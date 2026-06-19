@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Johnny Castaway Reborn</title>
+    </head>
+    <body>
+        <style>
+            html, body {
+                height: 100%;
+            }
+
+            html {
+                display: table;
+                margin: auto;
+            }
+
+            body {
+                background-color: black;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        </style>
+        <canvas id="canvas" width="640" height="480" oncontextmenu="event.preventDefault()"></canvas>
+        <script type='text/javascript'>
+            var Module = {
+                canvas: (function() { return document.getElementById('canvas'); })()
+            };
+            // Work-around chromium autoplay policy for Web Audio API
+            function resumeAudio(e) {
+                if (typeof window.audioContext !== 'undefined' && window.audioContext.state === 'suspended') {
+                    window.audioContext.resume();
+                }
+                if (typeof window.audioContext !== 'undefined' && window.audioContext.state === 'running') {
+                    document.getElementById('canvas').removeEventListener('click', resumeAudio);
+                    document.removeEventListener('keydown', resumeAudio);
+                }
+            }
+            document.getElementById('canvas').addEventListener('click', resumeAudio);
+            document.addEventListener('keydown', resumeAudio);
+        </script>
+        <script src="jc_reborn.js"></script>
+    </body>
+</html>

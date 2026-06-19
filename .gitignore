@@ -1,0 +1,39 @@
+# CMake / build output
+build/
+build-*/
+out/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile.cmake
+# Compiled objects / binaries
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.exe
+*.out
+# Emscripten / web
+*.wasm
+*.bc
+# Visual Studio (cache only — committed vs/ project files are kept)
+.vs/
+*.user
+*.suo
+
+# Game data (assets/scrantic_data.zip) is intentionally committed — art reworked / owned.
+
+# AI agent files — never track (local-only / extension-injected)
+CLAUDE.md
+AGENTS.md
+GEMINI.md
+KILO.md
+.github/copilot-instructions.md
+.cursorrules
+.windsurfrules
+.clinerules
+.codex/
+SESSION_*

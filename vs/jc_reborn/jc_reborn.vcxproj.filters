@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{7DC58D95-CC01-4677-A3F9-32C4BE45541A}</UniqueIdentifier>
+      <Extensions>c;cpp;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{7DC58D95-CC01-4677-A3F9-32C4BE45541B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Platform">
+      <UniqueIdentifier>{7DC58D95-CC01-4677-A3F9-32C4BE45541C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Third Party\miniz">
+      <UniqueIdentifier>{7DC58D95-CC01-4677-A3F9-32C4BE45541D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{89BCCF04-5794-4F39-9878-220028167905}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{89BCCF04-5794-4F39-9878-220028167906}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data">
+      <UniqueIdentifier>{89BCCF04-5794-4F39-9878-220028167907}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Platform">
+      <UniqueIdentifier>{89BCCF04-5794-4F39-9878-220028167908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Third Party\miniz">
+      <UniqueIdentifier>{89BCCF04-5794-4F39-9878-220028167909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{FE7BDEAD-822D-4F90-92CC-B64A677624FC}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;resx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\engine\jc_reborn.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\utils.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\uncompress.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\resource.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\dump.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\story.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\walk.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\calcpath.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\ads.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\ttm.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\island.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\bench.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\graphics.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\sound.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\events.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\src\engine\config.c"><Filter>Source Files\Engine</Filter></ClCompile>
+    <ClCompile Include="..\..\platform\platform_windows.c"><Filter>Source Files\Platform</Filter></ClCompile>
+    <ClCompile Include="..\..\platform\png_loader.c"><Filter>Source Files\Platform</Filter></ClCompile>
+    <ClCompile Include="..\..\platform\png_decoder.c"><Filter>Source Files\Platform</Filter></ClCompile>
+    <ClCompile Include="..\..\platform\zipvfs.c"><Filter>Source Files\Platform</Filter></ClCompile>
+    <ClCompile Include="..\..\third_party\miniz\miniz.c"><Filter>Source Files\Third Party\miniz</Filter></ClCompile>
+    <ClCompile Include="..\..\third_party\miniz\miniz_tdef.c"><Filter>Source Files\Third Party\miniz</Filter></ClCompile>
+    <ClCompile Include="..\..\third_party\miniz\miniz_tinfl.c"><Filter>Source Files\Third Party\miniz</Filter></ClCompile>
+    <ClCompile Include="..\..\third_party\miniz\miniz_zip.c"><Filter>Source Files\Third Party\miniz</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\engine\ads.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\bench.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\calcpath.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\config.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\dump.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\events.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\graphics.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\island.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\mytypes.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\resource.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\sound.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\story.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\ttm.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\uncompress.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\utils.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\engine\walk.h"><Filter>Header Files\Engine</Filter></ClInclude>
+    <ClInclude Include="..\..\src\data\calcpath_data.h"><Filter>Header Files\Data</Filter></ClInclude>
+    <ClInclude Include="..\..\src\data\story_data.h"><Filter>Header Files\Data</Filter></ClInclude>
+    <ClInclude Include="..\..\src\data\walk_data.h"><Filter>Header Files\Data</Filter></ClInclude>
+    <ClInclude Include="..\..\platform\platform.h"><Filter>Header Files\Platform</Filter></ClInclude>
+    <ClInclude Include="..\..\platform\png_decoder.h"><Filter>Header Files\Platform</Filter></ClInclude>
+    <ClInclude Include="..\..\platform\zipvfs.h"><Filter>Header Files\Platform</Filter></ClInclude>
+    <ClInclude Include="..\..\third_party\miniz\miniz.h"><Filter>Header Files\Third Party\miniz</Filter></ClInclude>
+    <ClInclude Include="..\..\third_party\miniz\miniz_common.h"><Filter>Header Files\Third Party\miniz</Filter></ClInclude>
+    <ClInclude Include="..\..\third_party\miniz\miniz_tdef.h"><Filter>Header Files\Third Party\miniz</Filter></ClInclude>
+    <ClInclude Include="..\..\third_party\miniz\miniz_tinfl.h"><Filter>Header Files\Third Party\miniz</Filter></ClInclude>
+    <ClInclude Include="..\..\third_party\miniz\miniz_zip.h"><Filter>Header Files\Third Party\miniz</Filter></ClInclude>
+    <ClInclude Include="..\..\third_party\miniz\miniz_export.h"><Filter>Header Files\Third Party\miniz</Filter></ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="jc_reborn.rc"><Filter>Resource Files</Filter></ResourceCompile>
+    <None Include="jc_reborn.ico"><Filter>Resource Files</Filter></None>
+  </ItemGroup>
+</Project>
