@@ -30,6 +30,11 @@
 
 
 #define ZIPVFS_MAX_PATH   1024
+/*  A candidate holds an executable directory, a separator, a subdirectory such
+ *  as "/../assets/", and the caller's name. Sizing it strictly larger than the
+ *  parts means truncation cannot happen, which keeps GCC's -Wformat-truncation
+ *  quiet for a real reason rather than by suppressing the diagnostic. */
+#define ZIPVFS_CAND_PATH  (ZIPVFS_MAX_PATH * 2 + 32)
 #define ZIPVFS_MAX_TRIED  4
 
 
@@ -89,7 +94,7 @@ static int zipvfs_exeDir(char *buf, size_t bufSize)
 
 void zipvfs_init(const char *zipPath)
 {
-    char candidates[ZIPVFS_MAX_TRIED][ZIPVFS_MAX_PATH];
+    char candidates[ZIPVFS_MAX_TRIED][ZIPVFS_CAND_PATH];
     char exeDir[ZIPVFS_MAX_PATH];
     int numCandidates = 0;
     int i;
@@ -112,16 +117,16 @@ void zipvfs_init(const char *zipPath)
      *  caller can point at a specific archive, and only then do we fall back to
      *  locations relative to the executable.
      */
-    snprintf(candidates[numCandidates++], ZIPVFS_MAX_PATH, "%s", zipPath);
+    snprintf(candidates[numCandidates++], ZIPVFS_CAND_PATH, "%s", zipPath);
 
     if (zipvfs_exeDir(exeDir, sizeof(exeDir))) {
-        snprintf(candidates[numCandidates++], ZIPVFS_MAX_PATH,
+        snprintf(candidates[numCandidates++], ZIPVFS_CAND_PATH,
                  "%s/%s", exeDir, zipPath);
         /* Running straight out of a build tree, where the archive is still in
          * the source layout rather than beside the binary. */
-        snprintf(candidates[numCandidates++], ZIPVFS_MAX_PATH,
+        snprintf(candidates[numCandidates++], ZIPVFS_CAND_PATH,
                  "%s/assets/%s", exeDir, zipPath);
-        snprintf(candidates[numCandidates++], ZIPVFS_MAX_PATH,
+        snprintf(candidates[numCandidates++], ZIPVFS_CAND_PATH,
                  "%s/../assets/%s", exeDir, zipPath);
     }
 
@@ -141,7 +146,7 @@ void zipvfs_init(const char *zipPath)
     /*  Report every path tried. "Failed to open scrantic_data.zip" on its own
      *  cannot be acted on, because it never says where the program looked. */
     {
-        char msg[ZIPVFS_MAX_TRIED * ZIPVFS_MAX_PATH + 256];
+        char msg[ZIPVFS_MAX_TRIED * ZIPVFS_CAND_PATH + 256];
         int off = snprintf(msg, sizeof(msg),
                            "Failed to open zip archive: %s\n"
                            "Looked in %d location(s):", zipPath, numCandidates);

@@ -197,7 +197,9 @@ void ttmPlay(struct TTtmThread *ttmThread)     // TODO
             if ((i & 0x01) == 0x01)   // always read an even number of uint8s
                 strArg[i++] = (char)data[offset++];
 
-            strArg[i < (int)sizeof(strArg) ? i : sizeof(strArg) - 1] = '\0';
+            /* Both branches int: the second was size_t, so the ternary's common
+             * type was unsigned and GCC warned that `i` changed signedness. */
+            strArg[i < (int)sizeof(strArg) ? i : (int)sizeof(strArg) - 1] = '\0';
         }
         else {                        // args are numArgs words
             peekUint16Block(data, &offset, args, numArgs);

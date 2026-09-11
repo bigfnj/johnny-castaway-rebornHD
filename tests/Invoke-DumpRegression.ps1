@@ -91,7 +91,14 @@ try {
     }
 
     if ($Update) {
-        Set-Content -LiteralPath $Golden -Value $rows -Encoding ASCII
+        # LF, WRITTEN EXPLICITLY. Set-Content emits CRLF on Windows PowerShell,
+        # which put a trailing \r on all 2,452 lines and made every one of them
+        # differ from the same manifest read in a Linux container - a total
+        # mismatch that looked exactly like a catastrophic decoder divergence and
+        # was purely this file's line endings. The manifest has to be as
+        # platform-neutral as the dump it describes.
+        [IO.File]::WriteAllText($Golden, (($rows -join "`n") + "`n"),
+                                (New-Object System.Text.ASCIIEncoding))
         Write-Host ("wrote {0} hashes to {1}" -f @($rows).Count, $Golden) -ForegroundColor Yellow
         exit 0
     }

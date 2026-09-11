@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
+#include <pthread.h>
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
@@ -626,8 +627,34 @@ static void* audioThreadFunc(void* arg) {
     UNUSED(arg);
     while (audioThreadRunning) {
         if (audioCallback) {
+            snd_pcm_sframes_t written;
+
+            /*  The callback takes platformLockAudio() itself (sound.c
+             *  soundCallback), so this thread must NOT hold the mutex across the
+             *  call: audioMutex is a default pthread mutex and is not recursive,
+             *  so wrapping the callback here would deadlock on the first sample
+             *  played. The shared state is properly synchronised either way,
+             *  because soundPlay takes the same mutex.
+             */
             audioCallback(audioUserData, audioBuffer, audioBufferSize);
-            snd_pcm_writei(pcmHandle, audioBuffer, audioFrames);
+
+            written = snd_pcm_writei(pcmHandle, audioBuffer, audioFrames);
+
+            /*  RECOVER FROM AN UNDERRUN. The return was discarded, so after the
+             *  first XRUN - which any scheduling hiccup produces - the stream
+             *  stayed in the error state and every later write returned -EPIPE
+             *  immediately. That turned this into a spin loop at 100% CPU with
+             *  silent audio and nothing logged, for the remaining life of the
+             *  process.
+             */
+            if (written < 0) {
+                written = snd_pcm_recover(pcmHandle, (int)written, 1 /* silent */);
+                if (written < 0) {
+                    /* Unrecoverable: stop feeding rather than spin on the error. */
+                    lastError = "ALSA write failed and could not be recovered";
+                    audioThreadRunning = 0;
+                }
+            }
         } else {
             usleep(10000);
         }
@@ -695,6 +722,12 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
     if (err < 0) {
         lastError = "Failed to set ALSA parameters";
         snd_pcm_close(pcmHandle);
+        /*  NULL IT. The handle was closed and left dangling, so a later
+         *  platformCloseAudio saw a non-NULL pcmHandle and called snd_pcm_drain
+         *  and snd_pcm_close on freed memory. Reachable on the ordinary path:
+         *  soundInit sets soundDisabled and carries on when the open fails.
+         */
+        pcmHandle = NULL;
         return -1;
     }
 
@@ -702,10 +735,30 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
     audioUserData = spec->userdata;
     audioBufferSize = spec->samples * spec->channels;
     audioFrames = spec->samples;
-    audioBuffer = (uint8*)malloc(audioBufferSize);
 
+    audioBuffer = (uint8*)malloc(audioBufferSize);
+    if (!audioBuffer) {
+        lastError = "Out of memory allocating the audio buffer";
+        snd_pcm_close(pcmHandle);
+        pcmHandle = NULL;
+        return -1;
+    }
+
+    /*  Every failure below must leave the subsystem closed, not half-open.
+     *  pthread_create's return was discarded, so a failure left audioThreadRunning
+     *  set, the device open and the buffer allocated while the caller was told
+     *  the open succeeded and no thread ever fed a sample.
+     */
     audioThreadRunning = 1;
-    pthread_create(&audioThread, NULL, audioThreadFunc, NULL);
+    if (pthread_create(&audioThread, NULL, audioThreadFunc, NULL) != 0) {
+        lastError = "Failed to start the audio thread";
+        audioThreadRunning = 0;
+        free(audioBuffer);
+        audioBuffer = NULL;
+        snd_pcm_close(pcmHandle);
+        pcmHandle = NULL;
+        return -1;
+    }
 
     return 0;
 }

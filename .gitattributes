@@ -1,0 +1,24 @@
+# Line endings that are part of the CONTRACT, not a preference.
+#
+# Two files here are consumed by Linux tooling and by byte-exact comparison, so
+# core.autocrlf turning them into CRLF on a Windows checkout is a real failure
+# rather than a cosmetic one:
+#
+#   tests/golden-dump.sha256  is compared line-for-line against a manifest
+#       generated inside a Linux container. A trailing \r on every line made all
+#       2,452 entries differ and looked precisely like a catastrophic decoder
+#       divergence. It was the file's line endings.
+#
+#   tests/*.sh  runs under bash in that container. CRLF makes bash fail with
+#       "\r: command not found", or worse, silently mis-parse.
+
+* text=auto
+
+tests/golden-dump.sha256   text eol=lf
+*.sh                       text eol=lf
+
+# Binary assets: never touched, never diffed as text.
+*.zip    binary
+*.ico    binary
+*.png    binary
+*.wav    binary
