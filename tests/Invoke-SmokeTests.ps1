@@ -193,6 +193,41 @@ It 'a different seed produces a different run' {
     ($a.Code -eq 0) -and ($b.Code -eq 0) -and ($a.Output -ne $b.Output)
 }
 
+It 'night forces the NIGHT.SCR backdrop' {
+    # Night was reachable ONLY between 21:00 and 05:59 off the system clock, so
+    # every daytime test run left NIGHT.SCR and its HD replacement completely
+    # unexercised - a whole rendering path nothing could look at, let alone
+    # assert on, without changing the machine's clock.
+    $r = Invoke-Jc @('window', 'nosound', 'maxspeed', 'hotkeys', 'debug', 'night',
+                     'seed', "$Seed", 'frames', '900') 900
+    ($r.Code -eq 0) -and ($r.Output -match 'island backdrop: NIGHT\.SCR')
+}
+
+It 'day forces an OCEAN backdrop even at night' {
+    # The negative half. Without it an override that simply ignored its argument,
+    # or a clock that happened to read daytime, would pass the test above.
+    $r = Invoke-Jc @('window', 'nosound', 'maxspeed', 'hotkeys', 'debug', 'day',
+                     'seed', "$Seed", 'frames', '900') 900
+    ($r.Code -eq 0) -and ($r.Output -match 'island backdrop: OCEAN0\d\.SCR') -and
+        ($r.Output -notmatch 'island backdrop: NIGHT\.SCR')
+}
+
+It 'clouds still animate over the night backdrop' {
+    # Night and clouds are set up in the same function but composited as separate
+    # layers, so "night works" and "clouds work" passing separately does not mean
+    # they work TOGETHER.
+    #
+    # Seed 5 rather than $Seed, and the reason is worth keeping: night skips the
+    # `rand() % 3` that picks OCEAN0N, so the whole RNG stream shifts and
+    # numClouds (rand() % 6) lands on a different value than it does by day. Seed
+    # 2 renders clouds by day and none at night purely for that reason. Measured
+    # across six seeds at night: 3, 5 and 42 produce clouds; 2, 7 and 11 do not.
+    $r = Invoke-Jc @('window', 'nosound', 'maxspeed', 'hotkeys', 'debug', 'night',
+                     'seed', '5', 'frames', '900') 900
+    ($r.Code -eq 0) -and ($r.Output -match 'island backdrop: NIGHT\.SCR') -and
+        ($r.Output -match 'Clouds Pos')
+}
+
 It 'bench mode runs bounded and exits 0' {
     $r = Invoke-Jc @('window', 'nosound', 'maxspeed', 'hotkeys','frames', '120', 'bench') 600
     (-not $r.TimedOut) -and ($r.Code -eq 0)

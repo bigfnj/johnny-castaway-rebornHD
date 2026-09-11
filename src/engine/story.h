@@ -31,6 +31,10 @@ void storyPlay(void);
 //    0 : force no holiday decorations
 //  1..4 : force a specific holiday (see island.c: 1=Halloween, 2=St Patrick, 3=Christmas, 4=New Year)
 void storySetForcedHoliday(int holiday);
+
+/* Force the night backdrop on (1) or off (0); -1 restores the clock-derived
+ * default of 21:00-05:59. Set by the `night` / `day` options. */
+void storySetForcedNight(int night);
 int  storyGetForcedHoliday(void);
 
 // Sync the island state (night + holiday) from the current clock.

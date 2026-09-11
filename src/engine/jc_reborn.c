@@ -218,6 +218,8 @@ static void usage(void)
     printf("         seed <n>   - fix the random seed, for reproducible runs\n");
     printf("         frames <n> - stop cleanly after n frames (exit code 0)\n");
     printf("         maxspeed   - run unthrottled from the start (as <M> does)\n");
+    printf("         night      - force the night backdrop (default: 21:00-05:59)\n");
+    printf("         day        - force daytime, ignoring the clock\n");
     printf("         holiday <name> - force holiday decorations (halloween|stpatricks|christmas|newyear|random|none|auto)\n");
     printf("         (shorthand) halloween|stpatricks|christmas|newyear|random\n");
     printf("\n");
@@ -363,6 +365,12 @@ static void parseArgs(int argc, char **argv)
         }
         else if (!strcmp(argv[i], "maxspeed")) {
             evStartAtMaxSpeed = 1;
+        }
+        else if (!strcmp(argv[i], "night")) {
+            storySetForcedNight(1);
+        }
+        else if (!strcmp(argv[i], "day")) {
+            storySetForcedNight(0);
         }
         else if (!strcmp(argv[i], "seed")) {
             expect = EXPECT_SEED;

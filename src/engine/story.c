@@ -41,6 +41,19 @@ static int storyCurrentDay = 1;
 // -1 = automatic, 0 = none, 1..4 = specific holiday (see island.c)
 static int storyForcedHoliday = -1;
 
+/*  Forced night/day, or -1 for the clock. Night is otherwise reachable only
+ *  between 21:00 and 05:59, so the NIGHT.SCR backdrop and its HD replacement
+ *  could not be looked at, let alone tested, during a working day without
+ *  changing the system clock. The holiday override beside it exists for exactly
+ *  the same reason.
+ */
+static int storyForcedNight = -1;
+
+void storySetForcedNight(int night)
+{
+    storyForcedNight = night;
+}
+
 void storySetForcedHoliday(int holiday)
 {
     storyForcedHoliday = holiday;
@@ -112,8 +125,13 @@ static void storyUpdateCurrentDay(void)
 void storyUpdateIslandFromDateAndTime(void)
 {
     // Night ? (hours 21-23 and 0-5)
-    int hour = getHour();
-    islandState.night = (hour >= 21 || hour <= 5);
+    if (storyForcedNight >= 0) {
+        islandState.night = storyForcedNight;
+    }
+    else {
+        int hour = getHour();
+        islandState.night = (hour >= 21 || hour <= 5);
+    }
 
     // Holidays ?
     islandState.holiday = 0;

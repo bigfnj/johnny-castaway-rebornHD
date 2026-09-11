@@ -38,13 +38,20 @@ void islandInit(struct TTtmThread *ttmThread)
     struct TTtmSlot *ttmSlot = ttmThread->ttmSlot;
 
 
+    /*  The backdrop choice is logged because it is otherwise unobservable from
+     *  outside: night depends on the wall clock (21:00-05:59), so a daytime test
+     *  run and a broken night path are indistinguishable without it. The smoke
+     *  suite asserts on this line.
+     */
     if (islandState.night) {
         grLoadScreen("NIGHT.SCR");
+        debugMsg("island backdrop: NIGHT.SCR");
     }
     else {
         char scrName[16];
         snprintf(scrName, sizeof(scrName), "OCEAN0%d.SCR", rand() % 3);
         grLoadScreen(scrName);
+        debugMsg("island backdrop: %s", scrName);
     }
 
     ttmThread->ttmLayer = grBackgroundSfc;
