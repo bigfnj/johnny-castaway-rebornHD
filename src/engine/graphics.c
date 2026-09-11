@@ -690,6 +690,18 @@ void grLoadScreen(const char *strArg)
     int outW = w * grScale;
     int outH = h * grScale;
 
+    /*  Same unbounded pixel walk as grLoadBmp had: the loop below is sized from
+     *  the file's own width/height and never consulted how many bytes actually
+     *  decoded. All 10 shipped SCRs decode to exactly (width/2)*height bytes, so
+     *  again there is no slack. */
+    {
+        size_t needed = ((size_t)w / 2) * (size_t)h;
+
+        if (needed > (size_t)scrResource->uncompressedSize)
+            fatalError("SCR '%s': %dx%d needs %zu pixel bytes, but only %u bytes were decoded",
+                       scrResource->resName, w, h, needed, scrResource->uncompressedSize);
+    }
+
     uint8 *outData = safe_malloc((size_t)outW * (size_t)outH * sizeof(uint32));
     uint8 *inPtr = scrResource->uncompressedData;
 
@@ -807,7 +819,18 @@ void grLoadBmp(struct TTtmSlot *ttmSlot, uint16 slotNo, const char *strArg)
         fatalError("BMP resource not found");
     }
 
+    /*  numImages is a uint16 straight out of the file and sprites[] holds
+     *  MAX_SPRITES_PER_BMP pointers, so the loop below wrote past the slot as
+     *  soon as a BMP declared more images than that - and numSprites was set
+     *  from the same unchecked value, so every later read of the slot believed
+     *  it. The shipped archive peaks at 102 images (LILIPUTS.BMP), so the cap
+     *  has never been approached; nothing enforced it either. */
+    if (bmpResource->numImages > MAX_SPRITES_PER_BMP)
+        fatalError("BMP '%s': declares %u images, but a BMP slot holds at most %d",
+                   bmpResource->resName, bmpResource->numImages, MAX_SPRITES_PER_BMP);
+
     uint8 *inPtr = bmpResource->uncompressedData;
+    size_t srcUsed = 0;
 
     ttmSlot->numSprites[slotNo] = bmpResource->numImages;
 
@@ -819,7 +842,20 @@ void grLoadBmp(struct TTtmSlot *ttmSlot, uint16 slotNo, const char *strArg)
         if ((width % 2) == 1)
             fatalError("grLoadBmp(): can't manage odd widths");
 
-        int spriteBytes = (width * height) / 2;
+        size_t spriteBytes = ((size_t)width * (size_t)height) / 2;
+
+        /*  The pixel walk was bounded by the widths/heights table alone, which
+         *  is also file-supplied, so a table claiming more pixels than were
+         *  decoded read off the end of the heap buffer - once per pixel, for as
+         *  many pixels as the file asked for. There is no slack to absorb it:
+         *  all 116 shipped BMPs sum to EXACTLY their decoded size. */
+        if (spriteBytes > (size_t)bmpResource->uncompressedSize - srcUsed)
+            fatalError("BMP '%s': image %d (%ux%u) needs %zu pixel bytes at offset %zu, "
+                       "but only %u bytes were decoded",
+                       bmpResource->resName, image, width, height,
+                       spriteBytes, srcUsed, bmpResource->uncompressedSize);
+
+        srcUsed += spriteBytes;
 
         // HD override per-image: data/hd/BMP/<NAME>/<NNN>.png
         if (grHdEnabled) {

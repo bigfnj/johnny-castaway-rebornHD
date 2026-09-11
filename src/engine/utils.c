@@ -188,21 +188,44 @@ uint16 *readUint16Block(FILE *f, int len)
 }
 
 
-uint16 peekUint16(uint8 *data, uint32 *offset)
+/*  Written so it cannot overflow: `dataSize - offset` is only evaluated once
+ *  offset is known to be inside the buffer, so a huge nBytes cannot wrap. */
+int peekHasBytes(uint32 dataSize, uint32 offset, uint32 nBytes)
 {
-    uint16 result;
-
-    result  = data[(*offset)++];
-    result |= (uint16)((uint16)data[(*offset)++] << 8);
-
-    return result;
+    return (offset <= dataSize) && (nBytes <= dataSize - offset);
 }
 
 
-void peekUint16Block(uint8 *data, uint32 *offset, uint16 *dest, int len)
+uint16 peekUint16(const uint8 *data, uint32 dataSize, uint32 *offset, const char *what)
 {
+    uint32 off = *offset;
+
+    if (!peekHasBytes(dataSize, off, 2))
+        fatalError("%s: read of 2 bytes at offset %u runs past the end of the "
+                   "%u-byte script (truncated or corrupt resource)",
+                   what ? what : "script", off, dataSize);
+
+    *offset = off + 2;
+
+    return (uint16)((uint16)data[off] | (uint16)((uint16)data[off + 1] << 8));
+}
+
+
+void peekUint16Block(const uint8 *data, uint32 dataSize, uint32 *offset,
+                     uint16 *dest, int len, int destCapacity, const char *what)
+{
+    /*  The argument count comes from the opcode's low nibble, which admits 0-14,
+     *  so the destination buffer must be sized for the ENCODING and not for the
+     *  widest opcode anyone has seen. This says so in code rather than in a
+     *  comment: a buffer too small for the request is refused here instead of
+     *  being written past. */
+    if (len < 0 || len > destCapacity)
+        fatalError("%s: %d argument words requested at offset %u, but the argument "
+                   "buffer holds only %d",
+                   what ? what : "script", len, *offset, destCapacity);
+
     for (int i=0; i < len ; i++)
-        dest[i] = peekUint16(data, offset);
+        dest[i] = peekUint16(data, dataSize, offset, what);
 }
 
 

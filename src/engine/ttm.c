@@ -35,6 +35,18 @@ int ttmDx = 0;
 int ttmDy = 0;
 
 
+/*  SIZED FOR THE ENCODING, not for the widest opcode anyone has seen.
+ *
+ *  A TTM opcode's low nibble is its argument count: 0x0f selects the string
+ *  form, so the numeric form admits 0..14 words. The buffer here held 10, and
+ *  peekUint16Block wrote all of them - a data-driven overflow of up to 8 bytes
+ *  of stack. The shipped archive only ever uses 0, 1, 2, 4 and 6 (measured over
+ *  all 41 TTMs), which is why it never showed. dump.c's copy of the same decoder
+ *  already used 20, so the range was known.
+ */
+#define TTM_MAX_ARGS 16
+
+
 static uint32 ttmFindPreviousTag(struct TTtmSlot *ttmSlot, uint32 offset)
 {
     uint32 result = 0;
@@ -88,12 +100,41 @@ void ttmLoadTtm(struct TTtmSlot *ttmSlot, const char *ttmName)
     uint32 offset=0;
     int tagNo = 0;
 
-    while (offset < ttmSlot->dataSize) {
+    while (peekHasBytes(ttmSlot->dataSize, offset, 2)) {
 
-        uint16 opcode = peekUint16(ttmSlot->data, &offset);
+        uint32 opcodeOffset = offset;
+        uint16 opcode = peekUint16(ttmSlot->data, ttmSlot->dataSize, &offset,
+                                   ttmResource->resName);
 
         if (opcode == 0x1111 || opcode == 0x1101) {
-            uint16 arg = peekUint16(ttmSlot->data, &offset);
+
+            /*  REFUSE rather than write past the tag table.
+             *
+             *  `tags` is allocated from the TAG: chunk's numTags but filled by
+             *  scanning the bytecode, and nothing tied the two together. There
+             *  is no margin to absorb a disagreement either: measured across all
+             *  41 shipped TTMs the scan finds EXACTLY numTags tags in every one,
+             *  so a single extra 0x1111/0x1101 opcode in a corrupt or crafted
+             *  script overruns the heap block by a whole TTtmTag.
+             *
+             *  The sentinel fill below still handles the documented opposite
+             *  case (fewer tags found than declared, see the SASKDATE.TTM TODO).
+             */
+            if (tagNo >= ttmSlot->numTags)
+                fatalError("TTM %s: bytecode declares more tags than its TAG: chunk "
+                           "(%d); tag opcode %04X at offset %u would be tag #%d",
+                           ttmResource->resName, ttmSlot->numTags, opcode,
+                           opcodeOffset, tagNo + 1);
+
+            if (!peekHasBytes(ttmSlot->dataSize, offset, 2)) {
+                fprintf(stderr, "Warning : TTM %s: tag opcode %04X at offset %u has no "
+                                "tag id before the end of the script\n",
+                        ttmResource->resName, opcode, opcodeOffset);
+                break;
+            }
+
+            uint16 arg = peekUint16(ttmSlot->data, ttmSlot->dataSize, &offset,
+                                    ttmResource->resName);
             ttmSlot->tags[tagNo].id     = arg;
             ttmSlot->tags[tagNo].offset = offset;
             tagNo++; // TODO
@@ -103,7 +144,13 @@ void ttmLoadTtm(struct TTtmSlot *ttmSlot, const char *ttmName)
             uint8 numArgs = (uint8)(opcode & 0x000f);
 
             if (numArgs == 0x0f) {
-                while (ttmSlot->data[offset] != 0 && ttmSlot->data[offset+1] != 0)
+                /*  BOUNDED. This walk had no size at all: it read data[offset+1]
+                 *  one byte past the buffer when the string ended on the last
+                 *  byte, and with no zero pair ahead of it it left the
+                 *  allocation entirely and kept going. */
+                while (peekHasBytes(ttmSlot->dataSize, offset, 2)
+                       && ttmSlot->data[offset] != 0
+                       && ttmSlot->data[offset+1] != 0)
                     offset += 2;
                 offset += 2;
             }
@@ -112,6 +159,17 @@ void ttmLoadTtm(struct TTtmSlot *ttmSlot, const char *ttmName)
             }
         }
     }
+
+    /*  Observable, because a script that does not decode to its own length is
+     *  either truncated or being decoded wrongly, and silently building a short
+     *  tag table looks exactly like success. Every shipped TTM lands on its last
+     *  byte exactly, so this is quiet in normal operation. Not fatal: the VM
+     *  refuses to execute past the end anyway, and the tags found so far are
+     *  still usable. */
+    if (offset != ttmSlot->dataSize)
+        fprintf(stderr, "Warning : TTM %s: script does not decode to its own length "
+                        "(tag scan stopped at %u of %u bytes)\n",
+                ttmResource->resName, offset, ttmSlot->dataSize);
 
     // TODO : in SASKDATE.TTM, num SET_SCENE != ttmResource->numTags
     while (tagNo < ttmSlot->numTags)
@@ -166,7 +224,7 @@ void ttmPlay(struct TTtmThread *ttmThread)     // TODO
     uint32 offset;
     uint16 opcode;
     uint8 numArgs;
-    uint16 args[10];
+    uint16 args[TTM_MAX_ARGS];
     char strArg[256];
     int continueLoop = 1;
     struct TTtmSlot *ttmSlot;
@@ -179,9 +237,11 @@ void ttmPlay(struct TTtmThread *ttmThread)     // TODO
     offset = ttmThread->ip;
     data = ttmSlot->data;
 
-    while (continueLoop && offset + 1 < ttmSlot->dataSize) {
+    while (continueLoop && peekHasBytes(ttmSlot->dataSize, offset, 2)) {
 
-        opcode = peekUint16(data, &offset);
+        uint32 opcodeOffset = offset;
+
+        opcode = peekUint16(data, ttmSlot->dataSize, &offset, "TTM script");
 
         numArgs = (uint8) opcode & 0x0000f;
 
@@ -192,17 +252,43 @@ void ttmPlay(struct TTtmThread *ttmThread)     // TODO
             while (offset < ttmSlot->dataSize && data[offset] != 0 && i < (int)(sizeof(strArg) - 1))
                 strArg[i++] = (char)data[offset++];
 
+            /*  The terminator and the even-length pad byte were read
+             *  unconditionally, so a string left unterminated at the very end of
+             *  a script read up to two bytes past the buffer. The loop above
+             *  stops at dataSize, which is exactly what makes these two reads
+             *  the ones that leave it. */
+            if (offset >= ttmSlot->dataSize)
+                fatalError("TTM script: string argument of opcode %04X at offset %u is "
+                           "not terminated before the end of the %u-byte script",
+                           opcode, opcodeOffset, ttmSlot->dataSize);
+
             strArg[i++] = (char)data[offset++];
 
-            if ((i & 0x01) == 0x01)   // always read an even number of uint8s
+            if ((i & 0x01) == 0x01) { // always read an even number of uint8s
+                if (offset >= ttmSlot->dataSize)
+                    fatalError("TTM script: string argument of opcode %04X at offset %u "
+                               "has no pad byte before the end of the %u-byte script",
+                               opcode, opcodeOffset, ttmSlot->dataSize);
                 strArg[i++] = (char)data[offset++];
+            }
 
             /* Both branches int: the second was size_t, so the ternary's common
              * type was unsigned and GCC warned that `i` changed signedness. */
             strArg[i < (int)sizeof(strArg) ? i : (int)sizeof(strArg) - 1] = '\0';
         }
         else {                        // args are numArgs words
-            peekUint16Block(data, &offset, args, numArgs);
+            /*  Only the opcode read was guarded, so the arguments of an opcode
+             *  sitting near the end of a script were read off the end of the
+             *  buffer. Refused here, where the opcode and offset can be named,
+             *  rather than left to the reader's generic backstop. */
+            if (!peekHasBytes(ttmSlot->dataSize, offset, (uint32)numArgs << 1))
+                fatalError("TTM script: opcode %04X at offset %u needs %u argument bytes "
+                           "but only %u of the %u-byte script remain",
+                           opcode, opcodeOffset, (unsigned)numArgs << 1,
+                           (unsigned)(ttmSlot->dataSize - offset), ttmSlot->dataSize);
+
+            peekUint16Block(data, ttmSlot->dataSize, &offset, args, numArgs,
+                            TTM_MAX_ARGS, "TTM script");
         }
 
         switch (opcode) {

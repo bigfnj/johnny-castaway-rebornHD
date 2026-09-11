@@ -433,7 +433,21 @@ static void parseResourceFile(const char *filename)
         mapFile.Entries[i].resSize = readUint32(f);
 
         char *resName = mapFile.Entries[i].resName;
-        char *resType = resName + strlen(resName) - 4;  // get the extension .BMP .ADS etc.
+
+        /*  The name is 13 bytes copied out of the file, so its length is
+         *  anything from 0 to 13 - and `resName + strlen(resName) - 4` walks
+         *  BEFORE the allocation for any name shorter than its own type suffix,
+         *  with an empty name landing four bytes behind the block. That pointer
+         *  was then handed straight to strcmp. Every shipped name is 8 to 12
+         *  characters, so nothing in the archive reaches it. */
+        size_t resNameLen = strlen(resName);
+
+        if (resNameLen < 4)
+            fatalError("RESOURCE entry %d has a %zu-character name ('%s'); every entry "
+                       "must end in a 4-character type suffix such as '.TTM'",
+                       i, resNameLen, resName);
+
+        char *resType = resName + resNameLen - 4;  // get the extension .BMP .ADS etc.
 
         if (debugMode) {
              putchar('.');

@@ -97,11 +97,30 @@ static void dumpBmp(struct TBmpResource *bmpResource, struct TPalResource *palRe
 
     data = bmpResource->uncompressedData;
 
+    size_t srcUsed = 0;
+
     for (int image=0; image < bmpResource->numImages; image++) {
 
         if ((bmpResource->widths[image] % 2) == 1) {
             printf("Error : can't manage odd widths\n");
             return;
+        }
+
+        /*  The same unbounded pixel walk grLoadBmp had: `data` advances
+         *  width/2 bytes per row with nothing checking it against the size that
+         *  actually decoded. Shipped BMPs sum to exactly their decoded size. */
+        {
+            size_t need = ((size_t)bmpResource->widths[image]
+                           * (size_t)bmpResource->heights[image]) / 2;
+
+            if (need > (size_t)bmpResource->uncompressedSize - srcUsed)
+                fatalError("BMP '%s': image %d (%ux%u) needs %zu pixel bytes at offset "
+                           "%zu, but only %u bytes were decoded",
+                           bmpResource->resName, image, bmpResource->widths[image],
+                           bmpResource->heights[image], need, srcUsed,
+                           bmpResource->uncompressedSize);
+
+            srcUsed += need;
         }
 
         snprintf(filename, MAX_FILENAME_LEN, "%s/%s/%s.%03d.xpm",
@@ -162,6 +181,15 @@ static void dumpScr(struct TScrResource *scrResource, struct TPalResource *palRe
     if ((scrResource->width % 2) == 1) {
         printf("Error : can't manage odd widths\n");
         return;
+    }
+
+    {
+        size_t need = ((size_t)scrResource->width / 2) * (size_t)scrResource->height;
+
+        if (need > (size_t)scrResource->uncompressedSize)
+            fatalError("SCR '%s': %ux%u needs %zu pixel bytes, but only %u bytes were decoded",
+                       scrResource->resName, scrResource->width, scrResource->height,
+                       need, scrResource->uncompressedSize);
     }
 
     snprintf(filename, MAX_FILENAME_LEN, "%s/%s/%s.xpm",
@@ -253,9 +281,10 @@ static void dumpAds(struct TAdsResource *adsResource)
     data = adsResource->uncompressedData;
     offset = 0;
 
-    while (offset < adsResource->uncompressedSize) {
+    while (peekHasBytes(adsResource->uncompressedSize, offset, 2)) {
 
-        opcode = peekUint16(data, &offset);
+        opcode = peekUint16(data, adsResource->uncompressedSize, &offset,
+                            adsResource->resName);
 
         switch (opcode) {
             case 0x1070: fprintf(fout, "IF_LASTPLAYED_LOCAL"); numArgs=2; break;
@@ -282,7 +311,8 @@ static void dumpAds(struct TAdsResource *adsResource)
         }
 
         for (int b=0; b<numArgs; b++)
-            fprintf(fout, " %d", peekUint16(data, &offset));
+            fprintf(fout, " %d", peekUint16(data, adsResource->uncompressedSize,
+                                            &offset, adsResource->resName));
 
         fprintf(fout, "\n");
     }
@@ -332,9 +362,13 @@ static void dumpTtm(struct TTtmResource *ttmResource)
     data = ttmResource->uncompressedData;
     offset = 0;
 
-    while (offset < ttmResource->uncompressedSize) {
+    uint32 dataSize = ttmResource->uncompressedSize;
 
-        opcode = peekUint16(data, &offset);
+    while (peekHasBytes(dataSize, offset, 2)) {
+
+        uint32 opcodeOffset = offset;
+
+        opcode = peekUint16(data, dataSize, &offset, ttmResource->resName);
 
         numArgs = (uint8) opcode & 0x0000f;
 
@@ -342,20 +376,34 @@ static void dumpTtm(struct TTtmResource *ttmResource)
 
             int i=0;
 
-            while (data[offset] != 0 && i < (int)(sizeof(strArg) - 1))
+            /*  This walk had no size bound at all - not even the one ttm.c's
+             *  copy had - so an unterminated string ran off the end of the
+             *  decompressed buffer until it happened to find a zero. */
+            while (offset < dataSize && data[offset] != 0 && i < (int)(sizeof(strArg) - 1))
                 strArg[i++] = (char)data[offset++];
+
+            if (offset >= dataSize)
+                fatalError("TTM '%s': string argument of opcode %04X at offset %u is not "
+                           "terminated before the end of the %u-byte script",
+                           ttmResource->resName, opcode, opcodeOffset, dataSize);
 
             strArg[i++] = (char)data[offset++];
 
-            if ((i & 0x01) == 0x01)    // always read an even number of uint8s
+            if ((i & 0x01) == 0x01) {  // always read an even number of uint8s
+                if (offset >= dataSize)
+                    fatalError("TTM '%s': string argument of opcode %04X at offset %u has "
+                               "no pad byte before the end of the %u-byte script",
+                               ttmResource->resName, opcode, opcodeOffset, dataSize);
                 strArg[i++] = (char)data[offset++];
+            }
 
             /* Both branches int: the second was size_t, so the ternary's common
              * type was unsigned and GCC warned that `i` changed signedness. */
             strArg[i < (int)sizeof(strArg) ? i : (int)sizeof(strArg) - 1] = '\0';
         }
         else {                        // args are numArgs words
-            peekUint16Block(data, &offset, args, numArgs);
+            peekUint16Block(data, dataSize, &offset, args, numArgs,
+                            (int)(sizeof(args) / sizeof(args[0])), ttmResource->resName);
         }
 
         switch (opcode) {

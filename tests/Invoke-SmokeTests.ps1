@@ -29,6 +29,10 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
+# Synthetic malformed archives for the bounds no shipped resource can reach.
+# See the header of that file for why they have to be built rather than found.
+. (Join-Path $PSScriptRoot 'New-MalformedArchive.ps1')
+
 if (-not $Exe) {
     $repo = Split-Path $PSScriptRoot -Parent
     foreach ($c in @('build\Release\jc_reborn.exe', 'build\Debug\jc_reborn.exe')) {
@@ -75,11 +79,26 @@ function Invoke-Jc {
         end while the child fills the other is the classic pipe deadlock, and
         this engine is chatty under `debug`.
     #>
-    param([string[]]$JcArgs, [int]$TimeoutSec = 300)
+    param([string[]]$JcArgs, [int]$TimeoutSec = 300, [string]$WorkDir)
 
-    $work = Join-Path ([IO.Path]::GetTempPath()) ("jcr-smoke-" + [Guid]::NewGuid().ToString('N'))
+    # A caller-supplied working directory is how the malformed-fixture tests
+    # steer the binary onto their archive: zipvfs_init() tries the bare
+    # "scrantic_data.zip" relative to the current directory before it looks
+    # beside the executable. The caller owns that directory, so it is not
+    # cleaned up here.
+    $ownWork = $false
+    if (-not $WorkDir) {
+        $WorkDir = Join-Path ([IO.Path]::GetTempPath()) ("jcr-smoke-" + [Guid]::NewGuid().ToString('N'))
+        New-Item -ItemType Directory -Force -Path $WorkDir | Out-Null
+        $ownWork = $true
+    }
+    $work = $WorkDir
+
+    # The throwaway profile is always ours, even when the working directory is
+    # the caller's, because it is about isolating the engine's saved story day
+    # rather than about where the archive lives.
     $fakeHome = Join-Path ([IO.Path]::GetTempPath()) ("jcr-home-" + [Guid]::NewGuid().ToString('N'))
-    New-Item -ItemType Directory -Force -Path $work, $fakeHome | Out-Null
+    New-Item -ItemType Directory -Force -Path $fakeHome | Out-Null
 
     $proc = $null
     try {
@@ -128,8 +147,26 @@ function Invoke-Jc {
     }
     finally {
         if ($proc) { $proc.Dispose() }
-        Remove-Item -LiteralPath $work     -Recurse -Force -ErrorAction SilentlyContinue
+        if ($ownWork) { Remove-Item -LiteralPath $work -Recurse -Force -ErrorAction SilentlyContinue }
         Remove-Item -LiteralPath $fakeHome -Recurse -Force -ErrorAction SilentlyContinue
+    }
+}
+
+function Invoke-JcOnDefect {
+    <#
+        Build a one-defect archive, run the binary against it, throw the archive
+        away. Nothing here is a test-only code path in the engine: it is the
+        shipped binary reading a resource file it does not like.
+    #>
+    param([string]$Defect, [string[]]$JcArgs, [int]$TimeoutSec = 180)
+
+    $work = Join-Path ([IO.Path]::GetTempPath()) ("jcr-fixture-" + [Guid]::NewGuid().ToString('N'))
+    try {
+        New-MalformedArchive -Defect $Defect -OutDir $work | Out-Null
+        return Invoke-Jc $JcArgs $TimeoutSec $work
+    }
+    finally {
+        Remove-Item -LiteralPath $work -Recurse -Force -ErrorAction SilentlyContinue
     }
 }
 
@@ -280,6 +317,94 @@ It 'bench mode runs bounded and exits 0' {
 It 'a single TTM plays bounded and exits 0' {
     $r = Invoke-Jc @('window', 'nosound', 'maxspeed', 'hotkeys','frames', '120', 'ttm', 'MJSAND.TTM') 600
     (-not $r.TimedOut) -and ($r.Code -eq 0)
+}
+
+Write-Host "`n== malformed resources are refused, not executed ==" -ForegroundColor Cyan
+
+# THE SHIPPED ARCHIVE CANNOT REACH ANY OF THESE. Measured over it: every TTM and
+# ADS script decodes to its exact last byte, every BMP and SCR sums to exactly
+# its decoded size, every TTM's bytecode holds exactly as many tags as its TAG:
+# chunk declares, every ADS names slots 1..7 of 10, every resource name is 8 to
+# 12 characters. Zero margin on all five, which is precisely why an off-by-one
+# in a length field is a memory-safety bug and not a cosmetic one - and why the
+# input has to be synthesised (tests/New-MalformedArchive.ps1).
+#
+# Each assertion checks the MESSAGE as well as the exit code. A refusal that does
+# not name the offending value is not much better than a crash: the exit code
+# alone would also be satisfied by the process dying for an unrelated reason.
+
+It 'a TTM with more tags in its bytecode than its TAG: chunk declares is refused' {
+    $r = Invoke-JcOnDefect 'ttm-extra-tag' @('window', 'nosound', 'maxspeed', 'hotkeys',
+                                             'frames', '5', 'ttm', 'BAD.TTM')
+    ($r.Code -ne 0) -and ($r.Output -match 'BAD\.TTM') -and
+        ($r.Output -match 'declares more tags') -and ($r.Output -match 'tag #2')
+}
+
+It 'a TTM opcode whose arguments run past the end of the script is refused' {
+    $r = Invoke-JcOnDefect 'ttm-args-past-end' @('window', 'nosound', 'maxspeed', 'hotkeys',
+                                                 'frames', '5', 'ttm', 'BAD.TTM')
+    ($r.Code -ne 0) -and ($r.Output -match 'opcode 4004') -and
+        ($r.Output -match 'needs 8 argument bytes')
+}
+
+It 'and the dump disassembler refuses that same truncated TTM' {
+    # dump.c reaches the bounded reader with no pre-check in front of it, so this
+    # is what exercises peekUint16's own refusal rather than the VM's. Headless,
+    # which also means it is the one of these the Linux container can run.
+    $r = Invoke-JcOnDefect 'ttm-args-past-end' @('dump') 300
+    ($r.Code -ne 0) -and ($r.Output -match 'BAD\.TTM') -and
+        ($r.Output -match 'runs past the end of the 4-byte script')
+}
+
+It 'a 12-argument TTM opcode is decoded rather than overflowing the argument buffer' {
+    # The POSITIVE half, and the one that pins the buffer size. A TTM opcode's
+    # low nibble is its argument count and 0x0f selects the string form, so the
+    # numeric form admits up to 14 words; the shipped archive never exceeds 6.
+    # This script is well-formed and must simply RUN - it is the only thing here
+    # that would have written past the old ten-word buffer.
+    $r = Invoke-JcOnDefect 'ttm-wide-args' @('window', 'nosound', 'maxspeed', 'hotkeys',
+                                             'frames', '5', 'ttm', 'WIDE.TTM')
+    (-not $r.TimedOut) -and ($r.Code -eq 0)
+}
+
+It 'an ADS naming a TTM slot outside the slot table is refused' {
+    $r = Invoke-JcOnDefect 'ads-bad-slot' @('window', 'nosound', 'maxspeed', 'hotkeys',
+                                            'frames', '5', 'ads', 'BAD.ADS', '1')
+    ($r.Code -ne 0) -and ($r.Output -match 'names TTM slot 60000') -and
+        ($r.Output -match 'only 10 slots exist')
+}
+
+It 'an ADS opcode whose arguments run past the end of the script is refused' {
+    $r = Invoke-JcOnDefect 'ads-args-past-end' @('window', 'nosound', 'maxspeed', 'hotkeys',
+                                                 'frames', '5', 'ads', 'BAD.ADS', '1')
+    ($r.Code -ne 0) -and ($r.Output -match 'opcode 2005') -and
+        ($r.Output -match 'needs 8 argument bytes')
+}
+
+It 'a BMP declaring more images than a sprite slot holds is refused' {
+    $r = Invoke-JcOnDefect 'bmp-too-many-images' @('window', 'nosound', 'maxspeed', 'hotkeys',
+                                                   'frames', '5', 'ttm', 'LOAD.TTM')
+    ($r.Code -ne 0) -and ($r.Output -match 'declares 200 images') -and
+        ($r.Output -match 'at most 120')
+}
+
+It 'a BMP whose image table outruns its pixel data is refused when loaded' {
+    $r = Invoke-JcOnDefect 'bmp-short-pixels' @('window', 'nosound', 'maxspeed', 'hotkeys',
+                                                'frames', '5', 'ttm', 'LOAD.TTM')
+    ($r.Code -ne 0) -and ($r.Output -match 'needs 8 pixel bytes at offset 8')
+}
+
+It 'and refused on the headless dump path, which walks the same pixels separately' {
+    # dump.c carries its own copy of the decoder, which is how the disassemblers
+    # and the VM drifted apart in the first place. Fixing one is not fixing both.
+    $r = Invoke-JcOnDefect 'bmp-short-pixels' @('dump') 300
+    ($r.Code -ne 0) -and ($r.Output -match 'needs 8 pixel bytes at offset 8')
+}
+
+It 'a resource name shorter than its own type suffix is refused' {
+    $r = Invoke-JcOnDefect 'short-resource-name' @('dump') 300
+    ($r.Code -ne 0) -and ($r.Output -match '1-character name') -and
+        ($r.Output -match 'type suffix')
 }
 
 Write-Host ""
