@@ -16,12 +16,14 @@
 [CmdletBinding()]
 param(
     [string]$Exe,
-    # Seed 2 is deliberate. numClouds is rand() % 6, so a seed can legitimately
-    # produce no clouds for many island scenes: seed 1 renders none inside the
-    # first ~6,000 frames and 15,151 cloud draws by 30,000. Seed 2 reaches the
-    # cloud path within a few hundred frames, so the smoke run exercises island
-    # setup, cloud animation and teardown rather than only the common path.
-    [int]$Seed = 2
+    # Seed 9, chosen by measurement against a FRESH profile (story day 1), which
+    # is what a clean machine and every CI runner starts from. numClouds is
+    # rand() % 6, so a seed can legitimately produce no clouds at all for many
+    # island scenes, and the night branch skips the rand() % 3 backdrop pick,
+    # which shifts the whole stream - so a seed good by day can be barren at
+    # night. Swept 1-12 with day and night pinned: seed 9 gives 1,280 cloud draws
+    # by day and 2,592 at night, the only seed strong in both.
+    [int]$Seed = 9
 )
 
 Set-StrictMode -Version Latest
@@ -76,7 +78,8 @@ function Invoke-Jc {
     param([string[]]$JcArgs, [int]$TimeoutSec = 300)
 
     $work = Join-Path ([IO.Path]::GetTempPath()) ("jcr-smoke-" + [Guid]::NewGuid().ToString('N'))
-    New-Item -ItemType Directory -Force -Path $work | Out-Null
+    $fakeHome = Join-Path ([IO.Path]::GetTempPath()) ("jcr-home-" + [Guid]::NewGuid().ToString('N'))
+    New-Item -ItemType Directory -Force -Path $work, $fakeHome | Out-Null
 
     $proc = $null
     try {
@@ -91,6 +94,21 @@ function Invoke-Jc {
         # runs on .NET Framework, where only the Arguments STRING exists. Quote
         # each token so an argument containing a space cannot split in two.
         $psi.Arguments = (($JcArgs | ForEach-Object { '"' + ($_ -replace '"', '\"') + '"' }) -join ' ')
+
+        #  AN ISOLATED PROFILE PER RUN, which is not tidiness but correctness.
+        #
+        #  config.c persists the story day (1-11) to $HOME/.jc_reborn, falling
+        #  back to %USERPROFILE%, and story.c picks eligible scenes from that day.
+        #  So the developer's saved progress silently decided which scenes a test
+        #  exercised. This machine sits at currentDay=11 and a clean CI runner
+        #  starts at 1, which is exactly how two cloud assertions passed here and
+        #  failed in CI: measured, 1,244 cloud draws with the inherited profile
+        #  and 0 with a fresh one, same seed.
+        #
+        #  Pointing both variables at a throwaway directory makes every run start
+        #  from the same state everywhere, and leaves the real file untouched.
+        $psi.EnvironmentVariables['HOME'] = $fakeHome
+        $psi.EnvironmentVariables['USERPROFILE'] = $fakeHome
 
         $proc = [System.Diagnostics.Process]::Start($psi)
         $stdout = $proc.StandardOutput.ReadToEndAsync()
@@ -110,7 +128,8 @@ function Invoke-Jc {
     }
     finally {
         if ($proc) { $proc.Dispose() }
-        Remove-Item -LiteralPath $work -Recurse -Force -ErrorAction SilentlyContinue
+        Remove-Item -LiteralPath $work     -Recurse -Force -ErrorAction SilentlyContinue
+        Remove-Item -LiteralPath $fakeHome -Recurse -Force -ErrorAction SilentlyContinue
     }
 }
 
@@ -193,7 +212,12 @@ It 'a bounded story run exits 0 through the normal shutdown path' {
 It 'and it actually reaches the island cloud path, not just the common case' {
     # Asserts the run did REAL work rather than exiting early. A bounded run that
     # returns 0 having rendered nothing would otherwise pass the test above.
-    $r = Invoke-Jc @('window', 'nosound', 'maxspeed', 'hotkeys','debug', 'seed', "$Seed", 'frames', '400') 600
+    # `day` is PINNED. Without it this inherited the wall clock: night is
+    # 21:00-05:59, and the night branch shifts the RNG stream, so the same seed
+    # reaches different scenes. That is precisely how this passed locally in the
+    # afternoon and failed in CI at 22:43 UTC.
+    $r = Invoke-Jc @('window', 'nosound', 'maxspeed', 'hotkeys','debug', 'day',
+                     'seed', "$Seed", 'frames', '400') 600
     ($r.Code -eq 0) -and ($r.Output -match 'Clouds Pos')
 }
 
@@ -236,13 +260,14 @@ It 'clouds still animate over the night backdrop' {
     # layers, so "night works" and "clouds work" passing separately does not mean
     # they work TOGETHER.
     #
-    # Seed 5 rather than $Seed, and the reason is worth keeping: night skips the
-    # `rand() % 3` that picks OCEAN0N, so the whole RNG stream shifts and
-    # numClouds (rand() % 6) lands on a different value than it does by day. Seed
-    # 2 renders clouds by day and none at night purely for that reason. Measured
-    # across six seeds at night: 3, 5 and 42 produce clouds; 2, 7 and 11 do not.
+    # Uses $Seed, which is chosen to work in BOTH lighting conditions. Night
+    # skips the `rand() % 3` that picks OCEAN0N, so the whole stream shifts and
+    # numClouds (rand() % 6) lands elsewhere: seed 2 gives 1,244 cloud draws by
+    # day and exactly 0 at night. An earlier revision pinned seed 5 here, chosen
+    # against this developer's saved story day; from a fresh profile seed 5 is
+    # barren at night, which is one of the two failures CI caught.
     $r = Invoke-Jc @('window', 'nosound', 'maxspeed', 'hotkeys', 'debug', 'night',
-                     'seed', '5', 'frames', '900') 900
+                     'seed', "$Seed", 'frames', '900') 900
     ($r.Code -eq 0) -and ($r.Output -match 'island backdrop: NIGHT\.SCR') -and
         ($r.Output -match 'Clouds Pos')
 }
