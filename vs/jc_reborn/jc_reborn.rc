@@ -1,5 +1,12 @@
 // jc_reborn.rc - Windows resources for the jc_reborn executable
 // This embeds the application icon into the built .exe.
+//
+// The id comes from the shared header so the window class in
+// platform/platform_windows.c and this script cannot disagree. Included by a
+// relative path rather than an include directory, because this script is built
+// by BOTH the Visual Studio project and CMake and the two set up rc.exe's
+// search path differently.
 
-#define JC_REBORN_ICON 101
-JC_REBORN_ICON ICON "jc_reborn.ico"
+#include "../../platform/jc_resources.h"
+
+JC_REBORN_ICON_ID ICON "jc_reborn.ico"

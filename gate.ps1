@@ -1,0 +1,104 @@
+#Requires -Version 5.1
+<#
+    THE gate: configure, build, smoke, regression, one exit code.
+
+    Run this before committing. It exists because this repository had no way to
+    answer "is it still working" at all: no tests, no CI, and three of its four
+    platforms unbuilt since a tree reorganisation. A build that merely compiles
+    proved nothing here, since the binary could not even locate its own data
+    archive and therefore died on startup in every configuration.
+
+    Order is deliberate. The build must succeed before anything can run; smoke
+    proves the binary starts, does real work and tears down cleanly; regression
+    proves the decoders still produce byte-identical output. Smoke first because
+    a binary that cannot start makes a regression diff meaningless noise.
+#>
+[CmdletBinding()]
+param(
+    [ValidateSet('Release', 'Debug')]
+    [string]$Config = 'Release',
+
+    # Skip the configure+build and test whatever is already there.
+    [switch]$NoBuild,
+
+    # Smoke only, for a fast inner loop. The gate is the full run.
+    [switch]$SmokeOnly
+)
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = 'Stop'
+
+$repo  = $PSScriptRoot
+$build = Join-Path $repo 'build'
+$exe   = Join-Path $build "$Config\jc_reborn.exe"
+$failed = $false
+
+function Write-Step { param([string]$Msg) Write-Host "`n=== $Msg ===" -ForegroundColor Cyan }
+
+Write-Host "=== gate: johnny-castaway-rebornHD ($Config) ===" -ForegroundColor Cyan
+
+if (-not $NoBuild) {
+    Write-Step 'configure + build'
+
+    # The generator is NOT pinned. CMake 4.3.1 here defaults to "Visual Studio 18
+    # 2026", which matches the v145 toolset the hand-maintained vs/ projects pin,
+    # so the default is already the right answer and hard-coding it would break
+    # the moment the toolchain moves.
+    if (-not (Test-Path -LiteralPath (Join-Path $build 'CMakeCache.txt'))) {
+        & cmake -S $repo -B $build -A x64 | Out-Null
+        if ($LASTEXITCODE -ne 0) { Write-Host 'FAIL cmake configure' -ForegroundColor Red; exit 1 }
+    }
+
+    $out = & cmake --build $build --config $Config 2>&1
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host 'FAIL build' -ForegroundColor Red
+        $out | Select-Object -Last 25 | ForEach-Object { Write-Host "     $_" -ForegroundColor Red }
+        exit 1
+    }
+
+    # Warnings are surfaced, not hidden. /W4 is on and this codebase is old
+    # enough that new warnings are worth seeing even when they are not fatal.
+    $warn = @($out | Select-String -Pattern ': warning ')
+    if ($warn.Count) {
+        Write-Host ("WARN {0} compiler warning(s)" -f $warn.Count) -ForegroundColor Yellow
+        $warn | Select-Object -First 8 | ForEach-Object { Write-Host "     $_" -ForegroundColor Yellow }
+    }
+    else {
+        Write-Host 'OK   build clean, no warnings' -ForegroundColor Green
+    }
+}
+
+if (-not (Test-Path -LiteralPath $exe)) {
+    Write-Host "FAIL no binary at $exe" -ForegroundColor Red
+    exit 1
+}
+
+# The archive must sit beside the binary. Asserted rather than assumed, because
+# its absence is the exact failure this project shipped with: the build
+# succeeded and the program died on startup.
+$zip = Join-Path (Split-Path $exe -Parent) 'scrantic_data.zip'
+if (-not (Test-Path -LiteralPath $zip)) {
+    Write-Host "FAIL scrantic_data.zip is not next to the binary ($zip)" -ForegroundColor Red
+    Write-Host '     the POST_BUILD copy in CMakeLists.txt did not run' -ForegroundColor Red
+    exit 1
+}
+
+Write-Step 'smoke'
+& powershell.exe -NoProfile -ExecutionPolicy Bypass `
+    -File (Join-Path $repo 'tests\Invoke-SmokeTests.ps1') -Exe $exe
+if ($LASTEXITCODE -ne 0) { $failed = $true }
+
+if (-not $SmokeOnly) {
+    Write-Step 'regression (golden dump corpus)'
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass `
+        -File (Join-Path $repo 'tests\Invoke-DumpRegression.ps1') -Exe $exe
+    if ($LASTEXITCODE -ne 0) { $failed = $true }
+}
+
+Write-Host ''
+if ($failed) {
+    Write-Host 'GATE FAILED' -ForegroundColor Red
+    exit 1
+}
+Write-Host 'gate passed' -ForegroundColor Green
+exit 0

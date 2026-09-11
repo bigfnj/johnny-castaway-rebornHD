@@ -215,6 +215,9 @@ static void usage(void)
     printf("         island     - display the island as background for ADS play\n");
     printf("         debug      - print some debug info on stdout\n");
     printf("         hotkeys    - enable hot keys\n");
+    printf("         seed <n>   - fix the random seed, for reproducible runs\n");
+    printf("         frames <n> - stop cleanly after n frames (exit code 0)\n");
+    printf("         maxspeed   - run unthrottled from the start (as <M> does)\n");
     printf("         holiday <name> - force holiday decorations (halloween|stpatricks|christmas|newyear|random|none|auto)\n");
     printf("         (shorthand) halloween|stpatricks|christmas|newyear|random\n");
     printf("\n");
@@ -247,7 +250,9 @@ static void parseArgs(int argc, char **argv)
         EXPECT_TTM_NAME,
         EXPECT_ADS_NAME,
         EXPECT_ADS_TAG,
-        EXPECT_HOLIDAY
+        EXPECT_HOLIDAY,
+        EXPECT_SEED,
+        EXPECT_FRAMES
     } TExpectedArg;
 
     TExpectedArg expect = EXPECT_NONE;
@@ -282,6 +287,31 @@ static void parseArgs(int argc, char **argv)
                     if (holiday == -2)
                         holiday = pickRandomHoliday();
                     storySetForcedHoliday(holiday);
+                    expect = EXPECT_NONE;
+                    break;
+                }
+
+                /*  Both parse with strtol and REJECT trailing garbage, rather
+                 *  than taking atoi's silent 0. `seed abc` naming a seed of 0
+                 *  would run, look plausible, and quietly defeat the
+                 *  reproducibility the option exists to provide.
+                 */
+                case EXPECT_SEED: {
+                    char *end = NULL;
+                    long v = strtol(argv[i], &end, 10);
+                    if (end == argv[i] || (end && *end != '\0') || v < 0)
+                        fatalError("Invalid seed '%s' (expected a non-negative integer)", argv[i]);
+                    grForcedSeed = v;
+                    expect = EXPECT_NONE;
+                    break;
+                }
+
+                case EXPECT_FRAMES: {
+                    char *end = NULL;
+                    long v = strtol(argv[i], &end, 10);
+                    if (end == argv[i] || (end && *end != '\0') || v <= 0)
+                        fatalError("Invalid frame count '%s' (expected a positive integer)", argv[i]);
+                    evMaxFrames = (uint32)v;
                     expect = EXPECT_NONE;
                     break;
                 }
@@ -330,6 +360,15 @@ static void parseArgs(int argc, char **argv)
         }
         else if (!strcmp(argv[i], "hotkeys")) {
             evHotKeysEnabled = 1;
+        }
+        else if (!strcmp(argv[i], "maxspeed")) {
+            evStartAtMaxSpeed = 1;
+        }
+        else if (!strcmp(argv[i], "seed")) {
+            expect = EXPECT_SEED;
+        }
+        else if (!strcmp(argv[i], "frames")) {
+            expect = EXPECT_FRAMES;
         }
         else if (isHolidayArg(argv[i])) {
             expect = EXPECT_HOLIDAY;

@@ -38,6 +38,24 @@ static int oneFrame = 0;
 
 int evHotKeysEnabled = 0;
 
+/*  Bounded run, for automated testing. 0 means unlimited, which is the default
+ *  and the shipping behaviour: storyPlay() loops forever and only ever leaves
+ *  through exit() on an input event. That is correct for a screensaver and
+ *  impossible to assert on, because a test can only kill it and guess whether
+ *  it was healthy. With `frames N` the engine shuts down cleanly through the
+ *  normal path and returns 0, so a smoke test can check an exit code instead.
+ */
+uint32 evMaxFrames = 0;
+static uint32 evFrameCount = 0;
+
+/*  Max speed as a startup option, not just the <M> hotkey. The per-scene delay
+ *  floor is 80 ms (12.5 FPS), so covering enough story iterations to exercise
+ *  the island setup/teardown cycle takes minutes of wall clock at normal speed.
+ *  The hotkey already proved the engine runs correctly unthrottled; this only
+ *  makes that reachable without a keyboard.
+ */
+int evStartAtMaxSpeed = 0;
+
 
 static void eventsProcessEvents(void)
 {
@@ -110,19 +128,42 @@ static void eventsProcessEvents(void)
 void eventsInit(void)
 {
     lastTicks = platformGetTicks();
+    maxSpeed  = evStartAtMaxSpeed;
     atexit(platformShutdown);
 }
 
 
 void eventsWaitTick(uint16 delay)
 {
-    delay *= 20;
+    /*  WIDENED to 32 bits before the multiply. `delay *= 20` on the uint16
+     *  parameter wrapped for any delay above 3276 ticks, so a script asking to
+     *  wait 4000 ticks (80 s) slept 14.4 s instead. No shipped script asks for
+     *  more than 660, so this has never fired, but the arithmetic was wrong and
+     *  the clamp that hides it lives in a different file.
+     */
+    uint32 delayMs = (uint32)delay * 20u;
+
     oneFrame = 0;
+
+    /*  Bounded run. Counted here because this is the one function every frame
+     *  passes through, whichever mode is playing. Shutdown goes through the
+     *  same soundEnd/graphicsEnd path as a user quit, so what the test exercises
+     *  is the real teardown, not a shortcut around it. Exit code 0, because
+     *  reaching the requested frame count is success; the input-driven quit
+     *  paths keep their 255.
+     */
+    if (evMaxFrames) {
+        if (++evFrameCount > evMaxFrames) {
+            soundEnd();
+            graphicsEnd();
+            exit(0);
+        }
+    }
 
     eventsProcessEvents();
 
     while ((paused && !oneFrame)
-            || (!maxSpeed && (platformGetTicks() - lastTicks < delay))) {
+            || (!maxSpeed && (platformGetTicks() - lastTicks < delayMs))) {
         platformDelay(5);
         eventsProcessEvents();
     }

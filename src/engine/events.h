@@ -28,6 +28,15 @@
 
 extern int evHotKeysEnabled;
 
+/* Frames to run before shutting down cleanly with exit code 0. 0 = unlimited
+ * (the shipping behaviour). Set by the `frames <N>` option; exists so an
+ * automated test can assert an exit code instead of killing the process. */
+extern uint32 evMaxFrames;
+
+/* Start unthrottled, as the <M> hotkey does. Set by the `maxspeed` option so a
+ * bounded run can cover many story iterations without minutes of wall clock. */
+extern int evStartAtMaxSpeed;
+
 void eventsInit(void);
 void eventsWaitTick(uint16 delay);
 

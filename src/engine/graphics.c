@@ -49,6 +49,9 @@ PlatformSurface *grBackgroundSfc = NULL;
 int grDx = 0;
 int grDy = 0;
 int grWindowed = 0;
+
+/* Forced RNG seed, or -1 to derive one from the clock. See graphicsInit(). */
+long grForcedSeed = -1;
 uint16 grUpdateDelay = 0;
 
 // HD / scaling support (logical coordinate space stays 640x480)
@@ -212,12 +215,31 @@ void graphicsInit(void)
     grLoadPalette(palResources[0]);  // TODO ?
 
     {
-        // srand() takes an unsigned int; time_t may be 64-bit.
-        // Fold the time value down to 32 bits in a deterministic way.
-        time_t now = time(NULL);
-        unsigned long long t = (unsigned long long)now;
-        unsigned int seed = (unsigned int)(t ^ (t >> 32));
+        unsigned int seed;
+
+        /*  A FIXED SEED MAKES THE ENGINE TESTABLE. Scene selection
+         *  (story.c:79), cloud count and placement (island.c:82-111), ocean
+         *  backdrop choice (island.c:46), low-tide rolls (story.c:150) and path
+         *  choice (calcpath.c:127) all come off this one stream, so without
+         *  `seed <N>` two runs of the same command never agree and nothing
+         *  about the island path can be asserted.
+         *
+         *  Default stays time-derived: a screensaver that picked the same
+         *  scenes every boot would be a regression in its own right.
+         */
+        if (grForcedSeed >= 0) {
+            seed = (unsigned int)grForcedSeed;
+        }
+        else {
+            // srand() takes an unsigned int; time_t may be 64-bit.
+            // Fold the time value down to 32 bits in a deterministic way.
+            time_t now = time(NULL);
+            unsigned long long t = (unsigned long long)now;
+            seed = (unsigned int)(t ^ (t >> 32));
+        }
+
         srand(seed);
+        debugMsg("rand seed: %u%s", seed, grForcedSeed >= 0 ? " (forced)" : "");
     }
 
     eventsInit();

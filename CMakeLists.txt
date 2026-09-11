@@ -67,7 +67,13 @@ if(EMSCRIPTEN)
     add_definitions(-DPLATFORM_WEB)
 elseif(WIN32)
     message(STATUS "Building for Windows")
-    set(PLATFORM_SOURCES platform/platform_windows.c)
+    # THE .rc IS PART OF THE BUILD. CMake never enabled the RC language or listed
+    # the resource script, so the CMake-built executable carried no icon at all
+    # while the Visual Studio build carried one: same sources, two different
+    # products. Combined with a window class that never set hIcon, the result was
+    # the blank default box in the title bar, taskbar and Alt-Tab.
+    enable_language(RC)
+    set(PLATFORM_SOURCES platform/platform_windows.c vs/jc_reborn/jc_reborn.rc)
     add_definitions(-DPLATFORM_WINDOWS)
     # MSVC: quiet down some legacy-C warnings surfaced by /W4 on this codebase
     if(MSVC)
@@ -94,6 +100,20 @@ endif()
 
 # Create executable
 add_executable(jc_reborn ${COMMON_SOURCES} ${PLATFORM_SOURCES})
+
+# ── Runtime data ──────────────────────────────────────────────────────────────
+# The engine opens scrantic_data.zip beside the executable (see zipvfs_init).
+# Without this copy the binary builds successfully and then dies on startup,
+# which is exactly what it did: the archive lives in assets/ and nothing ever
+# put it where the program looks. Emscripten is excluded because --preload-file
+# already bakes the archive into jc_reborn.data.
+if(NOT EMSCRIPTEN)
+    add_custom_command(TARGET jc_reborn POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
+                "$<TARGET_FILE_DIR:jc_reborn>/scrantic_data.zip"
+        COMMENT "Copying scrantic_data.zip next to jc_reborn")
+endif()
 
 # Set Objective-C compilation for macOS platform file
 if(APPLE)
@@ -151,7 +171,13 @@ elseif(UNIX)
 endif()
 
 # Installation
+# The archive is installed alongside the binary for the same reason it is copied
+# post-build: the engine cannot start without it, so a bin/ holding only the
+# executable is not a working install.
 install(TARGETS jc_reborn DESTINATION bin)
+if(NOT EMSCRIPTEN)
+    install(FILES "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip" DESTINATION bin)
+endif()
 
 # Print build configuration
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")

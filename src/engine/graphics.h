@@ -93,6 +93,11 @@ extern PlatformSurface *grBackgroundSfc;
 extern int grDx;
 extern int grDy;
 extern int grWindowed;
+
+/* Forced RNG seed set by `seed <N>`, or -1 for the default clock-derived seed.
+ * Every random choice in the engine comes off this one stream, so fixing it is
+ * what makes the story and island paths reproducible for testing. */
+extern long grForcedSeed;
 extern uint16 grUpdateDelay;
 
 // HD / scaling support

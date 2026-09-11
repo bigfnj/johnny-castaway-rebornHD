@@ -6,6 +6,7 @@
 #ifdef PLATFORM_WINDOWS
 
 #include "platform.h"
+#include "jc_resources.h"
 #include <windows.h>
 #include <stdlib.h>
 #include <string.h>
@@ -249,13 +250,37 @@ void platformShutdown(void) {
 
 // Window management
 PlatformWindow* platformCreateWindow(const char* title, int width, int height, int fullscreen) {
-    WNDCLASSA wc = {0};
-    wc.lpfnWndProc = WindowProc;
-    wc.hInstance = GetModuleHandle(NULL);
-    wc.lpszClassName = "JCRebornWindow";
-    wc.hCursor = LoadCursor(NULL, IDC_ARROW);
+    WNDCLASSEXA wc = {0};
+    HINSTANCE hInst = GetModuleHandle(NULL);
 
-    RegisterClassA(&wc);
+    /*  THE WINDOW ICON. Two things were missing and either one alone leaves the
+     *  blank default box in the title bar, the taskbar and Alt-Tab.
+     *
+     *  First, the class never set hIcon/hIconSm, so Windows substituted its
+     *  generic application icon no matter what the executable contained.
+     *
+     *  Second, the CMake build never compiled vs/jc_reborn/jc_reborn.rc, so the
+     *  binary had no icon resource to load in the first place. The Visual Studio
+     *  project did compile it, which is why the two builds disagreed. CMakeLists
+     *  now enables the RC language and builds the same .rc.
+     *
+     *  WNDCLASSEXA rather than WNDCLASSA because the small icon is only settable
+     *  through the Ex form. LoadIconA falls back to IDI_APPLICATION when the
+     *  resource is absent, so a build without the .rc still gets a window rather
+     *  than a failed class registration.
+     */
+    wc.cbSize        = sizeof(wc);
+    wc.lpfnWndProc   = WindowProc;
+    wc.hInstance     = hInst;
+    wc.lpszClassName = "JCRebornWindow";
+    wc.hCursor       = LoadCursor(NULL, IDC_ARROW);
+    wc.hIcon         = LoadIconA(hInst, MAKEINTRESOURCEA(JC_REBORN_ICON_ID));
+    wc.hIconSm       = wc.hIcon;
+
+    if (!wc.hIcon)
+        wc.hIcon = wc.hIconSm = LoadIconA(NULL, IDI_APPLICATION);
+
+    RegisterClassExA(&wc);
 
     PlatformWindow* window = (PlatformWindow*)malloc(sizeof(PlatformWindow));
 

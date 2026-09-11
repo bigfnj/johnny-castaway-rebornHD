@@ -1,6 +1,12 @@
 # CMake / build output
 build/
 build-*/
+# build_web with an UNDERSCORE is what scripts/build_web.ps1 actually defaults
+# to, while the rule above uses a hyphen and README documents the hyphen form.
+# The two documented workflows disagreed on exactly the boundary that matters,
+# so a web build placed jc_reborn.js, .data and index.html straight into
+# `git status` as untracked files.
+build_web/
 out/
 cmake-build-*/
 CMakeFiles/
@@ -23,6 +29,12 @@ Makefile.cmake
 .vs/
 *.user
 *.suo
+# MSBuild writes here; *.exe was already covered but its companions were not.
+vs/bin/
+vs/publish/
+*.pdb
+*.ilk
+*.exp
 
 # Game data (assets/scrantic_data.zip) is intentionally committed — art reworked / owned.
 

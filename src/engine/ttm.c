@@ -134,10 +134,24 @@ void ttmInitSlot(struct TTtmSlot *ttmSlot)
 
 void ttmResetSlot(struct TTtmSlot *ttmSlot)
 {
-    if (ttmSlot->data != NULL) {
-        ttmSlot->data = NULL;
-        free(ttmSlot->tags);
-    }
+    /*  Actually reset, which this did not previously do.
+     *
+     *  It freed `tags` and left the pointer at the freed block, and it kept the
+     *  old `numTags` and `dataSize`. A slot left in that state describes a
+     *  script that is no longer loaded: `data` is NULL while `dataSize` says
+     *  otherwise, so anything that trusted the size walked a NULL pointer, and
+     *  anything that read `tags` read freed memory.
+     *
+     *  `data` is not owned by the slot - it points into the loaded resource -
+     *  so it is cleared, never freed. `tags` is owned, and free(NULL) is a
+     *  no-op, so the unconditional free also covers the case the old guard
+     *  missed: data already NULL while tags was still allocated.
+     */
+    free(ttmSlot->tags);
+    ttmSlot->tags     = NULL;
+    ttmSlot->data     = NULL;
+    ttmSlot->numTags  = 0;
+    ttmSlot->dataSize = 0;
 
     for (int i=0; i < MAX_BMP_SLOTS; i++) {
         if (ttmSlot->numSprites[i])

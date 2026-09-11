@@ -982,18 +982,49 @@ void adsInitIsland(void)
 
 void adsReleaseIsland(void)
 {
+    /*  NULL AFTER FREE. Both layer pointers were left pointing at freed memory.
+     *
+     *  For the clouds layer that was an arbitrary free, not merely a double
+     *  free: adsInitIsland() frees a non-NULL ttmLayer before allocating a new
+     *  one, and between the two calls storyPlay() runs islandInit() - a
+     *  grLoadScreen plus two grLoadBmp calls, hundreds of allocations - so by
+     *  the time the second free ran, the PlatformSurface struct at that address
+     *  had almost certainly been recycled into something live. platformFreeSurface
+     *  then read `ownPixels` and `pixels` out of an unrelated object and called
+     *  free() on whatever it found there.
+     *
+     *  It armed on most island scenes after the first: islandAnimateClouds only
+     *  leaves isRunning set when numClouds > 0, and numClouds is rand() % 6.
+     *
+     *  The defensive free in adsInitIsland is NOT redundant and stays: when
+     *  numClouds == 0 the clouds thread is already TTM_FREE here, so this
+     *  function correctly skips the free and the layer is still live. Freeing
+     *  it there is what stops that case leaking a layer per island scene.
+     */
     ttmBackgroundThread.isRunning = TTM_FREE;
     ttmResetSlot(&ttmBackgroundSlot);
 
     if (ttmHolidayThread.isRunning) {
         ttmHolidayThread.isRunning = TTM_FREE;
         grFreeLayer(ttmHolidayThread.ttmLayer);
+        ttmHolidayThread.ttmLayer = NULL;
     }
+    ttmResetSlot(&ttmHolidaySlot);
 
     if (ttmCloudsThread.isRunning) {
         ttmCloudsThread.isRunning = TTM_FREE;
         grFreeLayer(ttmCloudsThread.ttmLayer);
+        ttmCloudsThread.ttmLayer = NULL;
     }
+
+    /*  RELEASE THE CLOUDS SPRITES. adsInitIsland calls ttmInitSlot on this slot,
+     *  which only zeroes the bookkeeping, so the BACKGRND.BMP that
+     *  islandAnimateClouds loads into it was never released: 42 sprites,
+     *  741,248 bytes of pixel data at grScale 1, and the shipped manifest sets
+     *  "scale": 2, so roughly four times that. Once per island scene, for as
+     *  long as the screensaver runs.
+     */
+    ttmResetSlot(&ttmCloudsSlot);
 }
 
 
