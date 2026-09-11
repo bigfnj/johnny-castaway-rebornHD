@@ -269,6 +269,21 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
      *  resource is absent, so a build without the .rc still gets a window rather
      *  than a failed class registration.
      */
+    /*  CS_OWNDC, because the DC below is cached for the process lifetime.
+     *
+     *  GetDC on a class without CS_OWNDC returns a COMMON DC whose visible
+     *  region is fixed at the moment it was retrieved. This code fetches one
+     *  once at creation and then reuses it across the fullscreen transition,
+     *  which changes the window's style, size and position. A stale visible
+     *  region is the standard explanation for a window that goes blank or
+     *  renders into the wrong rectangle after a mode switch.
+     *
+     *  CS_OWNDC gives the window its own private DC that follows those changes,
+     *  which makes the existing caching correct rather than lucky. The
+     *  alternative - GetDC/ReleaseDC on every present - is a per-frame cost for
+     *  no benefit here, since the window is owned by this code.
+     */
+    wc.style         = CS_OWNDC;
     wc.cbSize        = sizeof(wc);
     wc.lpfnWndProc   = WindowProc;
     wc.hInstance     = hInst;
@@ -354,6 +369,21 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
  */
 void platformDestroyWindow(PlatformWindow* window) {
     if (window) {
+        /*  CLEAR mainWindow FIRST, before anything is freed.
+         *
+         *  DestroyWindow dispatches WM_DESTROY and friends synchronously, and
+         *  WindowProc's WM_PAINT arm calls platformUpdateWindow(mainWindow)
+         *  while ignoring its own hwnd argument. With the global still pointing
+         *  here, a paint arriving during teardown reads a surface that was freed
+         *  a few statements earlier.
+         *
+         *  Not reachable today only because every caller does
+         *  graphicsEnd(); exit(255); so nothing dispatches afterwards. That is
+         *  an accident of the call sites, not a property of this function.
+         */
+        if (mainWindow == window) {
+            mainWindow = NULL;
+        }
         if (window->surface) {
             platformFreeSurface(window->surface);
         }
@@ -434,6 +464,16 @@ void platformUpdateWindow(PlatformWindow* window) {
     GetClientRect(window->hwnd, &clientRect);
     int clientWidth = clientRect.right - clientRect.left;
     int clientHeight = clientRect.bottom - clientRect.top;
+
+    /*  A zero-sized client area is not an error, it is a minimised window or a
+     *  degenerate rectangle, and there is nothing to present into. Without this
+     *  the aspect-ratio division below is a divide by zero. It becomes reachable
+     *  the moment this renders into a window it does not own, which is exactly
+     *  what screensaver preview mode does.
+     */
+    if (clientWidth <= 0 || clientHeight <= 0) {
+        return;
+    }
 
     // Calculate aspect-ratio preserving dimensions
     float surfaceAspect = (float)window->surface->width / (float)window->surface->height;
@@ -944,8 +984,25 @@ void platformCloseAudio(void) {
         waveOutReset(hWaveOut);
 
         for (int i = 0; i < 2; i++) {
+            /*  DO NOT FREE A BUFFER THE DRIVER STILL OWNS. The MMRESULT was
+             *  discarded here. waveOutPrepareHeader page-locks the buffer, and
+             *  waveOutUnprepareHeader returns WAVERR_STILLPLAYING rather than
+             *  unlocking it if the driver has not released it yet; freeing it
+             *  anyway hands page-locked memory back to the heap, and the
+             *  waveOutClose below then touches it. The failure surfaces as heap
+             *  corruption at shutdown, which gets blamed on something else.
+             *
+             *  Joining the feeding thread above closes the race that normally
+             *  makes this fire, so this is belt and braces rather than a
+             *  reproduced crash - but it is one comparison.
+             */
             if (waveHeaders[i].dwFlags & WHDR_PREPARED) {
-                waveOutUnprepareHeader(hWaveOut, &waveHeaders[i], sizeof(WAVEHDR));
+                if (waveOutUnprepareHeader(hWaveOut, &waveHeaders[i],
+                                           sizeof(WAVEHDR)) != MMSYSERR_NOERROR) {
+                    /* Leak the buffer deliberately: a leak at process exit is
+                     * strictly better than corrupting the heap on the way out. */
+                    audioBuffers[i] = NULL;
+                }
             }
             if (audioBuffers[i]) {
                 free(audioBuffers[i]);
@@ -1002,12 +1059,43 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
         audioLockInitialized = 1;
     }
 
+    /*  EVERY FAILURE BELOW TEARS DOWN. This function used to allocate the
+     *  buffers, prepare them, queue them and only then create the thread, and if
+     *  CreateThread failed it returned -1 leaving the device open with two
+     *  page-locked buffers permanently queued, an event handle and an
+     *  initialised CRITICAL_SECTION. Nothing ever reclaimed them, because
+     *  soundInit sets soundDisabled on failure (sound.c:138-142) and soundEnd
+     *  early-returns on soundDisabled (sound.c:151-152), so platformCloseAudio
+     *  was never reached. All of it survived to process exit.
+     *
+     *  platformCloseAudio null-checks every member, so it is safe to call
+     *  against the partial state built up here and is reused rather than
+     *  duplicated.
+     */
+
     // Create audio event
     audioEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
+    if (!audioEvent) {
+        /*  Unchecked before, and the consequence was invisible rather than
+         *  loud: AudioThreadProc waits on this handle, so a NULL event makes
+         *  WaitForSingleObject return WAIT_FAILED immediately and the thread
+         *  spins at 100% CPU forever, with no audio and nothing logged. A
+         *  broken run looked exactly like a working one.
+         */
+        lastError = "CreateEvent failed for the audio thread";
+        platformCloseAudio();
+        return -1;
+    }
 
     // Allocate and prepare buffers
     for (int i = 0; i < 2; i++) {
         audioBuffers[i] = (uint8*)malloc(audioBufferSize);
+        if (!audioBuffers[i]) {
+            /* The memset below dereferenced this without checking. */
+            lastError = "Out of memory allocating an audio buffer";
+            platformCloseAudio();
+            return -1;
+        }
         memset(audioBuffers[i], 128, audioBufferSize); // Silence
 
         memset(&waveHeaders[i], 0, sizeof(WAVEHDR));
@@ -1015,15 +1103,29 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
         waveHeaders[i].dwBufferLength = audioBufferSize;
         waveHeaders[i].dwFlags = 0;
 
-        waveOutPrepareHeader(hWaveOut, &waveHeaders[i], sizeof(WAVEHDR));
-        waveOutWrite(hWaveOut, &waveHeaders[i], sizeof(WAVEHDR));
+        if (waveOutPrepareHeader(hWaveOut, &waveHeaders[i], sizeof(WAVEHDR)) != MMSYSERR_NOERROR) {
+            lastError = "waveOutPrepareHeader failed";
+            platformCloseAudio();
+            return -1;
+        }
+        if (waveOutWrite(hWaveOut, &waveHeaders[i], sizeof(WAVEHDR)) != MMSYSERR_NOERROR) {
+            lastError = "waveOutWrite failed queueing the initial buffer";
+            platformCloseAudio();
+            return -1;
+        }
     }
 
     // Start audio thread
     audioThreadRunning = 1;
     audioThread = CreateThread(NULL, 0, AudioThreadProc, NULL, 0, NULL);
+    if (!audioThread) {
+        lastError = "CreateThread failed for the audio thread";
+        audioThreadRunning = 0;
+        platformCloseAudio();
+        return -1;
+    }
 
-    return audioThread ? 0 : -1;
+    return 0;
 }
 
 /**
