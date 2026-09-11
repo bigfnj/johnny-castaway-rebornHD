@@ -40,6 +40,9 @@
 #define MAX_ADS_CHUNKS        100
 #define MAX_ADS_CHUNKS_LOCAL  1
 
+/*  Widest fixed argument list in the ADS opcode table is ADD_SCENE_LOCAL's 5. */
+#define MAX_ADS_ARGS          10
+
 #define OP_ADD_SCENE   0
 #define OP_STOP_SCENE  1
 #define OP_NOP         2
@@ -86,10 +89,56 @@ static int    numThreads       = 0;
 static int    adsStopRequested = 0;
 
 
+/*  Name of the ADS currently being decoded, for diagnostics only. adsPlayChunk
+ *  recurses (GOSUB_TAG) and neither it nor adsLoad is given the resource, so
+ *  this is how a refusal message can say WHICH script was malformed. */
+static const char *adsCurrentName = "script";
+
+
+/*  Argument bytes consumed by an ADS opcode.
+ *
+ *  This mirrors, exactly, the `offset += N<<1` arithmetic already written out in
+ *  both switches below; every opcode not listed advances by nothing, including
+ *  the `default:` tag case. It exists so the decode loops can check that the
+ *  arguments are actually present BEFORE reading them - the loops guarded only
+ *  the opcode, and shipped ADS scripts decode to their exact last byte, so there
+ *  was no slack to absorb a truncated one.
+ */
+static uint32 adsArgBytes(uint16 opcode)
+{
+    switch (opcode) {
+        case 0x1070:                     // IF_LASTPLAYED_LOCAL
+        case 0x1330:                     // IF_UNKNOWN_1
+        case 0x1350:                     // IF_LASTPLAYED
+        case 0x1360:                     // IF_NOT_RUNNING
+        case 0x1370: return 2 << 1;      // IF_IS_RUNNING
+        case 0x1520: return 5 << 1;      // ADD_SCENE_LOCAL
+        case 0x2005: return 4 << 1;      // ADD_SCENE
+        case 0x2010: return 3 << 1;      // STOP_SCENE
+        case 0x3020: return 1 << 1;      // NOP
+        case 0x4000: return 3 << 1;      // UNKNOWN_6
+        case 0xf200: return 1 << 1;      // GOSUB_TAG
+        default:     return 0;
+    }
+}
+
+
+static void adsCheckArgs(uint16 opcode, uint32 opcodeOffset, uint32 offset, uint32 dataSize)
+{
+    uint32 needed = adsArgBytes(opcode);
+
+    if (!peekHasBytes(dataSize, offset, needed))
+        fatalError("ADS %s: opcode %04X at offset %u needs %u argument bytes but only "
+                   "%u of the %u-byte script remain",
+                   adsCurrentName, opcode, opcodeOffset, needed,
+                   dataSize - offset, dataSize);
+}
+
+
 static void adsLoad(uint8 *data, uint32 dataSize, uint16 numTags, uint16 tag, uint32 *tagOffset)
 {
     uint32 offset = 0;
-    uint16 args[10];
+    uint16 args[MAX_ADS_ARGS];
     int bookmarkingChunks = 0;
     int bookmarkingIfNotRunnings = 0;
 
@@ -100,9 +149,12 @@ static void adsLoad(uint8 *data, uint32 dataSize, uint16 numTags, uint16 tag, ui
     adsTags           = safe_malloc(numTags * sizeof(struct TTtmTag));
 
 
-    while (offset < dataSize) {
+    while (peekHasBytes(dataSize, offset, 2)) {
 
-        uint16 opcode = peekUint16(data, &offset);
+        uint32 opcodeOffset = offset;
+        uint16 opcode = peekUint16(data, dataSize, &offset, adsCurrentName);
+
+        adsCheckArgs(opcode, opcodeOffset, offset, dataSize);
 
         switch (opcode) {
 
@@ -110,7 +162,7 @@ static void adsLoad(uint8 *data, uint32 dataSize, uint16 numTags, uint16 tag, ui
 
                 if (bookmarkingChunks) {
                     bookmarkingIfNotRunnings = 0;
-                    peekUint16Block(data, &offset, args, 2);
+                    peekUint16Block(data, dataSize, &offset, args, 2, MAX_ADS_ARGS, adsCurrentName);
                     if (numAdsChunks < MAX_ADS_CHUNKS) {
                         adsChunks[numAdsChunks].scene.slot = args[0];
                         adsChunks[numAdsChunks].scene.tag  = args[1];
@@ -130,7 +182,7 @@ static void adsLoad(uint8 *data, uint32 dataSize, uint16 numTags, uint16 tag, ui
                 // preceding the first IF_LAST_PLAYED or IF_IS_RUNNING
 
                 if (bookmarkingChunks && bookmarkingIfNotRunnings) {
-                    peekUint16Block(data, &offset, args, 2);
+                    peekUint16Block(data, dataSize, &offset, args, 2, MAX_ADS_ARGS, adsCurrentName);
                     if (numAdsChunks < MAX_ADS_CHUNKS) {
                         adsChunks[numAdsChunks].scene.slot = args[0];
                         adsChunks[numAdsChunks].scene.tag  = args[1];
@@ -481,7 +533,7 @@ void adsPlaySingleTtm(const char *ttmName)  // TODO - tempo
 static void adsPlayChunk(uint8 *data, uint32 dataSize, uint32 offset)
 {
     uint16 opcode;
-    uint16 args[10];
+    uint16 args[MAX_ADS_ARGS];
     int inRandBlock          = 0;
     int inOrBlock            = 0;
     int inSkipBlock          = 0;
@@ -489,16 +541,20 @@ static void adsPlayChunk(uint8 *data, uint32 dataSize, uint32 offset)
     int continueLoop         = 1;
 
 
-    while (continueLoop && offset < dataSize) {
+    while (continueLoop && peekHasBytes(dataSize, offset, 2)) {
 
-        opcode = peekUint16(data, &offset);
+        uint32 opcodeOffset = offset;
+
+        opcode = peekUint16(data, dataSize, &offset, adsCurrentName);
+
+        adsCheckArgs(opcode, opcodeOffset, offset, dataSize);
 
         switch (opcode) {
 
             case 0x1070:
                 // Inside an IF_LASTPLAYED chunk, local IF_LASTPLAYED
                 // which overrides the global IF_LASTPLAYEDs.
-                peekUint16Block(data, &offset, args, 2);
+                peekUint16Block(data, dataSize, &offset, args, 2, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("IF_LASTPLAYED_LOCAL");
                 inIfLastplayedLocal = 1;
                 if (numAdsChunksLocal < MAX_ADS_CHUNKS_LOCAL) {
@@ -515,12 +571,12 @@ static void adsPlayChunk(uint8 *data, uint32 dataSize, uint32 offset)
                 //   - one exception: FISHING.ADS tag 3
                 //   - seems to be a synonym of "IF_NOT_RUNNING"
                 //   - if so, our implementation works fine anyway by ignoring this one...
-                peekUint16Block(data, &offset, args, 2);
+                peekUint16Block(data, dataSize, &offset, args, 2, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("IF_UNKNOWN_1 %d %d", args[0], args[1]);
                 break;
 
             case 0x1350:
-                peekUint16Block(data, &offset, args, 2);
+                peekUint16Block(data, dataSize, &offset, args, 2, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("IF_LASTPLAYED %d %d", args[0], args[1]);
 
                 if (!inOrBlock)
@@ -531,14 +587,14 @@ static void adsPlayChunk(uint8 *data, uint32 dataSize, uint32 offset)
                 break;
 
             case 0x1360:
-                peekUint16Block(data, &offset, args, 2);
+                peekUint16Block(data, dataSize, &offset, args, 2, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("IF_NOT_RUNNING %d %d", args[0], args[1]);
                 if (isSceneRunning(args[0], args[1]))
                     inSkipBlock = 1;
                 break;
 
             case 0x1370:
-                peekUint16Block(data, &offset, args, 2);
+                peekUint16Block(data, dataSize, &offset, args, 2, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("IF_IS_RUNNING %d %d", args[0], args[1]);
                 inSkipBlock = !isSceneRunning(args[0], args[1]);
                 break;
@@ -566,7 +622,7 @@ static void adsPlayChunk(uint8 *data, uint32 dataSize, uint32 offset)
 
             case 0x1520:
                 // Only in ACTIVITY.ADS tag 7, after IF_LASTPLAYED_LOCAL
-                peekUint16Block(data, &offset, args, 5);
+                peekUint16Block(data, dataSize, &offset, args, 5, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("ADD_SCENE_LOCAL");
 
                 if (inIfLastplayedLocal) {
@@ -583,7 +639,7 @@ static void adsPlayChunk(uint8 *data, uint32 dataSize, uint32 offset)
                 break;
 
             case 0x2005:
-                peekUint16Block(data, &offset, args, 4);
+                peekUint16Block(data, dataSize, &offset, args, 4, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("ADD_SCENE %d %d %d %d", args[0], args[1], args[2], args[3]);
 
                 if (!inSkipBlock) {               // TODO - TEMPO
@@ -596,7 +652,7 @@ static void adsPlayChunk(uint8 *data, uint32 dataSize, uint32 offset)
                 break;
 
             case 0x2010:
-                peekUint16Block(data, &offset, args, 3);
+                peekUint16Block(data, dataSize, &offset, args, 3, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("STOP_SCENE %d %d %d", args[0], args[1], args[2]);
 
                 if (!inSkipBlock) {              // TODO - TEMPO
@@ -615,7 +671,7 @@ static void adsPlayChunk(uint8 *data, uint32 dataSize, uint32 offset)
                 break;
 
             case 0x3020:
-                peekUint16Block(data, &offset, args, 1);
+                peekUint16Block(data, dataSize, &offset, args, 1, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("NOP");
                 if (inRandBlock)
                     adsRandomNop(args[0]);
@@ -628,7 +684,7 @@ static void adsPlayChunk(uint8 *data, uint32 dataSize, uint32 offset)
                 break;
 
             case 0x4000:
-                peekUint16Block(data, &offset, args, 3);
+                peekUint16Block(data, dataSize, &offset, args, 3, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("UNKNOWN_6");    // only in BUILDING.ADS tag 7
                 break;
 
@@ -637,7 +693,7 @@ static void adsPlayChunk(uint8 *data, uint32 dataSize, uint32 offset)
                 break;
 
             case 0xf200:
-                peekUint16Block(data, &offset, args, 1);
+                peekUint16Block(data, dataSize, &offset, args, 1, MAX_ADS_ARGS, adsCurrentName);
                 debugMsg("GOSUB_TAG %d", args[0]);    // ex UNKNOWN_8
                 // "quick and dirty" implementation, sufficient for
                 // JCastaway : only encountered in STAND.ADS to tag 14
@@ -721,11 +777,35 @@ void adsPlay(const char *adsName, uint16 adsTag)
 
     debugMsg("\n\n========== Playing ADS: %s:%d ==========\n", adsResource->resName, adsTag);
 
+    adsCurrentName = adsResource->resName;
+
     data = adsResource->uncompressedData;
     dataSize = adsResource->uncompressedSize;
 
-    for (int i=0; i < adsResource->numRes; i++)
-        ttmLoadTtm(&ttmSlots[adsResource->res[i].id], adsResource->res[i].name);
+    for (int i=0; i < adsResource->numRes; i++) {
+
+        /*  BOUNDS-CHECK THE SLOT NUMBER, which is a uint16 read straight out of
+         *  the resource file. ttmSlots has MAX_TTM_SLOTS entries and ttmLoadTtm
+         *  writes five fields through the pointer it is handed, so an id of, say,
+         *  60000 is an arbitrary write roughly 1.4 MB past a static array - not
+         *  a read of nonsense, a write. adsAddScene already range-checks the same
+         *  value when a scene is spawned; this load path did not.
+         *
+         *  Refused rather than skipped: every shipped ADS names ids 1..7, so a
+         *  value outside the table means the resource is corrupt, and quietly
+         *  dropping a script's TTM would leave the scene running against an empty
+         *  slot and look like a rendering bug.
+         */
+        uint16 ttmSlotNo = adsResource->res[i].id;
+
+        if (ttmSlotNo >= MAX_TTM_SLOTS)
+            fatalError("ADS %s: resource entry %d ('%s') names TTM slot %u, but only "
+                       "%d slots exist",
+                       adsResource->resName, i, adsResource->res[i].name,
+                       ttmSlotNo, MAX_TTM_SLOTS);
+
+        ttmLoadTtm(&ttmSlots[ttmSlotNo], adsResource->res[i].name);
+    }
 
     adsLoad(data, dataSize, adsResource->numTags, adsTag, &offset);
 

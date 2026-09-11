@@ -55,8 +55,24 @@ uint32 readUint32(FILE *f);
 char   *getString(FILE *f, int maxlen);
 uint8  *readUint8Block(FILE *f, int len);
 uint16 *readUint16Block(FILE *f, int len);
-uint16 peekUint16(uint8 *data, uint32 *offset);
-void   peekUint16Block(uint8 *data, uint32 *offset, uint16 *dest, int len);
+/*  BOUNDED SCRIPT READS.
+ *
+ *  These took no buffer size at all. Every VM loop guarded only the opcode read,
+ *  so an opcode near the end of a script read its arguments off the end of the
+ *  decompressed buffer - and there is no slack to absorb that: measured over the
+ *  shipped archive, all 41 TTM and all 10 ADS scripts decode to EXACTLY their
+ *  own last byte.
+ *
+ *  peekHasBytes() is the guard the decode loops use to stop cleanly; the two
+ *  readers refuse (fatalError, naming the resource, the offset and the size)
+ *  rather than read past the end, so a truncated script cannot be half-executed.
+ *
+ *  `what` names the resource in the diagnostic and may be NULL.
+ */
+int    peekHasBytes(uint32 dataSize, uint32 offset, uint32 nBytes);
+uint16 peekUint16(const uint8 *data, uint32 dataSize, uint32 *offset, const char *what);
+void   peekUint16Block(const uint8 *data, uint32 dataSize, uint32 *offset,
+                       uint16 *dest, int len, int destCapacity, const char *what);
 void   hexdump(uint8 *data, uint32 len);
 int    getDayOfYear(void);
 int    getHour(void);
