@@ -116,9 +116,28 @@ function Invoke-Jc {
 
 Write-Host "`n== the binary answers without touching the archive ==" -ForegroundColor Cyan
 
-It 'version exits 0 and names the engine' {
+It 'version exits 0 and reports the version from CMakeLists' {
+    # Asserts the NUMBER, not just the name. The binary previously printed
+    # "Development version" and the project carried no version at all, so there
+    # was nothing for a release to be consistent with. JC_VERSION now comes from
+    # project(... VERSION ...) as a compile definition, with an "unknown"
+    # fallback for hand-rolled builds - and "unknown" reaching a release is
+    # exactly what this test exists to catch.
+    #
+    # .github/workflows/release.yml refuses to publish when the git tag and that
+    # same CMake version disagree, so tag, source and binary are pinned together.
+    $repo = Split-Path $PSScriptRoot -Parent
+    $cmake = Get-Content (Join-Path $repo 'CMakeLists.txt') -Raw
+    if ($cmake -notmatch 'project\(jc_reborn VERSION (\d+\.\d+\.\d+)') {
+        Write-Host '     no version found in CMakeLists.txt' -ForegroundColor Red
+        return $false
+    }
+    $expected = $Matches[1]
+
     $r = Invoke-Jc @('version') 60
-    ($r.Code -eq 0) -and ($r.Output -match 'Johnny Reborn')
+    ($r.Code -eq 0) -and ($r.Output -match 'Johnny Reborn') -and
+        ($r.Output -match [regex]::Escape($expected)) -and
+        ($r.Output -notmatch 'unknown')
 }
 
 It 'help exits non-zero and lists the new options' {

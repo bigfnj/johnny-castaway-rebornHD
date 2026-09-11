@@ -234,12 +234,21 @@ static void usage(void)
 }
 
 
+/*  JC_VERSION comes from CMakeLists.txt's project(... VERSION ...) as a quoted
+ *  compile definition. The fallback exists so a hand-rolled build (the vs/
+ *  projects, or a bare cc invocation) still compiles and is honest about not
+ *  knowing, rather than silently claiming a version it was not told.
+ */
+#ifndef JC_VERSION
+#define JC_VERSION "unknown"
+#endif
+
 static void version(void)
 {
     printf("\n");
-    printf("    Johnny Reborn, an open-source engine for\n");
+    printf("    Johnny Reborn %s, an open-source engine for\n", JC_VERSION);
     printf("    the classic Johnny Castaway screensaver by Sierra.\n");
-    printf("    Development version Copyright (C) 2019 Jeremie GUILLAUME\n");
+    printf("    Copyright (C) 2019 Jeremie GUILLAUME\n");
     printf("\n");
     exit(0);
 }

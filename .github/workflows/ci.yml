@@ -1,0 +1,103 @@
+# Continuous integration for johnny-castaway-rebornHD.
+#
+# WHY THIS FILE EXISTS. Three of this project's four platforms had not been
+# compiled since a tree reorganisation, and one of them could not compile at all
+# (platform_linux.c used PTHREAD_MUTEX_INITIALIZER with no <pthread.h>). Nothing
+# noticed for months because there was no CI. Worse, docs/CHANGELOG.md and
+# docs/AI_UNDERSTANDING.md both describe edits to a `.github/workflows/main.yml`
+# that never existed, so the repository documented a safety net it did not have.
+#
+# Every job here therefore has to actually FAIL when the thing it guards breaks.
+# Compiling is not the bar: the Windows and Linux jobs run the binary and check
+# its output against a golden corpus.
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  windows:
+    name: Windows (MSVC)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The repo's own gate: configure, build, 15+ smoke tests, and a 2,452-file
+      # golden dump comparison. One exit code. Deliberately NOT re-implemented
+      # here, so CI and a local run cannot drift apart.
+      - name: gate
+        shell: pwsh
+        run: .\gate.ps1
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jc_reborn-windows
+          path: |
+            build/Release/jc_reborn.exe
+            build/Release/scrantic_data.zip
+          if-no-files-found: error
+
+  linux:
+    name: Linux (GCC, X11 + ALSA)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: install toolchain
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq build-essential cmake libx11-dev libasound2-dev
+
+      # Builds, then runs `dump` with no X server and compares every decoded file
+      # against the manifest generated on Windows. A hash that differs is a real
+      # cross-platform decode defect, which is the strongest signal this project
+      # has and costs nothing to check.
+      - name: build and verify decode parity
+        run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/linux-build.sh
+
+  web:
+    name: Web (Emscripten)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: mymindstorm/setup-emsdk@v14
+        with:
+          version: latest
+
+      - name: build
+        run: |
+          emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release
+          cmake --build build_web -j"$(nproc)"
+
+      # The linker emits jc_reborn.js and, via --preload-file, jc_reborn.data.
+      # Asserting all three exist catches a silently half-linked build, which a
+      # bare `cmake --build` exit code does not.
+      - name: verify artifacts
+        run: |
+          set -e
+          for f in jc_reborn.js jc_reborn.wasm jc_reborn.data; do
+            test -s "build_web/$f" || { echo "FAIL missing or empty: $f"; exit 1; }
+            echo "ok   $f ($(stat -c%s "build_web/$f") bytes)"
+          done
+
+      - name: assemble servable page
+        run: cp index.html favicon.ico build_web/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jc_reborn-web
+          path: build_web/
+          if-no-files-found: error

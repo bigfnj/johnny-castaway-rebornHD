@@ -1,0 +1,169 @@
+# Cut a release from a tag.
+#
+# Trigger:  git tag v0.9.0 && git push origin v0.9.0
+#
+# THE TAG AND THE SOURCE MUST AGREE. The first job refuses to publish when the
+# tag does not match project(... VERSION ...) in CMakeLists.txt. Without that
+# check the two drift silently and you end up shipping a binary that prints a
+# different version than the release it is attached to, which is the sort of
+# thing nobody notices until they are debugging a user's bug report against the
+# wrong source.
+#
+# Every artifact is built from the tagged commit by the same CMake the developers
+# use; nothing is uploaded from a workstation.
+
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to build (must already exist)'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  verify-version:
+    name: Tag matches source version
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.check.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: check
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="${{ github.event.inputs.tag || github.ref_name }}"
+          tag_version="${tag#v}"
+
+          # Read the single source of truth rather than a duplicated constant.
+          src_version=$(grep -oP 'project\(jc_reborn VERSION \K[0-9]+\.[0-9]+\.[0-9]+' CMakeLists.txt)
+
+          echo "tag    : $tag  (version $tag_version)"
+          echo "source : $src_version  (CMakeLists.txt)"
+
+          if [ "$tag_version" != "$src_version" ]; then
+            echo "FAIL tag $tag does not match project(... VERSION $src_version ...) in CMakeLists.txt"
+            echo "     bump CMakeLists.txt and re-tag, or tag v$src_version"
+            exit 1
+          fi
+          echo "version=$src_version" >> "$GITHUB_OUTPUT"
+
+  windows:
+    name: Windows package
+    needs: verify-version
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The full gate, not just a build: a release must pass the same smoke and
+      # regression checks a commit does.
+      - shell: pwsh
+        run: .\gate.ps1
+
+      - name: package
+        shell: pwsh
+        run: |
+          $v = '${{ needs.verify-version.outputs.version }}'
+          $stage = "jc_reborn-$v-windows-x64"
+          New-Item -ItemType Directory -Force -Path $stage | Out-Null
+          Copy-Item build/Release/jc_reborn.exe        $stage/
+          Copy-Item build/Release/scrantic_data.zip    $stage/
+          Copy-Item README.md, LICENSE                 $stage/
+          Compress-Archive -Path $stage -DestinationPath "$stage.zip"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: '*.zip'
+          if-no-files-found: error
+
+  linux:
+    name: Linux package
+    needs: verify-version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq build-essential cmake libx11-dev libasound2-dev
+
+      - name: build and verify decode parity
+        run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/linux-build.sh
+
+      - name: package
+        run: |
+          set -euo pipefail
+          v='${{ needs.verify-version.outputs.version }}'
+          stage="jc_reborn-$v-linux-x86_64"
+          mkdir -p "$stage"
+          cp /tmp/jcr/build-linux/jc_reborn "$stage/"
+          cp assets/scrantic_data.zip README.md LICENSE "$stage/"
+          tar czf "$stage.tar.gz" "$stage"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux
+          path: '*.tar.gz'
+          if-no-files-found: error
+
+  web:
+    name: Web package
+    needs: verify-version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: mymindstorm/setup-emsdk@v14
+        with:
+          version: latest
+
+      - run: |
+          emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release
+          cmake --build build_web -j"$(nproc)"
+
+      - name: package
+        run: |
+          set -euo pipefail
+          v='${{ needs.verify-version.outputs.version }}'
+          stage="jc_reborn-$v-web"
+          mkdir -p "$stage"
+          # index.html and favicon.ico are sources, not build output, and nothing
+          # in the build copies them - so a build_web/ directory on its own is
+          # not servable. Assemble the whole page here.
+          cp build_web/jc_reborn.js build_web/jc_reborn.wasm build_web/jc_reborn.data "$stage/"
+          cp index.html favicon.ico README.md LICENSE "$stage/"
+          tar czf "$stage.tar.gz" "$stage"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web
+          path: '*.tar.gz'
+          if-no-files-found: error
+
+  publish:
+    name: Publish GitHub Release
+    needs: [verify-version, windows, linux, web]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+
+      - run: ls -la dist
+
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
+          name: Johnny Reborn ${{ needs.verify-version.outputs.version }}
+          generate_release_notes: true
+          draft: false
+          files: dist/*

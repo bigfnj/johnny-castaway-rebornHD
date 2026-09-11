@@ -17,6 +17,13 @@
 tests/golden-dump.sha256   text eol=lf
 *.sh                       text eol=lf
 
+#   .github/workflows/*.yml  run: blocks execute under bash on the runners. CRLF
+#       there produces "\r: command not found" exactly as it does in a .sh file,
+#       and the failure surfaces as a broken CI job rather than anything that
+#       points at line endings.
+*.yml                      text eol=lf
+*.yaml                     text eol=lf
+
 # Binary assets: never touched, never diffed as text.
 *.zip    binary
 *.ico    binary

@@ -1,5 +1,16 @@
 cmake_minimum_required(VERSION 3.10)
-project(jc_reborn C)
+
+# ── Version, single source of truth ───────────────────────────────────────────
+# Releases are cut from git tags (v0.9.0, v1.0.0, ...) and .github/workflows/
+# release.yml REFUSES to publish when the tag and this number disagree, so the
+# two cannot drift. `jc_reborn version` prints this, which it previously could
+# not: it said "Development version" and the project carried no version at all.
+#
+# 0.9.x while the Windows .scr screensaver support is still landing. The engine
+# itself is in good shape; the thing this project is named for is not finished.
+project(jc_reborn VERSION 0.9.0 LANGUAGES C)
+
+set(JC_VERSION_STRING "${PROJECT_VERSION}")
 
 # Set C standard
 set(CMAKE_C_STANDARD 11)
@@ -119,6 +130,12 @@ endif()
 if(APPLE)
     set_source_files_properties(platform/platform_macos.m PROPERTIES COMPILE_FLAGS "-x objective-c")
 endif()
+
+# The version reaches the binary as a define rather than a generated header, so
+# there is nothing to regenerate, nothing to gitignore, and no chance of a stale
+# copy being compiled. JC_VERSION is quoted here so the C side needs no stringify
+# dance.
+target_compile_definitions(jc_reborn PRIVATE JC_VERSION="${JC_VERSION_STRING}")
 
 # Include directories — one entry per source family so #include "foo.h" works
 # regardless of which subdir the including .c lives in.
