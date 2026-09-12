@@ -6,8 +6,10 @@ cmake_minimum_required(VERSION 3.10)
 # two cannot drift. `jc_reborn version` prints this, which it previously could
 # not: it said "Development version" and the project carried no version at all.
 #
-# 0.9.x while the Windows .scr screensaver support is still landing. The engine
-# itself is in good shape; the thing this project is named for is not finished.
+# 0.9.x. The .scr landed 2026-09-11: /s, /c and /p all work, it was verified by
+# actually registering it in Windows and selecting it, and the /p preview path is
+# asserted by the gate. What keeps this below 1.0 is macOS, which is built and
+# tested nowhere, and the open items in BACKLOG.md.
 project(jc_reborn VERSION 0.9.0 LANGUAGES C)
 
 set(JC_VERSION_STRING "${PROJECT_VERSION}")

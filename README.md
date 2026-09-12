@@ -6,10 +6,17 @@ It is written in C and has been refactored to use platform-native APIs instead o
 
 ## Supported Platforms
 
-- **macOS**: Uses Cocoa for graphics and CoreAudio for sound
-- **Linux**: Uses X11 for graphics and ALSA for sound  
-- **Windows**: Uses Win32 API for graphics and WinMM (waveOut) for sound
-- **Web**: Uses HTML5 Canvas and Web Audio API (via Emscripten)
+| Platform | Backend | Built | Tested |
+|---|---|---|---|
+| **Windows** | Win32 + WinMM (waveOut) | CI | 27 smoke, 7 screensaver, 2,452-file decode corpus |
+| **Linux** | X11 + ALSA | CI | decode output byte-identical to Windows |
+| **Web** | HTML5 Canvas + Web Audio (Emscripten) | CI | headless-browser smoke |
+| **macOS** | Cocoa + CoreAudio | **nowhere** | **none** |
+
+**macOS is unverified.** It is not in CI, has not been compiled, and its most
+recent fixes were written by reading the code alone. There is also an unresolved
+question about whether its frame renders upside down. Treat it as unsupported
+until someone with a Mac builds it. See `BACKLOG.md`.
 
 
 ## How to install
@@ -22,7 +29,8 @@ The archive contains the original game data and the pre-extracted sound files:
 
     data/RESOURCE.MAP
     data/RESOURCE.001
-    data/sound0.wav .. sound24.wav
+    data/sound0.wav .. sound24.wav   (23 files: 11 and 13 do not exist,
+                                      and 0 ships but is never loaded)
 
 It may also contain optional HD (PNG) replacement assets under `data/hd/`.
 See `docs/HD_README.md` for the full zip layout and HD details.
@@ -188,7 +196,7 @@ The `holiday` option controls seasonal decorations on the island. By default (`a
 
 | Holiday       | Dates          |
 |---------------|----------------|
-| Halloween     | Oct 28 – Oct 31 |
+| Halloween     | Oct 29 – Oct 31 |
 | St. Patrick's | Mar 15 – Mar 17 |
 | Christmas     | Dec 23 – Dec 25 |
 | New Year      | Dec 29 – Jan 1  |
@@ -251,11 +259,14 @@ find its data.
 /s          - run full screen (what the screen saver actually does)
 /c          - show the settings dialog
 /p <hwnd>   - draw the preview inside the small monitor in the Settings dialog
+/a          - password change on very old Windows; accepted and ignored, so the
+              shell never sees an error
 ```
 
-Mouse movement past a small dead zone ends it, as does any key, a click, or loss
-of focus. In `/p` preview mode it draws as a child of the supplied window and
-never takes the foreground.
+Mouse movement past an 8-pixel dead zone ends it, as does any key or a mouse
+click. It does **not** yet exit on losing focus: no Win32 focus message is
+handled at all, which is a gap rather than a decision. In `/p` preview mode it
+draws as a child of the supplied window and never takes the foreground.
 
 Because it is the same binary, every option above still works for debugging:
 
@@ -274,6 +285,16 @@ It stores the current in-story day (1–11) and the last-run calendar date. When
 
 
 ## Current status
+
+**`BACKLOG.md` is the state of record.** It lists the open items with their
+reachability stated per item, and records findings that were investigated and
+rejected, so they do not get raised twice. The two sections below describe engine
+accuracy and are inherited from the upstream project; they predate the screensaver,
+the HD assets, the test suite and CI, so read them as history rather than status.
+
+Where it stands as of 2026-09-12: version 0.9.0, a real Windows `.scr` with `/s`,
+`/c` and `/p`, HD PNG assets on all four backends, real Web audio, and CI building
+and testing Windows, Linux and Web on every push. macOS is the gap.
 
 ### Short version
 Currently, Johnny reborn is in "work in progress" state. Every scene works with only some inaccuracies here and there.

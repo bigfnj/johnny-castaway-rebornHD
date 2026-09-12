@@ -201,6 +201,13 @@ consistently mono one. Fix both together, or not at all.
   both or it is destroyed on the next day rollover.
 - Fullscreen is primary-monitor only (`MONITOR_DEFAULTTOPRIMARY`). On a
   multi-monitor machine the other screens are left showing the desktop.
+- **It does not exit on losing focus.** `WindowProc` handles no `WM_KILLFOCUS`,
+  `WM_ACTIVATE` or `WM_ACTIVATEAPP`, and `PlatformEventType` has no focus member,
+  so a screensaver that somehow ends up behind another window keeps running. A
+  real screensaver gives way. Note when implementing it that `/p` preview is a
+  `WS_CHILD` window which never holds focus, so the handler must be gated on
+  `evScreensaverMode` and the preview path excluded, or preview will exit
+  immediately.
 
 ### Cross-platform contract gaps
 

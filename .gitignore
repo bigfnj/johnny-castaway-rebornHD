@@ -49,3 +49,7 @@ KILO.md
 .clinerules
 .codex/
 SESSION_*
+# .claude/ holds per-machine session and worktree state. It was the one hole in
+# this list: empty today, so git never surfaced it, and it would have appeared as
+# untracked the first time a tool wrote settings into it.
+.claude/
