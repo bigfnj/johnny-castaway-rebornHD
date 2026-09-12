@@ -86,6 +86,11 @@ void platformShutdown(void) {
     // Cleanup
 }
 
+/* Screensaver preview is a Windows concept; nothing to do here. See platform.h. */
+void platformSetPreviewParent(void* parentWindowHandle) {
+    UNUSED(parentWindowHandle);
+}
+
 // Window management
 PlatformWindow* platformCreateWindow(const char* title, int width, int height, int fullscreen) {
     PlatformWindow* window = (PlatformWindow*)malloc(sizeof(PlatformWindow));
@@ -545,9 +550,31 @@ void platformDelay(uint32 ms) {
     emscripten_sleep(ms);
 }
 
+/*  THE ONLY THING STOPPING THE TAB FROM FREEZING.
+ *
+ *  A zero-length asyncify sleep still unwinds the wasm stack and returns to the
+ *  browser event loop, so the page repaints and stays responsive. Without an
+ *  unconditional per-frame yield the engine can run arbitrarily long without
+ *  ever reaching the conditional sleep in eventsWaitTick - certainly under
+ *  `maxspeed`, and in practice whenever a frame's own work outlasts its delay.
+ */
+/* Defined with the audio code below; declared here because platformFrameYield
+ * is the only caller and sits above it. */
+static void webAudioPump(void);
+
+void platformFrameYield(void) {
+    /* Top up the audio queue before yielding, so the buffer the browser plays
+     * while we are unwound is already scheduled. */
+    webAudioPump();
+    emscripten_sleep(0);
+}
+
 // Audio (Web Audio API)
 static PlatformAudioCallback audioCallback = NULL;
 static void* audioUserData = NULL;
+static uint8* webAudioBuf = NULL;
+static int webAudioFrames = 0;
+static int webAudioRate = 22050;
 
 /**
  * platformInitAudio()
@@ -570,11 +597,19 @@ int platformInitAudio(void) {
  * Closes the audio device and stops any active playback.
  */
 void platformCloseAudio(void) {
+    audioCallback = NULL;
+    audioUserData = NULL;
+
+    free(webAudioBuf);
+    webAudioBuf = NULL;
+    webAudioFrames = 0;
+
     EM_ASM({
         if (window.audioContext) {
             window.audioContext.close();
             window.audioContext = null;
         }
+        window.jcAudioNext = 0;
     });
 }
 
@@ -586,25 +621,99 @@ void platformCloseAudio(void) {
 
  */
 int platformOpenAudio(PlatformAudioSpec* spec) {
+    /*  A REAL IMPLEMENTATION, replacing a stub.
+     *
+     *  What was here created a ScriptProcessorNode whose onaudioprocess body was
+     *  the comment "Audio processing would be done here". audioCallback was
+     *  stored and never read anywhere in this file, so the engine's mixer was
+     *  never once invoked: the web build was silent by construction while
+     *  soundInit still decoded every WAV in the archive at startup, and README
+     *  advertised Web Audio.
+     *
+     *  PUSH, not pull. A ScriptProcessorNode pulls from a JS callback, which
+     *  would have to re-enter wasm from an event handler - awkward under
+     *  ASYNCIFY, and ScriptProcessorNode is deprecated anyway. Instead the
+     *  engine fills a buffer and schedules it onto the AudioContext clock, kept
+     *  a fixed distance ahead of currentTime. That needs no exported symbols and
+     *  no JS-to-wasm re-entry, and it self-regulates: if the frame loop stalls,
+     *  the queue drains and refills rather than drifting permanently.
+     */
     audioCallback = spec->callback;
     audioUserData = spec->userdata;
 
-    // Setup Web Audio via JavaScript
+    webAudioRate = spec->freq;
+    webAudioFrames = spec->samples > 0 ? spec->samples : 1024;
+
+    free(webAudioBuf);
+    webAudioBuf = (uint8*)malloc((size_t)webAudioFrames);
+    if (!webAudioBuf) {
+        lastError = "Out of memory allocating the web audio buffer";
+        webAudioFrames = 0;
+        return -1;
+    }
+    memset(webAudioBuf, 128, (size_t)webAudioFrames);   /* 128 == silence, 8-bit unsigned */
+
     EM_ASM({
         if (!window.audioContext) return;
-
-        var bufferSize = $0;
-        var sampleRate = $1;
-
-        window.audioProcessor = window.audioContext.createScriptProcessor(bufferSize, 0, 1);
-        window.audioProcessor.onaudioprocess = function(e) {
-            // Audio processing would be done here
-        };
-
-        window.audioProcessor.connect(window.audioContext.destination);
-    }, spec->samples, spec->freq);
+        window.jcAudioNext = 0;
+    });
 
     return 0;
+}
+
+
+/*  Keep roughly a quarter second of audio queued ahead of the context clock.
+ *
+ *  Called once per frame from platformFrameYield. The guard bounds how many
+ *  buffers a single call may schedule, so a long stall cannot turn into an
+ *  unbounded catch-up loop that blocks the frame it was meant to unblock.
+ */
+static void webAudioPump(void) {
+    if (!audioCallback || !webAudioBuf || webAudioFrames <= 0)
+        return;
+
+    for (int guard = 0; guard < 8; guard++) {
+
+        int wantMore = EM_ASM_INT({
+            var ctx = window.audioContext;
+            if (!ctx || ctx.state !== 'running') return 0;
+            var now = ctx.currentTime;
+            if (!window.jcAudioNext || window.jcAudioNext < now) {
+                window.jcAudioNext = now;
+            }
+            return (window.jcAudioNext - now) < 0.25 ? 1 : 0;
+        });
+
+        if (!wantMore)
+            return;
+
+        audioCallback(audioUserData, webAudioBuf, webAudioFrames);
+
+        EM_ASM({
+            var ctx = window.audioContext;
+            if (!ctx) return;
+            /* One declaration per statement: EM_ASM is a variadic macro and the C
+             * preprocessor splits on top-level commas. Braces do not protect
+             * them, only parentheses do, so `var a = $0, b = $1;` becomes two
+             * macro arguments and the build fails with "expected expression". */
+            var ptr = $0;
+            var len = $1;
+            var rate = $2;
+
+            var buf = ctx.createBuffer(1, len, rate);
+            var ch = buf.getChannelData(0);
+            /* 8-bit unsigned PCM, 128 is silence. */
+            for (var i = 0; i < len; i++) {
+                ch[i] = (HEAPU8[ptr + i] - 128) / 128.0;
+            }
+
+            var src = ctx.createBufferSource();
+            src.buffer = buf;
+            src.connect(ctx.destination);
+            src.start(window.jcAudioNext);
+            window.jcAudioNext += len / rate;
+        }, webAudioBuf, webAudioFrames, webAudioRate);
+    }
 }
 
 /**

@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Johnny Castaway Reborn</title>
+        <link rel="icon" href="favicon.ico">
     </head>
     <body>
         <style>
@@ -21,24 +22,81 @@
                 display: table-cell;
                 vertical-align: middle;
             }
+
+            canvas {
+                max-width: 100%;
+                height: auto;
+            }
         </style>
         <canvas id="canvas" width="640" height="480" oncontextmenu="event.preventDefault()"></canvas>
         <script type='text/javascript'>
+            //  ARGUMENTS FROM THE URL.
+            //
+            //  Module previously defined only `canvas`, so no command-line option could
+            //  ever reach the engine in a browser: `frames`, `seed`, `nosound`, `night`
+            //  and `day` were unreachable and the page could only run the default
+            //  forever-loop. That also made the web target impossible to test
+            //  automatically, because a bounded run was not expressible.
+            //
+            //  ?args=nosound+seed+9+frames+400  ->  argv for main().
+            //  Only tokens the engine already accepts are passed through; the engine
+            //  validates them and nothing here can invent new behaviour.
+            var jcArgs = [];
+            try {
+                var q = new URLSearchParams(window.location.search).get('args');
+                if (q) {
+                    jcArgs = q.split(/[\s,+]+/).filter(function (t) { return t.length > 0; });
+                }
+            } catch (e) {
+                // URLSearchParams missing: run with defaults rather than failing to start.
+            }
+
+            //  A VISIBLE ERROR SURFACE. Without print/printErr the engine's fatalError
+            //  went nowhere a user would look: the page simply stopped, with the reason
+            //  only in devtools. A missing data file looked identical to a hang.
+            var jcLog = [];
             var Module = {
-                canvas: (function() { return document.getElementById('canvas'); })()
+                canvas: (function () { return document.getElementById('canvas'); })(),
+                arguments: jcArgs,
+                print: function (text) { jcLog.push(text); console.log(text); },
+                printErr: function (text) {
+                    jcLog.push(text);
+                    console.error(text);
+                    if (/Fatal error/i.test(text)) {
+                        document.title = 'Johnny Castaway Reborn - error';
+                    }
+                },
+                // Consumed by the automated browser test to know loading finished.
+                onRuntimeInitialized: function () { window.jcReady = true; },
+                // And to know the engine EXITED, which is a different event
+                // entirely. With -sNO_EXIT_RUNTIME the page is not unloaded and
+                // calledRun says only that startup finished, so without this
+                // there is no way to distinguish "still running" from "finished".
+                onExit: function (code) { window.jcExitCode = code; }
             };
-            // Work-around chromium autoplay policy for Web Audio API
-            function resumeAudio(e) {
-                if (typeof window.audioContext !== 'undefined' && window.audioContext.state === 'suspended') {
+            // Exposed so a test (or a curious user) can read what the engine printed.
+            window.jcLog = jcLog;
+
+            //  AUTOPLAY POLICY. A browser will not start an AudioContext without a user
+            //  gesture, so this resumes it on the first click on the canvas.
+            //
+            //  CLICK ONLY, deliberately. The previous version also listened for keydown,
+            //  which is self-defeating: with hot keys disabled - the default - the engine
+            //  treats ANY key as "quit the screensaver" and calls exit(255). The very
+            //  gesture documented to unmute the audio terminated the program before a
+            //  sample could play.
+            function resumeAudio() {
+                if (typeof window.audioContext === 'undefined' || !window.audioContext) {
+                    return;
+                }
+                if (window.audioContext.state === 'suspended') {
                     window.audioContext.resume();
                 }
-                if (typeof window.audioContext !== 'undefined' && window.audioContext.state === 'running') {
+                if (window.audioContext.state === 'running') {
                     document.getElementById('canvas').removeEventListener('click', resumeAudio);
-                    document.removeEventListener('keydown', resumeAudio);
                 }
             }
             document.getElementById('canvas').addEventListener('click', resumeAudio);
-            document.addEventListener('keydown', resumeAudio);
         </script>
         <script src="jc_reborn.js"></script>
     </body>
