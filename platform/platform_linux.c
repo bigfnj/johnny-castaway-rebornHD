@@ -46,6 +46,11 @@ struct PlatformWindow {
 
 static PlatformWindow* mainWindow = NULL;
 
+/* Screensaver preview is a Windows concept; nothing to do here. See platform.h. */
+void platformSetPreviewParent(void* parentWindowHandle) {
+    UNUSED(parentWindowHandle);
+}
+
 // Initialize platform
 int platformInit(void) {
     display = XOpenDisplay(NULL);
@@ -135,6 +140,17 @@ void platformDestroyWindow(PlatformWindow* window) {
             platformFreeSurface(window->surface);
         }
         XDestroyWindow(display, window->window);
+
+        /*  Clear the singleton BEFORE freeing, exactly as the Windows backend
+         *  does. platformShowCursor and platformPollEvent both reach through
+         *  this pointer, and a NULL check cannot tell "freed" from "valid". No
+         *  current caller dispatches after teardown - every graphicsEnd() is
+         *  followed by exit() - so this is latent, but it is the same invariant
+         *  Windows was already fixed to hold and Linux is where the stale
+         *  pointer would actually be dereferenced. */
+        if (mainWindow == window)
+            mainWindow = NULL;
+
         free(window);
     }
 }
@@ -611,6 +627,10 @@ uint32 platformGetTicks(void) {
  */
 void platformDelay(uint32 ms) {
     usleep(ms * 1000);
+}
+
+/* Preemptively scheduled: nothing to yield to. See platform.h. */
+void platformFrameYield(void) {
 }
 
 // Audio

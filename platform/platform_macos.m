@@ -105,10 +105,27 @@ int platformInit(void) {
 }
 
 void platformShutdown(void) {
+    /*  NO [NSApp terminate:]. It does not return - it runs the app's termination
+     *  sequence and calls exit() itself - and platformShutdown is called from
+     *  graphicsEnd(), which main() invokes BEFORE zipvfs_shutdown(). So on macOS
+     *  the process died inside this function and the archive was never closed.
+     *
+     *  Letting it return costs nothing: every caller either exits immediately
+     *  afterwards or is finishing main(), so the process still terminates, but
+     *  now it does so after the cleanup that was being skipped.
+     *
+     *  UNVERIFIED: changed by reading, not by running. There is no Mac available
+     *  to this work, and the CI matrix has no macOS job.
+     */
     @autoreleasepool {
         [eventQueue release];
-        [NSApp terminate:nil];
+        eventQueue = nil;
     }
+}
+
+/* Screensaver preview is a Windows concept; nothing to do here. See platform.h. */
+void platformSetPreviewParent(void* parentWindowHandle) {
+    UNUSED(parentWindowHandle);
 }
 
 // Window management
@@ -189,7 +206,12 @@ void platformUpdateWindow(PlatformWindow* window) {
 }
 
 PlatformSurface* platformGetWindowSurface(PlatformWindow* window) {
-    return window->surface;
+    /*  The other three backends all guard this; macOS was the only one that
+     *  dereferenced unconditionally, so a NULL window crashed here and returned
+     *  NULL everywhere else. UNVERIFIED like the rest of this file - there is no
+     *  Mac to build on - but it is a plain C-level divergence, independent of
+     *  any Cocoa behaviour. */
+    return window ? window->surface : NULL;
 }
 
 // Surface management
@@ -489,6 +511,10 @@ void platformDelay(uint32 ms) {
     usleep(ms * 1000);
 }
 
+/* Preemptively scheduled: nothing to yield to. See platform.h. */
+void platformFrameYield(void) {
+}
+
 // Audio
 static AudioQueueRef audioQueue = NULL;
 static PlatformAudioCallback audioCallback = NULL;
@@ -540,11 +566,22 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
     
     int bufferSize = spec->samples * spec->channels;
     for (int i = 0; i < 3; i++) {
-        AudioQueueAllocateBuffer(audioQueue, bufferSize, &audioBuffers[i]);
+        /*  The OSStatus was discarded and the very next line dereferenced the
+         *  buffer, so a failed allocation was a null dereference rather than a
+         *  reported failure. UNVERIFIED: no Mac available.
+         */
+        OSStatus bufStatus = AudioQueueAllocateBuffer(audioQueue, bufferSize,
+                                                      &audioBuffers[i]);
+        if (bufStatus != 0 || audioBuffers[i] == NULL) {
+            lastError = "Failed to allocate an audio queue buffer";
+            AudioQueueDispose(audioQueue, true);
+            audioQueue = NULL;
+            return -1;
+        }
         audioBuffers[i]->mAudioDataByteSize = bufferSize;
         audioOutputCallback(NULL, audioQueue, audioBuffers[i]);
     }
-    
+
     return 0;
 }
 

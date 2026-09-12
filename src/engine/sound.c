@@ -46,6 +46,15 @@ int soundDisabled = 0;
 static struct TSound sounds[NUM_OF_SOUNDS];
 static struct TSound *currentSound;
 
+/*  Tracked separately from soundDisabled, because the two answer different
+ *  questions. soundDisabled means "do not try to play anything"; this means
+ *  "the device is open and must be closed". Conflating them is what leaked
+ *  every decoded WAV below.
+ *
+ *  There is no flag for platformInitAudio because platform.h declares no
+ *  counterpart to it - platformCloseAudio pairs with platformOpenAudio. */
+static int audioOpened = 0;
+
 static uint8  *currentPtr;
 static uint32 currentRemaining;
 
@@ -140,6 +149,7 @@ void soundInit(void)
         soundDisabled = 1;
         return;
     }
+    audioOpened = 1;
 
     currentRemaining = 0;
     platformPauseAudio(0);
@@ -148,14 +158,40 @@ void soundInit(void)
 
 void soundEnd(void)
 {
-    if (soundDisabled)
-        return;
+    /*  RELEASE WHAT WAS ACQUIRED, not "everything or nothing".
+     *
+     *  This used to open with `if (soundDisabled) return;`, and that guard tests
+     *  the wrong thing: soundDisabled is set by the failure of
+     *  platformOpenAudio, which happens AFTER the loop above has already decoded
+     *  up to 24 WAV files into sounds[].data. So the one path where teardown
+     *  mattered most was the one path that skipped it entirely, and every
+     *  decoded buffer leaked.
+     *
+     *  Not a hypothetical: platformOpenAudio fails on any host with no ALSA
+     *  default device, which is the ordinary state of a container or a headless
+     *  CI runner.
+     *
+     *  Each resource is now released on the strength of its own flag, so a
+     *  partially initialised sound system unwinds exactly as far as it got. */
+    if (audioOpened) {
+        platformCloseAudio();
+        audioOpened = 0;
+    }
 
-    platformCloseAudio();
-
-    for (int i=0; i < NUM_OF_SOUNDS; i++)
-        if (sounds[i].data != NULL)
+    for (int i=0; i < NUM_OF_SOUNDS; i++) {
+        if (sounds[i].data != NULL) {
             platformFreeWAV(sounds[i].data);
+            sounds[i].data = NULL;
+            sounds[i].length = 0;
+        }
+    }
+
+    /*  currentSound/currentPtr point INTO the buffers just freed. Leaving them
+     *  set would turn any stray soundPlay or mixer callback after teardown into
+     *  a use-after-free. */
+    currentSound     = NULL;
+    currentPtr       = NULL;
+    currentRemaining = 0;
 }
 
 

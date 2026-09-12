@@ -250,7 +250,15 @@ static void adsLoad(uint8 *data, uint32 dataSize, uint16 numTags, uint16 tag, ui
 
 static void adsReleaseAds(void)
 {
+    /*  NULL the pointer and zero the count, for the same reason ttmResetSlot and
+     *  adsReleaseIsland do: a freed pointer left in a file-static is a
+     *  use-after-free waiting for its first caller. adsFindTag is the only
+     *  reader and today it cannot run outside an active adsPlay session, so this
+     *  is hygiene rather than a live fix - but it is the one place in this file
+     *  that missed the hardening the rest of it got. */
     free(adsTags);
+    adsTags    = NULL;
+    adsNumTags = 0;
 }
 
 

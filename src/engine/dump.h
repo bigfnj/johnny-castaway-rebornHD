@@ -27,7 +27,11 @@
 #include "mytypes.h"
 
 void dumpAllResources(void);
-void generateXpm(uint16 width, uint16 height, uint8 *data);
+/*  generateXpm() was declared here and defined nowhere in the tree - dead in the
+ *  strongest sense, since any caller would have failed to link. dumpBmp() and
+ *  dumpScr() each carry their own copy of the XPM-writing loop; this looks like
+ *  the prototype of a factor-out that never happened. Removed rather than left
+ *  as an invitation. */
 
 #endif /* DUMP_H */
 
