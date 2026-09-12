@@ -31,7 +31,7 @@ jobs:
     name: Windows (MSVC)
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # The repo's own gate: configure, build, 15+ smoke tests, and a 2,452-file
       # golden dump comparison. One exit code. Deliberately NOT re-implemented
@@ -40,12 +40,13 @@ jobs:
         shell: pwsh
         run: .\gate.ps1
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: jc_reborn-windows
           path: |
             build/Release/jc_reborn.exe
+            build/Release/jc_reborn.scr
             build/Release/scrantic_data.zip
           if-no-files-found: error
 
@@ -53,7 +54,7 @@ jobs:
     name: Linux (GCC, X11 + ALSA)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: install toolchain
         run: |
@@ -71,7 +72,7 @@ jobs:
     name: Web (Emscripten)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: mymindstorm/setup-emsdk@v14
         with:
@@ -94,9 +95,20 @@ jobs:
           done
 
       - name: assemble servable page
+        # index.html and favicon.ico are sources, not build output, and nothing
+        # in the build copies them - so build_web/ on its own is not servable.
         run: cp index.html favicon.ico build_web/
 
-      - uses: actions/upload-artifact@v4
+      # "It compiled" was the only bar this target ever had to clear, and it was
+      # clearing it while being silent and able to freeze the tab. Neither is
+      # visible to a linker, so the page is actually loaded in a browser.
+      - name: browser smoke test
+        run: |
+          python -m pip install --quiet playwright
+          python -m playwright install --with-deps chromium
+          python tests/web-smoke.py build_web
+
+      - uses: actions/upload-artifact@v7
         with:
           name: jc_reborn-web
           path: build_web/

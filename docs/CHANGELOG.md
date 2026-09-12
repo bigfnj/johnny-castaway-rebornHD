@@ -85,6 +85,8 @@ Root-level files preserved: CMakeLists.txt, README.md, LICENSE, index.html, favi
 
 **.github/workflows/main.yml** — Windows cross-compile job's toolchain path `-DCMAKE_TOOLCHAIN_FILE=../toolchain-mingw.cmake` → `-DCMAKE_TOOLCHAIN_FILE=../cmake/toolchain-mingw.cmake`.
 
+> ⚠ **Correction (2026-09-11).** This entry is not true: `.github/workflows/main.yml` has never existed in this repository, so no such edit was made. Real workflows were added 2026-09-11 as `ci.yml` and `release.yml`. Left in place rather than deleted, because the belief that CI existed is exactly why three of four platforms went unbuilt for months.
+
 **vs/jc_reborn/jc_reborn.vcxproj + .filters** — all 45+ `ClCompile Include` and `ClInclude Include` paths rewritten with correct subtree prefix (`..\..\src\engine\`, `..\..\platform\`, `..\..\third_party\miniz\`, `..\..\src\data\`). `AdditionalIncludeDirectories` updated per-configuration (Debug/Release Win32/x64 + Publish x64) from `$(SolutionDir)..;` to `$(SolutionDir)..\src\engine;$(SolutionDir)..\src\data;$(SolutionDir)..\platform;$(SolutionDir)..\third_party\miniz;`. Filters file also reorganized into `Source Files\Engine`, `Source Files\Platform`, `Source Files\Third Party\miniz`, and matching Header Files folders so the Solution Explorer view mirrors the disk layout.
 
 **vs/extract_sound/extract_sound.vcxproj** — updated `..\..\utils.c` → `..\..\src\engine\utils.c` (+ mytypes.h and utils.h paths); `AdditionalIncludeDirectories` narrowed to `$(SolutionDir)..\src\engine;`.
@@ -343,6 +345,8 @@ Also added `png_decoder.c` to COMMON_SOURCES.
 **5. .github/workflows/main.yml — web artifact now bundles the .data file**
 
 Previously the web job tar'd `jc_reborn.js jc_reborn.wasm index.html`. Added `jc_reborn.data` since `--preload-file` produces it as a separate artifact now.
+
+> ⚠ **Correction (2026-09-11).** Also untrue: there was no web job, because there was no workflow file. The real web packaging step lives in `release.yml` and does bundle `jc_reborn.data`, along with `index.html` and `favicon.ico`, which are sources the build never copies.
 
 **6. build_web.ps1 — parameterize hardcoded paths (gotcha #3)**
 

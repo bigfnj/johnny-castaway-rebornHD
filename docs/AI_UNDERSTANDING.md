@@ -58,15 +58,21 @@ Total source ~250 KB C/H (engine ~5-7 KLOC) + miniz (vendored, ~400 KB). 19 engi
 
 **VS project:** `vs/jc_reborn.sln` + `vs/jc_reborn/jc_reborn.vcxproj` + `.filters` + `jc_reborn.ico` + `jc_reborn.rc`. Also `vs/extract_sound/` and `vs/extract_walk_data/` for the two tools.
 
-**CI** (`.github/workflows/main.yml`): trigger on push/PR to `master`; 4 parallel build jobs + `release` job gated on `push && ref == master`:
+**CI.** ⚠ Everything this document previously said about
+`.github/workflows/main.yml` was fiction: **that file never existed in this
+repository.** A detailed job matrix was described here, and `docs/CHANGELOG.md`
+twice recorded edits to it, for a workflow nobody had written. Nothing was built
+anywhere but one developer's Windows machine, which is how three of the four
+platforms came to be broken at once - Linux would not compile at all.
 
-| Job | Runner | Steps |
+The real workflows, added 2026-09-11:
+
+| File | Trigger | Jobs |
 |---|---|---|
-| `macos` | macos-latest | cmake + build; artifact `jc_reborn_macos_v0<run>` |
-| `linux` | ubuntu-latest | apt install `libx11-dev libasound2-dev`; cmake + build; artifact `jc_reborn_linux_v0<run>` |
-| `windows` | ubuntu-latest (cross) | apt install `mingw-w64`; cmake `-DCMAKE_TOOLCHAIN_FILE=../cmake/toolchain-mingw.cmake`; build; artifact `jc_reborn_windows_v0<run>.exe` |
-| `web` | ubuntu-latest | `mymindstorm/setup-emsdk@v12`; emcmake + build; tar `jc_reborn.js jc_reborn.wasm jc_reborn.data index.html` |
-| `release` | ubuntu-latest | Download all artifacts; `actions/create-release@v1` with tag `v0.<run>`; upload 4 release assets |
+| `.github/workflows/ci.yml` | push / PR | `windows` runs `gate.ps1` (build + smoke + 2,452-file regression); `linux` runs `tests/linux-build.sh` and asserts decode output is byte-identical to the Windows manifest; `web` builds under emsdk and runs `tests/web-smoke.py` in headless Chromium |
+| `.github/workflows/release.yml` | tag `v*`, or manual dispatch | `verify-version` refuses to publish unless the tag matches `project(jc_reborn VERSION ...)`; then Windows, Linux and Web packaging jobs; then `publish` |
+
+macOS is **not** in CI and is not built anywhere. See `BACKLOG.md`.
 
 Repo layout on disk (after 2026-04-21 structural reorg):
 ```
@@ -216,7 +222,18 @@ PlatformSurface* platformLoadPNGFromMemory(const uint8* data, size_t size);
 5. `platformCreateSurfaceFrom(pixels, w, h, stride)` → returned as-is.
 6. Always-run cleanup releases all COM interfaces.
 
-Non-Windows: HD PNG fallback path is inactive; engine uses built-in BMP decoder at `grScale × grScale` nearest-neighbor upscaling (see `graphics.c:675-695`).
+Non-Windows: **the HD PNG path is active**, and has been since `png_decoder.c`
+landed - this line previously claimed it was inactive. Linux, macOS and Web
+decode the same HD PNGs through that decoder; the built-in BMP decoder with
+`grScale × grScale` nearest-neighbour upscaling (`graphics.c:675-695`) is the
+fallback for assets with no HD variant, on every platform including Windows.
+
+The decoder premultiplies alpha, because all four blitters implement
+premultiplied source-over and WIC already returns `32bppPBGRA` on Windows.
+That makes no visible difference to the shipped art - measured across all 2,402
+HD PNGs, 39,254,880 pixels, alpha is strictly 0 or 255, where the two
+representations are identical - but it is what keeps the four platforms
+consistent if anti-aliased art is ever added.
 
 ---
 
@@ -903,13 +920,18 @@ mkdir build && cd build && cmake .. && cmake --build .
 ./jc_reborn minimize                     # (Windows) start with console minimized
 
 # Cross-compile to Windows (Linux/macOS host):
-mkdir build-windows && cd build-windows && cmake -DCMAKE_TOOLCHAIN_FILE=../toolchain-mingw.cmake .. && cmake --build .
+#   the toolchain file moved into cmake/ in the 2026-04-21 reorganisation
+mkdir build-windows && cd build-windows && cmake -DCMAKE_TOOLCHAIN_FILE=../cmake/toolchain-mingw.cmake .. && cmake --build .
 
 # Web build (Emscripten):
 source /path/to/emsdk/emsdk_env.sh
-mkdir build-web && cd build-web && emcmake cmake .. && cmake --build .
-# Serve: python3 -m http.server 8000
-# Open http://localhost:8000/jc_reborn.html   (or index.html)
+emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release && cmake --build build_web
+# index.html and favicon.ico are SOURCES, not build output, and nothing in the
+# build copies them - without this the directory is not servable:
+cp index.html favicon.ico build_web/
+# Serve: python3 -m http.server 8000 --directory build_web
+# Open http://localhost:8000/index.html
+#   NOT jc_reborn.html - this build has never produced a file by that name.
 
 # Hotkeys (in game, if `hotkeys` passed):
 # ESC = quit | SPACE = pause | M = max speed | ALT+RET = toggle fullscreen | RET (paused) = step frame

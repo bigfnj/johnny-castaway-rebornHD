@@ -58,6 +58,11 @@ sudo apt-get install libx11-dev libasound2-dev
 - Install CMake from https://cmake.org/download/
 - Or use MinGW-w64 with CMake
 
+The CMake build works with any of those. The hand-maintained solution under
+`vs/` is a separate thing and pins the **v145** toolset, which needs Visual
+Studio 2026 - open it with anything older and it will not load. `cmake -S . -B
+build` is the supported path and is what CI and `gate.ps1` use.
+
 #### Web (Emscripten)
 ```bash
 # Install Emscripten SDK
@@ -99,21 +104,37 @@ cmake --build .
 # Make sure Emscripten is activated
 source /path/to/emsdk/emsdk_env.sh
 
-# Create build directory
-mkdir build-web
-cd build-web
+emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release
+cmake --build build_web -j
 
-# Configure with Emscripten
-emcmake cmake ..
+# index.html and favicon.ico are SOURCES, not build output, and nothing in the
+# build copies them. Without this step build_web/ is not servable.
+cp index.html favicon.ico build_web/
 
-# Build
-cmake --build .
-
-# Serve locally
-python3 -m http.server 8000
-
-# Open browser to http://localhost:8000/jc_reborn.html
+cd build_web && python3 -m http.server 8000
+# then open http://localhost:8000/
 ```
+
+The build produces `jc_reborn.js`, `jc_reborn.wasm` and `jc_reborn.data`; the
+page is `index.html`. (Earlier revisions of this README told you to open
+`jc_reborn.html`, which this build has never produced, and used a `build-web`
+directory that does not match the one `scripts/build_web.ps1` creates.)
+
+No Emscripten install? The whole thing builds in a container:
+
+```bash
+docker run --rm -v "$PWD:/src" emscripten/emsdk:latest bash -c \
+  'cd /src && emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release \
+   && cmake --build build_web -j4 && cp index.html favicon.ico build_web/'
+```
+
+**Options in the browser.** The page reads them from the query string, so
+`index.html?args=window+nosound+seed+9+frames+400` passes `window nosound seed 9
+frames 400` to the engine exactly as a command line would.
+
+`tests/web-smoke.py` loads the built page in headless Chromium and checks that it
+paints, that the tab stays responsive while the engine runs, and that audio is
+actually scheduled. It runs in CI.
 
 ## Usage
 
@@ -139,7 +160,27 @@ island                 - display the island as background for ADS play
 debug                  - print some debug info on stdout
 hotkeys                - enable hot keys
 holiday <name>         - force holiday decorations (see below)
+night                  - force the night backdrop (NIGHT.SCR)
+day                    - force daytime, ignoring the clock
+seed <n>               - fix the random seed, for reproducible runs
+frames <n>             - stop cleanly after n frames, exit code 0
+maxspeed               - run unthrottled from the start (as <M> does)
 ```
+
+The last five are additive and off by default; shipping behaviour is unchanged.
+
+`night` and `day` exist because the night backdrop is otherwise reachable only
+between 21:00 and 05:59, so an entire rendering path with its own HD artwork
+could not be looked at during the day without changing the system clock.
+
+`seed`, `frames` and `maxspeed` are what make the engine testable. Every random
+choice (scene selection, cloud count and placement, ocean backdrop, low tide,
+path finding) comes off one stream seeded from the clock, and `storyPlay()` never
+returns, so before these a test could only kill the process and guess whether it
+had been healthy. Note that the story day persists to `~/.jc_reborn` and also
+selects which scenes are eligible, so a fully reproducible run needs a fresh
+profile as well as a fixed seed; `tests/Invoke-SmokeTests.ps1` points `HOME` at a
+throwaway directory for exactly that reason.
 
 ### Holiday option
 
@@ -183,6 +224,44 @@ Return     - When paused, advance one frame
 ```
 
 Without `hotkeys`, pressing any key terminates the screensaver (normal screensaver behaviour).
+
+## Installing it as a Windows screensaver
+
+The Windows build produces two binaries from the same sources: `jc_reborn.exe`,
+a console program, and `jc_reborn.scr`, a real screensaver built
+`/SUBSYSTEM:WINDOWS`. Only the second one can be selected in Settings.
+
+```
+copy build\Release\jc_reborn.scr      %WINDIR%\System32\
+copy build\Release\scrantic_data.zip  %WINDIR%\System32\
+```
+
+Then pick **Johnny Reborn** in Settings → Personalisation → Lock screen →
+Screen saver. (Right-clicking the `.scr` and choosing **Install** does the same
+thing.)
+
+**Copy the data archive too.** Windows launches a screensaver with `System32` as
+the working directory, and the engine looks for `scrantic_data.zip` beside the
+binary. Without it the screensaver starts and immediately reports that it cannot
+find its data.
+
+`jc_reborn.scr` implements the three switches Windows passes:
+
+```
+/s          - run full screen (what the screen saver actually does)
+/c          - show the settings dialog
+/p <hwnd>   - draw the preview inside the small monitor in the Settings dialog
+```
+
+Mouse movement past a small dead zone ends it, as does any key, a click, or loss
+of focus. In `/p` preview mode it draws as a child of the supplied window and
+never takes the foreground.
+
+Because it is the same binary, every option above still works for debugging:
+
+```
+jc_reborn.scr /s window nosound frames 200
+```
 
 ## State persistence
 

@@ -34,7 +34,14 @@ jobs:
     outputs:
       version: ${{ steps.check.outputs.version }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+        with:
+          # MUST be explicit. On a tag push github.ref is the tag, but on a
+          # workflow_dispatch it is whatever branch the UI defaulted to - so
+          # without this a manual run builds main, checks main's version against
+          # the tag, and publishes the result under the tag's name. The binaries
+          # would not be the tagged source and nothing would say so.
+          ref: ${{ github.event.inputs.tag || github.ref }}
 
       - id: check
         shell: bash
@@ -61,7 +68,14 @@ jobs:
     needs: verify-version
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+        with:
+          # MUST be explicit. On a tag push github.ref is the tag, but on a
+          # workflow_dispatch it is whatever branch the UI defaulted to - so
+          # without this a manual run builds main, checks main's version against
+          # the tag, and publishes the result under the tag's name. The binaries
+          # would not be the tagged source and nothing would say so.
+          ref: ${{ github.event.inputs.tag || github.ref }}
 
       # The full gate, not just a build: a release must pass the same smoke and
       # regression checks a commit does.
@@ -75,11 +89,15 @@ jobs:
           $stage = "jc_reborn-$v-windows-x64"
           New-Item -ItemType Directory -Force -Path $stage | Out-Null
           Copy-Item build/Release/jc_reborn.exe        $stage/
+          # The screensaver is a second target from the same sources, built
+          # /SUBSYSTEM:WINDOWS. It is the reason most people will download this,
+          # so shipping only the console exe would miss the point.
+          Copy-Item build/Release/jc_reborn.scr        $stage/
           Copy-Item build/Release/scrantic_data.zip    $stage/
           Copy-Item README.md, LICENSE                 $stage/
           Compress-Archive -Path $stage -DestinationPath "$stage.zip"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: windows
           path: '*.zip'
@@ -90,7 +108,14 @@ jobs:
     needs: verify-version
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+        with:
+          # MUST be explicit. On a tag push github.ref is the tag, but on a
+          # workflow_dispatch it is whatever branch the UI defaulted to - so
+          # without this a manual run builds main, checks main's version against
+          # the tag, and publishes the result under the tag's name. The binaries
+          # would not be the tagged source and nothing would say so.
+          ref: ${{ github.event.inputs.tag || github.ref }}
 
       - run: |
           sudo apt-get update -qq
@@ -109,7 +134,7 @@ jobs:
           cp assets/scrantic_data.zip README.md LICENSE "$stage/"
           tar czf "$stage.tar.gz" "$stage"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: linux
           path: '*.tar.gz'
@@ -120,7 +145,14 @@ jobs:
     needs: verify-version
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
+        with:
+          # MUST be explicit. On a tag push github.ref is the tag, but on a
+          # workflow_dispatch it is whatever branch the UI defaulted to - so
+          # without this a manual run builds main, checks main's version against
+          # the tag, and publishes the result under the tag's name. The binaries
+          # would not be the tagged source and nothing would say so.
+          ref: ${{ github.event.inputs.tag || github.ref }}
       - uses: mymindstorm/setup-emsdk@v14
         with:
           version: latest
@@ -142,7 +174,7 @@ jobs:
           cp index.html favicon.ico README.md LICENSE "$stage/"
           tar czf "$stage.tar.gz" "$stage"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: web
           path: '*.tar.gz'
@@ -153,7 +185,7 @@ jobs:
     needs: [verify-version, windows, linux, web]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           path: dist
           merge-multiple: true
