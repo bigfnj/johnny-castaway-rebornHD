@@ -37,6 +37,10 @@ extern uint32 evMaxFrames;
  * bounded run can cover many story iterations without minutes of wall clock. */
 extern int evStartAtMaxSpeed;
 
+/* Screensaver semantics: quit on mouse movement past a small dead-zone, or on
+ * any click. Set by the Windows `/s` switch; off for every ordinary run. */
+extern int evScreensaverMode;
+
 void eventsInit(void);
 void eventsWaitTick(uint16 delay);
 

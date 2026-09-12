@@ -59,7 +59,17 @@ typedef enum {
     EVENT_QUIT,
     EVENT_KEY_DOWN,
     EVENT_KEY_UP,
-    EVENT_WINDOW_REFRESH
+    EVENT_WINDOW_REFRESH,
+
+    /*  Mouse input, added for screensaver behaviour. A Windows screensaver is
+     *  required to exit on mouse movement and on any click, and the codebase had
+     *  no mouse support at any layer: no WM_MOUSEMOVE handler, no mouse raw
+     *  input, and no member here. Emitted by the Windows backend; the other
+     *  three do not generate them, which is honest rather than a gap - only the
+     *  Windows build is a .scr.
+     */
+    EVENT_MOUSE_MOVE,
+    EVENT_MOUSE_BUTTON_DOWN
 } PlatformEventType;
 
 // Key modifiers
@@ -81,6 +91,17 @@ typedef struct {
             PlatformKeyCode keycode;
             uint16 modifiers;
         } key;
+        /*  Absolute position in client pixels. A screensaver needs the position
+         *  rather than just "something moved", because the shell hands it a
+         *  spurious WM_MOUSEMOVE as the window appears under the pointer: exiting
+         *  on the first one would make the screensaver close the instant it
+         *  started. The consumer applies a small dead-zone against the first
+         *  position it sees.
+         */
+        struct {
+            sint32 x;
+            sint32 y;
+        } mouse;
     } data;
 } PlatformEvent;
 
@@ -89,6 +110,17 @@ int platformInit(void);
 void platformShutdown(void);
 
 // Graphics - Window management
+/*  Parent window for the next platformCreateWindow, or NULL for a normal
+ *  top-level window. Set by the Windows screensaver preview switch (/p), where
+ *  the shell supplies the HWND to draw into; a no-op on every other backend,
+ *  since only the Windows build is a .scr.
+ *
+ *  A setter rather than a parameter: platformCreateWindow's signature is shared
+ *  by all four backends, and a setter rather than an engine global because the
+ *  platform layer must not reach into engine headers.
+ */
+void platformSetPreviewParent(void* parentWindowHandle);
+
 PlatformWindow* platformCreateWindow(const char* title, int width, int height, int fullscreen);
 void platformDestroyWindow(PlatformWindow* window);
 void platformShowCursor(int show);
@@ -127,6 +159,23 @@ int platformPollEvent(PlatformEvent* event);
 // Timing
 uint32 platformGetTicks(void);
 void platformDelay(uint32 ms);
+
+/*  Hand control back to the host once per frame.
+ *
+ *  A no-op on the native backends, which are preemptively scheduled and need
+ *  nothing. It exists for Emscripten, where the engine's `while (1)` in
+ *  storyPlay never returns and the ONLY yield in the entire program is the
+ *  emscripten_sleep inside platformDelay - which sits inside a CONDITIONAL
+ *  busy-wait in eventsWaitTick. Two consequences followed: with `maxspeed` the
+ *  loop body never executes and the browser tab locks outright, and even at
+ *  normal speed any frame whose own work already consumed its delay yields zero
+ *  times. The latter is not hypothetical there, because the per-frame present
+ *  copies ~1.2M pixels through a JavaScript loop.
+ *
+ *  Calling this once per frame makes the yield unconditional without
+ *  restructuring the engine around emscripten_set_main_loop.
+ */
+void platformFrameYield(void);
 
 // Audio
 typedef void (*PlatformAudioCallback)(void* userdata, uint8* stream, int len);

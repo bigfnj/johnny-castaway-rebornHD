@@ -69,11 +69,23 @@ set(COMMON_SOURCES
 if(EMSCRIPTEN)
     message(STATUS "Building for Web (Emscripten)")
     set(PLATFORM_SOURCES platform/platform_web.c)
-    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Os")
+    # NO -Os HERE. It used to be appended to CMAKE_C_FLAGS, and scripts/build_web.ps1
+    # configures with CMAKE_BUILD_TYPE=Release, so CMake appended -O3 from
+    # CMAKE_C_FLAGS_RELEASE *after* it. The compile line ended "... -Os ... -O3"
+    # and the last flag won, so the size intent recorded in the changelog was
+    # silently not happening. Compile optimization is left to the build type.
     # --preload-file produces a separate jc_reborn.data file loaded asynchronously
     # at startup. Emscripten waits for preload to complete before calling main(),
     # so the rest of the engine sees the zip mounted at the expected path.
-    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -sASYNCIFY -sALLOW_MEMORY_GROWTH -sSTANDALONE_WASM=0 -sNO_EXIT_RUNTIME -sFORCE_FILESYSTEM --preload-file ${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip@scrantic_data.zip")
+    # -O2 ON THE LINK LINE, which is where it actually matters here. emcc does its
+    # wasm-opt pass and the ASYNCIFY stack-unwinding instrumentation at LINK time,
+    # and no optimization flag reached the linker at all - so an ASYNCIFY build,
+    # the case that suffers most from it, was being linked at -O0.
+    #
+    # -sEXPORTED_RUNTIME_METHODS=callMain lets the page pass argv (see index.html),
+    # which is what makes `frames`, `seed` and `nosound` reachable in a browser and
+    # therefore what makes the web target testable at all.
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -O2 -sASYNCIFY -sALLOW_MEMORY_GROWTH -sSTANDALONE_WASM=0 -sNO_EXIT_RUNTIME -sFORCE_FILESYSTEM -sEXPORTED_RUNTIME_METHODS=callMain,ccall,cwrap --preload-file ${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip@scrantic_data.zip")
     set(CMAKE_EXECUTABLE_SUFFIX ".js")
     add_definitions(-DPLATFORM_WEB)
 elseif(WIN32)
@@ -185,6 +197,50 @@ elseif(UNIX)
         ${CMAKE_THREAD_LIBS_INIT}
         m
     )
+endif()
+
+# ── The Windows screensaver ───────────────────────────────────────────────────
+# A SECOND TARGET rather than a renamed first one. Windows needs a .scr that is
+# a WINDOWS-subsystem binary, because a console-subsystem screensaver flashes a
+# console window every time it starts - which is the whole reason the engine
+# grew a `minimize` option and a minimizeConsoleWindow() hack. But the console
+# build is what every test, `dump` and `help` depends on, so both are kept.
+#
+# Same sources, same objects, two link results.
+if(WIN32 AND NOT EMSCRIPTEN)
+    add_executable(jc_reborn_scr WIN32 ${COMMON_SOURCES} ${PLATFORM_SOURCES})
+
+    target_compile_definitions(jc_reborn_scr PRIVATE JC_VERSION="${JC_VERSION_STRING}")
+    target_include_directories(jc_reborn_scr PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/engine
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/data
+        ${CMAKE_CURRENT_SOURCE_DIR}/platform
+        ${CMAKE_CURRENT_SOURCE_DIR}/third_party/miniz
+    )
+    target_link_libraries(jc_reborn_scr gdi32 user32 winmm windowscodecs ole32 uuid comctl32)
+
+    # Windows subsystem with a plain main(). WIN32 above asks the linker for
+    # /SUBSYSTEM:WINDOWS, which normally demands WinMain; pointing the entry at
+    # mainCRTStartup keeps the existing main(argc, argv) and the real argv the
+    # shell passes in /p and /c:<hwnd>. The alternative - a WinMain that
+    # re-parses GetCommandLine() - would duplicate quoting rules for no gain.
+    if(MSVC)
+        set_target_properties(jc_reborn_scr PROPERTIES LINK_FLAGS "/ENTRY:mainCRTStartup")
+    endif()
+
+    # .scr IS the deliverable: Windows only lists files with this extension in
+    # the Screen Saver dropdown.
+    set_target_properties(jc_reborn_scr PROPERTIES
+        OUTPUT_NAME "jc_reborn"
+        SUFFIX ".scr")
+
+    # The archive has to travel with it, exactly as for the console build: an
+    # installed .scr runs from System32 and finds its data beside itself.
+    add_custom_command(TARGET jc_reborn_scr POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
+                "$<TARGET_FILE_DIR:jc_reborn_scr>/scrantic_data.zip"
+        COMMENT "Copying scrantic_data.zip next to jc_reborn.scr")
 endif()
 
 # Installation

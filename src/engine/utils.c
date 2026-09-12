@@ -27,6 +27,13 @@
 #include <stdarg.h>
 #include <time.h>
 
+#if defined(_WIN32)
+#  ifndef WIN32_LEAN_AND_MEAN
+#    define WIN32_LEAN_AND_MEAN
+#  endif
+#  include <windows.h>   /* MessageBoxA / GetStdHandle / GetFileType in fatalError */
+#endif
+
 #include "mytypes.h"
 #include "utils.h"
 
@@ -60,6 +67,42 @@ JCR_NORETURN void fatalError(const char *message, ... )
     vfprintf(stderr, message, args);
     fprintf(stderr, "\n\n");
     va_end(args);
+
+#if defined(_WIN32)
+    /*  SAY IT SOMEWHERE THE USER CAN SEE - but ONLY if stderr goes nowhere.
+     *
+     *  This is the program's only failure channel and it is reached on a missing
+     *  or unreadable data archive. The .scr build is a WINDOWS-subsystem binary
+     *  with no console, so without a dialog a screensaver that cannot find its
+     *  data looks identical to one that is simply broken.
+     *
+     *  The test used to be GetConsoleWindow() == NULL, and that was wrong in a
+     *  way that cost a gate run and would have cost a CI run. A process started
+     *  by a test harness with CreateNoWindow and redirected pipes ALSO has no
+     *  console window - while having a perfectly good stderr. Every failing
+     *  smoke test therefore raised a modal dialog on an unattended machine and
+     *  sat there until something killed it. An error path that blocks forever is
+     *  worse than one that is silent: the silent one at least fails fast.
+     *
+     *  So ask the question that actually matters - is there anywhere to write? -
+     *  by checking the handle rather than the window. A console, a file and a
+     *  pipe are all writable and all suppress the box; only a genuinely absent
+     *  or invalid handle raises it.
+     */
+    {
+        HANDLE err = GetStdHandle(STD_ERROR_HANDLE);
+        BOOL writable = (err != NULL && err != INVALID_HANDLE_VALUE &&
+                         GetFileType(err) != FILE_TYPE_UNKNOWN);
+        if (!writable) {
+            char buf[1024];
+            va_list wargs;
+            va_start(wargs, message);
+            vsnprintf(buf, sizeof(buf), message, wargs);
+            va_end(wargs);
+            MessageBoxA(NULL, buf, "Johnny Reborn", MB_OK | MB_ICONERROR);
+        }
+    }
+#endif
 
     exit(1);
 }

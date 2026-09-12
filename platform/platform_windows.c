@@ -59,6 +59,13 @@ static int pendingEventCount = 0;
 // do NOT generate WM_INPUT, so they won't terminate the screensaver.
 static int useRawKeyboardInput = 0;
 
+/* Parent HWND for screensaver preview mode, set via platformSetPreviewParent. */
+static HWND previewParent = NULL;
+
+void platformSetPreviewParent(void* parentWindowHandle) {
+    previewParent = (HWND)parentWindowHandle;
+}
+
 static void bringWindowToForeground(HWND hwnd, int makeTopmost)
 {
     if (!hwnd) return;
@@ -152,6 +159,15 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                         buf = heapBuf;
                     }
 
+                    /*  A NULL buf here is not merely "skip this event": passing
+                     *  pData == NULL is the documented way to ASK GetRawInputData
+                     *  for the required size, so it returns success without
+                     *  writing anything - and the check below would then wave a
+                     *  NULL pointer through to raw->header.dwType. The failed
+                     *  allocation would defeat the very test meant to catch it. */
+                    if (buf == NULL)
+                        return 0;
+
                     if (GetRawInputData((HRAWINPUT)lParam, RID_INPUT, buf, &size, sizeof(RAWINPUTHEADER)) != (UINT)-1) {
                         RAWINPUT *raw = (RAWINPUT*)buf;
                         if (raw->header.dwType == RIM_TYPEKEYBOARD) {
@@ -217,6 +233,62 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
                 if (GetKeyState(VK_MENU) & 0x8000)
                     ev->data.key.modifiers |= KEYMOD_LALT;
                 ev->data.key.keycode = mapVKeyToPlatformKey(wParam);
+                pendingEventCount++;
+            }
+            return 0;
+
+        /*  Mouse input, for screensaver exit behaviour.
+         *
+         *  Deliberately NOT routed through raw input, unlike the keyboard. The
+         *  keyboard uses WM_INPUT specifically so that synthesized keystrokes
+         *  cannot stop the app; for the mouse the opposite is wanted, because a
+         *  screensaver must yield to any real pointer movement and the ordinary
+         *  messages are both sufficient and simpler.
+         *
+         *  Position is passed through and the decision left to the caller: the
+         *  shell delivers a spurious move as the fullscreen window appears under
+         *  the pointer, so exiting on the first event would close the
+         *  screensaver the moment it started.
+         */
+        case WM_MOUSEMOVE:
+            /*  COALESCE, rather than append.
+             *
+             *  This queue holds 32 entries and drops the NEWEST when full -
+             *  and by the time that check runs, PM_REMOVE has already taken the
+             *  message off the OS queue, so a dropped event is lost rather than
+             *  deferred. That sizing was chosen when only keys and WM_CLOSE
+             *  used it. Mouse motion is a different kind of producer: it
+             *  arrives in bursts of dozens, and a burst that fills the queue
+             *  would discard whatever came next - including the click or the
+             *  close the screensaver is supposed to exit on.
+             *
+             *  Only the LATEST position matters to the dead-zone test, so an
+             *  unread move is overwritten in place. The queue can then never be
+             *  filled by motion alone.
+             */
+            if (pendingEventCount > 0 &&
+                pendingEvents[pendingEventCount - 1].type == EVENT_MOUSE_MOVE) {
+                PlatformEvent* ev = &pendingEvents[pendingEventCount - 1];
+                ev->data.mouse.x = (sint32)(short)LOWORD(lParam);
+                ev->data.mouse.y = (sint32)(short)HIWORD(lParam);
+            }
+            else if (pendingEventCount < 32) {
+                PlatformEvent* ev = &pendingEvents[pendingEventCount];
+                ev->type = EVENT_MOUSE_MOVE;
+                ev->data.mouse.x = (sint32)(short)LOWORD(lParam);
+                ev->data.mouse.y = (sint32)(short)HIWORD(lParam);
+                pendingEventCount++;
+            }
+            return 0;
+
+        case WM_LBUTTONDOWN:
+        case WM_RBUTTONDOWN:
+        case WM_MBUTTONDOWN:
+            if (pendingEventCount < 32) {
+                PlatformEvent* ev = &pendingEvents[pendingEventCount];
+                ev->type = EVENT_MOUSE_BUTTON_DOWN;
+                ev->data.mouse.x = (sint32)(short)LOWORD(lParam);
+                ev->data.mouse.y = (sint32)(short)HIWORD(lParam);
                 pendingEventCount++;
             }
             return 0;
@@ -299,22 +371,55 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
 
     PlatformWindow* window = (PlatformWindow*)malloc(sizeof(PlatformWindow));
 
-    DWORD style = WS_OVERLAPPEDWINDOW;
-    RECT rect = {0, 0, width, height};
-    AdjustWindowRect(&rect, style, FALSE);
+    /*  PREVIEW MODE creates a CHILD of the window the shell handed us, filling
+     *  it exactly, with no frame and no foreground grab. A top-level window here
+     *  is the classic broken-screensaver symptom: the Settings preview pane
+     *  launches something fullscreen that jumps in front of the dialog.
+     *
+     *  previewParent is set only by the /p path, so every other caller keeps
+     *  the original behaviour exactly.
+     */
+    HWND parent = previewParent;
 
-    window->hwnd = CreateWindowExA(
-        0,
-        "JCRebornWindow",
-        title,
-        style,
-        CW_USEDEFAULT, CW_USEDEFAULT,
-        rect.right - rect.left,
-        rect.bottom - rect.top,
-        NULL, NULL,
-        GetModuleHandle(NULL),
-        NULL
-    );
+    if (parent && IsWindow(parent)) {
+        RECT pr;
+        if (!GetClientRect(parent, &pr)) {
+            free(window);
+            lastError = "GetClientRect failed on the preview parent window";
+            return NULL;
+        }
+
+        window->hwnd = CreateWindowExA(
+            0,
+            "JCRebornWindow",
+            title,
+            WS_CHILD | WS_VISIBLE,
+            0, 0,
+            pr.right - pr.left,
+            pr.bottom - pr.top,
+            parent, NULL,
+            GetModuleHandle(NULL),
+            NULL
+        );
+    }
+    else {
+        DWORD style = WS_OVERLAPPEDWINDOW;
+        RECT rect = {0, 0, width, height};
+        AdjustWindowRect(&rect, style, FALSE);
+
+        window->hwnd = CreateWindowExA(
+            0,
+            "JCRebornWindow",
+            title,
+            style,
+            CW_USEDEFAULT, CW_USEDEFAULT,
+            rect.right - rect.left,
+            rect.bottom - rect.top,
+            NULL, NULL,
+            GetModuleHandle(NULL),
+            NULL
+        );
+    }
 
     if (!window->hwnd) {
         free(window);
@@ -349,6 +454,16 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
 
     ShowWindow(window->hwnd, SW_SHOW);
     mainWindow = window;
+
+    if (parent && IsWindow(parent)) {
+        /*  A preview must not go fullscreen and must not touch the foreground.
+         *  bringWindowToForeground is deliberately aggressive - SetWindowPos
+         *  HWND_TOPMOST, BringWindowToTop, SetForegroundWindow and an
+         *  AttachThreadInput retry - which is right for a screensaver and
+         *  precisely wrong while the user is working in the Settings dialog.
+         */
+        return window;
+    }
 
     if (fullscreen) {
         platformToggleFullscreen(window);
@@ -514,6 +629,20 @@ void platformUpdateWindow(PlatformWindow* window) {
             RECT bottomRect = {0, destY + destHeight, clientWidth, clientHeight};
             FillRect(window->hdc, &bottomRect, blackBrush);
         }
+    }
+
+    /*  HALFTONE when shrinking, which is the screensaver preview case: the
+     *  engine renders at 1280x960 with HD assets and the shell's preview pane is
+     *  about 152x112, and the default BLACKONWHITE stretch mode simply drops
+     *  rows and columns, which looks like noise at that ratio. HALFTONE needs
+     *  the brush origin reset, per the API contract.
+     */
+    if (destWidth < window->surface->width || destHeight < window->surface->height) {
+        SetStretchBltMode(window->hdc, HALFTONE);
+        SetBrushOrgEx(window->hdc, 0, 0, NULL);
+    }
+    else {
+        SetStretchBltMode(window->hdc, COLORONCOLOR);
     }
 
     StretchDIBits(window->hdc,
@@ -892,6 +1021,10 @@ uint32 platformGetTicks(void) {
  */
 void platformDelay(uint32 ms) {
     Sleep(ms);
+}
+
+/* Preemptively scheduled: nothing to yield to. See platform.h. */
+void platformFrameYield(void) {
 }
 
 // Audio (using waveOut API)

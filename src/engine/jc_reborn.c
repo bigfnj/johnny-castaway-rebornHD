@@ -56,6 +56,44 @@ static int  argPlayAll  = 0;
 static int  argIsland   = 0;
 static int  argMinimize = 0;
 
+/*  Windows screensaver mode, selected by the shell's /s, /c and /p switches.
+ *  SCR_MODE_NONE is every other invocation, including every non-Windows one.
+ */
+#define SCR_MODE_NONE     0
+#define SCR_MODE_RUN      1   /* /s  - run fullscreen as the screensaver      */
+#define SCR_MODE_CONFIG   2   /* /c  - show the settings dialog               */
+#define SCR_MODE_PREVIEW  3   /* /p  - draw into the shell's preview window   */
+
+/*  Stays outside the guard: the EXPECT_PARENT_HWND case in parseArgs is part of
+ *  the shared token state machine and assigns it on every platform. Only the
+ *  READ of it is Windows-only. */
+static unsigned long long argParentHwnd = 0;
+
+/*  Inside the guard, because every read and every write of it is too. Outside,
+ *  GCC 13 reports
+ *      warning: 'argScreensaver' defined but not used
+ *  on every Linux build - which is correct, and is the sort of warning that
+ *  trains people to ignore warnings. */
+#if defined(_WIN32)
+
+static int argScreensaver = SCR_MODE_NONE;
+
+/*  Match a screensaver switch. Windows is inconsistent about these across
+ *  versions and shells: the letter may be upper or lower case, the prefix may be
+ *  '/' or '-', and /c in particular arrives both bare and as "/c:12345". Accept
+ *  every documented spelling rather than guessing one.
+ */
+static int isScreensaverSwitch(const char *arg, char letter)
+{
+    if (!arg || (arg[0] != '/' && arg[0] != '-'))
+        return 0;
+    if (tolower((unsigned char)arg[1]) != letter)
+        return 0;
+    /* Nothing after the letter, or a colon introducing a handle. */
+    return arg[2] == '\0' || arg[2] == ':';
+}
+#endif
+
 static char *args[MAX_ARGS];
 static int  numArgs  = 0;
 
@@ -254,6 +292,43 @@ static void version(void)
 }
 
 
+#if defined(_WIN32)
+/*  The /c dialog.
+ *
+ *  A message box rather than a dialog resource, and that is a decision rather
+ *  than a shortcut: the engine currently has nothing a user can set. Its
+ *  persistent state is two integers (the story day and the date it last
+ *  advanced), and everything else - sound, windowing, holiday, night, HD scale -
+ *  is either automatic or a command-line option. Inventing settings to justify a
+ *  dialog would add state this engine does not have.
+ *
+ *  What it must NOT do is nothing at all, or hang: Windows runs /c synchronously
+ *  from the Screen Saver settings dialog and waits, so a silent exit looks
+ *  broken and a slow one freezes Settings.
+ */
+static void showConfigDialog(void)
+{
+    char msg[1024];
+    const char *home = getenv("USERPROFILE");
+
+    snprintf(msg, sizeof(msg),
+             "Johnny Reborn %s\n"
+             "An open-source engine for the classic Johnny Castaway "
+             "screensaver by Sierra.\n\n"
+             "There is nothing to configure here: the island, weather, holidays "
+             "and the day/night cycle all follow the system clock, and the story "
+             "advances one day per calendar day.\n\n"
+             "Story progress is kept in:\n    %s\\.jc_reborn\n"
+             "Delete that file to start the story again from day 1.\n\n"
+             "Run jc_reborn.scr from a command prompt with 'help' for the full "
+             "option list.",
+             JC_VERSION, home ? home : "%USERPROFILE%");
+
+    MessageBoxA(NULL, msg, "Johnny Reborn", MB_OK | MB_ICONINFORMATION);
+}
+#endif
+
+
 static void parseArgs(int argc, char **argv)
 {
     typedef enum {
@@ -263,7 +338,8 @@ static void parseArgs(int argc, char **argv)
         EXPECT_ADS_TAG,
         EXPECT_HOLIDAY,
         EXPECT_SEED,
-        EXPECT_FRAMES
+        EXPECT_FRAMES,
+        EXPECT_PARENT_HWND
     } TExpectedArg;
 
     TExpectedArg expect = EXPECT_NONE;
@@ -323,6 +399,23 @@ static void parseArgs(int argc, char **argv)
                     if (end == argv[i] || (end && *end != '\0') || v <= 0)
                         fatalError("Invalid frame count '%s' (expected a positive integer)", argv[i]);
                     evMaxFrames = (uint32)v;
+                    expect = EXPECT_NONE;
+                    break;
+                }
+
+                case EXPECT_PARENT_HWND: {
+                    /*  The window handle after /p. Windows passes it in decimal,
+                     *  but some shells and older documentation use hex, so base 0
+                     *  accepts both rather than silently reading 0x1234 as 0.
+                     *  A handle we cannot parse is fatal: rendering a preview
+                     *  into the wrong window, or into none, is worse than saying
+                     *  so.
+                     */
+                    char *end = NULL;
+                    unsigned long long v = strtoull(argv[i], &end, 0);
+                    if (end == argv[i] || (end && *end != '\0'))
+                        fatalError("Invalid preview window handle '%s'", argv[i]);
+                    argParentHwnd = v;
                     expect = EXPECT_NONE;
                     break;
                 }
@@ -390,6 +483,43 @@ static void parseArgs(int argc, char **argv)
         else if (isHolidayArg(argv[i])) {
             expect = EXPECT_HOLIDAY;
         }
+#if defined(_WIN32)
+        /*  WINDOWS SCREENSAVER SWITCHES.
+         *
+         *  The shell runs a .scr as `/s` (run), `/c` or `/c:<hwnd>` (configure)
+         *  and `/p <hwnd>` (preview in the little monitor). These reached the
+         *  fallback below and were silently discarded, so ALL THREE ran the
+         *  ordinary fullscreen screensaver. For /p that is the classic broken
+         *  screensaver symptom: the preview pane launches a fullscreen window
+         *  that steals the foreground while you are still in Settings.
+         *
+         *  Worse, normalizeToken strips non-alphanumerics, so a single-digit
+         *  window handle after /p normalised to "4" and matched the numeric
+         *  holiday shorthand.
+         */
+        else if (isScreensaverSwitch(argv[i], 's')) {
+            argScreensaver = SCR_MODE_RUN;
+        }
+        else if (isScreensaverSwitch(argv[i], 'c')) {
+            argScreensaver = SCR_MODE_CONFIG;
+            /* /c:<hwnd> carries the parent inline; bare /c does not. */
+            {
+                const char *colon = strchr(argv[i], ':');
+                if (colon && colon[1])
+                    argParentHwnd = strtoull(colon + 1, NULL, 10);
+            }
+        }
+        else if (isScreensaverSwitch(argv[i], 'p')) {
+            argScreensaver = SCR_MODE_PREVIEW;
+            expect = EXPECT_PARENT_HWND;
+        }
+        else if (isScreensaverSwitch(argv[i], 'a')) {
+            /* Password change on very old Windows. Accepted and ignored so the
+             * shell never sees an error, but it must not fall through to the
+             * fallback and start playing. */
+            argScreensaver = SCR_MODE_CONFIG;
+        }
+#endif
         else {
             // Shorthand: allow passing the holiday name directly
             // (e.g. `jc_reborn christmas`)
@@ -399,6 +529,15 @@ static void parseArgs(int argc, char **argv)
                     storySetForcedHoliday(pickRandomHoliday());
                 else if (holiday >= 0)
                     storySetForcedHoliday(holiday);
+            }
+            else if (argv[i][0] == '/' || argv[i][0] == '-') {
+                /*  REFUSE unknown switches instead of swallowing them. The old
+                 *  code had no else at all here, so a typo, a flag from a newer
+                 *  version, or anything the shell invented ran the default
+                 *  screensaver and reported success. A wrong argument should not
+                 *  look like a correct one.
+                 */
+                fatalError("Unknown option '%s' (try: jc_reborn help)", argv[i]);
             }
         }
     }
@@ -420,6 +559,41 @@ int main(int argc, char **argv)
 
     if (argDump)
         debugMode = 1;
+
+#if defined(_WIN32)
+    /*  The configure switch answers and exits BEFORE the archive is opened.
+     *
+     *  Windows runs /c synchronously from the Screen Saver settings dialog and
+     *  waits for it, so anything slow or fatal here freezes that dialog. Opening
+     *  a 3.8 MB archive and parsing every resource to show a settings box would
+     *  be both, and a missing archive would hang Settings rather than the
+     *  screensaver.
+     */
+    if (argScreensaver == SCR_MODE_CONFIG) {
+        showConfigDialog();
+        return 0;
+    }
+
+    if (argScreensaver == SCR_MODE_RUN) {
+        /*  Screensaver semantics: fullscreen, no console, and any real input
+         *  ends it. grWindowed is already 0 by default, so this only has to turn
+         *  on the input rules.
+         */
+        evScreensaverMode = 1;
+        argPlayAll = 1;
+    }
+    else if (argScreensaver == SCR_MODE_PREVIEW) {
+        /*  Preview draws into the tiny monitor in the Settings dialog. It must
+         *  NOT go fullscreen, must not steal the foreground, and must exit when
+         *  the shell destroys its parent window. Input is ignored here: the user
+         *  is interacting with Settings, not with us.
+         */
+        grWindowed = 1;
+        platformSetPreviewParent((void *)(uintptr_t)argParentHwnd);
+        argPlayAll = 1;
+        soundDisabled = 1;   /* a preview thumbnail that makes noise is a bug */
+    }
+#endif
 
     zipvfs_init("scrantic_data.zip");
     parseResourceFiles("data/RESOURCE.MAP");

@@ -10,3 +10,17 @@
 #include "../../platform/jc_resources.h"
 
 JC_REBORN_ICON_ID ICON "jc_reborn.ico"
+
+//  THE NAME WINDOWS SHOWS IN THE SCREEN SAVER DROPDOWN.
+//
+//  A screensaver's display name is string resource 1. With no string table
+//  Windows falls back to the file name, so the entry read "jc_reborn" - which
+//  is the one piece of this whole effort every user was guaranteed to see.
+//
+//  Keep it short: the control panel truncates at around 24 characters, and the
+//  string is read from whichever .scr is selected, so it must not depend on the
+//  file keeping its name.
+STRINGTABLE
+BEGIN
+    1, "Johnny Reborn"
+END

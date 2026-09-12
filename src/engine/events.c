@@ -56,6 +56,17 @@ static uint32 evFrameCount = 0;
  */
 int evStartAtMaxSpeed = 0;
 
+/*  Screensaver semantics: quit on mouse movement or a click, as Windows
+ *  requires of a .scr running under /s. Off for ordinary runs.
+ */
+int evScreensaverMode = 0;
+
+#define EV_MOUSE_DEADZONE 8
+
+static int    evMouseSeen = 0;
+static sint32 evMouseOriginX = 0;
+static sint32 evMouseOriginY = 0;
+
 
 static void eventsProcessEvents(void)
 {
@@ -108,6 +119,50 @@ static void eventsProcessEvents(void)
                 }
                 break;
 
+            /*  Mouse handling exists for one reason: a Windows screensaver must
+             *  give way the moment the user touches the mouse. Outside
+             *  screensaver mode these are ignored entirely, so windowed and
+             *  `ttm`/`ads` runs behave exactly as before.
+             */
+            case EVENT_MOUSE_MOVE:
+                if (evScreensaverMode) {
+                    /*  A DEAD-ZONE, measured against the first position seen
+                     *  rather than the last. The shell delivers a spurious
+                     *  WM_MOUSEMOVE as the fullscreen window appears under the
+                     *  pointer, and a tiny hardware jitter produces more, so
+                     *  quitting on any movement closes the screensaver
+                     *  immediately after it starts. Comparing against the first
+                     *  sighting also means slow drift still accumulates past the
+                     *  threshold rather than being reset each event.
+                     */
+                    if (!evMouseSeen) {
+                        evMouseSeen = 1;
+                        evMouseOriginX = event.data.mouse.x;
+                        evMouseOriginY = event.data.mouse.y;
+                    }
+                    else {
+                        sint32 dx = event.data.mouse.x - evMouseOriginX;
+                        sint32 dy = event.data.mouse.y - evMouseOriginY;
+                        if (dx < 0) dx = -dx;
+                        if (dy < 0) dy = -dy;
+
+                        if (dx > EV_MOUSE_DEADZONE || dy > EV_MOUSE_DEADZONE) {
+                            soundEnd();
+                            graphicsEnd();
+                            exit(255);
+                        }
+                    }
+                }
+                break;
+
+            case EVENT_MOUSE_BUTTON_DOWN:
+                if (evScreensaverMode) {
+                    soundEnd();
+                    graphicsEnd();
+                    exit(255);
+                }
+                break;
+
             case EVENT_WINDOW_REFRESH:
                 grRefreshDisplay();
                 break;
@@ -154,11 +209,35 @@ void eventsWaitTick(uint16 delay)
      */
     if (evMaxFrames) {
         if (++evFrameCount > evMaxFrames) {
+            /*  Say so on the way out. An exit code is enough for a native test,
+             *  but in a browser there is no exit code to read: Emscripten is
+             *  linked with -sNO_EXIT_RUNTIME, so exit() neither unloads the page
+             *  nor invokes Module.onExit, and Module.calledRun only reports that
+             *  STARTUP finished. Without this line there is no way to tell "still
+             *  running" from "finished", which is exactly the distinction the
+             *  bounded run exists to make.
+             */
+            printf("jc_reborn: stopping after %u frame(s) as requested\n",
+                   (unsigned)evMaxFrames);
+            fflush(stdout);
             soundEnd();
             graphicsEnd();
             exit(0);
         }
     }
+
+    /*  UNCONDITIONAL, once per frame, and it has to be outside the loop below.
+     *
+     *  That loop is the only place the engine ever gave control back to the
+     *  host, and it is conditional: with maxSpeed set it never runs at all, and
+     *  even at normal speed it is skipped entirely whenever the frame's own work
+     *  already consumed delayMs. On the native backends that costs nothing,
+     *  because the OS preempts. Under Emscripten there is no preemption and
+     *  storyPlay never returns, so those two cases are a frozen browser tab.
+     *
+     *  A no-op everywhere except web. See platform.h.
+     */
+    platformFrameYield();
 
     eventsProcessEvents();
 

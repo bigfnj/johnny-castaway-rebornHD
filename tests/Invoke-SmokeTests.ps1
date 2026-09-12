@@ -214,21 +214,45 @@ It 'dump runs from an unrelated working directory' {
 
 Write-Host "`n== bad arguments are refused, not silently accepted ==" -ForegroundColor Cyan
 
+#  These three assert the DIAGNOSTIC, not just a non-zero exit, and that is not
+#  pedantry. They used to read `$r.Code -ne 0` alone, and a timeout returns
+#  Code = -999, which is also non-zero - so when a change made fatalError raise a
+#  modal dialog on a harness-spawned process, all three sat for their full 120s
+#  and then reported ok. The suite was green while the binary was hanging.
+#  Requiring the message makes a timeout (Output = 'TIMED OUT') fail, and also
+#  distinguishes "refused for the stated reason" from "crashed on the way".
+
 It 'a non-numeric seed is rejected rather than read as 0' {
     $r = Invoke-Jc @('window', 'nosound', 'seed', 'abc', 'frames', '5') 120
-    $r.Code -ne 0
+    (-not $r.TimedOut) -and ($r.Code -ne 0) -and ($r.Output -match "Invalid seed 'abc'")
 }
 
 It 'a zero frame count is rejected' {
     # 0 means "unlimited" internally, so accepting it from the command line
     # would turn a bounded test run into one that never returns.
     $r = Invoke-Jc @('window', 'nosound', 'frames', '0') 120
-    $r.Code -ne 0
+    (-not $r.TimedOut) -and ($r.Code -ne 0) -and ($r.Output -match "Invalid frame count '0'")
 }
 
 It 'an out-of-range ADS tag is rejected' {
     $r = Invoke-Jc @('window', 'nosound', 'ads', 'JOHNNY.ADS', '99999999') 120
-    $r.Code -ne 0
+    (-not $r.TimedOut) -and ($r.Code -ne 0) -and ($r.Output -match 'Invalid ADS tag')
+}
+
+It 'an unknown switch is refused rather than silently ignored' {
+    # parseArgs used to drop unknown tokens, which is how /s, /c and /p all ran
+    # the default fullscreen path for months.
+    $r = Invoke-Jc @('window', 'nosound', '/nonsense') 120
+    (-not $r.TimedOut) -and ($r.Code -ne 0) -and ($r.Output -match "Unknown option")
+}
+
+It 'a fatal error reaches stderr instead of raising a dialog nobody can click' {
+    #  THE REGRESSION TEST for the hang above. fatalError shows a MessageBox when
+    #  stderr is unwritable, which is right for the .scr and fatal for any
+    #  automated run. This process has redirected pipes, so the text must arrive
+    #  on the pipe and the process must exit on its own.
+    $r = Invoke-Jc @('window', 'nosound', 'seed', 'abc') 30
+    (-not $r.TimedOut) -and ($r.Output -match 'Fatal error')
 }
 
 Write-Host "`n== bounded graphical runs start, work, and tear down cleanly ==" -ForegroundColor Cyan
