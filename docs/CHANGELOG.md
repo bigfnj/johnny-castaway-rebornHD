@@ -4,9 +4,9 @@ Per-session record of changes made to this fork on top of upstream Johnny Reborn
 
 ---
 
-## 2026-04-21 — Release x64 build now produces only `.exe` (no .pdb) (Justin Lowe)
+## 2026-04-21 — Release x64 build now produces only `.exe` (no .pdb) (bigfnj)
 
-**Author:** Justin Lowe (with Claude Opus 4.7 assistance)
+**Author:** bigfnj (with Claude Opus 4.7 assistance)
 **Scope:** All three `.vcxproj` Release configurations (Win32 + x64)
 
 ### Change
@@ -54,9 +54,9 @@ Sanity: jc_reborn.exe version → prints Johnny Reborn banner correctly.
 
 ---
 
-## 2026-04-21 — Structural reorganization (Option B) + Release x64 build verified clean (Justin Lowe)
+## 2026-04-21 — Structural reorganization (Option B) + Release x64 build verified clean (bigfnj)
 
-**Author:** Justin Lowe (with Claude Opus 4.7 assistance)
+**Author:** bigfnj (with Claude Opus 4.7 assistance)
 **Scope:** Repo layout, CMakeLists.txt, all VS project files, CI workflow, tools/, docs/, utility header for `noreturn`, warning cleanup in `sound.c` and `uncompress.c`
 
 ### Context
@@ -139,9 +139,9 @@ Sanity: jc_reborn.exe version → prints Johnny Reborn version banner correctly.
 
 ---
 
-## 2026-04-20 — LZW decoder diagnostics + per-frame allocation audit (Justin Lowe)
+## 2026-04-20 — LZW decoder diagnostics + per-frame allocation audit (bigfnj)
 
-**Author:** Justin Lowe (with Claude Opus 4.7 assistance)
+**Author:** bigfnj (with Claude Opus 4.7 assistance)
 **Scope:** `uncompress.c` (LZW hardening + better error messages), `graphics.c` (grLoadBmp fast-path), audit documentation
 
 ### Context
@@ -214,9 +214,9 @@ Defensive only — no observed symptom. Cost: one `strcmp` on hit (negligible) v
 
 ---
 
-## 2026-04-20 — isRunning refactored from `int` to `TtmRunState` enum (Justin Lowe)
+## 2026-04-20 — isRunning refactored from `int` to `TtmRunState` enum (bigfnj)
 
-**Author:** Justin Lowe (with Claude Opus 4.7 assistance)
+**Author:** bigfnj (with Claude Opus 4.7 assistance)
 **Scope:** `graphics.h` (enum + struct member type), `ads.c` / `ttm.c` / `island.c` (call sites)
 
 ### Context
@@ -260,9 +260,9 @@ None immediate. If someone hacks on `ttmPlay()` they'll now get a self-documenti
 
 ---
 
-## 2026-04-20 — SET_DELAY unit confirmed + isRunning semantics confirmed (Justin Lowe)
+## 2026-04-20 — SET_DELAY unit confirmed + isRunning semantics confirmed (bigfnj)
 
-**Author:** Justin Lowe (with Claude Opus 4.7 assistance)
+**Author:** bigfnj (with Claude Opus 4.7 assistance)
 **Scope:** Documentation-only — [AI_UNDERSTANDING.md](AI_UNDERSTANDING.md) `@TTM_VM`, `@ADS_VM`, `@KNOWN_ISSUES_AND_GOTCHAS`
 
 ### Context
@@ -311,9 +311,9 @@ Observed state transitions:
 
 ---
 
-## 2026-04-20 — HD PNG cross-platform + deployment friction fixes (Justin Lowe)
+## 2026-04-20 — HD PNG cross-platform + deployment friction fixes (bigfnj)
 
-**Author:** Justin Lowe (with Claude Opus 4.7 assistance)
+**Author:** bigfnj (with Claude Opus 4.7 assistance)
 **Scope:** HD asset override pipeline across platforms, documentation accuracy, Emscripten packaging, Windows build script portability
 
 ### Context
