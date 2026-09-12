@@ -214,14 +214,21 @@ consistently mono one. Fix both together, or not at all.
   `XPutImage` is 1:1 at the origin, macOS draws into a fixed `CGRect`. Fullscreen
   on Linux or macOS puts the frame in a corner at native size.
 
-### Documentation that is still wrong
+### Documentation has been spot-corrected, not audited
 
-`docs/AI_UNDERSTANDING.md` describes a `.github/workflows/main.yml` job matrix in
-detail (lines 64-70) and `docs/CHANGELOG.md` twice records edits to that file.
-**It never existed** until this work added real workflows, and the fiction is the
-direct reason three of four platforms went unbuilt for months. The same document
-claims at line 219 that the non-Windows HD PNG path is inactive; it has been live
-since the decoder landed.
+Five specific falsehoods were corrected in `4646848`: the phantom
+`.github/workflows/main.yml` job matrix and the two `CHANGELOG.md` entries
+recording edits to it, the claim that the non-Windows HD PNG path was inactive,
+the web build instructions that produced an unservable directory and pointed at a
+`jc_reborn.html` this build has never emitted, and a mingw toolchain path that
+predated the 2026-04-21 reorganisation.
+
+**`docs/AI_UNDERSTANDING.md` has not been read end to end.** It is ~950 lines
+written largely by an AI describing its own understanding, and it has now been
+caught inventing infrastructure that did not exist. Treat every load-bearing
+claim in it as unverified until checked against the code. The corrected passages
+say what was wrong rather than quietly dropping it, because the belief that CI
+existed is the interesting part.
 
 ---
 
