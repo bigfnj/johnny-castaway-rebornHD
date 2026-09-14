@@ -90,6 +90,19 @@ jobs:
       - name: build and verify decode parity
         run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/unix-build.sh
 
+      # The OTHER macOS build path, verified rather than assumed.
+      #
+      # Homebrew refuses to install on Intel Macs now ("only supported on Apple
+      # Silicon processors"), and CMake on macOS usually arrives via Homebrew. So
+      # the route anyone helping us verify macOS rendering will actually take is
+      # clang alone, and an untested build script is worse than no build script:
+      # it fails in front of the person doing us a favour.
+      #
+      # Running it here means tools/build-macos.sh and the APPLE branch of
+      # CMakeLists.txt cannot drift apart without turning this job red.
+      - name: build with clang only (no CMake, no Homebrew)
+        run: bash tools/build-macos.sh
+
   web:
     name: Web (Emscripten)
     runs-on: ubuntu-latest
