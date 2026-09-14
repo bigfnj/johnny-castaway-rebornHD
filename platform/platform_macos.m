@@ -89,11 +89,40 @@ static int quitRequested = 0;
     );
     
     CGImageRef image = CGBitmapContextCreateImage(bitmapContext);
-    CGRect rect = CGRectMake(0, 0, surface->width, surface->height);
-    
-    // Draw image directly without flipping (image data is already correct orientation)
+
+    /*  LETTERBOX INTO THE VIEW, rather than drawing at the surface's own size.
+     *
+     *  This used to be CGRectMake(0, 0, surface->width, surface->height) - a
+     *  FIXED rect. In a window that is invisible, because the window is sized to
+     *  the surface and the two happen to match exactly. The moment the view is
+     *  any other size, the image is drawn at 1280x960 anchored at CoreGraphics'
+     *  bottom-left origin, leaving it in a corner of a black screen.
+     *
+     *  Aspect is preserved and the remainder filled black, which is what the
+     *  Windows backend does with SetStretchBltMode + a letterboxed StretchDIBits.
+     *  Interpolation is off deliberately: this art is hard-edged and was upscaled
+     *  without anti-aliasing, so smoothing it on the way to the screen would
+     *  undo that.
+     */
+    NSRect bounds = [self bounds];
+    double scale = bounds.size.width / (double)surface->width;
+    double scaleY = bounds.size.height / (double)surface->height;
+    if (scaleY < scale) scale = scaleY;
+
+    double drawW = surface->width  * scale;
+    double drawH = surface->height * scale;
+    CGRect rect = CGRectMake((bounds.size.width  - drawW) * 0.5,
+                             (bounds.size.height - drawH) * 0.5,
+                             drawW, drawH);
+
+    CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 1.0);
+    CGContextFillRect(context, NSRectToCGRect(bounds));
+    CGContextSetInterpolationQuality(context, kCGInterpolationNone);
+
+    // Drawn without flipping: the image data is already the right way up, which
+    // was confirmed on Sequoia rather than assumed.
     CGContextDrawImage(context, rect, image);
-    
+
     CGImageRelease(image);
     CGContextRelease(bitmapContext);
     CGColorSpaceRelease(colorSpace);
@@ -167,8 +196,19 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
         PlatformWindow* window = (PlatformWindow*)malloc(sizeof(PlatformWindow));
         
         NSRect frame = NSMakeRect(0, 0, width, height);
-        NSWindowStyleMask style = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable | 
-                                 NSWindowStyleMaskMiniaturizable;
+        /*  RESIZABLE IS REQUIRED FOR FULLSCREEN, which is not obvious and fails
+         *  silently. macOS refuses native fullscreen on a non-resizable window,
+         *  so [nsWindow toggleFullScreen:] was a no-op with no error - and since
+         *  the startup-fullscreen path routes through the same call, BOTH
+         *  `jc_reborn` with no `window` flag and Alt+Return did nothing at all.
+         *  Reported from a real run on Sequoia 2026-09-14.
+         *
+         *  FullScreenPrimary is set explicitly below for the same reason: a
+         *  window that does not advertise it is skipped by the fullscreen
+         *  machinery.
+         */
+        NSWindowStyleMask style = NSWindowStyleMaskTitled | NSWindowStyleMaskClosable |
+                                 NSWindowStyleMaskMiniaturizable | NSWindowStyleMaskResizable;
         
         window->nsWindow = [[JCRebornWindow alloc]
             initWithContentRect:frame
@@ -181,6 +221,8 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
          *  red button into EVENT_QUIT. Without this the button destroyed the
          *  window under the running engine and left the process suspended. */
         [window->nsWindow setDelegate:window->nsWindow];
+        [window->nsWindow setCollectionBehavior:
+            [window->nsWindow collectionBehavior] | NSWindowCollectionBehaviorFullScreenPrimary];
         [window->nsWindow center];
         [window->nsWindow makeKeyAndOrderFront:nil];
         
