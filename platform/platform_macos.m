@@ -411,10 +411,6 @@ void platformGetClipRect(PlatformSurface* surface, PlatformRect* rect) {
     }
 }
 
-uint32 platformMapRGB(PlatformSurface* surface, uint8 r, uint8 g, uint8 b) {
-    (void)surface;
-    return (r << 16) | (g << 8) | b;
-}
 
 // Surface access
 uint8* platformGetSurfacePixels(PlatformSurface* surface) {

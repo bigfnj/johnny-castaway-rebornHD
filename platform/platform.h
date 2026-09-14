@@ -156,7 +156,11 @@ void platformFillRect(PlatformSurface* surface, PlatformRect* rect,
 void platformSetColorKey(PlatformSurface* surface, uint8 r, uint8 g, uint8 b);
 void platformSetClipRect(PlatformSurface* surface, PlatformRect* rect);
 void platformGetClipRect(PlatformSurface* surface, PlatformRect* rect);
-uint32 platformMapRGB(PlatformSurface* surface, uint8 r, uint8 g, uint8 b);
+/*  platformMapRGB was declared here and implemented in all four backends, and
+ *  called by absolutely nothing - verified across the whole tree. The Web one
+ *  also returned RGB packing while every surface in that file is BGRA, so had it
+ *  ever been wired up it would have been wrong on one platform out of four.
+ *  Removed rather than left as an invitation. */
 
 // Graphics - Surface access
 uint8* platformGetSurfacePixels(PlatformSurface* surface);

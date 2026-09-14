@@ -16,38 +16,56 @@ That is stated per item rather than implied, because "unreachable today" and
 
 ## The state of the project
 
-Builds and is tested on Windows, Linux and Web, all three in CI. macOS is the one
-platform that is neither built nor verified anywhere, and its backend has had
-changes made to it by reading only.
+All four platforms now build in CI. Rendering is verified on Windows and Web;
+Linux and macOS are proven only as far as their decoders, because the check that
+runs there is `dump`, which needs no window server.
 
 | | Windows | Linux | Web | macOS |
 |---|---|---|---|---|
-| Builds | yes | yes | yes | **unverified** |
-| Runs | yes | yes (headless `dump`) | yes | **unverified** |
-| In CI | yes | yes | yes | no |
-| Tests | 27 smoke + 7 screensaver + 2,452-file corpus | decode parity vs Windows, all 2,452 byte-identical | 10-check browser smoke | none |
+| Builds | yes | yes | yes | yes |
+| In CI | yes | yes | yes | yes |
+| Decoders verified | yes | yes | yes | yes |
+| **Rendering verified** | yes | **no** | yes | **no** |
+| Ships in releases | yes | yes | yes | **no** |
+| Tests | 27 smoke + 11 screensaver + 2,452-file corpus | decode parity vs Windows, all 2,452 byte-identical | 10-check browser smoke | decode parity vs Windows |
+
+"Rendering verified" is the row that matters and the one that is easy to misread
+off a green CI badge. Linux and macOS compile their window and blit code and then
+never run a pixel of it in CI.
 
 ---
 
 ## Open
 
-### macOS is entirely unverified
+### macOS renders something nobody has looked at
 
-`platform_macos.m` has had three fixes applied by reading: the `[NSApp
-terminate:]` that never returned (so `zipvfs_shutdown` never ran), an unchecked
-`AudioQueueAllocateBuffer` whose result was dereferenced on the next line, and
-the preview-parent stub. None has been compiled, let alone run.
+**Resolved 2026-09-14: it builds, and its decoders are correct.** A `macos` job
+on `macos-latest` runs `tests/unix-build.sh`, the same script Linux uses, and all
+2,452 decoded files are byte-identical to the Windows golden manifest. It passed
+first try, so the three fixes previously applied by reading alone at least
+compile. Releases still ship no macOS artifact.
 
-The platform audit also believes the frame is drawn **upside down**: the engine's
-buffer is top-down (`platform_windows.c` sets `biHeight = -height`), and
-`drawRect` builds a `CGImage` from it and draws into an unflipped `NSView`, where
-CoreGraphics puts the origin at bottom-left. The comment at
-`platform_macos.m:70` asserts the orientation is already correct. One of the two
-is wrong and it cannot be settled without a Mac.
+What is **still unverified is rendering**, and `dump` can never prove it: that
+mode needs no window server, so parity says the decoders agree and says nothing
+about `drawRect`. The open question is whether the frame comes out upside down.
+The engine's buffer is top-down, `drawRect` builds a `CGImage` from it and draws
+into an unflipped `NSView` where CoreGraphics puts the origin at bottom-left, and
+the comment at `platform_macos.m:70` asserts the orientation is already fine. One
+of the two is wrong.
 
-**Cheapest fix: add a macOS job to `.github/workflows/ci.yml`.** GitHub provides
-macOS runners; a compile alone would catch most of this class, and `dump` runs
-headless there exactly as it does on Linux, so the decode-parity check works too.
+**A test that could settle it without a Mac or a human.** The island scene is
+sky at the top and sea at the bottom, so a vertical flip is detectable as a
+luminance inversion. Run N frames windowed on the macOS runner, `screencapture`
+the window, and assert the top band is brighter than the bottom. That is an
+invariant rather than a pixel comparison, so it survives scaling, colour profiles
+and scene selection. GitHub's macOS runners have a real window server, so this is
+feasible; it was scoped but not built, to keep this pass from turning into an
+open-ended macOS project.
+
+Ruled out on the way: a macOS Docker image. Containers share the host kernel and
+macOS needs XNU; `docker-osx` runs it under QEMU and needs `/dev/kvm`, which
+Docker Desktop on WSL2 does not expose. Apple's licence also restricts macOS
+virtualization to Apple hardware. CI already gives real Apple hardware for free.
 
 ### Latent memory-safety, with zero margin
 
@@ -63,16 +81,12 @@ margin is what makes them latent, and that margin is nil.
 Nothing here fires on the shipped archive. Everything here fires on a corrupt or
 hand-edited one, which is the normal state of a 1992 data file being modded.
 
-### `zipvfs` temp file is a TOCTOU
+### ~~`zipvfs` temp file is a TOCTOU~~ DONE 2026-09-14
 
-`_tempnam` names a file without creating it and `fopen(..., "w+b")` is
-create-or-truncate, so anything that plants a file at that path in between is
-silently truncated and used as the resource cache. Two concurrent instances
-sharing `%TMP%` can collide the same way. `_open` with `_O_CREAT|_O_EXCL|
-_O_TEMPORARY` plus `_fdopen` makes creation atomic and keeps delete-on-close.
-
-Its failure message also says `tmpfile() failed` on a path that never calls
-`tmpfile`, which will mislead whoever triages it.
+Creation is now atomic: `_open` with `_O_CREAT|_O_EXCL|_O_RDWR|_O_BINARY|
+_O_TEMPORARY|_O_SHORT_LIVED` then `_fdopen`, retrying a bounded 8 times on
+`EEXIST` and stopping on anything else. The error message no longer claims
+`tmpfile() failed` on a path that never called `tmpfile`.
 
 ### The Web present is the frame budget
 
@@ -85,13 +99,19 @@ once into a reusable buffer, would remove almost all of it.
 This is why the missing yield mattered so much: the present is slow enough that
 frames routinely outlast their own delay.
 
-### Sound assets and the loader disagree
+### Sound assets and the loader half-disagree
 
-`sound0.wav` ships in the archive and is **never loaded**: the loop starts at
-`i = 1`. `sound11.wav` and `sound13.wav` are **absent** from the archive
-entirely, while `NUM_OF_SOUNDS` is 25 and `ttm.c` plays a data-driven index. No
-shipped script requests 0, 11 or 13, so nothing is audibly missing today; the
-mismatch is between the data and the code's expectations.
+`sound0.wav` shipped and was never loaded, because the loop started at `i = 1`.
+**Fixed 2026-09-14**: it starts at 0, so the data and the loader agree. Nothing
+observable changed - no shipped TTM requests index 0 - but `soundPlay(0)` no
+longer reports a missing sample about a file that is sitting in the archive.
+
+Still open, and it is a data problem rather than a code one: `sound11.wav` and
+`sound13.wav` are **absent from the archive entirely** while `NUM_OF_SOUNDS` is
+25 and `ttm.c` plays a data-driven index. Both log a miss on every start under
+`debug`. Either the files should be recovered from the original `SCRANTIC.SCR`
+(`tools/extract_sound` exists for exactly that) or the gap should be recorded as
+intentional.
 
 ### Init/teardown asymmetries that are unreachable today
 
@@ -106,11 +126,10 @@ point running exactly once per process, which is a property nobody is enforcing.
   before any scene exists, so the array is still statically zeroed each time.
   The first "restart the story without exiting" feature makes this leak
   per-restart.
-- **`jc_reborn island ads NAME TAG` never releases the island.**
-  `adsInitIsland` has two callers, `adsReleaseIsland` has one. `storyPlay` pairs
-  them; the CLI path at `jc_reborn.c:644` does not, so the backdrop, holiday and
-  cloud slots plus their BMP surfaces are still held at `graphicsEnd`. The
-  process exits immediately afterwards, so nothing accumulates across runs.
+- ~~**`jc_reborn island ads NAME TAG` never releases the island.**~~ **DONE
+  2026-09-14.** `adsReleaseIsland` is now called on that path, guarded by the
+  same `argIsland` flag that created it, so init and release are paired the way
+  `storyPlay` already pairs them.
 
 ### Unchecked allocations in all four platform backends
 
@@ -125,12 +144,19 @@ return surface;            /* "success" even when pixels == NULL */
 ```
 
 That NULL then flows into `StretchDIBits`, `XPutImage`, `CGBitmapContextCreate`
-and the Web canvas copy. It is inconsistent with this codebase's own convention:
-`pngDecodeToBGRA` returns NULL on any allocation failure and caps dimensions at
-16384×16384, while `platformCreateSurface` applies no cap at all.
+and the Web canvas copy.
 
-OOM-gated, so latent - but fixing it means changing the contract to "may return
-NULL" and auditing every caller, which is why it is here rather than done.
+**Correction to an earlier plan for this entry.** It said the cheap half was to
+cap dimensions the way `pngDecodeToBGRA` caps at 16384×16384, on the grounds that
+corrupt data can reach it. It cannot: `platformCreateSurface` has exactly ONE
+caller outside the platform files, `graphics.c:351`, and it passes
+`grRenderWidth`/`grRenderHeight`, which are engine-controlled. File-derived
+dimensions go through `platformCreateSurfaceFrom` and the PNG decoder, which is
+already capped. A cap here would guard nothing, so it was not added.
+
+That leaves only the OOM case, which needs the contract changed to "may return
+NULL" plus a caller audit across four backends, for a failure mode where a 4.7 MB
+`calloc` failing means the machine is already gone. Low value, real cost.
 
 ### Web audio drops the channel count
 
@@ -144,19 +170,45 @@ and the `EM_ASM` scheduling block assumes mono interleaving as well. Correcting
 only the buffer size would produce a silently wrong stereo path instead of a
 consistently mono one. Fix both together, or not at all.
 
+### The Web CI job is not reproducible
+
+`.github/workflows/ci.yml` and `release.yml` both use
+`mymindstorm/setup-emsdk@v14` with `version: latest`, which downloads
+`emscripten-core/emsdk/archive/HEAD.zip` on every run. That means two things:
+
+- **It fails when GitHub has a bad minute.** Observed 2026-09-14:
+  `HTTP Error 504: Gateway Time-out` fetching that archive, on a commit whose
+  only changes were Windows-side. A red CI that is nothing to do with the code
+  teaches people to re-run rather than read, which is how a real failure gets
+  waved through.
+- **The toolchain silently moves.** A build that passed last week can fail today
+  because upstream emsdk changed, with nothing in this repository's history to
+  explain it. That is exactly the class of problem the golden corpus exists to
+  catch everywhere else.
+
+Pin a specific emsdk version and bump it deliberately. The release workflow wants
+this more than CI does: a release should be reproducible from its tag, and right
+now the web artifact depends on whatever emsdk `HEAD` was that day.
+
 ### Dead code
 
-- **`platformMapRGB` is implemented in all four backends and called by nothing.**
-  Verified by grepping the whole tree: only the declaration and the four
-  definitions. The Web one also returns RGB packing while every surface in that
-  file is BGRA, so if it were ever wired up it would be wrong.
-- `grSaveZone` and `grSaveImage1` take five parameters, `UNUSED` all of them and
-  have empty bodies. `grRestoreZone` ignores its parameters and frees the entire
-  saved-zone layer; its only non-TTM caller passes all zeros for that side
-  effect. `docs/AI_UNDERSTANDING.md` still documents them as working.
-- `hexdump` (`utils.c`) and `storyGetForcedHoliday` (`story.c`) each have exactly
-  two references in the repo: the definition and the declaration.
-- `createDumpDirs` has external linkage but is used only inside `dump.c`.
+**Cleared 2026-09-14:** `platformMapRGB` (declared once, defined in all four
+backends, called by nothing, and the Web one packed RGB while every surface in
+that file is BGRA) is removed. `hexdump` and `storyGetForcedHoliday` are removed.
+`createDumpDirs` is now `static`, since `dump.c` was its only user.
+
+**CORRECTION, and the reason this section needs reading carefully.**
+`grSaveZone` and `grSaveImage1` were listed here as dead. **They are not.**
+`ttm.c:392` and `ttm.c:403` call them from the bytecode dispatch, for opcodes
+0x4200 and 0x0400. They are reachable no-ops, which is a different defect: the
+scripts invoke them, nothing happens, and `docs/AI_UNDERSTANDING.md` still
+documents them as working. Removing them would have broken opcode handling.
+They stay, and the category was wrong, not the observation.
+
+`grRestoreZone` likewise ignores its parameters and frees the entire saved-zone
+layer; its only non-TTM caller passes all zeros for exactly that side effect.
+
+Still open:
 - `parseResourceFile` takes a `filename` it immediately `UNUSED`es, rebuilding
   the path from the `mapFile` global its caller populated one line earlier. The
   caller passes a real string to both functions as if both used it.
@@ -176,38 +228,47 @@ consistently mono one. Fix both together, or not at all.
 - `grDrawSpriteFlip` calls `platformBlitSurface` **once per column** of the
   sprite, so a 96-pixel-wide sprite costs 96 blit calls with full setup each. A
   single blit with a horizontal-flip flag would replace it.
-- `graphicsEnd()` calls `platformShutdown()` and `eventsInit` separately
-  registers `atexit(platformShutdown)`, so it runs twice on a normal exit.
+- ~~`graphicsEnd()` and `atexit` both call `platformShutdown`~~ **DONE
+  2026-09-14**, and it was redundancy rather than a bug: checked before removing,
+  the second call was harmless on all four backends. Windows re-unregisters a
+  class that is already gone and ignores the FALSE, Linux guards on `display` and
+  NULLs it, macOS releases an already-nil queue, Web is empty. The `atexit`
+  registration is the one kept, because it also covers `fatalError`, which exits
+  without passing through `graphicsEnd`.
 - No dirty-rectangle tracking anywhere: every frame composites and presents the
   full surface. At `grScale` 4 or higher this becomes CPU-bound.
 
 ### Screensaver polish
 
-- **No `VERSIONINFO`.** The `STRINGTABLE` is done - the dropdown now reads
-  "Johnny Reborn" instead of the filename, asserted by
-  `tests/Test-ScreensaverPreview.ps1`, which loads the `.scr` as a data file and
-  reads string resource 1. `VERSIONINFO` is what is still missing, and it is
-  what puts a product name and version in the file properties dialog.
-  Note before adding it: `FILEVERSION` needs comma-separated integers, so the
-  version has to reach `jc_reborn.rc` from `project(... VERSION ...)` rather than
-  being typed in. That means `set_source_files_properties(... COMPILE_DEFINITIONS)`
-  from CMake plus `#ifndef` fallbacks for the hand-maintained `vs/` projects,
-  which do not define them - otherwise the version now lives in three places.
+- ~~**No `VERSIONINFO`.**~~ **DONE 2026-09-14.** CMake passes the three version
+  components to the `.rc` and the display strings are built back out of them, so
+  the number still lives only in `CMakeLists.txt`. `JC_IS_SCR` lets the shared
+  script describe whichever target it is linked into. The test asserts the
+  binary's embedded version against `CMakeLists.txt` rather than a literal, so
+  drift becomes a test failure.
+  Worth knowing if this is ever touched: the block must be `1 VERSIONINFO`, not
+  `VS_VERSION_INFO VERSIONINFO`, unless the script includes `<winver.h>`. That
+  name is a `#define` for `1`; undefined, `rc.exe` silently emits a NAMED
+  resource that Windows never reads, with no error, no warning, a `.res` that
+  genuinely contains the version block, and every field reading back empty.
 - The `/c` dialog is a message box, because the engine genuinely has no
   user-settable state (its persistence is two integers: the story day and the
   date it last advanced). If settings are ever wanted - sound, HD scale, forced
   holiday - note that `cfgFileRead` tolerates unknown keys but `cfgFileWrite`
   rewrites the file with only the two it knows, so any new key must be added to
   both or it is destroyed on the next day rollover.
-- Fullscreen is primary-monitor only (`MONITOR_DEFAULTTOPRIMARY`). On a
-  multi-monitor machine the other screens are left showing the desktop.
-- **It does not exit on losing focus.** `WindowProc` handles no `WM_KILLFOCUS`,
-  `WM_ACTIVATE` or `WM_ACTIVATEAPP`, and `PlatformEventType` has no focus member,
-  so a screensaver that somehow ends up behind another window keeps running. A
-  real screensaver gives way. Note when implementing it that `/p` preview is a
-  `WS_CHILD` window which never holds focus, so the handler must be gated on
-  `evScreensaverMode` and the preview path excluded, or preview will exit
-  immediately.
+- Fullscreen is primary-monitor only (`MONITOR_DEFAULTTOPRIMARY`), so other
+  screens keep showing the desktop. **This is now a decision, not an oversight:**
+  the owner was asked on 2026-09-14 and chose to leave it. Switching to the
+  `SM_*VIRTUALSCREEN` metrics is about four lines if that ever changes, and the
+  existing letterbox code would centre the island with black across every screen.
+  Do not re-raise it as a bug.
+- ~~**It does not exit on losing focus.**~~ **DONE 2026-09-14.** `WM_ACTIVATEAPP`
+  with `wParam == FALSE` produces `EVENT_FOCUS_LOST`, gated on
+  `evScreensaverMode` so a plain `jc_reborn.exe` is still usable as a background
+  window. The `/p` preview needed no special case: `SCR_MODE_PREVIEW` never sets
+  that flag. Two paired tests, and the gate was mutation-tested - removing it
+  breaks the background-run check and leaves the screensaver check passing.
 
 ### Cross-platform contract gaps
 

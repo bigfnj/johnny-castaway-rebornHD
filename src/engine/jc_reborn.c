@@ -668,6 +668,16 @@ int main(int argc, char **argv)
             adsPlay(args[0], (uint16)tagLong);
         }
 
+        /*  PAIRED WITH adsInitIsland ABOVE. storyPlay() gets this right; this
+         *  path did not, so the backdrop, holiday and cloud slots and their BMP
+         *  surfaces were still held at graphicsEnd. Nothing accumulated across
+         *  runs, because the process exits on the next line - but an init with
+         *  no matching release is the kind of asymmetry that becomes a real leak
+         *  the moment anything loops. Guarded on the same flag that created it.
+         */
+        if (argIsland)
+            adsReleaseIsland();
+
         soundEnd();
         graphicsEnd();
     }

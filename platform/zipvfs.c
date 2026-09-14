@@ -16,6 +16,13 @@
 #elif defined(_WIN32)
 #  define WIN32_LEAN_AND_MEAN
 #  include <windows.h>
+   /* _open/_fdopen and their flags, for the atomic temp-file creation in
+    * zipvfs_fopen. errno is read there to tell "that name is taken, draw
+    * another" apart from failures that will not improve on a retry. */
+#  include <errno.h>
+#  include <fcntl.h>
+#  include <io.h>
+#  include <sys/stat.h>
 #elif defined(__APPLE__)
 #  include <mach-o/dyld.h>
 #else
@@ -185,12 +192,45 @@ FILE *zipvfs_fopen(const char *entryPath)
     FILE *f = NULL;
 #if defined(_WIN32)
     {
-        // On Windows, tmpfile() may fail without admin privileges
-        // and doesn't guarantee binary mode. Use _tempnam + fopen instead.
-        char *tmpPath = _tempnam(NULL, "jcr");
-        if (tmpPath) {
-            f = fopen(tmpPath, "w+bTD");  // T=short-lived, D=delete-on-close
+        /*  CREATION MUST BE ATOMIC.
+         *
+         *  This used to be _tempnam followed by fopen(path, "w+bTD"). _tempnam
+         *  only chooses a NAME - it does not create anything - and "w+b" is
+         *  create-OR-TRUNCATE. So in the window between the two calls, anything
+         *  that plants a file at that path has it silently truncated and then
+         *  used as this process's resource cache. Two instances sharing %TMP%
+         *  collide the same way, which is not hypothetical: the smoke suite runs
+         *  several at once.
+         *
+         *  _O_EXCL closes the window by making creation fail if the path already
+         *  exists. _O_TEMPORARY preserves the delete-on-close that the "D" mode
+         *  flag provided, and _O_SHORT_LIVED the "T" - keep both, or the temp
+         *  files start surviving the process.
+         */
+        for (int attempt = 0; attempt < 8 && f == NULL; attempt++) {
+
+            char *tmpPath = _tempnam(NULL, "jcr");
+            if (!tmpPath)
+                break;
+
+            int fd = _open(tmpPath,
+                           _O_CREAT | _O_EXCL | _O_RDWR | _O_BINARY |
+                           _O_TEMPORARY | _O_SHORT_LIVED,
+                           _S_IREAD | _S_IWRITE);
+            int err = errno;
             free(tmpPath);
+
+            if (fd != -1) {
+                f = _fdopen(fd, "w+b");
+                if (!f)
+                    _close(fd);   /* _O_TEMPORARY still unlinks it */
+            }
+            else if (err != EEXIST) {
+                /* Somebody else owning that name is worth another draw; a
+                 * permission or out-of-handles failure is not going to improve
+                 * on a retry, so stop rather than spin. */
+                break;
+            }
         }
     }
 #else
@@ -198,7 +238,11 @@ FILE *zipvfs_fopen(const char *entryPath)
 #endif
     if (!f) {
         free(data);
-        fatalError("zipvfs_fopen: tmpfile() failed");
+        /* The old text said "tmpfile() failed" on the Windows path, which never
+         * called tmpfile - it would have sent whoever triaged it looking at the
+         * wrong function entirely. */
+        fatalError("zipvfs_fopen: could not create a temporary file to unpack '%s'",
+                   entryPath);
     }
 
     if (fwrite(data, 1, size, f) != size) {
