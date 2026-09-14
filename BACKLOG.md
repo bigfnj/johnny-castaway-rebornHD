@@ -58,17 +58,23 @@ Caveat worth keeping: this was a VM (OpenCore on AMD, software rendering) rather
 than Apple hardware. The `CGImage`-into-`NSView` path is identical either way, so
 orientation and channel order transfer, but nothing here exercised a GPU.
 
+**Audio works too**, confirmed the same day. That is the whole `AudioQueue` stack
+in `platform_macos.m` executing for the first time: `platformInitAudio`,
+`platformOpenAudio`, buffer allocation and the mixer callback actually feeding
+samples. It also means the unchecked-`AudioQueueAllocateBuffer` fix that was
+written by reading the code has now run rather than merely compiled.
+
 **Still unverified on macOS**, and NOT claimed anywhere:
 
-- audio. The run used `nosound`, and VoodooHDA was not installed, so the
-  `AudioQueue` path in `platform_macos.m` has still never executed.
-- input. Nothing exercised the key, mouse or `EVENT_QUIT` handling, and
-  `EVENT_QUIT` is known not to be produced on this backend at all.
+- input. Nothing has exercised the key, mouse or quit handling. `EVENT_QUIT` is
+  known not to be produced on this backend at all, so the close button cannot
+  terminate the app there, and the `hotkeys` Esc path is untested.
 - fullscreen, and the fixed `CGRect` presentation noted under cross-platform
   contract gaps.
 
-Releases still ship no macOS artifact. Adding one now needs a packaging job in
-`release.yml`, and is a reasonable next step rather than an oversight.
+Releases still ship no macOS artifact. Once input is confirmed, adding a
+packaging job to `release.yml` is the obvious next step and the remaining
+objection goes away.
 
 
 **Resolved 2026-09-14: it builds, and its decoders are correct.** A `macos` job

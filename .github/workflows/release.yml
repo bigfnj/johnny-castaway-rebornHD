@@ -238,8 +238,11 @@ jobs:
             the script uses `clang` directly rather than going through CMake. CI
             runs that script on every push.
 
-            **Still unverified on macOS:** audio, input handling and fullscreen.
-            No artifact is published until those have been exercised.
+            Audio works there too, confirmed the same day: the whole `AudioQueue`
+            path runs and produces sound.
+
+            **Still unverified on macOS:** input handling and fullscreen. No
+            artifact is published until those have been exercised.
 
             Linux is the remaining gap: it builds and decodes correctly in CI, but
             nothing there renders a pixel under test. Windows and Web are the two
