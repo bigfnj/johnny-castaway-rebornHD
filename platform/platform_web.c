@@ -175,31 +175,76 @@ void platformToggleFullscreen(PlatformWindow* window) {
 void platformUpdateWindow(PlatformWindow* window) {
     if (!window || !window->surface) return;
 
-    // Draw pixels to canvas using JavaScript (2D context)
+    /*  THE PRESENT WAS THE FRAME BUDGET.
+     *
+     *  This used to query the canvas, allocate a fresh ImageData - 4.7 MB at the
+     *  default HD scale of 1280x960 - and then do FOUR indexed HEAPU8 reads and
+     *  four writes per pixel, which is 9.8 million individually bounds-checked
+     *  element accesses. Every frame. With no damage tracking.
+     *
+     *  Now: the canvas, context and ImageData are cached across frames and keyed
+     *  on size, so a fullscreen toggle still rebuilds them; and the copy runs one
+     *  32-bit read, one bitwise swizzle and one 32-bit write per pixel, which is
+     *  2.4 million accesses instead of 9.8 million and no allocation at all.
+     */
     EM_ASM({
-        var canvas = document.querySelector('#canvas');
-        if (!canvas) return;
+        var w = $0;
+        var h = $1;
+        var ptr = $2;
 
-        var ctx = canvas.getContext('2d');
-        if (!ctx) return;
-
-        var width = $0;
-        var height = $1;
-        var pixels = $2;
-
-        var imageData = ctx.createImageData(width, height);
-        var data = imageData.data;
-
-        // Copy pixel data from WASM memory (BGRA -> RGBA)
-        for (var i = 0; i < width * height; i++) {
-            var off = i * 4;
-            data[off]     = HEAPU8[pixels + off + 2]; // R <- B
-            data[off + 1] = HEAPU8[pixels + off + 1]; // G
-            data[off + 2] = HEAPU8[pixels + off];     // B <- R
-            data[off + 3] = HEAPU8[pixels + off + 3]; // A
+        var st = Module.jcPresent;
+        if (!st || st.w !== w || st.h !== h) {
+            var canvas = document.querySelector('#canvas');
+            if (!canvas) return;
+            var ctx = canvas.getContext('2d');
+            if (!ctx) return;
+            var img = ctx.createImageData(w, h);
+            /*  ONE ASSIGNMENT PER LINE, NOT AN OBJECT LITERAL.
+             *
+             *  EM_ASM is a variadic macro and the C preprocessor only groups on
+             *  PARENTHESES - braces do not protect anything. So
+             *  `st = { w: w, h: h };` splits on those commas into separate macro
+             *  arguments and fails to compile, with an error that points at the
+             *  EM_ASM line and explains nothing. This codebase has now been bitten
+             *  by that twice; the other one was `var a = $0, b = $1;`.
+             */
+            st = {};
+            st.w = w;
+            st.h = h;
+            st.ctx = ctx;
+            st.img = img;
+            /* A Uint32Array view over the SAME buffer the ImageData owns, so
+               putImageData needs no further copy. */
+            st.u32 = new Uint32Array(img.data.buffer);
+            Module.jcPresent = st;
         }
 
-        ctx.putImageData(imageData, 0, 0);
+        /*  HEAPU32 IS SNAPSHOTTED HERE, INSIDE THE CALL, AND MUST STAY THAT WAY.
+         *
+         *  The build sets -sALLOW_MEMORY_GROWTH. When the wasm heap grows,
+         *  Emscripten swaps in a new ArrayBuffer and rebinds the HEAP* globals;
+         *  any view captured before that points at a DETACHED buffer, which
+         *  reads 0 and silently drops writes, with no exception thrown. Caching
+         *  this alongside the ImageData above would therefore produce a black
+         *  canvas, at an unpredictable moment, with nothing in the console.
+         *
+         *  Taking it per call is safe because growth is driven by malloc on the
+         *  C side, which cannot run while this JS loop holds the thread.
+         */
+        var src = HEAPU32;
+        var base = ptr >> 2;        /* calloc'd, so 4-byte aligned by construction */
+        var dst = st.u32;
+        var n = w * h;
+
+        for (var i = 0; i < n; i++) {
+            /*  Source is BGRA in memory, so little-endian it reads as
+             *  0xAARRGGBB. ImageData wants RGBA, which reads as 0xAABBGGRR.
+             *  Alpha and green keep their lanes; red and blue swap. */
+            var p = src[base + i];
+            dst[i] = (p & 0xFF00FF00) | ((p >> 16) & 0xFF) | ((p & 0xFF) << 16);
+        }
+
+        st.ctx.putImageData(st.img, 0, 0);
     }, window->surface->width, window->surface->height, window->surface->pixels);
 }
 

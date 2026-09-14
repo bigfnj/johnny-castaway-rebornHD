@@ -971,7 +971,14 @@ void grFadeOut(void)
 {
     static int fadeOutType = 0;
     PlatformSurface *sfc = platformGetWindowSurface(platform_window);
-    PlatformSurface *tmpSfc = grNewLayer();
+
+    /*  ALLOCATED LAZILY. Only the circle fade (case 0) needs a scratch layer -
+     *  the other four draw rectangles straight onto the window surface and never
+     *  touch it. Allocating it up front cost a full render-surface layer on
+     *  every scene transition, which at the default HD scale is 1280x960x4 =
+     *  4.9 MB malloc'd, zeroed and freed for nothing, four times out of five.
+     */
+    PlatformSurface *tmpSfc = NULL;
 
     int centerX = grScreenOrigin.w / 2;
     int centerY = grScreenOrigin.h / 2;
@@ -984,6 +991,7 @@ void grFadeOut(void)
         case 0:
             // Note: we use tmpSfc to be sure we have a 32bpp surface,
             // which is needed by grDrawCircle()
+            tmpSfc = grNewLayer();
             for (int radius=20; radius <= 400; radius += 20) {
                 grDrawCircle(tmpSfc, centerX / grScale - radius, centerY / grScale - radius,
                     radius << 1, radius << 1, 5, 5);

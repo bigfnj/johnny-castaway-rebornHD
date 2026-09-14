@@ -974,7 +974,11 @@ void adsPlayBench(void)  // TODO - tempo
 
     adsInit();
 
-    for (int i=0; i < 8; i++) {
+    /*  MAX_TTM_THREADS, not a literal 8. The array has 10 entries; this loop
+     *  and its teardown twin below both hardcoded 8, so the two extra threads
+     *  were never initialised here and never stopped. Harmless while 10 > 8,
+     *  and an out-of-bounds write the day anyone lowers MAX_TTM_THREADS. */
+    for (int i=0; i < MAX_TTM_THREADS; i++) {
         ttmThreads[i].ttmSlot         = &ttmSlots[0];
         ttmThreads[i].isRunning       = TTM_RUNNING;
         ttmThreads[i].selectedBmpSlot = 0;
@@ -1007,7 +1011,7 @@ void adsPlayBench(void)  // TODO - tempo
         printf(" %d-layers test --> %d fps\n", numLayers, counter/3);
     }
 
-    for (int i=0; i < 8; i++)
+    for (int i=0; i < MAX_TTM_THREADS; i++)
         adsStopScene(i);
 
     ttmResetSlot(&ttmSlots[0]);

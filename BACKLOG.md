@@ -88,16 +88,35 @@ _O_TEMPORARY|_O_SHORT_LIVED` then `_fdopen`, retrying a bounded 8 times on
 `EEXIST` and stopping on anything else. The error message no longer claims
 `tmpfile() failed` on a path that never called `tmpfile`.
 
-### The Web present is the frame budget
+### The Web present is still the frame budget, but 15% less of it
 
-`platformUpdateWindow` allocates a fresh `createImageData(1280, 960)` (4.7 MB)
-and performs roughly 4.9M `HEAPU8` reads plus 4.9M typed-array writes in `EM_ASM`
-JavaScript **every frame**, with no damage tracking. HD is on by default
-(`"scale": 2`). A single `set()` from a heap subarray, with the BGRA swizzle done
-once into a reusable buffer, would remove almost all of it.
+**Rewritten 2026-09-14 and measured.** It used to query the canvas, allocate a
+fresh 4.7 MB `ImageData`, and do four indexed `HEAPU8` reads plus four writes per
+pixel - 9.8M element accesses per frame. Now the canvas, context and `ImageData`
+are cached and keyed on size, and the copy is one 32-bit read, a bitwise swizzle
+and one 32-bit write per pixel.
 
-This is why the missing yield mattered so much: the present is slow enough that
-frames routinely outlast their own delay.
+| | median of 5 | per frame |
+|---|---|---|
+| before | 78,206 ms | 26.07 ms |
+| after | 66,202 ms | 22.07 ms |
+
+**+15.4%.** Method, because a number without one is worthless: two full container
+builds, baseline taken from git for that one file, runs ALTERNATING between the
+variants so machine drift hits both equally, fresh browser per run, timer started
+after the runtime reports ready and stopped when the engine prints its own
+"stopping after" line, so startup and asset preload are excluded. Correctness was
+checked separately and matters more than the speed: the rendered frame is
+**byte-identical** to the baseline, same SHA-256 over 4,915,200 bytes, which is
+the check that catches a red/blue swizzle error - "the canvas is not blank" would
+pass one happily.
+
+**Still 22 ms a frame**, so the present remains the dominant cost. What is left is
+`putImageData` itself and full-surface compositing, which means the next lever is
+damage tracking, not micro-optimizing the copy. Note also that
+`-sALLOW_MEMORY_GROWTH` rebinds the heap views when the heap grows, so the
+`HEAPU32` snapshot must stay inside the call; caching it across frames would give
+a black canvas at an unpredictable moment with nothing in the console.
 
 ### Sound assets and the loader half-disagree
 
@@ -190,6 +209,53 @@ Pin a specific emsdk version and bump it deliberately. The release workflow want
 this more than CI does: a release should be reproducible from its tag, and right
 now the web artifact depends on whatever emsdk `HEAD` was that day.
 
+### From the closing audit, 2026-09-14
+
+Two were fixed in the same pass and are listed under Optimization below:
+`grFadeOut` allocating a scratch layer for all five fade types when only one uses
+it, and `adsPlayBench` hardcoding `8` where `MAX_TTM_THREADS` is 10.
+
+The rest, verified and open:
+
+- **`adsPlaySingleTtm` never releases the saved-zones layer.** `adsPlay` ends with
+  `grRestoreZone(NULL,0,0,0,0)`, whose side effect is `grReleaseSavedLayer`;
+  `adsPlaySingleTtm` has no equivalent. Reachable via `jc_reborn ttm <name>` when
+  the script issues opcode 0x4204. One-shot, since the process exits, but it is
+  the only asymmetry between the two TTM-play paths.
+- **`grUpdateDisplay` ignores its first parameter** while two call sites pass a
+  live `&ttmBackgroundThread`. The background is composited from the
+  `grBackgroundSfc` global instead. Worth understanding before touching either:
+  `islandInit` sets the background thread's `ttmLayer` to *be* `grBackgroundSfc`,
+  so the two are the same surface, and wiring that parameter up would composite
+  the background twice per frame.
+- **`ttmResetSlot(&ttmSlots[0])` in `adsPlayIntro` is a no-op.** It runs
+  immediately after `adsInit`, which just called `ttmInitSlot` on every slot, so
+  every field it clears is already zero and the `free` sees NULL.
+- **Three more empty TTM opcode handlers** beyond the known palette ones:
+  `0x0080` DRAW_BACKGROUND, `0x2012` SET_FRAME1, `0xB606` DRAW_SCREEN. The first
+  matters most: its own comment says "Free images slots - see for example tag 11
+  of GFFFOOD.TTM", so if the original engine reclaimed sprite memory there, a
+  GFFFOOD scene holds more decoded sprites at peak here than it should.
+- **21 write-only struct fields** across `TAdsResource`, `TTtmResource`,
+  `TBmpResource`, `TPalResource`, `TScrResource`, `TMapFileEntry` and `TMapFile` -
+  parsed out of the file format and never read. Two of them (`versionString`,
+  both resource types) are heap allocations, 55 of them at 5 bytes. The size is
+  trivial; the value in removing them is that `resource.h` would then describe
+  what the engine actually consumes.
+- **`storyPlay` can spin without a delay** if `storyPickScene(FINAL, ...)` ever
+  returns NULL: the `continue` re-enters the loop with no `eventsWaitTick`, and
+  `storyUpdateCurrentDay` touches the config file each time. Unreachable with the
+  shipped `story_data.h`, so this is defensiveness against bad data, not a bug.
+
+**Interesting, and worth knowing before anyone trusts `seed`:** the wave-phase
+counters in `islandAnimate` are file-static and never reset, and `islandInit`
+primes the animation with four calls that advance them. So the wave frame at the
+start of a scene depends on how many island scenes preceded it in that process,
+not on the seed. `--seed N` reproduces the story arc, island position and cloud
+count; it does **not** reproduce wave phase. That is the only engine state the
+seed cannot pin, and it is worth remembering the next time a "the same seed
+rendered differently" report shows up.
+
 ### Dead code
 
 **Cleared 2026-09-14:** `platformMapRGB` (declared once, defined in all four
@@ -226,8 +292,27 @@ Still open:
 ### Optimization
 
 - `grDrawSpriteFlip` calls `platformBlitSurface` **once per column** of the
-  sprite, so a 96-pixel-wide sprite costs 96 blit calls with full setup each. A
-  single blit with a horizontal-flip flag would replace it.
+  sprite, so a 96-pixel-wide sprite costs 96 blit calls with full setup each.
+  **Do not "fix" this the obvious way.** Flipping into a scratch surface and
+  doing one normal blit costs *more* total pixel work, not less: 9,600 copies
+  plus 9,600 blends against the current 9,600 blends, to save 95 clipping
+  computations. It only pays if the flipped surface is CACHED across frames,
+  which is viable - sprite surfaces are stable within a scene - but needs a
+  parallel array in `TTtmSlot` and a matching free in `grReleaseBmp`.
+  Left undone deliberately: the analysis says the cheap version is a regression
+  and the cached version needs a microbenchmark that does not exist yet, since
+  the whole-program signal from three call sites (`walk.c:174`, `island.c:257`,
+  `ttm.c:455`) would be lost in noise.
+- ~~`grFadeOut` allocates a scratch layer for every fade type~~ **DONE
+  2026-09-14.** Only the circle fade needs a 32bpp scratch surface; the other
+  four draw rectangles straight onto the window surface. It was allocating,
+  zeroing and freeing a full render layer - 4.9 MB at the default HD scale - on
+  four out of five scene transitions. Now allocated inside `case 0`;
+  `platformFreeSurface` guards NULL in all four backends, which was checked
+  rather than assumed.
+- ~~`adsPlayBench` hardcodes `8` where `MAX_TTM_THREADS` is 10~~ **DONE
+  2026-09-14.** Harmless while 10 > 8, and an out-of-bounds write the day anyone
+  lowers the constant.
 - ~~`graphicsEnd()` and `atexit` both call `platformShutdown`~~ **DONE
   2026-09-14**, and it was redundancy rather than a bug: checked before removing,
   the second call was harmless on all four backends. Windows re-unregisters a
@@ -320,6 +405,19 @@ evidence.
   deadlock on the first sound, because `audioMutex` is a default, non-recursive
   pthread mutex. Windows only gets away with wrapping the callback because
   `CRITICAL_SECTION` is recursive.
+- **"The New Year holiday window is a logic error and spans all of January."**
+  Raised by the closing audit on 2026-09-14, with a proposed fix of changing the
+  `||` at `story.c:152` to `&&`. **Both halves are wrong, and applying the fix
+  would have broken the feature outright.** The condition is
+  `strcmp("1228", d) < 0 || strcmp(d, "0102") < 0`, and the argument was that the
+  second test admits any date before February. It does not: comparison is
+  lexicographic, so `"0131"` vs `"0102"` differs at index 2, where `'3' > '0'`,
+  making `"0131" < "0102"` false. Evaluated across the year, the condition yields
+  exactly Dec 29, 30, 31 and Jan 1 - precisely what the comment above it claims.
+  The proposed `&&` would have been strictly worse than a no-op: no date can be
+  both greater than `"1228"` and less than `"0102"`, so New Year would never fire
+  again. Verify date-window logic by evaluating it over real dates, not by
+  reading the operators.
 - **"CMake here tops out at the Visual Studio 17 2022 generator."** It offers
   `Visual Studio 18 2026` and defaults to it, so a plain `cmake ..` already
   matches the `v145` toolset the `vs/` projects pin. No mismatch.
