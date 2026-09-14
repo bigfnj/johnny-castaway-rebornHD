@@ -32,12 +32,36 @@ struct PlatformSurface {
 };
 
 // Window structure
-@interface JCRebornWindow : NSWindow
+/*  Set by the close button, drained by platformPollEvent. A plain int rather
+ *  than anything fancier because it is written on the main thread from
+ *  windowShouldClose: and read on the same thread from the poll. */
+static int quitRequested = 0;
+
+@interface JCRebornWindow : NSWindow <NSWindowDelegate>
 @end
 
 @implementation JCRebornWindow
 - (BOOL)canBecomeKeyWindow { return YES; }
 - (BOOL)canBecomeMainWindow { return YES; }
+
+/*  THE RED CLOSE BUTTON USED TO LEAVE THE PROCESS SUSPENDED.
+ *
+ *  The window is created NSWindowStyleMaskClosable, so the button was always
+ *  live, but nothing implemented a delegate. [NSApp sendEvent:] therefore
+ *  dispatched the click straight to the window, which destroyed itself while the
+ *  engine carried on drawing into it. Observed on macOS Sequoia 2026-09-14: the
+ *  app did not exit, it ended up STOPPED, and zsh reported "suspended" with the
+ *  process still resident and the shell blocked on it.
+ *
+ *  Returning NO is deliberate: do not let AppKit tear the window down underneath
+ *  a running engine. Raise EVENT_QUIT instead and let events.c run the normal
+ *  shutdown - soundEnd, graphicsEnd, exit - which is the same path Esc takes.
+ */
+- (BOOL)windowShouldClose:(NSWindow *)sender {
+    UNUSED(sender);
+    quitRequested = 1;
+    return NO;
+}
 @end
 
 @interface JCRebornView : NSView {
@@ -153,6 +177,10 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
             defer:NO];
         
         [window->nsWindow setTitle:[NSString stringWithUTF8String:title]];
+        /*  The window is its own delegate, so windowShouldClose: above turns the
+         *  red button into EVENT_QUIT. Without this the button destroyed the
+         *  window under the running engine and left the process suspended. */
+        [window->nsWindow setDelegate:window->nsWindow];
         [window->nsWindow center];
         [window->nsWindow makeKeyAndOrderFront:nil];
         
@@ -445,6 +473,16 @@ int platformGetSurfaceBytesPerPixel(PlatformSurface* surface) {
 // Events
 int platformPollEvent(PlatformEvent* event) {
     @autoreleasepool {
+        /*  Drained BEFORE the NSEvent pump, because a close request is not an
+         *  NSEvent this loop would ever see: AppKit delivers it to the window
+         *  delegate. Checking it first also means the quit is not held up behind
+         *  a quiet event queue. */
+        if (quitRequested) {
+            quitRequested = 0;
+            event->type = EVENT_QUIT;
+            return 1;
+        }
+
         NSEvent* nsEvent = [NSApp nextEventMatchingMask:NSEventMaskAny
                                               untilDate:[NSDate distantPast]
                                                  inMode:NSDefaultRunLoopMode
