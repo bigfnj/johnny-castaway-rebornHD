@@ -12,10 +12,13 @@ cmake_minimum_required(VERSION 3.10)
 # is complete: /s, /c and /p, verified by registering it in Windows and selecting
 # it, plus the input rules a screensaver is expected to honour.
 #
-# What 1.0 does NOT claim, and BACKLOG.md says so plainly: nobody has looked at a
-# rendered frame on Linux or macOS. The cross-platform check runs `dump`, which
-# opens no window, so on those two the blitting code compiles and is then never
-# executed. Releases ship no macOS artifact.
+# macOS rendering was confirmed by hand on Sequoia, 2026-09-14: right way up,
+# correct colours. The audit's upside-down prediction was wrong. Audio, input and
+# fullscreen there are still unexercised, so releases ship no macOS artifact yet.
+#
+# LINUX is now the only platform where nobody has looked at a rendered frame. The
+# cross-platform check runs `dump`, which opens no window, so its blitting code
+# compiles on every push and is never executed. See BACKLOG.md.
 project(jc_reborn VERSION 1.0.0 LANGUAGES C)
 
 set(JC_VERSION_STRING "${PROJECT_VERSION}")

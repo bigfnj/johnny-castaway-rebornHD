@@ -37,15 +37,38 @@ never run a pixel of it in CI.
 
 ## Open
 
-### macOS renders something nobody has looked at
+### ~~macOS renders something nobody has looked at~~ VERIFIED 2026-09-14
 
-> **Decision, 2026-09-14:** the owner does not expect to get macOS verification,
-> and chose to release 1.0.0 without it rather than hold the version. So this is
-> now a **stated limitation, not a blocker**. `release.yml` publishes the caveat
-> in the release body, no macOS artifact is shipped, and the README platform
-> table separates "builds" from "rendering verified". Do not treat the absence of
-> macOS validation as an oversight; treat it as the documented position until
-> someone with a Mac reports otherwise.
+**Somebody looked. It renders correctly.** Built on macOS Sequoia with
+`tools/build-macos.sh` and run windowed: cyan sky at the top, clouds in it, ocean
+below, sand island at the bottom with Johnny and the palm. Right way up.
+
+**The upside-down theory is dead.** The platform audit reasoned that the engine's
+buffer is top-down while `drawRect` draws a `CGImage` into an unflipped `NSView`
+where CoreGraphics puts the origin at bottom-left, and concluded the frame must
+come out inverted. It does not. The comment at `platform_macos.m:70` asserting the
+orientation was already correct was right, and the audit was wrong.
+
+**Colour is correct too**, which orientation alone would not have shown. The sky
+renders cyan and the sand yellow; under a red/blue channel swap those would come
+out yellow and pale blue. So the BGRA handling in the macOS blitter is right as
+well.
+
+Caveat worth keeping: this was a VM (OpenCore on AMD, software rendering) rather
+than Apple hardware. The `CGImage`-into-`NSView` path is identical either way, so
+orientation and channel order transfer, but nothing here exercised a GPU.
+
+**Still unverified on macOS**, and NOT claimed anywhere:
+
+- audio. The run used `nosound`, and VoodooHDA was not installed, so the
+  `AudioQueue` path in `platform_macos.m` has still never executed.
+- input. Nothing exercised the key, mouse or `EVENT_QUIT` handling, and
+  `EVENT_QUIT` is known not to be produced on this backend at all.
+- fullscreen, and the fixed `CGRect` presentation noted under cross-platform
+  contract gaps.
+
+Releases still ship no macOS artifact. Adding one now needs a packaging job in
+`release.yml`, and is a reasonable next step rather than an oversight.
 
 
 **Resolved 2026-09-14: it builds, and its decoders are correct.** A `macos` job

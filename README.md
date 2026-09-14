@@ -8,26 +8,28 @@ It is written in C and has been refactored to use platform-native APIs instead o
 
 | Platform | Backend | Built in CI | Decoders verified | Rendering verified |
 |---|---|---|---|---|
-| **Windows** | Win32 + WinMM (waveOut) | yes | yes | yes |
+| **Windows** | Win32 + WinMM (waveOut) | yes | yes | yes, automated |
 | **Linux** | X11 + ALSA | yes | yes | **no** |
-| **Web** | HTML5 Canvas + Web Audio (Emscripten) | yes | yes | yes |
-| **macOS** | Cocoa + CoreAudio | yes | yes | **no** |
+| **Web** | HTML5 Canvas + Web Audio (Emscripten) | yes | yes | yes, automated |
+| **macOS** | Cocoa + CoreAudio | yes | yes | yes, by eye (2026-09-14) |
 
 All four build on every push, and all four produce decode output byte-identical
 to the Windows golden corpus, 2,452 files.
 
-**Rendering is the column to read carefully.** The cross-platform check runs
-`dump`, which never opens a window, so on Linux and macOS the windowing and
-blitting code compiles and is then never executed.
+**Rendering is the column to read carefully.** The cross-platform CI check runs
+`dump`, which never opens a window, so it proves the decoders agree and says
+nothing about drawing. Windows and Web have automated rendering assertions.
+macOS was confirmed by building it on Sequoia and looking at the window: correct
+orientation, correct colours. Linux has had neither, so its windowing and
+blitting code compiles on every push and is never executed.
 
-**macOS is not validated and ships no binary.** Nobody has looked at a frame this
-engine rendered on a Mac. There is a specific open question about whether the
-frame comes out vertically flipped: the engine's buffer is top-down and
-`drawRect` draws into an unflipped `NSView`, where CoreGraphics puts the origin at
-bottom-left. Releases deliberately omit a macOS artifact rather than ship
-something that might render upside down. This is a known, accepted limitation
-rather than an open task. If you have a Mac, building from source and reporting
-what you see would settle it. See `BACKLOG.md`.
+**Building on macOS:** use `tools/build-macos.sh`, which needs only the Xcode
+Command Line Tools. Homebrew now refuses to install on Intel Macs, and CMake on
+macOS usually arrives through Homebrew, so the script uses `clang` directly. CI
+runs it on every push, so it stays working.
+
+Releases still ship no macOS artifact, and audio, input and fullscreen remain
+unverified there. See `BACKLOG.md` for exactly what is and is not proven.
 
 
 ## How to install
