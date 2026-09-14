@@ -166,10 +166,21 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 
+Write-Step 'wave renderer smoke'
+& python -B (Join-Path $repo 'tests\test_wave_renderer.py') --exe $exe --archive $sourceZip --phase smoke
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'GATE FAILED: wave smoke failed; regression was not run' -ForegroundColor Red
+    exit 1
+}
+
 if (-not $SmokeOnly) {
     Write-Step 'regression (art-style pixels and configuration)'
     & powershell.exe -NoProfile -ExecutionPolicy Bypass `
         -File (Join-Path $repo 'tests\Invoke-ArtStyleTests.ps1') -Exe $exe -Phase Regression
+    if ($LASTEXITCODE -ne 0) { $failed = $true }
+
+    Write-Step 'regression (wave alpha, restoration and fallback)'
+    & python -B (Join-Path $repo 'tests\test_wave_renderer.py') --exe $exe --archive $sourceZip
     if ($LASTEXITCODE -ne 0) { $failed = $true }
 
     Write-Step 'regression (art authoring tools)'

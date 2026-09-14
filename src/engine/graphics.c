@@ -33,6 +33,7 @@
 #include "resource.h"
 #include "events.h"
 #include "art_style.h"
+#include "island.h"
 
 
 static PlatformWindow *platform_window;
@@ -63,6 +64,7 @@ const char *grCapturePath = NULL;
 
 static void grReleaseScreen(void)
 {
+    islandRelease();
     free(platformGetSurfacePixels(grBackgroundSfc));
     platformFreeSurface(grBackgroundSfc);
     grBackgroundSfc = NULL;
@@ -259,6 +261,7 @@ void graphicsEnd(void)
      *  abrupt teardown.
      */
     grCaptureFrame();
+    islandRelease();
     artStyleReportUsage();
     platformDestroyWindow(platform_window);
 }

@@ -23,6 +23,19 @@ passed 10 checks. Deliberately broken runtime alpha, color-key, dimensions and
 settings cases all failed against rebuilt binaries; test-order and archive-refresh
 mutations also failed as intended and passed after restoration.
 
+True-alpha shore waves now restore their clean background before composing the
+current wave families, including their overlap order. This prevents color buildup
+and stale pixels when a later frame becomes transparent. HD and Cartoon packs
+without active wave replacements retain legacy rendering. The full native gate
+passes with seven focused wave checks; four rebuilt wave mutants triggered the
+intended failures, and nine complete HD/fallback captures matched the previous
+executable. Low-tide waves also held their expected alpha at an island offset
+through 1,529 background updates.
+
+The user approved the character design and the second walking registration's
+correction for added body movement. Foot-contact artwork is still under review;
+the production archive remains unchanged.
+
 ---
 
 ## 2026-04-21 — Release x64 build now produces only `.exe` (no .pdb) (bigfnj)

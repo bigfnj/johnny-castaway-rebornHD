@@ -41,6 +41,19 @@ non-interlaced. Transparent screens are rejected because the engine treats scree
 as opaque. New Cartoon art uses straight alpha and may contain opaque magenta;
 it does not depend on the HD pack's legacy color key.
 
+Animated waves need a clean background on each update so partially transparent
+pixels do not accumulate and transparent pixels reveal the island again. When
+an active tide has a Cartoon wave replacement, the engine restores the wave
+area and composes the current wave families in their last-update order. A mixed
+wave pack therefore also recomposes its HD fallback families, which can change
+edges that the legacy renderer retained from older frames. HD selection and
+Cartoon packs without active wave replacements keep legacy wave rendering.
+
+Author complete active wave groups together: frames 003-011 for high tide and
+030-041 for low tide. Review family overlaps, island offsets and both tides in
+motion. A partially completed wave group is useful for diagnosis, but should
+not be the production visual review target.
+
 ## Reference export
 
 Use Python 3.9 or later, with only its standard library. Run the following from

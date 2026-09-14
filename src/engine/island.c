@@ -23,20 +23,131 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "mytypes.h"
 #include "graphics.h"
 #include "island.h"
 #include "utils.h"
+#include "art_style.h"
+#include "zipvfs.h"
 
 
 struct TIslandState islandState = {0};
+
+struct TWaveFamily {
+    int x, y, firstSprite;
+};
+
+static const struct TWaveFamily highWaves[] = {
+    {270, 306, 3}, {364, 319, 6}, {518, 303, 9}
+};
+static const struct TWaveFamily lowWaves[] = {
+    {129, 340, 39}, {233, 323, 30}, {367, 356, 33}, {558, 323, 36}
+};
+
+static uint8 *waveBase = NULL;
+static PlatformRect waveBounds;
+static int waveSprites[4];
+static int waveOrder[4];
+static int waveOrderCount = 0;
+
+void islandRelease(void)
+{
+    free(waveBase);
+    waveBase = NULL;
+    waveOrderCount = 0;
+}
+
+static void islandSaveWaveBase(struct TTtmSlot *slot)
+{
+    const TArtStyle *style = artStyleCurrent();
+    const struct TWaveFamily *families = islandState.lowTide ? lowWaves : highWaves;
+    int count = islandState.lowTide ? 4 : 3;
+    int hasReplacement = 0;
+    int left = grRenderWidth, top = grRenderHeight, right = 0, bottom = 0;
+
+    /* HD's opaque stamping is retained exactly, including in partial packs
+     * that have no selected-style replacement for the active tide's waves. */
+    if (style->legacyColorKey) return;
+    for (int family = 0; family < count; family++) {
+        int x = (families[family].x + islandState.xPos) * grScale;
+        int y = (families[family].y + islandState.yPos) * grScale;
+        for (int phase = 0; phase < 3; phase++) {
+            int image = families[family].firstSprite + phase;
+            char path[192];
+            snprintf(path, sizeof(path), "%s/BMP/BACKGRND.BMP/%03d.png", style->root, image);
+            if (zipvfs_exists(path)) hasReplacement = 1;
+            if (image < slot->numSprites[0]) {
+                PlatformSurface *sprite = slot->sprites[0][image];
+                int spriteRight = x + platformGetSurfaceWidth(sprite);
+                int spriteBottom = y + platformGetSurfaceHeight(sprite);
+                if (x < left) left = x;
+                if (y < top) top = y;
+                if (spriteRight > right) right = spriteRight;
+                if (spriteBottom > bottom) bottom = spriteBottom;
+            }
+        }
+    }
+    if (!hasReplacement) return;
+    if (left < 0) left = 0;
+    if (top < 0) top = 0;
+    if (right > platformGetSurfaceWidth(grBackgroundSfc)) right = platformGetSurfaceWidth(grBackgroundSfc);
+    if (bottom > platformGetSurfaceHeight(grBackgroundSfc)) bottom = platformGetSurfaceHeight(grBackgroundSfc);
+    if (right <= left || bottom <= top) return;
+    waveBounds = (PlatformRect){left, top, right - left, bottom - top};
+    size_t rowBytes = (size_t)waveBounds.w * 4;
+    waveBase = safe_malloc(rowBytes * (size_t)waveBounds.h);
+    platformLockSurface(grBackgroundSfc);
+    const uint8 *pixels = platformGetSurfacePixels(grBackgroundSfc);
+    int pitch = platformGetSurfacePitch(grBackgroundSfc);
+    for (int y = 0; y < waveBounds.h; y++) {
+        memcpy(waveBase + (size_t)y * rowBytes,
+               pixels + (size_t)(waveBounds.y + y) * pitch + (size_t)waveBounds.x * 4,
+               rowBytes);
+    }
+    platformUnlockSurface(grBackgroundSfc);
+}
+
+static void islandDrawWave(struct TTtmSlot *slot, int family, int phase)
+{
+    const struct TWaveFamily *families = islandState.lowTide ? lowWaves : highWaves;
+    if (!waveBase) {
+        grDrawSprite(grBackgroundSfc, slot, families[family].x, families[family].y,
+                     (uint16)(families[family].firstSprite + phase), 0);
+        return;
+    }
+
+    /* An updated family becomes the topmost one, as in the original stamping
+     * order. Restoring only its rectangle would erase overlapping neighbors. */
+    int position = 0;
+    while (position < waveOrderCount && waveOrder[position] != family) position++;
+    if (position == waveOrderCount) waveOrderCount++;
+    for (int i = position; i + 1 < waveOrderCount; i++) waveOrder[i] = waveOrder[i + 1];
+    waveOrder[waveOrderCount - 1] = family;
+    waveSprites[family] = families[family].firstSprite + phase;
+
+    size_t rowBytes = (size_t)waveBounds.w * 4;
+    platformLockSurface(grBackgroundSfc);
+    uint8 *pixels = platformGetSurfacePixels(grBackgroundSfc);
+    int pitch = platformGetSurfacePitch(grBackgroundSfc);
+    for (int y = 0; y < waveBounds.h; y++) {
+        memcpy(pixels + (size_t)(waveBounds.y + y) * pitch + (size_t)waveBounds.x * 4,
+               waveBase + (size_t)y * rowBytes, rowBytes);
+    }
+    platformUnlockSurface(grBackgroundSfc);
+    for (int i = 0; i < waveOrderCount; i++) {
+        int current = waveOrder[i];
+        grDrawSprite(grBackgroundSfc, slot, families[current].x, families[current].y,
+                     (uint16)waveSprites[current], 0);
+    }
+}
 
 
 void islandInit(struct TTtmThread *ttmThread)
 {
     struct TTtmSlot *ttmSlot = ttmThread->ttmSlot;
-
+    islandRelease();
 
     /*  The backdrop choice is logged because it is otherwise unobservable from
      *  outside: night depends on the wall clock (21:00-05:59), so a daytime test
@@ -136,6 +247,9 @@ void islandInit(struct TTtmThread *ttmThread)
         grDrawSprite(grBackgroundSfc, ttmSlot, 150, 328,  2, 0);  // rock
     }
 
+    // Keep the static island separate from true-alpha wave animation.
+    islandSaveWaveBase(ttmSlot);
+
     // Initial waves on the shore
     for (int i=0; i < 4; i++) {
         islandAnimate(ttmThread);
@@ -156,22 +270,8 @@ void islandAnimate(struct TTtmThread *ttmThread)
     grDy = islandState.yPos;
 
     counter2++;
-    if (islandState.lowTide) {
-        counter2 %= 4;
-        switch (counter2) {
-            case 0: grDrawSprite(grBackgroundSfc, ttmSlot, 129, 340, (uint16)(39 + counter1), 0); break;  // rock waves (40)
-            case 1: grDrawSprite(grBackgroundSfc, ttmSlot, 233, 323, (uint16)(30 + counter1), 0); break;  // low tide waves - left (31)
-            case 2: grDrawSprite(grBackgroundSfc, ttmSlot, 367, 356, (uint16)(33 + counter1), 0); break;  // low tide waves - center (33)
-            case 3: grDrawSprite(grBackgroundSfc, ttmSlot, 558, 323, (uint16)(36 + counter1), 0); break;  // low tide waves - right (36)
-        }
-    } else {
-        counter2 %= 3;
-        switch (counter2) {
-            case 0: grDrawSprite(grBackgroundSfc, ttmSlot, 270, 306, (uint16)(3 + counter1), 0); break;  // high tide waves - left (3)
-            case 1: grDrawSprite(grBackgroundSfc, ttmSlot, 364, 319, (uint16)(6 + counter1), 0); break;  // high tide waves - center (6)
-            case 2: grDrawSprite(grBackgroundSfc, ttmSlot, 518, 303, (uint16)(9 + counter1), 0); break;  // high tide waves - right (9)
-        }
-    }
+    counter2 %= islandState.lowTide ? 4 : 3;
+    islandDrawWave(ttmSlot, counter2, counter1);
 
     if (!counter2) {
         counter1++;

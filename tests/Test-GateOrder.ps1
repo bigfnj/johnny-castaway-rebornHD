@@ -38,6 +38,9 @@ function Run-GateCase {
         $(if ($FailPhase -eq 'art') { "if (`$Phase -eq 'Smoke') { Write-Output 'FAIL fixture tests/Invoke-ArtStyleTests.ps1'; exit 1 }`n" } else { '' }) + "exit 0`n")
     Write-FixtureText 'tests\Invoke-DumpRegression.ps1' "param(`$Exe)`nWrite-Output 'WITNESS dump-regression'`nexit 0`n"
     Write-FixtureText 'tests\test_art_tools.py' "import unittest`nclass OrderFixture(unittest.TestCase):`n    def test_reached(self):`n        print('WITNESS authoring-regression')`n        self.assertTrue(True)`n"
+    Write-FixtureText 'tests\test_wave_renderer.py' (
+        "import sys`nphase = 'Smoke' if '--phase' in sys.argv else 'Regression'`nprint('WITNESS wave-' + phase)`n" +
+        $(if ($FailPhase -eq 'wave') { "if phase == 'Smoke':`n    print('FAIL fixture tests/test_wave_renderer.py')`n    sys.exit(1)`n" } else { '' }))
     $gateArgs = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', (Join-Path $work 'gate.ps1'), '-NoBuild')
     if ($SmokeOnly) { $gateArgs += '-SmokeOnly' }
     $psi = New-Object Diagnostics.ProcessStartInfo
@@ -67,11 +70,14 @@ function Check-Ordering {
         smoke = 'tests/Invoke-SmokeTests.ps1'
         screensaver = 'tests/Test-ScreensaverPreview.ps1'
         art = 'tests/Invoke-ArtStyleTests.ps1'
+        wave = 'tests/test_wave_renderer.py'
     }
     $marker = 'FAIL fixture ' + $names[$Phase]
     ($Result.Code -ne 0) -and
         ([regex]::Matches($Result.Text, [regex]::Escape($marker)).Count -eq 1) -and
         ($Result.Text -notmatch 'WITNESS art-Regression') -and
+        ($Result.Text -notmatch 'WITNESS wave-Regression') -and
+        ($Result.Text -notmatch 'WITNESS authoring-regression') -and
         ($Result.Text -notmatch 'WITNESS dump-regression')
 }
 
@@ -90,18 +96,19 @@ try {
         [IO.File]::WriteAllBytes((Join-Path $work $file), [byte[]]@(0))
     }
     Write-FixtureText 'gate.ps1' $gateSource
-    foreach ($phase in @('smoke', 'screensaver', 'art')) {
+    foreach ($phase in @('smoke', 'screensaver', 'art', 'wave')) {
         $result = Run-GateCase $phase
         Assert-Case "$phase failure prevents regression" (Check-Ordering $phase $result)
     }
     $result = Run-GateCase 'none'
-    Assert-Case 'passed smoke reaches both regression witnesses in order' (
+    Assert-Case 'passed smoke reaches every regression witness in order' (
         ($result.Code -eq 0) -and
-        ($result.Text -match '(?s)WITNESS smoke.*WITNESS screensaver.*WITNESS art-Smoke.*WITNESS art-Regression.*WITNESS dump-regression'))
+        ($result.Text -match '(?s)WITNESS smoke.*WITNESS screensaver.*WITNESS art-Smoke.*WITNESS wave-Smoke.*WITNESS art-Regression.*WITNESS wave-Regression.*WITNESS authoring-regression.*WITNESS dump-regression'))
     $result = Run-GateCase 'none' -SmokeOnly
     Assert-Case 'SmokeOnly executes smoke without regression' (
-        ($result.Code -eq 0) -and ($result.Text -match 'WITNESS art-Smoke') -and
-        ($result.Text -notmatch 'WITNESS art-Regression') -and ($result.Text -notmatch 'WITNESS dump-regression'))
+        ($result.Code -eq 0) -and ($result.Text -match 'WITNESS wave-Smoke') -and
+        ($result.Text -notmatch 'WITNESS art-Regression') -and ($result.Text -notmatch 'WITNESS wave-Regression') -and
+        ($result.Text -notmatch 'WITNESS authoring-regression') -and ($result.Text -notmatch 'WITNESS dump-regression'))
 
     if ($VerifyMutation) {
         $guard = "if (`$LASTEXITCODE -ne 0) {`n    Write-Host 'GATE FAILED: smoke failed; regression was not run'"
@@ -117,6 +124,20 @@ try {
             ([regex]::Matches($result.Text, 'FAIL fixture tests/Invoke-SmokeTests.ps1').Count -eq 1))
         Write-FixtureText 'gate.ps1' $gateSource
         Assert-Case 'restored gate blocks regression again' (Check-Ordering 'smoke' (Run-GateCase 'smoke'))
+
+        $guard = "if (`$LASTEXITCODE -ne 0) {`n    Write-Host 'GATE FAILED: wave smoke failed; regression was not run'"
+        if ([regex]::Matches($gateSource, [regex]::Escape($guard)).Count -ne 1) {
+            throw 'Expected exactly one wave smoke short-circuit guard in gate.ps1'
+        }
+        $mutant = $gateSource.Replace($guard, "if (`$false) {`n    Write-Host 'GATE FAILED: wave smoke failed; regression was not run'")
+        Write-FixtureText 'gate.ps1' $mutant
+        $result = Run-GateCase 'wave'
+        Assert-Case 'wave mutation executes regression witness and the ordering assertion rejects it' (
+            (-not (Check-Ordering 'wave' $result)) -and
+            ($result.Text -match 'WITNESS wave-Regression') -and ($result.Text -match 'WITNESS dump-regression') -and
+            ([regex]::Matches($result.Text, 'FAIL fixture tests/test_wave_renderer.py').Count -eq 1))
+        Write-FixtureText 'gate.ps1' $gateSource
+        Assert-Case 'restored wave gate blocks regression again' (Check-Ordering 'wave' (Run-GateCase 'wave'))
     }
 }
 finally {

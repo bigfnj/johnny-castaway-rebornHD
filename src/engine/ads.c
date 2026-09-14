@@ -1074,6 +1074,7 @@ void adsInitIsland(void)
 
 void adsReleaseIsland(void)
 {
+    islandRelease();
     /*  NULL AFTER FREE. Both layer pointers were left pointing at freed memory.
      *
      *  For the clouds layer that was an arbitrary free, not merely a double
