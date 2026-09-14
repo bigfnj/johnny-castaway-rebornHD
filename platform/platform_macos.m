@@ -105,14 +105,20 @@ int platformInit(void) {
 }
 
 void platformShutdown(void) {
-    /*  NO [NSApp terminate:]. It does not return - it runs the app's termination
-     *  sequence and calls exit() itself - and platformShutdown is called from
-     *  graphicsEnd(), which main() invokes BEFORE zipvfs_shutdown(). So on macOS
-     *  the process died inside this function and the archive was never closed.
+    /*  NO [NSApp terminate:]. It does not return: it runs the app's termination
+     *  sequence and calls exit() itself.
      *
-     *  Letting it return costs nothing: every caller either exits immediately
-     *  afterwards or is finishing main(), so the process still terminates, but
-     *  now it does so after the cleanup that was being skipped.
+     *  The reason that matters has CHANGED, and the old one is recorded here
+     *  because it explains the shape of the fix. Originally graphicsEnd() called
+     *  this directly, and main() calls graphicsEnd() BEFORE zipvfs_shutdown() -
+     *  so the process died inside this function and the archive was never closed.
+     *
+     *  That call was removed on 2026-09-14; platformShutdown now runs only as the
+     *  atexit handler eventsInit registers, which fires AFTER zipvfs_shutdown has
+     *  already returned. The ordering problem is therefore gone, and the rule
+     *  survives it for a harder reason: calling exit() from inside an atexit
+     *  handler is undefined behaviour (C11 7.22.4.4). Do not reinstate either the
+     *  terminate call or the graphicsEnd() call to "match" an older comment.
      *
      *  COMPILES, AND ITS DECODERS ARE CORRECT, as of the macOS CI job added
      *  2026-09-14: macos-latest builds this file and all 2,452 decoded files come
