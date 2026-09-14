@@ -133,6 +133,25 @@ $name = [JcWin]::ScreensaverName((Resolve-Path -LiteralPath $Scr).Path)
 Check 'the .scr carries the name shown in the Screen Saver dropdown' `
     ($name -eq 'Johnny Reborn') "string resource 1 = '$name'"
 
+#  VERSIONINFO, asserted against CMakeLists.txt rather than against a literal.
+#  The point of feeding the version to the .rc from CMake was to stop it living
+#  in more than one place; a test that hard-coded the number here would put it
+#  back. This turns any future drift between source, binary and tag into a test
+#  failure instead of something discovered in a bug report.
+$cmakeText = Get-Content (Join-Path $repo 'CMakeLists.txt') -Raw
+if ($cmakeText -match 'project\(jc_reborn VERSION (\d+\.\d+\.\d+)') {
+    $expected = $Matches[1]
+    $vi = [System.Diagnostics.FileVersionInfo]::GetVersionInfo((Resolve-Path -LiteralPath $Scr).Path)
+    $got = '{0}.{1}.{2}' -f $vi.FileMajorPart, $vi.FileMinorPart, $vi.FileBuildPart
+    Check 'its embedded version matches CMakeLists.txt' ($got -eq $expected) `
+        "binary says '$got', CMakeLists.txt says '$expected'"
+    Check 'and it identifies itself as the screensaver, not the console build' `
+        ($vi.OriginalFilename -eq 'jc_reborn.scr') "OriginalFilename = '$($vi.OriginalFilename)'"
+}
+else {
+    Check 'its embedded version matches CMakeLists.txt' $false 'no version found in CMakeLists.txt'
+}
+
 Write-Host "`n== /p preview draws into the window it is given ==" -ForegroundColor Cyan
 
 $form = New-Object System.Windows.Forms.Form

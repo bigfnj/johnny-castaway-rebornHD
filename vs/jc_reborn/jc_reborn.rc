@@ -24,3 +24,78 @@ STRINGTABLE
 BEGIN
     1, "Johnny Reborn"
 END
+
+//  VERSIONINFO - what the file properties dialog shows, and what an installer or
+//  an IT inventory reads.
+//
+//  THE VERSION LIVES IN CMakeLists.txt AND NOWHERE ELSE. FILEVERSION needs
+//  comma-separated integers rather than a string, so CMake passes the three
+//  components as defines and the display strings are built back out of them by
+//  stringification below. Typing "0.9.0" here instead would put the version in
+//  three places: CMakeLists.txt, this file, and the git tag that release.yml
+//  checks against CMakeLists.txt. Two of them would eventually disagree.
+//
+//  The fallback is deliberately 0.0.0 rather than the current number. The
+//  hand-maintained vs/ projects do not define these, and a build from that path
+//  SHOULD be identifiable rather than silently claiming to be a release. CMake is
+//  the supported path; see README.md.
+#ifndef JC_VER_MAJOR
+#  define JC_VER_MAJOR 0
+#  define JC_VER_MINOR 0
+#  define JC_VER_PATCH 0
+#endif
+
+#define JC_STR2(x) #x
+#define JC_STR(x)  JC_STR2(x)
+#define JC_VER_TEXT  JC_STR(JC_VER_MAJOR) "." JC_STR(JC_VER_MINOR) "." JC_STR(JC_VER_PATCH)
+
+//  Both targets compile this one script, so it has to describe whichever it is
+//  being linked into. JC_IS_SCR comes from the jc_reborn_scr target only.
+#ifdef JC_IS_SCR
+#  define JC_ORIGINAL_NAME "jc_reborn.scr"
+#  define JC_DESCRIPTION   "Johnny Reborn Screen Saver"
+#else
+#  define JC_ORIGINAL_NAME "jc_reborn.exe"
+#  define JC_DESCRIPTION   "Johnny Reborn"
+#endif
+
+//  THE LITERAL 1, NOT THE NAME VS_VERSION_INFO.
+//
+//  That name is a #define in <winver.h>, and this script deliberately includes
+//  no SDK headers because it is compiled by both CMake and the vs/ projects,
+//  which set up rc.exe's search path differently. Without the include the name
+//  is simply an undefined identifier, and rc.exe then emits a NAMED resource
+//  instead of ID 1 - no error, no warning, a perfectly valid .res containing a
+//  version block that Windows will never look at, because it only ever reads
+//  RT_VERSION id 1. That cost a build to diagnose: the resource was present in
+//  the .res and every field came back as the empty string.
+1 VERSIONINFO
+ FILEVERSION    JC_VER_MAJOR,JC_VER_MINOR,JC_VER_PATCH,0
+ PRODUCTVERSION JC_VER_MAJOR,JC_VER_MINOR,JC_VER_PATCH,0
+ FILEFLAGSMASK  0x3fL
+ FILEFLAGS      0x0L
+ FILEOS         0x40004L    // VOS_NT_WINDOWS32
+ FILETYPE       0x1L        // VFT_APP
+ FILESUBTYPE    0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"    // US English, Unicode
+        BEGIN
+            VALUE "FileDescription", JC_DESCRIPTION
+            VALUE "FileVersion",     JC_VER_TEXT
+            VALUE "InternalName",    "jc_reborn"
+            VALUE "LegalCopyright",  "GPLv3. Engine (C) 2019 Jeremie GUILLAUME. Original artwork (C) Sierra On-Line."
+            VALUE "OriginalFilename", JC_ORIGINAL_NAME
+            VALUE "ProductName",     "Johnny Reborn"
+            VALUE "ProductVersion",  JC_VER_TEXT
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        //  MUST agree with the BLOCK above: 0x409 is the 0409 in "040904b0" and
+        //  1200 is the 04b0. A mismatch makes the whole string block invisible to
+        //  the properties dialog, with no error anywhere.
+        VALUE "Translation", 0x409, 1200
+    END
+END
