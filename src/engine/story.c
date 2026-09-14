@@ -59,12 +59,6 @@ void storySetForcedHoliday(int holiday)
     storyForcedHoliday = holiday;
 }
 
-int storyGetForcedHoliday(void)
-{
-    return storyForcedHoliday;
-}
-
-
 static struct TStoryScene *storyPickScene(
                 uint16 wantedFlags, uint16 unwantedFlags)
 {

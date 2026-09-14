@@ -916,17 +916,6 @@ void platformGetClipRect(PlatformSurface* surface, PlatformRect* rect) {
     }
 }
 
-/**
- * platformMapRGB()
- *
- * Maps 8-bit RGB values to a surface-native pixel value.
- * Parameters: surface, r, g, b.
-
- */
-uint32 platformMapRGB(PlatformSurface* surface, uint8 r, uint8 g, uint8 b) {
-    UNUSED(surface);
-    return (r << 16) | (g << 8) | b;
-}
 
 /**
  * platformGetSurfacePixels()

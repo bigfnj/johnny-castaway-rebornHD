@@ -73,7 +73,6 @@ int    peekHasBytes(uint32 dataSize, uint32 offset, uint32 nBytes);
 uint16 peekUint16(const uint8 *data, uint32 dataSize, uint32 *offset, const char *what);
 void   peekUint16Block(const uint8 *data, uint32 dataSize, uint32 *offset,
                        uint16 *dest, int len, int destCapacity, const char *what);
-void   hexdump(uint8 *data, uint32 len);
 int    getDayOfYear(void);
 int    getHour(void);
 char   *getMonthAndDay(void);

@@ -35,7 +35,6 @@ void storySetForcedHoliday(int holiday);
 /* Force the night backdrop on (1) or off (0); -1 restores the clock-derived
  * default of 21:00-05:59. Set by the `night` / `day` options. */
 void storySetForcedNight(int night);
-int  storyGetForcedHoliday(void);
 
 // Sync the island state (night + holiday) from the current clock.
 // This is normally called by storyPlay(), but can also be useful for

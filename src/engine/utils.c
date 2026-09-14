@@ -272,28 +272,6 @@ void peekUint16Block(const uint8 *data, uint32 dataSize, uint32 *offset,
 }
 
 
-void hexdump(uint8 *data, uint32 len)
-{
-    if (data==NULL)
-    {
-        printf("Can't dump NULL data\n");
-        return;
-    }
-
-    printf("\n");
-
-    for (uint32 i=0; i < len; i++) {
-
-        printf("%02x ",data[i]);
-
-        if ((i & 0x0f) == 0x07) { printf (" ");  }
-        if ((i & 0x0f) == 0x0f) { printf ("\n"); }
-    }
-
-    printf("\n");
-}
-
-
 int getDayOfYear(void)
 {
     time_t t = time(NULL);

@@ -99,7 +99,18 @@ void soundInit(void)
     PlatformAudioSpec audioSpec = {0};
     int haveSpec = 0;
 
-    for (int i=1; i < NUM_OF_SOUNDS; i++) {
+    /*  FROM 0, not 1. data/sound0.wav ships in the archive and was never loaded,
+     *  so soundPlay(0) found an empty slot and logged "Non-existent sound sample
+     *  #0" about a file that was sitting right there. Nothing observable changes
+     *  today - no shipped TTM requests index 0 - but the data and the loader now
+     *  agree, which is the point.
+     *
+     *  Indices 11 and 13 genuinely are absent from the archive while
+     *  NUM_OF_SOUNDS is 25, so those two still log a miss on every start. That is
+     *  the data being incomplete rather than the loop being wrong, and it is
+     *  recorded in BACKLOG.md rather than papered over here.
+     */
+    for (int i=0; i < NUM_OF_SOUNDS; i++) {
 
         char filename[20];
         snprintf(filename, sizeof(filename), "data/sound%d.wav", i);

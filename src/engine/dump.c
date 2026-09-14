@@ -64,7 +64,9 @@ static void safe_mkdir(char *dirname)
 }
 
 
-void createDumpDirs(void)
+/* Only ever called from this file (below), so it does not need external
+ * linkage. Narrowed rather than removed: it is live, unlike its neighbours. */
+static void createDumpDirs(void)
 {
     char dirname[MAX_FILENAME_LEN];
 
