@@ -25,7 +25,6 @@
 #include <string.h>
 #include <time.h>
 #include <stdio.h>
-#include <ctype.h>
 #include "platform.h"
 
 #include "mytypes.h"
@@ -33,7 +32,7 @@
 #include "graphics.h"
 #include "resource.h"
 #include "events.h"
-#include "zipvfs.h"
+#include "art_style.h"
 
 
 static PlatformWindow *platform_window;
@@ -59,6 +58,7 @@ int grScale = 1;                 // 1 = original, 2 = 2x, etc.
 int grRenderWidth = SCREEN_WIDTH;
 int grRenderHeight = SCREEN_HEIGHT;
 int grHdEnabled = 0;
+const char *grCapturePath = NULL;
 
 
 static void grReleaseScreen(void)
@@ -135,51 +135,18 @@ void grLoadPalette(struct TPalResource *palResource)
 
 
 
-static void grDetectHDAssets(void)
+static void grDetectArtAssets(void)
 {
-    grScale = 1;
-    grHdEnabled = 0;
-
-    // If this file exists in the zip, we assume the HD PNG pack is present.
-    const char *manifestPath = "data/hd/manifest.json";
-
-    size_t manifestSize = 0;
-    uint8 *manifestData = zipvfs_read(manifestPath, &manifestSize);
-    if (!manifestData) {
-        grRenderWidth = SCREEN_WIDTH;
-        grRenderHeight = SCREEN_HEIGHT;
-        return;
-    }
-
-    char buf[4096 + 1];
-    size_t n = manifestSize < sizeof(buf) - 1 ? manifestSize : sizeof(buf) - 1;
-    memcpy(buf, manifestData, n);
-    free(manifestData);
-    buf[n] = '\0';
-
-    // Very small / very dumb JSON parsing: look for "scale": <int>
-    char *p = strstr(buf, "\"scale\"");
-    if (!p)
-        p = strstr(buf, "scale");
-
-    if (p) {
-        p = strchr(p, ':');
-        if (p) {
-            p++;
-            while (*p && !isdigit((unsigned char)*p))
-                p++;
-            long v = strtol(p, NULL, 10);
-            if (v > 1 && v <= 8) {
-                grScale = (int)v;
-                grHdEnabled = 1;
-            }
-        }
-    }
+    char error[768];
+    if (!artStyleValidatePack(error, sizeof(error)))
+        fatalError("%s", error);
+    grScale = artStyleCurrentScale();
+    grHdEnabled = grScale > 1;
 
     grRenderWidth = SCREEN_WIDTH * grScale;
     grRenderHeight = SCREEN_HEIGHT * grScale;
 
-    if (debugMode && grHdEnabled) {
+    if (debugMode && grHdEnabled && artStyleCurrent()->legacyColorKey) {
         printf("HD assets enabled (scale=%d, render=%dx%d)\n",
                grScale, grRenderWidth, grRenderHeight);
     }
@@ -188,9 +155,8 @@ static void grDetectHDAssets(void)
 
 void graphicsInit(void)
 {
+    grDetectArtAssets();
     platformInit();
-
-    grDetectHDAssets();
 
     platform_window = platformCreateWindow(
         "Johnny Reborn ...?",
@@ -246,6 +212,35 @@ void graphicsInit(void)
 }
 
 
+static void grCaptureFrame(void)
+{
+    if (!grCapturePath) return;
+    PlatformSurface *surface = platformGetWindowSurface(platform_window);
+    int width = platformGetSurfaceWidth(surface);
+    int height = platformGetSurfaceHeight(surface);
+    int pitch = platformGetSurfacePitch(surface);
+    uint8 *pixels = platformGetSurfacePixels(surface);
+    if (!pixels || width <= 0 || height <= 0 || platformGetSurfaceBytesPerPixel(surface) != 4)
+        fatalError("Cannot capture frame to %s: invalid render surface", grCapturePath);
+    FILE *file = fopen(grCapturePath, "wb");
+    if (!file) fatalError("Cannot open frame capture %s", grCapturePath);
+    uint8 *row = safe_malloc((size_t)width * 3);
+    int ok = fprintf(file, "P6\n%d %d\n255\n", width, height) > 0;
+    for (int y = 0; y < height && ok; y++) {
+        const uint8 *source = pixels + (size_t)y * (size_t)pitch;
+        for (int x = 0; x < width; x++) {
+            row[(size_t)x * 3] = source[(size_t)x * 4 + 2];
+            row[(size_t)x * 3 + 1] = source[(size_t)x * 4 + 1];
+            row[(size_t)x * 3 + 2] = source[(size_t)x * 4];
+        }
+        ok = fwrite(row, 3, (size_t)width, file) == (size_t)width;
+    }
+    free(row);
+    if (fclose(file) != 0) ok = 0;
+    if (!ok) fatalError("Cannot write frame capture %s", grCapturePath);
+    printf("Captured frame: %s (%dx%d)\n", grCapturePath, width, height);
+}
+
 void graphicsEnd(void)
 {
     /*  NO platformShutdown() here. eventsInit registers atexit(platformShutdown),
@@ -263,6 +258,8 @@ void graphicsEnd(void)
      *  that never reach here: fatalError exits directly, and so does any future
      *  abrupt teardown.
      */
+    grCaptureFrame();
+    artStyleReportUsage();
     platformDestroyWindow(platform_window);
 }
 
@@ -682,20 +679,14 @@ void grLoadScreen(const char *strArg)
     if (grSavedZonesLayer != NULL)
         grReleaseSavedLayer();
 
-    // HD override: data/hd/SCR/<NAME>.png  (e.g. data/hd/SCR/OCEAN00.SCR.png)
+    // The style loader selects a replacement or requests legacy decoding.
     if (grHdEnabled) {
-        char path[512];
-        snprintf(path, sizeof(path), "data/hd/SCR/%s.png", scrResource->resName);
-
-        size_t pngSize = 0;
-        uint8 *pngData = zipvfs_read(path, &pngSize);
-        if (pngData) {
-            PlatformSurface *pngSfc = platformLoadPNGFromMemory(pngData, pngSize);
-            free(pngData);
-            if (pngSfc != NULL) {
-                grBackgroundSfc = pngSfc;
-                return;
-            }
+        PlatformSurface *pngSfc = artStyleLoadScreen(scrResource->resName,
+                                                    scrResource->width,
+                                                    scrResource->height);
+        if (pngSfc != NULL) {
+            grBackgroundSfc = pngSfc;
+            return;
         }
     }
 
@@ -871,43 +862,11 @@ void grLoadBmp(struct TTtmSlot *ttmSlot, uint16 slotNo, const char *strArg)
 
         srcUsed += spriteBytes;
 
-        // HD override per-image: data/hd/BMP/<NAME>/<NNN>.png
+        // Keep frame identity/geometry; the style loader owns alpha conventions.
         if (grHdEnabled) {
-            char path[512];
-            snprintf(path, sizeof(path), "data/hd/BMP/%s/%03d.png", bmpResource->resName, image);
-
-            size_t hdPngSize = 0;
-            uint8 *hdPngData = zipvfs_read(path, &hdPngSize);
-            PlatformSurface *pngSfc = hdPngData ? platformLoadPNGFromMemory(hdPngData, hdPngSize) : NULL;
-            if (hdPngData) free(hdPngData);
+            PlatformSurface *pngSfc = artStyleLoadSprite(bmpResource->resName,
+                                                        image, width, height);
             if (pngSfc != NULL) {
-                // New path: keep real alpha from the PNG.
-                //
-                // Backward compatibility: if the PNG pack still uses the classic
-                // "magenta" background (A8-00-A8) with fully-opaque pixels, convert
-                // that color to true transparency (alpha=0).
-                uint8 *px = platformGetSurfacePixels(pngSfc);
-                int pitch = platformGetSurfacePitch(pngSfc);
-                int pw = platformGetSurfaceWidth(pngSfc);
-                int ph = platformGetSurfaceHeight(pngSfc);
-
-                if (px && platformGetSurfaceBytesPerPixel(pngSfc) == 4) {
-                    for (int yy = 0; yy < ph; yy++) {
-                        uint8 *row = px + ((size_t)yy * (size_t)pitch);
-                        for (int xx = 0; xx < pw; xx++) {
-                            uint8 *p = row + ((size_t)xx * 4);
-
-                            // If it's classic magenta and fully opaque, treat it as transparent.
-                            if (p[3] == 255 && p[0] == 0xA8 && p[1] == 0x00 && p[2] == 0xA8) {
-                                p[0] = 0;
-                                p[1] = 0;
-                                p[2] = 0;
-                                p[3] = 0;
-                            }
-                        }
-                    }
-                }
-
                 ttmSlot->sprites[slotNo][image] = pngSfc;
 
                 // still advance the source pointer for subsequent images

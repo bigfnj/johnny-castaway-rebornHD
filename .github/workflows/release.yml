@@ -204,17 +204,25 @@ jobs:
           emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release
           cmake --build build_web -j"$(nproc)"
 
+      - name: assemble servable page
+        run: cp index.html favicon.ico build_web/
+
+      # Match the Web CI sequence before packaging the tested page.
+      - name: browser smoke and art selector regression
+        run: |
+          python -m pip install --quiet playwright
+          python -m playwright install --with-deps chromium
+          python tests/web-smoke.py build_web
+          python tests/web-art-controls.py build_web --mutation-check
+
       - name: package
         run: |
           set -euo pipefail
           v='${{ needs.verify-version.outputs.version }}'
           stage="jc_reborn-$v-web"
           mkdir -p "$stage"
-          # index.html and favicon.ico are sources, not build output, and nothing
-          # in the build copies them - so a build_web/ directory on its own is
-          # not servable. Assemble the whole page here.
           cp build_web/jc_reborn.js build_web/jc_reborn.wasm build_web/jc_reborn.data "$stage/"
-          cp index.html favicon.ico README.md LICENSE "$stage/"
+          cp build_web/index.html build_web/favicon.ico README.md LICENSE "$stage/"
           tar czf "$stage.tar.gz" "$stage"
 
       - uses: actions/upload-artifact@v7
@@ -235,14 +243,8 @@ jobs:
 
       - run: ls -la dist
 
-      #  THE PLATFORM-SUPPORT NOTE IS PART OF THE RELEASE, not just the README.
-      #
-      #  A version number implies "this works", and for macOS that is not a claim
-      #  this project can make: the cross-platform CI check runs `dump`, which
-      #  opens no window, so macOS compiles its rendering code and never executes
-      #  it. Saying so where people download is the difference between a caveat
-      #  and a caveat nobody reads. generate_release_notes appends the commit
-      #  summary underneath this.
+      # Keep validation claims tied to suite names rather than changing counts.
+      # Generated commit notes follow this reusable platform summary.
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.inputs.tag || github.ref_name }}
@@ -255,42 +257,17 @@ jobs:
 
             | Platform | Status |
             |---|---|
-            | **Windows x64** | Screensaver (`.scr`) + console build. Tested: 27 smoke checks, 11 screensaver checks, 2,452-file decode corpus |
+            | **Windows x64** | Screensaver (`.scr`) + console build. Passes the full gate: native smoke, screensaver/settings tests, art regression and decode corpus |
             | **Linux x86_64** | Builds and decodes correctly. **Rendering is unverified** |
-            | **Web** | Runs in a browser. Tested in headless Chromium |
-            | **macOS x86_64** | Builds, renders, plays audio and quits cleanly. Confirmed by hand on Sequoia |
+            | **Web** | Passes browser runtime smoke and art selector regression in headless Chromium before packaging |
+            | **macOS x86_64** | Automated build and decode parity. Rendering, audio and input last checked by hand on Sequoia on 2026-09-14 |
 
-            ### macOS ships for the first time in this release
+            All packages are built from the selected release tag. Windows and Web
+            have automated rendering assertions; the Unix decode checks do not
+            exercise their window backends.
 
-            Every previous release omitted it, because nobody had seen this engine
-            render a frame on a Mac. That was settled on 2026-09-14 by building it
-            and looking: correct orientation, correct colours, working audio, Esc
-            and the close button both exiting cleanly.
+            To rebuild on macOS from a source checkout, run
+            `bash tools/build-macos.sh` with the Xcode Command Line Tools installed.
+            The script uses `clang` directly and is also exercised in CI.
 
-            An earlier audit had predicted the frame would come out vertically
-            flipped, since the engine's buffer is top-down while `drawRect` draws
-            into an unflipped `NSView`. That prediction was wrong.
-
-            That session also found **three real bugs**, all fixed here:
-
-            - the red close button did not exit the app, it left the process
-              **suspended** and holding the shell. The window had no delegate, so
-              AppKit destroyed it underneath the running engine.
-            - fullscreen silently did nothing, in either direction. macOS will not
-              go fullscreen on a window that is not resizable, and the style mask
-              was missing that flag.
-            - the frame was drawn at a fixed size that only lined up in a window
-              sized to match it. Any other size put the image in a corner. It now
-              letterboxes into the view, as the Windows backend already did.
-
-            Rebuild it with the bundled `build-macos.sh`, which needs only the
-            Xcode Command Line Tools. Homebrew refuses to install on Intel Macs
-            now, so the script uses `clang` directly rather than CMake. CI runs it
-            on every push.
-
-            **Still unexercised on macOS:** mouse input, which only matters in
-            screensaver mode and macOS has no `.scr` concept. See `BACKLOG.md`.
-
-            Linux is the remaining gap: it builds and decodes correctly in CI, but
-            nothing there renders a pixel under test. Windows and Web have
-            automated rendering assertions; macOS has a human who looked.
+            See `BACKLOG.md` in the source checkout for remaining verification gaps.

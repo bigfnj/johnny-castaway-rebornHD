@@ -118,10 +118,20 @@ if (-not (Test-Path -LiteralPath $zip)) {
     exit 1
 }
 
+$sourceZip = Join-Path $repo 'assets\scrantic_data.zip'
+if ((Get-FileHash -LiteralPath $sourceZip).Hash -ne (Get-FileHash -LiteralPath $zip).Hash) {
+    Write-Host "FAIL runtime archive differs from assets/scrantic_data.zip: $zip" -ForegroundColor Red
+    Write-Host '     run the normal build to refresh art-only asset changes' -ForegroundColor Red
+    exit 1
+}
+
 Write-Step 'smoke'
 & powershell.exe -NoProfile -ExecutionPolicy Bypass `
     -File (Join-Path $repo 'tests\Invoke-SmokeTests.ps1') -Exe $exe
-if ($LASTEXITCODE -ne 0) { $failed = $true }
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'GATE FAILED: smoke failed; regression was not run' -ForegroundColor Red
+    exit 1
+}
 
 # The /p preview is the one screensaver path no command line can reach: Windows
 # hands over the HWND of the little monitor in the Settings dialog and expects a
@@ -138,14 +148,41 @@ if (Test-Path -LiteralPath $scr) {
     Write-Step 'screensaver behaviour (/p preview, and the focus rules)'
     & powershell.exe -NoProfile -ExecutionPolicy Bypass `
         -File (Join-Path $repo 'tests\Test-ScreensaverPreview.ps1') -Scr $scr -Exe $exe
-    if ($LASTEXITCODE -ne 0) { $failed = $true }
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host 'GATE FAILED: screensaver smoke failed; regression was not run' -ForegroundColor Red
+        exit 1
+    }
 }
 else {
     Write-Step 'screensaver preview'
     Write-Host "SKIP no jc_reborn.scr at $scr - the /p path is UNTESTED in this run" -ForegroundColor Yellow
 }
 
+Write-Step 'art-style smoke'
+& powershell.exe -NoProfile -ExecutionPolicy Bypass `
+    -File (Join-Path $repo 'tests\Invoke-ArtStyleTests.ps1') -Exe $exe -Phase Smoke
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'GATE FAILED: art-style smoke failed; regression was not run' -ForegroundColor Red
+    exit 1
+}
+
 if (-not $SmokeOnly) {
+    Write-Step 'regression (art-style pixels and configuration)'
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass `
+        -File (Join-Path $repo 'tests\Invoke-ArtStyleTests.ps1') -Exe $exe -Phase Regression
+    if ($LASTEXITCODE -ne 0) { $failed = $true }
+
+    Write-Step 'regression (art authoring tools)'
+    $authoringSuite = Join-Path $repo 'tests\test_art_tools.py'
+    if (-not (Test-Path -LiteralPath $authoringSuite)) {
+        Write-Host "FAIL missing art authoring test suite: $authoringSuite" -ForegroundColor Red
+        $failed = $true
+    }
+    else {
+        & python -B -m unittest discover -s (Join-Path $repo 'tests') -p test_art_tools.py -v
+        if ($LASTEXITCODE -ne 0) { $failed = $true }
+    }
+
     Write-Step 'regression (golden dump corpus)'
     & powershell.exe -NoProfile -ExecutionPolicy Bypass `
         -File (Join-Path $repo 'tests\Invoke-DumpRegression.ps1') -Exe $exe

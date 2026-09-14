@@ -195,10 +195,14 @@ night                  - force the night backdrop (NIGHT.SCR)
 day                    - force daytime, ignoring the clock
 seed <n>               - fix the random seed, for reproducible runs
 frames <n>             - stop cleanly after n frames, exit code 0
+style <id>             - select hd or cartoon for this run
+setstyle <id>          - save the style and exit without advancing the story
+capture <file.ppm>     - save the final composed frame on clean shutdown
 maxspeed               - run unthrottled from the start (as <M> does)
 ```
 
-The last five are additive and off by default; shipping behaviour is unchanged.
+Playback options apply only to the current run. `setstyle` explicitly saves a
+preference for future runs.
 
 `night` and `day` exist because the night backdrop is otherwise reachable only
 between 21:00 and 05:59, so an entire rendering path with its own HD artwork
@@ -212,6 +216,34 @@ had been healthy. Note that the story day persists to `~/.jc_reborn` and also
 selects which scenes are eligible, so a fully reproducible run needs a fresh
 profile as well as a fixed seed; `tests/Invoke-SmokeTests.ps1` points `HOME` at a
 throwaway directory for exactly that reason.
+
+### Art styles
+
+HD is the default. `jc_reborn window style cartoon` selects Cartoon for one run;
+`jc_reborn setstyle cartoon` saves it in the existing `.jc_reborn` profile while
+retaining the story day and date. Use `setstyle hd` to restore the default.
+Windows Screen Saver Settings opens the same choice through the `.scr` file's
+Settings button (`/c`). A change takes effect the next time playback starts.
+
+The browser's Art style selector remembers its choice in local storage and
+reloads the scene. An explicit URL argument, such as
+`?args=window+style+hd`, overrides that saved browser choice for the current run.
+
+Cartoon requires an artwork pack inside `scrantic_data.zip` under
+`data/styles/cartoon/`. Artwork is currently being developed and reviewed;
+selecting Cartoon without its pack reports a missing-pack error. Partial preview
+packs identify their coverage and use compatible HD or original art for missing
+frames. They do not represent a completed Cartoon edition. The authoring and
+acceptance process is documented in [Cartoon art production](docs/cartoon-art.md).
+
+`capture` writes a PPM image of the final composed frame, for example:
+
+```text
+jc_reborn window nosound day seed 9 frames 400 style hd capture frame.ppm
+```
+
+It captures playback rather than resource-decoder output. Keep the same profile,
+seed and frame limit when comparing styles.
 
 ### Holiday option
 

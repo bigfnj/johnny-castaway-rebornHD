@@ -105,6 +105,8 @@ extern int grScale;
 extern int grRenderWidth;
 extern int grRenderHeight;
 extern int grHdEnabled;
+/* Optional P6 capture of the composed render surface on normal graphics exit. */
+extern const char *grCapturePath;
 
 
 void graphicsInit(void);

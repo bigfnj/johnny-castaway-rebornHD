@@ -109,6 +109,17 @@ public static class JcWin {
     //  WM_ACTIVATEAPP on deactivation - that part is documented OS behaviour.
     [DllImport("user32.dll", SetLastError=true)]
     public static extern bool PostMessageW(IntPtr h, uint msg, IntPtr w, IntPtr l);
+    [DllImport("user32.dll")] public static extern IntPtr GetDlgItem(IntPtr h, int id);
+    [DllImport("user32.dll", SetLastError=true)]
+    public static extern IntPtr SendMessageTimeoutW(IntPtr h, uint msg, IntPtr w,
+        IntPtr l, uint flags, uint timeout, out IntPtr result);
+
+    public static int ComboMessage(IntPtr h, uint msg, int value) {
+        IntPtr result;
+        if (SendMessageTimeoutW(h, msg, new IntPtr(value), IntPtr.Zero, 2, 2000, out result) == IntPtr.Zero)
+            throw new InvalidOperationException("Art style control did not answer in two seconds");
+        return result.ToInt32();
+    }
 
     public const uint WM_ACTIVATEAPP = 0x001C;
 
@@ -165,6 +176,8 @@ $form.Show()
 
 $parent = $form.Handle
 $proc = $null
+$previewProfile = Join-Path ([IO.Path]::GetTempPath()) ('jcr-preview-' + [Guid]::NewGuid().ToString('N'))
+New-Item -ItemType Directory -Path $previewProfile -Force | Out-Null
 try {
     #  CreateProcess, NOT Start-Process. Start-Process uses ShellExecute, and
     #  .scr is a registered shell type whose DEFAULT VERB is Install/Config
@@ -174,6 +187,8 @@ try {
     $psi.FileName = $Scr
     $psi.Arguments = "/p $parent"
     $psi.UseShellExecute = $false
+    $psi.EnvironmentVariables['HOME'] = $previewProfile
+    $psi.EnvironmentVariables['USERPROFILE'] = $previewProfile
     $proc = [System.Diagnostics.Process]::Start($psi)
 
     # Startup is not instant: a 3.8 MB archive is opened and every resource
@@ -223,6 +238,13 @@ finally {
         if (-not $proc.HasExited) { $proc.Kill() }
     }
     $form.Dispose()
+    if ($proc) { $proc.WaitForExit(); $proc.Dispose() }
+    $previewResolved = [IO.Path]::GetFullPath($previewProfile)
+    $previewTempRoot = [IO.Path]::GetFullPath([IO.Path]::GetTempPath()).TrimEnd('\') + '\'
+    if (-not $previewResolved.StartsWith($previewTempRoot, [StringComparison]::OrdinalIgnoreCase)) {
+        throw "Refusing cleanup outside temporary root: $previewResolved"
+    }
+    Remove-Item -LiteralPath $previewResolved -Recurse -Force
 }
 
 #  ---------------------------------------------------------------------------
@@ -290,6 +312,94 @@ Check 'with /s, deactivation ends it' $r.Exited $r.Reason
 # window: no /s means focus is none of its business.
 $r = Test-Deactivate @('window', 'nosound', 'hotkeys', 'frames', '1000000') 5
 Check 'without /s, deactivation is ignored' (-not $r.Exited) $r.Reason
+
+function Test-ArtConfigDialog {
+    param([switch]$Cancel, [switch]$ProgressChanges, [string]$InitialStyle = 'hd')
+    $dir = Join-Path ([IO.Path]::GetTempPath()) ('jcr-dialog-' + [Guid]::NewGuid().ToString('N'))
+    New-Item -ItemType Directory -Path $dir -Force | Out-Null
+    $profile = Join-Path $dir '.jc_reborn'
+    $utf8 = New-Object System.Text.UTF8Encoding($false)
+    $initial = "currentDay=7`ndate=123`nartStyle=$InitialStyle`n"
+    [IO.File]::WriteAllText($profile, $initial, $utf8)
+    # No archive beside this copied .scr or in its working directory. Settings
+    # must remain available even when the runtime data pack is absent.
+    $isolatedScr = Join-Path $dir 'jc_reborn.scr'
+    Copy-Item -LiteralPath $Scr -Destination $isolatedScr
+    $psi = New-Object Diagnostics.ProcessStartInfo
+    $psi.FileName = $isolatedScr
+    $psi.Arguments = '/c'
+    $psi.WorkingDirectory = $dir
+    $psi.UseShellExecute = $false
+    $psi.EnvironmentVariables['HOME'] = $dir
+    $psi.EnvironmentVariables['USERPROFILE'] = $dir
+    $p = [Diagnostics.Process]::Start($psi)
+    $label = if ($Cancel) { "Cancel ($InitialStyle saved)" } elseif ($ProgressChanges) { 'OK after story progress changes' } else { 'OK' }
+    try {
+        $dialog = [IntPtr]::Zero
+        $deadline = (Get-Date).AddSeconds(10)
+        while ((Get-Date) -lt $deadline -and -not $p.HasExited) {
+            foreach ($h in [JcWin]::TopLevelOf([uint32]$p.Id)) {
+                if ([JcWin]::Cls($h) -eq '#32770') { $dialog = $h; break }
+            }
+            if ($dialog -ne [IntPtr]::Zero) { break }
+            Start-Sleep -Milliseconds 100
+        }
+        $combo = [JcWin]::GetDlgItem($dialog, 201)
+        Check "$label config dialog opens without an archive" ($combo -ne [IntPtr]::Zero)
+        if ($combo -eq [IntPtr]::Zero) { return }
+        $count = [JcWin]::ComboMessage($combo, 0x0146, 0) # CB_GETCOUNT
+        $selection = [JcWin]::ComboMessage($combo, 0x0147, 0) # CB_GETCURSEL
+        $initialIndex = if ($InitialStyle -eq 'cartoon') { 1 } else { 0 }
+        Check "$label shows both styles and the saved selection" ($count -eq 2 -and $selection -eq $initialIndex)
+        [void][JcWin]::ComboMessage($combo, 0x014E, (1 - $initialIndex)) # CB_SETCURSEL
+        if ($ProgressChanges) {
+            [IO.File]::WriteAllText($profile, "currentDay=8`ndate=456`nartStyle=hd`n", $utf8)
+        }
+        $command = if ($Cancel) { 2 } else { 1 }
+        [void][JcWin]::PostMessageW($dialog, 0x0111, [IntPtr]$command, [IntPtr]::Zero)
+        $exited = $p.WaitForExit(5000)
+        Check "$label closes through the dialog action" ($exited -and $p.ExitCode -eq 0)
+        $savedText = [IO.File]::ReadAllText($profile)
+        if ($Cancel) {
+            Check "$label leaves settings byte-identical" ($savedText -ceq $initial)
+        }
+        else {
+            $day = if ($ProgressChanges) { 8 } else { 7 }
+            $date = if ($ProgressChanges) { 456 } else { 123 }
+            Check "$label saves Cartoon and retains the latest story progress" (
+                $savedText -match '(?m)^artStyle=cartoon\r?$' -and
+                $savedText -match "(?m)^currentDay=$day`r?$" -and $savedText -match "(?m)^date=$date`r?$")
+        }
+    }
+    finally {
+        if (-not $p.HasExited) { $p.Kill() }
+        $p.WaitForExit(); $p.Dispose()
+        $resolved = [IO.Path]::GetFullPath($dir)
+        $tempRoot = [IO.Path]::GetFullPath([IO.Path]::GetTempPath()).TrimEnd('\') + '\'
+        if (-not $resolved.StartsWith($tempRoot, [StringComparison]::OrdinalIgnoreCase)) {
+            throw "Refusing cleanup outside temporary root: $resolved"
+        }
+        # Windows can retain the copied executable briefly after WaitForExit
+        # has completed. Retry cleanup for at most two seconds, then surface
+        # the real error instead of silently leaving a fixture behind.
+        for ($attempt = 0; $attempt -lt 10; $attempt++) {
+            try {
+                Remove-Item -LiteralPath $resolved -Recurse -Force -ErrorAction Stop
+                break
+            }
+            catch {
+                if ($attempt -eq 9) { throw }
+                Start-Sleep -Milliseconds 200
+            }
+        }
+    }
+}
+
+Write-Host "`n== art style settings use a real Windows dialog ==" -ForegroundColor Cyan
+Test-ArtConfigDialog -Cancel
+Test-ArtConfigDialog
+Test-ArtConfigDialog -ProgressChanges
+Test-ArtConfigDialog -Cancel -InitialStyle cartoon
 
 Write-Host ''
 if ($script:failed) {

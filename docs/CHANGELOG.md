@@ -2,6 +2,27 @@
 
 Per-session record of changes made to this fork on top of upstream Johnny Reborn.
 
+## Unreleased: selectable art styles and Cartoon production tools
+
+Added persistent HD/Cartoon selection, a Windows settings dialog, a browser
+selector, and a one-run command-line override. HD remains the default. Cartoon
+packs have a separate namespace, strict canvas and alpha handling, and explicit
+partial coverage with compatible HD/original fallback. Missing packs report an
+error. Cartoon artwork is still in production and has not replaced the archive.
+
+Added composed-frame capture, reference inventory/export, and candidate-pack
+validation with recorded hashes. The native gate now stops after a failed smoke
+phase, checks the deployed archive, and exercises rendered alpha, settings and
+packaging before the existing exact resource regression. Web selection is tested
+against the actual Emscripten runtime in CI and before release packaging.
+
+Validation of the foundation: Windows build without warnings, 27 original smoke
+checks, 27 screensaver/settings checks, 33 art runtime checks, 20 authoring tests,
+and 2,452 unchanged original resource hashes. Web smoke and selector suites each
+passed 10 checks. Deliberately broken runtime alpha, color-key, dimensions and
+settings cases all failed against rebuilt binaries; test-order and archive-refresh
+mutations also failed as intended and passed after restoration.
+
 ---
 
 ## 2026-04-21 — Release x64 build now produces only `.exe` (no .pdb) (bigfnj)
