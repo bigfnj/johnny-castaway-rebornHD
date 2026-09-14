@@ -99,8 +99,9 @@ find . -type f | sed 's|^\./||' | sort | while read -r f; do
     printf '%s  %s\n' "$(sha256 "$f")" "$f"
 done > /tmp/unix-dump.sha256
 
-want=$(wc -l < "$GOLDEN")
-got=$(wc -l < /tmp/unix-dump.sha256)
+# tr: macOS `wc -l` right-pads its count with spaces, Linux does not.
+want=$(wc -l < "$GOLDEN" | tr -d '[:space:]')
+got=$(wc -l < /tmp/unix-dump.sha256 | tr -d '[:space:]')
 echo "windows: $want file(s)    $OSNAME: $got file(s)"
 
 if diff -q <(sort "$GOLDEN") <(sort /tmp/unix-dump.sha256) >/dev/null; then
