@@ -69,12 +69,22 @@ path, and the red close button exits instantly - after the delegate fix, which
 that very test is what prompted. See the `EVENT_QUIT` entry under cross-platform
 contract gaps for what it was doing before.
 
-**Still unverified on macOS**, and NOT claimed anywhere:
+**Fullscreen works too**, after two more fixes that the same session surfaced.
+It did nothing at all in either direction - Option+Return and launching without
+`window` both silently no-oped - because the window lacked
+`NSWindowStyleMaskResizable`, which macOS requires before it will go fullscreen.
+Fixing that would have exposed the fixed-`CGRect` presentation bug, so both were
+done together. Verified fullscreen, windowed, and resized.
 
-- fullscreen, and the fixed `CGRect` presentation noted under cross-platform
-  contract gaps. `grToggleFullScreen` on Option+Return has not been exercised.
-- mouse input, which only matters in screensaver mode and macOS has no `.scr`
-  concept, so this is close to moot.
+**The only thing still unexercised on macOS** is mouse input, which only matters
+in screensaver mode. macOS has no `.scr` concept, so that is close to moot.
+
+Worth noting what this exercise actually cost and returned. The audit's *predicted*
+macOS bug did not exist. Three real ones did - a close button that suspended the
+process, fullscreen that silently did nothing, and a presentation rect that put
+the image in a corner - and not one of them was reachable by reading the code,
+by the decode corpus, or by four platforms of green CI. All three took a person
+clicking things for about ten minutes.
 
 
 **Resolved 2026-09-14: it builds, and its decoders are correct.** A `macos` job
@@ -429,9 +439,15 @@ Still open:
 - `platformPollEvent` drain semantics differ: Windows and Web buffer into a queue
   and return 0 only when empty; Linux and macOS return 0 at the first event they
   do not translate, so an untranslated event truncates the drain loop.
-- Presentation differs: Windows letterboxes with aspect preservation, Linux
-  `XPutImage` is 1:1 at the origin, macOS draws into a fixed `CGRect`. Fullscreen
-  on Linux or macOS puts the frame in a corner at native size.
+- Presentation differs, but **Linux is now the only one that is wrong**. Windows
+  letterboxes with aspect preservation; macOS now does the same, as of
+  2026-09-14; Linux `XPutImage` is still 1:1 at the origin, so fullscreen there
+  puts the frame in a corner at native size.
+  The macOS half was real and was fixed alongside the fullscreen bug that hid it:
+  `drawRect` drew into a fixed `CGRect` of the surface's own size, which is
+  invisible in a window sized to match and lands the image in a corner the moment
+  the view is anything else. Verified fixed by resizing the window and by going
+  fullscreen.
 
 ### Documentation has been spot-corrected, not audited
 

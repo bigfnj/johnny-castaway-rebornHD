@@ -271,17 +271,25 @@ jobs:
             flipped, since the engine's buffer is top-down while `drawRect` draws
             into an unflipped `NSView`. That prediction was wrong.
 
-            The same session did find a real bug, now fixed: the red close button
-            did not exit the app, it left the process **suspended** and holding the
-            shell. The window had no delegate, so AppKit destroyed it underneath
-            the running engine.
+            That session also found **three real bugs**, all fixed here:
+
+            - the red close button did not exit the app, it left the process
+              **suspended** and holding the shell. The window had no delegate, so
+              AppKit destroyed it underneath the running engine.
+            - fullscreen silently did nothing, in either direction. macOS will not
+              go fullscreen on a window that is not resizable, and the style mask
+              was missing that flag.
+            - the frame was drawn at a fixed size that only lined up in a window
+              sized to match it. Any other size put the image in a corner. It now
+              letterboxes into the view, as the Windows backend already did.
 
             Rebuild it with the bundled `build-macos.sh`, which needs only the
             Xcode Command Line Tools. Homebrew refuses to install on Intel Macs
             now, so the script uses `clang` directly rather than CMake. CI runs it
             on every push.
 
-            **Still unexercised on macOS:** fullscreen. See `BACKLOG.md`.
+            **Still unexercised on macOS:** mouse input, which only matters in
+            screensaver mode and macOS has no `.scr` concept. See `BACKLOG.md`.
 
             Linux is the remaining gap: it builds and decodes correctly in CI, but
             nothing there renders a pixel under test. Windows and Web have

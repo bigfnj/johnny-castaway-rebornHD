@@ -28,11 +28,18 @@ Command Line Tools. Homebrew now refuses to install on Intel Macs, and CMake on
 macOS usually arrives through Homebrew, so the script uses `clang` directly. CI
 runs it on every push, so it stays working.
 
-Audio and input on macOS were confirmed in the same session: the `AudioQueue`
-path produces sound, Esc quits, and the close button exits cleanly. That last one
-took a fix — the window had no delegate, so clicking the red button destroyed it
-underneath the running engine and left the process suspended. Fullscreen there is
-still unexercised. See `BACKLOG.md` for exactly what is and is not proven.
+Audio, input and fullscreen on macOS were all confirmed in the same session, and
+three real bugs came out of it. The close button left the process suspended
+instead of exiting, because the window had no delegate and AppKit destroyed it
+underneath the running engine. Fullscreen silently did nothing in either
+direction, because macOS will not go fullscreen on a window that is not
+resizable. And the frame was drawn at a fixed size that only looked right in a
+window sized to match it, so any other size put the image in a corner. All three
+are fixed.
+
+Only mouse input is still unexercised there, and it only matters in screensaver
+mode, which macOS has no concept of. See `BACKLOG.md` for exactly what is and is
+not proven.
 
 
 ## How to install
