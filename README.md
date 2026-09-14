@@ -6,17 +6,21 @@ It is written in C and has been refactored to use platform-native APIs instead o
 
 ## Supported Platforms
 
-| Platform | Backend | Built | Tested |
-|---|---|---|---|
-| **Windows** | Win32 + WinMM (waveOut) | CI | 27 smoke, 7 screensaver, 2,452-file decode corpus |
-| **Linux** | X11 + ALSA | CI | decode output byte-identical to Windows |
-| **Web** | HTML5 Canvas + Web Audio (Emscripten) | CI | headless-browser smoke |
-| **macOS** | Cocoa + CoreAudio | **nowhere** | **none** |
+| Platform | Backend | Built in CI | Decoders verified | Rendering verified |
+|---|---|---|---|---|
+| **Windows** | Win32 + WinMM (waveOut) | yes | yes | yes |
+| **Linux** | X11 + ALSA | yes | yes | **no** |
+| **Web** | HTML5 Canvas + Web Audio (Emscripten) | yes | yes | yes |
+| **macOS** | Cocoa + CoreAudio | yes | yes | **no** |
 
-**macOS is unverified.** It is not in CI, has not been compiled, and its most
-recent fixes were written by reading the code alone. There is also an unresolved
-question about whether its frame renders upside down. Treat it as unsupported
-until someone with a Mac builds it. See `BACKLOG.md`.
+All four build on every push, and all four produce decode output byte-identical
+to the Windows golden corpus, 2,452 files.
+
+**Rendering is the column to read carefully.** The cross-platform check runs
+`dump`, which never opens a window, so on Linux and macOS the windowing and
+blitting code compiles and is then never executed. macOS in particular has an
+unresolved question about whether its frame comes out upside down, and releases
+ship no macOS artifact. See `BACKLOG.md`.
 
 
 ## How to install

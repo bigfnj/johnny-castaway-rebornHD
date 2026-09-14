@@ -114,8 +114,11 @@ void platformShutdown(void) {
      *  afterwards or is finishing main(), so the process still terminates, but
      *  now it does so after the cleanup that was being skipped.
      *
-     *  UNVERIFIED: changed by reading, not by running. There is no Mac available
-     *  to this work, and the CI matrix has no macOS job.
+     *  COMPILES, AND ITS DECODERS ARE CORRECT, as of the macOS CI job added
+     *  2026-09-14: macos-latest builds this file and all 2,452 decoded files come
+     *  out byte-identical to Windows. What remains unverified is the RUNTIME
+     *  behaviour of this function, because the CI check runs `dump`, which never
+     *  calls graphicsInit and therefore never reaches here.
      */
     @autoreleasepool {
         [eventQueue release];
