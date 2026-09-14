@@ -189,7 +189,18 @@ and the `EM_ASM` scheduling block assumes mono interleaving as well. Correcting
 only the buffer size would produce a silently wrong stereo path instead of a
 consistently mono one. Fix both together, or not at all.
 
-### The Web CI job is not reproducible
+### ~~The Web CI job is not reproducible~~ DONE 2026-09-14
+
+Pinned to emsdk **6.0.9** in both workflows, which is what `latest` resolved to on
+every green run. Bump it deliberately from now on.
+
+It earned the fix rather than getting it on principle: `version: latest` failed
+**twice in one afternoon**, both times `HTTP Error 504` fetching
+`emscripten-core/emsdk/archive/HEAD.zip`, on commits that touched no web code.
+The original entry is kept below because the second reason still applies and is
+the one that would have bitten quietly.
+
+### Why it mattered
 
 `.github/workflows/ci.yml` and `release.yml` both use
 `mymindstorm/setup-emsdk@v14` with `version: latest`, which downloads

@@ -156,9 +156,12 @@ jobs:
           # the tag, and publishes the result under the tag's name. The binaries
           # would not be the tagged source and nothing would say so.
           ref: ${{ github.event.inputs.tag || github.ref }}
+      # PINNED. A release must be reproducible from its tag, and with `latest`
+      # the web artifact depended on whatever emsdk HEAD happened to be that day.
+      # Keep this in step with the same pin in ci.yml.
       - uses: mymindstorm/setup-emsdk@v14
         with:
-          version: latest
+          version: 6.0.9
 
       - run: |
           emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release

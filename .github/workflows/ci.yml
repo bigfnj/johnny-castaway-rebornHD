@@ -96,9 +96,19 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # PINNED, not `latest`. `latest` makes the action fetch emsdk HEAD on every
+      # run, which failed twice on 2026-09-14 with HTTP 504 from GitHub on
+      # commits that touched no web code at all. A red CI that has nothing to do
+      # with the change teaches people to hit re-run instead of reading, which is
+      # how a real failure eventually gets waved through.
+      #
+      # It also made the toolchain a moving target: a build that passed last week
+      # could fail today because upstream moved, with nothing in this repo's
+      # history to explain it. 6.0.9 is what `latest` resolved to on every green
+      # run so far. Bump it deliberately.
       - uses: mymindstorm/setup-emsdk@v14
         with:
-          version: latest
+          version: 6.0.9
 
       - name: build
         run: |
