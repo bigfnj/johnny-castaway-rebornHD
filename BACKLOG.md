@@ -198,18 +198,29 @@ and the `EM_ASM` scheduling block assumes mono interleaving as well. Correcting
 only the buffer size would produce a silently wrong stereo path instead of a
 consistently mono one. Fix both together, or not at all.
 
-### ~~The Web CI job is not reproducible~~ DONE 2026-09-14
+### The Web CI job: reproducible now, still not resilient
+
+**Half done, and the half that is done is not the half that was failing.**
 
 Pinned to emsdk **6.0.9** in both workflows, which is what `latest` resolved to on
-every green run. Bump it deliberately from now on.
+every green run. That fixes REPRODUCIBILITY: the toolchain no longer moves under
+the project, and a release is buildable from its tag with the same compiler.
 
-It earned the fix rather than getting it on principle: `version: latest` failed
-**twice in one afternoon**, both times `HTTP Error 504` fetching
-`emscripten-core/emsdk/archive/HEAD.zip`, on commits that touched no web code.
-The original entry is kept below because the second reason still applies and is
-the one that would have bitten quietly.
+**It did not fix the flakiness, and I initially claimed it would.** The action
+downloads the emsdk *repository* from GitHub codeload before it can resolve any
+version at all, so a pinned `version:` changes nothing about that request. Three
+`HTTP 504`s inside forty minutes on 2026-09-14, all on commits touching no web
+code, and the third failed even though the action retries twice internally.
 
-### Why it mattered
+**The durable fix is to stop using GitHub codeload for the toolchain.** Run the
+job in the `emscripten/emsdk:<version>` container, which is pulled from a
+registry and is also exactly what local development already uses, so CI and the
+developer loop would stop diverging. The wrinkle to solve first: that job also
+runs the Playwright browser smoke, so the container needs python plus
+`playwright install --with-deps chromium`, which is fine as root but is more than
+a one-line change and wants testing on a branch rather than on main.
+
+### Why the pin still mattered
 
 `.github/workflows/ci.yml` and `release.yml` both use
 `mymindstorm/setup-emsdk@v14` with `version: latest`, which downloads
