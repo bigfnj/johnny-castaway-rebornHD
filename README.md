@@ -18,9 +18,16 @@ to the Windows golden corpus, 2,452 files.
 
 **Rendering is the column to read carefully.** The cross-platform check runs
 `dump`, which never opens a window, so on Linux and macOS the windowing and
-blitting code compiles and is then never executed. macOS in particular has an
-unresolved question about whether its frame comes out upside down, and releases
-ship no macOS artifact. See `BACKLOG.md`.
+blitting code compiles and is then never executed.
+
+**macOS is not validated and ships no binary.** Nobody has looked at a frame this
+engine rendered on a Mac. There is a specific open question about whether the
+frame comes out vertically flipped: the engine's buffer is top-down and
+`drawRect` draws into an unflipped `NSView`, where CoreGraphics puts the origin at
+bottom-left. Releases deliberately omit a macOS artifact rather than ship
+something that might render upside down. This is a known, accepted limitation
+rather than an open task. If you have a Mac, building from source and reporting
+what you see would settle it. See `BACKLOG.md`.
 
 
 ## How to install

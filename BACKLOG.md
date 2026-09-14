@@ -39,6 +39,15 @@ never run a pixel of it in CI.
 
 ### macOS renders something nobody has looked at
 
+> **Decision, 2026-09-14:** the owner does not expect to get macOS verification,
+> and chose to release 1.0.0 without it rather than hold the version. So this is
+> now a **stated limitation, not a blocker**. `release.yml` publishes the caveat
+> in the release body, no macOS artifact is shipped, and the README platform
+> table separates "builds" from "rendering verified". Do not treat the absence of
+> macOS validation as an oversight; treat it as the documented position until
+> someone with a Mac reports otherwise.
+
+
 **Resolved 2026-09-14: it builds, and its decoders are correct.** A `macos` job
 on `macos-latest` runs `tests/unix-build.sh`, the same script Linux uses, and all
 2,452 decoded files are byte-identical to the Windows golden manifest. It passed
