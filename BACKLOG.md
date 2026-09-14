@@ -64,17 +64,17 @@ in `platform_macos.m` executing for the first time: `platformInitAudio`,
 samples. It also means the unchecked-`AudioQueueAllocateBuffer` fix that was
 written by reading the code has now run rather than merely compiled.
 
+**Input works too**, confirmed the same day. Esc quits through the `hotkeys`
+path, and the red close button exits instantly - after the delegate fix, which
+that very test is what prompted. See the `EVENT_QUIT` entry under cross-platform
+contract gaps for what it was doing before.
+
 **Still unverified on macOS**, and NOT claimed anywhere:
 
-- input. Nothing has exercised the key, mouse or quit handling. `EVENT_QUIT` is
-  known not to be produced on this backend at all, so the close button cannot
-  terminate the app there, and the `hotkeys` Esc path is untested.
 - fullscreen, and the fixed `CGRect` presentation noted under cross-platform
-  contract gaps.
-
-Releases still ship no macOS artifact. Once input is confirmed, adding a
-packaging job to `release.yml` is the obvious next step and the remaining
-objection goes away.
+  contract gaps. `grToggleFullScreen` on Option+Return has not been exercised.
+- mouse input, which only matters in screensaver mode and macOS has no `.scr`
+  concept, so this is close to moot.
 
 
 **Resolved 2026-09-14: it builds, and its decoders are correct.** A `macos` job
@@ -417,8 +417,14 @@ Still open:
 
 ### Cross-platform contract gaps
 
-- `EVENT_QUIT` is never produced on macOS or Web, so `events.c`'s handler is dead
-  code on half the backends and the close button cannot terminate the app there.
+- `EVENT_QUIT` is never produced on **Web**. It is now produced on macOS, as of
+  2026-09-14, and that entry used to understate the problem: it said the close
+  button "cannot terminate the app there", implying it was ignored. On macOS it
+  was not ignored - the window destroyed itself under the running engine and left
+  the process **suspended**, resident and holding the shell. Fixed by making the
+  window its own `NSWindowDelegate`; verified by clicking it.
+  On Web the button in question is the browser tab, which closes regardless, so
+  the gap there is cosmetic rather than a wedge.
 - `EVENT_WINDOW_REFRESH` exists only on Linux.
 - `platformPollEvent` drain semantics differ: Windows and Web buffer into a queue
   and return 0 only when empty; Linux and macOS return 0 at the first event they

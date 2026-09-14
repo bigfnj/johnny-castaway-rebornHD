@@ -143,6 +143,43 @@ jobs:
           path: '*.tar.gz'
           if-no-files-found: error
 
+  macos:
+    name: macOS package
+    needs: verify-version
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+
+      # Shipped from 1.0.1 onward. Until then macOS was built and decode-checked
+      # but no artifact was published, because nobody had seen it render. That
+      # changed on 2026-09-14: rendering, colour, audio and input were all
+      # confirmed by hand on Sequoia, and the close button bug that test found is
+      # fixed. See BACKLOG.md for what is still unexercised there.
+      - name: build and verify decode parity
+        run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/unix-build.sh
+
+      - name: package
+        run: |
+          set -euo pipefail
+          v='${{ needs.verify-version.outputs.version }}'
+          stage="jc_reborn-$v-macos-x86_64"
+          mkdir -p "$stage"
+          cp /tmp/jcr/build-unix/jc_reborn "$stage/"
+          cp assets/scrantic_data.zip README.md LICENSE "$stage/"
+          # The no-dependency build path travels with it: Homebrew will not
+          # install on Intel Macs, so anyone rebuilding needs this rather than
+          # a CMake incantation.
+          cp tools/build-macos.sh "$stage/"
+          tar czf "$stage.tar.gz" "$stage"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: macos
+          path: '*.tar.gz'
+          if-no-files-found: error
+
   web:
     name: Web package
     needs: verify-version
@@ -188,7 +225,7 @@ jobs:
 
   publish:
     name: Publish GitHub Release
-    needs: [verify-version, windows, linux, web]
+    needs: [verify-version, windows, linux, macos, web]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v8
@@ -221,29 +258,31 @@ jobs:
             | **Windows x64** | Screensaver (`.scr`) + console build. Tested: 27 smoke checks, 11 screensaver checks, 2,452-file decode corpus |
             | **Linux x86_64** | Builds and decodes correctly. **Rendering is unverified** |
             | **Web** | Runs in a browser. Tested in headless Chromium |
-            | **macOS** | **No download**, but it builds and renders correctly. See below |
+            | **macOS x86_64** | Builds, renders, plays audio and quits cleanly. Confirmed by hand on Sequoia |
 
-            ### macOS: renders correctly, but ships no binary yet
+            ### macOS ships for the first time in this release
 
-            `platform_macos.m` compiles on Apple hardware in CI and its decoder
-            output is byte-identical to the Windows reference across all 2,452
-            files. As of 2026-09-14 the rendering was also confirmed by hand on
-            macOS Sequoia: correct orientation and correct colours. An earlier
-            audit predicted the frame would come out vertically flipped, because
-            the engine's buffer is top-down while `drawRect` draws into an
-            unflipped `NSView`. That prediction was wrong.
+            Every previous release omitted it, because nobody had seen this engine
+            render a frame on a Mac. That was settled on 2026-09-14 by building it
+            and looking: correct orientation, correct colours, working audio, Esc
+            and the close button both exiting cleanly.
 
-            Build it with `tools/build-macos.sh`, which needs only the Xcode
-            Command Line Tools. Homebrew refuses to install on Intel Macs now, so
-            the script uses `clang` directly rather than going through CMake. CI
-            runs that script on every push.
+            An earlier audit had predicted the frame would come out vertically
+            flipped, since the engine's buffer is top-down while `drawRect` draws
+            into an unflipped `NSView`. That prediction was wrong.
 
-            Audio works there too, confirmed the same day: the whole `AudioQueue`
-            path runs and produces sound.
+            The same session did find a real bug, now fixed: the red close button
+            did not exit the app, it left the process **suspended** and holding the
+            shell. The window had no delegate, so AppKit destroyed it underneath
+            the running engine.
 
-            **Still unverified on macOS:** input handling and fullscreen. No
-            artifact is published until those have been exercised.
+            Rebuild it with the bundled `build-macos.sh`, which needs only the
+            Xcode Command Line Tools. Homebrew refuses to install on Intel Macs
+            now, so the script uses `clang` directly rather than CMake. CI runs it
+            on every push.
+
+            **Still unexercised on macOS:** fullscreen. See `BACKLOG.md`.
 
             Linux is the remaining gap: it builds and decodes correctly in CI, but
-            nothing there renders a pixel under test. Windows and Web are the two
-            platforms with automated rendering assertions.
+            nothing there renders a pixel under test. Windows and Web have
+            automated rendering assertions; macOS has a human who looked.

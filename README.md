@@ -28,8 +28,11 @@ Command Line Tools. Homebrew now refuses to install on Intel Macs, and CMake on
 macOS usually arrives through Homebrew, so the script uses `clang` directly. CI
 runs it on every push, so it stays working.
 
-Releases still ship no macOS artifact, and audio, input and fullscreen remain
-unverified there. See `BACKLOG.md` for exactly what is and is not proven.
+Audio and input on macOS were confirmed in the same session: the `AudioQueue`
+path produces sound, Esc quits, and the close button exits cleanly. That last one
+took a fix — the window had no delegate, so clicking the red button destroyed it
+underneath the running engine and left the process suspended. Fullscreen there is
+still unexercised. See `BACKLOG.md` for exactly what is and is not proven.
 
 
 ## How to install
