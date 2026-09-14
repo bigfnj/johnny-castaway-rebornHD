@@ -130,11 +130,14 @@ if ($LASTEXITCODE -ne 0) { $failed = $true }
 # precisely what this engine did while parseArgs was discarding unknown tokens.
 # So it gets a real parent window and an assertion that no top-level window
 # appeared. Skipped, loudly, where no .scr was built.
+#
+# The same script also covers the focus rules, which need the CONSOLE build to
+# run the engine both with and without /s, so both binaries are passed in.
 $scr = Join-Path (Split-Path $exe -Parent) 'jc_reborn.scr'
 if (Test-Path -LiteralPath $scr) {
-    Write-Step 'screensaver preview (/p with a real parent window)'
+    Write-Step 'screensaver behaviour (/p preview, and the focus rules)'
     & powershell.exe -NoProfile -ExecutionPolicy Bypass `
-        -File (Join-Path $repo 'tests\Test-ScreensaverPreview.ps1') -Scr $scr
+        -File (Join-Path $repo 'tests\Test-ScreensaverPreview.ps1') -Scr $scr -Exe $exe
     if ($LASTEXITCODE -ne 0) { $failed = $true }
 }
 else {

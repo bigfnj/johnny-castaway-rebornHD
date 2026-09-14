@@ -16,18 +16,26 @@
 [CmdletBinding()]
 param(
     [string]$Scr,
+    # The CONSOLE build, for the focus checks at the end. They need to run the
+    # same engine both with and without /s, and the .scr is /SUBSYSTEM:WINDOWS so
+    # its diagnostics go nowhere a harness can read them.
+    [string]$Exe,
     [int]$Seconds = 15
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
-if (-not $Scr) {
-    $repo = Split-Path $PSScriptRoot -Parent
-    $Scr = Join-Path $repo 'build\Release\jc_reborn.scr'
-}
+$repo = Split-Path $PSScriptRoot -Parent
+if (-not $Scr) { $Scr = Join-Path $repo 'build\Release\jc_reborn.scr' }
+if (-not $Exe) { $Exe = Join-Path (Split-Path $Scr -Parent) 'jc_reborn.exe' }
+
 if (-not (Test-Path -LiteralPath $Scr)) {
     Write-Host "FAIL no screensaver binary at $Scr" -ForegroundColor Red
+    exit 1
+}
+if (-not (Test-Path -LiteralPath $Exe)) {
+    Write-Host "FAIL no console binary at $Exe" -ForegroundColor Red
     exit 1
 }
 
@@ -91,6 +99,22 @@ public static class JcWin {
         EnumChildWindows(parent, (h, l) => { res.Add(h); return true; }, IntPtr.Zero);
         return res;
     }
+
+    //  POSTED, not synthesized by really stealing the foreground.
+    //
+    //  SetForegroundWindow is subject to Windows' foreground-lock rules and
+    //  fails silently depending on which process last received input, so a test
+    //  built on it would be flaky in exactly the way a test must not be. What is
+    //  under test here is the ENGINE'S HANDLER, not whether Windows sends
+    //  WM_ACTIVATEAPP on deactivation - that part is documented OS behaviour.
+    [DllImport("user32.dll", SetLastError=true)]
+    public static extern bool PostMessageW(IntPtr h, uint msg, IntPtr w, IntPtr l);
+
+    public const uint WM_ACTIVATEAPP = 0x001C;
+
+    public static bool SendDeactivate(IntPtr h) {
+        return PostMessageW(h, WM_ACTIVATEAPP, IntPtr.Zero, IntPtr.Zero);
+    }
 }
 '@
 
@@ -108,6 +132,25 @@ Write-Host "`n== Windows can tell the user what this is ==" -ForegroundColor Cya
 $name = [JcWin]::ScreensaverName((Resolve-Path -LiteralPath $Scr).Path)
 Check 'the .scr carries the name shown in the Screen Saver dropdown' `
     ($name -eq 'Johnny Reborn') "string resource 1 = '$name'"
+
+#  VERSIONINFO, asserted against CMakeLists.txt rather than against a literal.
+#  The point of feeding the version to the .rc from CMake was to stop it living
+#  in more than one place; a test that hard-coded the number here would put it
+#  back. This turns any future drift between source, binary and tag into a test
+#  failure instead of something discovered in a bug report.
+$cmakeText = Get-Content (Join-Path $repo 'CMakeLists.txt') -Raw
+if ($cmakeText -match 'project\(jc_reborn VERSION (\d+\.\d+\.\d+)') {
+    $expected = $Matches[1]
+    $vi = [System.Diagnostics.FileVersionInfo]::GetVersionInfo((Resolve-Path -LiteralPath $Scr).Path)
+    $got = '{0}.{1}.{2}' -f $vi.FileMajorPart, $vi.FileMinorPart, $vi.FileBuildPart
+    Check 'its embedded version matches CMakeLists.txt' ($got -eq $expected) `
+        "binary says '$got', CMakeLists.txt says '$expected'"
+    Check 'and it identifies itself as the screensaver, not the console build' `
+        ($vi.OriginalFilename -eq 'jc_reborn.scr') "OriginalFilename = '$($vi.OriginalFilename)'"
+}
+else {
+    Check 'its embedded version matches CMakeLists.txt' $false 'no version found in CMakeLists.txt'
+}
 
 Write-Host "`n== /p preview draws into the window it is given ==" -ForegroundColor Cyan
 
@@ -181,6 +224,72 @@ finally {
     }
     $form.Dispose()
 }
+
+#  ---------------------------------------------------------------------------
+#  A screensaver must give way when something else takes the foreground, which
+#  is what DefScreenSaverProc does. A background utility must NOT. Both come out
+#  of the same binary, so the discriminator is the /s switch, and these two
+#  checks are a matched pair: the first proves the rule fires, the second proves
+#  the gate holds. Deleting the gate has to break exactly the second one.
+#  ---------------------------------------------------------------------------
+
+function Test-Deactivate {
+    param([string[]]$JcArgs, [int]$WaitSec = 8)
+
+    $psi = New-Object System.Diagnostics.ProcessStartInfo
+    $psi.FileName = $Exe
+    $psi.Arguments = ($JcArgs -join ' ')
+    $psi.UseShellExecute = $false
+    $psi.RedirectStandardOutput = $true
+    $psi.RedirectStandardError = $true
+    $psi.CreateNoWindow = $true
+    # Its own profile, so a saved story day cannot change which scene runs.
+    $home2 = Join-Path ([IO.Path]::GetTempPath()) ("jcr-focus-" + [Guid]::NewGuid().ToString('N'))
+    New-Item -ItemType Directory -Force -Path $home2 | Out-Null
+    $psi.EnvironmentVariables['HOME'] = $home2
+    $psi.EnvironmentVariables['USERPROFILE'] = $home2
+
+    $p = [System.Diagnostics.Process]::Start($psi)
+    try {
+        # Wait for the window to exist before posting anything at it.
+        $hwnd = [IntPtr]::Zero
+        $deadline = (Get-Date).AddSeconds(20)
+        while ((Get-Date) -lt $deadline -and -not $p.HasExited) {
+            foreach ($h in [JcWin]::TopLevelOf([uint32]$p.Id)) {
+                if ([JcWin]::Cls($h) -eq 'JCRebornWindow') { $hwnd = $h; break }
+            }
+            if ($hwnd -ne [IntPtr]::Zero) { break }
+            Start-Sleep -Milliseconds 200
+        }
+        if ($hwnd -eq [IntPtr]::Zero) {
+            return [pscustomobject]@{ Exited = $false; Reason = 'no window ever appeared' }
+        }
+
+        [void][JcWin]::SendDeactivate($hwnd)
+        $exited = $p.WaitForExit($WaitSec * 1000)
+        # $(...) around the if: a bare `if` inside a hashtable literal is a parse
+        # error under Windows PowerShell 5.1, which is what gate.ps1 runs this
+        # with, and it would not have shown up under pwsh.
+        $why = $(if ($exited) { "exit $($p.ExitCode)" } else { 'still running' })
+        return [pscustomobject]@{ Exited = $exited; Reason = $why }
+    }
+    finally {
+        if (-not $p.HasExited) { try { $p.Kill() } catch { } }
+        $p.WaitForExit()
+        $p.Dispose()
+        Remove-Item -LiteralPath $home2 -Recurse -Force -ErrorAction SilentlyContinue
+    }
+}
+
+Write-Host "`n== losing the foreground ends a screensaver, not a background run ==" -ForegroundColor Cyan
+
+$r = Test-Deactivate @('/s', 'window', 'nosound', 'hotkeys', 'frames', '1000000')
+Check 'with /s, deactivation ends it' $r.Exited $r.Reason
+
+# THE GATE. This is the one that protects running jc_reborn.exe as a background
+# window: no /s means focus is none of its business.
+$r = Test-Deactivate @('window', 'nosound', 'hotkeys', 'frames', '1000000') 5
+Check 'without /s, deactivation is ignored' (-not $r.Exited) $r.Reason
 
 Write-Host ''
 if ($script:failed) {

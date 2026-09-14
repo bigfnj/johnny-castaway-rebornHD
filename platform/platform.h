@@ -69,7 +69,19 @@ typedef enum {
      *  Windows build is a .scr.
      */
     EVENT_MOUSE_MOVE,
-    EVENT_MOUSE_BUTTON_DOWN
+    EVENT_MOUSE_BUTTON_DOWN,
+
+    /*  Focus loss, for the same reason. The reference implementation Windows
+     *  ships, DefScreenSaverProc, terminates on WM_ACTIVATE, WM_ACTIVATEAPP and
+     *  WM_NCACTIVATE whenever the wParam says it is being deactivated - so if a
+     *  UAC prompt, an alarm or an installer takes the foreground, the saver gets
+     *  out of the way instead of sitting on top of it. This engine handled no
+     *  focus message at all.
+     *
+     *  Windows-only, like the mouse events above: only the Windows build is a
+     *  .scr, and the other three backends deliberately never emit it.
+     */
+    EVENT_FOCUS_LOST
 } PlatformEventType;
 
 // Key modifiers

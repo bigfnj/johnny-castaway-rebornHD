@@ -163,6 +163,24 @@ static void eventsProcessEvents(void)
                 }
                 break;
 
+            /*  Something else took the foreground, so stop covering it. That is
+             *  what DefScreenSaverProc does, and it was the one input rule this
+             *  engine had no handler for at any layer.
+             *
+             *  Gated on evScreensaverMode like the mouse rules, which is what
+             *  keeps a plain `jc_reborn.exe` usable as a background window: only
+             *  /s sets that flag, so an ordinary run ignores focus entirely.
+             *  No dead-zone equivalent is needed - losing activation is
+             *  unambiguous in a way a two-pixel mouse twitch is not.
+             */
+            case EVENT_FOCUS_LOST:
+                if (evScreensaverMode) {
+                    soundEnd();
+                    graphicsEnd();
+                    exit(255);
+                }
+                break;
+
             case EVENT_WINDOW_REFRESH:
                 grRefreshDisplay();
                 break;

@@ -151,6 +151,20 @@ endif()
 # dance.
 target_compile_definitions(jc_reborn PRIVATE JC_VERSION="${JC_VERSION_STRING}")
 
+# The SAME version, reaching jc_reborn.rc as three integers so VERSIONINFO's
+# FILEVERSION can use them. FILEVERSION needs comma-separated numbers, not a
+# string, and the .rc builds its display strings back out of these by
+# stringification - which keeps the version in ONE place. Typing it into the .rc
+# instead would put it in three: CMakeLists.txt, the .rc, and the git tag that
+# release.yml checks against CMakeLists.txt.
+if(WIN32 AND NOT EMSCRIPTEN)
+    set(JC_RC_DEFS
+        JC_VER_MAJOR=${PROJECT_VERSION_MAJOR}
+        JC_VER_MINOR=${PROJECT_VERSION_MINOR}
+        JC_VER_PATCH=${PROJECT_VERSION_PATCH})
+    target_compile_definitions(jc_reborn PRIVATE ${JC_RC_DEFS})
+endif()
+
 # Include directories — one entry per source family so #include "foo.h" works
 # regardless of which subdir the including .c lives in.
 target_include_directories(jc_reborn PRIVATE
@@ -212,7 +226,11 @@ endif()
 if(WIN32 AND NOT EMSCRIPTEN)
     add_executable(jc_reborn_scr WIN32 ${COMMON_SOURCES} ${PLATFORM_SOURCES})
 
-    target_compile_definitions(jc_reborn_scr PRIVATE JC_VERSION="${JC_VERSION_STRING}")
+    # JC_IS_SCR lets the shared .rc describe itself correctly. Both targets
+    # compile the same resource script, so without it the screensaver would
+    # report OriginalFilename "jc_reborn.exe" in its properties dialog.
+    target_compile_definitions(jc_reborn_scr PRIVATE
+        JC_VERSION="${JC_VERSION_STRING}" ${JC_RC_DEFS} JC_IS_SCR=1)
     target_include_directories(jc_reborn_scr PRIVATE
         ${CMAKE_CURRENT_SOURCE_DIR}/src/engine
         ${CMAKE_CURRENT_SOURCE_DIR}/src/data

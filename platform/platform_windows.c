@@ -143,6 +143,37 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
             }
             return 0;
 
+        /*  GIVE WAY WHEN SOMETHING ELSE TAKES THE FOREGROUND.
+         *
+         *  WM_ACTIVATEAPP rather than WM_KILLFOCUS, because it fires when the
+         *  ACTIVATION leaves this application entirely, not merely when focus
+         *  moves between windows this process owns. wParam is FALSE on the way
+         *  out.
+         *
+         *  Not gated here. The platform layer reports what happened; events.c
+         *  decides what it means, and it only acts on this in screensaver mode.
+         *  The /p preview is outside that gate already, because SCR_MODE_PREVIEW
+         *  never sets evScreensaverMode - which matters, since a WS_CHILD
+         *  preview window never holds activation and would otherwise exit the
+         *  instant it appeared.
+         *
+         *  Coalesced like WM_MOUSEMOVE: repeated deactivations are one fact, and
+         *  the 32-slot queue drops the NEWEST when full, so a burst must not be
+         *  able to push out the events behind it.
+         */
+        case WM_ACTIVATEAPP:
+            if (wParam == FALSE) {
+                if (pendingEventCount > 0 &&
+                    pendingEvents[pendingEventCount - 1].type == EVENT_FOCUS_LOST) {
+                    /* already queued and unread; nothing to add */
+                }
+                else if (pendingEventCount < 32) {
+                    pendingEvents[pendingEventCount].type = EVENT_FOCUS_LOST;
+                    pendingEventCount++;
+                }
+            }
+            return 0;
+
         case WM_INPUT:
             if (useRawKeyboardInput) {
                 UINT size = 0;
