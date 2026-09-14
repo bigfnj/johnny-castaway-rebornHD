@@ -69,10 +69,13 @@ The real workflows, added 2026-09-11:
 
 | File | Trigger | Jobs |
 |---|---|---|
-| `.github/workflows/ci.yml` | push / PR | `windows` runs `gate.ps1` (build + smoke + 2,452-file regression); `linux` runs `tests/linux-build.sh` and asserts decode output is byte-identical to the Windows manifest; `web` builds under emsdk and runs `tests/web-smoke.py` in headless Chromium |
+| `.github/workflows/ci.yml` | push / PR | `windows` runs `gate.ps1` (build + smoke + screensaver + 2,452-file regression); `linux` and `macos` both run `tests/unix-build.sh` and assert decode output is byte-identical to the Windows manifest; `web` builds under emsdk and runs `tests/web-smoke.py` in headless Chromium |
 | `.github/workflows/release.yml` | tag `v*`, or manual dispatch | `verify-version` refuses to publish unless the tag matches `project(jc_reborn VERSION ...)`; then Windows, Linux and Web packaging jobs; then `publish` |
 
-macOS is **not** in CI and is not built anywhere. See `BACKLOG.md`.
+macOS **is** now built and decode-checked in CI, as of 2026-09-14. What is still
+unproven there is whether anything RENDERS: `dump` needs no window server, so
+parity says the decoders agree and nothing about `drawRect`. Releases do not ship
+a macOS artifact. See `BACKLOG.md`.
 
 Repo layout on disk (after 2026-04-21 structural reorg):
 ```
