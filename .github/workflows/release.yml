@@ -198,6 +198,14 @@ jobs:
 
       - run: ls -la dist
 
+      #  THE PLATFORM-SUPPORT NOTE IS PART OF THE RELEASE, not just the README.
+      #
+      #  A version number implies "this works", and for macOS that is not a claim
+      #  this project can make: the cross-platform CI check runs `dump`, which
+      #  opens no window, so macOS compiles its rendering code and never executes
+      #  it. Saying so where people download is the difference between a caveat
+      #  and a caveat nobody reads. generate_release_notes appends the commit
+      #  summary underneath this.
       - uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ github.event.inputs.tag || github.ref_name }}
@@ -205,3 +213,35 @@ jobs:
           generate_release_notes: true
           draft: false
           files: dist/*
+          body: |
+            ## Downloads
+
+            | Platform | Status |
+            |---|---|
+            | **Windows x64** | Screensaver (`.scr`) + console build. Tested: 27 smoke checks, 11 screensaver checks, 2,452-file decode corpus |
+            | **Linux x86_64** | Builds and decodes correctly. **Rendering is unverified** |
+            | **Web** | Runs in a browser. Tested in headless Chromium |
+            | **macOS** | **No download. Not validated.** See below |
+
+            ### macOS is not validated, and there is no macOS build here
+
+            `platform_macos.m` compiles on Apple hardware in CI, and its decoder
+            output is byte-identical to the Windows reference across all 2,452
+            files. That is the whole of what has been verified.
+
+            **Nobody has ever looked at a frame this engine rendered on a Mac.**
+            The cross-platform check runs `dump`, which never opens a window, so
+            the Cocoa windowing and blitting code is compiled and then never
+            executed. There is a specific open question about whether the frame
+            comes out vertically flipped: the engine's buffer is top-down and
+            `drawRect` draws into an unflipped `NSView`, where CoreGraphics puts
+            the origin at bottom-left.
+
+            No macOS artifact is published rather than shipping something that
+            might render upside down. If you have a Mac and want to help, building
+            from source and reporting what you see would settle it.
+
+            Linux is in a milder version of the same position: it builds and
+            decodes correctly in CI, but nothing there renders a pixel either.
+            Windows and Web are the two platforms where rendering is actually
+            exercised by automated tests.
