@@ -66,7 +66,29 @@ jobs:
       # cross-platform decode defect, which is the strongest signal this project
       # has and costs nothing to check.
       - name: build and verify decode parity
-        run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/linux-build.sh
+        run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/unix-build.sh
+
+  macos:
+    name: macOS (Clang, Cocoa + AudioToolbox)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      # THIS JOB EXISTS BECAUSE macOS WAS BUILT NOWHERE. platform_macos.m is 634
+      # lines of Objective-C that had never been compiled, on any machine, while
+      # the README listed macOS as an equally supported platform and three fixes
+      # were applied to it by reading the code alone.
+      #
+      # The runner ships cmake and the Xcode command line tools, so there is no
+      # install step. Same script as Linux: `dump` needs no window server, so the
+      # comparison against the Windows golden manifest works identically here and
+      # catches any endianness, struct-packing or signed-char decode defect.
+      #
+      # What this does NOT prove is that anything RENDERS. drawRect builds a
+      # CGImage from a top-down buffer and draws into an unflipped NSView, and
+      # whether that comes out upside down is still unsettled. See BACKLOG.md.
+      - name: build and verify decode parity
+        run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/unix-build.sh
 
   web:
     name: Web (Emscripten)
