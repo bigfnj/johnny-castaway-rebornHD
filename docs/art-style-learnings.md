@@ -246,6 +246,9 @@ rather than rewriting the historical request as a confidently ordered path list.
 
 ## Next style
 
+The [post-merge audit](cartoon-post-merge-audit.md) records delivery verification,
+the remaining maintenance findings and the scope of the approved scene.
+
 Reuse the geometry and workflow, not unreviewed Cartoon-specific scales or visual
 choices. Establish identity and one directional key, then a complete native-timed
 loop and layered scene. Register the style deliberately and label partial coverage

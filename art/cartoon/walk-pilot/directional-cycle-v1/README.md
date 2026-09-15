@@ -4,7 +4,10 @@ On 2026-09-14 the user reviewed the full E-to-A walking comparison and replied
 "looks good". This approves the six-pose motion and foot lifts as displayed.
 The selected raw images are 024v7, 025v2, 026v3-fresh, 027v3-fresh,
 028v4-transparent and 029v2. [acceptance.json](acceptance.json) identifies the
-exact six source and export hashes. Production promotion remains pending.
+exact six source and export hashes. These PNGs now ship unchanged in the
+21-asset Cartoon preview; the later
+[island scene acceptance](../../island-pilot-v1/acceptance.json) records the
+user's approval of the complete layered scene.
 
 The user's "well done" approved the 024v6 key's body direction and leg order in
 the context of the still review. The earlier "The body pop looks resolved"
@@ -60,10 +63,14 @@ and are accepted for this route. They are no longer an open gait-review item.
 The 028 alpha extraction altered its contour by approximately 1-2 raw pixels;
 alpha 1-7 exterior residue remains in several raw sources. Meaningful alpha bounds
 fit their original canvases at the recorded transform. No alpha thresholding or
-code cleanup has been applied. Coverage is limited to 024-029, and all other
-application artwork continues to use the existing fallback.
+code cleanup has been applied. This walking family covers only 024-029. The
+shipped preview also contains 15 island assets; uncovered application artwork
+continues to use the existing fallback.
 
-Other directions and broader scene contact remain unvalidated. Once the new
-island artwork is selected, replay these unchanged PNGs at the original route
-coordinates and inspect planted-foot contact, shoreline clearance and intended
-tree or foreground occlusion in the actual renderer before scene promotion.
+The later island review replayed these unchanged PNGs at the original route
+coordinates with independently advancing shoreline animation. The user approved
+the displayed scene. Native palm-occlusion and fallback checks, together with
+[production validation](../../island-pilot-v1/review-evidence/production-validation.json),
+record the integration evidence. This approval does not cover other walking
+directions or unseen environment states. Review their contacts and occlusion in
+the actual renderer as each new family is authored.
