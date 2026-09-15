@@ -13,6 +13,9 @@ engine review. The six front-oblique walking sprites have a
 [portable export recipe and approval](../art/cartoon/walk-pilot/calm-focus-runtime-v1/README.md).
 The accepted [rear walking family](../art/cartoon/walk-expansion-v1/README.md)
 adds six poses with its own [continuity and fit lessons](art-style-learnings-rear-walk.md).
+The [rear arrival pose](../art/cartoon/arrival-pilot-v1/README.md) adds standing
+frame 018 and [arrival lessons](art-style-learnings-arrival.md) about contact,
+registration and preserving the real transition.
 Each family retains its actual human review; aggregate pack approvals explicitly
 inherit earlier reviewed assets rather than silently replacing their provenance.
 

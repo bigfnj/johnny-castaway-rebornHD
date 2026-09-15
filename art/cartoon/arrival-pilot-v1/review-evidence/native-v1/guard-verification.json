@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "test_sha256": "89f5fcc126908e4194dc645ad07069c88108f92cbb669739dea722f9450a5b2d",
+  "records": [
+    {
+      "control": "valid-candidate",
+      "source_sha256": "e98298d04e802c0c82eb36433fca3ad4f54dae0dce7fdb065198f6f33e89014c",
+      "exit_code": 0,
+      "stdout": "WITNESS source=e98298d04e802c0c82eb36433fca3ad4f54dae0dce7fdb065198f6f33e89014c file=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\prepare_candidate.py\nPASS valid-candidate\n",
+      "exact_named_failures": []
+    },
+    {
+      "guard": "runtime-export-required",
+      "normal_refusal": {
+        "source_sha256": "e98298d04e802c0c82eb36433fca3ad4f54dae0dce7fdb065198f6f33e89014c",
+        "exit_code": 0,
+        "stdout": "WITNESS source=e98298d04e802c0c82eb36433fca3ad4f54dae0dce7fdb065198f6f33e89014c file=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\prepare_candidate.py\nPASS expected-refusal:runtime-export-required\n",
+        "exact_named_failures": []
+      },
+      "mutation": {
+        "source_sha256": "f2a17ad0a13c278c859421f27cebdafcef3417307827a8e402ac4aedfea9b6c0",
+        "exit_code": 1,
+        "stdout": "WITNESS source=f2a17ad0a13c278c859421f27cebdafcef3417307827a8e402ac4aedfea9b6c0 file=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\prepare-guard-mutant-0.py\nFAIL expected-refusal:runtime-export-required\n",
+        "exact_named_failures": [
+          "FAIL expected-refusal:runtime-export-required"
+        ]
+      },
+      "result": "FIRED"
+    },
+    {
+      "guard": "arrival-only-frame-set",
+      "normal_refusal": {
+        "source_sha256": "e98298d04e802c0c82eb36433fca3ad4f54dae0dce7fdb065198f6f33e89014c",
+        "exit_code": 0,
+        "stdout": "WITNESS source=e98298d04e802c0c82eb36433fca3ad4f54dae0dce7fdb065198f6f33e89014c file=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\prepare_candidate.py\nPASS expected-refusal:arrival-only-frame-set\n",
+        "exact_named_failures": []
+      },
+      "mutation": {
+        "source_sha256": "cb85f9165cd9c599d9920e0b8a5bb2a37ec629a3ff759807439fcb19afdaab41",
+        "exit_code": 1,
+        "stdout": "WITNESS source=cb85f9165cd9c599d9920e0b8a5bb2a37ec629a3ff759807439fcb19afdaab41 file=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\prepare-guard-mutant-1.py\nFAIL expected-refusal:arrival-only-frame-set\n",
+        "exact_named_failures": [
+          "FAIL expected-refusal:arrival-only-frame-set"
+        ]
+      },
+      "result": "FIRED"
+    },
+    {
+      "guard": "raw-source-identity",
+      "normal_refusal": {
+        "source_sha256": "e98298d04e802c0c82eb36433fca3ad4f54dae0dce7fdb065198f6f33e89014c",
+        "exit_code": 0,
+        "stdout": "WITNESS source=e98298d04e802c0c82eb36433fca3ad4f54dae0dce7fdb065198f6f33e89014c file=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\prepare_candidate.py\nPASS expected-refusal:raw-source-identity\n",
+        "exact_named_failures": []
+      },
+      "mutation": {
+        "source_sha256": "b83881f34c2749c7bf69d12a1a4c983e273241f364269ee92a3c3145c5c5fd58",
+        "exit_code": 1,
+        "stdout": "WITNESS source=b83881f34c2749c7bf69d12a1a4c983e273241f364269ee92a3c3145c5c5fd58 file=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\prepare-guard-mutant-2.py\nFAIL expected-refusal:raw-source-identity\n",
+        "exact_named_failures": [
+          "FAIL expected-refusal:raw-source-identity"
+        ]
+      },
+      "result": "FIRED"
+    },
+    {
+      "guard": "arrival-outside-pixels",
+      "normal_control": {
+        "source_sha256": "27eedf2f9a30a231d88919e35930d7f3513012527e74131dd1e9a1cbd2962145",
+        "exit_code": 0,
+        "stdout": "WITNESS source=27eedf2f9a30a231d88919e35930d7f3513012527e74131dd1e9a1cbd2962145 file=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\capture.py\nPASS arrival-outside-pixels\n",
+        "exact_named_failures": []
+      },
+      "mutation": {
+        "source_sha256": "23011b9db562087e759747c2068ab495848696bbbe1e3fca49650884db350069",
+        "exit_code": 1,
+        "stdout": "WITNESS source=23011b9db562087e759747c2068ab495848696bbbe1e3fca49650884db350069 file=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\capture-outside-mutant.py\nFAIL arrival-outside-pixels\n",
+        "exact_named_failures": [
+          "FAIL arrival-outside-pixels"
+        ]
+      },
+      "result": "FIRED"
+    }
+  ],
+  "scope": "Python source copies executed by fresh child interpreters with exact source SHA witnesses. Four mutations each produce exactly one named failure. No native binary was rebuilt or modified; baseline/candidate native runs have separate evidence."
+}

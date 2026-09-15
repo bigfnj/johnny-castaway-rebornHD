@@ -17,8 +17,8 @@
     "slots": 2401,
     "sprites": 2391,
     "screens": 10,
-    "accepted": 27,
-    "pending": 2374,
+    "accepted": 28,
+    "pending": 2373,
     "hd_proxy_blank_slots": 119,
     "distinct_hd_png_bytes": 2141,
     "exact_duplicate_slots": 260,
@@ -30,7 +30,7 @@
       "resource": "JOHNWALK.BMP",
       "priority": 1,
       "slots": 36,
-      "accepted": 12,
+      "accepted": 13,
       "hd_proxy_blank_slots": 1
     },
     {
@@ -38215,10 +38215,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/arrival-pilot-v1/production-acceptance.json",
+        "recipe": "art/cartoon/arrival-pilot-v1/runtime-recipe-v1.json",
+        "png_sha256": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190"
       }
     },
     {
@@ -93214,19 +93214,23 @@
       "basis": "utf8-normalized-newlines"
     },
     "art/cartoon/pack.json": {
-      "sha256": "829496823de8039261666f0d630968f70aeb172c072bd6188f157e3ce206b6c2",
+      "sha256": "621cfa8e0b28bd22ce90a52c9f1803f71baea090466b3ff73c56699a76fc3cd4",
       "basis": "utf8-normalized-newlines"
     },
     "docs/knowledge-base/cartoon-original-reference.json": {
       "sha256": "f6293e86dc4773fa5548f205df73afa970729662dab06a5bff111c3b0f9692ef",
       "basis": "utf8-normalized-newlines"
     },
-    "art/cartoon/walk-expansion-v1/production-acceptance.json": {
-      "sha256": "70942da086c93ca2fca2693fc35fb295be7d1ea38c29c38598124b5a1c16adc8",
+    "art/cartoon/arrival-pilot-v1/production-acceptance.json": {
+      "sha256": "52d71dd6255a544791d2de24c64882716b95cb0e90085f23a798612aef71f4e2",
       "basis": "file-bytes"
     },
     "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json": {
       "sha256": "ce7f3832982bcfbef13f9ce6dc06c1f60ce774b89aca088247442040fd767a0c",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/walk-expansion-v1/production-acceptance.json": {
+      "sha256": "70942da086c93ca2fca2693fc35fb295be7d1ea38c29c38598124b5a1c16adc8",
       "basis": "file-bytes"
     },
     "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json": {
@@ -93247,6 +93251,10 @@
     },
     "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json": {
       "sha256": "4740d0c115caa56f0dcc79032e92aac84fdb4356fd661a27b9f862ffe9213795",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/arrival-pilot-v1/runtime-recipe-v1.json": {
+      "sha256": "c2690a73c9f1fb5101acb6765eda868fd4839b7754d5889b9961b572fa11d0af",
       "basis": "file-bytes"
     },
     "art/cartoon/walk-expansion-v1/reference/metadata.json": {

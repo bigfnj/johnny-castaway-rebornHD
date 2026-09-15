@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen",
+  "batch": "arrival-pilot-v1",
+  "scope": "Draft frame018; technical fit and human arrival review pending. No production acceptance.",
+  "attempts": [
+    {
+      "id": "018-pose-v1",
+      "prompt": "Use case: identity-preserve.\nAsset type: one transparent Cartoon Johnny game sprite, JOHNWALK.BMP frame 018, the stationary rear-oblique arrival/wait pose.\nImage 1 is the ORIGINAL POSE reference, enlarged exactly 8x. Use its silhouette, joint arrangement, elbows, hands-at-shorts posture, foot placement and depth. Its diagnostic red/yellow pixel colors and gray ground shadow are NOT the desired colors or artwork.\nImage 2 is the APPROVED CARTOON CHARACTER AND REGISTRATION reference, frame 023. Use exactly this character design and rear-three-quarter direction: the white sailor cap with gold band and projecting dark brim, shaggy brown hair, full scruffy beard, lean bare back, orange skin, and natural ragged white shorts. Preserve its drawing style, outline weight, head/cap size and placement on the same 1024x1536 transparent canvas. This is the resting frame of the SAME animation, not a redesigned or resized character.\nChange the pose from walking to standing, matching Image 1. Johnny faces diagonally away toward screen-left; we see his back and the same small side of his face, not his chest or both eyes. His visible screen-left elbow bends outward and forward. Its forearm angles inward and downward to the hand resting at the shorts/pocket area. Do not leave that hand hanging down beside the knee as in Image 2. The opposite arm is mostly hidden; follow the compact original resting posture without inventing an extra hand.\nBoth legs now support a relaxed stationary stance. The nearer visible leg extends down to the larger screen-left foot, with its toes pointing along the leftward diagonal. The farther foot is smaller and sits a little to screen-right and higher in the image because it is farther away. Match this depth offset; do not put both soles on one horizontal row. Keep the stance compact and natural. Neither foot is hanging in the air, neither knee is lifted into a step. Trace each thigh from its own shorts opening through the knee and ankle. Use one natural distal toe group on each foot, with smooth side and heel contours and no extra toe-like bumps along an ankle.\nPreserve Image 2's head, beard, cap, upper-back orientation and common drawing scale. Adjust the arms and lower body only as required to produce the original standing pose. The full character should retain the same approximate cap-to-ground height as its adjacent walking frames. Keep the cap top around its current 40-pixel area and do not recenter, stretch, zoom, shrink or crop the whole character to fit. All cap edges and toes must be inside the canvas with transparent space around them. Shorts must have two distinct natural leg openings, not inflated, twisted or fused fabric.\nOutput one whole-body sprite on genuine transparent alpha. No cast shadow, floor, backdrop, glow, aura, opaque black, checkerboard drawing, labels, text or sprite sheet. Any colors hidden outside the reference's alpha are not part of the design. Keep clean transparent outer edges.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\build\\cartoon-production-reference\\nearest8\\018.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\023-pose-v1.png"
+      ],
+      "saved_image": "018-pose-v1.png",
+      "reference_roles": [
+        "Original pose and joint geometry only; canonical copy reference/018-nearest8.png",
+        "Approved Cartoon design and drawing-scale reference; ../walk-expansion-v1/023-pose-v1.png"
+      ],
+      "status": "generated; technical export and native human review pending",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-658ef535-aba6-4c9f-a973-6450964030e1.png",
+      "source_sha256": "4ed63ba9245dd30ac414caadba1a13febac240ffcbfa767c4f939a4bd83ddab2"
+    }
+  ]
+}

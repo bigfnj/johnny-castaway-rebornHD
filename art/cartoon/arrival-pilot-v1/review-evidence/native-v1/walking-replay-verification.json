@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "mutation": "FIRED",
+  "failure_count": 1,
+  "label": "capture.py:full:unchanged-full-frame:1",
+  "test_sha256": "467ea8c73d63dc2733b3993c7774cb8dc0e274265f6bb0cf88712342943999de",
+  "records": [
+    {
+      "case": "normal-refusal",
+      "source_sha256": "27eedf2f9a30a231d88919e35930d7f3513012527e74131dd1e9a1cbd2962145",
+      "exit_code": 0,
+      "named_failures": [],
+      "stdout": "WITNESS source=27eedf2f9a30a231d88919e35930d7f3513012527e74131dd1e9a1cbd2962145 compiled=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\capture.py\nPASS expected refusal capture.py:full:unchanged-full-frame:1\n"
+    },
+    {
+      "case": "removed-guard",
+      "source_sha256": "1164799ff825bedcf24b73ec790286bc943092903db0a10ab4b3f4b0addf306e",
+      "exit_code": 1,
+      "named_failures": [
+        "FAIL capture.py:full:unchanged-full-frame:1"
+      ],
+      "stdout": "WITNESS source=1164799ff825bedcf24b73ec790286bc943092903db0a10ab4b3f4b0addf306e compiled=D:\\.ai-work\\worktrees\\johnny-cartoon-arrival\\build\\arrival-native-review\\capture-walking-guard-mutant.py\nPASS full: 47 real displays; exact route/timing/art dependencies and pixel bounds\nFAIL capture.py:full:unchanged-full-frame:1\n"
+    }
+  ],
+  "original_capture_report_sha256": "542dc661e52daf9c05d9c09a3be3a7a289aecf22de34b2e039b366364a62f2bc",
+  "scope": "Actual capture.py comparison replay with hash-verified saved native PPM/log inputs; only one first-walking background pixel changed. The subprocess execution seam is substituted to replay captures. No new native execution, production mutation, or browser-page change. The real source refuses; removing its guard reaches exactly one named external failure."
+}

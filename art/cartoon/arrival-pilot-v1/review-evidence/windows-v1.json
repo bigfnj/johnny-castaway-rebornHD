@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "worktree_base_commit": "64a75df7d3ada0d554559a463491ab85e9e62afb",
+  "scope": "Windows delivery validation after arrival018 approval/promotion. Separate from frozen native-v1 human-review evidence.",
+  "source_archive_sha256": "0748676eb6ab0685abecfeb0bbfb8547d2050e6419bb1cad5f13ccc9f716fedd",
+  "deployed_archive_sha256": "0748676eb6ab0685abecfeb0bbfb8547d2050e6419bb1cad5f13ccc9f716fedd",
+  "source_and_deployed_archive_match": true,
+  "archive_member_count": 2579,
+  "arrival_png_sha256": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190",
+  "binaries": {
+    "jc_reborn.exe": {
+      "sha256": "cfafe1c2857ba3845350990b2c5c4fbdc622460be2d6efc3ba3e5a69be2b48a0",
+      "mtime_ns": 1789496623334917200
+    },
+    "jc_reborn.scr": {
+      "sha256": "0c8310541d9f880c45f541c0ec12f7a4cc068e70b668cb39a0d86f943179d9f4",
+      "mtime_ns": 1789496623721946700
+    },
+    "jc_palm_test.exe": {
+      "sha256": "a613a9ecc41e57a6aa4bf650369342db00409c0def40853562515efaf54d9e4d",
+      "mtime_ns": 1789496622393883900
+    }
+  },
+  "runs": [
+    {
+      "label": "arrival-promotion-v1",
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "<repo>\\gate.ps1"
+      ],
+      "passed": false,
+      "exit_code": 1,
+      "elapsed_seconds": 160.849,
+      "log_sha256": "daf40a968246dab3daad9aaeba8f9a10fa895a62a7d5672764c8445031f8ee09",
+      "archive_sha256": "0748676eb6ab0685abecfeb0bbfb8547d2050e6419bb1cad5f13ccc9f716fedd",
+      "input_desktop_preserved": true,
+      "poll_checks": 307,
+      "runtime_inputs_unchanged": true,
+      "observed_inactive_window_count": 265,
+      "authoring_test_tool_changes_during_gate": []
+    },
+    {
+      "label": "arrival-palm-control-v1",
+      "command": [
+        "<TOOLBOX_PYTHON>",
+        "-B",
+        "<repo>\\build\\palm_control.py"
+      ],
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 12.682,
+      "log_sha256": "6f51df48d4cbf28752e83c3faf307c2a9b5f016df9aa527a99d11d18f68bc8a3",
+      "archive_sha256": "0748676eb6ab0685abecfeb0bbfb8547d2050e6419bb1cad5f13ccc9f716fedd",
+      "input_desktop_preserved": true,
+      "poll_checks": 24,
+      "runtime_inputs_unchanged": true,
+      "observed_inactive_window_count": 89,
+      "authoring_test_tool_changes_during_gate": []
+    },
+    {
+      "label": "arrival-promotion-v2",
+      "command": [
+        "pwsh",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "<repo>\\gate.ps1"
+      ],
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 145.85,
+      "log_sha256": "c08b0fa322fd8c932c8f22f08087053f56d1ffb1b21b52849187cda7dd060185",
+      "archive_sha256": "0748676eb6ab0685abecfeb0bbfb8547d2050e6419bb1cad5f13ccc9f716fedd",
+      "input_desktop_preserved": true,
+      "poll_checks": 278,
+      "runtime_inputs_unchanged": true,
+      "observed_inactive_window_count": 295,
+      "authoring_test_tool_changes_during_gate": []
+    }
+  ],
+  "initial_failure": {
+    "test": "tests/test_palm_renderer.py:84",
+    "case": "outside-alpha",
+    "native_exit_code_as_reported": 0,
+    "failed_condition": "Required trailing Captured frame stdout marker missing.",
+    "retained_output": "Exact failure and last1500 native-output characters remain in the first full-gate log and excerpt.",
+    "ppm_state": "Unknown. The original test used TemporaryDirectory; its fixture/log/PPM files were removed when the test unwound. No missing-image claim.",
+    "cause": "Unproven. Similar output-marker symptoms are already tracked in BACKLOG, but this occurrence does not establish the same cause.",
+    "cleanup_evidence": "test_palm_renderer.py main uses TemporaryDirectory. Sysmon query returned no matching events; D: USN journal exists. No file-content recovery was attempted.",
+    "native_output_excerpt": "FAIL tests/test_palm_renderer.py: palm alpha128 remains128 away from Johnny on both routes: Capture failed (exit 0): <repo>\\build\\windows-gates\\arrival-promotion-v1\\temp\\jc-palm-3b9evvig\\alpha128-active1-original0\\current-cartoon-none.log\nsset: data/styles/cartoon/BMP/BACKGRND.BMP/038.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/039.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/040.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/041.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/000.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/001.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/002.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/003.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/004.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/005.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/006.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/007.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/008.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/009.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/010.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/011.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/012.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/013.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/014.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/015.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/016.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/017.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/018.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/019.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/020.png\n\nArt asset: data/styles/cartoon/BMP/BACKGRND.BMP/021.png\n\nArt asset: data/styles/\n"
+  },
+  "retained_focused_none_control": {
+    "file_sha256": "292be7327fc8e3031ae65b3c74e3790356acc514b23c42f48577f3982e8f1d68",
+    "canvas": [
+      1280,
+      960
+    ],
+    "rgb_byte_count": 3686400,
+    "rgb_sha256": "047af07029275ee954e524141b4028477ab04149b170140081f5114f3cb29ea9",
+    "capture_marker_present": true,
+    "log_sha256": "d100bff659d3298e1680a0c2962018845ff5db181acb36c2bbf318bad05e6a6f"
+  },
+  "focused_palm_checks": [
+    {
+      "name": "smoke",
+      "passed": true,
+      "label": "HD and Cartoon finish actual D/E captures"
+    },
+    {
+      "name": "outside-alpha",
+      "passed": true,
+      "label": "palm alpha128 remains128 away from Johnny on both routes"
+    },
+    {
+      "name": "overlap",
+      "passed": true,
+      "label": "palm-over-partial-Johnny preserves tree color and Johnny coverage"
+    },
+    {
+      "name": "opaque",
+      "passed": true,
+      "label": "opaque palm still occludes Johnny"
+    },
+    {
+      "name": "transparent",
+      "passed": true,
+      "label": "transparent palm preserves Johnny and empty background"
+    },
+    {
+      "name": "clipping",
+      "passed": true,
+      "label": "source-atop respects scaled offset, clip and negative origin"
+    },
+    {
+      "name": "hd-legacy",
+      "passed": true,
+      "label": "HD retains its original source-over pixels"
+    },
+    {
+      "name": "partial-fallback",
+      "passed": true,
+      "label": "partial Cartoon without palm replacements retains HD behavior"
+    }
+  ],
+  "final_full_gate_passed": true,
+  "production_runtime_changes_during_validation": false,
+  "source_report_sha256": "2557e85108b186e7621553e10a4ffca4d02ef46abdb250ecb9d68c70410aa515"
+}

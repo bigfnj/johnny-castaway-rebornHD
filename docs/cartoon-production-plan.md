@@ -17,7 +17,7 @@ application. Work starts from `0f7d7fd` on `art/cartoon-production-foundation`.
 
 The full catalog is preparation, not permission to generate every resource at
 once. The original 21 approved assets were the starting baseline; the accepted
-rear walking family now brings production coverage to 27.
+rear walking family and its standing arrival now bring production coverage to 28.
 Drafts have separate source records and do not acquire acceptance from similar
 poses, shared bytes or approval of a different direction.
 
@@ -62,10 +62,13 @@ metadata regressions. Retain failed-run evidence where it explains a limitation.
 
 The rear-three-quarter key was approved with "looks good yes". Its complete
 six-pose walk was subsequently approved in the native island review with
-"Yes, keep this walk"; the disclosed arrival frame 018 remains HD fallback.
-The next coherent step is to complete that waiting/turning transition before
-another walking family. The front walk can be revisited using the same
-sequence-level review if needed. Large-scale asset generation,
+"Yes, keep this walk". The user then approved standing arrival 018 with
+"nailed it, proceed", completing that displayed rear arrival in Cartoon.
+The next bounded review can revisit the front walk using the rear family's
+knee/foot continuity lessons. Before replacing its assets, explicitly transition
+the original pilot metadata's approval history. Eight of the ten unique
+wait/turn-table assets still use HD fallback; other placements and story uses
+of 018 remain outside this arrival review. Large-scale asset generation,
 low-tide scenery, other characters, action scenes and code-drawn effects remain
 outside the current production batch. Existing engine maintenance findings stay
 in [BACKLOG.md](../BACKLOG.md); address a reproduced blocker when its affected

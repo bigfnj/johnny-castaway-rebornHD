@@ -1,0 +1,60 @@
+{
+  "scope": "One-off arrival rule proof; isolated Git indexes only. No art edits or production gate added.",
+  "rule": "art/cartoon/arrival-pilot-v1/** -text whitespace=cr-at-eol",
+  "helper_sha256": "7a2969e61fc22f2e2d689a21f2451b36819496515572f0f58d70a1a9cae31f2e",
+  "git_version": "git version 2.55.0.windows.5",
+  "smoke_checks": 2,
+  "checkout_variants": [
+    {
+      "variant": "normal",
+      "tree_oid": "a3364e6f5124f2925821f64b08bddca0aaef5344",
+      "attributes_sha256": "41551cbd1438523fe0915ce32d7ed4353ca07c0bd0dbf3aa39307a6267b95758",
+      "protected_file": "art/cartoon/arrival-pilot-v1/reference/source.json",
+      "source_sha256": "bd2ba0025626593641c575b794d9380bf66613dae9b7f456d5715aa810d9ceae",
+      "checkout_sha256": "bd2ba0025626593641c575b794d9380bf66613dae9b7f456d5715aa810d9ceae",
+      "png_unchanged": true,
+      "png_sha256": "d4390dbd4e9df53d506dbedf540c4a2a0d867c23d3c5221743dad0bf07d2dbd8",
+      "outside_source_sha256": "352f62a46411c15efaa50bee9c647a49de61b68ab526dad1e579a6bcc14d53ca",
+      "outside_checkout_sha256": "6830c12f209f36d434330065184d5678683a84350e34034c632df79541178736",
+      "outside_LF_became_CRLF": true,
+      "actual_named_failure": null,
+      "failure_count": 0
+    },
+    {
+      "variant": "without-arrival-rule",
+      "tree_oid": "577e6dfdf712e037819b52fddbf4bd860ce9de2b",
+      "attributes_sha256": "ea6b6eeedece9e9085a45929913312825e7a643395ba0b749217169f063a73b4",
+      "protected_file": "art/cartoon/arrival-pilot-v1/reference/source.json",
+      "source_sha256": "bd2ba0025626593641c575b794d9380bf66613dae9b7f456d5715aa810d9ceae",
+      "checkout_sha256": "7d28f12d80e35ebd352dbe16152a8ac43ce1c48b1e6f2f2120b5fc23a2cbcee7",
+      "png_unchanged": true,
+      "png_sha256": "d4390dbd4e9df53d506dbedf540c4a2a0d867c23d3c5221743dad0bf07d2dbd8",
+      "outside_source_sha256": "352f62a46411c15efaa50bee9c647a49de61b68ab526dad1e579a6bcc14d53ca",
+      "outside_checkout_sha256": "6830c12f209f36d434330065184d5678683a84350e34034c632df79541178736",
+      "outside_LF_became_CRLF": true,
+      "actual_named_failure": "art/cartoon/arrival-pilot-v1/reference/source.json: byte-preservation",
+      "failure_count": 1
+    },
+    {
+      "variant": "restored",
+      "tree_oid": "a3364e6f5124f2925821f64b08bddca0aaef5344",
+      "attributes_sha256": "41551cbd1438523fe0915ce32d7ed4353ca07c0bd0dbf3aa39307a6267b95758",
+      "protected_file": "art/cartoon/arrival-pilot-v1/reference/source.json",
+      "source_sha256": "bd2ba0025626593641c575b794d9380bf66613dae9b7f456d5715aa810d9ceae",
+      "checkout_sha256": "bd2ba0025626593641c575b794d9380bf66613dae9b7f456d5715aa810d9ceae",
+      "png_unchanged": true,
+      "png_sha256": "d4390dbd4e9df53d506dbedf540c4a2a0d867c23d3c5221743dad0bf07d2dbd8",
+      "outside_source_sha256": "352f62a46411c15efaa50bee9c647a49de61b68ab526dad1e579a6bcc14d53ca",
+      "outside_checkout_sha256": "6830c12f209f36d434330065184d5678683a84350e34034c632df79541178736",
+      "outside_LF_became_CRLF": true,
+      "actual_named_failure": null,
+      "failure_count": 0
+    }
+  ],
+  "mutants_fired": 1,
+  "protected_binary_controls": 3,
+  "outside_normalization_controls": 3,
+  "real_worktree_index_unchanged": true,
+  "result": "PASS: removed rule fires exactly one executed file-naming assertion; restoration reproduces original tree.",
+  "full_local_report": "build/arrival-attributes/verification.json"
+}

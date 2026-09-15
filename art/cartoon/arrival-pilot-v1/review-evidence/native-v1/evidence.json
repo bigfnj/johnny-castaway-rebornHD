@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "status_at_capture": "technical-review-passed; human decision recorded separately",
+  "source_commit": "64a75df7d3ada0d554559a463491ab85e9e62afb",
+  "review_url": "http://127.0.0.1:8932/arrival-cartoon-v1/review.html",
+  "review_html_sha256": "d5dc40f835f04c410dfa48c20e4c44057f3a98754a02b9eada1bad7799261877",
+  "baseline_archive_sha256": "1daf8f95614fde8efd85745a8baac02a41d88c2775a91374d66959174220aa7e",
+  "candidate_archive_sha256": "bc47235fbb12ed5c2a080471a556e4e61e41e4e4c886de94fd02dd7591d6386d",
+  "executable_sha256": "831a6ada20ac1e1d68d822e325b2a664ec5a1ca22522b82d3fff7e01aaacc2b8",
+  "display_count": 47,
+  "duration_ms": 4360,
+  "travel_pose_count": 23,
+  "arrival_frame": 18,
+  "arrival_hold_ms": 1600,
+  "allowed_changes": "Only the frame018 runtime canvas during actual arrival states; all walking display pixels unchanged.",
+  "camera": {
+    "full_island": [
+      0,
+      0,
+      1280,
+      960
+    ],
+    "fixed_closeup": [
+      580,
+      440,
+      400,
+      280
+    ]
+  },
+  "files_sha256": {
+    "source-reuse.json": "e11d3ddccc14f21e5085769711b657ea8c3b34772c0ea952a97683672252fc25",
+    "historical-build.json": "cd007c82067977d1cc4837a7ab9df26fb3f76a7178a121edc6826b753c3126d6",
+    "prior-reviewed-smoke.json": "b817168d7e5f7ea0ed550f4fbc327a74b0dd8d6ee830749517a3c0eb1ff808a4",
+    "prior-reviewed-full.json": "ad2bed58a037fcbab54c05d213c4fdce4b34e61e6355b983f5bfe298de89f7ce",
+    "baseline-smoke.json": "43c58dbd5f8b01e6884b14dc252f2bd137b7050ab775cb5bb36ffb22110a5ea0",
+    "baseline-full.json": "8c5488e3bf7f44356d2b6f118bdeee2c99c81ebac2e00195c4c649fb1e516696",
+    "baseline-summary.json": "307c6182af5344720fa0c8cb3a50b9747447e05c36dd8ff7f182b025b391b9bd",
+    "archive-preparation.json": "05b05000a07611c2af1886642c6aac72d76b806f4b4c99f98a3bae10bc4ff7c2",
+    "recipe.json": "92926834433221e7404ad6aa88e600bf0895260f772a862db4f5cad8d586fe4f",
+    "export-report.json": "d4563e7e62cf3a4050a7d799248c0acc0f980d0d381fe9ff5b30867dedc17562",
+    "candidate-smoke.json": "5d18b7af97c4f180bb5d59dd91a30930235d16df5c3a5b894f3874444c7f9889",
+    "candidate-full.json": "542dc661e52daf9c05d9c09a3be3a7a289aecf22de34b2e039b366364a62f2bc",
+    "candidate-summary.json": "293627eca3b9b183f661772184db009dac6e177c23b2208899f187c3bb8a563e",
+    "review-record.json": "1c50ad45d5b3c8a2499869dbb059ad2597d3e5b9dcade545a2a883540b858e22",
+    "browser-validation.json": "66ff1fcfa4b2cae7f74fa4f8322f59e1462050c102f2a8ea97ed764250c0e606",
+    "served-validation.json": "7ae0d01e3b2bf5a5724abbd6820ad3377e0cca1ca3be6adb73c2a698f0fd3451",
+    "guard-verification.json": "c5bef01cacbc954e80a5c85f4a618ae930d01ff2422342ccec8fa356fbac1fa3",
+    "helpers/setup.py": "19d70fc49493492bc8a1778b624a0690442a8c16e6b14bd54944c0dc127b403f",
+    "helpers/capture.py": "27eedf2f9a30a231d88919e35930d7f3513012527e74131dd1e9a1cbd2962145",
+    "helpers/capture_format.py": "1a956d08ef659cd537e1530bcf13cc9da153a1bf34a1730fd344e91a107c4195",
+    "helpers/route_driver.c": "1116eefd0d456093f4b17e2cf0f940b5235aa707327c3df1da1df776949ae1af",
+    "helpers/prepare_candidate.py": "e98298d04e802c0c82eb36433fca3ad4f54dae0dce7fdb065198f6f33e89014c",
+    "helpers/adapt_review.py": "1b05f902809540d94bb71398af7ec7c2759795b5b8f0dbfc61d5061ebb458f74",
+    "helpers/build_review.py": "5c8d32319bb6e4d8fd8edeca781423d238a5b0746b2d97c40ce00ab7e15f99ef",
+    "helpers/check_review.py": "54803ac0f4d4a05f20722b6e142b9e408320113ce108f7ee9547795d4b1054cd",
+    "helpers/check_guards.py": "89f5fcc126908e4194dc645ad07069c88108f92cbb669739dea722f9450a5b2d",
+    "helpers/publish_review.py": "2da7c1b3615d51388ca8bb35629e9d6fc28efb31c2c52665576652f89971d9be",
+    "walking-replay-verification.json": "44bfd4e0142b5ec220e3d74cb06ba48cdb8f3ddd1ebcb1e87389082de164b724",
+    "helpers/check_walking_replay.py": "467ea8c73d63dc2733b3993c7774cb8dc0e274265f6bb0cf88712342943999de",
+    "README.md": "d1d809b66408f00f0439ede128f031630decf49f4fc0b276e059c3a87c5f42af"
+  },
+  "excluded": "No duplicated capture PNG/PPM sets, saved executable, production ZIP, original resource binaries, or human approval inferred from technical checks."
+}

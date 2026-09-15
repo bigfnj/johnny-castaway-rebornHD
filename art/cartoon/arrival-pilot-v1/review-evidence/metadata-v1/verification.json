@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "Final authoring validation on the frozen28 production pack; not a native renderer gate or original-executable parity test.",
+  "python_version": "3.14.5",
+  "commands_in_execution_order": [
+    {
+      "step": "pilot-smoke",
+      "command": "python -B tests/test_art_review_metadata.py --phase smoke",
+      "exit_code": 0,
+      "stdout_sha256": "7a26f0e8be079be83fd646e456e87ef960d45d82141474e60bb1320304b89fe1",
+      "stderr_sha256": "e7eaf52a622e096807b4fb3514c22cbd26b275939c0019cccb4d7dfabf5d9918",
+      "tests_passed": 2
+    },
+    {
+      "step": "production-smoke",
+      "command": "python -B tests/test_art_production_catalog.py --phase smoke",
+      "exit_code": 0,
+      "stdout_sha256": "917f1f102490a7595f618f731da2837070b9e64c9b0f3d5405fa039063ae96b6",
+      "stderr_sha256": "8c7a588b915c289601fcd363bc804971e155d87e6d1b4645381c9f8c153f2203",
+      "tests_passed": 3
+    },
+    {
+      "step": "pilot-regenerate",
+      "command": "python -B tools/art_review_metadata.py",
+      "exit_code": 0,
+      "stdout_sha256": "66684f240cac0a8847385857b5b3dc77ca8a139e59e3b2b9b23735ef36ae5954",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "production-regenerate",
+      "command": "python -B tools/art_production_catalog.py",
+      "exit_code": 0,
+      "stdout_sha256": "c5509ab51b6b8a5fb5f18e2252e766b15608069ebff76b56da0dbfca261739c4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "pilot-regression-mutations",
+      "command": "python -B tests/test_art_review_metadata.py --phase regression --mutation-check",
+      "exit_code": 0,
+      "stdout_sha256": "098c6d0588902d9a8e92155ea96bb885e18db99b3c5da794982365753fa5763a",
+      "stderr_sha256": "e4abdf6a7b11490c4e55023acf6e2bb00d63857fde55811ed957254654fdca73",
+      "tests_passed": 60,
+      "executed_mutants_fired": 56,
+      "mutants_total": 56,
+      "new_prefix_mutant": "FIRED test_arrival_acceptance_raw_bytes source=f885e700546272e5ee55dc002529dd1a1323314d10eef0e8476db74d93b69f95"
+    },
+    {
+      "step": "production-regression",
+      "command": "python -B tests/test_art_production_catalog.py --phase regression",
+      "exit_code": 0,
+      "stdout_sha256": "917f1f102490a7595f618f731da2837070b9e64c9b0f3d5405fa039063ae96b6",
+      "stderr_sha256": "ae6002719881908a98a78fd6bc8fbd784f6cbd1ebcf78eafd8536c0cb176f23e",
+      "tests_passed": 63
+    },
+    {
+      "step": "art-tools-regression",
+      "command": "python -B tests/test_art_tools.py",
+      "exit_code": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "d763a6196cfcb862f251e62040536bed9e9ef39237e0121cd6d3f36b9055e46f",
+      "tests_passed": 20
+    },
+    {
+      "step": "pilot-check",
+      "command": "python -B tools/art_review_metadata.py --check",
+      "exit_code": 0,
+      "stdout_sha256": "66684f240cac0a8847385857b5b3dc77ca8a139e59e3b2b9b23735ef36ae5954",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "step": "production-check",
+      "command": "python -B tools/art_production_catalog.py --check",
+      "exit_code": 0,
+      "stdout_sha256": "c5509ab51b6b8a5fb5f18e2252e766b15608069ebff76b56da0dbfca261739c4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "input_sha256": {
+    "tools/art_review_metadata.py": "b2828d5d91addfa3cb715b2fa78cef0bf97083adc6e7afa98c71a541500f8343",
+    "tests/test_art_review_metadata.py": "51a2c3c8278b3517d404771c0668df0e3e04a6147247bdbf187a1494240095ca",
+    "tools/art_production_catalog.py": "da0d62964022b01b530fc74f69abe995ac686e4e7586b56711b8aa982482da68",
+    "tests/test_art_production_catalog.py": "fa105c942f6280b8fb95712c55fd9002342c13448a6e71a94190b377e909d1ad",
+    "tests/test_art_tools.py": "7a6bf7d56e76b2a37f83054830b1ca5d6a65e6a77d0048964dee90f3bf11ac55",
+    "art/cartoon/pack.json": "621cfa8e0b28bd22ce90a52c9f1803f71baea090466b3ff73c56699a76fc3cd4",
+    "art/cartoon/production-plan.json": "9f148db5c26e4db5a6d58b9ccaa18670efb2dcdf305a12f80438c54965d69bd7",
+    "assets/scrantic_data.zip": "0748676eb6ab0685abecfeb0bbfb8547d2050e6419bb1cad5f13ccc9f716fedd",
+    "art/cartoon/arrival-pilot-v1/production-acceptance.json": "52d71dd6255a544791d2de24c64882716b95cb0e90085f23a798612aef71f4e2",
+    "art/cartoon/arrival-pilot-v1/runtime-recipe-v1.json": "c2690a73c9f1fb5101acb6765eda868fd4839b7754d5889b9961b572fa11d0af",
+    "art/cartoon/arrival-pilot-v1/export.py": "c382582ad113c917ee8b5f8e0ebda392ceb5f746bdb4be9982b7a51f04418c63",
+    "art/cartoon/arrival-pilot-v1/018-pose-v1.png": "4ed63ba9245dd30ac414caadba1a13febac240ffcbfa767c4f939a4bd83ddab2"
+  },
+  "generated_file_sha256": {
+    "docs/knowledge-base/cartoon-art-metadata.json": "85a60e5551607dbb166bc902d86e9e9332eaf0212d7e48b84c43b1289ceedf2c",
+    "docs/knowledge-base/cartoon-art-metadata.md": "a3d7fb624ab3d6f4650105e8ded7777e3ecfb2a0057e93307715de6c7907444f",
+    "docs/knowledge-base/cartoon-production-catalog.json": "f372551dc97808b55e636a7da175113d096dcbdb90633c80e8ce66be86ddee7b",
+    "docs/knowledge-base/cartoon-production-catalog.md": "28f977e82bd55d1ea536a5a8013b32c0991d4446d2cd544ac4f4e1f7fd114f3c"
+  },
+  "protected_files_before_after": {
+    "count": 433,
+    "unchanged": true,
+    "scope": "art/cartoon non-Markdown files (excluding this report), tools/tests/src/platform non-Markdown files, archive, attributes and metadata's explicit maintained-document/reference inputs.",
+    "manifest_sha256": "5977a3a894b2b3d0ecd1a55977c5f0741fa25767137b141684dcf3bf85456e4c"
+  },
+  "pilot_summary": {
+    "assets": 21,
+    "walking_assets": 6,
+    "island_assets": 15
+  },
+  "production_summary": {
+    "slots": 2401,
+    "sprites": 2391,
+    "screens": 10,
+    "accepted": 28,
+    "pending": 2373,
+    "hd_proxy_blank_slots": 119,
+    "distinct_hd_png_bytes": 2141,
+    "exact_duplicate_slots": 260,
+    "supplied_original_evidence_slots": 51
+  },
+  "new_condition_proof": {
+    "case": "test_arrival_acceptance_raw_bytes",
+    "mutant": "Remove only arrival-pilot-v1/ from immutable-prefix tuple",
+    "input_axis": "LF, CRLF and lone-CR valid arrival acceptance bytes pass build() with identical21 pilot assets and three distinct raw hashes.",
+    "intended_failure": "art/cartoon/arrival-pilot-v1/production-acceptance.json: preserve exact immutable acceptance bytes",
+    "result": "One named unittest failure after fresh python -B imported the mutant and printed its exact source SHA.",
+    "other_axis": "Existing maintained-document normalization controls and source mutants also passed."
+  },
+  "limits": "Commercial RESOURCE inputs are not reread. Stored original facts and approved art are preserved. Native capture evidence is separate and unchanged."
+}

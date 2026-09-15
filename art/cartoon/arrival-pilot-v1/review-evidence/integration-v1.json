@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "status": "PASS",
+  "scope": "Independent pre-commit approval, archive-member and export readback. No native or browser execution was repeated by this audit.",
+  "path_basis": "All record paths are repository-relative; archive members are named separately.",
+  "approval": {
+    "record": "art/cartoon/arrival-pilot-v1/production-acceptance.json",
+    "sha256": "52d71dd6255a544791d2de24c64882716b95cb0e90085f23a798612aef71f4e2",
+    "accepted_assets": 28,
+    "prior_pack_rows_preserved": 27,
+    "prior_accepted_rows_preserved": 27,
+    "approval_chain_records_checked": [
+      "art/cartoon/arrival-pilot-v1/production-acceptance.json",
+      "art/cartoon/walk-expansion-v1/production-acceptance.json",
+      "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json"
+    ],
+    "per_asset_review_and_recipe_links_match": true,
+    "scope_checked": "New acceptance covers displayed standing 018 and arrival. The earlier 27 approvals are inherited; unseen mirrored routes, turns and story uses are not newly approved."
+  },
+  "archive": {
+    "path": "assets/scrantic_data.zip",
+    "before_sha256": "1daf8f95614fde8efd85745a8baac02a41d88c2775a91374d66959174220aa7e",
+    "production_sha256": "0748676eb6ab0685abecfeb0bbfb8547d2050e6419bb1cad5f13ccc9f716fedd",
+    "reviewed_private_sha256": "bc47235fbb12ed5c2a080471a556e4e61e41e4e4c886de94fd02dd7591d6386d",
+    "prior_members_preserved": 2578,
+    "production_members": 2579,
+    "added_member": "data/styles/cartoon/BMP/JOHNWALK.BMP/018.png",
+    "added_member_sha256": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190",
+    "changed_or_removed_prior_members": 0,
+    "all_private_review_member_hashes_match": true,
+    "all_28_accepted_png_hashes_match": true,
+    "runtime_manifest_preserved": true,
+    "verification_record": "art/cartoon/arrival-pilot-v1/production-verification.json",
+    "verification_sha256": "29a9c7e2460b988d0f1732bda368b5ac568b0ab679336f53e6d4cfb10acc0002"
+  },
+  "source_and_reproduction": {
+    "raw": "art/cartoon/arrival-pilot-v1/018-pose-v1.png",
+    "raw_sha256": "4ed63ba9245dd30ac414caadba1a13febac240ffcbfa767c4f939a4bd83ddab2",
+    "raw_matches_available_imagegen_cache": true,
+    "ordered_reference_hashes_checked": 2,
+    "exporter": "art/cartoon/arrival-pilot-v1/export.py",
+    "exporter_sha256": "c382582ad113c917ee8b5f8e0ebda392ceb5f746bdb4be9982b7a51f04418c63",
+    "runtime_recipe": "art/cartoon/arrival-pilot-v1/runtime-recipe-v1.json",
+    "runtime_recipe_sha256": "c2690a73c9f1fb5101acb6765eda868fd4839b7754d5889b9961b572fa11d0af",
+    "technical_recipe": "art/cartoon/arrival-pilot-v1/candidate-recipe-v1.json",
+    "technical_recipe_sha256": "92926834433221e7404ad6aa88e600bf0895260f772a862db4f5cad8d586fe4f",
+    "technical_export_report": "art/cartoon/arrival-pilot-v1/candidate-export-v1.json",
+    "technical_export_report_sha256": "d4563e7e62cf3a4050a7d799248c0acc0f980d0d381fe9ff5b30867dedc17562",
+    "runtime_recipe_render_fields_preserved": true,
+    "pillow_version": "12.2.0",
+    "reproduction_method": "Imported the actual exporter and rendered both technical and production recipes in memory. Output hashes match the stored export report and installed production member.",
+    "reproduced_outputs_sha256": {
+      "padded/018.png": "ec3095e8b97963996ea1d99a9d9b2bdc681339ced1f04969ef1e3b2c033cab42",
+      "BMP/JOHNWALK.BMP/018.png": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190"
+    },
+    "environment_check": "An initial Pillow 12.3.0 attempt was refused by render-contract:018. Retrying with the recorded 12.2.0 reproduced the exact bytes; no recipe or guard was changed. The reproduction README now names the verified interpreter invocation."
+  },
+  "native_evidence": {
+    "record": "art/cartoon/arrival-pilot-v1/review-evidence/native-v1/evidence.json",
+    "sha256": "572f4933bf5baa1f2de4dfea2abd57f798e356701a9a04d1d9e0c56624c7e177",
+    "file_hash_links_checked": 30,
+    "candidate_recipe_and_export_report_byte_identical": true,
+    "review_html_and_executable_links_match_acceptance": true
+  },
+  "limits": "This audit verifies stored identities, inheritance and exact export reproduction. It does not rerun native delivery tests, establish anatomical parity, or imply approval of unseen uses. Historical pending-review records and frozen native evidence were not edited. Commit, merge and post-merge checks are recorded separately."
+}
