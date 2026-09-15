@@ -546,7 +546,7 @@ void grDrawCircle(PlatformSurface *sfc, int x1, int y1, int width, int height, u
         if (d < 0)
             d += (x << 1) + 3;
         else {
-            d += ((x - y) << 1) + 5;
+            d += 2 * (x - y) + 5;
             y--;
         }
 
@@ -579,7 +579,7 @@ void grDrawCircle(PlatformSurface *sfc, int x1, int y1, int width, int height, u
             if (d < 0)
                 d += (x << 1) + 3;
             else {
-                d += ((x - y) << 1) + 5;
+                d += 2 * (x - y) + 5;
                 y--;
             }
 
@@ -701,7 +701,8 @@ void grLoadScreen(const char *strArg)
         fatalError("Screen resource is too big");
 
     if (scrResource->width % 2)
-        printf("Warning: odd-width SCR file %s (engine expects even widths)\n", strArg);
+        fatalError("SCR '%s': unsupported odd width %u (packed pixels require an even width)",
+                   scrResource->resName, scrResource->width);
 
     if (grBackgroundSfc != NULL)
         grReleaseScreen();
@@ -845,18 +846,17 @@ void grLoadBmp(struct TTtmSlot *ttmSlot, uint16 slotNo, const char *strArg)
         return;
     }
 
-    if (ttmSlot->numSprites[slotNo])
-        grReleaseBmp(ttmSlot, slotNo);
-
     {
-        // strdup the name to avoid dangling pointer if caller's buffer is on the stack
+        /* Copy before release: strArg may be the slot's own cached name.
+         * A zero-image BMP still owns that name even though it has no sprites. */
         size_t len = strlen(strArg);
         char *nameCopy = safe_malloc(len + 1);
         memcpy(nameCopy, strArg, len + 1);
+        grReleaseBmp(ttmSlot, slotNo);
         ttmSlot->bmpNames[slotNo] = nameCopy;
     }
 
-    struct TBmpResource *bmpResource = findBmpResource(strArg);
+    struct TBmpResource *bmpResource = findBmpResource(ttmSlot->bmpNames[slotNo]);
     /*  numImages is a uint16 straight out of the file and sprites[] holds
      *  MAX_SPRITES_PER_BMP pointers, so the loop below wrote past the slot as
      *  soon as a BMP declared more images than that - and numSprites was set

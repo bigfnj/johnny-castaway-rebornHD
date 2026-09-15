@@ -39,7 +39,6 @@
 struct TAdsScene {
     uint16 slot;
     uint16 tag;
-    uint16 numPlays;
 };
 
 

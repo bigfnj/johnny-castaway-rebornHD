@@ -180,10 +180,9 @@ static void dumpScr(struct TScrResource *scrResource, struct TPalResource *palRe
 
     printf("---- Dumping SCR : %s  \n", scrResource->resName);
 
-    if ((scrResource->width % 2) == 1) {
-        printf("Error : can't manage odd widths\n");
-        return;
-    }
+    if (scrResource->width % 2)
+        fatalError("SCR '%s': unsupported odd width %u (packed pixels require an even width)",
+                   scrResource->resName, scrResource->width);
 
     {
         size_t need = ((size_t)scrResource->width / 2) * (size_t)scrResource->height;

@@ -70,8 +70,9 @@ bash tests/run_macos_platform.sh
 python3 tests/test_platform_mutations.py --platform macos --output /tmp/johnny-platform-mutations
 ```
 
-The macOS queue probe uses AppKit events with controlled dispatch and no visible
-window. It does not replace manual native rendering/fullscreen checks.
+The macOS queue probe uses real NSEvent objects with controlled dequeue/dispatch
+and no visible window. It tests production polling and translation, not OS key
+delivery, and does not replace manual native rendering/fullscreen checks.
 
 Mutation runs copy only source/header/test files into isolated output children,
 replace one guard, rebuild over an old timestamped sentinel, and require a runtime

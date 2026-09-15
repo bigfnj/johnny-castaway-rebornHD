@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 #
-#  Build jc_reborn on a Unix host and verify its DECODER OUTPUT matches Windows.
-#
-#  Runs on Linux AND on macOS. One script rather than two, because the valuable
-#  half is the comparison against the Windows golden manifest and a forked copy
-#  of that would drift. The platforms differ in exactly three places: which
-#  package manager installs the toolchain, how you count CPUs, and what the
-#  sha256 tool is called. All three are handled below and nothing else changes.
+#  Build jc_reborn on Linux/macOS, run portable and backend smoke/regression,
+#  then compare original-resource decoder output with the Windows corpus.
 #
 #  Intended to run inside a container, e.g.
 #    docker run --rm -v <repo>:/src:ro ubuntu:24.04 bash /src/tests/unix-build.sh
@@ -19,11 +14,8 @@
 #  cross-platform decode defect - endianness, struct packing, signed char,
 #  undefined shifts - and not a rendering difference or a timing artefact.
 #
-#  It is also the only automated proof that these builds work at all. Linux did
-#  not: platform_linux.c used PTHREAD_MUTEX_INITIALIZER and four pthread
-#  functions with no <pthread.h>, which is a hard error on GCC 14, and nothing in
-#  the repository would have noticed. macOS was in the same position for longer:
-#  634 lines of Objective-C that had never been compiled anywhere.
+#  Backend probes exercise real platform code separately from decode parity;
+#  their device and presentation coverage is documented in platform-cleanup.md.
 set -euo pipefail
 
 SRC=${SRC:-/src}
@@ -105,6 +97,12 @@ echo
 echo "== native platform smoke =="
 SRC="$WORK" OUT="$WORK/build-unix/platform-tests" bash "$PLATFORM_TEST" --phase smoke
 
+if [ "$OSNAME" = Linux ]; then
+    echo
+    echo "== drawing and packed-screen smoke =="
+    python3 "$WORK/tests/test_drawing_bounds.py" --output "$WORK/build-unix/drawing-tests" --phase smoke
+fi
+
 echo
 echo "== RESOURCE decoder regression =="
 python3 "$WORK/tests/test_uncompress.py" --probe "$WORK/build-unix/jc_uncompress_test" --engine "$WORK/build-unix/jc_reborn"
@@ -117,6 +115,10 @@ if [ "$OSNAME" = Linux ]; then
     echo
     echo "== required graphics-surface failure regression =="
     python3 "$WORK/tests/test_graphics_alloc.py" --output "$WORK/build-unix/graphics-tests"
+
+    echo
+    echo "== drawing and packed-screen regression =="
+    python3 "$WORK/tests/test_drawing_bounds.py" --output "$WORK/build-unix/drawing-tests" --phase regression
 fi
 
 echo

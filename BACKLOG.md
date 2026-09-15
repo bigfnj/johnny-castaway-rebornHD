@@ -1,8 +1,9 @@
 # Backlog - johnny-castaway-rebornHD
 
 The [cleanup verification](docs/legacy-cleanup-verification.md) records completed
-checks and pending delivery work. The [plan](docs/legacy-cleanup-plan.md) records
-scope and decisions. Historical detail remains in Git and the linked art records.
+checks. The [post-merge audit](docs/legacy-cleanup-audit.md) records review coverage
+and evidence limits; the [plan](docs/legacy-cleanup-plan.md) records scope and
+decisions. Historical detail remains in Git and the linked art records.
 
 ## Open work
 
@@ -16,11 +17,17 @@ scope and decisions. Historical detail remains in Git and the linked art records
 | Linux desktop fullscreen and physical audio | Real X11 resized-client captures test centering, enlargement, shrinking, bars and native-size recovery. Xvfb without a window manager does not validate desktop fullscreen negotiation. Audio error tests use real pthreads and deterministic ALSA responses, not a physical device. Exercise those paths on desktop Linux. |
 | macOS presentation regression automation | Earlier manual Sequoia testing verified orientation, channels, sound, close, resize and fullscreen. New Cocoa event/allocation probes do not replace complete rendered-scene screenshots or physical audio validation. Add native window capture when presentation changes next. |
 | Broader audio formats | Web refuses non-mono/non-U8 requests before changing playback state. All 23 shipped WAVs are mono, 11025 Hz, unsigned 8-bit. Stereo needs buffer layout, callback length, channel output and scheduling changes together. The common loader also warns about mixed rates/channels without resampling. |
+| Keep Web audio scheduled during long frame delays | Standalone GJHOT.TTM tag 1 contains SET_DELAY 50, PLAY_SAMPLE 24, UPDATE. That reaches a roughly one-second display wait while webAudioPump queues only about a quarter second ahead; platformDelay does not pump. This source-established starvation path needs an advancing-clock playback control, then bounded audio servicing during waits. Existing static-clock callback tests do not cover it; physical audible gaps were not measured. |
+| Complete Linux ALSA error/partial-write handling | Individual format/channel/rate setup results are ignored before committing parameters, and a positive short snd_pcm_writei result drops the unwritten tail. These predate cleanup and depend on device responses. Add controlled setter failures and partial writes, then validate on desktop ALSA; keep the now-tested worker ownership/join contract. |
 | Deterministic multi-scene wave phase | File-static wave counters persist and initialization advances them. A seed reproduces a fresh-process run, not arbitrary scene entry after other scenes. Preserve current timing; design a reviewed reset option if deterministic scene seeking is added. |
 | Empty story selection fallback | A NULL final-scene selection would re-enter storyPlay without a tick delay. The shipped table supplies candidates, so this remains an unreachable bad-data case. Address it when scene tables become editable. |
 | Measure flip caching first | grDrawSpriteFlip blits one column at a time. A scratch flip adds copies and is not an established saving. A reusable sprite cache needs matching slot cleanup and fresh-process interleaved measurements against a variant without the cache. |
 | Measure damage tracking first | Full-frame composition and presentation remain. Earlier Web optimization used alternating fresh browsers and exact pixel comparisons; this cleanup makes no new performance claim. Profile representative scales/scenes before adding renderer complexity. |
 | Keep later style source storage deliberate | Preserve selected raw art, used ancestors, prompts, acceptance and export recipes. Avoid duplicating the full original archive or every diagnostic capture in each style. Noir/anime also need explicit catalog and authoring-tool registration. |
+| Finish or retire the older local Web wrapper | scripts/build_web.ps1 compiles JS/Wasm/data but never copies index.html or favicon.ico. It also retains workstation-specific SDK discovery and changes the caller's directory. The supported tools/build_web.py path assembles a servable directory and is covered in CI. Review local-SDK compatibility before replacing the old wrapper. |
+| Repair original-data extraction before using it for recovery | tools/extract_sound.c and extract_walk_data.c pass an unchecked fopen result into fseek. Sound extraction also does not check allocation, short reads or output creation/writes. Both depend on ../data/SCRANTIC.SCR, which is absent here; the runtime does not call them. Add explicit input/output arguments and failure checks with a source fixture before attempting missing-sound recovery. |
+| Bound diagnostic history in long Web debug sessions | index.html retains printed lines in jcLog. Debug mode can keep appending throughout playback. Define a bounded recent-history policy while preserving useful startup/error evidence and browser assertions. Normal playback emits much less output; no ordinary scene leak is claimed from this log. |
+| Validate the CLI frame-limit range | frames parsing checks positivity but not errno or the uint32 range. On LP64, 4294967296 becomes zero (unlimited); UINT32_MAX can never satisfy the current increment-then-greater-than stop condition. Reject unsupported limits with boundary fixtures while preserving ordinary frame counts and their capture timing. |
 
 ## Legacy cleanup results
 
@@ -38,6 +45,8 @@ The verification record is authoritative for which phase checks have completed.
 | Platform allocation failure | All four backends refuse failed constructors and unwind acquired state. Borrowed wrappers leave caller pixels alone; WIC frees pixels if wrapping fails. Required engine callers report construction failure. |
 | Events/presentation/audio contracts | Linux/macOS drain ignored events. macOS observes quit during dispatch. Linux scales into its actual client rectangle with centered nearest-neighbor aspect preservation. Web refuses unsupported audio contracts. |
 | Unused code | Removed 35 write-only fields and unused version allocations, the ignored display background parameter, four unreachable post-lookup NULL branches and the empty intro reset. Every original header byte still goes through EOF-checking readers. Unused platform helpers/globals are removed. |
+| Post-merge drawing and name ownership | Replaced negative signed shifts in both circle loops without changing tested pixels. Odd-width packed screens now fail with a resource-naming diagnostic in rendering and dumping. Repeated zero-image BMP loads release the previous name, including when the request aliases the cached name. Sanitized controls and seven rebuilt negative controls verify the fixes. |
+| Post-merge unused platform state | Removed the uncalled color-key API and its unused fields/branches across all four backends, the write-only macOS fullscreen field and an unused scene counter. Active fullscreen state and PNG alpha handling remain intact. |
 | Architecture records | The guide now describes verified startup, rendering and ownership. The command review corrects old opcode numbers and distinguishes working operations from reachable no-ops. |
 
 ## Accepted artwork and earlier fixes

@@ -1,7 +1,7 @@
 # Legacy cleanup verification
 
 See [the execution plan](legacy-cleanup-plan.md) for phase order and decisions.
-This record distinguishes completed checks from pending integration work.
+This record preserves completed checks and the limits of their evidence.
 
 ## Baseline checkpoint
 
@@ -45,7 +45,7 @@ not a cross-platform RNG guarantee or full story coverage.
 | Web/macOS build reliability | Official pinned 6.0.9 container compilation passed as root and UID 1001, followed by host browser smoke and all ten style-control regressions. Six executed build-contract mutants fired. Draft PR CI also passed the real Intel macOS architecture checks, including the compiled ARM64 negative control; no release was published. |
 | Decoder output validation | Two complete-stream smoke checks and all eleven decoder regressions passed, including malformed actual RESOURCE archives and the existing LZW full-buffer return. Full Windows gate passed without warnings. All eight controlled scene captures match the frozen baseline byte-for-byte. Three isolated rebuilt decoder mutants fired. |
 | Resource ownership | Two focused smoke checks and all five ownership regressions passed against real engine code and Windows surface allocation. Full Windows gate passed without warnings; all eight baseline scenes remain byte-identical. Ten isolated rebuilt ownership mutants fired, including inactive layers, borrowed aliases, reinitialization, saved overlays and repeated teardown. |
-| Platform integration | Windows constructor/WIC smoke passed before nine allocation-failure regressions, then the full native gate passed without warnings and all eight baseline scenes remained identical. Worker validation passed 19 Linux pthread/X11 cases and ten Web cases, plus Linux full-application HD/Cartoon startup and the golden corpus. Rebuilt backend mutants fired: 16 Linux, eight Windows and seven Web. Cocoa probes await CI; Xvfb resize checks do not establish desktop fullscreen negotiation. |
+| Platform integration | Windows constructor/WIC smoke passed before nine allocation-failure regressions, then the full native gate passed without warnings and all eight baseline scenes remained identical. Worker validation passed 19 Linux pthread/X11 cases and ten Web cases, plus Linux full-application HD/Cartoon startup and the golden corpus. Rebuilt backend mutants fired: 16 Linux, eight Windows and seven Web. Final macOS CI passed 12 ordinary backend cases and all ten rebuilt mutations. Xvfb resize checks do not establish desktop fullscreen negotiation. |
 | Final code/API integration | The complete integrated gate passed under Windows PowerShell 5.1 without compiler warnings. It includes the existing native/settings/art/wave/palm/authoring suites and golden corpus, plus decoder smoke then 11 regressions, ownership smoke then five regressions, and platform smoke then nine regressions. Four graphics-caller failure controls and their rebuilt mutants passed on Linux. Independent review confirmed unused-field removal preserves header consumption and EOF checking. All eight controlled scene captures match baseline. |
 | Historical renderer comparisons | Against the frozen baseline binaries, all nine complete HD/fallback wave captures and all four palm HD/partial-fallback captures matched byte-for-byte. The focused suites ran smoke before their seven wave and eight palm checks. |
 
@@ -67,5 +67,59 @@ comparison and missing retained diagnostics; the test now resolves the reported
 path identity while still requiring the exact stale-data diagnostic and refusal
 before smoke. Executable hash/mtime and no-relink assertions were retained.
 
-That CI run predates final API cleanup and central platform-probe wiring. Final
-cross-platform CI, main delivery and the post-merge audit remain pending.
+Final PR [CI run 34928938740](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34928938740)
+passed all four platforms on `5d1fb9d`, including final API cleanup, central probe
+wiring, the real macOS compiler/runtime and all ten Cocoa mutations. The mutation
+report is retained in the run's `macos-mutation-evidence` artifact and locally at
+`build/cleanup/final-macos-mutations/mutation-report.json`.
+
+The first newly wired macOS run exposed a fixture problem: AppKit did not deliver
+a synthetic key posted for windowNumber zero before application launch. The test
+now supplies an ordered queue of real NSEvent objects and checks exact dispatch
+counts while retaining production polling/translation. This does not claim OS
+key-delivery coverage. All original assertions remain; no production change was
+needed for that failure.
+
+[PR 4](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/4) merged as
+`50eb6f4bc4b1bea704d03bbdda360be216be7d31`. The post-merge main rebuild passed
+the complete PowerShell 7 gate without compiler warnings, all eight frozen
+scene comparisons and [four-platform main CI](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34929288040).
+The full [independent audit](legacy-cleanup-audit.md) found additional existing
+drawing/ownership defects and unused platform state for a bounded follow-up.
+
+## Post-merge audit follow-up
+
+The drawing probe passed two smoke cases before six sanitized regressions.
+Independent expected circle pixels prevent a no-op renderer from passing;
+12 complete buffers at scales 1 and 2 also matched the pre-fix arithmetic variant
+on the tested Linux compiler. All seven isolated rebuilt source mutations fired
+the intended diagnostic/assertion, with advanced artifact timestamps and case
+execution witnesses. Linux gate-order controls passed 11 cases; all six
+continuation mutations fired, including both new drawing phases. Reports are
+retained in the drawing worktree under `build/drawing-audit/verified-smoke`,
+`build/drawing-audit/verified-regression` and `build/drawing-flow-wiring`.
+
+Independent code review confirmed the cached-name copy precedes release and
+subsequent resource lookup uses the new owned name. The unused platform color-key
+API had no callers. Removing it preserves active fullscreen state and the
+separate PNG alpha conversion. Worker checks passed Windows, Linux and Web
+backend smoke then regression.
+
+The integrated follow-up at `b7bc1b0` passed the complete Windows PowerShell 7
+gate without compiler warnings (`build/cleanup/phase6-audit-followup/gate.log`).
+The complete Linux gate also passed without warnings: PNG, decoder, platform
+and drawing smoke before regressions, 11 decoder cases, 16 platform regressions,
+four graphics-allocation cases, six drawing regressions with 12-buffer parity,
+and all 2,452 golden files. Its retained log/report are under
+`build/cleanup/followup-linux/output`.
+
+All eight controlled HD/Cartoon scenes, nine full HD/fallback wave captures and
+four palm HD/partial-fallback captures match the frozen pre-cleanup binaries
+byte-for-byte. Evidence is under `phase6-scenes`, `phase6-wave-history` and
+`phase6-palm-history` in `build/cleanup`. The production archive hash and all
+tracked assets, art records and image lessons remain unchanged.
+
+The follow-up is delivered through a separate pull request on
+`fix/legacy-cleanup`. Its four-platform checks and the subsequent main workflow
+retain the hosted delivery evidence; the local records above describe exactly
+what was executed before submission.

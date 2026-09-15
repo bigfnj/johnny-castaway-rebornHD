@@ -53,7 +53,28 @@ golden dump. Linux needs Xvfb/xauth for its real X11 probes and also runs requir
 graphics-surface allocation failure checks before the corpus. The Web platform
 probes run in the pinned SDK container; browser rendering stays on the host.
 Backend fault-injection checks are normal regression. Recompiling deliberately
-mutated C sources is manual verification, separate from a normal gate.
+mutated C sources is separate verification. macOS CI runs its source mutations
+on the actual runner; other backend mutation commands remain manual checks.
+
+Linux also runs `tests/test_drawing_bounds.py` with AddressSanitizer and
+UndefinedBehaviorSanitizer against the real graphics, SCR dump and surface code.
+Its two smoke cases precede all regressions; six drawing regressions precede the
+golden corpus. Valid packed screens have exact pixel/output assertions. Circle
+checks include fixed expected pixels and 12 complete-buffer comparisons against
+an isolated pre-fix arithmetic variant at both shipping scales. This parity is
+specific to the compiler running the test, not a universal circle reference.
+
+To reproduce the focused checks on Linux with the native build dependencies:
+
+```text
+python3 -B tests/test_drawing_bounds.py --output build/drawing-tests --phase smoke
+python3 -B tests/test_drawing_bounds.py --output build/drawing-tests --phase regression
+```
+
+Add `--mutations` to the second command for seven isolated rebuilt negative
+controls. Each requires an advanced artifact timestamp, a runtime witness and
+the intended pixel, sanitizer, refusal or allocation assertion. These source
+mutations are manual verification and do not run in the routine Unix gate.
 
 References checked when choosing this implementation:
 

@@ -171,9 +171,8 @@ jobs:
           mkdir -p "$stage"
           cp /tmp/jcr/build-unix/jc_reborn "$stage/"
           cp assets/scrantic_data.zip README.md LICENSE "$stage/"
-          # The no-dependency build path travels with it: Homebrew will not
-          # install on Intel Macs, so anyone rebuilding needs this rather than
-          # a CMake incantation.
+          # Include the helper as a reference; rebuilding still requires the
+          # complete source checkout documented in README.md.
           cp tools/build-macos.sh "$stage/"
           tar czf "$stage.tar.gz" "$stage"
 
