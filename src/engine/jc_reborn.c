@@ -45,6 +45,9 @@
 #include "ads.h"
 #include "story.h"
 #include "zipvfs.h"
+#include "config.h"
+#include "art_style.h"
+#include "jc_resources.h"
 
 #define MAX_ARGS 3
 
@@ -55,6 +58,8 @@ static int  argAds      = 0;
 static int  argPlayAll  = 0;
 static int  argIsland   = 0;
 static int  argMinimize = 0;
+static const char *argStyle = NULL;
+static const char *argSetStyle = NULL;
 
 /*  Windows screensaver mode, selected by the shell's /s, /c and /p switches.
  *  SCR_MODE_NONE is every other invocation, including every non-Windows one.
@@ -255,6 +260,9 @@ static void usage(void)
     printf("         hotkeys    - enable hot keys\n");
     printf("         seed <n>   - fix the random seed, for reproducible runs\n");
     printf("         frames <n> - stop cleanly after n frames (exit code 0)\n");
+    printf("         style <id> - use hd or cartoon for this run\n");
+    printf("         setstyle <id> - save the style and exit without advancing the story\n");
+    printf("         capture <file.ppm> - save the final rendered frame on clean shutdown\n");
     printf("         maxspeed   - run unthrottled from the start (as <M> does)\n");
     printf("         night      - force the night backdrop (default: 21:00-05:59)\n");
     printf("         day        - force daytime, ignoring the clock\n");
@@ -293,38 +301,68 @@ static void version(void)
 
 
 #if defined(_WIN32)
-/*  The /c dialog.
- *
- *  A message box rather than a dialog resource, and that is a decision rather
- *  than a shortcut: the engine currently has nothing a user can set. Its
- *  persistent state is two integers (the story day and the date it last
- *  advanced), and everything else - sound, windowing, holiday, night, HD scale -
- *  is either automatic or a command-line option. Inventing settings to justify a
- *  dialog would add state this engine does not have.
- *
- *  What it must NOT do is nothing at all, or hang: Windows runs /c synchronously
- *  from the Screen Saver settings dialog and waits, so a silent exit looks
- *  broken and a slow one freezes Settings.
- */
+/* Configuration stays independent of ZIP/resource loading. */
+static INT_PTR CALLBACK configDialogProc(HWND dialog, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    UNUSED(lParam);
+    if (message == WM_INITDIALOG) {
+        struct TConfig cfg;
+        cfgFileRead(&cfg);
+        for (int i = 0; i < artStyleCount(); i++) {
+            const TArtStyle *style = artStyleGet(i);
+            LRESULT item = SendDlgItemMessageA(dialog, JC_STYLE_COMBO_ID, CB_ADDSTRING,
+                                               0, (LPARAM)style->name);
+            if (item == CB_ERR || item == CB_ERRSPACE) {
+                EndDialog(dialog, -1);
+                return TRUE;
+            }
+            SendDlgItemMessageA(dialog, JC_STYLE_COMBO_ID, CB_SETITEMDATA,
+                                (WPARAM)item, i);
+            if (!strcmp(style->id, cfg.artStyle))
+                SendDlgItemMessageA(dialog, JC_STYLE_COMBO_ID, CB_SETCURSEL,
+                                    (WPARAM)item, 0);
+        }
+        return TRUE;
+    }
+    if (message == WM_COMMAND) {
+        if (LOWORD(wParam) == IDCANCEL) {
+            EndDialog(dialog, IDCANCEL);
+            return TRUE;
+        }
+        if (LOWORD(wParam) == IDOK) {
+            LRESULT item = SendDlgItemMessageA(dialog, JC_STYLE_COMBO_ID, CB_GETCURSEL, 0, 0);
+            if (item == CB_ERR) return TRUE;
+            LRESULT index = SendDlgItemMessageA(dialog, JC_STYLE_COMBO_ID, CB_GETITEMDATA,
+                                                (WPARAM)item, 0);
+            const TArtStyle *style = artStyleGet((int)index);
+            if (!style) return TRUE;
+            /* Read again so saving the dialog retains progress written since it opened. */
+            struct TConfig cfg;
+            cfgFileRead(&cfg);
+            strcpy(cfg.artStyle, style->id);
+            if (!cfgFileWrite(&cfg)) {
+                MessageBoxA(dialog, "The art style could not be saved. Check that your profile folder is writable.",
+                            "Johnny Reborn", MB_OK | MB_ICONERROR);
+                return TRUE;
+            }
+            EndDialog(dialog, IDOK);
+            return TRUE;
+        }
+    }
+    if (message == WM_CLOSE) {
+        EndDialog(dialog, IDCANCEL);
+        return TRUE;
+    }
+    return FALSE;
+}
+
 static void showConfigDialog(void)
 {
-    char msg[1024];
-    const char *home = getenv("USERPROFILE");
-
-    snprintf(msg, sizeof(msg),
-             "Johnny Reborn %s\n"
-             "An open-source engine for the classic Johnny Castaway "
-             "screensaver by Sierra.\n\n"
-             "There is nothing to configure here: the island, weather, holidays "
-             "and the day/night cycle all follow the system clock, and the story "
-             "advances one day per calendar day.\n\n"
-             "Story progress is kept in:\n    %s\\.jc_reborn\n"
-             "Delete that file to start the story again from day 1.\n\n"
-             "Run jc_reborn.scr from a command prompt with 'help' for the full "
-             "option list.",
-             JC_VERSION, home ? home : "%USERPROFILE%");
-
-    MessageBoxA(NULL, msg, "Johnny Reborn", MB_OK | MB_ICONINFORMATION);
+    HWND parent = (HWND)(uintptr_t)argParentHwnd;
+    if (!IsWindow(parent)) parent = NULL;
+    if (DialogBoxParamA(GetModuleHandleA(NULL), MAKEINTRESOURCEA(JC_CONFIG_DIALOG_ID),
+                        parent, configDialogProc, 0) == -1)
+        fatalError("Could not open the art style settings dialog");
 }
 #endif
 
@@ -339,6 +377,9 @@ static void parseArgs(int argc, char **argv)
         EXPECT_HOLIDAY,
         EXPECT_SEED,
         EXPECT_FRAMES,
+        EXPECT_STYLE,
+        EXPECT_SETSTYLE,
+        EXPECT_CAPTURE,
         EXPECT_PARENT_HWND
     } TExpectedArg;
 
@@ -402,6 +443,22 @@ static void parseArgs(int argc, char **argv)
                     expect = EXPECT_NONE;
                     break;
                 }
+
+                case EXPECT_STYLE:
+                case EXPECT_SETSTYLE: {
+                    const TArtStyle *style = artStyleFind(argv[i]);
+                    if (!style) fatalError("Unknown art style '%s' (try: hd, cartoon)", argv[i]);
+                    if (expect == EXPECT_STYLE) argStyle = style->id;
+                    else argSetStyle = style->id;
+                    expect = EXPECT_NONE;
+                    break;
+                }
+
+                case EXPECT_CAPTURE:
+                    if (!argv[i][0]) fatalError("Capture path cannot be empty");
+                    grCapturePath = argv[i];
+                    expect = EXPECT_NONE;
+                    break;
 
                 case EXPECT_PARENT_HWND: {
                     /*  The window handle after /p. Windows passes it in decimal,
@@ -480,6 +537,15 @@ static void parseArgs(int argc, char **argv)
         else if (!strcmp(argv[i], "frames")) {
             expect = EXPECT_FRAMES;
         }
+        else if (!strcmp(argv[i], "style")) {
+            expect = EXPECT_STYLE;
+        }
+        else if (!strcmp(argv[i], "setstyle")) {
+            expect = EXPECT_SETSTYLE;
+        }
+        else if (!strcmp(argv[i], "capture")) {
+            expect = EXPECT_CAPTURE;
+        }
         else if (isHolidayArg(argv[i])) {
             expect = EXPECT_HOLIDAY;
         }
@@ -545,8 +611,13 @@ static void parseArgs(int argc, char **argv)
     if (expect != EXPECT_NONE)
         usage();
 
-    if (argDump + argBench + argTtm + argAds > 1)
+    if (argDump + argBench + argTtm + argAds + (argSetStyle != NULL) > 1)
         usage();
+
+    if (argSetStyle && (argStyle || grCapturePath))
+        fatalError("setstyle cannot be combined with style or capture");
+    if (argDump && grCapturePath)
+        fatalError("capture requires a graphical playback mode");
 
     if (argDump + argBench + argTtm + argAds == 0)
         argPlayAll = 1;
@@ -556,6 +627,21 @@ static void parseArgs(int argc, char **argv)
 int main(int argc, char **argv)
 {
     parseArgs(argc, argv);
+
+    if (argSetStyle) {
+        struct TConfig cfg;
+        cfgFileRead(&cfg);
+        strcpy(cfg.artStyle, argSetStyle);
+        if (!cfgFileWrite(&cfg)) return 1;
+        printf("Saved art style: %s\n", cfg.artStyle);
+        return 0;
+    }
+
+    if (!argDump) {
+        struct TConfig cfg;
+        cfgFileRead(&cfg);
+        artStyleSelect(argStyle ? argStyle : cfg.artStyle);
+    }
 
     if (argDump)
         debugMode = 1;

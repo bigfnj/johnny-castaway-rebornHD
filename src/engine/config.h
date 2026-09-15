@@ -25,13 +25,15 @@
 #define CONFIG_H
 
 #define CFG_FILENAME ".jc_reborn"
+#define CFG_STYLE_SIZE 32
 
 struct TConfig {
     int currentDay;
     int date;
+    char artStyle[CFG_STYLE_SIZE];
 };
 
-void cfgFileWrite(struct TConfig *cfg);
+int cfgFileWrite(const struct TConfig *cfg);
 void cfgFileRead(struct TConfig *cfg);
 
 #endif /* CONFIG_H */

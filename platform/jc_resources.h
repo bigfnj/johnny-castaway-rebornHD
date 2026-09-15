@@ -14,5 +14,7 @@
 #define JC_RESOURCES_H
 
 #define JC_REBORN_ICON_ID   101
+#define JC_CONFIG_DIALOG_ID 200
+#define JC_STYLE_COMBO_ID   201
 
 #endif /* JC_RESOURCES_H */

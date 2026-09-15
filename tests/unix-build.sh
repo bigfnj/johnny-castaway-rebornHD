@@ -80,6 +80,10 @@ fi
 echo "OK   built build-unix/jc_reborn"
 
 echo
+echo "== portable PNG smoke: soft alpha reaches the real decoder =="
+"$WORK"/build-unix/jc_png_test
+
+echo
 echo "== dump, headless, no window server =="
 RUN=/tmp/jcr-run
 rm -rf "$RUN"; mkdir -p "$RUN"; cd "$RUN"

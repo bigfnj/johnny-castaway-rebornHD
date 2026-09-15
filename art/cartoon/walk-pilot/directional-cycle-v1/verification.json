@@ -1,0 +1,175 @@
+{
+  "exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9",
+  "tests": [
+    {
+      "case": "positive reproduction",
+      "result": "PASS",
+      "recorded_png_hashes_matched": 6,
+      "witness": "all six recorded candidate PNG hashes matched"
+    },
+    {
+      "case": "source hash",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "024-generated-v7.png: generated source hash mismatch",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "recorded output hash",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "BMP/JOHNWALK.BMP/024.png: export differs from recorded candidate PNG bytes",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "cap registration",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "BMP/JOHNWALK.BMP/024.png: cap registration differs from recipe",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "Pillow version",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "byte-exact export requires Pillow 0.0-test; found 12.3.0",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "common scale",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "recipe.json: this record requires common scale1/10 with no normalization",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "no normalization",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "recipe.json: this record requires common scale1/10 with no normalization",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "exact six paths",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "recipe.json: expected exactly the six recorded024-029 paths",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "required paths",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "recipe.json: expected exactly the six recorded024-029 paths",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "bundle hash",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "source-images.zip: source bundle hash mismatch",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "duplicate ZIP member",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "source-images.zip: unexpected or duplicate entries",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "unexpected ZIP member",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "source-images.zip: unexpected or duplicate entries",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "missing ZIP member",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "source-images.zip: unexpected or duplicate entries",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "original reference hash",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "data/hd/BMP/JOHNWALK.BMP/024.png: original pose reference hash mismatch",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "source dimensions",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "024-generated-v7.png: source RGBA dimensions differ from recipe",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "source RGB mode",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "024-generated-v7.png: source RGBA dimensions differ from recipe",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "frame source hash",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "024-generated-v7.png: frame source hash mismatch",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "frame common uniform scale",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "BMP/JOHNWALK.BMP/024.png: transform differs from the declared common uniform scale",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "runtime canvas",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "BMP/JOHNWALK.BMP/024.png: runtime canvas differs from the original",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "existing output",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "refusing to overwrite existing output: D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\directional-record-7vd_o129\\case-18\\no-partial-output",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9"
+    },
+    {
+      "case": "prior pilot uniform scale",
+      "result": "PASS",
+      "mutation_failure_count": 1,
+      "named_failure": "BMP/JOHNWALK.BMP/024.png: transform is not the declared uniform scale",
+      "no_changed_or_partial_output": true,
+      "executed_exporter_sha256": "f6b39952460b8d715aa359d5d16d8fe2f7648e1dd6ac9dd5d63c3f88d7790667"
+    }
+  ],
+  "status": "One positive reproduction and all twenty isolated negative mutations passed.",
+  "production_archive_unchanged": true,
+  "human_motion_acceptance": false,
+  "production_acceptance": false
+}

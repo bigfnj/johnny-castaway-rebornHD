@@ -2,6 +2,51 @@
 
 Per-session record of changes made to this fork on top of upstream Johnny Reborn.
 
+## Unreleased: selectable art styles and Cartoon production tools
+
+Added persistent HD/Cartoon selection, a Windows settings dialog, a browser
+selector, and a one-run command-line override. HD remains the default. Cartoon
+packs have a separate namespace, strict canvas and alpha handling, and explicit
+partial coverage with compatible HD/original fallback. Missing packs report an
+error. The archive now includes the approved 21-asset Cartoon preview: six walking
+poses, one ocean and fourteen independent island sprites. Other slots retain
+HD/original fallback, and selectors identify Cartoon as a preview.
+
+Added composed-frame capture, reference inventory/export, and candidate-pack
+validation with recorded hashes. The native gate now stops after a failed smoke
+phase, checks the deployed archive, and exercises rendered alpha, settings and
+packaging before the existing exact resource regression. Web selection is tested
+against the actual Emscripten runtime in CI and before release packaging.
+
+Validation of the foundation: Windows build without warnings, 27 original smoke
+checks, 27 screensaver/settings checks, 33 art runtime checks, 20 authoring tests,
+and 2,452 unchanged original resource hashes. Web smoke and selector suites each
+passed 10 checks. Deliberately broken runtime alpha, color-key, dimensions and
+settings cases all failed against rebuilt binaries; test-order and archive-refresh
+mutations also failed as intended and passed after restoration.
+
+True-alpha shore waves now restore their clean background before composing the
+current wave families, including their overlap order. This prevents color buildup
+and stale pixels when a later frame becomes transparent. HD and Cartoon packs
+without active wave replacements retain legacy rendering. The full native gate
+passes with seven focused wave checks; four rebuilt wave mutants triggered the
+intended failures, and nine complete HD/fallback captures matched the previous
+executable. Low-tide waves also held their expected alpha at an island offset
+through 1,529 background updates.
+
+The user approved the canonical character, the complete directional walk and
+the layered island scene. Full native motion review retains the original 23
+positions and 120 ms pose delays alongside independently advancing 160 ms waves.
+The exact reviewed assets, prompts, used source ancestry, rejected-attempt
+lessons and reproducible exports are preserved under `art/cartoon/`, with a
+reusable guide in `docs/art-style-learnings.md`.
+
+Behind-palm walking now applies source-atop when a selected pack contains new
+palm art, preventing a second alpha blend over the already-painted tree. Eight
+focused checks, five rebuilt mutations and historical HD/fallback parity cover
+the correction. The final island also passed alternate-state native API checks
+and original archive-member preservation.
+
 ---
 
 ## 2026-04-21 — Release x64 build now produces only `.exe` (no .pdb) (bigfnj)

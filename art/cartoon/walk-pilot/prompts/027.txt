@@ -1,0 +1,9 @@
+Use case: precise-object-edit
+Asset type: transparent Johnny Castaway walking sprite, JOHNWALK.BMP frame 027, next frame after 026.
+Image 1: EDIT TARGET and adjacent-frame identity/scale reference, the newly drawn frame026.
+Image 2: original game frame027, authority for the next POSE.
+Image 3: approved character sheet, retain its character design.
+Create the next walking pose by editing Image1. Preserve the exact same character, head and face viewing angle, white cap with gold band/anchor and projecting black brim, scruffy dark beard, face expression, hair, torso proportions, skin colors, linework and shading. Do not redraw him as a different character or change head size.
+Change arm and leg articulation to follow Image2 frame027: a three-quarter front LEFT-facing passing step. The feet are now close together under him, the trailing bent leg swinging past the planted leg; no wide stride. One leg stays planted under the body, the other knee bends slightly forward with heel raised. The formerly forward screen-left hand has swung back near the shorts; screen-right arm hangs bent close behind the hip. The source sprite is the exact pose authority.
+Keep Image1's lean build, full long beard, large rounded nose and eyes, and identical torn white shorts. Keep the same drawing scale and head size as Image1 rather than enlarging the character to fill the narrower pose.
+Use a portrait canvas, same canvas dimensions and overall head position as Image1, with truly transparent alpha. Entire body and feet visible. Preserve margins; allow the narrower silhouette to leave more transparent space. No ground shadow, scenery, checkerboard pattern, text, labels or extra figures. Produce exactly one sprite.

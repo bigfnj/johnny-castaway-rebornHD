@@ -1,0 +1,52 @@
+{
+  "scope": "Static and complete candidate technical validation; human runtime scene approval pending.",
+  "files": [
+    {
+      "file": "palm-mutations.json",
+      "historical_source": "build/palm-tests/mutations-v1/report.json",
+      "sha256": "aad42c070afe4de6e128946fabb8531b60cd647570fbfc947b86ef4d18a4950c"
+    },
+    {
+      "file": "palm-probe.json",
+      "historical_source": "build/art-work/island-scene-pilot/palm-probe-v1/report.json",
+      "sha256": "f1a70fdefa563dbc853e7f9622ffc5b2ccf1b280fcdb1171d9e097af5286fb8d"
+    },
+    {
+      "file": "gate-powershell5.log",
+      "historical_source": "build/palm-tests/gates/powershell.exe-full-gate.log",
+      "sha256": "99c532a402e89facccdddb4e302fde159113222b415761e4ce8aea7793deae2d"
+    },
+    {
+      "file": "gate-powershell7.log",
+      "historical_source": "build/palm-tests/gates/pwsh-full-gate.log",
+      "sha256": "b6b617e3321abad6357f485500b31e13fd21f0d4ad36beed57e996794e81f4f1"
+    },
+    {
+      "file": "static-native-validation.json",
+      "historical_source": "build/art-work/island-assets-v1/runtime-static-v1/validation-report.json",
+      "sha256": "3383968aa481799dda27f3cfec155a8eb5fabc1337abce3ff293835cc4308b01"
+    },
+    {
+      "file": "complete-native-validation.json",
+      "historical_source": "build/art-work/island-assets-v1/runtime-complete-v1/validation-report.json",
+      "sha256": "19b0f5ca3516349e25e50dc0e78f7c2469485bca00ec1bd6ad7f4433a7905bfb"
+    },
+    {
+      "file": "complete-golden-regression.log",
+      "historical_source": "build/art-work/island-assets-v1/runtime-complete-v1/golden-regression.log",
+      "sha256": "93b9488a22c794792956a718722aa2ec8f5f7cbfb894abd612e0fd0a775f835a"
+    },
+    {
+      "file": "git-byte-preservation.json",
+      "historical_source": "build/art-work/island-git-byte-proof.json",
+      "sha256": "9834c8099741fd5b92bf3233e6348e7cb1251fb16624702c3a0dab66d786eff3"
+    }
+  ],
+  "production_archive_sha256": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a",
+  "engine_source_sha256": {
+    "src/engine/graphics.c": "cae6478dc2b43aa34bd50eca3e64d5819e3fe93058c471d67ef353c2bdf495dc",
+    "src/engine/graphics.h": "de8be6c0c48d4c0f7c5fe86ad737dc63de972ce71849b66fba5dabdd69af5f14",
+    "src/engine/walk.c": "7e964a9c771c9db41cb1bfa0c08227f12272ff6bd4d024ed6269d12f014ef3a7"
+  },
+  "engine_source_hash_semantics": "Historical Windows working-copy bytes; these source files use normal Git text conversion."
+}

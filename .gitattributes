@@ -29,3 +29,11 @@ tests/golden-dump.sha256   text eol=lf
 *.ico    binary
 *.png    binary
 *.wav    binary
+
+# These authoring records include byte hashes of prompts, scripts and reports.
+# Preserve their recorded bytes across checkout platforms, including line endings.
+art/cartoon/walk-pilot/** -text whitespace=cr-at-eol
+art/cartoon/island-pilot-v1/** -text whitespace=cr-at-eol
+
+# This hashed historical capture manifest includes a final blank line.
+art/cartoon/walk-pilot/directional-cycle-v1/review-evidence/direction-clearance-manifest-v1.json whitespace=cr-at-eol,-blank-at-eof

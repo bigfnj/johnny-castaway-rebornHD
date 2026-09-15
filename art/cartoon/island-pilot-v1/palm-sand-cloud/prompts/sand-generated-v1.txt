@@ -1,0 +1,10 @@
+Use case: style-transfer
+Asset type: one independent transparent game sprite, BACKGRND.BMP frame000, the sand island only.
+
+Image1 is the exact GEOMETRY AND PLACEMENT authority. It is original sand000, enlarged exactly2x and pasted unchanged at raw(208,408) on a1536x1024 transparent canvas. Image2 is the approved illustrated island STYLE reference only. Redraw the sand from Image1 with Image2's warm pale golden sand, soft ochre interior shading, restrained sandy detail, clean dark fine outline and cheerful hand-drawn cartoon finish.
+
+Keep Image1's extremely shallow, wide island footprint, low perspective and every outer shoreline turn at the same raw placement and overall scale. The whole sand footprint occupies raw x208..1327 and y408..615. Its rear crest is a nearly level short ridge from approximately raw x736..875 at y408; its front lip remains shallow. Preserve the protruding low left tongue and uneven shallow front edge from the original. Do not enlarge the vertical mound, make it a thick rock, round it into a generic oval, rotate, recenter or zoom. The silhouette must fit those original boundaries. It will be exported at uniform0.5 scale to the original560x104 canvas.
+
+Draw a complete clean sand surface across the center, including areas hidden by the separately rendered trunk and shadow in the concept. Do not copy the original's dithering or any black patch as a new rock or shadow. The concept's tree, canopy, coconuts, tree shadow, Johnny, sky, ocean and white shore foam are independent assets and MUST NOT appear here. Sand only, with no object, vegetation, cast shadow, water rim, wet blue edge, surf or foam baked in.
+
+Output exactly one1536x1024 PNG with the sand at the same fixed position as Image1 and actual transparent alpha everywhere else. Opaque painted sand interior, narrow antialiased outer edge; no translucent sand body, soft exterior glow or dark halo. No text, labels, grid, guide lines, background or checkerboard. Preserve generous transparent padding and the original shallow geometry; change artistic rendering only.

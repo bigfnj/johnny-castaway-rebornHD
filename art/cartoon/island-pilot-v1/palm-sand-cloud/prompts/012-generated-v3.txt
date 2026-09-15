@@ -1,0 +1,5 @@
+Use case: precise-object-edit
+Image 1 is the sole edit target: the approved drawing and exact current placement of this palm canopy.
+Change ONLY the tiny pointed tip of the lowest hanging frond near(626,790). It reaches6pixels below the available sprite window. Shorten that tip upward by about12 raw pixels, making its lowest ink pixel aty781 or earlier, while preserving its leaf shape and all other artwork exactly.
+Keep the crown crest, coconut cluster, every other frond, colors, outlines, scale, and position exactly unchanged. Do NOT move the whole canopy or change any other edge. Keep the same1536 x1024 canvas. All visible canopy pixels must fit within x160..1376,y236..788; the current top already fits and must not move.
+Preserve genuinely transparent exterior and leaf gaps. Solid leaf and coconut interiors, narrow antialiased contour. No glow, haze, shadow, guide marks, text or new objects.

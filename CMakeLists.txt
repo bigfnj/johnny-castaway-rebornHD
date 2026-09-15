@@ -68,6 +68,7 @@ set(COMMON_SOURCES
     src/engine/sound.c
     src/engine/events.c
     src/engine/config.c
+    src/engine/art_style.c
     # Platform-agnostic I/O adapters
     platform/png_loader.c
     platform/png_decoder.c
@@ -102,6 +103,9 @@ if(EMSCRIPTEN)
     set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -O2 -sASYNCIFY -sALLOW_MEMORY_GROWTH -sSTANDALONE_WASM=0 -sNO_EXIT_RUNTIME -sFORCE_FILESYSTEM -sEXPORTED_RUNTIME_METHODS=callMain,ccall,cwrap --preload-file ${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip@scrantic_data.zip")
     set(CMAKE_EXECUTABLE_SUFFIX ".js")
     add_definitions(-DPLATFORM_WEB)
+    # Artwork-only changes must also regenerate the Web preload data.
+    set_property(SOURCE src/engine/jc_reborn.c APPEND PROPERTY OBJECT_DEPENDS
+        "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip")
 elseif(WIN32)
     message(STATUS "Building for Windows")
     # THE .rc IS PART OF THE BUILD. CMake never enabled the RC language or listed
@@ -137,6 +141,30 @@ endif()
 
 # Create executable
 add_executable(jc_reborn ${COMMON_SOURCES} ${PLATFORM_SOURCES})
+
+# Native API driver exercises real walk.c behind-palm routes. It is separate
+# from the application CLI and writes captures only to isolated test folders.
+if(WIN32 AND NOT EMSCRIPTEN)
+    set(PALM_TEST_SOURCES ${COMMON_SOURCES})
+    list(REMOVE_ITEM PALM_TEST_SOURCES src/engine/jc_reborn.c)
+    add_executable(jc_palm_test tests/test_palm_driver.c ${PALM_TEST_SOURCES}
+        platform/platform_windows.c)
+    target_include_directories(jc_palm_test PRIVATE src/engine src/data platform third_party/miniz)
+    target_link_libraries(jc_palm_test PRIVATE gdi32 user32 winmm windowscodecs ole32 uuid)
+endif()
+
+# Exercise the portable decoder even on Windows, where normal rendering uses
+# WIC. This probe needs no window server or platform rendering libraries.
+if(NOT EMSCRIPTEN)
+    add_executable(jc_png_test
+        tests/test_png_decoder.c
+        platform/png_decoder.c
+        third_party/miniz/miniz_tinfl.c)
+    target_include_directories(jc_png_test PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}/platform
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/engine
+        ${CMAKE_CURRENT_SOURCE_DIR}/third_party/miniz)
+endif()
 
 # ── Runtime data ──────────────────────────────────────────────────────────────
 # The engine opens scrantic_data.zip beside the executable (see zipvfs_init).
@@ -273,6 +301,20 @@ if(WIN32 AND NOT EMSCRIPTEN)
                 "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
                 "$<TARGET_FILE_DIR:jc_reborn_scr>/scrantic_data.zip"
         COMMENT "Copying scrantic_data.zip next to jc_reborn.scr")
+endif()
+
+# Refresh data on every normal build, including artwork-only changes with no
+# link step. The POST_BUILD commands cover freshly linked explicit targets.
+if(NOT EMSCRIPTEN)
+    add_custom_target(jc_runtime_data ALL
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
+                "$<TARGET_FILE_DIR:jc_reborn>/scrantic_data.zip"
+        DEPENDS jc_reborn "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
+        COMMENT "Refreshing runtime artwork archive")
+    if(TARGET jc_reborn_scr)
+        add_dependencies(jc_runtime_data jc_reborn_scr)
+    endif()
 endif()
 
 # Installation

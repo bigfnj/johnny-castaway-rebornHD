@@ -1,0 +1,8 @@
+Use case: precise-object-edit
+Image1 is the EDIT TARGET: keep its sand painting, colors, grain, linework, texture, left tongue, shallow footprint and1536x1024 transparent canvas unchanged. Image2 is the original exact sand silhouette at2x, fixed at(208,408), as contour authority.
+
+Make a tiny outer-contour correction so this sprite fits the fixed game canvas without cropping. Preserve the side extents and placement. The REAR TOP CREST must be a short almost-horizontal ridge at raw y409 running from approximately x736 to875. Extend the nearly level crest across that interval instead of the current more narrowly rounded top. Keep the dark outline at y408 or lower: no meaningful alpha above y408. Blend that low ridge naturally into the existing sloping shoulders to left and right; do not make a square corner or a tall mound.
+
+The lowest front outline currently reaches raw y617. Raise only the lowest thin front lip by about3rawpixels, keeping the same front-edge bumps and left tongue. All visible outline and meaningful sand must end by raw y615, with alpha0 from y616 downward. Keep the front lip shallow and the entire object inside raw x208..1327,y408..615. This is only a1-3rawpixel contour refinement, not a change to shape proportions, scale, view, texture or object position. No translation, enlargement, squeeze, warp or crop.
+
+The whole sand interior remains continuous, opaque-looking painted sand. No center hole, tree, shadow, Johnny, water, foam, vegetation or extra objects. Genuine transparent background with narrow clean antialiased edges; no exterior glow or veil. Output one1536x1024 PNG at the same registered position. Do not add text, guide lines or checkerboard. Preserve all of the approved-looking sand interior from Image1.

@@ -52,8 +52,7 @@ The archive contains the original game data and the pre-extracted sound files:
 
     data/RESOURCE.MAP
     data/RESOURCE.001
-    data/sound0.wav .. sound24.wav   (23 files: 11 and 13 do not exist,
-                                      and 0 ships but is never loaded)
+    data/sound0.wav .. sound24.wav   (23 files: 11 and 13 do not exist)
 
 It may also contain optional HD (PNG) replacement assets under `data/hd/`.
 See `docs/HD_README.md` for the full zip layout and HD details.
@@ -195,10 +194,14 @@ night                  - force the night backdrop (NIGHT.SCR)
 day                    - force daytime, ignoring the clock
 seed <n>               - fix the random seed, for reproducible runs
 frames <n>             - stop cleanly after n frames, exit code 0
+style <id>             - select hd or cartoon for this run
+setstyle <id>          - save the style and exit without advancing the story
+capture <file.ppm>     - save the final composed frame on clean shutdown
 maxspeed               - run unthrottled from the start (as <M> does)
 ```
 
-The last five are additive and off by default; shipping behaviour is unchanged.
+Playback options apply only to the current run. `setstyle` explicitly saves a
+preference for future runs.
 
 `night` and `day` exist because the night backdrop is otherwise reachable only
 between 21:00 and 05:59, so an entire rendering path with its own HD artwork
@@ -212,6 +215,40 @@ had been healthy. Note that the story day persists to `~/.jc_reborn` and also
 selects which scenes are eligible, so a fully reproducible run needs a fresh
 profile as well as a fixed seed; `tests/Invoke-SmokeTests.ps1` points `HOME` at a
 throwaway directory for exactly that reason.
+
+### Art styles
+
+HD is the default. `jc_reborn window style cartoon` selects Cartoon for one run;
+`jc_reborn setstyle cartoon` saves it in the existing `.jc_reborn` profile while
+retaining the story day and date. Use `setstyle hd` to restore the default.
+Windows Screen Saver Settings opens the same choice through the `.scr` file's
+Settings button (`/c`). A change takes effect the next time playback starts.
+
+The browser's Art style selector remembers its choice in local storage and
+reloads the scene. An explicit URL argument, such as
+`?args=window+style+hd`, overrides that saved browser choice for the current run.
+
+The bundled Cartoon preview contains 21 approved assets: six walking poses and
+15 island layers, including one ocean and all nine high-tide shore-foam frames.
+It is a partial style pack. Other animations and environment states use HD or
+original artwork, so the full story can mix the two styles. The settings label
+is "Cartoon (preview)" until wider artwork coverage is ready.
+
+Cartoon assets live under `data/styles/cartoon/` inside `scrantic_data.zip`.
+Selecting Cartoon with an older archive that lacks the pack reports a
+missing-pack error. The [approved scene](art/cartoon/island-pilot-v1/README.md)
+records its exact scope. See [Cartoon art production](docs/cartoon-art.md) for
+packaging and [image authoring lessons](docs/art-style-learnings.md) before
+creating the next style.
+
+`capture` writes a PPM image of the final composed frame, for example:
+
+```text
+jc_reborn window nosound day seed 9 frames 400 style hd capture frame.ppm
+```
+
+It captures playback rather than resource-decoder output. Keep the same profile,
+seed and frame limit when comparing styles.
 
 ### Holiday option
 

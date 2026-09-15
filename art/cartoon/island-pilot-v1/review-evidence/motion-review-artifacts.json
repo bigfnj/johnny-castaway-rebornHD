@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "Technical motion preview verified; human full-scene acceptance pending.",
+  "poster": {
+    "path": "cartoon-island-reference.png",
+    "sha256": "130dd79732239a12fe1ebea6843113f3d9f69d4af024ac150be33d8e335bf133",
+    "bytes": 1073916,
+    "format": "Full-color1280x960 actual engine PNG; reference image."
+  },
+  "animation": {
+    "path": "cartoon-island-motion.gif",
+    "sha256": "a59e8ee6c7b1712db4383353d4f9d32ebd3c35814c97b99bb79d6dd8637200f6",
+    "bytes": 1191308,
+    "format": "960px-wide palette-converted GIF; presentation copy.41 frames preserve the42 native display timings by merging one adjacent identical state; total3760ms."
+  },
+  "local_interactive_viewer": {
+    "url": "http://127.0.0.1:8931/island-cartoon-motion-v1/review.html",
+    "historical_local_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\engine-pilot\\island-cartoon-motion-v1\\review.html",
+    "note": "Local-only full-color viewer. Native display stepping and separate23-pose stepping; Cartoon/Original HD toggle."
+  },
+  "reports": [
+    "motion-capture-report.json",
+    "capture-files-and-timing.json",
+    "diagnostic-archive-overrides.json",
+    "wave-phase-validation.json",
+    "presentation-validation.json",
+    "browser-validation.json"
+  ],
+  "acceptance_scope": "Human approval of the concept and earlier walking pilot does not constitute approval of this full-scene runtime preview or production promotion."
+}

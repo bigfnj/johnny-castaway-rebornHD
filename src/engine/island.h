@@ -48,6 +48,8 @@ struct TIslandState {
 extern struct TIslandState islandState;
 
 void islandInit(struct TTtmThread *ttmThread);
+/* Idempotent cleanup for scene release, replacement backgrounds and exit. */
+void islandRelease(void);
 void islandAnimate(struct TTtmThread *ttmThread);
 void islandInitHoliday(struct TTtmThread *ttmThread);
 void islandAnimateClouds(struct TTtmThread *ttmThread);

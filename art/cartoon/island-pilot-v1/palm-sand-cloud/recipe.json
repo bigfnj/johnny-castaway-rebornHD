@@ -1,0 +1,445 @@
+{
+  "schema_version": 1,
+  "status": "Static sprites cleared for technical engine preview; human runtime scene review pending.",
+  "coverage": "partial",
+  "human_runtime_acceptance": false,
+  "production_acceptance": false,
+  "normalization": "none; fixed static design scales and explicit semantic translations",
+  "required_assets": [
+    "BMP/BACKGRND.BMP/000.png",
+    "BMP/BACKGRND.BMP/012.png",
+    "BMP/BACKGRND.BMP/013.png",
+    "BMP/BACKGRND.BMP/015.png"
+  ],
+  "source_bundle": {
+    "file": "source-images.zip",
+    "sha256": "4f1a5005e03a9cc4ba981592228509a874cfa0a3eb4db8a3cb5cbcba6d3088f0",
+    "bytes": 5899340,
+    "members": [
+      "012-generated-v1.png",
+      "012-generated-v2.png",
+      "013-generated-v1.png",
+      "013-generated-v3.png",
+      "cloud-generated-v1.png",
+      "sand-generated-v1.png"
+    ],
+    "compression": "DEFLATE level 9; fixed 1980 timestamp; sorted names",
+    "scope": "Four selected raw PNGs and two generated ancestors used by the selected palm images."
+  },
+  "generated_images": {
+    "012-generated-v1.png": {
+      "sha256": "1dbb3b649878116970fd754f0a059dee90ce8501916337b44ef40ce013edd6ad",
+      "canvas": [
+        1536,
+        1024
+      ]
+    },
+    "012-generated-v2.png": {
+      "sha256": "870e847c5a98c33ed0c006a807b992920f21cbcb0ef2b41d9faa207be4cfd4a2",
+      "canvas": [
+        1536,
+        1024
+      ]
+    },
+    "013-generated-v1.png": {
+      "sha256": "1e98ae909d0632223f17db37b98e18795061326dc450e640d537f116a1e8024f",
+      "canvas": [
+        1024,
+        1536
+      ]
+    },
+    "013-generated-v3.png": {
+      "sha256": "10d2cc46c5b926dd032081183f66a0269c4d0b44bbfd2f2ea260757339b56593",
+      "canvas": [
+        1024,
+        1536
+      ]
+    },
+    "cloud-generated-v1.png": {
+      "sha256": "b50454479c9f08d2eebf381d0d110aab4f3fde6c2d046161da4c22a77b1e21ca",
+      "canvas": [
+        1536,
+        1024
+      ]
+    },
+    "sand-generated-v1.png": {
+      "sha256": "49c8c516e7cc655c4c2ec780e6311d4924d0bdcaf598a395653272f51b9935af",
+      "canvas": [
+        1536,
+        1024
+      ]
+    }
+  },
+  "original_archive": {
+    "file": "assets/scrantic_data.zip",
+    "validation": "Only the four original member hashes below are required; later pack additions may change the archive hash."
+  },
+  "original_references": {
+    "000": {
+      "member": "data/hd/BMP/BACKGRND.BMP/000.png",
+      "sha256": "cf6fa1b623371c1b4f2c52eb93a9f33104ea1d658879ff7caa9e1fd91d26da08",
+      "canvas": [
+        560,
+        104
+      ],
+      "alpha_bounds": [
+        0,
+        0,
+        558,
+        104
+      ]
+    },
+    "012": {
+      "member": "data/hd/BMP/BACKGRND.BMP/012.png",
+      "sha256": "9a2017622738358ec5a4222787f3e11c35f5d0315ce32032020609a27a70c05c",
+      "canvas": [
+        304,
+        138
+      ],
+      "alpha_bounds": [
+        0,
+        0,
+        294,
+        138
+      ]
+    },
+    "013": {
+      "member": "data/hd/BMP/BACKGRND.BMP/013.png",
+      "sha256": "653ededaee4e0078163ea4181b08e8dacfaf32eb57ab82d6dcac62cb293b2711",
+      "canvas": [
+        48,
+        290
+      ],
+      "alpha_bounds": [
+        0,
+        0,
+        44,
+        290
+      ]
+    },
+    "015": {
+      "member": "data/hd/BMP/BACKGRND.BMP/015.png",
+      "sha256": "40723977e5b36558f235f7c6d58fa5d3b521871cdabb996e5a9340baeb229341",
+      "canvas": [
+        256,
+        72
+      ],
+      "alpha_bounds": [
+        0,
+        0,
+        246,
+        72
+      ]
+    }
+  },
+  "geometry_references": {
+    "013-geometry4x-padded.png": {
+      "original_reference": "013",
+      "sha256": "aafba27feeb46f342a91e8debb3250d34d836d53a7343f1657de723ff51250bd",
+      "canvas": [
+        1024,
+        1536
+      ],
+      "nearest_integer_scale": 4,
+      "offset_raw": [
+        416,
+        188
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.25,
+        0,
+        -104.0,
+        0,
+        0.25,
+        -47.0
+      ]
+    },
+    "012-geometry4x-padded.png": {
+      "original_reference": "012",
+      "sha256": "36cd915d2c24383fcbbe240908ff641124e9d2400d3d3f8e1eb82203539c0b1a",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 4,
+      "offset_raw": [
+        160,
+        236
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.25,
+        0,
+        -40.0,
+        0,
+        0.25,
+        -59.0
+      ]
+    },
+    "sand-original-nearest2-padded.png": {
+      "original_reference": "000",
+      "sha256": "8c925bdb6ae4896235a1cc69dd3c431eecfd9a8168b8ff51b6652e133eb63163",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 2,
+      "offset_raw": [
+        208,
+        408
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.5,
+        0,
+        -104.0,
+        0,
+        0.5,
+        -204.0
+      ]
+    },
+    "cloud-original-nearest4-padded.png": {
+      "original_reference": "015",
+      "sha256": "9ca2db01a35c51f767d05dc2eab01eb17be934001f92d9862de64c781d53b85e",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 4,
+      "offset_raw": [
+        256,
+        368
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.25,
+        0,
+        -64.0,
+        0,
+        0.25,
+        -92.0
+      ]
+    }
+  },
+  "concept_reference": {
+    "file": "art/cartoon/island-concept-v1/concept.png",
+    "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe"
+  },
+  "resampling": {
+    "working_mode": "RGBa",
+    "affine_filter": "BICUBIC",
+    "oversample": 8,
+    "downsample_filter": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "assets": [
+    {
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "generated_image": "sand-generated-v1.png",
+      "source_sha256": "49c8c516e7cc655c4c2ec780e6311d4924d0bdcaf598a395653272f51b9935af",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        560,
+        104
+      ],
+      "scene_origin_hd": [
+        576,
+        558
+      ],
+      "scale_exact": {
+        "numerator": 49,
+        "denominator": 100
+      },
+      "semantic_landmark": "rear crest midpoint",
+      "landmark_raw": [
+        811,
+        407
+      ],
+      "landmark_target_local_hd": [
+        298.5,
+        0
+      ],
+      "affine_forward": [
+        0.49,
+        0,
+        -98.88999999999999,
+        0,
+        0.49,
+        -199.43
+      ],
+      "candidate_png_sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+      "original_export_pillow_version": "12.3.0",
+      "design_adjustment": "One explicit static sand scale0.49,2% smaller than the initially planned0.5. Authorized by root for combined-scene inspection; not a rule for character frames or an automatic bounds fit.",
+      "anchor_note": "Upper outline crest midpoint over the raw alpha128 top segmentx786..836; placed at the midpoint of the original rear-crest contact spanx264..333. Narrow antialiasing at rawy407 is retained.",
+      "transformed_raw_alpha8_bounds": [
+        3.0300000000000153,
+        0.0,
+        551.34,
+        103.38999999999999
+      ],
+      "meaningful_alpha_clipped": false,
+      "shoreline_extent_delta_hd_vs_original": [
+        3.0300000000000153,
+        0.0,
+        -6.659999999999968,
+        -0.6100000000000136
+      ],
+      "crest_shape_note": "Original top contact span is approximately264..333. Generated alpha128 top span maps to286.25..310.75 at y0.49: crest midpoint is fixed but its nearly-level interval is narrower. Inspect the composed ground-contact scene before artistic acceptance."
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/012.png",
+      "generated_image": "012-generated-v2.png",
+      "source_sha256": "870e847c5a98c33ed0c006a807b992920f21cbcb0ef2b41d9faa207be4cfd4a2",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        304,
+        138
+      ],
+      "scene_origin_hd": [
+        730,
+        244
+      ],
+      "scale_exact": {
+        "numerator": 6,
+        "denominator": 25
+      },
+      "semantic_landmark": "central crown/frond-origin apex",
+      "landmark_raw": [
+        811.5,
+        244
+      ],
+      "landmark_target_local_hd": [
+        156.25,
+        0.5
+      ],
+      "affine_forward": [
+        0.24,
+        0,
+        -38.50999999999999,
+        0,
+        0.24,
+        -58.059999999999995
+      ],
+      "candidate_png_sha256": "701fc7909c3cc150ece7125c04f493f27da75d07446cc43cc6acae70fde1aa18",
+      "original_export_pillow_version": "12.2.0",
+      "design_adjustment": "Deliberate common4percent uniform reduction for static palm assets, authorized after measured marginal overflow. Semantic anchors, no bbox fit or shape warp.",
+      "transformed_raw_alpha8_bounds": [
+        0.37000000000000455,
+        0.2600000000000051,
+        287.89,
+        132.5
+      ],
+      "meaningful_alpha_clipped": false
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/013.png",
+      "generated_image": "013-generated-v3.png",
+      "source_sha256": "10d2cc46c5b926dd032081183f66a0269c4d0b44bbfd2f2ea260757339b56593",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        48,
+        290
+      ],
+      "scene_origin_hd": [
+        884,
+        296
+      ],
+      "scale_exact": {
+        "numerator": 6,
+        "denominator": 25
+      },
+      "semantic_landmark": "lowest central ground-contact tip",
+      "landmark_raw": [
+        489,
+        1342
+      ],
+      "landmark_target_local_hd": [
+        17.5,
+        289
+      ],
+      "affine_forward": [
+        0.24,
+        0,
+        -99.86,
+        0,
+        0.24,
+        -33.079999999999984
+      ],
+      "candidate_png_sha256": "72714deba94d2e7de946b9f30532e2482ac7a1b1027c442e77e443e5c9b7186c",
+      "original_export_pillow_version": "12.2.0",
+      "design_adjustment": "Deliberate common4percent uniform reduction for static palm assets, authorized after measured marginal overflow. Semantic anchors, no bbox fit or shape warp.",
+      "transformed_raw_alpha8_bounds": [
+        0.45999999999999375,
+        12.040000000000013,
+        46.77999999999999,
+        289.48
+      ],
+      "meaningful_alpha_clipped": false
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/015.png",
+      "generated_image": "cloud-generated-v1.png",
+      "source_sha256": "b50454479c9f08d2eebf381d0d110aab4f3fde6c2d046161da4c22a77b1e21ca",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        256,
+        72
+      ],
+      "scene_origin_hd": [
+        624,
+        116
+      ],
+      "scale_exact": {
+        "numerator": 1,
+        "denominator": 4
+      },
+      "semantic_landmark": "left contour and upper tower origin",
+      "landmark_raw": [
+        254,
+        364
+      ],
+      "landmark_target_local_hd": [
+        0,
+        0
+      ],
+      "affine_forward": [
+        0.25,
+        0,
+        -63.5,
+        0,
+        0.25,
+        -91.0
+      ],
+      "candidate_png_sha256": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+      "original_export_pillow_version": "12.3.0",
+      "design_adjustment": "Original scale retained; one explicit origin translation.",
+      "anchor_note": "Visually confirmed left contour and upper tower anchors at rawx254/y364 mapped to original canvasx0/y0. This corrects nominal origin drift by+0.5HDpx horizontally and+1HDpx vertically. No scale fit or centering.",
+      "transformed_raw_alpha8_bounds": [
+        0.0,
+        0.0,
+        248.5,
+        71.5
+      ],
+      "meaningful_alpha_clipped": false
+    }
+  ],
+  "alpha_note": "Alpha 8 bounds are an inspection threshold only. No alpha keying, thresholding or opaque-interior replacement was applied. Low-alpha residue remains in raw sources; the finite output canvas excludes some exterior residue."
+}

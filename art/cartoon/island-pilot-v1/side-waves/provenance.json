@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "status": "PENDING HUMAN RUNTIME SCENE REVIEW",
+  "scope": "Only high-tide left003-005 and right009-011, six fixed-canvas foam sprites.",
+  "human_concept_approval": {
+    "exact_user_phrase": "its wonderful",
+    "scope": "island concept, not runtime layer placement or wave motion"
+  },
+  "source_ancestry": "Six selected raw outputs have only original geometry and concept references. No generated ancestors were used. Rejected003v1 raw is omitted; its exact prompt, references, hash and lessons are retained.",
+  "attempts": [
+    {
+      "raw_file": "003-generated-v1.png",
+      "raw_sha256": "bba9a53dbf02a7d7b9f0f551407eff8407b589b5aee0d75bccb54f5f019b8161",
+      "raw_bytes": 852715,
+      "raw_canvas": [
+        1536,
+        1024
+      ],
+      "raw_mode": "RGBA",
+      "included_in_source_bundle": false,
+      "status": "rejected attempt; not selected ancestry",
+      "tool": "built-in image_gen.imagegen",
+      "tool_default_source_codex_home_relative": "generated_images/01a0a1f2-671e-7460-976f-f90ab7d5f1e2/exec-b74d35bf-24ae-4bdb-ba24-1e2d6d75db6f.png",
+      "seed_or_model_identifier_exposed": false,
+      "raw_bytes_preserved": true,
+      "prompt_file": "prompts/003-prompt-v1.txt",
+      "prompt_file_sha256": "25b58c52a3603163e630903b6a3de82fb16bac4fbfdaed57515d4afc6129be68",
+      "exact_ordered_references": [
+        {
+          "kind": "reproducible_original_geometry",
+          "reference": "003-original4x-padded.png",
+          "sha256": "0a9062e2d015208a4b4c9c2ec6b7fc3c141597af44e636482edc86ecf39b8589",
+          "role": "exact original foam geometry"
+        },
+        {
+          "kind": "tracked_concept",
+          "repo_path": "art/cartoon/island-concept-v1/concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "role": "style only"
+        },
+        {
+          "kind": "historical_working_reference",
+          "repo_relative_working_path": "build/art-work/island-assets-v1/ocean-shadow/exported/SCR/OCEAN02.SCR.png",
+          "sha256": "099249884c73c863436983ec4d4f5650e77e6e5748ef65bf417d0785b1acf294",
+          "role": "water palette only; used by rejected003v1, not selected ancestry",
+          "required_to_reproduce_selected_exports": false
+        }
+      ],
+      "observation_and_disposition": "Rejected initial attempt: foam expanded beyond the small 4x geometry region and used softer painterly strokes. Not referenced by the selected fresh revision.",
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "alpha_bounds_inspection_only": {
+        "1": [
+          416,
+          36,
+          1448,
+          960
+        ],
+        "8": [
+          423,
+          377,
+          1309,
+          691
+        ],
+        "128": [
+          424,
+          378,
+          1308,
+          690
+        ],
+        "250": [
+          448,
+          416,
+          1302,
+          688
+        ]
+      },
+      "alpha_counts": {
+        "zero": 1471901,
+        "1_to_7": 41400,
+        "8_to_249": 43543,
+        "250_to_255": 16020
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "raw_file": "003-generated-v2-fresh8x.png",
+      "raw_sha256": "a77511fd4e93808c20755608e937cf4b805bd9d781940cc9b9ca544bb182c0e8",
+      "raw_bytes": 952657,
+      "raw_canvas": [
+        1536,
+        1024
+      ],
+      "raw_mode": "RGBA",
+      "included_in_source_bundle": true,
+      "status": "selected technical scene-review candidate",
+      "tool": "built-in image_gen.imagegen",
+      "tool_default_source_codex_home_relative": "generated_images/01a0a1f2-671e-7460-976f-f90ab7d5f1e2/exec-11277b44-864b-447a-ba80-2250c56247d7.png",
+      "seed_or_model_identifier_exposed": false,
+      "raw_bytes_preserved": true,
+      "prompt_file": "prompts/003-prompt-v2-fresh8x.txt",
+      "prompt_file_sha256": "2f93655dcd0cacac43fa0161a1907998d53006cc343a45f74325d074361b13c5",
+      "exact_ordered_references": [
+        {
+          "kind": "reproducible_original_geometry",
+          "reference": "003-original8x-padded.png",
+          "sha256": "349d5d817c6a87b8b6facd295d02cc2458621d1a395e1b662491920288123d14",
+          "role": "exact original foam geometry"
+        },
+        {
+          "kind": "tracked_concept",
+          "repo_path": "art/cartoon/island-concept-v1/concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "role": "style only"
+        }
+      ],
+      "observation_and_disposition": "Fresh 8x original-first call produced useful flat foam linework but still expanded overall dimensions. Export uses the one fixed left-family transform; this source is not independently fitted.",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bounds_inspection_only": {
+        "1": [
+          89,
+          233,
+          1464,
+          968
+        ],
+        "8": [
+          141,
+          309,
+          1461,
+          801
+        ],
+        "128": [
+          142,
+          310,
+          1460,
+          800
+        ],
+        "250": [
+          143,
+          312,
+          1458,
+          799
+        ]
+      },
+      "alpha_counts": {
+        "zero": 1440737,
+        "1_to_7": 57726,
+        "8_to_249": 31587,
+        "250_to_255": 42814
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "raw_file": "004-generated-v1-10x.png",
+      "raw_sha256": "530bc333dc5223406c8debff16577ef8fb6af7289d29476711c2cf27a5fd0895",
+      "raw_bytes": 1025159,
+      "raw_canvas": [
+        1536,
+        1024
+      ],
+      "raw_mode": "RGBA",
+      "included_in_source_bundle": true,
+      "status": "selected technical scene-review candidate",
+      "tool": "built-in image_gen.imagegen",
+      "tool_default_source_codex_home_relative": "generated_images/01a0a1f2-671e-7460-976f-f90ab7d5f1e2/exec-5821521f-1c47-4649-ae8b-7a996d2ac97d.png",
+      "seed_or_model_identifier_exposed": false,
+      "raw_bytes_preserved": true,
+      "prompt_file": "prompts/004-prompt-v1-10x.txt",
+      "prompt_file_sha256": "02f258667ca8cb8a3d065c10dd966e1c83965370f7d88ac6214f29297eda3a94",
+      "exact_ordered_references": [
+        {
+          "kind": "reproducible_original_geometry",
+          "reference": "004-original10x-padded.png",
+          "sha256": "baa95579b2848bc8a982b080d405d10c5970814b289ead2fff88221ff3aec49c",
+          "role": "exact original foam geometry"
+        },
+        {
+          "kind": "tracked_concept",
+          "repo_path": "art/cartoon/island-concept-v1/concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "role": "style only"
+        }
+      ],
+      "observation_and_disposition": "Clean separate strokes and curved left endpoint. At nominal 0.1, right edge exceeds runtime canvas by 0.3 HD px. Selected with the shared left-family 0.097 transform.",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bounds_inspection_only": {
+        "1": [
+          59,
+          35,
+          1494,
+          968
+        ],
+        "8": [
+          82,
+          296,
+          1491,
+          781
+        ],
+        "128": [
+          83,
+          297,
+          1490,
+          780
+        ],
+        "250": [
+          95,
+          300,
+          1487,
+          777
+        ]
+      },
+      "alpha_counts": {
+        "zero": 1426539,
+        "1_to_7": 53565,
+        "8_to_249": 36286,
+        "250_to_255": 56474
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "raw_file": "005-generated-v1-10x.png",
+      "raw_sha256": "4a8252029263adcab0f487c457e80431043581da4b4fdcd589a6d021e47423b1",
+      "raw_bytes": 1005203,
+      "raw_canvas": [
+        1536,
+        1024
+      ],
+      "raw_mode": "RGBA",
+      "included_in_source_bundle": true,
+      "status": "selected technical scene-review candidate",
+      "tool": "built-in image_gen.imagegen",
+      "tool_default_source_codex_home_relative": "generated_images/01a0a1f2-671e-7460-976f-f90ab7d5f1e2/exec-c39fdca4-bf89-45f1-ab82-1015ea41009d.png",
+      "seed_or_model_identifier_exposed": false,
+      "raw_bytes_preserved": true,
+      "prompt_file": "prompts/005-prompt-v1-10x.txt",
+      "prompt_file_sha256": "f649bd76eed2aa314456d45f6ad53a06ab860976f7004cf4e7fb51cfaa084c50",
+      "exact_ordered_references": [
+        {
+          "kind": "reproducible_original_geometry",
+          "reference": "005-original10x-padded.png",
+          "sha256": "9e847d2b549cf836f46e17c8e5ae43cc3cb07b15981de8a202d3dce59699abb6",
+          "role": "exact original foam geometry"
+        },
+        {
+          "kind": "tracked_concept",
+          "repo_path": "art/cartoon/island-concept-v1/concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "role": "style only"
+        }
+      ],
+      "observation_and_disposition": "Phase has separated upright tips and broken upper curve. At nominal 0.1, right cyan tip exceeds canvas by 1.6 HD px. Selected with the shared left-family 0.097 transform.",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bounds_inspection_only": {
+        "1": [
+          105,
+          36,
+          1522,
+          864
+        ],
+        "8": [
+          113,
+          253,
+          1504,
+          744
+        ],
+        "128": [
+          114,
+          254,
+          1503,
+          743
+        ],
+        "250": [
+          115,
+          263,
+          1496,
+          741
+        ]
+      },
+      "alpha_counts": {
+        "zero": 1376667,
+        "1_to_7": 106543,
+        "8_to_249": 29971,
+        "250_to_255": 59683
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "raw_file": "009-generated-v1-10x.png",
+      "raw_sha256": "a637d0e7751e32a9ccf0a429017b8b55e615b2e4f3d15abe769c816f13361381",
+      "raw_bytes": 1044355,
+      "raw_canvas": [
+        1536,
+        1024
+      ],
+      "raw_mode": "RGBA",
+      "included_in_source_bundle": true,
+      "status": "selected technical scene-review candidate",
+      "tool": "built-in image_gen.imagegen",
+      "tool_default_source_codex_home_relative": "generated_images/01a0a1f2-671e-7460-976f-f90ab7d5f1e2/exec-dc906359-be07-4c01-926f-a2df87291c84.png",
+      "seed_or_model_identifier_exposed": false,
+      "raw_bytes_preserved": true,
+      "prompt_file": "prompts/009-prompt-v1-10x.txt",
+      "prompt_file_sha256": "66714e4be0a95c9f11cc45ec80026756044ec1629258b1cc8cf8259712c9ab84",
+      "exact_ordered_references": [
+        {
+          "kind": "reproducible_original_geometry",
+          "reference": "009-original10x-padded.png",
+          "sha256": "e9ad44cf2dd0b0827cf74e507eef9c3b4ba88543384e591a97ca47b403c8e017",
+          "role": "exact original foam geometry"
+        },
+        {
+          "kind": "tracked_concept",
+          "repo_path": "art/cartoon/island-concept-v1/concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "role": "style only"
+        }
+      ],
+      "observation_and_disposition": "Right crescent has open transparent gaps. Larger than the exact reference: nominal 0.1 exceeds left/right canvas by 1.8/1.9 HD px and bottom by 3.1 HD px. Selected only for a shared 0.09 family-scale diagnostic; shoreline placement must be inspected in the composed scene.",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bounds_inspection_only": {
+        "1": [
+          27,
+          72,
+          1510,
+          968
+        ],
+        "8": [
+          30,
+          220,
+          1507,
+          863
+        ],
+        "128": [
+          31,
+          221,
+          1506,
+          863
+        ],
+        "250": [
+          33,
+          222,
+          1505,
+          862
+        ]
+      },
+      "alpha_counts": {
+        "zero": 1412365,
+        "1_to_7": 59249,
+        "8_to_249": 29174,
+        "250_to_255": 72076
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "raw_file": "010-generated-v1-10x.png",
+      "raw_sha256": "0943ab25a2be4996cb46545042a8feff3077e4e89eb432d3635b859cdb9c387b",
+      "raw_bytes": 938150,
+      "raw_canvas": [
+        1536,
+        1024
+      ],
+      "raw_mode": "RGBA",
+      "included_in_source_bundle": true,
+      "status": "selected technical scene-review candidate",
+      "tool": "built-in image_gen.imagegen",
+      "tool_default_source_codex_home_relative": "generated_images/01a0a1f2-671e-7460-976f-f90ab7d5f1e2/exec-b348f436-3861-4433-be68-eee51bc9a4b2.png",
+      "seed_or_model_identifier_exposed": false,
+      "raw_bytes_preserved": true,
+      "prompt_file": "prompts/010-prompt-v1-10x.txt",
+      "prompt_file_sha256": "150e6a9598c3d20eb357843c74e82b5235399f520a0af39a3365c8600d6f1a8c",
+      "exact_ordered_references": [
+        {
+          "kind": "reproducible_original_geometry",
+          "reference": "010-original10x-padded.png",
+          "sha256": "4336db0a72fb6efab249e9dc811bc8d76da3323d8edd43ef8502c6265152dc1d",
+          "role": "exact original foam geometry"
+        },
+        {
+          "kind": "tracked_concept",
+          "repo_path": "art/cartoon/island-concept-v1/concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "role": "style only"
+        }
+      ],
+      "observation_and_disposition": "Two open curved foam lines with small cyan accents. Fits nominal 0.1, but exported at the same 0.09 as every other right-family frame to avoid independent per-phase fitting.",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bounds_inspection_only": {
+        "1": [
+          55,
+          171,
+          1470,
+          952
+        ],
+        "8": [
+          58,
+          264,
+          1396,
+          773
+        ],
+        "128": [
+          59,
+          264,
+          1395,
+          772
+        ],
+        "250": [
+          78,
+          265,
+          1394,
+          772
+        ]
+      },
+      "alpha_counts": {
+        "zero": 1472439,
+        "1_to_7": 33338,
+        "8_to_249": 21525,
+        "250_to_255": 45562
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "raw_file": "011-generated-v1-10x.png",
+      "raw_sha256": "889819abaedac7daf227d6a7439360b01acb22a364d7649697ff3e18ef84e8d8",
+      "raw_bytes": 916608,
+      "raw_canvas": [
+        1536,
+        1024
+      ],
+      "raw_mode": "RGBA",
+      "included_in_source_bundle": true,
+      "status": "selected technical scene-review candidate",
+      "tool": "built-in image_gen.imagegen",
+      "tool_default_source_codex_home_relative": "generated_images/01a0a1f2-671e-7460-976f-f90ab7d5f1e2/exec-82e5069c-24cf-4c01-951c-2d893b0cf407.png",
+      "seed_or_model_identifier_exposed": false,
+      "raw_bytes_preserved": true,
+      "prompt_file": "prompts/011-prompt-v1-10x.txt",
+      "prompt_file_sha256": "a8c0bb014d672208a1d56cc5a6afa3130041f25482dd71c7229ac80a3cb5b025",
+      "exact_ordered_references": [
+        {
+          "kind": "reproducible_original_geometry",
+          "reference": "011-original10x-padded.png",
+          "sha256": "5ab7021b1dc075c652c0cbf328798068cc6b10098d5dfe80494b5e05ab7c08c7",
+          "role": "exact original foam geometry"
+        },
+        {
+          "kind": "tracked_concept",
+          "repo_path": "art/cartoon/island-concept-v1/concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "role": "style only"
+        }
+      ],
+      "observation_and_disposition": "Two tapering right-curved foam lines, with reduced lower tail compared with prior phase. Fits nominal 0.1, but shares the right-family 0.09 transform. Native phase continuity remains to be reviewed.",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha_bounds_inspection_only": {
+        "1": [
+          89,
+          153,
+          1409,
+          813
+        ],
+        "8": [
+          109,
+          264,
+          1402,
+          756
+        ],
+        "128": [
+          110,
+          265,
+          1400,
+          755
+        ],
+        "250": [
+          111,
+          266,
+          1397,
+          754
+        ]
+      },
+      "alpha_counts": {
+        "zero": 1488621,
+        "1_to_7": 24856,
+        "8_to_249": 18100,
+        "250_to_255": 41287
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    }
+  ],
+  "lessons": [
+    "Original-first geometry reference separated foam from original blue/yellow paint; concept used only for flat white/cream strokes and cyan accents.",
+    "Small4x artwork on a large padded canvas expanded during generation. An8x reference improved stroke treatment, but did not lock dimensions.10x references made canvas occupancy more predictable.",
+    "Raw preview glow mostly belongs to hidden RGB/very-low alpha. Blue composites showed transparent gaps and no broad visible matte; numerical alpha inspection preceded any cleanup decision.",
+    "Exact numeric placement prompts did not guarantee exact tips. Left0.098 still exceeded the canvas by0.128HDpx at frame005, so the single family scale was fixed at0.097 before final export. Shared whole-family scales0.097left/0.09right preserve relative generated phase size without per-frame bounds fitting, but require full-scene shoreline approval.",
+    "Foam cores peak at alpha254, not255. Preserve and report near-opacity rather than claiming binary opaque alpha.",
+    "These line-only replacements omit legacy opaque ocean erase paint. The new background restore compositor is required for clean translucent redraws; engine verification belongs to the composed pilot."
+  ],
+  "review_findings": [
+    "Cartoon005 upper white-foam tip is11HDpx above the original white-foam extent.",
+    "Cartoon009 left white-foam tail extends20HDpx farther left than the original white-foam extent.",
+    "All alpha>=8 source artwork fits each fixed runtime canvas under the documented common-family transforms.",
+    "Full-scene wave placement and phase continuity have not received human approval."
+  ],
+  "coverage": "partial",
+  "human_runtime_acceptance": false,
+  "production_acceptance": false
+}

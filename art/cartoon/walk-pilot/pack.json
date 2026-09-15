@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "runtime": {
+    "id": "cartoon",
+    "scale": 2,
+    "alpha": "straight",
+    "coverage": "partial"
+  },
+  "scope": "Review candidates only: six JOHNWALK.BMP assets024-029. No other Cartoon images; legacy HD fallback for the remainder.",
+  "review_status": "review candidates; orientation and leg order rejected; preserve v2 registration approval only",
+  "canonical_character_reference": "art/cartoon/johnny-character-v5.png",
+  "canonical_character_sha256": "f52319502fc68ee76b22c74ab18bb6ab57b10d0d5edb54e68bcc2a0ef2686a27",
+  "base_archive_sha256": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a",
+  "registration_metadata": "recipe.json",
+  "scale_exact": {
+    "numerator": 137,
+    "denominator": 1590
+  },
+  "resampling": {
+    "pillow_version": "12.3.0",
+    "working_mode": "RGBa",
+    "affine_filter": "BICUBIC",
+    "oversample": 8,
+    "downsample_filter": "LANCZOS",
+    "output_mode": "RGBA"
+  },
+  "required_resources": [],
+  "required_assets": [
+    "BMP/JOHNWALK.BMP/024.png",
+    "BMP/JOHNWALK.BMP/025.png",
+    "BMP/JOHNWALK.BMP/026.png",
+    "BMP/JOHNWALK.BMP/027.png",
+    "BMP/JOHNWALK.BMP/028.png",
+    "BMP/JOHNWALK.BMP/029.png"
+  ],
+  "assets": [
+    {
+      "path": "BMP/JOHNWALK.BMP/024.png",
+      "source_sha256": "1233b19ffe0e07e9e9a2c1e2deee1d853026c6f4aca078a2aec4139f97455f91",
+      "sha256": "f79e372889d1af96297f4b3dc581cca716d89bb5547083eb984f915f48126226",
+      "alpha": "transparent",
+      "expected_png": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "expected_dimensions": [
+        64,
+        150
+      ],
+      "generated_reference": "source-images.zip#024-generated-v3-foot.png",
+      "generated_sha256": "efe753559ee7b62bb3703c166bef92ad61592243a4f0ba54000cdab39129b5ed",
+      "registration": {
+        "affine_forward": [
+          0.08913798658094158,
+          0,
+          -12.717777450939195,
+          0,
+          0.08913798658094158,
+          -5.009141208275553
+        ],
+        "cap_generated": [
+          339,
+          59
+        ],
+        "cap_target": [
+          17.5,
+          0.25
+        ],
+        "sole_difference_hd": -2.3074974436553646,
+        "runtime_canvas": [
+          64,
+          150
+        ]
+      },
+      "review": {
+        "stage": "archived motion review candidate",
+        "body_registration_v2": "human approved",
+        "runtime_pose_acceptance": false,
+        "human_motion_acceptance": "rejected orientation/leg order; correction pending",
+        "production_acceptance": false
+      },
+      "canvas_normalization": {
+        "nominal_input_canvas": [
+          929,
+          1813
+        ],
+        "actual_generated_canvas": [
+          898,
+          1752
+        ],
+        "uniform_factor_exact": {
+          "numerator": 929,
+          "denominator": 898
+        },
+        "basis": "Known input/output canvas width ratio, not image bounds or limb fitting. One uniform factor for both axes.",
+        "normalized_canvas": [
+          929,
+          1812.4810690423164
+        ]
+      },
+      "drawing_export_scale_exact": {
+        "numerator": 137,
+        "denominator": 1590
+      },
+      "recipe_frame": 24
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/025.png",
+      "source_sha256": "1eedad18ddb23c631439c17b01659d0abe7ee8b4da3d2ee3862dadb840686954",
+      "sha256": "d233f7a66ce350a88c0f76ea1f7c78af41511059d8ec4725d52dafd1b991f88c",
+      "alpha": "transparent",
+      "expected_png": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "expected_dimensions": [
+        80,
+        148
+      ],
+      "generated_reference": "source-images.zip#025-generated-v1.png",
+      "generated_sha256": "3d5f2a479ddbbfab9aab063c3de45420a9b138996fbff70de62df066e2ef4637",
+      "registration": {
+        "affine_forward": [
+          0.08616352201257861,
+          0,
+          -5.709433962264151,
+          0,
+          0.08616352201257861,
+          -3.8858490566037736
+        ],
+        "cap_generated": [
+          339,
+          48
+        ],
+        "cap_target": [
+          23.5,
+          0.25
+        ],
+        "sole_difference_hd": 3.3701257861634986
+      },
+      "review": {
+        "stage": "archived motion review candidate",
+        "body_registration_v2": "human approved",
+        "runtime_pose_acceptance": false,
+        "human_motion_acceptance": "rejected orientation/leg order; correction pending",
+        "production_acceptance": false
+      },
+      "recipe_frame": 25
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/026.png",
+      "source_sha256": "6d30f88641b8aa4da6a3ab883ecda94cb6871605d58af3b628521b79a93936c9",
+      "sha256": "82ef3e3f0a61a1ba9a6059b66c1f1cb6002779becae2162e8129a9c1f52eee24",
+      "alpha": "transparent",
+      "expected_png": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "expected_dimensions": [
+        80,
+        146
+      ],
+      "generated_reference": "source-images.zip#026-generated-v1.png",
+      "generated_sha256": "c8f21c44d9480a38ace708aef36c70072581d43381034e3c8700e06ecbeface9",
+      "registration": {
+        "affine_forward": [
+          0.08616352201257861,
+          0,
+          -6.552830188679246,
+          0,
+          0.08616352201257861,
+          -5.005974842767295
+        ],
+        "cap_generated": [
+          372,
+          61
+        ],
+        "cap_target": [
+          25.5,
+          0.25
+        ],
+        "sole_difference_hd": 0.24999999999997158
+      },
+      "review": {
+        "stage": "archived motion review candidate",
+        "body_registration_v2": "human approved",
+        "runtime_pose_acceptance": false,
+        "human_motion_acceptance": "rejected orientation/leg order; correction pending",
+        "production_acceptance": false
+      },
+      "recipe_frame": 26
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/027.png",
+      "source_sha256": "e19d3fe46184f05da2cc12b38bf07d161bcb293b4348bd076a5b9661a59369a9",
+      "sha256": "e301afce28a28e87b6ebaee3bc908670b3f6c6d78dd9ef115248d2bc1d029640",
+      "alpha": "transparent",
+      "expected_png": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "expected_dimensions": [
+        64,
+        144
+      ],
+      "generated_reference": "source-images.zip#027-generated-v1.png",
+      "generated_sha256": "f3d875605c4278f3d217cf7b2ac6f6617d1896eec8e4babcf4d254e6373ee653",
+      "registration": {
+        "affine_forward": [
+          0.08616352201257861,
+          0,
+          -13.432704402515723,
+          0,
+          0.08616352201257861,
+          -5.178301886792453
+        ],
+        "cap_generated": [
+          359,
+          63
+        ],
+        "cap_target": [
+          17.5,
+          0.25
+        ],
+        "sole_difference_hd": 0.16383647798741663
+      },
+      "review": {
+        "stage": "archived motion review candidate",
+        "body_registration_v2": "human approved",
+        "runtime_pose_acceptance": false,
+        "human_motion_acceptance": "rejected orientation/leg order; correction pending",
+        "production_acceptance": false
+      },
+      "recipe_frame": 27
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/028.png",
+      "source_sha256": "a387e9b663b2646c0a39e346106cbed59c8603b30503a4e6f3a445efa287d12a",
+      "sha256": "91b0d03bc0b67b37399001fd0a74956ffb5b509424c01794b094c086c63c9e60",
+      "alpha": "transparent",
+      "expected_png": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "expected_dimensions": [
+        64,
+        144
+      ],
+      "generated_reference": "source-images.zip#028-generated-v2.png",
+      "generated_sha256": "f2f38b9596ca308e5a13943279ad3a9fca70619b47c5654ef71db42eff445d9d",
+      "registration": {
+        "affine_forward": [
+          0.08616352201257861,
+          0,
+          -12.011006289308176,
+          0,
+          0.08616352201257861,
+          -5.178301886792453
+        ],
+        "cap_generated": [
+          342.5,
+          63
+        ],
+        "cap_target": [
+          17.5,
+          0.25
+        ],
+        "sole_difference_hd": -2.5072327044024973
+      },
+      "review": {
+        "stage": "archived motion review candidate",
+        "body_registration_v2": "human approved",
+        "runtime_pose_acceptance": false,
+        "human_motion_acceptance": "rejected orientation/leg order; correction pending",
+        "production_acceptance": false
+      },
+      "recipe_frame": 28
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/029.png",
+      "source_sha256": "091f4690aaab8af69120b4cfcd819c96db711f8ef30609773310e09c7dcdcfd9",
+      "sha256": "818a0f8d8ff89b875a7709a09ad6f54f7ad8fba6f2735cdf09e9e786dd33aafc",
+      "alpha": "transparent",
+      "expected_png": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "expected_dimensions": [
+        64,
+        150
+      ],
+      "generated_reference": "source-images.zip#029-generated-v1.png",
+      "generated_sha256": "4cd7cdc139cc5ebac7018d2c3100cf645dfae94af1624171ac159acb793a90ba",
+      "registration": {
+        "affine_forward": [
+          0.08616352201257861,
+          0,
+          -12.140251572327044,
+          0,
+          0.08616352201257861,
+          -5.092138364779874
+        ],
+        "cap_generated": [
+          344,
+          62
+        ],
+        "cap_target": [
+          17.5,
+          0.25
+        ],
+        "sole_difference_hd": -3.9223270440251667
+      },
+      "review": {
+        "stage": "archived motion review candidate",
+        "body_registration_v2": "human approved",
+        "runtime_pose_acceptance": false,
+        "human_motion_acceptance": "rejected orientation/leg order; correction pending",
+        "production_acceptance": false
+      },
+      "recipe_frame": 29
+    }
+  ],
+  "review_history": [
+    {
+      "stage": "registration v2",
+      "user_wording": "The body pop looks resolved",
+      "decision": "Upper-body alignment approved; does not approve pose geometry or all motion."
+    },
+    {
+      "stage": "foot revision3 comparison",
+      "user_wording": "well done",
+      "decision": "Positive response, superseded by substantive motion feedback; not sufficient full-motion acceptance."
+    },
+    {
+      "stage": "subsequent motion review",
+      "feedback_summary": "At pose3/sprite024 the opposite leg comes forward compared with original; the six-frame cycle stays in fixed left profile instead of matching original three-quarter direction and limb depth.",
+      "exact_wording_recorded": false,
+      "decision": "Runtime poses remain review candidates; correct full-cycle orientation and near/far leg order before acceptance."
+    }
+  ],
+  "source_bundle": "source-images.zip"
+}

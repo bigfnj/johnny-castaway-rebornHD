@@ -27,7 +27,23 @@
                 max-width: 100%;
                 height: auto;
             }
+
+            #art-controls {
+                color: #eee;
+                font: 14px system-ui, sans-serif;
+                padding: 12px 0;
+            }
+
+            #art-controls select { margin: 0 8px; }
         </style>
+        <div id="art-controls">
+            <label for="art-style">Art style</label>
+            <select id="art-style">
+                <option value="hd">HD</option>
+                <option value="cartoon">Cartoon (preview)</option>
+            </select>
+            <span>Changing style restarts the scene.</span>
+        </div>
         <canvas id="canvas" width="640" height="480" oncontextmenu="event.preventDefault()"></canvas>
         <script type='text/javascript'>
             //  ARGUMENTS FROM THE URL.
@@ -51,13 +67,69 @@
                 // URLSearchParams missing: run with defaults rather than failing to start.
             }
 
+            // URL options override the saved browser preference. The native
+            // config file is transient in Web builds, so it is not used here.
+            var stylePicker = document.getElementById('art-style');
+            function splitStyleOptions(args) {
+                var retained = [];
+                var style = null;
+                for (var i = 0; i < args.length; i++) {
+                    var token = args[i];
+                    if (token === 'style') {
+                        style = args[++i] || '';
+                        continue;
+                    }
+                    retained.push(token);
+                    // A filename or another option's operand can itself be
+                    // named "style". Retain it as a value, not an art option.
+                    var operands = token === 'ads' ? 2 : 0;
+                    if (['ttm', 'holiday', '-holiday', '--holiday', '/holiday',
+                         'seed', 'frames', 'capture', 'setstyle'].indexOf(token) !== -1) {
+                        operands = 1;
+                    }
+                    while (operands-- > 0 && i + 1 < args.length) retained.push(args[++i]);
+                }
+                return { retained: retained, style: style };
+            }
+            var explicitStyle = splitStyleOptions(jcArgs).style;
+            var savedStyle = null;
+            try { savedStyle = localStorage.getItem('jc.artStyle'); } catch (e) { }
+            if (explicitStyle === null && (savedStyle === 'hd' || savedStyle === 'cartoon')) {
+                jcArgs.push('style', savedStyle);
+            }
+            var selectedStyle = explicitStyle === null ? savedStyle : explicitStyle;
+            stylePicker.value = selectedStyle === 'cartoon' ? 'cartoon' : 'hd';
+            stylePicker.addEventListener('change', function () {
+                var chosen = stylePicker.value;
+                try { localStorage.setItem('jc.artStyle', chosen); } catch (e) { }
+                var retained = splitStyleOptions(jcArgs).retained;
+                retained.push('style', chosen);
+                var url = new URL(window.location.href);
+                url.searchParams.set('args', retained.join(' '));
+                window.location.assign(url.href);
+            });
+            // Emscripten registers keyboard callbacks on window in the capture
+            // phase. Run before its glue loads, and stop later window listeners
+            // for toolbar keys. Do not preventDefault: native select navigation
+            // must still work. Canvas/body keys keep reaching the engine.
+            function protectArtControlKeys(event) {
+                if (event.target && event.target.nodeType &&
+                    document.getElementById('art-controls').contains(event.target)) {
+                    event.stopImmediatePropagation();
+                }
+            }
+            window.addEventListener('keydown', protectArtControlKeys, true);
+            window.addEventListener('keyup', protectArtControlKeys, true);
+
             //  A VISIBLE ERROR SURFACE. Without print/printErr the engine's fatalError
             //  went nowhere a user would look: the page simply stopped, with the reason
             //  only in devtools. A missing data file looked identical to a hang.
             var jcLog = [];
             var Module = {
                 canvas: (function () { return document.getElementById('canvas'); })(),
-                arguments: jcArgs,
+                // Emscripten prepends argv[0] to this array. Keep user options
+                // separate so selector reloads cannot accumulate program names.
+                arguments: jcArgs.slice(),
                 print: function (text) { jcLog.push(text); console.log(text); },
                 printErr: function (text) {
                     jcLog.push(text);

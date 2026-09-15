@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "id": "johnny-directional-cycle-v1-human-motion-acceptance",
+  "date": "2026-09-14",
+  "status": "HUMAN MOTION ACCEPTED: the six-pose E-to-A walking pilot as reviewed.",
+  "user_wording": "looks good",
+  "review_context": "The user reviewed the full current extended-cartoon-direction-v1 walking comparison, then replied \"looks good\".",
+  "human_motion_acceptance": true,
+  "production_acceptance": false,
+  "coverage": "partial",
+  "accepted_frames": [
+    {
+      "frame": 24,
+      "asset": "BMP/JOHNWALK.BMP/024.png",
+      "generated_source": "024-generated-v7.png",
+      "generated_source_sha256": "63088f5c18e71d49fb61f733e564d5f9461c55f622e124b5eeaf9aa5cbd1ee2b",
+      "accepted_export_sha256": "02058c693d28bd06526f78412cd6a71d09e68451763a58b6f0a8cfec4959d10d",
+      "runtime_canvas": [
+        64,
+        150
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.0,
+        0,
+        0.1,
+        -3.95
+      ]
+    },
+    {
+      "frame": 25,
+      "asset": "BMP/JOHNWALK.BMP/025.png",
+      "generated_source": "025-generated-v2.png",
+      "generated_source_sha256": "af0f050ae39858eda063c1c681c82a26e2d988e09e18dc8d1a6ff83df73126cf",
+      "accepted_export_sha256": "b1fcdb55c168e596eee4234b471d768e54a6983a608c44d010d5f22de838e2ee",
+      "runtime_canvas": [
+        80,
+        148
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -15.0,
+        0,
+        0.1,
+        -3.95
+      ]
+    },
+    {
+      "frame": 26,
+      "asset": "BMP/JOHNWALK.BMP/026.png",
+      "generated_source": "026-generated-v3-fresh.png",
+      "generated_source_sha256": "051be31b0a7f734231164088660fe4def6531240826d7b1d57152614f0650702",
+      "accepted_export_sha256": "0e9889e31cb41740de200a0800b557269a05ea07c66bbe4157f11db23c84afdc",
+      "runtime_canvas": [
+        80,
+        146
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -13.0,
+        0,
+        0.1,
+        -3.95
+      ]
+    },
+    {
+      "frame": 27,
+      "asset": "BMP/JOHNWALK.BMP/027.png",
+      "generated_source": "027-generated-v3-fresh.png",
+      "generated_source_sha256": "31e1249a5035f4ce88c35aeeabfdf52e3a9202670e96d85c07ce50035b0ce70d",
+      "accepted_export_sha256": "57e76a0ed2920457c0fa8b9836bcc424e3644f9b49624985ae9c8b160abea25c",
+      "runtime_canvas": [
+        64,
+        144
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.0,
+        0,
+        0.1,
+        -3.95
+      ]
+    },
+    {
+      "frame": 28,
+      "asset": "BMP/JOHNWALK.BMP/028.png",
+      "generated_source": "028-generated-v4-transparent.png",
+      "generated_source_sha256": "bdbf7f83f0622cbc4b87f2f41c0f502e8185b4ee524da912f39a03cec28f8fc9",
+      "accepted_export_sha256": "59268bb33644b51486c05b3dc2eb37436e7737a1c18e0d055f1b00cdfadad745",
+      "runtime_canvas": [
+        64,
+        144
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.3,
+        0,
+        0.1,
+        -3.75
+      ]
+    },
+    {
+      "frame": 29,
+      "asset": "BMP/JOHNWALK.BMP/029.png",
+      "generated_source": "029-generated-v2.png",
+      "generated_source_sha256": "a19e4143ba6647965f7d3a5bab178b4cbe131b52429da59028adb6e233fe9e78",
+      "accepted_export_sha256": "7968ac59d55b86e9e3e605a47d65ae1ec5c2c4e516e49c8143ac026cecac62bd",
+      "runtime_canvas": [
+        64,
+        150
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.0,
+        0,
+        0.1,
+        -3.95
+      ]
+    }
+  ],
+  "motion_scope": {
+    "resource": "JOHNWALK.BMP",
+    "frames": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "route": "Original E-to-A walkData route, hosted in an isolated diagnostic MJREAD tag110.",
+    "positions": 23,
+    "native_pose_ms": 120,
+    "endpoint_hold_added_ms": 1000,
+    "camera_flip_and_draw_coordinates": "Unchanged from the reviewed original route.",
+    "diagnostic_archive_sha256": "5278a1251dabc804e5776fb9ae5ada3de9f33fdd5704bf685a6bbb558bc90268",
+    "normal_candidate_archive_sha256": "18e3fb46e1577c7ec14c5332f2571b36f0c1b20daa4f2118b664e9e5cd8f096c",
+    "preview_gif_sha256": "f83075639b7ec9177e176f9ead1e7317cb2fe93bd8542a7a7854e1eb2114a9df"
+  },
+  "artistic_decision": "The body direction, limb order, motion and elevated foot lifts are accepted as seen in this preview. The previously documented foot-clearance differences are not an open rejection of this approved gait.",
+  "not_yet_validated": [
+    "Other walking directions and frames beyond this six-pose family.",
+    "Ground contact and object occlusion in other scenes or against newly generated island artwork.",
+    "Production archive promotion and broader style-pack coverage."
+  ],
+  "next_scene_contact_check": "Once island components are selected, replay these unchanged accepted PNGs at their original coordinates against the new sand and tree layers. Inspect planted-foot contact, shoreline clearance and intended foreground occlusion in the real renderer before broadening scene coverage.",
+  "historical_record_policy": "This separate decision updates current review status only. Earlier recipe, provenance, prompt and technical evidence bytes retain their original pending-review fields as truthful snapshots of those checkpoints. Their export hashes identify the exact pixels approved here.",
+  "historical_records": {
+    "export.py": "3a7f4220b29c1bd9d4f40028facc6a225e2f490ec15d89509dca39b601409da9",
+    "provenance.json": "f8f1d964e01591b71c372ca3f9717794ddfd0b54262a8f0415990dea7bbfb2c6",
+    "recipe.json": "ceaa00c6e3be6db0a4ce056afd61d08492943395658c1c72deb9f69d19424f4f",
+    "source-images.zip": "8707ee636589ce8e20e08f3def5ef42fd6bd2cb0fb643852b1b66a4b7d108e3e",
+    "verification.json": "f79b85f4ec608ab84d36b590e5950cb1a2025b4c690b7e197348144ae4df4c4d",
+    "prompts\\024-generated-v7.txt": "29f788774721cfd36172cc381bba66c2c1109272afaf41cb77856b319100d282",
+    "prompts\\025-generated-v1.txt": "317a043a38d4c304cfb64f5f303d3230754e9fd5465dd10b81a7d95db7de5d3b",
+    "prompts\\025-generated-v2.txt": "88719b6a79635ab4528faf60149d3e7d1b1316298832ae4d30cd7ed53fd1b95d",
+    "prompts\\026-generated-v3-fresh.txt": "a807f41b88ac813b1ce522c3438a3e95999b599e6e17e4d92577516cf646b87f",
+    "prompts\\027-generated-v3-fresh.txt": "ee4eb94640462445907929c1eef2dace4a962de83fd0882aa6cf2a92727eec36",
+    "prompts\\028-generated-v1.txt": "27de59fcc686329417204ed2898cf1c0ddb7682b92e49bb2dca317a38e7654c0",
+    "prompts\\028-generated-v2.txt": "676055a5ffae5a5f51d90d3a345139bfda96f6893af724158b66935ed4b106a1",
+    "prompts\\028-generated-v3-clearance.txt": "57883abac9c7052d44ac3e0e7c9ab80e8a6078c12c0cdd6f582c227c9e36b472",
+    "prompts\\028-generated-v4-transparent.txt": "beb3ec05fcce2f954529fc9a42fd1c838201cd23c12d3db39e2c4e5a5d7432d4",
+    "prompts\\029-generated-v1.txt": "c488c9d8ff14bac92b221ca88b910f8914e77760af85f49c4a0e5852967ec63a",
+    "prompts\\029-generated-v2.txt": "c07f7a8bec45ea588b43c1daa5c7339ecf9a54473976846906fc87432c12f883",
+    "review-evidence\\contact-report.json": "62530522975ea5831a8bbe0a5685883777e6f2fe5687622569cbed83025e958d",
+    "review-evidence\\direction-clearance-manifest-v1.json": "15e4f83e580a4740150c56961a0b2e55487cb4fabf458299d3b47d37318f86f6",
+    "review-evidence\\engine-validation.json": "8d33ac85221dd4ad813b29dc1b5a098d09034855100d64815c9a65d1bfb3ebd6",
+    "review-evidence\\export-report.json": "a1f01b831f6b933c06025f87b51acba82cd069348e50e0430eeecb739942b146"
+  },
+  "production_archive_sha256_at_decision": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a"
+}

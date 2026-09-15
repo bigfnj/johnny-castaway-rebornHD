@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "restored_controls": [
+    "cartoon-01/capture.png",
+    "cartoon-02/capture.png",
+    "cartoon-04/capture.png",
+    "cartoon-05/capture.png",
+    "cartoon-06/capture.png",
+    "cartoon-07/capture.png",
+    "cartoon-08/capture.png",
+    "cartoon-09/capture.png",
+    "hd-00/capture.png",
+    "hd-03/capture.png",
+    "hd-04/capture.png"
+  ],
+  "mutations": [
+    {
+      "kind": "single changed pixel outside selected canvases",
+      "named_failure": "cartoon-01/capture.png: 1 changed pixels outside permitted replacement regions",
+      "failures": 1,
+      "executed_assertion": "assert_pixels",
+      "restored_control": "PASS"
+    },
+    {
+      "kind": "single changed pixel in HD whole-frame comparison",
+      "named_failure": "hd-00/capture.png: 1 changed pixels outside permitted replacement regions",
+      "failures": 1,
+      "executed_assertion": "assert_pixels",
+      "restored_control": "PASS"
+    }
+  ],
+  "helper_sha256": "c717e83a627048b9297940637d97a0542677a893eab8844e1b1841cbb3d896b8",
+  "scope": "In-memory capture mutations; exact production assert_pixels function executed. No engine source, binary or capture bytes changed."
+}

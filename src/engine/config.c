@@ -24,10 +24,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#ifdef _WIN32
+#include <windows.h>
+#include <process.h>
+#else
+#include <unistd.h>
+#endif
 
 #include "mytypes.h"
 #include "utils.h"
 #include "config.h"
+#include "art_style.h"
 
 #define BUFFER_LEN 100
 
@@ -67,18 +74,39 @@ static char *cfgFullPath(void)
 }
 
 
-void cfgFileWrite(struct TConfig *cfg)
+int cfgFileWrite(const struct TConfig *cfg)
 {
-    FILE *f = fopen(cfgFullPath(), "w");
-
-    if (f == NULL) {
-        debugMsg("Warning: couldn't open %s for writing", CFG_FILENAME);
+    /* Write beside the destination and replace it only after a complete close.
+     * A failed save must leave the previous story progress and style intact. */
+    const char *path = cfgFullPath();
+    size_t capacity = strlen(path) + 40;
+    char *temporary = safe_malloc(capacity);
+#ifdef _WIN32
+    unsigned long processId = (unsigned long)_getpid();
+#else
+    unsigned long processId = (unsigned long)getpid();
+#endif
+    snprintf(temporary, capacity, "%s.%lu.tmp", path, processId);
+    FILE *f = fopen(temporary, "wx");
+    int ok = 0;
+    if (f) {
+        const char *style = artStyleFind(cfg->artStyle) ? cfg->artStyle : "hd";
+        int written = fprintf(f, "currentDay=%d\ndate=%d\nartStyle=%s\n",
+                              cfg->currentDay, cfg->date, style);
+        int closed = fclose(f);
+        if (written >= 0 && closed == 0) {
+#ifdef _WIN32
+            ok = MoveFileExA(temporary, path,
+                            MOVEFILE_REPLACE_EXISTING | MOVEFILE_WRITE_THROUGH) != 0;
+#else
+            ok = rename(temporary, path) == 0;
+#endif
+        }
+        if (!ok) remove(temporary);
     }
-    else {
-        fprintf(f, "currentDay=%d\n", cfg->currentDay);
-        fprintf(f, "date=%d\n", cfg->date);
-        fclose(f);
-    }
+    if (!ok) fprintf(stderr, "Could not save %s; previous settings retained\n", CFG_FILENAME);
+    free(temporary);
+    return ok;
 }
 
 
@@ -88,18 +116,39 @@ void cfgFileRead(struct TConfig *cfg)
 
     cfg->currentDay = 0;
     cfg->date       = 0;
+    strcpy(cfg->artStyle, "hd");
 
     FILE *f = fopen(cfgFullPath(), "r");
 
     if (f != NULL) {
 
         while (fgets(buf, BUFFER_LEN, f) != NULL) {
+            size_t length = strcspn(buf, "\r\n");
+            if (length == sizeof(buf) - 1 && !feof(f)) {
+                int c;
+                while ((c = fgetc(f)) != '\n' && c != EOF) { }
+                if (!strncmp(buf, "artStyle=", 9)) {
+                    strcpy(cfg->artStyle, "hd");
+                    fprintf(stderr, "Invalid saved art style; using hd\n");
+                }
+                continue;
+            }
+            buf[length] = '\0';
 
             if(strstr(buf, "currentDay=") == buf)
                 cfg->currentDay = atoi(buf + 11);
 
             if(strstr(buf, "date=") == buf)
                 cfg->date = atoi(buf + 5);
+
+            if (!strncmp(buf, "artStyle=", 9)) {
+                if (artStyleFind(buf + 9))
+                    strcpy(cfg->artStyle, buf + 9);
+                else {
+                    strcpy(cfg->artStyle, "hd");
+                    fprintf(stderr, "Invalid saved art style; using hd\n");
+                }
+            }
         }
 
         fclose(f);

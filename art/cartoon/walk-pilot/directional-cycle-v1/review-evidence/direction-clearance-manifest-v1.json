@@ -1,0 +1,137 @@
+{
+  "status": "Root reviewed the static contact and cleared all six selected bytes for TECHNICAL MOTION PREVIEW. Full motion/art and production acceptance remain pending.",
+  "scale_exact": {
+    "numerator": 1,
+    "denominator": 10
+  },
+  "registration_convention": "Use the visually retained v6 cap feature(385,42) for024/025/026/027/029. Root reviewed028's regenerated cap shift and supplied actual feature(388,40). Alpha-threshold row spans are recorded separately and never choose scale or translation.",
+  "known_geometry_limitations": [
+    "024 rear-foot overlap is improved, but remaining clearance must be reviewed in motion.",
+    "026 fresh candidate rear-foot clearance is approximately11.6HDpixels versus about4 in the source; not fixed by registration.",
+    "027 fresh candidate rear-foot clearance is approximately11HDpixels versus about4 in the source; not fixed by registration.",
+    "029v2 retains excessive raised-foot clearance; later edits were not selected because they did not improve pose fidelity enough or changed the head.",
+    "028v4-transparent restores a clean exterior and keeps the visible toe inside its fixed canvas; gait/contact still pending review.",
+    "The original23-pose E-to-A route, camera, flip and120ms cadence are unchanged. The engine route is not the cause of the drawn pose mismatch."
+  ],
+  "frames": [
+    {
+      "frame": 24,
+      "source": "walk-direction-v1/024-generated-v7.png",
+      "sha256": "63088f5c18e71d49fb61f733e564d5f9461c55f622e124b5eeaf9aa5cbd1ee2b",
+      "actual_canvas": [
+        1024,
+        1536
+      ],
+      "cap_raw": [
+        385,
+        42
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "landmark_review": "Root visually confirmed the same fixed v6 cap feature; keep common385,42 despite minor alpha-edge midpoint differences.",
+      "approved_for_technical_preview": true
+    },
+    {
+      "frame": 25,
+      "source": "walk-direction-v1/025-generated-v2.png",
+      "sha256": "af0f050ae39858eda063c1c681c82a26e2d988e09e18dc8d1a6ff83df73126cf",
+      "actual_canvas": [
+        1024,
+        1536
+      ],
+      "cap_raw": [
+        385,
+        42
+      ],
+      "cap_target_hd": [
+        23.5,
+        0.25
+      ],
+      "landmark_review": "Root requested common visual v6 cap feature. Independently compared025v2 and v6: cap shape, brim/head angle and placement visually retained. Alpha128 top-row midpoint388.5,41 is a separate edge diagnostic, not this affine anchor.",
+      "approved_for_technical_preview": true
+    },
+    {
+      "frame": 26,
+      "source": "walk-direction-v1/026-generated-v3-fresh.png",
+      "sha256": "051be31b0a7f734231164088660fe4def6531240826d7b1d57152614f0650702",
+      "actual_canvas": [
+        1024,
+        1536
+      ],
+      "cap_raw": [
+        385,
+        42
+      ],
+      "cap_target_hd": [
+        25.5,
+        0.25
+      ],
+      "landmark_review": "Root viewed fresh026 and explicitly chose the visually retained v6 cap feature385,42. Alpha128 top-row midpoint389.5,41 remains separate diagnostic evidence.",
+      "approved_for_technical_preview": true
+    },
+    {
+      "frame": 27,
+      "source": "walk-direction-v1/027-generated-v3-fresh.png",
+      "sha256": "31e1249a5035f4ce88c35aeeabfdf52e3a9202670e96d85c07ce50035b0ce70d",
+      "actual_canvas": [
+        1024,
+        1536
+      ],
+      "cap_raw": [
+        385,
+        42
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "landmark_review": "Root viewed fresh027 and explicitly chose the visually retained v6 cap feature385,42. Alpha200 top-row midpoint388,41 is recorded separately by renderer review.",
+      "approved_for_technical_preview": true
+    },
+    {
+      "frame": 28,
+      "source": "walk-direction-v1/028-generated-v4-transparent.png",
+      "sha256": "bdbf7f83f0622cbc4b87f2f41c0f502e8185b4ee524da912f39a03cec28f8fc9",
+      "actual_canvas": [
+        1024,
+        1536
+      ],
+      "cap_raw": [
+        388,
+        40
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "landmark_review": "Root and renderer independently inspected regenerated028v4-transparent. Root supplied actualcap388,40 because the cap shifted1-2raw pixels. Use this explicit feature, with no normalization or fitting.",
+      "approved_for_technical_preview": true
+    },
+    {
+      "frame": 29,
+      "source": "walk-direction-v1/029-generated-v2.png",
+      "sha256": "a19e4143ba6647965f7d3a5bab178b4cbe131b52429da59028adb6e233fe9e78",
+      "actual_canvas": [
+        1024,
+        1536
+      ],
+      "cap_raw": [
+        385,
+        42
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "landmark_review": "Root selected029v2 and explicitly confirmed the visually retained v6 cap feature385,42; later029 candidates are not used.",
+      "approved_for_technical_preview": true
+    }
+  ],
+  "parent_static_manifest": {
+    "path": "direction-static-manifest-v1.json",
+    "sha256": "071d061d9426982d756d630dff22425a2c76a5092a5a7bd52d9678e700bdef40"
+  }
+}
+

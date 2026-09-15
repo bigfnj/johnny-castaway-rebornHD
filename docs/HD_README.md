@@ -4,6 +4,11 @@ HD assets (PNG override) support
 This fork can optionally override the original Johnny Castaway RESOURCE.001
 sprites and screens with external PNG files rendered at higher resolution.
 
+This document describes the legacy HD style, which remains the default.
+Selectable Cartoon packs use a separate root and true alpha without the HD
+magenta color key. See [Cartoon art production](cartoon-art.md) for that format
+and the [usage guide](../README.md#art-styles) for style selection.
+
 How it works
 ------------
 

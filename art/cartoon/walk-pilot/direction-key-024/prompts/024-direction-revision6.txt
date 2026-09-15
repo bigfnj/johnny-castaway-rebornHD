@@ -1,0 +1,8 @@
+Use case: precise-object-edit
+Image 1 is the edit target: preserve the entire character except the lower part of the rear leg and its small foot. Image 2 is the original frame 024 pose authority.
+
+The previous correction has the right leg ordering, but the small rear foot is still held too high. It should be skimming just above the ground beside the planted foreground foot, not hanging up beside the shin.
+
+Keep the screen-right foreground leg and its large planted foot unchanged. Keep the head, cap, face, beard, torso, arms, shorts and both knees unchanged. The small far foot currently peeks out to screen-left at about y1340 in the 1024x1536 image. Lower that REAR FOOT by roughly 90 pixels so its lowest toe is near y1430, only a small distance above the planted foot sole at y1490. Redraw the far calf and ankle that connect to it behind the foreground shin, with continuous anatomy. The rear calf passes behind the foreground leg and becomes almost entirely hidden by it. Only a small part of the rear toes/foot should peek out to screen-left beside the inside edge of the foreground foot, low near the ground. Keep the rear foot partly occluded by the foreground ankle/foot; do not place it in front or turn this into a wide stride. The original sprite shows the two feet close together vertically.
+
+Keep the same front-three-quarter angle toward screen-left and the viewer, and preserve all other appearance, placement, size, colors and outlines. Do not scale or move the figure or change canvas dimensions. Exact same 1024x1536 canvas. One transparent sprite, opaque character interior with antialiased edges, no shadow, glow, background, checkerboard or labels.

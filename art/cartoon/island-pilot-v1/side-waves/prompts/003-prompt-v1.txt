@@ -1,0 +1,12 @@
+Use case: style-transfer
+Asset type: one independent transparent animated shore-wave sprite, BACKGRND.BMP frame003, left high-tide family phase1 of3.
+
+Image1 is the exact ORIGINAL FRAME and primary GEOMETRY/PHASE authority. It was enlarged exactly4x without changing pixels and padded at raw(480,396) on1536x1024. Image2 is the approved cartoon island STYLE reference: use its narrow bright white-to-cream shore-foam strokes, delicate cyan water highlights and clean hand-painted illustration. Image3 supplies the current OCEAN WATER PALETTE only, never a background to copy.
+
+Recreate the specific white foam curves and their exact phase/placement from Image1 in that illustrated style. The curved wave wraps around the LEFT end of the island: the short curling tip is on screen-left, then the long shallow parallel foam arcs sweep toward screen-right. Keep the number, relative spacing, curve bends, staggered ends and broken sections close to this exact original frame, so the next separately authored phase moves through the original wave cycle. Do not mirror, rotate, recenter, zoom or draw a complete oval around an imagined island.
+
+The fixed original sprite region is raw x480..1055,y396..627. Keep all meaningful foam and water highlights inside this region with a slim transparent edge margin. The family uses a shared uniform0.25 export scale and the same fixed translation for all3frames, producing144x58. No individual scaling or centering will repair an oversized drawing. Keep the exact original low-perspective shape and position on the1536x1024 canvas.
+
+Draw ONLY thin luminous white/cream foam strokes and a few very light translucent cyan water strokes immediately alongside them. Opaque-looking foam cores, narrow antialiased edges; transparent empty gaps between separate strokes and outside the wave. The original saturated blue pixels are old ocean paint and its yellow pixels are old shoreline paint: DO NOT copy either as a filled shape. No opaque ocean matte, colored puddle, solid crescent base, sand, land, tree, shadow or background. No black/dark contour outline, blue rectangular patch, glow, broad fog, checkerboard, text or labels. Do not flatten the concept into this sprite. The new ocean must remain visible through the empty areas and any small translucent water tint.
+
+Output exactly one1536x1024 PNG with genuine transparent alpha, this singleleft wave phase at Image1's registered placement, and generous transparent padding. Preserve the complete foam contours without cropping. No other objects.

@@ -152,6 +152,7 @@ jobs:
           python -m pip install --quiet playwright
           python -m playwright install --with-deps chromium
           python tests/web-smoke.py build_web
+          python tests/web-art-controls.py build_web --mutation-check
 
       - uses: actions/upload-artifact@v7
         with:
