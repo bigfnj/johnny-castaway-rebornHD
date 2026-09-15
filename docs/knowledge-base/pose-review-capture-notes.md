@@ -8,8 +8,9 @@ native captures.
 Three isolated 21-asset packs passed their first-pose native smoke. The full
 42-display capture stopped at display 20 because required completion messages
 were absent from stdout, although the process exited 0 and printed its bounded
-stop message. The assertion was retained. Full native capture, candidate golden
-regression and the actual-capture browser review remain incomplete.
+stop message. The assertion was retained. At this Windows checkpoint, full
+native capture, candidate golden regression and the actual-capture browser
+review remained incomplete. The subsequent Linux results are recorded below.
 
 Three failed attempts and one successful separate control produced complete,
 identical 1280 by 960 P6 images, each 3,686,416 bytes. This is evidence of missing
@@ -47,3 +48,35 @@ Local evidence is retained under the art worktree's ignored
 `distinct-handles-control-020` logs and PPMs. The invocation guide and longer
 investigation notes are in `build/original-pose-review/README-motion-review.md`
 and `CAPTURE-NOTES.md`. These local files are not included in the repository.
+
+## Subsequent Linux review
+
+The existing Docker Desktop WSL environment and `johnny-platform-cleanup:latest`
+image provided a windowless Linux/Xvfb capture path. No Windows application was
+launched. Docker needed `--init` here so `xvfb-run` could complete startup; its
+earlier invocation as PID 1 stayed waiting before the engine started.
+
+The Linux original display-20 probe produced a complete image and all required
+completion messages. This does not establish a cause or fix for the Windows
+logging failure. A same-seed cross-platform image comparison also failed:
+`island.c` uses libc `rand()` to select the ocean and clouds, and Windows and
+Linux selected different assets with seed 9. A seed alone is therefore not a
+cross-platform scene identity. Record the selected asset paths as well as the
+platform and seed when reproducing visual evidence.
+
+Linux seed 11 explicitly loaded the approved Cartoon `OCEAN02.SCR.png`. Current
+and Calm focus candidate captures then used that same Linux build and seed.
+Both display-20 smoke checks passed before the complete routes: 42 displays,
+23 route positions and the 3760 ms endpoint witness per version. Every image
+difference stayed inside the placed Johnny canvas. The diagnostic archives
+differed only in six walking PNGs; all 15 island PNGs were unchanged.
+
+Both normal archives also matched all 2,452 golden decoder hashes. The browser
+player loaded all 84 actual captures and passed seven smoke checks followed by
+52 timeline and control regressions. These results validate this Linux review
+route, not Windows scene parity, original-executable timing or human acceptance
+of the draft artwork. All 75 protected source and input hashes remained unchanged.
+
+Local reproduction scripts, capture reports, image hashes, pair comparisons and
+browser results are under `build/original-pose-review/linux-capture/`. The Windows
+logging issue remains in `BACKLOG.md`; it was not bypassed or marked resolved.
