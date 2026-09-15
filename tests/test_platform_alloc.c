@@ -62,8 +62,10 @@ static void test_free(void *p) {
 #undef free
 #ifdef PLATFORM_MACOS
 #include <objc/runtime.h>
+static int failed_objc_allocations;
 static id fail_objc_alloc(id self, SEL command, NSZone *zone) {
     (void)self; (void)command; (void)zone;
+    failed_objc_allocations++;
     return nil;
 }
 #endif
@@ -79,12 +81,17 @@ int main(int argc, char **argv) {
         fail_native_dc = !strcmp(argv[1], "native-context");
         assert(platformCreateWindow("hidden failure", 3, 2, 0) == NULL);
 #elif defined(PLATFORM_MACOS)
+        /* NSApplication must exist before the hidden NSWindow allocation.
+         * No launch, activation or OS-delivered input is needed for this path. */
         [NSApplication sharedApplication];
         Class cls = !strcmp(argv[1], "native-window") ? [JCRebornWindow class] : [JCRebornView class];
         SEL selector = @selector(allocWithZone:);
         const char *types = method_getTypeEncoding(class_getClassMethod(cls, selector));
         assert(class_addMethod(object_getClass(cls), selector, (IMP)fail_objc_alloc, types));
         assert(platformCreateWindow("hidden failure", 3, 2, 0) == NULL);
+        assert(failed_objc_allocations == 1);
+        assert(strstr(platformGetError(), !strcmp(argv[1], "native-window") ?
+            "Cocoa window" : "Cocoa view"));
 #else
         assert(!"native allocation case requires Windows or macOS");
 #endif
