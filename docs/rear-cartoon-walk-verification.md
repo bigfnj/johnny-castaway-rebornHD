@@ -87,6 +87,88 @@ authoring overlap.
 
 ## Delivery and post-merge audit
 
-The branch delivery and fresh main-branch audit will be recorded here after
-the remote checks and merge complete. No release package is implied by the
-local production integration evidence above.
+The artwork was committed as `82a43a4bae1545382b46db41eba7ba07f63705c8`
+and merged through [PR 10](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/10)
+at `0eb2214450a6280104d985550819576e464bd6a2`. The
+[PR CI run 34999133646](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34999133646)
+passed all four jobs: Windows, Linux, macOS and Web.
+The [merged-main CI run 34999501028](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34999501028)
+also passed all four jobs on `0eb2214`.
+
+Fresh main-checkout authoring checks passed in order: both smoke suites,
+59 pilot and 63 catalog regressions, then both reproduction checks. The existing
+art tools also passed 20 regressions. These main executions are recorded in
+the work session, not a separate saved log directory. All 77 newly staged
+authoring-bundle paths were independently checked against their exact Git blob
+bytes before delivery.
+
+The merged tree differs from the tested branch only in the prior foundation's
+delivery documentation. Engine/platform/vendor source, CMake/runtime deployment
+wiring and the native gate are unchanged from the pre-promotion main baseline.
+The fresh authoring audit read both complete metadata tools, the six-pose
+exporter, original reference extractor, diagnostic viewer and their tests,
+and all seven tracked native helper snapshots including the C observer.
+It found no new actionable defect. Every one of the 77 delivered art paths
+matches both the reviewed worktree and its committed bytes. All 27 checked
+acceptance/evidence hash links match, the 21 inherited rows remain exact,
+and all 27 accepted PNG hashes match the production archive. Historical
+overhanging fixtures, low-alpha filtering limits and the old-baseline native
+reproduction requirements remain accurately documented.
+
+A separate fresh core audit covered startup and CLI, events/configuration,
+common audio, ADS/TTM dispatch and cleanup, resource parsing/decompression,
+story/walk/path, benchmark/utilities, island lifecycle and ZIP ownership.
+It found no new confirmed runtime issue or unrecorded backlog item. Independent
+in-memory archive comparison again found six additions, with no changed or
+removed prior members. Known audio startup, malformed-config/string/LZW,
+seed-range and unfinished-command issues remain open in BACKLOG.md. Normal
+scene cleanup and process-owned decoded resource pools remain distinct; this
+review establishes no new recurring memory leak or measured optimization.
+
+The main checkout's `jc_runtime_data` target refreshed the deployed archive
+beside both Windows executable targets. The ZIP matches the approved production
+hash; EXE/SCR bytes and timestamps did not change. On the inactive desktop,
+`gate.ps1 -NoBuild -SmokeOnly` passed before the focused art regression passed
+31/31. Both runs preserved the input desktop and protected runtime inputs.
+Local evidence is retained under `build/windows-gates/rear-main-smoke/` and
+`build/windows-gates/rear-main-art-regression/`. Their log SHA256 values are,
+respectively,
+`e48bec93686c81e2f1b121ce2fb2268bc4a8a1eb8b47b3e4425f12add9b7c051`
+and `eba5f9e3cba1a4c3793718c3d66e7638c4b96e6ec6a4e8992babefe1e9684632`.
+
+The final platform audit freshly read all four backend implementations, the
+platform API, PNG decoder/loader and ZIP interfaces, graphics/style/island/audio,
+the Web page and relevant walk/event/startup/teardown callers. It found no new
+actionable issue or introduced regression. Windows foreground raw-input cleanup,
+common audio initialization and active post-open device-error handling remain
+the documented backlog items. Intentional backend no-op hooks were not
+misclassified as broken calls. Physical-device audio and full desktop
+presentation limits remain separate from this source review and the CI results.
+
+The three fresh source reviews established no new recurring leak, dead call or
+measured performance saving. Existing follow-ups remain in BACKLOG.md, and its
+next-art recommendation now names the traced 018/023 arrival pair. The original
+pilot-history transition is also retained there for a future front-walk revision.
+No release package is implied by repository integration.
+
+## Next bounded art work
+
+JOHNWALK 018 is the 32-by-77 native wait/arrival image for northwest heading 3
+and its mirrored northeast heading 5 at all six island spots. The paired turn
+is 023, already approved in this batch. `src/data/walk_data.h:104-121` shows
+the first spot's turn/wait rows; `src/engine/walk.c:135-174` selects the wait
+rows and line 212 applies the arrival hold. Generate 018 against its original
+reference, then review its transition with accepted 023 and the complete walk.
+
+The finite orientation table uses wait frames 000, 015, 016, 017 and 018, and
+turn frames 003, 009, 010, 012 and 023. Nine of those ten unique assets still
+use HD fallback. This describes orientation coverage, not every idle animation
+or story scene.
+
+A sequential slot trace through the 41 shipped TTM resources also binds 018 to
+JOHNWALK in SJLEAVES tag 3, "Johnny gets his bags": load at byte offset 100,
+DRAW_SPRITE 018 at offset 228, then 012 at 248 and flipped 011 at 268. MARY.ADS
+scene 5 refers to this resource; the story table makes it eligible on day 8.
+The independently decoded supplied-original segment agrees at offsets 210-284.
+The entire TTM still has the previously documented SET_DELAY 0 difference, so
+this is static sequence evidence, not a new original-runtime parity result.
