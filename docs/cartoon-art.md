@@ -194,9 +194,9 @@ For an explicit target build, use:
 cmake --build build --config Release --target jc_runtime_data
 ```
 
-Building only `jc_reborn` copies the archive after a link step;
-when only the artwork changed, that target can be up to date and leave its old
-archive beside the executable. The full `gate.ps1` uses the normal build. Web
+The native executable targets also depend on `jc_runtime_data`, so building
+only `jc_reborn` or `jc_reborn_scr` refreshes the archive even when no link step
+is needed. CMake 3.19 or newer is required. The full `gate.ps1` uses the normal build. Web
 builds declare the archive as an input and regenerate their preload data when
 it changes.
 

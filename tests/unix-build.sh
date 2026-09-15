@@ -71,7 +71,15 @@ cd "$WORK"
 echo
 echo "== build =="
 cmake -S . -B build-unix -DCMAKE_BUILD_TYPE=Release >/dev/null
-cmake --build build-unix -j"$(ncpu)" 2>&1 | tee /tmp/build.log | grep -E 'error|warning' || true
+if cmake --build build-unix -j"$(ncpu)" > /tmp/build.log 2>&1; then
+    # No diagnostic matches is a successful, warning-free build.
+    grep -E 'error|warning' /tmp/build.log || true
+else
+    build_status=$?
+    cat /tmp/build.log
+    echo "FAIL tests/unix-build.sh: CMake build failed (status $build_status; /tmp/build.log)"
+    exit "$build_status"
+fi
 
 if ! [ -x build-unix/jc_reborn ]; then
     echo "FAIL no binary produced"

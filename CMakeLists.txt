@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.19)
 
 # ── Version, single source of truth ───────────────────────────────────────────
 # Releases are cut from git tags (v0.9.0, v1.0.0, ...) and .github/workflows/
@@ -166,20 +166,6 @@ if(NOT EMSCRIPTEN)
         ${CMAKE_CURRENT_SOURCE_DIR}/third_party/miniz)
 endif()
 
-# ── Runtime data ──────────────────────────────────────────────────────────────
-# The engine opens scrantic_data.zip beside the executable (see zipvfs_init).
-# Without this copy the binary builds successfully and then dies on startup,
-# which is exactly what it did: the archive lives in assets/ and nothing ever
-# put it where the program looks. Emscripten is excluded because --preload-file
-# already bakes the archive into jc_reborn.data.
-if(NOT EMSCRIPTEN)
-    add_custom_command(TARGET jc_reborn POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
-                "$<TARGET_FILE_DIR:jc_reborn>/scrantic_data.zip"
-        COMMENT "Copying scrantic_data.zip next to jc_reborn")
-endif()
-
 # Set Objective-C compilation for macOS platform file
 if(APPLE)
     set_source_files_properties(platform/platform_macos.m PROPERTIES COMPILE_FLAGS "-x objective-c")
@@ -294,27 +280,18 @@ if(WIN32 AND NOT EMSCRIPTEN)
         OUTPUT_NAME "jc_reborn"
         SUFFIX ".scr")
 
-    # The archive has to travel with it, exactly as for the console build: an
-    # installed .scr runs from System32 and finds its data beside itself.
-    add_custom_command(TARGET jc_reborn_scr POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
-                "$<TARGET_FILE_DIR:jc_reborn_scr>/scrantic_data.zip"
-        COMMENT "Copying scrantic_data.zip next to jc_reborn.scr")
 endif()
 
-# Refresh data on every normal build, including artwork-only changes with no
-# link step. The POST_BUILD commands cover freshly linked explicit targets.
+# A prerequisite runs even when an explicit executable target needs no relink.
+# CMake 3.19 enables CMP0112 NEW: TARGET_FILE_DIR does not add a reverse
+# dependency on the executable, which would make this prerequisite cyclic.
 if(NOT EMSCRIPTEN)
-    add_custom_target(jc_runtime_data ALL
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
-                "$<TARGET_FILE_DIR:jc_reborn>/scrantic_data.zip"
-        DEPENDS jc_reborn "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
-        COMMENT "Refreshing runtime artwork archive")
+    include(cmake/RuntimeData.cmake)
+    set(JC_RUNTIME_TARGETS jc_reborn)
     if(TARGET jc_reborn_scr)
-        add_dependencies(jc_runtime_data jc_reborn_scr)
+        list(APPEND JC_RUNTIME_TARGETS jc_reborn_scr)
     endif()
+    jc_add_runtime_data("${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip" ${JC_RUNTIME_TARGETS})
 endif()
 
 # Installation
