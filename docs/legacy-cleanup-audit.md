@@ -17,9 +17,16 @@ Detailed phase and mutation evidence is in [the verification record](legacy-clea
 
 No introduced normal-playback regression was found. The complete review found
 additional existing engine defects for a bounded follow-up: signed left shifts
-in circle drawing, odd-width SCR decoding, consecutive zero-image BMP name
-ownership, and one unused scene field. Follow-up implementation and validation
-are still in progress; this record does not yet claim those fixes are delivered.
+in circle drawing, odd-width SCR decoding and consecutive zero-image BMP name
+ownership. It also found an unused scene field, the unused platform color-key
+API and write-only macOS fullscreen bookkeeping. The follow-up corrects these
+defects and removes that unused state. Independent review confirmed cached-name
+alias safety, rejection before packed-screen allocation, defined circle
+arithmetic and negative-control execution. Focused smoke passed before six
+sanitized drawing regressions; seven rebuilt source mutations fired. Twelve
+complete circle buffers match the arithmetic-undo variant on the tested Linux
+compiler. Integrated validation and follow-up delivery are recorded separately
+in the verification record.
 
 ## Decisions and remaining work
 

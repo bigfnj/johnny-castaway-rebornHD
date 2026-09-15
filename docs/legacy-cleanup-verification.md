@@ -1,7 +1,7 @@
 # Legacy cleanup verification
 
 See [the execution plan](legacy-cleanup-plan.md) for phase order and decisions.
-This record distinguishes completed checks from pending integration work.
+This record preserves completed checks and the limits of their evidence.
 
 ## Baseline checkpoint
 
@@ -81,5 +81,45 @@ key-delivery coverage. All original assertions remain; no production change was
 needed for that failure.
 
 [PR 4](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/4) merged as
-`50eb6f4bc4b1bea704d03bbdda360be216be7d31`. The post-merge main rebuild and
-independent audit are in progress.
+`50eb6f4bc4b1bea704d03bbdda360be216be7d31`. The post-merge main rebuild passed
+the complete PowerShell 7 gate without compiler warnings, all eight frozen
+scene comparisons and [four-platform main CI](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34929288040).
+The full [independent audit](legacy-cleanup-audit.md) found additional existing
+drawing/ownership defects and unused platform state for a bounded follow-up.
+
+## Post-merge audit follow-up
+
+The drawing probe passed two smoke cases before six sanitized regressions.
+Independent expected circle pixels prevent a no-op renderer from passing;
+12 complete buffers at scales 1 and 2 also matched the pre-fix arithmetic variant
+on the tested Linux compiler. All seven isolated rebuilt source mutations fired
+the intended diagnostic/assertion, with advanced artifact timestamps and case
+execution witnesses. Linux gate-order controls passed 11 cases; all six
+continuation mutations fired, including both new drawing phases. Reports are
+retained in the drawing worktree under `build/drawing-audit/verified-smoke`,
+`build/drawing-audit/verified-regression` and `build/drawing-flow-wiring`.
+
+Independent code review confirmed the cached-name copy precedes release and
+subsequent resource lookup uses the new owned name. The unused platform color-key
+API had no callers. Removing it preserves active fullscreen state and the
+separate PNG alpha conversion. Worker checks passed Windows, Linux and Web
+backend smoke then regression.
+
+The integrated follow-up at `b7bc1b0` passed the complete Windows PowerShell 7
+gate without compiler warnings (`build/cleanup/phase6-audit-followup/gate.log`).
+The complete Linux gate also passed without warnings: PNG, decoder, platform
+and drawing smoke before regressions, 11 decoder cases, 16 platform regressions,
+four graphics-allocation cases, six drawing regressions with 12-buffer parity,
+and all 2,452 golden files. Its retained log/report are under
+`build/cleanup/followup-linux/output`.
+
+All eight controlled HD/Cartoon scenes, nine full HD/fallback wave captures and
+four palm HD/partial-fallback captures match the frozen pre-cleanup binaries
+byte-for-byte. Evidence is under `phase6-scenes`, `phase6-wave-history` and
+`phase6-palm-history` in `build/cleanup`. The production archive hash and all
+tracked assets, art records and image lessons remain unchanged.
+
+The follow-up is delivered through a separate pull request on
+`fix/legacy-cleanup`. Its four-platform checks and the subsequent main workflow
+retain the hosted delivery evidence; the local records above describe exactly
+what was executed before submission.

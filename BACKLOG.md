@@ -1,8 +1,9 @@
 # Backlog - johnny-castaway-rebornHD
 
 The [cleanup verification](docs/legacy-cleanup-verification.md) records completed
-checks and pending delivery work. The [plan](docs/legacy-cleanup-plan.md) records
-scope and decisions. Historical detail remains in Git and the linked art records.
+checks. The [post-merge audit](docs/legacy-cleanup-audit.md) records review coverage
+and evidence limits; the [plan](docs/legacy-cleanup-plan.md) records scope and
+decisions. Historical detail remains in Git and the linked art records.
 
 ## Open work
 
@@ -25,7 +26,7 @@ scope and decisions. Historical detail remains in Git and the linked art records
 | Keep later style source storage deliberate | Preserve selected raw art, used ancestors, prompts, acceptance and export recipes. Avoid duplicating the full original archive or every diagnostic capture in each style. Noir/anime also need explicit catalog and authoring-tool registration. |
 | Finish or retire the older local Web wrapper | scripts/build_web.ps1 compiles JS/Wasm/data but never copies index.html or favicon.ico. It also retains workstation-specific SDK discovery and changes the caller's directory. The supported tools/build_web.py path assembles a servable directory and is covered in CI. Review local-SDK compatibility before replacing the old wrapper. |
 | Repair original-data extraction before using it for recovery | tools/extract_sound.c and extract_walk_data.c pass an unchecked fopen result into fseek. Sound extraction also does not check allocation, short reads or output creation/writes. Both depend on ../data/SCRANTIC.SCR, which is absent here; the runtime does not call them. Add explicit input/output arguments and failure checks with a source fixture before attempting missing-sound recovery. |
-| Bound diagnostic history in long Web debug sessions | index.html retains printed lines in jcLog and the output textarea. Debug mode can keep appending throughout playback. Define a bounded recent-history policy while preserving useful startup/error evidence and browser assertions. Normal playback emits much less output; no ordinary scene leak is claimed from this log. |
+| Bound diagnostic history in long Web debug sessions | index.html retains printed lines in jcLog. Debug mode can keep appending throughout playback. Define a bounded recent-history policy while preserving useful startup/error evidence and browser assertions. Normal playback emits much less output; no ordinary scene leak is claimed from this log. |
 | Validate the CLI frame-limit range | frames parsing checks positivity but not errno or the uint32 range. On LP64, 4294967296 becomes zero (unlimited); UINT32_MAX can never satisfy the current increment-then-greater-than stop condition. Reject unsupported limits with boundary fixtures while preserving ordinary frame counts and their capture timing. |
 
 ## Legacy cleanup results
@@ -44,6 +45,8 @@ The verification record is authoritative for which phase checks have completed.
 | Platform allocation failure | All four backends refuse failed constructors and unwind acquired state. Borrowed wrappers leave caller pixels alone; WIC frees pixels if wrapping fails. Required engine callers report construction failure. |
 | Events/presentation/audio contracts | Linux/macOS drain ignored events. macOS observes quit during dispatch. Linux scales into its actual client rectangle with centered nearest-neighbor aspect preservation. Web refuses unsupported audio contracts. |
 | Unused code | Removed 35 write-only fields and unused version allocations, the ignored display background parameter, four unreachable post-lookup NULL branches and the empty intro reset. Every original header byte still goes through EOF-checking readers. Unused platform helpers/globals are removed. |
+| Post-merge drawing and name ownership | Replaced negative signed shifts in both circle loops without changing tested pixels. Odd-width packed screens now fail with a resource-naming diagnostic in rendering and dumping. Repeated zero-image BMP loads release the previous name, including when the request aliases the cached name. Sanitized controls and seven rebuilt negative controls verify the fixes. |
+| Post-merge unused platform state | Removed the uncalled color-key API and its unused fields/branches across all four backends, the write-only macOS fullscreen field and an unused scene counter. Active fullscreen state and PNG alpha handling remain intact. |
 | Architecture records | The guide now describes verified startup, rendering and ownership. The command review corrects old opcode numbers and distinguishes working operations from reachable no-ops. |
 
 ## Accepted artwork and earlier fixes
