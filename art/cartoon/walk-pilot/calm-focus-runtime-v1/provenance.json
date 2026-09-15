@@ -1,0 +1,244 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "scope": "Technical candidate only: new toe edits and in-scene motion await human review.",
+  "prior_standalone_acceptance": {
+    "file": "../original-pose-corrections-v1/standalone-motion-acceptance.json",
+    "sha256": "5fc12ecd5f73aabde5d3fd92a838d19d8c7f69c1d687c358533fec9d97fd8ee0",
+    "bytes": 8974,
+    "difference": "The accepted standalone used different028 and029 source bytes. Its appearance approval does not silently approve these two new toe edits."
+  },
+  "source_archive": {
+    "file": "source-images.zip",
+    "sha256": "b6bf6893cf4ac5942a9e3cd58ab4de9d0ecee57d82248d5ceb27eee5b94a1ae3",
+    "bytes": 7893764,
+    "repeated_construction_identical": true
+  },
+  "source_frames": [
+    {
+      "frame": 24,
+      "bundle_member": "024-calm-pose-v2.png",
+      "source_origin": "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\art\\cartoon\\walk-pilot\\original-pose-corrections-v1\\024-calm-pose-v2.png",
+      "sha256": "13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb",
+      "bytes": 1252617,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "ancestry_record": "../original-pose-corrections-v1/next-generation-review.json"
+    },
+    {
+      "frame": 25,
+      "bundle_member": "025-calm-eyes-v1.png",
+      "source_origin": "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\art\\cartoon\\walk-pilot\\original-pose-corrections-v1\\025-calm-eyes-v1.png",
+      "sha256": "656061532b3833c092dd76d57d0cdd2e9e21a1b59f8cf0f360c5c0250494b20c",
+      "bytes": 1399255,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "ancestry_record": "../original-pose-corrections-v1/next-generation-review.json"
+    },
+    {
+      "frame": 26,
+      "bundle_member": "026-calm-eyes-v1.png",
+      "source_origin": "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\art\\cartoon\\walk-pilot\\original-pose-corrections-v1\\026-calm-eyes-v1.png",
+      "sha256": "20336e0fa8ab6ec930a78307e32719fd6a7d6a871e22803dd8b197724f34e110",
+      "bytes": 1396730,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "ancestry_record": "../original-pose-corrections-v1/next-generation-review.json"
+    },
+    {
+      "frame": 27,
+      "bundle_member": "027-calm-eyes-v1.png",
+      "source_origin": "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\art\\cartoon\\walk-pilot\\original-pose-corrections-v1\\027-calm-eyes-v1.png",
+      "sha256": "02adcafbd8548901b29eeb5a5f61a6f1fbe3c72b854410cd403139420ba241d6",
+      "bytes": 1283347,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "ancestry_record": "../original-pose-corrections-v1/next-generation-review.json"
+    },
+    {
+      "frame": 28,
+      "bundle_member": "028-canvas-clearance-v1.png",
+      "source_origin": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-dc210e19-f282-4026-aea3-c660010a0ff4.png",
+      "sha256": "cf502632f5a22593ccce4173b257d3c04b831cff072d0732fdf8bbd6e4a92691",
+      "bytes": 1337613,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "ancestry_record": "prompts.json"
+    },
+    {
+      "frame": 29,
+      "bundle_member": "029-canvas-clearance-v1.png",
+      "source_origin": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-066605a3-71bb-40a3-91ac-d2d4f59c7bfc.png",
+      "sha256": "481db648e8c9b553ec940309a0a760fa6a7c02a884b0ccd3676f1bfc131b8129",
+      "bytes": 1300643,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "ancestry_record": "prompts.json"
+    }
+  ],
+  "exact_call_record": {
+    "file": "prompts.json",
+    "sha256": "408738b0fa79ef16c5d592ffd41dc627e7acf7a844cd9bba404fbae671631e37",
+    "bytes": 3393,
+    "policy": "Exact original JSON bytes, decoded prompt strings and actual ordered references retained. SHA-256 prompt hashes use UTF-8 without whitespace/newline normalization."
+  },
+  "new_generation_attempts": [
+    {
+      "frame": 28,
+      "prompt_record": "prompts.json#/jobs/0",
+      "prompt_utf8_sha256": "2b9d1c92e1d8a8772063fcebe913f8744c707605330ce5fba239fef71a8b5d7c",
+      "tool": "image_gen.imagegen",
+      "num_last_images_to_include": "omitted",
+      "ordered_references": [
+        {
+          "index_zero_based": 0,
+          "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/028-natural-left-step-v5.png",
+          "sha256": "4d64d52cdac32e71abc8264e3c0461cc73673983ad9992d0888899dad9dd5665",
+          "bytes": 1346253,
+          "canvas": [
+            1024,
+            1536
+          ],
+          "role": "Single direct edit target from the accepted standalone motion; anatomy mismatch was reviewed and retained.",
+          "durable_source": "../original-pose-corrections-v1/028-natural-left-step-v5.png"
+        }
+      ],
+      "output": {
+        "bundle_member": "028-canvas-clearance-v1.png",
+        "actual_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-dc210e19-f282-4026-aea3-c660010a0ff4.png",
+        "sha256": "cf502632f5a22593ccce4173b257d3c04b831cff072d0732fdf8bbd6e4a92691",
+        "bytes": 1337613,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "status": "candidate; new toe appearance and in-scene motion not yet accepted",
+      "scope": "The prompt requests a local toe edit; it does not prove unchanged pixels elsewhere."
+    },
+    {
+      "frame": 29,
+      "prompt_record": "prompts.json#/jobs/1",
+      "prompt_utf8_sha256": "5f08d6cf8637665c8ffda44b8998bce79187098e9cafd00a101269989b856f48",
+      "tool": "image_gen.imagegen",
+      "num_last_images_to_include": "omitted",
+      "ordered_references": [
+        {
+          "index_zero_based": 0,
+          "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/029-calm-pose-v2.png",
+          "sha256": "c92553a2bca8778736063bee25d8518919da0c599ee7b905d6c0d2caa14d6cc1",
+          "bytes": 1292634,
+          "canvas": [
+            1024,
+            1536
+          ],
+          "role": "Single direct edit target from the accepted standalone motion; anatomy mismatch was reviewed and retained.",
+          "durable_source": "../original-pose-corrections-v1/029-calm-pose-v2.png"
+        }
+      ],
+      "output": {
+        "bundle_member": "029-canvas-clearance-v1.png",
+        "actual_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-066605a3-71bb-40a3-91ac-d2d4f59c7bfc.png",
+        "sha256": "481db648e8c9b553ec940309a0a760fa6a7c02a884b0ccd3676f1bfc131b8129",
+        "bytes": 1300643,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "status": "candidate; new toe appearance and in-scene motion not yet accepted",
+      "scope": "The prompt requests a local toe edit; it does not prove unchanged pixels elsewhere."
+    }
+  ],
+  "technical_export_origin": {
+    "script_historical_path": "build/original-pose-review/export_calm_runtime.py",
+    "script_sha256": "c963f8cded62c1823e1b4cdd06423d5f53f820c60ce4a2ddeab5133e3aee0868",
+    "pillow_version": "12.3.0",
+    "report": {
+      "file": "review-evidence/export-report.json",
+      "sha256": "90a6620a2f962772fcf74ee328a21f8e6a9ddc8d19ace565bd95bb04be67fa99",
+      "bytes": 5754
+    },
+    "independent_report": {
+      "file": "review-evidence/independent-validation.json",
+      "sha256": "2d27c51e1c1357f0ebc9eb9d46881a33c3ef75166d2072e4006e6503efd35a81",
+      "bytes": 14309
+    }
+  },
+  "independent_raw_diagnostics": {
+    "basis": "Read-only alpha-mask measurements reported by test_plan. Threshold alpha8, with fixed y-bands rather than anatomical masks; no pixel-identity claim.",
+    "frames": [
+      {
+        "frame": 28,
+        "source_sha256": "cf502632f5a22593ccce4173b257d3c04b831cff072d0732fdf8bbd6e4a92691",
+        "cap_alpha128_top_y": 40,
+        "cap_alpha128_span_x_inclusive": [
+          376,
+          401
+        ],
+        "cap_midpoint_x": 388.5,
+        "prior_cap_midpoint_x": 389,
+        "silhouette_y_less_than_900_iou": 0.99655598,
+        "head_band_y_less_than_520_iou": 0.99557154,
+        "silhouette_y_less_than_900_chebyshev_distance_max_raw_px": 2,
+        "visible_rgba_changed_pixels_y_less_than_900": 221804
+      },
+      {
+        "frame": 29,
+        "source_sha256": "481db648e8c9b553ec940309a0a760fa6a7c02a884b0ccd3676f1bfc131b8129",
+        "cap_alpha128_top_y": 40,
+        "cap_alpha128_span_x_inclusive": [
+          377,
+          398
+        ],
+        "cap_midpoint_x": 387.5,
+        "prior_cap_midpoint_x": 388,
+        "silhouette_y_less_than_900_iou": 0.99532283,
+        "head_band_y_less_than_520_iou": 0.99434609,
+        "silhouette_y_less_than_900_chebyshev_distance_max_raw_px": 2,
+        "visible_rgba_changed_pixels_y_less_than_900": 210820
+      }
+    ]
+  },
+  "rendering_limits": "No alpha8 source pixel centers lie outside the existing canvases, but filtered cap-edge clipping is not zero. White-background comparisons differ by10-12 channel levels at5-6 cap pixels per frame; blue by at most7.029 has two outside cap-fringe pixels at alpha12 and8. The raw-RGBA maximum255 in028 occurs at alpha1 and has premultiplied delta1, not a255-level visible difference.",
+  "lessons": [
+    "The single-reference toe-clearance requests brought the source pixel centers inside existing canvases after combined shorts/leg edits failed. This is a technical result pending human review, not a guarantee of local-only redraw.",
+    "Keep the accepted family scale0.1 and cap registration. Do not shrink or shift the entire family to conceal local toe overhang.",
+    "Separate source-center bounds from filtered-edge behavior, and inspect premultiplied/composited differences rather than maximum straight-RGBA differences at tiny alpha."
+  ],
+  "portable_export_verification": {
+    "exporter": {
+      "file": "export.py",
+      "sha256": "db027fd2bb69d2c594b4ab5c465a060a8269a19592f9d2244a809578295cf440",
+      "bytes": 5781
+    },
+    "recipe": {
+      "file": "recipe.json",
+      "sha256": "77ffb83239754f6765800973ed323f185e5665e546855f4b7eb05d6715d18ee3",
+      "bytes": 8190
+    },
+    "report": {
+      "file": "review-evidence/export-verification.json",
+      "sha256": "f60d66ce8c08e4160d1a2deba937721c8a379dead5aef6662ca88feddc5a8c4c",
+      "bytes": 9140
+    },
+    "result": "PASS: 2 smoke, 30 regression checks, 15 isolated executed guard mutations"
+  },
+  "linux_scene_evidence": {
+    "file": "review-evidence/linux-scene-validation.json",
+    "sha256": "504b074b2ad9998a0f4c2340b34789639f119ebb26195f54d7fdafdb9ab1b0cf",
+    "bytes": 44969
+  }
+}

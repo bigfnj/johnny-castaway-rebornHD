@@ -1,0 +1,214 @@
+{
+  "python": "3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]",
+  "exporter_sha256": "db027fd2bb69d2c594b4ab5c465a060a8269a19592f9d2244a809578295cf440",
+  "source_zip_sha256": "b6bf6893cf4ac5942a9e3cd58ab4de9d0ecee57d82248d5ceb27eee5b94a1ae3",
+  "smoke": [
+    "Actual exporter executes and writes exactly six candidate PNGs",
+    "First candidate decodes as the expected transparent RGBA64x150 canvas"
+  ],
+  "regression": [
+    "024: exact independently exported bytes and runtime RGBA canvas",
+    "025: exact independently exported bytes and runtime RGBA canvas",
+    "026: exact independently exported bytes and runtime RGBA canvas",
+    "027: exact independently exported bytes and runtime RGBA canvas",
+    "028: exact independently exported bytes and runtime RGBA canvas",
+    "029: exact independently exported bytes and runtime RGBA canvas",
+    "existing: named refusal, no new or changed output",
+    "version: named refusal, no new or changed output",
+    "scale: named refusal, no new or changed output",
+    "resampling: named refusal, no new or changed output",
+    "paths: named refusal, no new or changed output",
+    "bundle-hash: named refusal, no new or changed output",
+    "member-extra: named refusal, no new or changed output",
+    "generated-hash: named refusal, no new or changed output",
+    "generated-canvas: named refusal, no new or changed output",
+    "frame-hash: named refusal, no new or changed output",
+    "skew: named refusal, no new or changed output",
+    "cap: named refusal, no new or changed output",
+    "runtime-canvas: named refusal, no new or changed output",
+    "outside-alpha: named refusal, no new or changed output",
+    "export-hash: named refusal, no new or changed output",
+    "normalize: named refusal, no new or changed output",
+    "path-order: named refusal, no new or changed output",
+    "bundle-size: named refusal, no new or changed output",
+    "member-missing: named refusal, no new or changed output",
+    "member-duplicate: named refusal, no new or changed output",
+    "frame-canvas: named refusal, no new or changed output",
+    "target: named refusal, no new or changed output",
+    "translation: named refusal, no new or changed output",
+    "export-size: named refusal, no new or changed output"
+  ],
+  "mutations": [
+    {
+      "removed_guard": "existing",
+      "mutated_source_sha256": "12ee7bee54cbb4f783de4d65483ea18ae173ebb744fe082589e674608e6cc8fa",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "12ee7bee54cbb4f783de4d65483ea18ae173ebb744fe082589e674608e6cc8fa",
+      "actual_failed_checks": [
+        "existing"
+      ],
+      "exit_code": 1,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "version",
+      "mutated_source_sha256": "5eff8ebe82302fa7a922d61ce2090f7c33999ded6c8a210cfc5dcfeab3ff3cb7",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "5eff8ebe82302fa7a922d61ce2090f7c33999ded6c8a210cfc5dcfeab3ff3cb7",
+      "actual_failed_checks": [
+        "version"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "scale",
+      "mutated_source_sha256": "bfaccb5969ca10c165dc4d579b8b714d7b6ed23e16c825cdb6133a0c6052e801",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "bfaccb5969ca10c165dc4d579b8b714d7b6ed23e16c825cdb6133a0c6052e801",
+      "actual_failed_checks": [
+        "scale"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "resampling",
+      "mutated_source_sha256": "205b46ab56ea17ce48bbfdc603005767184ebc85f70e0685cf8670770801801b",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "205b46ab56ea17ce48bbfdc603005767184ebc85f70e0685cf8670770801801b",
+      "actual_failed_checks": [
+        "resampling"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "paths",
+      "mutated_source_sha256": "67794b5c0b6a25487eae8071dd86b4acf534556a05da2016717865191e7a7ebe",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "67794b5c0b6a25487eae8071dd86b4acf534556a05da2016717865191e7a7ebe",
+      "actual_failed_checks": [
+        "paths"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "bundle-hash",
+      "mutated_source_sha256": "ac4d68e03a27e3e727a2f301fe0b4ed7445fc40e9825e517808742a0da68e5b5",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "ac4d68e03a27e3e727a2f301fe0b4ed7445fc40e9825e517808742a0da68e5b5",
+      "actual_failed_checks": [
+        "bundle-hash"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "member-extra",
+      "mutated_source_sha256": "e0aed2bcb371c03b75917a24668ac0577d103b12bd865174af39ecb3dd705d3c",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "e0aed2bcb371c03b75917a24668ac0577d103b12bd865174af39ecb3dd705d3c",
+      "actual_failed_checks": [
+        "member-extra"
+      ],
+      "exit_code": 1,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "generated-hash",
+      "mutated_source_sha256": "1f0f584263fb22a6fa1af4f277175674481bc8c4f9b294c89d5d2cda318f89c7",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "1f0f584263fb22a6fa1af4f277175674481bc8c4f9b294c89d5d2cda318f89c7",
+      "actual_failed_checks": [
+        "generated-hash"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "generated-canvas",
+      "mutated_source_sha256": "7c7982ac81bdcf6c5bfc006b70207133890c89a9c5d8ad97a4909afd22cafed0",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "7c7982ac81bdcf6c5bfc006b70207133890c89a9c5d8ad97a4909afd22cafed0",
+      "actual_failed_checks": [
+        "generated-canvas"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "frame-hash",
+      "mutated_source_sha256": "c69a6dd024524f9183d3d29d7d4e8960d86a893a466f2a2840be6e308429ae64",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "c69a6dd024524f9183d3d29d7d4e8960d86a893a466f2a2840be6e308429ae64",
+      "actual_failed_checks": [
+        "frame-hash"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "skew",
+      "mutated_source_sha256": "757ddf917243d269fd0000905eacba4f79244045b61b338bc4cda1522c230a3e",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "757ddf917243d269fd0000905eacba4f79244045b61b338bc4cda1522c230a3e",
+      "actual_failed_checks": [
+        "skew"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "cap",
+      "mutated_source_sha256": "4528646b3d2fa25cf058d2ed3f16d5f1068e93cf0f7bfc48da9dc166983d2a35",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "4528646b3d2fa25cf058d2ed3f16d5f1068e93cf0f7bfc48da9dc166983d2a35",
+      "actual_failed_checks": [
+        "cap"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "runtime-canvas",
+      "mutated_source_sha256": "8f15963690a71ff40c757b1e604206238a7dd81ef20c2fe6ff672246ae293578",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "8f15963690a71ff40c757b1e604206238a7dd81ef20c2fe6ff672246ae293578",
+      "actual_failed_checks": [
+        "runtime-canvas"
+      ],
+      "exit_code": 2,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "outside-alpha",
+      "mutated_source_sha256": "ffee37cb12e38c23cce2b60f498cfe552de8551164ac7d5167d555804039432c",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "ffee37cb12e38c23cce2b60f498cfe552de8551164ac7d5167d555804039432c",
+      "actual_failed_checks": [
+        "outside-alpha"
+      ],
+      "exit_code": 2,
+      "status": "FIRED"
+    },
+    {
+      "removed_guard": "export-hash",
+      "mutated_source_sha256": "deeaf00415fcd428923e5d899bb7878f86fcb0e30b1b45702b22f36cf224ac5f",
+      "source_mtime_advanced": true,
+      "executed_main_source_sha256": "deeaf00415fcd428923e5d899bb7878f86fcb0e30b1b45702b22f36cf224ac5f",
+      "actual_failed_checks": [
+        "export-hash"
+      ],
+      "exit_code": 0,
+      "status": "FIRED"
+    }
+  ],
+  "scope": "Frozen candidate export checks; no human approval, runtime pack writes or original art mutation.",
+  "restored": "Original exporter source restored; all six candidate hashes reproduced again",
+  "result": "PASS: 2 smoke, 30 regression checks, 15 isolated executed guard mutations",
+  "harness_historical_path": "build/original-pose-review/verify_runtime_bundle.py",
+  "harness_sha256": "ed133c12b58883f7ad948bc2ab1c07d36d29cb8ca11c1ac1890a946550602a26",
+  "method": "Fresh Python subprocess for each isolated case; profiling witnesses the actual exporter main call and exact executed source hash. Mutants replace the one guarded condition with false; the source timestamp advances, and exactly its named refusal assertion fails. The final original-source run reproduces all six PNGs. This is Python source execution, not a compiled build."
+}
