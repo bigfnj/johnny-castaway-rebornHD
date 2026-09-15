@@ -1,0 +1,93 @@
+[
+  {
+    "frame": 24,
+    "prompt": "Use case: precise-object-edit. Output one full-body Cartoon Johnny sprite, exactly1024x1536 with real transparent alpha. Preserve the drawing scale and canvas placement of the edit target, with the entire cap and both feet visible and the same top margin near40px. No crop, recentering, body fitting, head tilt, labels, scenery or added ground shadow. Keep the accepted white sailor cap with anchor, gold band and projecting dark brim; long scruffy brown beard; orange nose; lean torso; ragged white shorts.\nImage1 is the ORIGINAL native pose reference. Use it for leg geometry only, not color or pixel-art style. Image2 is the CURRENT POSE edit target. Image3 is the USER-SELECTED CALM FOCUS expression key. Match its eyes and relaxed brows: pupils at the vertical centers of the eyes, looking ahead at horizon level; not downcast and not worried. Keep the target's nose, cap, beard and head position.\nIn this case images2 and3 are the same approved Calm focus drawing. Do not change its expression again.\nCorrect ONLY the small trailing anatomical RIGHT foot. It remains behind the large planted left ankle, near the ground, at the SAME HEIGHT and ankle position as image2. Turn its long axis farther sideways toward the walking direction on screen-LEFT, as image1 shows. Give that little foot a narrower, foreshortened side profile rather than front-facing round toe knuckles. Keep the plantar/toe height from image2; no raised shin or extra lift. Preserve the large planted left foot and both leg connections. This is a small foot-angle edit, not a new step pose.",
+    "target": "024-calm-focus-key.png",
+    "targetInArt": true,
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/original-024-nearest16x.png",
+      "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png",
+      "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png"
+    ],
+    "attempt": "calm-pose-v2",
+    "result": {
+      "output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-d98611fb-163f-4146-ac33-05ed294cf304.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  {
+    "frame": 28,
+    "prompt": "Use case: precise-object-edit. Output one full-body Cartoon Johnny sprite, exactly1024x1536 with real transparent alpha. Preserve the drawing scale and canvas placement of the edit target, with the entire cap and both feet visible and the same top margin near40px. No crop, recentering, body fitting, head tilt, labels, scenery or added ground shadow. Keep the accepted white sailor cap with anchor, gold band and projecting dark brim; long scruffy brown beard; orange nose; lean torso; ragged white shorts.\nImage1 is the ORIGINAL native pose reference. Use it for leg geometry only, not color or pixel-art style. Image2 is the CURRENT POSE edit target. Image3 is the USER-SELECTED CALM FOCUS expression key. Match its eyes and relaxed brows: pupils at the vertical centers of the eyes, looking ahead at horizon level; not downcast and not worried. Keep the target's nose, cap, beard and head position.\nThe pose correction is ESSENTIAL: original frame028 has anatomical LEFT leg forward and RIGHT leg back; image2 currently reverses the leg identities. Redraw the shorts-opening and upper-thigh connections so the foreground anatomical LEFT thigh originates on the nearer side of the hip, beneath the screen-RIGHT side of the shorts, then angles down toward the raised-toe forward foot on screen-LEFT. It must visually overlap and cover the farther right thigh where their paths meet. The anatomical RIGHT leg recedes behind that near thigh and extends toward the rear planted foot on screen-RIGHT. Trace each continuous leg from hip to knee to foot; do not keep the old thigh connections or simply redraw identical feet. A small overlap at the shorts/upper-thigh area is necessary to show the left leg in front.\nRetain the original reference's heel-first forward step and near-ground trailing foot. Preserve approximate existing foot endpoint heights/locations and the target's lean proportions. Do not mirror the head or torso. Do not increase the stride or invent extra lift. The near-left leg identity and original silhouette are more important than retaining the incorrect shorts seam.",
+    "target": "028-generated-v4-transparent.png",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/original-028-nearest16x.png",
+      "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/028-generated-v4-transparent.png",
+      "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png"
+    ],
+    "attempt": "calm-pose-v2",
+    "result": {
+      "output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-b1e78615-da08-4d4b-afdd-91b414e51d1c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  {
+    "frame": 29,
+    "prompt": "Use case: precise-object-edit. Output one full-body Cartoon Johnny sprite, exactly1024x1536 with real transparent alpha. Preserve the drawing scale and canvas placement of the edit target, with the entire cap and both feet visible and the same top margin near40px. No crop, recentering, body fitting, head tilt, labels, scenery or added ground shadow. Keep the accepted white sailor cap with anchor, gold band and projecting dark brim; long scruffy brown beard; orange nose; lean torso; ragged white shorts.\nImage1 is the ORIGINAL native pose reference. Use it for leg geometry only, not color or pixel-art style. Image2 is the CURRENT POSE edit target. Image3 is the USER-SELECTED CALM FOCUS expression key. Match its eyes and relaxed brows: pupils at the vertical centers of the eyes, looking ahead at horizon level; not downcast and not worried. Keep the target's nose, cap, beard and head position.\nCorrect the reversed leg identities in image2. Original frame029 has anatomical LEFT foot planted forward and RIGHT leg trailing behind. Reconstruct the lower-body overlap: the foreground LEFT thigh comes from the near side of the hip beneath the screen-RIGHT portion of the shorts, angles across toward the forward planted foot on screen-LEFT, and visibly covers the farther thigh near their junction. The farther RIGHT thigh begins behind it, then bends backward toward screen-RIGHT into the raised trailing foot. Match the original reference's leg order and natural connection from hip to each foot. Do not merely keep the old shorts openings and current leg attachments.\nKeep the planted foot's current ground level and approximate position. Retain a modest rear knee bend, without increasing the existing foot lift. Keep the head/cap registration and size exactly as image2; the cap must have its full40px top margin and may not touch the image edge. The last attempted leg edit moved the entire figure upward; avoid that error.",
+    "target": "029-generated-v2.png",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/original-029-nearest16x.png",
+      "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/029-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png"
+    ],
+    "attempt": "calm-pose-v2",
+    "result": {
+      "output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-9da0147c-676c-4b1a-9dd0-218038f3c8fa.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  {
+    "frame": 25,
+    "attempt": "calm-eyes-v1",
+    "prompt": "Edit ONLY Johnny's eyes and eyebrows in image1, the full-body EDIT TARGET. This is a 1024x1536 transparent sprite. Match the USER-SELECTED CALM FOCUS expression shown on image2. Make the gaze visibly attentive ahead: move BOTH pupils from the bottom of the eyes to the vertical CENTERS of the eye whites, looking toward screen-left at horizon level. Use the same relaxed, level, friendly eyebrow arcs as image2. No raised inquisitive eyebrow and no worried downcast gaze.\nKeep image1's own head and entire body pose. Do not copy the body pose from image2. Keep the eye sizes, nose, beard, hair, cap, shorts, arms, legs, feet, foot lift, scale and placement as in image1. Full cap remains visible at the same approximately40px top margin. No crop, reframe or recentering. No background, glow, labels or ground shadow; preserve real transparent alpha. Return one full-body sprite, 1024x1536. The clearly changed pupil direction and relaxed eyebrows are the only intended edit.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/025-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png"
+    ],
+    "result": {
+      "output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-7f81616c-4daf-4ff3-ba66-78d453be68ec.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  {
+    "frame": 26,
+    "attempt": "calm-eyes-v1",
+    "prompt": "Edit ONLY Johnny's eyes and eyebrows in image1, the full-body EDIT TARGET. This is a 1024x1536 transparent sprite. Match the USER-SELECTED CALM FOCUS expression shown on image2. Make the gaze visibly attentive ahead: move BOTH pupils from the bottom of the eyes to the vertical CENTERS of the eye whites, looking toward screen-left at horizon level. Use the same relaxed, level, friendly eyebrow arcs as image2. No raised inquisitive eyebrow and no worried downcast gaze.\nKeep image1's own head and entire body pose. Do not copy the body pose from image2. Keep the eye sizes, nose, beard, hair, cap, shorts, arms, legs, feet, foot lift, scale and placement as in image1. Full cap remains visible at the same approximately40px top margin. No crop, reframe or recentering. No background, glow, labels or ground shadow; preserve real transparent alpha. Return one full-body sprite, 1024x1536. The clearly changed pupil direction and relaxed eyebrows are the only intended edit.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/026-generated-v3-fresh.png",
+      "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png"
+    ],
+    "result": {
+      "output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-bd90e3cf-c350-4e09-bec3-d18c1da3b06c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  {
+    "frame": 27,
+    "attempt": "calm-eyes-v1",
+    "prompt": "Edit ONLY Johnny's eyes and eyebrows in image1, the full-body EDIT TARGET. This is a 1024x1536 transparent sprite. Match the USER-SELECTED CALM FOCUS expression shown on image2. Make the gaze visibly attentive ahead: move BOTH pupils from the bottom of the eyes to the vertical CENTERS of the eye whites, looking toward screen-left at horizon level. Use the same relaxed, level, friendly eyebrow arcs as image2. No raised inquisitive eyebrow and no worried downcast gaze.\nKeep image1's own head and entire body pose. Do not copy the body pose from image2. Keep the eye sizes, nose, beard, hair, cap, shorts, arms, legs, feet, foot lift, scale and placement as in image1. Full cap remains visible at the same approximately40px top margin. No crop, reframe or recentering. No background, glow, labels or ground shadow; preserve real transparent alpha. Return one full-body sprite, 1024x1536. The clearly changed pupil direction and relaxed eyebrows are the only intended edit.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/027-generated-v3-fresh.png",
+      "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png"
+    ],
+    "result": {
+      "output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-8f54cc64-d9be-41a5-8e25-6add1cea504c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  },
+  {
+    "frame": 28,
+    "attempt": "near-left-thigh-v3",
+    "prompt": "Edit image1 into a CORRECTED WALK POSE. The front leg must connect to the NEAR hip, not the far hip. The current image is WRONG: its leg on the far, screen-left side of the shorts steps forward. Swap which thigh is attached to each lower leg.\nRedraw BOTH shorts legs and BOTH upper thighs. The big near shorts leg on SCREEN-RIGHT should sweep diagonally left across the crotch and open over the thigh that reaches the SCREEN-LEFT forward heel. Draw that nearer LEFT thigh OVER the other thigh, visibly crossing in front just below the shorts. The back RIGHT leg starts hidden BEHIND that foreground thigh, emerges toward SCREEN-RIGHT and reaches the rear foot. The shorts' near outer seam must lead to the FORWARD leg, not the rear leg. This overlap and changed shorts geometry must be obvious.\nImage2 is the original pose reference, geometry only. Match its forward-left-leg / back-right-leg order. Keep both feet approximately at image1's current endpoints: front heel with toes up on screen-left, rear toes near the ground on screen-right. Keep a relaxed walk rather than an exaggerated crossed-leg runway walk. Do not mirror the body.\nPreserve everything above the waistband in image1, including the Calm focus face, eye direction, cap with projecting black brim and gold band, long beard, head angle and arm position. Preserve original canvas placement, uniform drawing scale and full cap with40px top margin. Output one 1024x1536 full-body sprite with true transparent alpha. No scenery, glow, matte, labels, recentering or cropping. A corrected connection from near hip to forward foot is required; returning the current separate non-overlapping thighs is a failed edit.",
+    "referenced_image_paths": [
+      "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-b1e78615-da08-4d4b-afdd-91b414e51d1c.png",
+      "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/original-028-nearest16x.png"
+    ],
+    "result": {
+      "output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-a8e278eb-38d1-430a-bb2c-7f92d01c4a4f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  }
+]

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-09-15",
   "purpose": "expression direction selection after original-pose review",
-  "scope": "Expression concepts, selected full-body expression reference, and rejected-attempt history only. Runtime sprites and production assets remain unchanged.",
+  "scope": "Expression concepts, selected full-body expression reference, prospective pose sources and rejected-attempt history only. Runtime sprites and production assets remain unchanged.",
   "current_selection_record": "acceptance.json",
   "expression_sheet": {
     "file": "expressions-v1.png",
@@ -565,13 +565,25 @@
     "evidence_class": "Measured comparison reported by independent test_plan reviewer from read-only Python/Pillow commands; no source report file was written.",
     "baseline_sha256": "63088f5c18e71d49fb61f733e564d5f9461c55f622e124b5eeaf9aa5cbd1ee2b",
     "selected_key_sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
-    "canvas": [1024, 1536],
-    "selected_alpha_extrema": [0, 254],
+    "canvas": [
+      1024,
+      1536
+    ],
+    "selected_alpha_extrema": [
+      0,
+      254
+    ],
     "cap_alpha_at_least_128": {
       "baseline_first_row_y": 41,
       "selected_first_row_y": 41,
-      "baseline_first_row_span_x_inclusive": [383, 393],
-      "selected_first_row_span_x_inclusive": [378, 398],
+      "baseline_first_row_span_x_inclusive": [
+        383,
+        393
+      ],
+      "selected_first_row_span_x_inclusive": [
+        378,
+        398
+      ],
       "both_span_midpoint_x": 388,
       "meaning": "Alpha-edge diagnostic, not an engine registration anchor or identical cap shape."
     },
@@ -588,5 +600,11 @@
       "meaning": "A fixed y-band, not an anatomical mask. Broad redraw occurred outside the requested face edit."
     },
     "scope": "Only this selected key compared with the accepted 024 raw. These measurements do not establish byte-identical body or feet, runtime registration, corrected anatomy or motion approval."
+  },
+  "next_generation_record": {
+    "file": "next-generation-review.json",
+    "sha256": "f615a1519701059045b281cabc364b29f216d1b334591b957cdd788bc7f8af47",
+    "bytes": 53786,
+    "scope": "Nine exact generation calls and their source/review records. Only the earlier Calm focus expression key remains accepted as an expression reference. No foot, cycle or runtime acceptance."
   }
 }

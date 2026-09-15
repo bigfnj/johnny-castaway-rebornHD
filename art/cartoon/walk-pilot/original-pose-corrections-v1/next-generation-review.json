@@ -1,0 +1,1531 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "scope": "Nine exact generation calls and their source/review records. Only the earlier Calm focus expression key remains accepted as an expression reference. No foot, cycle or runtime acceptance.",
+  "prompt_records": {
+    "next-generation-prompts.json": {
+      "sha256": "f533c566dbea4d1bda4b4ea7f783e5304a07fe3dc01587dc18e535215cf152ce",
+      "bytes": 17275
+    },
+    "simple-shorts-prompt.json": {
+      "sha256": "87fe706a31bf9f6d3e9740dcfad3bcfee0c4a94bd5a50d1cb4cfd43b0ca1d6c0",
+      "bytes": 2156
+    },
+    "natural-step-prompt.json": {
+      "sha256": "806fc6895d6b0003d5e1a33235b4f846eff08544bd9bef8567642f93fcd906ea",
+      "bytes": 2681
+    }
+  },
+  "prompt_hash_policy": "SHA-256 of exact JSON-decoded prompt strings encoded as UTF-8, without whitespace or newline normalization. Source JSON files and output_hint strings are preserved byte-for-byte.",
+  "source_qa_method": {
+    "method": "Read-only PNG measurements; returned files are not cropped, transformed, normalized or exported.",
+    "python": "3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]",
+    "pillow": "12.3.0",
+    "numpy": "2.4.6",
+    "coordinate_policy": "The recorded existing runtime affine is applied analytically to source pixel centers for clipping counts. Mapped bounding boxes use alpha-8 pixel-cell outer edges. No resampler or runtime capture is executed.",
+    "landmark_policy": "The first alpha-128 row and its midpoint are cap-edge diagnostics, not anatomical or engine anchors. Compare with the edit target; the preexisting recipe cap anchor remains unchanged.",
+    "redraw_policy": "RGBA differences count pixels where either image alpha is at least 8. The y>=520 band is diagnostic, not an anatomical mask. Premultiplied differences use rounded RGB*alpha/255 plus alpha; threshold32 is a descriptive count, not an approval gate."
+  },
+  "attempts": [
+    {
+      "id": "024-calm-pose-v2",
+      "resource": "JOHNWALK.BMP",
+      "frame": 24,
+      "status": "human-static-review-pending",
+      "review_reason": "More side-on trailing toe, but toe silhouette changed height and reach. No foot acceptance.",
+      "output": {
+        "file": "024-calm-pose-v2.png",
+        "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-d98611fb-163f-4146-ac33-05ed294cf304.png",
+        "sha256": "13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb",
+        "bytes": 1252617,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "raw_preservation_role": "Prospective review source, not a runtime sprite",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "call_record": "next-generation-prompts.json#/0",
+        "prompt_utf8_sha256": "4002a3d0ea1d8b821c38e7fa285ad96938415ca9776bf96b7f853de8b722d4f9",
+        "num_last_images_to_include": "omitted",
+        "ordered_reference_roles": [
+          {
+            "index_zero_based": 0,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/original-024-nearest16x.png",
+            "role": "Supplied-original native pose enlarged 16x; geometry reference only",
+            "sha256": "7d8ece0b0eaad600638872b5cbafb2bbefba72f450c3609c54d490269f8f8cf2",
+            "canvas": [
+              512,
+              1200
+            ],
+            "durable_source": {
+              "record": "provenance.json#/technical_pose_reference_preparation",
+              "method": "Native canvas, index0 transparent, 16x nearest-neighbor enlargement; not duplicated here."
+            }
+          },
+          {
+            "index_zero_based": 1,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png",
+            "role": "Selected Calm focus key; direct edit target",
+            "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "file": "024-calm-focus-key.png"
+            }
+          },
+          {
+            "index_zero_based": 2,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png",
+            "role": "The same selected Calm focus key again; expression reference",
+            "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "file": "024-calm-focus-key.png"
+            }
+          }
+        ]
+      },
+      "technical_qa": {
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "bounds_alpha_at_least_8_exclusive": [
+          285,
+          40,
+          741,
+          1498
+        ],
+        "first_alpha_at_least_128_row_y": 40,
+        "first_alpha_at_least_128_row_span_x_inclusive": [
+          383,
+          393
+        ],
+        "first_row_span_midpoint_x": 388.0,
+        "existing_registration": {
+          "recipe": "../directional-cycle-v1/recipe.json",
+          "runtime_canvas": [
+            64,
+            150
+          ],
+          "cap_raw_recipe_observation": [
+            385,
+            42
+          ],
+          "cap_target_hd_recipe": [
+            17.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -21.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "mapped_alpha8_bounds_hd_exclusive": [
+            7.5,
+            0.05,
+            53.1,
+            145.85
+          ],
+          "source_pixel_centers_outside_canvas_by_alpha_threshold": {
+            "8": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            },
+            "128": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            },
+            "250": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            }
+          },
+          "meaningful_alpha8_source_centers_fit": true,
+          "alpha8_cell_bounds_fit": true,
+          "runtime_export_performed": false
+        },
+        "comparison_to_direct_edit_target": {
+          "reference_index_zero_based": 1,
+          "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+          "alpha_facts": {
+            "alpha_extrema": [
+              0,
+              254
+            ],
+            "bounds_alpha_at_least_8_exclusive": [
+              285,
+              40,
+              740,
+              1497
+            ],
+            "first_alpha_at_least_128_row_y": 41,
+            "first_alpha_at_least_128_row_span_x_inclusive": [
+              378,
+              398
+            ],
+            "first_row_span_midpoint_x": 388.0
+          },
+          "silhouette_alpha8_iou": 0.9685837688980548,
+          "changed_visible_rgba_pixels_full_canvas": 308746,
+          "changed_visible_rgba_pixels_y_at_least_520": 188360,
+          "premultiplied_max_channel_difference_greater_than_32_pixels_y_at_least_520": 23668,
+          "pixel_identity_claim": false
+        }
+      },
+      "anatomy_verified": false,
+      "runtime_export_performed": false,
+      "motion_accepted": false
+    },
+    {
+      "id": "028-calm-pose-v2",
+      "resource": "JOHNWALK.BMP",
+      "frame": 28,
+      "status": "assistant-rejected-anatomy",
+      "review_reason": "The prior hip-to-leg assignment remained; no clear anatomical left-forward correction.",
+      "output": {
+        "file": "028-calm-pose-v2.png",
+        "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-b1e78615-da08-4d4b-afdd-91b414e51d1c.png",
+        "sha256": "5031b478a1a292f9f6e16080437d78bb1a41b828ccf3de2c700622bf0e7f3127",
+        "bytes": 1325756,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "raw_preservation_role": "Actual ancestor retained despite rejection",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "call_record": "next-generation-prompts.json#/1",
+        "prompt_utf8_sha256": "175c49ae238c07c79002420e93ed54302aa6dbb8f542ef55472e325fa0e7c64b",
+        "num_last_images_to_include": "omitted",
+        "ordered_reference_roles": [
+          {
+            "index_zero_based": 0,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/original-028-nearest16x.png",
+            "role": "Supplied-original native pose enlarged 16x; geometry reference only",
+            "sha256": "e405b6261b56e907a2051d10b5c8c9a10f8fb9a785db22415a3eb8935f14ed4e",
+            "canvas": [
+              512,
+              1152
+            ],
+            "durable_source": {
+              "record": "provenance.json#/technical_pose_reference_preparation",
+              "method": "Native canvas, index0 transparent, 16x nearest-neighbor enlargement; not duplicated here."
+            }
+          },
+          {
+            "index_zero_based": 1,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/028-generated-v4-transparent.png",
+            "role": "Previously accepted Cartoon 028 raw; direct edit target, with leg identity under correction",
+            "sha256": "bdbf7f83f0622cbc4b87f2f41c0f502e8185b4ee524da912f39a03cec28f8fc9",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "bundle": "../directional-cycle-v1/source-images.zip",
+              "member": "028-generated-v4-transparent.png"
+            }
+          },
+          {
+            "index_zero_based": 2,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png",
+            "role": "Selected Calm focus key; expression reference",
+            "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "file": "024-calm-focus-key.png"
+            }
+          }
+        ]
+      },
+      "technical_qa": {
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "bounds_alpha_at_least_8_exclusive": [
+          221,
+          39,
+          846,
+          1459
+        ],
+        "first_alpha_at_least_128_row_y": 40,
+        "first_alpha_at_least_128_row_span_x_inclusive": [
+          384,
+          393
+        ],
+        "first_row_span_midpoint_x": 388.5,
+        "existing_registration": {
+          "recipe": "../directional-cycle-v1/recipe.json",
+          "runtime_canvas": [
+            64,
+            144
+          ],
+          "cap_raw_recipe_observation": [
+            388,
+            40
+          ],
+          "cap_target_hd_recipe": [
+            17.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -21.3,
+            0,
+            0.1,
+            -3.75
+          ],
+          "mapped_alpha8_bounds_hd_exclusive": [
+            0.8,
+            0.15,
+            63.3,
+            142.15
+          ],
+          "source_pixel_centers_outside_canvas_by_alpha_threshold": {
+            "8": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            },
+            "128": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            },
+            "250": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            }
+          },
+          "meaningful_alpha8_source_centers_fit": true,
+          "alpha8_cell_bounds_fit": true,
+          "runtime_export_performed": false
+        },
+        "comparison_to_direct_edit_target": {
+          "reference_index_zero_based": 1,
+          "sha256": "bdbf7f83f0622cbc4b87f2f41c0f502e8185b4ee524da912f39a03cec28f8fc9",
+          "alpha_facts": {
+            "alpha_extrema": [
+              0,
+              254
+            ],
+            "bounds_alpha_at_least_8_exclusive": [
+              232,
+              39,
+              813,
+              1440
+            ],
+            "first_alpha_at_least_128_row_y": 40,
+            "first_alpha_at_least_128_row_span_x_inclusive": [
+              381,
+              395
+            ],
+            "first_row_span_midpoint_x": 388.0
+          },
+          "silhouette_alpha8_iou": 0.8848753145540696,
+          "changed_visible_rgba_pixels_full_canvas": 353289,
+          "changed_visible_rgba_pixels_y_at_least_520": 232535,
+          "premultiplied_max_channel_difference_greater_than_32_pixels_y_at_least_520": 85455,
+          "pixel_identity_claim": false
+        }
+      },
+      "anatomy_verified": false,
+      "runtime_export_performed": false,
+      "motion_accepted": false
+    },
+    {
+      "id": "029-calm-pose-v2",
+      "resource": "JOHNWALK.BMP",
+      "frame": 29,
+      "status": "assistant-rejected-anatomy-and-clearance",
+      "review_reason": "The prior hip-to-leg assignment remained; trailing foot also exceeds the fixed runtime canvas.",
+      "output": {
+        "file": null,
+        "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-9da0147c-676c-4b1a-9dd0-218038f3c8fa.png",
+        "sha256": "c92553a2bca8778736063bee25d8518919da0c599ee7b905d6c0d2caa14d6cc1",
+        "bytes": 1292634,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "raw_preservation_role": "Unused failed raw omitted; exact hash and reason retained",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "call_record": "next-generation-prompts.json#/2",
+        "prompt_utf8_sha256": "e8b831d5acaf10935984a28b7d1a7fe3dcf83251bd9a3cbe78bb61d2e2ae82fa",
+        "num_last_images_to_include": "omitted",
+        "ordered_reference_roles": [
+          {
+            "index_zero_based": 0,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/original-029-nearest16x.png",
+            "role": "Supplied-original native pose enlarged 16x; geometry reference only",
+            "sha256": "a21dce6354421a58a84e507583e5620bf69d6d56cff77bdb8f39a3829ad2e169",
+            "canvas": [
+              512,
+              1200
+            ],
+            "durable_source": {
+              "record": "provenance.json#/technical_pose_reference_preparation",
+              "method": "Native canvas, index0 transparent, 16x nearest-neighbor enlargement; not duplicated here."
+            }
+          },
+          {
+            "index_zero_based": 1,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/029-generated-v2.png",
+            "role": "Previously accepted Cartoon 029 raw; direct edit target, with leg identity under correction",
+            "sha256": "a19e4143ba6647965f7d3a5bab178b4cbe131b52429da59028adb6e233fe9e78",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "bundle": "../directional-cycle-v1/source-images.zip",
+              "member": "029-generated-v2.png"
+            }
+          },
+          {
+            "index_zero_based": 2,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png",
+            "role": "Selected Calm focus key; expression reference",
+            "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "file": "024-calm-focus-key.png"
+            }
+          }
+        ]
+      },
+      "technical_qa": {
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "bounds_alpha_at_least_8_exclusive": [
+          285,
+          40,
+          855,
+          1456
+        ],
+        "first_alpha_at_least_128_row_y": 40,
+        "first_alpha_at_least_128_row_span_x_inclusive": [
+          383,
+          393
+        ],
+        "first_row_span_midpoint_x": 388.0,
+        "existing_registration": {
+          "recipe": "../directional-cycle-v1/recipe.json",
+          "runtime_canvas": [
+            64,
+            150
+          ],
+          "cap_raw_recipe_observation": [
+            385,
+            42
+          ],
+          "cap_target_hd_recipe": [
+            17.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -21.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "mapped_alpha8_bounds_hd_exclusive": [
+            7.5,
+            0.05,
+            64.5,
+            141.65
+          ],
+          "source_pixel_centers_outside_canvas_by_alpha_threshold": {
+            "8": {
+              "left": 0,
+              "right": 160,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 160
+            },
+            "128": {
+              "left": 0,
+              "right": 126,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 126
+            },
+            "250": {
+              "left": 0,
+              "right": 66,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 66
+            }
+          },
+          "meaningful_alpha8_source_centers_fit": false,
+          "alpha8_cell_bounds_fit": false,
+          "runtime_export_performed": false
+        },
+        "comparison_to_direct_edit_target": {
+          "reference_index_zero_based": 1,
+          "sha256": "a19e4143ba6647965f7d3a5bab178b4cbe131b52429da59028adb6e233fe9e78",
+          "alpha_facts": {
+            "alpha_extrema": [
+              0,
+              254
+            ],
+            "bounds_alpha_at_least_8_exclusive": [
+              284,
+              40,
+              842,
+              1455
+            ],
+            "first_alpha_at_least_128_row_y": 41,
+            "first_alpha_at_least_128_row_span_x_inclusive": [
+              378,
+              398
+            ],
+            "first_row_span_midpoint_x": 388.0
+          },
+          "silhouette_alpha8_iou": 0.9352013525976022,
+          "changed_visible_rgba_pixels_full_canvas": 322148,
+          "changed_visible_rgba_pixels_y_at_least_520": 203245,
+          "premultiplied_max_channel_difference_greater_than_32_pixels_y_at_least_520": 49860,
+          "pixel_identity_claim": false
+        }
+      },
+      "anatomy_verified": false,
+      "runtime_export_performed": false,
+      "motion_accepted": false
+    },
+    {
+      "id": "025-calm-eyes-v1",
+      "resource": "JOHNWALK.BMP",
+      "frame": 25,
+      "status": "technical-and-motion-review-pending",
+      "review_reason": "The Calm focus gaze changed visibly. The rest of the pixels are not assumed unchanged.",
+      "output": {
+        "file": "025-calm-eyes-v1.png",
+        "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-7f81616c-4daf-4ff3-ba66-78d453be68ec.png",
+        "sha256": "656061532b3833c092dd76d57d0cdd2e9e21a1b59f8cf0f360c5c0250494b20c",
+        "bytes": 1399255,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "raw_preservation_role": "Prospective review source, not a runtime sprite",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "call_record": "next-generation-prompts.json#/3",
+        "prompt_utf8_sha256": "3d544e19c92fa0f00183bf7d2406dacbb8211a8720695739cde88456f4a2fc96",
+        "num_last_images_to_include": "omitted",
+        "ordered_reference_roles": [
+          {
+            "index_zero_based": 0,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/025-generated-v2.png",
+            "role": "Previously accepted Cartoon 025 raw; direct edit target",
+            "sha256": "af0f050ae39858eda063c1c681c82a26e2d988e09e18dc8d1a6ff83df73126cf",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "bundle": "../directional-cycle-v1/source-images.zip",
+              "member": "025-generated-v2.png"
+            }
+          },
+          {
+            "index_zero_based": 1,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png",
+            "role": "Selected Calm focus key; expression reference",
+            "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "file": "024-calm-focus-key.png"
+            }
+          }
+        ]
+      },
+      "technical_qa": {
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "bounds_alpha_at_least_8_exclusive": [
+          161,
+          40,
+          863,
+          1394
+        ],
+        "first_alpha_at_least_128_row_y": 41,
+        "first_alpha_at_least_128_row_span_x_inclusive": [
+          375,
+          401
+        ],
+        "first_row_span_midpoint_x": 388.0,
+        "existing_registration": {
+          "recipe": "../directional-cycle-v1/recipe.json",
+          "runtime_canvas": [
+            80,
+            148
+          ],
+          "cap_raw_recipe_observation": [
+            385,
+            42
+          ],
+          "cap_target_hd_recipe": [
+            23.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -15.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "mapped_alpha8_bounds_hd_exclusive": [
+            1.1,
+            0.05,
+            71.3,
+            135.45
+          ],
+          "source_pixel_centers_outside_canvas_by_alpha_threshold": {
+            "8": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            },
+            "128": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            },
+            "250": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            }
+          },
+          "meaningful_alpha8_source_centers_fit": true,
+          "alpha8_cell_bounds_fit": true,
+          "runtime_export_performed": false
+        },
+        "comparison_to_direct_edit_target": {
+          "reference_index_zero_based": 0,
+          "sha256": "af0f050ae39858eda063c1c681c82a26e2d988e09e18dc8d1a6ff83df73126cf",
+          "alpha_facts": {
+            "alpha_extrema": [
+              0,
+              254
+            ],
+            "bounds_alpha_at_least_8_exclusive": [
+              161,
+              40,
+              862,
+              1394
+            ],
+            "first_alpha_at_least_128_row_y": 41,
+            "first_alpha_at_least_128_row_span_x_inclusive": [
+              380,
+              397
+            ],
+            "first_row_span_midpoint_x": 388.5
+          },
+          "silhouette_alpha8_iou": 0.9941957307574977,
+          "changed_visible_rgba_pixels_full_canvas": 345883,
+          "changed_visible_rgba_pixels_y_at_least_520": 222375,
+          "premultiplied_max_channel_difference_greater_than_32_pixels_y_at_least_520": 11435,
+          "pixel_identity_claim": false
+        }
+      },
+      "anatomy_verified": false,
+      "runtime_export_performed": false,
+      "motion_accepted": false
+    },
+    {
+      "id": "026-calm-eyes-v1",
+      "resource": "JOHNWALK.BMP",
+      "frame": 26,
+      "status": "technical-and-motion-review-pending",
+      "review_reason": "The Calm focus gaze changed visibly. Existing high rear-foot lift remains a review question.",
+      "output": {
+        "file": "026-calm-eyes-v1.png",
+        "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-bd90e3cf-c350-4e09-bec3-d18c1da3b06c.png",
+        "sha256": "20336e0fa8ab6ec930a78307e32719fd6a7d6a871e22803dd8b197724f34e110",
+        "bytes": 1396730,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "raw_preservation_role": "Prospective review source, not a runtime sprite",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "call_record": "next-generation-prompts.json#/4",
+        "prompt_utf8_sha256": "3d544e19c92fa0f00183bf7d2406dacbb8211a8720695739cde88456f4a2fc96",
+        "num_last_images_to_include": "omitted",
+        "ordered_reference_roles": [
+          {
+            "index_zero_based": 0,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/026-generated-v3-fresh.png",
+            "role": "Previously accepted Cartoon 026 raw; direct edit target",
+            "sha256": "051be31b0a7f734231164088660fe4def6531240826d7b1d57152614f0650702",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "bundle": "../directional-cycle-v1/source-images.zip",
+              "member": "026-generated-v3-fresh.png"
+            }
+          },
+          {
+            "index_zero_based": 1,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png",
+            "role": "Selected Calm focus key; expression reference",
+            "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "file": "024-calm-focus-key.png"
+            }
+          }
+        ]
+      },
+      "technical_qa": {
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "bounds_alpha_at_least_8_exclusive": [
+          138,
+          39,
+          851,
+          1440
+        ],
+        "first_alpha_at_least_128_row_y": 40,
+        "first_alpha_at_least_128_row_span_x_inclusive": [
+          382,
+          395
+        ],
+        "first_row_span_midpoint_x": 388.5,
+        "existing_registration": {
+          "recipe": "../directional-cycle-v1/recipe.json",
+          "runtime_canvas": [
+            80,
+            146
+          ],
+          "cap_raw_recipe_observation": [
+            385,
+            42
+          ],
+          "cap_target_hd_recipe": [
+            25.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -13.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "mapped_alpha8_bounds_hd_exclusive": [
+            0.8,
+            -0.05,
+            72.1,
+            140.05
+          ],
+          "source_pixel_centers_outside_canvas_by_alpha_threshold": {
+            "8": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            },
+            "128": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            },
+            "250": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            }
+          },
+          "meaningful_alpha8_source_centers_fit": true,
+          "alpha8_cell_bounds_fit": false,
+          "runtime_export_performed": false
+        },
+        "comparison_to_direct_edit_target": {
+          "reference_index_zero_based": 0,
+          "sha256": "051be31b0a7f734231164088660fe4def6531240826d7b1d57152614f0650702",
+          "alpha_facts": {
+            "alpha_extrema": [
+              0,
+              254
+            ],
+            "bounds_alpha_at_least_8_exclusive": [
+              138,
+              40,
+              850,
+              1440
+            ],
+            "first_alpha_at_least_128_row_y": 41,
+            "first_alpha_at_least_128_row_span_x_inclusive": [
+              377,
+              402
+            ],
+            "first_row_span_midpoint_x": 389.5
+          },
+          "silhouette_alpha8_iou": 0.9950633549240476,
+          "changed_visible_rgba_pixels_full_canvas": 357825,
+          "changed_visible_rgba_pixels_y_at_least_520": 231633,
+          "premultiplied_max_channel_difference_greater_than_32_pixels_y_at_least_520": 9274,
+          "pixel_identity_claim": false
+        }
+      },
+      "anatomy_verified": false,
+      "runtime_export_performed": false,
+      "motion_accepted": false
+    },
+    {
+      "id": "027-calm-eyes-v1",
+      "resource": "JOHNWALK.BMP",
+      "frame": 27,
+      "status": "technical-and-motion-review-pending",
+      "review_reason": "The Calm focus gaze changed visibly. Existing high rear-foot lift remains a review question.",
+      "output": {
+        "file": "027-calm-eyes-v1.png",
+        "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-8f54cc64-d9be-41a5-8e25-6add1cea504c.png",
+        "sha256": "02adcafbd8548901b29eeb5a5f61a6f1fbe3c72b854410cd403139420ba241d6",
+        "bytes": 1283347,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "raw_preservation_role": "Prospective review source, not a runtime sprite",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "call_record": "next-generation-prompts.json#/5",
+        "prompt_utf8_sha256": "3d544e19c92fa0f00183bf7d2406dacbb8211a8720695739cde88456f4a2fc96",
+        "num_last_images_to_include": "omitted",
+        "ordered_reference_roles": [
+          {
+            "index_zero_based": 0,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/027-generated-v3-fresh.png",
+            "role": "Previously accepted Cartoon 027 raw; direct edit target",
+            "sha256": "31e1249a5035f4ce88c35aeeabfdf52e3a9202670e96d85c07ce50035b0ce70d",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "bundle": "../directional-cycle-v1/source-images.zip",
+              "member": "027-generated-v3-fresh.png"
+            }
+          },
+          {
+            "index_zero_based": 1,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png",
+            "role": "Selected Calm focus key; expression reference",
+            "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "file": "024-calm-focus-key.png"
+            }
+          }
+        ]
+      },
+      "technical_qa": {
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "bounds_alpha_at_least_8_exclusive": [
+          284,
+          40,
+          751,
+          1471
+        ],
+        "first_alpha_at_least_128_row_y": 40,
+        "first_alpha_at_least_128_row_span_x_inclusive": [
+          383,
+          393
+        ],
+        "first_row_span_midpoint_x": 388.0,
+        "existing_registration": {
+          "recipe": "../directional-cycle-v1/recipe.json",
+          "runtime_canvas": [
+            64,
+            144
+          ],
+          "cap_raw_recipe_observation": [
+            385,
+            42
+          ],
+          "cap_target_hd_recipe": [
+            17.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -21.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "mapped_alpha8_bounds_hd_exclusive": [
+            7.4,
+            0.05,
+            54.1,
+            143.15
+          ],
+          "source_pixel_centers_outside_canvas_by_alpha_threshold": {
+            "8": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            },
+            "128": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            },
+            "250": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 0
+            }
+          },
+          "meaningful_alpha8_source_centers_fit": true,
+          "alpha8_cell_bounds_fit": true,
+          "runtime_export_performed": false
+        },
+        "comparison_to_direct_edit_target": {
+          "reference_index_zero_based": 0,
+          "sha256": "31e1249a5035f4ce88c35aeeabfdf52e3a9202670e96d85c07ce50035b0ce70d",
+          "alpha_facts": {
+            "alpha_extrema": [
+              0,
+              254
+            ],
+            "bounds_alpha_at_least_8_exclusive": [
+              284,
+              40,
+              750,
+              1471
+            ],
+            "first_alpha_at_least_128_row_y": 41,
+            "first_alpha_at_least_128_row_span_x_inclusive": [
+              377,
+              400
+            ],
+            "first_row_span_midpoint_x": 388.5
+          },
+          "silhouette_alpha8_iou": 0.9930146502428848,
+          "changed_visible_rgba_pixels_full_canvas": 321181,
+          "changed_visible_rgba_pixels_y_at_least_520": 200306,
+          "premultiplied_max_channel_difference_greater_than_32_pixels_y_at_least_520": 11714,
+          "pixel_identity_claim": false
+        }
+      },
+      "anatomy_verified": false,
+      "runtime_export_performed": false,
+      "motion_accepted": false
+    },
+    {
+      "id": "028-near-left-thigh-v3",
+      "resource": "JOHNWALK.BMP",
+      "frame": 28,
+      "status": "user-rejected-shorts",
+      "review_reason": "The user rejected the twisted, overlapping shorts flap: no, the shorts look weird",
+      "output": {
+        "file": "028-near-left-thigh-v3.png",
+        "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-a8e278eb-38d1-430a-bb2c-7f92d01c4a4f.png",
+        "sha256": "aed05515c6519dfcabf1db0c7c6184d0a14a9f9bb901b1065edc7dd5d99dd90f",
+        "bytes": 1353921,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "raw_preservation_role": "Actual ancestor retained despite rejection",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "call_record": "next-generation-prompts.json#/6",
+        "prompt_utf8_sha256": "a6429d660eb9c425cd7f81742b6e782d8bce3b3e862f75036818fbd11a907676",
+        "num_last_images_to_include": "omitted",
+        "ordered_reference_roles": [
+          {
+            "index_zero_based": 0,
+            "actual_path": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-b1e78615-da08-4d4b-afdd-91b414e51d1c.png",
+            "role": "Rejected 028 calm-pose-v2 raw; actual direct edit ancestor",
+            "sha256": "5031b478a1a292f9f6e16080437d78bb1a41b828ccf3de2c700622bf0e7f3127",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "file": "028-calm-pose-v2.png"
+            }
+          },
+          {
+            "index_zero_based": 1,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/original-028-nearest16x.png",
+            "role": "Supplied-original native pose enlarged 16x; geometry reference only",
+            "sha256": "e405b6261b56e907a2051d10b5c8c9a10f8fb9a785db22415a3eb8935f14ed4e",
+            "canvas": [
+              512,
+              1152
+            ],
+            "durable_source": {
+              "record": "provenance.json#/technical_pose_reference_preparation",
+              "method": "Native canvas, index0 transparent, 16x nearest-neighbor enlargement; not duplicated here."
+            }
+          }
+        ]
+      },
+      "technical_qa": {
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "bounds_alpha_at_least_8_exclusive": [
+          184,
+          39,
+          876,
+          1457
+        ],
+        "first_alpha_at_least_128_row_y": 40,
+        "first_alpha_at_least_128_row_span_x_inclusive": [
+          377,
+          400
+        ],
+        "first_row_span_midpoint_x": 388.5,
+        "existing_registration": {
+          "recipe": "../directional-cycle-v1/recipe.json",
+          "runtime_canvas": [
+            64,
+            144
+          ],
+          "cap_raw_recipe_observation": [
+            388,
+            40
+          ],
+          "cap_target_hd_recipe": [
+            17.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -21.3,
+            0,
+            0.1,
+            -3.75
+          ],
+          "mapped_alpha8_bounds_hd_exclusive": [
+            -2.9,
+            0.15,
+            66.3,
+            141.95
+          ],
+          "source_pixel_centers_outside_canvas_by_alpha_threshold": {
+            "8": {
+              "left": 1724,
+              "right": 1219,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 2943
+            },
+            "128": {
+              "left": 1640,
+              "right": 1148,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 2788
+            },
+            "250": {
+              "left": 1463,
+              "right": 1034,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 2497
+            }
+          },
+          "meaningful_alpha8_source_centers_fit": false,
+          "alpha8_cell_bounds_fit": false,
+          "runtime_export_performed": false
+        },
+        "comparison_to_direct_edit_target": {
+          "reference_index_zero_based": 0,
+          "sha256": "5031b478a1a292f9f6e16080437d78bb1a41b828ccf3de2c700622bf0e7f3127",
+          "alpha_facts": {
+            "alpha_extrema": [
+              0,
+              254
+            ],
+            "bounds_alpha_at_least_8_exclusive": [
+              221,
+              39,
+              846,
+              1459
+            ],
+            "first_alpha_at_least_128_row_y": 40,
+            "first_alpha_at_least_128_row_span_x_inclusive": [
+              384,
+              393
+            ],
+            "first_row_span_midpoint_x": 388.5
+          },
+          "silhouette_alpha8_iou": 0.8848912277195846,
+          "changed_visible_rgba_pixels_full_canvas": 351734,
+          "changed_visible_rgba_pixels_y_at_least_520": 232832,
+          "premultiplied_max_channel_difference_greater_than_32_pixels_y_at_least_520": 82091,
+          "pixel_identity_claim": false
+        }
+      },
+      "anatomy_verified": false,
+      "runtime_export_performed": false,
+      "motion_accepted": false
+    },
+    {
+      "id": "028-simple-shorts-v4",
+      "resource": "JOHNWALK.BMP",
+      "frame": 28,
+      "status": "user-rejected-shorts-and-foot-optics",
+      "review_reason": "The user rejected this revision: try again, it also looks like the foot is optically wrong",
+      "output": {
+        "file": "028-simple-shorts-v4.png",
+        "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-bb8cd193-a8b1-4820-85a8-bb243d8caffe.png",
+        "sha256": "6ecb9f4c90bd56c7be816db06770cff92b3ad31c887550d70adcdaa14e9ededf",
+        "bytes": 1351215,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "raw_preservation_role": "Rejected branch endpoint retained for review; not an accepted replacement",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "call_record": "simple-shorts-prompt.json",
+        "prompt_utf8_sha256": "b0ca00220eddd7e36a8d25741a9342e541ecd3621b85cc5eb71a0dd8851ffc88",
+        "num_last_images_to_include": "omitted",
+        "ordered_reference_roles": [
+          {
+            "index_zero_based": 0,
+            "actual_path": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-a8e278eb-38d1-430a-bb2c-7f92d01c4a4f.png",
+            "role": "User-rejected 028 near-left-thigh-v3 raw; actual direct edit ancestor",
+            "sha256": "aed05515c6519dfcabf1db0c7c6184d0a14a9f9bb901b1065edc7dd5d99dd90f",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "file": "028-near-left-thigh-v3.png"
+            }
+          },
+          {
+            "index_zero_based": 1,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/028-generated-v4-transparent.png",
+            "role": "Previously accepted Cartoon 028 raw; simple shorts appearance reference",
+            "sha256": "bdbf7f83f0622cbc4b87f2f41c0f502e8185b4ee524da912f39a03cec28f8fc9",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "bundle": "../directional-cycle-v1/source-images.zip",
+              "member": "028-generated-v4-transparent.png"
+            }
+          }
+        ]
+      },
+      "technical_qa": {
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "bounds_alpha_at_least_8_exclusive": [
+          183,
+          38,
+          878,
+          1457
+        ],
+        "first_alpha_at_least_128_row_y": 39,
+        "first_alpha_at_least_128_row_span_x_inclusive": [
+          382,
+          394
+        ],
+        "first_row_span_midpoint_x": 388.0,
+        "existing_registration": {
+          "recipe": "../directional-cycle-v1/recipe.json",
+          "runtime_canvas": [
+            64,
+            144
+          ],
+          "cap_raw_recipe_observation": [
+            388,
+            40
+          ],
+          "cap_target_hd_recipe": [
+            17.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -21.3,
+            0,
+            0.1,
+            -3.75
+          ],
+          "mapped_alpha8_bounds_hd_exclusive": [
+            -3.0,
+            0.05,
+            66.5,
+            141.95
+          ],
+          "source_pixel_centers_outside_canvas_by_alpha_threshold": {
+            "8": {
+              "left": 1802,
+              "right": 1346,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 3148
+            },
+            "128": {
+              "left": 1720,
+              "right": 1279,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 2999
+            },
+            "250": {
+              "left": 1528,
+              "right": 1152,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 2680
+            }
+          },
+          "meaningful_alpha8_source_centers_fit": false,
+          "alpha8_cell_bounds_fit": false,
+          "runtime_export_performed": false
+        },
+        "comparison_to_direct_edit_target": {
+          "reference_index_zero_based": 0,
+          "sha256": "aed05515c6519dfcabf1db0c7c6184d0a14a9f9bb901b1065edc7dd5d99dd90f",
+          "alpha_facts": {
+            "alpha_extrema": [
+              0,
+              254
+            ],
+            "bounds_alpha_at_least_8_exclusive": [
+              184,
+              39,
+              876,
+              1457
+            ],
+            "first_alpha_at_least_128_row_y": 40,
+            "first_alpha_at_least_128_row_span_x_inclusive": [
+              377,
+              400
+            ],
+            "first_row_span_midpoint_x": 388.5
+          },
+          "silhouette_alpha8_iou": 0.963270746175994,
+          "changed_visible_rgba_pixels_full_canvas": 337201,
+          "changed_visible_rgba_pixels_y_at_least_520": 217913,
+          "premultiplied_max_channel_difference_greater_than_32_pixels_y_at_least_520": 40322,
+          "pixel_identity_claim": false
+        }
+      },
+      "anatomy_verified": false,
+      "runtime_export_performed": false,
+      "motion_accepted": false
+    },
+    {
+      "id": "028-natural-left-step-v5",
+      "resource": "JOHNWALK.BMP",
+      "frame": 28,
+      "status": "human-pose-review-pending",
+      "review_reason": "Simple ragged shorts were restored visually. Anatomical leg linkage, foot left/right identity, toe order and optics remain unresolved; fixed-canvas clearance is not met.",
+      "output": {
+        "file": "028-natural-left-step-v5.png",
+        "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-872f749a-9afb-436f-8323-534bb2baa6ea.png",
+        "sha256": "4d64d52cdac32e71abc8264e3c0461cc73673983ad9992d0888899dad9dd5665",
+        "bytes": 1346253,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "raw_preservation_role": "Prospective review source from a fresh branch; not an accepted replacement",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "call_record": "natural-step-prompt.json",
+        "prompt_utf8_sha256": "eb9e61e7a817c89eb9b389058d9a7da2d02c361e326945655e32dc704082cc74",
+        "num_last_images_to_include": "omitted",
+        "ordered_reference_roles": [
+          {
+            "index_zero_based": 0,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/028-generated-v4-transparent.png",
+            "role": "Previously accepted Cartoon028 raw; direct edit target for a fresh branch",
+            "sha256": "bdbf7f83f0622cbc4b87f2f41c0f502e8185b4ee524da912f39a03cec28f8fc9",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "bundle": "../directional-cycle-v1/source-images.zip",
+              "member": "028-generated-v4-transparent.png"
+            }
+          },
+          {
+            "index_zero_based": 1,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png",
+            "role": "Selected Calm focus key; expression reference",
+            "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+            "canvas": [
+              1024,
+              1536
+            ],
+            "durable_source": {
+              "file": "024-calm-focus-key.png"
+            }
+          },
+          {
+            "index_zero_based": 2,
+            "actual_path": "D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/original-028-nearest16x.png",
+            "role": "Supplied-original native pose enlarged16x; geometry reference only",
+            "sha256": "e405b6261b56e907a2051d10b5c8c9a10f8fb9a785db22415a3eb8935f14ed4e",
+            "canvas": [
+              512,
+              1152
+            ],
+            "durable_source": {
+              "record": "provenance.json#/technical_pose_reference_preparation",
+              "method": "Native canvas, index0 transparent,16x nearest-neighbor enlargement; not duplicated here."
+            }
+          }
+        ]
+      },
+      "technical_qa": {
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "bounds_alpha_at_least_8_exclusive": [
+          190,
+          39,
+          847,
+          1443
+        ],
+        "first_alpha_at_least_128_row_y": 40,
+        "first_alpha_at_least_128_row_span_x_inclusive": [
+          380,
+          398
+        ],
+        "first_row_span_midpoint_x": 389.0,
+        "existing_registration": {
+          "recipe": "../directional-cycle-v1/recipe.json",
+          "runtime_canvas": [
+            64,
+            144
+          ],
+          "cap_raw_recipe_observation": [
+            388,
+            40
+          ],
+          "cap_target_hd_recipe": [
+            17.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -21.3,
+            0,
+            0.1,
+            -3.75
+          ],
+          "mapped_alpha8_bounds_hd_exclusive": [
+            -2.3,
+            0.15,
+            63.4,
+            140.55
+          ],
+          "source_pixel_centers_outside_canvas_by_alpha_threshold": {
+            "8": {
+              "left": 1061,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 1061
+            },
+            "128": {
+              "left": 992,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 992
+            },
+            "250": {
+              "left": 863,
+              "right": 0,
+              "top": 0,
+              "bottom": 0,
+              "unique_total": 863
+            }
+          },
+          "meaningful_alpha8_source_centers_fit": false,
+          "alpha8_cell_bounds_fit": false,
+          "runtime_export_performed": false
+        },
+        "comparison_to_direct_edit_target": {
+          "reference_index_zero_based": 0,
+          "sha256": "bdbf7f83f0622cbc4b87f2f41c0f502e8185b4ee524da912f39a03cec28f8fc9",
+          "alpha_facts": {
+            "alpha_extrema": [
+              0,
+              254
+            ],
+            "bounds_alpha_at_least_8_exclusive": [
+              232,
+              39,
+              813,
+              1440
+            ],
+            "first_alpha_at_least_128_row_y": 40,
+            "first_alpha_at_least_128_row_span_x_inclusive": [
+              381,
+              395
+            ],
+            "first_row_span_midpoint_x": 388.0
+          },
+          "silhouette_alpha8_iou": 0.8547833442479807,
+          "changed_visible_rgba_pixels_full_canvas": 362583,
+          "changed_visible_rgba_pixels_y_at_least_520": 240968,
+          "premultiplied_max_channel_difference_greater_than_32_pixels_y_at_least_520": 99270,
+          "pixel_identity_claim": false
+        }
+      },
+      "ancestry_note": "This call used the previously accepted028 raw, Calm focus key and native pose. Rejected028 v2/v3/v4 are not ancestors of v5.",
+      "anatomy_verified": false,
+      "runtime_export_performed": false,
+      "motion_accepted": false
+    }
+  ],
+  "human_decisions": [
+    {
+      "attempt_id": "028-near-left-thigh-v3",
+      "response": "no, the shorts look weird",
+      "status": "rejected",
+      "scope": "Shorts appearance; not approval of anatomy."
+    },
+    {
+      "attempt_id": "028-simple-shorts-v4",
+      "response": "try again, it also looks like the foot is optically wrong",
+      "status": "rejected",
+      "scope": "Shorts and foot optics; no accepted 028 replacement."
+    }
+  ],
+  "visual_observations": [
+    {
+      "attempt_id": "024-calm-pose-v2",
+      "basis": "Independent visual inspection plus alpha8 row-contour measurements against the selected Calm key",
+      "observation": "The small trailing toe became more side-on. Its leading contour is around raw(405,1345..1350), versus Calm raw(476,1365..1370): approximately71 raw pixels left and20 up. This is a toe-contour observation, not a measured ankle translation or whole-limb lift."
+    },
+    {
+      "attempt_id": "028-calm-pose-v2",
+      "basis": "Independent visual inspection",
+      "observation": "The forward screen-left foot still connects to the screen-left shorts opening; the requested near-left hip-to-forward-foot chain was not established."
+    },
+    {
+      "attempt_id": "029-calm-pose-v2",
+      "basis": "Independent visual inspection",
+      "observation": "The same prior hip-to-leg assignment remains. Calm focus gaze is visible, but this is not a corrected pose."
+    }
+  ],
+  "lessons": [
+    "The first correction attempts and the subsequent Calm-pose leg passes returned the wrong connections. Correcting an anatomical chain requires revisiting shorts openings and upper thighs, not only feet.",
+    "Forcing a crossing seam produced wrapped flaps and unnatural shorts; the user rejected that branch. A changed overlap is not evidence that anatomical leg identity is correct.",
+    "Explicitly asking for pupils at the vertical centers of the eye whites produced a visible forward gaze in these reviewed outputs. This is an observation about these attempts, not a universal generation guarantee.",
+    "Eye-only is prompt intent. Broad pixel redraw occurred below the face in every new output; silhouettes, registration and motion require fresh review.",
+    "The returned raw canvas size does not establish fit inside the original runtime frame. The rejected028 branch extends beyond both sides under its existing affine."
+  ],
+  "pixel_redraw_caveat": "No output is represented as byte-identical outside its intended edit. Technical alpha/registration measurements do not approve anatomy, gait timing, foot clearance or style.",
+  "unresolved_foot_identity": "Determine anatomical left/right foot identity by tracing hip, thigh, knee, ankle and foot together, then check big-toe/smaller-toe ordering and side/sole view against the native reference. Prompt wording and changed shorts are not proof of the intended identity; v5 remains unverified."
+}

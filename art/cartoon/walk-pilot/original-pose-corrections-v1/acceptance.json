@@ -30,5 +30,37 @@
     "runtime_export_accepted": false,
     "motion_family_accepted": false,
     "production_promotion": false
+  },
+  "next_generation_checkpoint": {
+    "record": "next-generation-review.json",
+    "prospective_024": {
+      "file": "024-calm-pose-v2.png",
+      "status": "human-static-review-pending"
+    },
+    "prospective_025_026_027": {
+      "files": [
+        "025-calm-eyes-v1.png",
+        "026-calm-eyes-v1.png",
+        "027-calm-eyes-v1.png"
+      ],
+      "status": "technical-and-motion-review-pending"
+    },
+    "frame_028": {
+      "replacement_selected": false,
+      "latest_rejected_file": "028-simple-shorts-v4.png",
+      "human_response": "try again, it also looks like the foot is optically wrong",
+      "prospective_file": "028-natural-left-step-v5.png",
+      "status": "human-pose-review-pending",
+      "anatomy_verified": false,
+      "foot_identity_and_toe_order_verified": false
+    },
+    "frame_029": {
+      "replacement_selected": false,
+      "reason": "Latest Calm-pose attempt rejected for leg linkage and canvas clearance."
+    },
+    "foot_corrections_accepted": false,
+    "complete_cycle_accepted": false,
+    "runtime_exports_accepted": false,
+    "production_assets_changed": false
   }
 }
