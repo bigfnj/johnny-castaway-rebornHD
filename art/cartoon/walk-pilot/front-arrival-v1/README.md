@@ -3,7 +3,8 @@
 Work starts from main `707a20b` on `art/cartoon-front-arrival-family`.
 The approved front walk 024-029 stays intact. This batch begins with the
 separate original standing pose 017, reviewed as a key before more drawings.
-No new artwork is approved or promoted yet.
+017 appearance and its front-walk arrival are approved in `approval017-v1.json`.
+The remaining poses are pending. No new artwork is promoted yet.
 
 The full wait/turn table uses ten unique sprites. Two, 018 and 023, are already
 Cartoon. Eight still need artwork: 000, 003, 009, 010, 012, 015, 016 and 017.
@@ -22,7 +23,7 @@ silhouette fitting or camera recentering to hide motion discontinuities.
 
 ## First visual checkpoint
 
-Selected source: `017-foot-depth-v3.png`. The pending review is at
+Selected source: `017-foot-depth-v3.png`. The approved arrival review is at
 http://127.0.0.1:8932/front-arrival017-v1/review.html.
 The left panel is the accepted Cartoon walk ending in existing HD017; the right
 uses exactly the same walk followed by the new Cartoon017. "Show arrival"
@@ -32,7 +33,8 @@ complete movement. This review does not cover the later turn poses or story uses
 `provenance-v1.json` binds all three generation calls, their ordered references,
 raw outputs and technical measurements. `candidate-recipe-v1.json` reproduces
 the selected 80x150 candidate. `candidate-export-v1.json` records its output
-identity. Human acceptance remains pending in `review-request-v1.json`.
+identity. The original request is preserved in `review-request-v1.json`;
+the subsequent response and its exact scope are in `approval017-v1.json`.
 
 | Check | Result |
 | --- | --- |
