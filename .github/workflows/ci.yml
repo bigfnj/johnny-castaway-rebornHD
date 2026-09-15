@@ -81,6 +81,7 @@ jobs:
       - name: build failure and archive dependency controls
         run: |
           python3 -B tests/test_unix_build_flow.py --mutations
+          python3 -B tests/test_web_workflow_flow.py --mutations
           python3 -B tests/test_runtime_data.py --generator "Unix Makefiles" --mutations
           python3 -B tests/test_runtime_data.py --generator Ninja --mutations
 
@@ -153,12 +154,15 @@ jobs:
           python -m pip install --quiet playwright
           python -m playwright install --with-deps chromium
           python tests/web-smoke.py build_web
+          python tests/web-logging.py build_web --phase smoke
 
       - name: Web platform regression
         run: python3 -B tools/build_web.py --platform-probes regression --probes-only
 
-      - name: art selector and build contract regression
+      - name: Web audio, logging, art and build regression
         run: |
+          python tests/web-audio-timing.py build_web
+          python tests/web-logging.py build_web --phase regression
           python tests/web-art-controls.py build_web --mutation-check
           python3 -B tests/test_build_contracts.py --mutations
 

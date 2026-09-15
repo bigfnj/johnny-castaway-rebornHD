@@ -120,7 +120,7 @@ def verify(work, controls_only):
         restored = work / 'restored'; restored.mkdir()
         for case in checks.SMOKE: check(case, sound, walk, restored)
     (work / 'report.json').write_text(json.dumps({'status': 'PASS', 'mutations': records, 'fault_controls': 14,
-        'scope': 'compiled C with test-only I/O substitution; original SCRANTIC.SCR unavailable'}, indent=2) + '\n', encoding='utf-8')
+        'scope': 'compiled C with test-only I/O substitution; synthetic inputs, no original executable used'}, indent=2) + '\n', encoding='utf-8')
     print(f'PASS extractor fault controls and {len(records)} rebuilt mutations; evidence {work}')
 
 

@@ -164,7 +164,7 @@ def main():
         report = {'phase': args.phase, 'passed': cases, 'sound_sha256': hashlib.sha256(sound.read_bytes()).hexdigest(),
                   'walk_sha256': hashlib.sha256(walk.read_bytes()).hexdigest(), 'original_source_parity': 'unverified; synthetic fixtures only'}
         (work / 'report.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
-        print(f'INFO original SCRANTIC.SCR is unavailable; synthetic layout coverage only. Evidence: {work}')
+        print(f'INFO synthetic layout coverage only; this suite does not read an original executable. Evidence: {work}')
         print(f'PASS extractors {args.phase}: {len(cases)}/{len(cases)}'); return 0
     except (AssertionError, OSError, subprocess.SubprocessError) as exc:
         print(f'FAIL {exc}; evidence: {work}'); return 1
