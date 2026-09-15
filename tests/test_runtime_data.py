@@ -72,7 +72,10 @@ jc_add_runtime_data("${CMAKE_SOURCE_DIR}/scrantic_data.zip" jc_reborn jc_reborn_
         deployed = binary.parent / 'scrantic_data.zip'; deployed.unlink()
         command([options.cmake, '--build', build, '--config', 'Release', '--target', target], folder, folder / f'recover-{target}.log')
         assert deployed.exists() and digest(deployed) == digest(archive), f'cmake/RuntimeData.cmake: {target} did not restore deleted archive'
-        assert digest(binary) == original_hash and binary.stat().st_mtime_ns == original_time, f'{target}: artwork refresh unexpectedly rebuilt binary'
+        identity = {'path': str(binary), 'before_sha256': original_hash, 'after_sha256': digest(binary),
+                    'before_mtime_ns': original_time, 'after_mtime_ns': binary.stat().st_mtime_ns}
+        (folder/f'{target}-binary-identity.json').write_text(json.dumps(identity,indent=2)+'\n',encoding='utf-8')
+        assert identity['after_sha256'] == original_hash and identity['after_mtime_ns'] == original_time, f'{target}: artwork refresh unexpectedly rebuilt binary; {identity}; logs: {folder}'
     report = {'status':'PASS','generator':generator,'checks':results,'binary_execution_witnesses':2,
               'deleted_archives_restored':2,'binary_hashes_and_timestamps_unchanged':True,
               'module_sha256':digest(source / 'RuntimeData.cmake')}
@@ -110,9 +113,12 @@ def main():
     options=parser.parse_args()
     try:
         if options.work:
-            work=options.work.resolve(); work.mkdir(parents=True,exist_ok=False); run(options,work)
+            work=options.work.resolve(); work.mkdir(parents=True,exist_ok=False); run(options,work.resolve(strict=True))
         else:
-            with tempfile.TemporaryDirectory(prefix='jcr-runtime-data-') as tmp: run(options,Path(tmp))
+            base=ROOT/'build/cleanup-fixtures'; base.mkdir(parents=True,exist_ok=True)
+            work=Path(tempfile.mkdtemp(prefix='runtime-data-',dir=base)).resolve(strict=True)
+            print(f'Fixture logs retained: {work}',flush=True)
+            run(options,work)
         return 0
     except (AssertionError,subprocess.TimeoutExpired) as exc:
         print(f'FAIL {exc}'); return 1

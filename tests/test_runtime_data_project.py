@@ -66,8 +66,10 @@ def verify(work, mutations):
     for shell in ('powershell.exe', 'pwsh'):
         code, text = run([shell, '-NoProfile', '-File', source / 'gate.ps1', '-NoBuild', '-SmokeOnly'], source, work / f'gate-{shell}.log', check=False)
         failures = [line for line in text.splitlines() if line.startswith('FAIL ')]
-        expected = f'FAIL runtime archive differs from assets/scrantic_data.zip: {deployed}'
-        assert code != 0 and failures == [expected] and '=== smoke ===' not in text, f'gate.ps1: {shell} did not reject exactly one stale {deployed} before smoke'
+        prefix = 'FAIL runtime archive differs from assets/scrantic_data.zip: '
+        same_archive = (len(failures) == 1 and failures[0].startswith(prefix)
+                        and Path(failures[0][len(prefix):]).samefile(deployed))
+        assert code != 0 and same_archive and '=== smoke ===' not in text, f'gate.ps1: {shell} did not reject exactly one stale {deployed} before smoke; status={code}; log={work / f"gate-{shell}.log"}; actual output:\n{text}'
         gate_results.append({'shell': shell, 'failure': failures[0], 'smoke_reached': False})
         print(f'FIRED 1/1 gate.ps1 ({shell}): stale {deployed} refused before smoke', flush=True)
     run(compile_command, source, work / 'refresh.log')
@@ -116,9 +118,12 @@ def main():
         return 1
     try:
         if args.work:
-            work = args.work.resolve(); work.mkdir(parents=True, exist_ok=False); verify(work, args.mutations)
+            work = args.work.resolve(); work.mkdir(parents=True, exist_ok=False); verify(work.resolve(strict=True), args.mutations)
         else:
-            with tempfile.TemporaryDirectory(prefix='jcr-runtime-project-') as tmp: verify(Path(tmp), args.mutations)
+            base = ROOT / 'build/cleanup-fixtures'; base.mkdir(parents=True, exist_ok=True)
+            work = Path(tempfile.mkdtemp(prefix='runtime-project-', dir=base)).resolve(strict=True)
+            print(f'Fixture logs retained: {work}', flush=True)
+            verify(work, args.mutations)
         return 0
     except (AssertionError, OSError, subprocess.SubprocessError) as exc:
         print(f'FAIL {exc}'); return 1
