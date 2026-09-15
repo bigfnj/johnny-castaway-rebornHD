@@ -19,7 +19,7 @@ def main():
     source = work / 'source'
     source.mkdir()
     shutil.copyfile(root / 'CMakeLists.txt', source / 'CMakeLists.txt')
-    for folder in ['src', 'platform', 'third_party', 'vs', 'tests', 'cmake', 'assets']:
+    for folder in ['src', 'platform', 'third_party', 'vs', 'tests', 'cmake', 'assets', 'tools']:
         shutil.copytree(root / folder, source / folder,
                         ignore=shutil.ignore_patterns('build', '__pycache__', '.vs'))
     builddir = work / 'build'

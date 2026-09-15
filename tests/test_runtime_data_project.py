@@ -41,7 +41,7 @@ def assert_fresh(archive, deployed):
 def verify(work, mutations):
     protected = sha(ROOT / 'assets/scrantic_data.zip')
     source = work / 'source'; source.mkdir()
-    for directory in ('cmake', 'src', 'platform', 'third_party', 'vs', 'tests'):
+    for directory in ('cmake', 'src', 'platform', 'third_party', 'vs', 'tests', 'tools'):
         shutil.copytree(ROOT / directory, source / directory)
     for name in ('CMakeLists.txt', 'gate.ps1'):
         shutil.copyfile(ROOT / name, source / name)
