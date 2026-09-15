@@ -2,7 +2,7 @@
 
 This follows the [Calm focus](art-style-learnings-calm-focus.md) and
 [rear walk](art-style-learnings-rear-walk.md) records. The production front walk
-remains unchanged while the new motion is reviewed.
+has a bounded replacement of 028/029 after separate motion and island reviews.
 
 ## Establish the hip connection before expanding the cycle
 
@@ -19,6 +19,9 @@ After the far arm was hidden in 028/029 and the two drawings were combined with
 the exact approved 024-027 runtime PNGs, the user approved the full standalone
 walk with "much better proceed". Preserve this motion-specific acceptance
 separately from the subsequent native island and standing-transition review.
+The user approved that actual scene with "pass- proceed". The existing HD 017
+arrival was visible and unchanged. Keep its review scope explicit: the two new
+walking drawings do not also create a Cartoon standing pose.
 
 ## Occluded anatomy should stay hidden
 

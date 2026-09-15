@@ -1,8 +1,10 @@
 # Front-oblique walk refresh
 
-This candidate batch revisits JOHNWALK 024-029 using the approved rear walk's
-joint, contact and clothing lessons. Production still contains the accepted
-Calm focus six-frame family. Neither draft is promoted by this bundle.
+This batch revisits JOHNWALK 024-029 using the approved rear walk's joint,
+contact and clothing lessons. The user approved revised 028/029 in standalone
+motion and on the native island. Frames 024-027 retain their exact earlier
+Calm focus runtime PNGs. The production acceptance records the two replacements
+and inherits the other 26 assets' earlier approvals.
 
 The user preferred the third 028 draft and requested complete occlusion of its
 far/background arm. [The exact feedback](feedback-key-v1.json) is retained.
@@ -10,7 +12,8 @@ far/background arm. [The exact feedback](feedback-key-v1.json) is retained.
 [Continuation provenance](continuation-provenance-v1.json) records all three
 follow-up calls and their exact outputs. The user approved the six-pose motion
 comparison with "much better proceed"; [the motion acceptance](motion-acceptance-v1.json)
-pins its exact drawings and preview. Native island and arrival review is next.
+pins its exact drawings and preview. The subsequent native island and arrival
+review was approved with "pass- proceed".
 The earlier static page is a preserved historical view of draft v3.
 
 ## First pose: 028
@@ -77,3 +80,12 @@ The actual HD standing arrival is mirrored frame 017 at logical (293,243), held
 1600 ms, after walking 027 at (300,242). Rear arrival 018 does not apply here.
 An E-to-F route exercises the mirrored family. Neither route timing nor this
 still reference establishes original-executable playback parity.
+
+## Accepted production scope
+
+[Production acceptance](production-acceptance.json) records the exact island
+response, preserves the motion approval and native capture identities, and
+lists only 028/029 as newly accepted. The standing arrival remains existing HD
+017. The approval covers the displayed E-to-A scene; it does not establish
+original anatomical parity or approval of every mirrored route and story use.
+Earlier pending-review records and preview pages remain unchanged history.

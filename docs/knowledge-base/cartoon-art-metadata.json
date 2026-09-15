@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "purpose": "authoring-review-only",
   "style": "cartoon",
   "coverage": "partial",
@@ -15,50 +15,7 @@
     "walking_assets": 6,
     "island_assets": 15
   },
-  "current_human_review": {
-    "date": "2026-09-15",
-    "basis": "user-visual-approval-of-actual-linux-native-scene-captures",
-    "preview": "http://127.0.0.1:8932/calm-focus-island-v1/",
-    "not_automatically_verified": true,
-    "observations": [
-      {
-        "id": "walk-024-trailing-right-foot",
-        "frame": 24,
-        "status": "accepted-as-displayed",
-        "original_reference_observation": "The trailing anatomical right foot turns inward along the walking trajectory.",
-        "variant_judgment": "The displayed Calm focus variant is accepted; its foot angle is not automatically verified against original anatomy.",
-        "decision": "Retain the six reviewed runtime exports, including the displayed 024 trailing foot."
-      },
-      {
-        "id": "walk-028-leg-order",
-        "frame": 28,
-        "status": "accepted-as-displayed-with-known-leg-difference",
-        "original_reference_observation": "Anatomical left foot is forward and right foot is back.",
-        "variant_judgment": "The known original-versus-Cartoon leg-order difference remains; anatomical correction is not claimed.",
-        "decision": "Retain the displayed motion and the reviewed local toe-clearance edit."
-      },
-      {
-        "id": "walk-029-leg-order",
-        "frame": 29,
-        "status": "accepted-as-displayed-with-known-leg-difference",
-        "original_reference_observation": "Anatomical left foot is forward and right foot is back.",
-        "variant_judgment": "The known original-versus-Cartoon leg-order difference remains; anatomical correction is not claimed.",
-        "decision": "Retain the displayed motion and the reviewed local toe-clearance edit."
-      }
-    ],
-    "awaiting_human_decision": [],
-    "accepted_retained_differences": [
-      {
-        "frames": [
-          26,
-          27
-        ],
-        "decision": "Displayed foot lift accepted in the reviewed motion; not measured anatomical parity."
-      }
-    ],
-    "historical_approval_policy": "Earlier observations and pending-review snapshots remain unchanged as historical records. This new acceptance closes the displayed family's review while retaining the known leg difference and measured rendering limits."
-  },
-  "current_acceptance_record": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+  "current_acceptance_record": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json",
   "historical_human_correction_requests": {
     "date": "2026-09-15",
     "basis": "user-visual-review-of-supplied-original-comparison",
@@ -487,7 +444,8 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -500,7 +458,18 @@
           ]
         },
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+        "sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+        "canvas": [
+          560,
+          104
+        ]
       }
     },
     {
@@ -593,7 +562,8 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -606,7 +576,18 @@
           ]
         },
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+        "canvas": [
+          144,
+          58
+        ]
       }
     },
     {
@@ -699,7 +680,8 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -712,7 +694,18 @@
           ]
         },
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+        "canvas": [
+          144,
+          58
+        ]
       }
     },
     {
@@ -805,7 +798,8 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -818,7 +812,18 @@
           ]
         },
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+        "canvas": [
+          144,
+          58
+        ]
       }
     },
     {
@@ -911,13 +916,25 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+        "sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+        "canvas": [
+          320,
+          50
+        ]
       }
     },
     {
@@ -1010,13 +1027,25 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+        "sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+        "canvas": [
+          320,
+          50
+        ]
       }
     },
     {
@@ -1109,13 +1138,25 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+        "sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+        "canvas": [
+          320,
+          50
+        ]
       }
     },
     {
@@ -1208,7 +1249,8 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -1221,7 +1263,18 @@
           ]
         },
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+        "canvas": [
+          144,
+          64
+        ]
       }
     },
     {
@@ -1314,7 +1367,8 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -1327,7 +1381,18 @@
           ]
         },
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+        "canvas": [
+          144,
+          64
+        ]
       }
     },
     {
@@ -1420,7 +1485,8 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -1433,7 +1499,18 @@
           ]
         },
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+        "canvas": [
+          144,
+          64
+        ]
       }
     },
     {
@@ -1526,13 +1603,25 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+        "sha256": "701fc7909c3cc150ece7125c04f493f27da75d07446cc43cc6acae70fde1aa18",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/012.png",
+        "canvas": [
+          304,
+          138
+        ]
       }
     },
     {
@@ -1625,13 +1714,25 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+        "sha256": "72714deba94d2e7de946b9f30532e2482ac7a1b1027c442e77e443e5c9b7186c",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/013.png",
+        "canvas": [
+          48,
+          290
+        ]
       }
     },
     {
@@ -1724,13 +1825,25 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+        "sha256": "ddfbff021d56c093456b4a9f9476f9439fbe482c45e66ddfb0c9f2993f9e324f",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/014.png",
+        "canvas": [
+          208,
+          56
+        ]
       }
     },
     {
@@ -1823,13 +1936,25 @@
         ],
         "placement_basis": "first-reference-cloud-position",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+        "sha256": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/015.png",
+        "canvas": [
+          256,
+          72
+        ]
       }
     },
     {
@@ -1919,14 +2044,26 @@
         "reviewed_scene_origin_hd": null,
         "placement_basis": "route-dependent",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": [
+        "historical_user_review_ids": [
           "walk-024-trailing-right-foot"
+        ]
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/024.png",
+        "canvas": [
+          64,
+          150
         ]
       }
     },
@@ -2017,13 +2154,25 @@
         "reviewed_scene_origin_hd": null,
         "placement_basis": "route-dependent",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/025.png",
+        "canvas": [
+          80,
+          148
+        ]
       }
     },
     {
@@ -2113,7 +2262,8 @@
         "reviewed_scene_origin_hd": null,
         "placement_basis": "route-dependent",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -2125,12 +2275,23 @@
             "precision": "approximate; no automatic threshold",
             "source": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json#known_geometry_limitations",
             "measured_variant_recipe": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json",
-            "current_variant_independently_remeasured": false,
-            "current_disposition": "Displayed foot lift accepted in the reviewed motion; no claim of anatomical parity."
+            "historical_pilot_variant_independently_remeasured": false,
+            "historical_pilot_disposition": "Displayed foot lift accepted in the reviewed motion; no claim of anatomical parity."
           }
         },
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/026.png",
+        "canvas": [
+          80,
+          146
+        ]
       }
     },
     {
@@ -2220,7 +2381,8 @@
         "reviewed_scene_origin_hd": null,
         "placement_basis": "route-dependent",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -2232,12 +2394,23 @@
             "precision": "approximate; no automatic threshold",
             "source": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json#known_geometry_limitations",
             "measured_variant_recipe": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json",
-            "current_variant_independently_remeasured": false,
-            "current_disposition": "Displayed foot lift accepted in the reviewed motion; no claim of anatomical parity."
+            "historical_pilot_variant_independently_remeasured": false,
+            "historical_pilot_disposition": "Displayed foot lift accepted in the reviewed motion; no claim of anatomical parity."
           }
         },
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/027.png",
+        "canvas": [
+          64,
+          144
+        ]
       }
     },
     {
@@ -2287,7 +2460,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/028.png",
+        "member": null,
         "sha256": "50e7eb8717283e3a532a8237f1b0e96c2d0e4314080e2f985b6b928e5dee9167",
         "canvas": [
           64,
@@ -2327,14 +2500,26 @@
         "reviewed_scene_origin_hd": null,
         "placement_basis": "route-dependent",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": [
+        "historical_user_review_ids": [
           "walk-028-leg-order"
+        ]
+      },
+      "production": {
+        "status": "replaced",
+        "acceptance": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+        "sha256": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/028.png",
+        "canvas": [
+          64,
+          144
         ]
       }
     },
@@ -2385,7 +2570,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/029.png",
+        "member": null,
         "sha256": "ac6907347ace18d909c09cd00ba6c1de65180bcfcdd43142ec0e00062bc17d15",
         "canvas": [
           64,
@@ -2425,14 +2610,26 @@
         "reviewed_scene_origin_hd": null,
         "placement_basis": "route-dependent",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": [
+        "historical_user_review_ids": [
           "walk-029-leg-order"
+        ]
+      },
+      "production": {
+        "status": "replaced",
+        "acceptance": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+        "sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/029.png",
+        "canvas": [
+          64,
+          150
         ]
       }
     },
@@ -2505,19 +2702,31 @@
         ],
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "historically_human_accepted": true
+        "historically_human_accepted": true,
+        "production_status": "retained"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
         "recorded_deviations": {},
         "artistic_fidelity": "unverified-by-this-tool",
-        "current_user_review_ids": []
+        "historical_user_review_ids": []
+      },
+      "production": {
+        "status": "retained",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+        "sha256": "099249884c73c863436983ec4d4f5650e77e6e5748ef65bf417d0785b1acf294",
+        "member": "data/styles/cartoon/SCR/OCEAN02.SCR.png",
+        "canvas": [
+          1280,
+          960
+        ]
       }
     }
   ],
   "evidence": {
     "art/cartoon/pack.json": {
-      "sha256": "621cfa8e0b28bd22ce90a52c9f1803f71baea090466b3ff73c56699a76fc3cd4",
+      "sha256": "f74233777743c8cf895f48ce5b0a537c65b47a79e13ab74d7724b61feef49aa2",
       "hash_basis": "utf8-normalized-newlines"
     },
     "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json": {
@@ -2561,7 +2770,7 @@
       "hash_basis": "file-bytes"
     },
     "docs/art-style-learnings.md": {
-      "sha256": "d7fb2c870860eb86f06e5e2fcb0ddaf63f25e0c7e46ed50627049ebc955f0c38",
+      "sha256": "87209ecd276e1f3ca4472b0915f599255418fc7a625e84d1907cd12f507bb55f",
       "hash_basis": "utf8-normalized-newlines"
     },
     "art/cartoon/motion-review.md": {
@@ -2580,8 +2789,20 @@
       "sha256": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70",
       "hash_basis": "utf8-normalized-newlines"
     },
+    "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json": {
+      "sha256": "80c385a861a2520e6c672bd4bbae3b08f6159b425bf310c7a9cc44a4eadecfee",
+      "hash_basis": "file-bytes"
+    },
     "art/cartoon/arrival-pilot-v1/production-acceptance.json": {
       "sha256": "52d71dd6255a544791d2de24c64882716b95cb0e90085f23a798612aef71f4e2",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/walk-expansion-v1/production-acceptance.json": {
+      "sha256": "70942da086c93ca2fca2693fc35fb295be7d1ea38c29c38598124b5a1c16adc8",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json": {
+      "sha256": "8b72e60b5598e29909f5897a47e4304a54f9e5b96564624811e0f57e56218725",
       "hash_basis": "file-bytes"
     },
     "art/cartoon/walk-pilot/calm-focus-runtime-v1/source-images.zip": {
@@ -2632,7 +2853,63 @@
   "limits": [
     "Original XPM evidence is decoded by the port, not a capture of the original executable. No new anatomical annotation is performed.",
     "Numeric registration residuals test transform consistency, not original-versus-variant landmark coincidence.",
-    "Historical raised-foot observations are retained with their older variant identity. Current displayed foot lift and known leg differences were accepted, not proven anatomically equivalent.",
+    "Historical raised-foot observations retain their older variant identity. The historical Calm focus pilot's displayed foot lift and known leg differences were accepted, not proven anatomically equivalent; this is not approval of replacement drawings.",
     "No pixel-equality or invented aesthetic threshold is applied across styles. Other poses/states remain outside this pilot."
-  ]
+  ],
+  "historical_pilot_acceptance_record": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+  "historical_pilot_human_review": {
+    "date": "2026-09-15",
+    "basis": "user-visual-approval-of-actual-linux-native-scene-captures",
+    "preview": "http://127.0.0.1:8932/calm-focus-island-v1/",
+    "not_automatically_verified": true,
+    "observations": [
+      {
+        "id": "walk-024-trailing-right-foot",
+        "frame": 24,
+        "status": "accepted-as-displayed",
+        "original_reference_observation": "The trailing anatomical right foot turns inward along the walking trajectory.",
+        "variant_judgment": "The displayed Calm focus variant is accepted; its foot angle is not automatically verified against original anatomy.",
+        "decision": "Retain the six reviewed runtime exports, including the displayed 024 trailing foot."
+      },
+      {
+        "id": "walk-028-leg-order",
+        "frame": 28,
+        "status": "accepted-as-displayed-with-known-leg-difference",
+        "original_reference_observation": "Anatomical left foot is forward and right foot is back.",
+        "variant_judgment": "The known original-versus-Cartoon leg-order difference remains; anatomical correction is not claimed.",
+        "decision": "Retain the displayed motion and the reviewed local toe-clearance edit."
+      },
+      {
+        "id": "walk-029-leg-order",
+        "frame": 29,
+        "status": "accepted-as-displayed-with-known-leg-difference",
+        "original_reference_observation": "Anatomical left foot is forward and right foot is back.",
+        "variant_judgment": "The known original-versus-Cartoon leg-order difference remains; anatomical correction is not claimed.",
+        "decision": "Retain the displayed motion and the reviewed local toe-clearance edit."
+      }
+    ],
+    "awaiting_human_decision": [],
+    "accepted_retained_differences": [
+      {
+        "frames": [
+          26,
+          27
+        ],
+        "decision": "Displayed foot lift accepted in the reviewed motion; not measured anatomical parity."
+      }
+    ],
+    "historical_approval_policy": "Earlier observations and pending-review snapshots remain unchanged as historical records. This new acceptance closes the displayed family's review while retaining the known leg difference and measured rendering limits."
+  },
+  "pilot_history": {
+    "acceptance_record": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+    "sha256": "ce7f3832982bcfbef13f9ce6dc06c1f60ce774b89aca088247442040fd767a0c",
+    "replaced_assets": [
+      "BMP/JOHNWALK.BMP/028.png",
+      "BMP/JOHNWALK.BMP/029.png"
+    ]
+  },
+  "production_summary": {
+    "retained": 19,
+    "replaced": 2
+  }
 }

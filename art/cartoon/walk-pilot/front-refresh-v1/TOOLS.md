@@ -1,8 +1,9 @@
 # Front refresh technical export and standalone review
 
-`export.py` accepts exactly six explicit selections. Use `FRAME=approved` to
-retain that frame's existing runtime PNG bytes, or `FRAME=RAW.png` for a new
-source relative to this folder. No automatic candidate choice or approval occurs.
+`export.py` accepts exactly six explicit selections for the pre-promotion
+Calm-focus baseline. Use `FRAME=approved` to retain that frame's exact baseline
+runtime PNG bytes, or `FRAME=RAW.png` for a new source relative to this folder.
+No automatic candidate choice or approval occurs.
 The provisional motion-v1 selection retains 024–027 and uses
 `028-occluded-arm-v4.png` and `029-heel-fit-v2.png`.
 
@@ -11,7 +12,8 @@ candidate. The saved recipe requires its recorded version. Playwright and its
 Chromium installation are needed for the browser tests. No new tool installation
 is required.
 
-From the repository root:
+The original preparation command, run before promotion from the repository
+root, was:
 
 ```powershell
 & $env:TOOLBOX_PYTHON -B art/cartoon/walk-pilot/front-refresh-v1/export.py --source 024=approved --source 025=approved --source 026=approved --source 027=approved --source 028=028-occluded-arm-v4.png --source 029=029-heel-fit-v2.png --output build/front-refresh/candidate-motion-v1
@@ -20,6 +22,12 @@ From the repository root:
 Use a new output directory for every attempt. `--preview-only` explicitly
 permits inspection of an overhanging source and withholds every runtime sprite.
 It does not crop the source to make the fit pass.
+
+After 028/029 promotion, this `--source` command intentionally refuses the changed
+live baseline with `approved-runtime-identity:028`. It does not silently call the
+new production artwork the old approved source. Use `--recipe` below to reproduce
+motion-v1 after promotion. A later art family needs its own explicit baseline;
+this historical exporter is not a general current-production editing tool.
 
 ## Frozen inputs and registration
 
@@ -103,17 +111,37 @@ Motion-v1's camera is `[592,414,269,224]`. At 1280×900, each panel occupies abo
 & $env:TOOLBOX_PYTHON -B art/cartoon/walk-pilot/front-refresh-v1/test_tools.py --phase regression --mutations
 ```
 
-Two smoke checks precede 14 regressions. The browser uses a temporary loopback
+Two smoke checks precede 15 regressions. The browser uses a temporary loopback
 server and a controlled animation-frame clock to exercise the actual page's
 normal and slow timing, pause, stepping, endpoint hold and repeat controls.
 The unchanged control also compares rendered current/revised pixels.
 
-Eleven executed-source mutations cover input/source identity, registration,
+Twelve executed-source mutations cover input/source identity, registration,
 original canvas, Pillow contract, runtime overhang, recorded outputs, retained
 PNG preservation, the original route, stopped browser timing, and a false
-retained-frame label. The label control actually selects new test pixels for
+retained-frame label, and accidental coupling to promoted production PNGs.
+The label control actually selects new test pixels for
 024 with 025–029 retained, then reads the rendered browser text. Each mutant must
 produce exactly one named failure with the executed helper's SHA256 witness.
+
+Historical authoring tests create a disposable six-frame asset ZIP from
+`motion-v1/export/inputs/baseline/`, alongside the frozen prior recipe, original
+catalog, and walk table. The retained old raw source bundle remains hash-pinned
+by that recipe. No test replaces production files. A promotion-isolation control
+serves the real new 028/029 candidate bytes to any accidental live archive read,
+then confirms preparation still returns all six historical PNGs. Its mutation
+forces the exporter back to the live root and must produce exactly one named
+failure. These historical tests do not validate the active production pack;
+the separate `tools/art_production_catalog.py --check` and
+`tools/art_review_metadata.py --check` gates retain that responsibility.
+
+The promotion-isolation update passed two smoke checks, then 15 regressions and
+all 12 executed mutations on 2026-09-15. The test driver SHA256 was
+`2cbf75c5ab8a7ef194fc0b706c980cf818dc11ec8c14022de29966528cca24af`.
+The new live-root mutant's executed source SHA256 was
+`618d0aee148d17fcd1edf93fb0e4206dea2097f5168e2592c2eafc0f6101aff8`;
+`test_historical_fixture_after_promotion` failed exactly once as required.
+The live exporter and both frozen motion-v1 helpers were unchanged.
 
 Motion-v1's preserved `tool-verification.json` records the earlier two smoke,
 13-regression, ten-mutation run. The later label fix and expanded test run are
@@ -134,4 +162,4 @@ smoke before regression, all 24 states, normal/slow timing, pause, stepping,
 diagnostic hold, repeat-off stopping, repeat-on wrapping, and the 1280×900 layout.
 The one-off publisher and checker is retained as
 `review-evidence/motion-v1/helpers/publish_motion_v1.py`; it refuses to overwrite
-the already published version. Production assets remain unchanged.
+the already published version. That publication did not change production assets.

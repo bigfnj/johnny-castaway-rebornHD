@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "accepted": true,
+  "acceptance_record": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json",
+  "human_question": "Does the revised right-hand walk look natural on the island at Normal speed, including its transition to the existing HD standing pose?",
+  "human_response": "pass- proceed",
+  "reviewed_url": "http://127.0.0.1:8932/front-refresh-island-v1/review.html",
+  "reviewed_html_sha256": "e4b7c8a87762a5736b1e157f13c00d50a3d7d917d70e4ffc5d312db162ebc4f0",
+  "scope": "New approval covers revised front walking frames 028/029 in the displayed standalone motion and native E-to-A route on the Cartoon island. The other twenty-six accepted assets retain their earlier per-asset approval records. The final mirrored HD standing frame 017 remains unchanged; it was observed as the existing arrival context, not approved as new Cartoon artwork.",
+  "runtime_coverage": "partial",
+  "newly_accepted_assets": [
+    "BMP/JOHNWALK.BMP/028.png",
+    "BMP/JOHNWALK.BMP/029.png"
+  ],
+  "inherited_acceptances": [
+    {
+      "path": "art/cartoon/arrival-pilot-v1/production-acceptance.json",
+      "sha256": "52d71dd6255a544791d2de24c64882716b95cb0e90085f23a798612aef71f4e2",
+      "asset_paths": [
+        "BMP/BACKGRND.BMP/000.png",
+        "BMP/BACKGRND.BMP/003.png",
+        "BMP/BACKGRND.BMP/004.png",
+        "BMP/BACKGRND.BMP/005.png",
+        "BMP/BACKGRND.BMP/006.png",
+        "BMP/BACKGRND.BMP/007.png",
+        "BMP/BACKGRND.BMP/008.png",
+        "BMP/BACKGRND.BMP/009.png",
+        "BMP/BACKGRND.BMP/010.png",
+        "BMP/BACKGRND.BMP/011.png",
+        "BMP/BACKGRND.BMP/012.png",
+        "BMP/BACKGRND.BMP/013.png",
+        "BMP/BACKGRND.BMP/014.png",
+        "BMP/BACKGRND.BMP/015.png",
+        "BMP/JOHNWALK.BMP/024.png",
+        "BMP/JOHNWALK.BMP/025.png",
+        "BMP/JOHNWALK.BMP/026.png",
+        "BMP/JOHNWALK.BMP/027.png",
+        "SCR/OCEAN02.SCR.png",
+        "BMP/JOHNWALK.BMP/011.png",
+        "BMP/JOHNWALK.BMP/019.png",
+        "BMP/JOHNWALK.BMP/020.png",
+        "BMP/JOHNWALK.BMP/021.png",
+        "BMP/JOHNWALK.BMP/022.png",
+        "BMP/JOHNWALK.BMP/023.png",
+        "BMP/JOHNWALK.BMP/018.png"
+      ],
+      "scope": "Select the twenty-six unchanged assets from the prior twenty-eight-asset aggregate. Its earlier Calm focus, rear walk and standing 018 origins remain intact; previous 028/029 approvals remain historical and are not inherited as the new runtime assets."
+    }
+  ],
+  "accepted_assets": [
+    {
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/012.png",
+      "sha256": "701fc7909c3cc150ece7125c04f493f27da75d07446cc43cc6acae70fde1aa18",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/013.png",
+      "sha256": "72714deba94d2e7de946b9f30532e2482ac7a1b1027c442e77e443e5c9b7186c",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/014.png",
+      "sha256": "ddfbff021d56c093456b4a9f9476f9439fbe482c45e66ddfb0c9f2993f9e324f",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/015.png",
+      "sha256": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/024.png",
+      "sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/025.png",
+      "sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/026.png",
+      "sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/027.png",
+      "sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/028.png",
+      "sha256": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4",
+      "recipe": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/029.png",
+      "sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+      "recipe": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json"
+    },
+    {
+      "path": "SCR/OCEAN02.SCR.png",
+      "sha256": "099249884c73c863436983ec4d4f5650e77e6e5748ef65bf417d0785b1acf294",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/011.png",
+      "sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/019.png",
+      "sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/020.png",
+      "sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/021.png",
+      "sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/022.png",
+      "sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/023.png",
+      "sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/018.png",
+      "sha256": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190",
+      "recipe": "art/cartoon/arrival-pilot-v1/runtime-recipe-v1.json"
+    }
+  ],
+  "human_review_records": {
+    "standalone_motion": {
+      "path": "art/cartoon/walk-pilot/front-refresh-v1/motion-acceptance-v1.json",
+      "sha256": "96cc1dfd845fbf08d07d174d091bd07e51d47aaa19654be970861046ed03e091",
+      "human_response": "much better proceed",
+      "scope": "Approved the displayed standalone motion and authorized proceeding to native island review."
+    },
+    "native_question": {
+      "path": "art/cartoon/walk-pilot/front-refresh-v1/feedback-native-v1.json",
+      "sha256": "6f58b747582591c6172e166f31f50a7258fcca17dde1195c273e532f26c6059d"
+    },
+    "native_publication": {
+      "path": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-publication-v1/publication.json",
+      "sha256": "1564d54ec4e97b0348cd76cc773c7a39bdb7b413f9f3e69c81e9a8f56ec82a6c"
+    }
+  },
+  "runtime_recipe": {
+    "path": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+    "sha256": "8b72e60b5598e29909f5897a47e4304a54f9e5b96564624811e0f57e56218725"
+  },
+  "runtime_export_report": {
+    "path": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/export-report.json",
+    "sha256": "3130e9bb9f6e027a5ce1d4b7ab91d321ef29abc003f47d62a8bf9c3a3f5633fd"
+  },
+  "reviewed_platform": "Linux/X11 under Xvfb",
+  "reviewed_source_checkout": "4551081495eee81e5e5bf2d8b5f00a5619a176a2",
+  "reviewed_native_executable_sha256": "ac2b28b83dfa7d4b32d2f90b2ae37ab6f82ce4491eac5d5ed1bddce03c8ec947",
+  "reviewed_native_api": "adsPlayWalk(4,1,0,1)",
+  "reviewed_island_seed": 11,
+  "reviewed_path_seed": 2,
+  "technical_evidence": {
+    "path": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/evidence.json",
+    "sha256": "deb5ec550a8f5a7ea25fcbe5799a0e2d313be160ca5808080210f61f7e416805",
+    "display_count": 47,
+    "logical_duration_ms": 4360,
+    "travel_pose_count": 23,
+    "travel_delay_ms": 120,
+    "arrival_hold_ms": 1600,
+    "changed_displays": 12,
+    "unchanged_displays": 35,
+    "comparison": "All display times, dependencies, and pixels outside the exact placed 028/029 canvases match the pre-replacement baseline. The final HD 017 arrival is pixel-identical."
+  },
+  "source_identity_policy": "pack.json source_sha256 identifies the bundled HD proxy. Generated source identities and original indexed/palette reference identities remain distinct in the frozen export and reference records.",
+  "retained_limits": [
+    "Only revised 028/029 PNGs replace accepted production assets. The 024-027 runtime PNGs and their prior review origins remain byte-identical.",
+    "The human review covers the displayed E-to-A route at Normal speed and standalone motion. It does not establish exact source anatomy or approve unseen mirrored routes, story interactions, or every placement.",
+    "Final arrival 017 remains HD. Standing 018 remains the separately accepted Cartoon asset from the earlier arrival pilot.",
+    "The style remains partial: twelve walking frames, standing 018, and fifteen island assets, totaling twenty-eight accepted assets.",
+    "Frozen generation, motion, native-capture and publication records retain their original pending-review states. Their hashes identify the candidate later accepted in this separate record."
+  ],
+  "historical_approval_policy": "Existing Calm focus, rear walk and arrival approval records are unchanged. pilot_history binds the original twenty-one-asset pilot and explicitly names only 028/029 as replaced; nineteen original pilot assets remain current.",
+  "production_archive": {
+    "before_sha256": "0748676eb6ab0685abecfeb0bbfb8547d2050e6419bb1cad5f13ccc9f716fedd",
+    "archive_sha256": "1da6ddba0f22d679193fc35b824b975b62dc9ca1966f312d91649f18d8793b63",
+    "reviewed_private_archive_sha256": "1da6ddba0f22d679193fc35b824b975b62dc9ca1966f312d91649f18d8793b63",
+    "member_count": 2579,
+    "cartoon_asset_count": 28,
+    "unchanged_members": 2577,
+    "changed_members": {
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/028.png": {
+        "before_sha256": "50e7eb8717283e3a532a8237f1b0e96c2d0e4314080e2f985b6b928e5dee9167",
+        "after_sha256": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4"
+      },
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/029.png": {
+        "before_sha256": "ac6907347ace18d909c09cd00ba6c1de65180bcfcdd43142ec0e00062bc17d15",
+        "after_sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a"
+      }
+    },
+    "added_members": [],
+    "removed_members": [],
+    "all_reviewed_member_content_hashes_equal": true,
+    "prior_26_pack_rows_unchanged": true,
+    "runtime_manifest_unchanged": true
+  },
+  "production_verification": {
+    "path": "art/cartoon/walk-pilot/front-refresh-v1/production-integration-v1/verification.json",
+    "sha256": "54aa65aa5861e86d9324fd71805b70898dacbe095a0badcccbb9eaedc53e4643"
+  },
+  "production_rebuild_helper": {
+    "path": "art/cartoon/walk-pilot/front-refresh-v1/production-integration-v1/rebuild.py",
+    "sha256": "d878d07c1a3c3d86c1fa090b8b4552724994fd4919be2cf0c4d52465f10a6d4c"
+  },
+  "status_at_recording": "Accepted and integrated in the branch worktree after package smoke and independent member regression checks. Catalog regeneration, broader platform tests, commit and merge are recorded separately."
+}

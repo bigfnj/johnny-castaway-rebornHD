@@ -1,9 +1,9 @@
-# Front walk refresh: working record
+# Front walk refresh: delivery verification
 
 Work is on `art/cartoon-front-walk-refresh`, based on main `4551081`.
-The production archive still has 28 accepted Cartoon assets; no draft has
-replaced an accepted PNG. The active scope is the six-pose front-oblique
-JOHNWALK family, 024-029.
+The production archive has 28 accepted Cartoon assets. This batch replaces
+front-oblique JOHNWALK 028/029 and retains 024-027 exactly. The other 26 accepted
+assets inherit their earlier approvals.
 
 ## Decisions
 
@@ -46,7 +46,7 @@ The first static browser comparison passed 3 smoke checks, then 36 regression
 checks covering served HTML, image composition, controls, aspect ratio and
 visibility at 700, 1280 and 1600 pixels. The user preferred the new 028 draft and
 requested far-arm removal. The historical static page remains unchanged;
-the subsequent arm-hidden 028 and adjacent 029 are provisional motion sources.
+the subsequent arm-hidden 028 and adjacent 029 became the reviewed motion sources.
 
 The standalone comparison now contains all 23 stored travel poses. Frames
 024-027 keep exact approved runtime PNG bytes; new 028/029 use the common 0.1
@@ -56,7 +56,7 @@ an explicit diagnostic endpoint hold. The user approved this motion with
 "much better proceed"; `motion-acceptance-v1.json` preserves the exact response
 and the accepted preview and runtime PNG identities.
 
-The standalone tools passed 2 smoke checks followed by 14 regressions and 11
+The standalone tools passed 2 smoke checks followed by 15 regressions and 12
 executed-source mutations. The extra browser control selects a revised 024 and
 proves that future previews cannot claim 024-027 are always retained. The
 published motion-v1 remains byte-identical to its frozen builder and inputs.
@@ -74,18 +74,51 @@ preserves capture helpers, identities, per-display reports and 94 image hashes.
 The full runnable image bundle remains local. Its mask-removal, stopped-timer
 and incorrect candidate-pixel controls all produced witnessed failures.
 
-## Remaining phases
+## Native approval and integration
 
 The [published 23-position comparison](http://127.0.0.1:8932/front-refresh-motion-v1/review.html)
-has human motion approval. The prepared native route and its existing HD 017
-arrival now require the separate scene review.
+has human motion approval. The user then approved the native route and its
+existing HD 017 arrival with "pass- proceed".
 The [published native comparison](http://127.0.0.1:8932/front-refresh-island-v1/review.html)
 preserves all 95 HTML/image identities. Publication smoke passed before checks
 of all 47 display times, 94 rendered RGBA images, exact close-up pixels and
 1280px layout. The final original HD standing pose remains unchanged.
-Only accepted replacements should update the production pack and explicit
-pilot-history declaration. Smoke and regression follow integration; the production art
-commit, merge and requested post-merge audit remain pending at this checkpoint.
+The [production acceptance](../art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json)
+records that separate decision and inherits the other 26 assets from the
+previous arrival acceptance. The explicit pilot-history declaration keeps the
+original 21-slot approval intact: 19 mappings are retained and two are replaced.
+
+Production archive SHA256 is
+`1da6ddba0f22d679193fc35b824b975b62dc9ca1966f312d91649f18d8793b63`,
+identical to the native-reviewed private archive. Package smoke passed before
+independent readback of all 2579 members. Only 028/029 differ from the previous
+archive; all other 2577 members, including original resources, HD artwork,
+other Cartoon assets and the runtime manifest, are unchanged. A deliberately
+corrupted 028 produced exactly one named comparison failure.
+
+The live preview test suite initially also depended on the old production
+sprites. Its test fixture now uses the retained historical inputs so promotion
+cannot invalidate historical authoring tests. Live production catalog checks
+remain separate. The new isolation control supplies the actual new 028/029
+bytes for an accidental live-archive read; a mutant that redirected preparation
+to that live archive produced exactly one named failure. Platform gates, merge
+and post-merge audit are recorded below when complete.
+
+All authoring smoke suites passed before regression: inventory 3, history 1,
+historical pilot 2 and full catalog 3. Regression passed 9 inventory controls
+with 2 explicit Windows symlink-privilege skips, 22 history checks, 60 pilot
+checks and 63 production-catalog checks. History regression also executes the
+84-test future-promotion replay. Both maintained catalogs reproduce; original
+pose facts, historical recipe mappings and human judgments remain unchanged.
+
+The first local Windows gate passed every smoke stage and all regression
+groups except a palm capture-marker check. Its HD child exited 0 but lacked
+the required stdout marker, matching the previously documented intermittent
+test symptom. No missing image is inferred: the default temporary directory
+was cleaned before its contents could be inspected. The original gate log is
+retained under `build/windows-gates/front-promotion-v1/`; its SHA256 is
+`7aadb21f8c0cfd6086082a19380f48563ab72cfc455c17af34c3f545f8a3fac7`.
+Focused retained diagnostics and a fresh full gate are separate checks.
 
 ## CI correction
 

@@ -4,12 +4,15 @@ from functools import partial
 import hashlib
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import importlib.util
+import json
 from pathlib import Path
 import subprocess
 import sys
 import tempfile
 import threading
 import unittest
+from unittest.mock import patch
+import zipfile
 
 from PIL import Image, ImageDraw
 
@@ -30,6 +33,28 @@ class ToolsTests(unittest.TestCase):
         self.addCleanup(self.temporary.cleanup)
         self.work = Path(self.temporary.name)
         self.approved = {frame: "approved" for frame in e.FRAMES}
+        self.fixture_root = self.work / "historical-baseline"
+        frozen = HERE / "review-evidence/motion-v1/export/inputs"
+        # Use the exact pre-promotion PNGs without reading the live asset ZIP.
+        files = {
+            e.OLD + "/recipe.json": (frozen / "approved-recipe.json").read_bytes(),
+            e.OLD + "/source-images.zip": (e.ROOT / e.OLD / "source-images.zip").read_bytes(),
+            "docs/knowledge-base/cartoon-original-reference.json": (frozen / "original-catalog.json").read_bytes(),
+            "src/data/walk_data.h": (frozen / "walk-data.h").read_bytes(),
+        }
+        for name, raw in files.items():
+            target = self.fixture_root / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(raw)
+        target = self.fixture_root / "assets/scrantic_data.zip"
+        target.parent.mkdir(parents=True)
+        with zipfile.ZipFile(target, "w") as archive:
+            for frame in e.FRAMES:
+                archive.writestr(f"data/styles/cartoon/BMP/JOHNWALK.BMP/{frame:03}.png",
+                    (frozen / f"baseline/{frame:03}.png").read_bytes())
+
+    def prepare(self, sources, preview_only=False):
+        return e.prepare(sources, preview_only, root=self.fixture_root, here=HERE)
 
     def candidate(self, preview_only=False, outside=False, frame=28):
         # Deliberately artificial test pixels, never visual-review artwork.
@@ -41,10 +66,10 @@ class ToolsTests(unittest.TestCase):
             image.putpixel((0, 1400), (255, 0, 0, 255))
         source = self.work / "TEST-PIXELS.png"
         image.save(source)
-        return e.prepare({**self.approved, frame: str(source)}, preview_only)
+        return self.prepare({**self.approved, frame: str(source)}, preview_only)
 
     def test_smoke_export(self):
-        recipe, inputs, images, report = e.prepare(self.approved)
+        recipe, inputs, images, report = self.prepare(self.approved)
         self.assertEqual(len(recipe["frames"]), 6)
         for row in recipe["frames"]:
             self.assertEqual(images[row["path"]], inputs[row["baseline"]], f"exact retained PNG:{row['frame']}")
@@ -65,7 +90,7 @@ class ToolsTests(unittest.TestCase):
             e.render(recipe, inputs)
 
     def test_input_identity(self):
-        recipe, inputs, _, _ = e.prepare(self.approved)
+        recipe, inputs, _, _ = self.prepare(self.approved)
         inputs["inputs/walk-data.h"] += b"\n"
         with self.assertRaisesRegex(ValueError, "^frozen-input-identity$"):
             e.render(recipe, inputs)
@@ -77,13 +102,13 @@ class ToolsTests(unittest.TestCase):
             e.render(recipe, inputs)
 
     def test_runtime_canvas(self):
-        recipe, inputs, _, _ = e.prepare(self.approved)
+        recipe, inputs, _, _ = self.prepare(self.approved)
         recipe["frames"][0]["runtime_canvas"] = [64, 148]
         with self.assertRaisesRegex(ValueError, "^runtime-canvas:024$"):
             e.render(recipe, inputs)
 
     def test_pillow_contract(self):
-        recipe, inputs, _, _ = e.prepare(self.approved)
+        recipe, inputs, _, _ = self.prepare(self.approved)
         recipe["pillow_version"] = "deliberately-different"
         with self.assertRaisesRegex(ValueError, "^family-render-contract$"):
             e.render(recipe, inputs)
@@ -100,13 +125,13 @@ class ToolsTests(unittest.TestCase):
         self.assertEqual(images, e.render(recipe, inputs)[0])
 
     def test_output_identity(self):
-        recipe, inputs, _, _ = e.prepare(self.approved)
+        recipe, inputs, _, _ = self.prepare(self.approved)
         recipe["output_sha256"]["padded/024.png"] = "0" * 64
         with self.assertRaisesRegex(ValueError, "^recorded-output-identity$"):
             e.render(recipe, inputs)
 
     def test_existing_output_is_preserved(self):
-        result = e.prepare(self.approved)
+        result = self.prepare(self.approved)
         output = self.work / "export"
         output.mkdir()
         sentinel = output / "sentinel.txt"
@@ -132,7 +157,7 @@ class ToolsTests(unittest.TestCase):
 
     def browser(self, exercise, result=None):
         from playwright.sync_api import sync_playwright
-        result = e.prepare(self.approved) if result is None else result
+        result = self.prepare(self.approved) if result is None else result
         exported, review = self.work / "export", self.work / "review"
         e.write_output(exported, *result)
         data, evidence = r.build(exported, review)
@@ -204,6 +229,40 @@ class ToolsTests(unittest.TestCase):
             self.assertEqual(page.evaluate("frontReviewState.index"), 0)
         self.browser(check)
 
+    def test_historical_fixture_after_promotion(self):
+        live_archive = (e.ROOT / "assets/scrantic_data.zip").resolve()
+        frozen = HERE / "review-evidence/motion-v1/export"
+        promoted = {f"data/styles/cartoon/BMP/JOHNWALK.BMP/{frame:03}.png":
+            (frozen / f"BMP/JOHNWALK.BMP/{frame:03}.png").read_bytes() for frame in (28, 29)}
+        previous = json.loads((frozen / "inputs/approved-recipe.json").read_bytes())
+        previous = {row["frame"]: row for row in previous["frames"]}
+        for frame in (28, 29):
+            self.assertNotEqual(e.sha(promoted[f"data/styles/cartoon/BMP/JOHNWALK.BMP/{frame:03}.png"]),
+                previous[frame]["candidate_png_sha256"], "promotion fixture must actually change both PNGs")
+        real_read, live_reads = zipfile.ZipFile.read, []
+
+        def promoted_read(archive, name, *args, **kwargs):
+            if archive.filename is not None and Path(archive.filename).resolve() == live_archive and name in promoted:
+                live_reads.append(name)
+                return promoted[name]
+            return real_read(archive, name, *args, **kwargs)
+
+        with patch.object(zipfile.ZipFile, "read", promoted_read):
+            # Execute the alternate live path to prove the fixture is non-degenerate.
+            with zipfile.ZipFile(live_archive) as archive:
+                for name, raw in promoted.items():
+                    self.assertEqual(archive.read(name), raw)
+            self.assertEqual(len(live_reads), 2)
+            live_reads.clear()
+            try:
+                recipe, inputs, images, _ = self.prepare(self.approved)
+            except ValueError as error:
+                self.fail("historical preparation read promoted production: " + str(error))
+            self.assertEqual(live_reads, [], "historical preparation must not read production PNGs")
+        for row in recipe["frames"]:
+            self.assertEqual(e.sha(images[row["path"]]), previous[row["frame"]]["candidate_png_sha256"])
+            self.assertEqual(images[row["path"]], inputs[row["baseline"]])
+
 
 MUTATIONS = [
     ("export.py", "test_input_identity", 'set(inputs) == set(recipe["input_sha256"]) and all(sha(raw) == recipe["input_sha256"][name] for name, raw in inputs.items())', "True"),
@@ -214,6 +273,8 @@ MUTATIONS = [
     ("export.py", "test_runtime_overhang", 'recipe["preview_only"] or fits', "True"),
     ("export.py", "test_output_identity", '{name: sha(raw) for name, raw in sorted(images.items())} == recipe["output_sha256"]', "True"),
     ("export.py", "test_smoke_export", 'runtime = inputs[row["baseline"]]', 'runtime = png(Image.new("RGBA", canvas))'),
+    ("export.py", "test_historical_fixture_after_promotion", '    require(sorted(sources) == FRAMES, "six-explicit-sources-required")',
+     '    root = ROOT\n    require(sorted(sources) == FRAMES, "six-explicit-sources-required")'),
     ("review.py", "test_wrong_route_refused", '[row["frame"] for row in rows] == expected', "True"),
     ("review.py", "test_browser_controls", 'position+=(time-last)*Number($(\'speed\').value);', 'position+=0;'),
     ("review.py", "test_labels_follow_explicit_selection", 'Only the frames listed below as revised use new drawings.',

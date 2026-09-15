@@ -12,7 +12,7 @@ and the original-first art metadata work.
 
 | Item | Evidence and next useful action |
 | --- | --- |
-| Expand Cartoon by complete motion families | Production now contains 12 walking poses, standing arrival 018 and 15 island assets. The [production catalog](docs/knowledge-base/cartoon-production-catalog.md) tracks all 2,401 slots and links 51 supplied-original references. The rear cycle and [arrival](art/cartoon/arrival-pilot-v1/production-acceptance.json) are accepted in their native island reviews. Revisit the front walk using the learned knee/foot continuity, first transitioning its pilot approval history as described below. Eight of ten unique wait/turn-table assets remain HD; trace each complete transition before generating its family. The [rear delivery record](docs/rear-cartoon-walk-verification.md) preserves direction-table and story uses. Other directions, low-tide foam, other ocean/cloud variants, holiday/raft scenery and most story animations use fallback. Keep "Cartoon (preview)" until coverage is complete. Palette-driven primitives and fades require visual review beyond PNG coverage. |
+| Expand Cartoon by complete motion families | Production contains 12 walking poses, standing arrival 018 and 15 island assets. The [production catalog](docs/knowledge-base/cartoon-production-catalog.md) tracks all 2,401 slots and links 51 supplied-original references. The rear cycle, arrival 018 and [front 028/029 refresh](art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json) have native island approvals. Next, trace the front arrival 017 and its complete wait/turn transitions before generating that family. Eight of ten unique wait/turn-table assets remain HD. The [rear delivery record](docs/rear-cartoon-walk-verification.md) preserves direction-table and story uses. Other directions, low-tide foam, other ocean/cloud variants, holiday/raft scenery and most story animations use fallback. Keep "Cartoon (preview)" until coverage is complete. Palette-driven primitives and fades require visual review beyond PNG coverage. |
 | Establish the remaining frontal walking sequence | Original JOHNWALK frames 033-035 visually form a frontal group with 010, but do not occur in the compiled walk table. Trace their complete TTM uses and timing before calling them a complete cycle or unused art. The [walking reference](art/cartoon/walk-expansion-v1/reference/NOTES.md) preserves the distinction; sprite 013 is a tiny placeholder, not a full character pose. |
 | Complete foreground raw-input cleanup on Windows | `platform/platform_windows.c:175` handles `WM_INPUT` and returns without `DefWindowProc`, including error exits. [Microsoft's contract](https://learn.microsoft.com/en-us/windows/win32/inputdev/wm-input) requires that cleanup call for foreground `RIM_INPUT`. Add one common cleanup path and controlled success, failure and ignored-input tests. This is an existing API-contract omission; no OS-resource leak was measured. |
 | Initialize common audio state before starting the worker | `src/engine/sound.c:165` resets `currentRemaining` without locking after `platformOpenAudio` has started the Linux worker, whose callback uses that state under a mutex. Initialize callback state before opening audio and test actual `sound.c` startup with the worker; backend-only tests use their own callbacks. Also avoid the initial silence path's `memcpy(stream, NULL, 0)` at line 79. This is a source-established startup synchronization gap; no audible corruption or race-detector result is claimed. |
@@ -58,7 +58,8 @@ facts. Historical test fixtures remain separate from live production checks.
 A simulated accepted 028 replacement exercises both suites against schema 2,
 so subsequent replacements do not depend on schema 1 assumptions. New artwork
 still needs its own human review and an explicit history declaration when
-promoted; no front-walk draft is promoted by this tooling change.
+promoted. The approved front 028/029 replacement now uses that explicit history
+declaration: 19 original pilot mappings are retained and two are replaced.
 
 ## Cartoon production foundation
 
@@ -71,7 +72,8 @@ original route's draw-origin shift and disclosed foot-depth observation.
 
 The complete production slot catalog now checks shipped coverage, accepted
 recipe/PNG identity, reference provenance, duplicate candidates and HD-proxy
-blankness. The existing original-first pilot metadata remains unchanged.
+blankness. The original-first pilot metadata preserves its historical facts
+and now maps current replacements separately.
 One Linux CI step runs both metadata smoke suites before their regressions and
 reproduction checks. Local execution of the actual CI commands passed; damaged
 approval, missing-command and suppressed-exit controls failed as intended.
