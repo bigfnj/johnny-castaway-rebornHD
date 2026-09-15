@@ -40,6 +40,12 @@ jobs:
         shell: pwsh
         run: .\gate.ps1
 
+      - name: native archive prerequisites and gate refusal
+        shell: pwsh
+        run: |
+          powershell.exe -NoProfile -File tests/Test-ArtAssetRefresh.ps1 -VerifyMutation
+          python -B tests/test_runtime_data_project.py --mutations
+
       - uses: actions/upload-artifact@v7
         if: always()
         with:
@@ -59,7 +65,13 @@ jobs:
       - name: install toolchain
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq build-essential cmake libx11-dev libasound2-dev
+          sudo apt-get install -y -qq build-essential cmake ninja-build python3 libx11-dev libasound2-dev
+
+      - name: build failure and archive dependency controls
+        run: |
+          python3 -B tests/test_unix_build_flow.py --mutations
+          python3 -B tests/test_runtime_data.py --generator "Unix Makefiles" --mutations
+          python3 -B tests/test_runtime_data.py --generator Ninja --mutations
 
       # Builds, then runs `dump` with no X server and compares every decoded file
       # against the manifest generated on Windows. A hash that differs is a real
@@ -70,7 +82,7 @@ jobs:
 
   macos:
     name: macOS (Clang, Cocoa + AudioToolbox)
-    runs-on: macos-latest
+    runs-on: macos-15-intel
     steps:
       - uses: actions/checkout@v7
 
@@ -90,6 +102,9 @@ jobs:
       - name: build and verify decode parity
         run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/unix-build.sh
 
+      - name: verify Intel release architecture and negative controls
+        run: python3 -B tests/test_build_contracts.py --mutations --mac-binary /tmp/jcr/build-unix/jc_reborn
+
       # The OTHER macOS build path, verified rather than assumed.
       #
       # Homebrew refuses to install on Intel Macs now ("only supported on Apple
@@ -101,7 +116,9 @@ jobs:
       # Running it here means tools/build-macos.sh and the APPLE branch of
       # CMakeLists.txt cannot drift apart without turning this job red.
       - name: build with clang only (no CMake, no Homebrew)
-        run: bash tools/build-macos.sh
+        run: |
+          bash tools/build-macos.sh
+          python3 -B tools/verify_macos_arch.py jc_reborn
 
   web:
     name: Web (Emscripten)
@@ -109,40 +126,14 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # PINNED, not `latest`. `latest` makes the action fetch emsdk HEAD on every
-      # run, which failed twice on 2026-09-14 with HTTP 504 from GitHub on
-      # commits that touched no web code at all. A red CI that has nothing to do
-      # with the change teaches people to hit re-run instead of reading, which is
-      # how a real failure eventually gets waved through.
-      #
-      # It also made the toolchain a moving target: a build that passed last week
-      # could fail today because upstream moved, with nothing in this repo's
-      # history to explain it. 6.0.9 is what `latest` resolved to on every green
-      # run so far. Bump it deliberately.
-      - uses: mymindstorm/setup-emsdk@v14
-        with:
-          version: 6.0.9
+      # The official SDK image is pinned by digest in the shared builder. It
+      # avoids setup-emsdk's GitHub/codeload download and action Node runtime.
+      # Only Docker image acquisition retries; compiler/test failures stop.
+      - name: build with Emscripten 6.0.9 and verify preload artifacts
+        run: python3 -B tools/build_web.py
 
-      - name: build
-        run: |
-          emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release
-          cmake --build build_web -j"$(nproc)"
-
-      # The linker emits jc_reborn.js and, via --preload-file, jc_reborn.data.
-      # Asserting all three exist catches a silently half-linked build, which a
-      # bare `cmake --build` exit code does not.
-      - name: verify artifacts
-        run: |
-          set -e
-          for f in jc_reborn.js jc_reborn.wasm jc_reborn.data; do
-            test -s "build_web/$f" || { echo "FAIL missing or empty: $f"; exit 1; }
-            echo "ok   $f ($(stat -c%s "build_web/$f") bytes)"
-          done
-
-      - name: assemble servable page
-        # index.html and favicon.ico are sources, not build output, and nothing
-        # in the build copies them - so build_web/ on its own is not servable.
-        run: cp index.html favicon.ico build_web/
+      - name: build contract negative controls
+        run: python3 -B tests/test_build_contracts.py --mutations
 
       # "It compiled" was the only bar this target ever had to clear, and it was
       # clearing it while being silent and able to freeze the tab. Neither is

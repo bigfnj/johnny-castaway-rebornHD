@@ -45,17 +45,17 @@ case "$(uname -s)" in
 esac
 
 echo "== toolchain ($OSNAME) =="
-if ! command -v cmake >/dev/null 2>&1; then
+if ! command -v cmake >/dev/null 2>&1 || ! command -v python3 >/dev/null 2>&1; then
     if [ "$OSNAME" = macOS ]; then
         # Every GitHub macOS runner ships cmake and the Xcode command line tools.
         # If it is missing we are somewhere unexpected, and guessing at a package
         # manager would hide that rather than report it.
-        echo "FAIL cmake not found on a macOS host; install the Xcode command line tools"
+        echo "FAIL cmake or python3 not found on a macOS host; install the build/test prerequisites"
         exit 1
     fi
     export DEBIAN_FRONTEND=noninteractive
     apt-get update -qq
-    apt-get install -y -qq build-essential cmake libx11-dev libasound2-dev >/dev/null
+    apt-get install -y -qq build-essential cmake python3 libx11-dev libasound2-dev >/dev/null
 fi
 cc --version | head -1
 cmake --version | head -1
