@@ -38,23 +38,22 @@ never run a pixel of it in CI.
 
 ## Open
 
-### Cartoon animation: complete foot-contact and gait fidelity review
+### Cartoon scene integration: apply the approved walking pilot to new island art
 
-The user approved the character design, the correction for added whole-body
-popping, and the revised frame 024's front-three-quarter direction and leg
-order. These are separate approvals; a complete walking cycle remains under
-review. Generated frames can retain a raised-foot pose despite repeated targeted
-edits requesting lower contact. Fresh generation from the original pose improved
-some contacts but did not establish full motion fidelity. This is an artwork
-authoring limitation, not evidence of an engine trajectory defect.
+The six-pose E-to-A motion review is complete. On 2026-09-14 the user reviewed
+the full 23-position directional comparison and replied "looks good". The body
+direction, limb order and displayed foot lifts are accepted for that preview.
+The earlier gait-review item is closed; do not keep its foot-clearance differences
+open as a rejected animation. Exact source and export hashes are recorded in
+[the acceptance ledger](art/cartoon/walk-pilot/directional-cycle-v1/acceptance.json).
 
-Finish the six-pose/23-position comparison before expanding the character pack.
-Preserve original timing and route, one common drawing scale, and consistent cap
-registration. Close this item only after foot-contact and complete gait review,
-not merely a passing asset-load or golden-dump test. If pose corrections keep
-failing, evaluate stronger pose guides or a character rig before increasing the
-generation volume. See [motion review](art/cartoon/motion-review.md) and the
-preserved candidate provenance under `art/cartoon/walk-pilot`.
+After the next island artwork is selected, replay these accepted PNGs unchanged
+at the original coordinates against the new sand and tree layers. Check planted
+feet against the ground, shoreline clearance and intended foreground occlusion
+in the real renderer before scene promotion. Other walking directions, broader
+animation coverage and production archive promotion remain unvalidated.
+Preserve the original timing and route, common drawing scale and cap registration.
+See [motion review](art/cartoon/motion-review.md) for the decision and its scope.
 
 ### ~~macOS renders something nobody has looked at~~ VERIFIED 2026-09-14
 

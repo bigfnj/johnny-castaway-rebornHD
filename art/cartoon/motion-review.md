@@ -1,7 +1,11 @@
 # Cartoon walking review
 
-The character design in `character.md` is approved. The walking animation is
-still under review; character approval does not approve these runtime poses.
+The character design and the six-pose directional E-to-A walking pilot are
+approved. After reviewing the full `extended-cartoon-direction-v1` comparison
+on 2026-09-14, the user replied "looks good". This accepts the motion and foot
+lifts as displayed. The exact six export hashes are recorded in
+[`walk-pilot/directional-cycle-v1/acceptance.json`](walk-pilot/directional-cycle-v1/acceptance.json).
+Other directions, broader scene contact and production promotion remain pending.
 
 On 2026-09-14 the user requested a longer comparison after the initial seven-pose
 preview. The extended comparison uses 23 positions from the original E-to-A
@@ -74,8 +78,9 @@ not claimed to be pixel-identical. Canvas dimensions alone would not establish
 that an arbitrary future output was uniformly resized.
 
 This revision places the sole near y142.69. A new motion candidate changes only
-frame 024; the other five revision-2 images stay byte-identical. Foot-contact
-and motion acceptance remain pending human review.
+frame 024; the other five revision-2 images stay byte-identical. At this checkpoint,
+foot-contact and motion acceptance were pending. The subsequent direction and
+limb-order feedback rejected this profile candidate.
 
 ## Direction and limb-order correction
 
@@ -84,14 +89,15 @@ problem in pose 3 of the extended route (sprite 024 at logical 384,216): the
 Cartoon places the opposite leg in front and stays too firmly in left profile.
 The original presents more of the front of the body and changes its apparent
 yaw through the walk. The positive response is not recorded as full motion
-approval. Only the earlier correction for added body movement is approved.
+approval. At that point only the earlier correction for added body movement
+was approved.
 
-Rebuild the six-pose cycle around the original directional poses and near/far
-limb relationships. Establish a three-quarter directional key pose before
-expanding the set. Use the original shoulders, chest, hips and limb occlusions
-as pose references; the approved character sheet remains the appearance
-reference. A foot-only change cannot repair an incorrect torso angle or limb
-order. Preserve the original route and timing while revising the artwork.
+The next step was to rebuild the cycle around the original directional poses
+and near/far limb relationships, starting with a three-quarter key pose. Original
+shoulders, chest, hips and limb occlusions supplied the pose references; the
+approved character sheet supplied appearance. A foot-only change could not
+repair the incorrect torso angle or limb order. The artwork revisions preserved
+the original route and timing.
 
 Inspection of all six original frames found the top 38 HD rows pixel-identical
 after their existing horizontal offsets are removed. The route travels (-94,+30)
@@ -105,14 +111,14 @@ A fresh directional key was generated from the original 024 pose and the approve
 character sheet without referencing the rejected profile drawing. Directional
 revisions 4 through 6 establish a front-three-quarter chest/hips and reverse the
 incorrect leg overlap. Two targeted edits move the exposed rear foot down and
-behind the planted leg. Its clearance still exceeds the original, so the current
-still comparison asks only for body direction and leg-order review. No revised
-six-pose cycle has been accepted or added to production.
+behind the planted leg. Its clearance still exceeded the original, so that
+still comparison asked only for body direction and leg-order review. The revised
+six-pose cycle had not yet been accepted or added to production at that checkpoint.
 
 The directional still uses a fixed uniform 0.1 display scale and a measured cap
 anchor, not the older generated canvas's 137/1590 scale. This is a new drawing
-family, not a normalization inferred from canvas dimensions. The eventual cycle
-must use one documented common drawing scale and preserve the approved absence
+family, not a normalization inferred from canvas dimensions. The subsequent cycle
+uses one documented common drawing scale and preserves the approved absence
 of added body popping. The source images carry RGB values under zero alpha that
 look like a dark backdrop in the raw image preview; standard alpha composition
 shows a clean neutral background without removing or painting source pixels.
@@ -123,7 +129,7 @@ The user replied "well done". This is recorded as approval of that direction and
 leg order, with rear-foot height explicitly excluded from the check. It authorizes
 building the six-pose directional cycle, not full motion or production acceptance.
 
-## Directional cycle candidate
+## Directional cycle and full motion approval
 
 The new six-pose family uses the approved directional key as its appearance and
 head-placement reference, with each corresponding original sprite supplying the
@@ -137,8 +143,9 @@ Targeted foot edits did not reliably produce the requested geometry. Fresh
 pose-first generations improved frames 026 and 027, but their approximate rear
 foot clearances remain about 11.6 and 11 HD pixels respectively, versus about
 four in the originals. Frame 029 retains a larger lift too; a fresh alternative
-changed the head and was rejected. These differences remain explicit motion
-review items. Passing technical checks does not close them.
+changed the head and was rejected. These differences were visible in the full
+comparison. The user's later "looks good" accepts the foot lifts as seen in this
+route; they are no longer an open rejection of the approved gait.
 
 Frame 028's toe initially crossed the original canvas boundary. A focused
 foreshortening edit fixed that contour but introduced actual nonzero-alpha
@@ -147,11 +154,12 @@ a visually clean candidate with its alpha>=8 silhouette inside the fixed
 canvas. Generated alpha is preserved; this does not claim every exterior pixel
 is exactly zero or that the character interior reaches alpha 255.
 
-The combined static comparison cleared these six selected bytes for isolated
-native motion testing only. Full-cycle acceptance and production promotion
-remain pending. The existing E-to-A route, 23 poses, camera and 120 ms cadence
-continue unchanged. See `walk-pilot/directional-cycle-v1` for selected sources
-and ancestry, and `BACKLOG.md` for the remaining animation-authoring work.
+The combined static comparison first cleared these six selected bytes for
+isolated native motion testing. The later full comparison received human motion
+approval. The existing E-to-A route, 23 poses, camera and 120 ms cadence remain
+unchanged. Production promotion is still pending. See
+`walk-pilot/directional-cycle-v1` for selected sources, ancestry and the separate
+acceptance record, and `BACKLOG.md` for broader scene work.
 
 The selected directional candidate passed native capture smoke on the saved
 visual-comparison executable: all six paths loaded, all 23 original draws and
@@ -166,22 +174,34 @@ The current branch executable was checked separately with the normal candidate
 archive. Its bounded smoke loaded all six paths, matched the seven original
 MJREAD walking draws and exited after 13 frames. Only after that smoke passed,
 its golden regression matched all 2,452 files. Production asset bytes remain
-unchanged. These results verify integration and preservation, not acceptance of
-the remaining gait differences.
+unchanged. These results verify integration and preservation; the user's
+subsequent full-preview decision supplies the artistic acceptance.
 
-## Correction and acceptance
+The exact accepted selection is 024v7, 025v2, 026v3-fresh, 027v3-fresh,
+028v4-transparent and 029v2 at the recorded uniform 0.1 scale and cap anchors.
+The response "looks good" applies to those six exported PNG hashes in the
+23-position E-to-A preview. It does not approve other walking directions,
+unseen scene interactions or a production archive update. Historical hashed
+recipe, provenance and technical evidence keep their original checkpoint status;
+the new `acceptance.json` records the later decision without changing their bytes.
 
-Use a consistent upper-body reference across the cycle and review the feet
-against the original ground contacts. Keep one uniform scale and the original
-canvas sizes. If the pose cannot satisfy both upper-body continuity and foot
-contact through translation, correct the artwork through imagegen. Do not
-stretch a frame, crop meaningful art, change the engine's original trajectory,
-or add interpolated frames to hide the mismatch.
+## Next scene contact check
 
-Compare the original, rejected candidate and revision at equal display scale
-with synchronized playback and frame stepping. Inspect cap, face, shoulders,
-waist, planted feet and the loop transition. Human motion approval is required
-before expanding character production.
+After the next island artwork is selected, replay the accepted PNGs unchanged at
+their original coordinates against the new sand and tree layers. Inspect planted
+feet against the ground, shoreline clearance and intended foreground occlusion
+in the real renderer. This is a new scene-integration check, not a reopening of
+the user's approved foot lifts or gait.
+
+For future poses, use the established upper-body reference and original ground
+contacts. Keep one uniform scale and the original canvas sizes. If a new pose
+cannot satisfy upper-body continuity and scene contact through translation,
+correct the artwork through imagegen. Do not stretch a frame, crop meaningful
+art, change the original trajectory or add interpolated frames to hide a mismatch.
+
+Future motion reviews should retain equal display scale, synchronized playback
+and frame stepping. The current six-pose review is complete; broader directions
+and animation families require their own checks.
 
 | Decision | Reason |
 |---|---|
@@ -189,4 +209,5 @@ before expanding character production.
 | Reject the first motion candidate | The longer sequence exposes added whole-body movement |
 | Correct registration before redrawing | Existing poses may be usable with consistent placement |
 | Check ground contact after alignment | A steady torso alone does not establish a correct walk |
-| Keep previews separate from shipping art | No walking candidate has human motion approval yet |
+| Accept the directional E-to-A pilot | The user reviewed the full comparison and said "looks good", including the displayed foot lifts |
+| Keep scene checks and production promotion separate | Motion approval covers these six PNGs on the reviewed route; broader integration is not yet validated |

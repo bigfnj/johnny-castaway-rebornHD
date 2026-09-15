@@ -2,18 +2,20 @@
 
 This directory's root recipe preserves the rejected profile-cycle candidates.
 The later `direction-key-024` record holds the approved viewing direction and
-leg-order key; `directional-cycle-v1` holds the subsequent six-pose motion
-candidate, whose complete gait still requires review.
+leg-order key; `directional-cycle-v1` holds the subsequent six-pose E-to-A cycle
+whose full motion the user approved with "looks good" on 2026-09-14. Its separate
+`acceptance.json` records the exact approved export hashes. Production promotion
+and broader scene contact remain pending.
 
-This record covers only `JOHNWALK.BMP` frames 024 through 029. These are review
-candidates, not accepted runtime poses. On 2026-09-14 the user replied "well done"
+This root recipe covers only `JOHNWALK.BMP` frames 024 through 029. Its images
+are rejected review candidates. On 2026-09-14 the user replied "well done"
 after the synchronized revision-3 motion comparison, then identified substantive
 leg-order and viewing-angle defects: pose 3 / sprite 024 brings the opposite leg
 forward, and the generated cycle stays in a fixed left profile rather than
 following the original three-quarter movement. The earlier response must not be
 treated as full motion approval.
 
-The approved decision is narrower: the user's "The body pop looks resolved"
+For this root profile candidate, the approved decision is narrower: "The body pop looks resolved"
 confirmed revision-2 upper-body registration. Preserve that alignment while
 correcting pose geometry and direction. Character design approval is separate.
 
@@ -41,7 +43,8 @@ general rule to resize future output, a body-bounds fit, or a limb warp.
 The third foot drawing's sole lands near y142.69, compared with the original
 black sole at y144-145. Source contact interpretation remains approximate by
 about two HD pixels. This measurement does not establish correct anatomical
-leg order or viewing angle, which remain rejected and require art correction.
+leg order or viewing angle. This profile candidate remains rejected; the later
+directional cycle supplies the accepted replacement.
 
 Recreate the six runtime PNGs with Python and Pillow 12.3.0. The exporter checks
 every output against its recorded candidate hash before writing; it refuses an existing
@@ -64,5 +67,6 @@ review archive. Compared with revision 2, revision 3 changed only frame 024.
 Native captures loaded all six replacements, preserved pixels outside the
 sprite canvases, retained all 2,550 original archive members, and matched all
 2,452 golden dump hashes. These checks establish integration and preservation;
-the user's review supplies the artistic decision. The full walking cycle remains
-unapproved after the latest orientation and leg-order feedback.
+the user's review supplies the artistic decision. This root profile cycle remains
+rejected. The later directional cycle has its own motion approval and does not
+change this historical recipe or its recorded candidate bytes.
