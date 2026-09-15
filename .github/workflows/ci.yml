@@ -73,6 +73,17 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # Authoring metadata uses only Python's standard library and Git. Check it
+      # once here; native runtime fixtures do not depend on the art work history.
+      - name: Cartoon authoring smoke, regression and reproduction
+        run: |
+          python3 -B tests/test_art_review_metadata.py --phase smoke
+          python3 -B tests/test_art_production_catalog.py --phase smoke
+          python3 -B tests/test_art_review_metadata.py --phase regression
+          python3 -B tests/test_art_production_catalog.py --phase regression
+          python3 -B tools/art_review_metadata.py --check
+          python3 -B tools/art_production_catalog.py --check
+
       - name: install toolchain
         run: |
           sudo apt-get update -qq
