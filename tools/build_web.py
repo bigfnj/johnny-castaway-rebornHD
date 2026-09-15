@@ -51,17 +51,22 @@ def acquire_image(run=subprocess.run, sleep=time.sleep):
     raise RuntimeError('tools/build_web.py: pinned SDK image acquisition failed after 3 attempts')
 
 
-def inside(source, output):
+def inside(source, output, platform_phase=None, probes_only=False):
     version = subprocess.run(['emcc', '--version'], check=True, text=True, capture_output=True).stdout
     print(version, end='', flush=True)
     verify_version(version)
-    subprocess.run(['emcmake', 'cmake', '-S', str(source), '-B', str(output),
-                    '-DCMAKE_BUILD_TYPE=Release'], check=True)
-    subprocess.run(['cmake', '--build', str(output), '--parallel', str(min(8, os.cpu_count() or 2))], check=True)
-    verify_artifacts(source, output)
+    if not probes_only:
+        subprocess.run(['emcmake', 'cmake', '-S', str(source), '-B', str(output),
+                        '-DCMAKE_BUILD_TYPE=Release'], check=True)
+        subprocess.run(['cmake', '--build', str(output), '--parallel', str(min(8, os.cpu_count() or 2))], check=True)
+        verify_artifacts(source, output)
+    if platform_phase:
+        env = dict(os.environ, SRC=str(source), OUT=str(source / 'build/platform-web-tests'))
+        subprocess.run(['bash', str(source / 'tests/run_web_platform.sh'), '--phase', platform_phase],
+                       env=env, check=True, timeout=180)
 
 
-def build(source, output, run=subprocess.run):
+def build(source, output, run=subprocess.run, platform_phase=None, probes_only=False):
     source = source.resolve()
     relative = output.as_posix()
     if output.is_absolute() or '..' in output.parts or output == Path('.'):
@@ -73,13 +78,20 @@ def build(source, output, run=subprocess.run):
         command += ['--user', f'{os.getuid()}:{os.getgid()}']
     command += [SDK_IMAGE, 'python3', 'tools/build_web.py', '--inside', '--source', '/src',
                 '--output', relative]
+    if platform_phase:
+        command += ['--platform-probes', platform_phase]
+    if probes_only:
+        command += ['--probes-only']
     # Do not retry compilation or convert its failure into an artifact check.
     run(command, check=True, timeout=1200)
-    destination = source / output
-    verify_artifacts(source, destination)
-    for name in ('index.html', 'favicon.ico'):
-        shutil.copyfile(source / name, destination / name)
-    print(f'PASS tools/build_web.py: servable output in {destination}', flush=True)
+    if not probes_only:
+        destination = source / output
+        verify_artifacts(source, destination)
+        for name in ('index.html', 'favicon.ico'):
+            shutil.copyfile(source / name, destination / name)
+        print(f'PASS tools/build_web.py: servable output in {destination}', flush=True)
+    if platform_phase:
+        print(f'PASS tools/build_web.py: platform {platform_phase} completed', flush=True)
 
 
 def main():
@@ -87,12 +99,16 @@ def main():
     parser.add_argument('--source', type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument('--output', type=Path, default=Path('build_web'))
     parser.add_argument('--inside', action='store_true', help=argparse.SUPPRESS)
+    parser.add_argument('--platform-probes', choices=['smoke', 'regression'], help='Run real Web backend probes inside the SDK container')
+    parser.add_argument('--probes-only', action='store_true', help='Run the requested backend phase without rebuilding the application')
     options = parser.parse_args()
+    if options.probes_only and not options.platform_probes:
+        parser.error('--probes-only requires --platform-probes')
     try:
         if options.inside:
-            inside(options.source.resolve(), options.source.resolve() / options.output)
+            inside(options.source.resolve(), options.source.resolve() / options.output, options.platform_probes, options.probes_only)
         else:
-            build(options.source, options.output)
+            build(options.source, options.output, platform_phase=options.platform_probes, probes_only=options.probes_only)
         return 0
     except (RuntimeError, OSError, subprocess.SubprocessError) as exc:
         print(f'FAIL {exc}', file=sys.stderr)

@@ -40,11 +40,22 @@ jobs:
         shell: pwsh
         run: .\gate.ps1
 
-      - name: native archive prerequisites and gate refusal
+      - name: native archive prerequisites
         shell: pwsh
-        run: |
-          powershell.exe -NoProfile -File tests/Test-ArtAssetRefresh.ps1 -VerifyMutation
-          python -B tests/test_runtime_data_project.py --mutations
+        run: powershell.exe -NoProfile -File tests/Test-ArtAssetRefresh.ps1 -VerifyMutation
+
+      - name: actual application archive wiring and gate refusal
+        shell: pwsh
+        run: python -B tests/test_runtime_data_project.py --mutations
+
+      - uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: windows-build-fixture-evidence
+          path: |
+            build/cleanup-fixtures/**/*.log
+            build/cleanup-fixtures/**/*.json
+          if-no-files-found: ignore
 
       - uses: actions/upload-artifact@v7
         if: always()
@@ -65,7 +76,7 @@ jobs:
       - name: install toolchain
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq build-essential cmake ninja-build python3 libx11-dev libasound2-dev
+          sudo apt-get install -y -qq build-essential cmake ninja-build python3 libx11-dev libasound2-dev xvfb xauth
 
       - name: build failure and archive dependency controls
         run: |
@@ -130,10 +141,7 @@ jobs:
       # avoids setup-emsdk's GitHub/codeload download and action Node runtime.
       # Only Docker image acquisition retries; compiler/test failures stop.
       - name: build with Emscripten 6.0.9 and verify preload artifacts
-        run: python3 -B tools/build_web.py
-
-      - name: build contract negative controls
-        run: python3 -B tests/test_build_contracts.py --mutations
+        run: python3 -B tools/build_web.py --platform-probes smoke
 
       # "It compiled" was the only bar this target ever had to clear, and it was
       # clearing it while being silent and able to freeze the tab. Neither is
@@ -143,7 +151,14 @@ jobs:
           python -m pip install --quiet playwright
           python -m playwright install --with-deps chromium
           python tests/web-smoke.py build_web
+
+      - name: Web platform regression
+        run: python3 -B tools/build_web.py --platform-probes regression --probes-only
+
+      - name: art selector and build contract regression
+        run: |
           python tests/web-art-controls.py build_web --mutation-check
+          python3 -B tests/test_build_contracts.py --mutations
 
       - uses: actions/upload-artifact@v7
         with:

@@ -45,7 +45,8 @@ case "$(uname -s)" in
 esac
 
 echo "== toolchain ($OSNAME) =="
-if ! command -v cmake >/dev/null 2>&1 || ! command -v python3 >/dev/null 2>&1; then
+if ! command -v cmake >/dev/null 2>&1 || ! command -v python3 >/dev/null 2>&1 ||
+    { [ "$OSNAME" = Linux ] && ! command -v xvfb-run >/dev/null 2>&1; }; then
     if [ "$OSNAME" = macOS ]; then
         # Every GitHub macOS runner ships cmake and the Xcode command line tools.
         # If it is missing we are somewhere unexpected, and guessing at a package
@@ -55,7 +56,7 @@ if ! command -v cmake >/dev/null 2>&1 || ! command -v python3 >/dev/null 2>&1; t
     fi
     export DEBIAN_FRONTEND=noninteractive
     apt-get update -qq
-    apt-get install -y -qq build-essential cmake python3 libx11-dev libasound2-dev >/dev/null
+    apt-get install -y -qq build-essential cmake python3 libx11-dev libasound2-dev xvfb xauth >/dev/null
 fi
 cc --version | head -1
 cmake --version | head -1
@@ -90,6 +91,27 @@ echo "OK   built build-unix/jc_reborn"
 echo
 echo "== portable PNG smoke: soft alpha reaches the real decoder =="
 "$WORK"/build-unix/jc_png_test
+
+echo
+echo "== RESOURCE decoder smoke =="
+python3 "$WORK/tests/test_uncompress.py" --probe "$WORK/build-unix/jc_uncompress_test" --engine "$WORK/build-unix/jc_reborn" --phase smoke
+
+if [ "$OSNAME" = macOS ]; then
+    PLATFORM_TEST="$WORK/tests/run_macos_platform.sh"
+else
+    PLATFORM_TEST="$WORK/tests/run_linux_platform.sh"
+fi
+echo
+echo "== native platform smoke =="
+SRC="$WORK" OUT="$WORK/build-unix/platform-tests" bash "$PLATFORM_TEST" --phase smoke
+
+echo
+echo "== RESOURCE decoder regression =="
+python3 "$WORK/tests/test_uncompress.py" --probe "$WORK/build-unix/jc_uncompress_test" --engine "$WORK/build-unix/jc_reborn"
+
+echo
+echo "== native platform regression =="
+SRC="$WORK" OUT="$WORK/build-unix/platform-tests" bash "$PLATFORM_TEST" --phase regression
 
 echo
 echo "== dump, headless, no window server =="

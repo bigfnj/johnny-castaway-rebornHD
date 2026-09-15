@@ -10,6 +10,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 from types import ModuleType, SimpleNamespace
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -113,6 +114,24 @@ def verify(work, mutations, mac_binary):
         needle = "raise RuntimeError('tools/build_web.py: pinned SDK image acquisition failed after 3 attempts')"
         bad, digest = mutant(web, needle, 'return')
         fired('tools/build_web.py exhausted pull status', lambda: rejected(lambda: bad.acquire_image(lambda *a, **k: SimpleNamespace(returncode=1), lambda _: None), 'acquisition failed after 3 attempts'), digest)
+    def assert_platform_stops(module):
+        commands = []
+        def fake_run(args, **kwargs):
+            commands.append(args)
+            if args == ['emcc', '--version']:
+                return SimpleNamespace(stdout=version, returncode=0)
+            assert args[0] == 'bash' and args[-2:] == ['--phase', 'smoke'], 'tools/build_web.py: probe-only mode rebuilt application or changed phase'
+            if kwargs.get('check'): raise subprocess.CalledProcessError(47, args)
+            return SimpleNamespace(returncode=47)
+        with patch.object(module.subprocess, 'run', fake_run):
+            try: module.inside(source, output, platform_phase='smoke', probes_only=True)
+            except subprocess.CalledProcessError as exc: assert exc.returncode == 47
+            else: raise AssertionError('tools/build_web.py: expected failure was not raised (platform smoke status 47)')
+        assert len(commands) == 2, 'tools/build_web.py: platform failure was retried'
+    assert_platform_stops(web)
+    if mutations:
+        bad, digest = mutant(web, 'env=env, check=True, timeout=180)', 'env=env, check=False, timeout=180)')
+        fired('tools/build_web.py platform smoke status', lambda: assert_platform_stops(bad), digest)
     def fake_lipo(architecture):
         return lambda args, **kwargs: SimpleNamespace(stdout=architecture + '\n')
     mac.verify(Path('control'), fake_lipo('x86_64'))

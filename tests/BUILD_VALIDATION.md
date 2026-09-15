@@ -30,7 +30,9 @@ fetch and action Node runtime. Docker registry availability is still required.
 Browser tests stay on the host and run in order:
 
 ```text
+python3 -B tools/build_web.py --platform-probes smoke
 python tests/web-smoke.py build_web
+python3 -B tools/build_web.py --platform-probes regression --probes-only
 python tests/web-art-controls.py build_web --mutation-check
 ```
 
@@ -42,6 +44,15 @@ runner, `--mac-binary /tmp/jcr/build-unix/jc_reborn` adds real `lipo` inspection
 and a deliberately compiled ARM64 negative control. Both CI and release use
 `macos-15-intel`; the package label remains `macos-x86_64`. These checks establish
 architecture and build/decode behavior, not native window rendering.
+
+The Windows gate runs decoder, ownership and platform-constructor smoke before
+any regression. Its focused ownership probe uses tracked Win32 allocations and
+is Windows-specific. Linux and macOS run the portable decoder and their actual
+backend probe scripts, with all smoke phases before focused regressions and the
+golden dump. Linux needs Xvfb/xauth for its real X11 probes. The Web platform
+probes run in the pinned SDK container; browser rendering stays on the host.
+Backend fault-injection checks are normal regression. Recompiling deliberately
+mutated C sources is manual verification, separate from a normal gate.
 
 References checked when choosing this implementation:
 
