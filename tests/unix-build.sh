@@ -97,6 +97,12 @@ echo
 echo "== native platform smoke =="
 SRC="$WORK" OUT="$WORK/build-unix/platform-tests" bash "$PLATFORM_TEST" --phase smoke
 
+if [ "$OSNAME" = Linux ]; then
+    echo
+    echo "== drawing and packed-screen smoke =="
+    python3 "$WORK/tests/test_drawing_bounds.py" --output "$WORK/build-unix/drawing-tests" --phase smoke
+fi
+
 echo
 echo "== RESOURCE decoder regression =="
 python3 "$WORK/tests/test_uncompress.py" --probe "$WORK/build-unix/jc_uncompress_test" --engine "$WORK/build-unix/jc_reborn"
@@ -109,6 +115,10 @@ if [ "$OSNAME" = Linux ]; then
     echo
     echo "== required graphics-surface failure regression =="
     python3 "$WORK/tests/test_graphics_alloc.py" --output "$WORK/build-unix/graphics-tests"
+
+    echo
+    echo "== drawing and packed-screen regression =="
+    python3 "$WORK/tests/test_drawing_bounds.py" --output "$WORK/build-unix/drawing-tests" --phase regression
 fi
 
 echo
