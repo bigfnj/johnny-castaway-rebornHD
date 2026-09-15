@@ -292,13 +292,10 @@ void grToggleFullScreen(void)
 }
 
 
-void grUpdateDisplay(struct TTtmThread *ttmBackgroundThread,
-                     struct TTtmThread *ttmThreads,
+void grUpdateDisplay(struct TTtmThread *ttmThreads,
                      struct TTtmThread *ttmHolidayThread,
                      struct TTtmThread *ttmCloudsThread)
 {
-    UNUSED(ttmBackgroundThread);
-
     PlatformSurface* windowSurface = platformGetWindowSurface(platform_window);
 
     // Blit the background
@@ -713,11 +710,6 @@ void grLoadScreen(const char *strArg)
 {
     struct TScrResource *scrResource = findScrResource(strArg);
 
-    if (scrResource == NULL) {
-        printf("Requested SCR resource not found: %s\n", strArg);
-        fatalError("Screen resource not found");
-    }
-
     if (scrResource->width > SCREEN_WIDTH || scrResource->height > SCREEN_HEIGHT)
         fatalError("Screen resource is too big");
 
@@ -878,11 +870,6 @@ void grLoadBmp(struct TTtmSlot *ttmSlot, uint16 slotNo, const char *strArg)
     }
 
     struct TBmpResource *bmpResource = findBmpResource(strArg);
-    if (bmpResource == NULL) {
-        printf("Requested BMP resource not found: %s\n", strArg);
-        fatalError("BMP resource not found");
-    }
-
     /*  numImages is a uint16 straight out of the file and sprites[] holds
      *  MAX_SPRITES_PER_BMP pointers, so the loop below wrote past the slot as
      *  soon as a BMP declared more images than that - and numSprites was set

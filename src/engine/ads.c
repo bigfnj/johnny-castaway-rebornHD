@@ -535,7 +535,7 @@ void adsPlaySingleTtm(const char *ttmName)  // TODO - tempo
     while (ttmThreads[0].ip < ttmSlots[0].dataSize) {
         ttmPlay(ttmThreads);
         ttmThreads[0].isRunning = TTM_RUNNING;
-        grUpdateDisplay(NULL, ttmThreads, NULL, NULL);
+        grUpdateDisplay(ttmThreads, NULL, NULL);
         grUpdateDelay = ttmThreads[0].delay;
     }
 
@@ -785,11 +785,6 @@ void adsPlay(const char *adsName, uint16 adsTag)
     uint32 dataSize;
 
     struct TAdsResource *adsResource = findAdsResource(adsName);
-    if (adsResource == NULL) {
-        fatalError("ADS resource '%s' not found", adsName);
-        return;
-    }
-
     debugMsg("\n\n========== Playing ADS: %s:%d ==========\n", adsResource->resName, adsTag);
 
     adsCurrentName = adsResource->resName;
@@ -887,7 +882,7 @@ void adsPlay(const char *adsName, uint16 adsTag)
         }
 
         // Refresh display
-        grUpdateDisplay(&ttmBackgroundThread, ttmThreads, &ttmHolidayThread, &ttmCloudsThread);
+        grUpdateDisplay(ttmThreads, &ttmHolidayThread, &ttmCloudsThread);
 
         // Determine min timer through all threads
         uint16 mini = 300;
@@ -1008,7 +1003,7 @@ void adsPlayBench(void)  // TODO - tempo
             for (int i=0; i < numLayers; i++)
                 benchPlay(&ttmThreads[i], i);
 
-            grUpdateDisplay(NULL, ttmThreads, NULL, NULL);
+            grUpdateDisplay(ttmThreads, NULL, NULL);
 
             counter++;
         }
@@ -1027,9 +1022,8 @@ void adsPlayIntro(void)
 {
     grLoadScreen("INTRO.SCR");
     grUpdateDelay = 100;
-    grUpdateDisplay(NULL, ttmThreads, NULL, NULL);
+    grUpdateDisplay(ttmThreads, NULL, NULL);
     grFadeOut();
-    ttmResetSlot(&ttmSlots[0]);
 }
 
 
@@ -1141,7 +1135,7 @@ void adsPlayWalk(int fromSpot, int fromHdg, int toSpot, int toHdg)
         }
 
         // Refresh display
-        grUpdateDisplay(&ttmBackgroundThread, ttmThreads, &ttmHolidayThread, &ttmCloudsThread);
+        grUpdateDisplay(ttmThreads, &ttmHolidayThread, &ttmCloudsThread);
 
         // Determine min timer from the two threads
         uint16 mini = ttmThreads[0].timer;

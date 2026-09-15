@@ -84,11 +84,6 @@ uint32 ttmFindTag(struct TTtmSlot *ttmSlot, uint16 reqdTag)
 void ttmLoadTtm(struct TTtmSlot *ttmSlot, const char *ttmName)
 {
     struct TTtmResource *ttmResource = findTtmResource(ttmName);
-    if (ttmResource == NULL) {
-        fatalError("TTM resource '%s' not found", ttmName);
-        return;
-    }
-
     debugMsg("---- Loading %s", ttmResource->resName);
 
     ttmSlot->data     = ttmResource->uncompressedData;
