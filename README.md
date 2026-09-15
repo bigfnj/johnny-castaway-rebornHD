@@ -307,8 +307,8 @@ find its data.
 ```
 
 Mouse movement past an 8-pixel dead zone ends it, as does any key or a mouse
-click. It does **not** yet exit on losing focus: no Win32 focus message is
-handled at all, which is a gap rather than a decision. In `/p` preview mode it
+click. In `/s` mode it also exits when another application takes activation.
+Ordinary windowed runs ignore that deactivation event. In `/p` preview mode it
 draws as a child of the supplied window and never takes the foreground.
 
 Because it is the same binary, every option above still works for debugging:

@@ -1,0 +1,55 @@
+{
+  "scope": "Actual config.c and included unmodified story.c; isolated HOME; fixed clock and logging/style/allocation stubs. No application graphics/audio run.",
+  "commit": "2d073a9319a217fc3d3a62a71efedd4920faa319",
+  "build_command": [
+    "gcc",
+    "-std=c99",
+    "-O1",
+    "-g",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=undefined",
+    "-ffunction-sections",
+    "-fdata-sections",
+    "-I/repo/src/engine",
+    "-I/repo/src/data",
+    "-I/repo/platform",
+    "/evidence/story_config_probe.c",
+    "/repo/src/engine/config.c",
+    "-Wl,--gc-sections",
+    "-o",
+    "/evidence/story_config_probe"
+  ],
+  "compile_started_ns": 1789484214861300710,
+  "binary_mtime_ns": 1789484215787231200,
+  "binary_sha256": "8bdd87b9295dcd3e529b1d6031db58a987117f0c33a03b8e13e449a7e95edb73",
+  "raw_source_sha256": {
+    "src/engine/story.c": "b503cca4115b5852f4ed9cdc02c5aef77498c793bac9fdb2b517b19cd8c4b9a4",
+    "src/engine/config.c": "a87b4e3d050912d7a82f3efa2d681be2ac20a72cadca3581dffa6d7e572bba58"
+  },
+  "cases": [
+    {
+      "name": "ordinary-stale",
+      "returncode": 0,
+      "stdout": "WITNESS: actual cfgFileRead currentDay=1 date=199\nRESULT: storyCurrentDay=2 savedDay=2 savedDate=200\n",
+      "stderr": ""
+    },
+    {
+      "name": "cycle-stale",
+      "returncode": 0,
+      "stdout": "WITNESS: actual cfgFileRead currentDay=11 date=199\nRESULT: storyCurrentDay=1 savedDay=1 savedDate=200\n",
+      "stderr": ""
+    },
+    {
+      "name": "max-same-date",
+      "returncode": 0,
+      "stdout": "WITNESS: actual cfgFileRead currentDay=2147483647 date=200\nRESULT: storyCurrentDay=1 savedDay=1 savedDate=200\n",
+      "stderr": ""
+    },
+    {
+      "name": "max-stale-date",
+      "returncode": 1,
+      "stdout": "WITNESS: actual cfgFileRead currentDay=2147483647 date=199\n",
+      "stderr": "/repo/src/engine/story.c:102:27: runtime error: signed integer overflow: 2147483647 + 1 cannot be represented in type 'int'\n"
+    }
+  ]
+}

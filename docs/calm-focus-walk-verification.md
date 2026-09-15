@@ -73,3 +73,54 @@ Local detailed evidence is under `build/original-pose-review/`,
 Compact export/native evidence is tracked with the accepted art recipe. These
 checks do not establish physical audio output, Linux desktop fullscreen
 behavior or complete original-executable scene parity.
+
+## Merge and post-merge verification
+
+[PR 8](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/8) merged at
+`2d073a9319a217fc3d3a62a71efedd4920faa319` after its
+[four-platform CI run](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34984091876)
+passed. The subsequent
+[main CI run](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34984729462)
+also passed Windows, Linux, macOS and Web.
+
+On the merged main checkout, the portable exporter reproduced all six PNGs;
+the 20 art-tool and 45 metadata regressions then passed, including the three
+Git newline-rule mutations. The catalog's read-only reproduction check passed.
+The native runtime-data target refreshed the local build's archive, whose hash
+matches the production archive above. No runtime source, platform adapter,
+build/gate workflow or original-resource change was introduced by this revision.
+
+The post-merge documentation audit corrected an outdated README claim that
+screensaver mode did not react to losing activation. `WM_ACTIVATEAPP` already
+feeds `EVENT_FOCUS_LOST`, which exits only screensaver mode; the existing
+screensaver suite covers that behavior and ordinary-window continuation.
+
+## Post-merge code audit
+
+The independent review began on merged main `2d073a9`, after the art and code
+changes were committed and pushed. The following coverage is a fresh source
+audit, with the bounded config probe called out separately.
+
+| Area | Findings and disposition |
+| --- | --- |
+| Engine, scheduling and resources | Reviewed startup/events/config, ADS/TTM interpreters, decompression, story/walk/path data and ownership. No regression attributable to this art revision or recurring scene-resource leak was found. Existing malformed LZW/string, seed-range and process-lifetime resource follow-ups remain. |
+| Windows, Linux, macOS and Web | Reviewed adapters, PNG/ZIP interfaces, graphics, island, style selection, sound and browser code. A missing Windows raw-input cleanup call and a common audio startup synchronization gap were identified as existing follow-ups. Both are in BACKLOG.md with targeted test proposals; no measured OS leak or audible failure is claimed. |
+| Malformed saved configuration | Actual config parsing plus unmodified story initialization, a fixed clock and isolated HOME reproduced one signed-overflow diagnostic for INT_MAX with a stale date. Three ordinary/boundary controls passed. The [probe record](calm-focus-config-boundary.json) preserves source/binary identities, compiler arguments and outputs. Validate before incrementing. |
+| Dead code and unfinished calls | Four post-decompression NULL checks in resource loading are unreachable under the current allocate-or-terminate contract. They are recorded as cleanup. Reachable logging-only ADS/TTM commands remain unfinished behavior, not dead code to remove. |
+| Authoring and build tools | Reviewed tools, exporters, preview helper, CMake, wrappers, workflows and test wiring. No new functional defect was found. Metadata checks remain manual authoring checks, so adding one Linux CI smoke/regression/reproduction step is now an explicit backlog item. |
+| Optimization | Flip caching and full-frame damage tracking remain measurement-led follow-ups. The audit establishes no new speed or memory-saving claim. |
+
+The Windows cleanup finding follows the
+[documented WM_INPUT contract](https://learn.microsoft.com/en-us/windows/win32/inputdev/wm-input):
+foreground raw-input handling must call `DefWindowProc`. The current early exits
+and successful handler return before that call. The common audio callback uses
+`currentRemaining` under its lock, while initialization resets it after a Linux
+worker may already be running; its initial zero-length copy also has a null
+source. These findings require focused fixes/tests rather than assumptions about
+observed playback corruption.
+
+The remaining items and the corrected README statement are recorded in
+[BACKLOG.md](../BACKLOG.md). No original-executable outcome verification,
+long-duration heap profiling, physical audio testing or exhaustive malformed-data
+fuzzing was added by this audit. The subsequent audit-record commit changes only
+documentation and retained evidence, leaving the tested code and artwork intact.
