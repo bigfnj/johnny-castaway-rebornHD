@@ -115,6 +115,11 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
+def text_digest(data):
+    """Hash strict UTF-8 with CRLF and CR converted to LF; retain all else."""
+    return digest(data.decode('utf-8').replace('\r\n', '\n').replace('\r', '\n').encode('utf-8'))
+
+
 def u16(data, offset):
     return struct.unpack_from('<H', data, offset)[0]
 
@@ -402,7 +407,7 @@ def dump_validation(exe, archive, root):
             raise ValueError(f'Golden dump differs in {len(mismatches)} files: {mismatches[:5]}')
         return {'status': 'all_hashes_match', 'files': len(actual),
                 'counts_by_directory': dict(sorted(Counter(name.split('/')[0] for name in actual).items())),
-                'golden_sha256': digest((root / 'tests/golden-dump.sha256').read_bytes()),
+                'golden_lf_utf8_sha256': text_digest((root / 'tests/golden-dump.sha256').read_bytes()),
                 'scope': 'Port decoder regression only; not original executable rendering parity.'}
 
 
@@ -473,7 +478,7 @@ def fan_crosswalk(root, resources, scenes):
                    'basis': 'Reports about the old Windows program are neither a port reproduction nor a required animation specification.',
                    'original_render_parity_proven': False})
     assigned.update(faults)
-    return {'catalog_sha256': digest(path.read_bytes()), 'catalog_observations': len(by_id),
+    return {'catalog_lf_utf8_sha256': text_digest(path.read_bytes()), 'catalog_observations': len(by_id),
             'scope': 'Grouped candidates cover source observations, not distinct animation counts or original visual parity. All fan records retain secondary_unverified status.',
             'groups': groups, 'observations_by_status': dict(sorted(Counter(g['status'] for g in groups for _ in g['catalog_ids']).items())),
             'unmapped_catalog_ids': sorted(set(by_id) - assigned),
@@ -638,6 +643,16 @@ def markdown(report):
               'inputs only at packet boundaries to fit Windows argv limits, and creates a temporary headless dump '
               'of the port archive for comparison with every golden hash. Input and executable hashes are recorded '
               'in JSON; tool and source changes require regeneration.', '']
+    lines += ['Schema version 2 identifies text input hashes with `lf_utf8_sha256` in their field names. '
+              'For the generator, scene catalog, reviewed source files and golden manifest, decode UTF-8 strictly, '
+              'replace CRLF and any remaining CR with LF, then hash the UTF-8 encoding. Preserve the BOM if present, '
+              'spaces, trailing blank lines and all other characters. This makes those fingerprints independent '
+              'of checkout line endings without hiding content edits. Original resources, archives, executables, '
+              'compressed payloads and decoded script bytes retain exact raw-byte SHA-256 hashes. '
+              'ADS command-block fingerprints continue to hash their serialized derived command records. '
+              'Generated JSON and Markdown use UTF-8 with LF line endings. Scoped `.gitattributes` rules '
+              'preserve those exact bytes for the two checked-in inventory reports during Git checkout. '
+              'Other source files may use CRLF in a checkout; their fingerprints follow the text policy above.', '']
     lines += ['The command-support explanations and scheduler interpretation are manually reviewed source assessments, '
               'not semantic proofs derived from matching a switch label. Re-review these assessments when their recorded '
               'source hashes change. Run the focused fixture and mutation checks with '
@@ -685,18 +700,23 @@ def main(argv=None):
                     record['command_changes'] = command_changes(o, p)
         comparison.append(record)
     report = {
-        'schema_version': 1,
+        'schema_version': 2,
+        'hash_policy': {
+            'text_inputs': 'Fields containing lf_utf8_sha256 hash strict UTF-8 text after CRLF and remaining CR are replaced with LF. All other characters, BOMs, whitespace and trailing blank lines are preserved.',
+            'raw_bytes': 'Archive, original/port resource-pair, probe/executable, resource-payload and decoded-script hashes remain SHA-256 of exact bytes; no text normalization applies.',
+            'derived_records': 'ADS block_commands_sha256 hashes JSON-serialized derived command records with sorted keys, excluding offsets, the containing ADS tag number and TAG commands.',
+            'generated_reports': 'JSON and Markdown are emitted as UTF-8 with LF line endings. Scoped .gitattributes rules preserve LF for the two checked-in inventory reports.'},
         'scope': 'Local port and original resource/script inventory; static reachability; no original runtime/render parity assertion.',
         'original_comparison': {'status': 'performed', 'inputs': ['RESOURCE.MAP', 'RESOURCE.001'],
                                 'omitted_mode_supported': False},
         'assessment_method': 'Command-support notes and scheduler interpretation are manually reviewed; source hashes identify the reviewed snapshot. Re-review them after source changes.',
         'related_evidence': ['original-ne-audio.json', 'original-reference.md', 'scene-catalog.json'],
-        'inputs': {'inventory_tool_sha256': digest(Path(__file__).read_bytes()),
+        'inputs': {'inventory_tool_lf_utf8_sha256': text_digest(Path(__file__).read_bytes()),
                    'archive_sha256': digest(archive.read_bytes()),
                    'port_map_sha256': digest(port_map), 'port_volume_sha256': digest(port_volume),
                    'original_map_sha256': digest(original_map), 'original_volume_sha256': digest(original_volume),
                    'probe_sha256': digest(probe.read_bytes()), 'engine_sha256': digest(exe.read_bytes()),
-                   'source_hashes': {name: digest((root / name).read_bytes()) for name in
+                   'source_lf_utf8_sha256': {name: text_digest((root / name).read_bytes()) for name in
                        ['src/data/story_data.h', 'src/engine/story.c', 'src/engine/ads.c',
                         'src/engine/ttm.c', 'src/engine/graphics.c', 'src/engine/resource.c', 'src/engine/dump.c',
                         'src/engine/sound.c', 'src/engine/island.c', 'src/data/walk_data.h']}},
@@ -719,8 +739,8 @@ def main(argv=None):
         'archive_members': archive_members,
     }
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
-    args.output.with_suffix('.md').write_text(markdown(report), encoding='utf-8')
+    args.output.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8', newline='\n')
+    args.output.with_suffix('.md').write_text(markdown(report), encoding='utf-8', newline='\n')
     print(json.dumps(report['summary'], sort_keys=True))
     return 0
 

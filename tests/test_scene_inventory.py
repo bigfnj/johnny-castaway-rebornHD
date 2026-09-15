@@ -74,7 +74,25 @@ def story_fixture(directory, rows, count):
 
 
 def run_case(module, name):
-    if name == 'smoke':
+    if name == 'hash_controls':
+        canonical = b'one\ntwo\nthree\n'
+        expected = module.digest(canonical)
+        for encoded in (canonical, b'one\r\ntwo\r\nthree\r\n', b'one\r\ntwo\rthree\n'):
+            require(module.text_digest(encoded) == expected, 'LF, CRLF and mixed text fingerprints agree')
+        require(module.text_digest(b'\xc3\xa9\r\n') == module.digest(b'\xc3\xa9\n'), 'UTF-8 characters survive normalization')
+        for distinct in (b'one\ntwo\nTHREE\n', canonical + b'\n', b'\xef\xbb\xbf' + canonical, b'one \ntwo\nthree\n'):
+            require(module.text_digest(distinct) != expected, 'non-newline content is not normalized away')
+        require(module.digest(b'\x00\r\n\xff') != module.digest(b'\x00\n\xff'), 'binary fingerprints remain byte-exact')
+        try:
+            module.text_digest(b'\xff')
+        except UnicodeDecodeError:
+            pass
+        else:
+            raise AssertionError('text hashing requires valid UTF-8')
+    elif name == 'hash_normalization':
+        actual = module.text_digest(b'one\r\ntwo\rthree\n')
+        require(actual == module.digest(b'one\ntwo\nthree\n'), 'mixed line endings retain the canonical text fingerprint')
+    elif name == 'smoke':
         index, volume = map_fixture(('ONE.BIN', 'TWO.BIN'))
         _, catalog = module.resource_catalog(index, volume)
         require(list(catalog) == ['ONE.BIN', 'TWO.BIN'], 'two distinct resources retained')
@@ -170,6 +188,7 @@ MUTATIONS = [
     ('story_witness', 'scheduler', 'if not finals:', 'if False:'),
     ('golden_mismatch', 'dump_validation', 'if mismatches:', 'if False:'),
     ('golden_exit', 'dump_validation', 'if result.returncode:', 'if False:'),
+    ('hash_normalization', 'text_digest', "return digest(data.decode('utf-8').replace('\\r\\n', '\\n').replace('\\r', '\\n').encode('utf-8'))", 'return digest(data)'),
 ]
 
 DIAGNOSTICS = {
@@ -179,6 +198,7 @@ DIAGNOSTICS = {
     'probe_exit': 'decompressor failed', 'probe_size': 'incomplete decompression', 'probe_consumption': 'incomplete decompression',
     'script_padding': 'command exceeds', 'story_count': 'count differs', 'story_witness': 'no eligible final predecessor',
     'golden_mismatch': "Golden dump differs in 1 files: ['one.txt']", 'golden_exit': 'Production dump failed',
+    'hash_normalization': 'mixed line endings retain the canonical text fingerprint',
 }
 
 
@@ -204,7 +224,7 @@ def main():
         print(json.dumps({'case': args.case, 'status': 'PASS'}))
         return 0
     module = load_module(SOURCE)
-    cases = ['smoke', 'story_controls'] + [row[0] for row in MUTATIONS]
+    cases = ['smoke', 'hash_controls', 'story_controls'] + [row[0] for row in MUTATIONS]
     for case in cases:
         run_case(module, case)
         print(json.dumps({'case': case, 'status': 'PASS'}), flush=True)
@@ -229,7 +249,7 @@ def main():
                 require(result.stdout.splitlines().count(witness) == 1, case + ': actual mutated function executed')
                 require(result.returncode == 1 and len(records) == 1 and records[0]['case'] == case and records[0]['status'] == 'FAIL', case + ': exactly one named failure')
                 expected = records[0]['assertion']
-                prefix = 'wrong exception: ' if case == 'story_witness' else 'not rejected: '
+                prefix = '' if case == 'hash_normalization' else 'wrong exception: ' if case == 'story_witness' else 'not rejected: '
                 require(expected == prefix + DIAGNOSTICS[case], case + ': intended rejection assertion fired')
                 print(json.dumps({'file': 'tools/inventory_scenes.py', 'case': case, 'mutation': 'FIRED', 'assertion': expected, 'rebuilt': True, 'witness': witness}), flush=True)
     return 0

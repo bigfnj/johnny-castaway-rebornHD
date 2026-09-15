@@ -1,5 +1,11 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
+  "hash_policy": {
+    "text_inputs": "Fields containing lf_utf8_sha256 hash strict UTF-8 text after CRLF and remaining CR are replaced with LF. All other characters, BOMs, whitespace and trailing blank lines are preserved.",
+    "raw_bytes": "Archive, original/port resource-pair, probe/executable, resource-payload and decoded-script hashes remain SHA-256 of exact bytes; no text normalization applies.",
+    "derived_records": "ADS block_commands_sha256 hashes JSON-serialized derived command records with sorted keys, excluding offsets, the containing ADS tag number and TAG commands.",
+    "generated_reports": "JSON and Markdown are emitted as UTF-8 with LF line endings. Scoped .gitattributes rules preserve LF for the two checked-in inventory reports."
+  },
   "scope": "Local port and original resource/script inventory; static reachability; no original runtime/render parity assertion.",
   "original_comparison": {
     "status": "performed",
@@ -16,7 +22,7 @@
     "scene-catalog.json"
   ],
   "inputs": {
-    "inventory_tool_sha256": "ea9f10a0fb5811797535d662f4849a48f4834f13228c434ec263789ec70622c3",
+    "inventory_tool_lf_utf8_sha256": "258759d0a5547e32884b3ab2d79060726b051d51c9c63655e21a57e605318fcc",
     "archive_sha256": "fb70d795531d50093dd4a9ac53895a6a20a76efc982d4d7d45a64403b98e68d8",
     "port_map_sha256": "65f5e30383b3d5a5f1c4fca1b49d57cc31d72bfaf90a49ce61d5990d449d59da",
     "port_volume_sha256": "f4e97a342a3c3c5b31c85cc4b177dba05363a81ad9a49b3961c26f6a4508bd02",
@@ -24,17 +30,17 @@
     "original_volume_sha256": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae",
     "probe_sha256": "4e716d60e41340ce2fe1e01076566c11ce200b97fece772b761a7c63a5d5c470",
     "engine_sha256": "6ac61dc53dc926a311d89fcf2e27ff7cefbbac7f4c60e2491f69114230400865",
-    "source_hashes": {
-      "src/data/story_data.h": "0f7d6cbd9a37b411839a2a9376c15e035388d00cb0f8cbf4b898dcc93eaff6f6",
-      "src/engine/story.c": "b503cca4115b5852f4ed9cdc02c5aef77498c793bac9fdb2b517b19cd8c4b9a4",
-      "src/engine/ads.c": "c4d53220327f62676a159f1b3651626a8dabafdfa5bf625b5e94d443280eb4f6",
-      "src/engine/ttm.c": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6",
-      "src/engine/graphics.c": "bdb81a2c3af2d1f28014ba3d0d5ffe2fa1886d999d8862594e44444a74bf9e92",
-      "src/engine/resource.c": "8b60a6d5936dd67ca014aaedde799e8b6f0a567ac482c836bd922a4fa93c6f43",
-      "src/engine/dump.c": "b2e46c22fa854bbc0d75413b441f4afc0afb10d42b6ead737e70bc5d7e92babd",
-      "src/engine/sound.c": "7a2c2e0e8d7f836a60a619fe2212af1f710cf072eafdc413186c4f196de8da74",
-      "src/engine/island.c": "222810695a00989322c058aeed272a5f671be9abf168f0702b328e96096bae39",
-      "src/data/walk_data.h": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769"
+    "source_lf_utf8_sha256": {
+      "src/data/story_data.h": "51446802f188ea95ac8db0eed5a09ded878cbff86f209d9f1628dbe134448cb5",
+      "src/engine/story.c": "32148bd4879931d8db5cf91ab4349e347ec279c4c552efaeca85032ffb89902f",
+      "src/engine/ads.c": "d8eab364f3c9bb772910ed082197a5fe8f3a69572eb622e2a16038ae2b26c1a8",
+      "src/engine/ttm.c": "4a856f695a64eeab5d2c255b9c53395bc89b4e475b72cd50af3773972556eba3",
+      "src/engine/graphics.c": "1d3f66ffe5e8f0179cb3a602916f36d7f91a69d27be85b1964752330a06adc56",
+      "src/engine/resource.c": "7a6f30dccc8295e19749a3ed0b322425b6c249802a4d42960b6f5b9e44b34a1c",
+      "src/engine/dump.c": "d4e7e991f1a2d23d3a949ba841035173e85037f6154bad8d31bd5a4e255799fd",
+      "src/engine/sound.c": "5cfb2f2cdb06cb3de5706a30474bcc18529b36b6fff1470c96602f6d0aca7e91",
+      "src/engine/island.c": "f02ab16e374c26053743f4c202efadd199ee3c7dc883c38d94bb873dc90711fc",
+      "src/data/walk_data.h": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70"
     }
   },
   "summary": {
@@ -81,11 +87,11 @@
       "SCR": 10,
       "TTM": 41
     },
-    "golden_sha256": "0bb9eb0c4f246543442199f8abecb340ff9388088c846eb07c8967e6aaf4e0b2",
+    "golden_lf_utf8_sha256": "0bb9eb0c4f246543442199f8abecb340ff9388088c846eb07c8967e6aaf4e0b2",
     "scope": "Port decoder regression only; not original executable rendering parity."
   },
   "fan_crosswalk": {
-    "catalog_sha256": "b921481843184e58dc0be2f55645c4ce6a6b064af7c68984731e9f59f0c2ed14",
+    "catalog_lf_utf8_sha256": "b921481843184e58dc0be2f55645c4ce6a6b064af7c68984731e9f59f0c2ed14",
     "catalog_observations": 176,
     "scope": "Grouped candidates cover source observations, not distinct animation counts or original visual parity. All fan records retain secondary_unverified status.",
     "groups": [
