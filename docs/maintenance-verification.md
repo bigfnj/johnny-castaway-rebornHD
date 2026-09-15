@@ -57,6 +57,14 @@ had copied CMakeLists.txt without its new tools/ sources. Their explicit copy
 lists now include those sources. Fresh rebuilt frame mutants and actual
 application archive-refusal controls passed after the fixes.
 
+The first PR CI run passed Windows, Linux and Web, and the macOS native gate.
+Its later build-contract step exposed a fixture mismatch between macOS's /var
+temporary path and its canonical /private/var spelling. Production refusal was
+correct. The assertion now compares canonical destinations, and POSIX runs also
+exercise an actual symlink alias. The original failure was reproduced on Linux;
+normal and aliased controls passed after the fix. Nine existing mutations and a
+mutation removing the corrected assertion normalization fired as intended.
+
 | Comparison | Result |
 | --- | --- |
 | Historical scene matrix | All eight complete HD/Cartoon, day/night, frame-1/frame-13 captures match the frozen pre-cleanup baseline exactly. |
