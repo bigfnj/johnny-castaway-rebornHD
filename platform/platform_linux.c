@@ -669,6 +669,7 @@ static void* audioUserData = NULL;
 static uint8* audioBuffer = NULL;
 static int audioBufferSize = 0;
 static int audioFrames = 0;
+static int audioFrameBytes = 0;
 static pthread_t audioThread;
 /* Creation owns a joinable thread even after its worker has stopped. */
 static int audioThreadCreated = 0;
@@ -678,8 +679,6 @@ static void* audioThreadFunc(void* arg) {
     UNUSED(arg);
     while (atomic_load(&audioThreadRunning)) {
         if (audioCallback) {
-            snd_pcm_sframes_t written;
-
             /*  The callback takes platformLockAudio() itself (sound.c
              *  soundCallback), so this thread must NOT hold the mutex across the
              *  call: audioMutex is a default pthread mutex and is not recursive,
@@ -689,21 +688,35 @@ static void* audioThreadFunc(void* arg) {
              */
             audioCallback(audioUserData, audioBuffer, audioBufferSize);
 
-            written = snd_pcm_writei(pcmHandle, audioBuffer, audioFrames);
-
-            /*  RECOVER FROM AN UNDERRUN. The return was discarded, so after the
-             *  first XRUN - which any scheduling hiccup produces - the stream
-             *  stayed in the error state and every later write returned -EPIPE
-             *  immediately. That turned this into a spin loop at 100% CPU with
-             *  silent audio and nothing logged, for the remaining life of the
-             *  process.
-             */
-            if (written < 0) {
-                written = snd_pcm_recover(pcmHandle, (int)written, 1 /* silent */);
-                if (written < 0) {
-                    /* Unrecoverable: stop feeding rather than spin on the error. */
-                    lastError = "ALSA write failed and could not be recovered";
-                    atomic_store(&audioThreadRunning, 0);
+            /* ALSA reports frames, while the callback supplies interleaved
+             * unsigned-eight-bit bytes. Keep the same callback buffer until
+             * every accepted frame has been accounted for. */
+            snd_pcm_uframes_t offset = 0;
+            while (atomic_load(&audioThreadRunning) && offset < (snd_pcm_uframes_t)audioFrames) {
+                snd_pcm_sframes_t written = snd_pcm_writei(pcmHandle,
+                    audioBuffer + (size_t)offset * audioFrameBytes,
+                    (snd_pcm_uframes_t)audioFrames - offset);
+                if (written > 0) {
+                    offset += (snd_pcm_uframes_t)written;
+                } else {
+                    int error = (int)written;
+                    if (written == 0 || written == -EAGAIN) {
+                        /* Bound each readiness wait so close can stop retries.
+                         * A ready device that still makes no progress also
+                         * gets a short backoff instead of a busy retry loop. */
+                        error = snd_pcm_wait(pcmHandle, 20);
+                        if (error >= 0) {
+                            usleep(1000);
+                            continue;
+                        }
+                    }
+                    if (snd_pcm_recover(pcmHandle, error, 1 /* silent */) < 0) {
+                        lastError = "ALSA write failed and could not be recovered";
+                        atomic_store(&audioThreadRunning, 0);
+                    } else {
+                        /* A recovered write retries the unchanged tail. */
+                        usleep(1000);
+                    }
                 }
             }
         } else {
@@ -748,7 +761,7 @@ void platformCloseAudio(void) {
         free(audioBuffer);
         audioBuffer = NULL;
     }
-    audioBufferSize = audioFrames = 0;
+    audioBufferSize = audioFrames = audioFrameBytes = 0;
     audioCallback = NULL;
     audioUserData = NULL;
 }
@@ -776,36 +789,47 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
 
     snd_pcm_hw_params_t* params;
     snd_pcm_hw_params_alloca(&params);
-    snd_pcm_hw_params_any(pcmHandle, params);
-    snd_pcm_hw_params_set_access(pcmHandle, params, SND_PCM_ACCESS_RW_INTERLEAVED);
-    snd_pcm_hw_params_set_format(pcmHandle, params, SND_PCM_FORMAT_U8);
-    snd_pcm_hw_params_set_channels(pcmHandle, params, spec->channels);
-    snd_pcm_hw_params_set_rate_near(pcmHandle, params, (unsigned int*)&spec->freq, 0);
+    unsigned int rate = (unsigned int)spec->freq;
+    if (snd_pcm_hw_params_any(pcmHandle, params) < 0) {
+        lastError = "Failed to initialize ALSA parameters";
+        goto parameter_failure;
+    }
+    if (snd_pcm_hw_params_set_access(pcmHandle, params, SND_PCM_ACCESS_RW_INTERLEAVED) < 0) {
+        lastError = "Failed to set ALSA access mode";
+        goto parameter_failure;
+    }
+    if (snd_pcm_hw_params_set_format(pcmHandle, params, SND_PCM_FORMAT_U8) < 0) {
+        lastError = "Failed to set ALSA sample format";
+        goto parameter_failure;
+    }
+    if (snd_pcm_hw_params_set_channels(pcmHandle, params, spec->channels) < 0) {
+        lastError = "Failed to set ALSA channels";
+        goto parameter_failure;
+    }
+    if (snd_pcm_hw_params_set_rate_near(pcmHandle, params, &rate, 0) < 0) {
+        lastError = "Failed to set ALSA sample rate";
+        goto parameter_failure;
+    }
 
     err = snd_pcm_hw_params(pcmHandle, params);
     if (err < 0) {
         lastError = "Failed to set ALSA parameters";
-        snd_pcm_close(pcmHandle);
-        /*  NULL IT. The handle was closed and left dangling, so a later
-         *  platformCloseAudio saw a non-NULL pcmHandle and called snd_pcm_drain
-         *  and snd_pcm_close on freed memory. Reachable on the ordinary path:
-         *  soundInit sets soundDisabled and carries on when the open fails.
-         */
-        pcmHandle = NULL;
-        return -1;
+        goto parameter_failure;
     }
+    spec->freq = (int)rate;
 
     audioCallback = spec->callback;
     audioUserData = spec->userdata;
     audioBufferSize = spec->samples * spec->channels;
     audioFrames = spec->samples;
+    audioFrameBytes = spec->channels;
 
     audioBuffer = (uint8*)malloc(audioBufferSize);
     if (!audioBuffer) {
         lastError = "Out of memory allocating the audio buffer";
         snd_pcm_close(pcmHandle);
         pcmHandle = NULL;
-        audioBufferSize = audioFrames = 0;
+        audioBufferSize = audioFrames = audioFrameBytes = 0;
         audioCallback = NULL;
         audioUserData = NULL;
         return -1;
@@ -824,7 +848,7 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
         audioBuffer = NULL;
         snd_pcm_close(pcmHandle);
         pcmHandle = NULL;
-        audioBufferSize = audioFrames = 0;
+        audioBufferSize = audioFrames = audioFrameBytes = 0;
         audioCallback = NULL;
         audioUserData = NULL;
         return -1;
@@ -832,6 +856,11 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
     audioThreadCreated = 1;
 
     return 0;
+
+parameter_failure:
+    snd_pcm_close(pcmHandle);
+    pcmHandle = NULL;
+    return -1;
 }
 
 /**

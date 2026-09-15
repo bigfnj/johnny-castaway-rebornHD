@@ -1,4 +1,4 @@
-"""Build Web in the pinned SDK container; browser tests run separately on the host.
+"""Build Web with the pinned SDK container or an activated local SDK of that version.
 
 The digest selects the official 6.0.9 multi-platform image, verified with emcc.
 Only image acquisition is retried. A compiler or artifact failure ends the run.
@@ -51,11 +51,31 @@ def acquire_image(run=subprocess.run, sleep=time.sleep):
     raise RuntimeError('tools/build_web.py: pinned SDK image acquisition failed after 3 attempts')
 
 
+def verify_cache(source, output):
+    """Keep user caches intact; reject a native or differently mounted build tree."""
+    cache = output / 'CMakeCache.txt'
+    if not cache.exists():
+        return
+    fields = dict(re.findall(r'^([A-Za-z_][A-Za-z_0-9]*):[^=\r\n]+=([^\r\n]*)$', cache.read_text(encoding='utf-8'), re.MULTILINE))
+    home = fields.get('CMAKE_HOME_DIRECTORY', '').replace('\\', '/').rstrip('/')
+    toolchain = fields.get('CMAKE_TOOLCHAIN_FILE', '').replace('\\', '/')
+    if home.casefold() != source.as_posix().rstrip('/').casefold() or not toolchain.endswith('/Emscripten.cmake'):
+        raise RuntimeError(f'tools/build_web.py: incompatible {cache}; select a new output directory for this backend (cache preserved)')
+
+
+def assemble_page(source, output):
+    verify_artifacts(source, output)
+    for name in ('index.html', 'favicon.ico'):
+        shutil.copyfile(source / name, output / name)
+    print(f'PASS tools/build_web.py: servable output in {output}', flush=True)
+
+
 def inside(source, output, platform_phase=None, probes_only=False):
     version = subprocess.run(['emcc', '--version'], check=True, text=True, capture_output=True).stdout
     print(version, end='', flush=True)
     verify_version(version)
     if not probes_only:
+        verify_cache(source, output)
         subprocess.run(['emcmake', 'cmake', '-S', str(source), '-B', str(output),
                         '-DCMAKE_BUILD_TYPE=Release'], check=True)
         subprocess.run(['cmake', '--build', str(output), '--parallel', str(min(8, os.cpu_count() or 2))], check=True)
@@ -68,9 +88,10 @@ def inside(source, output, platform_phase=None, probes_only=False):
 
 def build(source, output, run=subprocess.run, platform_phase=None, probes_only=False):
     source = source.resolve()
-    relative = output.as_posix()
-    if output.is_absolute() or '..' in output.parts or output == Path('.'):
-        raise RuntimeError('tools/build_web.py: output must be a relative directory within source')
+    destination = (source / output).resolve()
+    if destination == source or not destination.is_relative_to(source):
+        raise RuntimeError(f'tools/build_web.py: container output must be a directory within {source}: {destination}')
+    relative = destination.relative_to(source).as_posix()
     acquire_image(run=run)
     command = ['docker', 'run', '--rm', '--mount', f'type=bind,source={source},target=/src',
                '--workdir', '/src']
@@ -85,11 +106,7 @@ def build(source, output, run=subprocess.run, platform_phase=None, probes_only=F
     # Do not retry compilation or convert its failure into an artifact check.
     run(command, check=True, timeout=1200)
     if not probes_only:
-        destination = source / output
-        verify_artifacts(source, destination)
-        for name in ('index.html', 'favicon.ico'):
-            shutil.copyfile(source / name, destination / name)
-        print(f'PASS tools/build_web.py: servable output in {destination}', flush=True)
+        assemble_page(source, destination)
     if platform_phase:
         print(f'PASS tools/build_web.py: platform {platform_phase} completed', flush=True)
 
@@ -98,6 +115,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--source', type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument('--output', type=Path, default=Path('build_web'))
+    parser.add_argument('--backend', choices=['container', 'local'], default='container',
+                        help='Local requires an activated emsdk 6.0.9; the PowerShell wrapper activates EMSDK in a child shell')
     parser.add_argument('--inside', action='store_true', help=argparse.SUPPRESS)
     parser.add_argument('--platform-probes', choices=['smoke', 'regression'], help='Run real Web backend probes inside the SDK container')
     parser.add_argument('--probes-only', action='store_true', help='Run the requested backend phase without rebuilding the application')
@@ -107,6 +126,14 @@ def main():
     try:
         if options.inside:
             inside(options.source.resolve(), options.source.resolve() / options.output, options.platform_probes, options.probes_only)
+        elif options.backend == 'local':
+            source = options.source.resolve()
+            output = (source / options.output).resolve()
+            if output == source:
+                raise RuntimeError(f'tools/build_web.py: output must differ from source: {output}')
+            inside(source, output, options.platform_probes, options.probes_only)
+            if not options.probes_only:
+                assemble_page(source, output)
         else:
             build(options.source, options.output, platform_phase=options.platform_probes, probes_only=options.probes_only)
         return 0

@@ -152,11 +152,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\tools\extract_sound.c" />
-    <ClCompile Include="..\..\src\engine\utils.c" />
+    <ClCompile Include="..\..\tools\extract_io.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\engine\mytypes.h" />
-    <ClInclude Include="..\..\src\engine\utils.h" />
+    <ClInclude Include="..\..\tools\extract_io.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

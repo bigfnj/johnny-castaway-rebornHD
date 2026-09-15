@@ -125,18 +125,37 @@
             //  went nowhere a user would look: the page simply stopped, with the reason
             //  only in devtools. A missing data file looked identical to a hang.
             var jcLog = [];
+            var jcErrors = [];
+            window.jcHadFatalError = false;
+            function retainLog(text, isError) {
+                text = String(text);
+                // Detect fatal errors before truncation or later history eviction.
+                if (isError && /Fatal error/i.test(text)) {
+                    window.jcHadFatalError = true;
+                    document.title = 'Johnny Castaway Reborn - error';
+                }
+                var marker = '... [truncated]';
+                // Materialize the bounded prefix: a substring can otherwise keep
+                // the entire original message's backing storage alive in V8.
+                var retained = text.length > 4096 ?
+                    text.slice(0, 4096 - marker.length).split('').join('') + marker : text;
+                jcLog.push(retained);
+                // Preserve the initial 64 messages and the most recent 448.
+                if (jcLog.length > 512) jcLog.splice(64, jcLog.length - 512);
+                if (isError) {
+                    jcErrors.push(retained);
+                    if (jcErrors.length > 16) jcErrors.splice(0, jcErrors.length - 16);
+                }
+            }
             var Module = {
                 canvas: (function () { return document.getElementById('canvas'); })(),
                 // Emscripten prepends argv[0] to this array. Keep user options
                 // separate so selector reloads cannot accumulate program names.
                 arguments: jcArgs.slice(),
-                print: function (text) { jcLog.push(text); console.log(text); },
+                print: function (text) { retainLog(text, false); console.log(text); },
                 printErr: function (text) {
-                    jcLog.push(text);
+                    retainLog(text, true);
                     console.error(text);
-                    if (/Fatal error/i.test(text)) {
-                        document.title = 'Johnny Castaway Reborn - error';
-                    }
                 },
                 // Consumed by the automated browser test to know loading finished.
                 onRuntimeInitialized: function () { window.jcReady = true; },
@@ -148,6 +167,7 @@
             };
             // Exposed so a test (or a curious user) can read what the engine printed.
             window.jcLog = jcLog;
+            window.jcErrors = jcErrors;
 
             //  AUTOPLAY POLICY. A browser will not start an AudioContext without a user
             //  gesture, so this resumes it on the first click on the canvas.

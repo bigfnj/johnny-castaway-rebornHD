@@ -26,6 +26,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <time.h>
+#include <errno.h>
 
 #if defined(_WIN32)
 #ifndef WIN32_LEAN_AND_MEAN
@@ -419,7 +420,7 @@ static void parseArgs(int argc, char **argv)
                     break;
                 }
 
-                /*  Both parse with strtol and REJECT trailing garbage, rather
+                /*  Numeric options REJECT trailing garbage, rather
                  *  than taking atoi's silent 0. `seed abc` naming a seed of 0
                  *  would run, look plausible, and quietly defeat the
                  *  reproducibility the option exists to provide.
@@ -436,9 +437,11 @@ static void parseArgs(int argc, char **argv)
 
                 case EXPECT_FRAMES: {
                     char *end = NULL;
-                    long v = strtol(argv[i], &end, 10);
-                    if (end == argv[i] || (end && *end != '\0') || v <= 0)
-                        fatalError("Invalid frame count '%s' (expected a positive integer)", argv[i]);
+                    errno = 0;
+                    long long v = strtoll(argv[i], &end, 10);
+                    if (errno == ERANGE || end == argv[i] || *end != '\0' ||
+                        v <= 0 || (unsigned long long)v > UINT32_MAX)
+                        fatalError("Invalid frame count '%s' (expected an integer from 1 to 4294967295)", argv[i]);
                     evMaxFrames = (uint32)v;
                     expect = EXPECT_NONE;
                     break;

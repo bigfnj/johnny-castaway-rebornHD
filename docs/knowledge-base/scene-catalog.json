@@ -1,0 +1,1494 @@
+{
+  "schema_version": 1,
+  "scope": "Attributed fan observations for comparison; not an exhaustive original or port scene specification.",
+  "verification_default": "secondary_unverified",
+  "granularity": "A record is an observation, outcome, sequence, context claim or fault report; record count is not a distinct animation count.",
+  "overlap": "Different pages repeat some observations. Repeated source descriptions are not independent corroboration.",
+  "date_and_timing_caveat": "Reported dates, ordering, frequency and story meanings require original-data and engine cross-checks; they are not test controls.",
+  "omitted_content": [
+    "No harvested page prose, site scripts, screenshots or media are redistributed here.",
+    "Navigation, promotional wording, viewing advice and restoration recommendations are omitted.",
+    "The list and update digest add no specific variants beyond detailed pages.",
+    "The dive, octopus, aircraft-crash and still-there detail pages do not identify further concrete outcomes.",
+    "Technical research, download and reference pages belong to the separate source guide.",
+    "Vague descriptions remain explicitly unspecified; missing variant details are not reconstructed."
+  ],
+  "provenance": {
+    "retrieved": "2026-09-14",
+    "site_script_url": "https://johnnycastawayscreensaver.com/site.js?v=20260829-feedback1",
+    "site_script_sha256": "986085311bd4a6a27a95e76a6e1e86411fae1698a7b41331b0120a6ec5e42c52",
+    "capture_hash_definition": "SHA-256 of initial response bytes and rendered main.innerText encoded UTF-8 with LF newlines, respectively."
+  },
+  "sources": [
+    {
+      "id": "fan:list",
+      "url": "https://johnnycastawayscreensaver.com/list.html",
+      "category": "Source navigation",
+      "retrieved": "2026-09-14",
+      "html_sha256": "5949128cdfbe0045bd9bfca49bca33ab969e52ccbe7bbd5ae7d4d17ef794a910",
+      "rendered_main_lf_utf8_sha256": "e01465470f4c0069becdf2b6ae38d446aba9d4530572cea51233b53dc0417314",
+      "entry_count": 0,
+      "summary_word_count": 0,
+      "review_disposition": "no additional specific variant"
+    },
+    {
+      "id": "fan:common",
+      "url": "https://johnnycastawayscreensaver.com/common.html",
+      "category": "Daily activities",
+      "retrieved": "2026-09-14",
+      "html_sha256": "48b32610e2a641cec8331d34c75e1165e11cf86748b56911684703d6995649c8",
+      "rendered_main_lf_utf8_sha256": "62aaa8b5ee168662350911dde38671606fbac025ee748daa6d102e72908b1cac",
+      "entry_count": 34,
+      "summary_word_count": 113,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:fishing",
+      "url": "https://johnnycastawayscreensaver.com/fishing.html",
+      "category": "Catches and fishing",
+      "retrieved": "2026-09-14",
+      "html_sha256": "7e31dde758ff76fcba3218f9cd7e4103f2c7b6204b57349dc4c63eb503dc8ab4",
+      "rendered_main_lf_utf8_sha256": "02e470134ad7747be0b0bc89f36fae6cfa2b8096617db848dd9ccdd3b8599003",
+      "entry_count": 17,
+      "summary_word_count": 76,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:swimming",
+      "url": "https://johnnycastawayscreensaver.com/swimming.html",
+      "category": "Water activities",
+      "retrieved": "2026-09-14",
+      "html_sha256": "83f72f480ad3c161d523b7555678ac8dda16f4947f2068cc8f7ac305907fe2ed",
+      "rendered_main_lf_utf8_sha256": "11382154042d18b737bb5b49ea7051babde0d511068b13a5c575d6fa072db84b",
+      "entry_count": 16,
+      "summary_word_count": 73,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:reading",
+      "url": "https://johnnycastawayscreensaver.com/reading.html",
+      "category": "Book activity",
+      "retrieved": "2026-09-14",
+      "html_sha256": "f656647b76bde051ef00c0a4bfc14509142c34811dce690baac993b002b003e1",
+      "rendered_main_lf_utf8_sha256": "83fa74e139c969a2aea2ab3ea853ea5312d1c00d4d4c5953b44883247871680c",
+      "entry_count": 2,
+      "summary_word_count": 11,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:seagull",
+      "url": "https://johnnycastawayscreensaver.com/seagull.html",
+      "category": "Bird interactions",
+      "retrieved": "2026-09-14",
+      "html_sha256": "8e38d221dc84c247e5428b5843a40d87741a287957c934fde27c1a29bea830fc",
+      "rendered_main_lf_utf8_sha256": "a89215d51cc2c0e9ca776df0d3eee9faad28b7e21d22412a8574a933b07c0f0d",
+      "entry_count": 7,
+      "summary_word_count": 39,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:mermaid",
+      "url": "https://johnnycastawayscreensaver.com/mermaid.html",
+      "category": "Mermaid encounters",
+      "retrieved": "2026-09-14",
+      "html_sha256": "028048be829bf10fbf5a862498f3a2452a7c053348993188f13cf9fdf40d39d5",
+      "rendered_main_lf_utf8_sha256": "8b6bc53caa89775cd5afad7155fb41390b63fd047396f233f197b55dfbbbdf27",
+      "entry_count": 15,
+      "summary_word_count": 79,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:pirates",
+      "url": "https://johnnycastawayscreensaver.com/pirates.html",
+      "category": "Pirate encounters",
+      "retrieved": "2026-09-14",
+      "html_sha256": "eb90f17f2a924fb22848beda573e56d3a03cb74f021221701a19de9498a65fec",
+      "rendered_main_lf_utf8_sha256": "98ed70731dfdb60b86421eae3900a4ad9f03474d1290686522bedd162ba97f95",
+      "entry_count": 9,
+      "summary_word_count": 51,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:story",
+      "url": "https://johnnycastawayscreensaver.com/story.html",
+      "category": "Numbered story sequence",
+      "retrieved": "2026-09-14",
+      "html_sha256": "0cc5f245860cec82aa0e7a2a4bebb628422a90e2ae1986525d22df689ea67a93",
+      "rendered_main_lf_utf8_sha256": "67b213c397bee9c95e48537e57a9e486c1918c7910749627195066e96a33d014",
+      "entry_count": 15,
+      "summary_word_count": 103,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:leaving",
+      "url": "https://johnnycastawayscreensaver.com/leaving.html",
+      "category": "Departure and mainland",
+      "retrieved": "2026-09-14",
+      "html_sha256": "7df6a548548b3a65691e1acb34be032ded3e3a45fd341250af017bb5e8925aea",
+      "rendered_main_lf_utf8_sha256": "6e6958349c9edcff92be588d1443c67e138599ff0906c658cb7e9770d653000f",
+      "entry_count": 11,
+      "summary_word_count": 55,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:visitors",
+      "url": "https://johnnycastawayscreensaver.com/visitors.html",
+      "category": "Passing visitors",
+      "retrieved": "2026-09-14",
+      "html_sha256": "b514a685a6ebc541d73ada269f73c4294d9639c9805d6826fea1db2bb2e2052b",
+      "rendered_main_lf_utf8_sha256": "f4007e256131eac7db2758edbc67ff923c6348435de372eb736fe32eaba57c71",
+      "entry_count": 16,
+      "summary_word_count": 68,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:unusual",
+      "url": "https://johnnycastawayscreensaver.com/unusual.html",
+      "category": "Unusual events",
+      "retrieved": "2026-09-14",
+      "html_sha256": "5cfa98d875c5be74719a6c046acdf8893ce1a375a4ab3dde95156866c47777a6",
+      "rendered_main_lf_utf8_sha256": "ee25a6bd121a61bd068ba89e25cab439e7d2e1d46209235e737d14a34f4978ff",
+      "entry_count": 11,
+      "summary_word_count": 81,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:annivers",
+      "url": "https://johnnycastawayscreensaver.com/annivers.html",
+      "category": "Calendar observations",
+      "retrieved": "2026-09-14",
+      "html_sha256": "e83dfb7cfb11d38bd05e8fdaea482a2077c7a274f7cb18e406cec924cf494f46",
+      "rendered_main_lf_utf8_sha256": "1bb595b6d57c5d54d9f54e12e0f24d5b5938ab724f70674f6321f79c5c9d254d",
+      "entry_count": 5,
+      "summary_word_count": 19,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:bugs",
+      "url": "https://johnnycastawayscreensaver.com/bugs.html",
+      "category": "Reported legacy faults",
+      "retrieved": "2026-09-14",
+      "html_sha256": "f27ba8074d82e93698ddc931b9210e26a255a4022c5ef5c3527f237ba438ca95",
+      "rendered_main_lf_utf8_sha256": "7a28088e03c9e5b22e23bc74479050e18b9820d07407f21e66c4ec959815950e",
+      "entry_count": 18,
+      "summary_word_count": 98,
+      "review_disposition": "facts catalogued"
+    },
+    {
+      "id": "fan:johnew",
+      "url": "https://johnnycastawayscreensaver.com/johnew.html",
+      "category": "Source update digest",
+      "retrieved": "2026-09-14",
+      "html_sha256": "5d1d5225ad30417c9d268b852368ba35e4f10941d0b71684554824ece8061fce",
+      "rendered_main_lf_utf8_sha256": "f41c03eb86601511146e1552ac3cb5ac678054a736e3d2f396b68a27cfc3cf61",
+      "entry_count": 0,
+      "summary_word_count": 0,
+      "review_disposition": "no additional specific variant"
+    },
+    {
+      "id": "fan:dive",
+      "url": "https://johnnycastawayscreensaver.com/dive.html",
+      "category": "Dive detail page",
+      "retrieved": "2026-09-14",
+      "html_sha256": "c9a251f9715ace84362c3ac78b915d052e7b9857c15dc3c8959871301345ec26",
+      "rendered_main_lf_utf8_sha256": "14149caf758e3fcb828fc2fde5bbbb2d404040c33fb0fd0a6e48417ebf1acf55",
+      "entry_count": 0,
+      "summary_word_count": 0,
+      "review_disposition": "no additional specific variant"
+    },
+    {
+      "id": "fan:octoctch",
+      "url": "https://johnnycastawayscreensaver.com/octoctch.html",
+      "category": "Octopus detail page",
+      "retrieved": "2026-09-14",
+      "html_sha256": "7ca695c9315e2364ac9b19438395ca69b247cab692dfe7ba9086ab2bb9061aa4",
+      "rendered_main_lf_utf8_sha256": "cb0dabe7dd0f9ca8044678a4619effa2133a7918dbdcdf451174e8f8a800593d",
+      "entry_count": 0,
+      "summary_word_count": 0,
+      "review_disposition": "no additional specific variant"
+    },
+    {
+      "id": "fan:crash-b",
+      "url": "https://johnnycastawayscreensaver.com/crash-b.html",
+      "category": "Aircraft detail page",
+      "retrieved": "2026-09-14",
+      "html_sha256": "de0fc936850e6e07ccc4478c38e056101272def255e6617d8cb62bc2a2fde6f7",
+      "rendered_main_lf_utf8_sha256": "eac58831ed5502ecb17cbdc7f38f29d60757ddc1ca42f112921613cf4adfb302",
+      "entry_count": 0,
+      "summary_word_count": 0,
+      "review_disposition": "no additional specific variant"
+    },
+    {
+      "id": "fan:stillthere",
+      "url": "https://johnnycastawayscreensaver.com/stillthere.html",
+      "category": "Water-gag detail page",
+      "retrieved": "2026-09-14",
+      "html_sha256": "8a7847e5590188ef68ea58e84192f5fc45e8f7373bf91561e20c70fcd9608cbf",
+      "rendered_main_lf_utf8_sha256": "4ad75c1d8dc049f1cb6e0fcc86ca7b352799365594eaf61015772a3b9fb39ffd",
+      "entry_count": 0,
+      "summary_word_count": 0,
+      "review_disposition": "no additional specific variant"
+    }
+  ],
+  "entries": [
+    {
+      "id": "fan:common:sleep",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Snoring sleep",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:fish",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Fishing",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:eat",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Eating",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:read",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Reading",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:wash",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Washing",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:jog",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Jogging",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:walk",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Island wandering",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:sand-work",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Sand work near palm",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:raft-build",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Incremental raft construction",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:raft-reset",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Raft sometimes shrinks to initial state",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:fire-two-rubs",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Flame after two stick rubs",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:fire-three-rubs",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Flame after three stick rubs",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:fire-four-rubs",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Flame after four stick rubs",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:fire-after-abandon",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Flame appears after abandonment",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:cook-fish",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Fish cooking",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:eat-boot",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Boot as food",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:octopus-struggle",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Octopus resists cooking",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:coconut-right",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "One strong rightward bounce",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:coconut-left",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Two smaller leftward bounces",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:coconut-head-spin",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Coconut causes head rotation",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:coconut-catch",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Coconut caught, cracked against trunk, eaten",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:message-send",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Message written, bottled, thrown",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:message-return",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Bottle washes back",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:message-found",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Bottle discovered",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:message-day-two-thought",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Day two: miniature island self-image",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:pirate-sleep",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Pirate sleep differs from usual snoring",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:rod-handedness",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Rod hand follows fishing side",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:thought-rescue",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Rescue thought",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:thought-island",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Island thought",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:thought-time",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Time thought",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:thought-person",
+      "source_id": "fan:common",
+      "kind": "observation",
+      "summary": "Thought of anticipated company",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:context-night",
+      "source_id": "fan:common",
+      "kind": "context_claim",
+      "summary": "Night presentation differs",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:context-low-tide",
+      "source_id": "fan:common",
+      "kind": "context_claim",
+      "summary": "Low-tide presentation differs",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:common:context-story-reset",
+      "source_id": "fan:common",
+      "kind": "context_claim",
+      "summary": "Post-story island reset changes presentation",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:boot-return",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Caught boot returned to water",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:boot-keep",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Caught boot stored behind palm",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:crab-return",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Caught crab returned",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:starfish-return",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Caught starfish returned",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:crab-nose",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Crab grips nose",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:green-fish-catch",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Green fish caught",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:plank",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Plank caught",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:lifebelt",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Named-ship lifebelt caught",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:small-octopus",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Small octopus caught",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:unusual-storage",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Unusual catches often stored behind palm",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:lifebelt-left-artifact",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Left-side lifebelt catch: displaced dark shape",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:shark-tow",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Shark drags fisherman",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:large-octopus-chase",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Large octopus forces retreat up palm",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:large-octopus-theft",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Large octopus steals accumulated fish",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:green-fish-spray",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Green fish squirts, then is discarded",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:rod-handedness",
+      "source_id": "fan:fishing",
+      "kind": "observation",
+      "summary": "Fishing hand matches island side",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:fishing:context-tide-light",
+      "source_id": "fan:fishing",
+      "kind": "context_claim",
+      "summary": "Boot/crab/starfish associated with low tide and moonlight",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:palm-dive",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Palm climb followed by dive",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:judged-dive",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Scorecards from starfish, fish, gull, crab",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:belly-flop",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Belly flop judged",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:crab-scoring",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Crab may favor flop over clean dive",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:bath-equipment",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Seated bath with towel and brush",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:water-temperature",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Water temperature tested",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:wash",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Washing",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:audience-cover",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Notices viewer and covers body",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:dress",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Dresses behind palm",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:fist",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Returns gesturing with fist",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:shorts-theft",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Gull steals bathing clothes",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:shark-bite",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Bath interrupted by shark bite",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:shark-injury",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Falls against palm, apparently injured",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:leg-fakeout",
+      "source_id": "fan:swimming",
+      "kind": "observation",
+      "summary": "Hidden leg rediscovered; relief",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:context-light",
+      "source_id": "fan:swimming",
+      "kind": "context_claim",
+      "summary": "Daylight or moonlit water scenes",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:swimming:context-reset",
+      "source_id": "fan:swimming",
+      "kind": "context_claim",
+      "summary": "Some special variants end with black reset",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:reading:book",
+      "source_id": "fan:reading",
+      "kind": "observation",
+      "summary": "Reading break",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:reading:interruption",
+      "source_id": "fan:reading",
+      "kind": "observation",
+      "summary": "Reading may precede distraction; no specific extra variant described",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:seagull:book-theft",
+      "source_id": "fan:seagull",
+      "kind": "observation",
+      "summary": "Book carried into palm; beak turns pages",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:seagull:head-perch",
+      "source_id": "fan:seagull",
+      "kind": "observation",
+      "summary": "Head perching; attempted removal leaves bump",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:seagull:shorts-theft",
+      "source_id": "fan:seagull",
+      "kind": "observation",
+      "summary": "Bathing shorts stolen",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:seagull:hat-nest",
+      "source_id": "fan:seagull",
+      "kind": "observation",
+      "summary": "Stolen hat becomes tree nest",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:seagull:pirate-chest-nest",
+      "source_id": "fan:seagull",
+      "kind": "observation",
+      "summary": "Bound sleeper used for chest nest",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:seagull:night-head",
+      "source_id": "fan:seagull",
+      "kind": "observation",
+      "summary": "Night aftermath may substitute head perching",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:seagull:night-book",
+      "source_id": "fan:seagull",
+      "kind": "observation",
+      "summary": "Night aftermath may substitute book theft",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:identity",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Mermaid identified as Mary by fan research",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:unseen",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Approach from unwatched side; splash redirects fishing",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:unseen-boot",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Missed encounter followed by boot catch",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:unseen-teeth",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Missed encounter followed by false-teeth catch",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:gift-shells",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Mary offers purple-shell necklace",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:gift-lifebelt",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Johnny offers lifebelt",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:dinner-thought",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Johnny imagines shared dinner",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:traffic-light-thought",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Mary imagines green traffic signal and mainland",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:formal-date",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Formal clothes, table, meal, drinks, gramophone",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:date-conversation",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Dinner conversation",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:date-dance",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Dancing, then Mary's return to sea",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:raft-question",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Mary asks raft's purpose",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:raft-refusal",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "City invitation upsets Mary; departure and pleading",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:goodbye",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Farewell encounter",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:mermaid:office-dream",
+      "source_id": "fan:mermaid",
+      "kind": "observation",
+      "summary": "Clock introduces desk work, sleep, island/Mary dream",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:pirates:castle-landing",
+      "source_id": "fan:pirates",
+      "kind": "observation",
+      "summary": "Galleon anchors; small pirates row ashore",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:pirates:castle-capture",
+      "source_id": "fan:pirates",
+      "kind": "observation",
+      "summary": "Castle seized, flag raised, shots fired",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:pirates:tree-retreat",
+      "source_id": "fan:pirates",
+      "kind": "observation",
+      "summary": "Johnny retreats up palm",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:pirates:miniature-planes",
+      "source_id": "fan:pirates",
+      "kind": "observation",
+      "summary": "Small aircraft attack near tree",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:pirates:fall",
+      "source_id": "fan:pirates",
+      "kind": "observation",
+      "summary": "Johnny falls into water",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:pirates:sleep-capture",
+      "source_id": "fan:pirates",
+      "kind": "observation",
+      "summary": "Night pirates bind sleeping Johnny and depart",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:pirates:chest-egg",
+      "source_id": "fan:pirates",
+      "kind": "observation",
+      "summary": "Gull nests and lays egg on chest",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:pirates:silent-sleep",
+      "source_id": "fan:pirates",
+      "kind": "observation",
+      "summary": "Night scene may omit snoring",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:pirates:gull-absent",
+      "source_id": "fan:pirates",
+      "kind": "observation",
+      "summary": "Gull aftermath may be absent; bird asleep",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:story:day-01",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "Mary watches from behind while Johnny fishes, unnoticed",
+      "verification": "secondary_unverified",
+      "story_day": 1
+    },
+    {
+      "id": "fan:story:day-02",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "SOS bottle; thought may show miniature island Johnny",
+      "verification": "secondary_unverified",
+      "story_day": 2
+    },
+    {
+      "id": "fan:story:day-03",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "Larger raft; nearby shark attack; Suzy receives bottle in city",
+      "verification": "secondary_unverified",
+      "story_day": 3
+    },
+    {
+      "id": "fan:story:day-04",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "Nearly finished raft; Mary seen; date proposed",
+      "verification": "secondary_unverified",
+      "story_day": 4
+    },
+    {
+      "id": "fan:story:day-05",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "Night date: changed clothes, table, gramophone, dancing with Mary",
+      "verification": "secondary_unverified",
+      "story_day": 5
+    },
+    {
+      "id": "fan:story:day-06",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "Suzy imagined; another message written; raft develops",
+      "verification": "secondary_unverified",
+      "story_day": 6
+    },
+    {
+      "id": "fan:story:day-07",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "Mainland invitation; Mary understands and leaves crying",
+      "verification": "secondary_unverified",
+      "story_day": 7
+    },
+    {
+      "id": "fan:story:day-08",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "Farewell to Mary and shark; raft departure",
+      "verification": "secondary_unverified",
+      "story_day": 8
+    },
+    {
+      "id": "fan:story:day-09",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "Frog clock; mainland arrival; Suzy meeting",
+      "verification": "secondary_unverified",
+      "story_day": 9
+    },
+    {
+      "id": "fan:story:day-10",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "Office sleep and island dream",
+      "verification": "secondary_unverified",
+      "story_day": 10
+    },
+    {
+      "id": "fan:story:day-11",
+      "source_id": "fan:story",
+      "kind": "story_day",
+      "summary": "Plane returns Johnny to island; cycle restarts",
+      "verification": "secondary_unverified",
+      "story_day": 11
+    },
+    {
+      "id": "fan:story:context-day-state",
+      "source_id": "fan:story",
+      "kind": "context_claim",
+      "summary": "Numbered day state selects chapters",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:story:context-repeat",
+      "source_id": "fan:story",
+      "kind": "context_claim",
+      "summary": "Previously seen chapter can recur",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:story:context-delay",
+      "source_id": "fan:story",
+      "kind": "context_claim",
+      "summary": "Ordinary activities precede special event",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:story:context-reset",
+      "source_id": "fan:story",
+      "kind": "context_claim",
+      "summary": "Black transition may change tide, light, day",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:suzy-identity",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Mainland woman identified as Suzy City Dweller by fan research",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:bottle-fantasy",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Suzy finds message and imagines attractive castaway",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:departure-equipment",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Raft departure with paddle and sack",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:departure-visitors",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Mermaid and shark may accompany farewell",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:resort",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Suzy waits near sea with buildings behind",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:reunion-affection",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Affectionate reunion",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:reunion-awkward",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Awkward reunion",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:reunion-gum",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Chewing gum interrupts reunion",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:ear-pull",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Ear-pulling reprimand",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:room-inset",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Smaller room-like inset",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:leaving:impress-suzy",
+      "source_id": "fan:leaving",
+      "kind": "observation",
+      "summary": "Attempt to impress; precise action unspecified",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:telescope",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Telescope observation",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:biplane",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Passing biplane",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:helicopter",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Passing helicopter",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:aircraft-notice",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Aircraft noticed",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:aircraft-signal",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Jumping to attract aircraft",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:aircraft-missed",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Aircraft missed",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:woman-dog-boat",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Woman and dog pass by boat",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:water-skier",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Skier knocks Johnny down",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:party-departure",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Party boat carries Johnny away",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:party-return",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Party returns Johnny to island",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:ship-distant",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Distant ship leaves view",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:ship-close",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Ship returns at much larger scale",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:ship-signal",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Ship signaling attempt worsens situation; details unspecified",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:coconut-crash",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Shaken coconut thrown at low plane; crash and parachute",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:photographers",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Couple photographs rain dance",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:visitors:unnoticed-passers",
+      "source_id": "fan:visitors",
+      "kind": "observation",
+      "summary": "Travelers pass behind Johnny",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:duplicate-fight",
+      "source_id": "fan:unusual",
+      "kind": "observation",
+      "summary": "Transparent double emerges, fights, is punched into sea; plane follows",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:rain-dance",
+      "source_id": "fan:unusual",
+      "kind": "observation",
+      "summary": "Costumed dance summons small cloud, single drop, lightning",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:melting",
+      "source_id": "fan:unusual",
+      "kind": "observation",
+      "summary": "Fan fails; knees buckle; body becomes bright puddle",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:ending-inset",
+      "source_id": "fan:unusual",
+      "kind": "observation",
+      "summary": "Clock, central inset, aircraft, parachutist, ending text",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:shark-swallow",
+      "source_id": "fan:unusual",
+      "kind": "observation",
+      "summary": "Stranded shark swallows Johnny, circles, expels him",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:office-dream",
+      "source_id": "fan:unusual",
+      "kind": "observation",
+      "summary": "Sleeping office worker imagines island",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:thought-clock",
+      "source_id": "fan:unusual",
+      "kind": "observation",
+      "summary": "Thought clock may show fixed or inaccurate time",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:coconut-crash",
+      "source_id": "fan:unusual",
+      "kind": "observation",
+      "summary": "Coconut downs plane; pilot parachutes",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:silver-shapes",
+      "source_id": "fan:unusual",
+      "kind": "observation",
+      "summary": "Two silver forms beside palm before clearing",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:context-delay",
+      "source_id": "fan:unusual",
+      "kind": "context_claim",
+      "summary": "Special event often follows roughly five to six minutes",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:unusual:context-reset",
+      "source_id": "fan:unusual",
+      "kind": "context_claim",
+      "summary": "Rare events often finish with black reset",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:annivers:new-year",
+      "source_id": "fan:annivers",
+      "kind": "observation",
+      "summary": "New Year palm banner",
+      "verification": "secondary_unverified",
+      "reported_date_window_inclusive": [
+        "12-29",
+        "01-01"
+      ]
+    },
+    {
+      "id": "fan:annivers:saint-patrick",
+      "source_id": "fan:annivers",
+      "kind": "observation",
+      "summary": "Clover-covered island",
+      "verification": "secondary_unverified",
+      "reported_date_window_inclusive": [
+        "03-15",
+        "03-17"
+      ]
+    },
+    {
+      "id": "fan:annivers:halloween",
+      "source_id": "fan:annivers",
+      "kind": "observation",
+      "summary": "Foreground carved pumpkin",
+      "verification": "secondary_unverified",
+      "reported_date_window_inclusive": [
+        "10-29",
+        "10-31"
+      ]
+    },
+    {
+      "id": "fan:annivers:christmas",
+      "source_id": "fan:annivers",
+      "kind": "observation",
+      "summary": "Decorated tree changes foreground",
+      "verification": "secondary_unverified",
+      "reported_date_window_inclusive": [
+        "12-23",
+        "12-25"
+      ]
+    },
+    {
+      "id": "fan:annivers:octopus-decorations",
+      "source_id": "fan:annivers",
+      "kind": "observation",
+      "summary": "Large octopus may take Christmas decorations",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:data-directory",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Legacy Windows data-directory mismatch",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:signin-freeze",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Title freezes at sign-in/password screen",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:memory-slowdown",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Low memory: slow animation, normal-speed audio",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:missing-johnny",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Lower memory: Johnny absent",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:missing-data",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Lower memory: data fails to load",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:rod-semicircle",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Left fishing: dark semicircle over rod",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:ship-water-patch",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Departing pirate ship leaves water rectangle",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:right-boot-rod",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Right-side retained boot: rod disappears",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:finished-raft-work",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Work continues on completed raft",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:transparent-palm",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Palm transparency persists across scenes",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:airborne-duplicate",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Dive leaves airborne duplicate until reset",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:cloud-duplicates",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Rain-dance figures persist in cloud",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:giant-island",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Oversized island; Johnny traverses expanded area",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:extra-rafts",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Oversized-island fault includes multiple rafts",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:extra-palms",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Oversized-island fault includes extra palms",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:upper-cloud-cover",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Oversized-island fault includes extensive upper clouds",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:mismatched-tides",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Oversized-island fault includes unequal tide ends",
+      "verification": "secondary_unverified"
+    },
+    {
+      "id": "fan:bugs:sound-after-stop",
+      "source_id": "fan:bugs",
+      "kind": "reported_legacy_fault",
+      "summary": "Audio continues after visible animation stops",
+      "verification": "secondary_unverified"
+    }
+  ]
+}

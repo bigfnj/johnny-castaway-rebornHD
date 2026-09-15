@@ -32,9 +32,35 @@ Browser tests stay on the host and run in order:
 ```text
 python3 -B tools/build_web.py --platform-probes smoke
 python tests/web-smoke.py build_web
+python tests/web-logging.py build_web --phase smoke
 python3 -B tools/build_web.py --platform-probes regression --probes-only
+python tests/web-audio-timing.py build_web
+python tests/web-logging.py build_web --phase regression
 python tests/web-art-controls.py build_web --mutation-check
 ```
+
+The logging regression measures retained Chromium heap before reading clipped
+strings, because reading can flatten a substring and hide backing-store
+retention. Add `--mutations` for isolated served-HTML negative controls.
+The audio trace executes GJHOT and compares exact sound-24 PCM bytes and buffer
+continuity during its long display wait. This measures host scheduling, not
+physical speaker output. `tests/test_web_timing_mutations.py` separately rebuilds
+the Web backend negative controls; its optional full-browser mutant is a manual
+check. `tests/test_web_workflow_flow.py --mutations` executes CI/release command
+sequences with failure fixtures to verify smoke prevents regression.
+
+The Windows gate also runs `tests/test_web_wrapper.py` in smoke then regression
+mode. These are actual PowerShell child-process checks with recording builder
+and SDK fixtures; a real pinned Web build is a separate check. Both PowerShell
+5.1 and 7 remain supported. The local SDK compiler path has not been exercised
+against an installed SDK on this workstation.
+
+Native gates build both extractor targets and run `tests/test_extractors.py`
+with `--sound`, `--walk` and `--phase smoke|regression`. Synthetic fixtures verify
+the explicit legacy layout and I/O contract. They do not prove that a historical
+layout is correct for an arbitrary original executable. The
+[original-source comparison](../docs/knowledge-base/original-extractor-reference.md)
+records the separately established walking parity and sound-layout defect.
 
 `python3 -B tests/test_build_contracts.py --mutations` checks acquisition failure
 and retry limits, compiler failure propagation, SDK version, missing/empty/stale

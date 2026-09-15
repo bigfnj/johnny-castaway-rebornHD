@@ -52,6 +52,34 @@ function Run-GateCase {
         Write-FixtureText ('tests\' + $suite.File) (
             "import sys`nphase = 'Smoke' if '--phase' in sys.argv else 'Regression'`nprint('WITNESS $($suite.Name)-' + phase)`n" + $failCode)
     }
+    Write-FixtureText 'tests\test_frame_limits.py' (
+        "import argparse, sys`nfrom pathlib import Path`n" +
+        "parser = argparse.ArgumentParser()`nparser.add_argument('--exe', required=True, type=Path)`n" +
+        "parser.add_argument('--probe', required=True, type=Path)`nparser.add_argument('--phase', choices=['smoke', 'regression'], default='regression')`n" +
+        "args = parser.parse_args()`nexpected = Path(__file__).resolve().parents[1] / 'build' / 'Release'`n" +
+        "assert args.exe.resolve() == expected / 'jc_reborn.exe' and args.exe.is_file(), 'tests/test_frame_limits.py: wrong engine path'`n" +
+        "assert args.probe.resolve() == expected / 'jc_frame_test.exe' and args.probe.is_file(), 'tests/test_frame_limits.py: wrong probe path'`n" +
+        "phase = args.phase.title()`nprint('WITNESS frame-' + phase)`n" +
+        $(if ($FailPhase -eq 'frame') { "if phase == 'Smoke':`n    print('FAIL fixture tests/test_frame_limits.py')`n    sys.exit(1)`n" } elseif ($FailPhase -eq 'frame-regression') { "if phase == 'Regression':`n    print('FAIL fixture tests/test_frame_limits.py')`n    sys.exit(1)`n" } else { '' }))
+    foreach ($suite in @(@{ Name = 'extractor'; File = 'test_extractors.py' }, @{ Name = 'wrapper'; File = 'test_web_wrapper.py' })) {
+        $paths = if ($suite.Name -eq 'extractor') {
+            "parser.add_argument('--sound', required=True, type=Path)`nparser.add_argument('--walk', required=True, type=Path)`n"
+        } else { '' }
+        $validate = if ($suite.Name -eq 'extractor') {
+            "expected = Path(__file__).resolve().parents[1] / 'build' / 'Release'`n" +
+            "assert args.sound.resolve() == expected / 'extract_sound.exe' and args.sound.is_file(), 'tests/test_extractors.py: wrong sound path'`n" +
+            "assert args.walk.resolve() == expected / 'extract_walk_data.exe' and args.walk.is_file(), 'tests/test_extractors.py: wrong walk path'`n"
+        } else { '' }
+        $failCode = if ($FailPhase -eq $suite.Name) {
+            "if phase == 'Smoke':`n    print('FAIL fixture tests/$($suite.File)')`n    sys.exit(1)`n"
+        } elseif ($FailPhase -eq ($suite.Name + '-regression')) {
+            "if phase == 'Regression':`n    print('FAIL fixture tests/$($suite.File)')`n    sys.exit(1)`n"
+        } else { '' }
+        Write-FixtureText ('tests\' + $suite.File) (
+            "import argparse, sys`nfrom pathlib import Path`nparser = argparse.ArgumentParser()`n" + $paths +
+            "parser.add_argument('--phase', choices=['smoke', 'regression'], required=True)`nargs = parser.parse_args()`n" +
+            $validate + "phase = args.phase.title()`nprint('WITNESS $($suite.Name)-' + phase)`n" + $failCode)
+    }
     $gateArgs = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', (Join-Path $work 'gate.ps1'), '-NoBuild')
     if ($SmokeOnly) { $gateArgs += '-SmokeOnly' }
     $psi = New-Object Diagnostics.ProcessStartInfo
@@ -85,7 +113,10 @@ function Check-Ordering {
         palm = 'tests/test_palm_renderer.py'
         decoder = 'tests/test_uncompress.py'
         lifecycle = 'tests/test_lifecycle.py'
+        frame = 'tests/test_frame_limits.py'
         platform = 'tests/Test-PlatformAlloc.ps1'
+        extractor = 'tests/test_extractors.py'
+        wrapper = 'tests/test_web_wrapper.py'
     }
     $marker = 'FAIL fixture ' + $names[$Phase]
     ($Result.Code -ne 0) -and
@@ -95,7 +126,10 @@ function Check-Ordering {
         ($Result.Text -notmatch 'WITNESS palm-Regression') -and
         ($Result.Text -notmatch 'WITNESS decoder-Regression') -and
         ($Result.Text -notmatch 'WITNESS lifecycle-Regression') -and
+        ($Result.Text -notmatch 'WITNESS frame-Regression') -and
         ($Result.Text -notmatch 'WITNESS platform-Regression') -and
+        ($Result.Text -notmatch 'WITNESS extractor-Regression') -and
+        ($Result.Text -notmatch 'WITNESS wrapper-Regression') -and
         ($Result.Text -notmatch 'WITNESS authoring-regression') -and
         ($Result.Text -notmatch 'WITNESS dump-regression')
 }
@@ -118,18 +152,32 @@ try {
         New-Item -ItemType Directory -Path (Join-Path $work $dir) -Force | Out-Null
     }
     foreach ($file in @('build\Release\jc_reborn.exe', 'build\Release\jc_reborn.scr',
+                        'build\Release\jc_frame_test.exe',
+                        'build\Release\extract_sound.exe', 'build\Release\extract_walk_data.exe',
                         'build\Release\scrantic_data.zip', 'assets\scrantic_data.zip')) {
         [IO.File]::WriteAllBytes((Join-Path $work $file), [byte[]]@(0))
     }
     Write-FixtureText 'gate.ps1' $gateSource
-    foreach ($phase in @('smoke', 'screensaver', 'art', 'wave', 'palm', 'decoder', 'lifecycle', 'platform')) {
+    foreach ($phase in @('smoke', 'screensaver', 'art', 'wave', 'palm', 'decoder', 'lifecycle', 'frame', 'platform', 'extractor', 'wrapper')) {
         $result = Run-GateCase $phase
         Assert-Case "$phase failure prevents regression" (Check-Ordering $phase $result)
     }
     $result = Run-GateCase 'none'
     Assert-Case 'passed smoke reaches every regression witness in order' (
         ($result.Code -eq 0) -and
-        ($result.Text -match '(?s)WITNESS smoke.*WITNESS screensaver.*WITNESS art-Smoke.*WITNESS wave-Smoke.*WITNESS palm-Smoke.*WITNESS decoder-Smoke.*WITNESS lifecycle-Smoke.*WITNESS platform-Smoke.*WITNESS platform-Regression.*WITNESS decoder-Regression.*WITNESS lifecycle-Regression.*WITNESS art-Regression.*WITNESS wave-Regression.*WITNESS palm-Regression.*WITNESS authoring-regression.*WITNESS dump-regression'))
+        ($result.Text -match '(?s)WITNESS smoke.*WITNESS screensaver.*WITNESS art-Smoke.*WITNESS wave-Smoke.*WITNESS palm-Smoke.*WITNESS decoder-Smoke.*WITNESS lifecycle-Smoke.*WITNESS frame-Smoke.*WITNESS platform-Smoke.*WITNESS extractor-Smoke.*WITNESS wrapper-Smoke.*WITNESS extractor-Regression.*WITNESS wrapper-Regression.*WITNESS platform-Regression.*WITNESS decoder-Regression.*WITNESS lifecycle-Regression.*WITNESS frame-Regression.*WITNESS art-Regression.*WITNESS wave-Regression.*WITNESS palm-Regression.*WITNESS authoring-regression.*WITNESS dump-regression'))
+    $result = Run-GateCase 'frame-regression'
+    Assert-Case 'frame regression failure fails the gate after all smoke' (
+        ($result.Code -ne 0) -and
+        ([regex]::Matches($result.Text, 'FAIL fixture tests/test_frame_limits.py').Count -eq 1) -and
+        ($result.Text -match '(?s)WITNESS frame-Smoke.*WITNESS platform-Smoke.*WITNESS frame-Regression.*WITNESS dump-regression'))
+    foreach ($suite in @(@{ Name = 'extractor'; File = 'test_extractors.py' }, @{ Name = 'wrapper'; File = 'test_web_wrapper.py' })) {
+        $result = Run-GateCase ($suite.Name + '-regression')
+        Assert-Case "$($suite.Name) regression failure fails the gate after all smoke" (
+            ($result.Code -ne 0) -and
+            ([regex]::Matches($result.Text, [regex]::Escape('FAIL fixture tests/' + $suite.File)).Count -eq 1) -and
+            ($result.Text -match ('(?s)WITNESS wrapper-Smoke.*WITNESS ' + $suite.Name + '-Regression.*WITNESS dump-regression')))
+    }
     $result = Run-GateCase 'none' -SmokeOnly
     Assert-Case 'SmokeOnly executes smoke without regression' (
         ($result.Code -eq 0) -and ($result.Text -match 'WITNESS wave-Smoke') -and
@@ -137,11 +185,14 @@ try {
         ($result.Text -match 'WITNESS palm-Smoke') -and ($result.Text -notmatch 'WITNESS palm-Regression') -and
         ($result.Text -match 'WITNESS decoder-Smoke') -and ($result.Text -notmatch 'WITNESS decoder-Regression') -and
         ($result.Text -match 'WITNESS lifecycle-Smoke') -and ($result.Text -notmatch 'WITNESS lifecycle-Regression') -and
+        ($result.Text -match 'WITNESS frame-Smoke') -and ($result.Text -notmatch 'WITNESS frame-Regression') -and
         ($result.Text -match 'WITNESS platform-Smoke') -and ($result.Text -notmatch 'WITNESS platform-Regression') -and
+        ($result.Text -match 'WITNESS extractor-Smoke') -and ($result.Text -notmatch 'WITNESS extractor-Regression') -and
+        ($result.Text -match 'WITNESS wrapper-Smoke') -and ($result.Text -notmatch 'WITNESS wrapper-Regression') -and
         ($result.Text -notmatch 'WITNESS authoring-regression') -and ($result.Text -notmatch 'WITNESS dump-regression'))
 
     if ($VerifyMutation) {
-        foreach ($phase in @('decoder', 'lifecycle', 'platform')) {
+        foreach ($phase in @('decoder', 'lifecycle', 'frame', 'platform', 'extractor', 'wrapper')) {
             $guard = "if (`$LASTEXITCODE -ne 0) {`n    Write-Host 'GATE FAILED: $phase smoke failed; regression was not run'"
             if ([regex]::Matches($gateSource, [regex]::Escape($guard)).Count -ne 1) {
                 throw "Expected exactly one $phase smoke short-circuit guard in gate.ps1"

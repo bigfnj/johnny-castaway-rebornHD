@@ -3,13 +3,15 @@ CFLAGS=-Wall -Wpedantic -std=c99
 
 EXE =   extract_walk_data
 
-OBJ =   extract_walk_data.o
+OBJ =   extract_walk_data.o extract_io.o
 
 
 all: $(EXE)
 
 $(EXE): $(OBJ)
 
+$(OBJ): extract_io.h
+
 clean:
-	rm -v $(OBJ) $(EXE) 2> /dev/null ; true
+	rm -f $(OBJ) $(EXE)
 

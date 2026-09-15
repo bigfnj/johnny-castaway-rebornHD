@@ -35,6 +35,36 @@ if os.environ['JCR_CASE'] == 'decoder-' + phase + '-fail':
     print('FAIL tests/test_uncompress.py: fixture rejected')
     sys.exit(32 if phase == 'smoke' else 34)
 ''',encoding='utf-8')
+    (src/'tests/test_frame_limits.py').write_text('''import argparse, os, sys
+from pathlib import Path
+parser = argparse.ArgumentParser()
+parser.add_argument('--exe', required=True, type=Path)
+parser.add_argument('--probe', required=True, type=Path)
+parser.add_argument('--phase', choices=['smoke', 'regression'], default='regression')
+args = parser.parse_args()
+expected = Path(__file__).resolve().parents[1] / 'build-unix'
+assert args.exe.resolve() == expected / 'jc_reborn' and args.exe.is_file(), 'tests/test_frame_limits.py: wrong engine path'
+assert args.probe.resolve() == expected / 'jc_frame_test' and args.probe.is_file(), 'tests/test_frame_limits.py: wrong probe path'
+with open(os.environ['JCR_TRACE'], 'a') as stream: stream.write('WITNESS frame-' + args.phase + '\\n')
+if os.environ['JCR_CASE'] == 'frame-' + args.phase + '-fail':
+    print('FAIL tests/test_frame_limits.py: fixture rejected')
+    sys.exit(39 if args.phase == 'smoke' else 40)
+''',encoding='utf-8')
+    (src/'tests/test_extractors.py').write_text('''import argparse, os, sys
+from pathlib import Path
+parser = argparse.ArgumentParser()
+parser.add_argument('--sound', required=True, type=Path)
+parser.add_argument('--walk', required=True, type=Path)
+parser.add_argument('--phase', choices=['smoke', 'regression'], required=True)
+args = parser.parse_args()
+expected = Path(__file__).resolve().parents[1] / 'build-unix'
+assert args.sound.resolve() == expected / 'extract_sound' and args.sound.is_file(), 'tests/test_extractors.py: wrong sound path'
+assert args.walk.resolve() == expected / 'extract_walk_data' and args.walk.is_file(), 'tests/test_extractors.py: wrong walk path'
+with open(os.environ['JCR_TRACE'], 'a') as stream: stream.write('WITNESS extractor-' + args.phase + '\\n')
+if os.environ['JCR_CASE'] == 'extractor-' + args.phase + '-fail':
+    print('FAIL tests/test_extractors.py: fixture rejected')
+    sys.exit(41 if args.phase == 'smoke' else 42)
+''',encoding='utf-8')
     (src/'tests/test_graphics_alloc.py').write_text('''import os, sys
 with open(os.environ['JCR_TRACE'], 'a') as stream: stream.write('WITNESS graphics-regression\\n')
 if os.environ['JCR_CASE'] == 'graphics-regression-fail':
@@ -74,6 +104,9 @@ if [ "$1" = --build ]; then
   mkdir -p build-unix
   cp fixture-main build-unix/jc_reborn
   cp fixture-png build-unix/jc_png_test
+  cp fixture-png build-unix/jc_frame_test
+  cp fixture-png build-unix/extract_sound
+  cp fixture-png build-unix/extract_walk_data
   if [ "$JCR_CASE" = build-fail ]; then echo 'error: deliberate extra ALL target failure'; exit 23; fi
   if [ "$JCR_CASE" = warning ]; then echo 'warning: successful fixture build'; fi
 fi
@@ -88,9 +121,9 @@ exit 0
     return proc.returncode,text,trace,folder
 
 def assert_case(mode, code, text, trace):
-    full_trace = ['WITNESS build-executed', 'WITNESS png-smoke', 'WITNESS decoder-smoke', 'WITNESS platform-smoke']
+    full_trace = ['WITNESS build-executed', 'WITNESS png-smoke', 'WITNESS decoder-smoke', 'WITNESS frame-smoke', 'WITNESS extractor-smoke', 'WITNESS platform-smoke']
     if LINUX: full_trace.append('WITNESS drawing-smoke')
-    full_trace.extend(['WITNESS decoder-regression', 'WITNESS platform-regression'])
+    full_trace.extend(['WITNESS decoder-regression', 'WITNESS frame-regression', 'WITNESS extractor-regression', 'WITNESS platform-regression'])
     if LINUX: full_trace.extend(['WITNESS graphics-regression', 'WITNESS drawing-regression'])
     full_trace.append('WITNESS dump-regression')
     if mode in ('clean', 'warning'):
@@ -104,7 +137,11 @@ def assert_case(mode, code, text, trace):
                  'decoder-regression-fail': (34, 'decoder-regression', 'tests/test_uncompress.py'), 'platform-regression-fail': (35, 'platform-regression', 'tests/run_linux_platform.sh'),
                  'graphics-regression-fail': (36, 'graphics-regression', 'tests/test_graphics_alloc.py'),
                  'drawing-smoke-fail': (37, 'drawing-smoke', 'tests/test_drawing_bounds.py'),
-                 'drawing-regression-fail': (38, 'drawing-regression', 'tests/test_drawing_bounds.py')}
+                 'drawing-regression-fail': (38, 'drawing-regression', 'tests/test_drawing_bounds.py'),
+                 'frame-smoke-fail': (39, 'frame-smoke', 'tests/test_frame_limits.py'),
+                 'frame-regression-fail': (40, 'frame-regression', 'tests/test_frame_limits.py'),
+                 'extractor-smoke-fail': (41, 'extractor-smoke', 'tests/test_extractors.py'),
+                 'extractor-regression-fail': (42, 'extractor-regression', 'tests/test_extractors.py')}
         status, stage, file = cases[mode]
         length = full_trace.index('WITNESS ' + stage) + 1
         assert code == status and text.count(f'FAIL {file}: fixture rejected') == 1 and trace.splitlines() == full_trace[:length], f'tests/unix-build.sh: {mode} reached later regression or lost its diagnostic/status'
@@ -115,7 +152,7 @@ def main():
     original=SCRIPT.read_text(encoding='utf-8')
     def verify(work):
         records=[]
-        modes = ['clean','warning','build-fail','smoke-fail','decoder-smoke-fail','platform-smoke-fail','decoder-regression-fail','platform-regression-fail']
+        modes = ['clean','warning','build-fail','smoke-fail','decoder-smoke-fail','frame-smoke-fail','extractor-smoke-fail','platform-smoke-fail','decoder-regression-fail','frame-regression-fail','extractor-regression-fail','platform-regression-fail']
         if LINUX: modes.extend(['graphics-regression-fail', 'drawing-smoke-fail', 'drawing-regression-fail'])
         for mode in modes:
             code,text,trace,folder=run_case(work,original,mode,mode)
@@ -138,6 +175,10 @@ def main():
                 raise AssertionError('tests/unix-build.sh: disabled exit mutation survived')
             guarded_commands = [
                 ('decoder-smoke-fail', 'python3 "$WORK/tests/test_uncompress.py" --probe "$WORK/build-unix/jc_uncompress_test" --engine "$WORK/build-unix/jc_reborn" --phase smoke'),
+                ('frame-smoke-fail', 'python3 "$WORK/tests/test_frame_limits.py" --exe "$WORK/build-unix/jc_reborn" --probe "$WORK/build-unix/jc_frame_test" --phase smoke'),
+                ('frame-regression-fail', 'python3 "$WORK/tests/test_frame_limits.py" --exe "$WORK/build-unix/jc_reborn" --probe "$WORK/build-unix/jc_frame_test" --phase regression'),
+                ('extractor-smoke-fail', 'python3 "$WORK/tests/test_extractors.py" --sound "$WORK/build-unix/extract_sound" --walk "$WORK/build-unix/extract_walk_data" --phase smoke'),
+                ('extractor-regression-fail', 'python3 "$WORK/tests/test_extractors.py" --sound "$WORK/build-unix/extract_sound" --walk "$WORK/build-unix/extract_walk_data" --phase regression'),
                 ('platform-smoke-fail', 'SRC="$WORK" OUT="$WORK/build-unix/platform-tests" bash "$PLATFORM_TEST" --phase smoke')]
             if LINUX:
                 guarded_commands.extend([

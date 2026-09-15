@@ -552,6 +552,9 @@ uint32 platformGetTicks(void) {
     return (uint32)(emscripten_get_now() - startTime);
 }
 
+/* Audio is serviced at frame boundaries and throughout the engine's 5 ms waits. */
+static void webAudioPump(void);
+
 /**
  * platformDelay()
  *
@@ -560,6 +563,7 @@ uint32 platformGetTicks(void) {
 
  */
 void platformDelay(uint32 ms) {
+    webAudioPump();
     emscripten_sleep(ms);
 }
 
@@ -571,10 +575,6 @@ void platformDelay(uint32 ms) {
  *  ever reaching the conditional sleep in eventsWaitTick - certainly under
  *  `maxspeed`, and in practice whenever a frame's own work outlasts its delay.
  */
-/* Defined with the audio code below; declared here because platformFrameYield
- * is the only caller and sits above it. */
-static void webAudioPump(void);
-
 void platformFrameYield(void) {
     /* Top up the audio queue before yielding, so the buffer the browser plays
      * while we are unwound is already scheduled. */
@@ -681,7 +681,7 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
 
 /*  Keep roughly a quarter second of audio queued ahead of the context clock.
  *
- *  Called once per frame from platformFrameYield. The guard bounds how many
+ *  Called from platformFrameYield and platformDelay. The guard bounds how many
  *  buffers a single call may schedule, so a long stall cannot turn into an
  *  unbounded catch-up loop that blocks the frame it was meant to unblock.
  */

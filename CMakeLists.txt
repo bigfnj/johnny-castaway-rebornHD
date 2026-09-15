@@ -167,6 +167,11 @@ endif()
 # Exercise the portable decoder even on Windows, where normal rendering uses
 # WIC. This probe needs no window server or platform rendering libraries.
 if(NOT EMSCRIPTEN)
+    # Offline legacy-data tools do not link the engine or platform backends.
+    add_executable(extract_sound tools/extract_sound.c tools/extract_io.c)
+    add_executable(extract_walk_data tools/extract_walk_data.c tools/extract_io.c)
+    add_executable(jc_frame_test tests/test_frame_limits.c)
+    target_include_directories(jc_frame_test PRIVATE src/engine platform)
     add_executable(jc_uncompress_test tests/test_uncompress_driver.c src/engine/uncompress.c)
     target_include_directories(jc_uncompress_test PRIVATE src/engine)
     add_executable(jc_png_test

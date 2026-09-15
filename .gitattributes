@@ -24,6 +24,11 @@ tests/golden-dump.sha256   text eol=lf
 *.yml                      text eol=lf
 *.yaml                     text eol=lf
 
+# Inventory generation emits canonical LF reports. Preserve those exact bytes
+# when Windows autocrlf materializes them for regeneration comparisons.
+docs/knowledge-base/port-inventory.json text eol=lf
+docs/knowledge-base/port-inventory.md   text eol=lf
+
 # Binary assets: never touched, never diffed as text.
 *.zip    binary
 *.ico    binary
