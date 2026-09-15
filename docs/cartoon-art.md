@@ -9,8 +9,12 @@ style or animation family. It preserves the Cartoon pilot's generation,
 registration, transparency and review experience with links to exact records.
 The [Calm focus revision lessons](art-style-learnings-calm-focus.md) add expression
 selection, original-pose comparisons, narrowly scoped toe edits and actual
-engine review. The current six walking sprites have a
+engine review. The six front-oblique walking sprites have a
 [portable export recipe and approval](../art/cartoon/walk-pilot/calm-focus-runtime-v1/README.md).
+The accepted [rear walking family](../art/cartoon/walk-expansion-v1/README.md)
+adds six poses with its own [continuity and fit lessons](art-style-learnings-rear-walk.md).
+Each family retains its actual human review; aggregate pack approvals explicitly
+inherit earlier reviewed assets rather than silently replacing their provenance.
 
 Cartoon is an additional art pack. The original resources and HD PNGs remain in
 `assets/scrantic_data.zip`; accepted Cartoon PNGs live under

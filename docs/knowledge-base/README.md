@@ -13,10 +13,11 @@ Presence in a catalog is not proof that every branch runs correctly.
 | [External tools](external-tools.md) | Pinned xesf engine/viewer source, useful art-inspection patterns and limits of their playback implementations. |
 | [Extractor comparison](original-extractor-reference.md) | Proven walking-data equality and the historical sound extraction length/numbering defect. |
 | [Original image comparison](original-image-comparison.md) | Executed decoding comparisons, original-versus-bundled pixel differences and limits of palette/runtime evidence. |
-| [Cartoon review metadata](cartoon-art-metadata.md) and [asset data](cartoon-art-metadata.json) | All 21 approved replacements mapped to original identities, native dimensions, HD proxies, recipes, motion records and human acceptance. |
+| [Cartoon review metadata](cartoon-art-metadata.md) and [asset data](cartoon-art-metadata.json) | The original 21-asset pilot mapped to original identities, native dimensions, HD proxies, recipes, motion records and human acceptance. Later families are in the full production catalog. |
 | [Cartoon production catalog](cartoon-production-catalog.md) and [slot data](cartoon-production-catalog.json) | Complete shipped asset ledger for staged production, with explicit reference provenance and per-slot coverage. |
 | [Cartoon production plan](../cartoon-production-plan.md) | Bounded catalog and walking expansion, review boundaries and verification order. |
 | [Calm focus image lessons](../art-style-learnings-calm-focus.md) | Expression selection, rejected leg/shorts edits, accepted motion differences and runtime toe-clearance work. |
+| [Rear walking image lessons](../art-style-learnings-rear-walk.md) | Knee and leg continuity, extra-toe cleanup, small canvas-fit edits and the accepted island transition review. |
 | [Pose capture observations](pose-review-capture-notes.md) | Windows completion-log uncertainty, successful Linux scene review and platform-specific scene selection. |
 | [Source manifest](sources.json) | Retrieval date, page URLs, response hashes and rendered-text hashes for the public research. |
 

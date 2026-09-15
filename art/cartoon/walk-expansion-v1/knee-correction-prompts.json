@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "tool": "built-in image_gen",
+  "basis": "User's motion-review-v1.json anatomy feedback and annotated020-user-extra-toes.png.",
+  "user_extra_toes_feedback": "i circled in red, extra toes that do not belong",
+  "user_annotation": "020-user-extra-toes.png",
+  "attempts": [
+    {
+      "id": "020Knee",
+      "prompt": "Use case: precise-object-edit.\nImage1 is the ORIGINAL POSE JOHNWALK.BMP020 enlarged8x. Use its actual leg bends and overlap as the pose authority, not its diagnostic colors. Image2 is the CURRENT CARTOON EDIT TARGET,1024x1536RGBA, whose head, cap, beard, torso, arms, shorts and character design are approved for this direction but whose leg attachments are WRONG.\nCorrect BOTH legs as a coherent lower-body pose matching image1. The human reviewer explicitly identified: the anatomical LEFT knee must bend more and its foot must be lifted, more vertical; the anatomical RIGHT foot must be flat on the ground. The current image has the wrong anatomical leg bearing weight. Do not merely rotate the toe of the currently raised wrong leg.\nWe view Johnny from behind and slightly to his LEFT. His anatomical LEFT thigh comes out of the near/SCREEN-LEFT shorts opening, beneath the visible left arm. Trace that thigh continuously into a distinctly bent knee, then a short hanging shin and lifted near-vertical foot; this LEFT leg must NOT continue diagonally down into the large flat planted foot on screen-right. The LEFT foot is mostly off the ground with its toes pointing downward along the direction of walking, as in image1.\nHis anatomical RIGHT thigh comes out of the far/SCREEN-RIGHT shorts opening. This RIGHT leg should be the straighter weight-bearing leg and connect naturally to the flat planted foot toward screen-right at the existing ground contact level. Keep its shin behind the bent near LEFT leg where their silhouettes overlap. Clear correct joint connections are the purpose of this correction.\nPreserve the current torso, natural white shorts with two distinct leg openings, screen-left diagonal-away facing, relaxed character identity, outer arm contours and compact width. Change only the lower-body limb arrangement needed to match the source. No wrapped shorts, detached foot, twisted ankle, extra leg or eye-direction change. Do not reuse the current crossed-leg arrangement.\nMaintain the same1024x1536canvas, cap location and overall drawing scale. The planted RIGHT sole must stay at the current ground level. Both feet should fit the compact width of image2, with no new sideways extension beyond its existing outline. Preserve true transparent alpha, no floor shadow, glow, scenery, text or matte. Return one complete sprite.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\build\\cartoon-production-reference\\nearest8\\020.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-clearance-v2.png"
+      ],
+      "saved_image": "020-left-knee-v3.png",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-b4299434-633e-4f06-91f8-32cc8279e172.png",
+      "used_local_ancestors": [
+        "020-clearance-v2.png"
+      ],
+      "status": "rejected-extra-side-toes"
+    },
+    {
+      "id": "020Toes",
+      "prompt": "Use case: precise-object-edit.\nImage 1 is the full 1024x1536 transparent Cartoon Johnny sprite to edit. Image 2 is the user's annotated crop of that exact image. The red circle identifies extra toe-like bumps on the side of the raised LEFT foot, which must be removed.\nMake only this small anatomy cleanup: remove the two rounded skin-colored protrusions on the SCREEN-LEFT edge of the hanging raised foot, at the area shown inside the red circle. That side is a smooth foot/ankle contour, not another set of toes. Reconnect the outline into a simple natural smooth curve with the existing dark outline and matching skin fill. Keep the intended toe group at the very bottom/end of the hanging foot; do not add toes elsewhere.\nPreserve the LEFT knee bend, hanging vertical foot orientation, heel position, ankle connection and planted RIGHT foot exactly as in image1. Keep every other part of Johnny and the complete canvas unchanged, including cap, head, beard, back, arms, shorts, leg pose, scale and placement. Do not twist the ankle, flatten the raised foot or redraw the rest of the gait.\nDo not reproduce the red circle or checkerboard from the annotation. Output the complete single full-body sprite on genuine transparent alpha, no glow, matte, scenery or shadow. Only the extra side bumps are to be removed.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-left-knee-v3.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-user-extra-toes.png"
+      ],
+      "saved_image": "020-toes-v4.png",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-36967987-4768-4fcf-8c36-b43d86c4eb61.png",
+      "used_local_ancestors": [
+        "020-left-knee-v3.png",
+        "020-user-extra-toes.png"
+      ],
+      "status": "motion-and-runtime-review-pending"
+    },
+    {
+      "id": "021Knee",
+      "prompt": "Use case: precise-object-edit.\nImage1 is original JOHNWALK.BMP021 enlarged8x: pose geometry authority, not color. Image2 is the current Cartoon frame021 EDIT TARGET: preserve its character identity, cap, head, hair/beard, torso, arms, shorts, currentdrawing scale and1024x1536transparentcanvas. Image3 is the immediately preceding revised Cartoon frame020, showing the intended anatomical LEG IDENTITY and bent-knee/vertical-foot treatment. It is not the exact pose to copy; frame021 must advance the step according to original image1.\nThe user identified frame021 as wrong: the anatomical LEFT knee needs a more distinct bend, with the LEFT foot mostly off the ground and hanging more vertically, while the anatomical RIGHT foot must be flat on the ground.\nCorrect the lower body of image2 following image1 and continue the leg identity from image3. We see Johnny from behind and slightly to his left. LEFT thigh exits the near/SCREEN-LEFT shorts opening under the visible left arm. It bends sharply at the knee as it advances screen-left; its shin slopes down to a raised, toe-down near-vertical foot. Do not straighten that LEFT leg into a planted flat foot, and do not point that lifted foot horizontally toward the left as image2 currently does.\nRIGHT thigh exits the far/SCREEN-RIGHT shorts opening and connects naturally to the supporting leg and flat foot toward screen-right. Keep that RIGHT foot at image2's existing ground level and make the knee/hip connection unambiguous. Preserve the original stance spacing and correct front/back overlap; the bent LEFT leg is closer to the viewer.\nKeep shorts natural with two separate openings and no wrapped flap or new costume folds. Preserve upper-body yaw, head/cap location, beard, far arm and style. No global zoom, recentering, stretching or leg swapping; change only the pose geometry needed below the shorts. The whole character fits the canvas, with modest low foot clearance rather than high marching. Output one full sprite in a single image with genuine transparent alpha. No floor shadow, glow, matte, text or scenery.\nThe raised foot has one toe group only at its distal end. Keep the side and heel contours smooth; do not add extra toe-like bumps along the side of the foot or ankle.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\build\\cartoon-production-reference\\nearest8\\021.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\021-pose-v1.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-toes-v4.png"
+      ],
+      "saved_image": "021-left-knee-v2.png",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-1826b692-fff1-459f-942b-5fbdd01ce9a8.png",
+      "used_local_ancestors": [
+        "021-pose-v1.png",
+        "020-toes-v4.png"
+      ],
+      "status": "motion-and-runtime-review-pending"
+    }
+  ]
+}

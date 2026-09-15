@@ -1,0 +1,78 @@
+{
+  "export_source_sha256": "d467dc20eaf640c83dcd60568135e44234bbf27875448f8f801e126d01c9f09e",
+  "test_sha256": "9a604e1780422ddb951bb78089124b25c55df7d26437df1a81b0c3e3af56ea6d",
+  "recipe_sha256": "771dc19404b8a59dade882487c37aee86f4f2c3415acb6ba9ad95b7ccc2fb1b4",
+  "smoke_passed": 2,
+  "regressions": [
+    "six-padded-PNG-byte-reproduction",
+    "six-synthetic-fitting-normal-exports",
+    "reference-identity-refused-before-output",
+    "family-render-contract-refused-before-output",
+    "six-source-family-refused-before-output",
+    "source-identity:011-refused-before-output",
+    "source-canvas:011-refused-before-output",
+    "fixed-registration:011-refused-before-output",
+    "runtime-canvas:011-refused-before-output",
+    "runtime-overhang:022-refused-before-output",
+    "restored-source-six-PNG-reproduction"
+  ],
+  "mutations": [
+    {
+      "label": "export.py: reference-identity-refused-before-output",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_mutant_sha256": "77e7be386ce685f0211707ce8c2824ddab7ccd159d4420a94d616add0bcfffa0",
+      "witness": "fresh python -B child prints exact source SHA"
+    },
+    {
+      "label": "export.py: family-render-contract-refused-before-output",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_mutant_sha256": "9e8470825174a18bb68a8a017739d643cf399128d35e79955e6629efa562fc35",
+      "witness": "fresh python -B child prints exact source SHA"
+    },
+    {
+      "label": "export.py: six-source-family-refused-before-output",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_mutant_sha256": "43a47242d03eb45174e421e529443cccaa5c9e3b3b9b28b0e4f4c96f7b6bf781",
+      "witness": "fresh python -B child prints exact source SHA"
+    },
+    {
+      "label": "export.py: source-identity:011-refused-before-output",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_mutant_sha256": "aea3aa514458c88cbb25d1a27e8ab0da229a500379901c5f163c7145bb4d01ca",
+      "witness": "fresh python -B child prints exact source SHA"
+    },
+    {
+      "label": "export.py: source-canvas:011-refused-before-output",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_mutant_sha256": "c31fbc75b0db3254bb2bc9a162af7ed14c800e12a6889363a54f21e44bd25d2a",
+      "witness": "fresh python -B child prints exact source SHA"
+    },
+    {
+      "label": "export.py: fixed-registration:011-refused-before-output",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_mutant_sha256": "8ffa7cfa0e32e3f5291adb82e530411d859e5ab94ec54e0003627526c837788e",
+      "witness": "fresh python -B child prints exact source SHA"
+    },
+    {
+      "label": "export.py: runtime-canvas:011-refused-before-output",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_mutant_sha256": "cb308a314367c38fa10ac0426bcc2448f9c695d1f799dcb8fff60e4c36e1fea3",
+      "witness": "fresh python -B child prints exact source SHA"
+    },
+    {
+      "label": "export.py: runtime-overhang:022-refused-before-output",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_mutant_sha256": "5718429e47ef4084aff3ad5c8c6befa10aca8b890a35ae6a2547c7b5df371962",
+      "witness": "fresh python -B child prints exact source SHA"
+    }
+  ],
+  "limit": "Authoring-only Python checks; synthetic rectangles prove fitting normal-mode behavior, not anatomical correctness."
+}

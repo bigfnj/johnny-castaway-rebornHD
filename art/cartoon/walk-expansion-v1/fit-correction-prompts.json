@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "tool": "built-in image_gen",
+  "scope": "Local foot-outline fit corrections to the provisional motion-v2 baseline. No gait redesign or runtime approval is implied.",
+  "attempts": [
+    {
+      "id": "020HeelFit",
+      "prompt": "Use case: precise-object-edit.\nEdit target: the attached full-body Cartoon Johnny sprite, 1024x1536 RGBA. The walking pose and character design have been approved. Make one very small silhouette clearance correction only.\nOn the planted RIGHT foot at the bottom of the picture, the SCREEN-RIGHT outer heel contour near x720-728, y1380-1440 sticks slightly too far sideways. Bring this rightmost heel outline inward toward screen-left by about 14 source pixels, gently blending into the existing ankle and sole. Keep the heel rounded and anatomically natural. This is roughly one outline-width adjustment to that small heel bulge, not moving the whole foot or shortening the leg. Leave the toes at the screen-left end of this planted foot unchanged, and keep its flat ground contact and sole height unchanged.\nPreserve the other raised LEFT foot exactly, including its smooth side contour, single distal toe group, downward orientation and strong knee bend. No extra side toes. Keep the leg order, shorts, arms, torso, hair, beard, face and cap unchanged. Preserve the exact canvas dimensions, cap position, drawing scale and character placement. No whole-body recentering or shrinking, no pose redesign.\nReturn one complete sprite on genuine transparent alpha, with no added background, halo, shadow, text or marks.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-toes-v4.png"
+      ],
+      "saved_image": "020-heel-fit-v5.png",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-c3cbcb87-75ea-4b5c-8fb3-c994ff9c9819.png",
+      "status": "canvas-fit-passed-island-review-pending"
+    },
+    {
+      "id": "022FootFit",
+      "prompt": "Use case: precise-object-edit.\nEdit target: the attached 1024x1536 transparent Cartoon Johnny walking sprite. Its stride, leg arrangement and character design are approved. Make only two tiny outline-clearance corrections at the outermost feet.\nThe front foot at SCREEN-LEFT has its toe tips around x239-248, y1320-1385. Bring just that far-left toe contour about 12 source pixels inward toward screen-right, retaining natural rounded toes and the same ankle, heel, sole height and lifted/toe-up orientation. Do not remove the toe group or change the knee.\nThe foot at SCREEN-RIGHT has its outer heel bulge around x875-884, y1290-1360. Bring just that far-right heel contour about 12 source pixels inward toward screen-left, smoothly joining the same ankle and sole. Preserve the toes at the left end of that foot, its rotation, contact height and leg.\nThese are tiny local foot-width refinements, not a new pose. Preserve the stride spacing at the ankles and all limb connections. Keep shorts, torso, arms, beard, hair, nose, cap and body yaw unchanged. Preserve exact canvas dimensions, cap location, overall scale and placement. No global shrinking, recentering, stretching or cropping. Do not add extra toes anywhere, especially along ankles or foot sidewalls.\nReturn one complete sprite on genuine transparent alpha with no added matte, background, halo, ground shadow, text or annotation.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\022-clearance-v3.png"
+      ],
+      "saved_image": "022-foot-fit-v4.png",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-987e18b7-06cb-42ba-92c3-833ac30d36bc.png",
+      "status": "canvas-fit-passed-island-review-pending"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Johnny's new walking direction</title><style>
+*{box-sizing:border-box}body{margin:0;background:#17232d;color:#edf3f7;font:16px system-ui,sans-serif}main{max-width:1900px;margin:auto;padding:24px}h1{font-size:28px;margin:0 0 10px}p{line-height:1.45;margin:8px 0}.muted{color:#b9c8d2}.controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;padding:14px 0}button,select{font:inherit;padding:8px 12px;background:#eaf2f6;color:#182c3a;border:0;border-radius:5px}button{cursor:pointer}label{display:flex;align-items:center;gap:6px}.panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.panel{background:#263746;border-radius:8px;overflow:hidden}.panel h2{margin:0;padding:12px;font-size:17px}.viewport{overflow:auto;background:#d9e0e5;min-height:280px}canvas{display:block;image-rendering:pixelated;max-width:none}.status{padding:10px 0;color:#ffdb9a;min-height:2.5em}#frameInfo{font-family:ui-monospace,monospace;white-space:pre-wrap}#failure{color:#ff9a9a}.legend{font-size:14px}.swatch{color:#a5145e}@media(max-width:800px){.panels{grid-template-columns:1fr}main{padding:12px}}
+</style><main><h1>Johnny's new walking direction</h1>
+<p>Original on the left, Cartoon on the right. Watch the stepping motion and body angle.</p>
+<div class="controls"><button id="play" type="button">Pause</button><button id="prev" type="button">Previous</button><button id="next" type="button">Next</button><label>Speed<select id="speed"><option value="0.5">Slow</option><option value="1" selected>Normal</option><option value="2">Fast</option></select></label><label>Zoom<select id="zoom"><option value="fit" selected>Fit</option><option value="1">1×</option><option value="2">2×</option><option value="3">3×</option></select></label><label><input type="checkbox" id="repeat" checked>Repeat</label><label><input type="checkbox" id="follow">Keep Johnny centered</label></div>
+<p id="frameInfo"></p><div class="panels"><section class="panel"><h2>Original</h2><div class="viewport"><canvas id="original" width="440" height="280"></canvas></div></section><section class="panel"><h2>Cartoon</h2><div class="viewport"><canvas id="cartoon" width="440" height="280"></canvas></div></section></div>
+<p>Small edge-fit adjustments remain; this review shows the artwork in full.</p>
+<details id="technical"><summary>Technical details</summary><p class="muted">Diagnostic port route, not native engine capture. Original indices use the port dump palette and index-0 transparency; original executable palette/compositing is not yet verified. Both views use logical coordinates at 2× resolution, plus the selected display zoom.</p><p id="technicalFrame"></p><label><input type="checkbox" id="bounds">Show original canvas</label><p class="status" id="status"></p><p class="legend"><span class="swatch">Magenta rectangle</span>: original runtime canvas. Artwork outside it remains visible in this padded review and would be clipped by that canvas. Common scale 0.1 and the same upper-cap measurement rule apply to every pose. No silhouette fitting, warping or interpolated poses.</p>
+<p class="muted">The recorded B-to-A route contains 23 draws at a nominal 120 ms each. Repeat jumps back to the first recorded draw; it does not invent a return walk. Actual route completion also uses waiting frame 018, which is outside this six-pose review. Anatomy, contact and motion still require human assessment.</p></details><p id="failure" role="alert"></p></main>
+<script id="review-data" type="application/json">__DATA__</script><script>
+'use strict';
+const data=JSON.parse(document.getElementById('review-data').textContent);
+const $=id=>document.getElementById(id), images={original:{},cartoon:{}};
+let index=0,playing=true,lastTime=null,elapsed=0,ready=false;
+function setPlaying(value){playing=value;$('play').textContent=value?'Pause':'Play';lastTime=null;elapsed=0;}
+function draw(){
+ if(!ready)return;
+ const row=data.route[index],frame=String(row.frame),info=data.frames[frame];
+ const left=$('follow').checked?row.draw_x-40:280, top=$('follow').checked?row.draw_y-15:215;
+ for(const kind of ['original','cartoon']){
+  const canvas=$(kind),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=false;ctx.fillStyle='#d9e0e5';ctx.fillRect(0,0,canvas.width,canvas.height);
+  ctx.strokeStyle='#c4cfd6';ctx.lineWidth=1;for(let x=0;x<canvas.width;x+=20){ctx.beginPath();ctx.moveTo(x+.5,0);ctx.lineTo(x+.5,canvas.height);ctx.stroke();}for(let y=0;y<canvas.height;y+=20){ctx.beginPath();ctx.moveTo(0,y+.5);ctx.lineTo(canvas.width,y+.5);ctx.stroke();}
+  const x=2*(row.draw_x-left),y=2*(row.draw_y-top),im=images[kind][frame];
+  if(kind==='original')ctx.drawImage(im,x,y,info.runtime_canvas[0],info.runtime_canvas[1]);
+  else ctx.drawImage(im,x-data.padding_hd,y-data.padding_hd);
+  if($('bounds').checked){ctx.strokeStyle='#a5145e';ctx.lineWidth=1;ctx.strokeRect(x+.5,y+.5,info.runtime_canvas[0]-1,info.runtime_canvas[1]-1);}
+ }
+ $('frameInfo').textContent=`Frame ${index+1} / ${data.route.length}`;
+ $('technicalFrame').textContent=`JOHNWALK.BMP ${String(row.frame).padStart(3,'0')} · original row ${row.row} · x=${row.draw_x}, y=${row.draw_y} · flip=${row.flip_x} · ${row.nominal_start_ms} ms`;
+ $('status').textContent=info.source_centers_fit_runtime?'This pose fits by the source alpha≥8 center check; filtered fringes and visual correctness remain separate checks.':`Canvas overhang in HD pixels (left / top / right / bottom): ${info.overhang_hd_left_top_right_bottom.map(v=>v.toFixed(2)).join(' / ')}. Runtime export remains blocked.`;
+ window.reviewState={ready,index,frame:row.frame,playing,speed:Number($('speed').value),duration:row.nominal_duration_ms,routeLength:data.route.length,repeat:$('repeat').checked};
+}
+function step(delta){setPlaying(false);index=(index+delta+data.route.length)%data.route.length;draw();}
+function tick(time){
+ if(ready&&playing){if(lastTime!==null){elapsed+=(time-lastTime)*Number($('speed').value);while(elapsed>=data.route[index].nominal_duration_ms){elapsed-=data.route[index].nominal_duration_ms;if(index+1<data.route.length)index++;else if($('repeat').checked)index=0;else{setPlaying(false);break;}}}draw();}lastTime=time;requestAnimationFrame(tick);
+}
+$('play').onclick=()=>{setPlaying(!playing);draw();};$('prev').onclick=()=>step(-1);$('next').onclick=()=>step(1);
+for(const id of ['follow','bounds','repeat'])$(id).onchange=draw;
+$('speed').onchange=()=>{lastTime=null;draw();};
+function zoom(){for(const kind of ['original','cartoon']){const c=$(kind),factor=$('zoom').value==='fit'?Math.min(3,c.parentElement.clientWidth/c.width):Number($('zoom').value);c.style.width=`${c.width*factor}px`;c.style.height=`${c.height*factor}px`;}}
+$('zoom').onchange=zoom;
+window.addEventListener('resize',zoom);
+async function load(){
+ try{await Promise.all(Object.entries(data.frames).flatMap(([frame,info])=>['original','cartoon'].map(kind=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{images[kind][frame]=im;resolve();};im.onerror=()=>reject(new Error(`Cannot load ${kind} frame ${frame}`));im.src=info[kind+'_image'];}))));ready=true;zoom();draw();requestAnimationFrame(tick);}catch(error){$('failure').textContent=error.message;window.reviewError=error.message;}
+}
+load();
+</script></html>

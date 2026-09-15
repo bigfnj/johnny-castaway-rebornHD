@@ -1,0 +1,55 @@
+{
+  "review_source_sha256": "a9e7a6288f2b6f38e50cc1ee0b47038a9ab01b4c3be8edd7d0aed04ece6b1903",
+  "test_sha256": "b82ca6673b74a094b4c41e859c10023bea29774d353653850c97bce31f101c50",
+  "html_sha256": "aa5ae838846c378c7b6d0791703e8af315939cc4053eef5e7755f1e22acea14f",
+  "smoke_passed": 2,
+  "regressions": [
+    "all23-original-coordinate-full-pixel-oracles-and-frameIDs",
+    "last-frame-stop-with-repeat-disabled",
+    "normal-speed-discrete-advance",
+    "double-speed-discrete-advance",
+    "zoom-follow-bounds-and-clean-console",
+    "review-reference-identity-refused-before-page",
+    "review-six-frame-contract-refused-before-page",
+    "review-cartoon-pixels:011-refused-before-page",
+    "restored-builder-byte-reproduction"
+  ],
+  "mutations": [
+    {
+      "label": "review.py: original-coordinate-oracle",
+      "result": "FIRED",
+      "failure_count": 1,
+      "html_sha256": "bf1eddf1882c28023b8e4673a8b8ef82533ed64c26b7d3eb2637d32963202972",
+      "witness": "loaded browser script digest matched mutated file; tested actual rendered pixels or timer state"
+    },
+    {
+      "label": "review.py: normal-speed-discrete-advance",
+      "result": "FIRED",
+      "failure_count": 1,
+      "html_sha256": "11c7bd690bdb9ececad2becd944a1ee195d7cc6f2bfe6dac9ad0cd752c859276",
+      "witness": "loaded browser script digest matched mutated file; tested actual rendered pixels or timer state"
+    },
+    {
+      "label": "review.py: review-reference-identity",
+      "result": "FIRED",
+      "failure_count": 1,
+      "source_sha256": "68bd6a9ae17449b1c6765233ecf168bac9bfaac996df36f2755256dc38f93cf6",
+      "witness": "fresh python -B prints exact changed source SHA"
+    },
+    {
+      "label": "review.py: review-six-frame-contract",
+      "result": "FIRED",
+      "failure_count": 1,
+      "source_sha256": "8312d479d2192d54bfefdbadc6564e8af71c8664b4cc2f81959f1fd684ee1255",
+      "witness": "fresh python -B prints exact changed source SHA"
+    },
+    {
+      "label": "review.py: review-cartoon-pixels:011",
+      "result": "FIRED",
+      "failure_count": 1,
+      "source_sha256": "f81ebeb978cd3475f12654bcec2c6fe9112717cb4694e962f438928832ed6d4c",
+      "witness": "fresh python -B prints exact changed source SHA"
+    }
+  ],
+  "timing_limit": "Headless Chromium wall-clock intervals checked in bounded ranges; no original-executable or native engine timing claim."
+}

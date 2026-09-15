@@ -1,0 +1,28 @@
+{
+  "html_sha256": "2a787afd1d2ee0c41a1113652cb5c05634bf593d1b302986e97f42d9ffa16df8",
+  "test_sha256": "de94f3408f973aad4d369cb6d92f55da79b9b6cc528dd981ec1c56e6426fb1c1",
+  "smoke_passed": 2,
+  "regressions": [
+    "47 exact logical times and94 full-canvas native pixel hashes; final endpoint stops",
+    "close-up/full-island controls and recorded-route repeat",
+    "both full-scene canvases retain aspect and fit1280/1600",
+    "missing-image negative control reports exact candidate capture"
+  ],
+  "mutations": [
+    {
+      "label": "review.html:timed-display",
+      "result": "FIRED",
+      "failure_count": 1,
+      "html_sha256": "aa187ffadfd626814d7aa1654017e75bb59f14067d8547dba1cb12015426b2cc",
+      "witness": "Actual served bytes and loaded browser script digest match; executed timer or canvas pixels fail one named oracle."
+    },
+    {
+      "label": "review.html:candidate-pixel-identity",
+      "result": "FIRED",
+      "failure_count": 1,
+      "html_sha256": "57798d35b8688b78bddbdc821e6fa5c823808446324fe8f050dd0dad900eb873",
+      "witness": "Actual served bytes and loaded browser script digest match; executed timer or canvas pixels fail one named oracle."
+    }
+  ],
+  "scope": "Actual Chromium rendering and timer callback, exact native pixels. Browser wall-clock smoke uses a bounded interval; no physical timing claim."
+}

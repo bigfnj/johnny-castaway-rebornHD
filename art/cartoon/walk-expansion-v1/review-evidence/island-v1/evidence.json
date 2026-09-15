@@ -1,0 +1,56 @@
+{
+  "scope": "Frozen technical evidence for the first native island review. Human acceptance and production promotion are separate ledgers. No source artwork or production archive was modified by these helpers.",
+  "served_url": "http://127.0.0.1:8932/rear-cartoon-island-v1/review.html",
+  "served_html_sha256": "2a787afd1d2ee0c41a1113652cb5c05634bf593d1b302986e97f42d9ffa16df8",
+  "docker_image": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "platform": "Linux/X11 under Xvfb",
+  "native_api": "adsPlayWalk(1,3,0,3)",
+  "island_seed": 11,
+  "path_seed": 2,
+  "display_count": 47,
+  "duration_ms": 4360,
+  "arrival": {
+    "frame": 18,
+    "draw_xy": [
+      298,
+      240
+    ],
+    "hold_ms": 1600,
+    "style": "HD fallback",
+    "full_frame_equal_to_baseline": true
+  },
+  "original_runtime_claim": false,
+  "preserved_files": {
+    "archive-preparation.json": "28c2065787d8abb063a020f85b71bd1fbec3688994add4b7020678c7b0896fcd",
+    "baseline-build.json": "cd007c82067977d1cc4837a7ab9df26fb3f76a7178a121edc6826b753c3126d6",
+    "baseline-full-report.json": "044041c550c2a201f68c3a64686d387df59177c945e04f784764ed14a069b392",
+    "baseline-repeat-summary.json": "8b8f19ead1c4e4d70f4fc1f23b717386fcc2289ff51dc93923c5d9d46cddbefa",
+    "baseline-smoke-report.json": "71a7d00565e93fb18320a63741a9811becdd239743036058f1637f998ffa06df",
+    "baseline-summary.json": "de68040216bfd8cae41c97ee88a11ef7a2427371577700f1828964187aa208d4",
+    "browser-validation.json": "90fade482801bfba5ff11c2f1798bc0ee5fdd944f25117c6d656e0ce8d0e4c43",
+    "candidate-full-report.json": "ad2bed58a037fcbab54c05d213c4fdce4b34e61e6355b983f5bfe298de89f7ce",
+    "candidate-smoke-report.json": "b817168d7e5f7ea0ed550f4fbc327a74b0dd8d6ee830749517a3c0eb1ff808a4",
+    "candidate-summary.json": "52e72411942869bf726bd5739f55af3e0c84b07ba16d7010657e18da1a49d8b7",
+    "export-report.json": "d0b1e8cc67134936ace7838019dc67ef59481e226f83a02689a29222207f1cf3",
+    "guard-verification.json": "49e9373ef55a6fdeaaee57be48f1ac098dbc309c158234e2e1f534f1379213b5",
+    "recipe.json": "c092bfbbd557f66e204801657fe641b448a54403ff767a423e4ac0a6ef86df26",
+    "review-record.json": "0983e402a8098f4f7ff68be198a3ed0f55190d8679dd03d070f7bb047e5bb781",
+    "served-validation.json": "87e49ad6017162f41c046df965dac03c00a3edc5595ef6c1bacfc9c5357ac87c",
+    "helpers/build_review.py": "196d46de49b38402b7b5894fa0a35f0a4213092fff78c6c392c093a4b2035788",
+    "helpers/check_guards.py": "fbfd20151211b14d98e2ae1dc4207497f35ba219450b1871fb978e1a00aa763b",
+    "helpers/check_review.py": "de94f3408f973aad4d369cb6d92f55da79b9b6cc528dd981ec1c56e6426fb1c1",
+    "helpers/prepare_candidate.py": "4948b4b70eb306ba18dca2a76d88c6821488bdedf21d0579ccc496652c4e8e3f",
+    "helpers/route_driver.c": "1116eefd0d456093f4b17e2cf0f940b5235aa707327c3df1da1df776949ae1af",
+    "helpers/run_baseline.py": "1a956d08ef659cd537e1530bcf13cc9da153a1bf34a1730fd344e91a107c4195",
+    "helpers/run_candidate.py": "24c14f7d94e7bd2a8fb7c4bf58dc4625e27f25c4254c80536ca8c76fe7d0b926",
+    "README.md": "e48965331a0e4f9e8e9d09d0ac6b7ea30d0e6e06c06b0b8ab62fceba8203544e"
+  },
+  "native_raster_policy": "94 PNG captures stay in ignored build folders and the local review server; reports retain pixel/PNG hashes. Helpers can regenerate them from the pinned source/build inputs.",
+  "limits": [
+    "Source and filtered alpha8 footprints fit; lower-alpha fringes are not claimed absent.",
+    "The baseline is packagedHDJohnny on the currentCartoonisland, not the original executable or supplied-original pixel reference.",
+    "Logical engine durations are recorded; physical playback timing is not measured.",
+    "Bounded helper mutations are not exhaustive arbitrary-input tests."
+  ],
+  "source_checkout_at_capture": "10672766e0534350f76db53c743002acf9ab1d8b"
+}

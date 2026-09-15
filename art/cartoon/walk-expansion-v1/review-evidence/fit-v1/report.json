@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "scope": "Technical fit and visual-drift review only. Ready for island review, not production acceptance.",
+  "comparison": "Same runtime coordinates, 3x nearest display, uniform neutral-gray alpha composition; raw crops also reviewed at 1:1.",
+  "hash_policy": "SHA-256 of exact file bytes. Paths are repository-relative; build inputs are retained local evidence, not tracked assets.",
+  "visual_observations": [
+    "No obvious torso, cap, body-yaw or knee-pose drift blocking island review.",
+    "020/022 have small outline, shading and detail differences beyond the feet; preservation is not pixel-exact.",
+    "Corrected outer-foot silhouettes remain recognizable in the same stride and leg arrangement.",
+    "All padded alpha>=8 pixels survive. Alpha1-4 filter fringe is cropped at the runtime edge; not every nonzero pixel fits."
+  ],
+  "frames": [
+    {
+      "frame": 11,
+      "motion_v2_source": "011-pose-v2.png",
+      "candidate_source": "011-pose-v2.png",
+      "raw_bytes_equal_to_motion_v2": true,
+      "padded_bytes_equal_to_motion_v2": true,
+      "runtime_canvas": [
+        64,
+        156
+      ],
+      "runtime_equals_padded_center_crop": true,
+      "source_centers_alpha_ge_8_fit": true,
+      "registration_delta_hd_xy": [
+        0.0,
+        0.0
+      ],
+      "outside_runtime_pixels_alpha_ge_1_8_128": [
+        12,
+        0,
+        0
+      ],
+      "outside_runtime_max_alpha": 4,
+      "runtime_png_sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+      "candidate_padded_png_sha256": "cbad2a7ec5758afd8a87446adc2465b15928be0765dfea59ad801fccff8c3a06"
+    },
+    {
+      "frame": 19,
+      "motion_v2_source": "019-pose-v1.png",
+      "candidate_source": "019-pose-v1.png",
+      "raw_bytes_equal_to_motion_v2": true,
+      "padded_bytes_equal_to_motion_v2": true,
+      "runtime_canvas": [
+        64,
+        152
+      ],
+      "runtime_equals_padded_center_crop": true,
+      "source_centers_alpha_ge_8_fit": true,
+      "registration_delta_hd_xy": [
+        0.0,
+        0.0
+      ],
+      "outside_runtime_pixels_alpha_ge_1_8_128": [
+        15,
+        0,
+        0
+      ],
+      "outside_runtime_max_alpha": 4,
+      "runtime_png_sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+      "candidate_padded_png_sha256": "a6da4029d7766bccd6b29a1512379ae5ed859eec87ff953bc682348dd08040ac"
+    },
+    {
+      "frame": 20,
+      "motion_v2_source": "020-toes-v4.png",
+      "candidate_source": "020-heel-fit-v5.png",
+      "raw_bytes_equal_to_motion_v2": false,
+      "padded_bytes_equal_to_motion_v2": false,
+      "runtime_canvas": [
+        48,
+        150
+      ],
+      "runtime_equals_padded_center_crop": true,
+      "source_centers_alpha_ge_8_fit": true,
+      "registration_delta_hd_xy": [
+        0.05,
+        0.0
+      ],
+      "outside_runtime_pixels_alpha_ge_1_8_128": [
+        44,
+        0,
+        0
+      ],
+      "outside_runtime_max_alpha": 4,
+      "runtime_png_sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+      "candidate_padded_png_sha256": "ec5733927e72ced2166ace9dbe9adc5f60c4b190659f42377c42fc830a357277"
+    },
+    {
+      "frame": 21,
+      "motion_v2_source": "021-left-knee-v2.png",
+      "candidate_source": "021-left-knee-v2.png",
+      "raw_bytes_equal_to_motion_v2": true,
+      "padded_bytes_equal_to_motion_v2": true,
+      "runtime_canvas": [
+        64,
+        150
+      ],
+      "runtime_equals_padded_center_crop": true,
+      "source_centers_alpha_ge_8_fit": true,
+      "registration_delta_hd_xy": [
+        0.0,
+        0.0
+      ],
+      "outside_runtime_pixels_alpha_ge_1_8_128": [
+        12,
+        0,
+        0
+      ],
+      "outside_runtime_max_alpha": 4,
+      "runtime_png_sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+      "candidate_padded_png_sha256": "78360a40535a327ad076d4f9a4a796c64bbdbf0af119dc9851e87f9a0b538c52"
+    },
+    {
+      "frame": 22,
+      "motion_v2_source": "022-clearance-v3.png",
+      "candidate_source": "022-foot-fit-v4.png",
+      "raw_bytes_equal_to_motion_v2": false,
+      "padded_bytes_equal_to_motion_v2": false,
+      "runtime_canvas": [
+        64,
+        148
+      ],
+      "runtime_equals_padded_center_crop": true,
+      "source_centers_alpha_ge_8_fit": true,
+      "registration_delta_hd_xy": [
+        -0.1,
+        0.1
+      ],
+      "outside_runtime_pixels_alpha_ge_1_8_128": [
+        26,
+        0,
+        0
+      ],
+      "outside_runtime_max_alpha": 4,
+      "runtime_png_sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+      "candidate_padded_png_sha256": "18559ed58ea7bc5d2d6ed2c8bfa9098a0ba8868699e9b39fcec940955ed61cac"
+    },
+    {
+      "frame": 23,
+      "motion_v2_source": "023-pose-v1.png",
+      "candidate_source": "023-pose-v1.png",
+      "raw_bytes_equal_to_motion_v2": true,
+      "padded_bytes_equal_to_motion_v2": true,
+      "runtime_canvas": [
+        64,
+        156
+      ],
+      "runtime_equals_padded_center_crop": true,
+      "source_centers_alpha_ge_8_fit": true,
+      "registration_delta_hd_xy": [
+        0.0,
+        0.0
+      ],
+      "outside_runtime_pixels_alpha_ge_1_8_128": [
+        12,
+        0,
+        0
+      ],
+      "outside_runtime_max_alpha": 4,
+      "runtime_png_sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+      "candidate_padded_png_sha256": "a284e586a22917126114fbc0939e38b4849fb44a0106524924ff458d204bed95"
+    }
+  ],
+  "input_sha256": {
+    "art/cartoon/walk-expansion-v1/fit-correction-prompts.json": "ba90fbbd1e41a2ccee196283f0d116606d35d18074aee74a1a40b51fa3c9a46c",
+    "art/cartoon/walk-expansion-v1/review-evidence/motion-v2/recipe.json": "088d0b298f2514a29789768062ac1f0d41f69b661a99e5b26ff611b352de2e3b",
+    "art/cartoon/walk-expansion-v1/review-evidence/motion-v2/export-report.json": "aff3778d78869b9fb349138b1aaa52b2ba2f688a858dd07bbb6dc80e4dafb2c1",
+    "build/cartoon-production-reference/runtime-candidate-v1/recipe.json": "c092bfbbd557f66e204801657fe641b448a54403ff767a423e4ac0a6ef86df26",
+    "build/cartoon-production-reference/runtime-candidate-v1/export-report.json": "d0b1e8cc67134936ace7838019dc67ef59481e226f83a02689a29222207f1cf3",
+    "build/cartoon-production-reference/reproduced-motion-v2/padded/011.png": "cbad2a7ec5758afd8a87446adc2465b15928be0765dfea59ad801fccff8c3a06",
+    "build/cartoon-production-reference/runtime-candidate-v1/padded/011.png": "cbad2a7ec5758afd8a87446adc2465b15928be0765dfea59ad801fccff8c3a06",
+    "build/cartoon-production-reference/runtime-candidate-v1/BMP/JOHNWALK.BMP/011.png": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+    "art/cartoon/walk-expansion-v1/011-pose-v2.png": "0f70a034f6047589732327c017eb6d2fc94b5fe22fedb7608ef898fd1a97a9fb",
+    "build/cartoon-production-reference/reproduced-motion-v2/padded/019.png": "a6da4029d7766bccd6b29a1512379ae5ed859eec87ff953bc682348dd08040ac",
+    "build/cartoon-production-reference/runtime-candidate-v1/padded/019.png": "a6da4029d7766bccd6b29a1512379ae5ed859eec87ff953bc682348dd08040ac",
+    "build/cartoon-production-reference/runtime-candidate-v1/BMP/JOHNWALK.BMP/019.png": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+    "art/cartoon/walk-expansion-v1/019-pose-v1.png": "1f4c7f4354ed8a5d589503f41188ce20091607432c3dfd24a6aa03b138ed9ea4",
+    "build/cartoon-production-reference/reproduced-motion-v2/padded/020.png": "85b4c6f4c5c4922c9e6e91a9098895dfd20fdea041e48de41d8b5ca3881d6fb7",
+    "build/cartoon-production-reference/runtime-candidate-v1/padded/020.png": "ec5733927e72ced2166ace9dbe9adc5f60c4b190659f42377c42fc830a357277",
+    "build/cartoon-production-reference/runtime-candidate-v1/BMP/JOHNWALK.BMP/020.png": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+    "art/cartoon/walk-expansion-v1/020-toes-v4.png": "9afa5467b20543e454e8acac958dd23f627191158d6f07a63a2c7521d2fd0ee4",
+    "art/cartoon/walk-expansion-v1/020-heel-fit-v5.png": "fbbc47b7e5449d4eb85264d5be8faf3ae0f5971768a76762db6a2fac6e89f681",
+    "build/cartoon-production-reference/reproduced-motion-v2/padded/021.png": "78360a40535a327ad076d4f9a4a796c64bbdbf0af119dc9851e87f9a0b538c52",
+    "build/cartoon-production-reference/runtime-candidate-v1/padded/021.png": "78360a40535a327ad076d4f9a4a796c64bbdbf0af119dc9851e87f9a0b538c52",
+    "build/cartoon-production-reference/runtime-candidate-v1/BMP/JOHNWALK.BMP/021.png": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+    "art/cartoon/walk-expansion-v1/021-left-knee-v2.png": "15ad79825ee819f6a28cf140912a9affd9f24c11392c0c85b5a223d03e0c1964",
+    "build/cartoon-production-reference/reproduced-motion-v2/padded/022.png": "5cae38a678b5a807e505b36178764d55f2019e9a873838c5451d5f62ad8ff8dd",
+    "build/cartoon-production-reference/runtime-candidate-v1/padded/022.png": "18559ed58ea7bc5d2d6ed2c8bfa9098a0ba8868699e9b39fcec940955ed61cac",
+    "build/cartoon-production-reference/runtime-candidate-v1/BMP/JOHNWALK.BMP/022.png": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+    "art/cartoon/walk-expansion-v1/022-clearance-v3.png": "2e2d72e718b16672e1c6cf19c351c0ca67b50db3d457eae7dc535dd0014d79f9",
+    "art/cartoon/walk-expansion-v1/022-foot-fit-v4.png": "bf5ab145730b9d022a196ced1f487f02811150e393f65f89245a99579c81f670",
+    "build/cartoon-production-reference/reproduced-motion-v2/padded/023.png": "a284e586a22917126114fbc0939e38b4849fb44a0106524924ff458d204bed95",
+    "build/cartoon-production-reference/runtime-candidate-v1/padded/023.png": "a284e586a22917126114fbc0939e38b4849fb44a0106524924ff458d204bed95",
+    "build/cartoon-production-reference/runtime-candidate-v1/BMP/JOHNWALK.BMP/023.png": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+    "art/cartoon/walk-expansion-v1/023-pose-v1.png": "1b33f52d9df250d069f7f0e7bb6924ab34c65a432c9df2211ac0bff2785c13a7"
+  },
+  "input_count": 31,
+  "inputs_rehashed_unchanged_after_comparison": true,
+  "exporter_sha256": "d467dc20eaf640c83dcd60568135e44234bbf27875448f8f801e126d01c9f09e",
+  "retained_outputs": {
+    "comparison.png": {
+      "sha256": "98931d631db206ec5168a10ba218dec103b8dcfa07ed055009215ce0dda0c794",
+      "bytes": 147780
+    }
+  },
+  "execution": {
+    "comparison_helper": "build/fit-review/review.py",
+    "helper_sha256": "65cae58ef5450f010d0b4bcb1b66317be96360cc0df1138274a1a122a8d41d88",
+    "retested_exporter": false,
+    "reason": "Exporter unchanged; no new concern warranted repeating existing regression/mutation checks.",
+    "runtime_capture": false,
+    "production_assets_written": false
+  }
+}

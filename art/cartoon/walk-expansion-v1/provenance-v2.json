@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "scope": "Additive provenance for the three knee/toe correction calls and the user annotation used by the second rear-oblique walking review. This record does not change the frozen v1 history, transform artwork, or approve runtime installation.",
+  "relative_path_base": "art/cartoon/walk-expansion-v1/",
+  "previous_record": {
+    "path": "provenance.json",
+    "sha256": "3002b609c4066d730806baa2f37bdfced1fed8420bb8dd3142172d51791358a0"
+  },
+  "prompt_record": {
+    "path": "knee-correction-prompts.json",
+    "sha256": "bb90088e47467309fccaf59724c48c109f245f137ce0d1cf06c7700fa4180856"
+  },
+  "review_status_record": "motion-review-v2.json",
+  "method": {
+    "pillow_version": "12.3.0",
+    "source_files_read_only": true,
+    "artistic_edits": false,
+    "alpha_cleanup": false,
+    "cache_comparison": "Full encoded file bytes compared with each still-available recorded tool output. All three saved images match.",
+    "input_paths": "Recorded image-input paths were resolved to existing local files and hashed. Redundant Windows separators, if present in a serialized path, are not evidence of a missing or malformed input.",
+    "bounds": "Raw source pixels; right and bottom bounds are exclusive. Alpha>=8 is a diagnostic threshold only. No faint pixels were removed.",
+    "corners": "Raw RGBA samples. RGB under alpha zero is not a visible background. The RGB user annotation has synthetic alpha 255 only for these diagnostic measurements.",
+    "claim_limit": "Prompt requests for local edits and unchanged anatomy, pose, or upper-body pixels describe intended edits. Byte-identity checks establish saved-output provenance, not preservation of all unrequested image regions or anatomical parity."
+  },
+  "counts": {
+    "generation_calls": 3,
+    "saved_outputs": 3,
+    "available_tool_outputs": 3,
+    "byte_identical_tool_outputs": 3,
+    "user_annotations": 1,
+    "byte_identical_original_uploads": 1
+  },
+  "generations": [
+    {
+      "call_id": "020Knee",
+      "saved_image": "020-left-knee-v3.png",
+      "sha256": "f8f6ef3300a47a5132765ca02b157379b31dbb98d5a5fbb5957cfec08c2d9364",
+      "byte_length": 1206463,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_nonzero_bounds_exclusive": [
+        65,
+        29,
+        962,
+        1494
+      ],
+      "alpha8_bounds_exclusive": [
+        298,
+        31,
+        727,
+        1460
+      ],
+      "corners_rgba": {
+        "top_left": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "top_right": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "bottom_left": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "bottom_right": [
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-b4299434-633e-4f06-91f8-32cc8279e172.png",
+      "tool_output_byte_identical": true,
+      "actual_inputs": [
+        {
+          "recorded_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\build\\cartoon-production-reference\\nearest8\\020.png",
+          "resolved_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\build\\cartoon-production-reference\\nearest8\\020.png",
+          "sha256": "281a87524d0a1f75fdf6e60f090e9e81651fa8d3b7e0e224adce2179788935dd",
+          "native_reference": {
+            "frame": 20,
+            "metadata": "reference/metadata.json",
+            "xpm_sha256": "3c3b506d432bf7df84f70ca6c7592aaaac60c8a57d21b29f8ec527fd2ff9bef9",
+            "rgba_sha256": "0fbd8466afc0445801a500948517b5c13ec41f886bdf35b4583ac70f923c1660",
+            "exact_nearest8_pixel_repeats": true
+          }
+        },
+        {
+          "recorded_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-clearance-v2.png",
+          "resolved_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-clearance-v2.png",
+          "sha256": "21160cc5e605aab083c23fe76c2d0aeb348d30f24503613bd646369a9243313f"
+        }
+      ],
+      "used_local_ancestors": [
+        "020-clearance-v2.png"
+      ],
+      "call_history_status": "rejected-extra-side-toes",
+      "selected_in_v2_review": false,
+      "production_accepted": false
+    },
+    {
+      "call_id": "020Toes",
+      "saved_image": "020-toes-v4.png",
+      "sha256": "9afa5467b20543e454e8acac958dd23f627191158d6f07a63a2c7521d2fd0ee4",
+      "byte_length": 1205387,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_nonzero_bounds_exclusive": [
+        73,
+        28,
+        940,
+        1490
+      ],
+      "alpha8_bounds_exclusive": [
+        298,
+        31,
+        728,
+        1461
+      ],
+      "corners_rgba": {
+        "top_left": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "top_right": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "bottom_left": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "bottom_right": [
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-36967987-4768-4fcf-8c36-b43d86c4eb61.png",
+      "tool_output_byte_identical": true,
+      "actual_inputs": [
+        {
+          "recorded_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-left-knee-v3.png",
+          "resolved_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-left-knee-v3.png",
+          "sha256": "f8f6ef3300a47a5132765ca02b157379b31dbb98d5a5fbb5957cfec08c2d9364"
+        },
+        {
+          "recorded_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-user-extra-toes.png",
+          "resolved_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-user-extra-toes.png",
+          "sha256": "ee7217338353a4413cae5706a14946fc218a8fcd26a0362d2a73a4645d69b5fa"
+        }
+      ],
+      "used_local_ancestors": [
+        "020-left-knee-v3.png",
+        "020-user-extra-toes.png"
+      ],
+      "call_history_status": "motion-and-runtime-review-pending",
+      "selected_in_v2_review": true,
+      "production_accepted": false
+    },
+    {
+      "call_id": "021Knee",
+      "saved_image": "021-left-knee-v2.png",
+      "sha256": "15ad79825ee819f6a28cf140912a9affd9f24c11392c0c85b5a223d03e0c1964",
+      "byte_length": 1243568,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "alpha_nonzero_bounds_exclusive": [
+        65,
+        24,
+        1010,
+        1469
+      ],
+      "alpha8_bounds_exclusive": [
+        310,
+        26,
+        809,
+        1463
+      ],
+      "corners_rgba": {
+        "top_left": [
+          1,
+          1,
+          1,
+          0
+        ],
+        "top_right": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "bottom_left": [
+          1,
+          2,
+          1,
+          0
+        ],
+        "bottom_right": [
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-1826b692-fff1-459f-942b-5fbdd01ce9a8.png",
+      "tool_output_byte_identical": true,
+      "actual_inputs": [
+        {
+          "recorded_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\build\\cartoon-production-reference\\nearest8\\021.png",
+          "resolved_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\build\\cartoon-production-reference\\nearest8\\021.png",
+          "sha256": "9b96288dc1835ad03c6faee6eac8e2730227846baf100c22638dca11611ef4a4",
+          "native_reference": {
+            "frame": 21,
+            "metadata": "reference/metadata.json",
+            "xpm_sha256": "bcf13e2b6a40c2747d189cc26762ac87dddc258443b515e72b06ecb97db401b3",
+            "rgba_sha256": "7d5ef779d21ea2f5340ea76cd5aa0164a989ae92f560a590b11e2118e788284d",
+            "exact_nearest8_pixel_repeats": true
+          }
+        },
+        {
+          "recorded_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\021-pose-v1.png",
+          "resolved_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\021-pose-v1.png",
+          "sha256": "5d469f3ca435a1b89f7d404abf806123e935b1929feb47bc9aa4b13c6d7d46ce"
+        },
+        {
+          "recorded_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-toes-v4.png",
+          "resolved_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-toes-v4.png",
+          "sha256": "9afa5467b20543e454e8acac958dd23f627191158d6f07a63a2c7521d2fd0ee4"
+        }
+      ],
+      "used_local_ancestors": [
+        "021-pose-v1.png",
+        "020-toes-v4.png"
+      ],
+      "call_history_status": "motion-and-runtime-review-pending",
+      "selected_in_v2_review": true,
+      "production_accepted": false
+    }
+  ],
+  "user_annotation": {
+    "saved_image": "020-user-extra-toes.png",
+    "sha256": "ee7217338353a4413cae5706a14946fc218a8fcd26a0362d2a73a4645d69b5fa",
+    "byte_length": 21539,
+    "canvas": [
+      147,
+      150
+    ],
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      0,
+      0,
+      147,
+      150
+    ],
+    "alpha8_bounds_exclusive": [
+      0,
+      0,
+      147,
+      150
+    ],
+    "corners_rgba": {
+      "top_left": [
+        24,
+        24,
+        24,
+        255
+      ],
+      "top_right": [
+        24,
+        24,
+        24,
+        255
+      ],
+      "bottom_left": [
+        37,
+        37,
+        37,
+        255
+      ],
+      "bottom_right": [
+        37,
+        37,
+        37,
+        255
+      ]
+    },
+    "original_upload_path": "C:\\Users\\Admin\\AppData\\Local\\Temp\\codex-clipboard-d833c9b6-dc7a-4deb-b264-ef920299a613.png",
+    "original_upload_available": true,
+    "original_upload_byte_identical": true,
+    "role": "User-supplied marked crop identifying unwanted side-toe bumps in 020-left-knee-v3.png; instructional reference for 020Toes, not a production sprite.",
+    "user_feedback": "i circled in red, extra toes that do not belong",
+    "used_by_call": "020Toes"
+  },
+  "ancestry_scope": "The actual input lists above identify every image input for these three calls. Older local ancestors continue through provenance.json; 020-left-knee-v3.png feeds 020-toes-v4.png, which also feeds 021-left-knee-v2.png. The rejected intermediate is preserved.",
+  "original_reference_reconstruction": {
+    "instructions": "reference/NOTES.md",
+    "instructions_sha256": "c7867327ca6d3b91be9e1bd34cb4131d52cee5a2daf197b74923d1ace6dbc8bf",
+    "generator": "reference/extract.py",
+    "generator_sha256": "9f2ac986ae7f29c84a672f2a77fd0f2ba75be135a3c2c8666a31a4b34adca5cc",
+    "source_record": "reference/source.json",
+    "source_record_sha256": "040106d15a0c6460a044a7989ddcfea12d494bc6838ee1fad83a3793e2f2cfa4",
+    "metadata": "reference/metadata.json",
+    "metadata_sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629",
+    "repository_root_command": "python -B art/cartoon/walk-expansion-v1/reference/extract.py --dump-root <original-dump-root> --output build/cartoon-production-reference/reproduced",
+    "reconstructed_inputs": [
+      "nearest8/020.png",
+      "nearest8/021.png"
+    ],
+    "local_verification": "Both actual nearest8 inputs repeat native pixels exactly in 8x8 blocks; their reconstructed native RGBA hashes match the maintained original-reference metadata.",
+    "limits": "The external original dump is required for reconstruction and is not redistributed here. The reference uses the port's diagnostic palette and index 0 transparency. Original executable palette, compositing, and timing are not verified by these PNG checks."
+  },
+  "selected_v2_sources": [
+    {
+      "frame": 11,
+      "file": "011-pose-v2.png",
+      "sha256": "0f70a034f6047589732327c017eb6d2fc94b5fe22fedb7608ef898fd1a97a9fb"
+    },
+    {
+      "frame": 19,
+      "file": "019-pose-v1.png",
+      "sha256": "1f4c7f4354ed8a5d589503f41188ce20091607432c3dfd24a6aa03b138ed9ea4"
+    },
+    {
+      "frame": 20,
+      "file": "020-toes-v4.png",
+      "sha256": "9afa5467b20543e454e8acac958dd23f627191158d6f07a63a2c7521d2fd0ee4"
+    },
+    {
+      "frame": 21,
+      "file": "021-left-knee-v2.png",
+      "sha256": "15ad79825ee819f6a28cf140912a9affd9f24c11392c0c85b5a223d03e0c1964"
+    },
+    {
+      "frame": 22,
+      "file": "022-clearance-v3.png",
+      "sha256": "2e2d72e718b16672e1c6cf19c351c0ca67b50db3d457eae7dc535dd0014d79f9"
+    },
+    {
+      "frame": 23,
+      "file": "023-pose-v1.png",
+      "sha256": "1b33f52d9df250d069f7f0e7bb6924ab34c65a432c9df2211ac0bff2785c13a7"
+    }
+  ],
+  "selection_scope": "Frozen six-source snapshot of the second standalone motion viewer. It is the provisional baseline for the next island review, with the display 8 to 9 observation and runtime fit still open. Later fit candidates are outside this record.",
+  "frozen_record_hashes": {
+    "provenance.json": "3002b609c4066d730806baa2f37bdfced1fed8420bb8dd3142172d51791358a0",
+    "motion-review-v1.json": "761b4d31f3384d84a6f49b4b8c62d21ed4cdde5edf89aec10a47704bbf615506",
+    "prompts.json": "5410aa8abdf29d800beb7443476fb6e9c908ee237670b84a719f4b154b8ae821",
+    "cycle-prompts.json": "079aa1a45e8fd7cd7f89a18df7b605321dc5f1094e0eac61d3c4a4441472898f",
+    "direction-acceptance.json": "429f6bd0a079ff92386151b825f608897686b5745b117fe33191ebd61e7a940e",
+    "knee-correction-prompts.json": "bb90088e47467309fccaf59724c48c109f245f137ce0d1cf06c7700fa4180856",
+    "reference/metadata.json": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629",
+    "reference/source.json": "040106d15a0c6460a044a7989ddcfea12d494bc6838ee1fad83a3793e2f2cfa4",
+    "reference/extract.py": "9f2ac986ae7f29c84a672f2a77fd0f2ba75be135a3c2c8666a31a4b34adca5cc",
+    "reference/NOTES.md": "c7867327ca6d3b91be9e1bd34cb4131d52cee5a2daf197b74923d1ace6dbc8bf",
+    "review-evidence/motion-v1/attribute-verification.json": "0c8058a21df8d6c6104be16f50c6914a2541f8edf08ffa2379274e1740d44212",
+    "review-evidence/motion-v1/browser-functional.json": "cd047b0c10073fb6f2965fe092345024894cd79392a8cd791fe6daf01afe2e9c",
+    "review-evidence/motion-v1/export-report.json": "4c1ca833229fe53cdc43eca0891d31cf80c851986d169a1998eb6c17fd7e8b85",
+    "review-evidence/motion-v1/export-verification.json": "1c4b1f6132318676dff9e3cbf278c4af29361de3e241eb00da58d1328503667a",
+    "review-evidence/motion-v1/preview-record.json": "89f550f040579ee38aaaa7917be9108a6f7b58a96359f339abedc5dc9a598227",
+    "review-evidence/motion-v1/recipe.json": "771dc19404b8a59dade882487c37aee86f4f2c3415acb6ba9ad95b7ccc2fb1b4",
+    "review-evidence/motion-v1/review-verification.json": "5ad67b78835bc6708edd25fb1d790e5f5b9a782c899c33d2fe74e6d0ddd6fadc",
+    "review-evidence/motion-v1/template.html": "91a1ee11a146229f125c1601c50ff02a76e077a0fd5585aeb0f09c0266f1fd20",
+    "review-evidence/motion-v1/visibility.json": "cfb152f18a0505c98015f6de9b1e2ac8d5afb2ffb8032ff9e2baa06b38f2c4e7"
+  },
+  "verification": "All listed records were read without rewriting them. The saved cache outputs, upload annotation, current selected-source recipe hashes, and two nearest8 reference inputs were checked for this additive record."
+}
