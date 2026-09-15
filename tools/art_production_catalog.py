@@ -157,7 +157,70 @@ def reference_assets(original, plan, record):
     return result
 
 
-def assemble(archive, plan, pack, original, record, canvases):
+def approval_origins(accepted, approved, acceptance_path, record, record_hash):
+    """Bind aggregate approval rows to explicitly inherited human reviews.
+
+    Legacy records approve their own complete asset list. An aggregate may
+    inherit selected earlier assets, preserving their row review pointers,
+    while explicitly identifying the newly approved complement. Each earlier
+    record's complete inheritance chain is still checked.
+    """
+    root_path, resolved = acceptance_path, {}
+    # Explicit stack avoids a recursion-depth limit as approval history grows.
+    pending = [(accepted, approved, acceptance_path, (), None)]
+    while pending:
+        accepted, approved, acceptance_path, ancestors, children = pending.pop()
+        if acceptance_path in resolved:
+            continue
+        origins = {path: acceptance_path for path in approved}
+        if children is not None:
+            for previous_path, paths in children:
+                for path in paths:
+                    origins[path] = resolved[previous_path][path]
+            resolved[acceptance_path] = origins
+            continue
+        if "inherited_acceptances" not in accepted and "newly_accepted_assets" not in accepted:
+            resolved[acceptance_path] = origins
+            continue
+        inherited = accepted.get("inherited_acceptances")
+        newly = accepted.get("newly_accepted_assets")
+        require(isinstance(inherited, list) and all(isinstance(item, dict) for item in inherited),
+                acceptance_path, "invalid inherited acceptance list")
+        require(isinstance(newly, list) and all(isinstance(path, str) for path in newly)
+                and len(newly) == len(set(newly)), acceptance_path, "invalid newly accepted asset list")
+        inherited_paths, seen_records = set(), set()
+        children, requests = [], []
+        for item in inherited:
+            previous_path = item.get("path")
+            require(isinstance(previous_path, str) and previous_path not in (*ancestors, acceptance_path)
+                    and previous_path not in seen_records, acceptance_path, "invalid or duplicate inherited acceptance path")
+            seen_records.add(previous_path)
+            paths = item.get("asset_paths")
+            require(isinstance(paths, list) and all(isinstance(path, str) for path in paths)
+                    and len(paths) == len(set(paths)), previous_path, "invalid inherited asset list")
+            require(set(paths) <= set(approved) and not (set(paths) & inherited_paths),
+                    previous_path, "inherited assets are unknown or overlap")
+            previous = record(previous_path)
+            checksum = item.get("sha256")
+            require(isinstance(checksum, str) and re.fullmatch(r"[0-9a-f]{64}", checksum)
+                    and record_hash is not None and record_hash(previous_path) == checksum,
+                    previous_path, "inherited acceptance file hash differs")
+            require(previous.get("accepted") is True, previous_path, "inherited acceptance is pending")
+            previous_rows = keyed(previous.get("accepted_assets"), previous_path)
+            require(set(paths) <= set(previous_rows), previous_path, "selected asset is missing from inherited acceptance")
+            for path in paths:
+                require(all(previous_rows[path].get(key) == approved[path].get(key) for key in ("sha256", "recipe")),
+                        path, "inherited approval differs from aggregate")
+            inherited_paths.update(paths)
+            children.append((previous_path, paths))
+            requests.append((previous, previous_rows, previous_path, (*ancestors, acceptance_path), None))
+        require(set(newly) == set(approved) - inherited_paths, acceptance_path, "new approval coverage differs from inherited complement")
+        pending.append((accepted, approved, acceptance_path, ancestors, children))
+        pending.extend(reversed(requests))
+    return resolved[root_path]
+
+
+def assemble(archive, plan, pack, original, record, canvases, record_hash=None):
     catalog = source_catalog(archive)
     require(isinstance(plan, dict) and plan.get("schema_version") == 1 and plan.get("style") == "cartoon",
             PLAN, "expected schema_version 1 and style cartoon")
@@ -185,6 +248,7 @@ def assemble(archive, plan, pack, original, record, canvases):
     require(accepted.get("accepted") is True, acceptance_path, "active production acceptance is pending")
     approved = keyed(accepted.get("accepted_assets"), acceptance_path)
     require(set(approved) == set(packed), acceptance_path, "acceptance coverage differs from production")
+    approval_paths = approval_origins(accepted, approved, acceptance_path, record, record_hash)
     recipes, recipe_rows = {}, {}
     for item in packed.values():
         path = item.get("recipe")
@@ -215,7 +279,7 @@ def assemble(archive, plan, pack, original, record, canvases):
             row = recipe_rows[recipe_path].get(path)
             require(row is not None, path, "asset is absent from referenced recipe")
             require(row.get("runtime_canvas") == [n * runtime["scale"] for n in logical], path, "recipe canvas differs from runtime")
-            require(item.get("review") == acceptance_path and approval.get("recipe") == recipe_path,
+            require(item.get("review") == approval_paths[path] and approval.get("recipe") == recipe_path,
                     path, "active recipe or acceptance pointer differs")
             require(item.get("source_sha256") == proxy_hash, path, "accepted HD proxy hash differs")
             require(item.get("sha256") == approval.get("sha256") == row.get("candidate_png_sha256"), path, "accepted PNG hashes differ")
@@ -229,7 +293,7 @@ def assemble(archive, plan, pack, original, record, canvases):
             total = info["width"] * info["height"]
             alpha = "blank" if info["alpha_zero"] == total else "opaque" if info["alpha_opaque"] == total else "transparent"
             require(item.get("alpha") == alpha, path, "accepted alpha declaration differs")
-            status = {"status": "accepted", "acceptance": acceptance_path, "recipe": recipe_path, "png_sha256": item["sha256"]}
+            status = {"status": "accepted", "acceptance": approval_paths[path], "recipe": recipe_path, "png_sha256": item["sha256"]}
         assets.append({"path": path, "kind": source["kind"], "resource": source["resource"], "frame": source.get("index"),
                        "family": "resource:" + source["resource"], "bundled_logical_canvas": logical,
                        "runtime_canvas": [n * runtime["scale"] for n in logical],
@@ -270,11 +334,12 @@ def assemble(archive, plan, pack, original, record, canvases):
 
 
 def build(root):
-    inputs = {}
+    inputs, raw_hashes = {}, {}
 
     def record(path):
         safe_member(path)
         data = (root / path).read_bytes()
+        raw_hashes[path] = digest(data)
         immutable = path not in (PLAN, PACK, ORIGINAL)
         inputs[path] = {"sha256": digest(data) if immutable else text_hash(data),
                         "basis": "file-bytes" if immutable else "utf8-normalized-newlines"}
@@ -282,7 +347,8 @@ def build(root):
 
     plan, pack, original = record(PLAN), record(PACK), record(ORIGINAL)
     with zipfile.ZipFile(root / ARCHIVE) as archive:
-        result = assemble(archive, plan, pack, original, record, bundled_canvases(archive))
+        result = assemble(archive, plan, pack, original, record, bundled_canvases(archive),
+                          lambda path: raw_hashes[path])
         for name in ("data/hd/manifest.json", "data/RESOURCE.MAP", "data/RESOURCE.001", PREFIX + "manifest.json"):
             inputs[ARCHIVE + "!" + name] = {"sha256": digest(archive.read(name)), "basis": "zip-member-bytes"}
     result["inputs"] = inputs

@@ -16,7 +16,8 @@ application. Work starts from `0f7d7fd` on `art/cartoon-production-foundation`.
 | Delivery | Accepted assets only, updated evidence and coverage, merged work and audit | Preserve previous art; native smoke then regression; inspect the final merged code and document remaining issues |
 
 The full catalog is preparation, not permission to generate every resource at
-once. The existing 21 approved Cartoon assets remain the production baseline.
+once. The original 21 approved assets were the starting baseline; the accepted
+rear walking family now brings production coverage to 27.
 Drafts have separate source records and do not acquire acceptance from similar
 poses, shared bytes or approval of a different direction.
 
@@ -59,8 +60,12 @@ condition they guard. Re-run the relevant native gates when runtime artwork or
 engine code changes; catalog-only work also receives the existing art-tool and
 metadata regressions. Retain failed-run evidence where it explains a limitation.
 
-The rear-three-quarter key was approved with "looks good yes". The next human
-review is its complete walking motion. Large-scale asset generation,
+The rear-three-quarter key was approved with "looks good yes". Its complete
+six-pose walk was subsequently approved in the native island review with
+"Yes, keep this walk"; the disclosed arrival frame 018 remains HD fallback.
+The next coherent step is to complete that waiting/turning transition before
+another walking family. The front walk can be revisited using the same
+sequence-level review if needed. Large-scale asset generation,
 low-tide scenery, other characters, action scenes and code-drawn effects remain
 outside the current production batch. Existing engine maintenance findings stay
 in [BACKLOG.md](../BACKLOG.md); address a reproduced blocker when its affected

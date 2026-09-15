@@ -29,6 +29,35 @@ RECIPE = "art/cartoon/example/recipe.json"
 REVIEW = "art/cartoon/example/acceptance.json"
 FRAMES = "art/cartoon/example/reference/metadata.json"
 FRAME_SOURCE = "art/cartoon/example/reference/source.json"
+AGGREGATE = "art/cartoon/expanded/acceptance.json"
+SECOND = "BMP/ONE.BMP/002.png"
+THIRD = "BMP/ONE.BMP/001.png"
+REVIEW2 = "art/cartoon/another/acceptance.json"
+
+
+def record_digest(data, path):
+    # Explicit fixture file bytes, not a pretend hash accepted by the tool.
+    return m.digest(json.dumps(data["records"][path], sort_keys=True, separators=(",", ":")).encode())
+
+
+def inherited_fixture():
+    data = fixture()
+    item = dict(data["pack"]["assets"][0], path=SECOND, review=AGGREGATE,
+                source_sha256=m.digest(data["members"]["data/hd/" + SECOND]))
+    data["pack"]["assets"].append(item)
+    data["pack"]["required_assets"].append(SECOND)
+    data["pack"]["acceptance_record"] = AGGREGATE
+    data["members"][m.PREFIX + SECOND] = data["members"][m.PREFIX + ASSET]
+    data["records"][RECIPE]["frames"].append(dict(data["records"][RECIPE]["frames"][0], path=SECOND))
+    data["records"][AGGREGATE] = {"accepted": True,
+        "accepted_assets": [dict(path=row["path"], sha256=row["sha256"], recipe=row["recipe"]) for row in data["pack"]["assets"]],
+        "inherited_acceptances": [{"path": REVIEW, "sha256": record_digest(data, REVIEW), "asset_paths": [ASSET]}],
+        "newly_accepted_assets": [SECOND]}
+    return data
+
+
+def rehash_previous(data):
+    data["records"][AGGREGATE]["inherited_acceptances"][0]["sha256"] = record_digest(data, REVIEW)
 
 
 def load(path):
@@ -91,7 +120,7 @@ def report(data):
         for name, body in data["members"].items(): archive.writestr(name, body)
     with zipfile.ZipFile(buffer) as archive:
         return m.assemble(archive, data["plan"], data["pack"], data["original"],
-                          lambda path: data["records"][path], data["canvases"])
+                          lambda path: data["records"][path], data["canvases"], lambda path: record_digest(data, path))
 
 
 def reference_fixture():
@@ -134,6 +163,166 @@ class CatalogTests(unittest.TestCase):
         result = report(fixture())
         self.assertEqual(result["summary"], {"slots": 4, "sprites": 3, "screens": 1, "accepted": 1, "pending": 3,
             "hd_proxy_blank_slots": 2, "distinct_hd_png_bytes": 2, "exact_duplicate_slots": 2, "supplied_original_evidence_slots": 1})
+
+    def test_smoke_inherited(self):
+        data = inherited_fixture()
+        before = copy.deepcopy(data)
+        result = report(data)
+        self.assertEqual(data, before)
+        self.assertEqual(result["summary"]["accepted"], 2)
+        approvals = {row["path"]: row["production"]["acceptance"] for row in result["assets"]}
+        self.assertEqual(approvals[ASSET], REVIEW)
+        self.assertEqual(approvals[SECOND], AGGREGATE)
+        self.assertIsNone(approvals[THIRD])
+
+    def inherited_bad(self, edit, label, reason):
+        data = inherited_fixture()
+        edit(data)
+        self.refused(lambda: report(data), label, reason)
+
+    def test_inherited_multiple_parents(self):
+        data = inherited_fixture()
+        item = dict(data["pack"]["assets"][0], path=THIRD, review=REVIEW2)
+        data["pack"]["assets"].append(item)
+        data["pack"]["required_assets"].append(THIRD)
+        data["members"][m.PREFIX + THIRD] = data["members"][m.PREFIX + ASSET]
+        data["records"][RECIPE]["frames"].append(dict(data["records"][RECIPE]["frames"][0], path=THIRD))
+        approval = dict(path=THIRD, sha256=item["sha256"], recipe=RECIPE)
+        data["records"][REVIEW2] = {"accepted": True, "accepted_assets": [approval]}
+        data["records"][AGGREGATE]["accepted_assets"].append(approval)
+        data["records"][AGGREGATE]["inherited_acceptances"].append(
+            {"path": REVIEW2, "sha256": record_digest(data, REVIEW2), "asset_paths": [THIRD]})
+        result = report(data)
+        self.assertEqual(result["summary"]["accepted"], 3)
+        self.assertEqual({row["path"]: row["production"]["acceptance"] for row in result["assets"]},
+                         {ASSET: REVIEW, THIRD: REVIEW2, SECOND: AGGREGATE, "SCR/ONE.SCR.png": None})
+
+    def test_inherited_nested_preserves_leaf_review(self):
+        data = inherited_fixture()
+        data["pack"]["acceptance_record"] = REVIEW2
+        data["records"][REVIEW2] = {"accepted": True,
+            "accepted_assets": copy.deepcopy(data["records"][AGGREGATE]["accepted_assets"]),
+            "inherited_acceptances": [{"path": AGGREGATE, "sha256": record_digest(data, AGGREGATE), "asset_paths": [ASSET, SECOND]}],
+            "newly_accepted_assets": []}
+        approvals = {row["path"]: row["production"]["acceptance"] for row in report(data)["assets"]}
+        self.assertEqual(approvals[ASSET], REVIEW)
+        self.assertEqual(approvals[SECOND], AGGREGATE)
+
+    def test_inherited_subset_allows_replacement(self):
+        data = inherited_fixture()
+        previous_png = png([b"\x32\x45\x67\x80" * 2] * 2)
+        data["records"][REVIEW]["accepted_assets"].append(
+            {"path": SECOND, "sha256": m.digest(previous_png), "recipe": "art/cartoon/previous/recipe.json"})
+        rehash_previous(data)
+        self.assertNotEqual(data["records"][REVIEW]["accepted_assets"][1]["sha256"], data["pack"]["assets"][1]["sha256"])
+        result = report(data)
+        self.assertEqual(result["summary"]["accepted"], 2)
+        approvals = {row["path"]: row["production"]["acceptance"] for row in result["assets"]}
+        self.assertEqual(approvals[ASSET], REVIEW)
+        self.assertEqual(approvals[SECOND], AGGREGATE)
+
+    def test_inherited_selected_history_still_validated(self):
+        data = inherited_fixture()
+        data["records"][AGGREGATE]["newly_accepted_assets"] = []  # Prior history is invalid for SECOND.
+        data["pack"]["acceptance_record"] = REVIEW2
+        data["pack"]["assets"][1]["review"] = REVIEW2
+        data["records"][REVIEW2] = {"accepted": True,
+            "accepted_assets": copy.deepcopy(data["records"][AGGREGATE]["accepted_assets"]),
+            "inherited_acceptances": [{"path": AGGREGATE, "sha256": record_digest(data, AGGREGATE), "asset_paths": [ASSET]}],
+            "newly_accepted_assets": [SECOND]}
+        self.refused(lambda: report(data), AGGREGATE, "new approval coverage differs from inherited complement")
+
+    def test_inherited_list(self):
+        self.inherited_bad(lambda d: d["records"][AGGREGATE].update(inherited_acceptances={}), AGGREGATE, "invalid inherited acceptance list")
+
+    def test_inherited_newly_list(self):
+        self.inherited_bad(lambda d: d["records"][AGGREGATE].update(newly_accepted_assets=[SECOND, SECOND]), AGGREGATE, "invalid newly accepted asset list")
+
+    def test_inherited_record_path(self):
+        self.inherited_bad(lambda d: d["records"][AGGREGATE]["inherited_acceptances"][0].update(path=AGGREGATE), AGGREGATE, "invalid or duplicate inherited acceptance path")
+
+    def test_inherited_record_duplicate(self):
+        def edit(d):
+            d["records"][AGGREGATE]["inherited_acceptances"].append(copy.deepcopy(d["records"][AGGREGATE]["inherited_acceptances"][0]))
+        self.inherited_bad(edit, AGGREGATE, "invalid or duplicate inherited acceptance path")
+
+    def test_inherited_asset_list(self):
+        self.inherited_bad(lambda d: d["records"][AGGREGATE]["inherited_acceptances"][0].update(asset_paths=[ASSET, ASSET]), REVIEW, "invalid inherited asset list")
+
+    def test_inherited_unknown_asset(self):
+        self.inherited_bad(lambda d: d["records"][AGGREGATE]["inherited_acceptances"][0].update(asset_paths=[THIRD]), REVIEW, "inherited assets are unknown or overlap")
+
+    def test_inherited_overlap(self):
+        def edit(d):
+            d["records"][REVIEW2] = copy.deepcopy(d["records"][REVIEW])
+            d["records"][AGGREGATE]["inherited_acceptances"].append({"path": REVIEW2, "sha256": record_digest(d, REVIEW2), "asset_paths": [ASSET]})
+        self.inherited_bad(edit, REVIEW2, "inherited assets are unknown or overlap")
+
+    def test_inherited_hash(self):
+        self.inherited_bad(lambda d: d["records"][AGGREGATE]["inherited_acceptances"][0].update(sha256="0" * 64), REVIEW, "inherited acceptance file hash differs")
+
+    def test_inherited_exact_file_bytes(self):
+        # Exercise build's real file reader/hash callback with both changed and
+        # unchanged newline axes. Resource geometry is outside this I/O test.
+        for ending in ("\n", "\r\n"):
+            with self.subTest(ending=repr(ending)), tempfile.TemporaryDirectory() as temporary:
+                root, data = Path(temporary), inherited_fixture()
+                previous_bytes = (json.dumps(data["records"][REVIEW], indent=2) + "\n").replace("\n", ending).encode()
+                data["records"][AGGREGATE]["inherited_acceptances"][0]["sha256"] = m.digest(previous_bytes)
+                files = {m.PLAN: data["plan"], m.PACK: data["pack"], m.ORIGINAL: data["original"], **data["records"]}
+                for name, value in files.items():
+                    path = root / name
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    path.write_bytes(json.dumps(value).encode())
+                (root / REVIEW).write_bytes(previous_bytes)
+                (root / m.ARCHIVE).parent.mkdir(parents=True, exist_ok=True)
+                with zipfile.ZipFile(root / m.ARCHIVE, "w") as archive:
+                    for name, value in data["members"].items():
+                        archive.writestr(name, value)
+                    archive.writestr("data/RESOURCE.MAP", b"geometry supplied by fixture")
+                    archive.writestr("data/RESOURCE.001", b"geometry supplied by fixture")
+                with patch.object(m, "bundled_canvases", return_value=data["canvases"]):
+                    try:
+                        result = m.build(root)
+                    except m.ArtError as exc:
+                        self.fail("Exact-byte inherited record must pass: " + str(exc))
+                    self.assertEqual(result["summary"]["accepted"], 2)
+                    self.assertEqual(result["inputs"][REVIEW], {"basis": "file-bytes", "sha256": m.digest(previous_bytes)})
+                    if ending == "\r\n":
+                        declared = data["records"][AGGREGATE]["inherited_acceptances"][0]
+                        declared["sha256"] = m.digest(previous_bytes.replace(b"\r\n", b"\n"))
+                        (root / AGGREGATE).write_text(json.dumps(data["records"][AGGREGATE]), encoding="utf-8")
+                        self.refused(lambda: m.build(root), REVIEW, "inherited acceptance file hash differs")
+
+    def test_inherited_pending(self):
+        def edit(d):
+            d["records"][REVIEW]["accepted"] = False
+            rehash_previous(d)
+        self.inherited_bad(edit, REVIEW, "inherited acceptance is pending")
+
+    def test_inherited_coverage(self):
+        def edit(d):
+            d["records"][REVIEW]["accepted_assets"].clear()
+            rehash_previous(d)
+        self.inherited_bad(edit, REVIEW, "selected asset is missing from inherited acceptance")
+
+    def test_inherited_approval_hash(self):
+        def edit(d):
+            d["records"][REVIEW]["accepted_assets"][0]["sha256"] = "0" * 64
+            rehash_previous(d)
+        self.inherited_bad(edit, ASSET, "inherited approval differs from aggregate")
+
+    def test_inherited_approval_recipe(self):
+        def edit(d):
+            d["records"][REVIEW]["accepted_assets"][0]["recipe"] = "different-recipe.json"
+            rehash_previous(d)
+        self.inherited_bad(edit, ASSET, "inherited approval differs from aggregate")
+
+    def test_inherited_newly_coverage(self):
+        self.inherited_bad(lambda d: d["records"][AGGREGATE].update(newly_accepted_assets=[]), AGGREGATE, "new approval coverage differs from inherited complement")
+
+    def test_inherited_review_pointer(self):
+        self.inherited_bad(lambda d: d["pack"]["assets"][0].update(review=AGGREGATE), ASSET, "active recipe or acceptance pointer differs")
 
     def test_reproduction(self):
         result = m.build(ROOT)
@@ -331,6 +520,20 @@ class CatalogTests(unittest.TestCase):
 
 
 MUTATIONS = [
+    ("test_inherited_list", 'isinstance(inherited, list) and all(isinstance(item, dict) for item in inherited)'),
+    ("test_inherited_newly_list", 'isinstance(newly, list) and all(isinstance(path, str) for path in newly)\n                and len(newly) == len(set(newly))'),
+    ("test_inherited_record_path", 'isinstance(previous_path, str) and previous_path not in (*ancestors, acceptance_path)\n                    and previous_path not in seen_records'),
+    ("test_inherited_asset_list", 'isinstance(paths, list) and all(isinstance(path, str) for path in paths)\n                    and len(paths) == len(set(paths))'),
+    ("test_inherited_unknown_asset", 'set(paths) <= set(approved) and not (set(paths) & inherited_paths)'),
+    ("test_inherited_hash", 'isinstance(checksum, str) and re.fullmatch(r"[0-9a-f]{64}", checksum)\n                    and record_hash is not None and record_hash(previous_path) == checksum'),
+    ("test_inherited_exact_file_bytes", 'lambda path: raw_hashes[path]', 'lambda path: text_hash((root / path).read_bytes())'),
+    ("test_inherited_pending", 'previous.get("accepted") is True'),
+    ("test_inherited_coverage", 'set(paths) <= set(previous_rows)'),
+    ("test_inherited_selected_history_still_validated", 'requests.append((previous, previous_rows, previous_path, (*ancestors, acceptance_path), None))',
+     'requests.append((previous, {path: previous_rows[path] for path in paths}, previous_path, (*ancestors, acceptance_path), None))'),
+    ("test_inherited_approval_hash", 'all(previous_rows[path].get(key) == approved[path].get(key) for key in ("sha256", "recipe"))'),
+    ("test_inherited_newly_coverage", 'set(newly) == set(approved) - inherited_paths'),
+    ("test_smoke_inherited", '"acceptance": approval_paths[path], "recipe": recipe_path', '"acceptance": acceptance_path, "recipe": recipe_path'),
     ("test_reference_paths", 'isinstance(paths, list) and all(isinstance(path, str) for path in paths)\n            and len(paths) == len(set(paths))'),
     ("test_reference_identities", 'isinstance(frames, list) and metadata.get("frame_count") == len(frames)\n                and all(isinstance(row, dict) and isinstance(row.get("resource"), str)\n                        and row["resource"].endswith(".BMP") and type(row.get("frame")) is int\n                        and row["frame"] >= 0 for row in frames)'),
     ("test_reference_source", 'isinstance(source_name, str)'),
@@ -362,7 +565,7 @@ MUTATIONS = [
     ("test_recipe_canvas", 'row.get("runtime_canvas") == [n * runtime["scale"] for n in logical]'),
     ("test_bundled_canvas", "logical == canvases[path]"),
     ("test_original_canvas", 'native["canvas"] == logical'),
-    ("test_review_pointer", 'item.get("review") == acceptance_path and approval.get("recipe") == recipe_path'),
+    ("test_review_pointer", 'item.get("review") == approval_paths[path] and approval.get("recipe") == recipe_path'),
     ("test_proxy_hash", 'item.get("source_sha256") == proxy_hash'),
     ("test_accepted_hash", 'item.get("sha256") == approval.get("sha256") == row.get("candidate_png_sha256")'),
     ("test_production_hash", 'digest(data) == item["sha256"]'),

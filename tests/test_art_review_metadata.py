@@ -225,6 +225,92 @@ class MetadataTests(unittest.TestCase):
                 value["acceptance_record"] = m.ISLAND + "/acceptance.json"
         self.refused(lambda: self.report(mutate), m.PACK, "active acceptance pointer differs")
 
+    def inherited_pilot(self, change=None):
+        pilot = json.loads((ROOT / m.ACCEPTANCE).read_bytes())
+        link = {"path": m.ACCEPTANCE, "sha256": hashlib.sha256((ROOT / m.ACCEPTANCE).read_bytes()).hexdigest(),
+                "asset_paths": [row["path"] for row in pilot["accepted_assets"]]}
+        active = m.ISLAND + "/acceptance.json"
+        def mutate(label, value):
+            if label == m.PACK:
+                value["acceptance_record"] = active
+            if label == active:
+                value.update(accepted=True, inherited_acceptances=[link])
+                if change:
+                    change(value)
+        return self.report(mutate)
+
+    def test_direct_and_inherited_pilot_scope(self):
+        inherited = self.inherited_pilot()
+        def direct(label, value):
+            if label == m.PACK:
+                value["acceptance_record"] = m.ACCEPTANCE
+        original = self.report(direct)
+        self.assertEqual(inherited["assets"], original["assets"])
+        self.assertEqual(inherited["summary"], {"assets": 21, "walking_assets": 6, "island_assets": 15})
+
+    def test_inherited_pilot_hash(self):
+        self.refused(lambda: self.inherited_pilot(lambda d: d["inherited_acceptances"][0].update(sha256="0" * 64)),
+                     m.PACK, "active acceptance pointer differs")
+
+    def test_missing_acceptance_pointer(self):
+        def mutate(label, value):
+            if label == m.PACK:
+                value.pop("acceptance_record")
+        self.refused(lambda: self.report(mutate), m.PACK, "active acceptance pointer differs")
+
+    def test_inherited_pilot_row_shape(self):
+        self.refused(lambda: self.inherited_pilot(lambda d: d.update(inherited_acceptances=["bad"])),
+                     m.PACK, "invalid inherited acceptance list")
+
+    def test_inherited_pilot_record_shape(self):
+        original_read = m.read_json
+        active = m.ISLAND + "/acceptance.json"
+        def changed(data, label):
+            value = original_read(data, label)
+            if label == m.PACK:
+                value["acceptance_record"] = active
+            return [] if label == active else value
+        with patch.object(m, "read_json", side_effect=changed):
+            self.refused(lambda: m.build(ROOT), m.PACK, "invalid inherited acceptance record")
+
+    def test_inherited_pilot_list_shape(self):
+        self.refused(lambda: self.inherited_pilot(lambda d: d.update(inherited_acceptances=None)),
+                     m.PACK, "invalid inherited acceptance list")
+
+    def test_inherited_pilot_asset_list_shape(self):
+        self.refused(lambda: self.inherited_pilot(lambda d: d["inherited_acceptances"][0].update(asset_paths=None)),
+                     m.PACK, "active acceptance pointer differs")
+
+    def test_inherited_pilot_asset_shape(self):
+        self.refused(lambda: self.inherited_pilot(lambda d: d["inherited_acceptances"][0].update(asset_paths=[{}])),
+                     m.PACK, "active acceptance pointer differs")
+
+    def test_inherited_pilot_scope(self):
+        self.refused(lambda: self.inherited_pilot(lambda d: d["inherited_acceptances"][0]["asset_paths"].pop()),
+                     m.PACK, "active acceptance pointer differs")
+
+    def test_pending_inheriting_acceptance(self):
+        self.refused(lambda: self.inherited_pilot(lambda d: d.update(accepted=False)),
+                     m.PACK, "active acceptance pointer differs")
+
+    def test_duplicate_inherited_pilot(self):
+        self.refused(lambda: self.inherited_pilot(lambda d: d["inherited_acceptances"].append(dict(d["inherited_acceptances"][0]))),
+                     m.PACK, "active acceptance pointer differs")
+
+    def test_pack_required_coverage(self):
+        def mutate(label, value):
+            if label == m.PACK:
+                value["required_assets"].pop()
+        self.refused(lambda: self.report(mutate), m.PACK, "accepted coverage differs")
+
+    def test_missing_pilot_pack_asset(self):
+        def mutate(label, value):
+            if label == m.PACK:
+                path = "BMP/JOHNWALK.BMP/024.png"
+                value["assets"] = [row for row in value["assets"] if row["path"] != path]
+                value["required_assets"].remove(path)
+        self.refused(lambda: self.report(mutate), m.PACK, "accepted coverage differs")
+
     def test_pending_production_acceptance(self):
         def mutate(label, value):
             if label == m.ACCEPTANCE:
@@ -411,6 +497,8 @@ class MetadataTests(unittest.TestCase):
             (dump / "BMP").mkdir(parents=True)
             (root / m.PACK).parent.mkdir(parents=True)
             (root / m.PACK).write_text(json.dumps({"required_assets": ["BMP/X.BMP/000.png"]}))
+            (root / m.ACCEPTANCE).parent.mkdir(parents=True)
+            (root / m.ACCEPTANCE).write_text(json.dumps({"accepted_assets": [{"path": "BMP/X.BMP/000.png"}]}))
             (root / m.ORIGINAL_IDENTITY).parent.mkdir(parents=True, exist_ok=True)
             (root / m.ORIGINAL_IDENTITY).write_text(json.dumps({"source_resources": []}))
             data = fixture_xpm()
@@ -424,6 +512,28 @@ class MetadataTests(unittest.TestCase):
             if label == m.ORIGINAL:
                 value["input_sha256"]["RESOURCE.001"] = "0" * 64
         self.refused(lambda: self.report(mutate), m.ORIGINAL, "resource identity is not the supplied original distribution")
+
+    def test_import_retains_pilot_scope(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            dump = root / "dump"
+            (dump / "BMP").mkdir(parents=True)
+            (root / m.PACK).parent.mkdir(parents=True)
+            (root / m.PACK).write_text(json.dumps({"required_assets": ["BMP/X.BMP/000.png", "BMP/X.BMP/001.png"]}))
+            (root / m.ACCEPTANCE).parent.mkdir(parents=True)
+            (root / m.ACCEPTANCE).write_text(json.dumps({"accepted_assets": [{"path": "BMP/X.BMP/000.png"}]}))
+            (root / m.ORIGINAL_IDENTITY).parent.mkdir(parents=True)
+            (root / m.ORIGINAL_IDENTITY).write_text(json.dumps({"source_resources": []}))
+            data = fixture_xpm()
+            hashes = {}
+            for index in (0, 1):
+                name = f"BMP/X.BMP.{index:03}.xpm"
+                (dump / name).write_bytes(data)
+                hashes[name] = hashlib.sha256(data).hexdigest()
+            (root / "report.json").write_text(json.dumps({"exit_code": 0, "dump_sha256": hashes,
+                "engine_sha256": "1" * 64, "input_sha256": {}}))
+            result = m.import_original(root, dump)
+            self.assertEqual(set(result["assets"]), {"BMP/X.BMP/000.png"})
 
     def test_import_distribution_identity(self):
         with tempfile.TemporaryDirectory() as temporary:
@@ -452,7 +562,20 @@ class MetadataTests(unittest.TestCase):
 # exactly one negative control, reports the actual imported source SHA, and must
 # produce one named test failure. No real input or approved asset is modified.
 MUTATIONS = [
-    ("test_active_acceptance_pointer", 'pack.get("acceptance_record") == ACCEPTANCE'),
+    ("test_inherited_pilot_record_shape", 'isinstance(active, dict)'),
+    ("test_missing_acceptance_pointer", 'isinstance(active_path, str)'),
+    ("test_inherited_pilot_row_shape", 'all(isinstance(row, dict) for row in links)'),
+    ("test_inherited_pilot_list_shape", 'isinstance(links, list)'),
+    ("test_inherited_pilot_asset_list_shape", 'isinstance(inherited[0].get("asset_paths"), list)'),
+    ("test_inherited_pilot_asset_shape", 'all(isinstance(path, str) for path in inherited[0]["asset_paths"])'),
+    ("test_active_acceptance_pointer", 'require(inherits_pilot, PACK, "active acceptance pointer differs")', 'require(True, PACK, "active acceptance pointer differs")'),
+    ("test_inherited_pilot_hash", 'inherited[0].get("sha256") == evidence[ACCEPTANCE]["sha256"]'),
+    ("test_inherited_pilot_scope", 'set(inherited[0].get("asset_paths", [])) == set(approved)'),
+    ("test_pending_inheriting_acceptance", 'active.get("accepted") is True'),
+    ("test_missing_pilot_pack_asset", 'set(approved) <= set(all_packed)'),
+    ("test_duplicate_inherited_pilot", 'len(inherited) == 1'),
+    ("test_pack_required_coverage", 'set(all_packed) == set(pack["required_assets"])'),
+    ("test_import_retains_pilot_scope", '[row["path"] for row in accepted["accepted_assets"]]', 'read_json((root / PACK).read_bytes(), PACK)["required_assets"]'),
     ("test_pending_production_acceptance", 'accepted.get("accepted") is True'),
     ("test_runtime_scale", 'pack["runtime"]["scale"] == 2'),
     ("test_pack_recipe_pointer", 'item.get("recipe") == approved[asset].get("recipe") == path'),
@@ -466,7 +589,7 @@ MUTATIONS = [
     ("test_original_canvas_mismatch", "native[\"canvas\"] == logical"),
     ("test_acceptance_mismatch", "approved[asset][\"sha256\"] == item[\"sha256\"] == row[\"candidate_png_sha256\"]"),
     ("test_hd_proxy_mismatch", "item[\"source_sha256\"] == original[\"source_sha256\"]"),
-    ("test_missing_coverage", "set(packed) == set(approved) == set(pack[\"required_assets\"])"),
+    ("test_missing_coverage", 'set(approved) == set(supplied_original["assets"])'),
     ("test_route_draw_mismatch", "record[\"original_draw_xy_frame_slot\"] == expected"),
     ("test_route_cadence_mismatch", "position == len(route) - 1 or end <= (position + 1) * pose_ms"),
     ("test_xpm_row_guard", "all(len(row) == width and set(row) <= set(palette) for row in rows)"),

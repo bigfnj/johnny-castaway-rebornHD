@@ -209,7 +209,7 @@ The browser's Art style selector remembers its choice in local storage and
 reloads the scene. An explicit URL argument, such as
 `?args=window+style+hd`, overrides that saved browser choice for the current run.
 
-The bundled Cartoon preview contains 21 approved assets: six walking poses and
+The bundled Cartoon preview contains 27 approved assets: twelve walking poses and
 15 island layers, including one ocean and all nine high-tide shore-foam frames.
 It is a partial style pack. Other animations and environment states use HD or
 original artwork, so the full story can mix the two styles. The settings label
@@ -219,7 +219,9 @@ Cartoon assets live under `data/styles/cartoon/` inside `scrantic_data.zip`.
 Selecting Cartoon with an older archive that lacks the pack reports a
 missing-pack error. The [approved island](art/cartoon/island-pilot-v1/README.md)
 and [Calm focus walking revision](art/cartoon/walk-pilot/calm-focus-runtime-v1/README.md)
-record their exact scope. See [Cartoon art production](docs/cartoon-art.md) for
+record their exact scope. The [rear walking family](art/cartoon/walk-expansion-v1/README.md)
+adds six poses; its final standing pose still uses HD artwork.
+See [Cartoon art production](docs/cartoon-art.md) for
 packaging, [image authoring lessons](docs/art-style-learnings.md) and
 [the walking revision lessons](docs/art-style-learnings-calm-focus.md) before
 creating the next style.

@@ -27,7 +27,13 @@
     "BMP/JOHNWALK.BMP/027.png",
     "BMP/JOHNWALK.BMP/028.png",
     "BMP/JOHNWALK.BMP/029.png",
-    "SCR/OCEAN02.SCR.png"
+    "SCR/OCEAN02.SCR.png",
+    "BMP/JOHNWALK.BMP/011.png",
+    "BMP/JOHNWALK.BMP/019.png",
+    "BMP/JOHNWALK.BMP/020.png",
+    "BMP/JOHNWALK.BMP/021.png",
+    "BMP/JOHNWALK.BMP/022.png",
+    "BMP/JOHNWALK.BMP/023.png"
   ],
   "assets": [
     {
@@ -197,9 +203,57 @@
       "alpha": "opaque",
       "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
       "review": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/011.png",
+      "sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+      "source_sha256": "ddde53f810f1a45ac17f1f19ea755e7e01badb91e2db11fbc6eaf50e5a42b052",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+      "review": "art/cartoon/walk-expansion-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/019.png",
+      "sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+      "source_sha256": "712790f959d8f63c1a07b76dee6c91775a710b7df65d0c1d27dfcd7e2c368a07",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+      "review": "art/cartoon/walk-expansion-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/020.png",
+      "sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+      "source_sha256": "acad4f83c3c3383be3b3efe17ca53406c05427ef4d644d840801eca71d1c916b",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+      "review": "art/cartoon/walk-expansion-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/021.png",
+      "sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+      "source_sha256": "6bd5a9a2a10222375a71424055c2b2f6bd83c1bfcb595dc40408fa338e71f8c8",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+      "review": "art/cartoon/walk-expansion-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/022.png",
+      "sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+      "source_sha256": "24df0d2992b8dcf5f04abf6560bb0f78add9126bdc1523782eb96b1b954b1b47",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+      "review": "art/cartoon/walk-expansion-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/023.png",
+      "sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+      "source_sha256": "e7f94419111712b3e9f0e7d2bb34147f637afe92a85d5e489e524dc1d417a1ad",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+      "review": "art/cartoon/walk-expansion-v1/production-acceptance.json"
     }
   ],
-  "review_status": "Human approved the Calm focus walking family in the complete layered island scene on 2026-09-15.",
-  "acceptance_record": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-  "scope": "Partial pack: six walking poses and fifteen island assets; other states and animations use HD/original fallback."
+  "review_status": "Human approved the rear-oblique walking family in the layered island scene on 2026-09-15. The prior twenty-one accepted assets retain their earlier review records.",
+  "acceptance_record": "art/cartoon/walk-expansion-v1/production-acceptance.json",
+  "scope": "Partial pack: twelve walking poses and fifteen island assets; other states and animations use HD/original fallback. The rear-oblique arrival pose still uses HD artwork."
 }

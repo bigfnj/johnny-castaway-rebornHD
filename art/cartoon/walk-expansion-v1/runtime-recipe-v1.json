@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "scope": "Reproduce the six runtime-canvas sprites accepted in production-acceptance.json. Acceptance scope is recorded separately; no pixel or registration change from the reviewed technical recipe.",
+  "reference": "reference/metadata.json",
+  "reference_sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629",
+  "scale_exact": {
+    "numerator": 1,
+    "denominator": 10
+  },
+  "normalization": "none",
+  "padding_hd": 64,
+  "resampling": {
+    "working_mode": "RGBa",
+    "affine": "BICUBIC",
+    "oversample": 8,
+    "downsample": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "pillow_version": "12.3.0",
+  "cap_measurement": "First row containing alpha>=128; horizontal pixel-edge midpoint of that row. Its y is the row top edge. Consistent outline observation, not an anatomical or engine anchor.",
+  "cap_target_hd": [
+    17,
+    0.25
+  ],
+  "target_basis": "Native original cap-top span x[6,11) has midpoint8.5, doubled to17HD. y0.25 is a deliberate small antialiasing margin.",
+  "frames": [
+    {
+      "frame": 11,
+      "source": "011-pose-v2.png",
+      "source_sha256": "0f70a034f6047589732327c017eb6d2fc94b5fe22fedb7608ef898fd1a97a9fb",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        64,
+        156
+      ],
+      "cap_raw": [
+        407.5,
+        36
+      ],
+      "cap_target_hd": [
+        17,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -23.75,
+        0,
+        0.1,
+        -3.35
+      ],
+      "path": "BMP/JOHNWALK.BMP/011.png",
+      "candidate_png_sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814"
+    },
+    {
+      "frame": 19,
+      "source": "019-pose-v1.png",
+      "source_sha256": "1f4c7f4354ed8a5d589503f41188ce20091607432c3dfd24a6aa03b138ed9ea4",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        64,
+        152
+      ],
+      "cap_raw": [
+        411,
+        45
+      ],
+      "cap_target_hd": [
+        17,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -24.1,
+        0,
+        0.1,
+        -4.25
+      ],
+      "path": "BMP/JOHNWALK.BMP/019.png",
+      "candidate_png_sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5"
+    },
+    {
+      "frame": 20,
+      "source": "020-heel-fit-v5.png",
+      "source_sha256": "fbbc47b7e5449d4eb85264d5be8faf3ae0f5971768a76762db6a2fac6e89f681",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        48,
+        150
+      ],
+      "cap_raw": [
+        410.5,
+        32
+      ],
+      "cap_target_hd": [
+        17,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -24.050000000000004,
+        0,
+        0.1,
+        -2.95
+      ],
+      "path": "BMP/JOHNWALK.BMP/020.png",
+      "candidate_png_sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56"
+    },
+    {
+      "frame": 21,
+      "source": "021-left-knee-v2.png",
+      "source_sha256": "15ad79825ee819f6a28cf140912a9affd9f24c11392c0c85b5a223d03e0c1964",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        64,
+        150
+      ],
+      "cap_raw": [
+        410.5,
+        27
+      ],
+      "cap_target_hd": [
+        17,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -24.050000000000004,
+        0,
+        0.1,
+        -2.45
+      ],
+      "path": "BMP/JOHNWALK.BMP/021.png",
+      "candidate_png_sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd"
+    },
+    {
+      "frame": 22,
+      "source": "022-foot-fit-v4.png",
+      "source_sha256": "bf5ab145730b9d022a196ced1f487f02811150e393f65f89245a99579c81f670",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        64,
+        148
+      ],
+      "cap_raw": [
+        412.5,
+        35
+      ],
+      "cap_target_hd": [
+        17,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -24.25,
+        0,
+        0.1,
+        -3.25
+      ],
+      "path": "BMP/JOHNWALK.BMP/022.png",
+      "candidate_png_sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea"
+    },
+    {
+      "frame": 23,
+      "source": "023-pose-v1.png",
+      "source_sha256": "1b33f52d9df250d069f7f0e7bb6924ab34c65a432c9df2211ac0bff2785c13a7",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        64,
+        156
+      ],
+      "cap_raw": [
+        407,
+        35
+      ],
+      "cap_target_hd": [
+        17,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -23.700000000000003,
+        0,
+        0.1,
+        -3.25
+      ],
+      "path": "BMP/JOHNWALK.BMP/023.png",
+      "candidate_png_sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9"
+    }
+  ],
+  "production_acceptance": "art/cartoon/walk-expansion-v1/production-acceptance.json",
+  "reviewed_recipe": {
+    "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/recipe.json",
+    "sha256": "c092bfbbd557f66e204801657fe641b448a54403ff767a423e4ac0a6ef86df26"
+  }
+}

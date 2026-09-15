@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "preview": "http://127.0.0.1:8932/rear-cartoon-walk-v1/review.html",
+  "accepted": false,
+  "scope": "Six-pose rear-oblique B-to-A draft, common scale0.1, original23routepositions; direction key approval retained.",
+  "user_feedback": "Feedback on frames: 9-the knee bend of the left foot is not noticed and the \"wrong\" foot is on the ground flat. The left leg should be bent more at the knee with the foot being in the air more vertical, while the RIGHT foot should be flat on the ground. 10-same, the left foot should have more bend like the original. 15-completely wrong again, same notes as frame 9. 16-is obviously now incorrect because the frame before it is wrong, look at the source image, the knee is bent more, and the foot is mostly off the ground and vertical. 21-same notes as frame 9. 22-same notes as 16.",
+  "mapped_requests": [
+    {
+      "review_positions": [
+        9,
+        15,
+        21
+      ],
+      "frame": 20,
+      "source": "020-clearance-v2.png"
+    },
+    {
+      "review_positions": [
+        10,
+        16,
+        22
+      ],
+      "frame": 21,
+      "source": "021-pose-v1.png"
+    }
+  ],
+  "target": "Original anatomical LEFT knee bent more, left foot raised more vertically; anatomical RIGHT foot flat on ground. Follow each leg from its shorts opening and preserve correct occlusion. Pose consistency matters across subsequent steps.",
+  "untested_or_pending": "Other poses are not independently accepted by this rejection. Frame022 canvas fit remains unresolved; no new art has entered the runtime archive."
+}

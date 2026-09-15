@@ -1,0 +1,34 @@
+{
+  "scope": "Four bounded helper guard mutations, not exhaustive malformed-input coverage. Production inputs and real candidate captures untouched.",
+  "test_sha256": "fbfd20151211b14d98e2ae1dc4207497f35ba219450b1871fb978e1a00aa763b",
+  "mutations": [
+    {
+      "label": "prepare_candidate.py:candidate-source:011",
+      "result": "FIRED",
+      "failure_count": 1,
+      "mutant_source_sha256": "b25842d27a43afe4d678332faf1089aa3e28a1fd2d99373a61f147b5622b2831",
+      "witness": "Fresh python -B printed exact executed mutant source hash; original refused before output; disabled guard admitted its targeted bad input."
+    },
+    {
+      "label": "prepare_candidate.py:candidate-runtime-crop:011",
+      "result": "FIRED",
+      "failure_count": 1,
+      "mutant_source_sha256": "6c6ec655252389b1aa6dc5eef0bdad02756760bc67045b23da9c7c7a2b145ac7",
+      "witness": "Fresh python -B printed exact executed mutant source hash; original refused before output; disabled guard admitted its targeted bad input."
+    },
+    {
+      "label": "prepare_candidate.py:runtime-export-required",
+      "result": "FIRED",
+      "failure_count": 1,
+      "mutant_source_sha256": "c3a9c6641f28e5747e4e16970b524e8fc24edee5f0185cb1c2de7ffaa1ae4e16",
+      "witness": "Fresh python -B printed exact executed mutant source hash; original refused before output; disabled guard admitted its targeted bad input."
+    },
+    {
+      "label": "run_candidate.py:outside-pixel-difference",
+      "result": "FIRED",
+      "failure_count": 1,
+      "mutant_source_sha256": "b3de47fc596219fa72714b38a7cc7de64b57c64bae8dcf2d827e54396bcffa9f",
+      "witness": "Fresh Python source-hash witness; actual native pair plus one outside RGB-byte mutation, with identical/inside-only positive controls."
+    }
+  ]
+}

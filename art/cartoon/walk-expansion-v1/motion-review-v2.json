@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "scope": "Human review record for the second standalone rear-oblique Cartoon walk. This is an additive provisional baseline decision, not final motion acceptance or approval to install runtime artwork.",
+  "relative_path_base": "art/cartoon/walk-expansion-v1/",
+  "status": "provisional-motion-baseline-for-island-review",
+  "provisional_motion_baseline_approved": true,
+  "final_motion_acceptance": false,
+  "runtime_accepted": false,
+  "runtime_installed": false,
+  "original_anatomical_parity_verified": false,
+  "previous_review": {
+    "path": "motion-review-v1.json",
+    "sha256": "761b4d31f3384d84a6f49b4b8c62d21ed4cdde5edf89aec10a47704bbf615506",
+    "preserved": true
+  },
+  "provenance": "provenance-v2.json",
+  "reviewed_preview": {
+    "url": "http://127.0.0.1:8932/rear-cartoon-walk-v2/review.html",
+    "generated_html_sha256": "b0eca06f0ba767e8755052d1134eb0ed339c3dfe93273daf503bebc12c614d73",
+    "record": "review-evidence/motion-v2/preview-record.json",
+    "record_sha256": "7c8bb3e0cfab5e377bbeb608f5768e52ac3c00f968c0c72aa35c480b0a36738f",
+    "recipe": "review-evidence/motion-v2/recipe.json",
+    "recipe_sha256": "088d0b298f2514a29789768062ac1f0d41f69b661a99e5b26ff611b352de2e3b",
+    "selected_sources": [
+      {
+        "frame": 11,
+        "file": "011-pose-v2.png",
+        "sha256": "0f70a034f6047589732327c017eb6d2fc94b5fe22fedb7608ef898fd1a97a9fb"
+      },
+      {
+        "frame": 19,
+        "file": "019-pose-v1.png",
+        "sha256": "1f4c7f4354ed8a5d589503f41188ce20091607432c3dfd24a6aa03b138ed9ea4"
+      },
+      {
+        "frame": 20,
+        "file": "020-toes-v4.png",
+        "sha256": "9afa5467b20543e454e8acac958dd23f627191158d6f07a63a2c7521d2fd0ee4"
+      },
+      {
+        "frame": 21,
+        "file": "021-left-knee-v2.png",
+        "sha256": "15ad79825ee819f6a28cf140912a9affd9f24c11392c0c85b5a223d03e0c1964"
+      },
+      {
+        "frame": 22,
+        "file": "022-clearance-v3.png",
+        "sha256": "2e2d72e718b16672e1c6cf19c351c0ca67b50db3d457eae7dc535dd0014d79f9"
+      },
+      {
+        "frame": 23,
+        "file": "023-pose-v1.png",
+        "sha256": "1b33f52d9df250d069f7f0e7bb6924ab34c65a432c9df2211ac0bff2785c13a7"
+      }
+    ],
+    "presentation": "Browser canvas comparison of original nearest-neighbor references and padded Cartoon exports at fixed common scale 0.1. It follows the port's 23-position B-to-A route, with nominal 120 ms pose durations. It is not a native engine capture or an island scene.",
+    "registration": "The first source row with alpha>=128 and that row's horizontal pixel-edge midpoint map to the common cap target (17,0.25) HD. This is a measured silhouette feature, not an anatomical or engine anchor.",
+    "reference": {
+      "path": "reference/metadata.json",
+      "sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629"
+    },
+    "route_limits": "Positions include stored-x-minus-one and precede any island offset; there is no horizontal flip on this route. Port cadence is not measured original-executable timing. Actual route completion changes to waiting frame 018, outside this six-frame review. A viewer loop reset is diagnostic."
+  },
+  "human_review_sequence": [
+    {
+      "order": 1,
+      "kind": "positive-standalone-reaction",
+      "user_quote": "its so good, your making me want to revisit the front walk",
+      "scope": "Positive reaction to the displayed v2 motion, followed by a more specific unresolved transition observation."
+    },
+    {
+      "order": 2,
+      "kind": "unresolved-transition-observation",
+      "user_quote": "the transition from slide 8 to frame 9. The foot doesnt \"drop from 8-9\" below where it is raised, it does in the original."
+    },
+    {
+      "order": 3,
+      "kind": "uncertainty-about-observation",
+      "user_quote": "i may be overthinking it",
+      "scope": "This does not establish that the perceived difference is absent or fixed."
+    },
+    {
+      "order": 4,
+      "kind": "assistant-recommendation",
+      "recommendation": "Keep v2 as the baseline and inspect display 8 to 9 on the island before changing the gait."
+    },
+    {
+      "order": 5,
+      "kind": "approval-to-continue-with-that-plan",
+      "user_quote": "agreed, continue",
+      "scope": "Continue to island-context review using the provisional v2 baseline. No final runtime acceptance is inferred."
+    }
+  ],
+  "open_observations": [
+    {
+      "id": "display-8-to-9-foot-drop",
+      "status": "pending-island-context-review",
+      "transition": [
+        {
+          "display_number": 8,
+          "frame": 19,
+          "source": "019-pose-v1.png",
+          "draw_logical_xy": [
+            398,
+            250
+          ],
+          "nominal_start_ms": 840,
+          "nominal_duration_ms": 120,
+          "walk_table_source_line": 129,
+          "flip_x": false
+        },
+        {
+          "display_number": 9,
+          "frame": 20,
+          "source": "020-toes-v4.png",
+          "draw_logical_xy": [
+            392,
+            249
+          ],
+          "nominal_start_ms": 960,
+          "nominal_duration_ms": 120,
+          "walk_table_source_line": 130,
+          "flip_x": false
+        }
+      ],
+      "observation": "The user perceives less downward movement of the raised foot in Cartoon than in the original comparison.",
+      "measurement_limit": "The mapped sprite identities, draw coordinates, and cadence are established by the preserved route metadata. No new per-foot landmark measurement or cause is asserted here.",
+      "next_step": "Review this same transition in the island context before deciding whether a gait correction is necessary."
+    },
+    {
+      "id": "runtime-canvas-fit",
+      "status": "unresolved-for-this-v2-selection",
+      "source_report": "review-evidence/motion-v2/export-report.json",
+      "source_report_sha256": "aff3778d78869b9fb349138b1aaa52b2ba2f688a858dd07bbb6dc80e4dafb2c1",
+      "alpha8_source_center_overhang_hd": [
+        {
+          "frame": 20,
+          "left": 0,
+          "top": 0,
+          "right": 0.65,
+          "bottom": 0
+        },
+        {
+          "frame": 22,
+          "left": 0.2,
+          "top": 0,
+          "right": 0.2,
+          "bottom": 0
+        }
+      ],
+      "limit": "The padded review preserves these edges. Source-center fit is separate from filtered alpha fringes; runtime export was blocked for this selection. This record does not approve clipping, rescaling, or later fit edits."
+    }
+  ],
+  "technical_evidence": {
+    "browser_record": "review-evidence/motion-v2/browser-functional.json",
+    "browser_record_sha256": "6bfb48dc3d09f8ce094824699898715f61b40a110ecce7f8826a5a830ef73723",
+    "scope": "Existing v2 Chromium checks cover all 23 display mappings, controls, and complete alpha>=8 subject visibility at 1280 and 1600 viewport widths. They do not establish anatomy or native rendering.",
+    "reproduction_record": "review-evidence/motion-v2/reproduction.json",
+    "reproduction_record_sha256": "cc673a453ec16a750f69bafbad5b32bb94efb57dff0269734008df35adeec5ce",
+    "reproduction_scope": "Existing reproduction report records all 9 generated outputs byte-identical from the preserved recipe/template. These technical reports were inspected and hashed for this record, not rerun.",
+    "historical_fit_suite": "review-evidence/motion-v2/fit-verification.json",
+    "historical_fit_suite_limit": "This broader fit/mutation suite used the prior six-source selection. The new v2 candidate has the separate browser-functional check; no broader source-selection coverage is inferred.",
+    "evidence_hashes": {
+      "review-evidence/motion-v2/browser-functional.json": "6bfb48dc3d09f8ce094824699898715f61b40a110ecce7f8826a5a830ef73723",
+      "review-evidence/motion-v2/export-report.json": "aff3778d78869b9fb349138b1aaa52b2ba2f688a858dd07bbb6dc80e4dafb2c1",
+      "review-evidence/motion-v2/fit-verification.json": "6cc7f6fc0965cad6fe69a6b72654fd19247db9e569924adb731400923167fffd",
+      "review-evidence/motion-v2/full-canvas-visibility.json": "fb80ae1752b6a4094622f621109b3f44d2d21d2bf94eb400b3e193c051c8dfc2",
+      "review-evidence/motion-v2/preview-record.json": "7c8bb3e0cfab5e377bbeb608f5768e52ac3c00f968c0c72aa35c480b0a36738f",
+      "review-evidence/motion-v2/recipe.json": "088d0b298f2514a29789768062ac1f0d41f69b661a99e5b26ff611b352de2e3b",
+      "review-evidence/motion-v2/reproduction.json": "cc673a453ec16a750f69bafbad5b32bb94efb57dff0269734008df35adeec5ce",
+      "review-evidence/motion-v2/template.html": "0fbf8c96c9f7c083082a019ef2a82653f3e2c1b156ee49e2007570883a4dd7cd"
+    }
+  },
+  "next_review": "Prepare an isolated island-context comparison while preserving the v2 baseline, its exact source bytes, and the unresolved observation. Record subsequent fit or art changes and human decisions separately.",
+  "production_change": "None authorized or recorded by this review."
+}

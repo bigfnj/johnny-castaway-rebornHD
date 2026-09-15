@@ -1,0 +1,946 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "scope": "Additive technical provenance for two foot-outline fit corrections and the six-sprite runtime-canvas candidate. The preceding v2 standalone walk remains a provisional baseline. Island-context human review is pending; this record does not approve motion, anatomical parity, or production installation.",
+  "relative_path_base": "art/cartoon/walk-expansion-v1/",
+  "status": "technical-fit-passed-island-review-pending",
+  "final_motion_acceptance": false,
+  "production_accepted": false,
+  "production_installed": false,
+  "baseline": {
+    "provenance": "provenance-v2.json",
+    "provenance_sha256": "fe951eb6322a350c425edcfa6fb928d09214ce01859cb2fa62842dbc0dae5139",
+    "review": "motion-review-v2.json",
+    "review_sha256": "a1835817efc130fdfcb8aa8c7202d633277ff701989d546ec34af0fb2c21fc17",
+    "unresolved_observation": "The user reported a missing foot drop at display 8 to 9, sprites 019 to 020. That observation remains for island-context review; these fit checks do not resolve it."
+  },
+  "prompt_record": {
+    "path": "fit-correction-prompts.json",
+    "sha256": "ba90fbbd1e41a2ccee196283f0d116606d35d18074aee74a1a40b51fa3c9a46c"
+  },
+  "method": {
+    "pillow_version": "12.3.0",
+    "source_files_read_only": true,
+    "artistic_edits": false,
+    "alpha_cleanup": false,
+    "cache_identity": "Both saved generated images are byte-identical to the still-available image-generation outputs.",
+    "input_paths": "Exact recorded prompt strings and reference path strings are retained below. Each Windows path was resolved to an existing file and hashed; redundant separators in the serialized strings did not prevent resolution.",
+    "bounds": "Raw alpha>=8 source bounds use exclusive right/bottom edges. Source centers are transformed at common scale0.1 using the recipe's measured cap registration. This threshold is diagnostic and does not remove faint source pixels.",
+    "reproduction": "Loaded the existing exporter module and called render(recipe, false) in memory using Pillow12.3.0. All12 returned PNG byte strings matched the existing six padded and six runtime-canvas files; the reproduced export report matched its stored JSON. No output files were written by this reproduction.",
+    "filtered_fit": "Measured all alpha values in each padded image outside the runtime crop. Every frame had zero outside pixels with alpha>=8; outside nonzero fringe pixels reached alpha4. Each saved runtime PNG's decoded pixels matched the exact padded crop.",
+    "claim_limit": "The prompts request local changes and describe prior approval. Those are historical prompt statements, not measurements proving unchanged pixels outside the requested edits or final approval of these outputs. These checks bind sources, registration, and exported bytes; they do not establish anatomical parity or foot-contact motion."
+  },
+  "generations": [
+    {
+      "id": "020HeelFit",
+      "prompt": "Use case: precise-object-edit.\nEdit target: the attached full-body Cartoon Johnny sprite, 1024x1536 RGBA. The walking pose and character design have been approved. Make one very small silhouette clearance correction only.\nOn the planted RIGHT foot at the bottom of the picture, the SCREEN-RIGHT outer heel contour near x720-728, y1380-1440 sticks slightly too far sideways. Bring this rightmost heel outline inward toward screen-left by about 14 source pixels, gently blending into the existing ankle and sole. Keep the heel rounded and anatomically natural. This is roughly one outline-width adjustment to that small heel bulge, not moving the whole foot or shortening the leg. Leave the toes at the screen-left end of this planted foot unchanged, and keep its flat ground contact and sole height unchanged.\nPreserve the other raised LEFT foot exactly, including its smooth side contour, single distal toe group, downward orientation and strong knee bend. No extra side toes. Keep the leg order, shorts, arms, torso, hair, beard, face and cap unchanged. Preserve the exact canvas dimensions, cap position, drawing scale and character placement. No whole-body recentering or shrinking, no pose redesign.\nReturn one complete sprite on genuine transparent alpha, with no added background, halo, shadow, text or marks.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-toes-v4.png"
+      ],
+      "saved_image": "020-heel-fit-v5.png",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-c3cbcb87-75ea-4b5c-8fb3-c994ff9c9819.png",
+      "status": "canvas-fit-passed-island-review-pending",
+      "resolved_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-c3cbcb87-75ea-4b5c-8fb3-c994ff9c9819.png",
+      "tool_output_byte_identical": true,
+      "image_facts": {
+        "sha256": "fbbc47b7e5449d4eb85264d5be8faf3ae0f5971768a76762db6a2fac6e89f681",
+        "byte_length": 1209458,
+        "canvas": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha_nonzero_bounds_exclusive": [
+          65,
+          29,
+          988,
+          1466
+        ],
+        "alpha8_bounds_exclusive": [
+          298,
+          31,
+          720,
+          1462
+        ],
+        "corners_rgba": {
+          "top_left": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "top_right": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bottom_left": [
+            1,
+            2,
+            1,
+            0
+          ],
+          "bottom_right": [
+            1,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "resolved_inputs": [
+        {
+          "recorded_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-toes-v4.png",
+          "resolved_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\020-toes-v4.png",
+          "sha256": "9afa5467b20543e454e8acac958dd23f627191158d6f07a63a2c7521d2fd0ee4"
+        }
+      ]
+    },
+    {
+      "id": "022FootFit",
+      "prompt": "Use case: precise-object-edit.\nEdit target: the attached 1024x1536 transparent Cartoon Johnny walking sprite. Its stride, leg arrangement and character design are approved. Make only two tiny outline-clearance corrections at the outermost feet.\nThe front foot at SCREEN-LEFT has its toe tips around x239-248, y1320-1385. Bring just that far-left toe contour about 12 source pixels inward toward screen-right, retaining natural rounded toes and the same ankle, heel, sole height and lifted/toe-up orientation. Do not remove the toe group or change the knee.\nThe foot at SCREEN-RIGHT has its outer heel bulge around x875-884, y1290-1360. Bring just that far-right heel contour about 12 source pixels inward toward screen-left, smoothly joining the same ankle and sole. Preserve the toes at the left end of that foot, its rotation, contact height and leg.\nThese are tiny local foot-width refinements, not a new pose. Preserve the stride spacing at the ankles and all limb connections. Keep shorts, torso, arms, beard, hair, nose, cap and body yaw unchanged. Preserve exact canvas dimensions, cap location, overall scale and placement. No global shrinking, recentering, stretching or cropping. Do not add extra toes anywhere, especially along ankles or foot sidewalls.\nReturn one complete sprite on genuine transparent alpha with no added matte, background, halo, ground shadow, text or annotation.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\022-clearance-v3.png"
+      ],
+      "saved_image": "022-foot-fit-v4.png",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-987e18b7-06cb-42ba-92c3-833ac30d36bc.png",
+      "status": "canvas-fit-passed-island-review-pending",
+      "resolved_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-987e18b7-06cb-42ba-92c3-833ac30d36bc.png",
+      "tool_output_byte_identical": true,
+      "image_facts": {
+        "sha256": "bf5ab145730b9d022a196ced1f487f02811150e393f65f89245a99579c81f670",
+        "byte_length": 1285346,
+        "canvas": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha_nonzero_bounds_exclusive": [
+          65,
+          32,
+          962,
+          1496
+        ],
+        "alpha8_bounds_exclusive": [
+          251,
+          34,
+          871,
+          1421
+        ],
+        "corners_rgba": {
+          "top_left": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "top_right": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "bottom_left": [
+            1,
+            2,
+            1,
+            0
+          ],
+          "bottom_right": [
+            1,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "resolved_inputs": [
+        {
+          "recorded_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\022-clearance-v3.png",
+          "resolved_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-expansion-v1\\022-clearance-v3.png",
+          "sha256": "2e2d72e718b16672e1c6cf19c351c0ca67b50db3d457eae7dc535dd0014d79f9"
+        }
+      ]
+    }
+  ],
+  "candidate": {
+    "historical_local_directory": "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\build\\cartoon-production-reference\\runtime-candidate-v1",
+    "location_scope": "Ignored local technical output, not the production archive. The complete recipe and all six runtime PNG identities are retained here so the output can be reproduced.",
+    "exporter": {
+      "path": "export.py",
+      "sha256": "d467dc20eaf640c83dcd60568135e44234bbf27875448f8f801e126d01c9f09e"
+    },
+    "reference": {
+      "path": "reference/metadata.json",
+      "sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629"
+    },
+    "recipe_sha256": "c092bfbbd557f66e204801657fe641b448a54403ff767a423e4ac0a6ef86df26",
+    "recipe": {
+      "schema_version": 1,
+      "scope": "Technical review only; no runtime or motion approval is assigned by this recipe.",
+      "reference": "reference/metadata.json",
+      "reference_sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629",
+      "scale_exact": {
+        "numerator": 1,
+        "denominator": 10
+      },
+      "normalization": "none",
+      "padding_hd": 64,
+      "resampling": {
+        "working_mode": "RGBa",
+        "affine": "BICUBIC",
+        "oversample": 8,
+        "downsample": "LANCZOS",
+        "output_mode": "RGBA",
+        "png_compress_level": 9
+      },
+      "pillow_version": "12.3.0",
+      "cap_measurement": "First row containing alpha>=128; horizontal pixel-edge midpoint of that row. Its y is the row top edge. Consistent outline observation, not an anatomical or engine anchor.",
+      "cap_target_hd": [
+        17,
+        0.25
+      ],
+      "target_basis": "Native original cap-top span x[6,11) has midpoint8.5, doubled to17HD. y0.25 is a deliberate small antialiasing margin.",
+      "frames": [
+        {
+          "frame": 11,
+          "source": "011-pose-v2.png",
+          "source_sha256": "0f70a034f6047589732327c017eb6d2fc94b5fe22fedb7608ef898fd1a97a9fb",
+          "generated_canvas": [
+            1024,
+            1536
+          ],
+          "runtime_canvas": [
+            64,
+            156
+          ],
+          "cap_raw": [
+            407.5,
+            36
+          ],
+          "cap_target_hd": [
+            17,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -23.75,
+            0,
+            0.1,
+            -3.35
+          ]
+        },
+        {
+          "frame": 19,
+          "source": "019-pose-v1.png",
+          "source_sha256": "1f4c7f4354ed8a5d589503f41188ce20091607432c3dfd24a6aa03b138ed9ea4",
+          "generated_canvas": [
+            1024,
+            1536
+          ],
+          "runtime_canvas": [
+            64,
+            152
+          ],
+          "cap_raw": [
+            411,
+            45
+          ],
+          "cap_target_hd": [
+            17,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -24.1,
+            0,
+            0.1,
+            -4.25
+          ]
+        },
+        {
+          "frame": 20,
+          "source": "020-heel-fit-v5.png",
+          "source_sha256": "fbbc47b7e5449d4eb85264d5be8faf3ae0f5971768a76762db6a2fac6e89f681",
+          "generated_canvas": [
+            1024,
+            1536
+          ],
+          "runtime_canvas": [
+            48,
+            150
+          ],
+          "cap_raw": [
+            410.5,
+            32
+          ],
+          "cap_target_hd": [
+            17,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -24.050000000000004,
+            0,
+            0.1,
+            -2.95
+          ]
+        },
+        {
+          "frame": 21,
+          "source": "021-left-knee-v2.png",
+          "source_sha256": "15ad79825ee819f6a28cf140912a9affd9f24c11392c0c85b5a223d03e0c1964",
+          "generated_canvas": [
+            1024,
+            1536
+          ],
+          "runtime_canvas": [
+            64,
+            150
+          ],
+          "cap_raw": [
+            410.5,
+            27
+          ],
+          "cap_target_hd": [
+            17,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -24.050000000000004,
+            0,
+            0.1,
+            -2.45
+          ]
+        },
+        {
+          "frame": 22,
+          "source": "022-foot-fit-v4.png",
+          "source_sha256": "bf5ab145730b9d022a196ced1f487f02811150e393f65f89245a99579c81f670",
+          "generated_canvas": [
+            1024,
+            1536
+          ],
+          "runtime_canvas": [
+            64,
+            148
+          ],
+          "cap_raw": [
+            412.5,
+            35
+          ],
+          "cap_target_hd": [
+            17,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -24.25,
+            0,
+            0.1,
+            -3.25
+          ]
+        },
+        {
+          "frame": 23,
+          "source": "023-pose-v1.png",
+          "source_sha256": "1b33f52d9df250d069f7f0e7bb6924ab34c65a432c9df2211ac0bff2785c13a7",
+          "generated_canvas": [
+            1024,
+            1536
+          ],
+          "runtime_canvas": [
+            64,
+            156
+          ],
+          "cap_raw": [
+            407,
+            35
+          ],
+          "cap_target_hd": [
+            17,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -23.700000000000003,
+            0,
+            0.1,
+            -3.25
+          ]
+        }
+      ]
+    },
+    "export_report_sha256": "d0b1e8cc67134936ace7838019dc67ef59481e226f83a02689a29222207f1cf3",
+    "runtime_sprites": [
+      {
+        "frame": 11,
+        "source": "011-pose-v2.png",
+        "source_sha256": "0f70a034f6047589732327c017eb6d2fc94b5fe22fedb7608ef898fd1a97a9fb",
+        "runtime_path": "BMP/JOHNWALK.BMP/011.png",
+        "runtime_png": {
+          "sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+          "byte_length": 11527,
+          "canvas": [
+            64,
+            156
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha_nonzero_bounds_exclusive": [
+            5,
+            0,
+            53,
+            147
+          ],
+          "alpha8_bounds_exclusive": [
+            7,
+            0,
+            51,
+            145
+          ],
+          "corners_rgba": {
+            "top_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "top_right": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_right": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "cap_raw": [
+          407.5,
+          36
+        ],
+        "affine_forward": [
+          0.1,
+          0,
+          -23.75,
+          0,
+          0.1,
+          -3.35
+        ],
+        "source_centers_fit_runtime": true,
+        "alpha8_centers_hd": [
+          7.100000000000001,
+          0.20000000000000018,
+          50.2,
+          144.10000000000002
+        ],
+        "filtered_alpha8_bounds_hd_exclusive": [
+          7,
+          0,
+          51,
+          145
+        ],
+        "padded_png_sha256": "cbad2a7ec5758afd8a87446adc2465b15928be0765dfea59ad801fccff8c3a06",
+        "outside_runtime_in_padded_image": {
+          "alpha_max": 4,
+          "alpha8_pixel_count": 0,
+          "nonzero_pixel_count": 12
+        }
+      },
+      {
+        "frame": 19,
+        "source": "019-pose-v1.png",
+        "source_sha256": "1f4c7f4354ed8a5d589503f41188ce20091607432c3dfd24a6aa03b138ed9ea4",
+        "runtime_path": "BMP/JOHNWALK.BMP/019.png",
+        "runtime_png": {
+          "sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+          "byte_length": 12489,
+          "canvas": [
+            64,
+            152
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha_nonzero_bounds_exclusive": [
+            0,
+            0,
+            53,
+            145
+          ],
+          "alpha8_bounds_exclusive": [
+            1,
+            0,
+            51,
+            143
+          ],
+          "corners_rgba": {
+            "top_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "top_right": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_right": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "cap_raw": [
+          411,
+          45
+        ],
+        "affine_forward": [
+          0.1,
+          0,
+          -24.1,
+          0,
+          0.1,
+          -4.25
+        ],
+        "source_centers_fit_runtime": true,
+        "alpha8_centers_hd": [
+          1.75,
+          0.2999999999999998,
+          50.449999999999996,
+          142.70000000000002
+        ],
+        "filtered_alpha8_bounds_hd_exclusive": [
+          1,
+          0,
+          51,
+          143
+        ],
+        "padded_png_sha256": "a6da4029d7766bccd6b29a1512379ae5ed859eec87ff953bc682348dd08040ac",
+        "outside_runtime_in_padded_image": {
+          "alpha_max": 4,
+          "alpha8_pixel_count": 0,
+          "nonzero_pixel_count": 15
+        }
+      },
+      {
+        "frame": 20,
+        "source": "020-heel-fit-v5.png",
+        "source_sha256": "fbbc47b7e5449d4eb85264d5be8faf3ae0f5971768a76762db6a2fac6e89f681",
+        "runtime_path": "BMP/JOHNWALK.BMP/020.png",
+        "runtime_png": {
+          "sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+          "byte_length": 12058,
+          "canvas": [
+            48,
+            150
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha_nonzero_bounds_exclusive": [
+            3,
+            0,
+            48,
+            146
+          ],
+          "alpha8_bounds_exclusive": [
+            5,
+            0,
+            48,
+            144
+          ],
+          "corners_rgba": {
+            "top_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "top_right": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_right": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "cap_raw": [
+          410.5,
+          32
+        ],
+        "affine_forward": [
+          0.1,
+          0,
+          -24.050000000000004,
+          0,
+          0.1,
+          -2.95
+        ],
+        "source_centers_fit_runtime": true,
+        "alpha8_centers_hd": [
+          5.799999999999997,
+          0.20000000000000018,
+          47.9,
+          143.20000000000002
+        ],
+        "filtered_alpha8_bounds_hd_exclusive": [
+          5,
+          0,
+          48,
+          144
+        ],
+        "padded_png_sha256": "ec5733927e72ced2166ace9dbe9adc5f60c4b190659f42377c42fc830a357277",
+        "outside_runtime_in_padded_image": {
+          "alpha_max": 4,
+          "alpha8_pixel_count": 0,
+          "nonzero_pixel_count": 44
+        }
+      },
+      {
+        "frame": 21,
+        "source": "021-left-knee-v2.png",
+        "source_sha256": "15ad79825ee819f6a28cf140912a9affd9f24c11392c0c85b5a223d03e0c1964",
+        "runtime_path": "BMP/JOHNWALK.BMP/021.png",
+        "runtime_png": {
+          "sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+          "byte_length": 12890,
+          "canvas": [
+            64,
+            150
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha_nonzero_bounds_exclusive": [
+            4,
+            0,
+            59,
+            146
+          ],
+          "alpha8_bounds_exclusive": [
+            6,
+            0,
+            57,
+            144
+          ],
+          "corners_rgba": {
+            "top_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "top_right": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_right": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "cap_raw": [
+          410.5,
+          27
+        ],
+        "affine_forward": [
+          0.1,
+          0,
+          -24.050000000000004,
+          0,
+          0.1,
+          -2.45
+        ],
+        "source_centers_fit_runtime": true,
+        "alpha8_centers_hd": [
+          6.9999999999999964,
+          0.20000000000000018,
+          56.800000000000004,
+          143.8
+        ],
+        "filtered_alpha8_bounds_hd_exclusive": [
+          6,
+          0,
+          57,
+          144
+        ],
+        "padded_png_sha256": "78360a40535a327ad076d4f9a4a796c64bbdbf0af119dc9851e87f9a0b538c52",
+        "outside_runtime_in_padded_image": {
+          "alpha_max": 4,
+          "alpha8_pixel_count": 0,
+          "nonzero_pixel_count": 12
+        }
+      },
+      {
+        "frame": 22,
+        "source": "022-foot-fit-v4.png",
+        "source_sha256": "bf5ab145730b9d022a196ced1f487f02811150e393f65f89245a99579c81f670",
+        "runtime_path": "BMP/JOHNWALK.BMP/022.png",
+        "runtime_png": {
+          "sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+          "byte_length": 13021,
+          "canvas": [
+            64,
+            148
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha_nonzero_bounds_exclusive": [
+            0,
+            0,
+            64,
+            141
+          ],
+          "alpha8_bounds_exclusive": [
+            0,
+            0,
+            63,
+            139
+          ],
+          "corners_rgba": {
+            "top_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "top_right": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_right": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "cap_raw": [
+          412.5,
+          35
+        ],
+        "affine_forward": [
+          0.1,
+          0,
+          -24.25,
+          0,
+          0.1,
+          -3.25
+        ],
+        "source_centers_fit_runtime": true,
+        "alpha8_centers_hd": [
+          0.9000000000000021,
+          0.20000000000000018,
+          62.80000000000001,
+          138.8
+        ],
+        "filtered_alpha8_bounds_hd_exclusive": [
+          0,
+          0,
+          63,
+          139
+        ],
+        "padded_png_sha256": "18559ed58ea7bc5d2d6ed2c8bfa9098a0ba8868699e9b39fcec940955ed61cac",
+        "outside_runtime_in_padded_image": {
+          "alpha_max": 4,
+          "alpha8_pixel_count": 0,
+          "nonzero_pixel_count": 26
+        }
+      },
+      {
+        "frame": 23,
+        "source": "023-pose-v1.png",
+        "source_sha256": "1b33f52d9df250d069f7f0e7bb6924ab34c65a432c9df2211ac0bff2785c13a7",
+        "runtime_path": "BMP/JOHNWALK.BMP/023.png",
+        "runtime_png": {
+          "sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+          "byte_length": 12268,
+          "canvas": [
+            64,
+            156
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha_nonzero_bounds_exclusive": [
+            0,
+            0,
+            55,
+            143
+          ],
+          "alpha8_bounds_exclusive": [
+            2,
+            0,
+            53,
+            141
+          ],
+          "corners_rgba": {
+            "top_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "top_right": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_left": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "bottom_right": [
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "cap_raw": [
+          407,
+          35
+        ],
+        "affine_forward": [
+          0.1,
+          0,
+          -23.700000000000003,
+          0,
+          0.1,
+          -3.25
+        ],
+        "source_centers_fit_runtime": true,
+        "alpha8_centers_hd": [
+          2.849999999999998,
+          0.20000000000000018,
+          52.650000000000006,
+          140.6
+        ],
+        "filtered_alpha8_bounds_hd_exclusive": [
+          2,
+          0,
+          53,
+          141
+        ],
+        "padded_png_sha256": "a284e586a22917126114fbc0939e38b4849fb44a0106524924ff458d204bed95",
+        "outside_runtime_in_padded_image": {
+          "alpha_max": 4,
+          "alpha8_pixel_count": 0,
+          "nonzero_pixel_count": 12
+        }
+      }
+    ],
+    "reproduce_from_repository_root": "python -B art/cartoon/walk-expansion-v1/export.py --recipe <recipe.json extracted from this record's candidate.recipe> --output <new-isolated-output-directory>",
+    "reproduction_limit": "The preserved exporter and source inputs are required. Use Pillow12.3.0 for the recorded encoded PNG identities. Do not replace the production archive from this technical provenance record."
+  },
+  "verification": {
+    "cache_byte_matches": 2,
+    "selected_source_hashes_match": 6,
+    "source_cap_measurements_match_recipe": 6,
+    "runtime_canvas_and_rgba_checks": 6,
+    "source_center_fit_checks": 6,
+    "padded_crop_pixel_matches": 6,
+    "png_byte_reproductions": 12,
+    "reproduced_export_report_equal": true,
+    "native_engine_runs_by_this_verification": 0,
+    "human_island_review": "pending",
+    "new_formal_gate_added": false
+  },
+  "preserved_record_hashes": {
+    "provenance.json": "3002b609c4066d730806baa2f37bdfced1fed8420bb8dd3142172d51791358a0",
+    "provenance-v2.json": "fe951eb6322a350c425edcfa6fb928d09214ce01859cb2fa62842dbc0dae5139",
+    "motion-review-v1.json": "761b4d31f3384d84a6f49b4b8c62d21ed4cdde5edf89aec10a47704bbf615506",
+    "motion-review-v2.json": "a1835817efc130fdfcb8aa8c7202d633277ff701989d546ec34af0fb2c21fc17",
+    "fit-correction-prompts.json": "ba90fbbd1e41a2ccee196283f0d116606d35d18074aee74a1a40b51fa3c9a46c",
+    "export.py": "d467dc20eaf640c83dcd60568135e44234bbf27875448f8f801e126d01c9f09e",
+    "reference/metadata.json": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629"
+  }
+}

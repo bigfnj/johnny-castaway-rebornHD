@@ -1,0 +1,602 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "accepted": true,
+  "acceptance_record": "art/cartoon/walk-expansion-v1/production-acceptance.json",
+  "human_question": "Does the Cartoon walk feel natural on the island at Normal speed, including the 8→9 transition? The final standing pose still uses the existing HD artwork.",
+  "human_response": "Yes, keep this walk",
+  "reviewed_url": "http://127.0.0.1:8932/rear-cartoon-island-v1/review.html",
+  "scope": "New approval covers six rear-oblique walking sprites as displayed on the layered Cartoon island at Normal speed, including the previously questioned 8-to-9 walking-pose transition. The other twenty-one assets retain their earlier approvals; this record inherits them without claiming they were newly reviewed here. It does not establish original anatomical parity or approve unseen routes, directions, interactions, or scenery states.",
+  "runtime_coverage": "partial",
+  "newly_accepted_assets": [
+    "BMP/JOHNWALK.BMP/011.png",
+    "BMP/JOHNWALK.BMP/019.png",
+    "BMP/JOHNWALK.BMP/020.png",
+    "BMP/JOHNWALK.BMP/021.png",
+    "BMP/JOHNWALK.BMP/022.png",
+    "BMP/JOHNWALK.BMP/023.png"
+  ],
+  "inherited_acceptances": [
+    {
+      "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+      "sha256": "ce7f3832982bcfbef13f9ce6dc06c1f60ce774b89aca088247442040fd767a0c",
+      "asset_paths": [
+        "BMP/BACKGRND.BMP/000.png",
+        "BMP/BACKGRND.BMP/003.png",
+        "BMP/BACKGRND.BMP/004.png",
+        "BMP/BACKGRND.BMP/005.png",
+        "BMP/BACKGRND.BMP/006.png",
+        "BMP/BACKGRND.BMP/007.png",
+        "BMP/BACKGRND.BMP/008.png",
+        "BMP/BACKGRND.BMP/009.png",
+        "BMP/BACKGRND.BMP/010.png",
+        "BMP/BACKGRND.BMP/011.png",
+        "BMP/BACKGRND.BMP/012.png",
+        "BMP/BACKGRND.BMP/013.png",
+        "BMP/BACKGRND.BMP/014.png",
+        "BMP/BACKGRND.BMP/015.png",
+        "BMP/JOHNWALK.BMP/024.png",
+        "BMP/JOHNWALK.BMP/025.png",
+        "BMP/JOHNWALK.BMP/026.png",
+        "BMP/JOHNWALK.BMP/027.png",
+        "BMP/JOHNWALK.BMP/028.png",
+        "BMP/JOHNWALK.BMP/029.png",
+        "SCR/OCEAN02.SCR.png"
+      ],
+      "scope": "The existing six Calm focus walking sprites and fifteen island assets remain accepted under this earlier record, including its known differences and limitations. Their pack rows, recipe pointers and review pointers are preserved."
+    }
+  ],
+  "accepted_assets": [
+    {
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/012.png",
+      "sha256": "701fc7909c3cc150ece7125c04f493f27da75d07446cc43cc6acae70fde1aa18",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/013.png",
+      "sha256": "72714deba94d2e7de946b9f30532e2482ac7a1b1027c442e77e443e5c9b7186c",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/014.png",
+      "sha256": "ddfbff021d56c093456b4a9f9476f9439fbe482c45e66ddfb0c9f2993f9e324f",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/015.png",
+      "sha256": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/024.png",
+      "sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/025.png",
+      "sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/026.png",
+      "sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/027.png",
+      "sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/028.png",
+      "sha256": "50e7eb8717283e3a532a8237f1b0e96c2d0e4314080e2f985b6b928e5dee9167",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/029.png",
+      "sha256": "ac6907347ace18d909c09cd00ba6c1de65180bcfcdd43142ec0e00062bc17d15",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "SCR/OCEAN02.SCR.png",
+      "sha256": "099249884c73c863436983ec4d4f5650e77e6e5748ef65bf417d0785b1acf294",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/011.png",
+      "sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/019.png",
+      "sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/020.png",
+      "sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/021.png",
+      "sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/022.png",
+      "sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/023.png",
+      "sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    }
+  ],
+  "reviewed_platform": "Linux/X11 under Xvfb",
+  "reviewed_native_executable_sha256": "831a6ada20ac1e1d68d822e325b2a664ec5a1ca22522b82d3fff7e01aaacc2b8",
+  "reviewed_html_sha256": "2a787afd1d2ee0c41a1113652cb5c05634bf593d1b302986e97f42d9ffa16df8",
+  "reviewed_native_api": "adsPlayWalk(1,3,0,3)",
+  "reviewed_island_seed": 11,
+  "reviewed_path_seed": 2,
+  "reviewed_candidate_archive": {
+    "sha256": "3d83577bf8e5f322f078ba235145c483332d97745e22c46398949e5a6e13e149",
+    "base_archive_sha256": "1336db8396e5464f5cd133c8f2dee81235dff7731b216175c1cd041ebc7c8ac3",
+    "all_existing_members_preserved": 2572,
+    "added_members": [
+      {
+        "path": "data/styles/cartoon/BMP/JOHNWALK.BMP/011.png",
+        "sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814"
+      },
+      {
+        "path": "data/styles/cartoon/BMP/JOHNWALK.BMP/019.png",
+        "sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5"
+      },
+      {
+        "path": "data/styles/cartoon/BMP/JOHNWALK.BMP/020.png",
+        "sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56"
+      },
+      {
+        "path": "data/styles/cartoon/BMP/JOHNWALK.BMP/021.png",
+        "sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd"
+      },
+      {
+        "path": "data/styles/cartoon/BMP/JOHNWALK.BMP/022.png",
+        "sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea"
+      },
+      {
+        "path": "data/styles/cartoon/BMP/JOHNWALK.BMP/023.png",
+        "sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9"
+      }
+    ],
+    "scope": "Private technical archive used for the accepted review. It added exactly six Cartoon PNGs to the previous archive and preserved all 2572 existing members. RESOURCE.MAP and RESOURCE.001 were not overridden. The eventual production build may have different ZIP container bytes; accepted member hashes are authoritative."
+  },
+  "walking_sources": [
+    {
+      "frame": 11,
+      "path": "BMP/JOHNWALK.BMP/011.png",
+      "source": "011-pose-v2.png",
+      "source_sha256": "0f70a034f6047589732327c017eb6d2fc94b5fe22fedb7608ef898fd1a97a9fb",
+      "candidate_png_sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+      "runtime_canvas": [
+        64,
+        156
+      ],
+      "cap_raw": [
+        407.5,
+        36
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -23.75,
+        0,
+        0.1,
+        -3.35
+      ],
+      "hd_proxy_member": "data/hd/BMP/JOHNWALK.BMP/011.png",
+      "hd_proxy_sha256": "ddde53f810f1a45ac17f1f19ea755e7e01badb91e2db11fbc6eaf50e5a42b052",
+      "supplied_original_reference": {
+        "record": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+        "frame": 11,
+        "xpm_sha256": "e85be2628206792ed11329a1797a01be6b85c2bbd551e3b1056184b9dce9619b"
+      }
+    },
+    {
+      "frame": 19,
+      "path": "BMP/JOHNWALK.BMP/019.png",
+      "source": "019-pose-v1.png",
+      "source_sha256": "1f4c7f4354ed8a5d589503f41188ce20091607432c3dfd24a6aa03b138ed9ea4",
+      "candidate_png_sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+      "runtime_canvas": [
+        64,
+        152
+      ],
+      "cap_raw": [
+        411,
+        45
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -24.1,
+        0,
+        0.1,
+        -4.25
+      ],
+      "hd_proxy_member": "data/hd/BMP/JOHNWALK.BMP/019.png",
+      "hd_proxy_sha256": "712790f959d8f63c1a07b76dee6c91775a710b7df65d0c1d27dfcd7e2c368a07",
+      "supplied_original_reference": {
+        "record": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+        "frame": 19,
+        "xpm_sha256": "a52b0ba839a39519366af8089515d51ecf5aea228518fab2a1487aec16e8d3a6"
+      }
+    },
+    {
+      "frame": 20,
+      "path": "BMP/JOHNWALK.BMP/020.png",
+      "source": "020-heel-fit-v5.png",
+      "source_sha256": "fbbc47b7e5449d4eb85264d5be8faf3ae0f5971768a76762db6a2fac6e89f681",
+      "candidate_png_sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+      "runtime_canvas": [
+        48,
+        150
+      ],
+      "cap_raw": [
+        410.5,
+        32
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -24.050000000000004,
+        0,
+        0.1,
+        -2.95
+      ],
+      "hd_proxy_member": "data/hd/BMP/JOHNWALK.BMP/020.png",
+      "hd_proxy_sha256": "acad4f83c3c3383be3b3efe17ca53406c05427ef4d644d840801eca71d1c916b",
+      "supplied_original_reference": {
+        "record": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+        "frame": 20,
+        "xpm_sha256": "3c3b506d432bf7df84f70ca6c7592aaaac60c8a57d21b29f8ec527fd2ff9bef9"
+      }
+    },
+    {
+      "frame": 21,
+      "path": "BMP/JOHNWALK.BMP/021.png",
+      "source": "021-left-knee-v2.png",
+      "source_sha256": "15ad79825ee819f6a28cf140912a9affd9f24c11392c0c85b5a223d03e0c1964",
+      "candidate_png_sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+      "runtime_canvas": [
+        64,
+        150
+      ],
+      "cap_raw": [
+        410.5,
+        27
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -24.050000000000004,
+        0,
+        0.1,
+        -2.45
+      ],
+      "hd_proxy_member": "data/hd/BMP/JOHNWALK.BMP/021.png",
+      "hd_proxy_sha256": "6bd5a9a2a10222375a71424055c2b2f6bd83c1bfcb595dc40408fa338e71f8c8",
+      "supplied_original_reference": {
+        "record": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+        "frame": 21,
+        "xpm_sha256": "bcf13e2b6a40c2747d189cc26762ac87dddc258443b515e72b06ecb97db401b3"
+      }
+    },
+    {
+      "frame": 22,
+      "path": "BMP/JOHNWALK.BMP/022.png",
+      "source": "022-foot-fit-v4.png",
+      "source_sha256": "bf5ab145730b9d022a196ced1f487f02811150e393f65f89245a99579c81f670",
+      "candidate_png_sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+      "runtime_canvas": [
+        64,
+        148
+      ],
+      "cap_raw": [
+        412.5,
+        35
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -24.25,
+        0,
+        0.1,
+        -3.25
+      ],
+      "hd_proxy_member": "data/hd/BMP/JOHNWALK.BMP/022.png",
+      "hd_proxy_sha256": "24df0d2992b8dcf5f04abf6560bb0f78add9126bdc1523782eb96b1b954b1b47",
+      "supplied_original_reference": {
+        "record": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+        "frame": 22,
+        "xpm_sha256": "1d1a16e03e82aa7e5be40c592b8634b3fd87c02eea8e040ed38b95e4cc9e32f4"
+      }
+    },
+    {
+      "frame": 23,
+      "path": "BMP/JOHNWALK.BMP/023.png",
+      "source": "023-pose-v1.png",
+      "source_sha256": "1b33f52d9df250d069f7f0e7bb6924ab34c65a432c9df2211ac0bff2785c13a7",
+      "candidate_png_sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+      "runtime_canvas": [
+        64,
+        156
+      ],
+      "cap_raw": [
+        407,
+        35
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -23.700000000000003,
+        0,
+        0.1,
+        -3.25
+      ],
+      "hd_proxy_member": "data/hd/BMP/JOHNWALK.BMP/023.png",
+      "hd_proxy_sha256": "e7f94419111712b3e9f0e7d2bb34147f637afe92a85d5e489e524dc1d417a1ad",
+      "supplied_original_reference": {
+        "record": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+        "frame": 23,
+        "xpm_sha256": "bca2ddc1f6875aa08eec34de0582c4f11bab6ff1869c09c279bb72432b9cd280"
+      }
+    }
+  ],
+  "runtime_recipe": {
+    "path": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+    "sha256": "4740d0c115caa56f0dcc79032e92aac84fdb4356fd661a27b9f862ffe9213795",
+    "derivation": "The exact reviewed recipe is preserved separately. This reproduction recipe adds canonical asset paths, accepted PNG hashes and descriptive acceptance links without changing any render field."
+  },
+  "source_identity_policy": "pack.json source_sha256 binds the bundled HD proxy PNG used by source_catalog. It is distinct from generated raw source_sha256 and the separately preserved supplied-original XPM identity. Stored original references retain their diagnostic palette, index0 transparency and unmeasured original-executable timing limitations.",
+  "current_human_review": {
+    "date": "2026-09-15",
+    "basis": "user-visual-approval-of-actual-linux-native-island-captures",
+    "preview": "http://127.0.0.1:8932/rear-cartoon-island-v1/review.html",
+    "not_automatically_verified": true,
+    "observations": [
+      {
+        "id": "rear-walk-pose-8-to-9-foot-drop",
+        "walking_pose_numbers_1_based": [
+          8,
+          9
+        ],
+        "frames": [
+          19,
+          20
+        ],
+        "status": "accepted-as-displayed-on-island",
+        "prior_observation_record": "art/cartoon/walk-expansion-v1/motion-review-v2.json",
+        "prior_observation": "the transition from slide 8 to frame 9. The foot doesnt \"drop from 8-9\" below where it is raised, it does in the original.",
+        "native_capture_mapping": [
+          {
+            "capture_index": 12,
+            "logical_ms": 840,
+            "frame": 19,
+            "draw_xy": [
+              398,
+              250
+            ],
+            "png_sha256": "28cd15bbc086489606f19b2d587a3e1ed5d7b0d0d38457de57424e2c991c0dc6"
+          },
+          {
+            "capture_index": 13,
+            "logical_ms": 960,
+            "frame": 20,
+            "draw_xy": [
+              392,
+              249
+            ],
+            "png_sha256": "f72a3ffab714e0e06a7fd783768dafa3ca22137c8ef85c979c853c89bbc85a74"
+          }
+        ],
+        "decision": "Retain the displayed island walk after the user's explicit approval of this transition. No additional gait correction or measured original-foot-trajectory parity is claimed."
+      }
+    ],
+    "awaiting_human_decision": [],
+    "scope_limit": "The accepted content is this displayed six-frame family and island route. The user was explicitly told that waiting frame018 remains HD fallback."
+  },
+  "technical_evidence": {
+    "record": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/evidence.json",
+    "sha256": "1ffa9ae11cd93e0217f0fd56abce2f02a38bce7d2f3d6d672ea732f4e023526c",
+    "display_count": 47,
+    "logical_duration_ms": 4360,
+    "native_capture": "The saved Linux API driver captured the unchanged B-to-A route with the current island. Baseline-repeat pixels matched; candidate smoke preceded the full route. Candidate differences were confined to the current Johnny canvas, and the HD arrival pose remained full-frame identical.",
+    "browser": "Stored Chromium verification checks the actual native capture pixels and recorded timing, then the served page was checked at its final URL. No new runtime or browser execution is claimed by this acceptance-record write.",
+    "raster_policy": "94 PNG captures stay in ignored build folders and the local review server; reports retain pixel/PNG hashes. Helpers can regenerate them from the pinned source/build inputs.",
+    "records": [
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/archive-preparation.json",
+        "sha256": "28c2065787d8abb063a020f85b71bd1fbec3688994add4b7020678c7b0896fcd"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/baseline-build.json",
+        "sha256": "cd007c82067977d1cc4837a7ab9df26fb3f76a7178a121edc6826b753c3126d6"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/baseline-full-report.json",
+        "sha256": "044041c550c2a201f68c3a64686d387df59177c945e04f784764ed14a069b392"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/baseline-repeat-summary.json",
+        "sha256": "8b8f19ead1c4e4d70f4fc1f23b717386fcc2289ff51dc93923c5d9d46cddbefa"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/baseline-smoke-report.json",
+        "sha256": "71a7d00565e93fb18320a63741a9811becdd239743036058f1637f998ffa06df"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/baseline-summary.json",
+        "sha256": "de68040216bfd8cae41c97ee88a11ef7a2427371577700f1828964187aa208d4"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/browser-validation.json",
+        "sha256": "90fade482801bfba5ff11c2f1798bc0ee5fdd944f25117c6d656e0ce8d0e4c43"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/candidate-full-report.json",
+        "sha256": "ad2bed58a037fcbab54c05d213c4fdce4b34e61e6355b983f5bfe298de89f7ce"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/candidate-smoke-report.json",
+        "sha256": "b817168d7e5f7ea0ed550f4fbc327a74b0dd8d6ee830749517a3c0eb1ff808a4"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/candidate-summary.json",
+        "sha256": "52e72411942869bf726bd5739f55af3e0c84b07ba16d7010657e18da1a49d8b7"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/export-report.json",
+        "sha256": "d0b1e8cc67134936ace7838019dc67ef59481e226f83a02689a29222207f1cf3"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/guard-verification.json",
+        "sha256": "49e9373ef55a6fdeaaee57be48f1ac098dbc309c158234e2e1f534f1379213b5"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/recipe.json",
+        "sha256": "c092bfbbd557f66e204801657fe641b448a54403ff767a423e4ac0a6ef86df26"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/review-record.json",
+        "sha256": "0983e402a8098f4f7ff68be198a3ed0f55190d8679dd03d070f7bb047e5bb781"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/served-validation.json",
+        "sha256": "87e49ad6017162f41c046df965dac03c00a3edc5595ef6c1bacfc9c5357ac87c"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/helpers/build_review.py",
+        "sha256": "196d46de49b38402b7b5894fa0a35f0a4213092fff78c6c392c093a4b2035788"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/helpers/check_guards.py",
+        "sha256": "fbfd20151211b14d98e2ae1dc4207497f35ba219450b1871fb978e1a00aa763b"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/helpers/check_review.py",
+        "sha256": "de94f3408f973aad4d369cb6d92f55da79b9b6cc528dd981ec1c56e6426fb1c1"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/helpers/prepare_candidate.py",
+        "sha256": "4948b4b70eb306ba18dca2a76d88c6821488bdedf21d0579ccc496652c4e8e3f"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/helpers/route_driver.c",
+        "sha256": "1116eefd0d456093f4b17e2cf0f940b5235aa707327c3df1da1df776949ae1af"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/helpers/run_baseline.py",
+        "sha256": "1a956d08ef659cd537e1530bcf13cc9da153a1bf34a1730fd344e91a107c4195"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/helpers/run_candidate.py",
+        "sha256": "24c14f7d94e7bd2a8fb7c4bf58dc4625e27f25c4254c80536ca8c76fe7d0b926"
+      },
+      {
+        "path": "art/cartoon/walk-expansion-v1/review-evidence/island-v1/README.md",
+        "sha256": "e48965331a0e4f9e8e9d09d0ac6b7ea30d0e6e06c06b0b8ab62fceba8203544e"
+      }
+    ]
+  },
+  "retained_limits": [
+    "The baseline used packaged HD walking sprites on the existing Cartoon island, not the original executable or supplied-original reference pixels.",
+    "The route contains 23 walking poses, intervening background displays and a 1600 ms HD waiting-pose hold. A browser repeat restarts the recorded route rather than depicting a return walk.",
+    "Common drawing scale0.1, cap registration and exact runtime canvases are retained. Source and filtered alpha>=8 footprints fit; outside lower-alpha fringes reach alpha4. This is not a claim of zero filtering loss.",
+    "Approval covers perceived appearance and motion in this review, not anatomical parity or all future placements and flipped routes."
+  ],
+  "historical_approval_policy": "provenance.json, provenance-v2.json, provenance-fit-v1.json, motion-review-v1.json, motion-review-v2.json and all previous review evidence remain unchanged. Their earlier rejected or pending statuses are historical snapshots. This new record accepts only the exact runtime candidate identified here and inherits prior approvals explicitly.",
+  "production_integration": {
+    "date": "2026-09-15",
+    "status_at_recording": "installed-in-repository-worktree-commit-pending",
+    "archive_installed_in_worktree": true,
+    "commit_status_at_recording": "pending",
+    "scope": "The repository working copy now contains the accepted archive with 27 Cartoon assets. All 2572 prior members are preserved, and the six additions match the reviewed private archive. This integration does not change the human approval history or claim completion of platform tests, deployment, publication or main-branch merge."
+  },
+  "reviewed_source_checkout": "10672766e0534350f76db53c743002acf9ab1d8b",
+  "production_archive": {
+    "path": "assets/scrantic_data.zip",
+    "before_sha256": "1336db8396e5464f5cd133c8f2dee81235dff7731b216175c1cd041ebc7c8ac3",
+    "sha256": "1daf8f95614fde8efd85745a8baac02a41d88c2775a91374d66959174220aa7e",
+    "added_members": [
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/011.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/019.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/020.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/021.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/022.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/023.png"
+    ],
+    "existing_members_preserved": 2572,
+    "member_count": 2578,
+    "reviewed_private_archive_sha256": "3d83577bf8e5f322f078ba235145c483332d97745e22c46398949e5a6e13e149",
+    "all_reviewed_member_content_hashes_equal": true,
+    "original_resource_sha256": {
+      "data/RESOURCE.MAP": "65f5e30383b3d5a5f1c4fca1b49d57cc31d72bfaf90a49ce61d5990d449d59da",
+      "data/RESOURCE.001": "f4e97a342a3c3c5b31c85cc4b177dba05363a81ad9a49b3961c26f6a4508bd02"
+    },
+    "verification": {
+      "path": "art/cartoon/walk-expansion-v1/production-verification.json",
+      "sha256": "b9e1a732681e39b2f92d86f0501233e93a298f8eac7092fbe335f36e44cd81f8"
+    }
+  }
+}

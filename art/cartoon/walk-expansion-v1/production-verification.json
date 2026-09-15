@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "status": "PASS",
+  "scope": "Archive integration verification only. No additional artistic approval, native-platform test result, release or main-branch merge is claimed.",
+  "source_report": {
+    "historical_local_path": "build/rear-runtime-integration/archive-verification.json",
+    "sha256": "4cc3f38cc9ceba2ebeb684d937b255098a1ed3b047193ba0ada8667b23138b6a"
+  },
+  "archive_verification": {
+    "status": "PASS",
+    "before_sha256": "1336db8396e5464f5cd133c8f2dee81235dff7731b216175c1cd041ebc7c8ac3",
+    "production_candidate_sha256": "1daf8f95614fde8efd85745a8baac02a41d88c2775a91374d66959174220aa7e",
+    "reviewed_preview_sha256": "3d83577bf8e5f322f078ba235145c483332d97745e22c46398949e5a6e13e149",
+    "existing_members_preserved": 2572,
+    "candidate_members": 2578,
+    "added_members": [
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/011.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/019.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/020.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/021.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/022.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/023.png"
+    ],
+    "all_reviewed_member_content_hashes_equal": true,
+    "scope": "Exact uncompressed ZIP member identities, not compressed-archive byte identity or new artistic judgment."
+  },
+  "independent_archive_readback": {
+    "before_member_count": 2572,
+    "reviewed_and_production_member_count": 2578,
+    "existing_members_preserved": true,
+    "reviewed_and_production_members_equal": true,
+    "exactly_six_new_paths": true,
+    "member_map_sha256": "2f3727c17ebdb14d2fcb7d64ae1e10c9535f86608673baca7cd6c31018458ff1",
+    "member_map_encoding": "UTF-8 JSON object mapping ZIP member names to SHA256 of uncompressed bytes; keys sorted; compact separators; no trailing newline"
+  },
+  "preserved_resource_sha256": {
+    "data/RESOURCE.MAP": "65f5e30383b3d5a5f1c4fca1b49d57cc31d72bfaf90a49ce61d5990d449d59da",
+    "data/RESOURCE.001": "f4e97a342a3c3c5b31c85cc4b177dba05363a81ad9a49b3961c26f6a4508bd02"
+  },
+  "added_member_sha256": {
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/011.png": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/019.png": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/020.png": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/021.png": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/022.png": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/023.png": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9"
+  },
+  "state_at_recording": {
+    "production_archive_path": "assets/scrantic_data.zip",
+    "worktree_archive_installed": true,
+    "commit_status": "pending",
+    "deployment_scope": "Repository working copy only. Build/deployment and platform-test evidence belong to separate records."
+  }
+}

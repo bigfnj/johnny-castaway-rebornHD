@@ -1,0 +1,26 @@
+{
+  "rule": "art/cartoon/walk-expansion-v1/** -text whitespace=cr-at-eol",
+  "results": [
+    {
+      "variant": "normal",
+      "tree_oid": "3cb18c10d6709da08ef7e221a8f9ed7a8461c254",
+      "witness": "git add/write-tree/checkout-index with core.autocrlf=true; outside-scope LF becameCRLF",
+      "checked_file": "art/cartoon/walk-expansion-v1/reference/extract.py",
+      "expected_sha256": "9f2ac986ae7f29c84a672f2a77fd0f2ba75be135a3c2c8666a31a4b34adca5cc",
+      "checkout_sha256": "9f2ac986ae7f29c84a672f2a77fd0f2ba75be135a3c2c8666a31a4b34adca5cc",
+      "named_failure": null,
+      "failure_count": 0
+    },
+    {
+      "variant": "without-new-rule",
+      "tree_oid": "788814741b7860b58f3bb2e57573a37c039e55f3",
+      "witness": "git add/write-tree/checkout-index with core.autocrlf=true; outside-scope LF becameCRLF",
+      "checked_file": "art/cartoon/walk-expansion-v1/reference/extract.py",
+      "expected_sha256": "9f2ac986ae7f29c84a672f2a77fd0f2ba75be135a3c2c8666a31a4b34adca5cc",
+      "checkout_sha256": "874149fd70b718bfa193bb9bbf00ab287c2c9db9db0b8f23a6a79a18652c698c",
+      "named_failure": "art/cartoon/walk-expansion-v1/reference/extract.py: byte-preservation",
+      "failure_count": 1
+    }
+  ],
+  "mutation_result": "FIRED: removing only new rule changes checked source bytes; outside-scope control unchanged"
+}
