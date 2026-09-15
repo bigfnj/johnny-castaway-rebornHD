@@ -47,6 +47,17 @@ and the original-first art metadata work.
 | Share exporter and native-review configuration for later families | The017 and016 authoring checkpoints preserve the same premultiplied filtering with different source hashes, cap targets and canvases. A copied native adapter initially retained a017 metadata label while packaging016; comparison checks rejected it before review. The new000/015 shared exporter now requires an explicit frame and recipe match, with historical-filter parity and executed mutation checks. Future native review should likewise make frame identity, registration and route inputs explicit shared configuration before larger batches. Preserve historical exporters/recipes and their exact bytes; verify new common tooling against their outputs instead of rewriting accepted evidence. This is a maintenance opportunity, not a measured speedup. |
 | Review remaining compiler diagnostics when touching those paths | Pinned Emscripten 6.0.9 still reports existing unused parameters/non-Windows parent-window state and C11 pedantic diagnostics from Emscripten macros; vendored miniz reports its large-file I/O choice. Native Windows phase-one build is warning-free. Keep SDK/vendor diagnostics distinct from actionable project warnings and do not silence them globally. |
 
+## Standing-family capture evidence
+
+The [standing delivery](docs/cartoon-standing-verification.md) again encountered
+the Windows palm capture-marker failure. This time its scratch gate retained
+the failed artifacts: the child exited0 and produced a complete1280x960 PPM,
+while stdout ended mid asset path without the marker. An unchanged focused
+smoke/regression rerun passed; its corresponding image is byte-identical to
+the failed run. This establishes a valid saved image for this occurrence,
+not the cause of the incomplete stdout or a runtime fix. The permanent
+palm/wave failure-retention item above remains open.
+
 ## Front-walk post-merge audit follow-ups
 
 The [fresh audit](docs/front-refresh-post-merge-audit.md) reviewed merged main

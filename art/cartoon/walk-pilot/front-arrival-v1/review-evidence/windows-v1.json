@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "worktree_head_at_record": "b161b246a188ad94cc6ebb0f3eb106e4272e02c6",
+  "scope": "Windows delivery verification after human approval and production promotion of standing000/015/016/017. This is separate from frozen native review captures. No runtime or tracked test source changes.",
+  "status": "PASS after one retained full-gate failure, focused unchanged palm checks, and a fresh full gate.",
+  "source_archive_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+  "deployed_archive_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+  "archive_member_count": 2583,
+  "new_standing_png_sha256": {
+    "000": "9fef4cef56033a7cf35c36d96a839c42e7d7d23832acf0a34ebc6ff52e040e96",
+    "015": "c74f85cdd79ed13f180f3cb3c8c5962ba0453d587a2c8da15c844a2c046eb5d8",
+    "016": "1cb3d6249486eeecec29ff2040c452c28d14ff8a6f2d79d265e0f17ef2e38d92",
+    "017": "60e3a77a64620502d2b5198911a7805e19aaedf07801c7a00a92c030b4924de1"
+  },
+  "binaries": {
+    "extract_sound.exe": {
+      "sha256": "583fa44946b34ae1743d67b15ec1f0e2888333b8fad4fd6e80a82c4bb5723562",
+      "mtime_ns": 1789515976567545600
+    },
+    "extract_walk_data.exe": {
+      "sha256": "90ae07e0036e2adb321b1a544a660134128e613df3a3a3346c341d52c9689ba8",
+      "mtime_ns": 1789515976892940800
+    },
+    "jc_frame_test.exe": {
+      "sha256": "d35876ef68886d748c50b47e81ec03dc58fd4de85f80cea835cb7c2c6d14cc9f",
+      "mtime_ns": 1789515977270242800
+    },
+    "jc_lifecycle_test.exe": {
+      "sha256": "141e208f31ff52891c34f51d91cd5d70d0d27d4ed17c701eabb49f6003e276c6",
+      "mtime_ns": 1789515977639434000
+    },
+    "jc_palm_test.exe": {
+      "sha256": "cbf58d919bc5f38b05e876411bc40cbe50eaebfe335bb5b0b05d0bccdd91b7fe",
+      "mtime_ns": 1789515977957583600
+    },
+    "jc_platform_alloc_test.exe": {
+      "sha256": "49547bca667941c650b9bee3fe9d0e74b8a1a647ef0991c72b6cb3bb4e9edd4e",
+      "mtime_ns": 1789515978264000300
+    },
+    "jc_png_test.exe": {
+      "sha256": "9123119f6fa0c98d9f00c26a9df808aac92c77690f0990cd9d89ae65cd782431",
+      "mtime_ns": 1789515978615643400
+    },
+    "jc_reborn.exe": {
+      "sha256": "4b0f1117d39c73ce85a687751d7bffabdec4a7cd4ad948eee6a89dcb9745e1e9",
+      "mtime_ns": 1789515979068097000
+    },
+    "jc_reborn.scr": {
+      "sha256": "c92408127669afc9df09b7607bc6c871c5796e0c7ae95d4077afc1f212fc9160",
+      "mtime_ns": 1789515979404595700
+    },
+    "jc_uncompress_test.exe": {
+      "sha256": "824cbd8fe48f5bb0853ef06e17f72491a09e578d3abc44b178b5f6e15b39b8fb",
+      "mtime_ns": 1789515979717044500
+    }
+  },
+  "runs": [
+    {
+      "label": "standing-promotion-v1",
+      "kind": "full gate with retained palm/wave work paths",
+      "passed": false,
+      "exit_code": 1,
+      "elapsed_seconds": 195.691,
+      "log": "build/windows-gates/standing-promotion-v1/gate.log",
+      "log_sha256": "8d1c24a204733087664861018c094f8892d90cdd4167fc33587ab31012cc246c",
+      "result": "build/windows-gates/standing-promotion-v1/result.json",
+      "result_sha256": "c9624cfadb7b0ef28c939a2bf3f577735e32795fa4c419e9a9cb8dc22970a370",
+      "input_manifest_sha256": "c3b44a22ff421127372593eea6bc7de311a919866a44853796c02983a9f9fd6d",
+      "input_desktop_preserved": true,
+      "poll_checks": 371,
+      "observed_inactive_window_count": 295,
+      "protected_inputs_unchanged": true,
+      "retained_capture_count": 24,
+      "complete_ppm_count": 24,
+      "capture_marker_count": 23,
+      "adaptation": {
+        "original_gate_sha256": "7eb40f38d9c34f990f22628b54b853459385175016250e3eefa074a2ecf30394",
+        "adapted_gate_sha256": "dff5db0662257dac94cb4f19c44912d1dc78ebff018cd2b2c7edbce4cf834964",
+        "diff_sha256": "5d73ba670a45958d2d63142fe41078bdfc6bf7deda2c57eaab0af0a4722d0591",
+        "retained_work_paths": [
+          "build/windows-gates/standing-promotion-v1/wave-smoke",
+          "build/windows-gates/standing-promotion-v1/wave-regression",
+          "build/windows-gates/standing-promotion-v1/palm-smoke",
+          "build/windows-gates/standing-promotion-v1/palm-regression"
+        ],
+        "changes": "Repository root assignment and four explicit existing --work options only. No test assertions, ordering, build flags or runtime sources changed."
+      },
+      "source_archive_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+      "deployed_archive_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+      "scope": "Build, all smoke stages, then all existing regressions. Tests and assertions unchanged.",
+      "golden_dump_2452_byte_identical": true
+    },
+    {
+      "label": "standing-palm-control-v1",
+      "kind": "focused palm smoke then all8 checks",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 15.224,
+      "log": "build/windows-gates/standing-palm-control-v1/diagnostic.log",
+      "log_sha256": "2b5fb20c3d36ce0024c20442657de9a1c9f4e816f00591ff8525284d2d9c1221",
+      "result": "build/windows-gates/standing-palm-control-v1/result.json",
+      "result_sha256": "0d8c657b40fe9504a85a9ddaa5d05412be4801635d0e5fbb94bf971a06bec2a7",
+      "input_manifest_sha256": "8855f2fcf4d36981d5cbfeb7eeae161b7654649b65effb88873f322342a5906d",
+      "input_desktop_preserved": true,
+      "poll_checks": 64,
+      "observed_inactive_window_count": 145,
+      "protected_inputs_unchanged": true,
+      "retained_capture_count": 17,
+      "complete_ppm_count": 17,
+      "capture_marker_count": 17,
+      "phase_check_counts": {
+        "smoke": 1,
+        "all": 8
+      }
+    },
+    {
+      "label": "standing-promotion-v2",
+      "kind": "full gate with retained palm/wave work paths",
+      "passed": true,
+      "exit_code": 0,
+      "elapsed_seconds": 138.398,
+      "log": "build/windows-gates/standing-promotion-v2/gate.log",
+      "log_sha256": "9b346750fac54834886fa6ee63db3b865764f0f04e2c877695dcffd101531984",
+      "result": "build/windows-gates/standing-promotion-v2/result.json",
+      "result_sha256": "358257b8e7d6a4a97c8e7e94b1b7a687a1604151d90757a801e091cd1037264e",
+      "input_manifest_sha256": "d0aaa1fd76ce5692ed8e461bf5a35bd11b6fa3628d72428e4ce01737363b5e1a",
+      "input_desktop_preserved": true,
+      "poll_checks": 265,
+      "observed_inactive_window_count": 281,
+      "protected_inputs_unchanged": true,
+      "retained_capture_count": 32,
+      "complete_ppm_count": 32,
+      "capture_marker_count": 32,
+      "adaptation": {
+        "original_gate_sha256": "7eb40f38d9c34f990f22628b54b853459385175016250e3eefa074a2ecf30394",
+        "adapted_gate_sha256": "2777b210f32962e632a6832c3d1626a55b94cbfeb3f2e3bb60ffa7b91cfc8f22",
+        "diff_sha256": "05d139bd8737ffe109cb3e74ef1df64951c6aa98f510a6f879f63b7c43ef9acb",
+        "retained_work_paths": [
+          "build/windows-gates/standing-promotion-v2/wave-smoke",
+          "build/windows-gates/standing-promotion-v2/wave-regression",
+          "build/windows-gates/standing-promotion-v2/palm-smoke",
+          "build/windows-gates/standing-promotion-v2/palm-regression"
+        ],
+        "changes": "Repository root assignment and four explicit existing --work options only. No test assertions, ordering, build flags or runtime sources changed."
+      },
+      "source_archive_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+      "deployed_archive_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+      "scope": "Build, all smoke stages, then all existing regressions. Tests and assertions unchanged.",
+      "golden_dump_2452_byte_identical": true
+    }
+  ],
+  "initial_failure": {
+    "test": "tests/test_palm_renderer.py:84",
+    "case": "outside-alpha/current-cartoon-none",
+    "native_exit_code": 0,
+    "failed_condition": "Required trailing Captured frame stdout marker missing. Assertion remains a failure and was not weakened.",
+    "native_log": "build/windows-gates/standing-promotion-v1/palm-regression/alpha128-active1-original0/current-cartoon-none.log",
+    "native_log_sha256": "fdd6a52f1d4628a02e4edc5dd144c851be975ef07526b9bbeb3ef273b07b7aa4",
+    "native_log_bytes": 4505,
+    "native_log_observation": "Stdout ends mid asset path, before capture marker.",
+    "retained_ppm": "build/windows-gates/standing-promotion-v1/palm-regression/alpha128-active1-original0/current-cartoon-none.ppm",
+    "retained_ppm_sha256": "292be7327fc8e3031ae65b3c74e3790356acc514b23c42f48577f3982e8f1d68",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "rgb_payload_bytes": 3686400,
+    "pixel_900_350": [
+      128,
+      0,
+      0
+    ],
+    "successful_control_ppm": "build/windows-gates/standing-palm-control-v1/all/alpha128-active1-original0/current-cartoon-none.ppm",
+    "successful_control_ppm_sha256": "292be7327fc8e3031ae65b3c74e3790356acc514b23c42f48577f3982e8f1d68",
+    "failed_and_control_ppms_byte_identical": true,
+    "cause": "Unproven. This records a repeated missing-output-marker symptom and a complete retained image, not a runtime fix or evidence of a missing image."
+  },
+  "gate_adaptation": {
+    "source": "gate.ps1",
+    "original_sha256": "7eb40f38d9c34f990f22628b54b853459385175016250e3eefa074a2ecf30394",
+    "changes": "Exactly one repository-root assignment and four existing --work options. Distinct new smoke/regression paths preserve palm/wave failures. Engine code, tests, assertions and command ordering are unchanged.",
+    "temporary_only": true,
+    "permanent_retention_work": "Remains in BACKLOG.md. These ignored scratch changes do not fix automatic cleanup in the tracked harness.",
+    "preparation_syntax": "Parsed under Windows PowerShell5.1.26100.7019 and PowerShell7.6.5."
+  },
+  "tools": {
+    "focused_python": "3.11.15",
+    "full_gate_host": "PowerShell7.6.5; existing Windows subtests invoke powershell.exe5.1",
+    "launcher": "build/run_front_arrival_windows_gate.py",
+    "launcher_sha256": "b40e76683cf7d5ed56b123ba89d093cc3ee1e5c7c93e214ee690cacd8472ab13",
+    "focused_launcher": "build/run_palm_diagnostic.py",
+    "focused_launcher_sha256": "abbe42dc07ecc052615cf6d2ad0bd831ea4d6074f9ab7cda0c83a123f7e3f2ab",
+    "existing_inactive_desktop_helper_sha256": "86312fd1bad0786c2e1ee56c9eb6aab69cb1bf9f1295ec84430769877490f55d",
+    "gate_python_selection": "The existing gate invokes bare python through PowerShell. Its interpreter version was not captured in the gate process."
+  },
+  "limitations": [
+    "Windows inventory suite visibly skips file and directory symlink cases because this process lacks symlink creation privilege. Hardlink and path aliases passed.",
+    "Optional pre-change historical palm/wave binary comparisons were not supplied. Independent legacy pixels and current fallback comparisons ran.",
+    "Desktop and foreground observations are sampled, with the native processes explicitly attached to an inactive desktop. No input-desktop switch is requested.",
+    "Full gate logs, input manifests, adapted scripts, diffs, native fixture archives and PPMs remain in ignored build/windows-gates directories. This portable record binds their hashes; it is not a self-contained capture bundle."
+  ],
+  "native_review_evidence": {
+    "path": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/review-evidence/native-v1/evidence.json",
+    "sha256": "825f8fb28544f58bdfcc0d396ea5025c58494dd46003805e60019ffa6ec26ed1"
+  }
+}

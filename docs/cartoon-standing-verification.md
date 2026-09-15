@@ -102,5 +102,36 @@ four annotation-only recipes, all approvals,63 bound native ring files,
 discrepancy. Its SHA256 is
 `014996e4af77a1c45057be4cd87ab2d06925edcceb52e6751994c07d920c87f2`.
 
-Complete platform checks and merge evidence are in progress. This record does
-not yet claim a merge or post-merge audit.
+The final local Windows gate passed. Cross-platform CI and merge evidence are
+in progress; this record does not yet claim a merge or post-merge audit.
+
+## Retained Windows capture failure
+
+The first complete Windows gate built without warnings and passed every smoke
+stage, but its palm outside-alpha regression failed a required capture-marker
+assertion for `current-cartoon-none`. The child exited0 and stdout ended partway
+through an asset path. The gate remained failed even though the other suites,
+including all2452 golden hashes, passed.
+
+For this delivery, an exact scratch copy of the gate changes only the repository
+root and adds four distinct existing `--work` arguments to preserve wave/palm
+smoke and regression artifacts. Test assertions and ordering remain unchanged.
+The standard tracked gate is unchanged. Native tests run on an inactive desktop.
+
+The retained failed PPM contains the complete1280x960 image with3686400 RGB bytes,
+SHA256`292be7327fc8e3031ae65b3c74e3790356acc514b23c42f48577f3982e8f1d68`.
+Its outside-alpha sample at900,350 has the expected RGB128,0,0. A fresh unchanged
+focused run passed smoke then all8 palm cases, with all17 captures complete
+and their required markers present. Its matching image is byte-identical to
+the failed run. The cause of the missing marker remains unknown; no renderer
+fix or weakened assertion is claimed.
+
+The fresh full retained gate passed in138.398 seconds: build, all smoke stages,
+every regression suite and all2452 golden hashes. The successful full log has
+SHA256`9b346750fac54834886fa6ee63db3b865764f0f04e2c877695dcffd101531984`.
+Source and deployed archives both remained
+`096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6`.
+Protected source/test/tool inputs stayed unchanged, and265 observations
+confirmed the interactive desktop was preserved. The32 retained wave/palm PPMs
+are complete. The [Windows evidence](../art/cartoon/walk-pilot/front-arrival-v1/review-evidence/windows-v1.json)
+records the failed gate, focused control and successful full rerun separately.
