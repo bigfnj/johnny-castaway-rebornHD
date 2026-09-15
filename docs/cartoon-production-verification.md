@@ -2,7 +2,9 @@
 
 This change adds a full asset worklist and original walking references while
 preserving the production archive and existing artwork. The source baseline is
-`0f7d7fd`; work is on `art/cartoon-production-foundation`.
+`0f7d7fd`. The foundation was merged through
+[PR 9](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/9) at
+`0757f6b9e9706425a2bc84cf69340b8b227740c3`.
 
 ## Catalog and continuous checks
 
@@ -27,9 +29,17 @@ The CI rehearsal ran the exact six YAML commands in Linux bash with failure
 propagation. It used existing image
 `sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc`,
 with Python 3.12.3 and Git 2.43.0. All 362 copied input hashes matched the
-live inputs and were restored after mutations. An earlier native-build-image
-attempt correctly stopped when Git was unavailable; that failure remains in
-local evidence. No dependency was installed and no check was weakened.
+live inputs and were restored after mutations in `run-2`, which passed the
+then-current 43 catalog regressions. The final `run-3` repeated the six commands
+after the XPM/source consistency fix: metadata 2 smoke and 45 regression checks,
+catalog 2 smoke and 44 regression checks, both reproduction checks and all three
+CI negative controls passed. All 368 files in that later isolated snapshot were
+restored to their original hashes.
+
+The earlier `run-1` native-build-image attempt passed both smoke suites, then
+correctly stopped when the metadata regression required unavailable Git. That
+environment failure remains in local evidence alongside both successful runs.
+No dependency was installed and no check was weakened.
 
 Detailed local evidence is retained under `build/catalog-validation/` and
 `build/cartoon-ci-wiring/`. The compact original-reference verification is
@@ -58,7 +68,35 @@ production count.
 
 ## Delivery and audit
 
-Local foundation checks are complete. Commit, remote CI, merge and the
-post-merge audit will be recorded here when completed. Remaining work belongs
-in [BACKLOG.md](../BACKLOG.md), including the frontal 033-035 sequence, remaining
-walking states, later artwork and code-drawn scene effects.
+Both remote CI runs completed successfully in all four platform jobs: Windows,
+Linux, macOS and Web. The
+[PR run 34992857005](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34992857005)
+tested `10672766e0534350f76db53c743002acf9ab1d8b`; the
+[main run 34993827317](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34993827317)
+tested the merged `0757f6b` commit. Both Linux jobs passed the new authoring step
+before the native build and decode checks.
+
+Fresh authoring execution in the main checkout also passed: pilot metadata had
+2 smoke checks followed by 45 regressions, the production catalog had 2 smoke
+checks followed by 44 regressions, and the existing art tools passed 20
+regressions. Both generators passed `--check`. These main-checkout executions
+are recorded in the work session; no separate saved main-checkout log path is
+claimed. They are distinct from the saved feature-worktree Linux rehearsals.
+
+Two fresh read-only post-merge source audits found no new confirmed runtime
+issue. The core review covered startup, events, configuration, common audio,
+ADS/TTM execution, resource parsing and decompression, story/island/walking and
+path tables, benchmark/utilities and ZIP ownership. The second review covered
+all four platform backends, the platform API and PNG loader, graphics/style,
+events/island/walk/audio integration and the Web page. Runtime source, production
+archive and native gate/build files match `0f7d7fd`; the merged tree also matches
+the tested PR tree. Neither review introduced engine changes or reran graphical
+tests.
+
+No new recurring ownership leak, broken call target or performance improvement
+was established. Existing audio startup, malformed-input, unfinished-command
+and platform follow-ups remain in [BACKLOG.md](../BACKLOG.md); they are not new
+foundation regressions. The audits do not establish original-engine visual
+parity or physical audio behavior. Remaining art work includes the frontal
+033-035 sequence, other walking states, later artwork and code-drawn scene
+effects. Draft art review remains separate from this foundation delivery.
