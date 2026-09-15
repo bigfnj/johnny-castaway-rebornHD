@@ -5,8 +5,9 @@ hooks. They do not modify artwork or production archives. Each case emits a
 runtime `WITNESS` before assertions; Release allocator probes keep assertions on.
 The shell scripts accept `--phase smoke` or `--phase regression`; the PowerShell
 script accepts `-Phase Smoke` or `-Phase Regression`. Omitting the phase runs all
-cases. Run source mutations manually after the normal runtime checks when guards
-change, rather than rebuilding every mutant in routine CI.
+cases. Run source mutations after the normal runtime checks when guards change.
+macOS CI runs its mutations on the real runner because the development host is
+Windows; the other backends' mutation commands are manual checks.
 
 Windows, after the normal CMake build:
 

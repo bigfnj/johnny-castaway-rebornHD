@@ -115,16 +115,19 @@ jobs:
       - name: verify Intel release architecture and negative controls
         run: python3 -B tests/test_build_contracts.py --mutations --mac-binary /tmp/jcr/build-unix/jc_reborn
 
-      # The OTHER macOS build path, verified rather than assumed.
-      #
-      # Homebrew refuses to install on Intel Macs now ("only supported on Apple
-      # Silicon processors"), and CMake on macOS usually arrives via Homebrew. So
-      # the route anyone helping us verify macOS rendering will actually take is
-      # clang alone, and an untested build script is worse than no build script:
-      # it fails in front of the person doing us a favour.
-      #
-      # Running it here means tools/build-macos.sh and the APPLE branch of
-      # CMakeLists.txt cannot drift apart without turning this job red.
+      # The development host is Windows; execute Cocoa guard mutations here
+      # after ordinary smoke/regression so their detection is proved on macOS.
+      - name: rebuilt Cocoa guard negative controls
+        run: python3 -B tests/test_platform_mutations.py --platform macos --output /tmp/jcr/macos-mutations
+
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: macos-mutation-evidence
+          path: /tmp/jcr/macos-mutations/mutation-report.json
+          if-no-files-found: warn
+
+      # Keep the documented direct-Clang path working alongside CMake.
       - name: build with clang only (no CMake, no Homebrew)
         run: |
           bash tools/build-macos.sh
