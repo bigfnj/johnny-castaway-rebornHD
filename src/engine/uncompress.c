@@ -228,6 +228,13 @@ uint8 *uncompressLZW(FILE *f, uint32 inSize, uint32 outSize)
                    (unsigned)stackPtr, (unsigned)free_entry, (unsigned)n_bits);
     }
 
+    if (outOffset != outSize) {
+        fatalError("LZW decode incomplete: produced %u of %u output bytes "
+                   "(consumed %u of %u input bytes)",
+                   (unsigned)outOffset, (unsigned)outSize,
+                   (unsigned)inOffset, (unsigned)inSize);
+    }
+
     if (inOffset != inSize) {
         fatalError("LZW decode truncated: consumed %u of %u input bytes "
                    "(produced %u of %u output bytes)",
@@ -274,6 +281,13 @@ uint8 *uncompressRLE(FILE *f, uint32 inSize, uint32 outSize)
                 inOffset++;
             }
         }
+    }
+
+    if (outOffset != outSize) {
+        fatalError("RLE decode incomplete: produced %u of %u output bytes "
+                   "(consumed %u of %u input bytes)",
+                   (unsigned)outOffset, (unsigned)outSize,
+                   (unsigned)inOffset, (unsigned)inSize);
     }
 
     if (inOffset != inSize) {
