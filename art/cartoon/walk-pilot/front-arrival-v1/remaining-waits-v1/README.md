@@ -1,8 +1,11 @@
 # Remaining standing views000 and015
 
 These two new drawings complete the five unique assets used for eight standing
-directions, alongside approved016/017 and production018. Human review of000/015
-and the complete direction ring is pending. No new production assets are added.
+directions, alongside approved016/017 and production018. The user approved000/
+015 and the complete direction ring with "excellent, proceed" at
+http://127.0.0.1:8932/standing-ring-v1/review.html. The approval is recorded
+separately from the technical checkpoint reports, which retain their original
+pending-at-capture wording. Production integration follows this art decision.
 
 | New pose | Original direction and treatment | Fixed runtime export |
 | --- | --- | --- |
@@ -27,10 +30,13 @@ from those paths using the explicit corresponding `--frame` described in
 `EXPORT.md`. Choose a fresh output directory. The saved smoke/regression records
 are under `review-evidence/export-v1/000` and `015`.
 
-The next checkpoint runs actual same-spot adjacent-heading calls around all
-eight directions at A in both orders. Existing016/017/018 PNGs must remain
-identical. Original draw origins, reflections and native timing are retained;
-pose stepping supports inspection without inserting artificial holds.
+The approved checkpoint runs actual same-spot adjacent-heading calls around all
+eight directions at A in both orders. Existing016/017/018 PNGs remain identical.
+Original draw origins, reflections and native timing are retained; pose stepping
+supports inspection without inserting artificial holds. The two native clips
+have108 and22 displays respectively. Across both,81 displays remain identical
+and49 differ only inside the000/015 canvases. The source scheduler's directional
+timing asymmetry is disclosed in the preview and recorded separately in BACKLOG.
 
 ## Lessons for later style packs
 

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "human accepted side and rear standing poses and complete direction ring",
+  "user_response_verbatim": "excellent, proceed",
+  "question_record": "review-request-v1.json",
+  "url": "http://127.0.0.1:8932/standing-ring-v1/review.html",
+  "preview_html_sha256": "03dee9b661da7dd724bdd652656dc587851a038ad723261d9eb4e3b077152df9",
+  "native_evidence_sha256": "825f8fb28544f58bdfcc0d396ea5025c58494dd46003805e60019ffa6ec26ed1",
+  "reviewed_private_archive_sha256": "ee180c8b6aa1e07024132bae808fc4d2fcc136714dd12152468a3c9fc511aa2c",
+  "accepted_new_assets": [
+    {
+      "frame": 0,
+      "source": "000-profile-v1.png",
+      "source_sha256": "ae989a65335c10a24da3176ff6fd568dc4a2cb6fddda185002c60dcdae3d3a12",
+      "runtime_sha256": "9fef4cef56033a7cf35c36d96a839c42e7d7d23832acf0a34ebc6ff52e040e96"
+    },
+    {
+      "frame": 15,
+      "source": "015-rear-v1.png",
+      "source_sha256": "dbd88e081fafbe906f9a9482128bb54fad1b142d1dc18f240e099bfe7e227578",
+      "runtime_sha256": "c74f85cdd79ed13f180f3cb3c8c5962ba0453d587a2c8da15c844a2c046eb5d8"
+    }
+  ],
+  "retained_runtime_sha256": {
+    "016": "1cb3d6249486eeecec29ff2040c452c28d14ff8a6f2d79d265e0f17ef2e38d92",
+    "017": "60e3a77a64620502d2b5198911a7805e19aaedf07801c7a00a92c030b4924de1",
+    "018": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190"
+  },
+  "scope": "Cartoon000 appearance in both side orientations and015 appearance from behind, including their displayed feet and continuity with approved016/017/018 through the eight-heading standing ring at A in both captured native orders.",
+  "observation_disposition": "The displayed geometry and transitions are accepted artistically. Source-based anatomy, frame registration and native draw origins remain separately recorded; acceptance does not establish pixel-identical agreement with the original artwork.",
+  "excluded_scope": "Ordinary003/009/010/012 turns, profile walking001-008, unseen route and story interactions, original-executable parity and any engine timing correction.",
+  "production_promoted_at_this_checkpoint": false,
+  "next_step": "Integrate exact000/015/016/017 runtime PNGs alongside existing018; run smoke then regression, merge after verification, and audit merged main."
+}

@@ -1,17 +1,26 @@
-# Cartoon front arrival and wait/turn family
+# Cartoon front arrival and standing family
 
 Work starts from main `707a20b` on `art/cartoon-front-arrival-family`.
 The approved front walk 024-029 stays intact. This batch begins with the
 separate original standing pose 017, reviewed as a key before more drawings.
 017 appearance and its front-walk arrival are approved in `approval017-v1.json`.
 016 and both front waiting turns are approved in `016-key-v1/approval-v1.json`.
-The other six new poses are pending. No new artwork is promoted yet.
+The remaining standing drawings000/015 and the complete direction ring are
+approved with "excellent, proceed" at standing-ring-v1. Production integration
+and delivery verification follow these separate art decisions.
 
-The full wait/turn table uses ten unique sprites. Two, 018 and 023, are already
-Cartoon. Eight still need artwork: 000, 003, 009, 010, 012, 015, 016 and 017.
+This delivery completes all eight standing directions with five unique sprites:
+new000/015/016/017 and existing Cartoon018. The full wait/turn table uses ten
+unique sprites; existing Cartoon023 and ordinary HD003/009/010/012 account for
+the rest. The original eight-new-pose scope was split after the dependency trace
+showed003 recurring inside the HD001-008 profile walk. Those ordinary turns
+belong with a complete profile-walk/context batch. Their original-only
+preparation is in `ordinary-turns-v1/reference/`; no new ordinary artwork was
+generated or approved.
 The first native checkpoint is the existing 23-position E-to-A front walk into
 017, including its mirrored use, original draw-origin change and 1600ms hold.
-Subsequent generation and review will follow the traced wait/turn sequence.
+The final checkpoint reviews000/015 with all approved standing views in both
+native heading orders. See `remaining-waits-v1/` for its sources and evidence.
 
 Use supplied-original pixels for pose geometry and the approved Calm focus
 character for appearance. Stored 017 faces screen-right; the engine mirrors it

@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "status": "ORIGINAL-ONLY PREPARATION",
+  "scope": "No ordinary-turn artwork generated, approved or promoted. Counts and dependencies support a future motion-family review only.",
+  "source_inputs": {
+    "trace_record": {
+      "path": "art/cartoon/walk-pilot/front-arrival-v1/trace/trace.json",
+      "sha256": "84542ebc9c922b2a99dd86f35d0a8f0dcddd1f6d0bddfc0ac3999b2dca8c7a91"
+    },
+    "walk_table": {
+      "path": "src/data/walk_data.h",
+      "lf_sha256": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70"
+    },
+    "full_dependency_evidence": {
+      "path": "art/cartoon/walk-pilot/front-arrival-v1/ordinary-turns-v1/reference/dependencies.json",
+      "sha256": "f0193170bbc1211bff52236e15a23ba6c8cc86e53897ee1ff1c65d360dbf632e"
+    },
+    "original_source_record": {
+      "path": "art/cartoon/walk-expansion-v1/reference/source.json",
+      "sha256": "040106d15a0c6460a044a7989ddcfea12d494bc6838ee1fad83a3793e2f2cfa4"
+    },
+    "original_metadata_record": {
+      "path": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+      "sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629"
+    },
+    "per_frame_reference_records": {
+      "art/cartoon/walk-pilot/front-arrival-v1/ordinary-turns-v1/reference/003-source.json": "fcc0a289b43ee13cad06d6a83bf519eebcea84a90fd9e70b86b2d87956262d58",
+      "art/cartoon/walk-pilot/front-arrival-v1/ordinary-turns-v1/reference/009-source.json": "7923b3d1572951a358d63fdbeb45c25c5a3bf769ce93327ebd89328b0c2e1fd1",
+      "art/cartoon/walk-pilot/front-arrival-v1/ordinary-turns-v1/reference/010-source.json": "45b82869688776db44d040c8389259af9c0c86b326ac13e74d6e89d1ca0075dc",
+      "art/cartoon/walk-pilot/front-arrival-v1/ordinary-turns-v1/reference/012-source.json": "0ce329ddc3bb9ed3111a8bae304cefbf4f693f66d961e9d47a4d6e9611c454b2"
+    }
+  },
+  "counting_rules": {
+    "table": "Each non-sentinel row counts once. Route groups exclude ordinary-turn blocks. Repeated rows are retained; table counts are not runtime frequencies.",
+    "compiled": "Only actual matching draws in the stored116-case C observer trace. Routes may traverse multiple encoded route groups; this is not all routes or visual playback.",
+    "ttm": "Static direct draw sites attributed to JOHNWALK by linear slot bindings, separately retained for original and port. This is not a runtime execution count or all branch coverage."
+  },
+  "frames": [
+    {
+      "frame": 3,
+      "counts": {
+        "route_table_draws": 19,
+        "route_table_groups": 11,
+        "ordinary_turn_table_draws": 12,
+        "ordinary_turn_groups": 6,
+        "port_static_ttm_draw_sites": 37,
+        "original_static_ttm_draw_sites": 37
+      },
+      "route_groups": [
+        {
+          "label": "A to F",
+          "occurrences": 1,
+          "source_lines": [
+            37
+          ],
+          "ordered_frames": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            11,
+            19,
+            20,
+            21,
+            22,
+            23,
+            11,
+            19,
+            20,
+            21,
+            22,
+            23
+          ]
+        },
+        {
+          "label": "A to C",
+          "occurrences": 3,
+          "source_lines": [
+            58,
+            66,
+            74
+          ],
+          "ordered_frames": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            11,
+            19,
+            20,
+            21,
+            22
+          ]
+        },
+        {
+          "label": "A to B",
+          "occurrences": 1,
+          "source_lines": [
+            88
+          ],
+          "ordered_frames": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            26,
+            27,
+            28,
+            29,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            24,
+            25,
+            26,
+            27
+          ]
+        },
+        {
+          "label": "C to A",
+          "occurrences": 3,
+          "source_lines": [
+            183,
+            191,
+            199
+          ],
+          "ordered_frames": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2
+          ]
+        },
+        {
+          "label": "C to E",
+          "occurrences": 1,
+          "source_lines": [
+            243
+          ],
+          "ordered_frames": [
+            4,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            21,
+            22,
+            23,
+            11,
+            19,
+            20,
+            21,
+            22,
+            23
+          ]
+        },
+        {
+          "label": "C to F",
+          "occurrences": 1,
+          "source_lines": [
+            264
+          ],
+          "ordered_frames": [
+            4,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            21,
+            22,
+            23
+          ]
+        },
+        {
+          "label": "D to E",
+          "occurrences": 1,
+          "source_lines": [
+            309
+          ],
+          "ordered_frames": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "label": "E to C",
+          "occurrences": 2,
+          "source_lines": [
+            380,
+            388
+          ],
+          "ordered_frames": [
+            28,
+            29,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            24,
+            25,
+            9,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "label": "E to D",
+          "occurrences": 2,
+          "source_lines": [
+            394,
+            401
+          ],
+          "ordered_frames": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "label": "F to A",
+          "occurrences": 2,
+          "source_lines": [
+            443,
+            451
+          ],
+          "ordered_frames": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "label": "F to C",
+          "occurrences": 2,
+          "source_lines": [
+            456,
+            464
+          ],
+          "ordered_frames": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "turn_group_labels": [
+        "A turn",
+        "B turn",
+        "C turn",
+        "D turn",
+        "E turn",
+        "F turn"
+      ],
+      "observed_compiled_case_counts": [
+        {
+          "case": "A-to-E",
+          "draw_occurrences": 5
+        },
+        {
+          "case": "E-to-F",
+          "draw_occurrences": 4
+        }
+      ],
+      "ttm_detail_location": "dependencies.json frames entry with matching frame; full original and port command sites retained separately"
+    },
+    {
+      "frame": 9,
+      "counts": {
+        "route_table_draws": 4,
+        "route_table_groups": 3,
+        "ordinary_turn_table_draws": 12,
+        "ordinary_turn_groups": 6,
+        "port_static_ttm_draw_sites": 5,
+        "original_static_ttm_draw_sites": 5
+      },
+      "route_groups": [
+        {
+          "label": "C to B",
+          "occurrences": 2,
+          "source_lines": [
+            209,
+            222
+          ],
+          "ordered_frames": [
+            9,
+            28,
+            29,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            24,
+            25,
+            26,
+            27,
+            9
+          ]
+        },
+        {
+          "label": "D to F",
+          "occurrences": 1,
+          "source_lines": [
+            315
+          ],
+          "ordered_frames": [
+            9,
+            28,
+            29,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            24,
+            25
+          ]
+        },
+        {
+          "label": "E to C",
+          "occurrences": 1,
+          "source_lines": [
+            379
+          ],
+          "ordered_frames": [
+            28,
+            29,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            24,
+            25,
+            9,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ]
+        }
+      ],
+      "turn_group_labels": [
+        "A turn",
+        "B turn",
+        "C turn",
+        "D turn",
+        "E turn",
+        "F turn"
+      ],
+      "observed_compiled_case_counts": [
+        {
+          "case": "A-to-E",
+          "draw_occurrences": 1
+        },
+        {
+          "case": "C-to-B",
+          "draw_occurrences": 2
+        },
+        {
+          "case": "E-to-F",
+          "draw_occurrences": 2
+        }
+      ],
+      "ttm_detail_location": "dependencies.json frames entry with matching frame; full original and port command sites retained separately"
+    },
+    {
+      "frame": 10,
+      "counts": {
+        "route_table_draws": 0,
+        "route_table_groups": 0,
+        "ordinary_turn_table_draws": 6,
+        "ordinary_turn_groups": 6,
+        "port_static_ttm_draw_sites": 8,
+        "original_static_ttm_draw_sites": 8
+      },
+      "route_groups": [],
+      "turn_group_labels": [
+        "A turn",
+        "B turn",
+        "C turn",
+        "D turn",
+        "E turn",
+        "F turn"
+      ],
+      "observed_compiled_case_counts": [
+        {
+          "case": "A-to-E",
+          "draw_occurrences": 1
+        },
+        {
+          "case": "E-to-F",
+          "draw_occurrences": 1
+        }
+      ],
+      "ttm_detail_location": "dependencies.json frames entry with matching frame; full original and port command sites retained separately"
+    },
+    {
+      "frame": 12,
+      "counts": {
+        "route_table_draws": 0,
+        "route_table_groups": 0,
+        "ordinary_turn_table_draws": 6,
+        "ordinary_turn_groups": 6,
+        "port_static_ttm_draw_sites": 2,
+        "original_static_ttm_draw_sites": 2
+      },
+      "route_groups": [],
+      "turn_group_labels": [
+        "A turn",
+        "B turn",
+        "C turn",
+        "D turn",
+        "E turn",
+        "F turn"
+      ],
+      "observed_compiled_case_counts": [
+        {
+          "case": "A-to-E",
+          "draw_occurrences": 1
+        }
+      ],
+      "ttm_detail_location": "dependencies.json frames entry with matching frame; full original and port command sites retained separately"
+    }
+  ],
+  "decisions": {
+    "current_delivery": "Complete waiting-direction family000/015/016/017 plus existing018 only, after its own review and approval.",
+    "deferred_ordinary_frames": [
+      3,
+      9,
+      10,
+      12
+    ],
+    "next_dependency_review": {
+      "frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reason": "003 occurs inside the profile cycle; a global003-only replacement would mix Cartoon and HD within that motion.",
+      "evidence": "003 route rows include repeated002-to-003-to-004 transitions and complete001-008 sequences in A-to-C and C-to-A."
+    },
+    "later_contexts": "009 bridges front-oblique and profile routes;010 requires repeated MJDIVE tag2 water-exit context;012 requires GJVIS5 tag10 and SJLEAVES tag3. Preserve original/port TTM differences and do not infer complete story approval."
+  },
+  "limits": [
+    "TTM slots/delays follow linear decoded command order, not every runtime branch. Cross-tag loads can be required; ADS associations establish static references, not whole-scene rendering parity.",
+    "All decoded TTM hashes match preserved inventory. SJLEAVES original has an extra SET_DELAY0 in tag3; preceding linear delays are port semantic values, not measured original timing.",
+    "No new native capture or original executable run; compiled observations come from the retained116-case trace.",
+    "Eight-new-drawing wait/turn scope is not a self-contained complete motion family."
+  ]
+}

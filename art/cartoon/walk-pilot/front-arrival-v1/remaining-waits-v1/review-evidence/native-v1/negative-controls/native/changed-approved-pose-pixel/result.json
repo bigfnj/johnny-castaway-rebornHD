@@ -1,0 +1,13 @@
+{
+  "case": "changed-approved-pose-pixel",
+  "status": "FIRED",
+  "failure": "turn capture: all prior-approved pose/background pixels unchanged",
+  "guard_module_sha256": {
+    "capture.py": "71059fa6f13f7ed892aa26f4bd5d5302d8cbc6e60d3780e549b01fd34ea50c45",
+    "capture_candidate.py": "5da022face0f8c412b0cdb802cfb36ba494657df12db4aa7cfc3877e58333696",
+    "native_core.py": "1b62d0684899798177bf09bcc2aacbcb755f4557bc255bab30223e5cc6f77105",
+    "negative_native.py": "3796220791fb4593502f9955c5d3c0d5e4dd25314d86cd4a15adbe41221e669e"
+  },
+  "input_log_sha256": "e2e8be7a0a564d6d8a43aabf15481559fe2455f35fe0eecb225c133b433f281e",
+  "scope": "Recorded native outputs replayed through unchanged Python guards; native engine not rerun."
+}

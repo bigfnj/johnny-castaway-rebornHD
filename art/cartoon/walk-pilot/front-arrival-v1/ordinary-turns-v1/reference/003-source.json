@@ -1,0 +1,635 @@
+{
+  "schema_version": 1,
+  "source_label": "Stored supplied-original JOHNWALK frame 003; ordinary-turn geometry only, no generated artwork or approval.",
+  "original_frame": {
+    "frame": 3,
+    "resource": "JOHNWALK.BMP",
+    "canvas": [
+      40,
+      76
+    ],
+    "xpm_sha256": "42f40f4b6f1d1deb189f0c8ad73946dd4d7d42b3f3a14532646641e81d67ab14",
+    "index_plane_sha256": "782532af28aaa4ab7f1653bbe9af386b71050f51da3fdceecc5dcc7d5ea606c2",
+    "rgba_sha256": "8917c35bb6b562a9d112e1d346ce5d6121ad522f025ed167847babf668789208",
+    "visible_bounds_exclusive": [
+      0,
+      0,
+      33,
+      76
+    ],
+    "transparent_index": 0,
+    "first_row_visible_span_x_exclusive": [
+      26,
+      28
+    ],
+    "landmark_limit": "Visible bounds include original shadow; first-row extent is a measured pixel feature, not an engine or anatomical anchor.",
+    "encoded_uses": [
+      {
+        "group": "A to F",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "A to C",
+        "draw_count": 3,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "A to B",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "A turn",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "B turn",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "C to A",
+        "draw_count": 3,
+        "flip_x": [
+          true
+        ]
+      },
+      {
+        "group": "C to E",
+        "draw_count": 1,
+        "flip_x": [
+          true
+        ]
+      },
+      {
+        "group": "C to F",
+        "draw_count": 1,
+        "flip_x": [
+          true
+        ]
+      },
+      {
+        "group": "C turn",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "D to E",
+        "draw_count": 1,
+        "flip_x": [
+          true
+        ]
+      },
+      {
+        "group": "D turn",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "E to C",
+        "draw_count": 2,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "E to D",
+        "draw_count": 2,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "E turn",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "F to A",
+        "draw_count": 2,
+        "flip_x": [
+          true
+        ]
+      },
+      {
+        "group": "F to C",
+        "draw_count": 2,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "F turn",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      }
+    ]
+  },
+  "original_source_record": "art/cartoon/walk-expansion-v1/reference/source.json",
+  "original_source_record_sha256": "040106d15a0c6460a044a7989ddcfea12d494bc6838ee1fad83a3793e2f2cfa4",
+  "original_metadata_record": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+  "original_metadata_record_sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629",
+  "resource_sha256": {
+    "RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+    "RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+  },
+  "historical_dump_engine_sha256": "6ac61dc53dc926a311d89fcf2e27ff7cefbbac7f4c60e2491f69114230400865",
+  "scope": "Copied and validated preserved original extraction. Commercial RESOURCE files and original executable were not reread or rerun in this step.",
+  "palette_limit": "Original indices use the port dump palette and index 0 transparency. Original executable color/compositing and timing parity are not established.",
+  "hash_policy": "Exact file bytes for stored records and PNGs; RGBA hashes cover decoded row-major RGBA bytes.",
+  "files": {
+    "003-original-native.png": "622f8902c51975a70498fa7630969c637f979207ac206d43af77dd621d8f2310",
+    "003-original-nearest8.png": "7d3aad1acabbebd015c224fd85e0c53772fe564a420426cdfd14d7092fa0374b"
+  },
+  "nearest8": {
+    "scale_exact": {
+      "numerator": 8,
+      "denominator": 1
+    },
+    "filter": "NEAREST",
+    "verification": "All decoded RGBA bytes equal native pixel replication into 8x8 blocks."
+  },
+  "registration": {
+    "native_canvas": [
+      40,
+      76
+    ],
+    "runtime_canvas": [
+      80,
+      152
+    ],
+    "native_top_visible_span_x_exclusive": [
+      26,
+      28
+    ],
+    "native_top_pixel_edge_midpoint_x": 27.0,
+    "runtime_top_pixel_edge_midpoint_x": 54.0,
+    "suggested_cap_target_hd": [
+      54.0,
+      0.25
+    ],
+    "generated_art_scale_exact": {
+      "numerator": 1,
+      "denominator": 10
+    },
+    "target_basis": "X is the original top-row cap-outline midpoint at 2x. Y=0.25 is the inherited deliberate filter margin, not a measured original point. No engine or anatomical anchor is claimed."
+  },
+  "waiting_pose_comparison": {
+    "original_frame": {
+      "frame": 0,
+      "resource": "JOHNWALK.BMP",
+      "canvas": [
+        40,
+        76
+      ],
+      "xpm_sha256": "f26c3a4e429da553acb5f0e8b00a886324f025074471a12b3a17317a1266eb4b",
+      "index_plane_sha256": "ce1b03a3067b983190510cf6d198e7a5c02b43d672c8963be4b5bc5631f2660e",
+      "rgba_sha256": "9cbcb4d4ca5c0236eb3d7060cc33d0ac6c4dc1aa543d179603ca463374e2428c",
+      "visible_bounds_exclusive": [
+        0,
+        0,
+        33,
+        76
+      ],
+      "transparent_index": 0,
+      "first_row_visible_span_x_exclusive": [
+        26,
+        28
+      ],
+      "landmark_limit": "Visible bounds include original shadow; first-row extent is a measured pixel feature, not an engine or anatomical anchor.",
+      "encoded_uses": [
+        {
+          "group": "A wait",
+          "draw_count": 2,
+          "flip_x": [
+            false,
+            true
+          ]
+        },
+        {
+          "group": "B wait",
+          "draw_count": 2,
+          "flip_x": [
+            false,
+            true
+          ]
+        },
+        {
+          "group": "C wait",
+          "draw_count": 2,
+          "flip_x": [
+            false,
+            true
+          ]
+        },
+        {
+          "group": "D wait",
+          "draw_count": 2,
+          "flip_x": [
+            false,
+            true
+          ]
+        },
+        {
+          "group": "E wait",
+          "draw_count": 2,
+          "flip_x": [
+            false,
+            true
+          ]
+        },
+        {
+          "group": "F wait",
+          "draw_count": 2,
+          "flip_x": [
+            false,
+            true
+          ]
+        }
+      ]
+    },
+    "native_reference": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/reference/000-original-native.png",
+    "native_reference_sha256": "e671e0c24432a633450d7e64e5e5f8aa54f7b31ca9e2381ecbd6b15ff130be52",
+    "limit": "Original waiting pose is a geometry comparison, not source art for this turn and not a Cartoon approval."
+  },
+  "turn_table": {
+    "trace_record": "art/cartoon/walk-pilot/front-arrival-v1/trace/trace.json",
+    "trace_record_sha256": "84542ebc9c922b2a99dd86f35d0a8f0dcddd1f6d0bddfc0ac3999b2dca8c7a91",
+    "uses": [
+      {
+        "group": "A turn",
+        "table_row": {
+          "row": 93,
+          "source_line": 106,
+          "raw": [
+            1,
+            285,
+            241,
+            3
+          ],
+          "frame": 3,
+          "flip_x": true,
+          "x": 284,
+          "y": 241,
+          "heading": 2,
+          "heading_name": "W"
+        }
+      },
+      {
+        "group": "A turn",
+        "table_row": {
+          "row": 97,
+          "source_line": 110,
+          "raw": [
+            0,
+            305,
+            241,
+            3
+          ],
+          "frame": 3,
+          "flip_x": false,
+          "x": 304,
+          "y": 241,
+          "heading": 6,
+          "heading_name": "E"
+        }
+      },
+      {
+        "group": "B turn",
+        "table_row": {
+          "row": 147,
+          "source_line": 160,
+          "raw": [
+            1,
+            439,
+            253,
+            3
+          ],
+          "frame": 3,
+          "flip_x": true,
+          "x": 438,
+          "y": 253,
+          "heading": 2,
+          "heading_name": "W"
+        }
+      },
+      {
+        "group": "B turn",
+        "table_row": {
+          "row": 151,
+          "source_line": 164,
+          "raw": [
+            0,
+            459,
+            253,
+            3
+          ],
+          "frame": 3,
+          "flip_x": false,
+          "x": 458,
+          "y": 253,
+          "heading": 6,
+          "heading_name": "E"
+        }
+      },
+      {
+        "group": "C turn",
+        "table_row": {
+          "row": 262,
+          "source_line": 275,
+          "raw": [
+            1,
+            507,
+            231,
+            3
+          ],
+          "frame": 3,
+          "flip_x": true,
+          "x": 506,
+          "y": 231,
+          "heading": 2,
+          "heading_name": "W"
+        }
+      },
+      {
+        "group": "C turn",
+        "table_row": {
+          "row": 266,
+          "source_line": 279,
+          "raw": [
+            0,
+            527,
+            231,
+            3
+          ],
+          "frame": 3,
+          "flip_x": false,
+          "x": 526,
+          "y": 231,
+          "heading": 6,
+          "heading_name": "E"
+        }
+      },
+      {
+        "group": "D turn",
+        "table_row": {
+          "row": 316,
+          "source_line": 329,
+          "raw": [
+            1,
+            465,
+            217,
+            3
+          ],
+          "frame": 3,
+          "flip_x": true,
+          "x": 464,
+          "y": 217,
+          "heading": 2,
+          "heading_name": "W"
+        }
+      },
+      {
+        "group": "D turn",
+        "table_row": {
+          "row": 320,
+          "source_line": 333,
+          "raw": [
+            0,
+            485,
+            217,
+            3
+          ],
+          "frame": 3,
+          "flip_x": false,
+          "x": 484,
+          "y": 217,
+          "heading": 6,
+          "heading_name": "E"
+        }
+      },
+      {
+        "group": "E turn",
+        "table_row": {
+          "row": 407,
+          "source_line": 420,
+          "raw": [
+            1,
+            380,
+            211,
+            3
+          ],
+          "frame": 3,
+          "flip_x": true,
+          "x": 379,
+          "y": 211,
+          "heading": 2,
+          "heading_name": "W"
+        }
+      },
+      {
+        "group": "E turn",
+        "table_row": {
+          "row": 411,
+          "source_line": 424,
+          "raw": [
+            0,
+            400,
+            211,
+            3
+          ],
+          "frame": 3,
+          "flip_x": false,
+          "x": 399,
+          "y": 211,
+          "heading": 6,
+          "heading_name": "E"
+        }
+      },
+      {
+        "group": "F turn",
+        "table_row": {
+          "row": 473,
+          "source_line": 486,
+          "raw": [
+            1,
+            420,
+            226,
+            3
+          ],
+          "frame": 3,
+          "flip_x": true,
+          "x": 419,
+          "y": 226,
+          "heading": 2,
+          "heading_name": "W"
+        }
+      },
+      {
+        "group": "F turn",
+        "table_row": {
+          "row": 477,
+          "source_line": 490,
+          "raw": [
+            0,
+            440,
+            226,
+            3
+          ],
+          "frame": 3,
+          "flip_x": false,
+          "x": 439,
+          "y": 226,
+          "heading": 6,
+          "heading_name": "E"
+        }
+      }
+    ],
+    "observed_compiled_cases": [
+      {
+        "case": "A-to-E",
+        "api_arguments": [
+          0,
+          1,
+          4,
+          5
+        ],
+        "glibc_seed": 2,
+        "total_case_draws": 69,
+        "matching_draws": [
+          {
+            "draw_index_zero_based": 2,
+            "draw": {
+              "frame": 3,
+              "flip_x": 0,
+              "x": 304,
+              "y": 241,
+              "delay_ticks": 6
+            }
+          },
+          {
+            "draw_index_zero_based": 10,
+            "draw": {
+              "frame": 3,
+              "flip_x": 0,
+              "x": 368,
+              "y": 243,
+              "delay_ticks": 6
+            }
+          },
+          {
+            "draw_index_zero_based": 25,
+            "draw": {
+              "frame": 3,
+              "flip_x": 0,
+              "x": 458,
+              "y": 253,
+              "delay_ticks": 6
+            }
+          },
+          {
+            "draw_index_zero_based": 53,
+            "draw": {
+              "frame": 3,
+              "flip_x": 1,
+              "x": 464,
+              "y": 217,
+              "delay_ticks": 6
+            }
+          },
+          {
+            "draw_index_zero_based": 61,
+            "draw": {
+              "frame": 3,
+              "flip_x": 1,
+              "x": 406,
+              "y": 212,
+              "delay_ticks": 6
+            }
+          }
+        ]
+      },
+      {
+        "case": "E-to-F",
+        "api_arguments": [
+          4,
+          7,
+          5,
+          7
+        ],
+        "glibc_seed": 2,
+        "total_case_draws": 45,
+        "matching_draws": [
+          {
+            "draw_index_zero_based": 0,
+            "draw": {
+              "frame": 3,
+              "flip_x": 0,
+              "x": 399,
+              "y": 211,
+              "delay_ticks": 6
+            }
+          },
+          {
+            "draw_index_zero_based": 1,
+            "draw": {
+              "frame": 3,
+              "flip_x": 0,
+              "x": 399,
+              "y": 211,
+              "delay_ticks": 6
+            }
+          },
+          {
+            "draw_index_zero_based": 8,
+            "draw": {
+              "frame": 3,
+              "flip_x": 0,
+              "x": 448,
+              "y": 213,
+              "delay_ticks": 6
+            }
+          },
+          {
+            "draw_index_zero_based": 32,
+            "draw": {
+              "frame": 3,
+              "flip_x": 1,
+              "x": 462,
+              "y": 230,
+              "delay_ticks": 6
+            }
+          }
+        ]
+      }
+    ],
+    "scope": "Stored encoded turn rows plus matching compiled route draws. The same-spot A-turn cases in this trace use waiting sprites and do not exercise this ordinary-turn frame. Matching route draws use 6 port ticks, 120ms at 20ms/tick. This is not a new native capture, original-executable timing calibration or all-route/story coverage."
+  },
+  "preparation_status": "ORIGINAL-ONLY PREPARATION: no ordinary-turn art generated or approved."
+}
