@@ -12,6 +12,8 @@ Presence in a catalog is not proof that every branch runs correctly.
 | [Original reference](original-reference.md) | Exact executable/resource identity, windowed launch and what has actually been observed. |
 | [External tools](external-tools.md) | Pinned xesf engine/viewer source, useful art-inspection patterns and limits of their playback implementations. |
 | [Extractor comparison](original-extractor-reference.md) | Proven walking-data equality and the historical sound extraction length/numbering defect. |
+| [Original image comparison](original-image-comparison.md) | Executed decoding comparisons, original-versus-bundled pixel differences and limits of palette/runtime evidence. |
+| [Cartoon review metadata](cartoon-art-metadata.md) and [asset data](cartoon-art-metadata.json) | All 21 approved replacements mapped to original identities, native dimensions, HD proxies, recipes, motion records and human acceptance. |
 | [Source manifest](sources.json) | Retrieval date, page URLs, response hashes and rendered-text hashes for the public research. |
 
 ## Evidence levels
@@ -47,6 +49,17 @@ It does not mirror the site's prose, screenshots or downloads.
 An original display defect is reference behavior to document. Reproducing it
 in the port is a separate decision. This research does not authorize silently
 changing scene semantics or replacing approved artwork.
+
+For artwork review, begin with the supplied-original reference layer. The bundled
+resource pixels and upscaled HD PNGs have their own provenance; they are not
+interchangeable with the supplied installation. Record pose, facing, limb order
+and foot contact against original evidence, then compare each variant. Matching
+dimensions or registration arithmetic does not establish artistic fidelity.
+
+The current accepted Cartoon pilot contains six walking poses and 15 island
+assets. Some earlier motion notes describe work as pending because they predate
+the final acceptance. Their historical wording and image-generation lessons are
+preserved; the final acceptance ledgers and current metadata describe coverage.
 
 ## Maintaining these records
 

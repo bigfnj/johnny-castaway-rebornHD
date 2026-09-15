@@ -115,3 +115,61 @@ branches, the original sample-ID translation and complete malformed LZW
 validation remain outside these passing checks. The corresponding concrete
 findings are retained in BACKLOG.md. No new art pack or scene-command behavior
 was introduced by this maintenance pass.
+
+## Post-merge reference and metadata follow-up
+
+PR 6 merged at `4586f128ec50f8bc390f160f8c24466b95a8cc47`. Both the
+[final PR run](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34937968981)
+and [main run](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34938468373)
+passed all four platforms. The [post-merge audit](maintenance-post-merge-audit.md)
+records independent engine/platform review and new bounded follow-ups.
+
+The first local main PowerShell 5.1 gate built without warnings and passed all
+smoke. One partial-fallback palm capture failed during regression; its temporary
+log had been removed, so its exit status and native output were unavailable.
+Other regressions and all 2,452 golden files passed. Focused real palm smoke then
+all eight regressions passed. The existing capture assertion now includes exit
+code and a native-output tail. Two forced-error controls verified that both
+nonzero exit and missing-marker diagnostics retain evidence after scratch cleanup.
+No automatic retry or unproven runtime fix was added.
+
+A later follow-up gate stopped after one of 27 smoke cases timed out; regression
+correctly did not run. The preserved process dump showed frame 158/400,
+`paused=1`, `oneFrame=0`, `maxSpeed=0`, and `evStartAtMaxSpeed=1`. The main thread
+was in the ordinary five-millisecond event-loop sleep. The user confirmed
+accidentally pausing and closing a test window. This interruption is distinct
+from the earlier palm failure. Its local evidence is under
+`build/cleanup/art-reference-integrated-ps51`, including `stall-diagnosis.md`.
+
+After that diagnosis, the complete follow-up PowerShell 5.1 gate passed with a
+warning-free build, all smoke before regression, all eight palm checks and all
+2,452 golden files equal. Complete output and exit metadata are retained at
+`build/cleanup/art-reference-integrated-ps51-after-hotkey-diagnosis`. The earlier
+unexplained palm failure remains recorded; a later pass does not identify its cause.
+
+The [original-image comparison](knowledge-base/original-image-comparison.md)
+verified all 79 selected images in each distribution using native and pinned
+JavaScript execution. A distinct NanaZip decoder matched each original LZW
+stream's declared packed bytes. Original-versus-bundled differences total 2,428
+indices in those resources. Palette selection and original-executable rendering
+remain outside that evidence.
+
+The new original-first authoring metadata covers all 21 approved assets. It
+passed two smoke checks before 39 regressions, 36 executed-source mutations and
+three real Git line-ending rule mutations. Complete LF and CRLF checkouts
+reproduced the generated reports. Integration repeated smoke, regression,
+mutations and the generator's read-only reproduction check. The commands are
+documented in [the metadata guide](knowledge-base/cartoon-art-metadata.md);
+these are explicit authoring checks, not additional CI job claims.
+
+Independent review caught and corrected two false passes before integration:
+incomplete capture timelines and original imports with the wrong distribution
+identity. Guards now check both styles, every display interval and route
+position, endpoint duration, original resource hashes and decoder identity.
+Every newly added refusal was exercised with its intended negative control.
+
+The browser comparison verified six original pixel buffers and six approved PNG
+hashes at a shared coordinate scale. It identified the port dump palette and
+transparency rules explicitly. The user's new 024/028/029 correction requests
+are stored as human observations, separate from automatic technical checks and
+the original acceptance ledgers. No replacement art is part of this follow-up.
