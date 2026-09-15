@@ -25,6 +25,19 @@ for case in $audio_cases; do
 done
 cc -std=c11 -D_DEFAULT_SOURCE -DPLATFORM_LINUX -Wall -Wextra -Werror \
     -I"$SRC/platform" -I"$SRC/src/engine" \
+    "$SRC/tests/test_linux_audio_delivery.c" -o "$OUT/test_linux_audio_delivery" -lX11 -lasound -pthread
+delivery_cases='full rate-near'
+if [[ $phase == regression ]]; then
+    delivery_cases=''
+fi
+if [[ $phase != smoke ]]; then
+    delivery_cases="$delivery_cases any-failure access-failure format-failure channels-failure rate-failure commit-failure partial-mono partial-stereo recover interrupted would-block zero-progress wait-failure recover-failure blocked-stop close-pending"
+fi
+for case in $delivery_cases; do
+    timeout 10 "$OUT/test_linux_audio_delivery" "$case"
+done
+cc -std=c11 -D_DEFAULT_SOURCE -DPLATFORM_LINUX -Wall -Wextra -Werror \
+    -I"$SRC/platform" -I"$SRC/src/engine" \
     "$SRC/tests/test_platform_alloc.c" -o "$OUT/test_platform_alloc" -lX11 -lasound -pthread
 for case in $alloc_cases; do
     xvfb-run -a timeout 10 "$OUT/test_platform_alloc" "$case"
