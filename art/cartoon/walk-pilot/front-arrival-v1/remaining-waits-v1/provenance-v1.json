@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen.imagegen",
+  "model_identifier": "not exposed by tool",
+  "generation_seed": "not exposed by tool",
+  "status": "New000/015 drafts; prior016/017/018 approvals guide identity but do not approve these poses.",
+  "appearance_approval_inputs": [
+    {
+      "path": "art/cartoon/walk-pilot/front-arrival-v1/approval017-v1.json",
+      "sha256": "e6eef0551f0085b5b3c00e440ad5ad345623dac6b0271050e4aa74bb6887ec0c"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/approval-v1.json",
+      "sha256": "d6b6ab4e5801136b573c241c4071d3aebb82701f1c59fa434d340550343bac9c"
+    },
+    {
+      "path": "art/cartoon/arrival-pilot-v1/production-acceptance.json",
+      "sha256": "52d71dd6255a544791d2de24c64882716b95cb0e90085f23a798612aef71f4e2"
+    }
+  ],
+  "attempts": [
+    {
+      "frame": 0,
+      "raw_output": "000-profile-v1.png",
+      "raw_sha256": "ae989a65335c10a24da3176ff6fd568dc4a2cb6fddda185002c60dcdae3d3a12",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-d8c58d34-657e-40c9-a1a7-16e300890e91.png",
+      "cache_bytes_identical": true,
+      "call": "000-call-v1.json",
+      "call_sha256": "4db3c40bb8bc12433e02e5e88b88123748fd14812963382ea4d948eed9577b92",
+      "prompt_utf8_sha256": "6f7553807984abc4fbb86fb7ef4241b232a498041feb75ac562388cf645b7a7b",
+      "actual_reference_order": [
+        {
+          "actual_path": "build/front-arrival/reference/nearest8/000.png",
+          "preserved_path": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/reference/000-original-nearest8.png",
+          "sha256": "b61aeae2496fc2a169bbdb8ca1254802499a59a5ea282894773f865e64ffc321"
+        },
+        {
+          "actual_path": "art/cartoon/walk-pilot/front-arrival-v1/017-foot-depth-v3.png",
+          "preserved_path": "art/cartoon/walk-pilot/front-arrival-v1/017-foot-depth-v3.png",
+          "sha256": "d1fab951de823fc5612860a5fac48bd586a533177a3e5e26d2605f41d4272c1d"
+        }
+      ],
+      "geometry_record": {
+        "path": "reference/000-source.json",
+        "sha256": "42233146f463bad1c8fdfe7c135bc35e518f06ac6bf77012f38a7f754042cf2b"
+      },
+      "measurements": {
+        "canvas": [
+          1024,
+          1536
+        ],
+        "alpha_range": [
+          0,
+          254
+        ],
+        "bounds_exclusive_by_alpha_threshold": {
+          "1": [
+            25,
+            19,
+            892,
+            1536
+          ],
+          "8": [
+            327,
+            21,
+            707,
+            1486
+          ],
+          "128": [
+            327,
+            22,
+            706,
+            1485
+          ]
+        },
+        "limit": "Raster geometry observations only; no anatomical or motion-acceptance claim."
+      },
+      "status": "Candidate; native direction-ring and human review pending."
+    },
+    {
+      "frame": 15,
+      "raw_output": "015-rear-v1.png",
+      "raw_sha256": "dbd88e081fafbe906f9a9482128bb54fad1b142d1dc18f240e099bfe7e227578",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-28f126db-4d2b-4501-b1eb-79a4b6261aad.png",
+      "cache_bytes_identical": true,
+      "call": "015-call-v1.json",
+      "call_sha256": "788fc1cf1972606df5e9612c198bbd3fb2c05106d5567f6815971c2d228351b9",
+      "prompt_utf8_sha256": "5511d4544582e7e5883a6e34f8aa7b82624075ae02595186e4b57b4cbb5e42e0",
+      "actual_reference_order": [
+        {
+          "actual_path": "build/front-arrival/reference/nearest8/015.png",
+          "preserved_path": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/reference/015-original-nearest8.png",
+          "sha256": "afba9900490c794c0260081208278b197758bd95360df3e4374eb227c09621e0"
+        },
+        {
+          "actual_path": "art/cartoon/arrival-pilot-v1/018-pose-v1.png",
+          "preserved_path": "art/cartoon/arrival-pilot-v1/018-pose-v1.png",
+          "sha256": "4ed63ba9245dd30ac414caadba1a13febac240ffcbfa767c4f939a4bd83ddab2"
+        },
+        {
+          "actual_path": "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/016-toe-fit-v2.png",
+          "preserved_path": "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/016-toe-fit-v2.png",
+          "sha256": "d89066217905e3e1a2fa509f1f9d6cfecbb084cb7fba50844a32a9d8c181c052"
+        }
+      ],
+      "geometry_record": {
+        "path": "reference/015-source.json",
+        "sha256": "48a2b5329b1a446babc6421f3a13843b500537063ae42c5826e6df439ac459f4"
+      },
+      "measurements": {
+        "canvas": [
+          1024,
+          1536
+        ],
+        "alpha_range": [
+          0,
+          254
+        ],
+        "bounds_exclusive_by_alpha_threshold": {
+          "1": [
+            45,
+            14,
+            1010,
+            1470
+          ],
+          "8": [
+            235,
+            16,
+            779,
+            1466
+          ],
+          "128": [
+            235,
+            16,
+            778,
+            1465
+          ]
+        },
+        "limit": "Raster geometry observations only; no anatomical or motion-acceptance claim."
+      },
+      "status": "Candidate; native direction-ring and human review pending."
+    }
+  ],
+  "reference_rule": "Supplied-original geometry is authoritative for pose/direction/occlusion. Approved Cartoon references define appearance. Original diagnostic colors and ground shadows do not define the new palette or sole placement."
+}
