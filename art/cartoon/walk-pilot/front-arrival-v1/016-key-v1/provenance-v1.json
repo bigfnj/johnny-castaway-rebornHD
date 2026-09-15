@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen.imagegen",
+  "status": "016 draft pending native and human review;017 approval does not approve016.",
+  "model_identifier": "not exposed by tool",
+  "generation_seed": "not exposed by tool",
+  "appearance_approval": {
+    "path": "../approval017-v1.json",
+    "sha256": "e6eef0551f0085b5b3c00e440ad5ad345623dac6b0271050e4aa74bb6887ec0c"
+  },
+  "geometry_reference": {
+    "path": "reference/source.json",
+    "sha256": "08501f2e05651f7e818e7ce6f274e564b7c84b1a39f4a9211396559715d70125"
+  },
+  "attempts": [
+    {
+      "call": "016-call-v1.json",
+      "call_sha256": "57d3e51b4037aa8359e313a59cd35fc7a05dcb373731fdc15205aec82961770e",
+      "prompt_utf8_sha256": "382e40a9f92ebe24cb223d2f1c5fd726bc1227e15017558f6d19dcf89b141ce9",
+      "actual_reference_order": [
+        {
+          "actual_path": "build/front-arrival/reference/nearest8/016.png",
+          "preserved_path": "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/reference/016-original-nearest8.png",
+          "sha256": "17d68191c85315e1759edf357920d2642f791ce6a5dd5cf1871899c2b0854d92"
+        },
+        {
+          "actual_path": "art/cartoon/walk-pilot/front-arrival-v1/017-foot-depth-v3.png",
+          "preserved_path": "art/cartoon/walk-pilot/front-arrival-v1/017-foot-depth-v3.png",
+          "sha256": "d1fab951de823fc5612860a5fac48bd586a533177a3e5e26d2605f41d4272c1d"
+        }
+      ],
+      "raw_output": "016-front-v1.png",
+      "raw_sha256": "14dcda059e360c0f9726dc0c6be0e951c53cb4422848cd7c917252be0c5cfa1d",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-a0dda5ab-f8fa-4316-b23f-0ce710dd66d1.png",
+      "cache_bytes_identical": true,
+      "disposition": "Rejected fixed-canvas fit: source alpha8 outermost right toe maps to64.05HD against width64. No runtime sprite written.",
+      "measurements": {
+        "canvas": [
+          1024,
+          1536
+        ],
+        "alpha_range": [
+          0,
+          254
+        ],
+        "bounds_exclusive_by_alpha_threshold": {
+          "1": [
+            135,
+            23,
+            972,
+            1491
+          ],
+          "8": [
+            223,
+            25,
+            804,
+            1490
+          ],
+          "128": [
+            224,
+            26,
+            803,
+            1489
+          ]
+        },
+        "warm_foot_pixel_max_y_screen_left_right": [
+          1488,
+          1488
+        ],
+        "measurement_mask": "Separate x halves; y>=1150; alpha>=128; red>1.3*green and red>1.3*blue.",
+        "limit": "Colored pixel extents, not anatomical ground contacts or native animation approval."
+      }
+    },
+    {
+      "call": "016-call-v2.json",
+      "call_sha256": "23cc230bad5f1cff5b48998db9013b543f9b53a205a19f948255d949d21a2263",
+      "prompt_utf8_sha256": "125f01f2c9a4a44b249703169e87c9ce70ae7abab7515d0b930f4505aca62d1d",
+      "actual_reference_order": [
+        {
+          "actual_path": "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/016-front-v1.png",
+          "preserved_path": "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/016-front-v1.png",
+          "sha256": "14dcda059e360c0f9726dc0c6be0e951c53cb4422848cd7c917252be0c5cfa1d"
+        }
+      ],
+      "raw_output": "016-toe-fit-v2.png",
+      "raw_sha256": "d89066217905e3e1a2fa509f1f9d6cfecbb084cb7fba50844a32a9d8c181c052",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-03db120b-9a4b-425b-91bc-10a0f5602286.png",
+      "cache_bytes_identical": true,
+      "disposition": "Narrow screen-right toe correction; candidate for technical export and native front-turn review. No human acceptance yet.",
+      "measurements": {
+        "canvas": [
+          1024,
+          1536
+        ],
+        "alpha_range": [
+          0,
+          254
+        ],
+        "bounds_exclusive_by_alpha_threshold": {
+          "1": [
+            119,
+            23,
+            986,
+            1492
+          ],
+          "8": [
+            223,
+            25,
+            789,
+            1490
+          ],
+          "128": [
+            224,
+            26,
+            788,
+            1489
+          ]
+        },
+        "warm_foot_pixel_max_y_screen_left_right": [
+          1488,
+          1488
+        ],
+        "measurement_mask": "Separate x halves; y>=1150; alpha>=128; red>1.3*green and red>1.3*blue.",
+        "limit": "Colored pixel extents, not anatomical ground contacts or native animation approval."
+      }
+    }
+  ],
+  "selected_for_technical_review": "016-toe-fit-v2.png",
+  "remaining_visual_check": "Original016 retains a modest projected foot stagger; generated016 feet are nearly level. Judge both native turn directions with unchanged017 before acceptance."
+}
