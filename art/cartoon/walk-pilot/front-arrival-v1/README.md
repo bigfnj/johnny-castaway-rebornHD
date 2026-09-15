@@ -4,7 +4,8 @@ Work starts from main `707a20b` on `art/cartoon-front-arrival-family`.
 The approved front walk 024-029 stays intact. This batch begins with the
 separate original standing pose 017, reviewed as a key before more drawings.
 017 appearance and its front-walk arrival are approved in `approval017-v1.json`.
-The remaining poses are pending. No new artwork is promoted yet.
+016 and both front waiting turns are approved in `016-key-v1/approval-v1.json`.
+The other six new poses are pending. No new artwork is promoted yet.
 
 The full wait/turn table uses ten unique sprites. Two, 018 and 023, are already
 Cartoon. Eight still need artwork: 000, 003, 009, 010, 012, 015, 016 and 017.

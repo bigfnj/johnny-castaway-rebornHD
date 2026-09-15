@@ -1,0 +1,104 @@
+{
+  "trace_source": "art/cartoon/walk-pilot/front-arrival-v1/trace/trace.json",
+  "trace_sha256": "84542ebc9c922b2a99dd86f35d0a8f0dcddd1f6d0bddfc0ac3999b2dca8c7a91",
+  "clips": {
+    "A1-to-A7": {
+      "prime": {
+        "api_arguments": [
+          0,
+          1,
+          0,
+          1
+        ],
+        "glibc_seed": 2,
+        "draws": [
+          {
+            "frame": 17,
+            "flip_x": 1,
+            "x": 293,
+            "y": 243,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      "turn": {
+        "api_arguments": [
+          0,
+          1,
+          0,
+          7
+        ],
+        "glibc_seed": 2,
+        "draws": [
+          {
+            "frame": 16,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 6
+          },
+          {
+            "frame": 17,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 6
+          },
+          {
+            "frame": 17,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 80
+          }
+        ]
+      }
+    },
+    "A7-to-A1": {
+      "prime": {
+        "api_arguments": [
+          0,
+          7,
+          0,
+          7
+        ],
+        "glibc_seed": 2,
+        "draws": [
+          {
+            "frame": 17,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      "turn": {
+        "api_arguments": [
+          0,
+          7,
+          0,
+          1
+        ],
+        "glibc_seed": 2,
+        "draws": [
+          {
+            "frame": 16,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 6
+          },
+          {
+            "frame": 17,
+            "flip_x": 1,
+            "x": 293,
+            "y": 243,
+            "delay_ticks": 80
+          }
+        ]
+      }
+    }
+  },
+  "scope": "Draw arguments and returned delays from independently compiled untouched walk.c. Display timestamps observed separately, including adsPlayWalk first-timer behavior."
+}

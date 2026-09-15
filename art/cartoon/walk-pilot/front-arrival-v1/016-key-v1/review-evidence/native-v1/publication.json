@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8932/front-turn016-v1/review.html",
+  "html_sha256": "6705ac2d85d4a99bfb2c6be0d5cdbf432c8d94ac641edb7e3168d10f17c591d2",
+  "served_file_count": 69,
+  "smoke_passed": true,
+  "regressions_after_smoke": [
+    "A1-to-A7: exact016 native crops, initial/turn/settled stepping, Normal native boundary and endpoint,1280 layout",
+    "A7-to-A1: exact016 native crops, initial/turn/settled stepping, Normal native boundary and endpoint,1280 layout"
+  ],
+  "browser_errors": [],
+  "negative_control": "changed HTML causes one named served identity failure",
+  "publisher_sha256": "daba4850ab9bebb613f937f8cc9b953642b1ed1f0cb85b037c8cc03c88bf0923",
+  "scope": "Proposed016 and approved017 native turn comparison. No016 human approval or production change."
+}

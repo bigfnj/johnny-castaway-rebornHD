@@ -11,7 +11,7 @@ Existing Cartoon018 and023 complete the ten unique table assets.
 |---|---|
 | Trace | Verify original walk rows and actual C route behavior; separate shared story uses from the walk-table family. Completed: 489 rows, 116 compiled cases and all41 original/41 port TTM identities. |
 | Front arrival017 | Approved: original pose plus Calm focus identity; static/fit checks and the actual E-to-A walk into its mirrored standing pose. User: "looks good, proceed". |
-| Front waiting turn | Add016 and review both same-spot1-to7 and7-to1 turns with017. Preserve the original120ms intermediate frames and1600ms final hold. |
+| Front waiting turn | Approved:016 exported and native-checked in both same-spot1-to7 and7-to1 turns with017. User: "Yes, keep this turn" at front-turn016-v1. Preserve the original120ms intermediate frames and1600ms final hold. |
 | Remaining waiting directions | Add000 and015, retaining018. Review original heading order, both reflected uses, stance and continuity. |
 | Ordinary turning poses | Add003,009,010,012, retaining023. Review actual departure/waypoint paths, with clearly disclosed HD walking fallback outside the accepted front/rear cycles. |
 | Integration | Promote only reviewed assets with explicit inherited approvals, reproducible export recipes, unchanged prior PNGs and smoke before regression. Merge after the agreed family review; run the post-merge audit and update BACKLOG. |

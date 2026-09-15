@@ -1,8 +1,9 @@
 # Cartoon016 front waiting turn
 
 017 appearance and the E-to-A arrival were accepted with "looks good, proceed";
-see `../approval017-v1.json`. This folder starts the next pose,016, and does not
-inherit artistic approval from017. Production remains unchanged.
+see `../approval017-v1.json`. The user subsequently accepted016 and both reviewed
+front turns with "Yes, keep this turn"; see `approval-v1.json`. This is a separate
+approval from017. Production remains unchanged.
 
 Original016 provides the front-facing geometry. The approved017 supplies the
 Calm focus identity, beard, brimmed sailor cap, proportions and shorts style.
@@ -23,7 +24,8 @@ than assumed unchanged. No limb warp, pose rescaling or alpha hardening was used
 The second draft passes the fixed64x148 fit. Its nearly level feet differ from
 the original's small projected stagger. A color-mask comparison identifies a
 possible continuity issue but does not prove foot anatomy or ground contact.
-The next visual checkpoint must inspect both actual native turn directions.
+Both actual native turn directions were reviewed and accepted as shown; that
+artistic acceptance does not relabel the drawing as exact original anatomy.
 
 | Native turn | Original sequence |
 | --- | --- |
@@ -35,5 +37,18 @@ turn to show its starting017. Its observed first-timer duration must remain
 separate from the requested turn duration. Preserve all actual origins and
 reflections; do not interpolate or center each pose independently.
 
-`EXPORT.md` documents reproduction and the exporter evidence. Native evidence
-and the human request will be linked here when the review is ready.
+`EXPORT.md` documents reproduction and the exporter evidence. The native review
+is at http://127.0.0.1:8932/front-turn016-v1/review.html; the exact human question
+and selected identities are retained in `review-request-v1.json`.
+
+Both native directions passed smoke followed by full regression, retaining
+18 and16 displays over1960ms and1840ms respectively. Only the two016 displays
+per clip change; the other30 displays and all pixels outside016 remain exact.
+The original017 private baseline and the full production archive remain intact.
+The published page passed69 served-file identity checks followed by browser
+checks for both directions, native pixels, logical timing, controls and crops.
+The subsequent human judgment accepted the displayed foot motion in both turns.
+
+Native helpers, reports and reconstruction notes are preserved under
+`review-evidence/native-v1/`. Large native captures and private ZIPs remain local
+scratch artifacts; their recorded hashes do not imply permanent availability.
