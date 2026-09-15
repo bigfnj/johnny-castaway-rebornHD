@@ -37,7 +37,7 @@ int main(int argc, char **argv)
         assert(evFrameCount == UINT32_MAX && yields == 3 && polls == 3);
         assert(stopCode == -1 && cleanupOrder == 0);
     } else {
-        unsigned expectedCalls;
+        volatile unsigned expectedCalls;
         if (!strcmp(argv[1], "ordinary")) {
             evMaxFrames = 3;
             evFrameCount = 0;
