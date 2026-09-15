@@ -1,0 +1,42 @@
+"""Prepare original pose and deterministic reference flip for front arrival017."""
+import hashlib
+import json
+from pathlib import Path
+import shutil
+from PIL import Image, __version__
+
+ROOT = Path(__file__).resolve().parents[2]
+ART = ROOT / 'art/cartoon/walk-pilot/front-arrival-v1'
+REF = ART / 'reference'
+REF.mkdir(parents=True, exist_ok=False)
+sha = lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
+source = ROOT / 'build/front-arrival/reference'
+metadata = json.loads((source / 'metadata.json').read_text())
+frame = next(row for row in metadata['frames'] if row['frame'] == 17)
+for variant, target in [('native', '017-original-native.png'), ('nearest8', '017-original-nearest8.png')]:
+    shutil.copyfile(source / variant / '017.png', REF / target)
+with Image.open(REF / '017-original-native.png') as im:
+    assert im.size == (40, 75)
+    assert hashlib.sha256(im.convert('RGBA').tobytes()).hexdigest() == frame['rgba_sha256']
+with Image.open(REF / '017-original-nearest8.png') as enlarged:
+    with Image.open(REF / '017-original-native.png') as native:
+        assert enlarged.convert('RGBA').tobytes() == native.convert('RGBA').resize((320,600), Image.Resampling.NEAREST).tobytes()
+character = ROOT / 'art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-pose-v2.png'
+assert sha(character) == '13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb'
+with Image.open(character) as im:
+    flipped = im.convert('RGBA').transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+    destination = REF / '024-approved-mirrored.png'
+    flipped.save(destination, compress_level=9)
+    with Image.open(destination) as check:
+        assert check.tobytes() == flipped.tobytes()
+    assert flipped.transpose(Image.Transpose.FLIP_LEFT_RIGHT).tobytes() == im.convert('RGBA').tobytes()
+record = {'schema_version': 1, 'scope': 'Original pose authority and deterministic horizontal flip of approved character reference; no artistic edits.',
+    'original_frame': frame, 'original_source_record': 'art/cartoon/walk-expansion-v1/reference/source.json',
+    'original_source_record_sha256': sha(ROOT / 'art/cartoon/walk-expansion-v1/reference/source.json'),
+    'palette_limit': metadata['palette_compositing_limit'],
+    'character_source': character.relative_to(ROOT).as_posix(), 'character_source_sha256': sha(character),
+    'character_transform': 'RGBA FLIP_LEFT_RIGHT over entire 1024x1536 canvas; no crop/rescale/recolor',
+    'pillow_version': __version__,
+    'files': {p.name: sha(p) for p in sorted(REF.glob('*.png'))}}
+(REF / 'preparation.json').write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8')
+print(json.dumps(record, indent=2))

@@ -1,0 +1,131 @@
+{
+  "inputs_sha256": {
+    "export": "56fc9e13ce266203d69c13e48d1187b60228681d2c46f4ddba8b3b9734f942d2",
+    "test": "5f056214e1c4a71dad93e0d9fb6c8da812ff352db7d5c394be2a17c4f3a05f77",
+    "recipe": "32b7588894a0ef9b2aa623b2da5fd5aaaa25af362b61e985a8b4eaa41af34d85",
+    "legacy_export": "c382582ad113c917ee8b5f8e0ebda392ceb5f746bdb4be9982b7a51f04418c63"
+  },
+  "phase": "regression",
+  "passed": 19,
+  "cases": [
+    "reference-preparation",
+    "reference-native",
+    "reference-nearest8",
+    "source-path",
+    "prepare-canvas",
+    "cap-outline",
+    "recipe-reference",
+    "render-contract",
+    "only-arrival",
+    "source-identity",
+    "source-canvas",
+    "fixed-registration",
+    "runtime-canvas",
+    "runtime-overhang",
+    "output-exists",
+    "normal-synthetic",
+    "preview-overhang",
+    "recipe-byte-identity",
+    "legacy-filter-parity"
+  ],
+  "mutations": [
+    {
+      "case": "reference-preparation",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "b5568d779dc0865b73c23f727b3713bba2c686d195cd9496d45bca092eb1c2b0"
+    },
+    {
+      "case": "reference-native",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "b5568d779dc0865b73c23f727b3713bba2c686d195cd9496d45bca092eb1c2b0"
+    },
+    {
+      "case": "reference-nearest8",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "b5568d779dc0865b73c23f727b3713bba2c686d195cd9496d45bca092eb1c2b0"
+    },
+    {
+      "case": "source-path",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "86f9be8b4d9cf9c5e9f1349e45f2a3854f132aba83b9e209af555d29bd4ed5ce"
+    },
+    {
+      "case": "prepare-canvas",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "93417f5b906314286efe0d910a0fca6b417ba3b95feff4c126e47d646990bccb"
+    },
+    {
+      "case": "cap-outline",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "40bdd7074a00f66331aa79cfda97716fb63a8b20169acd73feb32633bf2fb729"
+    },
+    {
+      "case": "recipe-reference",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "d39de136dec45d5aad4b2b82231b8941b7b075b1b3595a335b8b822f5f885f22"
+    },
+    {
+      "case": "render-contract",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "7695f0771fe3628b47dfbe8e901f75fd2cc3f787b6d63cc1342c2225d296d0bf"
+    },
+    {
+      "case": "only-arrival",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "7d06a24dc0086cd8fad455b68d82092b910612caa2a69b85bb1b32e029f8a74e"
+    },
+    {
+      "case": "source-identity",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "a913c33be4b80ddb847add6cab419e8bf104e494288315915da32fb669356673"
+    },
+    {
+      "case": "source-canvas",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "0bdab9b31436e5f1934b51abee37b0445b7e48bdb77e2ae7ea83f53f71379d50"
+    },
+    {
+      "case": "fixed-registration",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "986a9f0b0c743213335263b1da233988b169c2f63c8a5495a3d55d7b41f27e8c"
+    },
+    {
+      "case": "runtime-canvas",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "0f3e270896d525c7700e34b6653d4d62317e3dccd5f0beb3cf02bd4a7d4e93af"
+    },
+    {
+      "case": "runtime-overhang",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "4d24bed2e98dcf8294e01838add6faedb53699e273e2f2dc57a12b7f10aa6d79"
+    },
+    {
+      "case": "output-exists",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "665ca02173777dbc791eab0e8e6796d641c0307be2e243bd769b5d16b2a49dcc"
+    },
+    {
+      "case": "premultiplied-filter",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "1b140bfffcbb0671ea852721939706b4d2723e5cfa8d3f063b59a929267ccc53"
+    }
+  ],
+  "mutation_status": "executed",
+  "limit": "Authoring-only checks; no anatomical correctness or original-engine playback parity claim. Source mutations execute in fresh python -B processes."
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "scope": "Original pose authority and deterministic horizontal flip of approved character reference; no artistic edits.",
+  "original_frame": {
+    "frame": 17,
+    "resource": "JOHNWALK.BMP",
+    "canvas": [
+      40,
+      75
+    ],
+    "xpm_sha256": "103e6049b78bf0943a643b7bb081d3de4e43569d34f6baadaaf0e40d6a731e3a",
+    "index_plane_sha256": "8330731d8b495d4572ccb81d27fae8585c06d2330e138d0a93db58eb8498ef35",
+    "rgba_sha256": "bd14a807d215ddc568983d70930ffcea78c51653c5e4c68de7786d7f91d6a89e",
+    "visible_bounds_exclusive": [
+      0,
+      0,
+      36,
+      75
+    ],
+    "transparent_index": 0,
+    "first_row_visible_span_x_exclusive": [
+      27,
+      31
+    ],
+    "landmark_limit": "Visible bounds include original shadow; first-row extent is a measured pixel feature, not an engine or anatomical anchor.",
+    "encoded_uses": [
+      {
+        "group": "A wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "B wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "C wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "D wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "E wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "F wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      }
+    ]
+  },
+  "original_source_record": "art/cartoon/walk-expansion-v1/reference/source.json",
+  "original_source_record_sha256": "040106d15a0c6460a044a7989ddcfea12d494bc6838ee1fad83a3793e2f2cfa4",
+  "palette_limit": "Original indices use the port dump palette and index-0 transparency; original executable palette/compositing is not verified.",
+  "character_source": "art/cartoon/walk-pilot/original-pose-corrections-v1/024-calm-pose-v2.png",
+  "character_source_sha256": "13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb",
+  "character_transform": "RGBA FLIP_LEFT_RIGHT over entire 1024x1536 canvas; no crop/rescale/recolor",
+  "pillow_version": "12.3.0",
+  "files": {
+    "017-original-native.png": "f8579f9122c1f2e585d960f8de94159bcd17de8e29148ed5e796f2819c81e92c",
+    "017-original-nearest8.png": "d3ac095f60c8bbd4ff33250641fbb27f51f938f816fdbff8d82450d8add5f42a",
+    "024-approved-mirrored.png": "b4862f50a362d1eecbad542bb42345a6ffa28b656ce8b6d3cabccea4b41997f1"
+  }
+}
