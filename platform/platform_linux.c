@@ -13,6 +13,8 @@
 #include <unistd.h>
 #include <pthread.h>
 #include <stdatomic.h>
+#include <limits.h>
+#include <stdint.h>
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
@@ -40,6 +42,7 @@ struct PlatformWindow {
     Window window;
     GC gc;
     XImage* ximage;
+    XImage* presentationImage;
     PlatformSurface* surface;
     int isFullscreen;
     Atom wmDeleteWindow;
@@ -139,6 +142,7 @@ fail:
  */
 void platformDestroyWindow(PlatformWindow* window) {
     if (window) {
+        if (window->presentationImage) XDestroyImage(window->presentationImage);
         if (window->ximage) {
             window->ximage->data = NULL;  // Prevent XDestroyImage from freeing our pixels
             XDestroyImage(window->ximage);
@@ -230,9 +234,59 @@ void platformToggleFullscreen(PlatformWindow* window) {
  */
 void platformUpdateWindow(PlatformWindow* window) {
     if (!window || !window->ximage) return;
-
-    XPutImage(display, window->window, window->gc, window->ximage,
-             0, 0, 0, 0, window->surface->width, window->surface->height);
+    XWindowAttributes attr;
+    if (!XGetWindowAttributes(display, window->window, &attr)) {
+        lastError = "Failed to read X window dimensions";
+        return;
+    }
+    if (attr.width <= 0 || attr.height <= 0) return;
+    PlatformSurface *source = window->surface;
+    XImage *image = window->ximage;
+    if (attr.width != source->width || attr.height != source->height) {
+        if (!window->presentationImage || window->presentationImage->width != attr.width ||
+            window->presentationImage->height != attr.height) {
+            if (attr.width > INT_MAX / 4 || (size_t)attr.height > SIZE_MAX / ((size_t)attr.width * 4)) {
+                lastError = "X window dimensions exceed presentation buffer size";
+                return;
+            }
+            char *pixels = (char *)malloc((size_t)attr.width * (size_t)attr.height * 4);
+            if (!pixels) { lastError = "Out of memory allocating presentation pixels"; return; }
+            int screen = DefaultScreen(display);
+            XImage *replacement = XCreateImage(display, DefaultVisual(display, screen),
+                DefaultDepth(display, screen), ZPixmap, 0, pixels,
+                attr.width, attr.height, 32, attr.width * 4);
+            if (!replacement) {
+                free(pixels);
+                lastError = "Failed to create presentation X image";
+                return;
+            }
+            if (window->presentationImage) XDestroyImage(window->presentationImage);
+            window->presentationImage = replacement;
+        }
+        image = window->presentationImage;
+        memset(image->data, 0, (size_t)image->bytes_per_line * (size_t)image->height);
+        int drawW = attr.width;
+        int drawH = (int)((int64_t)source->height * drawW / source->width);
+        if (drawH > attr.height) {
+            drawH = attr.height;
+            drawW = (int)((int64_t)source->width * drawH / source->height);
+        }
+        if (drawW < 1) drawW = 1;
+        if (drawH < 1) drawH = 1;
+        int left = (attr.width - drawW) / 2;
+        int top = (attr.height - drawH) / 2;
+        /* Presentation only: preserve the engine surface and source colors. */
+        for (int y = 0; y < drawH; y++) {
+            int sy = (int)((int64_t)y * source->height / drawH);
+            for (int x = 0; x < drawW; x++) {
+                int sx = (int)((int64_t)x * source->width / drawW);
+                memcpy(image->data + (size_t)(top + y) * image->bytes_per_line + (left + x) * 4,
+                       source->pixels + (size_t)sy * source->pitch + sx * 4, 4);
+            }
+        }
+    }
+    XPutImage(display, window->window, window->gc, image,
+             0, 0, 0, 0, attr.width, attr.height);
     XFlush(display);
 }
 
