@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "audited_commit": "71f3e5f8d158e4d6a7315fe633d3c9944a4b21e5",
+  "comparison_commit": "4551081495eee81e5e5bf2d8b5f00a5619a176a2",
+  "status": "Read-only post-merge core audit complete; no introduced core-source regression found in inspected scope.",
+  "source_diff_since_comparison": [],
+  "coverage": [
+    {
+      "paths": [
+        "src/engine/jc_reborn.c",
+        "src/engine/config.c"
+      ],
+      "method": "Manual control-flow review",
+      "scope": "CLI token parsing, frames/seed/tag bounds, saved style handling, configuration persistence, screensaver/standalone dispatch and cleanup."
+    },
+    {
+      "paths": [
+        "src/engine/story.c",
+        "src/engine/ads.c",
+        "src/engine/ttm.c"
+      ],
+      "method": "Manual full-file review plus isolated actual-source TTM probe",
+      "scope": "Date progression, scene selection, ADS loading/scheduling/tag lookup, TTM tag scan and VM operands, stop/reset ownership and known reachable no-op commands."
+    },
+    {
+      "paths": [
+        "src/engine/walk.c",
+        "src/engine/calcpath.c"
+      ],
+      "method": "Manual full-file review",
+      "scope": "Direct/turn/arrival state machine, static path ownership, internal route-table indexing, palm replacement/fallback selection. No exhaustive modified-table fuzzing."
+    },
+    {
+      "paths": [
+        "src/engine/resource.c",
+        "src/engine/uncompress.c",
+        "src/engine/utils.c"
+      ],
+      "method": "Manual full-file review",
+      "scope": "Header and length handling, decompression bounds, lookup error paths, allocated resource/map ownership and bounded scalar/string reads."
+    },
+    {
+      "paths": [
+        "src/engine/dump.c"
+      ],
+      "method": "Manual full-file review plus isolated actual-source write-failure probe",
+      "scope": "BMP/SCR output bounds, ADS/TTM disassembly parsing, output directory/file paths and write completion."
+    },
+    {
+      "paths": [
+        "tools/extract_io.c",
+        "tools/extract_sound.c",
+        "tools/extract_walk_data.c"
+      ],
+      "method": "Manual full-file review",
+      "scope": "Explicit arguments, read span checks, exclusive creation, close/write error handling, rollback ownership and retained legacy sound-layout limitation."
+    },
+    {
+      "paths": [
+        "src/engine/sound.c"
+      ],
+      "method": "Manual full-file review",
+      "scope": "Common audio allocation, initialization ordering, callback aliases and teardown. Existing startup issue remains; backend concurrency separately audited."
+    },
+    {
+      "paths": [
+        "src/engine/graphics.c",
+        "src/engine/island.c"
+      ],
+      "method": "Targeted ownership review",
+      "scope": "graphicsEnd, screen/saved-layer release, grReleaseBmp, grLoadBmp cached-name/empty-sprite ownership, islandRelease and waveBase lifecycle. Not a complete rendering-algorithm audit."
+    },
+    {
+      "paths": [
+        "src/engine/graphics.h",
+        "src/engine/resource.h",
+        "src/engine/ttm.h",
+        "src/data/calcpath_data.h",
+        "tools/extract_io.h"
+      ],
+      "method": "Dependency/type fingerprints",
+      "scope": "Types and compiled ownership contracts; not claimed as exhaustive table validation."
+    },
+    {
+      "paths": [
+        "BACKLOG.md"
+      ],
+      "method": "Full open-work comparison",
+      "scope": "Existing boundary, unfinished-command, ownership, capture and optimization items compared to new findings."
+    }
+  ],
+  "new_findings": [
+    {
+      "id": "core-ttm-missing-tag-offset",
+      "classification": "Pre-existing malformed-resource bug; not an introduced art regression.",
+      "paths": [
+        {
+          "path": "src/engine/ttm.c",
+          "line": 92
+        },
+        {
+          "path": "src/engine/ttm.c",
+          "line": 171
+        },
+        {
+          "path": "src/engine/ttm.c",
+          "line": 69
+        }
+      ],
+      "finding": "The missing-tag fill initializes only id=65535. Offset remains allocator contents, and lookup of that valid uint16 value reads the unset offset. A zero offset also prevents loop-index advancement.",
+      "evidence": "Untouched ttmLoadTtm/ttmFindTag compiled with actual utils.c. One real tag with declared count two: A5-filled allocation returns 2779096485 for request65535; zero-filled allocation reaches the lookup witness and times out after one second. Valid tag7 returns4; ordinary missing tag8 returns0.",
+      "limitations": "Synthetic declared/actual tag-count mismatch with deterministic allocator fills. This does not establish a failure in the shipped scripts, whose earlier corpus audit reports exact tag counts.",
+      "suggested_backlog_text": "Reject or safely represent missing TTM tag entries. ttm.c:171 sets sentinel id65535 without initializing its offset, and ttmFindTag at line69 does not advance after a matching zero offset. An actual-source headless probe with declared2/scanned1 tags returned allocator-pattern offset2779096485; zero-filled allocation hung until a1s timeout. Valid/missing ordinary-tag controls passed. Track only scanned tags or reject the mismatch and ensure lookup always terminates; preserve valid corpus behavior. This is malformed-resource evidence, not a shipped-scene regression."
+    },
+    {
+      "id": "core-dump-write-failure",
+      "classification": "Pre-existing output-I/O error propagation bug; not an introduced art regression.",
+      "paths": [
+        {
+          "path": "src/engine/dump.c",
+          "line": 169
+        },
+        {
+          "path": "src/engine/dump.c",
+          "line": 235
+        },
+        {
+          "path": "src/engine/dump.c",
+          "line": 321
+        },
+        {
+          "path": "src/engine/dump.c",
+          "line": 570
+        }
+      ],
+      "finding": "The dump writers ignore stream write and close failures. dumpBmp can return normally after the stream fails to flush.",
+      "evidence": "Actual dumpBmp and utils.c executed against an isolated regular XPM output and a /dev/full output symlink. The regular control closed successfully. The full-device case observed actual fclose=-1/errno28 (ENOSPC), but dumpBmp still returned normally. The probe executable exited0. Other three dump close sites share the unchecked-close pattern by source inspection.",
+      "limitations": "Headless Linux failure injection against the actual dumpBmp helper, not a complete packaged CLI invocation. No actual disk-fill attempt or production output alteration.",
+      "suggested_backlog_text": "Propagate dump writer failures. dump.c ignores stream write/fclose results at169,235,321,570. A headless actual-source dumpBmp probe returned normally after /dev/full produced fclose=-1/ENOSPC; its regular-file control passed. Check stream completion and fail with the output filename, with valid-output and write/close-failure controls. Extractor helpers already check completion and provide a useful local pattern; current dump golden comparisons remain valuable independent coverage."
+    }
+  ],
+  "existing_findings_confirmed": [
+    {
+      "backlog_item": "Validate saved story day before advancing the date",
+      "locations": [
+        "src/engine/story.c:102",
+        "src/engine/config.c:139"
+      ],
+      "observation": "Unchanged increment-before-normalize and atoi remain. Did not rerun the existing UBSan reproduction."
+    },
+    {
+      "backlog_item": "Define and enforce the CLI seed range",
+      "locations": [
+        "src/engine/jc_reborn.c:430"
+      ],
+      "observation": "Seed parsing still omits ERANGE handling; frame parsing has a separate checked boundary."
+    },
+    {
+      "backlog_item": "Bound overlong TTM strings without executing their tail",
+      "locations": [
+        "src/engine/ttm.c:246",
+        "src/engine/dump.c:384"
+      ],
+      "observation": "Both copies retain a fixed 255-character copy limit followed by consumption of the next byte. The existing VM issue also applies to dump decoding alignment by source inspection."
+    },
+    {
+      "backlog_item": "Broader malformed LZW validation",
+      "locations": [
+        "src/engine/uncompress.c:42",
+        "src/engine/uncompress.c:110"
+      ],
+      "observation": "Exhausted input still synthesizes zero bytes and undefined code handling remains permissive. Existing output-size checks remain present."
+    },
+    {
+      "backlog_item": "Establish unfinished TTM command behavior",
+      "locations": [
+        "src/engine/ttm.c:290",
+        "src/engine/ttm.c:324",
+        "src/engine/ttm.c:463",
+        "src/engine/ttm.c:482"
+      ],
+      "observation": "Reachable logged no-op commands remain; they must not be deleted as dead code."
+    },
+    {
+      "backlog_item": "Complete resource unload before live restart or pack switching",
+      "locations": [
+        "src/engine/resource.c:42",
+        "src/engine/resource.c:495",
+        "src/engine/ttm.c:89"
+      ],
+      "observation": "Resource/map arrays own names and decoded data for process lifetime; TTM slots borrow decoded data. No live-reload API or repeated-parser leak claim added."
+    },
+    {
+      "backlog_item": "Remove redundant decoder-result checks when touching resource loading",
+      "locations": [
+        "src/engine/resource.c:117",
+        "src/engine/resource.c:189",
+        "src/engine/resource.c:282",
+        "src/engine/resource.c:336"
+      ],
+      "observation": "Current decoder APIs allocate or terminate, so these checks remain unreachable under that contract."
+    },
+    {
+      "backlog_item": "Initialize common audio state before starting the worker",
+      "locations": [
+        "src/engine/sound.c:79",
+        "src/engine/sound.c:165"
+      ],
+      "observation": "Existing callback startup ordering and zero-length NULL-copy issue remain; no new race-detector or audible claim."
+    },
+    {
+      "backlog_item": "Add verified original-resource sound extraction",
+      "locations": [
+        "tools/extract_sound.c:66"
+      ],
+      "observation": "Checked span/write/rollback behavior remains; first-u16-plus8 legacy layout is still explicitly disclosed."
+    }
+  ],
+  "ownership_result": "Inspected reset/release paths preserve the earlier ownership fixes: slots free owned tag/name/sprite allocations while retaining borrowed resource bytes; ADS teardown releases active/inactive layers and saved overlay; sound teardown closes before freeing buffers. This is a code review, not a whole-program leak detector or leak-free proof.",
+  "dead_code_result": "No additional uncalled production function was established by this review. Existing redundant decoder NULL checks are already recorded. TTM logged no-op commands are reachable semantic gaps.",
+  "optimization_result": "No performance measurements were made and no new saving is claimed. Retain the existing profile-first backlog for flip caching/full-frame damage tracking.",
+  "probe_evidence": {
+    "path": "build/front-refresh-postmerge-audit/core/probe-evidence.json",
+    "sha256": "2a3164933745aca9f5b18baa88fa125eb396cc30f3c7fa07e9a5aa70b04f24c9",
+    "container_image": "johnny-platform-cleanup:latest",
+    "container_image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+    "environment": "Network-disabled disposable Linux container; repository mounted read-only; only audit scratch mounted writable; no native window or audio device opened.",
+    "controls": "Two successful compiler invocations, valid ordinary tag and missing-tag controls, patterned and zero-filled incomplete tag table, regular-file and ENOSPC output controls."
+  },
+  "file_fingerprints": {
+    "src/engine/jc_reborn.c": {
+      "sha256": "50d9904cffd7c3cba9877ecec383370c612622ccd31a5a013e77755903c358c4",
+      "lines": 776,
+      "git_blob": "fa11bc5f943b9edc63f3ec46e0e04ee8d5e241fb"
+    },
+    "src/engine/config.c": {
+      "sha256": "a87b4e3d050912d7a82f3efa2d681be2ac20a72cadca3581dffa6d7e572bba58",
+      "lines": 157,
+      "git_blob": "7fa92b949456ec3440c845f867c142fbd58a4632"
+    },
+    "src/engine/story.c": {
+      "sha256": "b503cca4115b5852f4ed9cdc02c5aef77498c793bac9fdb2b517b19cd8c4b9a4",
+      "lines": 324,
+      "git_blob": "506e30da2a93a2557eff39b418547de383a29a0e"
+    },
+    "src/engine/ads.c": {
+      "sha256": "c4d53220327f62676a159f1b3651626a8dabafdfa5bf625b5e94d443280eb4f6",
+      "lines": 1157,
+      "git_blob": "353572be1df3a8c945964b7ccf907112e76f0425"
+    },
+    "src/engine/ttm.c": {
+      "sha256": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6",
+      "lines": 497,
+      "git_blob": "d577abbf6f259a44abbb7b9195086f99fc50b688"
+    },
+    "src/engine/walk.c": {
+      "sha256": "d6b88ef1e16a2ad10944ce520485a472d4b13d53fd744087e9c5e573e1908f9d",
+      "lines": 223,
+      "git_blob": "99ede106e84d7efa48b37069db0bbe8e2838483f"
+    },
+    "src/engine/calcpath.c": {
+      "sha256": "8035aef05017584b5e7e5db1dcac898ba3f51efe444efc072705d5f0523cfacb",
+      "lines": 141,
+      "git_blob": "9c2c9120cf95a7b7d865000f9a373e18e017aefd"
+    },
+    "src/engine/resource.c": {
+      "sha256": "8b60a6d5936dd67ca014aaedde799e8b6f0a567ac482c836bd922a4fa93c6f43",
+      "lines": 564,
+      "git_blob": "8b2ebe7e849f409ce8ab07b65d997ffccca0f3e0"
+    },
+    "src/engine/uncompress.c": {
+      "sha256": "c8c0483ef3ae43e242ecbfff622c4735aef6f330ebce04f4cda8b43bfbba6b15",
+      "lines": 319,
+      "git_blob": "293e46e65fffc4a7863c10190fb86014647578f2"
+    },
+    "src/engine/dump.c": {
+      "sha256": "b2e46c22fa854bbc0d75413b441f4afc0afb10d42b6ead737e70bc5d7e92babd",
+      "lines": 590,
+      "git_blob": "1a70014396567078f5ffec58022c028dc9bcfe86"
+    },
+    "src/engine/utils.c": {
+      "sha256": "c50c4ae6de6a59e4fbd1a169592eb920778449f8c000175cb55d66595343c10f",
+      "lines": 311,
+      "git_blob": "a1e8e48923ebe9f83176c76928451be218242ef0"
+    },
+    "src/engine/sound.c": {
+      "sha256": "eec8a1b43e33eccbd4e7f835ca55b7d9ab952818f2093f6a996d69d1ce6a91ee",
+      "lines": 233,
+      "git_blob": "d870183b45e643a6ac665aba0f26fad50a0319a8"
+    },
+    "src/engine/graphics.c": {
+      "sha256": "bdb81a2c3af2d1f28014ba3d0d5ffe2fa1886d999d8862594e44444a74bf9e92",
+      "lines": 1041,
+      "git_blob": "b63db6b9b53e201bb1a635830e8b5edb0b020dc2"
+    },
+    "src/engine/island.c": {
+      "sha256": "222810695a00989322c058aeed272a5f671be9abf168f0702b328e96096bae39",
+      "lines": 371,
+      "git_blob": "1a8658b9fcb03ee45bdc1a25652eed0e375b9ea6"
+    },
+    "src/engine/graphics.h": {
+      "sha256": "e2b388c6e9edfac3237c88467ba38117c4b1918b2a56f4a4d9dcd635e6fd9ecf",
+      "lines": 149,
+      "git_blob": "84605d6aff1437804719653322c50d52fae2cd79"
+    },
+    "src/engine/resource.h": {
+      "sha256": "dfb8a1c118fb69a515931b939e7a32e05cc05688b2c09875b496211dcac412af",
+      "lines": 142,
+      "git_blob": "9158d87f5de9ee83360d8f81ca5074c22888e992"
+    },
+    "src/engine/ttm.h": {
+      "sha256": "7a6a8d40da48f8316d204cc4a8bb664e7cf3950dde0a75f79c0a6bf8b080e48d",
+      "lines": 39,
+      "git_blob": "7c1c0084a2dd95cf52d121f265b382c03190e577"
+    },
+    "src/data/calcpath_data.h": {
+      "sha256": "fdaf8cc409388b1425485801597b272105c6a788eb30825b74441e21f5041237",
+      "lines": 100,
+      "git_blob": "04161f6478cbc16c50963151e6c49b47c4365462"
+    },
+    "tools/extract_io.c": {
+      "sha256": "5dd0fd31a8b61e312cb713e12359f45c2a2942e104321f4aa9552cff902dfb8d",
+      "lines": 95,
+      "git_blob": "633d9ba58c991994e4a4eb24ece69fdf347b5153"
+    },
+    "tools/extract_io.h": {
+      "sha256": "86e0897cb40dfd6a7ad7d772c3e58028e4c54a6fbc99afbf64d0b8ba697cc254",
+      "lines": 15,
+      "git_blob": "32b8eb815e67037ec42f5f25062424f432c0f63e"
+    },
+    "tools/extract_sound.c": {
+      "sha256": "fa984b4e2e02bcce8ddb994ea3d7a8881018fa8cbbfb59f67a6004008e849daa",
+      "lines": 104,
+      "git_blob": "26ff9d7bc8b55e0642bca89583e2ab5ccaeda378"
+    },
+    "tools/extract_walk_data.c": {
+      "sha256": "dd3773f78bbca4c43ba2a7bb66e7966172df7bc7fcfe5ad060dd0b1708e481d6",
+      "lines": 83,
+      "git_blob": "d4f53b9803c1d64ce582a138b6e6a9ac04e944ef"
+    },
+    "BACKLOG.md": {
+      "sha256": "ad8acfb4d3eaf62eabd8d7210f8ae82941908d1b23fbbc4518d11516a4e0e028",
+      "lines": 190,
+      "git_blob": "7b73fb8ea6ed5440891f5e6d3aa801108190a552"
+    }
+  },
+  "limits": [
+    "No full gates rerun in this subtask; platform/deployment checks are separately owned.",
+    "No source edits, production archive mutations, interactive native UI, network fetches or tool installation.",
+    "No exhaustive VM fuzzing, dynamic whole-program ownership tracing, leak-free proof, or performance claim.",
+    "Core src/platform and the inspected extractor implementations are unchanged from the pinned pre-art baseline."
+  ]
+}

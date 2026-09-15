@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "head": "71f3e5f8d158e4d6a7315fe633d3c9944a4b21e5",
+  "comparison_base": "4551081495eee81e5e5bf2d8b5f00a5619a176a2",
+  "result": "No new art-integration blocker or recurring resource leak established. One additional Web fullscreen state behavior is proposed for backlog.",
+  "new_findings": [
+    {
+      "id": "web-fullscreen-state",
+      "severity": "nonblocking existing Web behavior",
+      "newly_recorded": true,
+      "source": "platform/platform_web.c",
+      "lines": [
+        152,
+        153,
+        159,
+        161,
+        163
+      ],
+      "detail": "Fullscreen commands rely on a private toggled flag without observing browser fullscreen changes. After an independent browser exit, the next Alt+Enter takes the exit branch again instead of entering fullscreen.",
+      "evidence": "web-fullscreen-observation.json",
+      "evidence_limit": "Existing local Web build only. Not established as a freshly built merged executable. Null exit/error properties are not engine-health witnesses. Only the fullscreen state sequence is claimed.",
+      "suggested_backlog_text": "Synchronize Web fullscreen state with the browser. platform/platform_web.c:152-163 flips a private flag without observing fullscreenchange or request outcomes. A headless Chromium probe of the retained local Web build observed windowed -> Alt+Enter fullscreen -> document.exitFullscreen windowed -> next Alt+Enter still windowed -> following Alt+Enter fullscreen. The merged source retains this logic, but the retained executable's exact source revision was not established. Add a freshly built browser regression for ordinary toggles, browser-side exit and refused/deferred requests, then derive state from the browser or its fullscreen callback. This did not block the approved art delivery."
+    }
+  ],
+  "known_backlog_items": [
+    {
+      "item": "Windows foreground raw-input cleanup",
+      "source": "platform/platform_windows.c",
+      "line": 175,
+      "status": "Already in BACKLOG; no OS leak measurement added."
+    },
+    {
+      "item": "Common audio startup state initialization and zero-length NULL copy",
+      "source": "src/engine/sound.c",
+      "line": 165,
+      "status": "Already in BACKLOG; no new race-detector evidence."
+    },
+    {
+      "item": "Windows/macOS post-open audio failures",
+      "source": "platform/platform_windows.c",
+      "line": 1078,
+      "status": "Already in BACKLOG; physical-device failure not reproduced."
+    },
+    {
+      "item": "Capture marker failures discard temporary PPM/log folders",
+      "source": "tests/test_palm_renderer.py",
+      "line": 188,
+      "status": "Already in BACKLOG, also applies to wave harness. Root is recording this batch's recurrence and successful focused/full reruns."
+    },
+    {
+      "item": "Primitive clipping and unfinished save-zone commands",
+      "source": "src/engine/graphics.c",
+      "line": 392,
+      "status": "Already in BACKLOG; original scene behavior still needed, no new visual claim."
+    },
+    {
+      "item": "Flip caching, full-frame presentation and wave reset opportunities",
+      "source": "src/engine/graphics.c",
+      "line": 661,
+      "status": "Already in BACKLOG; no speedup or performance measurement claimed."
+    }
+  ],
+  "executed_checks": [
+    {
+      "name": "portable PNG",
+      "result": "PASS",
+      "log": "png-smoke.log",
+      "scope": "5 alpha/channel checks in retained compiled windowless probe."
+    },
+    {
+      "name": "engine lifecycle smoke",
+      "result": "PASS",
+      "log": "lifecycle-smoke.log",
+      "scope": "2 ownership checks."
+    },
+    {
+      "name": "engine lifecycle regression",
+      "result": "PASS",
+      "log": "lifecycle-regression.log",
+      "scope": "5 ownership checks; no native window."
+    },
+    {
+      "name": "build contracts ordinary controls",
+      "result": "PASS",
+      "log": "build-contracts-smoke.log",
+      "scope": "Fixture SDK, artifacts, acquisition, compiler/probe failure, architecture contracts."
+    },
+    {
+      "name": "build contract mutations",
+      "result": "PASS",
+      "log": "build-contracts-mutations.log",
+      "scope": "Executed source mutations; no real SDK download or native Mac architecture verification."
+    },
+    {
+      "name": "PowerShell 5.1 gate-order rerun",
+      "result": "ENVIRONMENT_LIMITED",
+      "log": "gate-order-ps51.log",
+      "scope": "Inherited PSModulePath prevented Get-FileHash discovery before any smoke child. Instrumented scratch child confirms this in diagnostic-powershell.exe.log. Not classified as a gate regression."
+    },
+    {
+      "name": "PowerShell 7 gate-order rerun",
+      "result": "AUDIT_RUNNER_TIMEOUT",
+      "timeout_seconds": 240,
+      "scope": "Supplemental fixture run exceeded this audit runner's whole-suite deadline. Its log was not retained because the scratch runner did not catch TimeoutExpired. No gate pass or code regression is inferred. Root independently completed feature/main gates under cleaned environment; no repeat was requested."
+    }
+  ],
+  "read_coverage": [
+    {
+      "path": "platform/platform.h",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 227,
+      "working_bytes_sha256": "d44c885dac7188ce20c1c9b726e43f0796a1312639ad2136b248469ad1b0f11b",
+      "tracked_bytes_sha256": "1a22cc89584ba11cfc00bdb6c234ee1af007b1a21a9557a4a1bc76e85f40d082",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "platform/platform_windows.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 1350,
+      "working_bytes_sha256": "4db7c0906dd3b572a931afb0c711b203b68e76321f102baaf1f9bb8a7543b4db",
+      "tracked_bytes_sha256": "579a1a31bb051ae5ca65e2d4bc4e3346ffdcdea25dc447fbc6d51087f8f3f248",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "platform/platform_linux.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 936,
+      "working_bytes_sha256": "c57c9aefad8f40e959116772438f0bdbda7403438b1b7188f2453cbecbc66687",
+      "tracked_bytes_sha256": "8cdde07142d3131fd7467c6d79d29f05aa51a32a49d5f03342abce9d3937ec8b",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "platform/platform_macos.m",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 695,
+      "working_bytes_sha256": "4f1a5dd1d0aab31c223f9a3ed9f7f2e540d4fd8bca329ca28dba8cb9e15af365",
+      "tracked_bytes_sha256": "67a68787b1cba4084f5562c35a8e9eea436ed4a9d24c9a060a4caa92be3b0d0d",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "platform/platform_web.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 810,
+      "working_bytes_sha256": "559e223cbf6f6ba51ad6d9a2a6ae4c3a1685fbb28d9625b1efc59ca3be48ee4b",
+      "tracked_bytes_sha256": "c1bfcaefc33f5b01fcb1dae117dd3ad6a97bda960a506104d423cad83cf99bfb",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "platform/png_decoder.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 274,
+      "working_bytes_sha256": "e98e3e9a9c3970d8366bcb5e7c8e57a7e5e71b0fad3913d42638cc072fdc2f6a",
+      "tracked_bytes_sha256": "274a924b3244691540ae61813b778a45cec2d027b4061e9a2998250ae0062cc4",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "platform/png_loader.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 143,
+      "working_bytes_sha256": "05cbc18bc03a3c7b48c15c2ae010242b37b489302acabf753192605aaeffaf1d",
+      "tracked_bytes_sha256": "6f7622c4458128e162f9e702aafed75a11a55104b3f613a6a44939a4c78dc340",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "platform/zipvfs.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 296,
+      "working_bytes_sha256": "1cb46f55871ac87a0f4ddee7d463282e822269875c77e49f81e101a1c2adec49",
+      "tracked_bytes_sha256": "5abc5752d1a2f0cc51bc780414b167da501cb4a69de6ee4c4c8824728308db71",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "src/engine/graphics.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 1041,
+      "working_bytes_sha256": "bdb81a2c3af2d1f28014ba3d0d5ffe2fa1886d999d8862594e44444a74bf9e92",
+      "tracked_bytes_sha256": "1d3f66ffe5e8f0179cb3a602916f36d7f91a69d27be85b1964752330a06adc56",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "src/engine/island.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 371,
+      "working_bytes_sha256": "222810695a00989322c058aeed272a5f671be9abf168f0702b328e96096bae39",
+      "tracked_bytes_sha256": "f02ab16e374c26053743f4c202efadd199ee3c7dc883c38d94bb873dc90711fc",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "src/engine/sound.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 233,
+      "working_bytes_sha256": "eec8a1b43e33eccbd4e7f835ca55b7d9ab952818f2093f6a996d69d1ce6a91ee",
+      "tracked_bytes_sha256": "83787c86ad22d0a9a19b96ab8159874a3af332a5d0c2ae78d0631d3d9128e383",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "src/engine/events.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 273,
+      "working_bytes_sha256": "041ac9fce76af2c3e1fc2eeef56ea9b92b45e1a4adc0087d5318720ccc2d57d2",
+      "tracked_bytes_sha256": "13d297427e0e9d712e7e6b25eab4d5ac12519597835da7e084b44e65470a9fd8",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "src/engine/art_style.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 386,
+      "working_bytes_sha256": "ce25a6fa8f81f79fd59beea2e63da89d12c33aa69ce14708e089b2ab3ed0c289",
+      "tracked_bytes_sha256": "722cfb1998b917f43dde913425c1d70060d9cdc00afcf21441431e4ee0cf900e",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "CMakeLists.txt",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 347,
+      "working_bytes_sha256": "0090f05332c00493b4f4fdd30fc6a25efd6b383a6f3373a3eb0c98d7a65d0962",
+      "tracked_bytes_sha256": "af0567b28ab5c3c9b74f3ccf66e6515fbcb8f3701d3895143e13a1483d1017a6",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "cmake/RuntimeData.cmake",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 19,
+      "working_bytes_sha256": "636026ff42a78acb3716f61c44988ebf3d307313dc5964d752e1f28e6f16e905",
+      "tracked_bytes_sha256": "63518c4b64b1b26dfdf1e79674b58fc5d214afe2c1a1d5a9d036e1d28d63e403",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "gate.ps1",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 317,
+      "working_bytes_sha256": "7eb40f38d9c34f990f22628b54b853459385175016250e3eefa074a2ecf30394",
+      "tracked_bytes_sha256": "c1b37ffb8aa7e84caf854f394e298f03ce6e2ac8e5991b22864e82037d9818aa",
+      "unchanged_from_base": false
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 202,
+      "working_bytes_sha256": "961a98e691d264786d0bc942aa781db62254451d9f533a38d882fb9c0821f6f2",
+      "tracked_bytes_sha256": "961a98e691d264786d0bc942aa781db62254451d9f533a38d882fb9c0821f6f2",
+      "unchanged_from_base": false
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 275,
+      "working_bytes_sha256": "78bff293e4ff159108c9b362df469cfb8a2f20b7c26d3870d8685bf35df3ab85",
+      "tracked_bytes_sha256": "78bff293e4ff159108c9b362df469cfb8a2f20b7c26d3870d8685bf35df3ab85",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tools/build_web.py",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 146,
+      "working_bytes_sha256": "602a0f1a7d7db27f27f0a9ae7d13b4ca49a6be108176202f2827f7a47764b259",
+      "tracked_bytes_sha256": "5ac79788f888efebe9a8fa58c32bdb8b8a108a3b6c6b9eb997e0c310e9710d95",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tools/build-macos.sh",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 69,
+      "working_bytes_sha256": "0503c544316ad4cfaf3b3b189e5bbd056f73bcab4ca78be3e0565ef55220c0cb",
+      "tracked_bytes_sha256": "0503c544316ad4cfaf3b3b189e5bbd056f73bcab4ca78be3e0565ef55220c0cb",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "scripts/build_web.ps1",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 31,
+      "working_bytes_sha256": "4ecdfe6c6eb97e64b64b7fc7859b2651c26350baecc7720b8341bde766aba1ec",
+      "tracked_bytes_sha256": "52171a00f820fed63682f83ac8e03727b671c0283e38e2a605c2ed3c28961463",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "scripts/build_web_local.ps1",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 22,
+      "working_bytes_sha256": "d7e48fbab143d5e3428895db4f4dabbde4347c25cffc386d683e6fcf50a48c03",
+      "tracked_bytes_sha256": "ccba51bb2728dd614d628ac995e09338e2a4966ab28109efc8b710939848ca02",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "index.html",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 195,
+      "working_bytes_sha256": "c7190a5a3a0f2aa073bcc570bbbdfc7dcc5044d47c040ebe97619f2191cb85b2",
+      "tracked_bytes_sha256": "092627ee49fafea12ff059e0eb4cc09dbf386cb244ad5b3357ba71caf26e095d",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tests/unix-build.sh",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 172,
+      "working_bytes_sha256": "1a4ae4a731059b2d5a38e6f7f9161d2d0d764ff18acf963dda002982d420b5ad",
+      "tracked_bytes_sha256": "1a4ae4a731059b2d5a38e6f7f9161d2d0d764ff18acf963dda002982d420b5ad",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tests/run_linux_platform.sh",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 50,
+      "working_bytes_sha256": "ae96fe6060fca5e2ca09ae4f4b847f9e2eade169ca80a6899c7e3e6f48a1b474",
+      "tracked_bytes_sha256": "ae96fe6060fca5e2ca09ae4f4b847f9e2eade169ca80a6899c7e3e6f48a1b474",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tests/run_macos_platform.sh",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 27,
+      "working_bytes_sha256": "5b9213ce59dc1d5627e1cb66c9fb2000d1a64efdc6f0f7844bf84499acf62ff1",
+      "tracked_bytes_sha256": "5b9213ce59dc1d5627e1cb66c9fb2000d1a64efdc6f0f7844bf84499acf62ff1",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tests/run_web_platform.sh",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 32,
+      "working_bytes_sha256": "2773f25b0d5efcca12bcd2c77a37fe0b45542193f12d43d906011c38f63f2115",
+      "tracked_bytes_sha256": "2773f25b0d5efcca12bcd2c77a37fe0b45542193f12d43d906011c38f63f2115",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tests/test_lifecycle.py",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 36,
+      "working_bytes_sha256": "49f4e34dd300299c6f4671e0a1fbf5ceb335a6ea42b57bbc08691a253cdb8760",
+      "tracked_bytes_sha256": "db717c46bfefdfbb6827c8309f38f47eae15e4b4aedecbb454500e582c18b544",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tests/test_build_contracts.py",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 203,
+      "working_bytes_sha256": "b2738686d711000aa00d6e959a584118945049bc08343044761c6056eab9a7f6",
+      "tracked_bytes_sha256": "8b51ebea08128ba273192442fbf2b2e1dc291ba50fa16babfba84fa524a16fbe",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tests/test_web_workflow_flow.py",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 151,
+      "working_bytes_sha256": "f8448dfe5c1e45744d385d9913860420a13561d5bad9754389b6c97710d7a9b2",
+      "tracked_bytes_sha256": "dc9d626c31f2f534e3f3912913b3e7df952e88dbc2d29170d9c94daa06aa6d29",
+      "unchanged_from_base": false
+    },
+    {
+      "path": "tests/test_png_decoder.c",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 53,
+      "working_bytes_sha256": "cb659b0c797b4847c6fb6f7eebd391b11f1e6567179711414a8e86fd93fc38db",
+      "tracked_bytes_sha256": "5b13f052c738a45ec38a2a2162d4acb3f3fc99daa25248fff2a76c579129d786",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "BACKLOG.md",
+      "scope": "Implementation and control flow read in full.",
+      "lines": 202,
+      "working_bytes_sha256": "2853dd329dba89599936787ea461f2417b08adf0dfcafdfb4c5c46fb433336ae",
+      "tracked_bytes_sha256": "b5c45aad129af8328aaeacab08919d71660a6c6bc16e8f7decd206bd9f751a31",
+      "unchanged_from_base": false
+    },
+    {
+      "path": "tests/Test-GateOrder.ps1",
+      "scope": "Fixture construction, child process capture/timeout, exact witness order, failure/omission mutations (lines 1-270).",
+      "lines": 331,
+      "working_bytes_sha256": "3db0bc569e29bf7d45945400bcdda12735239713c80d4d43993b5b7cf9985b5a",
+      "tracked_bytes_sha256": "1e702b240d2c244c0dc0bea2a619726802b18722bbbd30ccd9a9e5585204bb29",
+      "unchanged_from_base": false
+    },
+    {
+      "path": "tests/test_palm_renderer.py",
+      "scope": "Native child capture, image assertions, failure reporting, temporary-directory cleanup.",
+      "lines": 195,
+      "working_bytes_sha256": "51f09056dc6b6e294a87d8da5ab5d4ab6230b50fadcfa392f4c1a3e3acd6cc9f",
+      "tracked_bytes_sha256": "908ea7f88d5ff31db96f52208d8f5f63411de5a3c4ed00cb5c83e5856391475f",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tests/test_wave_renderer.py",
+      "scope": "Fixture generation, native child capture, pixel assertions and temporary-directory cleanup.",
+      "lines": 221,
+      "working_bytes_sha256": "98da1fd8eee4d4a61c83f3b79147f3bcd730a96d6344ffb5eef8ec53e80cd0e8",
+      "tracked_bytes_sha256": "de59e2ed91e462d18a5eb18a71e58d8ab2b5255abdd1d12e0d3b5cf7389c57e3",
+      "unchanged_from_base": true
+    },
+    {
+      "path": "tests/web-smoke.py",
+      "scope": "Startup, bounded responsiveness checks, painting/audio witnesses and bounded completion flow (lines 1-210); shutdown searched separately.",
+      "lines": 245,
+      "working_bytes_sha256": "45dfb318e956361afb481ac14e45dbfe821e1f6bba69eeedd32693c76c1590c1",
+      "tracked_bytes_sha256": "011b20c30aff0824b2424f3181c2dbf43ca47ed0b4b2b1d11505acadc1d3ec18",
+      "unchanged_from_base": true
+    }
+  ],
+  "executed_native_binary_sha256": {
+    "build/Release/jc_png_test.exe": "26448fc88444a773065d9c2797c8f893e9d74b2b06cd84592a41c78fe5022ce9",
+    "build/Release/jc_lifecycle_test.exe": "917c1b9243f299f0cfe42545cf4a269831ebf2349b3f20e50526ba53220c3640"
+  },
+  "limits": [
+    "No physical audio, desktop Linux fullscreen or native macOS presentation validation in this audit.",
+    "No comprehensive third_party/miniz audit; reviewed only the project's PNG/ZIP call sites and ownership.",
+    "No whole-program heap profiler or sanitizer run was performed by this audit agent.",
+    "Retained native probe hashes identify executed binaries; root's separate deployment/build verification is authoritative for merged application provenance.",
+    "No new dead function or broken call chain established; intentional native frame-yield/audio-lock no-ops remain platform contracts.",
+    "No tracked file was edited by this audit agent."
+  ]
+}

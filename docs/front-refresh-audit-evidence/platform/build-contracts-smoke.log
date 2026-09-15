@@ -1,0 +1,30 @@
+WITNESS tools/build_web.py: emcc 6.0.9 verified
+WITNESS tools/build_web.py: artifacts verified; archive SHA256 9513e7825c12aa61babea672c860acfe38d68287402575a84e110377eae4b10e
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (2/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (2/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (3/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (2/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (3/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pinned SDK image pull timed out
+Pulling pinned SDK image (2/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (3/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+INFO POSIX symlink-path control is exercised on Linux/macOS; Windows uses ordinary path controls
+WITNESS tools/build_web.py: output C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-_97la_5i\source refused as C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-_97la_5i\source before Docker
+WITNESS tools/build_web.py: output C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-_97la_5i\outside refused as C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-_97la_5i\outside before Docker
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+WITNESS tools/build_web.py: artifacts verified; archive SHA256 9513e7825c12aa61babea672c860acfe38d68287402575a84e110377eae4b10e
+PASS tools/build_web.py: servable output in C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-_97la_5i\source\build_web
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9 (fixture)
+WITNESS tools/build_web.py: emcc 6.0.9 verified
+WITNESS tools/verify_macos_arch.py: control: ['x86_64']
+WITNESS tools/verify_macos_arch.py: wrong-arch: ['arm64']
+WITNESS tools/verify_macos_arch.py: wrong-arch: ['x86_64', 'arm64']
+WITNESS tools/verify_macos_arch.py: wrong-arch: []
+INFO macOS architecture checks used command fixtures; real Mach-O/lipo/clang is UNTESTED here (use --mac-binary)
+PASS build contracts: acquisition retries, compiler failure, artifacts/version, architecture controls

@@ -1,0 +1,52 @@
+WITNESS tools/build_web.py: emcc 6.0.9 verified
+WITNESS tools/build_web.py: artifacts verified; archive SHA256 9513e7825c12aa61babea672c860acfe38d68287402575a84e110377eae4b10e
+WITNESS tools/build_web.py: emcc 6.0.8 verified
+FIRED 1/1 tools/build_web.py version guard: tools/build_web.py: expected failure was not raised (expected emcc 6.0.9); executed source SHA256 6b5839ec5255790bd14d8b0d0cdd6576e3fb9a1dc0ea6cdfe4c394af28f56b6d
+WITNESS tools/build_web.py: artifacts verified; archive SHA256 9513e7825c12aa61babea672c860acfe38d68287402575a84e110377eae4b10e
+FIRED 1/1 tools/build_web.py archive guard: tools/build_web.py: expected failure was not raised (stale); executed source SHA256 e86868f0198c9aeecd6fdcdc1598d6ef1ddf200432ed79be59471f21422edc7b
+WITNESS tools/build_web.py: artifacts verified; archive SHA256 9513e7825c12aa61babea672c860acfe38d68287402575a84e110377eae4b10e
+FIRED 1/1 tools/build_web.py empty artifact guard: tools/build_web.py: expected failure was not raised (missing or empty); executed source SHA256 bc750c6e21b7210b75355fbb1d974cab7ee25c858821344e47db094347874c25
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (2/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (2/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (3/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (2/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (3/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pinned SDK image pull timed out
+Pulling pinned SDK image (2/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (3/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+FIRED 1/1 tools/build_web.py cache guard: tools/build_web.py: expected failure was not raised (incompatible C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-pg1pt_jc\source\build_web\CMakeCache.txt); executed source SHA256 dbd57feb0a3979afb987a1da1cd867f09b307bc7cd5455494a99b22a41277190
+INFO POSIX symlink-path control is exercised on Linux/macOS; Windows uses ordinary path controls
+WITNESS tools/build_web.py: output C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-pg1pt_jc\source refused as C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-pg1pt_jc\source before Docker
+WITNESS tools/build_web.py: output C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-pg1pt_jc\outside refused as C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-pg1pt_jc\outside before Docker
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+FIRED 1/1 tools/build_web.py output guard: tools/build_web.py: expected failure was not raised (: C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-pg1pt_jc\source); executed source SHA256 f4f2d01e8cb42618aa97a0ea3a9394d9d8fab04524e9eefcc6decbffad5709b3
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+WITNESS tools/build_web.py: artifacts verified; archive SHA256 9513e7825c12aa61babea672c860acfe38d68287402575a84e110377eae4b10e
+PASS tools/build_web.py: servable output in C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-pg1pt_jc\source\build_web
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+WITNESS tools/build_web.py: artifacts verified; archive SHA256 9513e7825c12aa61babea672c860acfe38d68287402575a84e110377eae4b10e
+PASS tools/build_web.py: servable output in C:\Users\Admin\AppData\Local\Temp\jcr-build-contracts-pg1pt_jc\source\build_web
+FIRED 1/1 tools/build_web.py compiler status: tools/build_web.py: expected failure was not raised (compiler status 37); executed source SHA256 5220fdfeaa1ab7f007ace9acfafc6ec3b23b32dc542bfb7db1608c0283fa286b
+Pulling pinned SDK image (1/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (2/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+Pulling pinned SDK image (3/3): emscripten/emsdk@sha256:96617f27fe16421588241def73908fd348a7f9d260440ed0d00b36dcf7a063cc
+FIRED 1/1 tools/build_web.py exhausted pull status: tools/build_web.py: expected failure was not raised (acquisition failed after 3 attempts); executed source SHA256 b3f6bace602de1a5218d7d6ee141fc06b3cfedfd7d51b730e3888763b5aec6c2
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9 (fixture)
+WITNESS tools/build_web.py: emcc 6.0.9 verified
+emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 6.0.9 (fixture)
+WITNESS tools/build_web.py: emcc 6.0.9 verified
+FIRED 1/1 tools/build_web.py platform smoke status: tools/build_web.py: expected failure was not raised (platform smoke status 47); executed source SHA256 c08ec551eb2668b664d128d8c6b1b35a6c5ac50c5b0502794a850bfedeb0feea
+WITNESS tools/verify_macos_arch.py: control: ['x86_64']
+WITNESS tools/verify_macos_arch.py: wrong-arch: ['arm64']
+WITNESS tools/verify_macos_arch.py: wrong-arch: ['x86_64', 'arm64']
+WITNESS tools/verify_macos_arch.py: wrong-arch: []
+WITNESS tools/verify_macos_arch.py: wrong-arch: ['arm64']
+FIRED 1/1 tools/verify_macos_arch.py architecture guard: tools/verify_macos_arch.py: expected failure was not raised (expected x86_64); executed source SHA256 93f3b6a17f0b727dd9b4b122e5414b272ba8b79abb07e8d51f4f1bb57f04823f
+INFO macOS architecture checks used command fixtures; real Mach-O/lipo/clang is UNTESTED here (use --mac-binary)
+PASS build contracts: acquisition retries, compiler failure, artifacts/version, architecture controls

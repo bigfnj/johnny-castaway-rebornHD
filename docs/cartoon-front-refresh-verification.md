@@ -1,21 +1,27 @@
 # Front walk refresh: delivery verification
 
-Work is on `art/cartoon-front-walk-refresh`, based on main `4551081`.
-The production archive has 28 accepted Cartoon assets. This batch replaces
-front-oblique JOHNWALK 028/029 and retains 024-027 exactly. The other 26 accepted
-assets inherit their earlier approvals.
+The complete reviewed front-oblique walk is delivered: all six Cartoon drawings
+JOHNWALK 024-029 play across the 23 stored walking positions. This latest pass
+replaces 028/029 and retains the earlier Cartoon work in 024-027 exactly. The
+final standing drawing 017 remains HD. The production archive contains 28
+accepted Cartoon assets; the other 26 retain their earlier asset approvals.
+
+PR [12](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/12) merged branch
+`art/cartoon-front-walk-refresh`, based on `4551081`, into main as
+`71f3e5f8d158e4d6a7315fe633d3c9944a4b21e5`. Its tree matches tested feature
+head `513398e33cd48954736c3130b2b2cb77356a3858` exactly.
 
 ## Decisions
 
 | Decision | Reason and review scope |
 |---|---|
 | Start with 028 | Its known hip-to-forward-foot mismatch tests the hardest pose problem before creating more frames. |
-| Retain approved 024-027 for the first motion review | Current 024 already has the improved trailing-foot angle. Review actual continuity before changing more accepted drawings. |
+| Retain approved Cartoon 024-027 | Current 024 already has the improved trailing-foot angle. The user approved the complete six-drawing motion and native island preview after the 028/029 corrections. |
 | Preserve the earlier Calm focus design | The user's prior expression choice remains the character reference. |
 | Hide the far arm in 028 and 029 | The user preferred the new 028 draft but explicitly said the far/background arm would be occluded at that angle. |
 | Keep scale 0.1 and cap registration | Independent silhouette fitting caused body popping earlier. New art is inspected and corrected within the existing frame canvases. |
 | Use original pose geometry and retain its diagnostic palette caveat | Original resource indices establish the reference; their dump palette is not verified original-executable color. Gray shadows are not sole-contact landmarks. |
-| Separate static, motion and native review | The preferred 028 still does not approve a full cycle or its HD 017 arrival. |
+| Separate static, motion and native review | Static approval alone did not approve the cycle. The later standalone and native decisions explicitly approve the displayed complete walk and its existing HD 017 arrival transition. |
 | Freeze historical test inputs | Both pilot suites must survive later front/island replacements without rewriting old expectations or requiring Git history, network access or a historical Pillow environment. |
 
 ## Tooling prerequisites
@@ -101,8 +107,8 @@ sprites. Its test fixture now uses the retained historical inputs so promotion
 cannot invalidate historical authoring tests. Live production catalog checks
 remain separate. The new isolation control supplies the actual new 028/029
 bytes for an accidental live-archive read; a mutant that redirected preparation
-to that live archive produced exactly one named failure. Platform gates, merge
-and post-merge audit are recorded below when complete.
+to that live archive produced exactly one named failure. Platform checks and
+delivery results follow below.
 
 All authoring smoke suites passed before regression: inventory 3, history 1,
 historical pilot 2 and full catalog 3. Regression passed 9 inventory controls
@@ -120,6 +126,24 @@ retained under `build/windows-gates/front-promotion-v1/`; its SHA256 is
 `7aadb21f8c0cfd6086082a19380f48563ab72cfc455c17af34c3f545f8a3fac7`.
 Focused retained diagnostics and a fresh full gate are separate checks.
 
+The focused diagnostic passed smoke followed by all eight palm checks. All 17
+captures contained complete 1280x960 PPM images and their required stdout
+markers. The previously failing HD E-to-D case passed twice with identical
+image SHA256 `f8c5ec8e39758d5ec35c4167f7760bd24c99ea606df86be41ac59a6aa3eb4515`.
+Its result SHA256 is
+`2660dfc91b14829cbdc3e60320402ad1871ce695ad70b108dd8b78c273143379`.
+The original failure remains undiagnosed.
+
+The separate fresh full Windows gate passed, with smoke preceding regression
+and all 2,452 golden dump files byte-identical. Its log under
+`build/windows-gates/front-promotion-v2/` has SHA256
+`e69b67b35f919c4ced200ad62c1bef02cde2c7b0adcc217c7d41383f559b8595`.
+Tests ran on an inactive desktop and preserved the interactive desktop.
+The [feature CI run](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/35027930677)
+passed Windows, Linux, macOS and Web at the exact feature head above. Windows
+inventory regression explicitly skipped two symlink controls because the
+process lacked symlink privilege; Linux exercised all eleven controls.
+
 ## CI correction
 
 The initial art commit changed the image-learning index without regenerating
@@ -127,3 +151,29 @@ its normalized fingerprint in the maintained pilot catalog. Linux CI detected
 that stale record. Regenerating the catalog corrected it; 2 pilot smoke checks,
 60 regressions and both catalog reproduction checks passed. The motion approval
 updates the same index, so its fingerprint is regenerated with this checkpoint.
+
+## Merged local deployment
+
+Main was fast-forwarded to the merge commit, and the CMake `jc_runtime_data`
+target updated `build/Release/scrantic_data.zip` to the exact approved archive.
+The EXE and SCR bytes and timestamps remained unchanged; this art delivery
+changes no engine, platform, vendored library or CMake source. The local
+deployment record is `build/front-main-deployment/refresh.json`.
+
+The deployed build passed the complete `gate.ps1 -NoBuild -SmokeOnly` sequence,
+then all 31 native art-style regression checks under Windows PowerShell 5.1.
+Both ran on inactive desktops and preserved the user's interactive desktop.
+The smoke log SHA256 is
+`e926ee99b52cfd023f423b896559bd3df230a871329f2d96832e942379ff3c03`;
+the regression log SHA256 is
+`eba5f9e3cba1a4c3793718c3d66e7638c4b96e6ec6a4e8992babefe1e9684632`.
+These local checks verify deployed asset selection, fallback and settings;
+they supplement the full fresh-build feature gate and merged-main CI.
+
+The [merged-main CI run](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/35028462790)
+passed all four platforms. The [fresh post-merge audit](front-refresh-post-merge-audit.md)
+records source coverage, repeated authoring checks, exact six-drawing/frozen
+preview reproduction and three newly documented existing edge-case defects.
+All findings and the repeated capture-artifact retention issue are in
+[BACKLOG.md](../BACKLOG.md). No new art-integration blocker was found in the
+reviewed paths; known code and visual-coverage limits remain explicit.

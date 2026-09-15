@@ -1,0 +1,217 @@
+{
+  "commit": "71f3e5f8d158e4d6a7315fe633d3c9944a4b21e5",
+  "python": "toolbox-python",
+  "python_version": "3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "Fresh main authoring smoke before regression, catalog checks and frozen reproduction; no native capture, no tracked writes, no mutation reruns.",
+  "commands": [
+    {
+      "label": "inventory-smoke",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "tests/test_art_inventory.py",
+        "--smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0531329000368714,
+      "log_sha256": "d663b346487b163762f17947701404d1fc462a4a5cc294af221f4c456c7db443",
+      "test_count": 3,
+      "skipped": 0
+    },
+    {
+      "label": "pilot-history-smoke",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9725504999514669,
+      "log_sha256": "8cbce566771d4694c91bf7b54c4dbea1b3f976b57ddd44e97eac436d42b9f59d",
+      "test_count": 1,
+      "skipped": 0
+    },
+    {
+      "label": "pilot-metadata-smoke",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 0.8486274000024423,
+      "log_sha256": "02caaaa1cb2d81bcc1c15e60518819c1a81e7e24ad920d063cdde0b02e51a277",
+      "test_count": 2,
+      "skipped": 0
+    },
+    {
+      "label": "production-catalog-smoke",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "tests/test_art_production_catalog.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 3.576269000011962,
+      "log_sha256": "763f6726e9308c7c4be4f9636f95b7460e4ffb199339b58c0eb73e482ef9b285",
+      "test_count": 3,
+      "skipped": 0
+    },
+    {
+      "label": "front-tools-smoke",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "art/cartoon/walk-pilot/front-refresh-v1/test_tools.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "seconds": 6.83547059999546,
+      "log_sha256": "95be833aa211469dfc7b7e2bbf37b6a51d3aae30a04877537bcccc60cb245ff7",
+      "test_count": 2,
+      "skipped": 0
+    },
+    {
+      "label": "inventory-regression",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "tests/test_art_inventory.py"
+      ],
+      "exit_code": 0,
+      "seconds": 2.62744329997804,
+      "log_sha256": "784ffedb01b1ca366ac72aadae64c6bbec6e10ca8047510c721eb4f18a77d90c",
+      "test_count": 11,
+      "skipped": 2
+    },
+    {
+      "label": "pilot-history-regression",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "seconds": 17.33635460003279,
+      "log_sha256": "72f31e7e54f258bd6c52ce1cf221cab2a9e3249631518501a414350c19461fc5",
+      "test_count": 22,
+      "skipped": 0
+    },
+    {
+      "label": "pilot-metadata-regression",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "seconds": 9.316301900020335,
+      "log_sha256": "d390f6f0756df0ea1a12d8c4a1866fea5da4335e8112f15a96bef707e24c6636",
+      "test_count": 60,
+      "skipped": 0
+    },
+    {
+      "label": "production-catalog-regression",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "tests/test_art_production_catalog.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "seconds": 3.725320300029125,
+      "log_sha256": "c9373895a62367c6cb82383c3986481c30fa1c1967653691523f20cec33753c1",
+      "test_count": 63,
+      "skipped": 0
+    },
+    {
+      "label": "front-tools-regression",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "art/cartoon/walk-pilot/front-refresh-v1/test_tools.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "seconds": 12.22512389998883,
+      "log_sha256": "c65eb1bf901ccef484647a79f1ef530e66486128f2d8cef4554be076b70ada60",
+      "test_count": 15,
+      "skipped": 0
+    },
+    {
+      "label": "pilot-check",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "tools/art_review_metadata.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 0.598361499956809,
+      "log_sha256": "10e6a3549914e8055f79e092ad6fa67dbd0c5d43b84601eab477151b741f4f93",
+      "skipped": 0
+    },
+    {
+      "label": "catalog-check",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "tools/art_production_catalog.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "seconds": 3.4060073999571614,
+      "log_sha256": "14b3178dd2fddd800b637b30d05c91ab4e4aa59ea87ccf1bad71e8c30f081141",
+      "skipped": 0
+    },
+    {
+      "label": "frozen-export-reproduction",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/helpers/export.py",
+        "--recipe",
+        "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+        "--output",
+        "build/front-refresh-postmerge-audit/authoring/frozen-export"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9434418000164442,
+      "log_sha256": "1b389cc0b8c7d8667702520d67f489b0ac502b782149f6876bda60c71249e936",
+      "skipped": 0
+    },
+    {
+      "label": "frozen-review-reproduction",
+      "command": [
+        "toolbox-python",
+        "-B",
+        "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/helpers/review.py",
+        "--export",
+        "build/front-refresh-postmerge-audit/authoring/frozen-export",
+        "--output",
+        "build/front-refresh-postmerge-audit/authoring/frozen-review"
+      ],
+      "exit_code": 0,
+      "seconds": 0.9686531000188552,
+      "log_sha256": "ca891f2d77828e4767e31dd8f861d178ed3aadcb639e2c86f0b1ff40768dad2d",
+      "skipped": 0
+    }
+  ],
+  "frozen_review_files_reproduced": 20,
+  "frozen_review_record_identical": true,
+  "source_fingerprints_unchanged": true,
+  "tracked_status_after": " M docs/cartoon-front-refresh-verification.md\n"
+}

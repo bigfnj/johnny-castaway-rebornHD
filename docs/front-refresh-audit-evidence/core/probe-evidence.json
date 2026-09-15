@@ -1,0 +1,114 @@
+{
+  "source_commit": "71f3e5f8d158e4d6a7315fe633d3c9944a4b21e5",
+  "method": "Untouched ttm.c/dump.c/utils.c; deterministic allocator-fill and observed fclose wrappers; no renderer/UI or production resource mutation.",
+  "scope": "Malformed TTM metadata and output I/O failure, not evidence of a shipped-scene regression.",
+  "source_sha256": {
+    "src/engine/ttm.c": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6",
+    "src/engine/dump.c": "b2e46c22fa854bbc0d75413b441f4afc0afb10d42b6ead737e70bc5d7e92babd",
+    "src/engine/utils.c": "c50c4ae6de6a59e4fbd1a169592eb920778449f8c000175cb55d66595343c10f"
+  },
+  "executables_sha256": {
+    "ttm_tag_probe": "50d924c8d8516daa473a1d642331dbecfa509469bfcc215cf3298734b1264883",
+    "dump_write_probe": "a13d8c4af56fda80406c21b1a51ca81c9896f15cc15f1825db8b47ad4dce3881"
+  },
+  "records": [
+    {
+      "label": "build-ttm",
+      "command": [
+        "gcc",
+        "-O0",
+        "-g",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I/src/src/engine",
+        "-I/src/platform",
+        "/src/build/front-refresh-postmerge-audit/core/ttm_tag_probe.c",
+        "/src/src/engine/ttm.c",
+        "/src/src/engine/utils.c",
+        "-Wl,--gc-sections",
+        "-Wl,--wrap=malloc",
+        "-o",
+        "/out/ttm_tag_probe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "timeout": false
+    },
+    {
+      "label": "build-dump",
+      "command": [
+        "gcc",
+        "-O0",
+        "-g",
+        "-ffunction-sections",
+        "-fdata-sections",
+        "-I/src/src/engine",
+        "-I/src/platform",
+        "/src/build/front-refresh-postmerge-audit/core/dump_write_probe.c",
+        "/src/src/engine/utils.c",
+        "-Wl,--gc-sections",
+        "-Wl,--wrap=fclose",
+        "-o",
+        "/out/dump_write_probe"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "timeout": false
+    },
+    {
+      "label": "valid-tag-control",
+      "command": [
+        "/out/ttm_tag_probe",
+        "valid"
+      ],
+      "exit_code": 0,
+      "stdout": "WITNESS valid tag7=4 missing8=0\n",
+      "stderr": "Warning : TTM tag #8 not found, returning offset 0000\n",
+      "timeout": false
+    },
+    {
+      "label": "missing-tag-pattern",
+      "command": [
+        "/out/ttm_tag_probe",
+        "pattern"
+      ],
+      "exit_code": 0,
+      "stdout": "WITNESS declared2 scanned1 sentinel-id=65535 initialized-pattern-offset=2779096485\nWITNESS sentinel lookup returned 2779096485\n",
+      "stderr": "",
+      "timeout": false
+    },
+    {
+      "label": "missing-tag-zero",
+      "command": [
+        "/out/ttm_tag_probe",
+        "zero"
+      ],
+      "exit_code": null,
+      "stdout": "WITNESS declared2 scanned1 sentinel-id=65535 initialized-pattern-offset=0\n",
+      "stderr": "",
+      "timeout": true
+    },
+    {
+      "label": "dump-regular-control",
+      "command": [
+        "/out/dump_write_probe"
+      ],
+      "exit_code": 0,
+      "stdout": "---- Dumping BMP : PROBE.BMP (1 images) \nWITNESS dumpBmp returned normally\n",
+      "stderr": "WITNESS dump fclose result=0 errno=0\n",
+      "timeout": false
+    },
+    {
+      "label": "dump-full-device",
+      "command": [
+        "/out/dump_write_probe"
+      ],
+      "exit_code": 0,
+      "stdout": "---- Dumping BMP : PROBE.BMP (1 images) \nWITNESS dumpBmp returned normally\n",
+      "stderr": "WITNESS dump fclose result=-1 errno=28\n",
+      "timeout": false
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "scope": "Headless Chromium fullscreen hotkey observation using existing Web build; no native windows.",
+  "steps": [
+    {
+      "label": "initial windowed control",
+      "fullscreen": false
+    },
+    {
+      "label": "first Alt+Enter",
+      "fullscreen": true
+    },
+    {
+      "label": "browser exits fullscreen independently",
+      "fullscreen": false
+    },
+    {
+      "label": "next Alt+Enter",
+      "fullscreen": false
+    },
+    {
+      "label": "following Alt+Enter",
+      "fullscreen": true
+    }
+  ],
+  "build_sha256": {
+    "index.html": "fecd4dbb53ca1b6497b30ef2c0d5f5f0f052861df195855b0ec79460549a2330",
+    "jc_reborn.js": "6b8732a9d869ee39aff503381b17b4f8cd8e925bf9ce25bc47aec70e8ddcde84",
+    "jc_reborn.wasm": "3a08892bd1d56169ce35cde70f91a31a792841662545e5e2ba443cc78faf8578",
+    "jc_reborn.data": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a"
+  },
+  "evidence_limit": "Existing local Web build only. Not established as a freshly built merged executable. Null exit/error properties are not engine-health witnesses. Only the fullscreen state sequence is claimed.",
+  "source": {
+    "path": "platform/platform_web.c",
+    "lines": [
+      152,
+      153,
+      159,
+      161,
+      163
+    ],
+    "tracked_bytes_sha256": "c1bfcaefc33f5b01fcb1dae117dd3ad6a97bda960a506104d423cad83cf99bfb",
+    "unchanged_from_base": true,
+    "existing_build_source_provenance": "No retained build record was found in build_web; its exact source revision is not asserted."
+  }
+}

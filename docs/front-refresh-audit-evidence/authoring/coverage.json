@@ -1,0 +1,159 @@
+{
+  "commit": "71f3e5f8d158e4d6a7315fe633d3c9944a4b21e5",
+  "status": "PASS",
+  "findings_new": [],
+  "production_archive_sha256": "1da6ddba0f22d679193fc35b824b975b62dc9ca1966f312d91649f18d8793b63",
+  "archive_members": 2579,
+  "changed_members": [
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/028.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/029.png"
+  ],
+  "unchanged_members": 2577,
+  "complete_reviewed_front_walk": {
+    "drawing_count": 6,
+    "travel_positions": 23,
+    "frames": [
+      {
+        "frame": 24,
+        "png_sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "source_mode": "retained"
+      },
+      {
+        "frame": 25,
+        "png_sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "source_mode": "retained"
+      },
+      {
+        "frame": 26,
+        "png_sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "source_mode": "retained"
+      },
+      {
+        "frame": 27,
+        "png_sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "source_mode": "retained"
+      },
+      {
+        "frame": 28,
+        "png_sha256": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4",
+        "acceptance": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+        "source_mode": "generated"
+      },
+      {
+        "frame": 29,
+        "png_sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+        "acceptance": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+        "source_mode": "generated"
+      }
+    ],
+    "route": "E-to-A, unflipped",
+    "travel_pose_ms": 120,
+    "native_arrival": "existing mirrored HD017",
+    "hd017_sha256": "9109f11aa5bbbd93d429b02bf7873f4bf6f6c0b293037f430f8a29b62b5959b5",
+    "other_mirrored_routes_and_story_placements_approved": false
+  },
+  "approval_evidence_file_hashes_verified": {
+    "art/cartoon/arrival-pilot-v1/production-acceptance.json": "52d71dd6255a544791d2de24c64882716b95cb0e90085f23a798612aef71f4e2",
+    "art/cartoon/walk-pilot/front-refresh-v1/motion-acceptance-v1.json": "96cc1dfd845fbf08d07d174d091bd07e51d47aaa19654be970861046ed03e091",
+    "art/cartoon/walk-pilot/front-refresh-v1/feedback-native-v1.json": "6f58b747582591c6172e166f31f50a7258fcca17dde1195c273e532f26c6059d",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-publication-v1/publication.json": "1564d54ec4e97b0348cd76cc773c7a39bdb7b413f9f3e69c81e9a8f56ec82a6c",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json": "8b72e60b5598e29909f5897a47e4304a54f9e5b96564624811e0f57e56218725",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/export-report.json": "3130e9bb9f6e027a5ce1d4b7ab91d321ef29abc003f47d62a8bf9c3a3f5633fd",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/evidence.json": "deb5ec550a8f5a7ea25fcbe5799a0e2d313be160ca5808080210f61f7e416805",
+    "art/cartoon/walk-pilot/front-refresh-v1/production-integration-v1/verification.json": "54aa65aa5861e86d9324fd71805b70898dacbe095a0badcccbb9eaedc53e4643",
+    "art/cartoon/walk-pilot/front-refresh-v1/production-integration-v1/rebuild.py": "d878d07c1a3c3d86c1fa090b8b4552724994fd4919be2cf0c4d52465f10a6d4c"
+  },
+  "protected_evidence_file_hashes_verified": {
+    "art/cartoon/walk-pilot/front-refresh-v1/feedback-native-v1.json": "6f58b747582591c6172e166f31f50a7258fcca17dde1195c273e532f26c6059d",
+    "art/cartoon/walk-pilot/front-refresh-v1/motion-acceptance-v1.json": "96cc1dfd845fbf08d07d174d091bd07e51d47aaa19654be970861046ed03e091",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-publication-v1/publication.json": "1564d54ec4e97b0348cd76cc773c7a39bdb7b413f9f3e69c81e9a8f56ec82a6c",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/evidence.json": "deb5ec550a8f5a7ea25fcbe5799a0e2d313be160ca5808080210f61f7e416805",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json": "8b72e60b5598e29909f5897a47e4304a54f9e5b96564624811e0f57e56218725",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/export-report.json": "3130e9bb9f6e027a5ce1d4b7ab91d321ef29abc003f47d62a8bf9c3a3f5633fd",
+    "art/cartoon/arrival-pilot-v1/production-acceptance.json": "52d71dd6255a544791d2de24c64882716b95cb0e90085f23a798612aef71f4e2",
+    "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json": "ce7f3832982bcfbef13f9ce6dc06c1f60ce774b89aca088247442040fd767a0c",
+    "art/cartoon/walk-expansion-v1/production-acceptance.json": "70942da086c93ca2fca2693fc35fb295be7d1ea38c29c38598124b5a1c16adc8",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-evidence.json": "e82366a051ad849aa26b6541177772e901f30e8e4b028d1672722b7037feacbc",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/build.json": "4f9adc6d1cdb95b4bb329af90e926bf16b78208a32d486669ec0c73cce003b55",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/build.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/full/capture.log": "da674559dfeb08857dc30e62685f2a8440ce9265b0b7566366171db935bf0b1b",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/full/report.json": "7320d68801307c698582b11749875b63f22d2fcfd0fb29cae55f9aea022ad65f",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/repeat/capture.log": "da674559dfeb08857dc30e62685f2a8440ce9265b0b7566366171db935bf0b1b",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/repeat/report.json": "67672c81750ba6038d9508f13539bbb29ac3f5da85ef1efa6b5149cc22640864",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/route-contract.json": "899adcca2d4a0691e7e8f9b736d72d6895ee5903d90fc399775b4fec249d88ef",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/smoke/capture.log": "fec0b9984e7fdbe6a8b8994e030176d06fb6b1001e06b396beba7df3e1c5c49e",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/smoke/report.json": "5b431c3755715c5b551b8f786ef64652f4b07930db13889d4584f118d8d50371",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/baseline-v1/summary.json": "c97672489ce18cc558b4c54fb9e54b085d493d5699d7c2a9e33afde16567a375",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/browser-validation.json": "faf290678ff59384aa47498221f23b37cfbde2569d1fdd897492f6992ee6db78",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/candidate-v1/export-report.json": "3130e9bb9f6e027a5ce1d4b7ab91d321ef29abc003f47d62a8bf9c3a3f5633fd",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/candidate-v1/full/capture.log": "da674559dfeb08857dc30e62685f2a8440ce9265b0b7566366171db935bf0b1b",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/candidate-v1/full/report.json": "b39641d24d18b348b668c94fb3df6f90101759311f09eb771edf02ac21745afa",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/candidate-v1/mask-guard-verification.json": "132cffc98d9aca95fa526fbd1c123dbd2ad87826da725976f935518cc2bde12d",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/candidate-v1/preparation.json": "21ebd1a5bf531cab5ae3621b3acaea3776e3e66d7548a966b2352825d375fc43",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/candidate-v1/recipe.json": "8b72e60b5598e29909f5897a47e4304a54f9e5b96564624811e0f57e56218725",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/candidate-v1/smoke/capture.log": "fec0b9984e7fdbe6a8b8994e030176d06fb6b1001e06b396beba7df3e1c5c49e",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/candidate-v1/smoke/report.json": "d597213bddd3de61e1384e7122ed6f65fee449804948c212ab2c0265fa8029f8",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/candidate-v1/summary.json": "a23d1e60838f96ec931d6a728dfe067cd1a33f723886deae21f58863659465e2",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/build_review.py": "b266541b17979b7b7859f6f28537e4730b42af3020b6f521f71bb477ca898dd9",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/capture.py": "00ab987e8dbd1bcb4144ca990862fd6b6be832a765de8ee53f54a2b6a4c856ae",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/capture_candidate.py": "611b3023287b53ec5a1cbb0609c8040869b635cd7de9f17628311c4d66bed8a7",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/check_candidate_guards.py": "f6094358ef8e2e80338564e4035092010e4981169ed1e4cdeedb29f6a95b4666",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/check_review.py": "9d4cb9de7c32d22b874607b7cdf9001aa5a1cee060a64403a52e69b3c7002a7c",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/finish.py": "1e7718abd463031621ed852fb3601f15582e9fe0071ed1c81d7980408dd49cd9",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/finish_review.py": "03b5f2177bb54fc96ab2b7dd3ab100b44a24d233dcb50b9e89104c09055526f7",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/prepare.py": "ab41cfc54d9e83b317e0f25208036936a5be862070245169ad132d489f65bf2d",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/prepare_candidate.py": "56dbd6e46a27c3e6dabcc0de78219371d871a986e617a4bfb5d73e9861152860",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/preserve.py": "5ce2f35e0d33d1b7696ab90d78a0abbfa444023687067f789ac5cbb78dbbd28f",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/helpers/route_driver.c": "146d0caa13aab68f1984e04860ff35423d926e75734c661529a9f233fa4dc342",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/native-review-evidence.json": "fcc98d4cdbea7bc2201e00638f864802dab16c5b6d6a124c970a685baa548e7b",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/preparation.json": "bf38b29b85debc7e5acb67911992af619d6e5b65c0357d2c2736558b7ded5ded",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/README.md": "8a9c40fe9a86f88b28f408555cc914c44f8e864da34a9729c5276e05292cdfef",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/review-record.json": "3c2f8d2d02c0a2e7177f9dadecc2c0f36230ba4461365feb7256c60dcba3f3d5",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/review.html": "e4b7c8a87762a5736b1e157f13c00d50a3d7d917d70e4ffc5d312db162ebc4f0",
+    "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/native-island-v1/scratch-reproduction.md": "3b0982fe433c1c9b1b3a8c5ee089a2971aff3088fa2fa997ff0b41b290415e7d"
+  },
+  "pilot_history": {
+    "retained": 19,
+    "replaced": 2,
+    "prior_approval_bytes_unchanged": true
+  },
+  "coverage": [
+    "Fresh main inventory, pilot history, pilot metadata, full catalog and frontend helper smoke before regressions.",
+    "Catalog reproduction with --check only; no maintained catalog regenerated.",
+    "Frozen six-frame export reproduction including exact current production runtime PNGs.",
+    "Frozen standalone HTML, data and 18 images reproduce all 20 declared files plus the entire review record.",
+    "Source review: fixed affine scale/translation, no per-frame body normalization, original canvas, explicit alpha-fit limit, fixed union camera, stored 23-row route and labeled diagnostic hold.",
+    "Source review: selected nested acceptance origins, explicit replaced pilot slots, pending/hash/canvas failures and fixture isolation after production promotion.",
+    "Actual archive comparison against pinned prior commit, protected evidence hashes and old approval bytes."
+  ],
+  "remaining_backlog": [
+    {
+      "path": "BACKLOG.md",
+      "line": 15,
+      "item": "Trace front arrival017 and complete wait/turn family before generation; eight of ten unique wait/turn-table slots remain HD."
+    },
+    {
+      "path": "BACKLOG.md",
+      "line": 16,
+      "item": "Trace original033-035 with010 through TTM uses before assigning a complete frontal cycle."
+    }
+  ],
+  "limits": [
+    "No original binary was replayed and no original-executable pixel/timing parity is claimed.",
+    "No native scene captures or visible UI were launched by this authoring audit; root owns fresh deployment checks.",
+    "Previously executed unchanged mutation suites were not rerun; regressions retain their normal negative fixtures.",
+    "Windows inventory symlink cases explicitly skip because this process lacks symlink privilege; hardlink/path-alias cases pass.",
+    "The current style is partial: 28 accepted of 2401 cataloged slots. Complete means this reviewed six-drawing route only."
+  ]
+}
