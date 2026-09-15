@@ -105,10 +105,10 @@ void soundInit(void)
      *  today - no shipped TTM requests index 0 - but the data and the loader now
      *  agree, which is the point.
      *
-     *  Indices 11 and 13 genuinely are absent from the archive while
-     *  NUM_OF_SOUNDS is 25, so those two still log a miss on every start. That is
-     *  the data being incomplete rather than the loop being wrong, and it is
-     *  recorded in BACKLOG.md rather than papered over here.
+     *  Filenames 11 and 13 are absent while NUM_OF_SOUNDS is 25, so those two
+     *  still log a miss. All 23 declared original RIFF payloads match bundled
+     *  WAV prefixes; missing filenames do not establish lost audio. Original
+     *  sample-ID mapping remains unresolved; see the knowledge-base reference.
      */
     for (int i=0; i < NUM_OF_SOUNDS; i++) {
 
