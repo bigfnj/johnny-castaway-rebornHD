@@ -1,0 +1,399 @@
+{
+  "source": "user-supplied original SCRANTIC executable",
+  "exe_sha256": "7811b526b36bba2f08326d7a680f2f063190b4278e5a36393fde5a02080b0262",
+  "archive_sha256": "fb70d795531d50093dd4a9ac53895a6a20a76efc982d4d7d45a64403b98e68d8",
+  "method": "Parse NE resource table; compare each full aligned allocation to each bundled WAV. Separately verify RIFF/WAVE payload length from little-endian uint32 at offset+4 plus 8 against the matching WAV prefix.",
+  "types": [
+    {
+      "type_id": "0x800f",
+      "count": 1
+    },
+    {
+      "type_id": "0x800e",
+      "count": 1
+    },
+    {
+      "type_id": "0x8005",
+      "count": 3
+    },
+    {
+      "type_id": "0x8006",
+      "count": 1
+    },
+    {
+      "type_id": "0x8003",
+      "count": 1
+    },
+    {
+      "type_id": "0xf005",
+      "count": 23
+    }
+  ],
+  "original_wave_count": 23,
+  "bundled_wave_count": 23,
+  "all_original_waves_matched": false,
+  "all_declared_riff_payloads_matched": true,
+  "declared_riff_matches_unique": true,
+  "unmatched_bundled_waves": [
+    "data/sound0.wav"
+  ],
+  "waves": [
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 1,
+      "offset": "0x1dc00",
+      "allocated_bytes": 11264,
+      "riff_bytes": 11116,
+      "sha256": "07b95df027ab6d44eeed7a26a1d86baa7cb18f818c08dfb2957560565804d1bb",
+      "allocation_sha256": "862e04ba90b28d2fb06ee42bc04358d236fc53a10ef778c0f8dc872b32e5a278",
+      "archive_matches": [
+        "data/sound1.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound1.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 2,
+      "offset": "0x20800",
+      "allocated_bytes": 1536,
+      "riff_bytes": 1532,
+      "sha256": "a7fd42b45e207e2e9efaed938a1290076d0e1b65d768fe7d38b00ea88dda1f45",
+      "allocation_sha256": "6f35815152f8b58ff94e250830be2cbd93d9371b196941f5e28a6ef668ce0355",
+      "archive_matches": [
+        "data/sound2.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound2.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 3,
+      "offset": "0x20e00",
+      "allocated_bytes": 7680,
+      "riff_bytes": 7436,
+      "sha256": "1153b9fc89f36161af159fc4a3d0e7dec2b96382ee3ffd90e75a36b6343b84a4",
+      "allocation_sha256": "a72172e32385a8d2b4df264511a53f0068d898db65ebfbea9ba6cf4614a368d8",
+      "archive_matches": [
+        "data/sound3.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound3.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 4,
+      "offset": "0x22c00",
+      "allocated_bytes": 5120,
+      "riff_bytes": 5036,
+      "sha256": "f345e917744efe2d548d587325219d9adcaf68e43ff499208e964f00a75e8adc",
+      "allocation_sha256": "210b01503de844d04b50178df5d08ea66e8904be8dac181a0a28325d85b286ba",
+      "archive_matches": [
+        "data/sound4.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound4.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 5,
+      "offset": "0x24000",
+      "allocated_bytes": 3072,
+      "riff_bytes": 2860,
+      "sha256": "48debc037d2c60eaf46d0a3a15272b070359d0d4746d8602640e97a44612f712",
+      "allocation_sha256": "f3e1fa0125ba611d3c33b7a498574060488946c717b15c0f51b0d0eec07cdd08",
+      "archive_matches": [
+        "data/sound5.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound5.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 6,
+      "offset": "0x24c00",
+      "allocated_bytes": 15872,
+      "riff_bytes": 15788,
+      "sha256": "5749df895266241507edf8e3ee441b3028149ea553a99d94e45cabb38e3cd06c",
+      "allocation_sha256": "1f46b32b74e6f5c276553d94f9801c4a9137fc84d854a78b0190402d1ee66780",
+      "archive_matches": [
+        "data/sound6.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound6.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 7,
+      "offset": "0x28a00",
+      "allocated_bytes": 15360,
+      "riff_bytes": 15020,
+      "sha256": "ba9bfbd91dc61637254c76e39f554f64706e28eaa364cd4d784dea8b8a91240f",
+      "allocation_sha256": "ad476fcf939a52cd5aebb18eed83efcd3a68ec4dfde7279b9699a85bfafb729e",
+      "archive_matches": [
+        "data/sound7.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound7.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 8,
+      "offset": "0x2c600",
+      "allocated_bytes": 2560,
+      "riff_bytes": 2348,
+      "sha256": "9a13e0b9a3be8ae02e7916327cb485829bb6d892b046baa3d8eee61a8404cbf8",
+      "allocation_sha256": "2fcacba8f89cde7fde1b5ae0a1b78bcc86deafb1033bac5eee75c02a413e7923",
+      "archive_matches": [
+        "data/sound8.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound8.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 9,
+      "offset": "0x2d000",
+      "allocated_bytes": 3584,
+      "riff_bytes": 3084,
+      "sha256": "534c6784c04da3bae88ecd4bc7ddc6657a1e60a08b8c460cbcfa07402d86b3a6",
+      "allocation_sha256": "b982a54123886d3b6c075ee27fea3f5b9e53b93c5ef1da57a62ddc4f665a290a",
+      "archive_matches": [
+        "data/sound9.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound9.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 10,
+      "offset": "0x2de00",
+      "allocated_bytes": 20480,
+      "riff_bytes": 20268,
+      "sha256": "18dcd72aebd8d0c4849b0594c961be7b8b4dd5bfe1cc728e14f3c2f0fa3e676e",
+      "allocation_sha256": "a4cf5394e8374454c2ec43b0a40f358d68f2b79755e06931ea18436eda5d3c04",
+      "archive_matches": [
+        "data/sound10.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound10.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 11,
+      "offset": "0x32e00",
+      "allocated_bytes": 5632,
+      "riff_bytes": 5482,
+      "sha256": "aa41f1b7f786f0014f8573a068848dd3538f63051fb217809730a02430caf34e",
+      "allocation_sha256": "3035006d593e4b91a525820ae87cb8a084f1438b0a3f2663893d0154073f6e8b",
+      "archive_matches": [
+        "data/sound12.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound12.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 12,
+      "offset": "0x34400",
+      "allocated_bytes": 11776,
+      "riff_bytes": 11372,
+      "sha256": "b3ae2a798cca9bfb3cdd7da4d5a97d2df80e6c9a6c9919eeb096efd1d4324852",
+      "allocation_sha256": "ab5e79d37796700589de37b6905d78d6a03d52bff69bb7ecf61cce94040ffca9",
+      "archive_matches": [
+        "data/sound14.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound14.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 13,
+      "offset": "0x37200",
+      "allocated_bytes": 3072,
+      "riff_bytes": 2882,
+      "sha256": "516d2b369a9ae14b77cfaf744940bd19e279a9e98dbdd7fc9be36fd21fd7633d",
+      "allocation_sha256": "98ef560406b0bbf1b3896253cb126ffdd1fcee6a5be03577fdc10e70b376f19c",
+      "archive_matches": [
+        "data/sound15.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound15.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 14,
+      "offset": "0x37e00",
+      "allocated_bytes": 7680,
+      "riff_bytes": 7648,
+      "sha256": "28071bdf523d958d43d7e4f7cc4b913c7166d12000db4f36b96befd6e4d43695",
+      "allocation_sha256": "b54c2ef4a33d654a4712e412c757bff61d1a60181bef73be30b5d967b57b2e7c",
+      "archive_matches": [
+        "data/sound16.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound16.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 15,
+      "offset": "0x39c00",
+      "allocated_bytes": 4608,
+      "riff_bytes": 4298,
+      "sha256": "bac3618d082bec49c6d1eb3471e84b80f2391ca31f0976b0c63e6d0bc8502ef8",
+      "allocation_sha256": "c1428b8dad39bbdb2441516cf4acbb649c37264df684b8344d37127947c94191",
+      "archive_matches": [
+        "data/sound17.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound17.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 16,
+      "offset": "0x3ae00",
+      "allocated_bytes": 14336,
+      "riff_bytes": 13988,
+      "sha256": "04397e30c99f0563495ae9e2e6c360520ca89726789ecd8f0ba0d9c010fae90d",
+      "allocation_sha256": "e0cf3d8ae5b8983b436002c026ea3f5aa7000944652701340c7734417af5a81f",
+      "archive_matches": [
+        "data/sound18.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound18.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 17,
+      "offset": "0x3e600",
+      "allocated_bytes": 3584,
+      "riff_bytes": 3332,
+      "sha256": "d05e58c368b8d9b6e6df22f679dd2ce93bd69fae1c6df153883954c44f1e1738",
+      "allocation_sha256": "de7956093ab2da45f7c8b740c9c3a2e510a7297a993643cd750675a13c9873a5",
+      "archive_matches": [
+        "data/sound19.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound19.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 18,
+      "offset": "0x3f400",
+      "allocated_bytes": 7680,
+      "riff_bytes": 7260,
+      "sha256": "263cf6c54f0b45ad90d1ac5dfc9835d4de812141193a82f944180c473044e3a4",
+      "allocation_sha256": "75f2bf1aa1db22123e9f35f22c4c08adbb4b7b33d083c4a86bfa837e32eb4796",
+      "archive_matches": [
+        "data/sound20.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound20.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 19,
+      "offset": "0x41200",
+      "allocated_bytes": 5120,
+      "riff_bytes": 4882,
+      "sha256": "17cd4ae9cf6694122b927dd779efa158275a3e9e927acf8dacfef68e46b8920a",
+      "allocation_sha256": "dd5ab4f4cf6c71610bdd61d193c51d663ba5286493eebe4724df77bdb10df95c",
+      "archive_matches": [
+        "data/sound21.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound21.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 20,
+      "offset": "0x42600",
+      "allocated_bytes": 1536,
+      "riff_bytes": 1336,
+      "sha256": "4d4440d0c2b676b15da5d0bc593cd8eff20a97a49485682efc3d4f37cbe12568",
+      "allocation_sha256": "f22225772a53bc43385488d554b915cf70dcec2956234b1511d49d9691fab0ae",
+      "archive_matches": [
+        "data/sound22.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound22.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 21,
+      "offset": "0x42c00",
+      "allocated_bytes": 2048,
+      "riff_bytes": 1560,
+      "sha256": "868e45f45ba299bf445a7d9b6dfaaeae062d40864f373aef80f09146ebd9780a",
+      "allocation_sha256": "97b6c0ee805fabb3898f7ad10ea8e45186025e5c1636075c862f9b530cf2c683",
+      "archive_matches": [
+        "data/sound23.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound23.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 22,
+      "offset": "0x43400",
+      "allocated_bytes": 9728,
+      "riff_bytes": 9716,
+      "sha256": "22d5489c8dccb37f1514eff25e433e6c54eb44f925a233c90d0229fda2bbdf11",
+      "allocation_sha256": "55aec8ac14c560490fb53fd29a49fa5921945779d42060357a306c766eca2a3a",
+      "archive_matches": [
+        "data/sound24.wav"
+      ],
+      "riff_prefix_matches": [
+        "data/sound24.wav"
+      ]
+    },
+    {
+      "ne_type": "0xf005",
+      "ne_resource_id": 23,
+      "offset": "0x45a00",
+      "allocated_bytes": 10752,
+      "riff_bytes": 10306,
+      "sha256": "0073e4aba5206d9c94355d3c3eb547906079568bc9612ae8ee73d2fa12e800ab",
+      "allocation_sha256": "9e6bf290a4979059b0ef211adbeed49d86ea96fe6c4610a36cac57a3e250d124",
+      "archive_matches": [],
+      "riff_prefix_matches": [
+        "data/sound0.wav"
+      ]
+    }
+  ],
+  "limits": [
+    "NE resource IDs are not assumed to be PLAY_SAMPLE IDs.",
+    "Byte equality does not prove correct runtime sample selection, audible timing or outcomes."
+  ],
+  "trailing_bytes_observation": {
+    "archive": "data/sound0.wav",
+    "allocated_bytes": 10752,
+    "bundled_bytes": 10768,
+    "declared_riff_bytes": 10306,
+    "trailing_file_offset": "0x48400",
+    "trailing_hex": "4e423032ffffffffffffffffffffffff",
+    "meaning": "The bundled file includes the original executable's final 16 bytes beyond the aligned resource allocation. These bytes are outside the declared RIFF/WAVE payload; they begin with NB02."
+  }
+}
+
