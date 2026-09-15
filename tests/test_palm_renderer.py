@@ -81,7 +81,9 @@ def capture(driver, folder, style, route, label):
                             creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
     text = result.stdout.decode('utf-8', 'replace') + result.stderr.decode('utf-8', 'replace')
     output.with_suffix('.log').write_text(text, encoding='utf-8')
-    assert result.returncode == 0 and f'Captured frame: {output}' in text, f'Capture failed: {output.with_suffix(".log")}'
+    assert result.returncode == 0 and f'Captured frame: {output}' in text, (
+        f'Capture failed (exit {result.returncode}): {output.with_suffix(".log")}\n{text[-1500:]}'
+    )
     if route != 'none':
         assert f'chosen path: {route.upper()}' in text and 'next=-1' in text, f'Real direct walk witness missing: {output}'
         assert 'stopping after 4 frame(s)' in text, f'Bounded exit missing: {output}'

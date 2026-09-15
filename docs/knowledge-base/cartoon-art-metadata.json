@@ -1,0 +1,2577 @@
+{
+  "schema_version": 1,
+  "purpose": "authoring-review-only",
+  "style": "cartoon",
+  "coverage": "partial",
+  "reference_policy": "Supplied original decoded pixels establish reference canvases and bounds; bundled RESOURCE headers are compared separately. Original-derived draw records establish route. HD PNGs are upscaled proxies, not assumed pixel-identical to the supplied original. Cartoon acceptance never establishes original anatomy.",
+  "coordinates": {
+    "logical": "original 640x480 scene coordinates",
+    "hd": "logical multiplied by 2",
+    "raw": "generated source canvas pixels",
+    "landmarks": "manual authoring observations, not engine anchors"
+  },
+  "summary": {
+    "assets": 21,
+    "walking_assets": 6,
+    "island_assets": 15
+  },
+  "current_human_review": {
+    "date": "2026-09-15",
+    "basis": "user-visual-review-of-supplied-original-comparison",
+    "preview": "local original-vs-cartoon-walk.html; original indices with port dump palette and index0 transparency",
+    "not_automatically_verified": true,
+    "observations": [
+      {
+        "id": "walk-024-trailing-right-foot",
+        "frame": 24,
+        "status": "correction-requested",
+        "original_reference_observation": "The trailing anatomical right foot turns inward along the walking trajectory.",
+        "variant_judgment": "The current Cartoon trailing right foot needs a more inward angle.",
+        "correction_target": "Adjust that foot angle while preserving the original limb identity and trajectory."
+      },
+      {
+        "id": "walk-028-leg-order",
+        "frame": 28,
+        "status": "correction-requested",
+        "original_reference_observation": "Anatomical left foot is forward and right foot is back.",
+        "variant_judgment": "The Cartoon pose reverses that leg order.",
+        "correction_target": "Restore anatomical left-forward/right-back limb order."
+      },
+      {
+        "id": "walk-029-leg-order",
+        "frame": 29,
+        "status": "correction-requested",
+        "original_reference_observation": "Anatomical left foot is forward and right foot is back.",
+        "variant_judgment": "The Cartoon pose reverses that leg order.",
+        "correction_target": "Restore anatomical left-forward/right-back limb order."
+      }
+    ],
+    "awaiting_human_decision": [
+      {
+        "frames": [
+          26,
+          27
+        ],
+        "question": "Whether to reduce the higher rear-foot lift."
+      }
+    ],
+    "historical_approval_policy": "Earlier acceptance records remain unchanged. They do not close these new correction requests."
+  },
+  "original_observations": [
+    {
+      "assets": [
+        "BMP/JOHNWALK.BMP/024"
+      ],
+      "basis": "historical-hd-proxy-inspection",
+      "source": "art/cartoon/motion-review.md",
+      "statement": "024 foreground leg descends from the screen-right shorts opening; far leg begins at the screen-left opening with the small foot mostly behind and screen-left of the planted ankle.",
+      "independently_remeasured_in_this_catalog": false
+    },
+    {
+      "family": "walk-e-to-a",
+      "basis": "historical-hd-proxy-inspection",
+      "source": "docs/art-style-learnings.md",
+      "statement": "Six HD proxy poses share the upper 38 HD reference rows after their recorded horizontal offsets. Precise anatomical left/right labels for every pose remain unverified."
+    }
+  ],
+  "motion": {
+    "id": "walk-e-to-a",
+    "resource": "JOHNWALK.BMP",
+    "basis": "original-derived-route-and-native-capture-record",
+    "route_source": "src/data/walk_data.h",
+    "draw_convention_source": "src/engine/walk.c:walkAnimate",
+    "route": [
+      {
+        "position": 0,
+        "frame": 28,
+        "flip_x": false,
+        "draw_logical_xy": [
+          394,
+          212
+        ],
+        "start_ms": 0
+      },
+      {
+        "position": 1,
+        "frame": 29,
+        "flip_x": false,
+        "draw_logical_xy": [
+          387,
+          214
+        ],
+        "start_ms": 120
+      },
+      {
+        "position": 2,
+        "frame": 24,
+        "flip_x": false,
+        "draw_logical_xy": [
+          384,
+          216
+        ],
+        "start_ms": 240
+      },
+      {
+        "position": 3,
+        "frame": 25,
+        "flip_x": false,
+        "draw_logical_xy": [
+          378,
+          214
+        ],
+        "start_ms": 360
+      },
+      {
+        "position": 4,
+        "frame": 26,
+        "flip_x": false,
+        "draw_logical_xy": [
+          374,
+          215
+        ],
+        "start_ms": 480
+      },
+      {
+        "position": 5,
+        "frame": 27,
+        "flip_x": false,
+        "draw_logical_xy": [
+          368,
+          217
+        ],
+        "start_ms": 600
+      },
+      {
+        "position": 6,
+        "frame": 28,
+        "flip_x": false,
+        "draw_logical_xy": [
+          366,
+          215
+        ],
+        "start_ms": 720
+      },
+      {
+        "position": 7,
+        "frame": 29,
+        "flip_x": false,
+        "draw_logical_xy": [
+          359,
+          217
+        ],
+        "start_ms": 840
+      },
+      {
+        "position": 8,
+        "frame": 24,
+        "flip_x": false,
+        "draw_logical_xy": [
+          356,
+          220
+        ],
+        "start_ms": 960
+      },
+      {
+        "position": 9,
+        "frame": 25,
+        "flip_x": false,
+        "draw_logical_xy": [
+          350,
+          219
+        ],
+        "start_ms": 1080
+      },
+      {
+        "position": 10,
+        "frame": 26,
+        "flip_x": false,
+        "draw_logical_xy": [
+          346,
+          220
+        ],
+        "start_ms": 1200
+      },
+      {
+        "position": 11,
+        "frame": 27,
+        "flip_x": false,
+        "draw_logical_xy": [
+          341,
+          225
+        ],
+        "start_ms": 1320
+      },
+      {
+        "position": 12,
+        "frame": 28,
+        "flip_x": false,
+        "draw_logical_xy": [
+          339,
+          224
+        ],
+        "start_ms": 1440
+      },
+      {
+        "position": 13,
+        "frame": 29,
+        "flip_x": false,
+        "draw_logical_xy": [
+          334,
+          227
+        ],
+        "start_ms": 1560
+      },
+      {
+        "position": 14,
+        "frame": 24,
+        "flip_x": false,
+        "draw_logical_xy": [
+          331,
+          231
+        ],
+        "start_ms": 1680
+      },
+      {
+        "position": 15,
+        "frame": 25,
+        "flip_x": false,
+        "draw_logical_xy": [
+          325,
+          230
+        ],
+        "start_ms": 1800
+      },
+      {
+        "position": 16,
+        "frame": 26,
+        "flip_x": false,
+        "draw_logical_xy": [
+          320,
+          231
+        ],
+        "start_ms": 1920
+      },
+      {
+        "position": 17,
+        "frame": 27,
+        "flip_x": false,
+        "draw_logical_xy": [
+          315,
+          236
+        ],
+        "start_ms": 2040
+      },
+      {
+        "position": 18,
+        "frame": 28,
+        "flip_x": false,
+        "draw_logical_xy": [
+          314,
+          234
+        ],
+        "start_ms": 2160
+      },
+      {
+        "position": 19,
+        "frame": 29,
+        "flip_x": false,
+        "draw_logical_xy": [
+          308,
+          236
+        ],
+        "start_ms": 2280
+      },
+      {
+        "position": 20,
+        "frame": 24,
+        "flip_x": false,
+        "draw_logical_xy": [
+          307,
+          240
+        ],
+        "start_ms": 2400
+      },
+      {
+        "position": 21,
+        "frame": 25,
+        "flip_x": false,
+        "draw_logical_xy": [
+          302,
+          241
+        ],
+        "start_ms": 2520
+      },
+      {
+        "position": 22,
+        "frame": 27,
+        "flip_x": false,
+        "draw_logical_xy": [
+          300,
+          242
+        ],
+        "start_ms": 2640
+      }
+    ],
+    "pose_ms": 120,
+    "diagnostic_endpoint_hold_ms": 1000,
+    "captured_review_ms": 3760,
+    "review_displays_per_style": 42,
+    "travel_logical_xy": [
+      -94,
+      30
+    ],
+    "original_executable_timing_verified": false,
+    "limitation": "120 ms is the port's reviewed native cadence; no original-executable timing calibration. The extra endpoint hold is diagnostic."
+  },
+  "island_motion": {
+    "basis": "port-code-and-native-capture-record",
+    "source": "src/engine/island.c:islandAnimate",
+    "evidence": "art/cartoon/island-pilot-v1/review-evidence/wave-phase-validation.json",
+    "high_tide_families": {
+      "left": [
+        3,
+        4,
+        5
+      ],
+      "center": [
+        6,
+        7,
+        8
+      ],
+      "right": [
+        9,
+        10,
+        11
+      ]
+    },
+    "background_step_ms": 160,
+    "family_updates": "one family per step; latest updated family is on top; phase counters persist across island reinitialization",
+    "not_a_synchronized_three_frame_animation": true,
+    "scope": "Fresh-process reviewed day/OCEAN02, high tide, zero offset, no raft/holiday. Cloud origin is a reference capture position, not fixed placement."
+  },
+  "assets": [
+    {
+      "id": "BMP/BACKGRND.BMP/000",
+      "family": "sand",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 0,
+        "logical_canvas": [
+          280,
+          52
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.000.xpm",
+          "canvas": [
+            280,
+            52
+          ],
+          "xpm_sha256": "cdd6e5bb6f6687213510a89af62900b8a64d90adb2f5640679465f143e4f5981",
+          "index_plane_sha256": "8a80063c71b31efb46df9133f26df3acfdaadbc22b3c197373fa3fff935b19dd",
+          "rgba_sha256": "7ce5ba3f2db5512477f9d2b5d9a11d4745919547542959be0d3f13a53d5bd8f3",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            279,
+            52
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/000.png",
+          "sha256": "cf6fa1b623371c1b4f2c52eb93a9f33104ea1d658879ff7caa9e1fd91d26da08",
+          "canvas": [
+            560,
+            104
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+        "sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+        "canvas": [
+          560,
+          104
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+        "raw_member": "sand-generated-v1.png",
+        "raw_sha256": "49c8c516e7cc655c4c2ec780e6311d4924d0bdcaf598a395653272f51b9935af",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.49,
+          "affine_forward": [
+            0.49,
+            0,
+            -98.88999999999999,
+            0,
+            0.49,
+            -199.43
+          ],
+          "landmark": "rear crest midpoint",
+          "raw_xy": [
+            811,
+            407
+          ],
+          "target_local_hd_xy": [
+            298.5,
+            0
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          576,
+          558
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {
+          "shoreline_extent_delta_hd_vs_original": [
+            3.0300000000000153,
+            0.0,
+            -6.659999999999968,
+            -0.6100000000000136
+          ]
+        },
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/003",
+      "family": "shore-high-left",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 3,
+        "logical_canvas": [
+          72,
+          29
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.003.xpm",
+          "canvas": [
+            72,
+            29
+          ],
+          "xpm_sha256": "f1b243bc3ce014c902b43c0b8d2ae008bd7d5e442593d62bb53fb6d45f7b6f34",
+          "index_plane_sha256": "f7d35a71c81aad0b68e00eaaadaa57c41453c049e7c5e33c481778e19a53199b",
+          "rgba_sha256": "2924ee79b49f07ed2b31e89a09599f03e623e42db9081528442d61a3ab1403ee",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            72,
+            29
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/003.png",
+          "sha256": "ca39d3bcfc7b096eb0e10162c4ff989167084827ef29f4c5d8389c372654a5fd",
+          "canvas": [
+            144,
+            58
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+        "sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+        "canvas": [
+          144,
+          58
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "raw_member": "003-generated-v2-fresh8x.png",
+        "raw_sha256": "a77511fd4e93808c20755608e937cf4b805bd9d781940cc9b9ca544bb182c0e8",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.097,
+          "affine_forward": [
+            0.097,
+            0,
+            -2.4960000000000093,
+            0,
+            0.097,
+            -20.664
+          ],
+          "landmark": "common padded canvas center for this family",
+          "raw_xy": [
+            768,
+            512
+          ],
+          "target_local_hd_xy": [
+            72,
+            29
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          540,
+          612
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {
+          "white_foam_extent_delta_hd": [
+            6,
+            1,
+            -5,
+            -1
+          ]
+        },
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/004",
+      "family": "shore-high-left",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 4,
+        "logical_canvas": [
+          72,
+          29
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.004.xpm",
+          "canvas": [
+            72,
+            29
+          ],
+          "xpm_sha256": "b8ea39f21fd778d7fbcf461e7791e60915a6f3a1cd54243c695ff1835a144287",
+          "index_plane_sha256": "209a7181a7e220b577e633bffefcdc5f07f68d6d37b456202eb57b1f0e9c4c4e",
+          "rgba_sha256": "b0d8f471ccfef0cf97f916c7476264e9d77a257c627917a745ccb0c5d2baad94",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            72,
+            29
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/004.png",
+          "sha256": "faaba294040db7486747e4f0c3f30fa5e5d4ec56f48cccdfba1bd5fa3f8ec095",
+          "canvas": [
+            144,
+            58
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+        "sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+        "canvas": [
+          144,
+          58
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "raw_member": "004-generated-v1-10x.png",
+        "raw_sha256": "530bc333dc5223406c8debff16577ef8fb6af7289d29476711c2cf27a5fd0895",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.097,
+          "affine_forward": [
+            0.097,
+            0,
+            -2.4960000000000093,
+            0,
+            0.097,
+            -20.664
+          ],
+          "landmark": "common padded canvas center for this family",
+          "raw_xy": [
+            768,
+            512
+          ],
+          "target_local_hd_xy": [
+            72,
+            29
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          540,
+          612
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {
+          "white_foam_extent_delta_hd": [
+            -2,
+            -2,
+            2,
+            1
+          ]
+        },
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/005",
+      "family": "shore-high-left",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 5,
+        "logical_canvas": [
+          72,
+          29
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.005.xpm",
+          "canvas": [
+            72,
+            29
+          ],
+          "xpm_sha256": "3033e153c10db2d9da83c5b76922f65b7f4b65e1b838064c6fea7aa9fc4b991d",
+          "index_plane_sha256": "74e810706e42daeb5cebd61bd577cf04b47378ac48d96a06596de1cd956e6605",
+          "rgba_sha256": "fc52dd85c908f061b0e8e2debd96d6649cb32d887ce15d3818177d2999f8a9af",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            72,
+            29
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/005.png",
+          "sha256": "1c41daae1621f6a4e482b3b195e88e708276a3760041146b8aa2f9fbb86cc425",
+          "canvas": [
+            144,
+            58
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+        "sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+        "canvas": [
+          144,
+          58
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "raw_member": "005-generated-v1-10x.png",
+        "raw_sha256": "4a8252029263adcab0f487c457e80431043581da4b4fdcd589a6d021e47423b1",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.097,
+          "affine_forward": [
+            0.097,
+            0,
+            -2.4960000000000093,
+            0,
+            0.097,
+            -20.664
+          ],
+          "landmark": "common padded canvas center for this family",
+          "raw_xy": [
+            768,
+            512
+          ],
+          "target_local_hd_xy": [
+            72,
+            29
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          540,
+          612
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {
+          "white_foam_extent_delta_hd": [
+            -1,
+            -11,
+            1,
+            1
+          ]
+        },
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/006",
+      "family": "shore-high-center",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 6,
+        "logical_canvas": [
+          160,
+          25
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.006.xpm",
+          "canvas": [
+            160,
+            25
+          ],
+          "xpm_sha256": "3fb31607d1126c8ac48f9dd1faf877c907384bbc58bb966f756419c98807e56f",
+          "index_plane_sha256": "f0b1e3ae1d04da35ca4a41d5c273e9a55bf18c7a97f6599982d7cce2fe8c5b4d",
+          "rgba_sha256": "cca3a44a05010c3ea8673373f7d208d157b476181674d9aee2a166b2c8f194e4",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            156,
+            25
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/006.png",
+          "sha256": "6adfb326812a829ee9a56c28979b3652cf60be914ce16e23441bf568862a473b",
+          "canvas": [
+            320,
+            50
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+        "sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
+        "canvas": [
+          320,
+          50
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+        "raw_member": "006-generated-v1.png",
+        "raw_sha256": "4216199c9e69f0f61cdaa27f7106d7c80b07056b895779592836730772910033",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.249,
+          "affine_forward": [
+            0.249,
+            0,
+            -31.232,
+            0,
+            0.249,
+            -102.488
+          ],
+          "landmark": "common original guide center",
+          "raw_xy": [
+            768,
+            512
+          ],
+          "target_local_hd_xy": [
+            160,
+            25
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          728,
+          638
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/007",
+      "family": "shore-high-center",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 7,
+        "logical_canvas": [
+          160,
+          25
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.007.xpm",
+          "canvas": [
+            160,
+            25
+          ],
+          "xpm_sha256": "216a5ea5348cc7aa5dc9e9828f89229360cd74426b951ed8129e0508007defd3",
+          "index_plane_sha256": "d3ce74e19266070173e01ed9d112aefef91b0b87929f3e84ed5fe53a70f48d0d",
+          "rgba_sha256": "09dedceb76467e965872584f8771053cca977d4e9217ae80ebae3f07834c7163",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            156,
+            25
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/007.png",
+          "sha256": "d5654a837b67b4dd21cb8f66bdaa649ee8355cd39b4be6aee75ddd98356d3519",
+          "canvas": [
+            320,
+            50
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+        "sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+        "canvas": [
+          320,
+          50
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+        "raw_member": "007-generated-v1.png",
+        "raw_sha256": "8c284930a1b4414246cb54ec27eadb9a141b14aceab21830fb28ca545a4a2de8",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.249,
+          "affine_forward": [
+            0.249,
+            0,
+            -31.232,
+            0,
+            0.249,
+            -102.488
+          ],
+          "landmark": "common original guide center",
+          "raw_xy": [
+            768,
+            512
+          ],
+          "target_local_hd_xy": [
+            160,
+            25
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          728,
+          638
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/008",
+      "family": "shore-high-center",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 8,
+        "logical_canvas": [
+          160,
+          25
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.008.xpm",
+          "canvas": [
+            160,
+            25
+          ],
+          "xpm_sha256": "f62ae511f2caf31d326c1ad9f2e5e2a494232a5ccd27098582d72dfd7724d4eb",
+          "index_plane_sha256": "130f6eae03a2be6fe89402a53309de4e3b97f4fc5f620022bd1ecb2b30ab1ea8",
+          "rgba_sha256": "6c3da4278d55ea4f56872d462ac5a615199efdc0f1bc97c03b31a3ecb44bc6d1",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            156,
+            25
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/008.png",
+          "sha256": "134035d13a1f91df9d053517a939fdd9b1390d2693309f1d8a441683ff13d469",
+          "canvas": [
+            320,
+            50
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+        "sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
+        "canvas": [
+          320,
+          50
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+        "raw_member": "008-generated-v1.png",
+        "raw_sha256": "d8fe387761fd1435ac5cef9024e13ecb72684b1c0039ee53318c3ed28138b313",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.249,
+          "affine_forward": [
+            0.249,
+            0,
+            -31.232,
+            0,
+            0.249,
+            -102.488
+          ],
+          "landmark": "common original guide center",
+          "raw_xy": [
+            768,
+            512
+          ],
+          "target_local_hd_xy": [
+            160,
+            25
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          728,
+          638
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/009",
+      "family": "shore-high-right",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 9,
+        "logical_canvas": [
+          72,
+          32
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.009.xpm",
+          "canvas": [
+            72,
+            32
+          ],
+          "xpm_sha256": "09d079ae76af878bfc8f763ee93996f0f4fa4489b89539e9a9fce8963c4bf1e8",
+          "index_plane_sha256": "c6cc994f1a39ef6da675be37607557157b4920662f15fa3a939feb948dc9cc9c",
+          "rgba_sha256": "6b3c29e7220dd21ae6d865de8e30883b9331e1703a1b1da8ab4b6914d1c3d344",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            65,
+            32
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/009.png",
+          "sha256": "4683ffdb93d4a7b677c834e67ccf761c38b825f6e04e3fcf566bcaf84b50f2c2",
+          "canvas": [
+            144,
+            64
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+        "sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+        "canvas": [
+          144,
+          64
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "raw_member": "009-generated-v1-10x.png",
+        "raw_sha256": "a637d0e7751e32a9ccf0a429017b8b55e615b2e4f3d15abe769c816f13361381",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.09,
+          "affine_forward": [
+            0.09,
+            0,
+            2.8799999999999955,
+            0,
+            0.09,
+            -14.079999999999998
+          ],
+          "landmark": "common padded canvas center for this family",
+          "raw_xy": [
+            768,
+            512
+          ],
+          "target_local_hd_xy": [
+            72,
+            32
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          1036,
+          606
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {
+          "white_foam_extent_delta_hd": [
+            -20,
+            0,
+            8,
+            4
+          ]
+        },
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/010",
+      "family": "shore-high-right",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 10,
+        "logical_canvas": [
+          72,
+          32
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.010.xpm",
+          "canvas": [
+            72,
+            32
+          ],
+          "xpm_sha256": "a19705bbd10569c3a61be0d91a894f6bbd993b57bcb636f499f6f8504bc0378d",
+          "index_plane_sha256": "2524e402d87f2300fc81c9f40830df04b11bc42eda0f309333207a85151ada93",
+          "rgba_sha256": "18a52ab023cd0bf63b90e3ca2bf6b5392126227d4f7e4f275c679a36f357b884",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            65,
+            32
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/010.png",
+          "sha256": "cd0a87148fc00c67c4a608d9bcc82544bfce97521af222dabee7460147ae5e7e",
+          "canvas": [
+            144,
+            64
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+        "sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+        "canvas": [
+          144,
+          64
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "raw_member": "010-generated-v1-10x.png",
+        "raw_sha256": "0943ab25a2be4996cb46545042a8feff3077e4e89eb432d3635b859cdb9c387b",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.09,
+          "affine_forward": [
+            0.09,
+            0,
+            2.8799999999999955,
+            0,
+            0.09,
+            -14.079999999999998
+          ],
+          "landmark": "common padded canvas center for this family",
+          "raw_xy": [
+            768,
+            512
+          ],
+          "target_local_hd_xy": [
+            72,
+            32
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          1036,
+          606
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {
+          "white_foam_extent_delta_hd": [
+            -5,
+            3,
+            1,
+            -1
+          ]
+        },
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/011",
+      "family": "shore-high-right",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 11,
+        "logical_canvas": [
+          72,
+          32
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.011.xpm",
+          "canvas": [
+            72,
+            32
+          ],
+          "xpm_sha256": "28ec38226b3ce53585f3e840a170a99bc7715b3d6d52c39617e792547f67e59e",
+          "index_plane_sha256": "308942b03052ad7b430d8df369fb5eeaf99b229ff21d35d0edd65f4e2bb4c709",
+          "rgba_sha256": "9f354d56d86c6a25f374f4b59f23a1811707dbc6212296804e3c681fb44c08d4",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            65,
+            32
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/011.png",
+          "sha256": "ad252ab25c85e63b13270818ed5f66ff1feddcd645891cfdf5d746a15640dd9a",
+          "canvas": [
+            144,
+            64
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+        "sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+        "canvas": [
+          144,
+          64
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
+        "raw_member": "011-generated-v1-10x.png",
+        "raw_sha256": "889819abaedac7daf227d6a7439360b01acb22a364d7649697ff3e18ef84e8d8",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.09,
+          "affine_forward": [
+            0.09,
+            0,
+            2.8799999999999955,
+            0,
+            0.09,
+            -14.079999999999998
+          ],
+          "landmark": "common padded canvas center for this family",
+          "raw_xy": [
+            768,
+            512
+          ],
+          "target_local_hd_xy": [
+            72,
+            32
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          1036,
+          606
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {
+          "white_foam_extent_delta_hd": [
+            0,
+            2,
+            6,
+            -2
+          ]
+        },
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/012",
+      "family": "palm",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 12,
+        "logical_canvas": [
+          152,
+          69
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.012.xpm",
+          "canvas": [
+            152,
+            69
+          ],
+          "xpm_sha256": "02bd3f6c5de0da9ade96f7923320c227a182eb29237442300c92b0fa47670424",
+          "index_plane_sha256": "447463a61bf4b8ddf6c5ff921e27cd3f6af4dc7e992b3607ad52be5b3500c970",
+          "rgba_sha256": "b978a363fd76584b6d91f71ad7e9dcbfda901c87c3b340774cf336b849fdbf0c",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            147,
+            69
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/012.png",
+          "sha256": "9a2017622738358ec5a4222787f3e11c35f5d0315ce32032020609a27a70c05c",
+          "canvas": [
+            304,
+            138
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/012.png",
+        "sha256": "701fc7909c3cc150ece7125c04f493f27da75d07446cc43cc6acae70fde1aa18",
+        "canvas": [
+          304,
+          138
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+        "raw_member": "012-generated-v2.png",
+        "raw_sha256": "870e847c5a98c33ed0c006a807b992920f21cbcb0ef2b41d9faa207be4cfd4a2",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.24,
+          "affine_forward": [
+            0.24,
+            0,
+            -38.50999999999999,
+            0,
+            0.24,
+            -58.059999999999995
+          ],
+          "landmark": "central crown/frond-origin apex",
+          "raw_xy": [
+            811.5,
+            244
+          ],
+          "target_local_hd_xy": [
+            156.25,
+            0.5
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          730,
+          244
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/013",
+      "family": "palm",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 13,
+        "logical_canvas": [
+          24,
+          145
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.013.xpm",
+          "canvas": [
+            24,
+            145
+          ],
+          "xpm_sha256": "792ec6f58840508d27e4457df6ae587603a45a1ee0573492fda0076052c33f8a",
+          "index_plane_sha256": "26b2fd3f9923e9621c145ee47d5a3b86335a8e39a52b9741990d8b0a2b899192",
+          "rgba_sha256": "6bf55d78cd036c540fa04c63a2eab173c2c416215d1625ab4d8533f188ebdb18",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            22,
+            145
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/013.png",
+          "sha256": "653ededaee4e0078163ea4181b08e8dacfaf32eb57ab82d6dcac62cb293b2711",
+          "canvas": [
+            48,
+            290
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/013.png",
+        "sha256": "72714deba94d2e7de946b9f30532e2482ac7a1b1027c442e77e443e5c9b7186c",
+        "canvas": [
+          48,
+          290
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+        "raw_member": "013-generated-v3.png",
+        "raw_sha256": "10d2cc46c5b926dd032081183f66a0269c4d0b44bbfd2f2ea260757339b56593",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.24,
+          "affine_forward": [
+            0.24,
+            0,
+            -99.86,
+            0,
+            0.24,
+            -33.079999999999984
+          ],
+          "landmark": "lowest central ground-contact tip",
+          "raw_xy": [
+            489,
+            1342
+          ],
+          "target_local_hd_xy": [
+            17.5,
+            289
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          884,
+          296
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/014",
+      "family": "shadow",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 14,
+        "logical_canvas": [
+          104,
+          28
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.014.xpm",
+          "canvas": [
+            104,
+            28
+          ],
+          "xpm_sha256": "9fd675c1f15038c2d431872291ce7a7a3e1a6a97c2cc9cf6760964c8c9a5873a",
+          "index_plane_sha256": "734fa064e607a412054fc821a02e9397cabce3c8cdc39f5308488f65225678fc",
+          "rgba_sha256": "24ef623a9ef99292be78179b3f17b53f0bc4f12001d03ed65a26f542c2f386c1",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            104,
+            28
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/014.png",
+          "sha256": "43152471052960a1e173d00cf7b24516d529e4213a727a19a893d2f20a3b5072",
+          "canvas": [
+            208,
+            56
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/014.png",
+        "sha256": "ddfbff021d56c093456b4a9f9476f9439fbe482c45e66ddfb0c9f2993f9e324f",
+        "canvas": [
+          208,
+          56
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+        "raw_member": "shadow-generated-v1.png",
+        "raw_sha256": "ac50f8257939997084ed7a0c10969c32b93006089714086d273e71a175eb2bd0",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.235,
+          "affine_forward": [
+            0.235,
+            0,
+            -76.47999999999999,
+            0,
+            0.235,
+            -93.5
+          ],
+          "landmark": "original guide horizontal center and upper contact",
+          "raw_xy": [
+            768,
+            400
+          ],
+          "target_local_hd_xy": [
+            104,
+            0.5
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          792,
+          558
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/015",
+      "family": "cloud",
+      "original": {
+        "resource": "BACKGRND.BMP",
+        "frame_index": 15,
+        "logical_canvas": [
+          128,
+          36
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/BACKGRND.BMP.015.xpm",
+          "canvas": [
+            128,
+            36
+          ],
+          "xpm_sha256": "9c7e2d04de3ba9497952db6dae39b0f302778b6f48d312ac0db0bf1e0830b0a8",
+          "index_plane_sha256": "096f0d287d3d1c58aa6f333be57e494fc181b84aec8bedc44799d75a0807db4a",
+          "rgba_sha256": "691014f6df29fe024fd5a44f845afe658fcc28fa2111536876313b530ce0f417",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            123,
+            36
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "f5bb7859eb58e244f6f4b3dd817020ba582abc73f47cd045c902deca073068fd",
+          "volume_offset": 1899829,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/BACKGRND.BMP/015.png",
+          "sha256": "40723977e5b36558f235f7c6d58fa5d3b521871cdabb996e5a9340baeb229341",
+          "canvas": [
+            256,
+            72
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/015.png",
+        "sha256": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+        "canvas": [
+          256,
+          72
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+        "raw_member": "cloud-generated-v1.png",
+        "raw_sha256": "b50454479c9f08d2eebf381d0d110aab4f3fde6c2d046161da4c22a77b1e21ca",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.25,
+          "affine_forward": [
+            0.25,
+            0,
+            -63.5,
+            0,
+            0.25,
+            -91.0
+          ],
+          "landmark": "left contour and upper tower origin",
+          "raw_xy": [
+            254,
+            364
+          ],
+          "target_local_hd_xy": [
+            0,
+            0
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": [
+          624,
+          116
+        ],
+        "placement_basis": "first-reference-cloud-position",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/JOHNWALK.BMP/024",
+      "family": "walk-e-to-a",
+      "original": {
+        "resource": "JOHNWALK.BMP",
+        "frame_index": 24,
+        "logical_canvas": [
+          32,
+          75
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/JOHNWALK.BMP.024.xpm",
+          "canvas": [
+            32,
+            75
+          ],
+          "xpm_sha256": "8f0c431aacbcaaad561d959f45d692a422d8178976591d9b4c8e5a42d3f84a1b",
+          "index_plane_sha256": "779dc1f6bdf803bb24ffcb0f62886b2417c2e7f7b7f56257754ad2bee3860a2c",
+          "rgba_sha256": "8cb67b4a53d4fc42f0995a09100180aab20902fd12d7c62eb4e94111fab9d298",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            28,
+            75
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "519cbe88053f46141b053ee8af30e80d13da38906844b8f47c43e2fe00f0ae9b",
+          "volume_offset": 1850155,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/JOHNWALK.BMP/024.png",
+          "sha256": "1233b19ffe0e07e9e9a2c1e2deee1d853026c6f4aca078a2aec4139f97455f91",
+          "canvas": [
+            64,
+            150
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/024.png",
+        "sha256": "02058c693d28bd06526f78412cd6a71d09e68451763a58b6f0a8cfec4959d10d",
+        "canvas": [
+          64,
+          150
+        ],
+        "recipe": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json",
+        "raw_member": "024-generated-v7.png",
+        "raw_sha256": "63088f5c18e71d49fb61f733e564d5f9461c55f622e124b5eeaf9aa5cbd1ee2b",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.1,
+          "affine_forward": [
+            0.1,
+            0,
+            -21.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "landmark": "visually retained cap feature",
+          "raw_xy": [
+            385,
+            42
+          ],
+          "target_local_hd_xy": [
+            17.5,
+            0.25
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": null,
+        "placement_basis": "route-dependent",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": [
+          "walk-024-trailing-right-foot"
+        ]
+      }
+    },
+    {
+      "id": "BMP/JOHNWALK.BMP/025",
+      "family": "walk-e-to-a",
+      "original": {
+        "resource": "JOHNWALK.BMP",
+        "frame_index": 25,
+        "logical_canvas": [
+          40,
+          74
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/JOHNWALK.BMP.025.xpm",
+          "canvas": [
+            40,
+            74
+          ],
+          "xpm_sha256": "1c1e40bb2b7987fb91b4aacf88b356fded47f1a42641545bf4bee16764a6e16d",
+          "index_plane_sha256": "b139de87f0da99ff909daef6b469cde7ddc794dbe11f37b8e14dab213b8cb12a",
+          "rgba_sha256": "5dd3b032a9f87014ca857317d0777b2c1e2a2a92080d74fbdcd5ff9e0737edda",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            37,
+            74
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "519cbe88053f46141b053ee8af30e80d13da38906844b8f47c43e2fe00f0ae9b",
+          "volume_offset": 1850155,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/JOHNWALK.BMP/025.png",
+          "sha256": "1eedad18ddb23c631439c17b01659d0abe7ee8b4da3d2ee3862dadb840686954",
+          "canvas": [
+            80,
+            148
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/025.png",
+        "sha256": "b1fcdb55c168e596eee4234b471d768e54a6983a608c44d010d5f22de838e2ee",
+        "canvas": [
+          80,
+          148
+        ],
+        "recipe": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json",
+        "raw_member": "025-generated-v2.png",
+        "raw_sha256": "af0f050ae39858eda063c1c681c82a26e2d988e09e18dc8d1a6ff83df73126cf",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.1,
+          "affine_forward": [
+            0.1,
+            0,
+            -15.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "landmark": "visually retained cap feature",
+          "raw_xy": [
+            385,
+            42
+          ],
+          "target_local_hd_xy": [
+            23.5,
+            0.25
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": null,
+        "placement_basis": "route-dependent",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/JOHNWALK.BMP/026",
+      "family": "walk-e-to-a",
+      "original": {
+        "resource": "JOHNWALK.BMP",
+        "frame_index": 26,
+        "logical_canvas": [
+          40,
+          73
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/JOHNWALK.BMP.026.xpm",
+          "canvas": [
+            40,
+            73
+          ],
+          "xpm_sha256": "faac7e6e13f936817a50339fa2402a7de7b08649f4672a17425418cc64af501f",
+          "index_plane_sha256": "38e9f3456cab49c4dd043cfda37501f9c4a20341b7e8902690294f4a306f3ce5",
+          "rgba_sha256": "18fba76f2f3d442e90790e780a55013fcfac477d44d82f9755db195b4033d0ba",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            38,
+            73
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "519cbe88053f46141b053ee8af30e80d13da38906844b8f47c43e2fe00f0ae9b",
+          "volume_offset": 1850155,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/JOHNWALK.BMP/026.png",
+          "sha256": "6d30f88641b8aa4da6a3ab883ecda94cb6871605d58af3b628521b79a93936c9",
+          "canvas": [
+            80,
+            146
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/026.png",
+        "sha256": "0e9889e31cb41740de200a0800b557269a05ea07c66bbe4157f11db23c84afdc",
+        "canvas": [
+          80,
+          146
+        ],
+        "recipe": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json",
+        "raw_member": "026-generated-v3-fresh.png",
+        "raw_sha256": "051be31b0a7f734231164088660fe4def6531240826d7b1d57152614f0650702",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.1,
+          "affine_forward": [
+            0.1,
+            0,
+            -13.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "landmark": "visually retained cap feature",
+          "raw_xy": [
+            385,
+            42
+          ],
+          "target_local_hd_xy": [
+            25.5,
+            0.25
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": null,
+        "placement_basis": "route-dependent",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {
+          "rear_foot_clearance_hd": {
+            "hd_proxy_approx": 4,
+            "variant_approx": 11.6,
+            "basis": "historical-hd-proxy-comparison",
+            "precision": "approximate; no automatic threshold",
+            "source": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json#known_geometry_limitations"
+          }
+        },
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/JOHNWALK.BMP/027",
+      "family": "walk-e-to-a",
+      "original": {
+        "resource": "JOHNWALK.BMP",
+        "frame_index": 27,
+        "logical_canvas": [
+          32,
+          72
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/JOHNWALK.BMP.027.xpm",
+          "canvas": [
+            32,
+            72
+          ],
+          "xpm_sha256": "e30eab4a9e52b73acb7862df0da95f7b3b969e0acc553a620ccc3237bd4f33c1",
+          "index_plane_sha256": "75be9d833caedd3c69761f04665303b501b8bae5e325c43db57414bea7aa5aa4",
+          "rgba_sha256": "37f6af84948c452c8a127f54be21d4f8d3804fefde143cb1b44cb10967ed0077",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            29,
+            72
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "519cbe88053f46141b053ee8af30e80d13da38906844b8f47c43e2fe00f0ae9b",
+          "volume_offset": 1850155,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/JOHNWALK.BMP/027.png",
+          "sha256": "e19d3fe46184f05da2cc12b38bf07d161bcb293b4348bd076a5b9661a59369a9",
+          "canvas": [
+            64,
+            144
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/027.png",
+        "sha256": "57e76a0ed2920457c0fa8b9836bcc424e3644f9b49624985ae9c8b160abea25c",
+        "canvas": [
+          64,
+          144
+        ],
+        "recipe": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json",
+        "raw_member": "027-generated-v3-fresh.png",
+        "raw_sha256": "31e1249a5035f4ce88c35aeeabfdf52e3a9202670e96d85c07ce50035b0ce70d",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.1,
+          "affine_forward": [
+            0.1,
+            0,
+            -21.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "landmark": "visually retained cap feature",
+          "raw_xy": [
+            385,
+            42
+          ],
+          "target_local_hd_xy": [
+            17.5,
+            0.25
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": null,
+        "placement_basis": "route-dependent",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {
+          "rear_foot_clearance_hd": {
+            "hd_proxy_approx": 4,
+            "variant_approx": 11,
+            "basis": "historical-hd-proxy-comparison",
+            "precision": "approximate; no automatic threshold",
+            "source": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json#known_geometry_limitations"
+          }
+        },
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    },
+    {
+      "id": "BMP/JOHNWALK.BMP/028",
+      "family": "walk-e-to-a",
+      "original": {
+        "resource": "JOHNWALK.BMP",
+        "frame_index": 28,
+        "logical_canvas": [
+          32,
+          72
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/JOHNWALK.BMP.028.xpm",
+          "canvas": [
+            32,
+            72
+          ],
+          "xpm_sha256": "7dec13cc86a956efebe7f23327c59a1a657211b6d88cbee1850442aa405b6996",
+          "index_plane_sha256": "4b8cb2d3a03ef2969574ecbe61778cc5e5aa916ec02c0bc9decf41584cb23737",
+          "rgba_sha256": "ac27dac3410e365105f36821ed1ab1aa3b5d0e4dc1d25b0ffd55268323a75f53",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            32,
+            72
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "519cbe88053f46141b053ee8af30e80d13da38906844b8f47c43e2fe00f0ae9b",
+          "volume_offset": 1850155,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/JOHNWALK.BMP/028.png",
+          "sha256": "a387e9b663b2646c0a39e346106cbed59c8603b30503a4e6f3a445efa287d12a",
+          "canvas": [
+            64,
+            144
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/028.png",
+        "sha256": "59268bb33644b51486c05b3dc2eb37436e7737a1c18e0d055f1b00cdfadad745",
+        "canvas": [
+          64,
+          144
+        ],
+        "recipe": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json",
+        "raw_member": "028-generated-v4-transparent.png",
+        "raw_sha256": "bdbf7f83f0622cbc4b87f2f41c0f502e8185b4ee524da912f39a03cec28f8fc9",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.1,
+          "affine_forward": [
+            0.1,
+            0,
+            -21.3,
+            0,
+            0.1,
+            -3.75
+          ],
+          "landmark": "visually retained cap feature",
+          "raw_xy": [
+            388,
+            40
+          ],
+          "target_local_hd_xy": [
+            17.5,
+            0.25
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": null,
+        "placement_basis": "route-dependent",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": [
+          "walk-028-leg-order"
+        ]
+      }
+    },
+    {
+      "id": "BMP/JOHNWALK.BMP/029",
+      "family": "walk-e-to-a",
+      "original": {
+        "resource": "JOHNWALK.BMP",
+        "frame_index": 29,
+        "logical_canvas": [
+          32,
+          75
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "BMP/JOHNWALK.BMP.029.xpm",
+          "canvas": [
+            32,
+            75
+          ],
+          "xpm_sha256": "8d447f309ea2b0b6628e5d3a382a8521811c8f8b69251e5881538e36a272a1fc",
+          "index_plane_sha256": "15d3d8b9643be96e523e78f1fbb86af3c558cfed30fec74dbd44f42896382a62",
+          "rgba_sha256": "1e71e20e20e943d455801d88d5c47a363516c2113391d478ef757571933a31b1",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            32,
+            75
+          ],
+          "transparent_index": 0
+        },
+        "bundled_resource": {
+          "payload_sha256": "519cbe88053f46141b053ee8af30e80d13da38906844b8f47c43e2fe00f0ae9b",
+          "volume_offset": 1850155,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/BMP/JOHNWALK.BMP/029.png",
+          "sha256": "091f4690aaab8af69120b4cfcd819c96db711f8ef30609773310e09c7dcdcfd9",
+          "canvas": [
+            64,
+            150
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/029.png",
+        "sha256": "7968ac59d55b86e9e3e605a47d65ae1ec5c2c4e516e49c8143ac026cecac62bd",
+        "canvas": [
+          64,
+          150
+        ],
+        "recipe": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json",
+        "raw_member": "029-generated-v2.png",
+        "raw_sha256": "a19e4143ba6647965f7d3a5bab178b4cbe131b52429da59028adb6e233fe9e78",
+        "registration": {
+          "kind": "uniform-affine",
+          "scale": 0.1,
+          "affine_forward": [
+            0.1,
+            0,
+            -21.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "landmark": "visually retained cap feature",
+          "raw_xy": [
+            385,
+            42
+          ],
+          "target_local_hd_xy": [
+            17.5,
+            0.25
+          ],
+          "landmark_residual_hd": [
+            0.0,
+            0.0
+          ],
+          "basis": "recorded-measured-authoring-registration",
+          "engine_anchor": false,
+          "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."
+        },
+        "reviewed_scene_origin_hd": null,
+        "placement_basis": "route-dependent",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": [
+          "walk-029-leg-order"
+        ]
+      }
+    },
+    {
+      "id": "SCR/OCEAN02.SCR",
+      "family": "ocean-day",
+      "original": {
+        "resource": "OCEAN02.SCR",
+        "frame_index": null,
+        "logical_canvas": [
+          640,
+          480
+        ],
+        "basis": "supplied-original-decoded-pixels",
+        "native_reference": {
+          "evidence": "docs/knowledge-base/cartoon-original-reference.json",
+          "dump_member": "SCR/OCEAN02.SCR.xpm",
+          "canvas": [
+            640,
+            480
+          ],
+          "xpm_sha256": "da878a48922ad37cdf87dea0f8e30564d12712aa2195c119a22fe4a2f2734e76",
+          "index_plane_sha256": "77e920a6216798f42acbad7b95cd7f5f6334fb6e9eceee994ec7be5587878238",
+          "rgba_sha256": "ce15d5b4c57ca1ce09331aaa1306100134a3b0f5e49eb79bc7c636eb5e8b3fba",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            640,
+            480
+          ],
+          "transparent_index": null
+        },
+        "bundled_resource": {
+          "payload_sha256": "6da163fc23d31bc63022dc2e86cd210b9a2eae3f02bc2b220c065bb99e05c04b",
+          "volume_offset": 1892240,
+          "canvas_matches_supplied_original": true
+        },
+        "hd_proxy": {
+          "member": "data/hd/SCR/OCEAN02.SCR.png",
+          "sha256": "8d01436c5d5855ac2cba35559692f3e5180e5f6113725931ae6396b99c5f06cf",
+          "canvas": [
+            1280,
+            960
+          ]
+        },
+        "pose_landmarks": null,
+        "per_frame_anatomy_verified": false
+      },
+      "variant": {
+        "style": "cartoon",
+        "member": "data/styles/cartoon/SCR/OCEAN02.SCR.png",
+        "sha256": "099249884c73c863436983ec4d4f5650e77e6e5748ef65bf417d0785b1acf294",
+        "canvas": [
+          1280,
+          960
+        ],
+        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+        "raw_member": "ocean-generated-v1.png",
+        "raw_sha256": "10a4c01a454082a2f5592f249a59d2e84c5158eca434f6223d502a7fff745f96",
+        "registration": {
+          "kind": "full-canvas-resize",
+          "scale": 0.8839779005524862,
+          "landmark": null,
+          "landmark_residual_hd": null,
+          "basis": "recorded-export-transform"
+        },
+        "reviewed_scene_origin_hd": [
+          0,
+          0
+        ],
+        "placement_basis": "zero-offset-scene-recipe",
+        "acceptance": "art/cartoon/island-pilot-v1/acceptance.json",
+        "historically_human_accepted": true
+      },
+      "comparison": {
+        "canvas_matches_original_at_scale": true,
+        "recorded_deviations": {},
+        "artistic_fidelity": "unverified-by-this-tool",
+        "current_user_review_ids": []
+      }
+    }
+  ],
+  "evidence": {
+    "art/cartoon/pack.json": {
+      "sha256": "e72bfd0b2f4781adc2e3e6989fa44ed2e4deabf8a7dd0f31b0d6b4e9aac4564a",
+      "hash_basis": "utf8-normalized-newlines"
+    },
+    "art/cartoon/island-pilot-v1/acceptance.json": {
+      "sha256": "29f5a9a42d9a3e84e278d57e4b04207624db1a64bdb174b59910a854071e0e1c",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/directional-cycle-v1/acceptance.json": {
+      "sha256": "ded276b025ca095536ded679cfbddd82f441ec778b13e92b931e215d367495ce",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/island-pilot-v1/review-evidence/capture-files-and-timing.json": {
+      "sha256": "fa899d38a4552578137d8ae4ffee9c24116faf45c39358dbc2a1ca496e81b942",
+      "hash_basis": "file-bytes"
+    },
+    "docs/knowledge-base/cartoon-original-reference.json": {
+      "sha256": "f6293e86dc4773fa5548f205df73afa970729662dab06a5bff111c3b0f9692ef",
+      "hash_basis": "utf8-normalized-newlines"
+    },
+    "docs/knowledge-base/original-extractor-reference.json": {
+      "sha256": "30e47c4ab27527865b8d91c383817621ec9bb73e87a0ee06f7110f24a0bd477f",
+      "hash_basis": "utf8-normalized-newlines"
+    },
+    "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json": {
+      "sha256": "ceaa00c6e3be6db0a4ce056afd61d08492943395658c1c72deb9f69d19424f4f",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json": {
+      "sha256": "fe98aabe978b166d5d9f8177ba43cb4b7f0727a363d1f0f80909eac3cbbfc360",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json": {
+      "sha256": "40b1d14e5bed8b55c5b263b6ecae18120bbb8c4df26c9d3d276f23e4362a96ac",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/island-pilot-v1/side-waves/recipe.json": {
+      "sha256": "ea431b1991e9cbfb5d2670d95ef88341ac900c4e8887db3b18c7d8a92b43d28b",
+      "hash_basis": "file-bytes"
+    },
+    "docs/art-style-learnings.md": {
+      "sha256": "7c5685a04682eada46e01d203804a905e6a728f954fb81c684710ed30a8f8207",
+      "hash_basis": "utf8-normalized-newlines"
+    },
+    "art/cartoon/motion-review.md": {
+      "sha256": "bd0dcb3e6190f95964d21b4ee393e8e0f88d70b35f0a905f80256efc9976bcf3",
+      "hash_basis": "utf8-normalized-newlines"
+    },
+    "src/engine/island.c": {
+      "sha256": "f02ab16e374c26053743f4c202efadd199ee3c7dc883c38d94bb873dc90711fc",
+      "hash_basis": "utf8-normalized-newlines"
+    },
+    "src/engine/walk.c": {
+      "sha256": "a6d49c73188850642a68ff5da1053e032d2c566d0d5e4f0554c1c17946de09b3",
+      "hash_basis": "utf8-normalized-newlines"
+    },
+    "src/data/walk_data.h": {
+      "sha256": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70",
+      "hash_basis": "utf8-normalized-newlines"
+    },
+    "art/cartoon/walk-pilot/directional-cycle-v1/source-images.zip": {
+      "sha256": "8707ee636589ce8e20e08f3def5ef42fd6bd2cb0fb643852b1b66a4b7d108e3e",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/directional-cycle-v1/provenance.json": {
+      "sha256": "f8f1d964e01591b71c372ca3f9717794ddfd0b54262a8f0415990dea7bbfb2c6",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/source-images.zip": {
+      "sha256": "4f1a5005e03a9cc4ba981592228509a874cfa0a3eb4db8a3cb5cbcba6d3088f0",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/provenance.json": {
+      "sha256": "7bb5536971f35a0a40120339e4aeb0b8c33c33b5c4564c8e040bbc42af2fbb26",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/source-images.zip": {
+      "sha256": "dd9c2710580db88433b2427a5284eabe70e43d72975c0a5fdbea9b1aba9e7a8e",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/provenance.json": {
+      "sha256": "5e48200f21b97d2f47b1c2ca7dbdff9d7d014ef199a84c04dabbbc2aec11cca2",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/island-pilot-v1/side-waves/source-images.zip": {
+      "sha256": "8b6cd7ee6a573e5c7f5be893b472c8ef1d48024228aaf058351dad340758ee67",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/island-pilot-v1/side-waves/provenance.json": {
+      "sha256": "b2978b548eb2c3784ddaf121457094c7c164d310ac39dc71336ab0cab3411d3b",
+      "hash_basis": "file-bytes"
+    },
+    "assets/scrantic_data.zip!data/RESOURCE.MAP": {
+      "sha256": "65f5e30383b3d5a5f1c4fca1b49d57cc31d72bfaf90a49ce61d5990d449d59da",
+      "hash_basis": "zip-member-bytes"
+    },
+    "assets/scrantic_data.zip!data/RESOURCE.001": {
+      "sha256": "f4e97a342a3c3c5b31c85cc4b177dba05363a81ad9a49b3961c26f6a4508bd02",
+      "hash_basis": "zip-member-bytes"
+    },
+    "assets/scrantic_data.zip!data/hd/manifest.json": {
+      "sha256": "889935af8d19eacbd84f8ddea97dbed2028ebc0eaeb71d15f46acacfaff66f0d",
+      "hash_basis": "zip-member-bytes"
+    }
+  },
+  "limits": [
+    "Original XPM evidence is decoded by the port, not a capture of the original executable. No new anatomical annotation is performed.",
+    "Numeric registration residuals test transform consistency, not original-versus-variant landmark coincidence.",
+    "Known raised feet in 026/027 and qualitative 029 clearance remain differences despite motion acceptance.",
+    "No pixel-equality or invented aesthetic threshold is applied across styles. Other poses/states remain outside this pilot."
+  ]
+}
