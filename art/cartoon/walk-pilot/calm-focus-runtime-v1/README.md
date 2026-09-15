@@ -1,5 +1,30 @@
 # Calm focus runtime candidate v1
 
+## Current production acceptance
+
+On 2026-09-15 the user approved the actual Linux island comparison with
+"looks good". [production-acceptance.json](production-acceptance.json) records
+the exact six walking exports and inherited 15 island assets, the reviewed
+HTML/native capture evidence, and the retained original-leg difference.
+These six sprites are now selected in the production Cartoon pack. The pack
+remains partial; this approval does not cover unseen animation states.
+
+The production archive changed only the six walking PNG members. All 2,550
+non-style members, including normal `RESOURCE.MAP` and `RESOURCE.001`, and all
+15 island PNGs are unchanged. No diagnostic route script was promoted.
+
+The exporter reports its own scope: it reproduces recorded bytes, does not
+evaluate human acceptance, and does not modify the production archive.
+Historical exporter hashes and guard results in `provenance.json` and
+`export-verification.json` refer to the candidate checkpoint at commit
+`efb63b2`. Only its docstring and result labels changed after approval;
+registration, resampling, source checks and output PNG hashes did not.
+
+## Historical candidate notes
+
+The following notes preserve the pre-approval checkpoint. Its pending-review
+record remains historical; the separate production acceptance above is current.
+
 This is a technical candidate bundle. The two new toe-clearance edits and the
 resulting in-scene motion await human review. [pending-review.json](pending-review.json)
 records the exact current six sources with `accepted: false`. Nothing here

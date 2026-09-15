@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reproduce six pending-review candidate sprites in a new output directory."""
+"""Reproduce six recorded sprites in a new output directory."""
 import argparse
 import hashlib
 import io
@@ -82,7 +82,7 @@ def main():
         target = output / name
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
-    print(json.dumps({"status": "six recorded candidate PNG hashes matched", "frames": len(rendered), "coverage": "partial", "human_motion_acceptance": False, "production_acceptance": False, "output": str(output)}, sort_keys=True))
+    print(json.dumps({"status": "six recorded PNG hashes matched", "frames": len(rendered), "coverage": "partial", "human_acceptance_evaluated": False, "production_archive_modified": False, "output": str(output)}, sort_keys=True))
 
 
 if __name__ == "__main__":

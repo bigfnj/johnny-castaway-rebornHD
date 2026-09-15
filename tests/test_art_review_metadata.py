@@ -83,6 +83,22 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(sum(bool(x["comparison"]["recorded_deviations"]) for x in result["assets"]), 9)
         self.assertEqual([x["frame"] for x in result["current_human_review"]["observations"]], [24, 28, 29])
         self.assertTrue(result["current_human_review"]["not_automatically_verified"])
+        self.assertEqual(result["current_acceptance_record"], m.ACCEPTANCE)
+        self.assertEqual(result["current_human_review"]["awaiting_human_decision"], [])
+        self.assertEqual(result["current_human_review"]["accepted_retained_differences"][0]["frames"], [26, 27])
+        self.assertEqual([x["status"] for x in result["current_human_review"]["observations"]],
+                         ["accepted-as-displayed", "accepted-as-displayed-with-known-leg-difference",
+                          "accepted-as-displayed-with-known-leg-difference"])
+        self.assertEqual(result["motion"]["historical_route_acceptance"], m.ROUTE_ACCEPTANCE)
+        self.assertEqual(result["motion"]["historical_capture_evidence"], m.TIMING)
+        for asset in result["assets"]:
+            if asset["family"] == "walk-e-to-a":
+                self.assertEqual(asset["variant"]["recipe"], m.WALK + "/recipe.json")
+                self.assertEqual(asset["variant"]["acceptance"], m.ACCEPTANCE)
+                if asset["original"]["frame_index"] in (26, 27):
+                    clearance = asset["comparison"]["recorded_deviations"]["rear_foot_clearance_hd"]
+                    self.assertEqual(clearance["measured_variant_recipe"], m.HISTORICAL_WALK + "/recipe.json")
+                    self.assertFalse(clearance["current_variant_independently_remeasured"])
 
     def test_newline_normalization_varies(self):
         baseline = self.report()
@@ -203,6 +219,45 @@ class MetadataTests(unittest.TestCase):
                 value["accepted_assets"][0]["sha256"] = "0" * 64
         self.refused(lambda: self.report(mutate), "BMP/BACKGRND.BMP/000.png", "acceptance hash differs")
 
+    def test_active_acceptance_pointer(self):
+        def mutate(label, value):
+            if label == m.PACK:
+                value["acceptance_record"] = m.ISLAND + "/acceptance.json"
+        self.refused(lambda: self.report(mutate), m.PACK, "active acceptance pointer differs")
+
+    def test_pending_production_acceptance(self):
+        def mutate(label, value):
+            if label == m.ACCEPTANCE:
+                value["accepted"] = False
+        self.refused(lambda: self.report(mutate), m.ACCEPTANCE, "production acceptance is pending")
+
+    def test_runtime_scale(self):
+        def mutate(label, value):
+            if label == m.PACK:
+                value["runtime"]["scale"] = 3
+        self.refused(lambda: self.report(mutate), m.PACK, "pilot scale differs")
+
+    def test_pack_recipe_pointer(self):
+        def mutate(label, value):
+            if label == m.PACK:
+                row = next(x for x in value["assets"] if x["path"] == "BMP/JOHNWALK.BMP/024.png")
+                row["recipe"] = m.HISTORICAL_WALK + "/recipe.json"
+        self.refused(lambda: self.report(mutate), "BMP/JOHNWALK.BMP/024.png", "active recipe pointer differs")
+
+    def test_accepted_recipe_pointer(self):
+        def mutate(label, value):
+            if label == m.ACCEPTANCE:
+                row = next(x for x in value["accepted_assets"] if x["path"] == "BMP/JOHNWALK.BMP/024.png")
+                row["recipe"] = m.HISTORICAL_WALK + "/recipe.json"
+        self.refused(lambda: self.report(mutate), "BMP/JOHNWALK.BMP/024.png", "active recipe pointer differs")
+
+    def test_active_review_pointer(self):
+        def mutate(label, value):
+            if label == m.PACK:
+                row = next(x for x in value["assets"] if x["path"] == "BMP/JOHNWALK.BMP/024.png")
+                row["review"] = m.ISLAND + "/acceptance.json"
+        self.refused(lambda: self.report(mutate), "BMP/JOHNWALK.BMP/024.png", "active review pointer differs")
+
     def test_hd_proxy_mismatch(self):
         def mutate(label, value):
             if label == m.PACK:
@@ -290,7 +345,7 @@ class MetadataTests(unittest.TestCase):
 
     def test_route_length_mismatch(self):
         def mutate(label, value):
-            if label == m.WALK + "/acceptance.json":
+            if label == m.ROUTE_ACCEPTANCE:
                 value["motion_scope"]["positions"] += 1
         self.refused(lambda: self.report(mutate), "src/data/walk_data.h", "reviewed route length differs")
 
@@ -397,6 +452,12 @@ class MetadataTests(unittest.TestCase):
 # exactly one negative control, reports the actual imported source SHA, and must
 # produce one named test failure. No real input or approved asset is modified.
 MUTATIONS = [
+    ("test_active_acceptance_pointer", 'pack.get("acceptance_record") == ACCEPTANCE'),
+    ("test_pending_production_acceptance", 'accepted.get("accepted") is True'),
+    ("test_runtime_scale", 'pack["runtime"]["scale"] == 2'),
+    ("test_pack_recipe_pointer", 'item.get("recipe") == approved[asset].get("recipe") == path'),
+    ("test_accepted_recipe_pointer", 'item.get("recipe") == approved[asset].get("recipe") == path'),
+    ("test_active_review_pointer", 'item.get("review") == ACCEPTANCE'),
     ("test_duplicate_identity", "len(result) == len(rows)"),
     ("test_nonuniform_transform", "matrix[0] == matrix[4] == scale and matrix[1] == matrix[3] == 0"),
     ("test_landmark_mismatch", "all(abs(x) <= 1e-9 for x in residual)"),

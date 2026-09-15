@@ -3,6 +3,10 @@
 Read [image authoring lessons](art-style-learnings.md) before starting another
 style or animation family. It preserves the Cartoon pilot's generation,
 registration, transparency and review experience with links to exact records.
+The [Calm focus revision lessons](art-style-learnings-calm-focus.md) add expression
+selection, original-pose comparisons, narrowly scoped toe edits and actual
+engine review. The current six walking sprites have a
+[portable export recipe and approval](../art/cartoon/walk-pilot/calm-focus-runtime-v1/README.md).
 
 Cartoon is an additional art pack. The original resources and HD PNGs remain in
 `assets/scrantic_data.zip`; accepted Cartoon PNGs live under
@@ -69,9 +73,12 @@ python -B tools/art_inventory.py --archive assets/scrantic_data.zip --export bui
 ```
 
 Repeat `--resource` for another exact BMP or SCR name. Omit it to select every
-asset. Export copies the original PNG bytes without resizing or redrawing, and
+asset. Export copies the bundled HD PNG bytes without resizing or redrawing, and
 refuses to overwrite a reference file whose contents have changed. The catalog
 records original dimensions, source hashes, and exact-byte aliases.
+These HD proxies are distinct from supplied-original pixels. Use the
+[original-first review catalog](knowledge-base/cartoon-art-metadata.md) for
+original frame identities, source observations and their evidence limits.
 
 Keep references, candidates, and accepted staging files in ignored
 `build/art-work/`. Final shipping PNGs belong in the archive, so they do not need
@@ -91,7 +98,8 @@ Generate one runtime asset or targeted revision per call. Contact sheets are
 reference and review material; a generated grid is not assumed to preserve frame
 count, order or registration. Save candidate outputs separately. Technical export
 may enforce an approved size and placement, but an artistic correction goes back
-through imagegen. The tools here never change pixels.
+through imagegen. The inventory and packaging tools copy image bytes unchanged;
+recorded technical export recipes handle approved scaling and placement.
 
 The useful review points are the initial character/island direction, the first
 short motion loop, the playable pilot, and each completed scene family. Check
@@ -105,7 +113,9 @@ additional scene resources. A smaller initial motion test should declare its
 smaller scope explicitly. The selected scene's ADS/TTM loads must be checked:
 `STAND.ADS` references `MJAMBWLK.TTM` and `MJTELE.TTM`, so its name alone does
 not establish the required sprite set. Island backgrounds/clouds are randomized;
-preview runs need a controlled state or a verified seed.
+preview runs need a controlled state and verified asset selection. Record the
+platform with a seed: the same seed can select different ocean or cloud assets
+on Windows and Linux.
 
 PNG replacement also leaves TTM drawing primitives and original animation timing
 in place. Inspect palette-drawn effects in the pilot. A redraw does not add

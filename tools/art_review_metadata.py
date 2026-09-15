@@ -17,8 +17,10 @@ from art_common import ArtError, digest, inspect_png, read_json, safe_member, so
 from inventory_scenes import resource_catalog, metadata, u16
 
 PACK = "art/cartoon/pack.json"
-ACCEPTANCE = "art/cartoon/island-pilot-v1/acceptance.json"
-WALK = "art/cartoon/walk-pilot/directional-cycle-v1"
+WALK = "art/cartoon/walk-pilot/calm-focus-runtime-v1"
+ACCEPTANCE = WALK + "/production-acceptance.json"
+HISTORICAL_WALK = "art/cartoon/walk-pilot/directional-cycle-v1"
+ROUTE_ACCEPTANCE = HISTORICAL_WALK + "/acceptance.json"
 ISLAND = "art/cartoon/island-pilot-v1"
 TIMING = ISLAND + "/review-evidence/capture-files-and-timing.json"
 OUTPUT = "docs/knowledge-base/cartoon-art-metadata"
@@ -26,7 +28,7 @@ ORIGINAL = "docs/knowledge-base/cartoon-original-reference.json"
 ORIGINAL_IDENTITY = "docs/knowledge-base/original-extractor-reference.json"
 RECIPES = [WALK + "/recipe.json"] + [ISLAND + "/" + x + "/recipe.json" for x in (
     "palm-sand-cloud", "ocean-shadow-center-waves", "side-waves")]
-CURRENT_REVIEW = {
+HISTORICAL_REVIEW_REQUESTS = {
     "date": "2026-09-15", "basis": "user-visual-review-of-supplied-original-comparison",
     "preview": "local original-vs-cartoon-walk.html; original indices with port dump palette and index0 transparency",
     "not_automatically_verified": True,
@@ -228,6 +230,8 @@ def walk_sequence(source, timing, acceptance):
         row["start_ms"] = row["position"] * pose_ms
     return {"id": "walk-e-to-a", "resource": "JOHNWALK.BMP", "basis": "original-derived-route-and-native-capture-record",
             "route_source": "src/data/walk_data.h", "draw_convention_source": "src/engine/walk.c:walkAnimate",
+            "historical_route_acceptance": ROUTE_ACCEPTANCE, "historical_capture_evidence": TIMING,
+            "capture_artwork_scope": "Historical directional-cycle-v1 pixels; these records establish route and cadence, not captures of the current Calm focus artwork.",
             "route": route, "pose_ms": pose_ms,
             "diagnostic_endpoint_hold_ms": scope["endpoint_hold_added_ms"],
             "captured_review_ms": timing["duration_ms"],
@@ -256,7 +260,11 @@ def build(root):
 
     pack = load(PACK)
     accepted = load(ACCEPTANCE)
-    walk_acceptance = load(WALK + "/acceptance.json")
+    require(pack.get("acceptance_record") == ACCEPTANCE, PACK, "active acceptance pointer differs")
+    require(accepted.get("accepted") is True, ACCEPTANCE, "production acceptance is pending")
+    current_review = accepted["current_human_review"]
+    walk_acceptance = load(ROUTE_ACCEPTANCE)
+    load(HISTORICAL_WALK + "/recipe.json")
     timing = load(TIMING)
     supplied_original = load(ORIGINAL)
     validate_original_identity(supplied_original["input_sha256"], supplied_original["decoder_executable_sha256"],
@@ -270,7 +278,7 @@ def build(root):
     packed = keyed(pack["assets"], "path", PACK)
     approved = keyed(accepted["accepted_assets"], "path", ACCEPTANCE)
     require(set(packed) == set(approved) == set(pack["required_assets"]), PACK, "accepted coverage differs")
-    require(accepted["accepted"] is True and pack["runtime"]["scale"] == 2, PACK, "pilot acceptance or scale differs")
+    require(pack["runtime"]["scale"] == 2, PACK, "pilot scale differs")
     recipe_rows = {}
     for path, recipe in recipes.items():
         rows = keyed(recipe.get("frames", recipe.get("assets")), "path", path)
@@ -311,6 +319,8 @@ def build(root):
             canvas = [n * pack["runtime"]["scale"] for n in logical]
             require(row["runtime_canvas"] == canvas, asset, "recipe canvas differs from original")
             require(item["source_sha256"] == original["source_sha256"], asset, "HD reference hash differs")
+            require(item.get("recipe") == approved[asset].get("recipe") == path, asset, "active recipe pointer differs")
+            require(item.get("review") == ACCEPTANCE, asset, "active review pointer differs")
             require(approved[asset]["sha256"] == item["sha256"] == row["candidate_png_sha256"], asset, "acceptance hash differs")
             member = "data/styles/cartoon/" + asset
             data = archive.read(member)
@@ -325,7 +335,10 @@ def build(root):
                 deviations["rear_foot_clearance_hd"] = {
                     "hd_proxy_approx": 4, "variant_approx": 11.6 if index == 26 else 11,
                     "basis": "historical-hd-proxy-comparison", "precision": "approximate; no automatic threshold",
-                    "source": WALK + "/recipe.json#known_geometry_limitations"}
+                    "source": HISTORICAL_WALK + "/recipe.json#known_geometry_limitations",
+                    "measured_variant_recipe": HISTORICAL_WALK + "/recipe.json",
+                    "current_variant_independently_remeasured": False,
+                    "current_disposition": "Displayed foot lift accepted in the reviewed motion; no claim of anatomical parity."}
             assets.append({"id": asset.removesuffix(".png"), "family": family(asset),
                 "original": {"resource": original["resource"], "frame_index": index,
                     "logical_canvas": native["canvas"], "basis": "supplied-original-decoded-pixels",
@@ -343,7 +356,7 @@ def build(root):
                     "acceptance": ACCEPTANCE, "historically_human_accepted": True},
                 "comparison": {"canvas_matches_original_at_scale": True,
                     "recorded_deviations": deviations, "artistic_fidelity": "unverified-by-this-tool",
-                    "current_user_review_ids": [note["id"] for note in CURRENT_REVIEW["observations"]
+                    "current_user_review_ids": [note["id"] for note in current_review["observations"]
                         if original["resource"] == "JOHNWALK.BMP" and note["frame"] == index]}})
     walk_assets = [x for x in assets if x["family"] == "walk-e-to-a"]
     require({x["original"]["frame_index"] for x in walk_assets} == {r["frame"] for r in route["route"]}, PACK, "route assets differ from accepted walking family")
@@ -352,7 +365,9 @@ def build(root):
         "reference_policy": "Supplied original decoded pixels establish reference canvases and bounds; bundled RESOURCE headers are compared separately. Original-derived draw records establish route. HD PNGs are upscaled proxies, not assumed pixel-identical to the supplied original. Cartoon acceptance never establishes original anatomy.",
         "coordinates": {"logical": "original 640x480 scene coordinates", "hd": "logical multiplied by 2", "raw": "generated source canvas pixels", "landmarks": "manual authoring observations, not engine anchors"},
         "summary": {"assets": len(assets), "walking_assets": len(walk_assets), "island_assets": len(assets) - len(walk_assets)},
-        "current_human_review": CURRENT_REVIEW,
+        "current_human_review": current_review,
+        "current_acceptance_record": ACCEPTANCE,
+        "historical_human_correction_requests": HISTORICAL_REVIEW_REQUESTS,
         "original_observations": [{"assets": ["BMP/JOHNWALK.BMP/024"], "basis": "historical-hd-proxy-inspection",
             "source": "art/cartoon/motion-review.md",
             "statement": "024 foreground leg descends from the screen-right shorts opening; far leg begins at the screen-left opening with the small foot mostly behind and screen-left of the planted ankle.",
@@ -369,7 +384,7 @@ def build(root):
         "assets": assets, "evidence": evidence,
         "limits": ["Original XPM evidence is decoded by the port, not a capture of the original executable. No new anatomical annotation is performed.",
                    "Numeric registration residuals test transform consistency, not original-versus-variant landmark coincidence.",
-                   "Known raised feet in 026/027 and qualitative 029 clearance remain differences despite motion acceptance.",
+                   "Historical raised-foot observations are retained with their older variant identity. Current displayed foot lift and known leg differences were accepted, not proven anatomically equivalent.",
                    "No pixel-equality or invented aesthetic threshold is applied across styles. Other poses/states remain outside this pilot."]}
 
 
@@ -377,27 +392,28 @@ def markdown(report):
     lines = ["# Cartoon pilot: original-first review metadata", "",
         "Generated by `python tools/art_review_metadata.py`. Use `--check` to verify reproduction.", "",
         "[JSON catalog](cartoon-art-metadata.json) keeps original facts, variant mapping and acceptance separate.",
-        "It covers all 21 approved replacements: six walk poses and 15 island assets. The runtime pack is unchanged.", "",
+        "It maps the current 21 production replacements: six Calm focus walk poses and 15 unchanged island assets.", "",
         "[Supplied original XPM evidence](cartoon-original-reference.json) establishes native canvases and visible bounds.",
         "Bundled RESOURCE headers are checked separately. Existing HD PNGs are labeled upscaled proxies, not assumed",
         "pixel-identical to the original installation. The E-to-A sequence is read from the original-derived walk table",
-        "and checked against both HD and Cartoon capture records. This is port timing, not measured original EXE timing.", "",
+        "and checked against historical HD and Cartoon capture records. This is port timing, not measured original EXE timing.", "",
         "## Comparison findings", "",
         "All canvases match original dimensions at scale 2, all production bytes match the final acceptance ledger,",
         "and all recorded affine landmarks map to their declared targets. These are technical checks, not artistic approval.",
         "The cap landmarks are manually selected registration features, not engine anchors or newly detected pixel features.", "",
-        "The earlier review recorded rear-foot clearance near 11.6 HD pixels in 026 and 11 in 027, versus about 4 in",
-        "the packaged HD proxies. It also recorded elevated clearance in 029 without a reliable number. These differences",
-        "were previously accepted in motion, but remain visible review facts. No artwork was changed.", "",
-        "## Current human correction requests", "",
-        "On 2026-09-15 the user compared the supplied-original reference with Cartoon and identified:", "",
-        "- 024: turn the trailing anatomical right foot further inward along the walking trajectory.",
-        "- 028 and 029: the original has the anatomical left foot forward and right foot back; Cartoon reverses that order.", "",
-        "These are current user visual judgments and correction targets, not automatic geometry checks. The higher",
-        "rear-foot lift in 026/027 awaits a human decision. Historical acceptance files remain unchanged and do not",
-        "close these new requests. The JSON links each target to its exact frame and evidence classification.", "",
-        "The cited 024 leg-order observation also came from those proxies; it is not a new original-pixel annotation.",
-        "Per-frame anatomy remains unverified by this tool. The JSON also retains",
+        "The earlier directional-cycle-v1 review recorded rear-foot clearance near 11.6 HD pixels in 026 and 11 in 027,",
+        "versus about 4 in the packaged HD proxies. It also recorded elevated clearance in 029 without a reliable number.",
+        "Those approximate measurements belong to the older drawings; this catalog has not remeasured the current feet.", "",
+        "## Human review and retained differences", "",
+        "The user approved the displayed Calm focus walk, then its revised toes in the actual Linux island preview.",
+        "The decision accepts the displayed foot lift in 026/027 and known leg differences; it does not establish",
+        "anatomical agreement with the original. The JSON retains the earlier correction requests as historical observations",
+        "and links the current dispositions to the separate production acceptance. Earlier art records remain byte-identical.", "",
+        "The original-reference observations remain separate: the earlier user comparison requested an inward angle for",
+        "Cartoon 024's trailing right foot and identified original 028/029 as anatomical left-forward/right-back.",
+        "Artistic acceptance does not change those observations or the stored supplied-original pixel facts.", "",
+        "The JSON separately retains an older 024 foreground-leg description from HD proxies; that historical description",
+        "is not a new original-pixel annotation. Per-frame anatomy remains unverified by this tool. The JSON also retains",
         "the recorded shoreline/foam extent deltas where available. Nonzero differences have no automatic pass/fail threshold.", "",
         "## Asset map", "", "| Original identity | Logical canvas | Cartoon canvas | Family | Registration scale |", "|---|---|---|---|---|"]
     for asset in report["assets"]:
@@ -407,8 +423,10 @@ def markdown(report):
     lines += ["", "## Reviewed motion", "",
         "The 23-position route travels (-94,+30) logical pixels without a horizontal flip. Each pose starts 120 ms apart.",
         "The final 025-to-027 transition is retained; this route is not an invented repeating six-frame loop.",
-        "The review lasts 3760 ms including a separate 1000 ms endpoint hold. Its 42 display records include intervening",
+        "The historical route review lasts 3760 ms including a separate 1000 ms endpoint hold. Its 42 display records include intervening",
         "160 ms background updates, so display duration and pose duration are distinct fields.", "",
+        "Those historical captures show the older directional-cycle-v1 artwork. Current Calm focus scene captures and",
+        "their Linux platform/seed/archive identities are linked by the current acceptance record; they are separate evidence.", "",
         "High-tide wave groups 003-005, 006-008 and 009-011 advance independently. Latest-update draw order matters",
         "where center/right foam overlaps. The cloud's recorded origin is only its first reference position.", "",
         "## Evidence and scope", "",
@@ -429,7 +447,7 @@ def markdown(report):
         "hashes use exact preserved bytes; the maintained pack ledger uses the text policy.", "",
         "See [art guidance](../cartoon-art.md), [learnings](../art-style-learnings.md),",
         "[motion review](../../art/cartoon/motion-review.md) and",
-        "[final acceptance](../../art/cartoon/island-pilot-v1/acceptance.json).", ""]
+        f"[current production acceptance](../../{report['current_acceptance_record']}).", ""]
     return "\n".join(lines)
 
 

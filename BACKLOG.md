@@ -13,7 +13,6 @@ and the original-first art metadata work.
 | Item | Evidence and next useful action |
 | --- | --- |
 | Expand Cartoon by complete motion families | The accepted pilot contains six walking poses and 15 island assets. Other directions, low-tide foam, other ocean/cloud variants, holiday/raft scenery and most story animations use HD/original fallback. Keep "Cartoon (preview)" until coverage is complete. Follow the recorded registration, direction and limb-order lessons before generating more art. |
-| Review the Calm focus runtime walking candidate | The user accepted the [standalone six-frame motion](art/cartoon/walk-pilot/original-pose-corrections-v1/standalone-motion-acceptance.json) with its known original-leg mismatch. Two later toe-clearance edits and actual in-scene rendering remain pending in [the runtime candidate](art/cartoon/walk-pilot/calm-focus-runtime-v1/README.md). The earlier user comparison remains recorded: Cartoon 024 was requested to turn its trailing right foot inward; the user identified original 028/029 as anatomical left foot forward, right foot back. The displayed lift in 026/027 was included in the accepted standalone motion. Do not relabel artistic acceptance as anatomical agreement or rewrite the original-first observations when promoting the art. |
 | Classify original versus bundled pixel differences | Independent decoder executions agree for all 79 images in JOHNWALK, BACKGRND and OCEAN02, while original versus bundled indices differ in all 79. The [comparison](docs/knowledge-base/original-image-comparison.md) records 2,428 changed indices and unknown conversion history. Broader native-only results are separate. Calibrate original palette/compositing and determine the cause before replacing bundled resources or treating HD proxies as canonical. |
 | Establish unfinished TTM command behavior | These are reachable commands, not dead code. The [command review](docs/legacy-command-review.md) records exact opcodes and static occurrences. DRAW_BACKGROUND appears 190 times across 36 resources; SAVE_IMAGE1 appears 60 times across 40. Compare concrete original-engine scenes before changing pixels or ownership. GJGULIVR, MJSAND and WOULDBE are useful starting points. |
 | Establish original clipping behavior for drawing primitives | Sprites respect the active draw zone, while rectangle fill and pixel-based line/circle paths only enforce surface or screen bounds. There are 111 DRAW_RECT commands in six TTM resources and 52 SET_CLIP_ZONE commands overall; SBREAKUP tag 34 combines 12 rectangles and four clip changes. Trace whether a primitive crosses its active zone and compare the original before changing semantics. Static reachability does not establish a visible scene defect. |
@@ -37,6 +36,20 @@ and the original-first art metadata work.
 | Calibrate complete scenes against the supplied original | All 10 ADS and all 41 TTM names are present. Decoded ADS match; 40 TTM match exactly. SJLEAVES.TTM differs by a removed SET_DELAY 0 in tag 3. The original-only SA_DEMO.BMP and five TTM files without story ADS references need classification, not automatic promotion to missing scenes. Use the knowledge-base event crosswalk and original windowed reference to observe complete branches, timing, transitions and outcomes. |
 | Reuse resource inspection for the next art pack | The xesf viewer offers useful resource-list, sprite-sheet, palette and script-pane patterns, but its playback has unfinished commands and its current-line callback is not called. Prefer adding proven inspection conveniences to our existing scene/art tools: show original frame IDs, offsets, direction and complete motion-family contact sheets beside variants. Keep original DOSBox observation as the behavioral reference. See docs/knowledge-base/external-tools.md. |
 | Review remaining compiler diagnostics when touching those paths | Pinned Emscripten 6.0.9 still reports existing unused parameters/non-Windows parent-window state and C11 pedantic diagnostics from Emscripten macros; vendored miniz reports its large-file I/O choice. Native Windows phase-one build is warning-free. Keep SDK/vendor diagnostics distinct from actionable project warnings and do not silence them globally. |
+
+## Calm focus walking revision
+
+The user approved the [actual island preview](art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json)
+on 2026-09-15 with "looks good", including the two toe-clearance edits after the
+standalone review. This resolves the pending art decision for the six displayed
+walking poses. The original observations remain attributed to the user's
+comparison: Cartoon 024 was requested to turn its trailing right foot inward;
+the user identified original 028/029 as anatomical left foot forward, right foot
+back. The displayed reversed-leg artistic difference and 026/027 lift are
+accepted as shown, not relabeled as exact original anatomy. The
+[image lessons](docs/art-style-learnings-calm-focus.md) preserve that distinction.
+The [revision verification](docs/calm-focus-walk-verification.md) records packaging,
+metadata, native checks and the subsequent audit.
 
 ## Maintenance completion results
 

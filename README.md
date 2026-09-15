@@ -217,9 +217,11 @@ is "Cartoon (preview)" until wider artwork coverage is ready.
 
 Cartoon assets live under `data/styles/cartoon/` inside `scrantic_data.zip`.
 Selecting Cartoon with an older archive that lacks the pack reports a
-missing-pack error. The [approved scene](art/cartoon/island-pilot-v1/README.md)
-records its exact scope. See [Cartoon art production](docs/cartoon-art.md) for
-packaging and [image authoring lessons](docs/art-style-learnings.md) before
+missing-pack error. The [approved island](art/cartoon/island-pilot-v1/README.md)
+and [Calm focus walking revision](art/cartoon/walk-pilot/calm-focus-runtime-v1/README.md)
+record their exact scope. See [Cartoon art production](docs/cartoon-art.md) for
+packaging, [image authoring lessons](docs/art-style-learnings.md) and
+[the walking revision lessons](docs/art-style-learnings-calm-focus.md) before
 creating the next style.
 
 `capture` writes a PPM image of the final composed frame, for example:

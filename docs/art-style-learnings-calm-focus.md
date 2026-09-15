@@ -2,8 +2,10 @@
 
 This adds to [the original art-style lessons](art-style-learnings.md) without
 changing that historical record. The user approved the standalone walking
-preview on 2026-09-15. The later toe-clearance edits and their in-scene rendering
-still require review at this checkpoint.
+preview on 2026-09-15, then approved the later toe-clearance edits and their
+actual in-scene rendering with "looks good". The exact six exported sprites and
+inherited island artwork are recorded in the
+[production acceptance](../art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json).
 
 ## Keep reference truth and artistic acceptance separate
 
@@ -90,7 +92,7 @@ roughly 150 MB HTML document.
 ## Evidence
 
 - [Expression, attempt history and standalone acceptance](../art/cartoon/walk-pilot/original-pose-corrections-v1/README.md)
-- [Runtime candidate recipe and source provenance](../art/cartoon/walk-pilot/calm-focus-runtime-v1/README.md)
+- [Accepted runtime recipe and source provenance](../art/cartoon/walk-pilot/calm-focus-runtime-v1/README.md)
 - [Original-first art catalog](knowledge-base/cartoon-art-metadata.md)
 - [Bounded native capture logging observations](knowledge-base/pose-review-capture-notes.md)
 
