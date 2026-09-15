@@ -2,13 +2,8 @@
 #
 #  Build jc_reborn on macOS with NOTHING but the Xcode Command Line Tools.
 #
-#  WHY THIS EXISTS. The normal path is CMake, and CMake on macOS normally arrives
-#  via Homebrew - which as of 2026 refuses to install on Intel Macs at all:
-#
-#      Homebrew on macOS is only supported on Apple Silicon processors!
-#
-#  Every Mac with the Command Line Tools already has clang, so this remains
-#  a build path without CMake or a package manager.
+#  The Command Line Tools supply clang, so this path needs neither CMake nor a
+#  package manager. Run it from a complete source checkout.
 #
 #  This mirrors exactly what CMakeLists.txt does for APPLE: the same sources, the
 #  same four include directories, PLATFORM_MACOS, -x objective-c for the single

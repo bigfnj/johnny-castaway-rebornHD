@@ -45,7 +45,7 @@ not a cross-platform RNG guarantee or full story coverage.
 | Web/macOS build reliability | Official pinned 6.0.9 container compilation passed as root and UID 1001, followed by host browser smoke and all ten style-control regressions. Six executed build-contract mutants fired. Draft PR CI also passed the real Intel macOS architecture checks, including the compiled ARM64 negative control; no release was published. |
 | Decoder output validation | Two complete-stream smoke checks and all eleven decoder regressions passed, including malformed actual RESOURCE archives and the existing LZW full-buffer return. Full Windows gate passed without warnings. All eight controlled scene captures match the frozen baseline byte-for-byte. Three isolated rebuilt decoder mutants fired. |
 | Resource ownership | Two focused smoke checks and all five ownership regressions passed against real engine code and Windows surface allocation. Full Windows gate passed without warnings; all eight baseline scenes remain byte-identical. Ten isolated rebuilt ownership mutants fired, including inactive layers, borrowed aliases, reinitialization, saved overlays and repeated teardown. |
-| Platform integration | Windows constructor/WIC smoke passed before nine allocation-failure regressions, then the full native gate passed without warnings and all eight baseline scenes remained identical. Worker validation passed 19 Linux pthread/X11 cases and ten Web cases, plus Linux full-application HD/Cartoon startup and the golden corpus. Rebuilt backend mutants fired: 16 Linux, eight Windows and seven Web. Cocoa probes await CI; Xvfb resize checks do not establish desktop fullscreen negotiation. |
+| Platform integration | Windows constructor/WIC smoke passed before nine allocation-failure regressions, then the full native gate passed without warnings and all eight baseline scenes remained identical. Worker validation passed 19 Linux pthread/X11 cases and ten Web cases, plus Linux full-application HD/Cartoon startup and the golden corpus. Rebuilt backend mutants fired: 16 Linux, eight Windows and seven Web. Final macOS CI passed 12 ordinary backend cases and all ten rebuilt mutations. Xvfb resize checks do not establish desktop fullscreen negotiation. |
 | Final code/API integration | The complete integrated gate passed under Windows PowerShell 5.1 without compiler warnings. It includes the existing native/settings/art/wave/palm/authoring suites and golden corpus, plus decoder smoke then 11 regressions, ownership smoke then five regressions, and platform smoke then nine regressions. Four graphics-caller failure controls and their rebuilt mutants passed on Linux. Independent review confirmed unused-field removal preserves header consumption and EOF checking. All eight controlled scene captures match baseline. |
 | Historical renderer comparisons | Against the frozen baseline binaries, all nine complete HD/fallback wave captures and all four palm HD/partial-fallback captures matched byte-for-byte. The focused suites ran smoke before their seven wave and eight palm checks. |
 
@@ -67,5 +67,19 @@ comparison and missing retained diagnostics; the test now resolves the reported
 path identity while still requiring the exact stale-data diagnostic and refusal
 before smoke. Executable hash/mtime and no-relink assertions were retained.
 
-That CI run predates final API cleanup and central platform-probe wiring. Final
-cross-platform CI, main delivery and the post-merge audit remain pending.
+Final PR [CI run 34928938740](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34928938740)
+passed all four platforms on `5d1fb9d`, including final API cleanup, central probe
+wiring, the real macOS compiler/runtime and all ten Cocoa mutations. The mutation
+report is retained in the run's `macos-mutation-evidence` artifact and locally at
+`build/cleanup/final-macos-mutations/mutation-report.json`.
+
+The first newly wired macOS run exposed a fixture problem: AppKit did not deliver
+a synthetic key posted for windowNumber zero before application launch. The test
+now supplies an ordered queue of real NSEvent objects and checks exact dispatch
+counts while retaining production polling/translation. This does not claim OS
+key-delivery coverage. All original assertions remain; no production change was
+needed for that failure.
+
+[PR 4](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/4) merged as
+`50eb6f4bc4b1bea704d03bbdda360be216be7d31`. The post-merge main rebuild and
+independent audit are in progress.

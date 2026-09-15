@@ -1,11 +1,7 @@
 # CMake / build output
 build/
 build-*/
-# build_web with an UNDERSCORE is what scripts/build_web.ps1 actually defaults
-# to, while the rule above uses a hyphen and README documents the hyphen form.
-# The two documented workflows disagreed on exactly the boundary that matters,
-# so a web build placed jc_reborn.js, .data and index.html straight into
-# `git status` as untracked files.
+# The Web builder uses an underscore, which build-*/ does not match.
 build_web/
 out/
 cmake-build-*/

@@ -53,7 +53,8 @@ golden dump. Linux needs Xvfb/xauth for its real X11 probes and also runs requir
 graphics-surface allocation failure checks before the corpus. The Web platform
 probes run in the pinned SDK container; browser rendering stays on the host.
 Backend fault-injection checks are normal regression. Recompiling deliberately
-mutated C sources is manual verification, separate from a normal gate.
+mutated C sources is separate verification. macOS CI runs its source mutations
+on the actual runner; other backend mutation commands remain manual checks.
 
 References checked when choosing this implementation:
 
