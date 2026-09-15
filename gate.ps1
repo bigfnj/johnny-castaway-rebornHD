@@ -197,6 +197,14 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 
+Write-Step 'frame limits smoke'
+$frameProbe = Join-Path (Split-Path $exe -Parent) 'jc_frame_test.exe'
+& python -B (Join-Path $repo 'tests\test_frame_limits.py') --exe $exe --probe $frameProbe --phase smoke
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'GATE FAILED: frame smoke failed; regression was not run' -ForegroundColor Red
+    exit 1
+}
+
 Write-Step 'platform constructor smoke'
 $platformProbe = Join-Path (Split-Path $exe -Parent) 'jc_platform_alloc_test.exe'
 & powershell.exe -NoProfile -ExecutionPolicy Bypass `
@@ -218,6 +226,10 @@ if (-not $SmokeOnly) {
 
     Write-Step 'regression (engine ownership and cleanup)'
     & python -B (Join-Path $repo 'tests\test_lifecycle.py') --exe $lifecycleProbe
+    if ($LASTEXITCODE -ne 0) { $failed = $true }
+
+    Write-Step 'regression (frame parsing and stopping boundaries)'
+    & python -B (Join-Path $repo 'tests\test_frame_limits.py') --exe $exe --probe $frameProbe --phase regression
     if ($LASTEXITCODE -ne 0) { $failed = $true }
 
     Write-Step 'regression (art-style pixels and configuration)'

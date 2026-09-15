@@ -52,6 +52,15 @@ function Run-GateCase {
         Write-FixtureText ('tests\' + $suite.File) (
             "import sys`nphase = 'Smoke' if '--phase' in sys.argv else 'Regression'`nprint('WITNESS $($suite.Name)-' + phase)`n" + $failCode)
     }
+    Write-FixtureText 'tests\test_frame_limits.py' (
+        "import argparse, sys`nfrom pathlib import Path`n" +
+        "parser = argparse.ArgumentParser()`nparser.add_argument('--exe', required=True, type=Path)`n" +
+        "parser.add_argument('--probe', required=True, type=Path)`nparser.add_argument('--phase', choices=['smoke', 'regression'], default='regression')`n" +
+        "args = parser.parse_args()`nexpected = Path(__file__).resolve().parents[1] / 'build' / 'Release'`n" +
+        "assert args.exe.resolve() == expected / 'jc_reborn.exe' and args.exe.is_file(), 'tests/test_frame_limits.py: wrong engine path'`n" +
+        "assert args.probe.resolve() == expected / 'jc_frame_test.exe' and args.probe.is_file(), 'tests/test_frame_limits.py: wrong probe path'`n" +
+        "phase = args.phase.title()`nprint('WITNESS frame-' + phase)`n" +
+        $(if ($FailPhase -eq 'frame') { "if phase == 'Smoke':`n    print('FAIL fixture tests/test_frame_limits.py')`n    sys.exit(1)`n" } elseif ($FailPhase -eq 'frame-regression') { "if phase == 'Regression':`n    print('FAIL fixture tests/test_frame_limits.py')`n    sys.exit(1)`n" } else { '' }))
     $gateArgs = @('-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', (Join-Path $work 'gate.ps1'), '-NoBuild')
     if ($SmokeOnly) { $gateArgs += '-SmokeOnly' }
     $psi = New-Object Diagnostics.ProcessStartInfo
@@ -85,6 +94,7 @@ function Check-Ordering {
         palm = 'tests/test_palm_renderer.py'
         decoder = 'tests/test_uncompress.py'
         lifecycle = 'tests/test_lifecycle.py'
+        frame = 'tests/test_frame_limits.py'
         platform = 'tests/Test-PlatformAlloc.ps1'
     }
     $marker = 'FAIL fixture ' + $names[$Phase]
@@ -95,6 +105,7 @@ function Check-Ordering {
         ($Result.Text -notmatch 'WITNESS palm-Regression') -and
         ($Result.Text -notmatch 'WITNESS decoder-Regression') -and
         ($Result.Text -notmatch 'WITNESS lifecycle-Regression') -and
+        ($Result.Text -notmatch 'WITNESS frame-Regression') -and
         ($Result.Text -notmatch 'WITNESS platform-Regression') -and
         ($Result.Text -notmatch 'WITNESS authoring-regression') -and
         ($Result.Text -notmatch 'WITNESS dump-regression')
@@ -118,18 +129,24 @@ try {
         New-Item -ItemType Directory -Path (Join-Path $work $dir) -Force | Out-Null
     }
     foreach ($file in @('build\Release\jc_reborn.exe', 'build\Release\jc_reborn.scr',
+                        'build\Release\jc_frame_test.exe',
                         'build\Release\scrantic_data.zip', 'assets\scrantic_data.zip')) {
         [IO.File]::WriteAllBytes((Join-Path $work $file), [byte[]]@(0))
     }
     Write-FixtureText 'gate.ps1' $gateSource
-    foreach ($phase in @('smoke', 'screensaver', 'art', 'wave', 'palm', 'decoder', 'lifecycle', 'platform')) {
+    foreach ($phase in @('smoke', 'screensaver', 'art', 'wave', 'palm', 'decoder', 'lifecycle', 'frame', 'platform')) {
         $result = Run-GateCase $phase
         Assert-Case "$phase failure prevents regression" (Check-Ordering $phase $result)
     }
     $result = Run-GateCase 'none'
     Assert-Case 'passed smoke reaches every regression witness in order' (
         ($result.Code -eq 0) -and
-        ($result.Text -match '(?s)WITNESS smoke.*WITNESS screensaver.*WITNESS art-Smoke.*WITNESS wave-Smoke.*WITNESS palm-Smoke.*WITNESS decoder-Smoke.*WITNESS lifecycle-Smoke.*WITNESS platform-Smoke.*WITNESS platform-Regression.*WITNESS decoder-Regression.*WITNESS lifecycle-Regression.*WITNESS art-Regression.*WITNESS wave-Regression.*WITNESS palm-Regression.*WITNESS authoring-regression.*WITNESS dump-regression'))
+        ($result.Text -match '(?s)WITNESS smoke.*WITNESS screensaver.*WITNESS art-Smoke.*WITNESS wave-Smoke.*WITNESS palm-Smoke.*WITNESS decoder-Smoke.*WITNESS lifecycle-Smoke.*WITNESS frame-Smoke.*WITNESS platform-Smoke.*WITNESS platform-Regression.*WITNESS decoder-Regression.*WITNESS lifecycle-Regression.*WITNESS frame-Regression.*WITNESS art-Regression.*WITNESS wave-Regression.*WITNESS palm-Regression.*WITNESS authoring-regression.*WITNESS dump-regression'))
+    $result = Run-GateCase 'frame-regression'
+    Assert-Case 'frame regression failure fails the gate after all smoke' (
+        ($result.Code -ne 0) -and
+        ([regex]::Matches($result.Text, 'FAIL fixture tests/test_frame_limits.py').Count -eq 1) -and
+        ($result.Text -match '(?s)WITNESS frame-Smoke.*WITNESS platform-Smoke.*WITNESS frame-Regression.*WITNESS dump-regression'))
     $result = Run-GateCase 'none' -SmokeOnly
     Assert-Case 'SmokeOnly executes smoke without regression' (
         ($result.Code -eq 0) -and ($result.Text -match 'WITNESS wave-Smoke') -and
@@ -137,11 +154,12 @@ try {
         ($result.Text -match 'WITNESS palm-Smoke') -and ($result.Text -notmatch 'WITNESS palm-Regression') -and
         ($result.Text -match 'WITNESS decoder-Smoke') -and ($result.Text -notmatch 'WITNESS decoder-Regression') -and
         ($result.Text -match 'WITNESS lifecycle-Smoke') -and ($result.Text -notmatch 'WITNESS lifecycle-Regression') -and
+        ($result.Text -match 'WITNESS frame-Smoke') -and ($result.Text -notmatch 'WITNESS frame-Regression') -and
         ($result.Text -match 'WITNESS platform-Smoke') -and ($result.Text -notmatch 'WITNESS platform-Regression') -and
         ($result.Text -notmatch 'WITNESS authoring-regression') -and ($result.Text -notmatch 'WITNESS dump-regression'))
 
     if ($VerifyMutation) {
-        foreach ($phase in @('decoder', 'lifecycle', 'platform')) {
+        foreach ($phase in @('decoder', 'lifecycle', 'frame', 'platform')) {
             $guard = "if (`$LASTEXITCODE -ne 0) {`n    Write-Host 'GATE FAILED: $phase smoke failed; regression was not run'"
             if ([regex]::Matches($gateSource, [regex]::Escape($guard)).Count -ne 1) {
                 throw "Expected exactly one $phase smoke short-circuit guard in gate.ps1"

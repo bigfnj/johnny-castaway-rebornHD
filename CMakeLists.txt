@@ -167,6 +167,8 @@ endif()
 # Exercise the portable decoder even on Windows, where normal rendering uses
 # WIC. This probe needs no window server or platform rendering libraries.
 if(NOT EMSCRIPTEN)
+    add_executable(jc_frame_test tests/test_frame_limits.c)
+    target_include_directories(jc_frame_test PRIVATE src/engine platform)
     add_executable(jc_uncompress_test tests/test_uncompress_driver.c src/engine/uncompress.c)
     target_include_directories(jc_uncompress_test PRIVATE src/engine)
     add_executable(jc_png_test

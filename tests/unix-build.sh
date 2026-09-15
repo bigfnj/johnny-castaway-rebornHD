@@ -88,6 +88,10 @@ echo
 echo "== RESOURCE decoder smoke =="
 python3 "$WORK/tests/test_uncompress.py" --probe "$WORK/build-unix/jc_uncompress_test" --engine "$WORK/build-unix/jc_reborn" --phase smoke
 
+echo
+echo "== frame limits smoke =="
+python3 "$WORK/tests/test_frame_limits.py" --exe "$WORK/build-unix/jc_reborn" --probe "$WORK/build-unix/jc_frame_test" --phase smoke
+
 if [ "$OSNAME" = macOS ]; then
     PLATFORM_TEST="$WORK/tests/run_macos_platform.sh"
 else
@@ -106,6 +110,10 @@ fi
 echo
 echo "== RESOURCE decoder regression =="
 python3 "$WORK/tests/test_uncompress.py" --probe "$WORK/build-unix/jc_uncompress_test" --engine "$WORK/build-unix/jc_reborn"
+
+echo
+echo "== frame limits regression =="
+python3 "$WORK/tests/test_frame_limits.py" --exe "$WORK/build-unix/jc_reborn" --probe "$WORK/build-unix/jc_frame_test" --phase regression
 
 echo
 echo "== native platform regression =="

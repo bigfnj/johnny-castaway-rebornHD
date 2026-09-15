@@ -161,7 +161,7 @@ holiday <name>         - force holiday decorations (see below)
 night                  - force the night backdrop (NIGHT.SCR)
 day                    - force daytime, ignoring the clock
 seed <n>               - fix the random seed, for reproducible runs
-frames <n>             - stop cleanly after n frames, exit code 0
+frames <n>             - stop cleanly after n frames (1..4294967295), exit code 0
 style <id>             - select hd or cartoon for this run
 setstyle <id>          - save the style and exit without advancing the story
 capture <file.ppm>     - save the final composed frame on clean shutdown

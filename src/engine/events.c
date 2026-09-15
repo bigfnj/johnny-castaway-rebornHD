@@ -226,7 +226,10 @@ void eventsWaitTick(uint16 delay)
      *  paths keep their 255.
      */
     if (evMaxFrames) {
-        if (++evFrameCount > evMaxFrames) {
+        /* Compare before incrementing: the maximum uint32 limit must stop
+         * here instead of wrapping to zero. Ordinary runs stop on the same
+         * call as the previous increment-then-greater-than comparison. */
+        if (evFrameCount >= evMaxFrames) {
             /*  Say so on the way out. An exit code is enough for a native test,
              *  but in a browser there is no exit code to read: Emscripten is
              *  linked with -sNO_EXIT_RUNTIME, so exit() neither unloads the page
@@ -242,6 +245,7 @@ void eventsWaitTick(uint16 delay)
             graphicsEnd();
             exit(0);
         }
+        ++evFrameCount;
     }
 
     /*  UNCONDITIONAL, once per frame, and it has to be outside the loop below.
