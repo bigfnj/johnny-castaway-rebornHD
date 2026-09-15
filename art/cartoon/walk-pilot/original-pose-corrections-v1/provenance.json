@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "purpose": "expression direction selection after original-pose review",
+  "scope": "Concept and failed-attempt history only. No runtime PNG, production ZIP or historical acceptance file was changed.",
+  "current_selection_record": "acceptance.json",
+  "expression_sheet": {
+    "file": "expressions-v1.png",
+    "sha256": "084f82e20d580a89e2f2a5056cdba355681539d0850b988d859e67ae69f29116",
+    "bytes": 1628845,
+    "canvas": [
+      1222,
+      1287
+    ],
+    "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-8f2b4451-004e-49db-9260-c9feeeb2c9d9.png",
+    "preservation": "exact returned PNG bytes; no crop, resize, alpha cleanup or extraction",
+    "actual_tool": {
+      "tool": "image_gen.imagegen",
+      "prompt_source": "expression-prompt.json#/prompt",
+      "prompt_utf8_sha256": "6c6840438aedb7d4a456234f4aa764f3620d04f3b6b27fec027c6102291e83ca",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\024-generated-v7.png"
+      ],
+      "num_last_images_to_include": "omitted"
+    },
+    "source_reference": {
+      "resource": "JOHNWALK.BMP",
+      "frame": 24,
+      "existing_bundle": "art/cartoon/walk-pilot/directional-cycle-v1/source-images.zip",
+      "bundle_sha256": "8707ee636589ce8e20e08f3def5ef42fd6bd2cb0fb643852b1b66a4b7d108e3e",
+      "member": "024-generated-v7.png",
+      "sha256": "63088f5c18e71d49fb61f733e564d5f9461c55f622e124b5eeaf9aa5cbd1ee2b",
+      "bytes": 1239826,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "role": "Accepted Cartoon appearance reference, not original anatomy or a failed correction ancestor."
+    },
+    "layout": "3 columns by 2 rows; reading order",
+    "labels": [
+      {
+        "number": 1,
+        "label": "Curious"
+      },
+      {
+        "number": 2,
+        "label": "Considering"
+      },
+      {
+        "number": 3,
+        "label": "Knowing"
+      },
+      {
+        "number": 4,
+        "label": "Discerning"
+      },
+      {
+        "number": 5,
+        "label": "Intrigued"
+      },
+      {
+        "number": 6,
+        "label": "Calm focus"
+      }
+    ],
+    "technical_runtime_suitability": "not assessed; concept sheet with labels and portrait framing is not a runtime sprite",
+    "prompt_status_note": "expression-prompt.json retains its historical awaiting-human-selection status; acceptance.json records the later choice."
+  },
+  "prompt_records": {
+    "prompts.json": {
+      "sha256": "264d608ab1923bda20550594acf223689e81d49c2f85b3f864b8db171c4fd9f9",
+      "bytes": 6335
+    },
+    "expression-prompt.json": {
+      "sha256": "74d74a133f04d8fbc487ad43ef7e68d2636bc9ab7b6a5ae158f50d61f0ac02a0",
+      "bytes": 2481
+    }
+  },
+  "prompt_hash_policy": "Prompt semantic hashes are SHA-256 of the exact JSON-decoded prompt string encoded as UTF-8; no newline or whitespace normalization. File hashes identify preserved JSON bytes separately.",
+  "technical_pose_reference_preparation": {
+    "status": "PASS: exact technical references; no artistic changes or runtime promotion",
+    "scope": "Native-original resource indices, known dump palette, BMP index0 transparent; no DOS/Windows original executable display-parity claim.",
+    "method": "Retain full native canvas; normalize only BMP index0 to transparent RGBA0; preserve every other palette RGB. Exact nearest-neighbor integer enlargement, verified against independently repeated native bytes. Accepted Cartoon raw PNGs copied byte-for-byte, including their original alpha and hidden RGB.",
+    "python": "3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]",
+    "pillow": "12.3.0",
+    "factor": 16,
+    "script_sha256": "3377795a53edd8849144dae43fd57b0a7241f72c37e2063360ddad080549949a",
+    "original_resource_sha256": {
+      "RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+      "RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+    },
+    "original_decoder_sha256": "6ac61dc53dc926a311d89fcf2e27ff7cefbbac7f4c60e2491f69114230400865",
+    "original_dump_report_sha256": "1983679cff95f0abfd00d21451c46d905506c44ef7edad66f0accead749fcc73",
+    "original_reference_json_sha256": "f6293e86dc4773fa5548f205df73afa970729662dab06a5bff111c3b0f9692ef",
+    "accepted_source_bundle_sha256": "8707ee636589ce8e20e08f3def5ef42fd6bd2cb0fb643852b1b66a4b7d108e3e",
+    "accepted_recipe_sha256": "ceaa00c6e3be6db0a4ce056afd61d08492943395658c1c72deb9f69d19424f4f",
+    "source_record": {
+      "historical_local_path": "build/original-pose-review/provenance.json",
+      "sha256": "d587ab078e7bbe0cffec6dd0278474a2da7db51707355e14db9e392c743da18f",
+      "bytes": 8275
+    },
+    "inputs": {
+      "original_dump": "External supplied-original RESOURCE dump; identify by resource/decoder/report hashes below, not a repository binary.",
+      "original_reference": "docs/knowledge-base/cartoon-original-reference.json",
+      "accepted_recipe": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json",
+      "accepted_source_bundle": "art/cartoon/walk-pilot/directional-cycle-v1/source-images.zip"
+    },
+    "frames": [
+      {
+        "frame": 24,
+        "original_facts": {
+          "dump_member": "BMP/JOHNWALK.BMP.024.xpm",
+          "canvas": [
+            32,
+            75
+          ],
+          "xpm_sha256": "8f0c431aacbcaaad561d959f45d692a422d8178976591d9b4c8e5a42d3f84a1b",
+          "index_plane_sha256": "779dc1f6bdf803bb24ffcb0f62886b2417c2e7f7b7f56257754ad2bee3860a2c",
+          "rgba_sha256": "8cb67b4a53d4fc42f0995a09100180aab20902fd12d7c62eb4e94111fab9d298",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            28,
+            75
+          ],
+          "transparent_index": 0
+        },
+        "native_png": {
+          "file": "024-original-native.png",
+          "sha256": "60b63352f21464f3388e0b2d8b0cfd62c1c11a99f86654836fc22cb3023047b4",
+          "canvas": [
+            32,
+            75
+          ],
+          "rgba_sha256": "8cb67b4a53d4fc42f0995a09100180aab20902fd12d7c62eb4e94111fab9d298"
+        },
+        "nearest_neighbor_png": {
+          "file": "original-024-nearest16x.png",
+          "sha256": "7d8ece0b0eaad600638872b5cbafb2bbefba72f450c3609c54d490269f8f8cf2",
+          "canvas": [
+            512,
+            1200
+          ],
+          "rgba_sha256": "8c770c370d4d50781f92e97ff632d311cf25eb42ebac5c8fdb5815a8767ff07a"
+        },
+        "accepted_raw": {
+          "file": "024-generated-v7.png",
+          "sha256": "63088f5c18e71d49fb61f733e564d5f9461c55f622e124b5eeaf9aa5cbd1ee2b",
+          "canvas": [
+            1024,
+            1536
+          ]
+        },
+        "current_export": {
+          "runtime_canvas": [
+            64,
+            150
+          ],
+          "cap_raw": [
+            385,
+            42
+          ],
+          "cap_target_hd": [
+            17.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -21.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "candidate_png_sha256": "02058c693d28bd06526f78412cd6a71d09e68451763a58b6f0a8cfec4959d10d"
+        }
+      },
+      {
+        "frame": 28,
+        "original_facts": {
+          "dump_member": "BMP/JOHNWALK.BMP.028.xpm",
+          "canvas": [
+            32,
+            72
+          ],
+          "xpm_sha256": "7dec13cc86a956efebe7f23327c59a1a657211b6d88cbee1850442aa405b6996",
+          "index_plane_sha256": "4b8cb2d3a03ef2969574ecbe61778cc5e5aa916ec02c0bc9decf41584cb23737",
+          "rgba_sha256": "ac27dac3410e365105f36821ed1ab1aa3b5d0e4dc1d25b0ffd55268323a75f53",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            32,
+            72
+          ],
+          "transparent_index": 0
+        },
+        "native_png": {
+          "file": "028-original-native.png",
+          "sha256": "6e2569794d746bcd9fdc9393975cc6f290d6a2271a17c0e0ebfa190ab2d2b4c6",
+          "canvas": [
+            32,
+            72
+          ],
+          "rgba_sha256": "ac27dac3410e365105f36821ed1ab1aa3b5d0e4dc1d25b0ffd55268323a75f53"
+        },
+        "nearest_neighbor_png": {
+          "file": "original-028-nearest16x.png",
+          "sha256": "e405b6261b56e907a2051d10b5c8c9a10f8fb9a785db22415a3eb8935f14ed4e",
+          "canvas": [
+            512,
+            1152
+          ],
+          "rgba_sha256": "7d408e6bafeb8096f0638329d26a0719734b239f5fddde0cefc8c50030b592f0"
+        },
+        "accepted_raw": {
+          "file": "028-generated-v4-transparent.png",
+          "sha256": "bdbf7f83f0622cbc4b87f2f41c0f502e8185b4ee524da912f39a03cec28f8fc9",
+          "canvas": [
+            1024,
+            1536
+          ]
+        },
+        "current_export": {
+          "runtime_canvas": [
+            64,
+            144
+          ],
+          "cap_raw": [
+            388,
+            40
+          ],
+          "cap_target_hd": [
+            17.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -21.3,
+            0,
+            0.1,
+            -3.75
+          ],
+          "candidate_png_sha256": "59268bb33644b51486c05b3dc2eb37436e7737a1c18e0d055f1b00cdfadad745"
+        }
+      },
+      {
+        "frame": 29,
+        "original_facts": {
+          "dump_member": "BMP/JOHNWALK.BMP.029.xpm",
+          "canvas": [
+            32,
+            75
+          ],
+          "xpm_sha256": "8d447f309ea2b0b6628e5d3a382a8521811c8f8b69251e5881538e36a272a1fc",
+          "index_plane_sha256": "15d3d8b9643be96e523e78f1fbb86af3c558cfed30fec74dbd44f42896382a62",
+          "rgba_sha256": "1e71e20e20e943d455801d88d5c47a363516c2113391d478ef757571933a31b1",
+          "visible_bounds_exclusive": [
+            0,
+            0,
+            32,
+            75
+          ],
+          "transparent_index": 0
+        },
+        "native_png": {
+          "file": "029-original-native.png",
+          "sha256": "f505e60dae1667c252a3de3eef21da663d94c2bf26962d6b364a5b7d6adcf598",
+          "canvas": [
+            32,
+            75
+          ],
+          "rgba_sha256": "1e71e20e20e943d455801d88d5c47a363516c2113391d478ef757571933a31b1"
+        },
+        "nearest_neighbor_png": {
+          "file": "original-029-nearest16x.png",
+          "sha256": "a21dce6354421a58a84e507583e5620bf69d6d56cff77bdb8f39a3829ad2e169",
+          "canvas": [
+            512,
+            1200
+          ],
+          "rgba_sha256": "8c403153607f2409ed7b6f746c0af153fec54ede9ea2ecc9cea4c8c54a28650b"
+        },
+        "accepted_raw": {
+          "file": "029-generated-v2.png",
+          "sha256": "a19e4143ba6647965f7d3a5bab178b4cbe131b52429da59028adb6e233fe9e78",
+          "canvas": [
+            1024,
+            1536
+          ]
+        },
+        "current_export": {
+          "runtime_canvas": [
+            64,
+            150
+          ],
+          "cap_raw": [
+            385,
+            42
+          ],
+          "cap_target_hd": [
+            17.5,
+            0.25
+          ],
+          "affine_forward": [
+            0.1,
+            0,
+            -21.0,
+            0,
+            0.1,
+            -3.95
+          ],
+          "candidate_png_sha256": "7968ac59d55b86e9e3e605a47d65ae1ec5c2c4e516e49c8143ac026cecac62bd"
+        }
+      }
+    ]
+  },
+  "rejected_pose_attempts": [
+    {
+      "frame": 24,
+      "status": "rejected-by-assistant-review",
+      "reason": "The trailing-foot angle improved, but the edit raised that foot instead of preserving its height.",
+      "prompt_record": "prompts.json#/requests/0",
+      "prompt_utf8_sha256": "44286f4202cf7fa7955af8d5970d8a5917536f75b5997f6dc82ed5416dd80ea4",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "prompt_source": "prompts.json#/requests/0/prompt",
+        "referenced_image_paths": [
+          "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\original-024-nearest16x.png",
+          "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\024-generated-v7.png"
+        ],
+        "num_last_images_to_include": "omitted"
+      },
+      "output": {
+        "historical_local_path": "build/original-pose-review/024-correction-v1.png",
+        "sha256": "c8cbeed8d4a6920474d68f0ca31de941448ba1b02898d2a310372952a84a404f",
+        "bytes": 1249523,
+        "canvas": [
+          1024,
+          1536
+        ],
+        "binary_preserved_in_this_folder": false
+      },
+      "used_as_expression_ancestor": false,
+      "runtime_exported": false
+    },
+    {
+      "frame": 28,
+      "status": "rejected-by-assistant-review",
+      "reason": "The output did not clearly correct the anatomical leg-order reversal.",
+      "prompt_record": "prompts.json#/requests/1",
+      "prompt_utf8_sha256": "9a095d9ef86fac29e534e2937a997192e780f71aa830938d8ab18ab89deb8cb4",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "prompt_source": "prompts.json#/requests/1/prompt",
+        "referenced_image_paths": [
+          "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\original-028-nearest16x.png",
+          "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\028-generated-v4-transparent.png"
+        ],
+        "num_last_images_to_include": "omitted"
+      },
+      "output": {
+        "historical_local_path": "build/original-pose-review/028-correction-v1.png",
+        "sha256": "6c30b54da740aff3f08d76005820bc2edf7cf6bce1e6599201a13c9aa6dd0459",
+        "bytes": 1343587,
+        "canvas": [
+          1024,
+          1536
+        ],
+        "binary_preserved_in_this_folder": false
+      },
+      "used_as_expression_ancestor": false,
+      "runtime_exported": false
+    },
+    {
+      "frame": 29,
+      "status": "rejected-by-assistant-review",
+      "reason": "The overlap changed, but the head shifted upward and the cap was clipped.",
+      "prompt_record": "prompts.json#/requests/2",
+      "prompt_utf8_sha256": "bd16e751c5f038f913f30ae18e38ace78489a104b6b093d408722ddc4223e344",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "prompt_source": "prompts.json#/requests/2/prompt",
+        "referenced_image_paths": [
+          "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\original-029-nearest16x.png",
+          "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\029-generated-v2.png"
+        ],
+        "num_last_images_to_include": "omitted"
+      },
+      "output": {
+        "historical_local_path": "build/original-pose-review/029-correction-v1.png",
+        "sha256": "f21899b56feb666899224651c31e4b024c6cab9690ab397a3bbe0ccc310fb4c3",
+        "bytes": 1315714,
+        "canvas": [
+          1024,
+          1536
+        ],
+        "binary_preserved_in_this_folder": false
+      },
+      "used_as_expression_ancestor": false,
+      "runtime_exported": false
+    }
+  ],
+  "ancestry_note": "The expression call used only the accepted024 raw. None of the three rejected correction outputs was an input. Their unused pixels are omitted, while hashes, exact prompts and rejection reasons are retained."
+}
