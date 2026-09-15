@@ -1,11 +1,40 @@
 # Original-pose review and expression direction
 
-The user selected **6. Calm focus** on 2026-09-15. This approves an expression
-direction for subsequent work across the complete walking family. It does not
-approve new runtime sprites. The 21 production assets remain unchanged.
+The user selected **6. Calm focus** on 2026-09-15, then selected the earlier
+full-body [Calm focus key](024-calm-focus-key.png) with "Keep the earlier Calm
+focus version" after rejecting an eyebrow-lift variation. This approves an
+expression reference for subsequent work across the complete walking family.
+Foot corrections, exports and motion approval remain pending. The 21 production
+assets remain unchanged.
 
 [acceptance.json](acceptance.json) records the selection separately from the
 historical awaiting-selection status in [expression-prompt.json](expression-prompt.json).
+
+## Current expression key
+
+![Selected Calm focus key](024-calm-focus-key.png)
+
+The selected 1024 by 1536 PNG is the exact returned image. Its direct references
+were the previously accepted `024-generated-v7.png` and the expression sheet.
+The earlier combined expression-and-foot attempt was not selected and was not
+used to make this key. The later [inquisitive comparison](024-inquisitive-key.png)
+used the Calm key and sheet, but the user rejected its new eyebrow lift. That
+comparison is retained for review, not as a selected-key ancestor.
+
+[key-frame-prompts.json](key-frame-prompts.json) and
+[inquisitive-prompt.json](inquisitive-prompt.json) preserve exact prompt strings
+and actual ordered references, including their historical review statuses.
+The current decision is recorded separately in `acceptance.json`.
+
+Technical QA of this Calm key against the accepted 024 raw found the alpha-128
+cap top and center unchanged at y41 and x388, silhouette IoU about 99.4974%,
+and both silhouettes contained within a 2-raw-pixel square dilation of the
+other at alpha at least 8. Its alpha range is 0 through 254. However, 178,168
+visible pixels changed in the diagnostic band below raw y520, which is not an
+anatomical mask. The
+requested eye-only edit therefore does not establish byte-identical body or
+feet. These measurements apply to this key only and do not approve its runtime
+registration, gait geometry or motion.
 
 ![Six expression concepts](expressions-v1.png)
 

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-09-15",
   "purpose": "expression direction selection after original-pose review",
-  "scope": "Concept and failed-attempt history only. No runtime PNG, production ZIP or historical acceptance file was changed.",
+  "scope": "Expression concepts, selected full-body expression reference, and rejected-attempt history only. Runtime sprites and production assets remain unchanged.",
   "current_selection_record": "acceptance.json",
   "expression_sheet": {
     "file": "expressions-v1.png",
@@ -75,6 +75,14 @@
     "expression-prompt.json": {
       "sha256": "74d74a133f04d8fbc487ad43ef7e68d2636bc9ab7b6a5ae158f50d61f0ac02a0",
       "bytes": 2481
+    },
+    "key-frame-prompts.json": {
+      "sha256": "afa530138fc9521b7095078c887a5a184790ceaec97f1e14faa76de6ea7dbe2d",
+      "bytes": 4472
+    },
+    "inquisitive-prompt.json": {
+      "sha256": "504cbbf2e197a758be41ca00a82aa4530c41cbc2b5ab4e3024510e829da12874",
+      "bytes": 1993
     }
   },
   "prompt_hash_policy": "Prompt semantic hashes are SHA-256 of the exact JSON-decoded prompt string encoded as UTF-8; no newline or whitespace normalization. File hashes identify preserved JSON bytes separately.",
@@ -402,5 +410,183 @@
       "runtime_exported": false
     }
   ],
-  "ancestry_note": "The expression call used only the accepted024 raw. None of the three rejected correction outputs was an input. Their unused pixels are omitted, while hashes, exact prompts and rejection reasons are retained."
+  "ancestry_note": "The expression call used only the accepted024 raw. None of the three rejected correction outputs was an input. Their unused pixels are omitted, while hashes, exact prompts and rejection reasons are retained.",
+  "key_frame_attempts": [
+    {
+      "attempt": "024-combined-calm-focus-and-foot",
+      "status": "not-selected",
+      "reason": "The visible eye direction remained too close to the old downcast gaze.",
+      "output": {
+        "historical_local_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-9f8aeffa-05a5-427f-bfc5-5218f57bdc78.png",
+        "sha256": "dfc73030dc1c86944a6b16a0c44c5da51041449bdd3af98bd9f9315ea5066a96",
+        "bytes": 1262312,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "prompt_source": "key-frame-prompts.json#/attempts/0/prompt",
+        "prompt_utf8_sha256": "2f3cfffc5121d9186580c35e99691c99939e6edb04a35f6e9f60ae65fd191acd",
+        "referenced_image_paths": [
+          "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\024-generated-v7.png",
+          "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-8f2b4451-004e-49db-9260-c9feeeb2c9d9.png",
+          "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\original-024-nearest16x.png"
+        ],
+        "reference_identities_in_order": [
+          {
+            "sha256": "63088f5c18e71d49fb61f733e564d5f9461c55f622e124b5eeaf9aa5cbd1ee2b",
+            "bytes": 1239826,
+            "canvas": [
+              1024,
+              1536
+            ]
+          },
+          {
+            "sha256": "084f82e20d580a89e2f2a5056cdba355681539d0850b988d859e67ae69f29116",
+            "bytes": 1628845,
+            "canvas": [
+              1222,
+              1287
+            ]
+          },
+          {
+            "sha256": "7d8ece0b0eaad600638872b5cbafb2bbefba72f450c3609c54d490269f8f8cf2",
+            "bytes": 7136,
+            "canvas": [
+              512,
+              1200
+            ]
+          }
+        ],
+        "num_last_images_to_include": "omitted"
+      },
+      "raw_preserved_in_this_folder": false,
+      "ancestor_of_selected_key": false,
+      "runtime_exported": false
+    },
+    {
+      "attempt": "024-calm-focus-eyes-only",
+      "status": "user-selected-expression-reference",
+      "output": {
+        "file": "024-calm-focus-key.png",
+        "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+        "bytes": 1249944,
+        "canvas": [
+          1024,
+          1536
+        ],
+        "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-80755a40-e9f2-488f-a98b-c57788e0848e.png"
+      },
+      "preservation": "Exact returned PNG bytes; independently compared with the tool output. No crop, resize or alpha cleanup.",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "prompt_source": "key-frame-prompts.json#/attempts/1/prompt",
+        "prompt_utf8_sha256": "8b25672bb067901752d67c90a1fc78356d87fdc991debb6bc4bcc2412f7e2688",
+        "referenced_image_paths": [
+          "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\024-generated-v7.png",
+          "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-8f2b4451-004e-49db-9260-c9feeeb2c9d9.png"
+        ],
+        "reference_identities_in_order": [
+          {
+            "sha256": "63088f5c18e71d49fb61f733e564d5f9461c55f622e124b5eeaf9aa5cbd1ee2b",
+            "bytes": 1239826,
+            "canvas": [
+              1024,
+              1536
+            ]
+          },
+          {
+            "sha256": "084f82e20d580a89e2f2a5056cdba355681539d0850b988d859e67ae69f29116",
+            "bytes": 1628845,
+            "canvas": [
+              1222,
+              1287
+            ]
+          }
+        ],
+        "num_last_images_to_include": "omitted"
+      },
+      "prompt_intent_is_not_pixel_identity": "The requested eye-only edit redrew pixels beyond the face. Historical prompt scope describes intent, not unchanged body or foot bytes.",
+      "runtime_exported": false,
+      "foot_corrections_accepted": false,
+      "motion_family_accepted": false
+    },
+    {
+      "attempt": "024-inquisitive-key",
+      "status": "user-rejected-expression-variant",
+      "reason": "The user rejected the new eyebrow lift and selected the earlier Calm focus version.",
+      "output": {
+        "file": "024-inquisitive-key.png",
+        "sha256": "08ba1369b4f214022e9e31f5992b30c1a5b4ae6eb64f384017779ce4bec1eba2",
+        "bytes": 1247157,
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "preservation": "Retained returned PNG for a useful expression comparison. Default tool-cache path was not supplied in this record.",
+      "actual_tool": {
+        "tool": "image_gen.imagegen",
+        "prompt_source": "inquisitive-prompt.json#/prompt",
+        "prompt_utf8_sha256": "4d144a5e63d976991f581a1377ae8ea58aab4ae4f980ad6698a5d9f4bd460283",
+        "referenced_image_paths": [
+          "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\art\\cartoon\\walk-pilot\\original-pose-corrections-v1\\024-calm-focus-key.png",
+          "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-8f2b4451-004e-49db-9260-c9feeeb2c9d9.png"
+        ],
+        "reference_identities_in_order": [
+          {
+            "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+            "bytes": 1249944,
+            "canvas": [
+              1024,
+              1536
+            ]
+          },
+          {
+            "sha256": "084f82e20d580a89e2f2a5056cdba355681539d0850b988d859e67ae69f29116",
+            "bytes": 1628845,
+            "canvas": [
+              1222,
+              1287
+            ]
+          }
+        ],
+        "num_last_images_to_include": "omitted"
+      },
+      "ancestor_of_selected_key": false,
+      "referenced_by_later_generation_at_record_time": false,
+      "runtime_exported": false
+    }
+  ],
+  "key_frame_status_note": "The exact prompt JSON files retain their historical awaiting-review statuses. acceptance.json records the subsequent human choice. The rejected combined output and inquisitive variant are not ancestors of the selected Calm key.",
+  "selected_key_technical_qa": {
+    "evidence_class": "Measured comparison reported by independent test_plan reviewer from read-only Python/Pillow commands; no source report file was written.",
+    "baseline_sha256": "63088f5c18e71d49fb61f733e564d5f9461c55f622e124b5eeaf9aa5cbd1ee2b",
+    "selected_key_sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+    "canvas": [1024, 1536],
+    "selected_alpha_extrema": [0, 254],
+    "cap_alpha_at_least_128": {
+      "baseline_first_row_y": 41,
+      "selected_first_row_y": 41,
+      "baseline_first_row_span_x_inclusive": [383, 393],
+      "selected_first_row_span_x_inclusive": [378, 398],
+      "both_span_midpoint_x": 388,
+      "meaning": "Alpha-edge diagnostic, not an engine registration anchor or identical cap shape."
+    },
+    "silhouette_alpha_at_least_8": {
+      "intersection_over_union_approx": 0.994974,
+      "square_dilation_size": 5,
+      "uncovered_pixels_in_either_direction": 0,
+      "meaning": "Each silhouette lies within 2 raw pixels per axis of the other under square dilation."
+    },
+    "diagnostic_band_below_raw_y520": {
+      "rgba_changed_pixels_where_either_alpha_at_least_8": 178168,
+      "premultiplied_max_channel_difference_greater_than_32_pixels": 9806,
+      "premultiplied_method": "Compare rounded RGB*alpha/255 and alpha; take the largest absolute channel difference.",
+      "meaning": "A fixed y-band, not an anatomical mask. Broad redraw occurred outside the requested face edit."
+    },
+    "scope": "Only this selected key compared with the accepted 024 raw. These measurements do not establish byte-identical body or feet, runtime registration, corrected anatomy or motion approval."
+  }
 }
