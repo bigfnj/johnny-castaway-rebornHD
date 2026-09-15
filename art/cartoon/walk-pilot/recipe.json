@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "id": "johnny-walk-024-029-review-candidates",
+  "status": "review candidates; orientation and leg order rejected; preserve v2 registration approval only",
+  "coverage": "partial",
+  "date": "2026-09-14",
+  "review_history": [
+    {
+      "stage": "registration v2",
+      "user_wording": "The body pop looks resolved",
+      "decision": "Upper-body alignment approved; does not approve pose geometry or all motion."
+    },
+    {
+      "stage": "foot revision3 comparison",
+      "user_wording": "well done",
+      "decision": "Positive response, superseded by substantive motion feedback; not sufficient full-motion acceptance."
+    },
+    {
+      "stage": "subsequent motion review",
+      "feedback_summary": "At pose3/sprite024 the opposite leg comes forward compared with original; the six-frame cycle stays in fixed left profile instead of matching original three-quarter direction and limb depth.",
+      "exact_wording_recorded": false,
+      "decision": "Runtime poses remain review candidates; correct full-cycle orientation and near/far leg order before acceptance."
+    }
+  ],
+  "source_bundle": {
+    "file": "source-images.zip",
+    "sha256": "95a1b87ef2d821cb47afa121436a378132a5da76294e7d8c5592b72a904b5e39",
+    "bytes": 5926482,
+    "images": 9
+  },
+  "original_archive": {
+    "file": "assets/scrantic_data.zip",
+    "sha256_at_review": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a",
+    "note": "Original member hashes are authoritative; future addition of separate style members can change the overall archive hash."
+  },
+  "canonical_character": {
+    "file": "art/cartoon/johnny-character-v5.png",
+    "sha256": "f52319502fc68ee76b22c74ab18bb6ab57b10d0d5edb54e68bcc2a0ef2686a27"
+  },
+  "original_references": {
+    "024": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/024.png",
+      "sha256": "1233b19ffe0e07e9e9a2c1e2deee1d853026c6f4aca078a2aec4139f97455f91",
+      "canvas": [
+        64,
+        150
+      ]
+    },
+    "025": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/025.png",
+      "sha256": "1eedad18ddb23c631439c17b01659d0abe7ee8b4da3d2ee3862dadb840686954",
+      "canvas": [
+        80,
+        148
+      ]
+    },
+    "026": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/026.png",
+      "sha256": "6d30f88641b8aa4da6a3ab883ecda94cb6871605d58af3b628521b79a93936c9",
+      "canvas": [
+        80,
+        146
+      ]
+    },
+    "027": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/027.png",
+      "sha256": "e19d3fe46184f05da2cc12b38bf07d161bcb293b4348bd076a5b9661a59369a9",
+      "canvas": [
+        64,
+        144
+      ]
+    },
+    "028": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/028.png",
+      "sha256": "a387e9b663b2646c0a39e346106cbed59c8603b30503a4e6f3a445efa287d12a",
+      "canvas": [
+        64,
+        144
+      ]
+    },
+    "029": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/029.png",
+      "sha256": "091f4690aaab8af69120b4cfcd819c96db711f8ef30609773310e09c7dcdcfd9",
+      "canvas": [
+        64,
+        150
+      ]
+    }
+  },
+  "generated_images": {
+    "024-generated-v1.png": {
+      "sha256": "fc0fa866615ce3323a7ef67ab6d06a3337b230b3a14d924db75c52b52b178308",
+      "canvas": [
+        929,
+        1693
+      ],
+      "bytes": 643005,
+      "prompt": "prompts/024.txt",
+      "prompt_sha256": "e4eec51e8256196d9164432fa2fb832c3e4592beba1b2352560e6495d1329ba0",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "027-generated-v1.png"
+        },
+        {
+          "kind": "original_pose",
+          "frame": "024"
+        },
+        {
+          "kind": "canonical_character"
+        }
+      ],
+      "reference_order_evidence": "prompt-defined image roles",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false
+    },
+    "024-generated-v2-foot.png": {
+      "sha256": "0945523bbc4dcc34fa68f021579f3630accfa64226023f48879b3bbab6b75408",
+      "canvas": [
+        929,
+        1693
+      ],
+      "bytes": 608852,
+      "prompt": "prompts/024-foot-revision2.txt",
+      "prompt_sha256": "df02de14581a0c871a4a9953b1015737b82b2714d8f5de596bf654fc67a66e68",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "024-generated-v1.png"
+        },
+        {
+          "kind": "original_pose",
+          "frame": "024"
+        },
+        {
+          "kind": "canonical_character"
+        }
+      ],
+      "reference_order_evidence": "actual tool-call reference list confirmed in conversation",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false
+    },
+    "024-generated-v3-foot.png": {
+      "sha256": "efe753559ee7b62bb3703c166bef92ad61592243a4f0ba54000cdab39129b5ed",
+      "canvas": [
+        898,
+        1752
+      ],
+      "bytes": 600523,
+      "prompt": "prompts/024-foot-revision3.txt",
+      "prompt_sha256": "6d99952fecfbd4e662398c66dbf3c9b04f159254c3d8d11798f587018b38415e",
+      "ordered_references": [
+        {
+          "kind": "technical_reference",
+          "id": "024-foot-v2-bottom-pad"
+        }
+      ],
+      "reference_order_evidence": "actual tool-call reference list confirmed in conversation",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false
+    },
+    "025-generated-v1.png": {
+      "sha256": "3d5f2a479ddbbfab9aab063c3de45420a9b138996fbff70de62df066e2ef4637",
+      "canvas": [
+        929,
+        1693
+      ],
+      "bytes": 803883,
+      "prompt": "prompts/025.txt",
+      "prompt_sha256": "2c22ae884fe9e80e495b6056b4d84f5d6521443edd8f66975fb701aa48e80b5a",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "026-generated-v1.png"
+        },
+        {
+          "kind": "original_pose",
+          "frame": "025"
+        },
+        {
+          "kind": "canonical_character"
+        }
+      ],
+      "reference_order_evidence": "prompt-defined image roles",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false
+    },
+    "026-generated-v1.png": {
+      "sha256": "c8f21c44d9480a38ace708aef36c70072581d43381034e3c8700e06ecbeface9",
+      "canvas": [
+        929,
+        1694
+      ],
+      "bytes": 755859,
+      "prompt": "prompts/026.txt",
+      "prompt_sha256": "e10fab00e95e9c188aebc56462be9075bcbb1901040e773e598245c839146cf2",
+      "ordered_references": [
+        {
+          "kind": "canonical_character"
+        },
+        {
+          "kind": "original_pose",
+          "frame": "026"
+        }
+      ],
+      "reference_order_evidence": "prompt-defined image roles",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false
+    },
+    "027-generated-v1.png": {
+      "sha256": "f3d875605c4278f3d217cf7b2ac6f6617d1896eec8e4babcf4d254e6373ee653",
+      "canvas": [
+        929,
+        1693
+      ],
+      "bytes": 656610,
+      "prompt": "prompts/027.txt",
+      "prompt_sha256": "ee916ca02f811f4ef14acd8ec34fddb5d8fbfa488f4d7632e11d01b33331af83",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "026-generated-v1.png"
+        },
+        {
+          "kind": "original_pose",
+          "frame": "027"
+        },
+        {
+          "kind": "canonical_character"
+        }
+      ],
+      "reference_order_evidence": "prompt-defined image roles",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false
+    },
+    "028-generated-v1.png": {
+      "sha256": "76bf087e1ef0092f1c0099608fab516968e90d4e436153a9612faeebe8aad5a0",
+      "canvas": [
+        930,
+        1692
+      ],
+      "bytes": 690351,
+      "prompt": "prompts/028.txt",
+      "prompt_sha256": "9b44afbd8a2cb512af1b4b24dc3df8b90751ad1060fe12a6df78fead4c318b8e",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "027-generated-v1.png"
+        },
+        {
+          "kind": "original_pose",
+          "frame": "028"
+        },
+        {
+          "kind": "canonical_character"
+        }
+      ],
+      "reference_order_evidence": "prompt-defined image roles",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false
+    },
+    "028-generated-v2.png": {
+      "sha256": "f2f38b9596ca308e5a13943279ad3a9fca70619b47c5654ef71db42eff445d9d",
+      "canvas": [
+        930,
+        1692
+      ],
+      "bytes": 669849,
+      "prompt": "prompts/028-revision2.txt",
+      "prompt_sha256": "7df71e4cb255c5e50020e7e4a36b00907ff7749848689a7f65348b5e09f95a8d",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "028-generated-v1.png"
+        },
+        {
+          "kind": "original_pose",
+          "frame": "028"
+        }
+      ],
+      "reference_order_evidence": "prompt-defined image roles",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false
+    },
+    "029-generated-v1.png": {
+      "sha256": "4cd7cdc139cc5ebac7018d2c3100cf645dfae94af1624171ac159acb793a90ba",
+      "canvas": [
+        929,
+        1694
+      ],
+      "bytes": 672046,
+      "prompt": "prompts/029.txt",
+      "prompt_sha256": "2d06255defd29fa4ae868073ce9a2896ebc317992c4a89b75bcb9451b5147c00",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "026-generated-v1.png"
+        },
+        {
+          "kind": "original_pose",
+          "frame": "029"
+        },
+        {
+          "kind": "canonical_character"
+        }
+      ],
+      "reference_order_evidence": "prompt-defined image roles",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false
+    }
+  },
+  "technical_references": {
+    "024-foot-v2-bottom-pad": {
+      "source_image": "024-generated-v2-foot.png",
+      "source_canvas": [
+        929,
+        1693
+      ],
+      "output_canvas": [
+        929,
+        1813
+      ],
+      "operation": "Copy all source RGBA pixels unchanged at(0,0); add120 transparent black rows below. No art transformation.",
+      "pixel_offset": [
+        0,
+        0
+      ],
+      "added_bottom_rows": 120,
+      "rgba_fill": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "output_png_sha256": "8e440d7fda58382f067a86fa4d44c5542d74e207cf575c8e32adcf07fdb2eb66",
+      "pillow_version": "12.3.0",
+      "png_compress_level": 9
+    }
+  },
+  "drawing_export_scale_exact": {
+    "numerator": 137,
+    "denominator": 1590
+  },
+  "cap_anchor_convention": "Original cap crest plus shared HD offset(-0.5,+0.25); preserve original runtime canvases.",
+  "resampling": {
+    "pillow_version": "12.3.0",
+    "working_mode": "RGBa",
+    "affine_filter": "BICUBIC",
+    "oversample": 8,
+    "downsample_filter": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "frames": [
+    {
+      "frame": 24,
+      "path": "BMP/JOHNWALK.BMP/024.png",
+      "generated_image": "024-generated-v3-foot.png",
+      "generated_sha256": "efe753559ee7b62bb3703c166bef92ad61592243a4f0ba54000cdab39129b5ed",
+      "generated_canvas": [
+        898,
+        1752
+      ],
+      "original_reference": "024",
+      "runtime_canvas": [
+        64,
+        150
+      ],
+      "candidate_png_sha256": "f79e372889d1af96297f4b3dc581cca716d89bb5547083eb984f915f48126226",
+      "output_format": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "drawing_export_scale_exact": {
+        "numerator": 137,
+        "denominator": 1590
+      },
+      "canvas_normalization": {
+        "uniform_factor_exact": {
+          "numerator": 929,
+          "denominator": 898
+        },
+        "nominal_input_canvas": [
+          929,
+          1813
+        ],
+        "actual_generated_canvas": [
+          898,
+          1752
+        ],
+        "basis": "Known input/output canvas width ratio929/898, checked against head/torso; no bbox or limb fit."
+      },
+      "affine_forward": [
+        0.08913798658094158,
+        0,
+        -12.717777450939195,
+        0,
+        0.08913798658094158,
+        -5.009141208275553
+      ],
+      "cap_generated": [
+        339,
+        59
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "sole_difference_hd": -2.3074974436553646,
+      "sole_landmark_uncertainty_hd": 2,
+      "motion_acceptance": false
+    },
+    {
+      "frame": 25,
+      "path": "BMP/JOHNWALK.BMP/025.png",
+      "generated_image": "025-generated-v1.png",
+      "generated_sha256": "3d5f2a479ddbbfab9aab063c3de45420a9b138996fbff70de62df066e2ef4637",
+      "generated_canvas": [
+        929,
+        1693
+      ],
+      "original_reference": "025",
+      "runtime_canvas": [
+        80,
+        148
+      ],
+      "candidate_png_sha256": "d233f7a66ce350a88c0f76ea1f7c78af41511059d8ec4725d52dafd1b991f88c",
+      "output_format": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "drawing_export_scale_exact": {
+        "numerator": 137,
+        "denominator": 1590
+      },
+      "canvas_normalization": {
+        "uniform_factor_exact": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "nominal_input_canvas": [
+          929,
+          1693
+        ],
+        "actual_generated_canvas": [
+          929,
+          1693
+        ],
+        "basis": "No normalization; original generated canvas retained."
+      },
+      "affine_forward": [
+        0.08616352201257861,
+        0,
+        -5.709433962264151,
+        0,
+        0.08616352201257861,
+        -3.8858490566037736
+      ],
+      "cap_generated": [
+        339,
+        48
+      ],
+      "cap_target_hd": [
+        23.5,
+        0.25
+      ],
+      "sole_difference_hd": 3.3701257861634986,
+      "sole_landmark_uncertainty_hd": 2,
+      "motion_acceptance": false
+    },
+    {
+      "frame": 26,
+      "path": "BMP/JOHNWALK.BMP/026.png",
+      "generated_image": "026-generated-v1.png",
+      "generated_sha256": "c8f21c44d9480a38ace708aef36c70072581d43381034e3c8700e06ecbeface9",
+      "generated_canvas": [
+        929,
+        1694
+      ],
+      "original_reference": "026",
+      "runtime_canvas": [
+        80,
+        146
+      ],
+      "candidate_png_sha256": "82ef3e3f0a61a1ba9a6059b66c1f1cb6002779becae2162e8129a9c1f52eee24",
+      "output_format": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "drawing_export_scale_exact": {
+        "numerator": 137,
+        "denominator": 1590
+      },
+      "canvas_normalization": {
+        "uniform_factor_exact": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "nominal_input_canvas": [
+          929,
+          1694
+        ],
+        "actual_generated_canvas": [
+          929,
+          1694
+        ],
+        "basis": "No normalization; original generated canvas retained."
+      },
+      "affine_forward": [
+        0.08616352201257861,
+        0,
+        -6.552830188679246,
+        0,
+        0.08616352201257861,
+        -5.005974842767295
+      ],
+      "cap_generated": [
+        372,
+        61
+      ],
+      "cap_target_hd": [
+        25.5,
+        0.25
+      ],
+      "sole_difference_hd": 0.24999999999997158,
+      "sole_landmark_uncertainty_hd": 2,
+      "motion_acceptance": false
+    },
+    {
+      "frame": 27,
+      "path": "BMP/JOHNWALK.BMP/027.png",
+      "generated_image": "027-generated-v1.png",
+      "generated_sha256": "f3d875605c4278f3d217cf7b2ac6f6617d1896eec8e4babcf4d254e6373ee653",
+      "generated_canvas": [
+        929,
+        1693
+      ],
+      "original_reference": "027",
+      "runtime_canvas": [
+        64,
+        144
+      ],
+      "candidate_png_sha256": "e301afce28a28e87b6ebaee3bc908670b3f6c6d78dd9ef115248d2bc1d029640",
+      "output_format": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "drawing_export_scale_exact": {
+        "numerator": 137,
+        "denominator": 1590
+      },
+      "canvas_normalization": {
+        "uniform_factor_exact": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "nominal_input_canvas": [
+          929,
+          1693
+        ],
+        "actual_generated_canvas": [
+          929,
+          1693
+        ],
+        "basis": "No normalization; original generated canvas retained."
+      },
+      "affine_forward": [
+        0.08616352201257861,
+        0,
+        -13.432704402515723,
+        0,
+        0.08616352201257861,
+        -5.178301886792453
+      ],
+      "cap_generated": [
+        359,
+        63
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "sole_difference_hd": 0.16383647798741663,
+      "sole_landmark_uncertainty_hd": 2,
+      "motion_acceptance": false
+    },
+    {
+      "frame": 28,
+      "path": "BMP/JOHNWALK.BMP/028.png",
+      "generated_image": "028-generated-v2.png",
+      "generated_sha256": "f2f38b9596ca308e5a13943279ad3a9fca70619b47c5654ef71db42eff445d9d",
+      "generated_canvas": [
+        930,
+        1692
+      ],
+      "original_reference": "028",
+      "runtime_canvas": [
+        64,
+        144
+      ],
+      "candidate_png_sha256": "91b0d03bc0b67b37399001fd0a74956ffb5b509424c01794b094c086c63c9e60",
+      "output_format": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "drawing_export_scale_exact": {
+        "numerator": 137,
+        "denominator": 1590
+      },
+      "canvas_normalization": {
+        "uniform_factor_exact": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "nominal_input_canvas": [
+          930,
+          1692
+        ],
+        "actual_generated_canvas": [
+          930,
+          1692
+        ],
+        "basis": "No normalization; original generated canvas retained."
+      },
+      "affine_forward": [
+        0.08616352201257861,
+        0,
+        -12.011006289308176,
+        0,
+        0.08616352201257861,
+        -5.178301886792453
+      ],
+      "cap_generated": [
+        342.5,
+        63
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "sole_difference_hd": -2.5072327044024973,
+      "sole_landmark_uncertainty_hd": 2,
+      "motion_acceptance": false
+    },
+    {
+      "frame": 29,
+      "path": "BMP/JOHNWALK.BMP/029.png",
+      "generated_image": "029-generated-v1.png",
+      "generated_sha256": "4cd7cdc139cc5ebac7018d2c3100cf645dfae94af1624171ac159acb793a90ba",
+      "generated_canvas": [
+        929,
+        1694
+      ],
+      "original_reference": "029",
+      "runtime_canvas": [
+        64,
+        150
+      ],
+      "candidate_png_sha256": "818a0f8d8ff89b875a7709a09ad6f54f7ad8fba6f2735cdf09e9e786dd33aafc",
+      "output_format": {
+        "container": "PNG",
+        "mode": "RGBA",
+        "channel_bits": 8,
+        "alpha": "straight",
+        "interlaced": false
+      },
+      "drawing_export_scale_exact": {
+        "numerator": 137,
+        "denominator": 1590
+      },
+      "canvas_normalization": {
+        "uniform_factor_exact": {
+          "numerator": 1,
+          "denominator": 1
+        },
+        "nominal_input_canvas": [
+          929,
+          1694
+        ],
+        "actual_generated_canvas": [
+          929,
+          1694
+        ],
+        "basis": "No normalization; original generated canvas retained."
+      },
+      "affine_forward": [
+        0.08616352201257861,
+        0,
+        -12.140251572327044,
+        0,
+        0.08616352201257861,
+        -5.092138364779874
+      ],
+      "cap_generated": [
+        344,
+        62
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "sole_difference_hd": -3.9223270440251667,
+      "sole_landmark_uncertainty_hd": 2,
+      "motion_acceptance": false
+    }
+  ],
+  "diagnostic_playback": {
+    "script": "MJREAD.TTM",
+    "tag": 110,
+    "order": [
+      28,
+      29,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      24,
+      25,
+      27
+    ],
+    "draws_logical_xy": [
+      [
+        394,
+        212
+      ],
+      [
+        387,
+        214
+      ],
+      [
+        384,
+        216
+      ],
+      [
+        378,
+        214
+      ],
+      [
+        374,
+        215
+      ],
+      [
+        368,
+        217
+      ],
+      [
+        366,
+        215
+      ],
+      [
+        359,
+        217
+      ],
+      [
+        356,
+        220
+      ],
+      [
+        350,
+        219
+      ],
+      [
+        346,
+        220
+      ],
+      [
+        341,
+        225
+      ],
+      [
+        339,
+        224
+      ],
+      [
+        334,
+        227
+      ],
+      [
+        331,
+        231
+      ],
+      [
+        325,
+        230
+      ],
+      [
+        320,
+        231
+      ],
+      [
+        315,
+        236
+      ],
+      [
+        314,
+        234
+      ],
+      [
+        308,
+        236
+      ],
+      [
+        307,
+        240
+      ],
+      [
+        302,
+        241
+      ],
+      [
+        300,
+        242
+      ]
+    ],
+    "delay_ms": 120
+  },
+  "diagnostic_note": "23 existing native E-to-A positions at120ms, followed by1second endpoint hold. Review archive resource edits were diagnostic-only; source bundle has no changed story data.",
+  "validation": {
+    "native_baseline_executable_shared": true,
+    "all_six_style_paths_loaded": true,
+    "outside_sprite_canvas_pixels_unchanged": true,
+    "original_archive_members_preserved": 2550,
+    "golden_dump_hashes_matched": 2452,
+    "v2_to_v3_changed_member": "data/styles/cartoon/BMP/JOHNWALK.BMP/024.png",
+    "meaning": "Integration checks; do not establish correct anatomy or artistic acceptance."
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "status": "Technical validation passed; human motion review and production acceptance remain pending.",
+  "human_motion_acceptance": false,
+  "production_acceptance": false,
+  "baseline_native_capture": {
+    "exe_sha256": "b6cb68f420bf23dfeefaec8ba4fb2856c86503b47d9ddbdb9aa33dd209a466a9",
+    "diagnostic_archive_sha256": "5278a1251dabc804e5776fb9ae5ada3de9f33fdd5704bf685a6bbb558bc90268",
+    "route": "Extended walk test: native E-to-A walkData positions hosted in an isolated diagnostic MJREAD tag110.",
+    "script": "ACTIVITY.ADS",
+    "tag": 7,
+    "seed": 9,
+    "lighting": "day",
+    "holiday": "none",
+    "native_pose_ms": 120,
+    "captured_positions": 23,
+    "frame_draws_logical_xy_sprite_slot": [
+      [
+        394,
+        212,
+        28,
+        5
+      ],
+      [
+        387,
+        214,
+        29,
+        5
+      ],
+      [
+        384,
+        216,
+        24,
+        5
+      ],
+      [
+        378,
+        214,
+        25,
+        5
+      ],
+      [
+        374,
+        215,
+        26,
+        5
+      ],
+      [
+        368,
+        217,
+        27,
+        5
+      ],
+      [
+        366,
+        215,
+        28,
+        5
+      ],
+      [
+        359,
+        217,
+        29,
+        5
+      ],
+      [
+        356,
+        220,
+        24,
+        5
+      ],
+      [
+        350,
+        219,
+        25,
+        5
+      ],
+      [
+        346,
+        220,
+        26,
+        5
+      ],
+      [
+        341,
+        225,
+        27,
+        5
+      ],
+      [
+        339,
+        224,
+        28,
+        5
+      ],
+      [
+        334,
+        227,
+        29,
+        5
+      ],
+      [
+        331,
+        231,
+        24,
+        5
+      ],
+      [
+        325,
+        230,
+        25,
+        5
+      ],
+      [
+        320,
+        231,
+        26,
+        5
+      ],
+      [
+        315,
+        236,
+        27,
+        5
+      ],
+      [
+        314,
+        234,
+        28,
+        5
+      ],
+      [
+        308,
+        236,
+        29,
+        5
+      ],
+      [
+        307,
+        240,
+        24,
+        5
+      ],
+      [
+        302,
+        241,
+        25,
+        5
+      ],
+      [
+        300,
+        242,
+        27,
+        5
+      ]
+    ],
+    "all_six_cartoon_paths_loaded_in_every_capture": true,
+    "changed_pixels_outside_sprite_canvases": 0
+  },
+  "baseline_candidate_regression": {
+    "capture_smoke_report": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\engine-pilot\\extended-cartoon-direction-v1\\capture-report.json",
+    "unchanged_engine_sha256": "b6cb68f420bf23dfeefaec8ba4fb2856c86503b47d9ddbdb9aa33dd209a466a9",
+    "candidate_archive_sha256": "18e3fb46e1577c7ec14c5332f2571b36f0c1b20daa4f2118b664e9e5cd8f096c",
+    "source_archive_sha256": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a",
+    "unchanged_original_members": 2550,
+    "candidate_art_matches_captured_diagnostic": true,
+    "golden_files": 2452,
+    "golden_log": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\engine-pilot\\extended-cartoon-direction-v1\\candidate-regression\\candidate-dump-regression.log",
+    "note": "Native capture smoke first, then candidate archive and golden regression. Legacy27 UI smoke was not repeated because engine code is unchanged and its prior candidate run passed."
+  },
+  "current_build_verification": {
+    "status": "PASS",
+    "source_exe": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\Release\\jc_reborn.exe",
+    "current_exe_sha256": "96ad3efb7fa089afcfd07d199ae4020619dae061fbd1e68bb88eb4de25ce0597",
+    "visual_baseline_exe_sha256": "b6cb68f420bf23dfeefaec8ba4fb2856c86503b47d9ddbdb9aa33dd209a466a9",
+    "normal_candidate_sha256": "18e3fb46e1577c7ec14c5332f2571b36f0c1b20daa4f2118b664e9e5cd8f096c",
+    "smoke_report": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\engine-pilot\\extended-cartoon-direction-v1\\current-build-verification\\current-smoke-report.json",
+    "golden_files": 2452,
+    "golden_log": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\engine-pilot\\extended-cartoon-direction-v1\\current-build-verification\\current-candidate-dump-regression.log",
+    "unchanged_production_archive_sha256": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a",
+    "order": "Current executable native smoke passed before current executable golden regression.",
+    "scope": "Technical compatibility only. Motion/art acceptance and known foot geometry remain pending."
+  },
+  "current_build_normal_script_smoke": {
+    "status": "PASS",
+    "exe_sha256": "96ad3efb7fa089afcfd07d199ae4020619dae061fbd1e68bb88eb4de25ce0597",
+    "budget": 13,
+    "draws": [
+      [
+        480,
+        222,
+        26,
+        5
+      ],
+      [
+        480,
+        223,
+        27,
+        5
+      ],
+      [
+        468,
+        225,
+        28,
+        5
+      ],
+      [
+        460,
+        225,
+        29,
+        5
+      ],
+      [
+        459,
+        225,
+        24,
+        5
+      ],
+      [
+        445,
+        231,
+        25,
+        5
+      ],
+      [
+        432,
+        231,
+        26,
+        5
+      ]
+    ],
+    "cartoon_walk_loaded": [
+      "024",
+      "025",
+      "026",
+      "027",
+      "028",
+      "029"
+    ],
+    "note": "One bounded actual Cartoon run of the normal shipped script. Historical23-pose visual captures retain their separate baseline executable."
+  },
+  "browser_validation": {
+    "status": "PASS",
+    "frames": 23,
+    "loaded_images": 69,
+    "columns": [
+      "Original",
+      "Previous profile candidate",
+      "New directional cycle"
+    ],
+    "pose_ms": 120,
+    "endpoint_ms": 1120,
+    "loop_ms": 3760,
+    "capture_pairing_verified": true,
+    "controls_above_animation": true,
+    "controls": [
+      "play",
+      "pause",
+      "next",
+      "previous",
+      "wrap",
+      "space",
+      "left",
+      "right"
+    ],
+    "console_errors": [],
+    "failed_image_mutation": "Visible error and three disabled controls"
+  },
+  "gif_preview": {
+    "sha256": "f83075639b7ec9177e176f9ead1e7317cb2fe93bd8542a7a7854e1eb2114a9df",
+    "frames": 23,
+    "durations_ms": [
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      120,
+      1120
+    ],
+    "method": "Exact capture crops and native frame ordering; no interpolation or added motion. GIF uses a shared 256-color palette and is not pixel-exact. HTML/PNG is the full-color review authority."
+  },
+  "source_report_hashes": {
+    "build\\art-work\\engine-pilot\\extended-cartoon-direction-v1\\capture-report.json": "f4f73afae3904281a94bea5808aa5430169a19f3a6b69a8621b5fcc91882f71a",
+    "build\\art-work\\engine-pilot\\extended-cartoon-direction-v1\\candidate-regression\\validation-report.json": "9a478e332b3fe07c229d7549a7c8eb9431f213afa30926715fff0602fdd7abc6",
+    "build\\art-work\\engine-pilot\\extended-cartoon-direction-v1\\current-build-verification\\validation-report.json": "6051241f84b1ea24e995a1533141b1be0cfa90b5950724857522b13b94d92521",
+    "build\\art-work\\engine-pilot\\extended-cartoon-direction-v1\\current-build-verification\\current-smoke-report.json": "f2754a55e7da9a271839aa376b1c6d761975236d8d6a03520645adb7a9d6fb4b",
+    "build\\art-work\\engine-pilot\\extended-cartoon-direction-v1\\browser-validation.json": "f9e0a5408fdb3645f83d9cf6f3091e19f74bf4d11d6f382530531f48b1edd6ca",
+    "build\\art-work\\engine-pilot\\extended-cartoon-direction-v1\\gif-validation.json": "ef9d63ef465f183663118ed5c88a01b639fa485b1d99bf6244000aadcc1545cb"
+  },
+  "scope": "These checks establish loading, composition, archive preservation and regression compatibility. They do not judge foot clearance, anatomy or gait quality."
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "id": "johnny-direction-key-024-revisions4-6",
+  "date": "2026-09-14",
+  "status": "PARTIAL APPROVAL: revision6 body direction and leg order; foot contact and full motion remain pending",
+  "human_direction_review": {
+    "revision": 6,
+    "user_wording": "well done",
+    "context": "After the user asked what to inspect, the assistant explicitly asked for the right-hand directional key's front-three-quarter chest and planted-leg overlap, excluding exact foot height.",
+    "decision": "Treat as approval of body direction and leg order only; continue building the six-pose cycle with further foot-contact and full-motion review."
+  },
+  "runtime_registration_final": false,
+  "motion_acceptance": false,
+  "production_acceptance": false,
+  "source_bundle": {
+    "file": "source-images.zip",
+    "sha256": "24716fca7cbd08097a3b860027c1cba008fc4d31fe82172438a2e314a5d58792",
+    "bytes": 3668960,
+    "members": [
+      "024-generated-v4-direction.png",
+      "024-generated-v5-direction.png",
+      "024-generated-v6-direction.png"
+    ],
+    "scope": "Exactly three generated PNGs. No external reference files, original game resources, runtime PNG exports, or complete game archive."
+  },
+  "generated_images": [
+    {
+      "revision": 4,
+      "image": "024-generated-v4-direction.png",
+      "sha256": "ba550d537fdc29362adab38fa896623e11c9d4fa82e5a2cef283cbe96579ac20",
+      "bytes": 1244637,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "prompt": "prompts/024-direction-revision4.txt",
+      "prompt_sha256": "b78e90b7ffa3293ce6c414ea9e32e59620ed4a67e6d787de2d3bcde74ab2b13c",
+      "ordered_references": [
+        {
+          "kind": "technical_reference",
+          "id": "original024-nearest12x"
+        },
+        {
+          "kind": "canonical_character"
+        }
+      ],
+      "reference_order_evidence": "Actual imagegen call references confirmed in conversation",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false,
+      "status": "PENDING REVIEW",
+      "runtime_pose_acceptance": false,
+      "motion_acceptance": false
+    },
+    {
+      "revision": 5,
+      "image": "024-generated-v5-direction.png",
+      "sha256": "88067245259e0f0513596ff0af034e9c9de24df03ce380123c8f4015ec4731e6",
+      "bytes": 1232689,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "prompt": "prompts/024-direction-revision5.txt",
+      "prompt_sha256": "dbf7443a1971794c0d4ce0a3a03d16a925fec65085437626a9de797aeffc68ff",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "024-generated-v4-direction.png"
+        },
+        {
+          "kind": "technical_reference",
+          "id": "original024-nearest12x"
+        }
+      ],
+      "reference_order_evidence": "Actual imagegen call references confirmed in conversation",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false,
+      "status": "PENDING REVIEW",
+      "runtime_pose_acceptance": false,
+      "motion_acceptance": false
+    },
+    {
+      "revision": 6,
+      "image": "024-generated-v6-direction.png",
+      "sha256": "d5b07bc0a119298790c52eae3bc353c4ac6ed4aee323c950219267d14cf77685",
+      "bytes": 1230741,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "prompt": "prompts/024-direction-revision6.txt",
+      "prompt_sha256": "f229fcdea887904badc29380fad382c3cdc04830d89dd8061ab06e52a4463a0e",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "024-generated-v5-direction.png"
+        },
+        {
+          "kind": "technical_reference",
+          "id": "original024-nearest12x"
+        }
+      ],
+      "reference_order_evidence": "Actual imagegen call references confirmed in conversation",
+      "tool": "built-in image_gen.imagegen",
+      "seed_or_model_identifier_exposed": false,
+      "status": "PENDING REVIEW",
+      "runtime_pose_acceptance": false,
+      "motion_acceptance": false
+    }
+  ],
+  "original_reference": {
+    "archive": "assets/scrantic_data.zip",
+    "member": "data/hd/BMP/JOHNWALK.BMP/024.png",
+    "archive_sha256_at_review": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a",
+    "sha256": "1233b19ffe0e07e9e9a2c1e2deee1d853026c6f4aca078a2aec4139f97455f91",
+    "canvas": [
+      64,
+      150
+    ]
+  },
+  "canonical_character": {
+    "file": "art/cartoon/johnny-character-v5.png",
+    "sha256": "f52319502fc68ee76b22c74ab18bb6ab57b10d0d5edb54e68bcc2a0ef2686a27"
+  },
+  "technical_references": {
+    "original024-nearest12x": {
+      "source": "original_reference",
+      "integer_scale": 12,
+      "sampling": "nearest-neighbor",
+      "original_rgba_pixels_replicated_exactly": true,
+      "pixel_content_verified": true,
+      "source_canvas": [
+        64,
+        150
+      ],
+      "output_canvas": [
+        768,
+        1800
+      ],
+      "reference_png_sha256": "c4e007ffa3c75d5f8f036648511110fa284df637d1e0ea6fee3217fc7bd257e3",
+      "reference_png_bytes": 11592,
+      "reference_png_filename_at_generation": "024-original-pose-reference-12x.png",
+      "note": "PNG encoding hash identifies the actual input; exact RGBA nearest replication is independently verified."
+    }
+  },
+  "still_preview": {
+    "source_image": "024-generated-v6-direction.png",
+    "source_sha256": "d5b07bc0a119298790c52eae3bc353c4ac6ed4aee323c950219267d14cf77685",
+    "affine_forward": [
+      0.1,
+      0,
+      -21.0,
+      0,
+      0.1,
+      -3.95
+    ],
+    "display_canvas": [
+      64,
+      150
+    ],
+    "cap_landmark_raw": [
+      385,
+      42
+    ],
+    "cap_landmark_target_hd": [
+      17.5,
+      0.25
+    ],
+    "method": "Fixed uniform 0.1 scale and measured cap translation for this directional still. Not the previous generation canvas scale. No body fitting, painted corrections, alpha keying, or nonuniform scaling. Future poses must match a single documented common scale after direction approval.",
+    "remaining": "Rear-foot clearance remains greater than source and needs refinement before runtime cycle acceptance.",
+    "alpha_check": "Source includes nonzero RGB under alpha zero. Native alpha composite removes the apparent black/brown backdrop visible in the raw generation preview; no background removal was applied.",
+    "is_final_runtime_registration": false,
+    "prior_six_pose_recipe_changed": false,
+    "source_review_json_sha256": "2faa069407e0fde032f084309e12f1cbeea0ab6e339d6da3f67d1ec671c9f08f"
+  }
+}

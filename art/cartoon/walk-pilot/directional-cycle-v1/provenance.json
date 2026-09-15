@@ -1,0 +1,662 @@
+{
+  "schema_version": 1,
+  "id": "johnny-directional-cycle-v1",
+  "date": "2026-09-14",
+  "status": "PENDING HUMAN MOTION REVIEW: six selected poses cleared for technical preview only.",
+  "coverage": "partial",
+  "runtime_registration_final": false,
+  "human_motion_acceptance": false,
+  "production_acceptance": false,
+  "human_direction_review": {
+    "user_wording": "well done",
+    "context": "User replied after explicitly reviewing revision6 front-three-quarter body direction and planted-leg overlap, excluding exact foot height.",
+    "scope": "Direction and leg order of key024v6 only. Does not approve the full six-pose motion or foot contacts."
+  },
+  "prior_feedback": {
+    "body_alignment_user_wording": "The body pop looks resolved",
+    "later_motion_defect": "User identified opposite leading-leg order at024 and an overly fixed side-profile cycle. Earlier full-pose candidates were not accepted.",
+    "preservation": "The prior alignment review and archives are preserved; this directional cycle uses explicit cap registration and no body fitting."
+  },
+  "source_bundle": {
+    "file": "source-images.zip",
+    "sha256": "8707ee636589ce8e20e08f3def5ef42fd6bd2cb0fb643852b1b66a4b7d108e3e",
+    "bytes": 14738087,
+    "members": [
+      "024-generated-v7.png",
+      "025-generated-v1.png",
+      "025-generated-v2.png",
+      "026-generated-v3-fresh.png",
+      "027-generated-v3-fresh.png",
+      "028-generated-v1.png",
+      "028-generated-v2.png",
+      "028-generated-v3-clearance.png",
+      "028-generated-v4-transparent.png",
+      "029-generated-v1.png",
+      "029-generated-v2.png"
+    ],
+    "compression": "DEFLATE level9; fixed1980 timestamp; sorted names",
+    "scope": "Six selected generated PNGs plus five used generated ancestors. No external images, duplicated v6 reference, original-resource PNGs, runtime exports or game archive."
+  },
+  "generated_images": {
+    "024-generated-v7.png": {
+      "sha256": "63088f5c18e71d49fb61f733e564d5f9461c55f622e124b5eeaf9aa5cbd1ee2b",
+      "bytes": 1239826,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": 24,
+      "status": "Selected technical motion-review candidate; not accepted for production.",
+      "prompt": "prompts/024-generated-v7.txt",
+      "prompt_sha256": "29f788774721cfd36172cc381bba66c2c1109272afaf41cb77856b319100d282",
+      "prompt_evidence": "Exact saved prompt file; actual ordered call references confirmed by root in conversation. No additional whitespace normalization is inferred.",
+      "source_prompt_record_name": "024-foot-contact-v7.txt",
+      "source_prompt_record_sha256": "29f788774721cfd36172cc381bba66c2c1109272afaf41cb77856b319100d282",
+      "ordered_references": [
+        {
+          "kind": "external_generated_reference",
+          "id": "approved-direction-key-v6",
+          "sha256": "d5b07bc0a119298790c52eae3bc353c4ac6ed4aee323c950219267d14cf77685"
+        },
+        {
+          "kind": "technical_original_reference",
+          "id": "024-original-12x.png",
+          "sha256": "c4e007ffa3c75d5f8f036648511110fa284df637d1e0ea6fee3217fc7bd257e3"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-pilot\\024-generated-v6-direction.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\024-original-12x.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": null,
+      "default_file_byte_identity_verified": null,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    },
+    "025-generated-v1.png": {
+      "sha256": "21efc47153969799717973695fb8df1e247e7a25847cac7a08cfb388b500c67f",
+      "bytes": 1384343,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": null,
+      "status": "Used generated ancestor only; not a runtime candidate.",
+      "prompt": "prompts/025-generated-v1.txt",
+      "prompt_sha256": "317a043a38d4c304cfb64f5f303d3230754e9fd5465dd10b81a7d95db7de5d3b",
+      "prompt_evidence": "Trailing whitespace trimmed before tool call; exact_prompt_text records actual tool input.",
+      "source_prompt_record_name": "025-direction-v1.txt",
+      "source_prompt_record_sha256": "15d96d7d82788f82afb9fdd0c471eb20d31847bb21ae5e730e5c1454c539cc59",
+      "ordered_references": [
+        {
+          "kind": "external_generated_reference",
+          "id": "approved-direction-key-v6",
+          "sha256": "d5b07bc0a119298790c52eae3bc353c4ac6ed4aee323c950219267d14cf77685"
+        },
+        {
+          "kind": "technical_original_reference",
+          "id": "025-original-pose-12x.png",
+          "sha256": "d9ce8cd792a7b5edbee29723a0a38d14b9604cff5dc92fbcdbdf3967c11da492"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-pilot\\024-generated-v6-direction.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\025-original-pose-12x.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-671e-7460-976f-f90ab7d5f1e2\\exec-6ee3c691-41d4-449e-b09c-da2509963920.png",
+      "default_file_byte_identity_verified": true,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    },
+    "025-generated-v2.png": {
+      "sha256": "af0f050ae39858eda063c1c681c82a26e2d988e09e18dc8d1a6ff83df73126cf",
+      "bytes": 1389285,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": 25,
+      "status": "Selected technical motion-review candidate; not accepted for production.",
+      "prompt": "prompts/025-generated-v2.txt",
+      "prompt_sha256": "88719b6a79635ab4528faf60149d3e7d1b1316298832ae4d30cd7ed53fd1b95d",
+      "prompt_evidence": "Trailing whitespace trimmed before tool call; exact_prompt_text records actual tool input.",
+      "source_prompt_record_name": "025-direction-v2.txt",
+      "source_prompt_record_sha256": "883dce9218daba6d566d4d80a094f5c337c7ebd0f7b4a6184194a7a9a2d5352a",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "025-generated-v1.png",
+          "sha256": "21efc47153969799717973695fb8df1e247e7a25847cac7a08cfb388b500c67f"
+        },
+        {
+          "kind": "technical_original_reference",
+          "id": "025-original-pose-12x.png",
+          "sha256": "d9ce8cd792a7b5edbee29723a0a38d14b9604cff5dc92fbcdbdf3967c11da492"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\025-generated-v1.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\025-original-pose-12x.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-671e-7460-976f-f90ab7d5f1e2\\exec-3a8ab520-ceb9-4d71-bed1-ea044151e5ee.png",
+      "default_file_byte_identity_verified": true,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    },
+    "026-generated-v3-fresh.png": {
+      "sha256": "051be31b0a7f734231164088660fe4def6531240826d7b1d57152614f0650702",
+      "bytes": 1392158,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": 26,
+      "status": "Selected technical motion-review candidate; not accepted for production.",
+      "prompt": "prompts/026-generated-v3-fresh.txt",
+      "prompt_sha256": "a807f41b88ac813b1ce522c3438a3e95999b599e6e17e4d92577516cf646b87f",
+      "prompt_evidence": "Trailing whitespace trimmed before call; exact_prompt_text is actual tool input.",
+      "source_prompt_record_name": "026-direction-v3-fresh.txt",
+      "source_prompt_record_sha256": "c1fc7f8865a017fce52192f8a77faf6786c019e311ec584aa8d1ed8f2d91402c",
+      "ordered_references": [
+        {
+          "kind": "technical_original_reference",
+          "id": "026-original-pose-12x.png",
+          "sha256": "327432055d25494d961d4ad8b907d6d427f293045629177d7be68bd8d73ee4eb"
+        },
+        {
+          "kind": "external_generated_reference",
+          "id": "approved-direction-key-v6",
+          "sha256": "d5b07bc0a119298790c52eae3bc353c4ac6ed4aee323c950219267d14cf77685"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\026-original-pose-12x.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-pilot\\024-generated-v6-direction.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-671e-7460-976f-f90ab7d5f1e2\\exec-88ae3385-b75e-4a88-833a-cb1fe2d12851.png",
+      "default_file_byte_identity_verified": true,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    },
+    "027-generated-v3-fresh.png": {
+      "sha256": "31e1249a5035f4ce88c35aeeabfdf52e3a9202670e96d85c07ce50035b0ce70d",
+      "bytes": 1273940,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": 27,
+      "status": "Selected technical motion-review candidate; not accepted for production.",
+      "prompt": "prompts/027-generated-v3-fresh.txt",
+      "prompt_sha256": "ee4eb94640462445907929c1eef2dace4a962de83fd0882aa6cf2a92727eec36",
+      "prompt_evidence": "Exact built-in tool prompt and ordered reference list saved by the generating agent.",
+      "source_prompt_record_name": "027-prompt-v3-fresh.json",
+      "source_prompt_record_sha256": "146ed55f9f3f142f7997c789750c2bb6b32a1139891f6e49a1cd36beeba50fed",
+      "ordered_references": [
+        {
+          "kind": "technical_original_reference",
+          "id": "027-original-nearest8.png",
+          "sha256": "bb5ee656b1d63b0adad2c99343608aad76dd158cad2cc2a5af77704ae39ea175"
+        },
+        {
+          "kind": "external_generated_reference",
+          "id": "approved-direction-key-v6",
+          "sha256": "d5b07bc0a119298790c52eae3bc353c4ac6ed4aee323c950219267d14cf77685"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\027-original-nearest8.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-pilot\\024-generated-v6-direction.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-dcbd9aa8-ed72-46b5-81e2-cbbff3cf231b.png",
+      "default_file_byte_identity_verified": true,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    },
+    "028-generated-v1.png": {
+      "sha256": "957f048e86c848d20f3bd4a5796ec2bd8f8392c924bbcf31ad228dcf25e5aff5",
+      "bytes": 1323693,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": null,
+      "status": "Used generated ancestor only; not a runtime candidate.",
+      "prompt": "prompts/028-generated-v1.txt",
+      "prompt_sha256": "27de59fcc686329417204ed2898cf1c0ddb7682b92e49bb2dca317a38e7654c0",
+      "prompt_evidence": "Exact built-in tool prompt and ordered reference list saved by the generating agent.",
+      "source_prompt_record_name": "028-prompt-v1.json",
+      "source_prompt_record_sha256": "7fbba4c113f76991a94810b70272c2aa815579d96cbe043a7b62107869c5ed4d",
+      "ordered_references": [
+        {
+          "kind": "external_generated_reference",
+          "id": "approved-direction-key-v6",
+          "sha256": "d5b07bc0a119298790c52eae3bc353c4ac6ed4aee323c950219267d14cf77685"
+        },
+        {
+          "kind": "technical_original_reference",
+          "id": "028-original-nearest8.png",
+          "sha256": "6d7b9981a94f448f6c779943fa680ac8f8cc74d14992b826c5f7490cdfa5eda4"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-pilot\\024-generated-v6-direction.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\028-original-nearest8.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-e9d11632-36a7-4a78-a4d9-117251c96dd8.png",
+      "default_file_byte_identity_verified": true,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    },
+    "028-generated-v2.png": {
+      "sha256": "a180f2edba1afb10495913f4d6bda90e2c7c0c4fe7c15778c9b4be9efcf763e6",
+      "bytes": 1322100,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": null,
+      "status": "Used generated ancestor only; not a runtime candidate.",
+      "prompt": "prompts/028-generated-v2.txt",
+      "prompt_sha256": "676055a5ffae5a5f51d90d3a345139bfda96f6893af724158b66935ed4b106a1",
+      "prompt_evidence": "Exact built-in tool prompt and ordered reference list saved by the generating agent.",
+      "source_prompt_record_name": "028-prompt-v2.json",
+      "source_prompt_record_sha256": "46f037d948ea0396708ea017cdecb707c920f87c0fcbcbe80a361d3d40f80411",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "028-generated-v1.png",
+          "sha256": "957f048e86c848d20f3bd4a5796ec2bd8f8392c924bbcf31ad228dcf25e5aff5"
+        },
+        {
+          "kind": "technical_original_reference",
+          "id": "028-original-nearest8.png",
+          "sha256": "6d7b9981a94f448f6c779943fa680ac8f8cc74d14992b826c5f7490cdfa5eda4"
+        },
+        {
+          "kind": "external_generated_reference",
+          "id": "approved-direction-key-v6",
+          "sha256": "d5b07bc0a119298790c52eae3bc353c4ac6ed4aee323c950219267d14cf77685"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\028-generated-v1.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\028-original-nearest8.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-pilot\\024-generated-v6-direction.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-7930d445-339f-49ce-b2cd-97935f5d04eb.png",
+      "default_file_byte_identity_verified": true,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    },
+    "028-generated-v3-clearance.png": {
+      "sha256": "4c7220daa1a1427e6123000ea1294cd6e7a204226c460e8637aa89338a7f21fa",
+      "bytes": 1640354,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": null,
+      "status": "Used ancestor only. Rejected for runtime: substantial exterior alpha contamination. Input to built-in v4 background extraction.",
+      "prompt": "prompts/028-generated-v3-clearance.txt",
+      "prompt_sha256": "57883abac9c7052d44ac3e0e7c9ab80e8a6078c12c0cdd6f582c227c9e36b472",
+      "prompt_evidence": "Exact built-in tool prompt and ordered reference list saved by the generating agent.",
+      "source_prompt_record_name": "028-prompt-v3-clearance.json",
+      "source_prompt_record_sha256": "0a2a8940ffd61569cc3fe1a507de9722b9a751e4a1d8e84f2f13584035bc8046",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "028-generated-v2.png",
+          "sha256": "a180f2edba1afb10495913f4d6bda90e2c7c0c4fe7c15778c9b4be9efcf763e6"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\028-generated-v2.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-05f609ae-6e4d-4639-b054-a08866f6d90a.png",
+      "default_file_byte_identity_verified": true,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    },
+    "028-generated-v4-transparent.png": {
+      "sha256": "bdbf7f83f0622cbc4b87f2f41c0f502e8185b4ee524da912f39a03cec28f8fc9",
+      "bytes": 1328953,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": 28,
+      "status": "Selected technical motion-review candidate; not accepted for production.",
+      "prompt": "prompts/028-generated-v4-transparent.txt",
+      "prompt_sha256": "beb3ec05fcce2f954529fc9a42fd1c838201cd23c12d3db39e2c4e5a5d7432d4",
+      "prompt_evidence": "Exact built-in tool prompt and ordered reference list saved by the generating agent.",
+      "source_prompt_record_name": "028-prompt-v4-transparent.json",
+      "source_prompt_record_sha256": "83272389bf649ce7cc0d5ec7882efb5e3b03cf870c86edc8c38c1182bffd36de",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "028-generated-v3-clearance.png",
+          "sha256": "4c7220daa1a1427e6123000ea1294cd6e7a204226c460e8637aa89338a7f21fa"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\028-generated-v3-clearance.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-636b9121-af32-48df-9094-aa7adafb34ce.png",
+      "default_file_byte_identity_verified": true,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    },
+    "029-generated-v1.png": {
+      "sha256": "54cf21a53099121abc859d8dd829bee1c91a7a0351b1661bfe0812c9b7dd3ac9",
+      "bytes": 1283651,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": null,
+      "status": "Used generated ancestor only; not a runtime candidate.",
+      "prompt": "prompts/029-generated-v1.txt",
+      "prompt_sha256": "c488c9d8ff14bac92b221ca88b910f8914e77760af85f49c4a0e5852967ec63a",
+      "prompt_evidence": "Exact saved prompt file; actual ordered call references confirmed by root in conversation. No additional whitespace normalization is inferred.",
+      "source_prompt_record_name": "029-direction-v1.txt",
+      "source_prompt_record_sha256": "c488c9d8ff14bac92b221ca88b910f8914e77760af85f49c4a0e5852967ec63a",
+      "ordered_references": [
+        {
+          "kind": "external_generated_reference",
+          "id": "approved-direction-key-v6",
+          "sha256": "d5b07bc0a119298790c52eae3bc353c4ac6ed4aee323c950219267d14cf77685"
+        },
+        {
+          "kind": "technical_original_reference",
+          "id": "029-original-12x.png",
+          "sha256": "ca200cfb09212417db8a5e3149f2f1be287e7dc51dc3702adcd8cfb8acfcc143"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-pilot\\024-generated-v6-direction.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\029-original-12x.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": null,
+      "default_file_byte_identity_verified": null,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    },
+    "029-generated-v2.png": {
+      "sha256": "a19e4143ba6647965f7d3a5bab178b4cbe131b52429da59028adb6e233fe9e78",
+      "bytes": 1296139,
+      "canvas": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "selected_frame": 29,
+      "status": "Selected technical motion-review candidate; not accepted for production.",
+      "prompt": "prompts/029-generated-v2.txt",
+      "prompt_sha256": "c07f7a8bec45ea588b43c1daa5c7339ecf9a54473976846906fc87432c12f883",
+      "prompt_evidence": "Exact saved prompt file; actual ordered call references confirmed by root in conversation. No additional whitespace normalization is inferred.",
+      "source_prompt_record_name": "029-direction-v2.txt",
+      "source_prompt_record_sha256": "c07f7a8bec45ea588b43c1daa5c7339ecf9a54473976846906fc87432c12f883",
+      "ordered_references": [
+        {
+          "kind": "generated_image",
+          "image": "029-generated-v1.png",
+          "sha256": "54cf21a53099121abc859d8dd829bee1c91a7a0351b1661bfe0812c9b7dd3ac9"
+        },
+        {
+          "kind": "technical_original_reference",
+          "id": "029-original-12x.png",
+          "sha256": "ca200cfb09212417db8a5e3149f2f1be287e7dc51dc3702adcd8cfb8acfcc143"
+        }
+      ],
+      "actual_ordered_reference_paths_at_call": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\029-generated-v1.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\walk-direction-v1\\029-original-12x.png"
+      ],
+      "tool": "built-in image_gen.imagegen",
+      "default_generated_file_at_call": null,
+      "default_file_byte_identity_verified": null,
+      "seed_or_model_identifier_exposed": false,
+      "raw_png_bytes_preserved": true,
+      "human_motion_acceptance": false,
+      "production_acceptance": false
+    }
+  },
+  "external_generated_references": {
+    "approved-direction-key-v6": {
+      "bundle": "art/cartoon/walk-pilot/direction-key-024/source-images.zip",
+      "bundle_sha256": "24716fca7cbd08097a3b860027c1cba008fc4d31fe82172438a2e314a5d58792",
+      "member": "024-generated-v6-direction.png",
+      "sha256": "d5b07bc0a119298790c52eae3bc353c4ac6ed4aee323c950219267d14cf77685",
+      "provenance": "art/cartoon/walk-pilot/direction-key-024/provenance.json",
+      "duplicated_here": false
+    }
+  },
+  "original_archive": {
+    "file": "assets/scrantic_data.zip",
+    "sha256_at_review": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a"
+  },
+  "original_references": {
+    "24": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/024.png",
+      "sha256": "1233b19ffe0e07e9e9a2c1e2deee1d853026c6f4aca078a2aec4139f97455f91",
+      "canvas": [
+        64,
+        150
+      ]
+    },
+    "25": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/025.png",
+      "sha256": "1eedad18ddb23c631439c17b01659d0abe7ee8b4da3d2ee3862dadb840686954",
+      "canvas": [
+        80,
+        148
+      ]
+    },
+    "26": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/026.png",
+      "sha256": "6d30f88641b8aa4da6a3ab883ecda94cb6871605d58af3b628521b79a93936c9",
+      "canvas": [
+        80,
+        146
+      ]
+    },
+    "27": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/027.png",
+      "sha256": "e19d3fe46184f05da2cc12b38bf07d161bcb293b4348bd076a5b9661a59369a9",
+      "canvas": [
+        64,
+        144
+      ]
+    },
+    "28": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/028.png",
+      "sha256": "a387e9b663b2646c0a39e346106cbed59c8603b30503a4e6f3a445efa287d12a",
+      "canvas": [
+        64,
+        144
+      ]
+    },
+    "29": {
+      "member": "data/hd/BMP/JOHNWALK.BMP/029.png",
+      "sha256": "091f4690aaab8af69120b4cfcd819c96db711f8ef30609773310e09c7dcdcfd9",
+      "canvas": [
+        64,
+        150
+      ]
+    }
+  },
+  "technical_references": {
+    "024-original-12x.png": {
+      "original_frame": 24,
+      "integer_scale": 12,
+      "sampling": "NEAREST",
+      "rgba_pixel_replication_verified": true,
+      "actual_reference_sha256": "c4e007ffa3c75d5f8f036648511110fa284df637d1e0ea6fee3217fc7bd257e3",
+      "actual_canvas": [
+        768,
+        1800
+      ],
+      "storage": "Recreate from the original archive; not duplicated in source-images.zip."
+    },
+    "025-original-pose-12x.png": {
+      "original_frame": 25,
+      "integer_scale": 12,
+      "sampling": "NEAREST",
+      "rgba_pixel_replication_verified": true,
+      "actual_reference_sha256": "d9ce8cd792a7b5edbee29723a0a38d14b9604cff5dc92fbcdbdf3967c11da492",
+      "actual_canvas": [
+        960,
+        1776
+      ],
+      "storage": "Recreate from the original archive; not duplicated in source-images.zip."
+    },
+    "026-original-pose-12x.png": {
+      "original_frame": 26,
+      "integer_scale": 12,
+      "sampling": "NEAREST",
+      "rgba_pixel_replication_verified": true,
+      "actual_reference_sha256": "327432055d25494d961d4ad8b907d6d427f293045629177d7be68bd8d73ee4eb",
+      "actual_canvas": [
+        960,
+        1752
+      ],
+      "storage": "Recreate from the original archive; not duplicated in source-images.zip."
+    },
+    "027-original-nearest8.png": {
+      "original_frame": 27,
+      "integer_scale": 8,
+      "sampling": "NEAREST",
+      "rgba_pixel_replication_verified": true,
+      "actual_reference_sha256": "bb5ee656b1d63b0adad2c99343608aad76dd158cad2cc2a5af77704ae39ea175",
+      "actual_canvas": [
+        512,
+        1152
+      ],
+      "storage": "Recreate from the original archive; not duplicated in source-images.zip."
+    },
+    "028-original-nearest8.png": {
+      "original_frame": 28,
+      "integer_scale": 8,
+      "sampling": "NEAREST",
+      "rgba_pixel_replication_verified": true,
+      "actual_reference_sha256": "6d7b9981a94f448f6c779943fa680ac8f8cc74d14992b826c5f7490cdfa5eda4",
+      "actual_canvas": [
+        512,
+        1152
+      ],
+      "storage": "Recreate from the original archive; not duplicated in source-images.zip."
+    },
+    "029-original-12x.png": {
+      "original_frame": 29,
+      "integer_scale": 12,
+      "sampling": "NEAREST",
+      "rgba_pixel_replication_verified": true,
+      "actual_reference_sha256": "ca200cfb09212417db8a5e3149f2f1be287e7dc51dc3702adcd8cfb8acfcc143",
+      "actual_canvas": [
+        768,
+        1800
+      ],
+      "storage": "Recreate from the original archive; not duplicated in source-images.zip."
+    }
+  },
+  "known_geometry_limitations": [
+    "024 rear-foot overlap is improved, but remaining clearance must be reviewed in motion.",
+    "026 fresh candidate rear-foot clearance is approximately11.6HDpixels versus about4 in the source; not fixed by registration.",
+    "027 fresh candidate rear-foot clearance is approximately11HDpixels versus about4 in the source; not fixed by registration.",
+    "029v2 retains excessive raised-foot clearance; later edits were not selected because they did not improve pose fidelity enough or changed the head.",
+    "028v4-transparent restores a clean exterior and keeps the visible toe inside its fixed canvas; gait/contact still pending review.",
+    "The original23-pose E-to-A route, camera, flip and120ms cadence are unchanged. The engine route is not the cause of the drawn pose mismatch."
+  ],
+  "alpha_notes": "Raw sources retain true alpha exactly. Many interiors peak at254. Low-alpha1-7 exterior residue remains; no thresholding, color key or code cleanup is applied. Bounds atalpha>=8 are diagnostic rejection checks only and do not choose scale or translation.",
+  "excluded_attempts": [
+    "026v1/v2",
+    "027v1/v2",
+    "029v3/freshv4"
+  ],
+  "generation_reproducibility": "Exact prompts and actual reference order are preserved, but the tool exposed no deterministic seed or model identifier. Saved PNG bytes and SHA256 identify the reviewed drawings."
+}

@@ -2,8 +2,9 @@
 
 ## How to read this
 
-Every entry here was **reproduced against the code**, and where a measurement is
-quoted it was taken rather than estimated. Items that an audit claimed and that
+Engineering defects here were **reproduced against the code**. Artwork follow-ups
+identify their visual evidence and distinguish approximate pose landmarks from
+exact pixel measurements. Items that an audit claimed and that
 did not survive checking are recorded in "Claims that did not hold" at the
 bottom, so nobody re-raises them.
 
@@ -36,6 +37,24 @@ never run a pixel of it in CI.
 ---
 
 ## Open
+
+### Cartoon animation: complete foot-contact and gait fidelity review
+
+The user approved the character design, the correction for added whole-body
+popping, and the revised frame 024's front-three-quarter direction and leg
+order. These are separate approvals; a complete walking cycle remains under
+review. Generated frames can retain a raised-foot pose despite repeated targeted
+edits requesting lower contact. Fresh generation from the original pose improved
+some contacts but did not establish full motion fidelity. This is an artwork
+authoring limitation, not evidence of an engine trajectory defect.
+
+Finish the six-pose/23-position comparison before expanding the character pack.
+Preserve original timing and route, one common drawing scale, and consistent cap
+registration. Close this item only after foot-contact and complete gait review,
+not merely a passing asset-load or golden-dump test. If pose corrections keep
+failing, evaluate stronger pose guides or a character rig before increasing the
+generation volume. See [motion review](art/cartoon/motion-review.md) and the
+preserved candidate provenance under `art/cartoon/walk-pilot`.
 
 ### ~~macOS renders something nobody has looked at~~ VERIFIED 2026-09-14
 
