@@ -50,17 +50,34 @@
       "latest_rejected_file": "028-simple-shorts-v4.png",
       "human_response": "try again, it also looks like the foot is optically wrong",
       "prospective_file": "028-natural-left-step-v5.png",
-      "status": "human-pose-review-pending",
+      "status": "human-confirmed-wrong-leg-cleared-for-standalone-motion-review",
       "anatomy_verified": false,
-      "foot_identity_and_toe_order_verified": false
+      "foot_identity_and_toe_order_verified": false,
+      "human_leg_mismatch_confirmed": true,
+      "latest_human_response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please"
     },
     "frame_029": {
       "replacement_selected": false,
-      "reason": "Latest Calm-pose attempt rejected for leg linkage and canvas clearance."
+      "reason": "Latest Calm-pose attempt rejected for leg linkage and canvas clearance.",
+      "provisional_preview_file": "029-calm-pose-v2.png",
+      "anatomy_and_runtime_clearance_rejection_retained": true
     },
     "foot_corrections_accepted": false,
     "complete_cycle_accepted": false,
     "runtime_exports_accepted": false,
-    "production_assets_changed": false
+    "production_assets_changed": false,
+    "standalone_motion_review": {
+      "creation_cleared": true,
+      "provisional_files": [
+        "024-calm-pose-v2.png",
+        "025-calm-eyes-v1.png",
+        "026-calm-eyes-v1.png",
+        "027-calm-eyes-v1.png",
+        "028-natural-left-step-v5.png",
+        "029-calm-pose-v2.png"
+      ],
+      "human_response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please",
+      "scope": "Standalone preview only, with padding to expose overhang. No anatomical correction, foot correction, final motion or runtime export is accepted."
+    }
   }
 }

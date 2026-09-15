@@ -21,15 +21,23 @@ strings are preserved unchanged in [next-generation-prompts.json](next-generatio
 | [024 Calm pose v2](024-calm-pose-v2.png) | Human static review pending. Trailing toe is more side-on, but its contour shifted left and upward. |
 | [025](025-calm-eyes-v1.png), [026](026-calm-eyes-v1.png), [027](027-calm-eyes-v1.png) Calm eyes v1 | Technical and motion review pending. Eye edits do not establish unchanged body pixels. |
 | [028 Calm pose v2](028-calm-pose-v2.png) | Rejected after assistant anatomy review; retained as an actual ancestor of v3. |
-| 029 Calm pose v2 | Rejected for leg linkage and canvas clearance. Hash retained; unused PNG omitted. No selected replacement. |
+| [029 Calm pose v2](029-calm-pose-v2.png) | Rejected for leg linkage and canvas clearance. Subsequently retained as a provisional standalone preview input; no accepted replacement. |
 | [028 near-left-thigh v3](028-near-left-thigh-v3.png) | User rejected: "no, the shorts look weird". Retained as an actual ancestor of v4. |
 | [028 simple shorts v4](028-simple-shorts-v4.png) | User rejected: "try again, it also looks like the foot is optically wrong". Retained as the rejected branch endpoint. |
-| [028 natural left step v5](028-natural-left-step-v5.png) | Human pose review pending. Simple shorts restored visually; anatomy, foot identity, toe order and optics remain unverified. |
+| [028 natural left step v5](028-natural-left-step-v5.png) | User confirmed the leg is still wrong, then requested standalone motion review. This does not accept the anatomical correction or final motion. |
 
 V5 starts again from the previously accepted 028 raw, the Calm focus key and
 the supplied-original native pose. The rejected v2/v3/v4 branch is not its
 ancestry. There is currently no accepted 028 replacement, corrected walking
 cycle or runtime export.
+
+The user subsequently said: "its still the wrong leg, but since its completely
+opposite i think it works, give me a standalone walking animation and let me
+look at it please". This clears a provisional standalone animation using
+024 v2, 025/026/027 Calm eyes v1, 028 v5 and 029 Calm pose v2. The planned
+preview retains the existing scale/affines on a padded canvas so overhanging
+feet remain visible. It is not a runtime export, a corrected-anatomy claim or
+final motion approval. The record does not itself create that animation.
 
 All nine returned images are 1024 by 1536. Analytical checks use each frame's
 existing scale 0.1 affine without fitting or moving the art. V3 and v4 overhang

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-09-15",
-  "scope": "Nine exact generation calls and their source/review records. Only the earlier Calm focus expression key remains accepted as an expression reference. No foot, cycle or runtime acceptance.",
+  "scope": "Nine exact generation calls and their source/review records. The earlier Calm focus key is accepted as an expression reference. Six provisional inputs are cleared only for standalone motion review; no anatomical correction, final cycle or runtime export is accepted.",
   "prompt_records": {
     "next-generation-prompts.json": {
       "sha256": "f533c566dbea4d1bda4b4ea7f783e5304a07fe3dc01587dc18e535215cf152ce",
@@ -373,7 +373,7 @@
       "status": "assistant-rejected-anatomy-and-clearance",
       "review_reason": "The prior hip-to-leg assignment remained; trailing foot also exceeds the fixed runtime canvas.",
       "output": {
-        "file": null,
+        "file": "029-calm-pose-v2.png",
         "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-9da0147c-676c-4b1a-9dd0-218038f3c8fa.png",
         "sha256": "c92553a2bca8778736063bee25d8518919da0c599ee7b905d6c0d2caa14d6cc1",
         "bytes": 1292634,
@@ -382,7 +382,7 @@
           1536
         ]
       },
-      "raw_preservation_role": "Unused failed raw omitted; exact hash and reason retained",
+      "raw_preservation_role": "Provisional standalone animation input requested after the earlier rejection; anatomy and fixed-canvas rejection remain in effect.",
       "actual_tool": {
         "tool": "image_gen.imagegen",
         "call_record": "next-generation-prompts.json#/2",
@@ -1320,8 +1320,8 @@
       "id": "028-natural-left-step-v5",
       "resource": "JOHNWALK.BMP",
       "frame": 28,
-      "status": "human-pose-review-pending",
-      "review_reason": "Simple ragged shorts were restored visually. Anatomical leg linkage, foot left/right identity, toe order and optics remain unresolved; fixed-canvas clearance is not met.",
+      "status": "human-confirmed-wrong-leg-cleared-for-standalone-motion-review",
+      "review_reason": "The user confirmed the leg is still wrong, but requested a standalone animation to judge the complete opposite step. No anatomical correction or final motion acceptance.",
       "output": {
         "file": "028-natural-left-step-v5.png",
         "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-872f749a-9afb-436f-8323-534bb2baa6ea.png",
@@ -1500,6 +1500,12 @@
       "response": "try again, it also looks like the foot is optically wrong",
       "status": "rejected",
       "scope": "Shorts and foot optics; no accepted 028 replacement."
+    },
+    {
+      "attempt_id": "028-natural-left-step-v5",
+      "response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please",
+      "status": "wrong-leg-confirmed; standalone-motion-review-requested",
+      "scope": "Clearance to make a provisional standalone walking preview only. Anatomy correction and final motion are not accepted."
     }
   ],
   "visual_observations": [
@@ -1527,5 +1533,31 @@
     "The returned raw canvas size does not establish fit inside the original runtime frame. The rejected028 branch extends beyond both sides under its existing affine."
   ],
   "pixel_redraw_caveat": "No output is represented as byte-identical outside its intended edit. Technical alpha/registration measurements do not approve anatomy, gait timing, foot clearance or style.",
-  "unresolved_foot_identity": "Determine anatomical left/right foot identity by tracing hip, thigh, knee, ankle and foot together, then check big-toe/smaller-toe ordering and side/sole view against the native reference. Prompt wording and changed shorts are not proof of the intended identity; v5 remains unverified."
+  "unresolved_foot_identity": "The user confirmed028 v5 still uses the wrong leg relative to the original reference. Clearance to inspect a standalone animation does not resolve this deviation. Toe ordering, foot optics and full-family motion remain review questions.",
+  "standalone_motion_review": {
+    "human_response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please",
+    "provisional_input_files": [
+      "024-calm-pose-v2.png",
+      "025-calm-eyes-v1.png",
+      "026-calm-eyes-v1.png",
+      "027-calm-eyes-v1.png",
+      "028-natural-left-step-v5.png",
+      "029-calm-pose-v2.png"
+    ],
+    "provisional_input_sha256": {
+      "024-calm-pose-v2.png": "13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb",
+      "025-calm-eyes-v1.png": "656061532b3833c092dd76d57d0cdd2e9e21a1b59f8cf0f360c5c0250494b20c",
+      "026-calm-eyes-v1.png": "20336e0fa8ab6ec930a78307e32719fd6a7d6a871e22803dd8b197724f34e110",
+      "027-calm-eyes-v1.png": "02adcafbd8548901b29eeb5a5f61a6f1fbe3c72b854410cd403139420ba241d6",
+      "028-natural-left-step-v5.png": "4d64d52cdac32e71abc8264e3c0461cc73673983ad9992d0888899dad9dd5665",
+      "029-calm-pose-v2.png": "c92553a2bca8778736063bee25d8518919da0c599ee7b905d6c0d2caa14d6cc1"
+    },
+    "preview_creation_cleared": true,
+    "presentation_plan": "Use the existing common scale/affines on a padded standalone preview canvas so overhanging art can be seen. This is not the original runtime canvas or a new runtime export.",
+    "animation_created_by_this_record": false,
+    "anatomical_correction_accepted": false,
+    "final_motion_accepted": false,
+    "runtime_export_accepted": false,
+    "production_promotion": false
+  }
 }
