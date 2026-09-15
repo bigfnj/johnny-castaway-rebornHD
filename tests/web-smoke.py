@@ -194,7 +194,7 @@ def main():
                   "state=%s (a suspended context schedules nothing)" % audio["state"])
 
             log = page.evaluate("window.jcLog ? window.jcLog.join('\\n') : ''")
-            check("no fatal error while running", "Fatal error" not in log,
+            check("no fatal error while running", not page.evaluate("window.jcHadFatalError === true") and "Fatal error" not in log,
                   log[-200:] if log else "")
             check("no uncaught page errors", not errors, "; ".join(errors[:2]))
 
@@ -226,7 +226,7 @@ def main():
                 errors2.append(str(exc))
             check("bounded run reached its own frame limit and stopped", finished)
             log2 = page2.evaluate("window.jcLog ? window.jcLog.join('\\n') : ''")
-            check("bounded run reported no fatal error", "Fatal error" not in log2,
+            check("bounded run reported no fatal error", not page2.evaluate("window.jcHadFatalError === true") and "Fatal error" not in log2,
                   log2[-200:] if log2 else "")
 
             browser.close()
