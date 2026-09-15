@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.19)
 
 # ── Version, single source of truth ───────────────────────────────────────────
 # Releases are cut from git tags (v0.9.0, v1.0.0, ...) and .github/workflows/
@@ -19,9 +19,8 @@ cmake_minimum_required(VERSION 3.10)
 # suspended, fullscreen that silently no-oped in both directions, and a frame
 # drawn at a fixed size that only lined up in a window sized to match it.
 #
-# LINUX is now the only platform where nobody has looked at a rendered frame. The
-# cross-platform check runs `dump`, which opens no window, so its blitting code
-# compiles on every push and is never executed. See BACKLOG.md.
+# Linux presentation is exercised with X11 window captures under Xvfb. Desktop
+# window-manager fullscreen and physical audio remain separate checks; see BACKLOG.md.
 project(jc_reborn VERSION 1.0.1 LANGUAGES C)
 
 set(JC_VERSION_STRING "${PROJECT_VERSION}")
@@ -151,11 +150,25 @@ if(WIN32 AND NOT EMSCRIPTEN)
         platform/platform_windows.c)
     target_include_directories(jc_palm_test PRIVATE src/engine src/data platform third_party/miniz)
     target_link_libraries(jc_palm_test PRIVATE gdi32 user32 winmm windowscodecs ole32 uuid)
+
+    set(LIFECYCLE_TEST_SOURCES ${COMMON_SOURCES})
+    list(REMOVE_ITEM LIFECYCLE_TEST_SOURCES src/engine/jc_reborn.c src/engine/ads.c)
+    add_executable(jc_lifecycle_test tests/test_lifecycle_driver.c tests/lifecycle_alloc.c
+        ${LIFECYCLE_TEST_SOURCES} platform/platform_windows.c)
+    target_include_directories(jc_lifecycle_test PRIVATE tests src/engine src/data platform third_party/miniz)
+    target_link_libraries(jc_lifecycle_test PRIVATE gdi32 user32 winmm windowscodecs ole32 uuid)
+    if(MSVC)
+        target_compile_options(jc_lifecycle_test PRIVATE /FI${CMAKE_CURRENT_SOURCE_DIR}/tests/lifecycle_alloc.h)
+    else()
+        target_compile_options(jc_lifecycle_test PRIVATE -include ${CMAKE_CURRENT_SOURCE_DIR}/tests/lifecycle_alloc.h)
+    endif()
 endif()
 
 # Exercise the portable decoder even on Windows, where normal rendering uses
 # WIC. This probe needs no window server or platform rendering libraries.
 if(NOT EMSCRIPTEN)
+    add_executable(jc_uncompress_test tests/test_uncompress_driver.c src/engine/uncompress.c)
+    target_include_directories(jc_uncompress_test PRIVATE src/engine)
     add_executable(jc_png_test
         tests/test_png_decoder.c
         platform/png_decoder.c
@@ -164,20 +177,6 @@ if(NOT EMSCRIPTEN)
         ${CMAKE_CURRENT_SOURCE_DIR}/platform
         ${CMAKE_CURRENT_SOURCE_DIR}/src/engine
         ${CMAKE_CURRENT_SOURCE_DIR}/third_party/miniz)
-endif()
-
-# ── Runtime data ──────────────────────────────────────────────────────────────
-# The engine opens scrantic_data.zip beside the executable (see zipvfs_init).
-# Without this copy the binary builds successfully and then dies on startup,
-# which is exactly what it did: the archive lives in assets/ and nothing ever
-# put it where the program looks. Emscripten is excluded because --preload-file
-# already bakes the archive into jc_reborn.data.
-if(NOT EMSCRIPTEN)
-    add_custom_command(TARGET jc_reborn POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
-                "$<TARGET_FILE_DIR:jc_reborn>/scrantic_data.zip"
-        COMMENT "Copying scrantic_data.zip next to jc_reborn")
 endif()
 
 # Set Objective-C compilation for macOS platform file
@@ -255,6 +254,25 @@ elseif(UNIX)
     )
 endif()
 
+# Allocation probes compile the actual backend with test-only allocator hooks.
+# They never show a window: failures occur before ShowWindow/orderFront.
+if(NOT EMSCRIPTEN)
+    if(APPLE)
+        add_executable(jc_platform_alloc_test tests/test_platform_alloc_macos.m)
+    else()
+        add_executable(jc_platform_alloc_test tests/test_platform_alloc.c)
+    endif()
+    target_include_directories(jc_platform_alloc_test PRIVATE platform src/engine)
+    if(WIN32)
+        target_link_libraries(jc_platform_alloc_test PRIVATE gdi32 user32 winmm windowscodecs ole32 uuid)
+    elseif(APPLE)
+        target_link_libraries(jc_platform_alloc_test PRIVATE ${COCOA_FRAMEWORK} ${AUDIO_TOOLBOX})
+    else()
+        target_include_directories(jc_platform_alloc_test PRIVATE ${X11_INCLUDE_DIR} ${ALSA_INCLUDE_DIRS})
+        target_link_libraries(jc_platform_alloc_test PRIVATE ${X11_LIBRARIES} ${ALSA_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+    endif()
+endif()
+
 # ── The Windows screensaver ───────────────────────────────────────────────────
 # A SECOND TARGET rather than a renamed first one. Windows needs a .scr that is
 # a WINDOWS-subsystem binary, because a console-subsystem screensaver flashes a
@@ -262,7 +280,7 @@ endif()
 # grew a `minimize` option and a minimizeConsoleWindow() hack. But the console
 # build is what every test, `dump` and `help` depends on, so both are kept.
 #
-# Same sources, same objects, two link results.
+# The two executables compile the same source list with target-specific defines.
 if(WIN32 AND NOT EMSCRIPTEN)
     add_executable(jc_reborn_scr WIN32 ${COMMON_SOURCES} ${PLATFORM_SOURCES})
 
@@ -294,27 +312,18 @@ if(WIN32 AND NOT EMSCRIPTEN)
         OUTPUT_NAME "jc_reborn"
         SUFFIX ".scr")
 
-    # The archive has to travel with it, exactly as for the console build: an
-    # installed .scr runs from System32 and finds its data beside itself.
-    add_custom_command(TARGET jc_reborn_scr POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
-                "$<TARGET_FILE_DIR:jc_reborn_scr>/scrantic_data.zip"
-        COMMENT "Copying scrantic_data.zip next to jc_reborn.scr")
 endif()
 
-# Refresh data on every normal build, including artwork-only changes with no
-# link step. The POST_BUILD commands cover freshly linked explicit targets.
+# A prerequisite runs even when an explicit executable target needs no relink.
+# CMake 3.19 enables CMP0112 NEW: TARGET_FILE_DIR does not add a reverse
+# dependency on the executable, which would make this prerequisite cyclic.
 if(NOT EMSCRIPTEN)
-    add_custom_target(jc_runtime_data ALL
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-                "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
-                "$<TARGET_FILE_DIR:jc_reborn>/scrantic_data.zip"
-        DEPENDS jc_reborn "${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip"
-        COMMENT "Refreshing runtime artwork archive")
+    include(cmake/RuntimeData.cmake)
+    set(JC_RUNTIME_TARGETS jc_reborn)
     if(TARGET jc_reborn_scr)
-        add_dependencies(jc_runtime_data jc_reborn_scr)
+        list(APPEND JC_RUNTIME_TARGETS jc_reborn_scr)
     endif()
+    jc_add_runtime_data("${CMAKE_SOURCE_DIR}/assets/scrantic_data.zip" ${JC_RUNTIME_TARGETS})
 endif()
 
 # Installation

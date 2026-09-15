@@ -66,8 +66,9 @@ static struct TAdsResource *parseAdsResource(FILE *f)
 
     free(buffer);
 
-    adsResource->versionSize = readUint32(f);
-    adsResource->versionString = readUint8Block(f,5);
+    readUint32(f);  // Version chunk size; metadata is not used by the engine.
+    for (int i=0; i<5; i++)
+        readUint8(f);  // Consume the fixed version string with EOF checking.
 
     buffer = readUint8Block(f,4);
     if (memcmp(buffer,"ADS:",4))
@@ -75,10 +76,7 @@ static struct TAdsResource *parseAdsResource(FILE *f)
 
     free(buffer);
 
-    adsResource->adsUnknown1 = readUint8(f);
-    adsResource->adsUnknown2 = readUint8(f);
-    adsResource->adsUnknown3 = readUint8(f);
-    adsResource->adsUnknown4 = readUint8(f);
+    readUint32(f);  // Unused ADS header bytes.
 
     buffer = readUint8Block(f,4);
     if (memcmp(buffer,"RES:",4))
@@ -86,7 +84,7 @@ static struct TAdsResource *parseAdsResource(FILE *f)
 
     free(buffer);
 
-    adsResource->resSize = readUint32(f);
+    readUint32(f);  // RES chunk size.
     adsResource->numRes = readUint16(f);
 
     adsResource->res = safe_malloc(adsResource->numRes * sizeof(struct TAdsRes));
@@ -125,7 +123,7 @@ static struct TAdsResource *parseAdsResource(FILE *f)
 
     free(buffer);
 
-    adsResource->tagSize = readUint32(f);
+    readUint32(f);  // TAG chunk size.
     adsResource->numTags = readUint16(f);
 
     adsResource->tags = safe_malloc(adsResource->numTags * sizeof(struct TTags));
@@ -153,8 +151,8 @@ static struct TBmpResource *parseBmpResource(FILE *f)
 
     free(buffer);
 
-    bmpResource->width = readUint16(f);
-    bmpResource->height = readUint16(f);
+    readUint16(f);  // Header dimensions; each image has its own dimensions below.
+    readUint16(f);
 
     buffer = readUint8Block(f,4);
     if (memcmp(buffer,"INF:",4))
@@ -162,7 +160,7 @@ static struct TBmpResource *parseBmpResource(FILE *f)
 
     free(buffer);
 
-    bmpResource->dataSize = readUint32(f);
+    readUint32(f);  // INF chunk size.
     bmpResource->numImages = readUint16(f);
 
     bmpResource->widths = readUint16Block(f, bmpResource->numImages);
@@ -209,9 +207,9 @@ static struct TPalResource *parsePalResource(FILE *f)
 
     free(buffer);
 
-    palResource->size = readUint16(f);
-    palResource->unknown1 = readUint8(f);
-    palResource->unknown2 = readUint8(f);
+    readUint16(f);  // Palette header size.
+    readUint8(f);   // Unused palette header bytes.
+    readUint8(f);
 
     buffer = readUint8Block(f,4);
     if (memcmp(buffer,"VGA:",4))
@@ -248,8 +246,8 @@ static struct TScrResource *parseScrResource(FILE *f)
 
     free(buffer);
 
-    scrResource->totalSize = readUint16(f);
-    scrResource->flags = readUint16(f);
+    readUint16(f);  // Screen header size.
+    readUint16(f);  // Unused flags.
 
     buffer = readUint8Block(f,4);
     if (memcmp(buffer,"DIM:",4))
@@ -257,7 +255,7 @@ static struct TScrResource *parseScrResource(FILE *f)
 
     free(buffer);
 
-    scrResource->dimSize = readUint32(f);
+    readUint32(f);  // DIM chunk size.
     scrResource->width = readUint16(f);
     scrResource->height = readUint16(f);
 
@@ -301,8 +299,9 @@ static struct TTtmResource *parseTtmResource(FILE *f)
 
     free(buffer);
 
-    ttmResource->versionSize = readUint32(f);
-    ttmResource->versionString = readUint8Block(f,5);
+    readUint32(f);  // Version chunk size.
+    for (int i=0; i<5; i++)
+        readUint8(f);  // Consume the fixed version string with EOF checking.
 
     buffer = readUint8Block(f,4);
     if (memcmp(buffer,"PAG:",4))
@@ -310,9 +309,9 @@ static struct TTtmResource *parseTtmResource(FILE *f)
 
     free(buffer);
 
-    ttmResource->numPages = readUint32(f);
-    ttmResource->pagUnknown1 = readUint8(f);
-    ttmResource->pagUnknown2 = readUint8(f);
+    readUint32(f);  // Page count; playback uses tags scanned from the script.
+    readUint8(f);   // Unused PAG header bytes.
+    readUint8(f);
 
     buffer = readUint8Block(f,4);
     if (memcmp(buffer,"TT3:",4))
@@ -343,10 +342,7 @@ static struct TTtmResource *parseTtmResource(FILE *f)
 
     free(buffer);
 
-    ttmResource->ttiUnknown1 = readUint8(f);
-    ttmResource->ttiUnknown2 = readUint8(f);
-    ttmResource->ttiUnknown3 = readUint8(f);
-    ttmResource->ttiUnknown4 = readUint8(f);
+    readUint32(f);  // Unused TTI header bytes.
 
     buffer = readUint8Block(f,4);
     if (memcmp(buffer,"TAG:",4))
@@ -354,7 +350,7 @@ static struct TTtmResource *parseTtmResource(FILE *f)
 
     free(buffer);
 
-    ttmResource->tagSize = readUint32(f);
+    readUint32(f);  // TAG chunk size.
     ttmResource->numTags = readUint16(f);
 
     ttmResource->tags = safe_malloc(ttmResource->numTags * sizeof(struct TTags));
@@ -377,12 +373,8 @@ static void parseMapFile(const char *fileName)
     if (f_map == NULL)
         fatalError("Resources map file not found in zip: %s\n", fileName);
 
-    mapFile.unknown1 = readUint8(f_map);   // first 5 uint8s unknown
-    mapFile.unknown2 = readUint8(f_map);
-    mapFile.unknown3 = readUint8(f_map);
-    mapFile.unknown4 = readUint8(f_map);   // ? number of resources files available in this index
-    mapFile.unknown5 = readUint8(f_map);
-    mapFile.unknown6 = readUint8(f_map);
+    for (int i=0; i<6; i++)
+        readUint8(f_map);  // Unused map header bytes; still validate their presence.
 
     mapFile.resFileName = (char *) getString(f_map,13);
 
@@ -391,7 +383,7 @@ static void parseMapFile(const char *fileName)
     mapFile.Entries = safe_malloc(mapFile.numEntries * sizeof(struct TMapFileEntry));
 
     for (int i=0; i<mapFile.numEntries; i++) {
-        mapFile.Entries[i].length = readUint32(f_map);
+        readUint32(f_map);  // Unused index metadata; resource offsets follow.
         mapFile.Entries[i].offset = readUint32(f_map);
     }
 
@@ -399,9 +391,8 @@ static void parseMapFile(const char *fileName)
 }
 
 
-static void parseResourceFile(const char *filename)
+static void parseResourceFile(void)
 {
-    UNUSED(filename);
     FILE *f;
     char filepath[256];
 
@@ -430,7 +421,7 @@ static void parseResourceFile(const char *filename)
             free(rawName);
             mapFile.Entries[i].resName = safeName;
         }
-        mapFile.Entries[i].resSize = readUint32(f);
+        readUint32(f);  // Resource entry size; individual chunks are parsed below.
 
         char *resName = mapFile.Entries[i].resName;
 
@@ -504,7 +495,7 @@ static void parseResourceFile(const char *filename)
 void parseResourceFiles(const char *filename)
 {
     parseMapFile(filename);
-    parseResourceFile(filename);
+    parseResourceFile();
 }
 
 

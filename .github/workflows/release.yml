@@ -119,7 +119,7 @@ jobs:
 
       - run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq build-essential cmake libx11-dev libasound2-dev
+          sudo apt-get install -y -qq build-essential cmake python3 libx11-dev libasound2-dev xvfb xauth
 
       - name: build and verify decode parity
         run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/unix-build.sh
@@ -146,7 +146,7 @@ jobs:
   macos:
     name: macOS package
     needs: verify-version
-    runs-on: macos-latest
+    runs-on: macos-15-intel
     steps:
       - uses: actions/checkout@v7
         with:
@@ -159,6 +159,9 @@ jobs:
       # fixed. See BACKLOG.md for what is still unexercised there.
       - name: build and verify decode parity
         run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/unix-build.sh
+
+      - name: verify packaged Intel architecture and negative control
+        run: python3 -B tests/test_build_contracts.py --mac-binary /tmp/jcr/build-unix/jc_reborn
 
       - name: package
         run: |
@@ -193,27 +196,24 @@ jobs:
           # the tag, and publishes the result under the tag's name. The binaries
           # would not be the tagged source and nothing would say so.
           ref: ${{ github.event.inputs.tag || github.ref }}
-      # PINNED. A release must be reproducible from its tag, and with `latest`
-      # the web artifact depended on whatever emsdk HEAD happened to be that day.
-      # Keep this in step with the same pin in ci.yml.
-      - uses: mymindstorm/setup-emsdk@v14
-        with:
-          version: 6.0.9
-
-      - run: |
-          emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release
-          cmake --build build_web -j"$(nproc)"
-
-      - name: assemble servable page
-        run: cp index.html favicon.ico build_web/
+      # The same digest, SDK version check and artifact checks as Web CI.
+      - name: build with Emscripten 6.0.9 and verify preload artifacts
+        run: python3 -B tools/build_web.py --platform-probes smoke
 
       # Match the Web CI sequence before packaging the tested page.
-      - name: browser smoke and art selector regression
+      - name: browser smoke
         run: |
           python -m pip install --quiet playwright
           python -m playwright install --with-deps chromium
           python tests/web-smoke.py build_web
+
+      - name: Web platform regression
+        run: python3 -B tools/build_web.py --platform-probes regression --probes-only
+
+      - name: art selector and build contract regression
+        run: |
           python tests/web-art-controls.py build_web --mutation-check
+          python3 -B tests/test_build_contracts.py --mutations
 
       - name: package
         run: |
@@ -258,13 +258,13 @@ jobs:
             | Platform | Status |
             |---|---|
             | **Windows x64** | Screensaver (`.scr`) + console build. Passes the full gate: native smoke, screensaver/settings tests, art regression and decode corpus |
-            | **Linux x86_64** | Builds and decodes correctly. **Rendering is unverified** |
+            | **Linux x86_64** | Build/decode parity, real pthread controls and X11 resized-client pixel checks under Xvfb. Desktop fullscreen and physical audio remain separate checks |
             | **Web** | Passes browser runtime smoke and art selector regression in headless Chromium before packaging |
-            | **macOS x86_64** | Automated build and decode parity. Rendering, audio and input last checked by hand on Sequoia on 2026-09-14 |
+            | **macOS x86_64** | Verified Intel architecture, build/decode parity and Cocoa allocation/event checks. Rendering, audio and input last checked by hand on Sequoia on 2026-09-14 |
 
-            All packages are built from the selected release tag. Windows and Web
-            have automated rendering assertions; the Unix decode checks do not
-            exercise their window backends.
+            All packages are built from the selected release tag. Window-pixel,
+            backend-contract and headless decode tests establish different
+            behavior; none alone proves every scene or physical audio device.
 
             To rebuild on macOS from a source checkout, run
             `bash tools/build-macos.sh` with the Xcode Command Line Tools installed.

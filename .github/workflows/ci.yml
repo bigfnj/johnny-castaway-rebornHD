@@ -40,6 +40,23 @@ jobs:
         shell: pwsh
         run: .\gate.ps1
 
+      - name: native archive prerequisites
+        shell: pwsh
+        run: powershell.exe -NoProfile -File tests/Test-ArtAssetRefresh.ps1 -VerifyMutation
+
+      - name: actual application archive wiring and gate refusal
+        shell: pwsh
+        run: python -B tests/test_runtime_data_project.py --mutations
+
+      - uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: windows-build-fixture-evidence
+          path: |
+            build/cleanup-fixtures/**/*.log
+            build/cleanup-fixtures/**/*.json
+          if-no-files-found: ignore
+
       - uses: actions/upload-artifact@v7
         if: always()
         with:
@@ -59,7 +76,13 @@ jobs:
       - name: install toolchain
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq build-essential cmake libx11-dev libasound2-dev
+          sudo apt-get install -y -qq build-essential cmake ninja-build python3 libx11-dev libasound2-dev xvfb xauth
+
+      - name: build failure and archive dependency controls
+        run: |
+          python3 -B tests/test_unix_build_flow.py --mutations
+          python3 -B tests/test_runtime_data.py --generator "Unix Makefiles" --mutations
+          python3 -B tests/test_runtime_data.py --generator Ninja --mutations
 
       # Builds, then runs `dump` with no X server and compares every decoded file
       # against the manifest generated on Windows. A hash that differs is a real
@@ -70,7 +93,7 @@ jobs:
 
   macos:
     name: macOS (Clang, Cocoa + AudioToolbox)
-    runs-on: macos-latest
+    runs-on: macos-15-intel
     steps:
       - uses: actions/checkout@v7
 
@@ -84,24 +107,31 @@ jobs:
       # comparison against the Windows golden manifest works identically here and
       # catches any endianness, struct-packing or signed-char decode defect.
       #
-      # What this does NOT prove is that anything RENDERS. drawRect builds a
-      # CGImage from a top-down buffer and draws into an unflipped NSView, and
-      # whether that comes out upside down is still unsettled. See BACKLOG.md.
+      # Cocoa allocation/event probes accompany decode parity. Native scene
+      # presentation remains covered by the documented Sequoia manual review.
       - name: build and verify decode parity
         run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/unix-build.sh
 
-      # The OTHER macOS build path, verified rather than assumed.
-      #
-      # Homebrew refuses to install on Intel Macs now ("only supported on Apple
-      # Silicon processors"), and CMake on macOS usually arrives via Homebrew. So
-      # the route anyone helping us verify macOS rendering will actually take is
-      # clang alone, and an untested build script is worse than no build script:
-      # it fails in front of the person doing us a favour.
-      #
-      # Running it here means tools/build-macos.sh and the APPLE branch of
-      # CMakeLists.txt cannot drift apart without turning this job red.
+      - name: verify Intel release architecture and negative controls
+        run: python3 -B tests/test_build_contracts.py --mutations --mac-binary /tmp/jcr/build-unix/jc_reborn
+
+      # The development host is Windows; execute Cocoa guard mutations here
+      # after ordinary smoke/regression so their detection is proved on macOS.
+      - name: rebuilt Cocoa guard negative controls
+        run: python3 -B tests/test_platform_mutations.py --platform macos --output /tmp/jcr/macos-mutations
+
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: macos-mutation-evidence
+          path: /tmp/jcr/macos-mutations/mutation-report.json
+          if-no-files-found: warn
+
+      # Keep the documented direct-Clang path working alongside CMake.
       - name: build with clang only (no CMake, no Homebrew)
-        run: bash tools/build-macos.sh
+        run: |
+          bash tools/build-macos.sh
+          python3 -B tools/verify_macos_arch.py jc_reborn
 
   web:
     name: Web (Emscripten)
@@ -109,40 +139,11 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # PINNED, not `latest`. `latest` makes the action fetch emsdk HEAD on every
-      # run, which failed twice on 2026-09-14 with HTTP 504 from GitHub on
-      # commits that touched no web code at all. A red CI that has nothing to do
-      # with the change teaches people to hit re-run instead of reading, which is
-      # how a real failure eventually gets waved through.
-      #
-      # It also made the toolchain a moving target: a build that passed last week
-      # could fail today because upstream moved, with nothing in this repo's
-      # history to explain it. 6.0.9 is what `latest` resolved to on every green
-      # run so far. Bump it deliberately.
-      - uses: mymindstorm/setup-emsdk@v14
-        with:
-          version: 6.0.9
-
-      - name: build
-        run: |
-          emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release
-          cmake --build build_web -j"$(nproc)"
-
-      # The linker emits jc_reborn.js and, via --preload-file, jc_reborn.data.
-      # Asserting all three exist catches a silently half-linked build, which a
-      # bare `cmake --build` exit code does not.
-      - name: verify artifacts
-        run: |
-          set -e
-          for f in jc_reborn.js jc_reborn.wasm jc_reborn.data; do
-            test -s "build_web/$f" || { echo "FAIL missing or empty: $f"; exit 1; }
-            echo "ok   $f ($(stat -c%s "build_web/$f") bytes)"
-          done
-
-      - name: assemble servable page
-        # index.html and favicon.ico are sources, not build output, and nothing
-        # in the build copies them - so build_web/ on its own is not servable.
-        run: cp index.html favicon.ico build_web/
+      # The official SDK image is pinned by digest in the shared builder. It
+      # avoids setup-emsdk's GitHub/codeload download and action Node runtime.
+      # Only Docker image acquisition retries; compiler/test failures stop.
+      - name: build with Emscripten 6.0.9 and verify preload artifacts
+        run: python3 -B tools/build_web.py --platform-probes smoke
 
       # "It compiled" was the only bar this target ever had to clear, and it was
       # clearing it while being silent and able to freeze the tab. Neither is
@@ -152,7 +153,14 @@ jobs:
           python -m pip install --quiet playwright
           python -m playwright install --with-deps chromium
           python tests/web-smoke.py build_web
+
+      - name: Web platform regression
+        run: python3 -B tools/build_web.py --platform-probes regression --probes-only
+
+      - name: art selector and build contract regression
+        run: |
           python tests/web-art-controls.py build_web --mutation-check
+          python3 -B tests/test_build_contracts.py --mutations
 
       - uses: actions/upload-artifact@v7
         with:

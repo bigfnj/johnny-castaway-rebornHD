@@ -21,28 +21,6 @@
 
 static int wic_initialized = 0;
 
-static int utf8_to_wide(const char *in, wchar_t **outWide)
-{
-    if (!in || !outWide)
-        return 0;
-
-    int wlen = MultiByteToWideChar(CP_UTF8, 0, in, -1, NULL, 0);
-    if (wlen <= 0)
-        return 0;
-
-    wchar_t *wbuf = (wchar_t*)malloc((size_t)wlen * sizeof(wchar_t));
-    if (!wbuf)
-        return 0;
-
-    if (MultiByteToWideChar(CP_UTF8, 0, in, -1, wbuf, wlen) != wlen) {
-        free(wbuf);
-        return 0;
-    }
-
-    *outWide = wbuf;
-    return 1;
-}
-
 PlatformSurface *platformLoadPNGFromMemory(const uint8 *data, size_t dataSize)
 {
     if (!data || dataSize == 0)
@@ -117,6 +95,7 @@ PlatformSurface *platformLoadPNGFromMemory(const uint8 *data, size_t dataSize)
         }
 
         sfc = platformCreateSurfaceFrom(pixels, (int)w, (int)h, (int)stride);
+        if (!sfc) free(pixels);
     }
     goto mem_cleanup;
 

@@ -7,10 +7,8 @@
 #
 #      Homebrew on macOS is only supported on Apple Silicon processors!
 #
-#  Since this project is unverified on macOS and we are actively asking people
-#  with Macs to build it and report what they see, "first install a package
-#  manager that will not install" is a poor first step. Every Mac with the
-#  Command Line Tools already has clang, and that is all this needs.
+#  Every Mac with the Command Line Tools already has clang, so this remains
+#  a build path without CMake or a package manager.
 #
 #  This mirrors exactly what CMakeLists.txt does for APPLE: the same sources, the
 #  same four include directories, PLATFORM_MACOS, -x objective-c for the single
@@ -72,6 +70,5 @@ echo
 echo "Run it windowed:"
 echo "    ./$OUT window nosound hotkeys"
 echo
-echo "Esc quits. WHAT TO LOOK FOR: sky at the TOP, sea and island BELOW."
-echo "macOS rendering has never been verified by anyone - if the island is"
-echo "upside down, that is the open question in BACKLOG.md and worth reporting."
+echo "Esc quits. Rendering, colour, audio and input were checked by hand on"
+echo "Sequoia on 2026-09-14. See BACKLOG.md for remaining platform checks."

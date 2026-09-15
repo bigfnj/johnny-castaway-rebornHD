@@ -45,17 +45,18 @@ case "$(uname -s)" in
 esac
 
 echo "== toolchain ($OSNAME) =="
-if ! command -v cmake >/dev/null 2>&1; then
+if ! command -v cmake >/dev/null 2>&1 || ! command -v python3 >/dev/null 2>&1 ||
+    { [ "$OSNAME" = Linux ] && ! command -v xvfb-run >/dev/null 2>&1; }; then
     if [ "$OSNAME" = macOS ]; then
         # Every GitHub macOS runner ships cmake and the Xcode command line tools.
         # If it is missing we are somewhere unexpected, and guessing at a package
         # manager would hide that rather than report it.
-        echo "FAIL cmake not found on a macOS host; install the Xcode command line tools"
+        echo "FAIL cmake or python3 not found on a macOS host; install the build/test prerequisites"
         exit 1
     fi
     export DEBIAN_FRONTEND=noninteractive
     apt-get update -qq
-    apt-get install -y -qq build-essential cmake libx11-dev libasound2-dev >/dev/null
+    apt-get install -y -qq build-essential cmake python3 libx11-dev libasound2-dev xvfb xauth >/dev/null
 fi
 cc --version | head -1
 cmake --version | head -1
@@ -71,7 +72,15 @@ cd "$WORK"
 echo
 echo "== build =="
 cmake -S . -B build-unix -DCMAKE_BUILD_TYPE=Release >/dev/null
-cmake --build build-unix -j"$(ncpu)" 2>&1 | tee /tmp/build.log | grep -E 'error|warning' || true
+if cmake --build build-unix -j"$(ncpu)" > /tmp/build.log 2>&1; then
+    # No diagnostic matches is a successful, warning-free build.
+    grep -E 'error|warning' /tmp/build.log || true
+else
+    build_status=$?
+    cat /tmp/build.log
+    echo "FAIL tests/unix-build.sh: CMake build failed (status $build_status; /tmp/build.log)"
+    exit "$build_status"
+fi
 
 if ! [ -x build-unix/jc_reborn ]; then
     echo "FAIL no binary produced"
@@ -82,6 +91,33 @@ echo "OK   built build-unix/jc_reborn"
 echo
 echo "== portable PNG smoke: soft alpha reaches the real decoder =="
 "$WORK"/build-unix/jc_png_test
+
+echo
+echo "== RESOURCE decoder smoke =="
+python3 "$WORK/tests/test_uncompress.py" --probe "$WORK/build-unix/jc_uncompress_test" --engine "$WORK/build-unix/jc_reborn" --phase smoke
+
+if [ "$OSNAME" = macOS ]; then
+    PLATFORM_TEST="$WORK/tests/run_macos_platform.sh"
+else
+    PLATFORM_TEST="$WORK/tests/run_linux_platform.sh"
+fi
+echo
+echo "== native platform smoke =="
+SRC="$WORK" OUT="$WORK/build-unix/platform-tests" bash "$PLATFORM_TEST" --phase smoke
+
+echo
+echo "== RESOURCE decoder regression =="
+python3 "$WORK/tests/test_uncompress.py" --probe "$WORK/build-unix/jc_uncompress_test" --engine "$WORK/build-unix/jc_reborn"
+
+echo
+echo "== native platform regression =="
+SRC="$WORK" OUT="$WORK/build-unix/platform-tests" bash "$PLATFORM_TEST" --phase regression
+
+if [ "$OSNAME" = Linux ]; then
+    echo
+    echo "== required graphics-surface failure regression =="
+    python3 "$WORK/tests/test_graphics_alloc.py" --output "$WORK/build-unix/graphics-tests"
+fi
 
 echo
 echo "== dump, headless, no window server =="

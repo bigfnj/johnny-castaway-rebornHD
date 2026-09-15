@@ -87,10 +87,7 @@ int main(int argc, char **argv)
            !islandState.lowTide, islandState.xPos, islandState.yPos, islandState.raft, argv[2]);
     if (backgroundOnly) {
         struct TTtmThread empty[MAX_TTM_THREADS] = {{0}};
-        struct TTtmThread background = {0};
-        background.isRunning = TTM_STATIC_LAYER;
-        background.ttmLayer = grBackgroundSfc;
-        grUpdateDisplay(&background, empty, NULL, NULL);
+        grUpdateDisplay(empty, NULL, NULL);
     } else {
         /* Select an existing direct path through the real calcPath routine.
          * This changes only the test's path RNG seed after island setup. */

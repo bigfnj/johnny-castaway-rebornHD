@@ -71,7 +71,7 @@ static void grReleaseScreen(void)
 }
 
 
-static void grReleaseSavedLayer(void)
+void grReleaseSavedLayer(void)
 {
     platformFreeSurface(grSavedZonesLayer);
     grSavedZonesLayer = NULL;
@@ -245,25 +245,14 @@ static void grCaptureFrame(void)
 
 void graphicsEnd(void)
 {
-    /*  NO platformShutdown() here. eventsInit registers atexit(platformShutdown),
-     *  and every caller of this function exits immediately afterwards, so it ran
-     *  twice on every normal exit.
-     *
-     *  Checked before removing rather than assumed: the second call was harmless
-     *  on all four backends - Windows re-unregisters a window class that is
-     *  already gone and ignores the FALSE, Linux guards on `display` and NULLs
-     *  it, macOS releases an already-nil eventQueue, and the Web one is empty. So
-     *  this is redundancy, not a double-free, and removing it is a readability
-     *  fix rather than a bug fix.
-     *
-     *  The atexit registration is the one kept, because it also covers the paths
-     *  that never reach here: fatalError exits directly, and so does any future
-     *  abrupt teardown.
-     */
-    grCaptureFrame();
-    islandRelease();
+    /* Capture before releasing graphics owners. Platform shutdown stays with
+     * eventsInit's atexit registration, which also covers fatalError exits. */
+    if (platform_window) grCaptureFrame();
+    grReleaseSavedLayer();
+    grReleaseScreen();
     artStyleReportUsage();
     platformDestroyWindow(platform_window);
+    platform_window = NULL;
 }
 
 
@@ -290,13 +279,10 @@ void grToggleFullScreen(void)
 }
 
 
-void grUpdateDisplay(struct TTtmThread *ttmBackgroundThread,
-                     struct TTtmThread *ttmThreads,
+void grUpdateDisplay(struct TTtmThread *ttmThreads,
                      struct TTtmThread *ttmHolidayThread,
                      struct TTtmThread *ttmCloudsThread)
 {
-    UNUSED(ttmBackgroundThread);
-
     PlatformSurface* windowSurface = platformGetWindowSurface(platform_window);
 
     // Blit the background
@@ -349,6 +335,7 @@ PlatformSurface *grNewLayer(void)
     // Layers are drawn over the background, so they need real transparency.
     // We use per-pixel alpha (premultiplied BGRA / PBGRA), not a magenta color-key.
     PlatformSurface *sfc = platformCreateSurface(grRenderWidth, grRenderHeight);
+    if (!sfc) fatalError("Could not create drawing layer: %s", platformGetError());
     PlatformRect dest = { 0, 0, grRenderWidth, grRenderHeight };
     platformFillRect(sfc, &dest, 0, 0, 0, 0);  // fully transparent
     return sfc;
@@ -710,11 +697,6 @@ void grLoadScreen(const char *strArg)
 {
     struct TScrResource *scrResource = findScrResource(strArg);
 
-    if (scrResource == NULL) {
-        printf("Requested SCR resource not found: %s\n", strArg);
-        fatalError("Screen resource not found");
-    }
-
     if (scrResource->width > SCREEN_WIDTH || scrResource->height > SCREEN_HEIGHT)
         fatalError("Screen resource is too big");
 
@@ -783,6 +765,10 @@ void grLoadScreen(const char *strArg)
     }
 
     grBackgroundSfc = platformCreateSurfaceFrom(outData, outW, outH, outW * 4);
+    if (!grBackgroundSfc) {
+        free(outData);
+        fatalError("Could not create background surface: %s", platformGetError());
+    }
 }
 
 
@@ -817,6 +803,10 @@ void grInitEmptyBackground(void)
     }
 
     grBackgroundSfc = platformCreateSurfaceFrom((void*)data, outW, outH, 4 * outW);
+    if (!grBackgroundSfc) {
+        free(data);
+        fatalError("Could not create empty background: %s", platformGetError());
+    }
 }
 
 
@@ -867,11 +857,6 @@ void grLoadBmp(struct TTtmSlot *ttmSlot, uint16 slotNo, const char *strArg)
     }
 
     struct TBmpResource *bmpResource = findBmpResource(strArg);
-    if (bmpResource == NULL) {
-        printf("Requested BMP resource not found: %s\n", strArg);
-        fatalError("BMP resource not found");
-    }
-
     /*  numImages is a uint16 straight out of the file and sprites[] holds
      *  MAX_SPRITES_PER_BMP pointers, so the loop below wrote past the slot as
      *  soon as a BMP declared more images than that - and numSprites was set
@@ -968,6 +953,10 @@ void grLoadBmp(struct TTtmSlot *ttmSlot, uint16 slotNo, const char *strArg)
         inPtr += spriteBytes;
 
         PlatformSurface *surface = platformCreateSurfaceFrom((void*)outData, outW, outH, 4 * outW);
+        if (!surface) {
+            free(outData);
+            fatalError("Could not create sprite surface: %s", platformGetError());
+        }
         ttmSlot->sprites[slotNo][image] = surface;
     }
 }

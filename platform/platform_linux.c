@@ -12,12 +12,15 @@
 #include <time.h>
 #include <unistd.h>
 #include <pthread.h>
+#include <stdatomic.h>
+#include <limits.h>
+#include <stdint.h>
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
 #include <alsa/asoundlib.h>
 
-static const char* lastError = "";
+static _Atomic(const char*) lastError = "";
 static Display* display = NULL;
 static struct timespec startTime;
 
@@ -39,6 +42,7 @@ struct PlatformWindow {
     Window window;
     GC gc;
     XImage* ximage;
+    XImage* presentationImage;
     PlatformSurface* surface;
     int isFullscreen;
     Atom wmDeleteWindow;
@@ -80,12 +84,17 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     if (!display) return NULL;
 
     PlatformWindow* window = (PlatformWindow*)malloc(sizeof(PlatformWindow));
+    if (!window) { lastError = "Out of memory allocating window"; return NULL; }
+    memset(window, 0, sizeof(*window));
+    window->surface = platformCreateSurface(width, height);
+    if (!window->surface) { free(window); return NULL; }
     int screen = DefaultScreen(display);
 
     window->window = XCreateSimpleWindow(display, RootWindow(display, screen),
                                         0, 0, width, height, 0,
                                         BlackPixel(display, screen),
-                                        BlackPixel(display, screen));
+                                         BlackPixel(display, screen));
+    if (!window->window) { lastError = "Failed to create X window"; goto fail; }
 
     XSelectInput(display, window->window,
                 KeyPressMask | KeyReleaseMask | ExposureMask |
@@ -100,8 +109,8 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     XFlush(display);
 
     window->gc = XCreateGC(display, window->window, 0, NULL);
+    if (!window->gc) { lastError = "Failed to create X graphics context"; goto fail; }
 
-    window->surface = platformCreateSurface(width, height);
     window->isFullscreen = 0;
 
     Visual* visual = DefaultVisual(display, screen);
@@ -110,6 +119,7 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     window->ximage = XCreateImage(display, visual, depth, ZPixmap, 0,
                                   (char*)window->surface->pixels,
                                   width, height, 32, window->surface->pitch);
+    if (!window->ximage) { lastError = "Failed to create X image"; goto fail; }
 
     mainWindow = window;
 
@@ -118,6 +128,9 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     }
 
     return window;
+fail:
+    platformDestroyWindow(window);
+    return NULL;
 }
 
 /**
@@ -129,6 +142,7 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
  */
 void platformDestroyWindow(PlatformWindow* window) {
     if (window) {
+        if (window->presentationImage) XDestroyImage(window->presentationImage);
         if (window->ximage) {
             window->ximage->data = NULL;  // Prevent XDestroyImage from freeing our pixels
             XDestroyImage(window->ximage);
@@ -139,7 +153,7 @@ void platformDestroyWindow(PlatformWindow* window) {
         if (window->surface) {
             platformFreeSurface(window->surface);
         }
-        XDestroyWindow(display, window->window);
+        if (window->window) XDestroyWindow(display, window->window);
 
         /*  Clear the singleton BEFORE freeing, exactly as the Windows backend
          *  does. platformShowCursor and platformPollEvent both reach through
@@ -220,9 +234,59 @@ void platformToggleFullscreen(PlatformWindow* window) {
  */
 void platformUpdateWindow(PlatformWindow* window) {
     if (!window || !window->ximage) return;
-
-    XPutImage(display, window->window, window->gc, window->ximage,
-             0, 0, 0, 0, window->surface->width, window->surface->height);
+    XWindowAttributes attr;
+    if (!XGetWindowAttributes(display, window->window, &attr)) {
+        lastError = "Failed to read X window dimensions";
+        return;
+    }
+    if (attr.width <= 0 || attr.height <= 0) return;
+    PlatformSurface *source = window->surface;
+    XImage *image = window->ximage;
+    if (attr.width != source->width || attr.height != source->height) {
+        if (!window->presentationImage || window->presentationImage->width != attr.width ||
+            window->presentationImage->height != attr.height) {
+            if (attr.width > INT_MAX / 4 || (size_t)attr.height > SIZE_MAX / ((size_t)attr.width * 4)) {
+                lastError = "X window dimensions exceed presentation buffer size";
+                return;
+            }
+            char *pixels = (char *)malloc((size_t)attr.width * (size_t)attr.height * 4);
+            if (!pixels) { lastError = "Out of memory allocating presentation pixels"; return; }
+            int screen = DefaultScreen(display);
+            XImage *replacement = XCreateImage(display, DefaultVisual(display, screen),
+                DefaultDepth(display, screen), ZPixmap, 0, pixels,
+                attr.width, attr.height, 32, attr.width * 4);
+            if (!replacement) {
+                free(pixels);
+                lastError = "Failed to create presentation X image";
+                return;
+            }
+            if (window->presentationImage) XDestroyImage(window->presentationImage);
+            window->presentationImage = replacement;
+        }
+        image = window->presentationImage;
+        memset(image->data, 0, (size_t)image->bytes_per_line * (size_t)image->height);
+        int drawW = attr.width;
+        int drawH = (int)((int64_t)source->height * drawW / source->width);
+        if (drawH > attr.height) {
+            drawH = attr.height;
+            drawW = (int)((int64_t)source->width * drawH / source->height);
+        }
+        if (drawW < 1) drawW = 1;
+        if (drawH < 1) drawH = 1;
+        int left = (attr.width - drawW) / 2;
+        int top = (attr.height - drawH) / 2;
+        /* Presentation only: preserve the engine surface and source colors. */
+        for (int y = 0; y < drawH; y++) {
+            int sy = (int)((int64_t)y * source->height / drawH);
+            for (int x = 0; x < drawW; x++) {
+                int sx = (int)((int64_t)x * source->width / drawW);
+                memcpy(image->data + (size_t)(top + y) * image->bytes_per_line + (left + x) * 4,
+                       source->pixels + (size_t)sy * source->pitch + sx * 4, 4);
+            }
+        }
+    }
+    XPutImage(display, window->window, window->gc, image,
+             0, 0, 0, 0, attr.width, attr.height);
     XFlush(display);
 }
 
@@ -240,11 +304,17 @@ PlatformSurface* platformGetWindowSurface(PlatformWindow* window) {
 // Surface management
 PlatformSurface* platformCreateSurface(int width, int height) {
     PlatformSurface* surface = (PlatformSurface*)malloc(sizeof(PlatformSurface));
+    if (!surface) { lastError = "Out of memory allocating surface"; return NULL; }
     surface->width = width;
     surface->height = height;
     surface->bytesPerPixel = 4;
     surface->pitch = width * 4;
     surface->pixels = (uint8*)calloc(width * height, 4);
+    if (!surface->pixels) {
+        free(surface);
+        lastError = "Out of memory allocating surface pixels";
+        return NULL;
+    }
     surface->hasColorKey = 0;
     surface->clipRect.x = 0;
     surface->clipRect.y = 0;
@@ -263,6 +333,7 @@ PlatformSurface* platformCreateSurface(int width, int height) {
  */
 PlatformSurface* platformCreateSurfaceFrom(void* pixels, int width, int height, int pitch) {
     PlatformSurface* surface = (PlatformSurface*)malloc(sizeof(PlatformSurface));
+    if (!surface) { lastError = "Out of memory allocating surface wrapper"; return NULL; }
     surface->width = width;
     surface->height = height;
     surface->bytesPerPixel = 4;
@@ -539,61 +610,59 @@ int platformGetSurfaceBytesPerPixel(PlatformSurface* surface) {
 int platformPollEvent(PlatformEvent* event) {
     if (!display) return 0;
 
-    if (!XPending(display)) return 0;
-
-    XEvent xev;
-    XNextEvent(display, &xev);
-
     event->type = EVENT_NONE;
+    while (XPending(display)) {
+        XEvent xev;
+        XNextEvent(display, &xev);
+        switch (xev.type) {
+            case KeyPress: {
+                event->type = EVENT_KEY_DOWN;
+                KeySym keysym = XLookupKeysym(&xev.xkey, 0);
 
-    switch (xev.type) {
-        case KeyPress: {
-            event->type = EVENT_KEY_DOWN;
-            KeySym keysym = XLookupKeysym(&xev.xkey, 0);
+                switch (keysym) {
+                    case XK_space: event->data.key.keycode = KEY_SPACE; break;
+                    case XK_Return: event->data.key.keycode = KEY_RETURN; break;
+                    case XK_Escape: event->data.key.keycode = KEY_ESCAPE; break;
+                    case XK_m: case XK_M: event->data.key.keycode = KEY_M; break;
+                    default: event->data.key.keycode = KEY_UNKNOWN; break;
+                }
 
-            switch (keysym) {
-                case XK_space: event->data.key.keycode = KEY_SPACE; break;
-                case XK_Return: event->data.key.keycode = KEY_RETURN; break;
-                case XK_Escape: event->data.key.keycode = KEY_ESCAPE; break;
-                case XK_m: case XK_M: event->data.key.keycode = KEY_M; break;
-                default: event->data.key.keycode = KEY_UNKNOWN; break;
-            }
-
-            event->data.key.modifiers = 0;
-            if (xev.xkey.state & Mod1Mask) {
-                event->data.key.modifiers |= KEYMOD_LALT;
-            }
-            return 1;
-        }
-
-        case KeyRelease: {
-            event->type = EVENT_KEY_UP;
-            KeySym ks = XLookupKeysym(&xev.xkey, 0);
-            switch (ks) {
-                case XK_space: event->data.key.keycode = KEY_SPACE; break;
-                case XK_Return: event->data.key.keycode = KEY_RETURN; break;
-                case XK_Escape: event->data.key.keycode = KEY_ESCAPE; break;
-                case XK_m: case XK_M: event->data.key.keycode = KEY_M; break;
-                default: event->data.key.keycode = KEY_UNKNOWN; break;
-            }
-            event->data.key.modifiers = 0;
-            if (xev.xkey.state & Mod1Mask)
-                event->data.key.modifiers |= KEYMOD_LALT;
-            return 1;
-        }
-
-        case Expose:
-            event->type = EVENT_WINDOW_REFRESH;
-            return 1;
-
-        case ClientMessage:
-            if (mainWindow && (Atom)xev.xclient.data.l[0] == mainWindow->wmDeleteWindow) {
-                event->type = EVENT_QUIT;
+                event->data.key.modifiers = 0;
+                if (xev.xkey.state & Mod1Mask) {
+                    event->data.key.modifiers |= KEYMOD_LALT;
+                }
                 return 1;
             }
-            break;
-    }
 
+            case KeyRelease: {
+                event->type = EVENT_KEY_UP;
+                KeySym ks = XLookupKeysym(&xev.xkey, 0);
+                switch (ks) {
+                    case XK_space: event->data.key.keycode = KEY_SPACE; break;
+                    case XK_Return: event->data.key.keycode = KEY_RETURN; break;
+                    case XK_Escape: event->data.key.keycode = KEY_ESCAPE; break;
+                    case XK_m: case XK_M: event->data.key.keycode = KEY_M; break;
+                    default: event->data.key.keycode = KEY_UNKNOWN; break;
+                }
+                event->data.key.modifiers = 0;
+                if (xev.xkey.state & Mod1Mask)
+                    event->data.key.modifiers |= KEYMOD_LALT;
+                return 1;
+            }
+
+            case Expose:
+                event->type = EVENT_WINDOW_REFRESH;
+                return 1;
+
+            case ClientMessage:
+                if (mainWindow && (Atom)xev.xclient.data.l[0] == mainWindow->wmDeleteWindow) {
+                    event->type = EVENT_QUIT;
+                    return 1;
+                }
+                break;
+        }
+
+    }
     return 0;
 }
 
@@ -630,11 +699,13 @@ static uint8* audioBuffer = NULL;
 static int audioBufferSize = 0;
 static int audioFrames = 0;
 static pthread_t audioThread;
-static int audioThreadRunning = 0;
+/* Creation owns a joinable thread even after its worker has stopped. */
+static int audioThreadCreated = 0;
+static atomic_int audioThreadRunning = 0;
 
 static void* audioThreadFunc(void* arg) {
     UNUSED(arg);
-    while (audioThreadRunning) {
+    while (atomic_load(&audioThreadRunning)) {
         if (audioCallback) {
             snd_pcm_sframes_t written;
 
@@ -661,7 +732,7 @@ static void* audioThreadFunc(void* arg) {
                 if (written < 0) {
                     /* Unrecoverable: stop feeding rather than spin on the error. */
                     lastError = "ALSA write failed and could not be recovered";
-                    audioThreadRunning = 0;
+                    atomic_store(&audioThreadRunning, 0);
                 }
             }
         } else {
@@ -686,9 +757,14 @@ int platformInitAudio(void) {
  * Closes the audio device and stops any active playback.
  */
 void platformCloseAudio(void) {
-    if (audioThreadRunning) {
-        audioThreadRunning = 0;
-        pthread_join(audioThread, NULL);
+    atomic_store(&audioThreadRunning, 0);
+    if (audioThreadCreated) {
+        if (pthread_join(audioThread, NULL) != 0) {
+            /* A failed join does not prove the worker released its buffer. */
+            lastError = "Failed to join the audio thread";
+            return;
+        }
+        audioThreadCreated = 0;
     }
 
     if (pcmHandle) {
@@ -701,6 +777,9 @@ void platformCloseAudio(void) {
         free(audioBuffer);
         audioBuffer = NULL;
     }
+    audioBufferSize = audioFrames = 0;
+    audioCallback = NULL;
+    audioUserData = NULL;
 }
 
 /**
@@ -712,6 +791,11 @@ void platformCloseAudio(void) {
  */
 int platformOpenAudio(PlatformAudioSpec* spec) {
     int err;
+
+    if (audioThreadCreated || pcmHandle) {
+        lastError = "Audio device is already open";
+        return -1;
+    }
 
     err = snd_pcm_open(&pcmHandle, "default", SND_PCM_STREAM_PLAYBACK, 0);
     if (err < 0) {
@@ -750,6 +834,9 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
         lastError = "Out of memory allocating the audio buffer";
         snd_pcm_close(pcmHandle);
         pcmHandle = NULL;
+        audioBufferSize = audioFrames = 0;
+        audioCallback = NULL;
+        audioUserData = NULL;
         return -1;
     }
 
@@ -758,16 +845,20 @@ int platformOpenAudio(PlatformAudioSpec* spec) {
      *  set, the device open and the buffer allocated while the caller was told
      *  the open succeeded and no thread ever fed a sample.
      */
-    audioThreadRunning = 1;
+    atomic_store(&audioThreadRunning, 1);
     if (pthread_create(&audioThread, NULL, audioThreadFunc, NULL) != 0) {
         lastError = "Failed to start the audio thread";
-        audioThreadRunning = 0;
+        atomic_store(&audioThreadRunning, 0);
         free(audioBuffer);
         audioBuffer = NULL;
         snd_pcm_close(pcmHandle);
         pcmHandle = NULL;
+        audioBufferSize = audioFrames = 0;
+        audioCallback = NULL;
+        audioUserData = NULL;
         return -1;
     }
+    audioThreadCreated = 1;
 
     return 0;
 }

@@ -114,7 +114,7 @@ if (-not (Test-Path -LiteralPath $exe)) {
 $zip = Join-Path (Split-Path $exe -Parent) 'scrantic_data.zip'
 if (-not (Test-Path -LiteralPath $zip)) {
     Write-Host "FAIL scrantic_data.zip is not next to the binary ($zip)" -ForegroundColor Red
-    Write-Host '     the POST_BUILD copy in CMakeLists.txt did not run' -ForegroundColor Red
+    Write-Host '     build the executable target to run its jc_runtime_data prerequisite' -ForegroundColor Red
     exit 1
 }
 
@@ -181,7 +181,45 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 
+Write-Step 'RESOURCE decoder smoke'
+$decoderProbe = Join-Path (Split-Path $exe -Parent) 'jc_uncompress_test.exe'
+& python -B (Join-Path $repo 'tests\test_uncompress.py') --probe $decoderProbe --engine $exe --phase smoke
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'GATE FAILED: decoder smoke failed; regression was not run' -ForegroundColor Red
+    exit 1
+}
+
+Write-Step 'engine ownership smoke'
+$lifecycleProbe = Join-Path (Split-Path $exe -Parent) 'jc_lifecycle_test.exe'
+& python -B (Join-Path $repo 'tests\test_lifecycle.py') --exe $lifecycleProbe --phase smoke
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'GATE FAILED: lifecycle smoke failed; regression was not run' -ForegroundColor Red
+    exit 1
+}
+
+Write-Step 'platform constructor smoke'
+$platformProbe = Join-Path (Split-Path $exe -Parent) 'jc_platform_alloc_test.exe'
+& powershell.exe -NoProfile -ExecutionPolicy Bypass `
+    -File (Join-Path $repo 'tests\Test-PlatformAlloc.ps1') -Exe $platformProbe -Phase Smoke
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'GATE FAILED: platform smoke failed; regression was not run' -ForegroundColor Red
+    exit 1
+}
+
 if (-not $SmokeOnly) {
+    Write-Step 'regression (platform constructors and failures)'
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass `
+        -File (Join-Path $repo 'tests\Test-PlatformAlloc.ps1') -Exe $platformProbe -Phase Regression
+    if ($LASTEXITCODE -ne 0) { $failed = $true }
+
+    Write-Step 'regression (RESOURCE decoder completeness)'
+    & python -B (Join-Path $repo 'tests\test_uncompress.py') --probe $decoderProbe --engine $exe
+    if ($LASTEXITCODE -ne 0) { $failed = $true }
+
+    Write-Step 'regression (engine ownership and cleanup)'
+    & python -B (Join-Path $repo 'tests\test_lifecycle.py') --exe $lifecycleProbe
+    if ($LASTEXITCODE -ne 0) { $failed = $true }
+
     Write-Step 'regression (art-style pixels and configuration)'
     & powershell.exe -NoProfile -ExecutionPolicy Bypass `
         -File (Join-Path $repo 'tests\Invoke-ArtStyleTests.ps1') -Exe $exe -Phase Regression

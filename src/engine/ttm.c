@@ -84,11 +84,6 @@ uint32 ttmFindTag(struct TTtmSlot *ttmSlot, uint16 reqdTag)
 void ttmLoadTtm(struct TTtmSlot *ttmSlot, const char *ttmName)
 {
     struct TTtmResource *ttmResource = findTtmResource(ttmName);
-    if (ttmResource == NULL) {
-        fatalError("TTM resource '%s' not found", ttmName);
-        return;
-    }
-
     debugMsg("---- Loading %s", ttmResource->resName);
 
     ttmSlot->data     = ttmResource->uncompressedData;
@@ -212,8 +207,7 @@ void ttmResetSlot(struct TTtmSlot *ttmSlot)
     ttmSlot->dataSize = 0;
 
     for (int i=0; i < MAX_BMP_SLOTS; i++) {
-        if (ttmSlot->numSprites[i])
-            grReleaseBmp(ttmSlot, (uint16)i);
+        grReleaseBmp(ttmSlot, (uint16)i);
     }
 }
 

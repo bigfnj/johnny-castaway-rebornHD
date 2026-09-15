@@ -35,7 +35,6 @@ struct PlatformWindow {
     int isFullscreen;
 };
 
-static PlatformWindow* mainWindow = NULL;
 static PlatformEvent pendingEvents[32];
 static int pendingEventCount = 0;
 
@@ -94,13 +93,14 @@ void platformSetPreviewParent(void* parentWindowHandle) {
 // Window management
 PlatformWindow* platformCreateWindow(const char* title, int width, int height, int fullscreen) {
     PlatformWindow* window = (PlatformWindow*)malloc(sizeof(PlatformWindow));
+    if (!window) { lastError = "Out of memory allocating window"; return NULL; }
     window->canvasId = "#canvas";
     window->surface = platformCreateSurface(width, height);
+    if (!window->surface) { free(window); return NULL; }
     window->isFullscreen = 0;
 
     emscripten_set_canvas_element_size(window->canvasId, width, height);
 
-    mainWindow = window;
 
     if (fullscreen) {
         platformToggleFullscreen(window);
@@ -262,11 +262,17 @@ PlatformSurface* platformGetWindowSurface(PlatformWindow* window) {
 // Surface management
 PlatformSurface* platformCreateSurface(int width, int height) {
     PlatformSurface* surface = (PlatformSurface*)malloc(sizeof(PlatformSurface));
+    if (!surface) { lastError = "Out of memory allocating surface"; return NULL; }
     surface->width = width;
     surface->height = height;
     surface->bytesPerPixel = 4;
     surface->pitch = width * 4;
     surface->pixels = (uint8*)calloc(width * height, 4);
+    if (!surface->pixels) {
+        free(surface);
+        lastError = "Out of memory allocating surface pixels";
+        return NULL;
+    }
     surface->hasColorKey = 0;
     surface->clipRect.x = 0;
     surface->clipRect.y = 0;
@@ -285,6 +291,7 @@ PlatformSurface* platformCreateSurface(int width, int height) {
  */
 PlatformSurface* platformCreateSurfaceFrom(void* pixels, int width, int height, int pitch) {
     PlatformSurface* surface = (PlatformSurface*)malloc(sizeof(PlatformSurface));
+    if (!surface) { lastError = "Out of memory allocating surface wrapper"; return NULL; }
     surface->width = width;
     surface->height = height;
     surface->bytesPerPixel = 4;
@@ -656,6 +663,10 @@ void platformCloseAudio(void) {
 
  */
 int platformOpenAudio(PlatformAudioSpec* spec) {
+    if (spec->channels != 1 || spec->format != 8) {
+        lastError = "Web audio requires mono unsigned 8-bit PCM";
+        return -1;
+    }
     /*  A REAL IMPLEMENTATION, replacing a stub.
      *
      *  What was here created a ScriptProcessorNode whose onaudioprocess body was

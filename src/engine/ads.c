@@ -23,6 +23,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 #include "platform.h"
 
 #include "mytypes.h"
@@ -349,11 +350,12 @@ static void adsStopScene(int sceneNo)
 {
     if (sceneNo < 0 || sceneNo >= MAX_TTM_THREADS)
         return;
-    if (!ttmThreads[sceneNo].isRunning)
-        return;
+    int wasRunning = ttmThreads[sceneNo].isRunning != TTM_FREE;
+    /* A paused/inactive benchmark layer can still own a surface. */
     grFreeLayer(ttmThreads[sceneNo].ttmLayer);
+    ttmThreads[sceneNo].ttmLayer = NULL;
     ttmThreads[sceneNo].isRunning = TTM_FREE;
-    if (numThreads > 0)
+    if (wasRunning && numThreads > 0)
         numThreads--;
 }
 
@@ -502,13 +504,16 @@ static void adsRandomEnd(void)
 
 void adsInit(void)    // Init slots and threads for TTM scripts  // TODO : rename
 {
+    /* Release ownership before resetting bookkeeping. This also makes repeated
+     * initialization safe; the initial call only visits zero-initialized state. */
+    for (int i=0; i < MAX_TTM_THREADS; i++)
+        adsStopScene(i);
     for (int i=0; i < MAX_TTM_SLOTS; i++)
-        ttmInitSlot(&ttmSlots[i]);
-
-    for (int i=0; i < MAX_TTM_THREADS; i++) {
-        ttmThreads[i].isRunning = TTM_FREE;
-        ttmThreads[i].timer     = 0;
-    }
+        ttmResetSlot(&ttmSlots[i]);
+    adsReleaseIsland();
+    grReleaseSavedLayer();
+    adsReleaseAds();
+    memset(ttmThreads, 0, sizeof(ttmThreads));
 
     grUpdateDelay = 0;
     ttmBackgroundThread.isRunning = TTM_FREE;
@@ -516,6 +521,7 @@ void adsInit(void)    // Init slots and threads for TTM scripts  // TODO : renam
     ttmCloudsThread.isRunning     = TTM_FREE;
     numThreads = 0;
     adsStopRequested = 0;
+    numAdsChunks = numAdsChunksLocal = adsNumRandOps = 0;
 }
 
 
@@ -529,12 +535,13 @@ void adsPlaySingleTtm(const char *ttmName)  // TODO - tempo
     while (ttmThreads[0].ip < ttmSlots[0].dataSize) {
         ttmPlay(ttmThreads);
         ttmThreads[0].isRunning = TTM_RUNNING;
-        grUpdateDisplay(NULL, ttmThreads, NULL, NULL);
+        grUpdateDisplay(ttmThreads, NULL, NULL);
         grUpdateDelay = ttmThreads[0].delay;
     }
 
     adsStopScene(0);
     ttmResetSlot(&ttmSlots[0]);
+    grReleaseSavedLayer();
 }
 
 
@@ -778,11 +785,6 @@ void adsPlay(const char *adsName, uint16 adsTag)
     uint32 dataSize;
 
     struct TAdsResource *adsResource = findAdsResource(adsName);
-    if (adsResource == NULL) {
-        fatalError("ADS resource '%s' not found", adsName);
-        return;
-    }
-
     debugMsg("\n\n========== Playing ADS: %s:%d ==========\n", adsResource->resName, adsTag);
 
     adsCurrentName = adsResource->resName;
@@ -880,7 +882,7 @@ void adsPlay(const char *adsName, uint16 adsTag)
         }
 
         // Refresh display
-        grUpdateDisplay(&ttmBackgroundThread, ttmThreads, &ttmHolidayThread, &ttmCloudsThread);
+        grUpdateDisplay(ttmThreads, &ttmHolidayThread, &ttmCloudsThread);
 
         // Determine min timer through all threads
         uint16 mini = 300;
@@ -960,7 +962,7 @@ void adsPlay(const char *adsName, uint16 adsTag)
     for (int i=0; i < MAX_TTM_SLOTS; i++)
         ttmResetSlot(&ttmSlots[i]);
 
-    grRestoreZone(NULL, 0, 0, 0, 0);
+    grReleaseSavedLayer();
 
     adsReleaseAds();
 }
@@ -974,10 +976,8 @@ void adsPlayBench(void)  // TODO - tempo
 
     adsInit();
 
-    /*  MAX_TTM_THREADS, not a literal 8. The array has 10 entries; this loop
-     *  and its teardown twin below both hardcoded 8, so the two extra threads
-     *  were never initialised here and never stopped. Harmless while 10 > 8,
-     *  and an out-of-bounds write the day anyone lowers MAX_TTM_THREADS. */
+    /* Allocate all thread layers; teardown releases ownership even for layers
+     * marked inactive by the final eight-layer pass. */
     for (int i=0; i < MAX_TTM_THREADS; i++) {
         ttmThreads[i].ttmSlot         = &ttmSlots[0];
         ttmThreads[i].isRunning       = TTM_RUNNING;
@@ -1003,7 +1003,7 @@ void adsPlayBench(void)  // TODO - tempo
             for (int i=0; i < numLayers; i++)
                 benchPlay(&ttmThreads[i], i);
 
-            grUpdateDisplay(NULL, ttmThreads, NULL, NULL);
+            grUpdateDisplay(ttmThreads, NULL, NULL);
 
             counter++;
         }
@@ -1022,9 +1022,8 @@ void adsPlayIntro(void)
 {
     grLoadScreen("INTRO.SCR");
     grUpdateDelay = 100;
-    grUpdateDisplay(NULL, ttmThreads, NULL, NULL);
+    grUpdateDisplay(ttmThreads, NULL, NULL);
     grFadeOut();
-    ttmResetSlot(&ttmSlots[0]);
 }
 
 
@@ -1075,48 +1074,20 @@ void adsInitIsland(void)
 void adsReleaseIsland(void)
 {
     islandRelease();
-    /*  NULL AFTER FREE. Both layer pointers were left pointing at freed memory.
-     *
-     *  For the clouds layer that was an arbitrary free, not merely a double
-     *  free: adsInitIsland() frees a non-NULL ttmLayer before allocating a new
-     *  one, and between the two calls storyPlay() runs islandInit() - a
-     *  grLoadScreen plus two grLoadBmp calls, hundreds of allocations - so by
-     *  the time the second free ran, the PlatformSurface struct at that address
-     *  had almost certainly been recycled into something live. platformFreeSurface
-     *  then read `ownPixels` and `pixels` out of an unrelated object and called
-     *  free() on whatever it found there.
-     *
-     *  It armed on most island scenes after the first: islandAnimateClouds only
-     *  leaves isRunning set when numClouds > 0, and numClouds is rand() % 6.
-     *
-     *  The defensive free in adsInitIsland is NOT redundant and stays: when
-     *  numClouds == 0 the clouds thread is already TTM_FREE here, so this
-     *  function correctly skips the free and the layer is still live. Freeing
-     *  it there is what stops that case leaking a layer per island scene.
-     */
+    /* The background thread borrows the graphics-owned screen. Cloud/holiday
+     * layers are owned here, including an inactive zero-cloud layer. */
     ttmBackgroundThread.isRunning = TTM_FREE;
+    ttmBackgroundThread.ttmLayer = NULL;
     ttmResetSlot(&ttmBackgroundSlot);
 
-    if (ttmHolidayThread.isRunning) {
-        ttmHolidayThread.isRunning = TTM_FREE;
-        grFreeLayer(ttmHolidayThread.ttmLayer);
-        ttmHolidayThread.ttmLayer = NULL;
-    }
+    ttmHolidayThread.isRunning = TTM_FREE;
+    grFreeLayer(ttmHolidayThread.ttmLayer);
+    ttmHolidayThread.ttmLayer = NULL;
     ttmResetSlot(&ttmHolidaySlot);
 
-    if (ttmCloudsThread.isRunning) {
-        ttmCloudsThread.isRunning = TTM_FREE;
-        grFreeLayer(ttmCloudsThread.ttmLayer);
-        ttmCloudsThread.ttmLayer = NULL;
-    }
-
-    /*  RELEASE THE CLOUDS SPRITES. adsInitIsland calls ttmInitSlot on this slot,
-     *  which only zeroes the bookkeeping, so the BACKGRND.BMP that
-     *  islandAnimateClouds loads into it was never released: 42 sprites,
-     *  741,248 bytes of pixel data at grScale 1, and the shipped manifest sets
-     *  "scale": 2, so roughly four times that. Once per island scene, for as
-     *  long as the screensaver runs.
-     */
+    ttmCloudsThread.isRunning = TTM_FREE;
+    grFreeLayer(ttmCloudsThread.ttmLayer);
+    ttmCloudsThread.ttmLayer = NULL;
     ttmResetSlot(&ttmCloudsSlot);
 }
 
@@ -1164,7 +1135,7 @@ void adsPlayWalk(int fromSpot, int fromHdg, int toSpot, int toHdg)
         }
 
         // Refresh display
-        grUpdateDisplay(&ttmBackgroundThread, ttmThreads, &ttmHolidayThread, &ttmCloudsThread);
+        grUpdateDisplay(ttmThreads, &ttmHolidayThread, &ttmCloudsThread);
 
         // Determine min timer from the two threads
         uint16 mini = ttmThreads[0].timer;

@@ -29,12 +29,6 @@
 //------------------------
 
 struct TMapFile {
-    uint8 unknown1;
-    uint8 unknown2;
-    uint8 unknown3;
-    uint8 unknown4;
-    uint8 unknown5;
-    uint8 unknown6;
     char *resFileName;
     uint16 numEntries;
     struct TMapFileEntry *Entries;
@@ -42,29 +36,19 @@ struct TMapFile {
 
 
 struct TMapFileEntry {
-    uint32 length;
     uint32 offset;
     char *resName;
-    uint32 resSize;
 };
 
 
 struct TAdsResource {
     char *resName;
-    uint32 versionSize;
-    uint8 *versionString;
-    uint8 adsUnknown1;
-    uint8 adsUnknown2;
-    uint8 adsUnknown3;
-    uint8 adsUnknown4;
-    uint32 resSize;
     uint16 numRes;  // TODO rename
     struct TAdsRes *res;  // TODO rename
     uint32 compressedSize;
     uint8 compressionMethod;
     uint32 uncompressedSize;
     uint8 *uncompressedData;
-    uint32 tagSize;
     uint16 numTags;
     struct TTags *tags;
 };
@@ -78,9 +62,6 @@ struct TAdsRes {
 
 struct TBmpResource {
     char *resName;
-    uint16 width;
-    uint16 height;
-    uint32 dataSize;
     uint16 numImages;
     uint16 *widths;   // TODO
     uint16 *heights;
@@ -100,18 +81,12 @@ struct TColor {
 
 struct TPalResource {
     char *resName;
-    uint16 size;
-    uint8 unknown1;
-    uint8 unknown2;
     struct TColor colors[256];
 };
 
 
 struct TScrResource {
     char *resName;
-    uint16 totalSize;
-    uint16 flags;
-    uint32 dimSize;
     uint16 width;
     uint16 height;
     uint32 compressedSize;
@@ -123,20 +98,10 @@ struct TScrResource {
 
 struct TTtmResource {
     char *resName;
-    uint32 versionSize;
-    uint8 *versionString;
-    uint32 numPages;
-    uint8 pagUnknown1;
-    uint8 pagUnknown2;
     uint32 compressedSize;
     uint8 compressionMethod;
     uint32 uncompressedSize;
     uint8 *uncompressedData;
-    uint8 ttiUnknown1;
-    uint8 ttiUnknown2;
-    uint8 ttiUnknown3;
-    uint8 ttiUnknown4;
-    uint32 tagSize;
     uint16 numTags;
     struct TTags *tags; // TODO : merge with ttmTags from ttm.c ?
 };
