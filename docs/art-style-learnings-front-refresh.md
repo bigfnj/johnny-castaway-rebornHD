@@ -1,0 +1,46 @@
+# Front walking refresh: ongoing observations
+
+This follows the [Calm focus](art-style-learnings-calm-focus.md) and
+[rear walk](art-style-learnings-rear-walk.md) records. The production front walk
+remains unchanged while the new motion is reviewed.
+
+## Establish the hip connection before expanding the cycle
+
+The first new 028 used original pose geometry and approved raw024 character
+identity, avoiding the previously wrong028 as a direct ancestor. It still
+retained the old leg connection. A second call confined the requested change
+to pelvis, shorts and upper thighs: the near hip should feed the forward thigh,
+with the far thigh passing behind. Independent visual inspection found that
+more plausible. Human feedback preferred the resulting draft after its local
+toe fit edit. This is a preference for displayed art, not proof of original
+anatomical parity.
+
+## Occluded anatomy should stay hidden
+
+The user noted that the new028's far/background arm would not be noticeable at
+this angle and requested its complete removal. The next image edit hides that
+arm and hand behind the torso, preserving the visible near arm. Carry this
+occlusion into adjacent029 rather than adding a dangling hand merely because
+the character has two arms. Judge the visible source silhouette and overlap.
+
+## Local edit intent does not establish local pixel changes
+
+The 028 toe-fit call also moved its heel and redrew other visible pixels. The
+arm-removal and 029 heel-fit calls likewise produce new drawings. Preserve
+returned PNGs, remeasure cap registration and inspect surrounding anatomy.
+Never describe unmeasured regions as unchanged pixels.
+
+Use the original shadow separately from skin/foot observations. Its opaque
+gray extent makes the bottom of the image an unsuitable foot-height target.
+Do not lengthen a leg to fill that shadow area or independently scale a pose.
+
+## Verify future replacements, not just today's pack
+
+The tooling prerequisite adds explicit pilot history while retaining original
+approval bytes. Independent review found that its first test fixture assumed
+the live pack still used schema1. Replacement tests themselves must run against
+an already-replaced pack; otherwise the first production replacement can break
+the very regression suite intended to support later styles.
+
+Exact calls, original references, returned PNGs and human feedback are retained
+in the [front refresh bundle](../art/cartoon/walk-pilot/front-refresh-v1/README.md).

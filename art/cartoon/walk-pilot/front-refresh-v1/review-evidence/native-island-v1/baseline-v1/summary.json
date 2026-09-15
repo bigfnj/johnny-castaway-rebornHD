@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "phases": [
+    "smoke",
+    "full",
+    "repeat"
+  ],
+  "production_assets": 28,
+  "archive_sha256": "0748676eb6ab0685abecfeb0bbfb8547d2050e6419bb1cad5f13ccc9f716fedd",
+  "archive_members": 2579,
+  "executable_sha256": "ac2b28b83dfa7d4b32d2f90b2ae37ab6f82ce4491eac5d5ed1bddce03c8ec947",
+  "protected_inputs_unchanged": 60,
+  "path_seed": 2,
+  "display_count": 47,
+  "duration_ms": 4360,
+  "first_walk": [
+    0,
+    394,
+    212,
+    28
+  ],
+  "last_walk": [
+    0,
+    300,
+    242,
+    27
+  ],
+  "arrival": [
+    1,
+    293,
+    243,
+    17
+  ],
+  "repeat": "fresh native process, exact per-display RGB and PNG hashes, timing, draw dispatch and art dependencies",
+  "scope": "Baseline only. No candidate ZIP, publishing, production source edit or original-executable claim."
+}

@@ -1,0 +1,8 @@
+{
+  "tool": "image_gen.imagegen",
+  "status": "requested; arm occlusion correction after user review",
+  "prompt": "Use case: precise-object-edit.\nEdit ONLY the far/background arm in this transparent full-body Cartoon Johnny sprite. The user prefers this pose but says the far arm would not be visible at this angle.\nRemove the entire visible far arm and its dangling far hand on the SCREEN-RIGHT side of his torso, behind his bent foreground arm. Specifically remove the extra narrow orange upper-arm/forearm strip descending outside the torso and the small dangling curled hand beside the right edge of the shorts. That far arm is now completely occluded behind his body. Let the torso's natural outer silhouette run from the rear shoulder down to the waist and shorts with transparent air immediately outside it. Do not add an amputated stump, sleeve, hole, tucked hand or substitute arm outline.\nKEEP the near/foreground arm bent across his waist and its forward hand absolutely intact. Preserve the approved near-hip-to-forward-leg connection, natural turned ragged white shorts, both legs, both feet, heel-first step, cap, gold band, projecting black brim, anchor emblem, face, Calm focus eyes, beard, chest hair, head and body proportions, line weight, colors, scale and registration.\nSame 1024x1536 canvas and character placement. Cap top remains near (388,40). Do not move the feet, change the shorts or repaint a new pose. Actual transparent alpha, no background, glow, shadow, text or labels. Output one full-body sprite with the far arm fully hidden.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-front-refresh/art/cartoon/walk-pilot/front-refresh-v1/028-foot-fit-v3.png"
+  ]
+}

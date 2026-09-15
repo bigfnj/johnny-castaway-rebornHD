@@ -45,6 +45,11 @@ art/cartoon/arrival-pilot-v1/** -text whitespace=cr-at-eol
 # This hashed historical capture manifest includes a final blank line.
 art/cartoon/walk-pilot/directional-cycle-v1/review-evidence/direction-clearance-manifest-v1.json whitespace=cr-at-eol,-blank-at-eof
 
+# Frozen front-review inputs/helpers retain their original final blank lines.
+art/cartoon/walk-pilot/front-refresh-v1/review-evidence/key-v1/helpers/build_key_review.py whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/walk-pilot/front-refresh-v1/review-evidence/key-v1/helpers/check_key_review.py whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/inputs/walk-data.h whitespace=cr-at-eol,-blank-at-eof
+
 # Reproducible authoring metadata, separate from immutable art records.
 docs/knowledge-base/cartoon-art-metadata.json text eol=lf
 docs/knowledge-base/cartoon-art-metadata.md text eol=lf

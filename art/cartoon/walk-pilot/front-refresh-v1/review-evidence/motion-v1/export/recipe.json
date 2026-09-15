@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "scope": "Technical candidate only; human approval and production promotion are not assigned.",
+  "preview_only": false,
+  "scale_exact": {
+    "numerator": 1,
+    "denominator": 10
+  },
+  "normalization": "none",
+  "padding_hd": 64,
+  "resampling": {
+    "working_mode": "RGBa",
+    "affine_filter": "BICUBIC",
+    "oversample": 8,
+    "downsample_filter": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "pillow_version": "12.3.0",
+  "frames": [
+    {
+      "frame": 24,
+      "path": "BMP/JOHNWALK.BMP/024.png",
+      "mode": "retained",
+      "source": "inputs/raw/024.png",
+      "source_sha256": "13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb",
+      "source_selection": "approved",
+      "baseline": "inputs/baseline/024.png",
+      "baseline_sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+      "original": "inputs/original/024.png",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        64,
+        150
+      ],
+      "cap_raw": [
+        385,
+        42
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.0,
+        0,
+        0.1,
+        -3.95
+      ],
+      "candidate_png_sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838"
+    },
+    {
+      "frame": 25,
+      "path": "BMP/JOHNWALK.BMP/025.png",
+      "mode": "retained",
+      "source": "inputs/raw/025.png",
+      "source_sha256": "656061532b3833c092dd76d57d0cdd2e9e21a1b59f8cf0f360c5c0250494b20c",
+      "source_selection": "approved",
+      "baseline": "inputs/baseline/025.png",
+      "baseline_sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+      "original": "inputs/original/025.png",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        80,
+        148
+      ],
+      "cap_raw": [
+        385,
+        42
+      ],
+      "cap_target_hd": [
+        23.5,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -15.0,
+        0,
+        0.1,
+        -3.95
+      ],
+      "candidate_png_sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0"
+    },
+    {
+      "frame": 26,
+      "path": "BMP/JOHNWALK.BMP/026.png",
+      "mode": "retained",
+      "source": "inputs/raw/026.png",
+      "source_sha256": "20336e0fa8ab6ec930a78307e32719fd6a7d6a871e22803dd8b197724f34e110",
+      "source_selection": "approved",
+      "baseline": "inputs/baseline/026.png",
+      "baseline_sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+      "original": "inputs/original/026.png",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        80,
+        146
+      ],
+      "cap_raw": [
+        385,
+        42
+      ],
+      "cap_target_hd": [
+        25.5,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -13.0,
+        0,
+        0.1,
+        -3.95
+      ],
+      "candidate_png_sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e"
+    },
+    {
+      "frame": 27,
+      "path": "BMP/JOHNWALK.BMP/027.png",
+      "mode": "retained",
+      "source": "inputs/raw/027.png",
+      "source_sha256": "02adcafbd8548901b29eeb5a5f61a6f1fbe3c72b854410cd403139420ba241d6",
+      "source_selection": "approved",
+      "baseline": "inputs/baseline/027.png",
+      "baseline_sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+      "original": "inputs/original/027.png",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        64,
+        144
+      ],
+      "cap_raw": [
+        385,
+        42
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.0,
+        0,
+        0.1,
+        -3.95
+      ],
+      "candidate_png_sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18"
+    },
+    {
+      "frame": 28,
+      "path": "BMP/JOHNWALK.BMP/028.png",
+      "mode": "generated",
+      "source": "inputs/raw/028.png",
+      "source_sha256": "f5c0a043e869a7c219d6127981f90e4bbb5b6b4b4a9922ac3b43d4c06f60042c",
+      "source_selection": "028-occluded-arm-v4.png",
+      "baseline": "inputs/baseline/028.png",
+      "baseline_sha256": "50e7eb8717283e3a532a8237f1b0e96c2d0e4314080e2f985b6b928e5dee9167",
+      "original": "inputs/original/028.png",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        64,
+        144
+      ],
+      "cap_raw": [
+        388.5,
+        40
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.35,
+        0,
+        0.1,
+        -3.75
+      ],
+      "candidate_png_sha256": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4"
+    },
+    {
+      "frame": 29,
+      "path": "BMP/JOHNWALK.BMP/029.png",
+      "mode": "generated",
+      "source": "inputs/raw/029.png",
+      "source_sha256": "e8efc7e91972fc7dca1bb3080a3cddc38b4e7519cb4fb7aaf98c31a1acbb922a",
+      "source_selection": "029-heel-fit-v2.png",
+      "baseline": "inputs/baseline/029.png",
+      "baseline_sha256": "ac6907347ace18d909c09cd00ba6c1de65180bcfcdd43142ec0e00062bc17d15",
+      "original": "inputs/original/029.png",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        64,
+        150
+      ],
+      "cap_raw": [
+        388.0,
+        40
+      ],
+      "cap_target_hd": [
+        17.5,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.300000000000004,
+        0,
+        0.1,
+        -3.75
+      ],
+      "candidate_png_sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a"
+    }
+  ],
+  "cap_measurement": "Generated sources: first alpha-128 row's horizontal pixel-edge midpoint and row top. An outline observation, not an engine or anatomical anchor. Retained sources keep their historical manual registration.",
+  "input_sha256": {
+    "inputs/approved-recipe.json": "77ffb83239754f6765800973ed323f185e5665e546855f4b7eb05d6715d18ee3",
+    "inputs/baseline/024.png": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+    "inputs/baseline/025.png": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+    "inputs/baseline/026.png": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+    "inputs/baseline/027.png": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+    "inputs/baseline/028.png": "50e7eb8717283e3a532a8237f1b0e96c2d0e4314080e2f985b6b928e5dee9167",
+    "inputs/baseline/029.png": "ac6907347ace18d909c09cd00ba6c1de65180bcfcdd43142ec0e00062bc17d15",
+    "inputs/original-catalog.json": "f6293e86dc4773fa5548f205df73afa970729662dab06a5bff111c3b0f9692ef",
+    "inputs/original/024.png": "60b63352f21464f3388e0b2d8b0cfd62c1c11a99f86654836fc22cb3023047b4",
+    "inputs/original/025.png": "7c487f81c3f3298f526fe92d3acb1bd0e74cda64d0ae5e562567b28f2d5ef529",
+    "inputs/original/026.png": "0075904f625bba7f0183586ac8dc92464dfcec34ed4d4ddbb21c85fa1c8e23e6",
+    "inputs/original/027.png": "1f7b8c067b4c5d4f5ed07d11f6fd684bb8ba1b5c81f778ddf682c8e63677cb3c",
+    "inputs/original/028.png": "6e2569794d746bcd9fdc9393975cc6f290d6a2271a17c0e0ebfa190ab2d2b4c6",
+    "inputs/original/029.png": "f505e60dae1667c252a3de3eef21da663d94c2bf26962d6b364a5b7d6adcf598",
+    "inputs/raw/024.png": "13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb",
+    "inputs/raw/025.png": "656061532b3833c092dd76d57d0cdd2e9e21a1b59f8cf0f360c5c0250494b20c",
+    "inputs/raw/026.png": "20336e0fa8ab6ec930a78307e32719fd6a7d6a871e22803dd8b197724f34e110",
+    "inputs/raw/027.png": "02adcafbd8548901b29eeb5a5f61a6f1fbe3c72b854410cd403139420ba241d6",
+    "inputs/raw/028.png": "f5c0a043e869a7c219d6127981f90e4bbb5b6b4b4a9922ac3b43d4c06f60042c",
+    "inputs/raw/029.png": "e8efc7e91972fc7dca1bb3080a3cddc38b4e7519cb4fb7aaf98c31a1acbb922a",
+    "inputs/reference.json": "60fdd3cc21f6ebdcf065c88e637baf432bf9107c3050463381efadb5ccc15261",
+    "inputs/walk-data.h": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769"
+  },
+  "output_sha256": {
+    "BMP/JOHNWALK.BMP/024.png": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+    "BMP/JOHNWALK.BMP/025.png": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+    "BMP/JOHNWALK.BMP/026.png": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+    "BMP/JOHNWALK.BMP/027.png": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+    "BMP/JOHNWALK.BMP/028.png": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4",
+    "BMP/JOHNWALK.BMP/029.png": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+    "padded/024.png": "35904bfc45e6ef8daf1228857f3aac3da3800d476f34ed27ddefa114b1333567",
+    "padded/025.png": "65b29153b21ae53deefda0a74fa9544787f727aa4431ffb33398d027cf1192e8",
+    "padded/026.png": "add0156b15a9e6d683f537394362f96392914810abc45ae6e985748b3bef235c",
+    "padded/027.png": "e5d4115d0225f47b9ae004914af2bfb208ae92d230c892ee6bd1efd49590877d",
+    "padded/028.png": "c16716eb06553c6406c5358e80a4d4931f54c4f2bf8e93af53b352369add7781",
+    "padded/029.png": "47c17880b3c20194ad91924fdd398524236a55927abefbfd1c0802d39b3cfbef"
+  }
+}
