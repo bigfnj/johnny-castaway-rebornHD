@@ -3,14 +3,15 @@ CFLAGS=-Wall -Wpedantic -std=c99
 
 EXE =   extract_sound
 
-OBJ =   extract_sound.o \
-        ../src/engine/utils.o
+OBJ =   extract_sound.o extract_io.o
 
 
 all: $(EXE)
 
 $(EXE): $(OBJ)
 
+$(OBJ): extract_io.h
+
 clean:
-	rm -v $(OBJ) $(EXE) 2> /dev/null ; true
+	rm -f $(OBJ) $(EXE)
 
