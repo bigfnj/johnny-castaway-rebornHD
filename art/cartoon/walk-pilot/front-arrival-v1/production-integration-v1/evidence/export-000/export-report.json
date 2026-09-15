@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export only; not native capture or human acceptance.",
+  "preview_only": false,
+  "runtime_sprites_written": true,
+  "runtime_fit_all_source_centers": true,
+  "scale": 0.1,
+  "padding_hd": 64,
+  "reference_hashes": {
+    "000-source.json": "42233146f463bad1c8fdfe7c135bc35e518f06ac6bf77012f38a7f754042cf2b",
+    "000-original-native.png": "e671e0c24432a633450d7e64e5e5f8aa54f7b31ca9e2381ecbd6b15ff130be52",
+    "000-original-nearest8.png": "b61aeae2496fc2a169bbdb8ca1254802499a59a5ea282894773f865e64ffc321"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "frames": [
+    {
+      "frame": 0,
+      "source": "000-profile-v1.png",
+      "source_sha256": "ae989a65335c10a24da3176ff6fd568dc4a2cb6fddda185002c60dcdae3d3a12",
+      "cap_raw": [
+        598.5,
+        22
+      ],
+      "runtime_canvas": [
+        80,
+        152
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -5.850000000000001,
+        0,
+        0.1,
+        -1.9500000000000002
+      ],
+      "alpha8_source_bounds": [
+        327,
+        21,
+        707,
+        1486
+      ],
+      "alpha8_centers_hd": [
+        26.9,
+        0.19999999999999973,
+        64.80000000000001,
+        146.60000000000002
+      ],
+      "source_centers_fit_runtime": true,
+      "filtered_alpha8_bounds_hd_exclusive": [
+        26,
+        0,
+        65,
+        147
+      ],
+      "padded_canvas": [
+        208,
+        280
+      ]
+    }
+  ],
+  "outputs_sha256": {
+    "padded/000.png": "276d8b3c960aff181d8b9e2a87c73ad3d0235b7542421efa4c58b037fa53a180",
+    "BMP/JOHNWALK.BMP/000.png": "9fef4cef56033a7cf35c36d96a839c42e7d7d23832acf0a34ebc6ff52e040e96"
+  },
+  "filter_limit": "Source-center fit does not promise absence of low-alpha filter fringe; padded output retains it.",
+  "recipe_sha256": "9fd8d2d75c3fb0cbd1ac463acc236a5c7655d2e0f50bbd3bd42a3cc7a4c6b2d0",
+  "export_source_sha256": "542c0527ea0f997821b10304fdfa7d85dcfbfe894297d620858e60cd9a80fb43"
+}

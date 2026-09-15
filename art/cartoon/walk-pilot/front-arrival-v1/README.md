@@ -6,8 +6,10 @@ separate original standing pose 017, reviewed as a key before more drawings.
 017 appearance and its front-walk arrival are approved in `approval017-v1.json`.
 016 and both front waiting turns are approved in `016-key-v1/approval-v1.json`.
 The remaining standing drawings000/015 and the complete direction ring are
-approved with "excellent, proceed" at standing-ring-v1. Production integration
-and delivery verification follow these separate art decisions.
+approved with "excellent, proceed" at standing-ring-v1. Production now adds
+exact000/015/016/017 PNGs to the previous28 assets, preserving every old member.
+The [delivery record](../../../../docs/cartoon-standing-verification.md)
+tracks package verification, platform checks and merge/audit status.
 
 This delivery completes all eight standing directions with five unique sprites:
 new000/015/016/017 and existing Cartoon018. The full wait/turn table uses ten

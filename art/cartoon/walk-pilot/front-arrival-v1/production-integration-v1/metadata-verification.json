@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "scope": "Executed smoke before generation and regression, then both maintained catalog reproduction checks. No tool or test logic changed.",
+  "commands_by_ordered_phase": {
+    "smoke": [
+      {
+        "order": 1,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tests/test_art_inventory.py",
+          "--smoke"
+        ],
+        "exit_code": 0,
+        "stdout": "smoke-01-test_art_inventory.stdout.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "smoke-01-test_art_inventory.stderr.txt",
+        "stderr_sha256": "5a23879a0134a26e99ca5fa57d884a365c66f10413acf9fdd24e245367488425"
+      },
+      {
+        "order": 2,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tests/test_art_pilot_history.py",
+          "--phase",
+          "smoke"
+        ],
+        "exit_code": 0,
+        "stdout": "smoke-02-test_art_pilot_history.stdout.txt",
+        "stdout_sha256": "ffc4b5351470e9bc32c62f8db57deb2f9bc5eb24c1c031a5f4f7f8e676b9bafa",
+        "stderr": "smoke-02-test_art_pilot_history.stderr.txt",
+        "stderr_sha256": "7816feefc4d1e4de9bdba0d2a0a29cc18bc4db074217cc40bbd3b2a54a6a69fd"
+      },
+      {
+        "order": 3,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tests/test_art_review_metadata.py",
+          "--phase",
+          "smoke"
+        ],
+        "exit_code": 0,
+        "stdout": "smoke-03-test_art_review_metadata.stdout.txt",
+        "stdout_sha256": "ffc4b5351470e9bc32c62f8db57deb2f9bc5eb24c1c031a5f4f7f8e676b9bafa",
+        "stderr": "smoke-03-test_art_review_metadata.stderr.txt",
+        "stderr_sha256": "9adf70133918718c3cbf0fa3f4559fa6591e6c50f5eeab3a5aea2d985eadd541"
+      },
+      {
+        "order": 4,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tests/test_art_production_catalog.py",
+          "--phase",
+          "smoke"
+        ],
+        "exit_code": 0,
+        "stdout": "smoke-04-test_art_production_catalog.stdout.txt",
+        "stdout_sha256": "5869b823999e2293f966e18324eafe9d22fdbd010d89cc3df4e07dbeb6cd23a8",
+        "stderr": "smoke-04-test_art_production_catalog.stderr.txt",
+        "stderr_sha256": "76f11ce31830293baba04828a38a10dbcc3ad954b5849dea5c98a2b358e5a26d"
+      }
+    ],
+    "generate": [
+      {
+        "order": 1,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tools/art_review_metadata.py"
+        ],
+        "exit_code": 0,
+        "stdout": "generate-01-art_review_metadata.stdout.txt",
+        "stdout_sha256": "f31a2da85ed2024238226c2557f0b38133499a96bf2d39c1bf1f058a82f08ca6",
+        "stderr": "generate-01-art_review_metadata.stderr.txt",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "order": 2,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tools/art_production_catalog.py"
+        ],
+        "exit_code": 0,
+        "stdout": "generate-02-art_production_catalog.stdout.txt",
+        "stdout_sha256": "f68a73436c95e8df4e27fe92eac72588565f78737b190b89a22b45b594c3ccba",
+        "stderr": "generate-02-art_production_catalog.stderr.txt",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "regression": [
+      {
+        "order": 1,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tests/test_art_inventory.py"
+        ],
+        "exit_code": 0,
+        "stdout": "regression-01-test_art_inventory.stdout.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "regression-01-test_art_inventory.stderr.txt",
+        "stderr_sha256": "23af723c26fbf44d9a735ba6a7141efa48ea1b46c09f37fdf58c63cf1167e0f7"
+      },
+      {
+        "order": 2,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tests/test_art_pilot_history.py",
+          "--phase",
+          "regression"
+        ],
+        "exit_code": 0,
+        "stdout": "regression-02-test_art_pilot_history.stdout.txt",
+        "stdout_sha256": "1a81fdc04d25a5cdb87a0e2ec0a9bfa0a3eb7e2fc8d01cdb82a95e9a16e1c804",
+        "stderr": "regression-02-test_art_pilot_history.stderr.txt",
+        "stderr_sha256": "474ef77eabb46480ea07a051beea766c5cfb7475885b193180d52859c0534417"
+      },
+      {
+        "order": 3,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tests/test_art_review_metadata.py",
+          "--phase",
+          "regression"
+        ],
+        "exit_code": 0,
+        "stdout": "regression-03-test_art_review_metadata.stdout.txt",
+        "stdout_sha256": "b356597b25558d2449adf8db521d79e4ed075e4adeab1aa81254d91bc086554e",
+        "stderr": "regression-03-test_art_review_metadata.stderr.txt",
+        "stderr_sha256": "8b890878abe3d81b509d07f7521d0cfba66096480a204472e6e8bcc8b8a81555"
+      },
+      {
+        "order": 4,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tests/test_art_production_catalog.py",
+          "--phase",
+          "regression"
+        ],
+        "exit_code": 0,
+        "stdout": "regression-04-test_art_production_catalog.stdout.txt",
+        "stdout_sha256": "5869b823999e2293f966e18324eafe9d22fdbd010d89cc3df4e07dbeb6cd23a8",
+        "stderr": "regression-04-test_art_production_catalog.stderr.txt",
+        "stderr_sha256": "1028586c14ec45dfe0e6afad853cc252504876aac120698884c2bd9e7adf72d7"
+      },
+      {
+        "order": 5,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tests/test_art_tools.py"
+        ],
+        "exit_code": 0,
+        "stdout": "regression-05-test_art_tools.stdout.txt",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr": "regression-05-test_art_tools.stderr.txt",
+        "stderr_sha256": "e149ff94dfbc8db6e4bca85d5a9cc114e1496e18f0a85314b6bf9389ba83f825"
+      },
+      {
+        "order": 6,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tools/art_review_metadata.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "stdout": "regression-06-art_review_metadata.stdout.txt",
+        "stdout_sha256": "f31a2da85ed2024238226c2557f0b38133499a96bf2d39c1bf1f058a82f08ca6",
+        "stderr": "regression-06-art_review_metadata.stderr.txt",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "order": 7,
+        "command": [
+          "${PYTHON}",
+          "-B",
+          "tools/art_production_catalog.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "stdout": "regression-07-art_production_catalog.stdout.txt",
+        "stdout_sha256": "f68a73436c95e8df4e27fe92eac72588565f78737b190b89a22b45b594c3ccba",
+        "stderr": "regression-07-art_production_catalog.stderr.txt",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "command_log_scope": "Logs referenced by filename were captured under build/front-arrival/production-metadata-v1; this is a portable result record, not a copy of all scratch logs.",
+  "smoke_counts": {
+    "inventory": 3,
+    "history": 1,
+    "pilot": 2,
+    "full_catalog": 3
+  },
+  "regression_counts": {
+    "inventory": {
+      "executed": 9,
+      "skipped": 2,
+      "skip_reason": "Windows file and directory symlinks unavailable: WinError1314; hardlink identity test passed"
+    },
+    "history": 22,
+    "history_nested_future_promotion": 84,
+    "pilot": 60,
+    "full_catalog": 63,
+    "art_tools": 20
+  },
+  "both_catalog_checks": "PASS",
+  "catalog_counts": {
+    "accepted": 32,
+    "pending": 2369,
+    "slots": 2401,
+    "supplied_original_evidence_slots": 51,
+    "historical_pilot": 21
+  },
+  "unchanged_logic_mutations": "Not rerun; new package corruption control is separately preserved in verification.json. Existing suites executed their own fixture and Git normalization controls.",
+  "inputs_lf_sha256": {
+    "art/cartoon/pack.json": "2f360507b3ba297e8e087538ba34cc7874f44d12f48e8a14252faa1324b3f4dd",
+    "tools/art_inventory.py": "20b1522f5a899368936ba33b09c52bfbe88fa7542d27a6d6d384e4cb7848acb8",
+    "tools/art_review_metadata.py": "1fdd90051897575dd18ec04832f694e8a3a7bfec6f4cb92d8f85bbde961a8b73",
+    "tools/art_production_catalog.py": "42bddc671b56975db90d6dc5ed8b8c928add7e1e05e4ce154daacaf57be4ab64",
+    "tests/test_art_inventory.py": "f10933ae8dd8b062dc712d451864c29b1d518eaf41fe2ea431674dc52988c462",
+    "tests/test_art_pilot_history.py": "31b37d05d9df36a486fc2a590709f359ba0d177a84a208d97ecbcfa24ed8f924",
+    "tests/test_art_review_metadata.py": "3893d7b38542262243b16ecc07505000fe93052dfe4e97640172a65c382e9fa1",
+    "tests/test_art_production_catalog.py": "49890e4dc3b67c4ef55012eaf8cc47e1b731b162aa46e5ed92ad485d0dd78a83",
+    "tests/test_art_tools.py": "7d5976d6ebcffcacc87d959c7b57666187155ad7b698eb1e3e697f84ea854c21",
+    "docs/knowledge-base/cartoon-art-metadata.json": "a19664b27607f1a04175f121dd3ecb53068c3136ec3f89ae4b802b9174df3b6c",
+    "docs/knowledge-base/cartoon-art-metadata.md": "71b8ec5570136b0434a9f7ae5a2dc2333907a1c75bb3a7bc830c637334f7272b",
+    "docs/knowledge-base/cartoon-production-catalog.json": "ff76a4e8eb4cc91cda948f9d564edaf9d39f929213922f9ebadec8fd054ae151",
+    "docs/knowledge-base/cartoon-production-catalog.md": "bb0e485cb26889773bd1b4f0c54e6a4f93ad10d6f49e7a2b4a930a8d580ff884"
+  },
+  "production_zip_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6"
+}
