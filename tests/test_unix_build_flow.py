@@ -10,10 +10,12 @@ import json
 import os
 from pathlib import Path
 import subprocess
+import sys
 import tempfile
 
 ROOT=Path(__file__).resolve().parents[1]
 SCRIPT=ROOT/'tests/unix-build.sh'
+LINUX = sys.platform != 'darwin'
 
 def executable(path,text):
     path.write_text(text,encoding='utf-8'); path.chmod(0o755)
@@ -32,6 +34,12 @@ with open(os.environ['JCR_TRACE'], 'a') as stream: stream.write('WITNESS decoder
 if os.environ['JCR_CASE'] == 'decoder-' + phase + '-fail':
     print('FAIL tests/test_uncompress.py: fixture rejected')
     sys.exit(32 if phase == 'smoke' else 34)
+''',encoding='utf-8')
+    (src/'tests/test_graphics_alloc.py').write_text('''import os, sys
+with open(os.environ['JCR_TRACE'], 'a') as stream: stream.write('WITNESS graphics-regression\\n')
+if os.environ['JCR_CASE'] == 'graphics-regression-fail':
+    print('FAIL tests/test_graphics_alloc.py: fixture rejected')
+    sys.exit(36)
 ''',encoding='utf-8')
     platform_fixture = '''#!/usr/bin/env bash
 phase="$2"
@@ -73,7 +81,9 @@ exit 0
     return proc.returncode,text,trace,folder
 
 def assert_case(mode, code, text, trace):
-    full_trace = ['WITNESS build-executed', 'WITNESS png-smoke', 'WITNESS decoder-smoke', 'WITNESS platform-smoke', 'WITNESS decoder-regression', 'WITNESS platform-regression', 'WITNESS dump-regression']
+    full_trace = ['WITNESS build-executed', 'WITNESS png-smoke', 'WITNESS decoder-smoke', 'WITNESS platform-smoke', 'WITNESS decoder-regression', 'WITNESS platform-regression']
+    if LINUX: full_trace.append('WITNESS graphics-regression')
+    full_trace.append('WITNESS dump-regression')
     if mode in ('clean', 'warning'):
         assert code == 0 and trace.splitlines() == full_trace, f'tests/unix-build.sh: {mode} control did not reach smoke then regression'
     elif mode == 'build-fail':
@@ -82,7 +92,8 @@ def assert_case(mode, code, text, trace):
         assert code == 31 and text.count('FAIL tests/test_png_decoder.c: fixture rejected') == 1 and trace.splitlines() == ['WITNESS build-executed', 'WITNESS png-smoke'], 'tests/unix-build.sh: failed PNG smoke reached regression'
     else:
         cases = {'decoder-smoke-fail': (32, 3, 'tests/test_uncompress.py'), 'platform-smoke-fail': (33, 4, 'tests/run_linux_platform.sh'),
-                 'decoder-regression-fail': (34, 5, 'tests/test_uncompress.py'), 'platform-regression-fail': (35, 6, 'tests/run_linux_platform.sh')}
+                 'decoder-regression-fail': (34, 5, 'tests/test_uncompress.py'), 'platform-regression-fail': (35, 6, 'tests/run_linux_platform.sh'),
+                 'graphics-regression-fail': (36, 7, 'tests/test_graphics_alloc.py')}
         status, length, file = cases[mode]
         assert code == status and text.count(f'FAIL {file}: fixture rejected') == 1 and trace.splitlines() == full_trace[:length], f'tests/unix-build.sh: {mode} reached later regression or lost its diagnostic/status'
 
@@ -92,7 +103,9 @@ def main():
     original=SCRIPT.read_text(encoding='utf-8')
     def verify(work):
         records=[]
-        for mode in ('clean','warning','build-fail','smoke-fail','decoder-smoke-fail','platform-smoke-fail','decoder-regression-fail','platform-regression-fail'):
+        modes = ['clean','warning','build-fail','smoke-fail','decoder-smoke-fail','platform-smoke-fail','decoder-regression-fail','platform-regression-fail']
+        if LINUX: modes.append('graphics-regression-fail')
+        for mode in modes:
             code,text,trace,folder=run_case(work,original,mode,mode)
             assert_case(mode, code, text, trace)
             records.append({'case':mode,'status':code,'trace':trace.splitlines()})
@@ -111,9 +124,11 @@ def main():
                 print(f'FIRED 1/1 {exc}',flush=True)
             else:
                 raise AssertionError('tests/unix-build.sh: disabled exit mutation survived')
-            for mode, needle in (
+            guarded_commands = [
                 ('decoder-smoke-fail', 'python3 "$WORK/tests/test_uncompress.py" --probe "$WORK/build-unix/jc_uncompress_test" --engine "$WORK/build-unix/jc_reborn" --phase smoke'),
-                ('platform-smoke-fail', 'SRC="$WORK" OUT="$WORK/build-unix/platform-tests" bash "$PLATFORM_TEST" --phase smoke')):
+                ('platform-smoke-fail', 'SRC="$WORK" OUT="$WORK/build-unix/platform-tests" bash "$PLATFORM_TEST" --phase smoke')]
+            if LINUX: guarded_commands.append(('graphics-regression-fail', 'python3 "$WORK/tests/test_graphics_alloc.py" --output "$WORK/build-unix/graphics-tests"'))
+            for mode, needle in guarded_commands:
                 assert original.count(needle) == 1, f'tests/unix-build.sh: expected one {mode} command'
                 mutant = original.replace(needle, needle + ' || true')
                 code, text, trace, folder = run_case(work, mutant, mode, 'mutant-' + mode)

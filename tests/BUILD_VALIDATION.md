@@ -49,7 +49,8 @@ The Windows gate runs decoder, ownership and platform-constructor smoke before
 any regression. Its focused ownership probe uses tracked Win32 allocations and
 is Windows-specific. Linux and macOS run the portable decoder and their actual
 backend probe scripts, with all smoke phases before focused regressions and the
-golden dump. Linux needs Xvfb/xauth for its real X11 probes. The Web platform
+golden dump. Linux needs Xvfb/xauth for its real X11 probes and also runs required
+graphics-surface allocation failure checks before the corpus. The Web platform
 probes run in the pinned SDK container; browser rendering stays on the host.
 Backend fault-injection checks are normal regression. Recompiling deliberately
 mutated C sources is manual verification, separate from a normal gate.

@@ -113,6 +113,12 @@ echo
 echo "== native platform regression =="
 SRC="$WORK" OUT="$WORK/build-unix/platform-tests" bash "$PLATFORM_TEST" --phase regression
 
+if [ "$OSNAME" = Linux ]; then
+    echo
+    echo "== required graphics-surface failure regression =="
+    python3 "$WORK/tests/test_graphics_alloc.py" --output "$WORK/build-unix/graphics-tests"
+fi
+
 echo
 echo "== dump, headless, no window server =="
 RUN=/tmp/jcr-run
