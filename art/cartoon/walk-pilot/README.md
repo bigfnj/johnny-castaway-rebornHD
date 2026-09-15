@@ -4,8 +4,12 @@ This directory's root recipe preserves the rejected profile-cycle candidates.
 The later `direction-key-024` record holds the approved viewing direction and
 leg-order key; `directional-cycle-v1` holds the subsequent six-pose E-to-A cycle
 whose full motion the user approved with "looks good" on 2026-09-14. Its separate
-`acceptance.json` records the exact approved export hashes. Production promotion
-and broader scene contact remain pending.
+`acceptance.json` records the exact approved export hashes. Those six approved
+PNGs now ship unchanged in the 21-asset Cartoon preview. Later
+[island scene acceptance](../island-pilot-v1/acceptance.json) and
+[production validation](../island-pilot-v1/review-evidence/production-validation.json)
+record the full layered scene review and integration. Unseen directions and
+environment states still need separate artwork and review.
 
 This root recipe covers only `JOHNWALK.BMP` frames 024 through 029. Its images
 are rejected review candidates. On 2026-09-14 the user replied "well done"

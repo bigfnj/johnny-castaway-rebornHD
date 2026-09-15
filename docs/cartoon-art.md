@@ -179,6 +179,27 @@ screensaver checks. Compare old members, run existing regression checks, and rev
 the intended scenes before adopting it as the production archive. A scoped preview
 must remain clearly identified until its missing artwork is completed.
 
+## Refreshing runtime artwork
+
+After adopting an approved archive in `assets/scrantic_data.zip`, run the normal
+native build so `jc_runtime_data` refreshes the archive beside the executable:
+
+```text
+cmake --build build --config Release
+```
+
+For an explicit target build, use:
+
+```text
+cmake --build build --config Release --target jc_runtime_data
+```
+
+Building only `jc_reborn` copies the archive after a link step;
+when only the artwork changed, that target can be up to date and leave its old
+archive beside the executable. The full `gate.ps1` uses the normal build. Web
+builds declare the archive as an input and regenerate their preload data when
+it changes.
+
 ## Tool checks
 
 ```text

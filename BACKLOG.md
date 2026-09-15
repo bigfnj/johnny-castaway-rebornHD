@@ -2,7 +2,8 @@
 
 ## How to read this
 
-Engineering defects here were **reproduced against the code**. Artwork follow-ups
+Engineering findings distinguish reproduced defects from source-confirmed
+findings and untested coverage gaps. Artwork follow-ups
 identify their visual evidence and distinguish approximate pose landmarks from
 exact pixel measurements. Items that an audit claimed and that
 did not survive checking are recorded in "Claims that did not hold" at the
@@ -51,6 +52,7 @@ hardening or platform pass; the evidence level is explicit for each item.
 | Linux audio error exit leaves a joinable worker unjoined | Source-confirmed, not reproduced against ALSA here: the worker clears `audioThreadRunning` after unrecoverable `snd_pcm_recover`, while `platformCloseAudio` joins only if that flag remains true. Track successful thread creation separately from its running state. |
 | macOS release architecture label disagrees with its runner | `release.yml` uses `macos-latest` without an architecture override but names the package and download row `x86_64`. GitHub currently maps that runner to ARM64. Choose an explicit runner/target and assert the built binary matches its package label before the next release. [GitHub runner reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners). No release was cut during this art rollout. |
 | Unix build pipeline suppresses its exit status | `tests/unix-build.sh` uses `|| true` after the build pipeline, then validates specific executable files. A failed additional ALL target can escape that check. This is a source-level coverage gap, not an observed failed current target; preserve the pipeline status and mutation-test failure propagation. |
+| Explicit native executable target can retain an older artwork archive | Source-confirmed build scope: the normal ALL build runs `jc_runtime_data`, but an unchanged `--target jc_reborn` build does not run its `POST_BUILD` copy. After archive-only changes, use the normal build or explicitly build `jc_runtime_data`, as documented in [art production](docs/cartoon-art.md#refreshing-runtime-artwork). Consider making the executable target refresh data independently, with an archive-only change test covering both build forms. |
 | Small unused platform helpers remain | Source search found no callers of `png_loader.c`'s `utf8_to_wide`; macOS's event queue is allocated/released but never used and its `mainWindow` singleton is assigned without reads. Remove these in a cleanup pass and re-run platform builds. They are not evidence of a running leak. |
 | Older macOS notes contradict completed verification | The manual build script's closing message and historical paragraphs below still describe unverified rendering; the release workflow now packages macOS. Keep historical notes explicitly dated and update current instructions before the next release. |
 
