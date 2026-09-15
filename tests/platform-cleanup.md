@@ -34,6 +34,19 @@ real windows under Xvfb and compare `XGetImage` pixels after resize, including
 letterboxing, shrinking and returning to the native size. A virtual display does
 not validate a desktop window manager's fullscreen policy.
 
+The graphics caller probe is also headless and uses the Linux compiler and
+libraries above. It injects NULL surface constructors into the real graphics
+loader, checking all four required-surface errors and exactly-once release of
+caller-owned pixel buffers:
+
+```sh
+python3 tests/test_graphics_alloc.py --output /tmp/johnny-graphics-alloc
+python3 tests/test_graphics_alloc.py --output /tmp/johnny-graphics-alloc-mutations --mutations
+```
+
+The first command runs four regression cases. The optional mutation command
+additionally rebuilds each removed guard and requires a named runtime failure.
+
 Web needs the same Emscripten 6.0.9 toolchain as CI and its Node runtime:
 
 ```sh
