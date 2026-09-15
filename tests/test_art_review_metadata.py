@@ -155,6 +155,39 @@ class MetadataTests(unittest.TestCase):
             self.assertEqual(changed, [path], "Wrong or multiple changed files from isolated LF-rule mutation")
             print("FIRED Git LF rule " + path + " via " + version, flush=True)
 
+    def test_arrival_acceptance_raw_bytes(self):
+        active = "art/cartoon/arrival-pilot-v1/production-acceptance.json"
+        pilot = json.loads((ROOT / m.ACCEPTANCE).read_bytes())
+        link = {"path": m.ACCEPTANCE,
+                "sha256": hashlib.sha256((ROOT / m.ACCEPTANCE).read_bytes()).hexdigest(),
+                "asset_paths": [row["path"] for row in pilot["accepted_assets"]]}
+        # The pilot checks its direct inherited21; the full catalog owns the
+        # additional rear/arrival approvals. Use real build() I/O with valid
+        # immutable acceptance bytes in each newline form, without changing art.
+        value = {"accepted": True, "inherited_acceptances": [link]}
+        lf = (json.dumps(value, indent=2) + "\n").encode("utf-8")
+        forms = {"LF": lf, "CRLF": lf.replace(b"\n", b"\r\n"), "CR": lf.replace(b"\n", b"\r")}
+        read = Path.read_bytes
+        results = {}
+        for name, raw in forms.items():
+            def changed(path):
+                return raw if path == ROOT / active else read(path)
+            def choose(label, record):
+                if label == m.PACK:
+                    record["acceptance_record"] = active
+            with patch.object(Path, "read_bytes", changed):
+                results[name] = self.report(choose)
+        self.assertNotEqual(forms["LF"], forms["CRLF"])
+        self.assertEqual(results["CRLF"]["evidence"][active]["sha256"],
+                         hashlib.sha256(forms["CRLF"]).hexdigest(),
+                         active + ": preserve exact immutable acceptance bytes")
+        self.assertEqual(len({result["evidence"][active]["sha256"] for result in results.values()}), 3)
+        for name, result in results.items():
+            self.assertEqual(result["evidence"][active],
+                             {"sha256": hashlib.sha256(forms[name]).hexdigest(), "hash_basis": "file-bytes"})
+            self.assertEqual(result["assets"], results["LF"]["assets"])
+            self.assertEqual(result["summary"], {"assets": 21, "walking_assets": 6, "island_assets": 15})
+
     def test_transparency_normalization_varies(self):
         # Same hidden RGB change is ignored for sprites but retained for screens.
         a, b = fixture_xpm(), fixture_xpm(zero="ff00ff")
@@ -562,6 +595,7 @@ class MetadataTests(unittest.TestCase):
 # exactly one negative control, reports the actual imported source SHA, and must
 # produce one named test failure. No real input or approved asset is modified.
 MUTATIONS = [
+    ("test_arrival_acceptance_raw_bytes", ', "art/cartoon/arrival-pilot-v1/"', ""),
     ("test_inherited_pilot_record_shape", 'isinstance(active, dict)'),
     ("test_missing_acceptance_pointer", 'isinstance(active_path, str)'),
     ("test_inherited_pilot_row_shape", 'all(isinstance(row, dict) for row in links)'),

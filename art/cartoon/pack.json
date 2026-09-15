@@ -33,7 +33,8 @@
     "BMP/JOHNWALK.BMP/020.png",
     "BMP/JOHNWALK.BMP/021.png",
     "BMP/JOHNWALK.BMP/022.png",
-    "BMP/JOHNWALK.BMP/023.png"
+    "BMP/JOHNWALK.BMP/023.png",
+    "BMP/JOHNWALK.BMP/018.png"
   ],
   "assets": [
     {
@@ -251,9 +252,17 @@
       "alpha": "transparent",
       "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
       "review": "art/cartoon/walk-expansion-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/018.png",
+      "sha256": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190",
+      "source_sha256": "3381653776a7abccd5d85562eed83436d226d562e1fd3a81efbfb8daf8d7f6c9",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/arrival-pilot-v1/runtime-recipe-v1.json",
+      "review": "art/cartoon/arrival-pilot-v1/production-acceptance.json"
     }
   ],
   "review_status": "Human approved the rear-oblique walking family in the layered island scene on 2026-09-15. The prior twenty-one accepted assets retain their earlier review records.",
-  "acceptance_record": "art/cartoon/walk-expansion-v1/production-acceptance.json",
+  "acceptance_record": "art/cartoon/arrival-pilot-v1/production-acceptance.json",
   "scope": "Partial pack: twelve walking poses and fifteen island assets; other states and animations use HD/original fallback. The rear-oblique arrival pose still uses HD artwork."
 }

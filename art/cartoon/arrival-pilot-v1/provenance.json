@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen",
+  "image": "018-pose-v1.png",
+  "image_sha256": "4ed63ba9245dd30ac414caadba1a13febac240ffcbfa767c4f939a4bd83ddab2",
+  "raw_output_preserved": true,
+  "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-658ef535-aba6-4c9f-a973-6450964030e1.png",
+  "prompt_record": "prompts.json",
+  "ordered_reference_inputs": [
+    {
+      "role": "original pose geometry",
+      "canonical_path": "reference/018-nearest8.png",
+      "sha256": "228783a6a48523333a069592318308967e75537b83bb1a446c85c69fa7181c7a",
+      "limit": "Exact nearest enlargement of supplied-original indices using the port dump palette; original palette/compositing is unverified."
+    },
+    {
+      "role": "approved Cartoon design and head registration",
+      "canonical_path": "../walk-expansion-v1/023-pose-v1.png",
+      "sha256": "1b33f52d9df250d069f7f0e7bb6924ab34c65a432c9df2211ac0bff2785c13a7",
+      "approval_record": "../walk-expansion-v1/production-acceptance.json",
+      "limit": "Prior approval covers frame023, not the new drawing."
+    }
+  ],
+  "approval": {
+    "accepted": false,
+    "status": "pending-human-arrival-review"
+  },
+  "export_policy": "Preserve returned raw bytes. Technical registration and filtering create separately identified candidates; no artwork retouching or independent body fitting."
+}

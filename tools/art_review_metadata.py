@@ -248,7 +248,7 @@ def build(root):
         data = (root / path).read_bytes()
         # Art records preserve exact bytes; maintained docs normalize checkout
         # newlines so Windows and Unix identify the same text.
-        preserved = path.startswith(("art/cartoon/walk-pilot/", "art/cartoon/island-pilot-v1/", "art/cartoon/walk-expansion-v1/"))
+        preserved = path.startswith(("art/cartoon/walk-pilot/", "art/cartoon/island-pilot-v1/", "art/cartoon/walk-expansion-v1/", "art/cartoon/arrival-pilot-v1/"))
         evidence[path] = {"sha256": digest(data) if preserved else text_fingerprint(data), "hash_basis": "file-bytes" if preserved else "utf8-normalized-newlines"}
         return read_json(data, path)
 

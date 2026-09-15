@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status_at_recording": "human-review-requested",
+  "accepted": false,
+  "candidate": "018-pose-v1.png",
+  "source_sha256": "4ed63ba9245dd30ac414caadba1a13febac240ffcbfa767c4f939a4bd83ddab2",
+  "runtime_candidate_sha256": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190",
+  "recipe": "candidate-recipe-v1.json",
+  "recipe_sha256": "92926834433221e7404ad6aa88e600bf0895260f772a862db4f5cad8d586fe4f",
+  "preview": {
+    "url": "http://127.0.0.1:8932/arrival-cartoon-v1/review.html",
+    "html_sha256": "d5dc40f835f04c410dfa48c20e4c44057f3a98754a02b9eada1bad7799261877",
+    "right_panel": "New Cartoon arrival",
+    "defaults": "Normal speed; Full island",
+    "scope": "Unchanged approved 23-pose rear walk followed by candidate 018 and the actual 1600 ms arrival hold. No synthetic turn timing.",
+    "checks": "Native baseline/candidate smoke followed by 47-display comparisons; browser 2 smoke checks then 4 grouped regressions including 94 canvas pixel hashes and all recorded timestamps; served HTML/PNG identity verified."
+  },
+  "human_question": "In the “New Cartoon arrival” panel, does Johnny settle naturally into standing frame 018, including the smaller foot’s ground contact?",
+  "review_focus": "Last walking frame 022 to standing frame 018 transition, body consistency, visible hand at the pocket and depth/contact of the smaller foot.",
+  "known_observations": {
+    "far_foot": "Raw alpha-128 regions end near y1446 and y1349, about 9.7 HD pixels apart at 0.1 scale; the original clearly far x18+ region ends at y71 versus near y73, about 4 HD pixels apart. Region extrema are not exact anatomical sole measurements; native context is the review basis.",
+    "registration": "Scripted native origin (302,244) to (298,240) preserved. Same 0.1 export scale and (17,0.25) HD cap target. No independent torso/foot shift."
+  },
+  "production": {
+    "unchanged": true,
+    "approved_asset_count": 27,
+    "archive_sha256": "1daf8f95614fde8efd85745a8baac02a41d88c2775a91374d66959174220aa7e"
+  },
+  "disposition": "Pending user response; later approval or rejection belongs in a separate record."
+}
