@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "human_response": "looks good, whats next ?",
+  "status": "accepted-visible-standalone-motion-and-Calm-expression",
+  "scope": "The visible six-source standalone walking motion and Calm focus expression were accepted. Original-leg mismatch remains a reviewed, retained variation. Runtime exports and in-scene acceptance are pending.",
+  "standalone_motion_accepted": true,
+  "calm_expression_in_motion_accepted": true,
+  "original_anatomical_parity_claimed": false,
+  "reviewed_leg_mismatch_retained": true,
+  "prior_mismatch_response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please",
+  "runtime_export_accepted": false,
+  "in_scene_accepted": false,
+  "production_assets_changed": false,
+  "source_frames": [
+    {
+      "frame": 24,
+      "resource": "JOHNWALK.BMP",
+      "file": "024-calm-pose-v2.png",
+      "sha256": "13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb",
+      "bytes": 1252617,
+      "raw_canvas": [
+        1024,
+        1536
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.0,
+        0,
+        0.1,
+        -3.95
+      ],
+      "original_runtime_canvas": [
+        64,
+        150
+      ]
+    },
+    {
+      "frame": 25,
+      "resource": "JOHNWALK.BMP",
+      "file": "025-calm-eyes-v1.png",
+      "sha256": "656061532b3833c092dd76d57d0cdd2e9e21a1b59f8cf0f360c5c0250494b20c",
+      "bytes": 1399255,
+      "raw_canvas": [
+        1024,
+        1536
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -15.0,
+        0,
+        0.1,
+        -3.95
+      ],
+      "original_runtime_canvas": [
+        80,
+        148
+      ]
+    },
+    {
+      "frame": 26,
+      "resource": "JOHNWALK.BMP",
+      "file": "026-calm-eyes-v1.png",
+      "sha256": "20336e0fa8ab6ec930a78307e32719fd6a7d6a871e22803dd8b197724f34e110",
+      "bytes": 1396730,
+      "raw_canvas": [
+        1024,
+        1536
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -13.0,
+        0,
+        0.1,
+        -3.95
+      ],
+      "original_runtime_canvas": [
+        80,
+        146
+      ]
+    },
+    {
+      "frame": 27,
+      "resource": "JOHNWALK.BMP",
+      "file": "027-calm-eyes-v1.png",
+      "sha256": "02adcafbd8548901b29eeb5a5f61a6f1fbe3c72b854410cd403139420ba241d6",
+      "bytes": 1283347,
+      "raw_canvas": [
+        1024,
+        1536
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.0,
+        0,
+        0.1,
+        -3.95
+      ],
+      "original_runtime_canvas": [
+        64,
+        144
+      ]
+    },
+    {
+      "frame": 28,
+      "resource": "JOHNWALK.BMP",
+      "file": "028-natural-left-step-v5.png",
+      "sha256": "4d64d52cdac32e71abc8264e3c0461cc73673983ad9992d0888899dad9dd5665",
+      "bytes": 1346253,
+      "raw_canvas": [
+        1024,
+        1536
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.3,
+        0,
+        0.1,
+        -3.75
+      ],
+      "original_runtime_canvas": [
+        64,
+        144
+      ]
+    },
+    {
+      "frame": 29,
+      "resource": "JOHNWALK.BMP",
+      "file": "029-calm-pose-v2.png",
+      "sha256": "c92553a2bca8778736063bee25d8518919da0c599ee7b905d6c0d2caa14d6cc1",
+      "bytes": 1292634,
+      "raw_canvas": [
+        1024,
+        1536
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -21.0,
+        0,
+        0.1,
+        -3.95
+      ],
+      "original_runtime_canvas": [
+        64,
+        150
+      ]
+    }
+  ],
+  "reviewed_html": {
+    "historical_local_path": "build/original-pose-review/standalone-walk.html",
+    "sha256": "c9472f6daa012287e6004b2fd5492819a88f7ad83177b555b9927f610f9d0948",
+    "bytes": 10639485,
+    "raw_html_duplicated": false,
+    "reproduction_data": "review-evidence/standalone-walk-data.json",
+    "reproduction_template": "review-evidence/standalone-walk-template.html",
+    "builder": "review-evidence/build_standalone_preview.py",
+    "historical_captions": "The reproduced page retains its original Draft labels and not-installed caption to preserve reviewed bytes. This acceptance record is the current status."
+  },
+  "route_and_timing": {
+    "source": "docs/knowledge-base/cartoon-art-metadata.json#motion",
+    "source_raw_sha256_at_review": "c6f5814fe924599ee6e714c234b44119312206433fc8a11c60b63f5e440c4540",
+    "source_route_json_equal": true,
+    "snapshot": "review-evidence/standalone-walk-data.json#/route",
+    "positions": 23,
+    "pose_ms": 120,
+    "motion_ms": 2760,
+    "diagnostic_endpoint_hold_ms": 1000,
+    "loop_ms": 3760,
+    "coordinate_rule": "draw_logical_xy already contains stored x minus 1; multiply both coordinates by 2 only. No further route or foot adjustment.",
+    "source_frame_order": [
+      28,
+      29,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      24,
+      25,
+      27
+    ],
+    "limit": "This is the recorded port route, with a diagnostic endpoint hold, not a measurement of original-executable playback timing."
+  },
+  "registration_and_presentation": {
+    "recipe_source": "art/cartoon/walk-pilot/directional-cycle-v1/recipe.json",
+    "recipe_raw_sha256": "ceaa00c6e3be6db0a4ce056afd61d08492943395658c1c72deb9f69d19424f4f",
+    "all_six_affines_equal_recipe": true,
+    "scale": 0.1,
+    "route_coordinate_scale": 2,
+    "padding_hd_each_side": 28,
+    "padding_basis": "Union of the full raw 1024x1536 canvas transformed at all 23 route positions, then floor/ceil and 28 HD pixels of padding. This exposes art outside original runtime bounds.",
+    "canvas_rendering": "Browser 2D canvas with high-quality smoothing, devicePixelRatio and responsive display zoom up to 2.3. No runtime-size sprite exports were made.",
+    "known_fit_limits": "028 v5 overhangs left by 2.3 HD pixels; 029 v2 overhangs right by 0.5 HD pixels under existing affines. The alpha-8 cell top in 026 reaches -0.05 HD pixels. Measurements remain in next-generation-review.json."
+  },
+  "validation": {
+    "reports": [
+      {
+        "phase": "smoke",
+        "file": "review-evidence/standalone-walk-smoke-validation.json",
+        "sha256": "2855faad06c53d9e0cea694b28ee2fa157f373103ebf3bf679e60d0c1c2b3d0a",
+        "bytes": 386,
+        "passed": 8,
+        "errors": 0
+      },
+      {
+        "phase": "regression",
+        "file": "review-evidence/standalone-walk-regression-validation.json",
+        "sha256": "e4e8a27efbca1cdd7096083d5321ad9638b7286b88a5cbb28053e266106de8ef",
+        "bytes": 4585,
+        "passed": 93,
+        "errors": 0
+      }
+    ],
+    "sequence": "Existing headless smoke checks (8) ran before regression checks (93).",
+    "source_checker": {
+      "historical_local_path": "build/original-pose-review/check_standalone_walk.py",
+      "sha256": "90ad52220121fa488667e46168de8cd348cdca3f69fd5bab944fade1b4d7ad22",
+      "bytes": 6902
+    },
+    "historical_builder": {
+      "historical_local_path": "build/original-pose-review/build_standalone_walk.py",
+      "sha256": "98f9290bb5d25eb419746a1a51b42e8fc5d38c6b9e835bd17584681609c25218",
+      "bytes": 9876
+    },
+    "browser_test_scope": "Real PNG loads, controls, route draws and canvas transforms in a headless browser. RAF/performance timestamps are deliberately controlled, so timing assertions exercise browser handlers, not physical wall-clock cadence.",
+    "preservation_verification": "Current embedded PNG bytes equal the six retained files, route equals source metadata and all affines equal the recipe. Validation reports are copied byte-for-byte; exact HTML SHA identifies the reviewed artifact.",
+    "portable_reproduction": {
+      "files": [
+        {
+          "file": "review-evidence/build_standalone_preview.py",
+          "sha256": "559c76e324d4067525fb65f6676c446337d2dc6c0fbe54fd6dda0cb047fff237",
+          "bytes": 1812
+        },
+        {
+          "file": "review-evidence/standalone-walk-data.json",
+          "sha256": "d12b178291f7b1d852c1447dea991206ec6a9e2a64394f1c3c18272958e7e6c8",
+          "bytes": 6917
+        },
+        {
+          "file": "review-evidence/standalone-walk-template.html",
+          "sha256": "dcb6d801e4a189cc238d59cfecf08673671dcb4ec62007ecd802a9fba5a0120b",
+          "bytes": 7451
+        },
+        {
+          "file": "review-evidence/standalone-rebuild-verification.json",
+          "sha256": "ef781de4d038e1ea9f058c1787c3849b9fad989f7e7a78e350313871ca0f6655",
+          "bytes": 1871
+        }
+      ],
+      "result": "Exact reviewed HTML reproduced; four controls and two isolated executed guard mutations passed."
+    }
+  },
+  "historical_record_policy": "Earlier rejection and pending states remain generation history. This dated exact-source acceptance supersedes pending standalone-motion status, without asserting original pose parity or runtime readiness."
+}

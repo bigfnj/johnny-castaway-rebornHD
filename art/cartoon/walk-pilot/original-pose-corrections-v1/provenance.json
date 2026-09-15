@@ -2,7 +2,7 @@
   "schema_version": 1,
   "date": "2026-09-15",
   "purpose": "expression direction selection after original-pose review",
-  "scope": "Expression concepts, selected full-body expression reference, prospective pose sources and rejected-attempt history only. Runtime sprites and production assets remain unchanged.",
+  "scope": "Generation and source history, including the accepted visible standalone motion. Runtime sprites and production assets remain unchanged.",
   "current_selection_record": "acceptance.json",
   "expression_sheet": {
     "file": "expressions-v1.png",
@@ -603,8 +603,14 @@
   },
   "next_generation_record": {
     "file": "next-generation-review.json",
-    "sha256": "27eb33637567d59f6f2a30aed61db91e0a569a431b6475eeb21b316ae9cca22e",
-    "bytes": 55892,
-    "scope": "Nine exact generation calls and their source/review records. The earlier Calm focus key is accepted as an expression reference. Six provisional inputs are cleared only for standalone motion review; no anatomical correction, final cycle or runtime export is accepted."
+    "sha256": "92a3e8a86bb0c28a1bec65d4d688a695063ba2bbaddc9ad0157c9d5d1b0ff2f7",
+    "bytes": 60277,
+    "scope": "The visible six-source standalone walking motion and Calm focus expression were accepted. Original-leg mismatch remains a reviewed, retained variation. Runtime exports and in-scene acceptance are pending."
+  },
+  "standalone_motion_acceptance": {
+    "file": "standalone-motion-acceptance.json",
+    "sha256": "5fc12ecd5f73aabde5d3fd92a838d19d8c7f69c1d687c358533fec9d97fd8ee0",
+    "bytes": 8974,
+    "scope": "The visible six-source standalone walking motion and Calm focus expression were accepted. Original-leg mismatch remains a reviewed, retained variation. Runtime exports and in-scene acceptance are pending."
   }
 }

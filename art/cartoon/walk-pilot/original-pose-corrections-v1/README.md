@@ -1,11 +1,37 @@
 # Original-pose review and expression direction
 
-The user selected **6. Calm focus** on 2026-09-15, then selected the earlier
-full-body [Calm focus key](024-calm-focus-key.png) with "Keep the earlier Calm
-focus version" after rejecting an eyebrow-lift variation. This approves an
-expression reference for subsequent work across the complete walking family.
-Foot corrections, exports and motion approval remain pending. The 21 production
-assets remain unchanged.
+The user accepted the visible standalone six-source walking motion and Calm
+focus expression on 2026-09-15: "looks good, whats next ?".
+[standalone-motion-acceptance.json](standalone-motion-acceptance.json) ties that
+decision to the exact six PNG hashes, reviewed HTML, route and validation
+reports. The original-leg mismatch was reviewed and retained. Runtime exports
+and in-scene acceptance remain pending; the 21 production assets are unchanged.
+
+The earlier expression choices were **6. Calm focus**, followed by "Keep the
+earlier Calm focus version" for the full-body
+[Calm focus key](024-calm-focus-key.png), after an eyebrow-lift variation was
+rejected.
+
+## Reproduce the accepted standalone preview
+
+From the repository root, run:
+
+```text
+python art/cartoon/walk-pilot/original-pose-corrections-v1/review-evidence/build_standalone_preview.py --output build/standalone-walk.html
+```
+
+The portable builder embeds the unchanged repository PNGs into the preserved
+template/data and reproduces the exact reviewed HTML SHA-256
+`c9472f6daa012287e6004b2fd5492819a88f7ad83177b555b9927f610f9d0948`.
+The historical page still says "Draft" and "not installed"; this acceptance
+record supplies its current status. The 10.6 MB HTML is not duplicated here.
+
+The copied browser reports contain [8 smoke checks](review-evidence/standalone-walk-smoke-validation.json)
+followed by [93 regression checks](review-evidence/standalone-walk-regression-validation.json).
+They cover actual PNG loads, controls, all 23 route positions and canvas
+transforms. Controlled RAF/performance timestamps test handler timing, not
+physical wall-clock cadence. The [rebuild verification](review-evidence/standalone-rebuild-verification.json)
+records exact reproduction, refusal controls and two executed guard mutations.
 
 ## Pose and expression batch checkpoint
 
@@ -18,26 +44,26 @@ strings are preserved unchanged in [next-generation-prompts.json](next-generatio
 
 | Frame / attempt | Current status |
 |---|---|
-| [024 Calm pose v2](024-calm-pose-v2.png) | Human static review pending. Trailing toe is more side-on, but its contour shifted left and upward. |
-| [025](025-calm-eyes-v1.png), [026](026-calm-eyes-v1.png), [027](027-calm-eyes-v1.png) Calm eyes v1 | Technical and motion review pending. Eye edits do not establish unchanged body pixels. |
+| [024 Calm pose v2](024-calm-pose-v2.png) | Accepted in standalone motion. Earlier measured trailing-toe contour changes remain recorded. |
+| [025](025-calm-eyes-v1.png), [026](026-calm-eyes-v1.png), [027](027-calm-eyes-v1.png) Calm eyes v1 | Accepted in standalone motion. Eye edits do not establish unchanged body pixels. |
 | [028 Calm pose v2](028-calm-pose-v2.png) | Rejected after assistant anatomy review; retained as an actual ancestor of v3. |
-| [029 Calm pose v2](029-calm-pose-v2.png) | Rejected for leg linkage and canvas clearance. Subsequently retained as a provisional standalone preview input; no accepted replacement. |
+| [029 Calm pose v2](029-calm-pose-v2.png) | Accepted in standalone motion. Earlier original-leg linkage and canvas-clearance findings remain recorded. |
 | [028 near-left-thigh v3](028-near-left-thigh-v3.png) | User rejected: "no, the shorts look weird". Retained as an actual ancestor of v4. |
 | [028 simple shorts v4](028-simple-shorts-v4.png) | User rejected: "try again, it also looks like the foot is optically wrong". Retained as the rejected branch endpoint. |
-| [028 natural left step v5](028-natural-left-step-v5.png) | User confirmed the leg is still wrong, then requested standalone motion review. This does not accept the anatomical correction or final motion. |
+| [028 natural left step v5](028-natural-left-step-v5.png) | Accepted in standalone motion with the user-confirmed original-leg mismatch retained. |
 
 V5 starts again from the previously accepted 028 raw, the Calm focus key and
 the supplied-original native pose. The rejected v2/v3/v4 branch is not its
-ancestry. There is currently no accepted 028 replacement, corrected walking
-cycle or runtime export.
+ancestry. These six sources have standalone motion approval. That decision
+does not establish original anatomical parity or runtime/in-scene acceptance.
 
 The user subsequently said: "its still the wrong leg, but since its completely
 opposite i think it works, give me a standalone walking animation and let me
-look at it please". This clears a provisional standalone animation using
-024 v2, 025/026/027 Calm eyes v1, 028 v5 and 029 Calm pose v2. The planned
-preview retains the existing scale/affines on a padded canvas so overhanging
-feet remain visible. It is not a runtime export, a corrected-anatomy claim or
-final motion approval. The record does not itself create that animation.
+look at it please". The resulting animation used 024 v2, 025/026/027 Calm eyes
+v1, 028 v5 and 029 Calm pose v2. It retains the existing scale/affines on a
+padded canvas so overhanging feet remain visible. The later "looks good"
+response accepts that visible motion and Calm expression. It is not a runtime
+export or a claim of corrected original anatomy.
 
 All nine returned images are 1024 by 1536. Analytical checks use each frame's
 existing scale 0.1 affine without fitting or moving the art. V3 and v4 overhang
@@ -49,8 +75,9 @@ actual filtered export or runtime check. No new runtime sprites were exported.
 
 The early leg corrections retained the wrong connections. Changing hip/thigh
 attachments requires reviewing the shorts openings, but forcing a crossing seam
-produced wrapped flaps the user rejected. Hip-to-foot linkage and the big-toe
-versus smaller-toe order remain separate review questions. Explicit pupil
+produced wrapped flaps the user rejected. The accepted standalone motion
+retains the reviewed original-leg difference; original toe-order parity is not
+claimed. Explicit pupil
 centering produced a visible forward gaze in these outputs; every output also
 redrew pixels beyond the intended edit, so no unchanged-body claim is made.
 
@@ -79,8 +106,8 @@ and both silhouettes contained within a 2-raw-pixel square dilation of the
 other at alpha at least 8. Its alpha range is 0 through 254. However, 178,168
 visible pixels changed in the diagnostic band below raw y520, which is not an
 anatomical mask. The requested eye-only edit therefore does not establish
-byte-identical body or feet. These measurements apply to this key only and do not approve its runtime
-registration, gait geometry or motion.
+byte-identical body or feet. These measurements apply to this key only and do
+not establish runtime registration or original gait geometry.
 
 ![Six expression concepts](expressions-v1.png)
 

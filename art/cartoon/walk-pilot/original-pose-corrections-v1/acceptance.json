@@ -29,13 +29,15 @@
     "foot_corrections_accepted": false,
     "runtime_export_accepted": false,
     "motion_family_accepted": false,
-    "production_promotion": false
+    "production_promotion": false,
+    "historical_scope_note": "Key-only selection status at that point in time. The later standalone-motion-acceptance.json records accepted visible family motion."
   },
   "next_generation_checkpoint": {
     "record": "next-generation-review.json",
     "prospective_024": {
       "file": "024-calm-pose-v2.png",
-      "status": "human-static-review-pending"
+      "status": "accepted-in-visible-standalone-motion; runtime-in-scene-pending",
+      "historical_status_before_standalone_acceptance": "human-static-review-pending"
     },
     "prospective_025_026_027": {
       "files": [
@@ -43,27 +45,32 @@
         "026-calm-eyes-v1.png",
         "027-calm-eyes-v1.png"
       ],
-      "status": "technical-and-motion-review-pending"
+      "status": "accepted-in-visible-standalone-motion; runtime-in-scene-pending",
+      "historical_status_before_standalone_acceptance": "technical-and-motion-review-pending"
     },
     "frame_028": {
-      "replacement_selected": false,
+      "replacement_selected": true,
       "latest_rejected_file": "028-simple-shorts-v4.png",
       "human_response": "try again, it also looks like the foot is optically wrong",
       "prospective_file": "028-natural-left-step-v5.png",
-      "status": "human-confirmed-wrong-leg-cleared-for-standalone-motion-review",
+      "status": "accepted-in-visible-standalone-motion; runtime-in-scene-pending",
       "anatomy_verified": false,
       "foot_identity_and_toe_order_verified": false,
       "human_leg_mismatch_confirmed": true,
-      "latest_human_response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please"
+      "latest_human_response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please",
+      "historical_status_before_standalone_acceptance": "human-confirmed-wrong-leg-cleared-for-standalone-motion-review",
+      "selection_scope": "Source selected for accepted standalone motion only; runtime export and in-scene acceptance pending."
     },
     "frame_029": {
-      "replacement_selected": false,
+      "replacement_selected": true,
       "reason": "Latest Calm-pose attempt rejected for leg linkage and canvas clearance.",
       "provisional_preview_file": "029-calm-pose-v2.png",
-      "anatomy_and_runtime_clearance_rejection_retained": true
+      "anatomy_and_runtime_clearance_rejection_retained": true,
+      "status": "accepted-in-visible-standalone-motion; runtime-in-scene-pending",
+      "selection_scope": "Source selected for accepted standalone motion only; runtime export and in-scene acceptance pending."
     },
     "foot_corrections_accepted": false,
-    "complete_cycle_accepted": false,
+    "complete_cycle_accepted": true,
     "runtime_exports_accepted": false,
     "production_assets_changed": false,
     "standalone_motion_review": {
@@ -77,7 +84,20 @@
         "029-calm-pose-v2.png"
       ],
       "human_response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please",
-      "scope": "Standalone preview only, with padding to expose overhang. No anatomical correction, foot correction, final motion or runtime export is accepted."
-    }
+      "scope": "Standalone motion and Calm expression now accepted; reviewed original-leg mismatch retained. Runtime export and in-scene acceptance remain pending.",
+      "standalone_motion_accepted": true,
+      "acceptance_record": "standalone-motion-acceptance.json"
+    },
+    "historical_checkpoint_note": "Generation history through the request for a standalone preview. Current standalone acceptance is recorded separately below.",
+    "cycle_acceptance_scope": "Visible standalone motion only; runtime and in-scene acceptance pending."
+  },
+  "current_standalone_motion_acceptance": {
+    "record": "standalone-motion-acceptance.json",
+    "human_response": "looks good, whats next ?",
+    "standalone_motion_accepted": true,
+    "calm_expression_in_motion_accepted": true,
+    "reviewed_leg_mismatch_retained": true,
+    "runtime_export_accepted": false,
+    "in_scene_accepted": false
   }
 }

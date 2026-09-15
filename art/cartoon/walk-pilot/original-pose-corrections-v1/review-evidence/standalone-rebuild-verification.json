@@ -1,0 +1,37 @@
+{
+  "scope": "Exact HTML reproduction and two new identity-guard controls, using isolated copies and the actual Python builder. No approved image bytes changed.",
+  "python": "3.14.5 (tags/v3.14.5:5607950, May 10 2026, 10:43:50) [MSC v.1944 64 bit (AMD64)]",
+  "executed_builder_sha256": "559c76e324d4067525fb65f6676c446337d2dc6c0fbe54fd6dda0cb047fff237",
+  "reviewed_html_sha256": "c9472f6daa012287e6004b2fd5492819a88f7ad83177b555b9927f610f9d0948",
+  "checks": [
+    "Exact 10,639,485-byte reviewed HTML reproduced from repository PNGs",
+    "Wrong source identity refused with named PNG and no output",
+    "Changed historical template refused with named HTML and no output",
+    "Restored builder reproduces the exact reviewed HTML again"
+  ],
+  "mutations": [
+    {
+      "guard_removed": "source PNG identity guard",
+      "actual_failures": [
+        "source PNG identity guard"
+      ],
+      "mutated_script_sha256": "4bb45477dc1cace705dfd1b8aa4014ee4525fafcca45aee5903385fdc9e60179",
+      "source_mtime_advanced": true,
+      "execution_witness": "Actual isolated script returned 0 and wrote HTML while the expected named refusal disappeared",
+      "output_sha256": "c9472f6daa012287e6004b2fd5492819a88f7ad83177b555b9927f610f9d0948",
+      "status": "FIRED"
+    },
+    {
+      "guard_removed": "reviewed HTML identity guard",
+      "actual_failures": [
+        "reviewed HTML identity guard"
+      ],
+      "mutated_script_sha256": "e6334310e77bb23da8675d26beae3c2c1204e9e4dd0f3f21501f9b9fb165333b",
+      "source_mtime_advanced": true,
+      "execution_witness": "Actual isolated script returned 0 and wrote HTML while the expected named refusal disappeared",
+      "output_sha256": "ada550ff2aa1cd36fd95f0c1f4083365fc602cc6734f3efdac961b68e949aa8f",
+      "status": "FIRED"
+    }
+  ],
+  "result": "PASS: 4 controls and 2 isolated executed guard mutations"
+}

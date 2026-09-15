@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-09-15",
-  "scope": "Nine exact generation calls and their source/review records. The earlier Calm focus key is accepted as an expression reference. Six provisional inputs are cleared only for standalone motion review; no anatomical correction, final cycle or runtime export is accepted.",
+  "scope": "The visible six-source standalone walking motion and Calm focus expression were accepted. Original-leg mismatch remains a reviewed, retained variation. Runtime exports and in-scene acceptance are pending.",
   "prompt_records": {
     "next-generation-prompts.json": {
       "sha256": "f533c566dbea4d1bda4b4ea7f783e5304a07fe3dc01587dc18e535215cf152ce",
@@ -31,8 +31,8 @@
       "id": "024-calm-pose-v2",
       "resource": "JOHNWALK.BMP",
       "frame": 24,
-      "status": "human-static-review-pending",
-      "review_reason": "More side-on trailing toe, but toe silhouette changed height and reach. No foot acceptance.",
+      "status": "accepted-in-visible-standalone-motion",
+      "review_reason": "Visible standalone motion accepted with earlier original-leg and canvas observations retained; runtime export and in-scene acceptance pending.",
       "output": {
         "file": "024-calm-pose-v2.png",
         "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-d98611fb-163f-4146-ac33-05ed294cf304.png",
@@ -43,7 +43,7 @@
           1536
         ]
       },
-      "raw_preservation_role": "Prospective review source, not a runtime sprite",
+      "raw_preservation_role": "Accepted visible standalone motion source; runtime export pending.",
       "actual_tool": {
         "tool": "image_gen.imagegen",
         "call_record": "next-generation-prompts.json#/0",
@@ -194,7 +194,12 @@
       },
       "anatomy_verified": false,
       "runtime_export_performed": false,
-      "motion_accepted": false
+      "motion_accepted": true,
+      "historical_status_before_standalone_acceptance": "human-static-review-pending",
+      "motion_acceptance_scope": "Visible standalone presentation only. Earlier anatomy and canvas observations are retained; runtime and in-scene acceptance pending.",
+      "motion_acceptance_record": "standalone-motion-acceptance.json",
+      "historical_review_reason_before_standalone_acceptance": "More side-on trailing toe, but toe silhouette changed height and reach. No foot acceptance.",
+      "historical_raw_preservation_role": "Prospective review source, not a runtime sprite"
     },
     {
       "id": "028-calm-pose-v2",
@@ -370,8 +375,8 @@
       "id": "029-calm-pose-v2",
       "resource": "JOHNWALK.BMP",
       "frame": 29,
-      "status": "assistant-rejected-anatomy-and-clearance",
-      "review_reason": "The prior hip-to-leg assignment remained; trailing foot also exceeds the fixed runtime canvas.",
+      "status": "accepted-in-visible-standalone-motion",
+      "review_reason": "Visible standalone motion accepted with earlier original-leg and canvas observations retained; runtime export and in-scene acceptance pending.",
       "output": {
         "file": "029-calm-pose-v2.png",
         "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-9da0147c-676c-4b1a-9dd0-218038f3c8fa.png",
@@ -382,7 +387,7 @@
           1536
         ]
       },
-      "raw_preservation_role": "Provisional standalone animation input requested after the earlier rejection; anatomy and fixed-canvas rejection remain in effect.",
+      "raw_preservation_role": "Accepted visible standalone motion source; runtime export pending.",
       "actual_tool": {
         "tool": "image_gen.imagegen",
         "call_record": "next-generation-prompts.json#/2",
@@ -534,14 +539,19 @@
       },
       "anatomy_verified": false,
       "runtime_export_performed": false,
-      "motion_accepted": false
+      "motion_accepted": true,
+      "historical_status_before_standalone_acceptance": "assistant-rejected-anatomy-and-clearance",
+      "motion_acceptance_scope": "Visible standalone presentation only. Earlier anatomy and canvas observations are retained; runtime and in-scene acceptance pending.",
+      "motion_acceptance_record": "standalone-motion-acceptance.json",
+      "historical_review_reason_before_standalone_acceptance": "The prior hip-to-leg assignment remained; trailing foot also exceeds the fixed runtime canvas.",
+      "historical_raw_preservation_role": "Provisional standalone animation input requested after the earlier rejection; anatomy and fixed-canvas rejection remain in effect."
     },
     {
       "id": "025-calm-eyes-v1",
       "resource": "JOHNWALK.BMP",
       "frame": 25,
-      "status": "technical-and-motion-review-pending",
-      "review_reason": "The Calm focus gaze changed visibly. The rest of the pixels are not assumed unchanged.",
+      "status": "accepted-in-visible-standalone-motion",
+      "review_reason": "Visible standalone motion accepted with earlier original-leg and canvas observations retained; runtime export and in-scene acceptance pending.",
       "output": {
         "file": "025-calm-eyes-v1.png",
         "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-7f81616c-4daf-4ff3-ba66-78d453be68ec.png",
@@ -552,7 +562,7 @@
           1536
         ]
       },
-      "raw_preservation_role": "Prospective review source, not a runtime sprite",
+      "raw_preservation_role": "Accepted visible standalone motion source; runtime export pending.",
       "actual_tool": {
         "tool": "image_gen.imagegen",
         "call_record": "next-generation-prompts.json#/3",
@@ -690,14 +700,19 @@
       },
       "anatomy_verified": false,
       "runtime_export_performed": false,
-      "motion_accepted": false
+      "motion_accepted": true,
+      "historical_status_before_standalone_acceptance": "technical-and-motion-review-pending",
+      "motion_acceptance_scope": "Visible standalone presentation only. Earlier anatomy and canvas observations are retained; runtime and in-scene acceptance pending.",
+      "motion_acceptance_record": "standalone-motion-acceptance.json",
+      "historical_review_reason_before_standalone_acceptance": "The Calm focus gaze changed visibly. The rest of the pixels are not assumed unchanged.",
+      "historical_raw_preservation_role": "Prospective review source, not a runtime sprite"
     },
     {
       "id": "026-calm-eyes-v1",
       "resource": "JOHNWALK.BMP",
       "frame": 26,
-      "status": "technical-and-motion-review-pending",
-      "review_reason": "The Calm focus gaze changed visibly. Existing high rear-foot lift remains a review question.",
+      "status": "accepted-in-visible-standalone-motion",
+      "review_reason": "Visible standalone motion accepted with earlier original-leg and canvas observations retained; runtime export and in-scene acceptance pending.",
       "output": {
         "file": "026-calm-eyes-v1.png",
         "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-bd90e3cf-c350-4e09-bec3-d18c1da3b06c.png",
@@ -708,7 +723,7 @@
           1536
         ]
       },
-      "raw_preservation_role": "Prospective review source, not a runtime sprite",
+      "raw_preservation_role": "Accepted visible standalone motion source; runtime export pending.",
       "actual_tool": {
         "tool": "image_gen.imagegen",
         "call_record": "next-generation-prompts.json#/4",
@@ -846,14 +861,19 @@
       },
       "anatomy_verified": false,
       "runtime_export_performed": false,
-      "motion_accepted": false
+      "motion_accepted": true,
+      "historical_status_before_standalone_acceptance": "technical-and-motion-review-pending",
+      "motion_acceptance_scope": "Visible standalone presentation only. Earlier anatomy and canvas observations are retained; runtime and in-scene acceptance pending.",
+      "motion_acceptance_record": "standalone-motion-acceptance.json",
+      "historical_review_reason_before_standalone_acceptance": "The Calm focus gaze changed visibly. Existing high rear-foot lift remains a review question.",
+      "historical_raw_preservation_role": "Prospective review source, not a runtime sprite"
     },
     {
       "id": "027-calm-eyes-v1",
       "resource": "JOHNWALK.BMP",
       "frame": 27,
-      "status": "technical-and-motion-review-pending",
-      "review_reason": "The Calm focus gaze changed visibly. Existing high rear-foot lift remains a review question.",
+      "status": "accepted-in-visible-standalone-motion",
+      "review_reason": "Visible standalone motion accepted with earlier original-leg and canvas observations retained; runtime export and in-scene acceptance pending.",
       "output": {
         "file": "027-calm-eyes-v1.png",
         "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-8f54cc64-d9be-41a5-8e25-6add1cea504c.png",
@@ -864,7 +884,7 @@
           1536
         ]
       },
-      "raw_preservation_role": "Prospective review source, not a runtime sprite",
+      "raw_preservation_role": "Accepted visible standalone motion source; runtime export pending.",
       "actual_tool": {
         "tool": "image_gen.imagegen",
         "call_record": "next-generation-prompts.json#/5",
@@ -1002,7 +1022,12 @@
       },
       "anatomy_verified": false,
       "runtime_export_performed": false,
-      "motion_accepted": false
+      "motion_accepted": true,
+      "historical_status_before_standalone_acceptance": "technical-and-motion-review-pending",
+      "motion_acceptance_scope": "Visible standalone presentation only. Earlier anatomy and canvas observations are retained; runtime and in-scene acceptance pending.",
+      "motion_acceptance_record": "standalone-motion-acceptance.json",
+      "historical_review_reason_before_standalone_acceptance": "The Calm focus gaze changed visibly. Existing high rear-foot lift remains a review question.",
+      "historical_raw_preservation_role": "Prospective review source, not a runtime sprite"
     },
     {
       "id": "028-near-left-thigh-v3",
@@ -1320,8 +1345,8 @@
       "id": "028-natural-left-step-v5",
       "resource": "JOHNWALK.BMP",
       "frame": 28,
-      "status": "human-confirmed-wrong-leg-cleared-for-standalone-motion-review",
-      "review_reason": "The user confirmed the leg is still wrong, but requested a standalone animation to judge the complete opposite step. No anatomical correction or final motion acceptance.",
+      "status": "accepted-in-visible-standalone-motion",
+      "review_reason": "Visible standalone motion accepted with earlier original-leg and canvas observations retained; runtime export and in-scene acceptance pending.",
       "output": {
         "file": "028-natural-left-step-v5.png",
         "source_tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-872f749a-9afb-436f-8323-534bb2baa6ea.png",
@@ -1332,7 +1357,7 @@
           1536
         ]
       },
-      "raw_preservation_role": "Prospective review source from a fresh branch; not an accepted replacement",
+      "raw_preservation_role": "Accepted visible standalone motion source; runtime export pending.",
       "actual_tool": {
         "tool": "image_gen.imagegen",
         "call_record": "natural-step-prompt.json",
@@ -1485,7 +1510,12 @@
       "ancestry_note": "This call used the previously accepted028 raw, Calm focus key and native pose. Rejected028 v2/v3/v4 are not ancestors of v5.",
       "anatomy_verified": false,
       "runtime_export_performed": false,
-      "motion_accepted": false
+      "motion_accepted": true,
+      "historical_status_before_standalone_acceptance": "human-confirmed-wrong-leg-cleared-for-standalone-motion-review",
+      "motion_acceptance_scope": "Visible standalone presentation only. Earlier anatomy and canvas observations are retained; runtime and in-scene acceptance pending.",
+      "motion_acceptance_record": "standalone-motion-acceptance.json",
+      "historical_review_reason_before_standalone_acceptance": "The user confirmed the leg is still wrong, but requested a standalone animation to judge the complete opposite step. No anatomical correction or final motion acceptance.",
+      "historical_raw_preservation_role": "Prospective review source from a fresh branch; not an accepted replacement"
     }
   ],
   "human_decisions": [
@@ -1506,6 +1536,12 @@
       "response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please",
       "status": "wrong-leg-confirmed; standalone-motion-review-requested",
       "scope": "Clearance to make a provisional standalone walking preview only. Anatomy correction and final motion are not accepted."
+    },
+    {
+      "response": "looks good, whats next ?",
+      "status": "accepted-visible-standalone-motion-and-Calm-expression",
+      "record": "standalone-motion-acceptance.json",
+      "scope": "The visible six-source standalone walking motion and Calm focus expression were accepted. Original-leg mismatch remains a reviewed, retained variation. Runtime exports and in-scene acceptance are pending."
     }
   ],
   "visual_observations": [
@@ -1533,7 +1569,7 @@
     "The returned raw canvas size does not establish fit inside the original runtime frame. The rejected028 branch extends beyond both sides under its existing affine."
   ],
   "pixel_redraw_caveat": "No output is represented as byte-identical outside its intended edit. Technical alpha/registration measurements do not approve anatomy, gait timing, foot clearance or style.",
-  "unresolved_foot_identity": "The user confirmed028 v5 still uses the wrong leg relative to the original reference. Clearance to inspect a standalone animation does not resolve this deviation. Toe ordering, foot optics and full-family motion remain review questions.",
+  "unresolved_foot_identity": "The user-confirmed original-leg mismatch is retained in the accepted standalone motion. This is not original anatomical parity. Runtime fit and in-scene behavior remain to be checked.",
   "standalone_motion_review": {
     "human_response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please",
     "provisional_input_files": [
@@ -1556,8 +1592,10 @@
     "presentation_plan": "Use the existing common scale/affines on a padded standalone preview canvas so overhanging art can be seen. This is not the original runtime canvas or a new runtime export.",
     "animation_created_by_this_record": false,
     "anatomical_correction_accepted": false,
-    "final_motion_accepted": false,
+    "final_motion_accepted": true,
     "runtime_export_accepted": false,
-    "production_promotion": false
+    "production_promotion": false,
+    "acceptance_scope": "Visible standalone motion only; runtime and in-scene pending.",
+    "acceptance_record": "standalone-motion-acceptance.json"
   }
 }
