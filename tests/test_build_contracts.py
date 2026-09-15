@@ -6,6 +6,7 @@ architecture checks exercise command responses only and explicitly say so.
 import argparse
 import hashlib
 import importlib.util
+import os
 from pathlib import Path
 import subprocess
 import tempfile
@@ -112,13 +113,27 @@ def verify(work, mutations, mac_binary):
         bad, digest = mutant(web, needle, 'if False:')
         fired('tools/build_web.py cache guard', lambda: rejected(lambda: bad.verify_cache(source, output), f'incompatible {cache}'), digest)
     cache.unlink()
-    for invalid in (source, work / 'outside'):
-        rejected(lambda: web.build(source, invalid, run=lambda *a, **k: (_ for _ in ()).throw(AssertionError('docker reached before output validation'))), f': {invalid}')
+    source_paths = [source]
+    if os.name != 'nt':
+        # macOS temp paths can arrive through /var -> /private/var. Exercise
+        # a real alias on every POSIX run, including Linux, so this axis varies.
+        alias = work / 'source-alias'
+        alias.symlink_to(source.resolve(), target_is_directory=True)
+        assert alias != alias.resolve() and alias.samefile(source)
+        source_paths.append(alias)
+    else:
+        print('INFO POSIX symlink-path control is exercised on Linux/macOS; Windows uses ordinary path controls')
+    for source_path in source_paths:
+        for invalid in (source_path, work / 'outside'):
+            # build() reports its canonical destination. Preserve that exact
+            # path check when the caller used a symlink or a macOS temp alias.
+            rejected(lambda: web.build(source_path, invalid, run=lambda *a, **k: (_ for _ in ()).throw(AssertionError('docker reached before output validation'))), f': {invalid.resolve()}')
+            print(f'WITNESS tools/build_web.py: output {invalid} refused as {invalid.resolve()} before Docker')
     if mutations:
         bad, digest = mutant(web, 'if destination == source or not destination.is_relative_to(source):', 'if False:')
         # The root directory is a valid relative_to result, so disabling this
         # guard reaches the same refusal oracle rather than an unrelated error.
-        fired('tools/build_web.py output guard', lambda: rejected(lambda: bad.build(source, source, run=lambda *a, **k: SimpleNamespace(returncode=0), probes_only=True), f': {source}'), digest)
+        fired('tools/build_web.py output guard', lambda: rejected(lambda: bad.build(source, source, run=lambda *a, **k: SimpleNamespace(returncode=0), probes_only=True), f': {source.resolve()}'), digest)
     web.build(source, output, run=lambda *a, **k: SimpleNamespace(returncode=0))
     assert (output / 'index.html').read_bytes() == b'page-control', 'tools/build_web.py: absolute in-source output omitted page'
     def failed_compile(args, **kwargs):
