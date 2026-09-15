@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "status": "Selected independent ocean, shadow and center-wave assets for technical preview; full human runtime scene review pending.",
+  "coverage": "partial",
+  "human_runtime_acceptance": false,
+  "production_acceptance": false,
+  "required_assets": [
+    "BMP/BACKGRND.BMP/006.png",
+    "BMP/BACKGRND.BMP/007.png",
+    "BMP/BACKGRND.BMP/008.png",
+    "BMP/BACKGRND.BMP/014.png",
+    "SCR/OCEAN02.SCR.png"
+  ],
+  "source_bundle": {
+    "file": "source-images.zip",
+    "sha256": "dd9c2710580db88433b2427a5284eabe70e43d72975c0a5fdbea9b1aba9e7a8e",
+    "bytes": 4240583,
+    "members": [
+      "006-generated-v1.png",
+      "007-generated-v1.png",
+      "008-generated-v1.png",
+      "ocean-generated-v1.png",
+      "shadow-generated-v1.png"
+    ],
+    "compression": "DEFLATE level 9; fixed 1980 timestamp; sorted names",
+    "scope": "Exactly five selected raw PNGs. No selected image uses another generated asset as a reference."
+  },
+  "generated_images": {
+    "006-generated-v1.png": {
+      "sha256": "4216199c9e69f0f61cdaa27f7106d7c80b07056b895779592836730772910033",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "007-generated-v1.png": {
+      "sha256": "8c284930a1b4414246cb54ec27eadb9a141b14aceab21830fb28ca545a4a2de8",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "008-generated-v1.png": {
+      "sha256": "d8fe387761fd1435ac5cef9024e13ecb72684b1c0039ee53318c3ed28138b313",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "ocean-generated-v1.png": {
+      "sha256": "10a4c01a454082a2f5592f249a59d2e84c5158eca434f6223d502a7fff745f96",
+      "canvas": [
+        1448,
+        1086
+      ],
+      "mode": "RGB"
+    },
+    "shadow-generated-v1.png": {
+      "sha256": "ac50f8257939997084ed7a0c10969c32b93006089714086d273e71a175eb2bd0",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    }
+  },
+  "original_archive": {
+    "file": "assets/scrantic_data.zip",
+    "validation": "Only the five original member hashes below are required."
+  },
+  "original_references": {
+    "006": {
+      "member": "data/hd/BMP/BACKGRND.BMP/006.png",
+      "sha256": "6adfb326812a829ee9a56c28979b3652cf60be914ce16e23441bf568862a473b",
+      "canvas": [
+        320,
+        50
+      ]
+    },
+    "007": {
+      "member": "data/hd/BMP/BACKGRND.BMP/007.png",
+      "sha256": "d5654a837b67b4dd21cb8f66bdaa649ee8355cd39b4be6aee75ddd98356d3519",
+      "canvas": [
+        320,
+        50
+      ]
+    },
+    "008": {
+      "member": "data/hd/BMP/BACKGRND.BMP/008.png",
+      "sha256": "134035d13a1f91df9d053517a939fdd9b1390d2693309f1d8a441683ff13d469",
+      "canvas": [
+        320,
+        50
+      ]
+    },
+    "014": {
+      "member": "data/hd/BMP/BACKGRND.BMP/014.png",
+      "sha256": "43152471052960a1e173d00cf7b24516d529e4213a727a19a893d2f20a3b5072",
+      "canvas": [
+        208,
+        56
+      ]
+    },
+    "OCEAN02": {
+      "member": "data/hd/SCR/OCEAN02.SCR.png",
+      "sha256": "8d01436c5d5855ac2cba35559692f3e5180e5f6113725931ae6396b99c5f06cf",
+      "canvas": [
+        1280,
+        960
+      ]
+    }
+  },
+  "geometry_references": {
+    "shadow-original-4x-padded.png": {
+      "original_reference": "014",
+      "sha256": "2aa39afd9112ac5aba5d1ef33762f79cb998c3194a32cd94f6d2726b13fb5527",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 4,
+      "offset_raw": [
+        352,
+        400
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.25,
+        0,
+        -88,
+        0,
+        0.25,
+        -100
+      ]
+    },
+    "006-original-4x-padded.png": {
+      "original_reference": "006",
+      "sha256": "0abeed7161115a0d5ec21b2151293562c6a232cd33758cddaff550de7ec8546e",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 4,
+      "offset_raw": [
+        128,
+        412
+      ],
+      "png_compress_level": 6,
+      "nominal_raw_to_runtime_affine": [
+        0.25,
+        0,
+        -32,
+        0,
+        0.25,
+        -103
+      ]
+    },
+    "007-original-4x-padded.png": {
+      "original_reference": "007",
+      "sha256": "b1640427e60d9118cf8936d90c059ddcba798c2b91b81127ec7a32b4b2f13cb4",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 4,
+      "offset_raw": [
+        128,
+        412
+      ],
+      "png_compress_level": 6,
+      "nominal_raw_to_runtime_affine": [
+        0.25,
+        0,
+        -32,
+        0,
+        0.25,
+        -103
+      ]
+    },
+    "008-original-4x-padded.png": {
+      "original_reference": "008",
+      "sha256": "4045d81d021a1188e4de79cca1e8cd291ef3d00428263ebf6fb136f41472454d",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 4,
+      "offset_raw": [
+        128,
+        412
+      ],
+      "png_compress_level": 6,
+      "nominal_raw_to_runtime_affine": [
+        0.25,
+        0,
+        -32,
+        0,
+        0.25,
+        -103
+      ]
+    }
+  },
+  "concept_reference": {
+    "file": "art/cartoon/island-concept-v1/concept.png",
+    "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe"
+  },
+  "resampling": {
+    "opaque_resize": "RGB LANCZOS",
+    "affine": "premultiplied RGBa BICUBIC at 8x output, then LANCZOS and straight RGBA",
+    "png_compress_level": 6
+  },
+  "assets": [
+    {
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "original_reference": "006",
+      "generated_image": "006-generated-v1.png",
+      "source_sha256": "4216199c9e69f0f61cdaa27f7106d7c80b07056b895779592836730772910033",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        320,
+        50
+      ],
+      "scene_origin_hd": [
+        728,
+        638
+      ],
+      "transform_kind": "affine",
+      "scale_exact": {
+        "numerator": 249,
+        "denominator": 1000
+      },
+      "semantic_landmark": "common original guide center",
+      "landmark_raw": [
+        768,
+        512
+      ],
+      "landmark_target_local_hd": [
+        160,
+        25
+      ],
+      "affine_forward": [
+        0.249,
+        0,
+        -31.232,
+        0,
+        0.249,
+        -102.488
+      ],
+      "candidate_png_sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
+      "original_export_pillow_version": "12.3.0",
+      "source_mode": "RGBA",
+      "design_adjustment": "One common0.249 scale for all three phases, a0.4percent inset about the fixed source reference center(768,512)->runtime(160,25). This keeps006's quarter-pixel fringe inside without per-phase fitting or contour clipping.",
+      "transformed_raw_alpha8_bounds": [
+        0.3910000000000018,
+        6.822999999999993,
+        319.60900000000004,
+        49.65100000000001
+      ],
+      "meaningful_alpha_clipped": false
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "original_reference": "007",
+      "generated_image": "007-generated-v1.png",
+      "source_sha256": "8c284930a1b4414246cb54ec27eadb9a141b14aceab21830fb28ca545a4a2de8",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        320,
+        50
+      ],
+      "scene_origin_hd": [
+        728,
+        638
+      ],
+      "transform_kind": "affine",
+      "scale_exact": {
+        "numerator": 249,
+        "denominator": 1000
+      },
+      "semantic_landmark": "common original guide center",
+      "landmark_raw": [
+        768,
+        512
+      ],
+      "landmark_target_local_hd": [
+        160,
+        25
+      ],
+      "affine_forward": [
+        0.249,
+        0,
+        -31.232,
+        0,
+        0.249,
+        -102.488
+      ],
+      "candidate_png_sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+      "original_export_pillow_version": "12.3.0",
+      "source_mode": "RGBA",
+      "design_adjustment": "One common0.249 scale for all three phases, a0.4percent inset about the fixed source reference center(768,512)->runtime(160,25). This keeps006's quarter-pixel fringe inside without per-phase fitting or contour clipping.",
+      "transformed_raw_alpha8_bounds": [
+        2.631999999999998,
+        5.079999999999998,
+        311.89,
+        47.41
+      ],
+      "meaningful_alpha_clipped": false
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "original_reference": "008",
+      "generated_image": "008-generated-v1.png",
+      "source_sha256": "d8fe387761fd1435ac5cef9024e13ecb72684b1c0039ee53318c3ed28138b313",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        320,
+        50
+      ],
+      "scene_origin_hd": [
+        728,
+        638
+      ],
+      "transform_kind": "affine",
+      "scale_exact": {
+        "numerator": 249,
+        "denominator": 1000
+      },
+      "semantic_landmark": "common original guide center",
+      "landmark_raw": [
+        768,
+        512
+      ],
+      "landmark_target_local_hd": [
+        160,
+        25
+      ],
+      "affine_forward": [
+        0.249,
+        0,
+        -31.232,
+        0,
+        0.249,
+        -102.488
+      ],
+      "candidate_png_sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
+      "original_export_pillow_version": "12.3.0",
+      "source_mode": "RGBA",
+      "design_adjustment": "One common0.249 scale for all three phases, a0.4percent inset about the fixed source reference center(768,512)->runtime(160,25). This keeps006's quarter-pixel fringe inside without per-phase fitting or contour clipping.",
+      "transformed_raw_alpha8_bounds": [
+        1.3870000000000005,
+        2.0919999999999987,
+        318.61299999999994,
+        42.43000000000001
+      ],
+      "meaningful_alpha_clipped": false
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/014.png",
+      "original_reference": "014",
+      "generated_image": "shadow-generated-v1.png",
+      "source_sha256": "ac50f8257939997084ed7a0c10969c32b93006089714086d273e71a175eb2bd0",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        208,
+        56
+      ],
+      "scene_origin_hd": [
+        792,
+        558
+      ],
+      "transform_kind": "affine",
+      "scale_exact": {
+        "numerator": 47,
+        "denominator": 200
+      },
+      "semantic_landmark": "original guide horizontal center and upper contact",
+      "landmark_raw": [
+        768,
+        400
+      ],
+      "landmark_target_local_hd": [
+        104,
+        0.5
+      ],
+      "affine_forward": [
+        0.235,
+        0,
+        -76.47999999999999,
+        0,
+        0.235,
+        -93.5
+      ],
+      "candidate_png_sha256": "ddfbff021d56c093456b4a9f9476f9439fbe482c45e66ddfb0c9f2993f9e324f",
+      "original_export_pillow_version": "12.3.0",
+      "source_mode": "RGBA",
+      "design_adjustment": "v1 retained cleaner alpha. Fixed static scale0.235 and upper-contact anchor preserve the whole alpha>=8 silhouette. This is a deliberate six-percent smaller cast-shadow footprint, not an automatic body fit or alpha cleanup.",
+      "transformed_raw_alpha8_bounds": [
+        7.415000000000006,
+        0.26500000000000057,
+        203.64000000000001,
+        55.48999999999998
+      ],
+      "meaningful_alpha_clipped": false
+    },
+    {
+      "path": "SCR/OCEAN02.SCR.png",
+      "original_reference": "OCEAN02",
+      "generated_image": "ocean-generated-v1.png",
+      "source_sha256": "10a4c01a454082a2f5592f249a59d2e84c5158eca434f6223d502a7fff745f96",
+      "generated_canvas": [
+        1448,
+        1086
+      ],
+      "runtime_canvas": [
+        1280,
+        960
+      ],
+      "scene_origin_hd": [
+        0,
+        0
+      ],
+      "transform_kind": "opaque_resize",
+      "scale_exact": {
+        "numerator": 160,
+        "denominator": 181
+      },
+      "source_mode": "RGB",
+      "candidate_png_sha256": "099249884c73c863436983ec4d4f5650e77e6e5748ef65bf417d0785b1acf294",
+      "original_export_pillow_version": "12.3.0",
+      "design_adjustment": "Full 4:3 RGB image uniformly resized without cropping. Preserve the proportional horizon near 31.25%."
+    }
+  ],
+  "alpha_note": "Alpha 8 is an inspection threshold only. Raw pixels were not keyed, thresholded or repainted. The finite output canvas excludes some alpha 1-7 residue."
+}

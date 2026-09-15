@@ -624,6 +624,51 @@ void grDrawSprite(PlatformSurface *sfc, struct TTtmSlot *ttmSlot, int x, int y, 
 }
 
 
+void grDrawSpriteAtop(PlatformSurface *sfc, struct TTtmSlot *ttmSlot, int x, int y, uint16 spriteNo, uint16 imageNo)
+{
+    if (imageNo >= MAX_BMP_SLOTS || spriteNo >= ttmSlot->numSprites[imageNo]) {
+        debugMsg("Warning : grDrawSpriteAtop(): invalid sprite %u in slot %u", spriteNo, imageNo);
+        return;
+    }
+    PlatformSurface *source = ttmSlot->sprites[imageNo][spriteNo];
+    PlatformRect clip;
+    platformGetClipRect(sfc, &clip);
+    int dx = (x + grDx) * grScale, dy = (y + grDy) * grScale;
+    int left = dx > clip.x ? dx : clip.x;
+    int top = dy > clip.y ? dy : clip.y;
+    int right = dx + platformGetSurfaceWidth(source);
+    int bottom = dy + platformGetSurfaceHeight(source);
+    if (right > clip.x + clip.w) right = clip.x + clip.w;
+    if (bottom > clip.y + clip.h) bottom = clip.y + clip.h;
+    if (left < 0) left = 0;
+    if (top < 0) top = 0;
+    if (right > platformGetSurfaceWidth(sfc)) right = platformGetSurfaceWidth(sfc);
+    if (bottom > platformGetSurfaceHeight(sfc)) bottom = platformGetSurfaceHeight(sfc);
+    if (right <= left || bottom <= top) return;
+
+    platformLockSurface(source);
+    platformLockSurface(sfc);
+    const uint8 *src = platformGetSurfacePixels(source);
+    uint8 *dst = platformGetSurfacePixels(sfc);
+    int sourcePitch = platformGetSurfacePitch(source);
+    int destPitch = platformGetSurfacePitch(sfc);
+    for (int py = top; py < bottom; py++) {
+        for (int px = left; px < right; px++) {
+            const uint8 *s = src + (size_t)(py - dy) * sourcePitch + (size_t)(px - dx) * 4;
+            uint8 *d = dst + (size_t)py * destPitch + (size_t)px * 4;
+            /* Retain Johnny's coverage; add the palm color as well as masking
+             * Johnny's color. Over the already painted palm this equals palm
+             * over Johnny over clean background, without drawing the palm twice.
+             * Background/cloud/saved-zone pixels outside Johnny stay untouched. */
+            for (int channel = 0; channel < 3; channel++)
+                d[channel] = (uint8)((s[channel] * d[3] + d[channel] * (255 - s[3]) + 127) / 255);
+        }
+    }
+    platformUnlockSurface(sfc);
+    platformUnlockSurface(source);
+}
+
+
 void grDrawSpriteFlip(PlatformSurface *sfc, struct TTtmSlot *ttmSlot, int x, int y, uint16 spriteNo, uint16 imageNo)
 {
     if (imageNo >= MAX_BMP_SLOTS || spriteNo >= ttmSlot->numSprites[imageNo]) {

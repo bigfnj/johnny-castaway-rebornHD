@@ -1,13 +1,15 @@
 # Cartoon island concept 1
 
-`concept.png` is a generated environment direction for human review. It uses the
+`concept.png` is the approved environment direction. The user reviewed it and
+replied "its wonderful". [acceptance.json](acceptance.json) records the exact
+concept hash and the scope of that decision. It uses the
 approved character's ink and cel shading with blue-green water, warm sand and
 natural green palm fronds. The actual prompt, ordered references and source hash
 are in `provenance.json`. Built-in image generation was used; no seed or model
 identifier was exposed.
 
 This is a flattened concept, not a runtime scene capture. It is not approved for
-production. Its overall 4:3 composition follows the existing island, but exact
+production as a flattened image. Its overall 4:3 composition follows the existing island, but exact
 silhouettes and ground placement must be reconciled when authoring independent
 sprites. The small Johnny in this concept was regenerated; the separately
 approved six walking sprites remain unchanged.

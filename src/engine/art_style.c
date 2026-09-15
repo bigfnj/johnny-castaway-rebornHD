@@ -10,7 +10,7 @@
 
 static const TArtStyle styles[] = {
     { "hd", "HD", "data/hd", 2, 1 },
-    { "cartoon", "Cartoon", "data/styles/cartoon", 2, 0 }
+    { "cartoon", "Cartoon (preview)", "data/styles/cartoon", 2, 0 }
 };
 static const TArtStyle *selected = &styles[0];
 static int validated;

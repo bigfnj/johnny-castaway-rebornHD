@@ -135,6 +135,9 @@ void grDrawLine(PlatformSurface *sfc, int x1, int y1, int x2, int y2, uint8 colo
 void grDrawRect(PlatformSurface *sfc, int x, int y, int width, int height, uint8 color);
 void grDrawCircle(PlatformSurface *sfc, int x1, int y1, int width, int height, uint8 fgColor, uint8 bgColor);
 void grDrawSprite(PlatformSurface *sfc, struct TTtmSlot *ttmSlot, int x, int y, uint16 spriteNo, uint16 imageNo);
+/* Premultiplied source-atop: recolor occupied destination pixels while retaining
+ * destination alpha. Used when the same palm is already in the background. */
+void grDrawSpriteAtop(PlatformSurface *sfc, struct TTtmSlot *ttmSlot, int x, int y, uint16 spriteNo, uint16 imageNo);
 void grDrawSpriteFlip(PlatformSurface *sfc, struct TTtmSlot *ttmSlot, int x, int y, uint16 spriteNo, uint16 imageNo);
 void grClearScreen(PlatformSurface *sfc);
 void grFadeOut(void);

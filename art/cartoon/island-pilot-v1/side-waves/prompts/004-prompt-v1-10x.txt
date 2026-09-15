@@ -1,0 +1,11 @@
+Use case: style-transfer
+Create ONE transparent game shore-foam sprite, original BACKGRND frame004, left high-tide phase2 of3.
+Image1 is the EXACT POSE/PLACEMENT authority. It is this original frame enlarged10x, unchanged, at(48,222) on1536x1024. Image2 is STYLE ONLY: its simple narrow white shore-foam ink strokes and small cyan accents. Do not copy the concept's island, scene or overall wave placement.
+
+Trace the WHITE foam curves in Image1 into smooth, thin white-to-cream cartoon strokes in the SAME pixel positions and same overall dimensions. Keep their specific bends, parallel spacing, breaks and endpoints. The original blue paint is not part of the new sprite, and yellow is not part of the new sprite. Leave those areas TRANSPARENT except for very small low-opacity cyan accents immediately beside the white lines. Do not fill the crescent shape between the lines. This is open linework, not a solid crescent or a sheet of water.
+
+The outer curve bends around the LEFT edge, its upright curl on screen-left and long shallow ends pointing right. Preserve exactly this frame's phase rather than drawing a generic wake. At this10x working size, foam strokes should usually be about10-20rawpixels thick, becoming1-2pixels at runtime. Keep gaps between separate lines. No black outline, fog, glow, sparks or broad light bloom. Use clean flat painted white strokes, not glowing energy or photorealistic splashes.
+
+All meaningful strokes must remain inside the original sprite rectangle x48..1487,y222..801, with a small transparent edge margin. Keep exactly1536x1024 canvas and Image1's existing placement/scale. Do not make the wave wider, taller, recentered or rotated. Each phase will use the same uniform0.1 export scale to144x58, with no individual resize or centering.
+
+Genuine transparent alpha: opaque-looking narrow white foam cores, antialiased edges, optional faint cyan beside them, and empty transparent gaps. No opaque blue ocean matte, sand, island, land, tree, shadow, background, checkerboard, text or labels. No full circular shore around an imagined island. Only this single original left wave frame, newly illustrated while matching Image1's geometry.

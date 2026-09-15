@@ -1,0 +1,8 @@
+Use case: style-transfer
+Asset type: one independent transparent game cloud sprite, BACKGRND.BMP frame015.
+
+Image1 is the original cloud015 GEOMETRY AND PLACEMENT authority. Its original256x72 canvas was enlarged exactly4x and pasted unchanged at raw(256,368) on a1536x1024 transparent canvas. Image2 is the approved cartoon STYLE reference only. Redraw this one cloud with Image2's soft white cumulus forms, restrained pale blue-gray underside shading and thin clean dark cartoon contour.
+
+Match Image1's silhouette and exact overall placement, scale and low horizontal proportions. Keep the large high rounded tower on the left third, the descending smaller lobes across the middle, the low flatish underside and the slender tapering tail toward screen-right. Retain the specific original shape rather than copying Image2's different cloud or making a generic cloud icon. The cloud canvas region is raw x256..1279,y368..655; the original actual tail ends before the far-right edge. No meaningful part may extend outside this source footprint. This will export with uniform0.25 scale and fixed translation to256x72, so do not move, zoom, stretch or crop the cloud.
+
+One cloud only, no sky, sun, stars, scene, trees, ocean, rain or extra cloudlets. Opaque white and blue-gray painted interior with narrow antialiased alpha edges. Preserve genuine transparency outside, including any concave contour gaps; no broad semi-transparent veil, dark glow or cast shadow. Output exactly one1536x1024 PNG retaining Image1's fixed cloud placement and generous transparent padding. No text, labels, arrows, grid or checkerboard. Change illustration style while keeping the original geometry.

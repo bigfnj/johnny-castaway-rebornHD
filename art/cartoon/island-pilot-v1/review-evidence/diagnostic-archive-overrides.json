@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "normal_candidate": {
+    "historical_local_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\runtime-complete-v1\\cartoon-static-island-candidate.zip",
+    "sha256": "e936e004afa705f04cc0e60120a50d28b3bba64532628ce9aa5a9575bc0f41e9",
+    "assets": 21,
+    "unchanged_original_members": 2550,
+    "golden_files_byte_identical": 2452,
+    "scope": "Normal original scripts and original timing. Smoke passed before golden regression."
+  },
+  "diagnostic_candidate": {
+    "historical_local_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\engine-pilot\\island-cartoon-motion-v1\\diagnostic-ea-scene.zip",
+    "sha256": "c3c0b2926972e1b20cba9deb0f58106a4a9c9afbacf65ee8fb3b3980949ef2ff",
+    "changed_members_only": [
+      {
+        "name": "data/RESOURCE.001",
+        "normal_sha256": "f4e97a342a3c3c5b31c85cc4b177dba05363a81ad9a49b3961c26f6a4508bd02",
+        "diagnostic_sha256": "177db80402612b9c7818f0948c0daeb4905f4fa6c8a0ca78b07d5fe140f86350",
+        "normal_bytes": 1930773,
+        "diagnostic_bytes": 1940541
+      },
+      {
+        "name": "data/RESOURCE.MAP",
+        "normal_sha256": "65f5e30383b3d5a5f1c4fca1b49d57cc31d72bfaf90a49ce61d5990d449d59da",
+        "diagnostic_sha256": "6156e2b7b88692e5c4d6d7c118e57cd7f7e61a322733f50944a194bf52451d5c",
+        "normal_bytes": 1453,
+        "diagnostic_bytes": 1453
+      }
+    ],
+    "all_other_members_byte_identical": 2570,
+    "resource001_original_prefix_unchanged": true,
+    "scope": "Previously verified native E-to-A23-position walkData route hosted in MJREAD.TTM tag110, with original120ms pose delays and1-second endpoint hold. Only this isolated diagnostic archive differs; this is not a shipped story change."
+  },
+  "executable": {
+    "sha256": "f907574c4863ee45603f17e675218f145e758c2d1f34d519d0a362b91c6686d0",
+    "historical_local_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\Release\\jc_reborn.exe",
+    "same_for_both_styles": true
+  },
+  "production_archive": {
+    "repository_path": "assets/scrantic_data.zip",
+    "sha256": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a",
+    "unchanged": true
+  },
+  "review_media": {
+    "cartoon-island-motion.gif": {
+      "sha256": "a59e8ee6c7b1712db4383353d4f9d32ebd3c35814c97b99bb79d6dd8637200f6",
+      "bytes": 1191308
+    },
+    "cartoon-island-reference.png": {
+      "sha256": "130dd79732239a12fe1ebea6843113f3d9f69d4af024ac150be33d8e335bf133",
+      "bytes": 1073916
+    }
+  }
+}

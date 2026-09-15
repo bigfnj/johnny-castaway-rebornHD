@@ -17,18 +17,18 @@ That is stated per item rather than implied, because "unreachable today" and
 
 ## The state of the project
 
-All four platforms now build in CI. Rendering is verified on Windows and Web;
-Linux and macOS are proven only as far as their decoders, because the check that
-runs there is `dump`, which needs no window server.
+All four platforms build in CI. Rendering is verified automatically on Windows
+and Web, and was reviewed manually on macOS as recorded below. Linux rendering
+remains unverified. Linux/macOS CI checks only `dump`, which needs no window server.
 
 | | Windows | Linux | Web | macOS |
 |---|---|---|---|---|
 | Builds | yes | yes | yes | yes |
 | In CI | yes | yes | yes | yes |
 | Decoders verified | yes | yes | yes | yes |
-| **Rendering verified** | yes | **no** | yes | **no** |
-| Ships in releases | yes | yes | yes | **no** |
-| Tests | 27 smoke + 11 screensaver + 2,452-file corpus | decode parity vs Windows, all 2,452 byte-identical | 10-check browser smoke | decode parity vs Windows |
+| **Rendering verified** | yes, automated | **no** | yes, automated | yes, manual |
+| Release workflow configured | yes | yes | yes | yes, architecture label needs correction |
+| Tests | Native smoke, settings, alpha and 2,452-file corpus | decode parity vs Windows, all 2,452 byte-identical | Browser smoke and style controls | decode parity vs Windows; separate manual rendering review |
 
 "Rendering verified" is the row that matters and the one that is easy to misread
 off a green CI badge. Linux and macOS compile their window and blit code and then
@@ -38,7 +38,45 @@ never run a pixel of it in CI.
 
 ## Open
 
-### Cartoon scene integration: apply the approved walking pilot to new island art
+### Follow-ups found during the Cartoon delivery audit
+
+These findings are outside the new art rendering paths. The shipped resource
+corpus still passes its golden comparison. They remain work for a separate
+hardening or platform pass; the evidence level is explicit for each item.
+
+| Finding | Evidence and recommended follow-up |
+| --- | --- |
+| Legacy RLE/LZW accept output shorter than its declared length | Reproduced with isolated malformed RESOURCE archives: both streams produced one byte while declaring eight, returned success and exposed unwritten buffer contents in the dump. A complete RLE control passed. Require the produced byte count to equal the declared output size before returning, with complete/short controls and rebuilt mutations. [Sanitized reproduction](art/cartoon/island-pilot-v1/review-evidence/audit-decompression.json); no heap contents are stored in that report. |
+| Benchmark retains two render layers until exit | Source-confirmed: `adsPlayBench` allocates ten layers, its final pass marks only eight active, and `adsStopScene` skips the two already marked free. The process exits immediately afterward; this is not a recurring screensaver leak. Free owned layers independently of the active flag and exercise benchmark teardown. |
+| Linux audio error exit leaves a joinable worker unjoined | Source-confirmed, not reproduced against ALSA here: the worker clears `audioThreadRunning` after unrecoverable `snd_pcm_recover`, while `platformCloseAudio` joins only if that flag remains true. Track successful thread creation separately from its running state. |
+| macOS release architecture label disagrees with its runner | `release.yml` uses `macos-latest` without an architecture override but names the package and download row `x86_64`. GitHub currently maps that runner to ARM64. Choose an explicit runner/target and assert the built binary matches its package label before the next release. [GitHub runner reference](https://docs.github.com/en/actions/reference/runners/github-hosted-runners). No release was cut during this art rollout. |
+| Unix build pipeline suppresses its exit status | `tests/unix-build.sh` uses `|| true` after the build pipeline, then validates specific executable files. A failed additional ALL target can escape that check. This is a source-level coverage gap, not an observed failed current target; preserve the pipeline status and mutation-test failure propagation. |
+| Small unused platform helpers remain | Source search found no callers of `png_loader.c`'s `utf8_to_wide`; macOS's event queue is allocated/released but never used and its `mainWindow` singleton is assigned without reads. Remove these in a cleanup pass and re-run platform builds. They are not evidence of a running leak. |
+| Older macOS notes contradict completed verification | The manual build script's closing message and historical paragraphs below still describe unverified rendering; the release workflow now packages macOS. Keep historical notes explicitly dated and update current instructions before the next release. |
+
+Art source storage also deserves a deliberate choice before wider coverage:
+preserve selected raw images and used ancestors, but avoid duplicating the
+original archive or every diagnostic capture in each style. The current bundles
+keep source art separate from shipped PNGs and preserve exact export recipes.
+
+### Cartoon palm transparency during behind-tree walking: fixed 2026-09-14
+
+The real D-to-E and E-to-D paths painted trunk/canopy over a background that
+already contained them. A synthetic alpha-128 red trunk pixel away from Johnny
+changed from red128 to red192 on both routes; an opaque control stayed255.
+Selected Cartoon palm replacements now use premultiplied source-atop on Johnny's
+layer, retaining his alpha and adding the palm color once. This also preserves
+tree-over-Johnny color where both sprites are partially transparent. Pixels in
+clouds, saved zones and other layers outside Johnny remain untouched. HD and
+partial packs without palm replacements keep their existing draw path.
+
+The Windows gate covers actual walk.c API routes, partial/opaque/transparent
+pixel controls, clipping/offsets and HD fallback. These are isolated test-driver
+captures, not evidence that the shipped story scheduler selected those routes.
+The user subsequently approved the complete island scene. Its acceptance and
+fallback evidence are linked in the coverage item below.
+
+### Cartoon coverage beyond the approved island pilot
 
 The six-pose E-to-A motion review is complete. On 2026-09-14 the user reviewed
 the full 23-position directional comparison and replied "looks good". The body
@@ -47,13 +85,28 @@ The earlier gait-review item is closed; do not keep its foot-clearance differenc
 open as a rejected animation. Exact source and export hashes are recorded in
 [the acceptance ledger](art/cartoon/walk-pilot/directional-cycle-v1/acceptance.json).
 
-After the next island artwork is selected, replay these accepted PNGs unchanged
-at the original coordinates against the new sand and tree layers. Check planted
-feet against the ground, shoreline clearance and intended foreground occlusion
-in the real renderer before scene promotion. Other walking directions, broader
-animation coverage and production archive promotion remain unvalidated.
+The user then approved the complete island motion with "approved, it looks great".
+The original six walking PNGs are unchanged in that scene. The exact 21 approved
+assets and displayed motion artifact are recorded in
+[scene acceptance](art/cartoon/island-pilot-v1/acceptance.json).
 Preserve the original timing and route, common drawing scale and cap registration.
 See [motion review](art/cartoon/motion-review.md) for the decision and its scope.
+
+The partial pack contains 15 island assets and six walking poses. Native smoke,
+the 2,452-file golden regression and alternate-state API checks passed, preserving
+all 2,550 original archive members. The API matrix exercised both tides, all
+ocean screens and night, cloud variants, raft stages, holidays and offsets.
+Those checks establish integration, not a fully styled alternate environment.
+
+Remaining art work: other walking directions, low-tide foam, the other oceans and
+clouds, holiday/raft scenery and the broader story animations. The application
+labels this selection "Cartoon (preview)" and uses HD/original fallback for those
+slots. Start with complete motion or scene families; review them before widening
+the accepted scope. A future Noir/anime style also needs explicit catalog and
+authoring-tool registration, as described in the reusable guide.
+The selected sources, prompts, failed-attempt lessons and reproducible exports
+are indexed in [image authoring lessons](docs/art-style-learnings.md) for the
+next style pack. Cartoon is still a partial pilot, not full animation coverage.
 
 ### ~~macOS renders something nobody has looked at~~ VERIFIED 2026-09-14
 

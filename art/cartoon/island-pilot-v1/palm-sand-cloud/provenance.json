@@ -1,0 +1,964 @@
+{
+  "schema_version": 1,
+  "status": "Static sprites cleared for technical engine preview; human runtime scene review pending.",
+  "human_runtime_acceptance": false,
+  "production_acceptance": false,
+  "concept_approval": {
+    "quote": "its wonderful",
+    "scope": "Island concept only; see the separate concept acceptance record."
+  },
+  "technical_clearance": "Root inspected the static assembly and cleared these four selected exports for technical engine preview. Full human runtime scene approval remains pending.",
+  "source_bundle": {
+    "file": "source-images.zip",
+    "sha256": "4f1a5005e03a9cc4ba981592228509a874cfa0a3eb4db8a3cb5cbcba6d3088f0",
+    "bytes": 5899340,
+    "members": [
+      "012-generated-v1.png",
+      "012-generated-v2.png",
+      "013-generated-v1.png",
+      "013-generated-v3.png",
+      "cloud-generated-v1.png",
+      "sand-generated-v1.png"
+    ],
+    "compression": "DEFLATE level 9; fixed 1980 timestamp; sorted names",
+    "scope": "Four selected raw PNGs and two generated ancestors used by the selected palm images."
+  },
+  "attempts": [
+    {
+      "generated_image": "013-generated-v1.png",
+      "sha256": "1e98ae909d0632223f17db37b98e18795061326dc450e640d537f116a1e8024f",
+      "bytes": 916793,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-0c263a45-b7bb-4f7d-8f43-7a2b0c0002cb.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/013-generated-v1.txt",
+      "exact_prompt_utf8_sha256": "2f928cb1a33920282277404a8cb4b3bee0fe4bc05da6417cbb19f1ea5e67432e",
+      "prompt_processing": "Prompt string preserved exactly from the structured tool request.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\013-prompt-v1.json",
+      "original_prompt_record_sha256": "6d558095d7a5c688939670428c50970e2ac7711f25e0b31b191f4a4b3de4f93a",
+      "actual_ordered_references": [
+        {
+          "kind": "geometry_reference",
+          "id": "013-geometry4x-padded.png",
+          "sha256": "aafba27feeb46f342a91e8debb3250d34d836d53a7343f1657de723ff51250bd",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\013-geometry4x-padded.png"
+        },
+        {
+          "kind": "concept",
+          "id": "concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\art\\cartoon\\island-concept-v1\\concept.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "observation_and_disposition": "Style matches concept; middle/lower curve is right of original and alpha8 contour exceeds fixed0.25 canvas by1.75HDpx.",
+      "measurements": {
+        "canvas": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_counts": {
+          "zero": 1441625,
+          "one_to_seven": 5012,
+          "eight_to_127": 2025,
+          "128_to_249": 4786,
+          "250_to_255": 119416
+        },
+        "bounds_by_alpha_threshold": {
+          "1": [
+            75,
+            188,
+            828,
+            1464
+          ],
+          "8": [
+            418,
+            190,
+            615,
+            1347
+          ],
+          "128": [
+            418,
+            191,
+            614,
+            1346
+          ],
+          "200": [
+            419,
+            191,
+            613,
+            1345
+          ]
+        },
+        "original_fixed_transform": [
+          0.25,
+          0,
+          -104.0,
+          0,
+          0.25,
+          -47.0
+        ],
+        "fixed_transform_alpha8_bounds": [
+          0.5,
+          0.5,
+          49.75,
+          289.75
+        ],
+        "fixed_window_outside_alpha8_raw_pixels": 1621
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false,
+      "binary_in_source_bundle": true,
+      "role": "used generated ancestor"
+    },
+    {
+      "generated_image": "013-generated-v2.png",
+      "sha256": "82a7c5bbb14f4d614d805478122a0b6ae6734d64714762f218b9f30c100141e5",
+      "bytes": 914338,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-b2ff8935-f7cf-4bb9-a814-fbb5541cd06a.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/013-generated-v2.txt",
+      "exact_prompt_utf8_sha256": "681bab013c692e28517886763be002c98436620c3c1fef66a375fe5204e80c55",
+      "prompt_processing": "Prompt string preserved exactly from the structured tool request.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\013-prompt-v2.json",
+      "original_prompt_record_sha256": "0aed6ca3020507ceb053a62a4129cf4ff7d9ce4e36434cb0bfcd27170875b00c",
+      "actual_ordered_references": [
+        {
+          "kind": "generated_image",
+          "id": "013-generated-v1.png",
+          "sha256": "1e98ae909d0632223f17db37b98e18795061326dc450e640d537f116a1e8024f",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\013-generated-v1.png"
+        },
+        {
+          "kind": "geometry_reference",
+          "id": "013-geometry4x-padded.png",
+          "sha256": "aafba27feeb46f342a91e8debb3250d34d836d53a7343f1657de723ff51250bd",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\013-geometry4x-padded.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "observation_and_disposition": "Rejected: requested contour edit moved the complete trunk upward18rawpx and changed height/placement; top would clip at fixed transform.",
+      "measurements": {
+        "canvas": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_counts": {
+          "zero": 1455275,
+          "one_to_seven": 4399,
+          "eight_to_127": 1784,
+          "128_to_249": 3724,
+          "250_to_255": 107682
+        },
+        "bounds_by_alpha_threshold": {
+          "1": [
+            65,
+            55,
+            866,
+            1464
+          ],
+          "8": [
+            413,
+            170,
+            607,
+            1320
+          ],
+          "128": [
+            413,
+            171,
+            605,
+            1319
+          ],
+          "200": [
+            414,
+            171,
+            605,
+            1318
+          ]
+        },
+        "original_fixed_transform": [
+          0.25,
+          0,
+          -104.0,
+          0,
+          0.25,
+          -47.0
+        ],
+        "fixed_transform_alpha8_bounds": [
+          -0.75,
+          -4.5,
+          47.75,
+          283.0
+        ],
+        "fixed_window_outside_alpha8_raw_pixels": 422
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false,
+      "binary_in_source_bundle": false,
+      "role": "rejected variant; measurements and prompt retained"
+    },
+    {
+      "generated_image": "013-generated-v3.png",
+      "sha256": "10d2cc46c5b926dd032081183f66a0269c4d0b44bbfd2f2ea260757339b56593",
+      "bytes": 926511,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-3a676699-693d-4df7-b23d-41513024661f.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/013-generated-v3.txt",
+      "exact_prompt_utf8_sha256": "f1c0ee20cc50e8c8e1c8d6137a8c06828b8489351e56b18a19026ef51a7a73af",
+      "prompt_processing": "Prompt string preserved exactly from the structured tool request.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\013-prompt-v3.json",
+      "original_prompt_record_sha256": "9bb657c33c759ab60c979344addc4683bff6ac473dc05aa8fa9e24dd81005dc7",
+      "actual_ordered_references": [
+        {
+          "kind": "geometry_reference",
+          "id": "013-geometry4x-padded.png",
+          "sha256": "aafba27feeb46f342a91e8debb3250d34d836d53a7343f1657de723ff51250bd",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\013-geometry4x-padded.png"
+        },
+        {
+          "kind": "generated_image",
+          "id": "013-generated-v1.png",
+          "sha256": "1e98ae909d0632223f17db37b98e18795061326dc450e640d537f116a1e8024f",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\013-generated-v1.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "observation_and_disposition": "Selected for proposed semantic-registration export only. Original-first restyle restored top placement; fixed0.25 right edge still exceeds by0.75HDpx. Lower curve differs modestly from original.",
+      "measurements": {
+        "canvas": [
+          1024,
+          1536
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_counts": {
+          "zero": 1447379,
+          "one_to_seven": 4759,
+          "eight_to_127": 1822,
+          "128_to_249": 4139,
+          "250_to_255": 114765
+        },
+        "bounds_by_alpha_threshold": {
+          "1": [
+            65,
+            186,
+            938,
+            1464
+          ],
+          "8": [
+            418,
+            188,
+            611,
+            1344
+          ],
+          "128": [
+            418,
+            189,
+            610,
+            1343
+          ],
+          "200": [
+            419,
+            189,
+            610,
+            1343
+          ]
+        },
+        "original_fixed_transform": [
+          0.25,
+          0,
+          -104.0,
+          0,
+          0.25,
+          -47.0
+        ],
+        "fixed_transform_alpha8_bounds": [
+          0.5,
+          0.0,
+          48.75,
+          289.0
+        ],
+        "fixed_window_outside_alpha8_raw_pixels": 610
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false,
+      "binary_in_source_bundle": true,
+      "role": "selected technical candidate"
+    },
+    {
+      "generated_image": "012-generated-v1.png",
+      "sha256": "1dbb3b649878116970fd754f0a059dee90ce8501916337b44ef40ce013edd6ad",
+      "bytes": 1221086,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-1254faa3-32b8-4a4b-8f93-8ca3cbe84c49.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/012-generated-v1.txt",
+      "exact_prompt_utf8_sha256": "092042b606676a284caea462c571be37157ffc1d7237f02d7d44fa885ae16b00",
+      "prompt_processing": "Prompt string preserved exactly from the structured tool request.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\012-prompt-v1.json",
+      "original_prompt_record_sha256": "101b0c1850457ef12702735fdbc03f5ce91a3f8239a900300fadef897176760c",
+      "actual_ordered_references": [
+        {
+          "kind": "geometry_reference",
+          "id": "012-geometry4x-padded.png",
+          "sha256": "36cd915d2c24383fcbbe240908ff641124e9d2400d3d3f8e1eb82203539c0b1a",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\012-geometry4x-padded.png"
+        },
+        {
+          "kind": "concept",
+          "id": "concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\art\\cartoon\\island-concept-v1\\concept.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "observation_and_disposition": "Style matches concept but crown extends16rawpx above the fixed sprite window and left tip1rawpx outside.",
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_counts": {
+          "zero": 1180185,
+          "one_to_seven": 12351,
+          "eight_to_127": 3434,
+          "128_to_249": 8325,
+          "250_to_255": 368569
+        },
+        "bounds_by_alpha_threshold": {
+          "1": [
+            0,
+            19,
+            1496,
+            952
+          ],
+          "8": [
+            159,
+            220,
+            1344,
+            786
+          ],
+          "128": [
+            159,
+            221,
+            1343,
+            786
+          ],
+          "200": [
+            160,
+            221,
+            1343,
+            785
+          ]
+        },
+        "original_fixed_transform": [
+          0.25,
+          0,
+          -40.0,
+          0,
+          0.25,
+          -59.0
+        ],
+        "fixed_transform_alpha8_bounds": [
+          -0.25,
+          -4.0,
+          296.0,
+          137.5
+        ],
+        "fixed_window_outside_alpha8_raw_pixels": 1143
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false,
+      "binary_in_source_bundle": true,
+      "role": "used generated ancestor"
+    },
+    {
+      "generated_image": "012-generated-v2.png",
+      "sha256": "870e847c5a98c33ed0c006a807b992920f21cbcb0ef2b41d9faa207be4cfd4a2",
+      "bytes": 1218026,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-46ed0af2-d18a-41a2-ad93-8e030df97970.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/012-generated-v2.txt",
+      "exact_prompt_utf8_sha256": "bec602ee1a98433068d4fea5977d71e4d2c68ab1a2f8934c1b1ab4e54dd42f70",
+      "prompt_processing": "Prompt string preserved exactly from the structured tool request.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\012-prompt-v2.json",
+      "original_prompt_record_sha256": "d1aeebde46c86493420e24895c7ca5538bcd422a39475d0065eb5609f3243a5d",
+      "actual_ordered_references": [
+        {
+          "kind": "generated_image",
+          "id": "012-generated-v1.png",
+          "sha256": "1dbb3b649878116970fd754f0a059dee90ce8501916337b44ef40ce013edd6ad",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\012-generated-v1.png"
+        },
+        {
+          "kind": "geometry_reference",
+          "id": "012-geometry4x-padded.png",
+          "sha256": "36cd915d2c24383fcbbe240908ff641124e9d2400d3d3f8e1eb82203539c0b1a",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\012-geometry4x-padded.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "observation_and_disposition": "Selected for proposed semantic-registration export only. Crown/left tip fit; lowest frond extends6rawpx below fixed window. Other parts drifted slightly in the requested localized edit.",
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_counts": {
+          "zero": 1174587,
+          "one_to_seven": 10419,
+          "eight_to_127": 3191,
+          "128_to_249": 7636,
+          "250_to_255": 377031
+        },
+        "bounds_by_alpha_threshold": {
+          "1": [
+            0,
+            35,
+            1516,
+            998
+          ],
+          "8": [
+            162,
+            243,
+            1360,
+            794
+          ],
+          "128": [
+            162,
+            244,
+            1360,
+            793
+          ],
+          "200": [
+            163,
+            244,
+            1359,
+            793
+          ]
+        },
+        "original_fixed_transform": [
+          0.25,
+          0,
+          -40.0,
+          0,
+          0.25,
+          -59.0
+        ],
+        "fixed_transform_alpha8_bounds": [
+          0.5,
+          1.75,
+          300.0,
+          139.5
+        ],
+        "fixed_window_outside_alpha8_raw_pixels": 47
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false,
+      "binary_in_source_bundle": true,
+      "role": "selected technical candidate"
+    },
+    {
+      "generated_image": "012-generated-v3.png",
+      "sha256": "ead3be4cdf3476eac21ab1200eb8cb8800d4ef737398bae5dee23cdc8ef1520a",
+      "bytes": 1515977,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-7c45-7aa1-a3dd-a374ed302c49\\exec-e864043a-f39f-4b01-b77e-231a796ab1af.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/012-generated-v3.txt",
+      "exact_prompt_utf8_sha256": "e6bf974e9a3e03e6a25379576a7227b4fb4ec1db91ab4954f2420b04935be5bb",
+      "prompt_processing": "Prompt string preserved exactly from the structured tool request.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\012-prompt-v3.json",
+      "original_prompt_record_sha256": "e3cd488d779a5beb0c300aeed2ddaa85cd9bf007e26805ec557eaf72db4c9a8c",
+      "actual_ordered_references": [
+        {
+          "kind": "generated_image",
+          "id": "012-generated-v2.png",
+          "sha256": "870e847c5a98c33ed0c006a807b992920f21cbcb0ef2b41d9faa207be4cfd4a2",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\012-generated-v2.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "observation_and_disposition": "Rejected: requested12rawpx tip shortening became about38rawpx, and actual alpha contamination appeared across the exterior, including high-alpha pixels.",
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          253
+        ],
+        "alpha_counts": {
+          "zero": 3265,
+          "one_to_seven": 718219,
+          "eight_to_127": 296467,
+          "128_to_249": 217581,
+          "250_to_255": 337332
+        },
+        "bounds_by_alpha_threshold": {
+          "1": [
+            0,
+            0,
+            1536,
+            1024
+          ],
+          "8": [
+            65,
+            55,
+            1486,
+            838
+          ],
+          "128": [
+            160,
+            111,
+            1427,
+            766
+          ],
+          "200": [
+            162,
+            135,
+            1360,
+            756
+          ]
+        },
+        "original_fixed_transform": [
+          0.25,
+          0,
+          -40.0,
+          0,
+          0.25,
+          -59.0
+        ],
+        "fixed_transform_alpha8_bounds": [
+          -23.75,
+          -45.25,
+          331.5,
+          150.5
+        ],
+        "fixed_window_outside_alpha8_raw_pixels": 211814
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false,
+      "binary_in_source_bundle": false,
+      "role": "rejected variant; measurements and prompt retained"
+    },
+    {
+      "generated_image": "sand-generated-v1.png",
+      "sha256": "49c8c516e7cc655c4c2ec780e6311d4924d0bdcaf598a395653272f51b9935af",
+      "bytes": 883546,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-671e-7460-976f-f90ab7d5f1e2\\exec-24572eb5-3463-42cd-a2f7-0c17e8ea4392.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/sand-generated-v1.txt",
+      "exact_prompt_utf8_sha256": "fbb9299d75f7cefbe969213ee3d9c190c5741b9ccb1b91022dd8f7235bbdd890",
+      "prompt_processing": "Trailing whitespace trimmed before the tool call.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\sand-prompt-v1.txt",
+      "original_prompt_record_sha256": "23f5d379153e9aecdb1bf5d676257025c7a0d41b191ea0692747eb2e4b96c041",
+      "actual_ordered_references": [
+        {
+          "kind": "geometry_reference",
+          "id": "sand-original-nearest2-padded.png",
+          "sha256": "8c925bdb6ae4896235a1cc69dd3c431eecfd9a8168b8ff51b6652e133eb63163",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\sand-original-nearest2-padded.png"
+        },
+        {
+          "kind": "concept",
+          "id": "concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\art\\cartoon\\island-concept-v1\\concept.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "observation_and_disposition": "Closest first sand shape and style; top crest narrower than original. Alpha>=8 spans211raw pixels high, exceeding208 at planned0.5 scale. Root later approved testing one explicit static-art scale0.49 with crest registration; selected for that technical preview.",
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_counts": {
+          "zero": 1400859,
+          "1_to_7": 6218,
+          "8_to_249": 6652,
+          "250_to_255": 159135,
+          "opaque255": 0
+        },
+        "bounds_inspection_only": {
+          "1": [
+            206,
+            32,
+            1344,
+            998
+          ],
+          "8": [
+            208,
+            407,
+            1327,
+            618
+          ],
+          "128": [
+            209,
+            408,
+            1326,
+            617
+          ],
+          "250": [
+            215,
+            411,
+            1325,
+            616
+          ]
+        },
+        "proposed_affine_not_applied": [
+          0.5,
+          0,
+          -104,
+          0,
+          0.5,
+          -204
+        ],
+        "mapped_alpha8_bounds_at_proposed_transform": [
+          0.0,
+          -0.5,
+          559.5,
+          105.0
+        ]
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false,
+      "binary_in_source_bundle": true,
+      "role": "selected technical candidate"
+    },
+    {
+      "generated_image": "sand-generated-v2-contour.png",
+      "sha256": "073b6c16c7e2d07ad3ac0885ac9856b133a8e0ed735ac383d8131c3fbe92e075",
+      "bytes": 896307,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-671e-7460-976f-f90ab7d5f1e2\\exec-84d3472a-414b-4baf-9d53-fc415be069f5.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/sand-generated-v2-contour.txt",
+      "exact_prompt_utf8_sha256": "120242cd6177435ae3cd3a8ec6a492ca77584a84a06e3b0886e725317ada2f5c",
+      "prompt_processing": "Trailing whitespace trimmed before the tool call.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\sand-prompt-v2-contour.txt",
+      "original_prompt_record_sha256": "7ed9b32324282add2ff5f74533fb8cd6e910068fb7daf4a683bc07b405b6e66d",
+      "actual_ordered_references": [
+        {
+          "kind": "generated_image",
+          "id": "sand-generated-v1.png",
+          "sha256": "49c8c516e7cc655c4c2ec780e6311d4924d0bdcaf598a395653272f51b9935af",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\sand-generated-v1.png"
+        },
+        {
+          "kind": "geometry_reference",
+          "id": "sand-original-nearest2-padded.png",
+          "sha256": "8c925bdb6ae4896235a1cc69dd3c431eecfd9a8168b8ff51b6652e133eb63163",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\sand-original-nearest2-padded.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "observation_and_disposition": "Focused1-3pixel contour correction moved the crest upward instead, increasing alpha>=8 height to214. Rejected for registration; broadening the crest partly worked but the numeric placement did not.",
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_counts": {
+          "zero": 1399412,
+          "1_to_7": 5372,
+          "8_to_249": 5967,
+          "250_to_255": 162113,
+          "opaque255": 0
+        },
+        "bounds_inspection_only": {
+          "1": [
+            89,
+            21,
+            1436,
+            967
+          ],
+          "8": [
+            209,
+            403,
+            1327,
+            617
+          ],
+          "128": [
+            209,
+            405,
+            1326,
+            617
+          ],
+          "250": [
+            210,
+            407,
+            1325,
+            616
+          ]
+        },
+        "proposed_affine_not_applied": [
+          0.5,
+          0,
+          -104,
+          0,
+          0.5,
+          -204
+        ],
+        "mapped_alpha8_bounds_at_proposed_transform": [
+          0.5,
+          -2.5,
+          559.5,
+          104.5
+        ]
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false,
+      "binary_in_source_bundle": false,
+      "role": "rejected variant; measurements and prompt retained"
+    },
+    {
+      "generated_image": "sand-generated-v3-fresh.png",
+      "sha256": "85c3a8cf5952dca3b27b84edae5d4677145b8712da881a71124444aa9b088ba9",
+      "bytes": 883509,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-671e-7460-976f-f90ab7d5f1e2\\exec-d4bc4992-5fd9-415a-b788-65f3bf76a09f.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/sand-generated-v3-fresh.txt",
+      "exact_prompt_utf8_sha256": "2545c926dc7f5053ccb5b5aa69f6e439a7b5663c8e270f45169e82d1a6405605",
+      "prompt_processing": "Trailing whitespace trimmed before the tool call.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\sand-prompt-v3-fresh.txt",
+      "original_prompt_record_sha256": "47c513d679d6bf6bdb299507c99fc20ba533bd61947a48e1fa6d05eefca8ad38",
+      "actual_ordered_references": [
+        {
+          "kind": "geometry_reference",
+          "id": "sand-original-nearest2-padded.png",
+          "sha256": "8c925bdb6ae4896235a1cc69dd3c431eecfd9a8168b8ff51b6652e133eb63163",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\sand-original-nearest2-padded.png"
+        },
+        {
+          "kind": "concept",
+          "id": "concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\art\\cartoon\\island-concept-v1\\concept.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "observation_and_disposition": "Fresh original-first drawing shortened height to203raw pixels but widened the silhouette to1139 and moved its crest down to419. Rejected at the planned0.5 scale; numeric safe-contour guidance did not lock geometry.",
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_counts": {
+          "zero": 1405960,
+          "1_to_7": 5027,
+          "8_to_249": 6231,
+          "250_to_255": 155646,
+          "opaque255": 0
+        },
+        "bounds_inspection_only": {
+          "1": [
+            210,
+            36,
+            1456,
+            968
+          ],
+          "8": [
+            213,
+            418,
+            1352,
+            621
+          ],
+          "128": [
+            214,
+            419,
+            1352,
+            620
+          ],
+          "250": [
+            218,
+            420,
+            1351,
+            619
+          ]
+        },
+        "proposed_affine_not_applied": [
+          0.5,
+          0,
+          -104,
+          0,
+          0.5,
+          -204
+        ],
+        "mapped_alpha8_bounds_at_proposed_transform": [
+          2.5,
+          5.0,
+          572.0,
+          106.5
+        ]
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false,
+      "binary_in_source_bundle": false,
+      "role": "rejected variant; measurements and prompt retained"
+    },
+    {
+      "generated_image": "cloud-generated-v1.png",
+      "sha256": "b50454479c9f08d2eebf381d0d110aab4f3fde6c2d046161da4c22a77b1e21ca",
+      "bytes": 808725,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f2-671e-7460-976f-f90ab7d5f1e2\\exec-abd0b55f-d8d3-4b8a-ac6d-ace55d73e022.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/cloud-generated-v1.txt",
+      "exact_prompt_utf8_sha256": "5f4ad595fda6a1abd70ab38e54b90d25a46710d8720ed4e47495951cfe891d34",
+      "prompt_processing": "Trailing whitespace trimmed before the tool call.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\cloud-prompt-v1.txt",
+      "original_prompt_record_sha256": "27f22212e22cc4be03b53ecf0095646cc1ecda49c1c12e6b80825fc7a8fce0f8",
+      "actual_ordered_references": [
+        {
+          "kind": "geometry_reference",
+          "id": "cloud-original-nearest4-padded.png",
+          "sha256": "9ca2db01a35c51f767d05dc2eab01eb17be934001f92d9862de64c781d53b85e",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\cloud-original-nearest4-padded.png"
+        },
+        {
+          "kind": "concept",
+          "id": "concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\art\\cartoon\\island-concept-v1\\concept.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "observation_and_disposition": "Selected for technical preview. Original left tower, tapering tail and shallow proportions retained. Small contour-origin drift corrected by explicit translation only at the unchanged0.25 scale. Scene review pending.",
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_counts": {
+          "zero": 1422500,
+          "1_to_7": 5081,
+          "8_to_249": 5931,
+          "250_to_255": 139352,
+          "opaque255": 0
+        },
+        "bounds_inspection_only": {
+          "1": [
+            250,
+            219,
+            1380,
+            952
+          ],
+          "8": [
+            254,
+            364,
+            1248,
+            650
+          ],
+          "128": [
+            254,
+            364,
+            1248,
+            649
+          ],
+          "250": [
+            256,
+            366,
+            1247,
+            648
+          ]
+        }
+      },
+      "human_runtime_acceptance": false,
+      "production_acceptance": false,
+      "binary_in_source_bundle": true,
+      "role": "selected technical candidate"
+    }
+  ],
+  "lessons": {
+    "palm": [
+      "Padded4x originals and explicit fixed canvas instructions preserved output image dimensions, but not every silhouette boundary.",
+      "Targeted contour edits may move unrelated geometry; record the complete result, not merely requested changes.",
+      "Original-first geometry reference recovered trunk placement but still missed the strict boundary by less than one HD pixel.",
+      "Raw displayed glow can lie entirely under alpha0; inspect numerical alpha and a color composite before diagnosing contamination.",
+      "Canopyv3 introduced substantial real exterior alpha contamination despite requesting transparency; it is excluded.",
+      "Requested opaque interiors typically peak at253/254 in raw tool output. Do not silently force alpha255 or claim perfect opacity.",
+      "Static environment pieces can use one deliberate small uniform scale adjustment with semantic contact/joint anchors and scene review; this does not permit limb/shape warps or infer a transform from arbitrary body bounds.",
+      "At the proposed0.24 scale trunk top startsabout12HDpx down its canvas, still inside canopy overlap; scene review must confirm the join. Canopy lowest frond reaches132.5 rather than138canvasheight.",
+      "No source alpha thresholding, keying, painting, shape deformation or runtime edits were applied. Alpha8 is inspection-only; sub8 exterior residue remains in raw images."
+    ],
+    "sand_cloud": [
+      "Original geometry first and concept style second produced separate sand/cloud layers without baked scene objects.",
+      "Padded nearest references preserved source coordinates and returned the requested1536x1024 canvas, but did not guarantee contour coordinates.",
+      "Raw-view glow was hidden RGB under zero/very-low alpha: blue composites showed no broad visible halo. Inspect alpha before requesting background extraction.",
+      "Interior alpha peaks254 rather than255; preserve it and report near-opacity rather than claiming fully opaque bytes.",
+      "A tiny numeric contour edit moved sand in the wrong direction. Fresh geometry-first recreation also changed silhouette width, so do not treat a precise prompt as geometric proof.",
+      "Cloud origin drift was small enough for one explicitly measured translation at its existing scale. Sand could not fit through translation at the planned0.5 scale. Root then authorized one explicit0.49 static-art scale with crest registration. No artistic correction or nonuniform resize was performed in code."
+    ]
+  },
+  "historical_paths_note": "Absolute paths record actual local tool inputs and default outputs. Reproduction uses this portable recipe, the bundled source PNGs and existing repository originals.",
+  "report_sources": [
+    {
+      "historical_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\palm-generation-report.json",
+      "sha256": "8ed9b72ea5f70d10857e51cfe1147b0fa7b0a21dda3a909c93bdc24cd9160487"
+    },
+    {
+      "historical_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\palm\\reference-preparation.json",
+      "sha256": "e22b5239b78d011b618b102b1fd84474852df810b90163e632fa381cf00a29c0"
+    },
+    {
+      "historical_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\generation-report.json",
+      "sha256": "49e1f2a478de0c9fd577b24561ad14440bd6ce0488d26661946942ff42f60065"
+    },
+    {
+      "historical_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\sand-cloud\\reference-preparation.json",
+      "sha256": "abbff64c3340d4176c1fc7ea334e86a6042ebe02b43ee8221c7a21bfdf7d6b37"
+    }
+  ]
+}

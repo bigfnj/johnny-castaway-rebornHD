@@ -1,0 +1,237 @@
+{
+  "status": "all recorded PNGs reproduced and all isolated mutations fired",
+  "exporter_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+  "recipe_sha256": "40b1d14e5bed8b55c5b263b6ecae18120bbb8c4df26c9d3d276f23e4362a96ac",
+  "source_bundle_sha256": "dd9c2710580db88433b2427a5284eabe70e43d72975c0a5fdbea9b1aba9e7a8e",
+  "provenance_sha256": "5e48200f21b97d2f47b1c2ca7dbdff9d7d014ef199a84c04dabbbc2aec11cca2",
+  "positive_runs": [
+    {
+      "pillow_version": "12.2.0",
+      "assets": 5,
+      "all_recorded_hashes_match": true,
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "pillow_version": "12.3.0",
+      "assets": 5,
+      "all_recorded_hashes_match": true,
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.3.0"
+    }
+  ],
+  "geometry_reference_checks": [
+    {
+      "reference": "shadow-original-4x-padded.png",
+      "png_sha256": "2aa39afd9112ac5aba5d1ef33762f79cb998c3194a32cd94f6d2726b13fb5527",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "006-original-4x-padded.png",
+      "png_sha256": "0abeed7161115a0d5ec21b2151293562c6a232cd33758cddaff550de7ec8546e",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "007-original-4x-padded.png",
+      "png_sha256": "b1640427e60d9118cf8936d90c059ddcba798c2b91b81127ec7a32b4b2f13cb4",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "008-original-4x-padded.png",
+      "png_sha256": "4045d81d021a1188e4de79cca1e8cd291ef3d00428263ebf6fb136f41472454d",
+      "all_rgba_pixels_repeat_original": true
+    }
+  ],
+  "mutation_method": "Every isolated fixture uses a newly written exact exporter with newer timestamp. Python -B interprets that file directly; the source-hash witness proves its execution. Only copied inputs are mutated. Production source and archive are untouched.",
+  "mutations": [
+    {
+      "mutation": "existing-output",
+      "expected_named_failure": "refusing to overwrite existing output",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436474027116000,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "asset-path",
+      "expected_named_failure": "recipe.json: expected exactly",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436474406388500,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "required-paths",
+      "expected_named_failure": "recipe.json: expected exactly",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436474784760200,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "bundle-hash",
+      "expected_named_failure": "source-images.zip: source bundle hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436475209760400,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "zip-extra",
+      "expected_named_failure": "source-images.zip: unexpected, missing or duplicate entries",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436475592318000,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "zip-missing",
+      "expected_named_failure": "source-images.zip: unexpected, missing or duplicate entries",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436475959958100,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "zip-duplicate",
+      "expected_named_failure": "source-images.zip: unexpected, missing or duplicate entries",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436476346827400,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "generated-hash",
+      "expected_named_failure": "006-generated-v1.png: generated source hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436476775349200,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "original-hash",
+      "expected_named_failure": "data/hd/BMP/BACKGRND.BMP/006.png: original geometry reference hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436477138827600,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "source-dimensions",
+      "expected_named_failure": "006-generated-v1.png: source RGBA dimensions differ from recipe",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436477544147400,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "source-mode",
+      "expected_named_failure": "006-generated-v1.png: source RGBA dimensions differ from recipe",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436477998351900,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "asset-source-hash",
+      "expected_named_failure": "006-generated-v1.png: asset source hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436478577774000,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "uniform-scale",
+      "expected_named_failure": "BMP/BACKGRND.BMP/006.png: transform differs from the declared uniform scale",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436479026425500,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "semantic-anchor",
+      "expected_named_failure": "BMP/BACKGRND.BMP/006.png: semantic registration differs from recipe",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436479553405300,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "runtime-canvas",
+      "expected_named_failure": "BMP/BACKGRND.BMP/006.png: runtime canvas differs from the original",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436479990101700,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "rendered-pixels",
+      "expected_named_failure": "BMP/BACKGRND.BMP/006.png: export differs from recorded candidate PNG bytes",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436480464551300,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "last-output-hash",
+      "expected_named_failure": "SCR/OCEAN02.SCR.png: export differs from recorded candidate PNG bytes",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436481014576200,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "affine-kind",
+      "expected_named_failure": "BMP/BACKGRND.BMP/006.png: transform kind differs from the recorded asset",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436482159856200,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "ocean-kind",
+      "expected_named_failure": "SCR/OCEAN02.SCR.png: transform kind differs from the recorded asset",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436482575205000,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "ocean-scale",
+      "expected_named_failure": "SCR/OCEAN02.SCR.png: full-frame scale differs from the declared uniform resize",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436483490800900,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    },
+    {
+      "mutation": "ocean-mode",
+      "expected_named_failure": "ocean-generated-v1.png: source RGB dimensions differ from recipe",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436484368473900,
+      "executed_source_sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0",
+      "witness": "EXPORT_WITNESS source=acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0 pillow=12.2.0"
+    }
+  ],
+  "human_runtime_acceptance": false,
+  "production_acceptance": false
+}

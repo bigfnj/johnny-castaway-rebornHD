@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "status": "PENDING HUMAN RUNTIME SCENE REVIEW",
+  "coverage": "partial",
+  "human_runtime_acceptance": false,
+  "production_acceptance": false,
+  "normalization": "none",
+  "required_assets": [
+    "BMP/BACKGRND.BMP/003.png",
+    "BMP/BACKGRND.BMP/004.png",
+    "BMP/BACKGRND.BMP/005.png",
+    "BMP/BACKGRND.BMP/009.png",
+    "BMP/BACKGRND.BMP/010.png",
+    "BMP/BACKGRND.BMP/011.png"
+  ],
+  "source_bundle": {
+    "file": "source-images.zip",
+    "sha256": "8b6cd7ee6a573e5c7f5be893b472c8ef1d48024228aaf058351dad340758ee67",
+    "bytes": 5882906
+  },
+  "generated_images": {
+    "003-generated-v2-fresh8x.png": {
+      "sha256": "a77511fd4e93808c20755608e937cf4b805bd9d781940cc9b9ca544bb182c0e8",
+      "bytes": 952657,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "004-generated-v1-10x.png": {
+      "sha256": "530bc333dc5223406c8debff16577ef8fb6af7289d29476711c2cf27a5fd0895",
+      "bytes": 1025159,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "005-generated-v1-10x.png": {
+      "sha256": "4a8252029263adcab0f487c457e80431043581da4b4fdcd589a6d021e47423b1",
+      "bytes": 1005203,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "009-generated-v1-10x.png": {
+      "sha256": "a637d0e7751e32a9ccf0a429017b8b55e615b2e4f3d15abe769c816f13361381",
+      "bytes": 1044355,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "010-generated-v1-10x.png": {
+      "sha256": "0943ab25a2be4996cb46545042a8feff3077e4e89eb432d3635b859cdb9c387b",
+      "bytes": 938150,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    },
+    "011-generated-v1-10x.png": {
+      "sha256": "889819abaedac7daf227d6a7439360b01acb22a364d7649697ff3e18ef84e8d8",
+      "bytes": 916608,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA"
+    }
+  },
+  "original_archive": {
+    "file": "assets/scrantic_data.zip",
+    "sha256_at_review": "249028f1754d53a60b390bf2073ceab67a9d190870f09760b890dc00abde7c7a"
+  },
+  "original_references": {
+    "003": {
+      "member": "data/hd/BMP/BACKGRND.BMP/003.png",
+      "sha256": "ca39d3bcfc7b096eb0e10162c4ff989167084827ef29f4c5d8389c372654a5fd",
+      "canvas": [
+        144,
+        58
+      ]
+    },
+    "004": {
+      "member": "data/hd/BMP/BACKGRND.BMP/004.png",
+      "sha256": "faaba294040db7486747e4f0c3f30fa5e5d4ec56f48cccdfba1bd5fa3f8ec095",
+      "canvas": [
+        144,
+        58
+      ]
+    },
+    "005": {
+      "member": "data/hd/BMP/BACKGRND.BMP/005.png",
+      "sha256": "1c41daae1621f6a4e482b3b195e88e708276a3760041146b8aa2f9fbb86cc425",
+      "canvas": [
+        144,
+        58
+      ]
+    },
+    "009": {
+      "member": "data/hd/BMP/BACKGRND.BMP/009.png",
+      "sha256": "4683ffdb93d4a7b677c834e67ccf761c38b825f6e04e3fcf566bcaf84b50f2c2",
+      "canvas": [
+        144,
+        64
+      ]
+    },
+    "010": {
+      "member": "data/hd/BMP/BACKGRND.BMP/010.png",
+      "sha256": "cd0a87148fc00c67c4a608d9bcc82544bfce97521af222dabee7460147ae5e7e",
+      "canvas": [
+        144,
+        64
+      ]
+    },
+    "011": {
+      "member": "data/hd/BMP/BACKGRND.BMP/011.png",
+      "sha256": "ad252ab25c85e63b13270818ed5f66ff1feddcd645891cfdf5d746a15640dd9a",
+      "canvas": [
+        144,
+        64
+      ]
+    }
+  },
+  "geometry_references": {
+    "003-original4x-padded.png": {
+      "original_reference": "003",
+      "sha256": "0a9062e2d015208a4b4c9c2ec6b7fc3c141597af44e636482edc86ecf39b8589",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 4,
+      "offset_raw": [
+        480,
+        396
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.25,
+        0,
+        -120.0,
+        0,
+        0.25,
+        -99.0
+      ],
+      "used_by_selected_source": false
+    },
+    "003-original8x-padded.png": {
+      "original_reference": "003",
+      "sha256": "349d5d817c6a87b8b6facd295d02cc2458621d1a395e1b662491920288123d14",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 8,
+      "offset_raw": [
+        192,
+        280
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.125,
+        0,
+        -24.0,
+        0,
+        0.125,
+        -35.0
+      ],
+      "used_by_selected_source": true
+    },
+    "004-original10x-padded.png": {
+      "original_reference": "004",
+      "sha256": "baa95579b2848bc8a982b080d405d10c5970814b289ead2fff88221ff3aec49c",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 10,
+      "offset_raw": [
+        48,
+        222
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.1,
+        0,
+        -4.8,
+        0,
+        0.1,
+        -22.2
+      ],
+      "used_by_selected_source": true
+    },
+    "005-original10x-padded.png": {
+      "original_reference": "005",
+      "sha256": "9e847d2b549cf836f46e17c8e5ae43cc3cb07b15981de8a202d3dce59699abb6",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 10,
+      "offset_raw": [
+        48,
+        222
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.1,
+        0,
+        -4.8,
+        0,
+        0.1,
+        -22.2
+      ],
+      "used_by_selected_source": true
+    },
+    "009-original10x-padded.png": {
+      "original_reference": "009",
+      "sha256": "e9ad44cf2dd0b0827cf74e507eef9c3b4ba88543384e591a97ca47b403c8e017",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 10,
+      "offset_raw": [
+        48,
+        192
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.1,
+        0,
+        -4.8,
+        0,
+        0.1,
+        -19.2
+      ],
+      "used_by_selected_source": true
+    },
+    "010-original10x-padded.png": {
+      "original_reference": "010",
+      "sha256": "4336db0a72fb6efab249e9dc811bc8d76da3323d8edd43ef8502c6265152dc1d",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 10,
+      "offset_raw": [
+        48,
+        192
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.1,
+        0,
+        -4.8,
+        0,
+        0.1,
+        -19.2
+      ],
+      "used_by_selected_source": true
+    },
+    "011-original10x-padded.png": {
+      "original_reference": "011",
+      "sha256": "5ab7021b1dc075c652c0cbf328798068cc6b10098d5dfe80494b5e05ab7c08c7",
+      "canvas": [
+        1536,
+        1024
+      ],
+      "nearest_integer_scale": 10,
+      "offset_raw": [
+        48,
+        192
+      ],
+      "png_compress_level": 6,
+      "pixel_replication_verified": true,
+      "nominal_raw_to_runtime_affine": [
+        0.1,
+        0,
+        -4.8,
+        0,
+        0.1,
+        -19.2
+      ],
+      "used_by_selected_source": true
+    }
+  },
+  "concept_reference": {
+    "repo_path": "art/cartoon/island-concept-v1/concept.png",
+    "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+    "human_concept_approval": "its wonderful"
+  },
+  "resampling": {
+    "pillow_version": "12.3.0",
+    "working_mode": "RGBa",
+    "affine_filter": "BICUBIC",
+    "oversample": 8,
+    "downsample_filter": "LANCZOS",
+    "output_mode": "RGBA"
+  },
+  "assets": [
+    {
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "family": "left",
+      "generated_image": "003-generated-v2-fresh8x.png",
+      "source_sha256": "a77511fd4e93808c20755608e937cf4b805bd9d781940cc9b9ca544bb182c0e8",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        144,
+        58
+      ],
+      "scene_origin_hd": [
+        540,
+        612
+      ],
+      "scale_exact": {
+        "numerator": 97,
+        "denominator": 1000
+      },
+      "semantic_landmark": "common padded canvas center for this family",
+      "landmark_raw": [
+        768,
+        512
+      ],
+      "landmark_target_local_hd": [
+        72,
+        29
+      ],
+      "affine_forward": [
+        0.097,
+        0,
+        -2.4960000000000093,
+        0,
+        0.097,
+        -20.664
+      ],
+      "candidate_png_sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+      "original_export_pillow_version": "12.3.0",
+      "design_adjustment": "Left family3% smaller or right family10% smaller than nominal0.1. Same matrix is applied to every frame in its family. This is not a character registration rule.",
+      "anchor_note": "One explicit fixed canvas-center transform for the whole family, chosen for composed-scene diagnostic. No individual bounds fitting.",
+      "transformed_raw_alpha8_bounds": [
+        11.181,
+        9.309,
+        139.221,
+        57.033
+      ],
+      "meaningful_alpha_clipped": false,
+      "white_foam_bounds_original_diagnostic": [
+        8,
+        10,
+        144,
+        58
+      ],
+      "white_foam_bounds_export_diagnostic": [
+        14,
+        11,
+        139,
+        57
+      ],
+      "white_foam_extent_delta_hd": [
+        6,
+        1,
+        -5,
+        -1
+      ]
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "family": "left",
+      "generated_image": "004-generated-v1-10x.png",
+      "source_sha256": "530bc333dc5223406c8debff16577ef8fb6af7289d29476711c2cf27a5fd0895",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        144,
+        58
+      ],
+      "scene_origin_hd": [
+        540,
+        612
+      ],
+      "scale_exact": {
+        "numerator": 97,
+        "denominator": 1000
+      },
+      "semantic_landmark": "common padded canvas center for this family",
+      "landmark_raw": [
+        768,
+        512
+      ],
+      "landmark_target_local_hd": [
+        72,
+        29
+      ],
+      "affine_forward": [
+        0.097,
+        0,
+        -2.4960000000000093,
+        0,
+        0.097,
+        -20.664
+      ],
+      "candidate_png_sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+      "original_export_pillow_version": "12.3.0",
+      "design_adjustment": "Left family3% smaller or right family10% smaller than nominal0.1. Same matrix is applied to every frame in its family. This is not a character registration rule.",
+      "anchor_note": "One explicit fixed canvas-center transform for the whole family, chosen for composed-scene diagnostic. No individual bounds fitting.",
+      "transformed_raw_alpha8_bounds": [
+        5.458,
+        8.048,
+        142.131,
+        55.093
+      ],
+      "meaningful_alpha_clipped": false,
+      "white_foam_bounds_original_diagnostic": [
+        8,
+        10,
+        140,
+        54
+      ],
+      "white_foam_bounds_export_diagnostic": [
+        6,
+        8,
+        142,
+        55
+      ],
+      "white_foam_extent_delta_hd": [
+        -2,
+        -2,
+        2,
+        1
+      ]
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "family": "left",
+      "generated_image": "005-generated-v1-10x.png",
+      "source_sha256": "4a8252029263adcab0f487c457e80431043581da4b4fdcd589a6d021e47423b1",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        144,
+        58
+      ],
+      "scene_origin_hd": [
+        540,
+        612
+      ],
+      "scale_exact": {
+        "numerator": 97,
+        "denominator": 1000
+      },
+      "semantic_landmark": "common padded canvas center for this family",
+      "landmark_raw": [
+        768,
+        512
+      ],
+      "landmark_target_local_hd": [
+        72,
+        29
+      ],
+      "affine_forward": [
+        0.097,
+        0,
+        -2.4960000000000093,
+        0,
+        0.097,
+        -20.664
+      ],
+      "candidate_png_sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+      "original_export_pillow_version": "12.3.0",
+      "design_adjustment": "Left family3% smaller or right family10% smaller than nominal0.1. Same matrix is applied to every frame in its family. This is not a character registration rule.",
+      "anchor_note": "One explicit fixed canvas-center transform for the whole family, chosen for composed-scene diagnostic. No individual bounds fitting.",
+      "transformed_raw_alpha8_bounds": [
+        8.465,
+        3.877,
+        143.392,
+        51.504
+      ],
+      "meaningful_alpha_clipped": false,
+      "white_foam_bounds_original_diagnostic": [
+        10,
+        16,
+        136,
+        50
+      ],
+      "white_foam_bounds_export_diagnostic": [
+        9,
+        5,
+        137,
+        51
+      ],
+      "white_foam_extent_delta_hd": [
+        -1,
+        -11,
+        1,
+        1
+      ]
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "family": "right",
+      "generated_image": "009-generated-v1-10x.png",
+      "source_sha256": "a637d0e7751e32a9ccf0a429017b8b55e615b2e4f3d15abe769c816f13361381",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        144,
+        64
+      ],
+      "scene_origin_hd": [
+        1036,
+        606
+      ],
+      "scale_exact": {
+        "numerator": 90,
+        "denominator": 1000
+      },
+      "semantic_landmark": "common padded canvas center for this family",
+      "landmark_raw": [
+        768,
+        512
+      ],
+      "landmark_target_local_hd": [
+        72,
+        32
+      ],
+      "affine_forward": [
+        0.09,
+        0,
+        2.8799999999999955,
+        0,
+        0.09,
+        -14.079999999999998
+      ],
+      "candidate_png_sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+      "original_export_pillow_version": "12.3.0",
+      "design_adjustment": "Left family3% smaller or right family10% smaller than nominal0.1. Same matrix is applied to every frame in its family. This is not a character registration rule.",
+      "anchor_note": "One explicit fixed canvas-center transform for the whole family, chosen for composed-scene diagnostic. No individual bounds fitting.",
+      "transformed_raw_alpha8_bounds": [
+        5.58,
+        5.72,
+        138.51,
+        63.59
+      ],
+      "meaningful_alpha_clipped": false,
+      "white_foam_bounds_original_diagnostic": [
+        30,
+        6,
+        130,
+        58
+      ],
+      "white_foam_bounds_export_diagnostic": [
+        10,
+        6,
+        138,
+        62
+      ],
+      "white_foam_extent_delta_hd": [
+        -20,
+        0,
+        8,
+        4
+      ]
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "family": "right",
+      "generated_image": "010-generated-v1-10x.png",
+      "source_sha256": "0943ab25a2be4996cb46545042a8feff3077e4e89eb432d3635b859cdb9c387b",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        144,
+        64
+      ],
+      "scene_origin_hd": [
+        1036,
+        606
+      ],
+      "scale_exact": {
+        "numerator": 90,
+        "denominator": 1000
+      },
+      "semantic_landmark": "common padded canvas center for this family",
+      "landmark_raw": [
+        768,
+        512
+      ],
+      "landmark_target_local_hd": [
+        72,
+        32
+      ],
+      "affine_forward": [
+        0.09,
+        0,
+        2.8799999999999955,
+        0,
+        0.09,
+        -14.079999999999998
+      ],
+      "candidate_png_sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+      "original_export_pillow_version": "12.3.0",
+      "design_adjustment": "Left family3% smaller or right family10% smaller than nominal0.1. Same matrix is applied to every frame in its family. This is not a character registration rule.",
+      "anchor_note": "One explicit fixed canvas-center transform for the whole family, chosen for composed-scene diagnostic. No individual bounds fitting.",
+      "transformed_raw_alpha8_bounds": [
+        8.1,
+        9.68,
+        128.52,
+        55.49
+      ],
+      "meaningful_alpha_clipped": false,
+      "white_foam_bounds_original_diagnostic": [
+        16,
+        8,
+        126,
+        56
+      ],
+      "white_foam_bounds_export_diagnostic": [
+        11,
+        11,
+        127,
+        55
+      ],
+      "white_foam_extent_delta_hd": [
+        -5,
+        3,
+        1,
+        -1
+      ]
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "family": "right",
+      "generated_image": "011-generated-v1-10x.png",
+      "source_sha256": "889819abaedac7daf227d6a7439360b01acb22a364d7649697ff3e18ef84e8d8",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        144,
+        64
+      ],
+      "scene_origin_hd": [
+        1036,
+        606
+      ],
+      "scale_exact": {
+        "numerator": 90,
+        "denominator": 1000
+      },
+      "semantic_landmark": "common padded canvas center for this family",
+      "landmark_raw": [
+        768,
+        512
+      ],
+      "landmark_target_local_hd": [
+        72,
+        32
+      ],
+      "affine_forward": [
+        0.09,
+        0,
+        2.8799999999999955,
+        0,
+        0.09,
+        -14.079999999999998
+      ],
+      "candidate_png_sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+      "original_export_pillow_version": "12.3.0",
+      "design_adjustment": "Left family3% smaller or right family10% smaller than nominal0.1. Same matrix is applied to every frame in its family. This is not a character registration rule.",
+      "anchor_note": "One explicit fixed canvas-center transform for the whole family, chosen for composed-scene diagnostic. No individual bounds fitting.",
+      "transformed_raw_alpha8_bounds": [
+        12.69,
+        9.68,
+        129.06,
+        53.96
+      ],
+      "meaningful_alpha_clipped": false,
+      "white_foam_bounds_original_diagnostic": [
+        14,
+        8,
+        122,
+        56
+      ],
+      "white_foam_bounds_export_diagnostic": [
+        14,
+        10,
+        128,
+        54
+      ],
+      "white_foam_extent_delta_hd": [
+        0,
+        2,
+        6,
+        -2
+      ]
+    }
+  ],
+  "alpha_note": "Raw alpha1-7 speckles extend beyond runtime canvas. The finite export canvas excludes outside residue. No alpha thresholding, keying, painting or background removal was applied."
+}

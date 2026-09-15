@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "status": "Selected independent ocean, shadow and center-wave assets for technical preview; full human runtime scene review pending.",
+  "human_runtime_acceptance": false,
+  "production_acceptance": false,
+  "concept_approval": {
+    "quote": "its wonderful",
+    "scope": "Island concept only; see the separate concept acceptance record."
+  },
+  "source_bundle": {
+    "file": "source-images.zip",
+    "sha256": "dd9c2710580db88433b2427a5284eabe70e43d72975c0a5fdbea9b1aba9e7a8e",
+    "bytes": 4240583,
+    "members": [
+      "006-generated-v1.png",
+      "007-generated-v1.png",
+      "008-generated-v1.png",
+      "ocean-generated-v1.png",
+      "shadow-generated-v1.png"
+    ],
+    "compression": "DEFLATE level 9; fixed 1980 timestamp; sorted names",
+    "scope": "Exactly five selected raw PNGs. No selected image uses another generated asset as a reference."
+  },
+  "attempts": [
+    {
+      "generated_image": "ocean-generated-v1.png",
+      "sha256": "10a4c01a454082a2f5592f249a59d2e84c5158eca434f6223d502a7fff745f96",
+      "bytes": 1171742,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-91e6dded-7b0a-409c-8de4-042fabbd2101.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/ocean-generated-v1.txt",
+      "exact_prompt_utf8_sha256": "d322e5f6a08fdd53d36f0d55a3c93341f858042e8ef3f4cc82ff50fdbcc53a4c",
+      "prompt_processing": "One final newline removed before the tool call; prompt text retained exactly.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\ocean-shadow\\ocean-prompt-v1.txt",
+      "original_prompt_record_sha256": "463a8ff5dbf5e4e6fc105a3bf1923bf1a605f926d1760c668f2bb8db1a9cab31",
+      "actual_ordered_references": [
+        {
+          "kind": "concept",
+          "id": "concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\art\\cartoon\\island-concept-v1\\concept.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "measurements": {
+        "canvas": [
+          1448,
+          1086
+        ],
+        "mode": "RGB",
+        "alpha": "None; opaque RGB image"
+      },
+      "observation_and_disposition": "Object removal produced clean continuous sky/sea, preserved the 4:3 frame and horizon near 31.25%; no transparent holes. Full-frame uniform resampling is deliberate, not silhouette fitting.",
+      "binary_in_source_bundle": true,
+      "role": "selected technical candidate",
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "generated_image": "shadow-generated-v1.png",
+      "sha256": "ac50f8257939997084ed7a0c10969c32b93006089714086d273e71a175eb2bd0",
+      "bytes": 764733,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-c457e8aa-2871-4ef8-9c2f-dd4fde9633a7.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/shadow-generated-v1.txt",
+      "exact_prompt_utf8_sha256": "5e71a351aeb417ae4453c89e0369669b07f8635ca6ad46674cac3038bac2e954",
+      "prompt_processing": "One final newline removed before the tool call; prompt text retained exactly.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\ocean-shadow\\shadow-prompt-v1.txt",
+      "original_prompt_record_sha256": "46d8dcdf39438bf138f22dac01b97d038e18d85b23fe679434f94d2d7b0020bd",
+      "actual_ordered_references": [
+        {
+          "kind": "geometry_reference",
+          "id": "shadow-original-4x-padded.png",
+          "sha256": "2aa39afd9112ac5aba5d1ef33762f79cb998c3194a32cd94f6d2726b13fb5527",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\ocean-shadow\\shadow-original-4x-padded.png"
+        },
+        {
+          "kind": "concept",
+          "id": "concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\art\\cartoon\\island-concept-v1\\concept.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          133
+        ],
+        "alpha_bounds": {
+          "1": [
+            281,
+            39,
+            1378,
+            998
+          ],
+          "8": [
+            357,
+            399,
+            1192,
+            634
+          ],
+          "32": [
+            363,
+            403,
+            1185,
+            628
+          ],
+          "128": [
+            597,
+            450,
+            1083,
+            549
+          ],
+          "254": null
+        },
+        "alpha_counts": {
+          "zero": 1448282,
+          "one_to_seven": 25241,
+          "eight_to_249": 99341,
+          "250_to_255": 0
+        }
+      },
+      "observation_and_disposition": "v1 retained cleaner alpha. Fixed static scale0.235 and upper-contact anchor preserve the whole alpha>=8 silhouette. This is a deliberate six-percent smaller cast-shadow footprint, not an automatic body fit or alpha cleanup.",
+      "binary_in_source_bundle": true,
+      "role": "selected technical candidate",
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "generated_image": "shadow-generated-v2.png",
+      "sha256": "7cef9fbbe1dda789ceebc6481b053c04cbd0a92f9ce9e563c45e922c63270736",
+      "bytes": 757257,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-8eced0e3-0dac-42de-811b-9588c5d00515.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/shadow-generated-v2.txt",
+      "exact_prompt_utf8_sha256": "8e6008fb394d196eb0849f6ccf686137f1d7e3776f92ae89c9b4fc6a70c8c6d6",
+      "prompt_processing": "One final newline removed before the tool call; prompt text retained exactly.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\ocean-shadow\\shadow-prompt-v2.txt",
+      "original_prompt_record_sha256": "3f1fdaeb61b574694a1a619b2af2eaac29d6bfa40e047d072ef927f52b47ed44",
+      "actual_ordered_references": [
+        {
+          "kind": "generated_image",
+          "id": "shadow-generated-v1.png",
+          "sha256": "ac50f8257939997084ed7a0c10969c32b93006089714086d273e71a175eb2bd0",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\ocean-shadow\\shadow-generated-v1.png"
+        },
+        {
+          "kind": "geometry_reference",
+          "id": "shadow-original-4x-padded.png",
+          "sha256": "2aa39afd9112ac5aba5d1ef33762f79cb998c3194a32cd94f6d2726b13fb5527",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\ocean-shadow\\shadow-original-4x-padded.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          250
+        ],
+        "alpha_bounds": {
+          "1": [
+            0,
+            0,
+            1536,
+            1024
+          ],
+          "8": [
+            325,
+            353,
+            1234,
+            658
+          ],
+          "32": [
+            337,
+            365,
+            1219,
+            646
+          ],
+          "128": [
+            363,
+            388,
+            1199,
+            627
+          ],
+          "254": null
+        },
+        "alpha_counts": {
+          "zero": 1287066,
+          "one_to_seven": 76967,
+          "eight_to_249": 207358,
+          "250_to_255": 1473
+        }
+      },
+      "observation_and_disposition": "Targeted edge edit produced broader alpha>=8 residue; at scale0.245 centered on the original guide its bounds became[-4.535,-10.955,218.17,63.77], exceeding208x56. No artistic pixel cleanup or clipping used.",
+      "binary_in_source_bundle": false,
+      "role": "rejected unused variant; measurements and prompt retained",
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "generated_image": "006-generated-v1.png",
+      "sha256": "4216199c9e69f0f61cdaa27f7106d7c80b07056b895779592836730772910033",
+      "bytes": 796913,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-a979021a-47e0-466f-93cb-87e373fd4363.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/006-generated-v1.txt",
+      "exact_prompt_utf8_sha256": "ec0cda0516bc3ab78487de8b70a4d2c0d432442700a1562e35196b4f242f0c50",
+      "prompt_processing": "One final newline removed before the tool call; prompt text retained exactly.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\waves-center\\006-prompt-v1.txt",
+      "original_prompt_record_sha256": "bd73466da43e0121dd0dde147d474d8899e581c8bb06033e8f59fd55ea944444",
+      "actual_ordered_references": [
+        {
+          "kind": "geometry_reference",
+          "id": "006-original-4x-padded.png",
+          "sha256": "0abeed7161115a0d5ec21b2151293562c6a232cd33758cddaff550de7ec8546e",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\waves-center\\006-original-4x-padded.png"
+        },
+        {
+          "kind": "concept",
+          "id": "concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\art\\cartoon\\island-concept-v1\\concept.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bounds": {
+          "1": [
+            124,
+            327,
+            1412,
+            798
+          ],
+          "8": [
+            127,
+            439,
+            1409,
+            611
+          ],
+          "32": [
+            127,
+            440,
+            1409,
+            611
+          ],
+          "128": [
+            128,
+            440,
+            1408,
+            611
+          ],
+          "254": [
+            290,
+            527,
+            1224,
+            574
+          ]
+        },
+        "alpha_counts": {
+          "zero": 1506339,
+          "one_to_seven": 29375,
+          "eight_to_249": 24629,
+          "250_to_255": 12521
+        }
+      },
+      "observation_and_disposition": "Selected for technical preview; distinct original phase is the geometry authority. One common0.249 scale for all three phases, a0.4percent inset about the fixed source reference center(768,512)->runtime(160,25). This keeps006's quarter-pixel fringe inside without per-phase fitting or contour clipping.",
+      "binary_in_source_bundle": true,
+      "role": "selected technical candidate",
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "generated_image": "007-generated-v1.png",
+      "sha256": "8c284930a1b4414246cb54ec27eadb9a141b14aceab21830fb28ca545a4a2de8",
+      "bytes": 776691,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-6a3487a2-a0e3-4daf-b3cf-b19d5b4d1781.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/007-generated-v1.txt",
+      "exact_prompt_utf8_sha256": "11e584320a1226aa5506c0c3fb68fdc3df7c50d41dd9798fcaf22c82f8ca161c",
+      "prompt_processing": "One final newline removed before the tool call; prompt text retained exactly.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\waves-center\\007-prompt-v1.txt",
+      "original_prompt_record_sha256": "54aef1a982975aaef5bd54f53e1ff8c8e02a1867522af6786b1980f089349371",
+      "actual_ordered_references": [
+        {
+          "kind": "geometry_reference",
+          "id": "007-original-4x-padded.png",
+          "sha256": "b1640427e60d9118cf8936d90c059ddcba798c2b91b81127ec7a32b4b2f13cb4",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\waves-center\\007-original-4x-padded.png"
+        },
+        {
+          "kind": "concept",
+          "id": "concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\art\\cartoon\\island-concept-v1\\concept.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bounds": {
+          "1": [
+            129,
+            326,
+            1380,
+            950
+          ],
+          "8": [
+            136,
+            432,
+            1378,
+            602
+          ],
+          "32": [
+            136,
+            433,
+            1378,
+            601
+          ],
+          "128": [
+            137,
+            434,
+            1377,
+            600
+          ],
+          "254": [
+            155,
+            459,
+            1374,
+            546
+          ]
+        },
+        "alpha_counts": {
+          "zero": 1519931,
+          "one_to_seven": 19257,
+          "eight_to_249": 23936,
+          "250_to_255": 9740
+        }
+      },
+      "observation_and_disposition": "Selected for technical preview; distinct original phase is the geometry authority. One common0.249 scale for all three phases, a0.4percent inset about the fixed source reference center(768,512)->runtime(160,25). This keeps006's quarter-pixel fringe inside without per-phase fitting or contour clipping.",
+      "binary_in_source_bundle": true,
+      "role": "selected technical candidate",
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    },
+    {
+      "generated_image": "008-generated-v1.png",
+      "sha256": "d8fe387761fd1435ac5cef9024e13ecb72684b1c0039ee53318c3ed28138b313",
+      "bytes": 796416,
+      "tool": "built-in image_gen.imagegen; one asset per call",
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-0476c0e5-de44-4705-b708-77371be4f2b3.png",
+      "raw_default_bytes_identical": true,
+      "exact_prompt_file": "prompts/008-generated-v1.txt",
+      "exact_prompt_utf8_sha256": "02dc7288176740c282912e8a4537c8715c6af9925c4674425e0cc42c75b314a9",
+      "prompt_processing": "One final newline removed before the tool call; prompt text retained exactly.",
+      "original_prompt_record_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\waves-center\\008-prompt-v1.txt",
+      "original_prompt_record_sha256": "21421d2c0d9a3f88ac8f5761e35fb12cca920a02ace8da4f0bf4e17a0107abb6",
+      "actual_ordered_references": [
+        {
+          "kind": "geometry_reference",
+          "id": "008-original-4x-padded.png",
+          "sha256": "4045d81d021a1188e4de79cca1e8cd291ef3d00428263ebf6fb136f41472454d",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\waves-center\\008-original-4x-padded.png"
+        },
+        {
+          "kind": "concept",
+          "id": "concept.png",
+          "sha256": "da42f61b6443ab8da0fc6015b482f0d782eee86c037a35ad9908b08b27bf1fbe",
+          "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\art\\cartoon\\island-concept-v1\\concept.png"
+        }
+      ],
+      "seed_or_model_identifier_exposed": false,
+      "measurements": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_bounds": {
+          "1": [
+            31,
+            231,
+            1490,
+            768
+          ],
+          "8": [
+            131,
+            420,
+            1405,
+            582
+          ],
+          "32": [
+            132,
+            420,
+            1405,
+            581
+          ],
+          "128": [
+            133,
+            421,
+            1404,
+            580
+          ],
+          "254": [
+            233,
+            462,
+            1188,
+            524
+          ]
+        },
+        "alpha_counts": {
+          "zero": 1516752,
+          "one_to_seven": 21622,
+          "eight_to_249": 28015,
+          "250_to_255": 6475
+        }
+      },
+      "observation_and_disposition": "Selected for technical preview; distinct original phase is the geometry authority. One common0.249 scale for all three phases, a0.4percent inset about the fixed source reference center(768,512)->runtime(160,25). This keeps006's quarter-pixel fringe inside without per-phase fitting or contour clipping.",
+      "binary_in_source_bundle": true,
+      "role": "selected technical candidate",
+      "human_runtime_acceptance": false,
+      "production_acceptance": false
+    }
+  ],
+  "lessons": [
+    "Removing objects from the approved full scene produced a clean independent sky and sea layer while retaining the horizon and palette.",
+    "Explicit full-frame uniform resizing is appropriate for this opaque background; it does not normalize a silhouette or crop painted content.",
+    "Shadow v1 retained cleaner exterior alpha than the attempted narrow contour correction. The revision increased the contaminated bounds instead of tightening them.",
+    "The selected shadow peaks at alpha 133, above the requested 25-30% opacity. Preserve the measured source and judge the actual composed result rather than claiming the prompt guarantees opacity.",
+    "A fixed 0.235 shadow scale preserves the full meaningful contour with its original guide center and upper-contact anchor. This is a static design choice, not a bounds-derived transform.",
+    "Use the corresponding original phase as the first reference for every wave. These three images use no generated wave ancestor and share one center registration.",
+    "Frame 006 exceeded the initial 0.25 window by a quarter HD pixel on each side. One common 0.249 scale keeps the complete center family inside without per-phase fitting or clipping meaningful foam.",
+    "Keep sand and solid ocean fill out of the independent foam sprites. The corrected runtime wave compositor restores its clean base before rendering the current wave families.",
+    "Alpha 1-7 exterior residue remains in raw transparent sprites; numerical alpha and colored composites distinguish it from real visible background contamination."
+  ],
+  "historical_paths_note": "Absolute paths preserve actual local tool references and default outputs. The portable recipe uses this folder and repository-relative originals.",
+  "report_sources": [
+    {
+      "historical_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\ocean-shadow\\preparation.json",
+      "sha256": "151a63f53418451a3d1f0088e0636610daa9dec7649ff65f5ee2624b5f040a4b"
+    },
+    {
+      "historical_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\ocean-shadow\\shadow-selected.json",
+      "sha256": "5cfbf983830696265185d536123d15f51c356576fef5c78a8da6a920d05540fd"
+    },
+    {
+      "historical_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\waves-center\\generation-report.json",
+      "sha256": "c9b93292a7cb7aaaea19692e8943e8815e4bc086df35254d163a4eb2c0e2d0c0"
+    },
+    {
+      "historical_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\island-assets-v1\\waves-center\\reference-preparation.json",
+      "sha256": "909cce67f0a4e25c4df52984ee3e6c79cd9222c0f269a5ac5a4f2b9693915e8c"
+    }
+  ]
+}

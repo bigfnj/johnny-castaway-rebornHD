@@ -5,6 +5,9 @@ perfect" and "Yes, use this design". It is the canonical character reference for
 the first Cartoon animation test. This is an approved concept sheet, not a
 runtime sprite or a complete art pack.
 
+The [five-pass design history](character-history-v1/README.md) preserves exact
+prompts, used ancestor sheets, original pose references and the attached cap.
+
 Approved PNG SHA-256:
 `f52319502fc68ee76b22c74ab18bb6ab57b10d0d5edb54e68bcc2a0ef2686a27`.
 

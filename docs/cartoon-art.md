@@ -1,5 +1,9 @@
 # Cartoon art production
 
+Read [image authoring lessons](art-style-learnings.md) before starting another
+style or animation family. It preserves the Cartoon pilot's generation,
+registration, transparency and review experience with links to exact records.
+
 Cartoon is an additional art pack. The original resources and HD PNGs remain in
 `assets/scrantic_data.zip`; accepted Cartoon PNGs live under
 `data/styles/cartoon/`. Python is an offline authoring tool, never a dependency

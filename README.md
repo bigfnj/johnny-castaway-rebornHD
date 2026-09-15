@@ -52,8 +52,7 @@ The archive contains the original game data and the pre-extracted sound files:
 
     data/RESOURCE.MAP
     data/RESOURCE.001
-    data/sound0.wav .. sound24.wav   (23 files: 11 and 13 do not exist,
-                                      and 0 ships but is never loaded)
+    data/sound0.wav .. sound24.wav   (23 files: 11 and 13 do not exist)
 
 It may also contain optional HD (PNG) replacement assets under `data/hd/`.
 See `docs/HD_README.md` for the full zip layout and HD details.
@@ -229,12 +228,18 @@ The browser's Art style selector remembers its choice in local storage and
 reloads the scene. An explicit URL argument, such as
 `?args=window+style+hd`, overrides that saved browser choice for the current run.
 
-Cartoon requires an artwork pack inside `scrantic_data.zip` under
-`data/styles/cartoon/`. Artwork is currently being developed and reviewed;
-selecting Cartoon without its pack reports a missing-pack error. Partial preview
-packs identify their coverage and use compatible HD or original art for missing
-frames. They do not represent a completed Cartoon edition. The authoring and
-acceptance process is documented in [Cartoon art production](docs/cartoon-art.md).
+The bundled Cartoon preview contains 21 approved assets: six walking poses and
+15 island layers, including one ocean and all nine high-tide shore-foam frames.
+It is a partial style pack. Other animations and environment states use HD or
+original artwork, so the full story can mix the two styles. The settings label
+is "Cartoon (preview)" until wider artwork coverage is ready.
+
+Cartoon assets live under `data/styles/cartoon/` inside `scrantic_data.zip`.
+Selecting Cartoon with an older archive that lacks the pack reports a
+missing-pack error. The [approved scene](art/cartoon/island-pilot-v1/README.md)
+records its exact scope. See [Cartoon art production](docs/cartoon-art.md) for
+packaging and [image authoring lessons](docs/art-style-learnings.md) before
+creating the next style.
 
 `capture` writes a PPM image of the final composed frame, for example:
 

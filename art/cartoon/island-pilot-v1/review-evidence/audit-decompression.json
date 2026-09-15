@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "status": "pre-merge read-only audit finding; post-merge confirmation pending",
+  "scope": "Legacy malformed RESOURCE data, independent of Cartoon artwork. No production source, archive or executable was modified for this probe.",
+  "executable": {
+    "path_at_execution": "build/Release/jc_reborn.exe",
+    "sha256": "dcc1e0396d0cf7f0bad4d3fc11a26beefd7c61109f07ab31ce483359d3ef23fa"
+  },
+  "source": {
+    "path": "src/engine/uncompress.c",
+    "sha256": "bf562077478b1063dd6a3220053b238fe184fc61e68e69fe867f18c1407f757f",
+    "locations": ["uncompressLZW:231-238", "uncompressRLE:279-286"]
+  },
+  "method": {
+    "command_arguments": ["debug", "dump"],
+    "fixture": "Each isolated working directory contained its own scrantic_data.zip with a genuine RESOURCE.MAP and RESOURCE.001. The resource pair contained DEFAULT.PAL and a single SHORT.BMP image with dimensions 8x2, requiring eight packed pixel bytes. Every BMP declared an uncompressed length of eight bytes; only its compressed payload and method varied.",
+    "engine_execution_witness": "The real executable exited and logged Dumping BMP : SHORT.BMP; dump/BMP/SHORT.BMP.000.xpm existed for each case.",
+    "privacy": "Raw uninitialized output bytes and generated dump files are deliberately excluded from this durable record. Local diagnostic files remain under ignored build/art-work/audit-decompression."
+  },
+  "cases": [
+    {
+      "name": "rle-complete-control",
+      "compression_method": 1,
+      "compressed_payload_hex": "88aa",
+      "encoded_output_bytes": 8,
+      "declared_output_bytes": 8,
+      "exit_code": 0,
+      "dump_execution_witness": true,
+      "xpm_created": true,
+      "outcome": "Complete control decoded all eight bytes to the expected value AA."
+    },
+    {
+      "name": "rle-output-short",
+      "compression_method": 1,
+      "compressed_payload_hex": "81aa",
+      "encoded_output_bytes": 1,
+      "declared_output_bytes": 8,
+      "exit_code": 0,
+      "dump_execution_witness": true,
+      "xpm_created": true,
+      "outcome": "Malformed stream was accepted. The remaining seven output bytes were never written by the decoder, then were consumed by the dump. Their observed values are omitted."
+    },
+    {
+      "name": "lzw-output-short",
+      "compression_method": 2,
+      "compressed_payload_hex": "aa00",
+      "encoded_output_bytes": 1,
+      "declared_output_bytes": 8,
+      "exit_code": 0,
+      "dump_execution_witness": true,
+      "xpm_created": true,
+      "outcome": "Malformed stream was accepted. The remaining seven output bytes were never written by the decoder, then were consumed by the dump. Their observed values are omitted."
+    }
+  ],
+  "finding": "Both final decoder checks compare consumed input length with declared compressed length, but do not require produced output length to equal declared uncompressed length. Downstream BMP bounds checks trust the declared uncompressed length.",
+  "limits": "The shipped original resource corpus remains unchanged and fully passes its existing golden regression. This probe establishes malformed-input behavior, not a visual regression in accepted artwork or a running screensaver leak. It is not a decoder fix or a mutation-test result.",
+  "recommended_follow_up": "Validate produced length before returning from either decoder, preserving legitimate complete-output early returns; exercise malformed and complete controls against a freshly rebuilt executable and mutation-test each new check."
+}

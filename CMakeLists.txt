@@ -142,6 +142,17 @@ endif()
 # Create executable
 add_executable(jc_reborn ${COMMON_SOURCES} ${PLATFORM_SOURCES})
 
+# Native API driver exercises real walk.c behind-palm routes. It is separate
+# from the application CLI and writes captures only to isolated test folders.
+if(WIN32 AND NOT EMSCRIPTEN)
+    set(PALM_TEST_SOURCES ${COMMON_SOURCES})
+    list(REMOVE_ITEM PALM_TEST_SOURCES src/engine/jc_reborn.c)
+    add_executable(jc_palm_test tests/test_palm_driver.c ${PALM_TEST_SOURCES}
+        platform/platform_windows.c)
+    target_include_directories(jc_palm_test PRIVATE src/engine src/data platform third_party/miniz)
+    target_link_libraries(jc_palm_test PRIVATE gdi32 user32 winmm windowscodecs ole32 uuid)
+endif()
+
 # Exercise the portable decoder even on Windows, where normal rendering uses
 # WIC. This probe needs no window server or platform rendering libraries.
 if(NOT EMSCRIPTEN)

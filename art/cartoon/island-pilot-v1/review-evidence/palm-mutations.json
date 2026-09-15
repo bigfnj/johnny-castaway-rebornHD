@@ -1,0 +1,47 @@
+[
+  {
+    "mutation": "disable-atop",
+    "assertion": "outside-alpha",
+    "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\src\\engine\\walk.c",
+    "failure": "FAIL tests/test_palm_renderer.py: palm alpha128 remains128 away from Johnny on both routes",
+    "mtime_before_ns": 1789435004578381400,
+    "mtime_after_ns": 1789435088190787000,
+    "driver_sha256": "bd4bf7440c09c4dbe2a502abc9c657702fe9c92b634aa28b27127b71aa02cefa"
+  },
+  {
+    "mutation": "remove-tree-color",
+    "assertion": "overlap",
+    "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\src\\engine\\graphics.c",
+    "failure": "FAIL tests/test_palm_renderer.py: palm-over-partial-Johnny preserves tree color and Johnny coverage",
+    "mtime_before_ns": 1789435088190787000,
+    "mtime_after_ns": 1789435091933896000,
+    "driver_sha256": "94ee5bad77bbf359d09555c3f9e7d7f5950f857e599f1015f783005c990edf3e"
+  },
+  {
+    "mutation": "ignore-clip",
+    "assertion": "clipping",
+    "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\src\\engine\\graphics.c",
+    "failure": "FAIL tests/test_palm_renderer.py: source-atop respects scaled offset, clip and negative origin",
+    "mtime_before_ns": 1789435091933896000,
+    "mtime_after_ns": 1789435095655148700,
+    "driver_sha256": "4c71cdd3ff15c29a9606e32a921624ba9a4813754885ab44b27066ad69711c2f"
+  },
+  {
+    "mutation": "disable-hd-guard",
+    "assertion": "hd-legacy",
+    "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\src\\engine\\walk.c",
+    "failure": "FAIL tests/test_palm_renderer.py: HD retains its original source-over pixels",
+    "mtime_before_ns": 1789435095655148700,
+    "mtime_after_ns": 1789435097549116100,
+    "driver_sha256": "0b2322f76261a9ab1b15f6cb2f8d8c2576cb1956e3db5ecd947a6bd11b2e6461"
+  },
+  {
+    "mutation": "disable-presence-guard",
+    "assertion": "partial-fallback",
+    "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\src\\engine\\walk.c",
+    "failure": "FAIL tests/test_palm_renderer.py: partial Cartoon without palm replacements retains HD behavior",
+    "mtime_before_ns": 1789435097549116100,
+    "mtime_after_ns": 1789435100417774700,
+    "driver_sha256": "50f4efa78dbfa5347d4747629c84dbbee3361fafbcd504d225fcb51cd9b54152"
+  }
+]

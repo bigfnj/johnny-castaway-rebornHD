@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "status": "Historical character-design revisions leading to approved canonical v5.",
+  "coverage": "Character direction sheets only; not runtime sprite replacements.",
+  "canonical_character": {
+    "file": "art/cartoon/johnny-character-v5.png",
+    "sha256": "f52319502fc68ee76b22c74ab18bb6ab57b10d0d5edb54e68bcc2a0ef2686a27",
+    "human_design_approval": true
+  },
+  "source_bundle": {
+    "file": "source-images.zip",
+    "sha256": "fc78434a233fbde353f9b7be3bfa910d2df02789b94493c5ab09b6c51af8966c",
+    "bytes": 5233048,
+    "members": [
+      "johnny-cartoon-v1.png",
+      "johnny-cartoon-v2.png",
+      "johnny-cartoon-v3.png",
+      "johnny-cartoon-v4.png"
+    ],
+    "scope": "Exactly four earlier generated character sheets. Canonical v5 is already tracked separately.",
+    "compression": "DEFLATE level 9; fixed 1980 timestamp; ordered v1-v4"
+  },
+  "generations": [
+    {
+      "version": 1,
+      "generated_image": "johnny-cartoon-v1.png",
+      "sha256": "daf2ea34ea79589bf2051b7093346e78d3e9bdc1456470f114ab7063c50e18f3",
+      "bytes": 1454218,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "tool": "built-in image_gen.imagegen",
+      "prompt": "Use case: stylized-concept. Asset type: character model sheet for a 2D animated screensaver, visual direction review only, not a final runtime sprite sheet. Input images 1 and 2 are the original Johnny Castaway pixel sprites, used as identity, costume, silhouette and pose references. Create a polished modern 2D cartoon interpretation of THIS same castaway. Preserve his recognizable white sailor cap, prominent long rounded nose, dark facial hair/stubble, red upper-body color area, white shorts and long thin limbs with large bare feet as shown in the references. Keep his lanky, slightly stooped, scruffy comic personality and adult appearance. Use clean confident dark outlines, warm flat colors and very restrained two-tone cel shading. He should feel hand-drawn and expressive, readable at small screen size. Do not add new accessories, props, logos or change his outfit. The sheet has four clearly separated full-body drawings of the SAME design on an off-white background: standing side profile matching input 1, stepping side profile matching input 2, standing opposite profile, and a relaxed three-quarter view. Keep the body proportions consistent across all four drawings; avoid extreme squash/stretch. Give each drawing room so no limbs or hats overlap. No text, no titles, no texture over the character, no pixel-art effect, no 3D rendering. The purpose is to choose a faithful, animation-friendly cartoon Johnny before authoring individual animation frames.",
+      "prompt_file": "prompts/character-v1.txt",
+      "prompt_utf8_sha256": "441f22c7bfa4475fb0f303bc3ba2d859d55378301bf5d535e4d590cc478d0104",
+      "prompt_hash_semantics": "SHA-256 of the decoded tool prompt string encoded as UTF-8, independent of JSON/text file line endings.",
+      "generation_call_id": "call_sqgzez0R1iDzw1y5p68AHs7L",
+      "generation_timestamp": "2026-09-14T22:18:18.236Z",
+      "exact_inline_generation_response_bytes_verified": true,
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-e1c33379-fdfa-4330-90c9-0c979cd173eb.png",
+      "seed": null,
+      "model_identifier": null,
+      "stored_as": "source-images.zip#johnny-cartoon-v1.png",
+      "reference_selection": {
+        "mechanism": "referenced_image_paths",
+        "actual_ordered_references": [
+          {
+            "actual_tool_path": "D:/.ai-work/projects/johnny-castaway-rebornHD/build/art-inspection/BMP-JOHNWALK.BMP-000.png",
+            "kind": "original game pose reference",
+            "saved_as": "references/JOHNWALK.BMP-000.png",
+            "sha256": "480cda44e64198f2d0bdb95d597f45d8902fa6d8406deb44a2b07dbec261c8fd"
+          },
+          {
+            "actual_tool_path": "D:/.ai-work/projects/johnny-castaway-rebornHD/build/art-inspection/BMP-JOHNWALK.BMP-002.png",
+            "kind": "original game pose reference",
+            "saved_as": "references/JOHNWALK.BMP-002.png",
+            "sha256": "46b14e4530af14e4f3ea5c97a95a077785a4b84de0734ff901e568704e63e054"
+          }
+        ]
+      }
+    },
+    {
+      "version": 2,
+      "generated_image": "johnny-cartoon-v2.png",
+      "sha256": "08cfcc52e767ed663fe996392f4b50233d595b016f6e7aa599f5006f1c427455",
+      "bytes": 1493360,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "tool": "built-in image_gen.imagegen",
+      "prompt": "Use case: identity-preserve / style-transfer. Asset type: second character model-sheet concept for Johnny Castaway. Image 1 is the first concept sheet to revise. Images 2 and 3 are the original Johnny Castaway sprites and are authoritative for character identity and proportions. The user likes the clean 2D cartoon drawing style and specifically LOVES the ragged white shorts in image 1, but says the character himself feels off. Keep the same drawing style, line quality, restrained cel shading, white ragged shorts and sheet format. Redesign Johnny to match the original sprites much more closely: leaner scragglier silhouette, narrow sloping shoulders, thin neck and limbs, a more awkward slightly stooped stance. Reduce the bulky rounded torso from image 1. Make the head less conventionally handsome and less generic: closely follow the original large projecting nose, small scruffy chin and sparse beard, and tiny expressive eyes. Replace the confident half-lidded smirk with an earnest, slightly bewildered castaway expression. Make the white sailor cap modest and flatter like the original, not the giant swept-up hat of image 1. Reduce the mop of black hair and the dense full beard; retain just the scruffy hair and stubble suggested in the originals. Keep the sunburnt bare chest, bare feet and original costume. Preserve adult Johnny's recognizable identity, not a new character. Four separated full-body poses: side standing, side stepping, opposite side standing, front/three-quarter standing. All four must use precisely the same revised proportions. Plain off-white background, no text, no props, no additional accessories. This is a faithful cartoon modernization of the original castaway rather than a generic sailor.",
+      "prompt_file": "prompts/character-v2.txt",
+      "prompt_utf8_sha256": "2266afb1d67d96839d4f02391bb4b907a6f591128a019e67bc681b40e08e7c11",
+      "prompt_hash_semantics": "SHA-256 of the decoded tool prompt string encoded as UTF-8, independent of JSON/text file line endings.",
+      "generation_call_id": "call_cFmu61z16ZpU3K8RKzaoW7DV",
+      "generation_timestamp": "2026-09-14T22:20:44.331Z",
+      "exact_inline_generation_response_bytes_verified": true,
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-609be437-7f26-4294-9997-dff88b32c76b.png",
+      "seed": null,
+      "model_identifier": null,
+      "stored_as": "source-images.zip#johnny-cartoon-v2.png",
+      "reference_selection": {
+        "mechanism": "referenced_image_paths",
+        "actual_ordered_references": [
+          {
+            "actual_tool_path": "D:/.ai-work/worktrees/johnny-cartoon-art/build/art-work/concepts/johnny-cartoon-v1.png",
+            "kind": "generated character ancestor",
+            "saved_as": "source-images.zip#johnny-cartoon-v1.png",
+            "sha256": "daf2ea34ea79589bf2051b7093346e78d3e9bdc1456470f114ab7063c50e18f3"
+          },
+          {
+            "actual_tool_path": "D:/.ai-work/worktrees/johnny-cartoon-art/build/art-work/reference/BMP/JOHNWALK.BMP/000.png",
+            "kind": "original game pose reference",
+            "saved_as": "references/JOHNWALK.BMP-000.png",
+            "sha256": "480cda44e64198f2d0bdb95d597f45d8902fa6d8406deb44a2b07dbec261c8fd"
+          },
+          {
+            "actual_tool_path": "D:/.ai-work/worktrees/johnny-cartoon-art/build/art-work/reference/BMP/MJTELE.BMP/000.png",
+            "kind": "original game pose reference",
+            "saved_as": "references/MJTELE.BMP-000.png",
+            "sha256": "69a1ed6ced2c0d52ff8af11516388416599f43fd3d308506b232bdcbc8062bd0"
+          }
+        ]
+      }
+    },
+    {
+      "version": 3,
+      "generated_image": "johnny-cartoon-v3.png",
+      "sha256": "8b312ff1b3df0d7d6cad613c3c15b51a37a931f376cd6314460fe39f58ba9948",
+      "bytes": 1508247,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "tool": "built-in image_gen.imagegen",
+      "prompt": "Use case: precise-object-edit. Asset type: Johnny Castaway character reference sheet, revision 3. Image 1 is the SECOND concept sheet, the edit target. Image 2 is the FIRST concept sheet, used ONLY as reference for its sailor cap. Image 3 is an original Johnny sprite for beard identity. The user approves the leaner body, facial expressions, ragged white shorts and clean cartoon style of image 1. Change ONLY these two features across all four drawings, keeping everything else unchanged: (1) Give Johnny an actual full scruffy castaway BEARD, visibly grown out below his jaw/chin, dark brown/near-black with an irregular unkempt outline. This must read as a substantial beard with volume and strands, not five-o'clock shadow, dots or short stubble. Preserve his approved nose, eyes, earnest expression and face proportions. (2) Restore the white sailor cap design from image 2, with its recognizable fuller sailor form and upturned rim, consistent across all views. Keep the lean torso and limbs from image 1, not the fuller body of image 2. Do not alter the shorts, pose placement, body proportions, warm sunburnt skin, bare feet, line style or off-white sheet background. Four full-body views as existing. No text or added props.",
+      "prompt_file": "prompts/character-v3.txt",
+      "prompt_utf8_sha256": "a6aedd433602e74c662208fa589968f05696a3597177022c52a53fe9fd7e634e",
+      "prompt_hash_semantics": "SHA-256 of the decoded tool prompt string encoded as UTF-8, independent of JSON/text file line endings.",
+      "generation_call_id": "call_VMj4PCwGxIlkRux0Q8KOsqGB",
+      "generation_timestamp": "2026-09-14T22:23:20.619Z",
+      "exact_inline_generation_response_bytes_verified": true,
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-720bda13-a0da-468a-8ec3-5d0f879b33aa.png",
+      "seed": null,
+      "model_identifier": null,
+      "stored_as": "source-images.zip#johnny-cartoon-v3.png",
+      "reference_selection": {
+        "mechanism": "referenced_image_paths",
+        "actual_ordered_references": [
+          {
+            "actual_tool_path": "D:/.ai-work/worktrees/johnny-cartoon-art/build/art-work/concepts/johnny-cartoon-v2.png",
+            "kind": "generated character ancestor",
+            "saved_as": "source-images.zip#johnny-cartoon-v2.png",
+            "sha256": "08cfcc52e767ed663fe996392f4b50233d595b016f6e7aa599f5006f1c427455"
+          },
+          {
+            "actual_tool_path": "D:/.ai-work/worktrees/johnny-cartoon-art/build/art-work/concepts/johnny-cartoon-v1.png",
+            "kind": "generated character ancestor",
+            "saved_as": "source-images.zip#johnny-cartoon-v1.png",
+            "sha256": "daf2ea34ea79589bf2051b7093346e78d3e9bdc1456470f114ab7063c50e18f3"
+          },
+          {
+            "actual_tool_path": "D:/.ai-work/worktrees/johnny-cartoon-art/build/art-work/reference/BMP/JOHNWALK.BMP/000.png",
+            "kind": "original game pose reference",
+            "saved_as": "references/JOHNWALK.BMP-000.png",
+            "sha256": "480cda44e64198f2d0bdb95d597f45d8902fa6d8406deb44a2b07dbec261c8fd"
+          }
+        ]
+      }
+    },
+    {
+      "version": 4,
+      "generated_image": "johnny-cartoon-v4.png",
+      "sha256": "d9d9d6217fdd6370a45bae99f35397374903e1e5300c9c87a61ceb5c1e9bb9b7",
+      "bytes": 1669208,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "tool": "built-in image_gen.imagegen",
+      "prompt": "Use case: precise-object-edit\nAsset type: Johnny Castaway cartoon character design revision 4, for human art-direction review.\nInputs: Image 1 is the browser screenshot of the user's sailor-cap reference, for cap construction and silhouette only. Image 2 is the four-pose modern cartoon Johnny sheet, the EDIT TARGET. Image 3 and Image 4 are original game sprite contact sheets, supporting references for Johnny's plain white sailor cap, especially the cap-lifting frames and the standalone cap in MJREAD frame 024.\nEdit Image 2 only. Preserve its clean modern 2D cartoon drawing style, four full-body poses, layout, lean body proportions, large expressive eyes and long rounded nose, face expressions, shaggy black hair, sunburned skin colors, bare chest, ragged white shorts and exactly their torn hem, hands, bare feet and warm plain background.\nMake ONLY two targeted corrections across all four poses:\n1. Replace the flat floppy beret-like cap with a proper white sailor cap: soft rounded dome/crown surrounded by a clearly raised, turned-up fabric rim. Use the bowl-shaped construction of the user's reference, adapted to the original game's slightly battered soft cap. Show the crown distinctly rising within the upturned rim. It must read as a sailor's white canvas cap from every angle, not a beret, chef hat, baseball cap, captain's peaked hat, or a flat disk. Preserve plain white with subtle cool gray shading consistent with Johnny's original cap. Do not introduce the reference's blue stripes or anchor emblem; use its shape only.\n2. Make his existing full dark beard slightly longer, around 15-20 percent, and scruffier. Add a few irregular longer tufts and an uneven shaggy lower edge, less groomed and less symmetric, as a stranded sailor. Retain its dark brown-black color and full volume, clearly a real beard rather than stubble. Keep eyes, nose and expressions unchanged and readable. Avoid making the beard enormous or changing the body silhouette.\nDo not redesign the character beyond these two edits. No text or new objects. This is a new original drawing of Johnny using the stock cap only as a shape reference, not a reproduction of the stock artwork.",
+      "prompt_file": "prompts/character-v4.txt",
+      "prompt_utf8_sha256": "997e48138ea4168d7e1e2b7f8e2b11c50b0797db586339cc21e194c21a2b84c2",
+      "prompt_hash_semantics": "SHA-256 of the decoded tool prompt string encoded as UTF-8, independent of JSON/text file line endings.",
+      "generation_call_id": "call_3tGK1YyAXFvbuYwkwuMWIQ1a",
+      "generation_timestamp": "2026-09-14T22:33:23.372Z",
+      "exact_inline_generation_response_bytes_verified": true,
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-49da16aa-331d-4119-b218-b5bcb1a0850f.png",
+      "seed": null,
+      "model_identifier": null,
+      "stored_as": "source-images.zip#johnny-cartoon-v4.png",
+      "reference_selection": {
+        "mechanism": "num_last_images_to_include",
+        "count": 4,
+        "explicit_ordered_paths": null,
+        "prompt_declared_roles": [
+          {
+            "image": 1,
+            "role": "browser screenshot of the user's sailor-cap reference; cap construction and silhouette only"
+          },
+          {
+            "image": 2,
+            "role": "four-pose modern cartoon Johnny sheet; edit target"
+          },
+          {
+            "image": 3,
+            "role": "original game sprite contact sheet; cap supporting reference"
+          },
+          {
+            "image": 4,
+            "role": "original game sprite contact sheet; cap supporting reference"
+          }
+        ],
+        "limitation": "The call selected recent conversation images instead of supplying paths. This record preserves that mechanism and the prompt roles; it does not assert an explicit runtime-selected file order.",
+        "intended_previous_character_revision": 3
+      }
+    },
+    {
+      "version": 5,
+      "generated_image": "johnny-cartoon-v5.png",
+      "sha256": "f52319502fc68ee76b22c74ab18bb6ab57b10d0d5edb54e68bcc2a0ef2686a27",
+      "bytes": 1653287,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "tool": "built-in image_gen.imagegen",
+      "prompt": "Use case: precise-object-edit\nAsset type: Johnny Castaway modern cartoon character design revision 5 for human review.\nInput 1: EDIT TARGET, the four-pose Johnny cartoon sheet, version 4.\nInput 2: the user's exact CAP REFERENCE. This replaces the prior cap direction.\nEdit only the hat worn in each of the four poses of Input 1. Match the construction of Input 2: a white peaked sailor/captain cap with a soft rounded raised white crown, a distinct dark charcoal-black visor/brim PROJECTING FORWARD above his forehead, narrow warm gold band above the brim, and small simple dark anchor emblem on the front. The important correction is the visibly projecting brim. It is NOT an upturned all-around bowl rim or a beret. The visor must project forward over the brow and be clearly visible in both profiles and the three-quarter pose. Adapt the cap reference to the clean 2D cartoon linework and head angles of Johnny; make it slightly worn and natural on a castaway, while retaining the recognizable cap construction from the reference.\nSTRICT INVARIANTS: retain exactly the same four full-body poses and composition, current long scruffy dark beard and its outline, face and expressive eyes, long rounded nose, black shaggy hair, lean body, sunburned skin palette, bare chest, hands, ragged white shorts with the same torn hem, feet, clean modern cartoon style, warm pale background. Do not alter the beard or restyle the character. Change only his cap. No other objects or text.",
+      "prompt_file": "prompts/character-v5.txt",
+      "prompt_utf8_sha256": "6cebefa077bfd9e145d7a5c226f3294d521851f8fa85d9cea6db944c908f80b8",
+      "prompt_hash_semantics": "SHA-256 of the decoded tool prompt string encoded as UTF-8, independent of JSON/text file line endings.",
+      "generation_call_id": "call_pCPADQUQNkrkn2kqsAjvNvCB",
+      "generation_timestamp": "2026-09-14T22:36:22.300Z",
+      "exact_inline_generation_response_bytes_verified": true,
+      "default_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-1fee9dd4-d4b8-41a1-ae9d-19e52b395cf1.png",
+      "seed": null,
+      "model_identifier": null,
+      "stored_as": "art/cartoon/johnny-character-v5.png",
+      "user_attachment_source_available": true,
+      "user_attachment_exact_bytes_verified": true,
+      "reference_selection": {
+        "mechanism": "referenced_image_paths",
+        "actual_ordered_references": [
+          {
+            "actual_tool_path": "D:\\.ai-work\\worktrees\\johnny-cartoon-art\\build\\art-work\\concepts\\johnny-cartoon-v4.png",
+            "kind": "generated character ancestor",
+            "saved_as": "source-images.zip#johnny-cartoon-v4.png",
+            "sha256": "d9d9d6217fdd6370a45bae99f35397374903e1e5300c9c87a61ceb5c1e9bb9b7"
+          },
+          {
+            "actual_tool_path": "C:\\Users\\Admin\\AppData\\Local\\Temp\\codex-clipboard-e604b3ce-dab1-45e1-b2c6-8c61cc211752.png",
+            "kind": "user-attached cap reference",
+            "saved_as": "references/user-cap-reference.png",
+            "sha256": "b542634aa3de0db7715f77837770e085e045a45233c1fa52a3e7c6bb72364084"
+          }
+        ]
+      }
+    }
+  ],
+  "original_pose_references": {
+    "references/JOHNWALK.BMP-000.png": {
+      "sha256": "480cda44e64198f2d0bdb95d597f45d8902fa6d8406deb44a2b07dbec261c8fd",
+      "canvas": [
+        80,
+        152
+      ],
+      "bytes": 1284
+    },
+    "references/JOHNWALK.BMP-002.png": {
+      "sha256": "46b14e4530af14e4f3ea5c97a95a077785a4b84de0734ff901e568704e63e054",
+      "canvas": [
+        96,
+        146
+      ],
+      "bytes": 1335
+    },
+    "references/MJTELE.BMP-000.png": {
+      "sha256": "69a1ed6ced2c0d52ff8af11516388416599f43fd3d308506b232bdcbc8062bd0",
+      "canvas": [
+        80,
+        148
+      ],
+      "bytes": 1314
+    }
+  },
+  "human_revision_lessons": [
+    {
+      "after_version": 1,
+      "user_excerpt": "I love that you nailed the shorts but the character feels off",
+      "decision": "Retain the drawing style and ragged shorts; recover the original lean silhouette, awkward posture and expressive face."
+    },
+    {
+      "after_version": 2,
+      "user_excerpt": "your missing the beard, this is a 5-oclock shadow",
+      "decision": "The leaner body and expressions were preferred. Restore a substantial scruffy beard and the earlier fuller sailor cap while preserving those improvements."
+    },
+    {
+      "after_version": 3,
+      "user_excerpt": "slightly scruffier beard (maybe longer?)",
+      "decision": "Make a bounded beard and cap revision. The user suggested an external sailor-cap shape and pointed to the original hat-playing animation as a useful reference.",
+      "user_supplied_cap_shape_url": "https://www.shutterstock.com/image-vector/sailor-hat-vector-isolated-illustration-260nw-2596841733.jpg"
+    },
+    {
+      "after_version": 4,
+      "user_excerpt": "use a cap like this, he has a brim on his hat",
+      "decision": "The attached cap replaces the previous bowl-rim direction. Match its visibly projecting dark visor while holding beard, body, expressions and shorts fixed."
+    },
+    {
+      "after_version": 5,
+      "user_excerpts": [
+        "nailed it, perfect.",
+        "Yes, use this design"
+      ],
+      "decision": "Use canonical v5 as the approved character design. This approves the character reference, not every later animation or scene."
+    }
+  ],
+  "reference_limitations": [
+    "Version 4 used recent-image selection. Its prompt-declared roles are retained without inventing explicit input paths.",
+    "The older external cap browser screenshot is not re-downloaded or asserted to be the exact recent-image input. The actual later user-attached cap PNG is preserved."
+  ],
+  "recovery_scope": "Only these five art-generation requests, their exact image outputs, specific revision decisions and direct references were recovered. No general task transcript is copied.",
+  "first_prompt_recovery": "Matched the exact direct store(\"cartoonCharacterPrompt\", literal-string) before the first generation; did not match later similarly named variables or readers.",
+  "production_assets_modified": false
+}

@@ -29,6 +29,9 @@
 #include "calcpath.h"
 #include "walk.h"
 #include "walk_data.h"
+#include "art_style.h"
+#include "zipvfs.h"
+#include <stdio.h>
 
 
 static int *walkPath;
@@ -42,10 +45,21 @@ static int increment;
 static int lastTurn;
 static int hasArrived;
 static int isBehindTree;
+static int palmUsesAtop;
 
 
 void walkInit(int fromSpot, int fromHdg, int toSpot, int toHdg)
 {
+    const TArtStyle *style = artStyleCurrent();
+    palmUsesAtop = 0;
+    /* Partial packs without palm artwork retain the original HD path exactly. */
+    if (!style->legacyColorKey) {
+        char path[192];
+        for (int image = 12; image <= 13; image++) {
+            snprintf(path, sizeof(path), "%s/BMP/BACKGRND.BMP/%03d.png", style->root, image);
+            if (zipvfs_exists(path)) palmUsesAtop = 1;
+        }
+    }
     walkPath = calcPath(fromSpot, toSpot);
 
     currentSpot  = fromSpot;
@@ -184,8 +198,14 @@ uint16 walkAnimate(struct TTtmThread *ttmThread, struct TTtmSlot *ttmBgSlot)
                 0);
 
         if (isBehindTree) {
-            grDrawSprite(sfc, ttmBgSlot, 442, 148, 13, 0);  // trunk
-            grDrawSprite(sfc, ttmBgSlot, 365, 122, 12, 0);  // leafs
+            if (palmUsesAtop) {
+                grDrawSpriteAtop(sfc, ttmBgSlot, 442, 148, 13, 0);  // trunk
+                grDrawSpriteAtop(sfc, ttmBgSlot, 365, 122, 12, 0);  // leafs
+            }
+            else {
+                grDrawSprite(sfc, ttmBgSlot, 442, 148, 13, 0);  // trunk
+                grDrawSprite(sfc, ttmBgSlot, 365, 122, 12, 0);  // leafs
+            }
         }
 
         if (hasArrived)

@@ -1,0 +1,201 @@
+{
+  "status": "all recorded PNGs reproduced and all isolated mutations fired",
+  "exporter_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+  "recipe_sha256": "fe98aabe978b166d5d9f8177ba43cb4b7f0727a363d1f0f80909eac3cbbfc360",
+  "source_bundle_sha256": "4f1a5005e03a9cc4ba981592228509a874cfa0a3eb4db8a3cb5cbcba6d3088f0",
+  "provenance_sha256": "7bb5536971f35a0a40120339e4aeb0b8c33c33b5c4564c8e040bbc42af2fbb26",
+  "positive_runs": [
+    {
+      "pillow_version": "12.2.0",
+      "assets": 4,
+      "all_recorded_hashes_match": true,
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "pillow_version": "12.3.0",
+      "assets": 4,
+      "all_recorded_hashes_match": true,
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.3.0"
+    }
+  ],
+  "geometry_reference_checks": [
+    {
+      "reference": "013-geometry4x-padded.png",
+      "png_sha256": "aafba27feeb46f342a91e8debb3250d34d836d53a7343f1657de723ff51250bd",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "012-geometry4x-padded.png",
+      "png_sha256": "36cd915d2c24383fcbbe240908ff641124e9d2400d3d3f8e1eb82203539c0b1a",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "sand-original-nearest2-padded.png",
+      "png_sha256": "8c925bdb6ae4896235a1cc69dd3c431eecfd9a8168b8ff51b6652e133eb63163",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "cloud-original-nearest4-padded.png",
+      "png_sha256": "9ca2db01a35c51f767d05dc2eab01eb17be934001f92d9862de64c781d53b85e",
+      "all_rgba_pixels_repeat_original": true
+    }
+  ],
+  "mutation_method": "Every isolated fixture uses a newly written exact exporter with newer timestamp. Python -B interprets that file directly; the source-hash witness proves its execution. Only copied inputs are mutated. Production source and archive are untouched.",
+  "mutations": [
+    {
+      "mutation": "existing-output",
+      "expected_named_failure": "refusing to overwrite existing output",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436138732525000,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "asset-path",
+      "expected_named_failure": "recipe.json: expected exactly",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436139185551500,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "required-paths",
+      "expected_named_failure": "recipe.json: expected exactly",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436139656037300,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "bundle-hash",
+      "expected_named_failure": "source-images.zip: source bundle hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436140098681900,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "zip-extra",
+      "expected_named_failure": "source-images.zip: unexpected, missing or duplicate entries",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436140570145900,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "zip-missing",
+      "expected_named_failure": "source-images.zip: unexpected, missing or duplicate entries",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436141007193100,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "zip-duplicate",
+      "expected_named_failure": "source-images.zip: unexpected, missing or duplicate entries",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436141527008800,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "generated-hash",
+      "expected_named_failure": "sand-generated-v1.png: generated source hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436142080676700,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "original-hash",
+      "expected_named_failure": "data/hd/BMP/BACKGRND.BMP/000.png: original geometry reference hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436142574815900,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "source-dimensions",
+      "expected_named_failure": "sand-generated-v1.png: source RGBA dimensions differ from recipe",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436143041571800,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "source-mode",
+      "expected_named_failure": "sand-generated-v1.png: source RGBA dimensions differ from recipe",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436143551576500,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "asset-source-hash",
+      "expected_named_failure": "sand-generated-v1.png: asset source hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436144294779500,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "uniform-scale",
+      "expected_named_failure": "BMP/BACKGRND.BMP/000.png: transform differs from the declared uniform scale",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436144828742300,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "semantic-anchor",
+      "expected_named_failure": "BMP/BACKGRND.BMP/000.png: semantic registration differs from recipe",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436145345943100,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "runtime-canvas",
+      "expected_named_failure": "BMP/BACKGRND.BMP/000.png: runtime canvas differs from the original",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436145834306900,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "rendered-pixels",
+      "expected_named_failure": "BMP/BACKGRND.BMP/000.png: export differs from recorded candidate PNG bytes",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436146317938300,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    },
+    {
+      "mutation": "last-output-hash",
+      "expected_named_failure": "BMP/BACKGRND.BMP/015.png: export differs from recorded candidate PNG bytes",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436147357887900,
+      "executed_source_sha256": "2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7",
+      "witness": "EXPORT_WITNESS source=2598a9caa64ae29a7cccdbeb26e4966332a1c2d080a594f2d95a41055e1518d7 pillow=12.2.0"
+    }
+  ],
+  "human_runtime_acceptance": false,
+  "production_acceptance": false
+}

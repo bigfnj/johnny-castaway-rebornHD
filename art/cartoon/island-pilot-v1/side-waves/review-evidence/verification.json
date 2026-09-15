@@ -1,0 +1,244 @@
+{
+  "status": "all recorded PNGs reproduced and all isolated mutations fired",
+  "exporter_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+  "recipe_sha256": "ea431b1991e9cbfb5d2670d95ef88341ac900c4e8887db3b18c7d8a92b43d28b",
+  "source_bundle_sha256": "8b6cd7ee6a573e5c7f5be893b472c8ef1d48024228aaf058351dad340758ee67",
+  "provenance_sha256": "b2978b548eb2c3784ddaf121457094c7c164d310ac39dc71336ab0cab3411d3b",
+  "positive_runs": [
+    {
+      "pillow_version": "12.2.0",
+      "assets": 6,
+      "all_recorded_hashes_match": true,
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "pillow_version": "12.3.0",
+      "assets": 6,
+      "all_recorded_hashes_match": true,
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.3.0"
+    }
+  ],
+  "geometry_reference_checks": [
+    {
+      "reference": "003-original4x-padded.png",
+      "png_sha256": "0a9062e2d015208a4b4c9c2ec6b7fc3c141597af44e636482edc86ecf39b8589",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "003-original8x-padded.png",
+      "png_sha256": "349d5d817c6a87b8b6facd295d02cc2458621d1a395e1b662491920288123d14",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "004-original10x-padded.png",
+      "png_sha256": "baa95579b2848bc8a982b080d405d10c5970814b289ead2fff88221ff3aec49c",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "005-original10x-padded.png",
+      "png_sha256": "9e847d2b549cf836f46e17c8e5ae43cc3cb07b15981de8a202d3dce59699abb6",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "009-original10x-padded.png",
+      "png_sha256": "e9ad44cf2dd0b0827cf74e507eef9c3b4ba88543384e591a97ca47b403c8e017",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "010-original10x-padded.png",
+      "png_sha256": "4336db0a72fb6efab249e9dc811bc8d76da3323d8edd43ef8502c6265152dc1d",
+      "all_rgba_pixels_repeat_original": true
+    },
+    {
+      "reference": "011-original10x-padded.png",
+      "png_sha256": "5ab7021b1dc075c652c0cbf328798068cc6b10098d5dfe80494b5e05ab7c08c7",
+      "all_rgba_pixels_repeat_original": true
+    }
+  ],
+  "mutation_method": "Every isolated fixture uses a newly written exact exporter with newer timestamp. Python -B interprets that file directly; the source-hash witness proves its execution. Only copied inputs are mutated. Production source and archive are untouched.",
+  "mutations": [
+    {
+      "mutation": "existing-output",
+      "expected_named_failure": "refusing to overwrite existing output",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436678531000700,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "asset-path",
+      "expected_named_failure": "recipe.json: expected exactly",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436678954535700,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "required-paths",
+      "expected_named_failure": "recipe.json: expected exactly",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436679410131400,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "bundle-hash",
+      "expected_named_failure": "source-images.zip: source bundle hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436679822031000,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "zip-extra",
+      "expected_named_failure": "source-images.zip: unexpected, missing or duplicate entries",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436680330351700,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "zip-missing",
+      "expected_named_failure": "source-images.zip: unexpected, missing or duplicate entries",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436680846864000,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "zip-duplicate",
+      "expected_named_failure": "source-images.zip: unexpected, missing or duplicate entries",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436681209524200,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "generated-hash",
+      "expected_named_failure": "003-generated-v2-fresh8x.png: generated source hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436681661834900,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "original-hash",
+      "expected_named_failure": "data/hd/BMP/BACKGRND.BMP/003.png: original geometry reference hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436682097051100,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "source-dimensions",
+      "expected_named_failure": "003-generated-v2-fresh8x.png: source RGBA dimensions differ from recipe",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436682512740900,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "source-mode",
+      "expected_named_failure": "003-generated-v2-fresh8x.png: source RGBA dimensions differ from recipe",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436682985233500,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "asset-source-hash",
+      "expected_named_failure": "003-generated-v2-fresh8x.png: asset source hash mismatch",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436683662823800,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "uniform-scale",
+      "expected_named_failure": "BMP/BACKGRND.BMP/003.png: transform differs from the declared uniform scale",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436684116109000,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "semantic-anchor",
+      "expected_named_failure": "BMP/BACKGRND.BMP/003.png: semantic registration differs from recipe",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436684633733500,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "runtime-canvas",
+      "expected_named_failure": "BMP/BACKGRND.BMP/003.png: runtime canvas differs from the original",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436685077807600,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "rendered-pixels",
+      "expected_named_failure": "BMP/BACKGRND.BMP/003.png: export differs from recorded candidate PNG bytes",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436685543194900,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "last-output-hash",
+      "expected_named_failure": "BMP/BACKGRND.BMP/011.png: export differs from recorded candidate PNG bytes",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436686134811300,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "normalization",
+      "expected_named_failure": "recipe.json: side-wave export requires no normalization",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436738001843600,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "left-family-scale",
+      "expected_named_failure": "BMP/BACKGRND.BMP/003.png: transform differs from the declared uniform scale",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436738354163400,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    },
+    {
+      "mutation": "right-family-scale",
+      "expected_named_failure": "BMP/BACKGRND.BMP/009.png: transform differs from the declared uniform scale",
+      "exactly_one_named_failure": true,
+      "no_output_created_or_changed": true,
+      "fresh_script_mtime_ns": 1789436738711238400,
+      "executed_source_sha256": "268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7",
+      "witness": "EXPORT_WITNESS source=268301b152e6d0b1950eabd46b3d176ef250c41f7a31752f0ff885810c897be7 pillow=12.2.0"
+    }
+  ],
+  "human_runtime_acceptance": false,
+  "production_acceptance": false,
+  "additional_family_mutations": "Declared scale, both affine scale axes and registration translation were changed together, preserving uniformity and anchor placement. Each family-specific guard still rejected exactly one named asset before output. The separate normalization mutation also refused before output."
+}

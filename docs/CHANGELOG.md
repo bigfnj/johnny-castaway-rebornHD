@@ -8,7 +8,9 @@ Added persistent HD/Cartoon selection, a Windows settings dialog, a browser
 selector, and a one-run command-line override. HD remains the default. Cartoon
 packs have a separate namespace, strict canvas and alpha handling, and explicit
 partial coverage with compatible HD/original fallback. Missing packs report an
-error. Cartoon artwork is still in production and has not replaced the archive.
+error. The archive now includes the approved 21-asset Cartoon preview: six walking
+poses, one ocean and fourteen independent island sprites. Other slots retain
+HD/original fallback, and selectors identify Cartoon as a preview.
 
 Added composed-frame capture, reference inventory/export, and candidate-pack
 validation with recorded hashes. The native gate now stops after a failed smoke
@@ -32,9 +34,18 @@ intended failures, and nine complete HD/fallback captures matched the previous
 executable. Low-tide waves also held their expected alpha at an island offset
 through 1,529 background updates.
 
-The user approved the character design and the second walking registration's
-correction for added body movement. Foot-contact artwork is still under review;
-the production archive remains unchanged.
+The user approved the canonical character, the complete directional walk and
+the layered island scene. Full native motion review retains the original 23
+positions and 120 ms pose delays alongside independently advancing 160 ms waves.
+The exact reviewed assets, prompts, used source ancestry, rejected-attempt
+lessons and reproducible exports are preserved under `art/cartoon/`, with a
+reusable guide in `docs/art-style-learnings.md`.
+
+Behind-palm walking now applies source-atop when a selected pack contains new
+palm art, preventing a second alpha blend over the already-painted tree. Eight
+focused checks, five rebuilt mutations and historical HD/fallback parity cover
+the correction. The final island also passed alternate-state native API checks
+and original archive-member preservation.
 
 ---
 

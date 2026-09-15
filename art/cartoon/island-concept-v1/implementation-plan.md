@@ -1,7 +1,7 @@
 # First Cartoon island scene
 
-The six directional walking poses are approved. The scene concept is awaiting
-human review of its environment palette, linework and visual balance. Keep the
+The six directional walking poses and the scene concept are approved. The user
+replied "its wonderful" to the environment palette and drawing-style review. Keep the
 accepted walking PNGs unchanged throughout this scene phase.
 
 ## Authoring order
@@ -52,9 +52,11 @@ family appears on top. Review the actual changing silhouettes and retained
 transparency with the corrected clean-background wave compositor.
 
 The engine reuses trunk and canopy as foreground masks during D/E walking.
-Broad translucent leaf or wood interiors may blend twice because the tree is
-already in the background. Prefer solid interiors and narrow antialiased edges,
-then inspect real occlusion captures before deciding whether code needs a fix.
+The duplicate alpha blend was reproduced and fixed during this scene phase:
+selected Cartoon palm replacements use premultiplied source-atop on Johnny's
+layer. This retains his coverage while placing tree color in front of him,
+without repainting the background-only tree. HD and partial packs without palm
+replacements retain their existing path. See the verified checkpoint below.
 
 ## Scope and acceptance
 
@@ -70,7 +72,7 @@ regression establish reproducible inputs and integration. Keep both records.
 Production promotion, merge to main and the requested post-merge audit follow
 completed implementation and scene checks, not concept approval alone.
 
-## Reference preparation completed
+## Historical reference preparation checkpoint
 
 The current Windows executable (SHA-256 starting `96ad3efb`) passed eight fresh
 normal-CLI full-scene captures: HD and the accepted walking pack at frame budgets
@@ -88,9 +90,54 @@ in `reference-report.json`. Those captures did not execute behind-palm walking.
 The golden regression result was captured in tool session 82686; no separate
 persistent regression log was saved by that helper.
 
-The extra palm API probe was compiled but not executed at this checkpoint.
+The extra palm API probe was compiled but not executed at that checkpoint.
 Inspection found that its ignored harness compares a path terminator to -1;
-the next attempt must use `UNDEF_NODE` (6), rebuild, and compare a partially
-transparent trunk pixel before and during actual D/E walking. The possible
-double blend remains a source-level concern, not a reproduced failure. No probe
-or runner process was left running.
+the later probe corrected it to `UNDEF_NODE` (6) and rebuilt before execution.
+
+## Static scene and palm correction verified
+
+The rebuilt actual D-to-E and E-to-D API probe reproduced the double blend:
+an alpha-128 red trunk over black changed from red 128 to red 192 outside
+Johnny's canvas. An opaque control remained 255. The correction keeps that
+background pixel at 128 and also passes a tree-over-Johnny color oracle where
+both sprites are partially transparent. This evidence exercises the real
+`walk.c` paths through a test driver; it does not claim that the normal story
+scheduler selected those paths.
+
+Eight focused palm checks, four full-frame historical parity checks and five
+rebuilt code mutations passed. Each mutant produced its expected failure after
+the changed driver was rebuilt and executed. The full Windows gate then passed
+under both PowerShell 5.1 and 7, with smoke before regression. No new allocation
+or retained surface was introduced by the palm correction.
+
+The first 12-asset candidate combined six static island layers with the six
+unchanged approved walking poses. Normal CLI captures at frame budgets 1 and 13
+and actual D/E API captures passed smoke, followed by all 2,452 golden files.
+All 2,550 original archive members were preserved. Its SHA-256 is
+`d228cacf63cb7b381dd67b73e71038877b66173bdaa76c645bada16265256ad3`.
+The executable used for that checkpoint has SHA-256
+`f907574c4863ee45603f17e675218f145e758c2d1f34d519d0a362b91c6686d0`.
+
+Those static captures still contain the nine original high-tide wave sprites.
+The complete 21-asset scene must replace those waves and pass its own motion
+review. Human runtime scene approval and production promotion remain pending.
+
+The 21-asset candidate subsequently passed fresh normal CLI smoke and all 2,452
+golden files, preserving all 2,550 original members. Its exact inputs and SHA-256
+are in [the complete native validation record](../island-pilot-v1/review-evidence/complete-native-validation.json).
+The static candidate's D/E evidence remains applicable after checking that its
+12 PNGs and executable bytes are unchanged. The nine new waves do not intersect
+the palm test region. Full-scene motion and human review remain separate checks.
+
+## Complete scene approved
+
+The native motion review captured every display update across the 23-position
+walk and its endpoint hold. All nine independently advancing wave phases were
+checked against the exact shoreline compositor. Browser controls preserved the
+120 ms walking cadence and the separate 160 ms background updates.
+
+The user reviewed that scene and replied "approved, it looks great". This closes
+the full-scene visual review for the exact 21 selected assets. The separate
+[acceptance ledger](../island-pilot-v1/acceptance.json) identifies the hashes and
+preserved full-color poster and GIF. Earlier pending statuses above and in
+immutable technical reports describe their historical checkpoints.

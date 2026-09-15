@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "scope": "Final production archive and Cartoon (preview) display label, after the palm correction.",
+  "archive_sha256": "fb70d795531d50093dd4a9ac53895a6a20a76efc982d4d7d45a64403b98e68d8",
+  "executable_sha256": "dcc1e0396d0cf7f0bad4d3fc11a26beefd7c61109f07ab31ce483359d3ef23fa",
+  "powershell7": {"command": "pwsh -NoProfile -ExecutionPolicy Bypass -File gate.ps1", "exit_code": 0, "log": "gate-powershell7-final.log", "log_complete": true},
+  "powershell5": {"command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File gate.ps1", "exit_code": 0, "tool_session": 93699, "log": "gate-powershell5-final-tail.log", "log_complete": false, "note": "Direct native invocation passed. The preserved tail begins after the opening build/first smoke output; the command ran the full gate. Earlier Python-spawned attempts failed to locate Get-FileHash because of their inherited module environment, before smoke; those were not successful validation runs."},
+  "checks": {"native_smoke": 27, "screensaver_settings": 27, "art_smoke": 2, "art_regression": 31, "wave_regression": 7, "palm_regression": 8, "authoring": 20, "golden_files": 2452},
+  "order": "Each full gate completed its smoke stages before running regression.",
+  "historic_parity_note": "Final gates use independent HD/fallback pixel controls. Earlier four-frame historical palm parity and five rebuilt code mutations are preserved in their separate checkpoint evidence; the final gate did not rerun optional old-executable parity."
+}
