@@ -84,4 +84,89 @@ their working bytes, including all 30 native evidence links and the complete
 28-asset approval/archive chain. Delivery-only Windows evidence is added
 separately after that audit.
 
-Merge and post-merge audit results are recorded below when complete.
+## Merge and post-merge audit
+
+Artwork commit `16f64a05291dc7dc55f583c43e34fefa6bf39c21` was merged through
+[PR 11](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/11) at
+`a799e087664f2ec4844dfd8c79d90ce30760aab2`.
+[PR CI run 35008054223](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/35008054223)
+passed Windows, Linux, macOS and Web. The merged tree equals the tested branch
+tree exactly. Engine/platform source, native extractors, CMake, gate and CI
+wiring remain unchanged from the pre-arrival baseline.
+The [merged-main CI run 35008710565](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/35008710565)
+also passed all four platforms on `a799e087`.
+
+The fresh core audit read current startup/CLI and configuration, event handling,
+ADS/TTM dispatch and cleanup, story/walking/path logic, benchmark, resource
+parsing/decompression, dump/utilities, ZIP ownership and native extraction tools.
+It found no new confirmed runtime defect. Scene-owned layers, tags and sprites
+remain distinct from the decoded resource pool owned for the process lifetime.
+No newly recurring memory leak or measured performance saving was established.
+The known malformed-config/string/LZW, seed-range, unfinished-command and legacy
+extraction items remain in BACKLOG.md. This review did not run a new sanitizer,
+race detector or original-executable comparison.
+
+Local core evidence is `build/arrival-main-audit/core.json`, SHA256
+`265382ceb4edabff4fcf367353b2a09a9cd123a9a20db3b6e53791c3a34f773f`.
+The source audit records 25 read files and their exact identities.
+
+The independent platform/build audit reread all four backends and APIs,
+graphics/style/island/common audio, PNG/ZIP ownership, startup/shutdown callers,
+CMake deployment, native/Web builders, CI/release runners and browser runtime
+JavaScript. It found no new confirmed defect or backlog omission. Existing
+Windows raw-input cleanup, audio startup/post-open errors, saved-zone behavior
+and primitive clipping remain documented. Backend hooks that are intentionally
+empty were not classified as broken calls. Its local notes are
+`build/postmerge-arrival-audit/platform-build.md`, SHA256
+`eed546571c99f81f2d6dd529af53c7cc5bb671a36fd9e6b521a220cf6b6829f3`.
+
+Fresh main authoring checks passed in order: both smoke suites, 60 pilot and
+63 full-catalog regressions, 20 art-tool regressions and both reproduction
+checks. The unchanged mutation matrices were not repeated. Logs are retained
+under `build/arrival-postmerge-authoring/`.
+
+The capture-harness audit found that the wave helper shares the palm helper's
+failure-artifact retention weakness. BACKLOG.md now covers both. No new
+runtime failure is inferred from that source observation.
+
+The authoring review reproduced one existing CLI defect in
+`tools/art_inventory.py:59-62`: using the same source and output path replaces
+the ZIP with JSON while exiting 0. A distinct-output control preserved its
+source. Both executions used disposable fixtures; the production archive was
+untouched. The required input/output identity check is now in BACKLOG.md for
+the next authoring-tool batch. This is separate from arrival rendering and
+does not invalidate the package builder's validated preservation behavior.
+
+The completed authoring audit read all five art tools, imported resource
+framing/dimension readers, the 018 exporter/tests and all eleven native/browser
+helper snapshots. It found no other actionable issue. All 56 arrival files
+match main HEAD/index and the committed/working art branch bytes. All 30 native
+evidence links and 28 accepted PNG hashes remain valid, and both 018 recipes
+reproduce the exact accepted output under Pillow 12.2.0. The consolidated
+local report is `build/arrival-postmerge-authoring/audit-summary.json`, SHA256
+`7a17935461edcd81bd28c164a1ab2e75aa3312274ca8d3b9b20f5719410d0322`.
+The saved fresh-check report SHA256 is
+`a8fdb7dbe3f53018687f85bddd3acfbf99371a6daa1460f6572f76e1284d30b0`.
+
+The primary checkout's `jc_runtime_data` target refreshed the deployed ZIP to
+the approved production hash. EXE/SCR bytes and timestamps did not change.
+On inactive desktops, main smoke passed before all 31 art regressions passed.
+Both runs preserved the input desktop and protected runtime/test/tool inputs.
+The smoke log SHA256 is
+`8cb14d889dae3446ec73e595749d5ced7e80c7b578623bdc66b7f213afd6cf78`;
+the art-regression log SHA256 is
+`eba5f9e3cba1a4c3793718c3d66e7638c4b96e6ec6a4e8992babefe1e9684632`.
+The consolidated local deployment/harness report is
+`build/arrival-main-deployment/report.json`, SHA256
+`931e90456a6b77bd8e61c574425e2318357e010a21775d91acafd4d3b43b59d6`.
+
+## Decisions for the next batch
+
+| Decision | Reason and next action |
+| --- | --- |
+| Keep the exact approved 018 | The user reviewed the actual arrival and foot contact; preserve its geometry and registration |
+| Keep the pack partial | Eight wait/turn-table assets and most scenes still use fallback; one arrival does not complete story coverage |
+| Retain both export dependency versions | Arrival uses Pillow 12.2.0 while the previous rear export used 12.3.0; reproduce each with its own recipe |
+| Revisit the front walk next | Apply the rear knee/foot continuity lessons, beginning with an explicit pilot-history transition and a small review batch |
+| Improve failed-capture evidence | Retain palm and wave test artifacts before changing any renderer behavior based on a missing stdout marker |
+| Fix the inventory path collision | Reject output aliases of the source ZIP before the next authoring-tool expansion; retain positive and negative controls |
