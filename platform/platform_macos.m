@@ -519,64 +519,71 @@ int platformPollEvent(PlatformEvent* event) {
             return 1;
         }
 
-        NSEvent* nsEvent = [NSApp nextEventMatchingMask:NSEventMaskAny
-                                              untilDate:[NSDate distantPast]
-                                                 inMode:NSDefaultRunLoopMode
-                                                dequeue:YES];
-        
-        if (!nsEvent) return 0;
-        
-        [NSApp sendEvent:nsEvent];
-        
-        event->type = EVENT_NONE;
-        
-        switch ([nsEvent type]) {
-            case NSEventTypeKeyDown: {
-                event->type = EVENT_KEY_DOWN;
-                NSString* chars = [nsEvent charactersIgnoringModifiers];
-                if ([chars length] > 0) {
-                    unichar c = [chars characterAtIndex:0];
-                    switch (c) {
-                        case ' ': event->data.key.keycode = KEY_SPACE; break;
-                        case '\r': case '\n': event->data.key.keycode = KEY_RETURN; break;
-                        case 27: event->data.key.keycode = KEY_ESCAPE; break;
-                        case 'm': case 'M': event->data.key.keycode = KEY_M; break;
-                        default: event->data.key.keycode = KEY_UNKNOWN; break;
-                    }
-                }
-                NSEventModifierFlags flags = [nsEvent modifierFlags];
-                event->data.key.modifiers = 0;
-                if (flags & NSEventModifierFlagOption) {
-                    event->data.key.modifiers |= KEYMOD_LALT;
-                }
+        for (;;) {
+            NSEvent* nsEvent = [NSApp nextEventMatchingMask:NSEventMaskAny
+                                                  untilDate:[NSDate distantPast]
+                                                     inMode:NSDefaultRunLoopMode
+                                                    dequeue:YES];
+
+            if (!nsEvent) return 0;
+
+            [NSApp sendEvent:nsEvent];
+            if (quitRequested) {
+                quitRequested = 0;
+                event->type = EVENT_QUIT;
                 return 1;
             }
-            
-            case NSEventTypeKeyUp: {
-                event->type = EVENT_KEY_UP;
-                NSString *chars = [nsEvent charactersIgnoringModifiers];
-                event->data.key.keycode = KEY_UNKNOWN;
-                if ([chars length] > 0) {
-                    unichar c = [chars characterAtIndex:0];
-                    switch (c) {
-                        case ' ': event->data.key.keycode = KEY_SPACE; break;
-                        case '\r': case '\n': event->data.key.keycode = KEY_RETURN; break;
-                        case 27: event->data.key.keycode = KEY_ESCAPE; break;
-                        case 'm': case 'M': event->data.key.keycode = KEY_M; break;
-                        default: break;
+
+            event->type = EVENT_NONE;
+
+            switch ([nsEvent type]) {
+                case NSEventTypeKeyDown: {
+                    event->type = EVENT_KEY_DOWN;
+                    event->data.key.keycode = KEY_UNKNOWN;
+                    NSString* chars = [nsEvent charactersIgnoringModifiers];
+                    if ([chars length] > 0) {
+                        unichar c = [chars characterAtIndex:0];
+                        switch (c) {
+                            case ' ': event->data.key.keycode = KEY_SPACE; break;
+                            case '\r': case '\n': event->data.key.keycode = KEY_RETURN; break;
+                            case 27: event->data.key.keycode = KEY_ESCAPE; break;
+                            case 'm': case 'M': event->data.key.keycode = KEY_M; break;
+                            default: event->data.key.keycode = KEY_UNKNOWN; break;
+                        }
                     }
+                    NSEventModifierFlags flags = [nsEvent modifierFlags];
+                    event->data.key.modifiers = 0;
+                    if (flags & NSEventModifierFlagOption) {
+                        event->data.key.modifiers |= KEYMOD_LALT;
+                    }
+                    return 1;
                 }
-                event->data.key.modifiers = 0;
-                if ([nsEvent modifierFlags] & NSEventModifierFlagOption)
-                    event->data.key.modifiers |= KEYMOD_LALT;
-                return 1;
+
+                case NSEventTypeKeyUp: {
+                    event->type = EVENT_KEY_UP;
+                    NSString *chars = [nsEvent charactersIgnoringModifiers];
+                    event->data.key.keycode = KEY_UNKNOWN;
+                    if ([chars length] > 0) {
+                        unichar c = [chars characterAtIndex:0];
+                        switch (c) {
+                            case ' ': event->data.key.keycode = KEY_SPACE; break;
+                            case '\r': case '\n': event->data.key.keycode = KEY_RETURN; break;
+                            case 27: event->data.key.keycode = KEY_ESCAPE; break;
+                            case 'm': case 'M': event->data.key.keycode = KEY_M; break;
+                            default: break;
+                        }
+                    }
+                    event->data.key.modifiers = 0;
+                    if ([nsEvent modifierFlags] & NSEventModifierFlagOption)
+                        event->data.key.modifiers |= KEYMOD_LALT;
+                    return 1;
+                }
+
+                default:
+                    break;
             }
-            
-            default:
-                break;
+
         }
-        
-        return 0;
     }
 }
 

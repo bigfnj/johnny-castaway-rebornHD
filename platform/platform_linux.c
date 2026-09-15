@@ -556,61 +556,59 @@ int platformGetSurfaceBytesPerPixel(PlatformSurface* surface) {
 int platformPollEvent(PlatformEvent* event) {
     if (!display) return 0;
 
-    if (!XPending(display)) return 0;
-
-    XEvent xev;
-    XNextEvent(display, &xev);
-
     event->type = EVENT_NONE;
+    while (XPending(display)) {
+        XEvent xev;
+        XNextEvent(display, &xev);
+        switch (xev.type) {
+            case KeyPress: {
+                event->type = EVENT_KEY_DOWN;
+                KeySym keysym = XLookupKeysym(&xev.xkey, 0);
 
-    switch (xev.type) {
-        case KeyPress: {
-            event->type = EVENT_KEY_DOWN;
-            KeySym keysym = XLookupKeysym(&xev.xkey, 0);
+                switch (keysym) {
+                    case XK_space: event->data.key.keycode = KEY_SPACE; break;
+                    case XK_Return: event->data.key.keycode = KEY_RETURN; break;
+                    case XK_Escape: event->data.key.keycode = KEY_ESCAPE; break;
+                    case XK_m: case XK_M: event->data.key.keycode = KEY_M; break;
+                    default: event->data.key.keycode = KEY_UNKNOWN; break;
+                }
 
-            switch (keysym) {
-                case XK_space: event->data.key.keycode = KEY_SPACE; break;
-                case XK_Return: event->data.key.keycode = KEY_RETURN; break;
-                case XK_Escape: event->data.key.keycode = KEY_ESCAPE; break;
-                case XK_m: case XK_M: event->data.key.keycode = KEY_M; break;
-                default: event->data.key.keycode = KEY_UNKNOWN; break;
-            }
-
-            event->data.key.modifiers = 0;
-            if (xev.xkey.state & Mod1Mask) {
-                event->data.key.modifiers |= KEYMOD_LALT;
-            }
-            return 1;
-        }
-
-        case KeyRelease: {
-            event->type = EVENT_KEY_UP;
-            KeySym ks = XLookupKeysym(&xev.xkey, 0);
-            switch (ks) {
-                case XK_space: event->data.key.keycode = KEY_SPACE; break;
-                case XK_Return: event->data.key.keycode = KEY_RETURN; break;
-                case XK_Escape: event->data.key.keycode = KEY_ESCAPE; break;
-                case XK_m: case XK_M: event->data.key.keycode = KEY_M; break;
-                default: event->data.key.keycode = KEY_UNKNOWN; break;
-            }
-            event->data.key.modifiers = 0;
-            if (xev.xkey.state & Mod1Mask)
-                event->data.key.modifiers |= KEYMOD_LALT;
-            return 1;
-        }
-
-        case Expose:
-            event->type = EVENT_WINDOW_REFRESH;
-            return 1;
-
-        case ClientMessage:
-            if (mainWindow && (Atom)xev.xclient.data.l[0] == mainWindow->wmDeleteWindow) {
-                event->type = EVENT_QUIT;
+                event->data.key.modifiers = 0;
+                if (xev.xkey.state & Mod1Mask) {
+                    event->data.key.modifiers |= KEYMOD_LALT;
+                }
                 return 1;
             }
-            break;
-    }
 
+            case KeyRelease: {
+                event->type = EVENT_KEY_UP;
+                KeySym ks = XLookupKeysym(&xev.xkey, 0);
+                switch (ks) {
+                    case XK_space: event->data.key.keycode = KEY_SPACE; break;
+                    case XK_Return: event->data.key.keycode = KEY_RETURN; break;
+                    case XK_Escape: event->data.key.keycode = KEY_ESCAPE; break;
+                    case XK_m: case XK_M: event->data.key.keycode = KEY_M; break;
+                    default: event->data.key.keycode = KEY_UNKNOWN; break;
+                }
+                event->data.key.modifiers = 0;
+                if (xev.xkey.state & Mod1Mask)
+                    event->data.key.modifiers |= KEYMOD_LALT;
+                return 1;
+            }
+
+            case Expose:
+                event->type = EVENT_WINDOW_REFRESH;
+                return 1;
+
+            case ClientMessage:
+                if (mainWindow && (Atom)xev.xclient.data.l[0] == mainWindow->wmDeleteWindow) {
+                    event->type = EVENT_QUIT;
+                    return 1;
+                }
+                break;
+        }
+
+    }
     return 0;
 }
 

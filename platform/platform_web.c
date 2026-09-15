@@ -663,6 +663,10 @@ void platformCloseAudio(void) {
 
  */
 int platformOpenAudio(PlatformAudioSpec* spec) {
+    if (spec->channels != 1 || spec->format != 8) {
+        lastError = "Web audio requires mono unsigned 8-bit PCM";
+        return -1;
+    }
     /*  A REAL IMPLEMENTATION, replacing a stub.
      *
      *  What was here created a ScriptProcessorNode whose onaudioprocess body was
