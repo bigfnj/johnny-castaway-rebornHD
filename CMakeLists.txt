@@ -255,6 +255,25 @@ elseif(UNIX)
     )
 endif()
 
+# Allocation probes compile the actual backend with test-only allocator hooks.
+# They never show a window: failures occur before ShowWindow/orderFront.
+if(NOT EMSCRIPTEN)
+    if(APPLE)
+        add_executable(jc_platform_alloc_test tests/test_platform_alloc_macos.m)
+    else()
+        add_executable(jc_platform_alloc_test tests/test_platform_alloc.c)
+    endif()
+    target_include_directories(jc_platform_alloc_test PRIVATE platform src/engine)
+    if(WIN32)
+        target_link_libraries(jc_platform_alloc_test PRIVATE gdi32 user32 winmm windowscodecs ole32 uuid)
+    elseif(APPLE)
+        target_link_libraries(jc_platform_alloc_test PRIVATE ${COCOA_FRAMEWORK} ${AUDIO_TOOLBOX})
+    else()
+        target_include_directories(jc_platform_alloc_test PRIVATE ${X11_INCLUDE_DIR} ${ALSA_INCLUDE_DIRS})
+        target_link_libraries(jc_platform_alloc_test PRIVATE ${X11_LIBRARIES} ${ALSA_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+    endif()
+endif()
+
 # ── The Windows screensaver ───────────────────────────────────────────────────
 # A SECOND TARGET rather than a renamed first one. Windows needs a .scr that is
 # a WINDOWS-subsystem binary, because a console-subsystem screensaver flashes a

@@ -138,8 +138,6 @@ struct PlatformWindow {
     int isFullscreen;
 };
 
-static NSMutableArray* eventQueue;
-static PlatformWindow* mainWindow = NULL;
 
 // Initialize platform
 int platformInit(void) {
@@ -147,7 +145,6 @@ int platformInit(void) {
         [NSApplication sharedApplication];
         [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
         
-        eventQueue = [[NSMutableArray alloc] init];
         
         // Initialize timing
         mach_timebase_info(&timebaseInfo);
@@ -158,31 +155,8 @@ int platformInit(void) {
 }
 
 void platformShutdown(void) {
-    /*  NO [NSApp terminate:]. It does not return: it runs the app's termination
-     *  sequence and calls exit() itself.
-     *
-     *  The reason that matters has CHANGED, and the old one is recorded here
-     *  because it explains the shape of the fix. Originally graphicsEnd() called
-     *  this directly, and main() calls graphicsEnd() BEFORE zipvfs_shutdown() -
-     *  so the process died inside this function and the archive was never closed.
-     *
-     *  That call was removed on 2026-09-14; platformShutdown now runs only as the
-     *  atexit handler eventsInit registers, which fires AFTER zipvfs_shutdown has
-     *  already returned. The ordering problem is therefore gone, and the rule
-     *  survives it for a harder reason: calling exit() from inside an atexit
-     *  handler is undefined behaviour (C11 7.22.4.4). Do not reinstate either the
-     *  terminate call or the graphicsEnd() call to "match" an older comment.
-     *
-     *  COMPILES, AND ITS DECODERS ARE CORRECT, as of the macOS CI job added
-     *  2026-09-14: macos-latest builds this file and all 2,452 decoded files come
-     *  out byte-identical to Windows. What remains unverified is the RUNTIME
-     *  behaviour of this function, because the CI check runs `dump`, which never
-     *  calls graphicsInit and therefore never reaches here.
-     */
-    @autoreleasepool {
-        [eventQueue release];
-        eventQueue = nil;
-    }
+    /* No remaining platform-owned global resources. Do not terminate NSApp:
+     * this callback also runs during process exit and must return normally. */
 }
 
 /* Screensaver preview is a Windows concept; nothing to do here. See platform.h. */
@@ -194,6 +168,10 @@ void platformSetPreviewParent(void* parentWindowHandle) {
 PlatformWindow* platformCreateWindow(const char* title, int width, int height, int fullscreen) {
     @autoreleasepool {
         PlatformWindow* window = (PlatformWindow*)malloc(sizeof(PlatformWindow));
+        if (!window) { lastError = "Out of memory allocating window"; return NULL; }
+        memset(window, 0, sizeof(*window));
+        window->surface = platformCreateSurface(width, height);
+        if (!window->surface) { free(window); return NULL; }
         
         NSRect frame = NSMakeRect(0, 0, width, height);
         /*  RESIZABLE IS REQUIRED FOR FULLSCREEN, which is not obvious and fails
@@ -214,7 +192,12 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
             initWithContentRect:frame
             styleMask:style
             backing:NSBackingStoreBuffered
-            defer:NO];
+             defer:NO];
+        if (!window->nsWindow) {
+            lastError = "Failed to create Cocoa window";
+            platformDestroyWindow(window);
+            return NULL;
+        }
         
         [window->nsWindow setTitle:[NSString stringWithUTF8String:title]];
         /*  The window is its own delegate, so windowShouldClose: above turns the
@@ -224,16 +207,19 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
         [window->nsWindow setCollectionBehavior:
             [window->nsWindow collectionBehavior] | NSWindowCollectionBehaviorFullScreenPrimary];
         [window->nsWindow center];
-        [window->nsWindow makeKeyAndOrderFront:nil];
         
         window->view = [[JCRebornView alloc] initWithFrame:frame];
+        if (!window->view) {
+            lastError = "Failed to create Cocoa view";
+            platformDestroyWindow(window);
+            return NULL;
+        }
         [window->nsWindow setContentView:window->view];
         
-        window->surface = platformCreateSurface(width, height);
         window->view->surface = window->surface;
         window->isFullscreen = 0;
+        [window->nsWindow makeKeyAndOrderFront:nil];
         
-        mainWindow = window;
         
         if (fullscreen) {
             platformToggleFullscreen(window);
@@ -248,6 +234,7 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
 void platformDestroyWindow(PlatformWindow* window) {
     @autoreleasepool {
         if (window) {
+            if (window->view) window->view->surface = NULL;
             if (window->surface) {
                 platformFreeSurface(window->surface);
             }
@@ -296,11 +283,17 @@ PlatformSurface* platformGetWindowSurface(PlatformWindow* window) {
 // Surface management
 PlatformSurface* platformCreateSurface(int width, int height) {
     PlatformSurface* surface = (PlatformSurface*)malloc(sizeof(PlatformSurface));
+    if (!surface) { lastError = "Out of memory allocating surface"; return NULL; }
     surface->width = width;
     surface->height = height;
     surface->bytesPerPixel = 4;
     surface->pitch = width * 4;
     surface->pixels = (uint8*)calloc(width * height, 4);
+    if (!surface->pixels) {
+        free(surface);
+        lastError = "Out of memory allocating surface pixels";
+        return NULL;
+    }
     surface->hasColorKey = 0;
     surface->clipRect.x = 0;
     surface->clipRect.y = 0;
@@ -312,6 +305,7 @@ PlatformSurface* platformCreateSurface(int width, int height) {
 
 PlatformSurface* platformCreateSurfaceFrom(void* pixels, int width, int height, int pitch) {
     PlatformSurface* surface = (PlatformSurface*)malloc(sizeof(PlatformSurface));
+    if (!surface) { lastError = "Out of memory allocating surface wrapper"; return NULL; }
     surface->width = width;
     surface->height = height;
     surface->bytesPerPixel = 4;

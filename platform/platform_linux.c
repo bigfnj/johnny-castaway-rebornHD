@@ -81,12 +81,17 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     if (!display) return NULL;
 
     PlatformWindow* window = (PlatformWindow*)malloc(sizeof(PlatformWindow));
+    if (!window) { lastError = "Out of memory allocating window"; return NULL; }
+    memset(window, 0, sizeof(*window));
+    window->surface = platformCreateSurface(width, height);
+    if (!window->surface) { free(window); return NULL; }
     int screen = DefaultScreen(display);
 
     window->window = XCreateSimpleWindow(display, RootWindow(display, screen),
                                         0, 0, width, height, 0,
                                         BlackPixel(display, screen),
-                                        BlackPixel(display, screen));
+                                         BlackPixel(display, screen));
+    if (!window->window) { lastError = "Failed to create X window"; goto fail; }
 
     XSelectInput(display, window->window,
                 KeyPressMask | KeyReleaseMask | ExposureMask |
@@ -101,8 +106,8 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     XFlush(display);
 
     window->gc = XCreateGC(display, window->window, 0, NULL);
+    if (!window->gc) { lastError = "Failed to create X graphics context"; goto fail; }
 
-    window->surface = platformCreateSurface(width, height);
     window->isFullscreen = 0;
 
     Visual* visual = DefaultVisual(display, screen);
@@ -111,6 +116,7 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     window->ximage = XCreateImage(display, visual, depth, ZPixmap, 0,
                                   (char*)window->surface->pixels,
                                   width, height, 32, window->surface->pitch);
+    if (!window->ximage) { lastError = "Failed to create X image"; goto fail; }
 
     mainWindow = window;
 
@@ -119,6 +125,9 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     }
 
     return window;
+fail:
+    platformDestroyWindow(window);
+    return NULL;
 }
 
 /**
@@ -140,7 +149,7 @@ void platformDestroyWindow(PlatformWindow* window) {
         if (window->surface) {
             platformFreeSurface(window->surface);
         }
-        XDestroyWindow(display, window->window);
+        if (window->window) XDestroyWindow(display, window->window);
 
         /*  Clear the singleton BEFORE freeing, exactly as the Windows backend
          *  does. platformShowCursor and platformPollEvent both reach through
@@ -241,11 +250,17 @@ PlatformSurface* platformGetWindowSurface(PlatformWindow* window) {
 // Surface management
 PlatformSurface* platformCreateSurface(int width, int height) {
     PlatformSurface* surface = (PlatformSurface*)malloc(sizeof(PlatformSurface));
+    if (!surface) { lastError = "Out of memory allocating surface"; return NULL; }
     surface->width = width;
     surface->height = height;
     surface->bytesPerPixel = 4;
     surface->pitch = width * 4;
     surface->pixels = (uint8*)calloc(width * height, 4);
+    if (!surface->pixels) {
+        free(surface);
+        lastError = "Out of memory allocating surface pixels";
+        return NULL;
+    }
     surface->hasColorKey = 0;
     surface->clipRect.x = 0;
     surface->clipRect.y = 0;
@@ -264,6 +279,7 @@ PlatformSurface* platformCreateSurface(int width, int height) {
  */
 PlatformSurface* platformCreateSurfaceFrom(void* pixels, int width, int height, int pitch) {
     PlatformSurface* surface = (PlatformSurface*)malloc(sizeof(PlatformSurface));
+    if (!surface) { lastError = "Out of memory allocating surface wrapper"; return NULL; }
     surface->width = width;
     surface->height = height;
     surface->bytesPerPixel = 4;

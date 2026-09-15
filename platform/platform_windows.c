@@ -401,6 +401,10 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     RegisterClassExA(&wc);
 
     PlatformWindow* window = (PlatformWindow*)malloc(sizeof(PlatformWindow));
+    if (!window) { lastError = "Out of memory allocating window"; return NULL; }
+    memset(window, 0, sizeof(*window));
+    window->surface = platformCreateSurface(width, height);
+    if (!window->surface) { free(window); return NULL; }
 
     /*  PREVIEW MODE creates a CHILD of the window the shell handed us, filling
      *  it exactly, with no frame and no foreground grab. A top-level window here
@@ -415,9 +419,8 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     if (parent && IsWindow(parent)) {
         RECT pr;
         if (!GetClientRect(parent, &pr)) {
-            free(window);
             lastError = "GetClientRect failed on the preview parent window";
-            return NULL;
+            goto fail;
         }
 
         window->hwnd = CreateWindowExA(
@@ -453,8 +456,8 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     }
 
     if (!window->hwnd) {
-        free(window);
-        return NULL;
+        lastError = "Failed to create window";
+        goto fail;
     }
 
     // Prefer Raw Input keyboard events (WM_INPUT) so injected/simulated keystrokes
@@ -470,7 +473,7 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     }
 
     window->hdc = GetDC(window->hwnd);
-    window->surface = platformCreateSurface(width, height);
+    if (!window->hdc) { lastError = "Failed to get window device context"; goto fail; }
     window->isFullscreen = 0;
     window->windowPlacement.length = sizeof(WINDOWPLACEMENT);
 
@@ -504,6 +507,9 @@ PlatformWindow* platformCreateWindow(const char* title, int width, int height, i
     bringWindowToForeground(window->hwnd, fullscreen ? 1 : 0);
 
     return window;
+fail:
+    platformDestroyWindow(window);
+    return NULL;
 }
 
 /**
@@ -699,11 +705,17 @@ PlatformSurface* platformGetWindowSurface(PlatformWindow* window) {
 // Surface management (same as other platforms)
 PlatformSurface* platformCreateSurface(int width, int height) {
     PlatformSurface* surface = (PlatformSurface*)malloc(sizeof(PlatformSurface));
+    if (!surface) { lastError = "Out of memory allocating surface"; return NULL; }
     surface->width = width;
     surface->height = height;
     surface->bytesPerPixel = 4;
     surface->pitch = width * 4;
     surface->pixels = (uint8*)calloc(width * height, 4);
+    if (!surface->pixels) {
+        free(surface);
+        lastError = "Out of memory allocating surface pixels";
+        return NULL;
+    }
     surface->hasColorKey = 0;
     surface->clipRect.x = 0;
     surface->clipRect.y = 0;
@@ -722,6 +734,7 @@ PlatformSurface* platformCreateSurface(int width, int height) {
  */
 PlatformSurface* platformCreateSurfaceFrom(void* pixels, int width, int height, int pitch) {
     PlatformSurface* surface = (PlatformSurface*)malloc(sizeof(PlatformSurface));
+    if (!surface) { lastError = "Out of memory allocating surface wrapper"; return NULL; }
     surface->width = width;
     surface->height = height;
     surface->bytesPerPixel = 4;

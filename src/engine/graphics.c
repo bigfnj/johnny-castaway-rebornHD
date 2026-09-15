@@ -351,6 +351,7 @@ PlatformSurface *grNewLayer(void)
     // Layers are drawn over the background, so they need real transparency.
     // We use per-pixel alpha (premultiplied BGRA / PBGRA), not a magenta color-key.
     PlatformSurface *sfc = platformCreateSurface(grRenderWidth, grRenderHeight);
+    if (!sfc) fatalError("Could not create drawing layer: %s", platformGetError());
     PlatformRect dest = { 0, 0, grRenderWidth, grRenderHeight };
     platformFillRect(sfc, &dest, 0, 0, 0, 0);  // fully transparent
     return sfc;
@@ -785,6 +786,10 @@ void grLoadScreen(const char *strArg)
     }
 
     grBackgroundSfc = platformCreateSurfaceFrom(outData, outW, outH, outW * 4);
+    if (!grBackgroundSfc) {
+        free(outData);
+        fatalError("Could not create background surface: %s", platformGetError());
+    }
 }
 
 
@@ -819,6 +824,10 @@ void grInitEmptyBackground(void)
     }
 
     grBackgroundSfc = platformCreateSurfaceFrom((void*)data, outW, outH, 4 * outW);
+    if (!grBackgroundSfc) {
+        free(data);
+        fatalError("Could not create empty background: %s", platformGetError());
+    }
 }
 
 
@@ -970,6 +979,10 @@ void grLoadBmp(struct TTtmSlot *ttmSlot, uint16 slotNo, const char *strArg)
         inPtr += spriteBytes;
 
         PlatformSurface *surface = platformCreateSurfaceFrom((void*)outData, outW, outH, 4 * outW);
+        if (!surface) {
+            free(outData);
+            fatalError("Could not create sprite surface: %s", platformGetError());
+        }
         ttmSlot->sprites[slotNo][image] = surface;
     }
 }

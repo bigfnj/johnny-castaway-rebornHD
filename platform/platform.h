@@ -141,6 +141,8 @@ void platformUpdateWindow(PlatformWindow* window);
 PlatformSurface* platformGetWindowSurface(PlatformWindow* window);
 
 // Graphics - Surface management
+/* Constructors return NULL on failure and report platformGetError().
+ * SurfaceFrom borrows pixels: the caller owns them on success and failure. */
 PlatformSurface* platformCreateSurface(int width, int height);
 PlatformSurface* platformCreateSurfaceFrom(void* pixels, int width, int height, int pitch);
 
