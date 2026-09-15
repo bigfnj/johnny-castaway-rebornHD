@@ -31,8 +31,6 @@ struct PlatformSurface {
     int pitch;
     int bytesPerPixel;
     uint8* pixels;
-    uint8 hasColorKey;
-    uint8 colorKeyR, colorKeyG, colorKeyB;
     PlatformRect clipRect;
     int ownPixels;
 };
@@ -315,7 +313,6 @@ PlatformSurface* platformCreateSurface(int width, int height) {
         lastError = "Out of memory allocating surface pixels";
         return NULL;
     }
-    surface->hasColorKey = 0;
     surface->clipRect.x = 0;
     surface->clipRect.y = 0;
     surface->clipRect.w = width;
@@ -339,7 +336,6 @@ PlatformSurface* platformCreateSurfaceFrom(void* pixels, int width, int height, 
     surface->bytesPerPixel = 4;
     surface->pitch = pitch;
     surface->pixels = (uint8*)pixels;
-    surface->hasColorKey = 0;
     surface->clipRect.x = 0;
     surface->clipRect.y = 0;
     surface->clipRect.w = width;
@@ -436,15 +432,6 @@ void platformBlitSurface(PlatformSurface* src, PlatformRect* srcRect,
             uint8* srcPixel = src->pixels + sy * src->pitch + sx * src->bytesPerPixel;
             uint8* dstPixel = dst->pixels + dy * dst->pitch + dx * dst->bytesPerPixel;
 
-            // Backward-compatible color key: treat as fully transparent.
-            if (src->hasColorKey) {
-                if (srcPixel[0] == src->colorKeyB &&
-                    srcPixel[1] == src->colorKeyG &&
-                    srcPixel[2] == src->colorKeyR) {
-                    continue;
-                }
-            }
-
             uint8 sa = srcPixel[3];
 
             // Fast paths
@@ -504,22 +491,6 @@ void platformFillRect(PlatformSurface* surface, PlatformRect* rect,
             pixel[2] = pr;
             pixel[3] = a;
         }
-    }
-}
-
-/**
- * platformSetColorKey()
- *
- * Enables/disables color key transparency for a surface.
- * Parameters: surface, r, g, b.
-
- */
-void platformSetColorKey(PlatformSurface* surface, uint8 r, uint8 g, uint8 b) {
-    if (surface) {
-        surface->hasColorKey = 1;
-        surface->colorKeyR = r;
-        surface->colorKeyG = g;
-        surface->colorKeyB = b;
     }
 }
 

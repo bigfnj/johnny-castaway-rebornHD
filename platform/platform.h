@@ -155,7 +155,6 @@ void platformBlitSurface(PlatformSurface* src, PlatformRect* srcRect,
                         PlatformSurface* dst, PlatformRect* dstRect);
 void platformFillRect(PlatformSurface* surface, PlatformRect* rect,
                      uint8 r, uint8 g, uint8 b, uint8 a);
-void platformSetColorKey(PlatformSurface* surface, uint8 r, uint8 g, uint8 b);
 void platformSetClipRect(PlatformSurface* surface, PlatformRect* rect);
 void platformGetClipRect(PlatformSurface* surface, PlatformRect* rect);
 /*  platformMapRGB was declared here and implemented in all four backends, and
