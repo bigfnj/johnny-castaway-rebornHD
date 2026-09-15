@@ -84,4 +84,13 @@ They establish the baseline for the next assets; they do not validate the
 generated island concept as runtime art. The original full scene, accepted-walk
 full scene, layer guide and 15 byte-exact source PNGs are available locally under
 `build/art-work/island-scene-pilot/reference-v1`, with recorded hashes and setup
-in `reference-report.json`. True behind-palm coverage is recorded separately.
+in `reference-report.json`. Those captures did not execute behind-palm walking.
+The golden regression result was captured in tool session 82686; no separate
+persistent regression log was saved by that helper.
+
+The extra palm API probe was compiled but not executed at this checkpoint.
+Inspection found that its ignored harness compares a path terminator to -1;
+the next attempt must use `UNDEF_NODE` (6), rebuild, and compare a partially
+transparent trunk pixel before and during actual D/E walking. The possible
+double blend remains a source-level concern, not a reproduced failure. No probe
+or runner process was left running.
