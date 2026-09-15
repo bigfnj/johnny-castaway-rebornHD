@@ -38,12 +38,27 @@ and the original-first art metadata work.
 | Measure flip caching first | grDrawSpriteFlip blits one column at a time. A scratch flip adds copies and is not an established saving. A reusable sprite cache needs matching slot cleanup and fresh-process interleaved measurements against a variant without the cache. |
 | Measure damage tracking first | Full-frame composition and presentation remain. Earlier Web optimization used alternating fresh browsers and exact pixel comparisons; this cleanup makes no new performance claim. Profile representative scales/scenes before adding renderer complexity. |
 | Keep later style source storage deliberate | Preserve selected raw art, used ancestors, prompts, acceptance and export recipes. Avoid duplicating the full original archive or every diagnostic capture in each style. Noir/anime also need explicit catalog and authoring-tool registration. |
-| Transition pilot history explicitly when replacing its assets | The full production catalog supports selected-subset inheritance across approval chains. The original-first pilot metadata intentionally still requires its original 21 production assets and direct inherited approval. Before a later front-walk or island replacement, update that pilot-history model with preserved original references and replacement fixtures; do not silently overwrite the old approval or broaden the pilot import scope. |
-| Refuse inventory output that aliases its source archive | The arrival post-merge audit executed the real `tools/art_inventory.py` on a disposable ZIP with `--archive fixture.zip --output fixture.zip`. The tool exited 0 with empty stderr and replaced the ZIP with JSON through lines 59-62. A distinct-output control exited 0 and preserved its source. Add an input/output identity check before inventory/export work, with direct-path and alias controls and an executed guard-removal mutation. Fix this before the next authoring-tool expansion. Actual production assets were untouched. Local reproduction evidence: `build/arrival-postmerge-authoring/inventory-collision/report.json`. |
 | Add verified original-resource sound extraction | Checked explicit-path helpers now reject bad input and preserve existing outputs. The legacy sound layout still reads RIFF's first two bytes as a length and applies historical output numbering. The supplied executable proves this defect; the helper refuses its out-of-bounds span before creating output. Add a separately named mode using verified resource identifiers and bounded lengths, with explicit handling of RIFF content versus trailing allocation bytes. See docs/knowledge-base/original-extractor-reference.md. |
 | Calibrate complete scenes against the supplied original | All 10 ADS and all 41 TTM names are present. Decoded ADS match; 40 TTM match exactly. SJLEAVES.TTM differs by a removed SET_DELAY 0 in tag 3. The original-only SA_DEMO.BMP and five TTM files without story ADS references need classification, not automatic promotion to missing scenes. Use the knowledge-base event crosswalk and original windowed reference to observe complete branches, timing, transitions and outcomes. |
 | Reuse resource inspection for the next art pack | The xesf viewer offers useful resource-list, sprite-sheet, palette and script-pane patterns, but its playback has unfinished commands and its current-line callback is not called. Prefer adding proven inspection conveniences to our existing scene/art tools: show original frame IDs, offsets, direction and complete motion-family contact sheets beside variants. Keep original DOSBox observation as the behavioral reference. See docs/knowledge-base/external-tools.md. |
 | Review remaining compiler diagnostics when touching those paths | Pinned Emscripten 6.0.9 still reports existing unused parameters/non-Windows parent-window state and C11 pedantic diagnostics from Emscripten macros; vendored miniz reports its large-file I/O choice. Native Windows phase-one build is warning-free. Keep SDK/vendor diagnostics distinct from actionable project warnings and do not silence them globally. |
+
+## Front-walk tooling prerequisites
+
+The inventory CLI now rejects output/source identity before parsing or reference
+export, including resolved aliases and hardlinks. Windows and Linux smoke and
+regression controls preserve disposable source ZIPs; compiled guard-removal
+mutations fire. The [verification](docs/art-inventory-identity-verification.md)
+also covers gate ordering and omission controls under PowerShell 5.1/7 and the
+Linux/macOS/Web CI commands. This resolves the reproduced inventory overwrite.
+
+The [pilot-history model](docs/cartoon-pilot-history.md) now supports explicitly
+declared replacements while preserving the original 21-slot approval and pose
+facts. Historical test fixtures remain separate from live production checks.
+A simulated accepted 028 replacement exercises both suites against schema 2,
+so subsequent replacements do not depend on schema 1 assumptions. New artwork
+still needs its own human review and an explicit history declaration when
+promoted; no front-walk draft is promoted by this tooling change.
 
 ## Cartoon production foundation
 

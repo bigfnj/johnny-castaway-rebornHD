@@ -41,6 +41,17 @@ function Run-GateCase {
         "param(`$Exe, `$Phase)`nWrite-Output ('WITNESS platform-' + `$Phase)`n" +
         $(if ($FailPhase -eq 'platform') { "if (`$Phase -eq 'Smoke') { Write-Output 'FAIL fixture tests/Test-PlatformAlloc.ps1'; exit 1 }`n" } else { '' }) + "exit 0`n")
     Write-FixtureText 'tests\test_art_tools.py' "import unittest`nclass OrderFixture(unittest.TestCase):`n    def test_reached(self):`n        print('WITNESS authoring-regression')`n        self.assertTrue(True)`n"
+    foreach ($suite in @(@{ Name = 'inventory'; File = 'test_art_inventory.py' }, @{ Name = 'history'; File = 'test_art_pilot_history.py' })) {
+        $phaseCode = if ($suite.Name -eq 'inventory') { "phase = 'Smoke' if '--smoke' in sys.argv else 'Regression'`n" }
+            else { "phase = sys.argv[sys.argv.index('--phase') + 1].title()`n" }
+        $failCode = if ($FailPhase -eq $suite.Name) {
+            "if phase == 'Smoke':`n    print('FAIL fixture tests/$($suite.File)')`n    sys.exit(1)`n"
+        } elseif ($FailPhase -eq ($suite.Name + '-regression')) {
+            "if phase == 'Regression':`n    print('FAIL fixture tests/$($suite.File)')`n    sys.exit(1)`n"
+        } else { '' }
+        Write-FixtureText ('tests\' + $suite.File) (
+            "import sys`n" + $phaseCode + "print('WITNESS $($suite.Name)-' + phase)`n" + $failCode)
+    }
     Write-FixtureText 'tests\test_wave_renderer.py' (
         "import sys`nphase = 'Smoke' if '--phase' in sys.argv else 'Regression'`nprint('WITNESS wave-' + phase)`n" +
         $(if ($FailPhase -eq 'wave') { "if phase == 'Smoke':`n    print('FAIL fixture tests/test_wave_renderer.py')`n    sys.exit(1)`n" } else { '' }))
@@ -117,6 +128,8 @@ function Check-Ordering {
         platform = 'tests/Test-PlatformAlloc.ps1'
         extractor = 'tests/test_extractors.py'
         wrapper = 'tests/test_web_wrapper.py'
+        inventory = 'tests/test_art_inventory.py'
+        history = 'tests/test_art_pilot_history.py'
     }
     $marker = 'FAIL fixture ' + $names[$Phase]
     ($Result.Code -ne 0) -and
@@ -131,7 +144,23 @@ function Check-Ordering {
         ($Result.Text -notmatch 'WITNESS extractor-Regression') -and
         ($Result.Text -notmatch 'WITNESS wrapper-Regression') -and
         ($Result.Text -notmatch 'WITNESS authoring-regression') -and
+        ($Result.Text -notmatch 'WITNESS inventory-Regression') -and
+        ($Result.Text -notmatch 'WITNESS history-Regression') -and
         ($Result.Text -notmatch 'WITNESS dump-regression')
+}
+
+function Assert-Complete {
+    param($Result)
+    $expected = @('smoke', 'screensaver', 'art-Smoke', 'wave-Smoke', 'palm-Smoke',
+        'decoder-Smoke', 'lifecycle-Smoke', 'frame-Smoke', 'platform-Smoke', 'extractor-Smoke',
+        'wrapper-Smoke', 'inventory-Smoke', 'history-Smoke', 'extractor-Regression',
+        'wrapper-Regression', 'platform-Regression', 'decoder-Regression', 'lifecycle-Regression',
+        'frame-Regression', 'art-Regression', 'wave-Regression', 'palm-Regression',
+        'authoring-regression', 'inventory-Regression', 'history-Regression', 'dump-regression')
+    $actual = @([regex]::Matches($Result.Text, '(?m)^WITNESS ([^\r\n]+)') | ForEach-Object { $_.Groups[1].Value })
+    if (($Result.Code -ne 0) -or (($actual -join ',') -ne ($expected -join ','))) {
+        throw 'gate.ps1: expected smoke and regression witnesses missing or out of order'
+    }
 }
 
 function Assert-Case {
@@ -158,20 +187,20 @@ try {
         [IO.File]::WriteAllBytes((Join-Path $work $file), [byte[]]@(0))
     }
     Write-FixtureText 'gate.ps1' $gateSource
-    foreach ($phase in @('smoke', 'screensaver', 'art', 'wave', 'palm', 'decoder', 'lifecycle', 'frame', 'platform', 'extractor', 'wrapper')) {
+    foreach ($phase in @('smoke', 'screensaver', 'art', 'wave', 'palm', 'decoder', 'lifecycle', 'frame', 'platform', 'extractor', 'wrapper', 'inventory', 'history')) {
         $result = Run-GateCase $phase
         Assert-Case "$phase failure prevents regression" (Check-Ordering $phase $result)
     }
     $result = Run-GateCase 'none'
-    Assert-Case 'passed smoke reaches every regression witness in order' (
-        ($result.Code -eq 0) -and
-        ($result.Text -match '(?s)WITNESS smoke.*WITNESS screensaver.*WITNESS art-Smoke.*WITNESS wave-Smoke.*WITNESS palm-Smoke.*WITNESS decoder-Smoke.*WITNESS lifecycle-Smoke.*WITNESS frame-Smoke.*WITNESS platform-Smoke.*WITNESS extractor-Smoke.*WITNESS wrapper-Smoke.*WITNESS extractor-Regression.*WITNESS wrapper-Regression.*WITNESS platform-Regression.*WITNESS decoder-Regression.*WITNESS lifecycle-Regression.*WITNESS frame-Regression.*WITNESS art-Regression.*WITNESS wave-Regression.*WITNESS palm-Regression.*WITNESS authoring-regression.*WITNESS dump-regression'))
+    Assert-Complete $result
+    Write-Host 'ok   passed smoke reaches every regression witness in order'
     $result = Run-GateCase 'frame-regression'
     Assert-Case 'frame regression failure fails the gate after all smoke' (
         ($result.Code -ne 0) -and
         ([regex]::Matches($result.Text, 'FAIL fixture tests/test_frame_limits.py').Count -eq 1) -and
         ($result.Text -match '(?s)WITNESS frame-Smoke.*WITNESS platform-Smoke.*WITNESS frame-Regression.*WITNESS dump-regression'))
-    foreach ($suite in @(@{ Name = 'extractor'; File = 'test_extractors.py' }, @{ Name = 'wrapper'; File = 'test_web_wrapper.py' })) {
+    foreach ($suite in @(@{ Name = 'extractor'; File = 'test_extractors.py' }, @{ Name = 'wrapper'; File = 'test_web_wrapper.py' },
+                        @{ Name = 'inventory'; File = 'test_art_inventory.py' }, @{ Name = 'history'; File = 'test_art_pilot_history.py' })) {
         $result = Run-GateCase ($suite.Name + '-regression')
         Assert-Case "$($suite.Name) regression failure fails the gate after all smoke" (
             ($result.Code -ne 0) -and
@@ -189,10 +218,12 @@ try {
         ($result.Text -match 'WITNESS platform-Smoke') -and ($result.Text -notmatch 'WITNESS platform-Regression') -and
         ($result.Text -match 'WITNESS extractor-Smoke') -and ($result.Text -notmatch 'WITNESS extractor-Regression') -and
         ($result.Text -match 'WITNESS wrapper-Smoke') -and ($result.Text -notmatch 'WITNESS wrapper-Regression') -and
+        ($result.Text -match 'WITNESS inventory-Smoke') -and ($result.Text -notmatch 'WITNESS inventory-Regression') -and
+        ($result.Text -match 'WITNESS history-Smoke') -and ($result.Text -notmatch 'WITNESS history-Regression') -and
         ($result.Text -notmatch 'WITNESS authoring-regression') -and ($result.Text -notmatch 'WITNESS dump-regression'))
 
     if ($VerifyMutation) {
-        foreach ($phase in @('decoder', 'lifecycle', 'frame', 'platform', 'extractor', 'wrapper')) {
+        foreach ($phase in @('decoder', 'lifecycle', 'frame', 'platform', 'extractor', 'wrapper', 'inventory', 'history')) {
             $guard = "if (`$LASTEXITCODE -ne 0) {`n    Write-Host 'GATE FAILED: $phase smoke failed; regression was not run'"
             if ([regex]::Matches($gateSource, [regex]::Escape($guard)).Count -ne 1) {
                 throw "Expected exactly one $phase smoke short-circuit guard in gate.ps1"
@@ -215,6 +246,32 @@ try {
             Write-FixtureText 'gate.ps1' $gateSource
             Assert-Ordering $phase (Run-GateCase $phase)
             Write-Host "ok   restored $phase guard blocks regression again"
+        }
+
+        foreach ($omission in @(
+            @{ Name = 'inventory-Smoke'; Command = "& python -B (Join-Path `$repo 'tests\test_art_inventory.py') --smoke" },
+            @{ Name = 'inventory-Regression'; Command = "    & python -B (Join-Path `$repo 'tests\test_art_inventory.py')`n" },
+            @{ Name = 'history-Smoke'; Command = "& python -B (Join-Path `$repo 'tests\test_art_pilot_history.py') --phase smoke" },
+            @{ Name = 'history-Regression'; Command = "& python -B (Join-Path `$repo 'tests\test_art_pilot_history.py') --phase regression" }
+        )) {
+            if ([regex]::Matches($gateSource, [regex]::Escape($omission.Command)).Count -ne 1) {
+                throw "Expected exactly one $($omission.Name) invocation in gate.ps1"
+            }
+            $marker = "EXECUTED omitted $($omission.Name)"
+            Write-FixtureText 'gate.ps1' ($gateSource.Replace($omission.Command, "Write-Output '$marker'`n"))
+            $result = Run-GateCase 'none'
+            if (($result.Text -notmatch [regex]::Escape($marker)) -or ($result.Text -notmatch 'WITNESS dump-regression')) {
+                throw "gate.ps1: $($omission.Name) omission did not execute the changed gate and final witness"
+            }
+            $caught = $false
+            try { Assert-Complete $result }
+            catch {
+                if ($_.Exception.Message -ne 'gate.ps1: expected smoke and regression witnesses missing or out of order') { throw }
+                $caught = $true
+                Write-Host "FIRED 1/1 gate.ps1: omitted $($omission.Name) was detected by the execution trace"
+            }
+            if (-not $caught) { throw "gate.ps1: $($omission.Name) omission survived" }
+            Write-FixtureText 'gate.ps1' $gateSource
         }
 
         $guard = "if (`$LASTEXITCODE -ne 0) {`n    Write-Host 'GATE FAILED: smoke failed; regression was not run'"

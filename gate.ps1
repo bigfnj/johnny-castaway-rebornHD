@@ -230,6 +230,20 @@ if ($LASTEXITCODE -ne 0) {
     exit 1
 }
 
+Write-Step 'art inventory smoke'
+& python -B (Join-Path $repo 'tests\test_art_inventory.py') --smoke
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'GATE FAILED: inventory smoke failed; regression was not run' -ForegroundColor Red
+    exit 1
+}
+
+Write-Step 'art approval history smoke'
+& python -B (Join-Path $repo 'tests\test_art_pilot_history.py') --phase smoke
+if ($LASTEXITCODE -ne 0) {
+    Write-Host 'GATE FAILED: history smoke failed; regression was not run' -ForegroundColor Red
+    exit 1
+}
+
 if (-not $SmokeOnly) {
     Write-Step 'regression (legacy extractor bytes and failure handling)'
     & python -B (Join-Path $repo 'tests\test_extractors.py') --sound $soundExtractor --walk $walkExtractor --phase regression
@@ -279,6 +293,14 @@ if (-not $SmokeOnly) {
         & python -B -m unittest discover -s (Join-Path $repo 'tests') -p test_art_tools.py -v
         if ($LASTEXITCODE -ne 0) { $failed = $true }
     }
+
+    Write-Step 'regression (art inventory source preservation)'
+    & python -B (Join-Path $repo 'tests\test_art_inventory.py')
+    if ($LASTEXITCODE -ne 0) { $failed = $true }
+
+    Write-Step 'regression (art approval history)'
+    & python -B (Join-Path $repo 'tests\test_art_pilot_history.py') --phase regression
+    if ($LASTEXITCODE -ne 0) { $failed = $true }
 
     Write-Step 'regression (golden dump corpus)'
     & powershell.exe -NoProfile -ExecutionPolicy Bypass `

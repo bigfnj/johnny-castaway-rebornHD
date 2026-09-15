@@ -15,6 +15,7 @@ from pathlib import Path
 
 from art_common import ArtError, digest, inspect_png, read_json, safe_member, source_catalog
 from inventory_scenes import resource_catalog, metadata, u16
+from art_production_catalog import approval_origins, keyed as approval_rows
 
 PACK = "art/cartoon/pack.json"
 WALK = "art/cartoon/walk-pilot/calm-focus-runtime-v1"
@@ -179,6 +180,53 @@ def registration(row, recipe, label):
             "limitation": "Residual checks recipe arithmetic, not independent feature detection or pose fidelity."}
 
 
+def production_history(pack, pilot, record, record_hash):
+    """Validate an explicit pilot replacement without rewriting its old facts.
+
+    The same aggregate resolver as the full catalog owns selected inheritance.
+    The declaration pins the complete old acceptance even if every pilot asset
+    is eventually replaced and none of its rows are inherited into production.
+    """
+    declaration = pack["pilot_history"]
+    require(isinstance(declaration, dict), PACK, "invalid pilot history declaration")
+    require(declaration.get("acceptance_record") == ACCEPTANCE and
+            declaration.get("sha256") == record_hash(ACCEPTANCE),
+            PACK, "historical pilot acceptance identity differs")
+    replacements = declaration.get("replaced_assets")
+    require(isinstance(replacements, list) and all(isinstance(path, str) for path in replacements)
+            and len(replacements) == len(set(replacements)) and set(replacements) <= set(pilot),
+            PACK, "invalid replaced pilot asset list")
+    current_path = pack.get("acceptance_record")
+    require(isinstance(current_path, str), PACK, "active acceptance pointer differs")
+    current = record(current_path)
+    require(isinstance(current, dict) and current.get("accepted") is True,
+            current_path, "active production acceptance is pending")
+    approved = approval_rows(current.get("accepted_assets"), current_path)
+    packed = approval_rows(pack.get("assets"), PACK)
+    require(set(approved) == set(packed), current_path, "acceptance coverage differs from production")
+    origins = approval_origins(current, approved, current_path, record, record_hash)
+    changed = {path for path in pilot if any(approved[path].get(key) != pilot[path].get(key)
+               for key in ("sha256", "recipe")) or origins[path] != ACCEPTANCE}
+    require(set(replacements) == changed, PACK, "declared pilot replacements differ from active approvals")
+    result, recipes = {}, {}
+    for path in pilot:
+        item, approval = packed[path], approved[path]
+        recipe_path = item.get("recipe")
+        require(isinstance(recipe_path, str) and recipe_path == approval.get("recipe")
+                and item.get("review") == origins[path], path, "active recipe or acceptance pointer differs")
+        if recipe_path not in recipes:
+            recipe = record(recipe_path)
+            recipes[recipe_path] = approval_rows(recipe.get("frames", recipe.get("assets")), recipe_path)
+        row = recipes[recipe_path].get(path)
+        require(row is not None, path, "asset is absent from referenced recipe")
+        require(item.get("sha256") == approval.get("sha256") == row.get("candidate_png_sha256"),
+                path, "accepted PNG hashes differ")
+        result[path] = {"status": "replaced" if path in changed else "retained",
+            "acceptance": origins[path], "recipe": recipe_path, "sha256": item["sha256"],
+            "member": "data/styles/cartoon/" + path, "canvas": row.get("runtime_canvas")}
+    return result
+
+
 def walk_sequence(source, timing, acceptance):
     # Parse the named original-derived route, ending at its zero row. Do not
     # infer a repeating six-frame cycle: the last two entries are 025 then 027.
@@ -243,9 +291,11 @@ def walk_sequence(source, timing, acceptance):
 
 def build(root):
     evidence = {}
+    raw_hashes = {}
 
     def load(path):
         data = (root / path).read_bytes()
+        raw_hashes[path] = digest(data)
         # Art records preserve exact bytes; maintained docs normalize checkout
         # newlines so Windows and Unix identify the same text.
         preserved = path.startswith(("art/cartoon/walk-pilot/", "art/cartoon/island-pilot-v1/", "art/cartoon/walk-expansion-v1/", "art/cartoon/arrival-pilot-v1/"))
@@ -284,7 +334,15 @@ def build(root):
     # pilot's actual review or expand its original-reference import scope.
     active_path = pack.get("acceptance_record")
     require(isinstance(active_path, str), PACK, "active acceptance pointer differs")
-    if active_path == ACCEPTANCE:
+    production = None
+    if "pilot_history" in pack:
+        def history_record(path):
+            value = load(str(safe_member(path)))
+            evidence[path] = {"sha256": raw_hashes[path], "hash_basis": "file-bytes"}
+            return value
+        production = production_history(pack, approved, history_record, lambda path: raw_hashes[path])
+        inherits_pilot = True
+    elif active_path == ACCEPTANCE:
         inherits_pilot = True
     else:
         active = load(str(safe_member(active_path)))
@@ -341,12 +399,18 @@ def build(root):
             canvas = [n * pack["runtime"]["scale"] for n in logical]
             require(row["runtime_canvas"] == canvas, asset, "recipe canvas differs from original")
             require(item["source_sha256"] == original["source_sha256"], asset, "HD reference hash differs")
+            production_item = item
+            if production is not None:
+                require(production[asset]["canvas"] == canvas, asset, "active recipe canvas differs from original")
+                # Keep the historical recipe/raw/approval comparison intact.
+                # Current production has its own separately checked mapping.
+                item = dict(item, **approved[asset], review=ACCEPTANCE)
             require(item.get("recipe") == approved[asset].get("recipe") == path, asset, "active recipe pointer differs")
             require(item.get("review") == ACCEPTANCE, asset, "active review pointer differs")
             require(approved[asset]["sha256"] == item["sha256"] == row["candidate_png_sha256"], asset, "acceptance hash differs")
             member = "data/styles/cartoon/" + asset
             data = archive.read(member)
-            require(digest(data) == item["sha256"], member, "production PNG hash differs")
+            require(digest(data) == production_item["sha256"], member, "production PNG hash differs")
             inspect_png(data, member, expected=tuple(canvas), decode=False)
             reg = registration(row, recipe, asset)
             deviations = {}
@@ -380,10 +444,21 @@ def build(root):
                     "recorded_deviations": deviations, "artistic_fidelity": "unverified-by-this-tool",
                     "current_user_review_ids": [note["id"] for note in current_review["observations"]
                         if original["resource"] == "JOHNWALK.BMP" and note["frame"] == index]}})
+            if production is not None:
+                assets[-1]["production"] = production[asset]
+                assets[-1]["variant"]["production_status"] = production[asset]["status"]
+                if production[asset]["status"] == "replaced":
+                    assets[-1]["variant"]["member"] = None
+                comparison = assets[-1]["comparison"]
+                comparison["historical_user_review_ids"] = comparison.pop("current_user_review_ids")
+                clearance = comparison["recorded_deviations"].get("rear_foot_clearance_hd")
+                if clearance is not None:
+                    clearance["historical_pilot_variant_independently_remeasured"] = clearance.pop("current_variant_independently_remeasured")
+                    clearance["historical_pilot_disposition"] = clearance.pop("current_disposition")
     walk_assets = [x for x in assets if x["family"] == "walk-e-to-a"]
     require({x["original"]["frame_index"] for x in walk_assets} == {r["frame"] for r in route["route"]}, PACK, "route assets differ from accepted walking family")
     require(len({x["variant"]["registration"]["scale"] for x in walk_assets}) == 1, PACK, "walking family scale differs")
-    return {"schema_version": 1, "purpose": "authoring-review-only", "style": "cartoon", "coverage": "partial",
+    report = {"schema_version": 1, "purpose": "authoring-review-only", "style": "cartoon", "coverage": "partial",
         "reference_policy": "Supplied original decoded pixels establish reference canvases and bounds; bundled RESOURCE headers are compared separately. Original-derived draw records establish route. HD PNGs are upscaled proxies, not assumed pixel-identical to the supplied original. Cartoon acceptance never establishes original anatomy.",
         "coordinates": {"logical": "original 640x480 scene coordinates", "hd": "logical multiplied by 2", "raw": "generated source canvas pixels", "landmarks": "manual authoring observations, not engine anchors"},
         "summary": {"assets": len(assets), "walking_assets": len(walk_assets), "island_assets": len(assets) - len(walk_assets)},
@@ -408,21 +483,34 @@ def build(root):
                    "Numeric registration residuals test transform consistency, not original-versus-variant landmark coincidence.",
                    "Historical raised-foot observations are retained with their older variant identity. Current displayed foot lift and known leg differences were accepted, not proven anatomically equivalent.",
                    "No pixel-equality or invented aesthetic threshold is applied across styles. Other poses/states remain outside this pilot."]}
+    if production is not None:
+        report["schema_version"] = 2
+        report["historical_pilot_acceptance_record"] = ACCEPTANCE
+        report["historical_pilot_human_review"] = report.pop("current_human_review")
+        report["current_acceptance_record"] = active_path
+        report["pilot_history"] = pack["pilot_history"]
+        report["limits"][2] = "Historical raised-foot observations retain their older variant identity. The historical Calm focus pilot's displayed foot lift and known leg differences were accepted, not proven anatomically equivalent; this is not approval of replacement drawings."
+        report["production_summary"] = {"retained": sum(row["status"] == "retained" for row in production.values()),
+                                        "replaced": sum(row["status"] == "replaced" for row in production.values())}
+    return report
 
 
 def markdown(report):
     lines = ["# Cartoon pilot: original-first review metadata", "",
         "Generated by `python tools/art_review_metadata.py`. Use `--check` to verify reproduction.", "",
         "[JSON catalog](cartoon-art-metadata.json) keeps original facts, variant mapping and acceptance separate.",
-        "It maps the original 21-asset pilot still in production: six Calm focus walk poses and 15 island assets.",
+        ("It preserves the original 21-asset pilot and separately maps approved replacements in current production."
+         if "pilot_history" in report else
+         "It maps the original 21-asset pilot still in production: six Calm focus walk poses and 15 island assets."),
         "Later approved families belong to the [full production catalog](cartoon-production-catalog.md).",
-        "Their addition does not expand this pilot's original-reference or human-review scope.", "",
+        "Their addition does not expand this pilot's original-reference or human-review scope.",
+        "[Pilot history declarations](../cartoon-pilot-history.md) preserve these facts when production assets are replaced.", "",
         "[Supplied original XPM evidence](cartoon-original-reference.json) establishes native canvases and visible bounds.",
         "Bundled RESOURCE headers are checked separately. Existing HD PNGs are labeled upscaled proxies, not assumed",
         "pixel-identical to the original installation. The E-to-A sequence is read from the original-derived walk table",
         "and checked against historical HD and Cartoon capture records. This is port timing, not measured original EXE timing.", "",
         "## Comparison findings", "",
-        "All canvases match original dimensions at scale 2, all production bytes match the final acceptance ledger,",
+        "Historical and current canvases match original dimensions at scale 2; current production bytes match their acceptance ledger,",
         "and all recorded affine landmarks map to their declared targets. These are technical checks, not artistic approval.",
         "The cap landmarks are manually selected registration features, not engine anchors or newly detected pixel features.", "",
         "The earlier directional-cycle-v1 review recorded rear-foot clearance near 11.6 HD pixels in 026 and 11 in 027,",
@@ -432,7 +520,7 @@ def markdown(report):
         "The user approved the displayed Calm focus walk, then its revised toes in the actual Linux island preview.",
         "The decision accepts the displayed foot lift in 026/027 and known leg differences; it does not establish",
         "anatomical agreement with the original. The JSON retains the earlier correction requests as historical observations",
-        "and links the current dispositions to the separate production acceptance. Earlier art records remain byte-identical.", "",
+        "and links those dispositions to the pilot production acceptance. Earlier art records remain byte-identical.", "",
         "The original-reference observations remain separate: the earlier user comparison requested an inward angle for",
         "Cartoon 024's trailing right foot and identified original 028/029 as anatomical left-forward/right-back.",
         "Artistic acceptance does not change those observations or the stored supplied-original pixel facts.", "",
@@ -449,8 +537,8 @@ def markdown(report):
         "The final 025-to-027 transition is retained; this route is not an invented repeating six-frame loop.",
         "The historical route review lasts 3760 ms including a separate 1000 ms endpoint hold. Its 42 display records include intervening",
         "160 ms background updates, so display duration and pose duration are distinct fields.", "",
-        "Those historical captures show the older directional-cycle-v1 artwork. Current Calm focus scene captures and",
-        "their Linux platform/seed/archive identities are linked by the current acceptance record; they are separate evidence.", "",
+        "Those historical captures show the older directional-cycle-v1 artwork. The accepted Calm focus scene captures and",
+        "their Linux platform/seed/archive identities are linked by the pilot acceptance record; they are separate evidence.", "",
         "High-tide wave groups 003-005, 006-008 and 009-011 advance independently. Latest-update draw order matters",
         "where center/right foam overlaps. The cloud's recorded origin is only its first reference position.", "",
         "## Evidence and scope", "",
@@ -472,6 +560,16 @@ def markdown(report):
         "See [art guidance](../cartoon-art.md), [learnings](../art-style-learnings.md),",
         "[motion review](../../art/cartoon/motion-review.md) and",
         f"[current production acceptance](../../{report['current_acceptance_record']}).", ""]
+    if "pilot_history" in report:
+        lines += ["## Current production and preserved pilot", "",
+            "The asset map above describes the preserved pilot recipes. Its human judgments do not approve replacement drawings.",
+            "Each current production mapping below resolves to its own accepted record; a replaced historical drawing has no current ZIP member.", "",
+            "| Original slot | Pilot status | Current acceptance | Current recipe |",
+            "|---|---|---|---|"]
+        for asset in report["assets"]:
+            current = asset["production"]
+            lines.append(f"| `{asset['id']}` | {current['status']} | `{current['acceptance']}` | `{current['recipe']}` |")
+        lines.append("")
     return "\n".join(lines)
 
 
