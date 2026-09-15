@@ -87,6 +87,25 @@ engine rather than treating a second incomplete player as the expected image.
 The [scene catalog](scene-catalog.md) and port crosswalk keep fan observations,
 resource evidence and observed execution distinct.
 
+## PNG artwork with JSON metadata
+
+For future style packs, retain PNG pixels and pair them with structured metadata.
+The existing art pipeline already checks JSON frame contracts and acceptance
+records. Useful extensions are motion-family order, direction, front/back limb
+ordering, measured registration landmarks, native timing and links to approved
+reference images. Mark inferred landmarks separately from exact script coordinates.
+These fields make alignment and coverage testable; they do not establish likeness
+or replace a complete animated visual review.
+
+The xesf raw-index JSON exports can help software compare decoded pixels and
+palette indices. Converting every PNG into text pixel arrays would duplicate
+large payloads without preserving any new facts. A textual description is also
+incomplete: it cannot preserve all pixels needed to judge facial expression,
+silhouette or gait. Base64 inside JSON is an image transport representation, as
+shown in the [official image-input guide](https://developers.openai.com/api/docs/guides/images-vision),
+not an additional source of visual semantics. Prefer labeled contact sheets and
+real engine previews beside the metadata.
+
 ## Original audio comparison clarification
 
 An independent read-only comparison of the supplied original executable and the
