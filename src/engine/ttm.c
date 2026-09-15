@@ -212,8 +212,7 @@ void ttmResetSlot(struct TTtmSlot *ttmSlot)
     ttmSlot->dataSize = 0;
 
     for (int i=0; i < MAX_BMP_SLOTS; i++) {
-        if (ttmSlot->numSprites[i])
-            grReleaseBmp(ttmSlot, (uint16)i);
+        grReleaseBmp(ttmSlot, (uint16)i);
     }
 }
 

@@ -121,6 +121,8 @@ void grUpdateDisplay(struct TTtmThread *ttmBackgroundThread,
 void grInitEmptyBackground(void);
 PlatformSurface *grNewLayer(void);
 void grFreeLayer(PlatformSurface *sfc);
+/* Release the owned overlay without implying bytecode RESTORE_ZONE semantics. */
+void grReleaseSavedLayer(void);
 
 void grLoadBmp(struct TTtmSlot *ttmSlot, uint16 slotNo, const char *strArg);
 void grReleaseBmp(struct TTtmSlot *ttmSlot, uint16 bmpSlotNo);

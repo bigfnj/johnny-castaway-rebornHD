@@ -151,6 +151,18 @@ if(WIN32 AND NOT EMSCRIPTEN)
         platform/platform_windows.c)
     target_include_directories(jc_palm_test PRIVATE src/engine src/data platform third_party/miniz)
     target_link_libraries(jc_palm_test PRIVATE gdi32 user32 winmm windowscodecs ole32 uuid)
+
+    set(LIFECYCLE_TEST_SOURCES ${COMMON_SOURCES})
+    list(REMOVE_ITEM LIFECYCLE_TEST_SOURCES src/engine/jc_reborn.c src/engine/ads.c)
+    add_executable(jc_lifecycle_test tests/test_lifecycle_driver.c tests/lifecycle_alloc.c
+        ${LIFECYCLE_TEST_SOURCES} platform/platform_windows.c)
+    target_include_directories(jc_lifecycle_test PRIVATE tests src/engine src/data platform third_party/miniz)
+    target_link_libraries(jc_lifecycle_test PRIVATE gdi32 user32 winmm windowscodecs ole32 uuid)
+    if(MSVC)
+        target_compile_options(jc_lifecycle_test PRIVATE /FI${CMAKE_CURRENT_SOURCE_DIR}/tests/lifecycle_alloc.h)
+    else()
+        target_compile_options(jc_lifecycle_test PRIVATE -include ${CMAKE_CURRENT_SOURCE_DIR}/tests/lifecycle_alloc.h)
+    endif()
 endif()
 
 # Exercise the portable decoder even on Windows, where normal rendering uses

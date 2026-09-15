@@ -71,7 +71,7 @@ static void grReleaseScreen(void)
 }
 
 
-static void grReleaseSavedLayer(void)
+void grReleaseSavedLayer(void)
 {
     platformFreeSurface(grSavedZonesLayer);
     grSavedZonesLayer = NULL;
@@ -260,10 +260,12 @@ void graphicsEnd(void)
      *  that never reach here: fatalError exits directly, and so does any future
      *  abrupt teardown.
      */
-    grCaptureFrame();
-    islandRelease();
+    if (platform_window) grCaptureFrame();
+    grReleaseSavedLayer();
+    grReleaseScreen();
     artStyleReportUsage();
     platformDestroyWindow(platform_window);
+    platform_window = NULL;
 }
 
 
