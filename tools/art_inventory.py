@@ -56,6 +56,10 @@ def main(argv=None):
     parser.add_argument("--resource", action="append", default=[], help="exact resource name; repeatable")
     args = parser.parse_args(argv)
     try:
+        if args.output:
+            source, output = args.archive.resolve(), args.output.resolve()
+            if source == output or (output.exists() and source.samefile(output)):
+                raise ArtError(f"{args.output}: output must differ from the source archive {args.archive}")
         report = inventory(args.archive, args.resource, args.export)
         if args.output:
             args.output.parent.mkdir(parents=True, exist_ok=True)

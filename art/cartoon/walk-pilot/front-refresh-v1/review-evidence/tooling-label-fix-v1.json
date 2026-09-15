@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "change": "Live review intro no longer assumes024-027 are retained; actual revised frame list comes from recipe modes.",
+  "source_sha256": {
+    "export.py": "93b545b37033f572adaaa511271de177cfcf98971f54e32f534d1159b8ff7186",
+    "review.py": "623d800db01ac3d1b9dcc89d705f86ad47c7132dc773e4759929744e9da25215",
+    "test_tools.py": "2d887269dcf80e3eeed5825e9acacc9b3332ef1049a19d93f8691e45e561c911"
+  },
+  "smoke_checks": 2,
+  "regressions_after_smoke": 14,
+  "executed_mutations": 11,
+  "focused_control": {
+    "case": "test_labels_follow_explicit_selection",
+    "selected_generated_frame": 24,
+    "retained_frames": [
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "browser_text_checked": true
+  },
+  "focused_mutation": {
+    "restored": "incorrect hardcoded024-027retained sentence",
+    "result": "exactly-one-witnessed-test-failure",
+    "executed_review_source_sha256": "1f4956b480d76f32f9dafc17351018948ab074f3677cb36d0803dcf819cdbf01"
+  },
+  "frozen_motion_v1": {
+    "review_files_preserved": 20,
+    "published_files_preserved": 20,
+    "frozen_exporter_sha256": "93b545b37033f572adaaa511271de177cfcf98971f54e32f534d1159b8ff7186",
+    "frozen_review_builder_sha256": "9dfa19339d164c850316195780a5f0a0df44d625fa026230a189726553acf03c"
+  },
+  "scope": "Tooling label fix only. Published motion-v1, its frozen helpers, and production artwork unchanged."
+}

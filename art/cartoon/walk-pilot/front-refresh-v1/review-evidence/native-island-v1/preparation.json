@@ -1,0 +1,14 @@
+{
+  "source_commit": "4551081495eee81e5e5bf2d8b5f00a5619a176a2",
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "source_driver": "art\\cartoon\\arrival-pilot-v1\\review-evidence\\native-v1\\helpers\\route_driver.c",
+  "source_driver_sha256": "1116eefd0d456093f4b17e2cf0f940b5235aa707327c3df1da1df776949ae1af",
+  "adapted_driver_sha256": "146d0caa13aab68f1984e04860ff35423d926e75734c661529a9f233fa4dc342",
+  "prepare_sha256": "ab41cfc54d9e83b317e0f25208036936a5be862070245169ad132d489f65bf2d",
+  "adaptations": [
+    "REAR labels become FRONT",
+    "direct E-to-A route and headings 1/1",
+    "observe completed waits, actual sprite draw dispatch and walk delay return values"
+  ],
+  "scope": "New observation-only linker wrapper; original archived helper and production sources unchanged."
+}

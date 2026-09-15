@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "controls": 6,
+  "native_baseline_pixels_sha256": "5eb8a1651409287c46baa8f6fee49efe1d7e6c15f8635c2b13e9850af7fbae0a",
+  "native_candidate_pixels_sha256": "00130cbf90e82284593c3e14a0b772dcff5074ee35715fe07cb536ec3d8a6d01",
+  "placed_canvas": [
+    788,
+    424,
+    852,
+    568
+  ],
+  "helper_sha256": "611b3023287b53ec5a1cbb0609c8040869b635cd7de9f17628311c4d66bed8a7",
+  "mutation": "FIRED",
+  "rebuilt": true,
+  "witness": "WITNESS removed-native-candidate-mask",
+  "failure": "FAIL capture_candidate.py: changed pixel outside placed frame028 was allowed",
+  "scope": "Recorded native pixels and actual comparison helper; no new native execution or changed capture files."
+}

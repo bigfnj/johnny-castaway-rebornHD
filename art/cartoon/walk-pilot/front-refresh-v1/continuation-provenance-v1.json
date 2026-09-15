@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "date": "2026-09-15",
+  "prior_provenance": "provenance.json",
+  "prior_provenance_sha256": "86c320c7731ce01cc1ac73693d308c86005d89cac670643a8d480a7041edd02d",
+  "human_feedback": "feedback-key-v1.json",
+  "human_feedback_sha256": "9ac8299416813392183e10ef602dc420f626f5c1ca888426379cba7ba0de0d7a",
+  "preservation": "Exact returned PNG bytes, including alpha and hidden RGB. Local export is technical resampling only.",
+  "attempts": [
+    {
+      "call_file": "028-call-v4.json",
+      "call_file_sha256": "8df515a25c0b52b82d1ff792f656c55efa91b63ed70bfb99d33c936542ed226e",
+      "prompt_utf8_sha256": "8bd250bea8da2a65408bbee8e54e9dbdcdcb96e1df806188ade44f5c85d624d5",
+      "ordered_references": [
+        {
+          "ordered_index": 1,
+          "actual_path": "D:/.ai-work/worktrees/johnny-cartoon-front-refresh/art/cartoon/walk-pilot/front-refresh-v1/028-foot-fit-v3.png",
+          "sha256": "f17e13806f13a738218409f308aefb8069e623faaa239babe89b98c093d6fc25",
+          "canvas": [
+            1024,
+            1536
+          ]
+        }
+      ],
+      "tool_output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-26ad031a-bed1-484c-99ee-5d5352500713.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "output": {
+        "file": "028-occluded-arm-v4.png",
+        "sha256": "f5c0a043e869a7c219d6127981f90e4bbb5b6b4b4a9922ac3b43d4c06f60042c",
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "disposition": "Far arm occluded per human feedback; motion review pending.",
+      "pixel_identity_outside_requested_region": false
+    },
+    {
+      "call_file": "029-call-v1.json",
+      "call_file_sha256": "2a49d1d583959e222f404ac1a55dd6f16c1590e9ffbebefabe2c443a475157ea",
+      "prompt_utf8_sha256": "4acefa8b311968fd9c6d622174806cab3a7d57a8ddaab666b2476eb1907d007e",
+      "ordered_references": [
+        {
+          "ordered_index": 1,
+          "actual_path": "D:/.ai-work/worktrees/johnny-cartoon-front-refresh/art/cartoon/walk-pilot/front-refresh-v1/reference/029-original-nearest16.png",
+          "sha256": "a21dce6354421a58a84e507583e5620bf69d6d56cff77bdb8f39a3829ad2e169",
+          "canvas": [
+            512,
+            1200
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "actual_path": "D:/.ai-work/worktrees/johnny-cartoon-front-refresh/art/cartoon/walk-pilot/front-refresh-v1/028-occluded-arm-v4.png",
+          "sha256": "f5c0a043e869a7c219d6127981f90e4bbb5b6b4b4a9922ac3b43d4c06f60042c",
+          "canvas": [
+            1024,
+            1536
+          ]
+        }
+      ],
+      "tool_output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-39a4f271-cfeb-4a01-9393-7432e5214f4e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "output": {
+        "file": "029-pose-v1.png",
+        "sha256": "39566864b89ae90ceb1d0eb7aa22082268f95cc24ae7cbadcd01a8e47b76330f",
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "disposition": "Superseded: raised heel extends beyond runtime canvas.",
+      "pixel_identity_outside_requested_region": false
+    },
+    {
+      "call_file": "029-call-v2.json",
+      "call_file_sha256": "8302941ba2edf5a6f1f27f29445db35d3353daddde0a4d90914d0ff0c6015a5b",
+      "prompt_utf8_sha256": "3e383252ba6e3876e55f000207b9a13181dfd9bbb32f5f35711d8d87f346ce37",
+      "ordered_references": [
+        {
+          "ordered_index": 1,
+          "actual_path": "D:/.ai-work/worktrees/johnny-cartoon-front-refresh/art/cartoon/walk-pilot/front-refresh-v1/029-pose-v1.png",
+          "sha256": "39566864b89ae90ceb1d0eb7aa22082268f95cc24ae7cbadcd01a8e47b76330f",
+          "canvas": [
+            1024,
+            1536
+          ]
+        }
+      ],
+      "tool_output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-eb86983c-c1dd-4eb4-a310-b624752e663c.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "output": {
+        "file": "029-heel-fit-v2.png",
+        "sha256": "e8efc7e91972fc7dca1bb3080a3cddc38b4e7519cb4fb7aaf98c31a1acbb922a",
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "disposition": "Provisional motion-review source; raised-heel contour narrowed.",
+      "pixel_identity_outside_requested_region": false
+    }
+  ],
+  "next_review": "Full six-pose walk using unchanged approved024-027 plus provisional028/029.",
+  "motion_approved": false,
+  "production_promoted": false
+}

@@ -16,6 +16,12 @@ adds six poses with its own [continuity and fit lessons](art-style-learnings-rea
 The [rear arrival pose](../art/cartoon/arrival-pilot-v1/README.md) adds standing
 frame 018 and [arrival lessons](art-style-learnings-arrival.md) about contact,
 registration and preserving the real transition.
+The [front walk refresh](../art/cartoon/walk-pilot/front-refresh-v1/README.md)
+is an approved 028/029 replacement with its own
+[hip connection and occlusion lessons](art-style-learnings-front-refresh.md).
+Its standalone motion and native island scene are approved. The other 26 assets
+keep their earlier approvals through explicit selected inheritance; the original
+pilot's drawings and pose observations remain preserved as history.
 Each family retains its actual human review; aggregate pack approvals explicitly
 inherit earlier reviewed assets rather than silently replacing their provenance.
 

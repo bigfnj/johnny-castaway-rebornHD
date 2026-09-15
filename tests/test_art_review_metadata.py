@@ -9,6 +9,7 @@ import tempfile
 import unittest
 from pathlib import Path
 from unittest.mock import patch
+from art_pilot_fixture import legacy_pilot
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "tools"))
@@ -47,7 +48,7 @@ class MetadataTests(unittest.TestCase):
                 mutate(label, value)
             return value
 
-        with patch.object(m, "read_json", side_effect=changed):
+        with legacy_pilot(ROOT), patch.object(m, "read_json", side_effect=changed):
             return m.build(ROOT)
 
     def refused(self, callback, label, reason):
@@ -75,9 +76,10 @@ class MetadataTests(unittest.TestCase):
         self.assertEqual(reference["assets"]["SCR/OCEAN02.SCR.png"]["transparent_index"], None)
 
     def test_reproduction_and_classification(self):
+        live = m.build(ROOT)
+        self.assertEqual(json.loads((ROOT / (m.OUTPUT + ".json")).read_text()), live)
+        self.assertEqual((ROOT / (m.OUTPUT + ".md")).read_text(), m.markdown(live))
         result = self.report()
-        self.assertEqual(json.loads((ROOT / (m.OUTPUT + ".json")).read_text()), result)
-        self.assertEqual((ROOT / (m.OUTPUT + ".md")).read_text(), m.markdown(result))
         self.assertFalse(result["motion"]["original_executable_timing_verified"])
         self.assertEqual({x["comparison"]["artistic_fidelity"] for x in result["assets"]}, {"unverified-by-this-tool"})
         self.assertEqual(sum(bool(x["comparison"]["recorded_deviations"]) for x in result["assets"]), 9)
@@ -304,7 +306,7 @@ class MetadataTests(unittest.TestCase):
                 value["acceptance_record"] = active
             return [] if label == active else value
         with patch.object(m, "read_json", side_effect=changed):
-            self.refused(lambda: m.build(ROOT), m.PACK, "invalid inherited acceptance record")
+            self.refused(lambda: self.report(), m.PACK, "invalid inherited acceptance record")
 
     def test_inherited_pilot_list_shape(self):
         self.refused(lambda: self.inherited_pilot(lambda d: d.update(inherited_acceptances=None)),
@@ -635,7 +637,7 @@ MUTATIONS = [
     ("test_recipe_coverage", 'set(rows) == set(recipe["required_assets"])'),
     ("test_raw_bundle_hash", 'digest((root / bundle_path).read_bytes()) == bundle["sha256"]'),
     ("test_raw_selected_hash", 'digest(data) == row["source_sha256"]'),
-    ("test_production_hash", 'digest(data) == item["sha256"]'),
+    ("test_production_hash", 'digest(data) == production_item["sha256"]'),
     ("test_xpm_count_guard", 'len(strings) == 1 + colors + height'),
     ("test_xpm_palette_guard", 'match is not None and match[1] in "0123456789abcdef" and match[1] not in palette'),
     ("test_missing_hd_timeline", 'set(timing["frames"]) == {"hd", "cartoon"}'),

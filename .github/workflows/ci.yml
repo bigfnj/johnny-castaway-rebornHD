@@ -73,12 +73,16 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # Authoring metadata uses only Python's standard library and Git. Check it
-      # once here; native runtime fixtures do not depend on the art work history.
+      # Check catalog reproduction here; source preservation and approval-history
+      # transitions also run on the other supported hosts below.
       - name: Cartoon authoring smoke, regression and reproduction
         run: |
+          python3 -B tests/test_art_inventory.py --smoke
+          python3 -B tests/test_art_pilot_history.py --phase smoke
           python3 -B tests/test_art_review_metadata.py --phase smoke
           python3 -B tests/test_art_production_catalog.py --phase smoke
+          python3 -B tests/test_art_inventory.py
+          python3 -B tests/test_art_pilot_history.py --phase regression
           python3 -B tests/test_art_review_metadata.py --phase regression
           python3 -B tests/test_art_production_catalog.py --phase regression
           python3 -B tools/art_review_metadata.py --check
@@ -108,6 +112,13 @@ jobs:
     runs-on: macos-15-intel
     steps:
       - uses: actions/checkout@v7
+
+      - name: Art inventory and approval history smoke, then regression
+        run: |
+          python3 -B tests/test_art_inventory.py --smoke
+          python3 -B tests/test_art_pilot_history.py --phase smoke
+          python3 -B tests/test_art_inventory.py
+          python3 -B tests/test_art_pilot_history.py --phase regression
 
       # THIS JOB EXISTS BECAUSE macOS WAS BUILT NOWHERE. platform_macos.m is 634
       # lines of Objective-C that had never been compiled, on any machine, while
@@ -150,6 +161,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+
+      - name: Art inventory and approval history smoke, then regression
+        run: |
+          python3 -B tests/test_art_inventory.py --smoke
+          python3 -B tests/test_art_pilot_history.py --phase smoke
+          python3 -B tests/test_art_inventory.py
+          python3 -B tests/test_art_pilot_history.py --phase regression
 
       # The official SDK image is pinned by digest in the shared builder. It
       # avoids setup-emsdk's GitHub/codeload download and action Node runtime.

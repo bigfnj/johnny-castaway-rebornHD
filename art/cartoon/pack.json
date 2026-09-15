@@ -183,19 +183,19 @@
     },
     {
       "path": "BMP/JOHNWALK.BMP/028.png",
-      "sha256": "50e7eb8717283e3a532a8237f1b0e96c2d0e4314080e2f985b6b928e5dee9167",
+      "sha256": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4",
       "source_sha256": "a387e9b663b2646c0a39e346106cbed59c8603b30503a4e6f3a445efa287d12a",
       "alpha": "transparent",
-      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
-      "review": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json"
+      "recipe": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+      "review": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json"
     },
     {
       "path": "BMP/JOHNWALK.BMP/029.png",
-      "sha256": "ac6907347ace18d909c09cd00ba6c1de65180bcfcdd43142ec0e00062bc17d15",
+      "sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
       "source_sha256": "091f4690aaab8af69120b4cfcd819c96db711f8ef30609773310e09c7dcdcfd9",
       "alpha": "transparent",
-      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
-      "review": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json"
+      "recipe": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+      "review": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json"
     },
     {
       "path": "SCR/OCEAN02.SCR.png",
@@ -262,7 +262,15 @@
       "review": "art/cartoon/arrival-pilot-v1/production-acceptance.json"
     }
   ],
-  "review_status": "Human approved the rear-oblique walking family in the layered island scene on 2026-09-15. The prior twenty-one accepted assets retain their earlier review records.",
-  "acceptance_record": "art/cartoon/arrival-pilot-v1/production-acceptance.json",
-  "scope": "Partial pack: twelve walking poses and fifteen island assets; other states and animations use HD/original fallback. The rear-oblique arrival pose still uses HD artwork."
+  "review_status": "Human approved revised front walking frames 028/029 in standalone motion and the native E-to-A island route on 2026-09-15. The other twenty-six accepted assets retain their earlier review records.",
+  "acceptance_record": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json",
+  "scope": "Partial pack: twelve walking poses, Cartoon standing pose 018 and fifteen island assets. Front arrival pose 017 and other states and animations use HD/original fallback.",
+  "pilot_history": {
+    "acceptance_record": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+    "sha256": "ce7f3832982bcfbef13f9ce6dc06c1f60ce774b89aca088247442040fd767a0c",
+    "replaced_assets": [
+      "BMP/JOHNWALK.BMP/028.png",
+      "BMP/JOHNWALK.BMP/029.png"
+    ]
+  }
 }

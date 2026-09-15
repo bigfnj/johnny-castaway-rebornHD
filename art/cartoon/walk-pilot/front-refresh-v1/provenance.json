@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "date": "2026-09-15",
+  "scope": "Front-oblique028 pose development; production unchanged.",
+  "preservation": "Exact returned PNG bytes. No local artistic repainting, crop, warp, alpha cleanup or source resampling.",
+  "generation_is_not_deterministic": "Exact outputs are retained; identical prompts do not promise reproducible generation.",
+  "source_preparation": "Original PNG RGBA checked against cartoon-original-reference.json; integer nearest enlargement only. Approved raw024 extracted by named member and hash from calm-focus-runtime-v1/source-images.zip.",
+  "reference_record": "reference/source.json",
+  "reference_record_sha256": "60fdd3cc21f6ebdcf065c88e637baf432bf9107c3050463381efadb5ccc15261",
+  "attempts": [
+    {
+      "id": "028-pose-v1",
+      "call_file": "028-call-v1.json",
+      "call_file_sha256": "0b4b635672592c0fd550fac575ac00f2ff210fc3e084c4fcbfd7cc7b13e99e0c",
+      "prompt_utf8_sha256": "4f3d5d91327d852aad356b42364a3e436b5267b50fea90bca85cbb4f20dc754b",
+      "ordered_references": [
+        {
+          "ordered_index": 1,
+          "actual_path": "D:/.ai-work/worktrees/johnny-cartoon-front-refresh/art/cartoon/walk-pilot/front-refresh-v1/reference/028-original-nearest16.png",
+          "sha256": "e405b6261b56e907a2051d10b5c8c9a10f8fb9a785db22415a3eb8935f14ed4e",
+          "canvas": [
+            512,
+            1152
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "actual_path": "D:/.ai-work/worktrees/johnny-cartoon-front-refresh/build/front-refresh/approved/024-calm-pose-v2.png",
+          "sha256": "13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb",
+          "canvas": [
+            1024,
+            1536
+          ]
+        }
+      ],
+      "tool_output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-1fa12507-0f8a-483f-9388-6a27ffbbe1bc.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "output": {
+        "file": "028-pose-v1.png",
+        "sha256": "9f593d22f5726bb1ad5ff26b9e491ed40289803c9268332329f6545fd3790d6d",
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "disposition": "not selected by agent: old hip-to-leg connection retained"
+    },
+    {
+      "id": "028-pose-v2",
+      "call_file": "028-call-v2.json",
+      "call_file_sha256": "c689ca4dd42443b5e4afd30322eabfbf1c0da114a502e7965226cc384474b000",
+      "prompt_utf8_sha256": "64241c1a928eb7352b37f04e907e7bda329fddff112fc9f9cb1dcc4a994aa5d8",
+      "ordered_references": [
+        {
+          "ordered_index": 1,
+          "actual_path": "D:/.ai-work/worktrees/johnny-cartoon-front-refresh/art/cartoon/walk-pilot/front-refresh-v1/028-pose-v1.png",
+          "sha256": "9f593d22f5726bb1ad5ff26b9e491ed40289803c9268332329f6545fd3790d6d",
+          "canvas": [
+            1024,
+            1536
+          ]
+        },
+        {
+          "ordered_index": 2,
+          "actual_path": "D:/.ai-work/worktrees/johnny-cartoon-front-refresh/art/cartoon/walk-pilot/front-refresh-v1/reference/028-original-nearest16.png",
+          "sha256": "e405b6261b56e907a2051d10b5c8c9a10f8fb9a785db22415a3eb8935f14ed4e",
+          "canvas": [
+            512,
+            1152
+          ]
+        }
+      ],
+      "tool_output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-953916c9-d20e-4d3c-a654-92189917a8d8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "output": {
+        "file": "028-pose-v2.png",
+        "sha256": "85bc5d6ceabed54f75f850b6cd0b6b6fc3b86844636187233f885f448ad2f005",
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "disposition": "superseded by targeted toe-fit draft; hip connection visually plausible, not anatomically proved"
+    },
+    {
+      "id": "028-foot-fit-v3",
+      "call_file": "028-call-v3.json",
+      "call_file_sha256": "f04af3d33f499ca30527239bb495c2b72d484e9eedc21a904d7108d2c0d2a804",
+      "prompt_utf8_sha256": "d7c6d05c075c1cc1a985e1e6171bcb195a744685b1cb1fa8f22b7bfe3597115a",
+      "ordered_references": [
+        {
+          "ordered_index": 1,
+          "actual_path": "D:/.ai-work/worktrees/johnny-cartoon-front-refresh/art/cartoon/walk-pilot/front-refresh-v1/028-pose-v2.png",
+          "sha256": "85bc5d6ceabed54f75f850b6cd0b6b6fc3b86844636187233f885f448ad2f005",
+          "canvas": [
+            1024,
+            1536
+          ]
+        }
+      ],
+      "tool_output_hint": "Generated images are saved to C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75 as C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-ceef14b4-43eb-4336-bea0-62c6163aecad.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "output": {
+        "file": "028-foot-fit-v3.png",
+        "sha256": "f17e13806f13a738218409f308aefb8069e623faaa239babe89b98c093d6fc25",
+        "canvas": [
+          1024,
+          1536
+        ]
+      },
+      "disposition": "pending human static-pose review; no motion or production approval"
+    }
+  ],
+  "human_review": {
+    "status": "pending",
+    "url": "http://127.0.0.1:8932/front-refresh-028-v1/review.html",
+    "question": "In the new frame 028 comparison, does the right-hand draft show a natural forward-leg connection and shorts shape? Please also flag if the smaller trailing foot looks too high.",
+    "review_html_sha256": "07ddb4e4553107c3f3be79e3652276d66edc5100a48624133eca7c74078af69c",
+    "reviewed_candidate_sha256": "f17e13806f13a738218409f308aefb8069e623faaa239babe89b98c093d6fc25",
+    "motion_approved": false,
+    "production_promoted": false
+  }
+}

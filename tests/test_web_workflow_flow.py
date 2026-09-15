@@ -1,7 +1,7 @@
-"""Execute CI/release Web test commands with deterministic command witnesses.
+"""Execute CI authoring and CI/release Web commands with command witnesses.
 
 This checks GitHub bash step ordering/failure propagation. Actual compilation,
-browser tests and platform probes run separately in those same workflows.
+browser tests, authoring suites and platform probes run separately in those workflows.
 """
 import argparse
 import hashlib
@@ -16,6 +16,7 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED = ['platform-smoke', 'browser-smoke', 'logging-smoke', 'platform-regression',
             'audio-regression', 'logging-regression', 'selector-regression', 'build-regression']
+AUTHORING = ['inventory-smoke', 'history-smoke', 'inventory-regression', 'history-regression']
 
 
 def commands(source):
@@ -31,6 +32,13 @@ def commands(source):
     return result
 
 
+def authoring_commands(source, job):
+    body = source.split('\n  ' + job + ':\n', 1)[1]
+    body = re.split(r'\n  [A-Za-z][^\n]*:\n', body, maxsplit=1)[0]
+    return [line.strip() for line in body.splitlines()
+            if re.match(r'\s+python3 -B tests/test_art_(?:inventory|pilot_history)\.py(?:\s|$)', line)]
+
+
 def execute(work, name, sequence, fail='none'):
     folder = work / name; folder.mkdir()
     driver = folder / 'python'
@@ -38,7 +46,9 @@ def execute(work, name, sequence, fail='none'):
 import os, sys
 a = sys.argv[1:]
 joined = ' '.join(a)
-if 'build_web.py' in joined: stage = 'platform-' + a[a.index('--platform-probes') + 1]
+if 'test_art_inventory.py' in joined: stage = 'inventory-' + ('smoke' if '--smoke' in a else 'regression')
+elif 'test_art_pilot_history.py' in joined: stage = 'history-' + a[a.index('--phase') + 1]
+elif 'build_web.py' in joined: stage = 'platform-' + a[a.index('--platform-probes') + 1]
 elif 'web-smoke.py' in joined: stage = 'browser-smoke'
 elif 'web-logging.py' in joined: stage = 'logging-' + a[a.index('--phase') + 1]
 elif 'web-audio-timing.py' in joined: stage = 'audio-regression'
@@ -64,18 +74,39 @@ if stage == os.environ['JCR_WEB_FAIL']:
     return result.returncode, text, trace
 
 
-def oracle(path, fail, result):
+def oracle(path, fail, result, stages=EXPECTED, kind='Web'):
     code, text, trace = result
     print(f'WITNESS {path}: {fail} ordering assertion executed', flush=True)
     if fail == 'none':
-        assert code == 0 and trace == EXPECTED, f'{path}: Web smoke/regression command order differs: {trace}'
+        assert code == 0 and trace == stages, f'{path}: {kind} smoke/regression command order differs: {trace}'
     else:
-        expected = EXPECTED[:EXPECTED.index(fail) + 1]
+        expected = stages[:stages.index(fail) + 1]
         assert code == 43 and text.count('FAIL fixture ' + fail) == 1 and trace == expected, f'{path}: {fail} failure reached later tests or lost its status'
 
 
 def verify(work, mutations):
     records = []
+    source = (ROOT / '.github/workflows/ci.yml').read_text(encoding='utf-8')
+    for job in ('linux', 'macos', 'web'):
+        path = '.github/workflows/ci.yml (' + job + ')'
+        sequence = authoring_commands(source, job)
+        for fail in ['none'] + AUTHORING:
+            result = execute(work, 'authoring-' + job + '-' + fail, sequence, fail)
+            oracle(path, fail, result, AUTHORING, 'authoring')
+        if mutations:
+            for index, stage in enumerate(AUTHORING):
+                changed = sequence[:index] + sequence[index + 1:]
+                result = execute(work, 'authoring-' + job + '-omit-' + stage, changed)
+                assert result[0] == 0 and result[2] == AUTHORING[:index] + AUTHORING[index + 1:], (
+                    f'{path}: omission mutant did not execute the remaining command witnesses')
+                try: oracle(path, 'none', result, AUTHORING, 'authoring')
+                except AssertionError as exc:
+                    expected = f'{path}: authoring smoke/regression command order differs: {result[2]}'
+                    assert str(exc) == expected, f'wrong authoring wiring mutation failure: {exc}'
+                    records.append({'file': path, 'mutation': 'omitted-' + stage, 'result': 'FIRED',
+                                    'failure': str(exc), 'trace': result[2]})
+                    print(f'FIRED 1/1 {path}: omitted {stage}', flush=True)
+                else: raise AssertionError(f'{path}: {stage} omission survived')
     for name in ('ci', 'release'):
         path = '.github/workflows/' + name + '.yml'
         source = (ROOT / path).read_text(encoding='utf-8')
@@ -113,7 +144,7 @@ def main():
             with tempfile.TemporaryDirectory(prefix='jcr-web-flow-') as path: verify(Path(path), args.mutations)
     except (AssertionError, OSError, subprocess.SubprocessError) as exc:
         print(f'FAIL {exc}'); return 1
-    print('PASS Web workflow ordering; execution uses command fixtures, actual Web tests remain separate')
+    print('PASS Web and authoring workflow ordering; command fixtures run separately from actual suites')
     return 0
 
 

@@ -22,6 +22,8 @@ in `BACKLOG.md`.
 | [Layered island pilot](../art/cartoon/island-pilot-v1/README.md) | All 15 island assets, source bundles, technical verification and scene review status |
 | [Scene acceptance](../art/cartoon/island-pilot-v1/acceptance.json) | The exact 21 assets and preserved motion preview approved with "approved, it looks great" |
 | [Static island sources](../art/cartoon/island-pilot-v1/palm-sand-cloud/README.md) | Palm, sand and cloud prompts, selected ancestry, failed edits and verified exports |
+| [Front walk refresh lessons](art-style-learnings-front-refresh.md) | Hip and shorts connection, far-arm occlusion, original shadows versus foot contact, and preserved approval history |
+| [Front walk refresh bundle](../art/cartoon/walk-pilot/front-refresh-v1/README.md) | Exact 028/029 drafts and prompts, retained 024-027, frozen comparison inputs and separate approvals of standalone motion and the native island scene |
 
 ## Engine constraints that every style inherits
 

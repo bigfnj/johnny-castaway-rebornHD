@@ -1,0 +1,14 @@
+{
+  "url": "http://127.0.0.1:8932/front-refresh-island-v1/review.html",
+  "html_sha256": "e4b7c8a87762a5736b1e157f13c00d50a3d7d917d70e4ffc5d312db162ebc4f0",
+  "publisher_sha256": "bff54d9308c351218613a66821fc0edad78716aaa12d8b8cb7d39f3931acad6d",
+  "served_file_count": 95,
+  "smoke_passed": true,
+  "regressions_after_smoke": [
+    "47 native display times and 94 rendered RGBA identities; final arrival stops",
+    "fixed close-up preserves exact arrival pixels",
+    "full-island aspect and 1280px layout; no JavaScript errors"
+  ],
+  "negative_control": "changed served HTML produces one named identity failure",
+  "scope": "Publication of previously captured native route; no additional human acceptance."
+}

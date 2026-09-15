@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "summary": {
+    "status": "PASS",
+    "phases": [
+      "smoke",
+      "full",
+      "repeat"
+    ],
+    "production_assets": 28,
+    "archive_sha256": "0748676eb6ab0685abecfeb0bbfb8547d2050e6419bb1cad5f13ccc9f716fedd",
+    "archive_members": 2579,
+    "executable_sha256": "ac2b28b83dfa7d4b32d2f90b2ae37ab6f82ce4491eac5d5ed1bddce03c8ec947",
+    "protected_inputs_unchanged": 60,
+    "path_seed": 2,
+    "display_count": 47,
+    "duration_ms": 4360,
+    "first_walk": [
+      0,
+      394,
+      212,
+      28
+    ],
+    "last_walk": [
+      0,
+      300,
+      242,
+      27
+    ],
+    "arrival": [
+      1,
+      293,
+      243,
+      17
+    ],
+    "repeat": "fresh native process, exact per-display RGB and PNG hashes, timing, draw dispatch and art dependencies",
+    "scope": "Baseline only. No candidate ZIP, publishing, production source edit or original-executable claim."
+  },
+  "canvas_union_hd_xyxy": [
+    586,
+    424,
+    852,
+    636
+  ],
+  "files_sha256": {
+    "prepare.py": "ab41cfc54d9e83b317e0f25208036936a5be862070245169ad132d489f65bf2d",
+    "capture.py": "00ab987e8dbd1bcb4144ca990862fd6b6be832a765de8ee53f54a2b6a4c856ae",
+    "route_driver.c": "146d0caa13aab68f1984e04860ff35423d926e75734c661529a9f233fa4dc342",
+    "preparation.json": "bf38b29b85debc7e5acb67911992af619d6e5b65c0357d2c2736558b7ded5ded",
+    "baseline-v1/build.json": "4f9adc6d1cdb95b4bb329af90e926bf16b78208a32d486669ec0c73cce003b55",
+    "baseline-v1/route-contract.json": "899adcca2d4a0691e7e8f9b736d72d6895ee5903d90fc399775b4fec249d88ef",
+    "baseline-v1/summary.json": "c97672489ce18cc558b4c54fb9e54b085d493d5699d7c2a9e33afde16567a375",
+    "baseline-v1/smoke/report.json": "5b431c3755715c5b551b8f786ef64652f4b07930db13889d4584f118d8d50371",
+    "baseline-v1/full/report.json": "7320d68801307c698582b11749875b63f22d2fcfd0fb29cae55f9aea022ad65f",
+    "baseline-v1/repeat/report.json": "67672c81750ba6038d9508f13539bbb29ac3f5da85ef1efa6b5149cc22640864"
+  },
+  "scope": "Scratch baseline only. Captures are native composited pixels; bounds are full canvases, not silhouette fits."
+}

@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "smoke_checks": 2,
+  "regressions_after_smoke": 13,
+  "executed_source_mutations": [
+    {
+      "helper": "export.py",
+      "case": "test_input_identity",
+      "sha256": "f43bcaa759195c4afff267af6ad54c8423f539f209060634061500f1a250343d",
+      "result": "exactly-one-witnessed-test-failure"
+    },
+    {
+      "helper": "export.py",
+      "case": "test_source_identity",
+      "sha256": "9c45811c4dd9ff478ac240dcf1b984bfb6450d2a7accb81379d58faaee4c4577",
+      "result": "exactly-one-witnessed-test-failure"
+    },
+    {
+      "helper": "export.py",
+      "case": "test_registration",
+      "sha256": "47f8d9d8c953d0bc64f94776e79b601d1c3d1a76808f45bc0552201e54ac4b0a",
+      "result": "exactly-one-witnessed-test-failure"
+    },
+    {
+      "helper": "export.py",
+      "case": "test_runtime_canvas",
+      "sha256": "41d55ba10f20ff19c3ba34be349f9a5484d54acf7069753aeb4fddbb8bb71980",
+      "result": "exactly-one-witnessed-test-failure"
+    },
+    {
+      "helper": "export.py",
+      "case": "test_pillow_contract",
+      "sha256": "b47b6d9ece64c253315c3e44dfdecd0b01f04a27cbbc1bd10c0ca8a06c4c9748",
+      "result": "exactly-one-witnessed-test-failure"
+    },
+    {
+      "helper": "export.py",
+      "case": "test_runtime_overhang",
+      "sha256": "1376f4527a46d55bb9812a29974c4afabc08864cbe267292cb079b8b189fb775",
+      "result": "exactly-one-witnessed-test-failure"
+    },
+    {
+      "helper": "export.py",
+      "case": "test_output_identity",
+      "sha256": "965d6eabd86260061a1b9be31d0103942eae49924dafe42032aadb6234c1fe54",
+      "result": "exactly-one-witnessed-test-failure"
+    },
+    {
+      "helper": "export.py",
+      "case": "test_smoke_export",
+      "sha256": "3568efc5b0343d4a07fb25189ad559717bfbb15645e358a6cc2f279ec57d7491",
+      "result": "exactly-one-witnessed-test-failure"
+    },
+    {
+      "helper": "review.py",
+      "case": "test_wrong_route_refused",
+      "sha256": "1eca7338c779f1ce8f353345a7b13fcb7a028c18c42f8cf0b6b3a81edc11c616",
+      "result": "exactly-one-witnessed-test-failure"
+    },
+    {
+      "helper": "review.py",
+      "case": "test_browser_controls",
+      "sha256": "61f5d6e29b97c509e667efe74e34be012c3c0535a2d5936da2d4812f86435b28",
+      "result": "exactly-one-witnessed-test-failure"
+    }
+  ],
+  "source_sha256": {
+    "export.py": "93b545b37033f572adaaa511271de177cfcf98971f54e32f534d1159b8ff7186",
+    "review.py": "9dfa19339d164c850316195780a5f0a0df44d625fa026230a189726553acf03c",
+    "test_tools.py": "11ca971ff0cf0bbc82b75182e1f97e8f8a40ccc75c6a2ea70c02727a8489d7fd"
+  },
+  "frozen_reproduction": {
+    "export_outputs": "all recorded PNGs equal",
+    "review_files_equal": 20,
+    "review_record_equal": true
+  },
+  "candidate_browser_report_sha256": "0387a8fee7353738b70696800a1934b17bde2560124954134f17ca93a1c44e2d",
+  "scope": "Technical helpers and provisional standalone candidate only. No production promotion, human motion approval, or native capture."
+}
