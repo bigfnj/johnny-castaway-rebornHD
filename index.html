@@ -135,7 +135,10 @@
                     document.title = 'Johnny Castaway Reborn - error';
                 }
                 var marker = '... [truncated]';
-                var retained = text.length > 4096 ? text.slice(0, 4096 - marker.length) + marker : text;
+                // Materialize the bounded prefix: a substring can otherwise keep
+                // the entire original message's backing storage alive in V8.
+                var retained = text.length > 4096 ?
+                    text.slice(0, 4096 - marker.length).split('').join('') + marker : text;
                 jcLog.push(retained);
                 // Preserve the initial 64 messages and the most recent 448.
                 if (jcLog.length > 512) jcLog.splice(64, jcLog.length - 512);
