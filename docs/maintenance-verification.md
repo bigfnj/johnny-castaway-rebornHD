@@ -89,11 +89,19 @@ all ten ADS and 40 of 41 TTM decoded streams are identical. The report records t
 remaining script edit, omitted bitmap and unused script variants without claiming
 complete behavioral parity.
 
-The inventory generator passed 20 behavioral controls followed by 18 isolated
+The inventory generator passed 22 behavioral controls followed by 19 isolated
 compiled-source mutations. Each mutant required an advanced artifact timestamp,
 an executed function witness and exactly one intended failure naming the source.
 A fresh production dump matched all 2,452 golden files, and fresh JSON/Markdown
 generation was byte-identical. The original input hashes remained unchanged.
+
+Documentation review caught checkout-dependent text fingerprints. Schema 2 now
+hashes strict UTF-8 text with LF-normalized newlines and labels those fields
+explicitly; binary inputs retain exact-byte hashes. A real Git checkout with
+core.autocrlf=true produced CRLF source files, retained LF generated reports and
+regenerated without differences. Removing either scoped report line-ending rule
+produced exactly one named report mismatch. Independent review also verified all
+local knowledge-base links, catalog IDs, source records and original identities.
 
 The supplied original launched in DOSBox and was then relaunched successfully
 in a window at the user's request. Its hashes, launch recipe and observed scope
