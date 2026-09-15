@@ -54,6 +54,15 @@ exit 0
     trace=(folder/'witness.log').read_text()
     return proc.returncode,text,trace,folder
 
+def assert_case(mode, code, text, trace):
+    if mode in ('clean', 'warning'):
+        assert code == 0 and trace.splitlines() == ['WITNESS build-executed', 'WITNESS png-smoke', 'WITNESS dump-regression'], f'tests/unix-build.sh: {mode} control did not reach smoke then regression'
+    elif mode == 'build-fail':
+        assert code == 23 and text.count('FAIL tests/unix-build.sh: CMake build failed') == 1 and trace.splitlines() == ['WITNESS build-executed'], 'tests/unix-build.sh: failed build reached smoke/regression or lost its diagnostic/status'
+    else:
+        assert code == 31 and text.count('FAIL tests/test_png_decoder.c: fixture rejected') == 1 and trace.splitlines() == ['WITNESS build-executed', 'WITNESS png-smoke'], 'tests/unix-build.sh: failed PNG smoke reached regression'
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__); parser.add_argument('--work',type=Path); parser.add_argument('--mutations',action='store_true'); args=parser.parse_args()
     original=SCRIPT.read_text(encoding='utf-8')
@@ -61,12 +70,7 @@ def main():
         records=[]
         for mode in ('clean','warning','build-fail','smoke-fail'):
             code,text,trace,folder=run_case(work,original,mode,mode)
-            if mode in ('clean','warning'):
-                assert code==0 and trace.splitlines()==['WITNESS build-executed','WITNESS png-smoke','WITNESS dump-regression'], f'tests/unix-build.sh: {mode} control did not reach smoke then regression'
-            elif mode=='build-fail':
-                assert code==23 and text.count('FAIL tests/unix-build.sh: CMake build failed')==1 and trace.splitlines()==['WITNESS build-executed'], 'tests/unix-build.sh: failed build reached smoke/regression or lost its diagnostic/status'
-            else:
-                assert code==31 and text.count('FAIL tests/test_png_decoder.c: fixture rejected')==1 and trace.splitlines()==['WITNESS build-executed','WITNESS png-smoke'], 'tests/unix-build.sh: failed PNG smoke reached regression'
+            assert_case(mode, code, text, trace)
             records.append({'case':mode,'status':code,'trace':trace.splitlines()})
             print(f'PASS tests/unix-build.sh: {mode}',flush=True)
         if args.mutations:
@@ -75,8 +79,14 @@ def main():
             mutant=original.replace(needle,'    : # disabled build-failure exit')
             code,text,trace,folder=run_case(work,mutant,'build-fail','mutant')
             assert code==0 and 'WITNESS dump-regression' in trace and text.count('FAIL tests/unix-build.sh: CMake build failed')==1, 'tests/unix-build.sh: mutation did not execute the bad continuation'
-            records.append({'mutation':'disabled build failure exit','result':'FIRED','named_failure':'tests/unix-build.sh: failed build reached smoke/regression','executed_trace':trace.splitlines(),'mutant_script_sha256':hashlib.sha256((folder/'unix-build.sh').read_bytes()).hexdigest()})
-            print('FIRED 1/1 tests/unix-build.sh: disabled build exit reaches regression and ordering oracle rejects it',flush=True)
+            try:
+                assert_case('build-fail', code, text, trace)
+            except AssertionError as exc:
+                assert str(exc) == 'tests/unix-build.sh: failed build reached smoke/regression or lost its diagnostic/status', f'Wrong mutation failure: {exc}'
+                records.append({'mutation':'disabled build failure exit','result':'FIRED','named_failure':str(exc),'executed_trace':trace.splitlines(),'mutant_script_sha256':hashlib.sha256((folder/'unix-build.sh').read_bytes()).hexdigest()})
+                print(f'FIRED 1/1 {exc}',flush=True)
+            else:
+                raise AssertionError('tests/unix-build.sh: disabled exit mutation survived')
         (work/'report.json').write_text(json.dumps({'status':'PASS','checks':records},indent=2)+'\n',encoding='utf-8')
     try:
         if args.work:
