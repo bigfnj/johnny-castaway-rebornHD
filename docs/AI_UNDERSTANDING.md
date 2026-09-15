@@ -158,7 +158,7 @@ argument. Its actual back-to-front order is:
 1. Background screen with static island and current waves.
 2. Clouds.
 3. Saved-zone overlay, when present.
-4. Active TTM layers in slot order.
+4. Active TTM layers in thread-array order.
 5. Holiday overlay.
 
 It then waits for the frame tick and presents the composed window surface.
@@ -218,6 +218,7 @@ not as fixed counts in this guide.
 | [Golden dump](../tests/Invoke-DumpRegression.ps1), [Unix build](../tests/unix-build.sh) | Original-resource decode output matches the checked-in corpus; no PNG rendering is exercised by dump. |
 | [Decoder tests](../tests/test_uncompress.py) | Complete/short output and preserved LZW early-return behavior through compiled code and real resource fixtures. |
 | [Lifecycle tests](../tests/test_lifecycle.py) | Real engine ownership with tracked Windows surface allocations and no window; the benchmark uses a test-only clock. |
+| [Platform probes](../tests/platform-cleanup.md) | Backend allocation/event behavior, real pthread ownership, X11 resized-client pixels and the Web mono callback contract; physical devices and desktop fullscreen are separate checks. |
 | [Art integration](../tests/Invoke-ArtStyleTests.ps1), [waves](../tests/test_wave_renderer.py), [palm](../tests/test_palm_renderer.py) | Actual native captures, alpha, fallback, geometry and relevant layering behavior. |
 | [Browser smoke](../tests/web-smoke.py), [selector tests](../tests/web-art-controls.py) | Host-browser runtime and style control behavior against a compiled Web build. |
 | [Authoring tests](../tests/test_art_tools.py) | Asset dimensions, source-byte preservation, declared scope and packaging contracts, not artistic quality. |

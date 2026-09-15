@@ -39,5 +39,33 @@ not a cross-platform RNG guarantee or full story coverage.
 
 ## Integration status
 
-Implementation phases and post-merge audit are pending. Append actual results
-as each phase passes; baseline success alone does not validate later changes.
+| Phase | Completed evidence |
+| --- | --- |
+| Native build reliability | Full Windows gate passed without warnings. The actual runtime-data module passed explicit console/screensaver, ALL and data target controls, alternate output paths and deleted-copy recovery without relinking. Both disabled prerequisite mutants failed the named freshness assertion. The isolated real-application wiring and stale-gate controls passed under PowerShell 5.1 and 7. |
+| Web/macOS build reliability | Official pinned 6.0.9 container compilation passed as root and UID 1001, followed by host browser smoke and all ten style-control regressions. Six executed build-contract mutants fired. Draft PR CI also passed the real Intel macOS architecture checks, including the compiled ARM64 negative control; no release was published. |
+| Decoder output validation | Two complete-stream smoke checks and all eleven decoder regressions passed, including malformed actual RESOURCE archives and the existing LZW full-buffer return. Full Windows gate passed without warnings. All eight controlled scene captures match the frozen baseline byte-for-byte. Three isolated rebuilt decoder mutants fired. |
+| Resource ownership | Two focused smoke checks and all five ownership regressions passed against real engine code and Windows surface allocation. Full Windows gate passed without warnings; all eight baseline scenes remain byte-identical. Ten isolated rebuilt ownership mutants fired, including inactive layers, borrowed aliases, reinitialization, saved overlays and repeated teardown. |
+| Platform integration | Windows constructor/WIC smoke passed before nine allocation-failure regressions, then the full native gate passed without warnings and all eight baseline scenes remained identical. Worker validation passed 19 Linux pthread/X11 cases and ten Web cases, plus Linux full-application HD/Cartoon startup and the golden corpus. Rebuilt backend mutants fired: 16 Linux, eight Windows and seven Web. Cocoa probes await CI; Xvfb resize checks do not establish desktop fullscreen negotiation. |
+| Final code/API integration | The complete integrated gate passed under Windows PowerShell 5.1 without compiler warnings. It includes the existing native/settings/art/wave/palm/authoring suites and golden corpus, plus decoder smoke then 11 regressions, ownership smoke then five regressions, and platform smoke then nine regressions. Four graphics-caller failure controls and their rebuilt mutants passed on Linux. Independent review confirmed unused-field removal preserves header consumption and EOF checking. All eight controlled scene captures match baseline. |
+| Historical renderer comparisons | Against the frozen baseline binaries, all nine complete HD/fallback wave captures and all four palm HD/partial-fallback captures matched byte-for-byte. The focused suites ran smoke before their seven wave and eight palm checks. |
+
+Local integrated logs are `build/cleanup/phase1-native-build/gate.log` and
+`build/cleanup/phase2-decoder/gate.log`, followed by
+`build/cleanup/phase3-ownership/gate.log`,
+`build/cleanup/phase4-platform/gate.log` and
+`build/cleanup/phase5-final-integrated/gate.log`. Capture evidence is in the
+corresponding `phase2-scenes` through `phase5-scenes` report directories.
+Historical comparisons are under `final-wave-history` and `final-palm-history`.
+Worker mutation reports are retained
+in their isolated build directories, and the corresponding commit messages
+record the results. Tests and reproduction commands are tracked in `tests/`.
+
+Draft PR CI run `34927812623` passed Windows, Linux, Web and macOS on `2b330e3`.
+It exercised Visual Studio 2022 runtime-data fixtures and real Intel package
+verification. An earlier Windows fixture failure exposed short/canonical path
+comparison and missing retained diagnostics; the test now resolves the reported
+path identity while still requiring the exact stale-data diagnostic and refusal
+before smoke. Executable hash/mtime and no-relink assertions were retained.
+
+That CI run predates final API cleanup and central platform-probe wiring. Final
+cross-platform CI, main delivery and the post-merge audit remain pending.

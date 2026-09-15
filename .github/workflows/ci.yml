@@ -107,9 +107,8 @@ jobs:
       # comparison against the Windows golden manifest works identically here and
       # catches any endianness, struct-packing or signed-char decode defect.
       #
-      # What this does NOT prove is that anything RENDERS. drawRect builds a
-      # CGImage from a top-down buffer and draws into an unflipped NSView, and
-      # whether that comes out upside down is still unsettled. See BACKLOG.md.
+      # Cocoa allocation/event probes accompany decode parity. Native scene
+      # presentation remains covered by the documented Sequoia manual review.
       - name: build and verify decode parity
         run: SRC=$GITHUB_WORKSPACE WORK=/tmp/jcr bash tests/unix-build.sh
 

@@ -245,21 +245,8 @@ static void grCaptureFrame(void)
 
 void graphicsEnd(void)
 {
-    /*  NO platformShutdown() here. eventsInit registers atexit(platformShutdown),
-     *  and every caller of this function exits immediately afterwards, so it ran
-     *  twice on every normal exit.
-     *
-     *  Checked before removing rather than assumed: the second call was harmless
-     *  on all four backends - Windows re-unregisters a window class that is
-     *  already gone and ignores the FALSE, Linux guards on `display` and NULLs
-     *  it, macOS releases an already-nil eventQueue, and the Web one is empty. So
-     *  this is redundancy, not a double-free, and removing it is a readability
-     *  fix rather than a bug fix.
-     *
-     *  The atexit registration is the one kept, because it also covers the paths
-     *  that never reach here: fatalError exits directly, and so does any future
-     *  abrupt teardown.
-     */
+    /* Capture before releasing graphics owners. Platform shutdown stays with
+     * eventsInit's atexit registration, which also covers fatalError exits. */
     if (platform_window) grCaptureFrame();
     grReleaseSavedLayer();
     grReleaseScreen();

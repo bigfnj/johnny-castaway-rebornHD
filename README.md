@@ -9,37 +9,24 @@ It is written in C and has been refactored to use platform-native APIs instead o
 | Platform | Backend | Built in CI | Decoders verified | Rendering verified |
 |---|---|---|---|---|
 | **Windows** | Win32 + WinMM (waveOut) | yes | yes | yes, automated |
-| **Linux** | X11 + ALSA | yes | yes | **no** |
+| **Linux** | X11 + ALSA | yes | yes | X11 resized-client pixels under Xvfb |
 | **Web** | HTML5 Canvas + Web Audio (Emscripten) | yes | yes | yes, automated |
-| **macOS** | Cocoa + CoreAudio | yes | yes | yes, by eye (2026-09-14) |
+| **macOS** | Cocoa + AudioToolbox | yes | yes | yes, manual Sequoia review (2026-09-14) |
 
-All four build on every push, and all four produce decode output byte-identical
-to the Windows golden corpus, 2,452 files.
+CI builds all four platforms on main pushes and pull requests. Windows, Linux
+and macOS compare all 2,452 original-resource dumps against the golden corpus.
+Web checks startup, rendering, responsiveness, audio scheduling and style controls
+in Chromium. A headless dump verifies decoding without drawing a window.
 
-**Rendering is the column to read carefully.** The cross-platform CI check runs
-`dump`, which never opens a window, so it proves the decoders agree and says
-nothing about drawing. Windows and Web have automated rendering assertions.
-macOS was confirmed by building it on Sequoia and looking at the window: correct
-orientation, correct colours. Linux has had neither, so its windowing and
-blitting code compiles on every push and is never executed.
+Linux presentation tests inspect real X11 windows after resize; desktop
+fullscreen negotiation and physical audio still need a desktop test. macOS
+orientation, colors, audio, input, fullscreen and resize were reviewed manually
+on Sequoia. Its automated backend probes cover allocation and event handling.
+See [BACKLOG.md](BACKLOG.md) for remaining checks and [build validation](tests/BUILD_VALIDATION.md)
+for the maintained test commands.
 
-**Building on macOS:** use `tools/build-macos.sh`, which needs only the Xcode
-Command Line Tools. Homebrew now refuses to install on Intel Macs, and CMake on
-macOS usually arrives through Homebrew, so the script uses `clang` directly. CI
-runs it on every push, so it stays working.
-
-Audio, input and fullscreen on macOS were all confirmed in the same session, and
-three real bugs came out of it. The close button left the process suspended
-instead of exiting, because the window had no delegate and AppKit destroyed it
-underneath the running engine. Fullscreen silently did nothing in either
-direction, because macOS will not go fullscreen on a window that is not
-resizable. And the frame was drawn at a fixed size that only looked right in a
-window sized to match it, so any other size put the image in a corner. All three
-are fixed.
-
-Only mouse input is still unexercised there, and it only matters in screensaver
-mode, which macOS has no concept of. See `BACKLOG.md` for exactly what is and is
-not proven.
+For a macOS build without CMake, use `bash tools/build-macos.sh` with the Xcode
+Command Line Tools. CI exercises that direct-Clang path as well as CMake.
 
 
 ## How to install
@@ -66,6 +53,9 @@ rebuilding the data archive from the original software.
 ## Building
 
 ### Prerequisites
+
+Native CMake builds require CMake 3.19 or newer. The test suites also use Python 3.
+Linux platform tests require Xvfb and xauth in addition to the build libraries.
 
 #### macOS
 ```bash
@@ -94,14 +84,9 @@ Studio 2026 - open it with anything older and it will not load. `cmake -S . -B
 build` is the supported path and is what CI and `gate.ps1` use.
 
 #### Web (Emscripten)
-```bash
-# Install Emscripten SDK
-git clone https://github.com/emscripten-core/emsdk.git
-cd emsdk
-./emsdk install latest
-./emsdk activate latest
-source ./emsdk_env.sh
-```
+
+Use Python 3 and Docker for the same pinned Emscripten 6.0.9 build as CI.
+An existing local 6.0.9 SDK remains usable for direct `emcmake` builds.
 
 ### Build Instructions
 
@@ -131,32 +116,15 @@ cmake --build .
 #### Web (Emscripten)
 
 ```bash
-# Make sure Emscripten is activated
-source /path/to/emsdk/emsdk_env.sh
-
-emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release
-cmake --build build_web -j
-
-# index.html and favicon.ico are SOURCES, not build output, and nothing in the
-# build copies them. Without this step build_web/ is not servable.
-cp index.html favicon.ico build_web/
-
-cd build_web && python3 -m http.server 8000
+python3 tools/build_web.py
+python3 -m http.server 8000 --directory build_web
 # then open http://localhost:8000/
 ```
 
-The build produces `jc_reborn.js`, `jc_reborn.wasm` and `jc_reborn.data`; the
-page is `index.html`. (Earlier revisions of this README told you to open
-`jc_reborn.html`, which this build has never produced, and used a `build-web`
-directory that does not match the one `scripts/build_web.ps1` creates.)
-
-No Emscripten install? The whole thing builds in a container:
-
-```bash
-docker run --rm -v "$PWD:/src" emscripten/emsdk:latest bash -c \
-  'cd /src && emcmake cmake -S . -B build_web -DCMAKE_BUILD_TYPE=Release \
-   && cmake --build build_web -j4 && cp index.html favicon.ico build_web/'
-```
+The wrapper compiles with the official SDK container pinned by digest, verifies
+the actual compiler and preload archive, and copies the page assets. The output
+contains `jc_reborn.js`, `jc_reborn.wasm`, `jc_reborn.data` and `index.html`.
+On Windows, use `python` if that is the installed command name.
 
 **Options in the browser.** The page reads them from the query string, so
 `index.html?args=window+nosound+seed+9+frames+400` passes `window nosound seed 9
@@ -352,9 +320,10 @@ rejected, so they do not get raised twice. The two sections below describe engin
 accuracy and are inherited from the upstream project; they predate the screensaver,
 the HD assets, the test suite and CI, so read them as history rather than status.
 
-Where it stands as of 2026-09-12: version 0.9.0, a real Windows `.scr` with `/s`,
-`/c` and `/p`, HD PNG assets on all four backends, real Web audio, and CI building
-and testing Windows, Linux and Web on every push. macOS is the gap.
+Current delivery includes the Windows screensaver, HD and the approved partial
+Cartoon style, four-platform CI, and the legacy cleanup documented in the backlog.
+Original-engine behavior still needs investigation for the reachable unfinished
+commands recorded in [the command review](docs/legacy-command-review.md).
 
 ### Short version
 Currently, Johnny reborn is in "work in progress" state. Every scene works with only some inaccuracies here and there.

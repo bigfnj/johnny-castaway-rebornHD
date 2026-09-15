@@ -258,13 +258,13 @@ jobs:
             | Platform | Status |
             |---|---|
             | **Windows x64** | Screensaver (`.scr`) + console build. Passes the full gate: native smoke, screensaver/settings tests, art regression and decode corpus |
-            | **Linux x86_64** | Builds and decodes correctly. **Rendering is unverified** |
+            | **Linux x86_64** | Build/decode parity, real pthread controls and X11 resized-client pixel checks under Xvfb. Desktop fullscreen and physical audio remain separate checks |
             | **Web** | Passes browser runtime smoke and art selector regression in headless Chromium before packaging |
-            | **macOS x86_64** | Automated build and decode parity. Rendering, audio and input last checked by hand on Sequoia on 2026-09-14 |
+            | **macOS x86_64** | Verified Intel architecture, build/decode parity and Cocoa allocation/event checks. Rendering, audio and input last checked by hand on Sequoia on 2026-09-14 |
 
-            All packages are built from the selected release tag. Windows and Web
-            have automated rendering assertions; the Unix decode checks do not
-            exercise their window backends.
+            All packages are built from the selected release tag. Window-pixel,
+            backend-contract and headless decode tests establish different
+            behavior; none alone proves every scene or physical audio device.
 
             To rebuild on macOS from a source checkout, run
             `bash tools/build-macos.sh` with the Xcode Command Line Tools installed.

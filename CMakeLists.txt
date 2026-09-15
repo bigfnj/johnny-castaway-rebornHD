@@ -19,9 +19,8 @@ cmake_minimum_required(VERSION 3.19)
 # suspended, fullscreen that silently no-oped in both directions, and a frame
 # drawn at a fixed size that only lined up in a window sized to match it.
 #
-# LINUX is now the only platform where nobody has looked at a rendered frame. The
-# cross-platform check runs `dump`, which opens no window, so its blitting code
-# compiles on every push and is never executed. See BACKLOG.md.
+# Linux presentation is exercised with X11 window captures under Xvfb. Desktop
+# window-manager fullscreen and physical audio remain separate checks; see BACKLOG.md.
 project(jc_reborn VERSION 1.0.1 LANGUAGES C)
 
 set(JC_VERSION_STRING "${PROJECT_VERSION}")
@@ -281,7 +280,7 @@ endif()
 # grew a `minimize` option and a minimizeConsoleWindow() hack. But the console
 # build is what every test, `dump` and `help` depends on, so both are kept.
 #
-# Same sources, same objects, two link results.
+# The two executables compile the same source list with target-specific defines.
 if(WIN32 AND NOT EMSCRIPTEN)
     add_executable(jc_reborn_scr WIN32 ${COMMON_SOURCES} ${PLATFORM_SOURCES})
 
