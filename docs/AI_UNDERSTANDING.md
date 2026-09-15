@@ -204,6 +204,15 @@ the compiled allocation tracker, not inferred from pointer assignments alone.
 Audio is single-voice: starting another sample replaces the current sample.
 `nosound` skips initialization. The callback uses 128 as silence for unsigned
 8-bit PCM. Device failure and decoded-buffer ownership have separate state.
+Web refills its bounded queue at frame boundaries and throughout existing short
+delay waits. Linux retains an interleaved callback buffer until all accepted
+frames are accounted for, checks each ALSA setup result, and joins the worker
+before freeing its state. Device-response fixtures and browser scheduling traces
+do not establish physical audibility.
+
+Web diagnostics retain a startup prefix and bounded recent tail. Long retained
+messages receive a detached copy, avoiding V8 substring retention of the original
+large message. Fatal status is recorded before truncation or history eviction.
 
 ## Verification and reproducible scene review
 
@@ -234,3 +243,10 @@ executed, and produce the intended named failure before restoration. Pixel and
 decode parity demonstrate their tested cases, not universal semantic equivalence.
 Native rendering on another OS and human acceptance of motion remain separate
 evidence from compilation, static inventories or successful PNG validation.
+
+The [knowledge base](knowledge-base/README.md) adds the supplied original's
+executable/resource identity, the public event catalog, generated scene/command
+inventory and pinned external-reader research. Use its evidence distinctions
+before claiming a scene or outcome is absent. All declared RIFF audio payloads
+from the inspected original match bundled WAV prefixes; sample-ID mapping and
+complete animation behavior remain separate questions.

@@ -44,10 +44,14 @@ The archive contains the original game data and the pre-extracted sound files:
 It may also contain optional HD (PNG) replacement assets under `data/hd/`.
 See `docs/HD_README.md` for the full zip layout and HD details.
 
-The `tools/extract_sound` helper (built via `make -f Makefile.sound` in `tools/`)
-can dump the audio files from the original `SCRANTIC.SCR`; the WAVs it produces
-are already bundled inside `scrantic_data.zip`, so this step is only needed when
-rebuilding the data archive from the original software.
+Normal playback uses the bundled WAVs and needs no extraction. CMake also builds
+`extract_sound` and `extract_walk_data`, with explicit input/output arguments.
+Both check I/O and preserve existing output files. The sound helper retains an
+explicitly named historical layout whose length and numbering rules do not
+recreate the supplied original's audio correctly. It safely refuses an
+out-of-bounds span in that executable. Do not use it to rebuild the runtime ZIP;
+see the [original extraction comparison](docs/knowledge-base/original-extractor-reference.md).
+The walk helper has exact 489-record parity with the inspected original.
 
 
 ## Building
@@ -125,6 +129,15 @@ The wrapper compiles with the official SDK container pinned by digest, verifies
 the actual compiler and preload archive, and copies the page assets. The output
 contains `jc_reborn.js`, `jc_reborn.wasm`, `jc_reborn.data` and `index.html`.
 On Windows, use `python` if that is the installed command name.
+
+On Windows, `scripts/build_web.ps1 -Backend Container` uses this same builder.
+`-Backend Local -Sdk <emsdk-directory>` activates an installed Emscripten 6.0.9
+SDK in a child shell. `Auto` uses `EMSDK` when configured and otherwise selects
+the container. `-OutputDirectory` or `JCR_BUILD_DIR` selects the destination;
+relative wrapper paths retain their meaning relative to the invoking directory.
+The caller's directory and environment remain unchanged. Use a fresh output
+directory when changing backend; incompatible CMake caches are preserved and
+reported rather than deleted.
 
 **Options in the browser.** The page reads them from the query string, so
 `index.html?args=window+nosound+seed+9+frames+400` passes `window nosound seed 9
@@ -326,9 +339,12 @@ Original-engine behavior still needs investigation for the reachable unfinished
 commands recorded in [the command review](docs/legacy-command-review.md).
 
 ### Short version
-Currently, Johnny reborn is in "work in progress" state. Every scene works with only some inaccuracies here and there.
-
-That means that the engine globally works in an acceptable way, but more needs to be done to fully understand a number of details and faithfully reproduce the behaviour of the original engine.
+The port has all ADS and TTM resource names present in the supplied original,
+and its story table schedules 63 entries. Complete branch, timing and visual
+parity still require reference observation, especially for reachable unfinished
+commands. The [knowledge base](docs/knowledge-base/README.md) records 176 public
+guide observations, exact original-resource comparisons and the remaining
+questions without treating catalog counts as proof of animation completeness.
 
 ### Long version
 
