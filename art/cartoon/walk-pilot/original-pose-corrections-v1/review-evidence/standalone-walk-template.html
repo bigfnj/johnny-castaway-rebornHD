@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Draft motion preview</title><style>
+*{box-sizing:border-box}body{margin:0;background:#eef1f2;color:#293740;font:16px/1.5 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:26px 22px 40px}h1{margin:0 0 8px;font-size:clamp(28px,4vw,38px);letter-spacing:-.025em;line-height:1.2}.caption{margin:0 0 5px}.muted{font-size:14px;color:#637079}.stage{display:flex;align-items:center;justify-content:center;min-width:0;margin:20px 0 14px;background:#f7f8f7;border:1px solid #d8e0e3;border-radius:12px;overflow:hidden}canvas{display:block;max-width:100%}.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap}button,select{font:inherit;background:white;border:1px solid #aebbc3;border-radius:7px;padding:8px 14px;color:#293740;cursor:pointer}button:disabled{opacity:.5;cursor:default}#play{background:#236b75;color:white;border-color:#236b75;min-width:86px}label{display:flex;gap:8px;align-items:center;margin-left:8px}output{font-variant-numeric:tabular-nums;margin-left:auto;font-size:14px;color:#57636c}details{margin-top:20px;font-size:13px;color:#607079}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.5 ui-monospace,monospace;background:white;padding:14px;border:1px solid #d8e0e3}#health{font-size:12px;color:#6a747b;margin-top:14px}.error{color:#a6332b!important}@media(max-width:620px){main{padding:20px 12px}.controls{gap:7px}button,select{padding:8px 10px}label{margin-left:0}output{margin-left:0;flex-basis:100%}}
+</style></head><body><main>
+<h1>Draft motion preview</h1><p class="caption">Leg identity is still reversed; artwork is not installed.</p>
+<div class="muted">23 recorded positions · 120 ms per pose · 1 second endpoint hold</div>
+<div class="stage"><canvas id="walk" aria-label="Draft Johnny walking animation"></canvas></div>
+<div class="controls"><button id="play" disabled>Pause</button><button id="previous" disabled>Previous pose</button><button id="next" disabled>Next pose</button><button id="restart" disabled>Restart</button>
+<label>Speed <select id="speed"><option value="1">Normal</option><option value="0.5">Half</option><option value="0.25">Quarter</option></select></label><output id="position" aria-live="off">Loading...</output></div>
+<details><summary>Source identities and route</summary><p>Fixed registration and original route coordinates. Padding exposes possible canvas overhang. Frame 029 has a provisional face update; pose and fit remain unresolved.</p><pre id="provenance"></pre></details><p id="health" role="status">Loading six embedded PNGs...</p>
+</main><script id="walk-data" type="application/json">__STANDALONE_WALK_DATA__</script><script>
+'use strict';
+const data=JSON.parse(document.getElementById('walk-data').textContent);
+const canvas=document.getElementById('walk'),ctx=canvas.getContext('2d');
+const images=new Map(),byFrame=new Map(data.images.map(item=>[item.frame,item]));
+const state={ready:false,playing:true,speed:1,elapsed:0,lastTime:null,position:0,frame:null,holding:false,drawCount:0};
+window.walkPreview=state;
+const motionDuration=data.route.length*data.pose_ms,duration=motionDuration+data.endpoint_hold_ms;
+const points=[];
+for(const row of data.route){const item=byFrame.get(row.frame);const [a,b,c,d,e,f]=item.affine,[w,h]=item.dimensions;for(const [x,y] of [[0,0],[w,0],[0,h],[w,h]])points.push([2*row.draw_logical_xy[0]+a*x+b*y+c,2*row.draw_logical_xy[1]+d*x+e*y+f]);}
+const viewport=[Math.floor(Math.min(...points.map(p=>p[0])))-28,Math.floor(Math.min(...points.map(p=>p[1])))-28,Math.ceil(Math.max(...points.map(p=>p[0])))+28,Math.ceil(Math.max(...points.map(p=>p[1])))+28];
+state.viewport=viewport;state.poseMs=data.pose_ms;state.duration=duration;state.routeCount=data.route.length;
+function render(){
+ if(!state.ready)return;
+ state.position=Math.min(data.route.length-1,Math.floor(state.elapsed/data.pose_ms));
+ state.holding=state.elapsed>=motionDuration;
+ const row=data.route[state.position],item=byFrame.get(row.frame);state.frame=row.frame;
+ const [left,top,right,bottom]=viewport,width=right-left,height=bottom-top;
+ const zoom=Math.min(2.3,(document.querySelector('.stage').clientWidth-2)/width),dpr=devicePixelRatio||1;
+ const cw=width*zoom,ch=height*zoom;
+ if(canvas.width!==Math.ceil(cw*dpr)||canvas.height!==Math.ceil(ch*dpr)){canvas.width=Math.ceil(cw*dpr);canvas.height=Math.ceil(ch*dpr);canvas.style.width=cw+'px';canvas.style.height=ch+'px';}
+ ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#f7f8f7';ctx.fillRect(0,0,cw,ch);
+ ctx.save();ctx.scale(zoom,zoom);ctx.translate(-left,-top);ctx.translate(2*row.draw_logical_xy[0],2*row.draw_logical_xy[1]);
+ const m=item.affine;ctx.transform(m[0],m[3],m[1],m[4],m[2],m[5]);ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.drawImage(images.get(row.frame),0,0);ctx.restore();
+ state.lastDraw={frame:row.frame,position:state.position,routeXY:row.draw_logical_xy,runtimeXY:row.draw_logical_xy.map(v=>v*2),affine:m,zoom,dpr};state.drawCount++;
+ document.getElementById('position').textContent=`Pose ${state.position+1} / ${data.route.length} · ${String(row.frame).padStart(3,'0')}${state.holding?' · endpoint hold':''}`;
+ document.getElementById('play').textContent=state.playing?'Pause':'Play';
+}
+function advance(now){if(state.lastTime!==null&&state.playing)state.elapsed=(state.elapsed+Math.max(0,now-state.lastTime)*state.speed)%duration;state.lastTime=now;}
+function tick(now){advance(now);render();requestAnimationFrame(tick);}
+function settle(){advance(performance.now());}
+document.getElementById('play').addEventListener('click',()=>{settle();state.playing=!state.playing;render();});
+function step(direction){settle();state.playing=false;const position=(Math.min(data.route.length-1,Math.floor(state.elapsed/data.pose_ms))+direction+data.route.length)%data.route.length;state.elapsed=position*data.pose_ms;render();}
+document.getElementById('previous').addEventListener('click',()=>step(-1));document.getElementById('next').addEventListener('click',()=>step(1));
+document.getElementById('restart').addEventListener('click',()=>{state.elapsed=0;state.lastTime=performance.now();state.playing=true;render();});
+document.getElementById('speed').addEventListener('change',event=>{settle();state.speed=Number(event.target.value);render();});
+window.addEventListener('resize',render);
+Promise.all(data.images.map(item=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>{if(image.naturalWidth!==item.dimensions[0]||image.naturalHeight!==item.dimensions[1])return reject(new Error('Unexpected dimensions: '+item.filename));images.set(item.frame,image);resolve();};image.onerror=()=>reject(new Error('PNG load failed: '+item.filename));image.src=item.data;})))
+.then(()=>{state.ready=true;state.loaded=images.size;state.lastTime=performance.now();document.querySelectorAll('button').forEach(button=>button.disabled=false);document.getElementById('health').textContent='Ready · 6 embedded PNGs · exact 23-position route';render();requestAnimationFrame(tick);})
+.catch(error=>{state.error=String(error);const status=document.getElementById('health');status.textContent=String(error);status.classList.add('error');});
+document.getElementById('provenance').textContent=JSON.stringify({...data,images:data.images.map(({data,...item})=>item),viewport},null,2);
+</script></body></html>

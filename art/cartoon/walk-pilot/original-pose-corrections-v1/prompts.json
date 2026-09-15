@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "requests": [
+    {
+      "frame": 24,
+      "use": "preview-candidate-not-approved",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit.\nAsset: Johnny Castaway Cartoon walking sprite JOHNWALK.BMP frame 024.\nInput image 1 is the supplied ORIGINAL native sprite enlarged by exact nearest-neighbor, and is only the geometric pose reference. Its old palette and grey ground shadow must not be copied.\nInput image 2 is the EDIT TARGET, the approved 1024 by 1536 Cartoon source. Preserve its character design and placement.\nPrimary correction: change only the small trailing anatomical RIGHT foot, partly behind and beside the large planted foot. Turn that small foot a little farther inward along Johnny's diagonal-left walking direction, as in image 1. Its toes should point more sideways toward the left along the walk, with a narrower, foreshortened profile, rather than spreading front-on toward the viewer. Keep the ankle connected to the same far leg and retain the planted anatomical left leg and large foreground foot exactly.\nInvariants: same canvas size, full-body framing, drawing scale, upper-body position, lean build, torso direction, white ragged shorts, arms, facial expression, long scruffy beard, white sailor cap with anchor, gold band and projecting dark brim. Do not move or resize the cap or body. Do not mirror the character or switch legs. No change to the gait height, no added ground shadow.\nOutput one independent sprite, transparent background with genuine alpha. No colored matte, glow, checkerboard, labels, or extra views. Preserve the target's clean Cartoon line and shading style.",
+      "references": [
+        "build/original-pose-review/original-024-nearest16x.png",
+        "build/original-pose-review/024-generated-v7.png"
+      ]
+    },
+    {
+      "frame": 28,
+      "use": "preview-candidate-not-approved",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit.\nAsset: Johnny Castaway Cartoon walking sprite JOHNWALK.BMP frame 028.\nInput image 1 is the supplied ORIGINAL native sprite enlarged by exact nearest-neighbor. It is the authoritative lower-body pose and limb-overlap reference. Do not copy its old palette or grey ground shadow.\nInput image 2 is the EDIT TARGET, the approved 1024 by 1536 Cartoon source. Keep its character identity, head, torso, arms, framing and scale.\nPrimary correction: the user identified REVERSED LEG IDENTITY in the target. Restore the original's anatomical LEFT leg forward, anatomical RIGHT leg back. Do not merely reposition the toes or mirror the whole image. Trace the legs from their shorts openings: the nearer anatomical left thigh starts beneath the screen-RIGHT shorts opening, crosses visibly IN FRONT of the farther leg, and connects to the forward foot toward screen-LEFT. The farther anatomical right thigh starts beneath the screen-LEFT shorts opening, passes BEHIND the left leg and connects to the rear foot toward screen-RIGHT. Make the overlap and uninterrupted contour connections clear, matching original image 1.\nRetain this pose's forward heel-first foot with toes lifted, and the trailing foot near the ground. Preserve their existing approximate positions while correcting which thigh connects to which foot.\nInvariants: same canvas size, full-body framing, common drawing scale, fixed head and upper-body registration, white ragged shorts style, expressive face, long scruffy beard, white sailor cap with anchor, narrow gold band and projecting dark brim. Change only necessary lower-body contours and shorts-opening overlap to correct the leg order. No new yaw or rotation of the head, no extra limbs, no horizontal mirror, no added ground shadow.\nOutput one independent sprite with genuine transparent alpha, no colored matte, glow, checkerboard, text or extra views. Match the target's Cartoon line and shading style.",
+      "references": [
+        "build/original-pose-review/original-028-nearest16x.png",
+        "build/original-pose-review/028-generated-v4-transparent.png"
+      ]
+    },
+    {
+      "frame": 29,
+      "use": "preview-candidate-not-approved",
+      "tool": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit.\nAsset: Johnny Castaway Cartoon walking sprite JOHNWALK.BMP frame 029.\nInput image 1 is the supplied ORIGINAL native sprite enlarged by exact nearest-neighbor. It is the authoritative lower-body pose and limb-overlap reference. Do not copy its old palette or grey ground shadow.\nInput image 2 is the EDIT TARGET, the approved 1024 by 1536 Cartoon source. Keep its character identity, head, torso, arms, framing and scale.\nPrimary correction: the user identified REVERSED LEG IDENTITY in the target. Restore the original's anatomical LEFT leg forward, anatomical RIGHT leg back. Do not merely reposition the toes or mirror the whole image. Trace the legs from their shorts openings: the nearer anatomical left thigh starts beneath the screen-RIGHT shorts opening, crosses visibly IN FRONT of the farther leg, and connects to the forward foot toward screen-LEFT. The farther anatomical right thigh starts beneath the screen-LEFT shorts opening, passes BEHIND the left leg and connects to the rear foot toward screen-RIGHT. Make the overlap and uninterrupted contour connections clear, matching original image 1.\nRetain this pose's planted forward foot and bent, raised trailing foot. Correct the thigh-to-foot connections and overlap; do not increase the rear foot's lift.\nInvariants: same canvas size, full-body framing, common drawing scale, fixed head and upper-body registration, white ragged shorts style, expressive face, long scruffy beard, white sailor cap with anchor, narrow gold band and projecting dark brim. Change only necessary lower-body contours and shorts-opening overlap to correct the leg order. No new yaw or rotation of the head, no extra limbs, no horizontal mirror, no added ground shadow.\nOutput one independent sprite with genuine transparent alpha, no colored matte, glow, checkerboard, text or extra views. Match the target's Cartoon line and shading style.",
+      "references": [
+        "build/original-pose-review/original-029-nearest16x.png",
+        "build/original-pose-review/029-generated-v2.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "human_response": "6. Calm focus",
+  "expression_direction_accepted": true,
+  "selected_number": 6,
+  "selected_label": "Calm focus",
+  "sheet": {
+    "file": "expressions-v1.png",
+    "sha256": "084f82e20d580a89e2f2a5056cdba355681539d0850b988d859e67ae69f29116"
+  },
+  "scope": "User-approved expression direction for subsequent work across the complete walking family.",
+  "runtime_sprites_accepted": false,
+  "production_promotion": false,
+  "existing_production_assets_changed": false,
+  "history": "The user paused gait corrections to choose expressions. This selection does not approve the rejected024/028/029 pose attempts or new runtime sprites.",
+  "current_key_selection": {
+    "date": "2026-09-15",
+    "human_response": "Keep the earlier Calm focus version",
+    "selected_file": "024-calm-focus-key.png",
+    "selected_sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730",
+    "expression_reference_accepted": true,
+    "rejected_variant": {
+      "file": "024-inquisitive-key.png",
+      "sha256": "08ba1369b4f214022e9e31f5992b30c1a5b4ae6eb64f384017779ce4bec1eba2",
+      "reason": "New eyebrow lift rejected."
+    },
+    "scope": "Expression reference for subsequent correction of the complete six-frame walking family. This is not approval of foot corrections, exported runtime sprites or motion.",
+    "foot_corrections_accepted": false,
+    "runtime_export_accepted": false,
+    "motion_family_accepted": false,
+    "production_promotion": false,
+    "historical_scope_note": "Key-only selection status at that point in time. The later standalone-motion-acceptance.json records accepted visible family motion."
+  },
+  "next_generation_checkpoint": {
+    "record": "next-generation-review.json",
+    "prospective_024": {
+      "file": "024-calm-pose-v2.png",
+      "status": "accepted-in-visible-standalone-motion; runtime-in-scene-pending",
+      "historical_status_before_standalone_acceptance": "human-static-review-pending"
+    },
+    "prospective_025_026_027": {
+      "files": [
+        "025-calm-eyes-v1.png",
+        "026-calm-eyes-v1.png",
+        "027-calm-eyes-v1.png"
+      ],
+      "status": "accepted-in-visible-standalone-motion; runtime-in-scene-pending",
+      "historical_status_before_standalone_acceptance": "technical-and-motion-review-pending"
+    },
+    "frame_028": {
+      "replacement_selected": true,
+      "latest_rejected_file": "028-simple-shorts-v4.png",
+      "human_response": "try again, it also looks like the foot is optically wrong",
+      "prospective_file": "028-natural-left-step-v5.png",
+      "status": "accepted-in-visible-standalone-motion; runtime-in-scene-pending",
+      "anatomy_verified": false,
+      "foot_identity_and_toe_order_verified": false,
+      "human_leg_mismatch_confirmed": true,
+      "latest_human_response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please",
+      "historical_status_before_standalone_acceptance": "human-confirmed-wrong-leg-cleared-for-standalone-motion-review",
+      "selection_scope": "Source selected for accepted standalone motion only; runtime export and in-scene acceptance pending."
+    },
+    "frame_029": {
+      "replacement_selected": true,
+      "reason": "Latest Calm-pose attempt rejected for leg linkage and canvas clearance.",
+      "provisional_preview_file": "029-calm-pose-v2.png",
+      "anatomy_and_runtime_clearance_rejection_retained": true,
+      "status": "accepted-in-visible-standalone-motion; runtime-in-scene-pending",
+      "selection_scope": "Source selected for accepted standalone motion only; runtime export and in-scene acceptance pending."
+    },
+    "foot_corrections_accepted": false,
+    "complete_cycle_accepted": true,
+    "runtime_exports_accepted": false,
+    "production_assets_changed": false,
+    "standalone_motion_review": {
+      "creation_cleared": true,
+      "provisional_files": [
+        "024-calm-pose-v2.png",
+        "025-calm-eyes-v1.png",
+        "026-calm-eyes-v1.png",
+        "027-calm-eyes-v1.png",
+        "028-natural-left-step-v5.png",
+        "029-calm-pose-v2.png"
+      ],
+      "human_response": "its still the wrong leg, but since its completely opposite i think it works, give me a standalone walking animation and let me look at it please",
+      "scope": "Standalone motion and Calm expression now accepted; reviewed original-leg mismatch retained. Runtime export and in-scene acceptance remain pending.",
+      "standalone_motion_accepted": true,
+      "acceptance_record": "standalone-motion-acceptance.json"
+    },
+    "historical_checkpoint_note": "Generation history through the request for a standalone preview. Current standalone acceptance is recorded separately below.",
+    "cycle_acceptance_scope": "Visible standalone motion only; runtime and in-scene acceptance pending."
+  },
+  "current_standalone_motion_acceptance": {
+    "record": "standalone-motion-acceptance.json",
+    "human_response": "looks good, whats next ?",
+    "standalone_motion_accepted": true,
+    "calm_expression_in_motion_accepted": true,
+    "reviewed_leg_mismatch_retained": true,
+    "runtime_export_accepted": false,
+    "in_scene_accepted": false
+  }
+}

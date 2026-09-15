@@ -1,0 +1,494 @@
+{
+  "scope": "Technical export reproduction and pixel diagnostics, not native-engine or human-motion acceptance.",
+  "smoke": "passed before regression",
+  "regression": "six PNG byte reproductions and all protected hashes passed",
+  "pillow_version": "12.3.0",
+  "negative_controls": [
+    {
+      "control": "source identity",
+      "actual_named_failure": "024-calm-pose-v2.png: SHA256 mismatch"
+    },
+    {
+      "control": "export identity",
+      "actual_named_failure": "024.png: SHA256 mismatch"
+    },
+    {
+      "control": "canvas dimensions",
+      "actual_named_failure": "024.png: wrong dimensions 64x150; expected 65x150"
+    }
+  ],
+  "metric_controls": "alpha-zero RGB difference ignored; one-unit opaque RGB difference measured",
+  "protected_sha256": {
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\assets\\scrantic_data.zip": "fb70d795531d50093dd4a9ac53895a6a20a76efc982d4d7d45a64403b98e68d8",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\art\\cartoon\\walk-pilot\\directional-cycle-v1\\recipe.json": "ceaa00c6e3be6db0a4ce056afd61d08492943395658c1c72deb9f69d19424f4f",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\calm-runtime-v1\\export-report.json": "90a6620a2f962772fcf74ee328a21f8e6a9ddc8d19ace565bd95bb04be67fa99",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\art\\cartoon\\walk-pilot\\original-pose-corrections-v1\\024-calm-pose-v2.png": "13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\calm-runtime-v1\\sprites\\024.png": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\art\\cartoon\\walk-pilot\\original-pose-corrections-v1\\025-calm-eyes-v1.png": "656061532b3833c092dd76d57d0cdd2e9e21a1b59f8cf0f360c5c0250494b20c",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\calm-runtime-v1\\sprites\\025.png": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\art\\cartoon\\walk-pilot\\original-pose-corrections-v1\\026-calm-eyes-v1.png": "20336e0fa8ab6ec930a78307e32719fd6a7d6a871e22803dd8b197724f34e110",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\calm-runtime-v1\\sprites\\026.png": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\art\\cartoon\\walk-pilot\\original-pose-corrections-v1\\027-calm-eyes-v1.png": "02adcafbd8548901b29eeb5a5f61a6f1fbe3c72b854410cd403139420ba241d6",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\calm-runtime-v1\\sprites\\027.png": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+    "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-dc210e19-f282-4026-aea3-c660010a0ff4.png": "cf502632f5a22593ccce4173b257d3c04b831cff072d0732fdf8bbd6e4a92691",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\calm-runtime-v1\\sprites\\028.png": "50e7eb8717283e3a532a8237f1b0e96c2d0e4314080e2f985b6b928e5dee9167",
+    "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-066605a3-71bb-40a3-91ac-d2d4f59c7bfc.png": "481db648e8c9b553ec940309a0a760fa6a7c02a884b0ccd3676f1bfc131b8129",
+    "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\calm-runtime-v1\\sprites\\029.png": "ac6907347ace18d909c09cd00ba6c1de65180bcfcdd43142ec0e00062bc17d15"
+  },
+  "original_members_unchanged": 2550,
+  "frames": [
+    {
+      "frame": 24,
+      "reproduced_png_sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+      "premultiplied_rgba_max_delta": 16,
+      "premultiplied_rgba_pixels_delta_gt_1": 22,
+      "maximum_raw_rgba_delta_pixels": [
+        {
+          "xy": [
+            17,
+            0
+          ],
+          "direct_rgba": [
+            87,
+            87,
+            87,
+            234
+          ],
+          "padded_crop_rgba": [
+            87,
+            87,
+            87,
+            218
+          ],
+          "premultiplied_max_delta": 16
+        }
+      ],
+      "composite_comparisons": {
+        "black": {
+          "maximum_channel_delta": 6,
+          "pixels_delta_gt_1": 13,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        },
+        "white": {
+          "maximum_channel_delta": 11,
+          "pixels_delta_gt_1": 21,
+          "pixels_delta_gt_8": 6,
+          "pixels_delta_gt_8_xy": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ],
+            [
+              20,
+              0
+            ]
+          ]
+        },
+        "blue": {
+          "maximum_channel_delta": 6,
+          "pixels_delta_gt_1": 17,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        }
+      },
+      "padded_outside_alpha_max": 5,
+      "padded_outside_alpha_sum": 37,
+      "padded_outside_alpha_ge_8_pixels_xyalpha": []
+    },
+    {
+      "frame": 25,
+      "reproduced_png_sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+      "premultiplied_rgba_max_delta": 16,
+      "premultiplied_rgba_pixels_delta_gt_1": 27,
+      "maximum_raw_rgba_delta_pixels": [
+        {
+          "xy": [
+            23,
+            0
+          ],
+          "direct_rgba": [
+            90,
+            89,
+            89,
+            230
+          ],
+          "padded_crop_rgba": [
+            90,
+            90,
+            90,
+            214
+          ],
+          "premultiplied_max_delta": 16
+        }
+      ],
+      "composite_comparisons": {
+        "black": {
+          "maximum_channel_delta": 5,
+          "pixels_delta_gt_1": 14,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        },
+        "white": {
+          "maximum_channel_delta": 12,
+          "pixels_delta_gt_1": 26,
+          "pixels_delta_gt_8": 6,
+          "pixels_delta_gt_8_xy": [
+            [
+              21,
+              0
+            ],
+            [
+              22,
+              0
+            ],
+            [
+              23,
+              0
+            ],
+            [
+              24,
+              0
+            ],
+            [
+              25,
+              0
+            ],
+            [
+              26,
+              0
+            ]
+          ]
+        },
+        "blue": {
+          "maximum_channel_delta": 6,
+          "pixels_delta_gt_1": 18,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        }
+      },
+      "padded_outside_alpha_max": 4,
+      "padded_outside_alpha_sum": 45,
+      "padded_outside_alpha_ge_8_pixels_xyalpha": []
+    },
+    {
+      "frame": 26,
+      "reproduced_png_sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+      "premultiplied_rgba_max_delta": 15,
+      "premultiplied_rgba_pixels_delta_gt_1": 34,
+      "maximum_raw_rgba_delta_pixels": [
+        {
+          "xy": [
+            0,
+            74
+          ],
+          "direct_rgba": [
+            255,
+            127,
+            0,
+            2
+          ],
+          "padded_crop_rgba": [
+            255,
+            255,
+            0,
+            1
+          ],
+          "premultiplied_max_delta": 1
+        }
+      ],
+      "composite_comparisons": {
+        "black": {
+          "maximum_channel_delta": 6,
+          "pixels_delta_gt_1": 20,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        },
+        "white": {
+          "maximum_channel_delta": 11,
+          "pixels_delta_gt_1": 28,
+          "pixels_delta_gt_8": 6,
+          "pixels_delta_gt_8_xy": [
+            [
+              23,
+              0
+            ],
+            [
+              24,
+              0
+            ],
+            [
+              25,
+              0
+            ],
+            [
+              26,
+              0
+            ],
+            [
+              27,
+              0
+            ],
+            [
+              28,
+              0
+            ]
+          ]
+        },
+        "blue": {
+          "maximum_channel_delta": 6,
+          "pixels_delta_gt_1": 28,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        }
+      },
+      "padded_outside_alpha_max": 6,
+      "padded_outside_alpha_sum": 56,
+      "padded_outside_alpha_ge_8_pixels_xyalpha": []
+    },
+    {
+      "frame": 27,
+      "reproduced_png_sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+      "premultiplied_rgba_max_delta": 16,
+      "premultiplied_rgba_pixels_delta_gt_1": 32,
+      "maximum_raw_rgba_delta_pixels": [
+        {
+          "xy": [
+            29,
+            143
+          ],
+          "direct_rgba": [
+            85,
+            85,
+            0,
+            3
+          ],
+          "padded_crop_rgba": [
+            127,
+            127,
+            0,
+            2
+          ],
+          "premultiplied_max_delta": 1
+        }
+      ],
+      "composite_comparisons": {
+        "black": {
+          "maximum_channel_delta": 5,
+          "pixels_delta_gt_1": 18,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        },
+        "white": {
+          "maximum_channel_delta": 12,
+          "pixels_delta_gt_1": 28,
+          "pixels_delta_gt_8": 5,
+          "pixels_delta_gt_8_xy": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        },
+        "blue": {
+          "maximum_channel_delta": 5,
+          "pixels_delta_gt_1": 23,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        }
+      },
+      "padded_outside_alpha_max": 5,
+      "padded_outside_alpha_sum": 58,
+      "padded_outside_alpha_ge_8_pixels_xyalpha": []
+    },
+    {
+      "frame": 28,
+      "reproduced_png_sha256": "50e7eb8717283e3a532a8237f1b0e96c2d0e4314080e2f985b6b928e5dee9167",
+      "premultiplied_rgba_max_delta": 14,
+      "premultiplied_rgba_pixels_delta_gt_1": 33,
+      "maximum_raw_rgba_delta_pixels": [
+        {
+          "xy": [
+            0,
+            129
+          ],
+          "direct_rgba": [
+            255,
+            255,
+            255,
+            1
+          ],
+          "padded_crop_rgba": [
+            255,
+            255,
+            0,
+            1
+          ],
+          "premultiplied_max_delta": 1
+        }
+      ],
+      "composite_comparisons": {
+        "black": {
+          "maximum_channel_delta": 4,
+          "pixels_delta_gt_1": 18,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        },
+        "white": {
+          "maximum_channel_delta": 10,
+          "pixels_delta_gt_1": 32,
+          "pixels_delta_gt_8": 5,
+          "pixels_delta_gt_8_xy": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ]
+          ]
+        },
+        "blue": {
+          "maximum_channel_delta": 5,
+          "pixels_delta_gt_1": 25,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        }
+      },
+      "padded_outside_alpha_max": 4,
+      "padded_outside_alpha_sum": 62,
+      "padded_outside_alpha_ge_8_pixels_xyalpha": []
+    },
+    {
+      "frame": 29,
+      "reproduced_png_sha256": "ac6907347ace18d909c09cd00ba6c1de65180bcfcdd43142ec0e00062bc17d15",
+      "premultiplied_rgba_max_delta": 17,
+      "premultiplied_rgba_pixels_delta_gt_1": 41,
+      "maximum_raw_rgba_delta_pixels": [
+        {
+          "xy": [
+            18,
+            0
+          ],
+          "direct_rgba": [
+            94,
+            94,
+            94,
+            240
+          ],
+          "padded_crop_rgba": [
+            94,
+            94,
+            94,
+            223
+          ],
+          "premultiplied_max_delta": 17
+        }
+      ],
+      "composite_comparisons": {
+        "black": {
+          "maximum_channel_delta": 7,
+          "pixels_delta_gt_1": 24,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        },
+        "white": {
+          "maximum_channel_delta": 11,
+          "pixels_delta_gt_1": 41,
+          "pixels_delta_gt_8": 6,
+          "pixels_delta_gt_8_xy": [
+            [
+              15,
+              0
+            ],
+            [
+              16,
+              0
+            ],
+            [
+              17,
+              0
+            ],
+            [
+              18,
+              0
+            ],
+            [
+              19,
+              0
+            ],
+            [
+              20,
+              0
+            ]
+          ]
+        },
+        "blue": {
+          "maximum_channel_delta": 7,
+          "pixels_delta_gt_1": 28,
+          "pixels_delta_gt_8": 0,
+          "pixels_delta_gt_8_xy": []
+        }
+      },
+      "padded_outside_alpha_max": 12,
+      "padded_outside_alpha_sum": 82,
+      "padded_outside_alpha_ge_8_pixels_xyalpha": [
+        [
+          17,
+          -1,
+          12
+        ],
+        [
+          18,
+          -1,
+          8
+        ]
+      ]
+    }
+  ]
+}

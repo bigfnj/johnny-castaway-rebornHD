@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "tool": "built-in image_gen",
+  "num_last_images_to_include": "omitted",
+  "attempts": [
+    {
+      "attempt": "024-combined-calm-focus-and-foot",
+      "status": "not-selected",
+      "reason": "The visible eye direction remained too close to the old downcast gaze.",
+      "prompt": "Use case: precise-object-edit.\nCreate one revised full-body Cartoon Johnny sprite, frame JOHNWALK.BMP024, on exactly the same 1024x1536 transparent canvas as image1.\nImage1 is the EDIT TARGET: the previously approved full-body drawing. Its placement, scale and silhouette are fixed.\nImage2 is an expression-choice sheet. Use ONLY its bottom-right portrait, numbered6 \"Calm focus\", which the user selected. Ignore the other five expressions.\nImage3 is the native original pose enlarged16x. Use it only to understand the small trailing right foot's inward angle, not for color or style.\nMake two tightly confined changes:\nA. Give Johnny the alert, relaxed \"Calm focus\" expression from portrait6. Change eyes, gaze and eyebrows subtly, with relaxed level brows and an attentive gaze ahead. Keep the large nose, beard, hair, head angle, cap and facial proportions from image1. Avoid sad downcast eyes or worried sloping brows.\nB. Turn the small trailing anatomical RIGHT foot slightly inward along the diagonal-left walk, matching image3's sideward toe angle. Keep its ankle position and its height above the ground as in image1. Do NOT lift the foot or shin. The small foot remains just behind the planted foreground left ankle, with a narrow side-on toe profile.\nEverything else stays as in image1: full cap visible with the same top margin (cap registration landmark approximately385,42), same body position and size, white sailor cap/anchor/gold band/black brim, lean torso, scruffy beard, arms and ragged shorts, planted left leg and its large foot, same line weight and shading. Do not enlarge or recenter the character. Do not crop any cap, beard or foot. Do not add a shadow.\nOutput only the single full-body sprite with actual transparent alpha, no matte, no background scenery, no labels. This is a targeted revision of image1, not a newly composed portrait.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\024-generated-v7.png",
+        "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-8f2b4451-004e-49db-9260-c9feeeb2c9d9.png",
+        "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\original-024-nearest16x.png"
+      ],
+      "output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-9f8aeffa-05a5-427f-bfc5-5218f57bdc78.png"
+    },
+    {
+      "attempt": "024-calm-focus-eyes-only",
+      "status": "key-awaiting-human-review",
+      "scope": "Expression only; original approved foot pose retained.",
+      "prompt": "Edit ONLY Johnny's eyes and eyebrows in image1. This is a 1024x1536 transparent full-body sprite. Make a clearly visible gaze/expression change: move BOTH black pupils upward from their current drooping position at the bottom of the eyes to the vertical CENTERS of the white eye shapes, looking attentively toward the left at horizon level. Relax the eyebrows into level, confident, friendly arcs. He must look calmly engaged and alert, not sad, worried or staring down at the ground.\nUse only portrait6 \"Calm focus\" in the bottom-right of image2 as the approved expression guide. Ignore the other portraits. The user chose6 specifically.\nKeep image1's entire head position, eye sizes, nose, beard, mouth, hair, cap and body unchanged apart from these eye and eyebrow edits. Preserve the exact white sailor cap, black brim, gold band, anchor, body pose, legs, feet, shorts, drawing scale, margins and original transparent canvas. Do not reframe or crop. Do not add any background, glow, labels or shadows. Return one full-body sprite. The eye and eyebrow change is the purpose of this edit; do not leave the original downcast pupils unchanged.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-pose-corrections\\build\\original-pose-review\\024-generated-v7.png",
+        "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-8f2b4451-004e-49db-9260-c9feeeb2c9d9.png"
+      ],
+      "output_path": "024-calm-focus-key.png"
+    }
+  ]
+}
