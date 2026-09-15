@@ -1,5 +1,9 @@
 # Cartoon art production
 
+The [production plan](cartoon-production-plan.md) begins the next bounded batch:
+a complete [slot catalog](knowledge-base/cartoon-production-catalog.md), followed
+by additional walking directions with separate key, motion and scene reviews.
+
 Read [image authoring lessons](art-style-learnings.md) before starting another
 style or animation family. It preserves the Cartoon pilot's generation,
 registration, transparency and review experience with links to exact records.

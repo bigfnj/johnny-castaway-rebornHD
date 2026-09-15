@@ -1,0 +1,51 @@
+{
+  "source_sha256": "9f2ac986ae7f29c84a672f2a77fd0f2ba75be135a3c2c8666a31a4b34adca5cc",
+  "test_sha256": "388e265fb752a44e90a4784cfd134d948c9c13b1a079591b6fe35cf34c75db6e",
+  "smoke_passed": 2,
+  "regressions": [
+    "full36-metadata-canvas-and-RGBA-reproduction",
+    "selected011-PNG-byte-reproduction",
+    "table-text-normalization-lf",
+    "table-text-normalization-crlf",
+    "table-text-normalization-cr",
+    "original-source-identity-bad-input-refused-before-output",
+    "original-frame-identity:019-bad-input-refused-before-output",
+    "walk-table-identity-bad-input-refused-before-output",
+    "raw-XPM-newline-change-refused",
+    "restored-source-positive-reproduction"
+  ],
+  "mutations": [
+    {
+      "guard": "original-source-identity",
+      "axis": "pair",
+      "mutant_source_sha256": "1c3844c8ab5d9760a2c7b053c93a8af25fbedd7a004a246c114c2879b56a51b6",
+      "witness": "exact source SHA printed by fresh python -B subprocess",
+      "result": "FIRED",
+      "named_failure": "original-source-identity-bad-input-refused-before-output",
+      "failure_count": 1,
+      "observed_mutant_behavior": "accepted the deliberately wrong input"
+    },
+    {
+      "guard": "original-frame-identity:019",
+      "axis": "pixel",
+      "mutant_source_sha256": "8f21c25cc2cba15867ec6eabfb2e02d07a842f4204756c0f367601a2a3837aee",
+      "witness": "exact source SHA printed by fresh python -B subprocess",
+      "result": "FIRED",
+      "named_failure": "original-frame-identity:019-bad-input-refused-before-output",
+      "failure_count": 1,
+      "observed_mutant_behavior": "accepted the deliberately wrong input"
+    },
+    {
+      "guard": "walk-table-identity",
+      "axis": "coordinate",
+      "mutant_source_sha256": "72203e3b4a273d4f22cfdf44b227067ba1d8be9a5894ba7c253aeb3b7600b99e",
+      "witness": "exact source SHA printed by fresh python -B subprocess",
+      "result": "FIRED",
+      "named_failure": "walk-table-identity-bad-input-refused-before-output",
+      "failure_count": 1,
+      "observed_mutant_behavior": "accepted the deliberately wrong input"
+    }
+  ],
+  "scope": "Authoring reference only. No runtime build or GUI capture. Python mutants run in fresh -B subprocesses and emit their exact source SHA.",
+  "mutation_storage": "Temporary copied repository beneath the requested output directory."
+}

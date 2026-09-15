@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-15",
+  "tool": "built-in image_gen",
+  "use_case": "identity-preserve",
+  "attempts": [
+    {
+      "id": "011-direction-key-v1",
+      "status": "awaiting-human-direction-review",
+      "prompt": "Use case: identity-preserve.\nAsset type: one transparent full-body 2D game sprite, Cartoon Johnny, JOHNWALK.BMP frame 011. This is a NEW DIRECTIONAL KEY for the same approved character, not a character redesign.\nInput image 1 is the ORIGINAL POSE reference: native frame 011 enlarged 8x with nearest-neighbor sampling. Its diagnostic red/yellow/checkered colors are NOT the desired palette. Use its pose, silhouette arrangement and camera-facing angle.\nInput image 2 is the APPROVED CARTOON CHARACTER AND CALM FOCUS reference. Use its exact clean cartoon drawing style, lean proportions, warm skin, scruffy full brown beard, shaggy hair, ragged white shorts, and white sailor cap with narrow gold band and a projecting dark brim. Do not inherit its front-facing torso pose.\nPrimary request: redraw Johnny in the pose and rear-three-quarter angle of image 1, facing and walking diagonally away toward screen-left. We see the back and outer shoulder, back/side of his ragged white shorts and the back of his head. His chest should rotate away from the viewer. The silhouette of his long nose may peek out to the left, while the visible beard follows the front edge of the turned-away head. Do not turn his face back toward us merely to show both eyes; the Calm focus identity is conveyed by the same relaxed, attentive character, with the face naturally occluded from this angle.\nPose: preserve the original frame's nearly planted straight leg on the screen-right side and the other leg flexed behind it on the screen-left side. The low hand hangs forward toward screen-left beside the thigh, following the source arm silhouette; show the outer shoulder and back in the source angle. Study actual overlap in image 1. Natural separate shorts leg openings and anatomically connected feet, no wrapped skirt panel.\nComposition: exactly 1024x1536 portrait canvas, one complete character only. Use approximately the character height and scale of image 2, with the top of the cap about 45 pixels below the top edge, and every toe and cap edge fully inside the canvas. Keep a small clear margin below the feet. The complete silhouette must be narrow enough for the original 32x78 logical sprite canvas after a common family export scale; avoid exaggerated lateral toe extensions.\nStyle: clean confident dark outlines, restrained smooth cartoon shading matching image 2, same beard texture and proportions. Preserve a visible projecting sailor cap brim in the correct away-facing perspective; the anchor should only appear if naturally visible from this angle. No new costume details.\nReturn one finished sprite with genuine transparent alpha. No floor shadow, scenery, colored matte, glow, checkerboard drawing, labels, grid or text. Do not trace the diagnostic checkerboard colors. Do not reuse the front-oblique body orientation of image 2.",
+      "referenced_image_paths": [
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\build\\cartoon-production-reference\\nearest8\\011.png",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-production\\art\\cartoon\\walk-pilot\\original-pose-corrections-v1\\024-calm-focus-key.png"
+      ],
+      "durable_references": [
+        {
+          "role": "original pose",
+          "path": "reference/011-nearest8.png",
+          "scope": "Supplied-original decoded indices, port diagnostic palette, index 0 transparent; nearest-neighbor 8x. Original-executable colors not verified."
+        },
+        {
+          "role": "approved Cartoon identity and Calm focus",
+          "path": "../walk-pilot/original-pose-corrections-v1/024-calm-focus-key.png",
+          "sha256": "78bce20c0ec03931ff6c9178d586fb64885da678668b19c69374b9949ce92730"
+        }
+      ],
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-4c888428-b038-4af9-914d-1cf572c26d5e.png",
+      "saved_image": "011-direction-key-v1.png",
+      "sha256": "c3e2caba0cb2692cc9845c5f72fa69fa20f264d12552b692e41b5d4425b5a407",
+      "canvas": [
+        1024,
+        1536
+      ],
+      "review_scope": "Directional character key only. Neither foot placement, motion, runtime fit nor production acceptance is established.",
+      "inspection": {
+        "alpha_extrema": [
+          0,
+          254
+        ],
+        "alpha_nonzero_bounds": [
+          65,
+          42,
+          962,
+          1536
+        ],
+        "alpha8_bounds": [
+          312,
+          45,
+          729,
+          1476
+        ],
+        "corner_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "note": "Faint alpha below 8 extends beyond the visible subject. No alpha cleanup or artistic pixel changes applied. The gray review background is a technical alpha composite; the stored image preserves returned pixels."
+      }
+    }
+  ]
+}
