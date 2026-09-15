@@ -55,6 +55,7 @@ hardening or platform pass; the evidence level is explicit for each item.
 | Explicit native executable target can retain an older artwork archive | Source-confirmed build scope: the normal ALL build runs `jc_runtime_data`, but an unchanged `--target jc_reborn` build does not run its `POST_BUILD` copy. After archive-only changes, use the normal build or explicitly build `jc_runtime_data`, as documented in [art production](docs/cartoon-art.md#refreshing-runtime-artwork). Consider making the executable target refresh data independently, with an archive-only change test covering both build forms. |
 | Small unused platform helpers remain | Source search found no callers of `png_loader.c`'s `utf8_to_wide`; macOS's event queue is allocated/released but never used and its `mainWindow` singleton is assigned without reads. Remove these in a cleanup pass and re-run platform builds. They are not evidence of a running leak. |
 | Older macOS notes contradict completed verification | The manual build script's closing message and historical paragraphs below still describe unverified rendering; the release workflow now packages macOS. Keep historical notes explicitly dated and update current instructions before the next release. |
+| Emscripten setup action reports a deprecated JavaScript runtime | Observed in [CI run 34921499395](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/34921499395): `mymindstorm/setup-emsdk@v14` targets Node.js 20 and the runner forces Node.js 24. The Web build and browser smoke passed. Update the setup action to a supported runtime in the build-maintenance pass and verify the pinned SDK, preload artifacts and browser controls again. |
 
 Art source storage also deserves a deliberate choice before wider coverage:
 preserve selected raw images and used ancestors, but avoid duplicating the
@@ -479,12 +480,11 @@ Still open:
   name is a `#define` for `1`; undefined, `rc.exe` silently emits a NAMED
   resource that Windows never reads, with no error, no warning, a `.res` that
   genuinely contains the version block, and every field reading back empty.
-- The `/c` dialog is a message box, because the engine genuinely has no
-  user-settable state (its persistence is two integers: the story day and the
-  date it last advanced). If settings are ever wanted - sound, HD scale, forced
-  holiday - note that `cfgFileRead` tolerates unknown keys but `cfgFileWrite`
-  rewrites the file with only the two it knows, so any new key must be added to
-  both or it is destroyed on the next day rollover.
+- **Updated by the Cartoon delivery, 2026-09-14:** `/c` now opens a native art-style
+  settings dialog. HD and Cartoon selection persists alongside story progress;
+  the gate covers saving, cancellation and day rollover. The old message-box and
+  two-integer-only description no longer applies. Future settings such as sound
+  or scale still need matching read/write handling and persistence checks.
 - Fullscreen is primary-monitor only (`MONITOR_DEFAULTTOPRIMARY`), so other
   screens keep showing the desktop. **This is now a decision, not an oversight:**
   the owner was asked on 2026-09-14 and chose to leave it. Switching to the
