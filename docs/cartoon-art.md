@@ -19,7 +19,8 @@ registration and preserving the real transition.
 The [front walk refresh](../art/cartoon/walk-pilot/front-refresh-v1/README.md)
 is a provisional 028/029 replacement with its own
 [hip connection and occlusion lessons](art-style-learnings-front-refresh.md).
-Its motion review is pending; the accepted front assets remain in production.
+Its standalone motion is approved and native scene review is pending; the
+previously accepted front assets remain in production.
 Each family retains its actual human review; aggregate pack approvals explicitly
 inherit earlier reviewed assets rather than silently replacing their provenance.
 

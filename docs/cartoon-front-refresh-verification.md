@@ -52,7 +52,9 @@ The standalone comparison now contains all 23 stored travel poses. Frames
 024-027 keep exact approved runtime PNG bytes; new 028/029 use the common 0.1
 scale, existing per-frame cap targets and original doubled canvases. All six
 alpha-8 source bounds fit. The camera is fixed across the entire route, with
-an explicit diagnostic endpoint hold. Human motion acceptance remains pending.
+an explicit diagnostic endpoint hold. The user approved this motion with
+"much better proceed"; `motion-acceptance-v1.json` preserves the exact response
+and the accepted preview and runtime PNG identities.
 
 The standalone tools passed 2 smoke checks followed by 14 regressions and 11
 executed-source mutations. The extra browser control selects a revised 024 and
@@ -75,8 +77,20 @@ and incorrect candidate-pixel controls all produced witnessed failures.
 ## Remaining phases
 
 The [published 23-position comparison](http://127.0.0.1:8932/front-refresh-motion-v1/review.html)
-is awaiting human motion feedback. Next, show the prepared native route and
-its existing HD 017 arrival for the separate scene review.
+has human motion approval. The prepared native route and its existing HD 017
+arrival now require the separate scene review.
+The [published native comparison](http://127.0.0.1:8932/front-refresh-island-v1/review.html)
+preserves all 95 HTML/image identities. Publication smoke passed before checks
+of all 47 display times, 94 rendered RGBA images, exact close-up pixels and
+1280px layout. The final original HD standing pose remains unchanged.
 Only accepted replacements should update the production pack and explicit
-pilot-history declaration. Smoke and regression follow integration; the art
+pilot-history declaration. Smoke and regression follow integration; the production art
 commit, merge and requested post-merge audit remain pending at this checkpoint.
+
+## CI correction
+
+The initial art commit changed the image-learning index without regenerating
+its normalized fingerprint in the maintained pilot catalog. Linux CI detected
+that stale record. Regenerating the catalog corrected it; 2 pilot smoke checks,
+60 regressions and both catalog reproduction checks passed. The motion approval
+updates the same index, so its fingerprint is regenerated with this checkpoint.

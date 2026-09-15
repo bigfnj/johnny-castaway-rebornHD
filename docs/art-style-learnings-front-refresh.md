@@ -15,6 +15,11 @@ more plausible. Human feedback preferred the resulting draft after its local
 toe fit edit. This is a preference for displayed art, not proof of original
 anatomical parity.
 
+After the far arm was hidden in 028/029 and the two drawings were combined with
+the exact approved 024-027 runtime PNGs, the user approved the full standalone
+walk with "much better proceed". Preserve this motion-specific acceptance
+separately from the subsequent native island and standing-transition review.
+
 ## Occluded anatomy should stay hidden
 
 The user noted that the new028's far/background arm would not be noticeable at

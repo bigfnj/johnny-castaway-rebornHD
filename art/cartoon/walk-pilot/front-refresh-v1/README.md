@@ -2,15 +2,16 @@
 
 This candidate batch revisits JOHNWALK 024-029 using the approved rear walk's
 joint, contact and clothing lessons. Production still contains the accepted
-Calm focus six-frame family. No replacement is approved by this bundle.
+Calm focus six-frame family. Neither draft is promoted by this bundle.
 
 The user preferred the third 028 draft and requested complete occlusion of its
 far/background arm. [The exact feedback](feedback-key-v1.json) is retained.
 `028-occluded-arm-v4.png` carries that correction into `029-heel-fit-v2.png`.
 [Continuation provenance](continuation-provenance-v1.json) records all three
-follow-up calls and their exact outputs. The six-pose motion comparison is
-built and awaiting human review; the earlier static page is a preserved
-historical view of draft v3.
+follow-up calls and their exact outputs. The user approved the six-pose motion
+comparison with "much better proceed"; [the motion acceptance](motion-acceptance-v1.json)
+pins its exact drawings and preview. Native island and arrival review is next.
+The earlier static page is a preserved historical view of draft v3.
 
 ## First pose: 028
 
