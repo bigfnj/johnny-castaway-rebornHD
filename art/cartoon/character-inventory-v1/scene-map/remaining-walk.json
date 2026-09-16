@@ -1,0 +1,1296 @@
+{
+  "schema_version": 1,
+  "resource": "JOHNWALK.BMP",
+  "remaining_native_group": {
+    "frames": [
+      14,
+      30,
+      31,
+      32
+    ],
+    "route": "C to D",
+    "table_rows": [
+      {
+        "index": 211,
+        "source": "src/data/walk_data.h:224",
+        "group": "C to D",
+        "row": [
+          0,
+          513,
+          230,
+          11
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 212,
+        "source": "src/data/walk_data.h:225",
+        "group": "C to D",
+        "row": [
+          0,
+          506,
+          232,
+          19
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 213,
+        "source": "src/data/walk_data.h:226",
+        "group": "C to D",
+        "row": [
+          0,
+          502,
+          230,
+          20
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 214,
+        "source": "src/data/walk_data.h:227",
+        "group": "C to D",
+        "row": [
+          0,
+          495,
+          230,
+          21
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 215,
+        "source": "src/data/walk_data.h:228",
+        "group": "C to D",
+        "row": [
+          0,
+          489,
+          230,
+          22
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 216,
+        "source": "src/data/walk_data.h:229",
+        "group": "C to D",
+        "row": [
+          0,
+          485,
+          226,
+          23
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 217,
+        "source": "src/data/walk_data.h:230",
+        "group": "C to D",
+        "row": [
+          0,
+          477,
+          224,
+          32
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 218,
+        "source": "src/data/walk_data.h:231",
+        "group": "C to D",
+        "row": [
+          0,
+          480,
+          224,
+          14
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 219,
+        "source": "src/data/walk_data.h:232",
+        "group": "C to D",
+        "row": [
+          0,
+          478,
+          220,
+          30
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 220,
+        "source": "src/data/walk_data.h:233",
+        "group": "C to D",
+        "row": [
+          0,
+          481,
+          221,
+          31
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 221,
+        "source": "src/data/walk_data.h:234",
+        "group": "C to D",
+        "row": [
+          0,
+          475,
+          215,
+          32
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 222,
+        "source": "src/data/walk_data.h:235",
+        "group": "C to D",
+        "row": [
+          0,
+          479,
+          217,
+          14
+        ],
+        "sentinel": false
+      },
+      {
+        "index": 223,
+        "source": "src/data/walk_data.h:236",
+        "group": "C to D",
+        "row": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "sentinel": true
+      }
+    ],
+    "minimal_public_call": "adsPlayWalk(2, 3, 3, 4), conditional on calcPath choosing direct CD",
+    "arrival_row": {
+      "index": 327,
+      "source": "src/data/walk_data.h:340",
+      "group": "D wait",
+      "row": [
+        0,
+        479,
+        217,
+        15
+      ],
+      "sentinel": false
+    },
+    "timing": "walkAnimate returns 6 ticks per travel pose, 80 for the final wait, then 0. adsPlayWalk initializes timer=6; background/cloud redraw subdivisions may repeat a pose. No capture or platform RNG seed was chosen here.",
+    "route_choice": "calcPath enumerates context-dependent simple routes and chooses rand()%numPaths. Direct CD exists, but this investigation does not claim the public call always takes it.",
+    "mirror": "All twelve CD travel rows have flip=0. There is no same-pose mirrored return cycle in this table; D-to-C uses different frames.",
+    "palm": "C-to-D does not set the special behind-tree flag; that code is limited to D\u2194E."
+  },
+  "remaining_ttm_group": {
+    "frames": [
+      33,
+      34,
+      35
+    ],
+    "ttm": "MJDIVE.TTM",
+    "tag": 2,
+    "description": "Walk out of water",
+    "full_static_frame_order": [
+      35,
+      10,
+      33,
+      34,
+      35,
+      10,
+      33,
+      34,
+      35,
+      10,
+      33,
+      34,
+      35,
+      10,
+      33,
+      34,
+      35,
+      10,
+      17,
+      17
+    ],
+    "timing": "SET_DELAY 10 occurs after the first035 draw and before its UPDATE. Tag setup has an earlier UPDATE with inherited timing. The final SET_DELAY0 is clamped to4 by this port. Absolute duration and ADS repetition/concurrent composition remain unmeasured.",
+    "clipping": "Tag2 starts clip [0,0,639,279], changes to [0,0,639,349] before the last035, and finishes with017. Do not preview these raw sprites as a free-standing native walk cycle."
+  },
+  "ttm_uses": [
+    {
+      "ttm": "MJFISHC.TTM",
+      "tag": 64,
+      "description": "walk c to tree",
+      "slot": 1,
+      "decoded_sha256": "fcb7e15150476dde3d6deca6362fe311fbe7252cd93cfad1e14a8fd761b16874",
+      "original_decoded_bytes_identical": true,
+      "direct_story_references": [
+        {
+          "scene": "FISHING.ADS#7",
+          "description": "FISH AT C FOR JUNK",
+          "source": "src/data/story_data.h:99"
+        }
+      ],
+      "ordered_static_draws": [
+        {
+          "offset": 2596,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            241,
+            230,
+            11,
+            1
+          ]
+        },
+        {
+          "offset": 2636,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            234,
+            232,
+            19,
+            1
+          ]
+        },
+        {
+          "offset": 2676,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            230,
+            230,
+            20,
+            1
+          ]
+        },
+        {
+          "offset": 2712,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            223,
+            230,
+            21,
+            1
+          ]
+        },
+        {
+          "offset": 2758,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            217,
+            230,
+            22,
+            1
+          ]
+        },
+        {
+          "offset": 2804,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            213,
+            226,
+            23,
+            1
+          ]
+        },
+        {
+          "offset": 2840,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            205,
+            224,
+            32,
+            1
+          ]
+        },
+        {
+          "offset": 2866,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            208,
+            224,
+            14,
+            1
+          ]
+        },
+        {
+          "offset": 2896,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            206,
+            220,
+            30,
+            1
+          ]
+        },
+        {
+          "offset": 2922,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            209,
+            221,
+            31,
+            1
+          ]
+        },
+        {
+          "offset": 2948,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            203,
+            215,
+            32,
+            1
+          ]
+        },
+        {
+          "offset": 2974,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 64,
+          "args": [
+            207,
+            217,
+            14,
+            1
+          ]
+        },
+        {
+          "offset": 3010,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 64,
+          "args": [
+            187,
+            218,
+            4,
+            1
+          ]
+        },
+        {
+          "offset": 3046,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 64,
+          "args": [
+            176,
+            220,
+            5,
+            1
+          ]
+        },
+        {
+          "offset": 3082,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 64,
+          "args": [
+            165,
+            217,
+            6,
+            1
+          ]
+        },
+        {
+          "offset": 3122,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 64,
+          "args": [
+            166,
+            217,
+            7,
+            1
+          ]
+        }
+      ],
+      "control_instructions": [
+        {
+          "offset": 2606,
+          "opcode": "1021",
+          "command": "SET_DELAY",
+          "tag": 64,
+          "args": [
+            8
+          ]
+        },
+        {
+          "offset": 3142,
+          "opcode": "0110",
+          "command": "PURGE",
+          "tag": 64,
+          "args": []
+        }
+      ],
+      "scope": "Static instruction order for this tag and slot, not a native capture or scheduler occurrence proof."
+    },
+    {
+      "ttm": "MJFISHC.TTM",
+      "tag": 62,
+      "description": "boot to tree",
+      "slot": 1,
+      "decoded_sha256": "fcb7e15150476dde3d6deca6362fe311fbe7252cd93cfad1e14a8fd761b16874",
+      "original_decoded_bytes_identical": true,
+      "direct_story_references": [
+        {
+          "scene": "FISHING.ADS#8",
+          "description": "FISH AT KEEPERS",
+          "source": "src/data/story_data.h:100"
+        }
+      ],
+      "ordered_static_draws": [
+        {
+          "offset": 6574,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            241,
+            230,
+            11,
+            1
+          ]
+        },
+        {
+          "offset": 6610,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            234,
+            232,
+            19,
+            1
+          ]
+        },
+        {
+          "offset": 6646,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            230,
+            230,
+            20,
+            1
+          ]
+        },
+        {
+          "offset": 6682,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            223,
+            230,
+            21,
+            1
+          ]
+        },
+        {
+          "offset": 6728,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            217,
+            230,
+            22,
+            1
+          ]
+        },
+        {
+          "offset": 6774,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            213,
+            226,
+            23,
+            1
+          ]
+        },
+        {
+          "offset": 6820,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            205,
+            224,
+            32,
+            1
+          ]
+        },
+        {
+          "offset": 6856,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            208,
+            224,
+            14,
+            1
+          ]
+        },
+        {
+          "offset": 6882,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            206,
+            220,
+            30,
+            1
+          ]
+        },
+        {
+          "offset": 6908,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            209,
+            221,
+            31,
+            1
+          ]
+        },
+        {
+          "offset": 6924,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            203,
+            215,
+            32,
+            1
+          ]
+        },
+        {
+          "offset": 6960,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 62,
+          "args": [
+            207,
+            217,
+            14,
+            1
+          ]
+        },
+        {
+          "offset": 6976,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 62,
+          "args": [
+            187,
+            218,
+            4,
+            1
+          ]
+        },
+        {
+          "offset": 7022,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 62,
+          "args": [
+            176,
+            220,
+            5,
+            1
+          ]
+        },
+        {
+          "offset": 7068,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 62,
+          "args": [
+            165,
+            217,
+            6,
+            1
+          ]
+        },
+        {
+          "offset": 7104,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 62,
+          "args": [
+            166,
+            217,
+            7,
+            1
+          ]
+        }
+      ],
+      "control_instructions": [
+        {
+          "offset": 6420,
+          "opcode": "1021",
+          "command": "SET_DELAY",
+          "tag": 62,
+          "args": [
+            8
+          ]
+        },
+        {
+          "offset": 7124,
+          "opcode": "0110",
+          "command": "PURGE",
+          "tag": 62,
+          "args": []
+        }
+      ],
+      "scope": "Static instruction order for this tag and slot, not a native capture or scheduler occurrence proof."
+    },
+    {
+      "ttm": "MJFISHC.TTM",
+      "tag": 63,
+      "description": "large fish catch",
+      "slot": 1,
+      "decoded_sha256": "fcb7e15150476dde3d6deca6362fe311fbe7252cd93cfad1e14a8fd761b16874",
+      "original_decoded_bytes_identical": true,
+      "direct_story_references": [
+        {
+          "scene": "FISHING.ADS#8",
+          "description": "FISH AT KEEPERS",
+          "source": "src/data/story_data.h:100"
+        }
+      ],
+      "ordered_static_draws": [
+        {
+          "offset": 7700,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            241,
+            230,
+            11,
+            1
+          ]
+        },
+        {
+          "offset": 7756,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            234,
+            232,
+            19,
+            1
+          ]
+        },
+        {
+          "offset": 7812,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            230,
+            230,
+            20,
+            1
+          ]
+        },
+        {
+          "offset": 7868,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            223,
+            230,
+            21,
+            1
+          ]
+        },
+        {
+          "offset": 7934,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            217,
+            230,
+            22,
+            1
+          ]
+        },
+        {
+          "offset": 8000,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            213,
+            226,
+            23,
+            1
+          ]
+        },
+        {
+          "offset": 8066,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            205,
+            224,
+            32,
+            1
+          ]
+        },
+        {
+          "offset": 8102,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            208,
+            224,
+            14,
+            1
+          ]
+        },
+        {
+          "offset": 8138,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            206,
+            220,
+            30,
+            1
+          ]
+        },
+        {
+          "offset": 8174,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            209,
+            221,
+            31,
+            1
+          ]
+        },
+        {
+          "offset": 8210,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            203,
+            215,
+            32,
+            1
+          ]
+        },
+        {
+          "offset": 8246,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 63,
+          "args": [
+            207,
+            217,
+            14,
+            1
+          ]
+        },
+        {
+          "offset": 8282,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 63,
+          "args": [
+            187,
+            218,
+            4,
+            1
+          ]
+        },
+        {
+          "offset": 8338,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 63,
+          "args": [
+            176,
+            220,
+            5,
+            1
+          ]
+        },
+        {
+          "offset": 8394,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 63,
+          "args": [
+            165,
+            217,
+            6,
+            1
+          ]
+        },
+        {
+          "offset": 8430,
+          "opcode": "A524",
+          "command": "DRAW_SPRITE_FLIP",
+          "tag": 63,
+          "args": [
+            166,
+            217,
+            7,
+            1
+          ]
+        }
+      ],
+      "control_instructions": [
+        {
+          "offset": 7324,
+          "opcode": "1021",
+          "command": "SET_DELAY",
+          "tag": 63,
+          "args": [
+            7
+          ]
+        },
+        {
+          "offset": 7466,
+          "opcode": "1021",
+          "command": "SET_DELAY",
+          "tag": 63,
+          "args": [
+            16
+          ]
+        },
+        {
+          "offset": 7516,
+          "opcode": "1021",
+          "command": "SET_DELAY",
+          "tag": 63,
+          "args": [
+            7
+          ]
+        },
+        {
+          "offset": 7556,
+          "opcode": "2022",
+          "command": "TIMER",
+          "tag": 63,
+          "args": [
+            60,
+            120
+          ]
+        },
+        {
+          "offset": 7598,
+          "opcode": "1021",
+          "command": "SET_DELAY",
+          "tag": 63,
+          "args": [
+            7
+          ]
+        },
+        {
+          "offset": 8450,
+          "opcode": "0110",
+          "command": "PURGE",
+          "tag": 63,
+          "args": []
+        }
+      ],
+      "scope": "Static instruction order for this tag and slot, not a native capture or scheduler occurrence proof."
+    },
+    {
+      "ttm": "MJDIVE.TTM",
+      "tag": 2,
+      "description": "Walk out of water",
+      "slot": 0,
+      "decoded_sha256": "ea9bec31eb19cd9b6603750fd76f3bed9fa99337a4003c441d7444395b63d1cc",
+      "original_decoded_bytes_identical": true,
+      "direct_story_references": [
+        {
+          "scene": "ACTIVITY.ADS#1",
+          "description": "GAG DIVES",
+          "source": "src/data/story_data.h:72"
+        },
+        {
+          "scene": "ACTIVITY.ADS#4",
+          "description": "MUNDANE DIVE",
+          "source": "src/data/story_data.h:76"
+        }
+      ],
+      "ordered_static_draws": [
+        {
+          "offset": 2686,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            396,
+            276,
+            35,
+            0
+          ]
+        },
+        {
+          "offset": 2706,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            396,
+            271,
+            10,
+            0
+          ]
+        },
+        {
+          "offset": 2722,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            396,
+            266,
+            33,
+            0
+          ]
+        },
+        {
+          "offset": 2738,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            393,
+            262,
+            34,
+            0
+          ]
+        },
+        {
+          "offset": 2754,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            396,
+            258,
+            35,
+            0
+          ]
+        },
+        {
+          "offset": 2770,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            396,
+            253,
+            10,
+            0
+          ]
+        },
+        {
+          "offset": 2786,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            397,
+            249,
+            33,
+            0
+          ]
+        },
+        {
+          "offset": 2802,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            394,
+            243,
+            34,
+            0
+          ]
+        },
+        {
+          "offset": 2818,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            398,
+            238,
+            35,
+            0
+          ]
+        },
+        {
+          "offset": 2834,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            398,
+            234,
+            10,
+            0
+          ]
+        },
+        {
+          "offset": 2850,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            398,
+            230,
+            33,
+            0
+          ]
+        },
+        {
+          "offset": 2866,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            396,
+            225,
+            34,
+            0
+          ]
+        },
+        {
+          "offset": 2882,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            400,
+            220,
+            35,
+            0
+          ]
+        },
+        {
+          "offset": 2898,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            400,
+            216,
+            10,
+            0
+          ]
+        },
+        {
+          "offset": 2914,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            400,
+            213,
+            33,
+            0
+          ]
+        },
+        {
+          "offset": 2930,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            397,
+            209,
+            34,
+            0
+          ]
+        },
+        {
+          "offset": 2956,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            399,
+            210,
+            35,
+            0
+          ]
+        },
+        {
+          "offset": 2972,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            391,
+            215,
+            10,
+            0
+          ]
+        },
+        {
+          "offset": 2988,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            395,
+            213,
+            17,
+            0
+          ]
+        },
+        {
+          "offset": 3004,
+          "opcode": "A504",
+          "command": "DRAW_SPRITE",
+          "tag": 2,
+          "args": [
+            395,
+            213,
+            17,
+            0
+          ]
+        }
+      ],
+      "control_instructions": [
+        {
+          "offset": 2646,
+          "opcode": "1051",
+          "command": "SET_BMP_SLOT",
+          "tag": 2,
+          "args": [
+            0
+          ]
+        },
+        {
+          "offset": 2650,
+          "opcode": "F02F",
+          "command": "LOAD_IMAGE",
+          "tag": 2,
+          "args": [
+            "JOHNWALK.BMP"
+          ]
+        },
+        {
+          "offset": 2670,
+          "opcode": "4004",
+          "command": "SET_CLIP_ZONE",
+          "tag": 2,
+          "args": [
+            0,
+            0,
+            639,
+            279
+          ]
+        },
+        {
+          "offset": 2696,
+          "opcode": "1021",
+          "command": "SET_DELAY",
+          "tag": 2,
+          "args": [
+            10
+          ]
+        },
+        {
+          "offset": 2946,
+          "opcode": "4004",
+          "command": "SET_CLIP_ZONE",
+          "tag": 2,
+          "args": [
+            0,
+            0,
+            639,
+            349
+          ]
+        },
+        {
+          "offset": 3014,
+          "opcode": "1051",
+          "command": "SET_BMP_SLOT",
+          "tag": 2,
+          "args": [
+            0
+          ]
+        },
+        {
+          "offset": 3020,
+          "opcode": "1051",
+          "command": "SET_BMP_SLOT",
+          "tag": 2,
+          "args": [
+            1
+          ]
+        },
+        {
+          "offset": 3026,
+          "opcode": "1021",
+          "command": "SET_DELAY",
+          "tag": 2,
+          "args": [
+            0
+          ]
+        },
+        {
+          "offset": 3030,
+          "opcode": "0110",
+          "command": "PURGE",
+          "tag": 2,
+          "args": []
+        }
+      ],
+      "scope": "Static instruction order for this tag and slot, not a native capture or scheduler occurrence proof."
+    }
+  ],
+  "scope": "Original-derived source data interpreted by this port. No original executable playback, new art, or production changes."
+}

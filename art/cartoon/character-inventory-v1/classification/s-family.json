@@ -1,0 +1,395 @@
+{
+  "schema_version": 1,
+  "source_index_sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2",
+  "resources": [
+    {
+      "resource": "SANDCAST.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Sandcastle stages, collapse piles and airborne sand. These are character-action dependencies but contain no visible Johnny.",
+      "reviewed_pages": ["SANDCAST.BMP-01.png"]
+    },
+    {
+      "resource": "SA_DEMO.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "One DEMO text graphic. Retained as an original-only resource; absence from bundled runtime is not a classification rule.",
+      "reviewed_pages": ["SA_DEMO.BMP-01.png"]
+    },
+    {
+      "resource": "SBREAKUP.BMP",
+      "default_class": "not_johnny",
+      "overrides": [{"frames": [21,22,23,24,25,26,27,28,29,30,31,32,33], "class": "johnny_full", "note": "Bearded, capped Johnny standing, gesturing and dropping to his knees."}],
+      "notes": "000-020 depict the mermaid and water; 034 is a castle. The Johnny and mermaid slots remain independent drawings.",
+      "reviewed_pages": ["SBREAKUP.BMP-01.png"]
+    },
+    {
+      "resource": "SHARK.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {"frames": [0,1,2,3,4,5], "class": "johnny_composite", "note": "Johnny with a visible white/gray carried or released object; preserve the prop relationship."},
+        {"frames": [7,10,11,12,13,14,15,16,17,18,19,20,21,22,38], "class": "johnny_full", "note": "Whole Johnny falling, landing, sitting and gesturing; 007 was also inspected as its native PNG."}
+      ],
+      "notes": "Separate object pieces 006/008/009/039, water effects and shark/dolphin drawings are not Johnny. Gray cast shadows do not establish anatomical sole positions.",
+      "reviewed_pages": ["SHARK.BMP-01.png"]
+    },
+    {
+      "resource": "SHARKWLK.BMP",
+      "default_class": "johnny_full",
+      "overrides": [{"frames": [0,1,2,3,4,5,6,7], "class": "placeholder", "note": "Empty-looking 8x2 slots on the source atlas, with no recognizable figure; preserve every slot."}],
+      "notes": "008-013 show whole profile walking Johnny. Placeholder is a visual description, not a claim of unreachable code.",
+      "reviewed_pages": ["SHARKWLK.BMP-01.png"]
+    },
+    {
+      "resource": "SHIPS.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Distant vessel forms, sailing ship, projectiles and bursts. The tiny dark dots remain effects, not inferred people or unused slots.",
+      "reviewed_pages": ["SHIPS.BMP-01.png"]
+    },
+    {
+      "resource": "SHKNFIST.BMP",
+      "default_class": "johnny_full",
+      "overrides": [],
+      "notes": "Four whole-body Johnny fist/arm poses in usual cap and shorts.",
+      "reviewed_pages": ["SHKNFIST.BMP-01.png"]
+    },
+    {
+      "resource": "SJBRAKUP.BMP",
+      "default_class": "johnny_full",
+      "overrides": [{"frames": [1], "class": "johnny_partial", "note": "Small beard/face detail tile accompanying whole Johnny 000."}],
+      "notes": "Keep the facial overlay distinct from the whole-body source.",
+      "reviewed_pages": ["SJBRAKUP.BMP-01.png"]
+    },
+    {
+      "resource": "SJGFTASK.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {"frames": [1], "class": "johnny_composite", "note": "Johnny in formal clothes shares a dinner-table drawing with the mermaid, chairs and tableware."},
+        {"frames": [2,3], "class": "uncertain", "note": "Two 8x6 facial/detail fragments; their owner is not visually secure in this mixed-actor resource."},
+        {"frames": [10,11,12,13], "class": "johnny_partial", "note": "Detached gesturing arm drawings matching Johnny's adjacent arm poses."}
+      ],
+      "notes": "The standing Johnny poses include a worn flower lei. Normal worn clothing/accessories do not make a whole pose composite.",
+      "reviewed_pages": ["SJGFTASK.BMP-01.png"]
+    },
+    {
+      "resource": "SJGFTJMP.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {"frames": [0,1,2,3], "class": "johnny_composite", "note": "Johnny crouches with, lifts and throws a box-like prop."},
+        {"frames": [5], "class": "not_johnny", "note": "Isolated prop piece."}
+      ],
+      "notes": "004 and 006 are independent whole-body Johnny poses without the prop.",
+      "reviewed_pages": ["SJGFTJMP.BMP-01.png"]
+    },
+    {
+      "resource": "SJGFTSHY.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {"frames": [1], "class": "johnny_composite", "note": "Johnny and the kicked object occupy one drawing."},
+        {"frames": [2,4], "class": "not_johnny", "note": "Isolated small object/flattened-object drawings."}
+      ],
+      "notes": "Other slots are full standing/kicking Johnny poses; object companions need coherent styling when the sequence is authored.",
+      "reviewed_pages": ["SJGFTSHY.BMP-01.png"]
+    },
+    {
+      "resource": "SJGFTXCH.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {"frames": [10,11,12], "class": "johnny_composite", "note": "Johnny handles and swings a large pale oval/elongated prop."},
+        {"frames": [13], "class": "not_johnny", "note": "The pale thrown prop without Johnny."}
+      ],
+      "notes": "Remaining whole-body drawings include putting on or wearing the lei. Cap and worn lei remain ordinary character accessories.",
+      "reviewed_pages": ["SJGFTXCH.BMP-01.png"]
+    },
+    {
+      "resource": "SJMSUZY1.BMP",
+      "default_class": "johnny_full",
+      "overrides": [{"frames": [9], "class": "not_johnny", "note": "Suzy lies beside/over a tray-like prop; no Johnny is visible."}],
+      "notes": "000-008 show Johnny sitting, rising, reaching and running.",
+      "reviewed_pages": ["SJMSUZY1.BMP-01.png"]
+    },
+    {
+      "resource": "SJMSUZY2.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {"frames": [3,4,5,6,7,8,9,10,11], "class": "johnny_composite", "note": "Johnny and Suzy are joined in a single interaction/lifting drawing."},
+        {"frames": [12,13], "class": "uncertain", "note": "Small skin/face/hand-detail patches in a two-person sequence; exact character ownership needs scene-context confirmation."}
+      ],
+      "notes": "000-002 depict Suzy alone. Do not divide the joined two-character slots into independently fitted characters.",
+      "reviewed_pages": ["SJMSUZY2.BMP-01.png"]
+    },
+    {
+      "resource": "SJMSUZY3.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [
+        {"frames": [14,15], "class": "not_johnny", "note": "Isolated bracelet-wearing arm fragments visually match Suzy."},
+        {"frames": [16,17], "class": "uncertain", "note": "Tiny black/white detail fragments cannot independently establish character ownership."}
+      ],
+      "notes": "000-013 show Suzy and Johnny interacting in the same drawing, including Johnny being pulled/lifted.",
+      "reviewed_pages": ["SJMSUZY3.BMP-01.png"]
+    },
+    {
+      "resource": "SJRAFT1.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {"frames": [0,1], "class": "johnny_composite", "note": "Kneeling Johnny with handled tools/material and scattered fragments."},
+        {"frames": [6], "class": "placeholder", "note": "Minimal 8x1 pale marker slot; no recognizable character form."},
+        {"frames": [7,8,9,10], "class": "johnny_partial", "note": "Isolated arm/hand animation overlays."}
+      ],
+      "notes": "002-005 are whole-body bases. 005 omits arm detail supplied separately, so the full-base classification does not claim a self-contained final composite.",
+      "reviewed_pages": ["SJRAFT1.BMP-01.png"]
+    },
+    {
+      "resource": "SJWORK.BMP",
+      "default_class": "johnny_full",
+      "overrides": [{"frames": [0,1,2,3,4,5,6], "class": "johnny_partial", "note": "Upper-body/torso Johnny in blue work clothes, sailor cap and a cleaner-shaven appearance."}],
+      "notes": "007-011 include the lower body/legs in the alternate work outfit. Do not force current castaway beard/shorts onto an outfit-specific source pose.",
+      "reviewed_pages": ["SJWORK.BMP-01.png"]
+    },
+    {
+      "resource": "SLEEP.BMP",
+      "default_class": "johnny_full",
+      "overrides": [{"frames": [12], "class": "johnny_partial", "note": "Isolated face/beard detail tile."}],
+      "notes": "Whole-body reclining/sleeping/rolling poses occupy all other slots.",
+      "reviewed_pages": ["SLEEP.BMP-01.png"]
+    },
+    {
+      "resource": "SLEVEJC1.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {"frames": [0], "class": "placeholder", "note": "Minimal 8x1 dark marker with no recognizable body."},
+        {"frames": [1,2,3,4,5,6], "class": "johnny_composite", "note": "Johnny, or his detached arm in 001, shares a drawing with the large rolled/bag-like prop."},
+        {"frames": [7,10,11], "class": "johnny_full", "note": "Whole Johnny without the large prop."}
+      ],
+      "notes": "008-009 are isolated prop drawings. Partial body plus a story prop remains composite.",
+      "reviewed_pages": ["SLEVEJC1.BMP-01.png"]
+    },
+    {
+      "resource": "SLEVEJC2.BMP",
+      "default_class": "johnny_full",
+      "overrides": [{"frames": [10,11,12,13], "class": "johnny_partial", "note": "Thin extended skin/limb overlays, separate from the full Johnny poses."}],
+      "notes": "000-009 are whole-body motion/gesture poses; detached overlays need scene placement before generating replacements.",
+      "reviewed_pages": ["SLEVEJC2.BMP-01.png"]
+    },
+    {
+      "resource": "SLEVEJC3.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [{"frames": [0,1,2], "class": "johnny_full", "note": "Whole Johnny before the paddle interaction."}],
+      "notes": "003-011 include Johnny and a long paddle; several also contain water strokes/splashes in the same canvas.",
+      "reviewed_pages": ["SLEVEJC3.BMP-01.png"]
+    },
+    {
+      "resource": "SLEVEJM1.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Mermaid, dolphin and water drawings, including joined mermaid/dolphin motion. No visible Johnny.",
+      "reviewed_pages": ["SLEVEJM1.BMP-01.png"]
+    },
+    {
+      "resource": "SLEVEJM2.BMP",
+      "default_class": "not_johnny",
+      "overrides": [{"frames": [6,7,8], "class": "placeholder", "note": "8x1 minimal gray/dark marker slots without recognizable figures."}],
+      "notes": "Other slots show dolphin or mermaid poses. Minimal markers remain distinct source slots, without an unused-code claim.",
+      "reviewed_pages": ["SLEVEJM2.BMP-01.png"]
+    },
+    {
+      "resource": "SLEVEJM3.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Dolphin and mermaid interaction/submerging frames, ending with isolated fin/water details.",
+      "reviewed_pages": ["SLEVEJM3.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE1.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Mermaid leaps/dives and separate water effects; no visible Johnny.",
+      "reviewed_pages": ["SMDATE1.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE10.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {"frames": [0,1,2], "class": "johnny_composite", "note": "Tuxedo Johnny and mermaid share the same drawing."},
+        {"frames": [3], "class": "johnny_full", "note": "Johnny alone in formal clothes with open hands."}
+      ],
+      "notes": "004-006 depict only the departing/diving mermaid and water.",
+      "reviewed_pages": ["SMDATE10.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE11.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {"frames": [9,10,11,12,13,19,20,21,22,23], "class": "johnny_full", "note": "Whole Johnny in tuxedo, including top-hat removal/holding poses."},
+        {"frames": [14,15,16,17,18], "class": "johnny_partial", "note": "Headless formal-coat/limb components intended to combine with other character layers."}
+      ],
+      "notes": "000-008 are mermaid-tail/water drawings. A held normal hat does not by itself make the whole Johnny pose a story-prop composite.",
+      "reviewed_pages": ["SMDATE11.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE12.BMP",
+      "default_class": "not_johnny",
+      "overrides": [{"frames": [0,1], "class": "uncertain", "note": "Strongly flattened/streaked dark and skin-colored forms may contain the departing character, but static silhouette alone does not establish a Johnny body."}],
+      "notes": "002 is a thin outlined motion/effect shape. Scene context is required before excluding the two ambiguous flattened drawings from a character pass.",
+      "reviewed_pages": ["SMDATE12.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE2.BMP",
+      "default_class": "johnny_full",
+      "overrides": [{"frames": [4,5,7], "class": "not_johnny", "note": "Separate gray ground shadow and two cap-only drawings."}],
+      "notes": "Other slots show Johnny jumping/tumbling, including hat-off hair and a cap separated from his body in the same source canvas.",
+      "reviewed_pages": ["SMDATE2.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE3.BMP",
+      "default_class": "johnny_full",
+      "overrides": [{"frames": [0], "class": "johnny_partial", "note": "Isolated trouser leg and bare foot."}],
+      "notes": "001-015 show running/standing Johnny in tuxedo and top hat. 009 reaches the left canvas edge; retain source canvas and composition.",
+      "reviewed_pages": ["SMDATE3.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE4.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [
+        {"frames": [0], "class": "johnny_full", "note": "Johnny alone in formal clothes."},
+        {"frames": [4], "class": "not_johnny", "note": "Isolated small red/white object or motion fragment."}
+      ],
+      "notes": "001-003 and 005-008 combine Johnny with dining table/chairs/tableware. Their geometry cannot be fitted independently without separating source layers.",
+      "reviewed_pages": ["SMDATE4.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE5.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [{"frames": [0], "class": "not_johnny", "note": "Mermaid alone."}],
+      "notes": "001-011 combine tuxedo Johnny and the mermaid in catching/dancing poses.",
+      "reviewed_pages": ["SMDATE5.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE6.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {"frames": [7,8], "class": "johnny_full", "note": "Standing/bending whole Johnny in tuxedo."},
+        {"frames": [9,10,12,13,22,23,29,30], "class": "johnny_partial", "note": "Johnny torso, head, formal-coat or lower-body components; preserve separate layers and native extents."},
+        {"frames": [11,15,16,17,24,25,26,32], "class": "johnny_composite", "note": "Johnny or his arm/torso with drink/food props; 017 also includes the mermaid."},
+        {"frames": [14], "class": "placeholder", "note": "Minimal 8x1 dark marker slot."}
+      ],
+      "notes": "Remaining frames are mermaid body/arm/face components. This sheet mixes full bodies, partial bodies, props and both actors; no one classification applies to the filename.",
+      "reviewed_pages": ["SMDATE6.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE7.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Dining furniture/tableware and a gramophone on a stool. These are scene dependencies without a Johnny drawing.",
+      "reviewed_pages": ["SMDATE7.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE8.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {"frames": [0], "class": "johnny_partial", "note": "Rear-facing tuxedo upper-body component without a complete lower body."},
+        {"frames": [1,2], "class": "johnny_full", "note": "Tuxedo Johnny in extended and tightly curled motion poses."},
+        {"frames": [5], "class": "uncertain", "note": "Broad dark/striped moving form with a bent skin-colored limb; identity and layer composition need scene context."},
+        {"frames": [6,7,8,9], "class": "placeholder", "note": "8x1 blank/minimal-marker slots with no recognizable figure."}
+      ],
+      "notes": "003-004 are mermaid upper-body poses; 010-012 are gramophone motion. The ambiguous stretched drawing is retained for follow-up.",
+      "reviewed_pages": ["SMDATE8.BMP-01.png"]
+    },
+    {
+      "resource": "SMDATE9.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [],
+      "notes": "Every frame combines tuxedo Johnny and the mermaid, from horizontal motion streaks through dancing poses.",
+      "reviewed_pages": ["SMDATE9.BMP-01.png"]
+    },
+    {
+      "resource": "SMGFTWAV.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Mermaid-tail tips and water; preserve these companion drawings without counting them as Johnny.",
+      "reviewed_pages": ["SMGFTWAV.BMP-01.png"]
+    },
+    {
+      "resource": "SMGIFT.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Mermaid gestures, lei/oval-object handling, isolated props and signal graphic. All 47 slots inspected; no visible Johnny.",
+      "reviewed_pages": ["SMGIFT.BMP-01.png"]
+    },
+    {
+      "resource": "SMGLIMSE.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Mermaid surfacing/diving/turning and water details, without Johnny.",
+      "reviewed_pages": ["SMGLIMSE.BMP-01.png"]
+    },
+    {
+      "resource": "SPLASH.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Seven splash/ripple effects, no recognizable character body.",
+      "reviewed_pages": ["SPLASH.BMP-01.png"]
+    },
+    {
+      "resource": "SRAFT.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Raft and separate paddle. Keep as companions to character/raft sequences.",
+      "reviewed_pages": ["SRAFT.BMP-01.png"]
+    },
+    {
+      "resource": "SSUZY1.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Suzy reclining/sitting and a separate bottle-like prop; no Johnny.",
+      "reviewed_pages": ["SSUZY1.BMP-01.png"]
+    },
+    {
+      "resource": "SSUZY2.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Suzy rises, walks and runs; 001 is a separate small prop. No Johnny body is visible.",
+      "reviewed_pages": ["SSUZY2.BMP-01.png"]
+    },
+    {
+      "resource": "SSUZY3.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {"frames": [18,29], "class": "uncertain", "note": "Dream/landscape panels inspected both on atlas and as native PNGs; small distant features do not securely establish or exclude a tiny Johnny without scene context."},
+        {"frames": [19,20,21,22,23], "class": "uncertain", "note": "Blond, muscular male torso/arm poses and separate legs differ visibly from usual Johnny. Whether these depict an alternate/dream Johnny or another actor needs contextual confirmation."}
+      ],
+      "notes": "Other slots show Suzy, her limbs/face, handled objects and effects. Keep uncertain dream/alternate-person slots in the candidate inventory.",
+      "reviewed_pages": ["SSUZY3.BMP-01.png"]
+    },
+    {
+      "resource": "STNDLAY.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {"frames": [8], "class": "johnny_partial", "note": "Cropped torso/arm/shorts component."},
+        {"frames": [9], "class": "johnny_composite", "note": "Johnny is embedded in an island/ocean/palm scene patch, not an isolated transparent character."}
+      ],
+      "notes": "000-007 are whole standing-to-reclining Johnny poses. Scene-patch replacement 009 would require coordinated background treatment.",
+      "reviewed_pages": ["STNDLAY.BMP-01.png"]
+    },
+    {
+      "resource": "THEEND1.BMP",
+      "default_class": "not_johnny",
+      "overrides": [{"frames": [3,4,5,7,10,11,12,13,14,15,16,17,18,19,20,21], "class": "uncertain", "note": "Tiny dark parachutist and standalone human silhouettes have no secure Johnny face/cap identity at source resolution. Confirm actor ownership in the ending scene before inclusion/exclusion."}],
+      "notes": "Aircraft, separate objects and empty parachute drawings are not Johnny. Human silhouettes are retained as uncertain rather than inferred from the resource name.",
+      "reviewed_pages": ["THEEND1.BMP-01.png"]
+    },
+    {
+      "resource": "WOULDBE.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {"frames": [0,1,4,5,6,7,8,9,23,24,25,26,27,28,29], "class": "uncertain", "note": "Small striped-shirt, sailor-capped man and related body fragments may be an alternate Johnny, but static appearance alone does not establish that identity. 000 includes another man/scene props."},
+        {"frames": [30,31,32,33,34,35,36,37], "class": "johnny_composite", "note": "Recognizable bearded Johnny in a party hat shares the drawing with a dark-haired woman and often drinks."},
+        {"frames": [38,39], "class": "johnny_partial", "note": "Party-hat Johnny head/upper-body leaning or collapsed components without a complete lower body."},
+        {"frames": [40,42,43], "class": "johnny_composite", "note": "Johnny with a bottle; 043 retains only raised arms/bottle and splash while the body is submerged/omitted."}
+      ],
+      "notes": "Both pages and all 55 slots inspected. Other visible actors include a red-haired woman, a blond man and a dark-haired woman; their solo/pair drawings, small effects and water remain not_johnny. Dream/alternate-sailor ownership stays uncertain rather than silently excluded.",
+      "reviewed_pages": ["WOULDBE.BMP-01.png","WOULDBE.BMP-02.png"]
+    }
+  ]
+}

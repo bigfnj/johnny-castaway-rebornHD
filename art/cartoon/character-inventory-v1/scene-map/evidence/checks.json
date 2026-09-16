@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "helper_sha256": "32629730fe9904bf69235180e74be40a65ea2b5a08a4949fe9267697b4c7b87e",
+  "tests_sha256": "3e92429d4216e5b538f824148cfca7096608b73d831c5298ad0b4667bc6c8659",
+  "runner_sha256": "d82cab3ccafdd2b91a5f878f0e2af63da6c41c3a932f898ef53baef9b5c435a4",
+  "records": [
+    {
+      "name": "smoke",
+      "exit_code": 0,
+      "stderr_sha256": "e9991c10f88383893778d61c8ad083a81eceb9d5fae0c70da8ca81f9a5c11dea"
+    },
+    {
+      "name": "regression",
+      "exit_code": 0,
+      "stderr_sha256": "85228c3fcc19853aded120381614b888c49db1bb3fa26b14b17a9886be5c9d86"
+    },
+    {
+      "name": "ambiguous-slot-resolved",
+      "status": "FIRED",
+      "exit_code": 1,
+      "helper_sha256": "2b60459b6450f23ca0261ec5169f1e66674a72378df6723d63e1474c87393f8f",
+      "witness": "test_reused_slot_stays_ambiguous",
+      "stderr_sha256": "7becaa1f191e7042b696beb348e944c8f86bc7c474cb49a2855119928c70d7e7",
+      "method": "Fresh Python process imported this distinct mutated helper path; maintained/source files untouched."
+    },
+    {
+      "name": "load-slot-guard-disabled",
+      "status": "FIRED",
+      "exit_code": 1,
+      "helper_sha256": "6ccf742f53a992d99887e94973d9375a891d1c566f82514c3b760662b673bedc",
+      "witness": "test_missing_load_selector_is_refused",
+      "stderr_sha256": "30c7249861d50e82670769319037f25273920c9bb0bad34a58dde830f95ad77c",
+      "method": "Fresh Python process imported this distinct mutated helper path; maintained/source files untouched."
+    },
+    {
+      "name": "original-identity-disabled",
+      "status": "FIRED",
+      "exit_code": 1,
+      "helper_sha256": "bca5a203c604129023644c608d1422ca2d34cd1ea27dbfc31c87a4c70e210464",
+      "witness": "test_original_identity_guard",
+      "stderr_sha256": "41dc5c0795b566228228b1f9435e5937117a3212855689c583a2c1909c72d079",
+      "method": "Fresh Python process imported this distinct mutated helper path; maintained/source files untouched."
+    },
+    {
+      "name": "identity-guard-disabled",
+      "status": "FIRED",
+      "exit_code": 1,
+      "helper_sha256": "5829abbc5d4f43c0aaf3b1203df17d513fddcbc94ad364efe48feafc55d74cec",
+      "witness": "test_current_resource_identity_guard",
+      "stderr_sha256": "476ada6e1420e0faaf42ce443ce3833fc5056f8081a4d6c3e8ac89cb37345d47",
+      "method": "Fresh Python process imported this distinct mutated helper path; maintained/source files untouched."
+    },
+    {
+      "name": "restored-regression",
+      "exit_code": 0,
+      "stderr_sha256": "8bc382bdea40ff8f49edcadccc538d54832f41c5dedd14ca7c7f1e095197f7d7"
+    }
+  ],
+  "native_scenes_executed": false
+}

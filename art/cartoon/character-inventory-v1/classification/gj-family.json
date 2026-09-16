@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "source_index_sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2",
+  "resources": [
+    {
+      "resource": "GJANGRY.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            39,
+            40,
+            41,
+            42,
+            43
+          ],
+          "class": "johnny_full",
+          "note": "Standing, gesturing and angry Johnny poses."
+        },
+        {
+          "frames": [
+            44,
+            45,
+            46,
+            47,
+            48
+          ],
+          "class": "johnny_composite",
+          "note": "Seated Johnny with the gray book across his lap/hands."
+        }
+      ],
+      "notes": "Frames000–038 are gulls, including book-carrying gulls; retain these as co-scene dependencies.",
+      "reviewed_pages": [
+        "GJANGRY.BMP-01.png",
+        "GJANGRY.BMP-02.png"
+      ]
+    },
+    {
+      "resource": "GJBIPLAN.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            24,
+            25,
+            26,
+            27
+          ],
+          "class": "uncertain",
+          "note": "Tiny walking people and occupants of rowboats are visible, but their identity cannot be established from these pixels."
+        }
+      ],
+      "notes": "Planes000–009 have no identifiable Johnny drawing. Flags020–023 are separate props. Do not infer Johnny from the filename.",
+      "reviewed_pages": [
+        "GJBIPLAN.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJCASTLE.BMP",
+      "default_class": "johnny_full",
+      "overrides": [],
+      "notes": "All eight drawings show identifiable Johnny crouching, seated, or standing without a separate held story prop.",
+      "reviewed_pages": [
+        "GJCASTLE.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJCATCH1.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            12,
+            15,
+            17
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny fishing or being dragged with a rod/line included in the drawing."
+        },
+        {
+          "frames": [
+            3
+          ],
+          "class": "placeholder",
+          "note": "8x1 marker frame, not a character drawing."
+        },
+        {
+          "frames": [
+            8
+          ],
+          "class": "johnny_partial",
+          "note": "Visible hands/feet protrude around the wake while most of Johnny is submerged/occluded."
+        }
+      ],
+      "notes": "Separate rods, wakes and fins remain not_johnny. Those props/effects are dependencies of the same fishing action.",
+      "reviewed_pages": [
+        "GJCATCH1.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJCATCH2.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            1,
+            4,
+            7,
+            8,
+            9,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny with rod or octopus attached in the same drawing."
+        },
+        {
+          "frames": [
+            20,
+            21,
+            22,
+            24
+          ],
+          "class": "johnny_full",
+          "note": "Johnny alone, including the elongated launch/speed-streak pose022."
+        }
+      ],
+      "notes": "Frame023 is a black motion streak without recognizable anatomy. Octopus-only, fish, rod and splash drawings are not Johnny.",
+      "reviewed_pages": [
+        "GJCATCH2.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJCATCH3.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            3,
+            4,
+            5
+          ],
+          "class": "johnny_composite",
+          "note": "Cropped upper-body Johnny holds a fish, with water spray in004."
+        },
+        {
+          "frames": [
+            9
+          ],
+          "class": "johnny_composite",
+          "note": "Isolated hand attached to fishing rod; the hand is a Johnny component in this fishing sequence, not a complete body."
+        }
+      ],
+      "notes": "Separate fish and splash drawings are dependencies, not Johnny. The composite label takes precedence over partial anatomy where a held prop is inseparable.",
+      "reviewed_pages": [
+        "GJCATCH3.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJDIVE.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "class": "johnny_full",
+          "note": "Identifiable diving/tumbling Johnny poses."
+        },
+        {
+          "frames": [
+            12
+          ],
+          "class": "johnny_partial",
+          "note": "Johnny head and forearms emerge from a splash; the rest of the body is hidden."
+        }
+      ],
+      "notes": "Remaining drawings show splashes, shadows, starfish/crabs/fish/gulls with score sheets, and score numerals. Those drawings are not Johnny.",
+      "reviewed_pages": [
+        "GJDIVE.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJFFFOOD.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny holding a fishing rod."
+        },
+        {
+          "frames": [
+            1,
+            3,
+            43,
+            46
+          ],
+          "class": "johnny_full",
+          "note": "Standing, seated and diving Johnny poses without a distinct held story prop."
+        }
+      ],
+      "notes": "Other drawings are shark animation, fishing rods, food and splash/effect components.",
+      "reviewed_pages": [
+        "GJFFFOOD.BMP-01.png",
+        "GJFFFOOD.BMP-02.png"
+      ]
+    },
+    {
+      "resource": "GJGULL1.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "All drawings are gull, nest or egg components; there is no Johnny body in this resource.",
+      "reviewed_pages": [
+        "GJGULL1.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJGULL1A.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            39,
+            40,
+            41,
+            42,
+            43
+          ],
+          "class": "johnny_full",
+          "note": "Johnny reacts and raises a fist."
+        },
+        {
+          "frames": [
+            44,
+            45,
+            46,
+            47,
+            48
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny sits with the gray book across his lap/hands."
+        }
+      ],
+      "notes": "The preceding drawings are gulls and gull/book interactions. Similar-looking slots to GJANGRY remain separately inventoried.",
+      "reviewed_pages": [
+        "GJGULL1A.BMP-01.png",
+        "GJGULL1A.BMP-02.png"
+      ]
+    },
+    {
+      "resource": "GJGULL2.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "class": "placeholder",
+          "note": "8x1 marker/blank frames."
+        }
+      ],
+      "notes": "Gulls, separate sailor caps, rods/lines and cap-carrying gulls are not Johnny body drawings; keep them as scene dependencies.",
+      "reviewed_pages": [
+        "GJGULL2.BMP-01.png",
+        "GJGULL2.BMP-02.png"
+      ]
+    },
+    {
+      "resource": "GJGULL2A.BMP",
+      "default_class": "johnny_partial",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            1,
+            2
+          ],
+          "class": "placeholder",
+          "note": "8x1 marker frames."
+        }
+      ],
+      "notes": "Frames003–015 show hatless Johnny's upper body in water, with legs hidden.",
+      "reviewed_pages": [
+        "GJGULL2A.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJGULL3.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "class": "johnny_composite",
+          "note": "Seated Johnny and a gull perched on or circling his cap share the drawing."
+        }
+      ],
+      "notes": "Frames017–024 are gulls alone.",
+      "reviewed_pages": [
+        "GJGULL3.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJGULL3A.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "class": "placeholder",
+          "note": "8x1 marker frames."
+        },
+        {
+          "frames": [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            33,
+            34,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny with gull and/or paddle in the same drawing."
+        },
+        {
+          "frames": [
+            28,
+            35
+          ],
+          "class": "johnny_full",
+          "note": "Seated Johnny with empty hands, without a gull in this drawing."
+        },
+        {
+          "frames": [
+            29,
+            31
+          ],
+          "class": "johnny_partial",
+          "note": "Detached stretched arm;029 includes the sailor cap at its end."
+        }
+      ],
+      "notes": "Separate paddle, cap and gull drawings remain not_johnny. Wearing or handling his normal cap alone does not make a composite.",
+      "reviewed_pages": [
+        "GJGULL3A.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJHOT.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {
+          "frames": [
+            5,
+            6,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            22
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny holds the yellow fan; later drawings include his melting body and fan."
+        },
+        {
+          "frames": [
+            8,
+            9,
+            12,
+            13
+          ],
+          "class": "johnny_composite",
+          "note": "Detached Johnny arm holding the fan."
+        },
+        {
+          "frames": [
+            20
+          ],
+          "class": "johnny_partial",
+          "note": "Isolated bent Johnny arm."
+        }
+      ],
+      "notes": "All slots contain Johnny or a visible Johnny body component; the fan is an inseparable story prop in the composite drawings.",
+      "reviewed_pages": [
+        "GJHOT.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJKINGKO.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny emerges from or stands beside the green loose cloth/disguise included in the drawing."
+        }
+      ],
+      "notes": "Remaining slots show Johnny alone, including exaggerated spinning/stretch poses.",
+      "reviewed_pages": [
+        "GJKINGKO.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJNAT1.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Masked visitor in green skirt/loincloth and separate shadows. Every frame inspected; this is a distinct character, not Johnny.",
+      "reviewed_pages": [
+        "GJNAT1.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJNAT1LI.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Lightning, the masked visitor's skeleton/charred body, visitor limb parts, masks and ash. The green garment and mask sequence distinguish the visitor from Johnny.",
+      "reviewed_pages": [
+        "GJNAT1LI.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJNAT3.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Other visitors: sunglasses/camera upper-body figures, a woman in yellow, and masked green-clothed dancers. Props and flash effects are separate. No Johnny identified on either page.",
+      "reviewed_pages": [
+        "GJNAT3.BMP-01.png",
+        "GJNAT3.BMP-02.png"
+      ]
+    },
+    {
+      "resource": "GJPROW.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Ship bow/hull pieces only, including an anchor emblem.",
+      "reviewed_pages": [
+        "GJPROW.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJRUNAWA.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {
+          "frames": [
+            12,
+            13
+          ],
+          "class": "not_johnny",
+          "note": "Pure black motion streaks without recognizable anatomy."
+        }
+      ],
+      "notes": "Frames000–011 are Johnny running/turning/stretching, including full-body smear drawings.",
+      "reviewed_pages": [
+        "GJRUNAWA.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJVIS3.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            4
+          ],
+          "class": "uncertain",
+          "note": "Small occupants of the boat and aircraft/submersible are visible, but are not identifiable as Johnny."
+        },
+        {
+          "frames": [
+            6
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny holds binoculars."
+        }
+      ],
+      "notes": "Other slots are wakes, aircraft and propeller/rotor components; no visible Johnny body.",
+      "reviewed_pages": [
+        "GJVIS3.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJVIS5.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {
+          "frames": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny picks up, holds and throws a round red/brown story prop."
+        }
+      ],
+      "notes": "Other slots show identifiable Johnny jumping, turning and reacting without a separate held prop.",
+      "reviewed_pages": [
+        "GJVIS5.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJVIS52.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            1,
+            2,
+            3
+          ],
+          "class": "placeholder",
+          "note": "8x1 marker frames."
+        },
+        {
+          "frames": [
+            8,
+            9,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "class": "uncertain",
+          "note": "A tiny green/yellow aviator ejects or hangs beneath a parachute; identity is not resolved from these drawings."
+        }
+      ],
+      "notes": "Aircraft, projectile trail, explosion/splashes and a small distant plane occupy the other slots.",
+      "reviewed_pages": [
+        "GJVIS52.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "GJVIS6.BMP",
+      "default_class": "johnny_full",
+      "overrides": [],
+      "notes": "All18 drawings show identifiable Johnny walking, running, jumping or stretching. Motion trails are attached effects, not separate held props.",
+      "reviewed_pages": [
+        "GJVIS6.BMP-01.png"
+      ]
+    }
+  ]
+}

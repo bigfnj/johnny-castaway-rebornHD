@@ -6,6 +6,11 @@ workflow. A prompt is not a reproducible image; the saved source PNG and its
 documented export identify the actual artwork. Open engineering work belongs
 in `BACKLOG.md`.
 
+The [character authoring playbook](cartoon-character-playbook.md) consolidates
+the reusable character workflow, current Cartoon choices, inventory/extraction
+finish criteria and evidence-completeness lessons. Use it as the handoff for
+the next character pass; the linked historical records below remain unchanged.
+
 ## Evidence and source records
 
 | Record | Knowledge preserved |
