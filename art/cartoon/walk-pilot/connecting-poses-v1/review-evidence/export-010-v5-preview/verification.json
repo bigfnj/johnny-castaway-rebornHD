@@ -1,0 +1,36 @@
+{
+  "status": "REJECTED FOR FIXED-CANVAS FIT",
+  "selected_frame": 10,
+  "source": "010-connecting-v5.png",
+  "source_sha256": "cceef504e777f1fe9f794c35832c7c6e4273526fabc49b27a7d2032ae4056729",
+  "attempted_runtime_command": "python -B art/cartoon/walk-pilot/connecting-poses-v1/export.py --frame 10 --prepare --source 010-connecting-v5.png --output build/connecting-analysis/export010-v5",
+  "runtime_exit_code": 1,
+  "runtime_stderr": "FAIL runtime-overhang:010",
+  "executed_exporter_sha256": "bbbd0778ba2a92f161790937406fdc35a21f73e03599ac3f8575ddb11b5935d5",
+  "runtime_output_directory_created": false,
+  "runtime_png_created": false,
+  "preserved_preview_records": [
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/010-v5-preview/recipe.json",
+      "sha256": "684578710fb5c483938cf3d58b57f86fa11ac184f705bdc178ef62a5bb579ce0"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/010-v5-preview/export-report.json",
+      "sha256": "6a6d2bdebc64f3560c9d5b428eca22441b7b8e686febd88bb84d0f61c0a045c8"
+    }
+  ],
+  "alpha8_centers_hd": [
+    4.650000000000002,
+    0.2999999999999998,
+    65.85000000000001,
+    148.1
+  ],
+  "runtime_canvas": [
+    80,
+    148
+  ],
+  "bottom_overhang_hd": 0.1,
+  "smoke": "NOT RUN: runtime fit failed",
+  "regression": "NOT RUN: runtime fit failed",
+  "scope": "Padded preview only at unchanged0.1 scale and original cap target. No artwork edits, clipping, scale change, native capture, package change or approval."
+}

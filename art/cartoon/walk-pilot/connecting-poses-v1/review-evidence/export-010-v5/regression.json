@@ -1,0 +1,170 @@
+{
+  "inputs_sha256": {
+    "export": "ced3c0303d5ac39ea43e7f875c49d2d6907a312d88a6d0a1bd1bfb863ed9043f",
+    "test": "cced7415c42104f1bb2e9d1353d2fe262b6321f997f1420b48928b52ff0a0160",
+    "recipe": "f3a48ffc9b7316d0402d928544e156a4c3604b59088360392e1e3e17d713e500",
+    "legacy_export": "56fc9e13ce266203d69c13e48d1187b60228681d2c46f4ddba8b3b9734f942d2",
+    "selected_frame": 10
+  },
+  "phase": "regression",
+  "passed": 27,
+  "cases": [
+    "reference-source",
+    "reference-native",
+    "reference-nearest8",
+    "source-path",
+    "prepare-canvas",
+    "cap-outline",
+    "recipe-reference",
+    "render-contract",
+    "recipe-frame",
+    "source-identity",
+    "source-canvas",
+    "fixed-registration",
+    "fixed-y-registration",
+    "runtime-canvas",
+    "runtime-overhang",
+    "allowed-frame",
+    "output-exists",
+    "explicit-input",
+    "normal-synthetic",
+    "preview-overhang",
+    "recipe-byte-identity",
+    "legacy-filter-parity",
+    "explicit-prepare",
+    "original-cap-target",
+    "all-frame-configurations",
+    "target-y-derivation",
+    "prior-pose-byte-compatibility"
+  ],
+  "mutations": [
+    {
+      "case": "reference-source",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "c64b73f4875bc87889496460d8824b43f20348a32e8532bdd31b6ec72f6f4e72"
+    },
+    {
+      "case": "reference-native",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "c64b73f4875bc87889496460d8824b43f20348a32e8532bdd31b6ec72f6f4e72"
+    },
+    {
+      "case": "reference-nearest8",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "c64b73f4875bc87889496460d8824b43f20348a32e8532bdd31b6ec72f6f4e72"
+    },
+    {
+      "case": "source-path",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "e38575e1cbd2a94eae70f48ed2968d8682c3a3566e149e85bcda005bee60f345"
+    },
+    {
+      "case": "prepare-canvas",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "5b12a02a72ac065f34d1c648bb9fb8d3b753fe86ab7d2e727d3c5bda64eff494"
+    },
+    {
+      "case": "cap-outline",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "e9c2fed02574b0a30a49d2401307fb5efcd8c06fef019507e076c5d505c683eb"
+    },
+    {
+      "case": "recipe-reference",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "17dd25f10faf58b4cadaed01cc235372a2e320cb1d89a8cbba71c3a0f1029aac"
+    },
+    {
+      "case": "render-contract",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "e0c96fc45d0f337fdd9020f0cad078812b715413bc6aa0b7575dc638a24cfd01"
+    },
+    {
+      "case": "recipe-frame",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "5edb8c4e5f28e0fe7325df810df9cb65e76294015bc4daccedeb93c7db03e0a7"
+    },
+    {
+      "case": "source-identity",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "4c521e58fd1d4eedeedf76160242b8aa63fd60743d774d6d6d19192a9e951312"
+    },
+    {
+      "case": "source-canvas",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "3dc6cb75b81746d7226f185ceed1d9c935915919cadd6b7d606c3d2ee8effa9b"
+    },
+    {
+      "case": "fixed-registration",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "8f095f7daf3f3d96a6fde806db391104c3b218cdb86aae8c8f8dcfc9a349b0e1"
+    },
+    {
+      "case": "fixed-y-registration",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "8f095f7daf3f3d96a6fde806db391104c3b218cdb86aae8c8f8dcfc9a349b0e1"
+    },
+    {
+      "case": "runtime-canvas",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "d81fff125e5c9b6f63b38c47ee6320bc017ae3bf4f39251ff802338da7cd29cb"
+    },
+    {
+      "case": "runtime-overhang",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "6a1cff4815c0faa500ad8e2ba0ffe58379d1e96f1d88ee877241f1307511f752"
+    },
+    {
+      "case": "allowed-frame",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "25578c007d622f06b42cb13635873fb7324f56860d21e9ea5530af4452f1c719"
+    },
+    {
+      "case": "output-exists",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "63fdf12e0b588d056da26672ef74099718914f7893fb1880ae1160412adb709b"
+    },
+    {
+      "case": "explicit-input",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "ae91e2678e0b0a47a768d721ac4c1b3aceed6a20fca3ed73657da234b4d65061"
+    },
+    {
+      "case": "premultiplied-filter",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "40cf9b73c8680c2bbd541ebfbf0bb9cf6b2ad713aa029f9b771b1141d06f5b25"
+    },
+    {
+      "case": "original-cap-target",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "1bc39955af1234945bf4e5c1f6f78a88b6a3cb33b1b370be11e929cba3685361"
+    },
+    {
+      "case": "declared-target-y",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_source_sha256": "0714d86393dc276e1f68e9d48a4f3db0122be17c9d7ac8f28341ba0a62e78912"
+    }
+  ],
+  "mutation_status": "executed",
+  "limit": "Authoring-only checks; no anatomical correctness or original-engine playback parity claim. Source mutations execute in fresh python -B processes."
+}

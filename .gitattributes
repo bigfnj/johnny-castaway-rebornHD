@@ -41,6 +41,8 @@ art/cartoon/walk-pilot/** -text whitespace=cr-at-eol
 art/cartoon/island-pilot-v1/** -text whitespace=cr-at-eol
 art/cartoon/walk-expansion-v1/** -text whitespace=cr-at-eol
 art/cartoon/arrival-pilot-v1/** -text whitespace=cr-at-eol
+art/cartoon/skin-tone-v1/** -text whitespace=cr-at-eol
+art/cartoon/standing018-proportions-v1/** -text whitespace=cr-at-eol
 
 # This hashed historical capture manifest includes a final blank line.
 art/cartoon/walk-pilot/directional-cycle-v1/review-evidence/direction-clearance-manifest-v1.json whitespace=cr-at-eol,-blank-at-eof
@@ -49,6 +51,30 @@ art/cartoon/walk-pilot/directional-cycle-v1/review-evidence/direction-clearance-
 art/cartoon/walk-pilot/front-refresh-v1/review-evidence/key-v1/helpers/build_key_review.py whitespace=cr-at-eol,-blank-at-eof
 art/cartoon/walk-pilot/front-refresh-v1/review-evidence/key-v1/helpers/check_key_review.py whitespace=cr-at-eol,-blank-at-eof
 art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/inputs/walk-data.h whitespace=cr-at-eol,-blank-at-eof
+
+# Frozen connecting/color/contact evidence includes intentional changed-HTML
+# controls, unified-diff context lines and original final blank lines.
+art/cartoon/skin-tone-v1/review/evidence/native-v1/browser-controls/changed-served-html/review.html whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/color/correct018_foot_v5.py whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/color/evidence-foot-v5/adapter-diff.txt whitespace=cr-at-eol,-blank-at-eol
+art/cartoon/standing018-proportions-v1/color/reference-foot-v5.json whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/export/trials-foot-v4/measure_foot_v4.py whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/export/trials-foot-v5/measure_foot_v5.py whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/foot-review-v5/evidence-v1/helpers/shared_motion_check.py whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/foot-review-v5/shared_motion_check.py whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/motion-review-v1/evidence-v1/helpers/template.html whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/motion-review-v1/evidence-v1/negatives/wrong018-selector/mutant-review/review.html whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/motion-review-v1/evidence-v1/publication-first-attempt/publish.py whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/motion-review-v1/evidence-v1/review/review.html whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/standing018-proportions-v1/motion-review-v1/template.html whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/evidence/motion-v1/negative-controls/browser/changed-served-html/review.html whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/evidence/motion-v1/negative-controls/preservation-readback/changed-0.html whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+
+# Retained Windows stdout includes CRCRLF; keep the observed bytes, including
+# blank final lines and unified-diff context, instead of rewriting evidence.
+art/cartoon/skin-tone-v1/integration-v1/windows-v1/captures/** whitespace=cr-at-eol,-blank-at-eol,-blank-at-eof
+art/cartoon/skin-tone-v1/integration-v1/windows-v1/build/CMakeCache.txt whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/skin-tone-v1/integration-v1/windows-v1/run/gate-adaptation.diff whitespace=cr-at-eol,-blank-at-eol
 
 # Reproducible authoring metadata, separate from immutable art records.
 docs/knowledge-base/cartoon-art-metadata.json text eol=lf

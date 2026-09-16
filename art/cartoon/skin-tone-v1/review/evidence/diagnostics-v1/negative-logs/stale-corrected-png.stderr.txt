@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\skin-tone-v1\review\build_diagnostics.py", line 143, in <module>
+    main()
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\skin-tone-v1\review\build_diagnostics.py", line 92, in main
+    recipe_path, frames = load_inputs(export)
+                          ^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\skin-tone-v1\review\build_diagnostics.py", line 43, in load_inputs
+    candidate = bound(export / row['candidate_png'], row['candidate_png_sha256'], 'corrected PNG')
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\skin-tone-v1\review\build_diagnostics.py", line 21, in bound
+    assert sha(data) == expected, label + ':' + path.name
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: corrected PNG:024.png

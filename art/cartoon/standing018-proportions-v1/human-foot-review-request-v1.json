@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "Human foot contact and motion review requested; response pending",
+  "time_observed_before_question_utc": "2026-09-16 19:17:48 UTC",
+  "question": "In the new review (http://127.0.0.1:8932/standing018-contact-v3/review.html), does the right-hand \"Corrected foot\" now feel planted on the sand? Use \"Watch the arrival and departure\" to check it in motion too.",
+  "options": [
+    "Yes, keep this correction",
+    "The foot still needs adjustment"
+  ],
+  "url": "http://127.0.0.1:8932/standing018-contact-v3/review.html",
+  "contact_html_sha256": "9557a43cadf948a06acc7280f138742b2b36916c4408bffdc3adf31fafc2f1d1",
+  "contact_record_sha256": "0637c7f5b1d3b26223ecfadf136fbfed869de1b07458d8c898795be2a2a2d18a",
+  "motion_html_sha256": "3dc2fde8141eb74cb2f96dbbc764ec458561095d5d982da33e64e1a2854b887c",
+  "motion_record_sha256": "947b2aa27e41e33ac2189f9ae6c1c5767a7eb7e0989476cb3f156f2187bb1503",
+  "raw": "018-foot-v5.png",
+  "raw_sha256": "97922bacf481925f29640606e305ba1747b7de5fb1b01439e4fcdaf8e2621c5e",
+  "runtime018_sha256": "5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f",
+  "candidate_archive_sha256": "561edb2c9b4b4857b723af1505ce8d2654616aae2942325389604a4d88804521",
+  "native_evidence_sha256": "06f14e9124fef44686d3ec5613f23b788e9972812de5c3cd23330aa718f1f43a",
+  "color_evidence_sha256": "b5b3362b7582c0c874fb983be5a96d140d6bad2b4f6c253546379e49e2762ac2",
+  "scope": "Smaller foot contact after preserving accepted torso/shorts proportions, with approved skin target restored. Contact page uses three exact same-position stills; linked motion compares previous version and corrected foot across front departure, same-origin arrival and mirrored arrival. Do not infer exhaustive story coverage or that every clip was watched from a generic response.",
+  "source_reference_limit": "Original pose is port-rendered supplied-original geometry with diagnostic colors and original gray shadow. It is not original-executable color or timing proof.",
+  "verification": "Selected export smoke/regression and color smoke/regression passed. All three native clips passed smoke/full/fresh repeat;164 displays preserve placement/timing and all non018 pixels. Contact/motion browser checks and exact208-file served readback passed.",
+  "production_promoted": false,
+  "production_archive_unchanged_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db"
+}

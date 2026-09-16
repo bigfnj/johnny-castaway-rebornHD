@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "scope": "Unmodified maintained suites; all smoke stages before regressions; checks do not reread external originals.",
+  "files": {
+    "art-tools-regression.log": {
+      "sha256": "44435172b5855003bc3968f39b3b1b72978927760fa23eeb83c4a499038eb644",
+      "bytes": 2878
+    },
+    "catalog-regression.log": {
+      "sha256": "2be7ebfb13d92065254f32019007951181213c68ac6c004ea51cdb3ca33ac4dd",
+      "bytes": 5197
+    },
+    "catalog-reproduction.log": {
+      "sha256": "27928a2b0ad2cdc3300fd6da07b5e2d2be90deffb442fd169beea947df64b757",
+      "bytes": 345
+    },
+    "catalog-smoke.log": {
+      "sha256": "882af687bb1dba10f3c401045859fe86ddf8567f16374cd22105eb2996e4f388",
+      "bytes": 392
+    },
+    "history-regression.log": {
+      "sha256": "43327bc6f49a55c530a0b6a86f8f8b4a1190c3ff9492ebbf4080a66fa99dff8b",
+      "bytes": 2521
+    },
+    "history-smoke.log": {
+      "sha256": "e02443e75d7c78b94537604150eabfff2d7e3f48a01249df63a648cd28400e63",
+      "bytes": 261
+    },
+    "inventory-regression.log": {
+      "sha256": "bb7dd92e80d37b8e4a62cb13c3c0160f2838f0b07bbdd16e844bf7a4ed0c7a3b",
+      "bytes": 1742
+    },
+    "inventory-smoke.log": {
+      "sha256": "185a68791a109277592db99bdd774284188ff5c24744a4202c4f9ca7ca6b92ed",
+      "bytes": 328
+    },
+    "metadata-regression.log": {
+      "sha256": "4444c858ad01957724825964875efc7f885e2ad871b17fdb5e3f6f2c8dcf816f",
+      "bytes": 5771
+    },
+    "metadata-reproduction.log": {
+      "sha256": "aa3307a3cce0a0405448b06a83d6f2d7e955bf0f14eecb19bd518619ac5e2122",
+      "bytes": 272
+    },
+    "metadata-smoke.log": {
+      "sha256": "b931df849abfabc542b383635e000a6bc1160dca028cef1f842720bc6504c788",
+      "bytes": 338
+    },
+    "report.json": {
+      "sha256": "eab359a1e16de0f647476d6ed6bfefd6767f468d9c6fa87f69e615e9b18e7d40",
+      "bytes": 10561
+    },
+    "run_authoring.py": {
+      "sha256": "6a7904ec67b5589fc7c72738dd88d92ddf0aa1d4563de53e20c3139a5493d3c5",
+      "bytes": 3324
+    }
+  },
+  "runs": [
+    {
+      "label": "inventory-smoke",
+      "exit_code": 0,
+      "unittest_counts": [
+        "3"
+      ],
+      "skips": [],
+      "log_sha256": "185a68791a109277592db99bdd774284188ff5c24744a4202c4f9ca7ca6b92ed"
+    },
+    {
+      "label": "history-smoke",
+      "exit_code": 0,
+      "unittest_counts": [
+        "1"
+      ],
+      "skips": [],
+      "log_sha256": "e02443e75d7c78b94537604150eabfff2d7e3f48a01249df63a648cd28400e63"
+    },
+    {
+      "label": "metadata-smoke",
+      "exit_code": 0,
+      "unittest_counts": [
+        "2"
+      ],
+      "skips": [],
+      "log_sha256": "b931df849abfabc542b383635e000a6bc1160dca028cef1f842720bc6504c788"
+    },
+    {
+      "label": "catalog-smoke",
+      "exit_code": 0,
+      "unittest_counts": [
+        "3"
+      ],
+      "skips": [],
+      "log_sha256": "882af687bb1dba10f3c401045859fe86ddf8567f16374cd22105eb2996e4f388"
+    },
+    {
+      "label": "inventory-regression",
+      "exit_code": 0,
+      "unittest_counts": [
+        "11"
+      ],
+      "skips": [
+        "test_directory_symlink_alias (__main__.InventoryCliTests.test_directory_symlink_alias) ... skipped \"directory symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-bsdsfy9a' -> 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-bsdsfy9a\\\\\\\\alias'\"",
+        "test_file_symlink_alias (__main__.InventoryCliTests.test_file_symlink_alias) ... skipped \"file symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-md_eu_hi\\\\\\\\fixture.zip' -> 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-md_eu_hi\\\\\\\\symlink.json'\"",
+        "OK (skipped=2)"
+      ],
+      "log_sha256": "bb7dd92e80d37b8e4a62cb13c3c0160f2838f0b07bbdd16e844bf7a4ed0c7a3b"
+    },
+    {
+      "label": "history-regression",
+      "exit_code": 0,
+      "unittest_counts": [
+        "22"
+      ],
+      "skips": [],
+      "log_sha256": "43327bc6f49a55c530a0b6a86f8f8b4a1190c3ff9492ebbf4080a66fa99dff8b"
+    },
+    {
+      "label": "metadata-regression",
+      "exit_code": 0,
+      "unittest_counts": [
+        "60"
+      ],
+      "skips": [],
+      "log_sha256": "4444c858ad01957724825964875efc7f885e2ad871b17fdb5e3f6f2c8dcf816f"
+    },
+    {
+      "label": "catalog-regression",
+      "exit_code": 0,
+      "unittest_counts": [
+        "63"
+      ],
+      "skips": [],
+      "log_sha256": "2be7ebfb13d92065254f32019007951181213c68ac6c004ea51cdb3ca33ac4dd"
+    },
+    {
+      "label": "art-tools-regression",
+      "exit_code": 0,
+      "unittest_counts": [
+        "20"
+      ],
+      "skips": [],
+      "log_sha256": "44435172b5855003bc3968f39b3b1b72978927760fa23eeb83c4a499038eb644"
+    },
+    {
+      "label": "metadata-reproduction",
+      "exit_code": 0,
+      "unittest_counts": [],
+      "skips": [],
+      "log_sha256": "aa3307a3cce0a0405448b06a83d6f2d7e955bf0f14eecb19bd518619ac5e2122"
+    },
+    {
+      "label": "catalog-reproduction",
+      "exit_code": 0,
+      "unittest_counts": [],
+      "skips": [],
+      "log_sha256": "27928a2b0ad2cdc3300fd6da07b5e2d2be90deffb442fd169beea947df64b757"
+    }
+  ],
+  "replay": "Copy run_authoring.py to build/connecting-poses/run_authoring.py in this commit checkout, then run with toolbox Python 3.11.15. It requires a fresh build/connecting-poses/authoring-v1 output directory and executes maintained tests without modifying inputs. Historical report paths identify this original run."
+}

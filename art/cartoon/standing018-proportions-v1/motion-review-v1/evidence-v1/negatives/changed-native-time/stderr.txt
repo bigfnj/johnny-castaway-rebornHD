@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 98, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 72, in main
+    return one(a.review, a.output, a.case)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 39, in one
+    build.validate_pair(left, right, 'waypoint_front', executable)
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\build_review.py", line 53, in validate_pair
+    assert all(a[k] == b[k] for k in TIMELINE_KEYS), 'matching native panel timeline:' + clip + ':' + str(a['index'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: matching native panel timeline:waypoint_front:1

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--init",
+    "--network",
+    "none",
+    "--mount",
+    "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses,target=/source,readonly",
+    "--mount",
+    "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/build/standing018-proportions/native-review/color-v2,target=/out",
+    "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/art/cartoon/standing018-proportions-v1/native-review/capture_review.py",
+    "--capture"
+  ],
+  "helper_sha256": "eee881e74e89f4bb0a5ce9828358009f4b972070d969b4a11018174ba590f706"
+}

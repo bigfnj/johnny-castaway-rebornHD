@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "html_sha256": "13991046dd3a451b3886171a62df4fada4a92864cc3b07774e170730153c9d84",
+  "controls": [
+    {
+      "case": "changed-valid-html",
+      "status": "FIRED",
+      "failure": "identity:review file:review.html",
+      "changed_input_sha256": "5bd7de739d52915f86af9113a5c4b263930c483b469ff4d5e406fccd156d54f7"
+    },
+    {
+      "case": "changed-valid-preparation",
+      "status": "FIRED",
+      "failure": "identity:captured preparation",
+      "changed_input_sha256": "82f6e48b81fd7f443cfe187a27fccd67746f8289fb160980f794198a1b58ccd4"
+    },
+    {
+      "case": "changed-valid-capture-report",
+      "status": "FIRED",
+      "failure": "identity:captured report:candidate:waypoint_front",
+      "changed_input_sha256": "3668874a0bc35e77de4d7039e0f8b92df5865eeba41a380db2d001d1d7472ef5"
+    }
+  ],
+  "checker_sha256": "443c4665f8b9744beadba51d7bb90f5b8c25bb3d52f23b412196371e0e50e9e4",
+  "preserver_sha256": "a3eb111361aa57bc8acdedf6843a6eece6c7ea9a98921a787fdfc6fc87d8edce",
+  "publisher_sha256": "869734b89c2fd13f90ad18e3ac8e83adf35023bd5f5e7c3f27a70a2bc5615e6a",
+  "positive_before_and_after_each_case": true,
+  "scope": "Actual valid HTML/JSON changes in copied files. Native image PNGs and ZIP are read-only hardlinks, never edited. Original review, preparations and capture reports retain their identities."
+}

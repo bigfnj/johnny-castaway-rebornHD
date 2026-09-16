@@ -1,0 +1,136 @@
+"""One-time preservation of this completed isolated Windows delivery gate."""
+from pathlib import Path
+import hashlib
+import json
+import re
+import shutil
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[3]
+HERE = Path(__file__).resolve().parent
+RUN = HERE / 'connecting-color-foot-promotion-v1'
+DEST = ROOT / 'art/cartoon/skin-tone-v1/integration-v1/windows-v1'
+HELPER = Path('D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/motion_review.py')
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def read(path):
+    return json.loads(path.read_text(encoding='utf-8-sig'))
+
+
+def write(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, indent=2) + '\n', encoding='utf-8')
+
+
+def main():
+    result = read(RUN / 'result.json')
+    start = read(HERE / 'integration-start.json')
+    running = read(RUN / 'running.json')
+    log = (RUN / 'gate.log').read_text(encoding='utf-8', errors='replace')
+    assert not DEST.exists(), 'Preserved Windows checkpoint already exists'
+    changed = [name for name, digest in start['source_sha256'].items()
+               if sha(ROOT / name) != digest]
+    assert not changed, f'Integration inputs changed: {changed}'
+    assert sha(HELPER) == running['helper_sha256'], 'Desktop helper changed'
+    assert sha(HERE / 'run_gate.py') == running['launcher_sha256'], 'Launcher changed'
+    DEST.mkdir(parents=True)
+    copied = []
+
+    def copy(source, name, source_label=None):
+        target = DEST / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
+        assert sha(source) == sha(target), name
+        copied.append({'path': name, 'source': source_label or source.relative_to(ROOT).as_posix(),
+                       'sha256': sha(target)})
+
+    for name in ('result.json', 'running.json', 'gate.log', 'adaptation.json',
+                 'gate-adaptation.diff', 'gate-retained.ps1'):
+        copy(RUN / name, 'run/' + name)
+    copy(HERE / 'integration-start.json', 'run/integration-start.json')
+    copy(HERE / 'run_gate.py', 'helpers/run_gate.py')
+    copy(Path(__file__), 'helpers/preserve_windows.py.txt')
+    copy(ROOT / 'gate.ps1', 'helpers/gate.ps1')
+    copy(HELPER, 'helpers/motion_review.py', 'external-scratch/original-pose-review/motion_review.py')
+    cache = ROOT / 'build/CMakeCache.txt'
+    copy(cache, 'build/CMakeCache.txt')
+    for path in sorted((ROOT / 'build/CMakeFiles').glob('*/CMakeCCompiler.cmake')):
+        copy(path, 'build/' + path.parent.name + '/' + path.name)
+    for path in sorted((ROOT / 'build/CMakeFiles').glob('*/CMakeSystem.cmake')):
+        copy(path, 'build/' + path.parent.name + '/' + path.name)
+    for row in result['retained_captures']:
+        image = ROOT / row['path']
+        assert sha(image) == row['ppm_sha256'], 'Retained PPM changed: ' + row['path']
+        native_log = image.with_suffix('.log')
+        if native_log.exists():
+            assert sha(native_log) == row['log_sha256'], 'Retained log changed: ' + row['path']
+            copy(native_log, 'captures/' + native_log.relative_to(RUN).as_posix())
+
+    stages = [line for line in log.splitlines() if line.startswith('=== ')]
+    reg_index = next((i for i, line in enumerate(stages) if '=== regression (' in line), None)
+    ordered = reg_index is not None and not any('smoke' in line for line in stages[reg_index:])
+    captures = result['retained_captures']
+    complete = bool(captures) and all(row['complete_ppm'] and row['capture_marker'] for row in captures)
+    golden = '2452 file(s) byte-identical to the golden corpus' in log
+    warning_free = 'OK   build clean, no warnings' in log
+    skips = [line.strip() for line in log.splitlines() if 'skipped ' in line or line.lstrip().startswith('SKIP')]
+    binaries = {p.name: {'sha256': sha(p), 'mtime_ns': p.stat().st_mtime_ns}
+                for p in sorted((ROOT / 'build/Release').iterdir())
+                if p.suffix.lower() in ('.exe', '.scr')}
+    versions = {}
+    for tool, command in [('cmake', ['cmake', '--version']), ('pwsh', ['pwsh', '--version']),
+                          ('python_on_gate_path', ['python', '--version'])]:
+        output = subprocess.check_output(command, text=True).strip()
+        resolved = Path(shutil.which(command[0]))
+        versions[tool] = {'version_output': output, 'executable_sha256': sha(resolved),
+                          'path_at_preservation': str(resolved)}
+    import PIL
+    import psutil
+    versions['launcher_python'] = {'version': sys.version, 'executable_sha256': sha(Path(sys.executable)),
+                                   'Pillow_version': PIL.__version__, 'psutil_version': psutil.__version__}
+    record = {
+        'schema_version': 1,
+        'status': 'PASS' if result['passed'] and ordered and complete and golden else 'FAIL',
+        'scope': 'Windows full gate for accepted connecting poses, shared skin colors and foot-v5 018 integration.',
+        'source_archive_sha256': result['source_archive_sha256'],
+        'deployed_archive_sha256': result['deployed_archive_sha256'],
+        'head_at_start': start['head_at_start'],
+        'head_scope': 'Production working inputs were integrated before commit; source hashes, not HEAD alone, identify the tested state.',
+        'exit_code': result['exit_code'], 'elapsed_seconds': result['elapsed_seconds'],
+        'build_warning_free': warning_free, 'smoke_precedes_all_regressions': ordered,
+        'ordered_stages': stages, 'golden_2452_files_byte_identical': golden,
+        'retained_capture_count': len(captures), 'all_retained_captures_complete_with_markers': complete,
+        'input_desktop_preserved': result['input_desktop_preserved'],
+        'poll_checks': result['poll_checks'],
+        'observed_inactive_window_count': len(result['observed_inactive_windows']),
+        'protected_inputs_unchanged': result['protected_inputs_unchanged'],
+        'integration_inputs_unchanged': not changed, 'explicit_skip_lines': skips,
+        'toolchain': versions, 'binaries': binaries,
+        'launch_command': '& $env:TOOLBOX_PYTHON -B build/connecting-poses/windows-verification/run_gate.py --zip-sha256 '
+                          + result['source_archive_sha256'] + ' --label connecting-color-foot-promotion-v1',
+        'gate_command': running['command'],
+        'limitations': ['Inactive desktop tests real Windows code without displaying it on the input desktop.',
+                       'Compiler warnings are surfaced by the gate, not automatically fatal.',
+                       'Renderer PPMs and native binaries remain in ignored scratch; exact hashes and small native logs are retained.',
+                       'Maintained catalog reproduction and other-platform CI are separate checks.',
+                       'This feature-worktree gate is not a post-merge main deployment check.'],
+        'files': copied,
+    }
+    write(DEST / 'evidence.json', record)
+    mismatches = [row['path'] for row in copied if sha(DEST / row['path']) != row['sha256']]
+    assert not mismatches, mismatches
+    write(DEST / 'readback.json', {'status': 'PASS', 'evidence_sha256': sha(DEST / 'evidence.json'),
+          'exact_copies_checked': len(copied), 'retained_ppms_checked': len(captures),
+          'all_sources_equal_copies_at_write': True, 'mismatches': mismatches})
+    print(json.dumps({'status': record['status'], 'evidence_sha256': sha(DEST / 'evidence.json'),
+                      'readback_sha256': sha(DEST / 'readback.json'), 'copies': len(copied),
+                      'captures': len(captures)}, indent=2))
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "case": "protected",
+      "file": "art/cartoon/standing018-proportions-v1/generation-request-v2.json",
+      "status": "PASS",
+      "failure": null,
+      "source_sha256": "e16d166cdf19af37be27223f28936b5c24262508b9bcd3e30d8b2ff87a1093f7",
+      "checkout_sha256": "e16d166cdf19af37be27223f28936b5c24262508b9bcd3e30d8b2ff87a1093f7"
+    },
+    {
+      "case": "removed",
+      "file": "art/cartoon/standing018-proportions-v1/generation-request-v2.json",
+      "status": "FIRED",
+      "failure": "art/cartoon/standing018-proportions-v1/generation-request-v2.json: byte identity changed",
+      "source_sha256": "e16d166cdf19af37be27223f28936b5c24262508b9bcd3e30d8b2ff87a1093f7",
+      "checkout_sha256": "27bce64bdc883aa2ae2f7e510d18133c74a1a48c281b5f03df390efaaac4af0d"
+    },
+    {
+      "case": "restored",
+      "file": "art/cartoon/standing018-proportions-v1/generation-request-v2.json",
+      "status": "PASS",
+      "failure": null,
+      "source_sha256": "e16d166cdf19af37be27223f28936b5c24262508b9bcd3e30d8b2ff87a1093f7",
+      "checkout_sha256": "e16d166cdf19af37be27223f28936b5c24262508b9bcd3e30d8b2ff87a1093f7"
+    }
+  ],
+  "attributes_sha256": "332514feae56a23188dd4915c4ceacd076f6bd9351960da1d6f769a3fcee1c88"
+}

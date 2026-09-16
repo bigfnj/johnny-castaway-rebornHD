@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "checker_sha256": "959e1522b618be5b70eb265d932acee9e5339af68dc817a4de5f12eea969d756",
+  "comparison_helper_sha256": "3721daefabff3c35f593973cffcd5c6c039ef55ab5937c950a6e0b9e88a7b9b1",
+  "candidate_archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf",
+  "recipe_sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+  "candidate_version": 2,
+  "positive_before_and_after": true,
+  "original_files_modified": false,
+  "inputs": {
+    "candidate_report_sha256": "d87ef06a2ebd82bb387ef4e558b42b9e84554a0c273723b9f6492eba85cdf643",
+    "baseline_report_sha256": "b1c165003e7a2bb93815d120a783f3b3ac489be16dce97d2d8be25d0a8e00a7b"
+  },
+  "controls": [
+    {
+      "case": "changed-display-timestamp",
+      "status": "FIRED",
+      "failure": "connecting capture: identical native display logical_ms"
+    },
+    {
+      "case": "outside-skin",
+      "frame": 18,
+      "scene_pixel": [
+        970,
+        433
+      ],
+      "status": "FIRED",
+      "failure": "connecting capture: outside transformed skin mask:018"
+    },
+    {
+      "case": "outside-canvas",
+      "frame": 18,
+      "scene_pixel": [
+        0,
+        0
+      ],
+      "status": "FIRED",
+      "failure": "connecting capture: outside skin canvas:018"
+    },
+    {
+      "case": "unchanged029",
+      "frame": 29,
+      "scene_pixel": [
+        1014,
+        453
+      ],
+      "status": "FIRED",
+      "failure": "connecting capture: unchanged reference pixels:029"
+    }
+  ],
+  "method": "Actual completed native reports and PPM reader; one timestamp or one in-memory pixel changed. Candidate pixel hash updated so pixel controls reach the placement/mask/reference guards, rather than failing a hash check."
+}

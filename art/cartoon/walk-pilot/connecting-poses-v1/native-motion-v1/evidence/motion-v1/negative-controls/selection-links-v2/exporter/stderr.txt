@@ -1,0 +1,27 @@
+test_mixed_version_and_pose_bindings (__main__.SelectionLinks.test_mixed_version_and_pose_bindings) ... FAIL
+
+======================================================================
+FAIL: test_mixed_version_and_pose_bindings (__main__.SelectionLinks.test_mixed_version_and_pose_bindings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\build\connecting-poses\native-motion-v1\negative-controls\selection-links-v2\exporter\check_selection.py", line 54, in main
+    prepare_candidate.validate_selection(changed)
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\build\connecting-poses\native-motion-v1\negative-controls\selection-links-v2\exporter\prepare_candidate.py", line 45, in validate_selection
+    assert tuple(tested[key] for key in ('export', 'test', 'recipe', 'selected_frame')) == expected_tests and proof['phase'] == phase and proof['passed'] > 0, 'selected ' + phase + ' input binding:' + label
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: selected smoke input binding:010
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\build\connecting-poses\native-motion-v1\negative-controls\selection-links-v2\exporter\run.py", line 13, in test
+    check_selection.main()
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\build\connecting-poses\native-motion-v1\negative-controls\selection-links-v2\exporter\check_selection.py", line 56, in main
+    assert str(error) == label, 'wrong mixed-version failure:' + str(error)
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: wrong mixed-version failure:selected smoke input binding:010
+
+----------------------------------------------------------------------
+Ran 1 test in 0.101s
+
+FAILED (failures=1)

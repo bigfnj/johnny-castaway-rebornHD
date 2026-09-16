@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "control": "positive-before",
+      "exit_code": 0,
+      "expected_failure": null,
+      "stdout_sha256": "cc7f84a9c1ae40fb4576e28eefa95c1106059a121442cc55f70ec97fc4700b63",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executed_builder_sha256": "4f8ca94e658198657dac03fc207ef99eded52a87df408a050b43b8a85969fe0d"
+    },
+    {
+      "control": "stale-corrected-png",
+      "exit_code": 1,
+      "expected_failure": "corrected PNG:024.png",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "81981b79c5f70354e02b78e01bbfa6de382fa0bf0216ef082ba7141b63de073f",
+      "executed_builder_sha256": "4f8ca94e658198657dac03fc207ef99eded52a87df408a050b43b8a85969fe0d"
+    },
+    {
+      "control": "stale-mask-png",
+      "exit_code": 1,
+      "expected_failure": "mask PNG:024.png",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "6c8c5c6bbed9ac27ffaf96acd3918c4d5d23e3cdac81643d3fc540e03c294fc2",
+      "executed_builder_sha256": "4f8ca94e658198657dac03fc207ef99eded52a87df408a050b43b8a85969fe0d"
+    },
+    {
+      "control": "existing-output",
+      "exit_code": 1,
+      "expected_failure": "preserve existing diagnostic output",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "447c801c1fa066124f7e6e8e3917e9049f9218ae35a842b3cc50f0fac8c238a4",
+      "executed_builder_sha256": "4f8ca94e658198657dac03fc207ef99eded52a87df408a050b43b8a85969fe0d"
+    },
+    {
+      "control": "positive-after",
+      "exit_code": 0,
+      "expected_failure": null,
+      "stdout_sha256": "cc7f84a9c1ae40fb4576e28eefa95c1106059a121442cc55f70ec97fc4700b63",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "executed_builder_sha256": "4f8ca94e658198657dac03fc207ef99eded52a87df408a050b43b8a85969fe0d"
+    }
+  ],
+  "script_sha256": "4d7954824844746ebd28bce95977f2a9d5e37758a655f2b85f4f6644a8a753b9",
+  "export_recipe_sha256": "b126c6d1d8b369ad9570c17c0694d9ef1268adc064432040deffa84fec3c33be",
+  "scope": "Executed builder in fresh Python processes; two actual validPNG mutations with stale recipe hashes, then occupied-output refusal. Original export and diagnostic checkpoints remain untouched."
+}

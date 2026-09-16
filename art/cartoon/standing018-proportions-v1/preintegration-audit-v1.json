@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "scope": "Read-only pre-integration review. No pack, acceptance, archive, catalog or staging output was written. Revised018 still is approved; revised018 motion approval and delivery checks remain pending.",
+  "status": "Composition and retained evidence are consistent; integration is held for the remaining human motion checkpoint.",
+  "production_before": {
+    "archive": "assets/scrantic_data.zip",
+    "archive_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+    "pack": "art/cartoon/pack.json",
+    "pack_sha256": "bdf55967d89ab269d938fa1091be43d0c994ce985c4ac4c4be2899172be4a5b6",
+    "members": 2591,
+    "accepted_cartoon_assets": 40
+  },
+  "retained_readbacks": [
+    {
+      "path": "art/cartoon/skin-tone-v1/review-evidence/export-v2/manifest.json",
+      "sha256": "d81a1f63a46e611b9def6ef56d079506b41271c7e639c1e9c94361f114318bb4",
+      "files_verified": 66,
+      "mismatches": [],
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "recipe_sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311"
+    },
+    {
+      "path": "art/cartoon/standing018-proportions-v1/color/evidence-v2/evidence.json",
+      "sha256": "16a350c7a1941d8606b50ac10b48ffb7b02223dabffebb6dbad9307fc71eec6e",
+      "copied_files_verified": 12,
+      "bound_helpers_annotation_and_document_verified": 4,
+      "mismatches": [],
+      "recipe": "art/cartoon/standing018-proportions-v1/color/evidence-v2/recipe.json",
+      "recipe_sha256": "eb92e5ba8b5aa8c6578d55ef5f3e68faa97f6212eaec60ed61d92de3bdf898c2"
+    }
+  ],
+  "proposed_composition": {
+    "johnny_frames": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
+    "johnny_selection": "27 rows from skin-tone-v1/exports-v2, excluding018; revised018 from standing018-proportions-v1/color/evidence-v2/sprites/018.png.",
+    "revised018_sha256": "21cf94cd90d369b20b6d3b8ef60b7cc2848f919ff828578320502aec9a17c55b",
+    "unchanged_island_assets": 15,
+    "fixed_canvas_pngs_validated_with_maintained_inspect_png": 43,
+    "total_archive_members": 2594,
+    "added_members": [
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/009.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/010.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/012.png"
+    ],
+    "changed_existing_johnny_members": 24,
+    "unchanged_existing_members": 2567,
+    "removed_members": [],
+    "029_byte_identical_to_production": true,
+    "review_private_archive": "build/standing018-proportions/native-review/color-v2/scrantic_data.zip",
+    "review_private_archive_sha256": "7a50f72fe65382917a1d38412dad97315542831ea5fd06eec9570734a7afdb52",
+    "independent_private_payload_differences": [],
+    "comparison_method": "Read both ZIPs and all43 selected PNGs. Construct the proposed name-to-SHA map in memory from prior production plus the explicit28 Johnny selection. Compare every private ZIP member. No ZIP or staging tree was created."
+  },
+  "source_proxy_semantics": {
+    "rule": "pack.assets[].source_sha256 remains the exact encoded data/hd proxy PNG hash from art_common.source_catalog. It is not the raw generated image, supplied-original RGBA, intermediate export or corrected PNG hash.",
+    "evidence": ["tools/art_common.py:85", "tools/art_pack.py:60", "tools/art_production_catalog.py:284"],
+    "preserve_existing_25_johnny_source_sha256": true,
+    "new_slots": {
+      "BMP/JOHNWALK.BMP/009.png": "f13271713dc93b718155d6fcd99c5509824930b747a4a30e0b6893a7ead123f3",
+      "BMP/JOHNWALK.BMP/010.png": "3406f9584d9e8e5d2d4b60c9b2a41c07cd5552575ef75c009c6713a28b0d4d3b",
+      "BMP/JOHNWALK.BMP/012.png": "844e503ea864c99d4ded5216eb57d38dbcffd9c493807ade64376a886bfa03e0"
+    }
+  },
+  "acceptance_and_ledger_checklist": [
+    "After revised018 motion approval, create a new aggregate production acceptance, for example art/cartoon/skin-tone-v1/production-acceptance.json. Bind the existing human-color-approval-v1.json, revised018 still and forthcoming motion approvals, original connecting pose approvals, final private archive and both color recipe/evidence identities.",
+    "List all28 Johnny paths as newly accepted, including unchanged029. Select only the15 unchanged island assets from the prior current profile-walk-v1/acceptance.json inheritance record. Keep those15 ledger rows and their resolved historical review pointers unchanged.",
+    "The aggregate accepted_assets must contain exactly43 path/sha256/recipe rows. Point27 Johnny ledger rows at skin-tone-v1/exports-v2/recipe.json and only018 at standing018-proportions-v1/color/evidence-v2/recipe.json. Both recipes already have path, runtime_canvas and candidate_png_sha256, so no wrapper or maintained-tool modification is necessary.",
+    "Append009/010/012 to required_assets and assets, replace the selected Johnny SHA/recipe/review fields, and update the active acceptance pointer and truthful partial-pack scope. Preserve runtime id cartoon, scale2, alpha straight and coverage partial.",
+    "Keep the historical pilot acceptance path and hash untouched. Expand pilot_history.replaced_assets to024,025,026,027,028,029:029 counts because its recipe/review origin changes even though its PNG bytes do not.",
+    "Build a fresh full43-PNG accepted tree. tools/art_pack.py replaces the entire Cartoon subtree, so staging only changed Johnny would omit the island art. Preserve all other archive payloads and the equivalent runtime manifest."
+  ],
+  "ancestry_traps": [
+    "Do not describe the final package as color-only relative to the previous28-pose review:018 has2729 alpha-pixel differences from the old corrected018. Its color pass preserves alpha exactly relative to its NEW exported source. The other27 Johnny outputs remain the prior approved color outputs.",
+    "Do not change the original28 correction recipe, its018 row, ancestry.json, raw inputs or old human approvals. Its retained018 remains historical evidence, even though production will choose the new018 recipe.",
+    "The new018 color recipe refers to ignored source-export paths. Reproduction must stage the pinned original arrival exporter/references with raw018-torso-v2.png, render the retained technical recipe, verify source runtime SHA b1bf6834e30e11ccff6a4f4a66e8a0d1bd7bf3d1f5ca82eeb98d34c88b45b29f, then call correct018.py with reference-v2.json SHA2912b2ba7d5fd363a02e0f8955524d508f20506de90855d201ba6f9f10544efc. A durable copy of that exact source runtime is already in color/evidence-v2/source-export/.",
+    "The prior profile integration helper is frozen and assumes eight additions and unchanged prior rows. Use a new scoped integration helper, preserving prior helpers and their input pins. Compare standard-builder output to the reviewed private package by all2594 member payloads, not ZIP envelope SHA alone.",
+    "Keep human scope separate: the color approval covers its earlier color review; revised018 still approval explicitly leaves transitions pending. The forthcoming motion approval must be bound before setting the new aggregate accepted=true. None of these records establish original-executable or story parity."
+  ],
+  "planned_commands_not_executed_here": [
+    "python -B tools/art_pack.py validate --archive ${PINNED_PRIOR_PRODUCTION} --ledger ${NEW_LEDGER_SNAPSHOT} --accepted ${ALL_43_STAGE}",
+    "python -B tools/art_pack.py build --archive ${PINNED_PRIOR_PRODUCTION} --ledger ${NEW_LEDGER_SNAPSHOT} --accepted ${ALL_43_STAGE} --output ${FRESH_CANDIDATE_ZIP}",
+    "python -B tools/art_review_metadata.py",
+    "python -B tools/art_production_catalog.py",
+    "python -B tests/test_art_inventory.py --smoke",
+    "python -B tests/test_art_pilot_history.py --phase smoke",
+    "python -B tests/test_art_review_metadata.py --phase smoke",
+    "python -B tests/test_art_production_catalog.py --phase smoke",
+    "python -B tests/test_art_inventory.py",
+    "python -B tests/test_art_pilot_history.py --phase regression",
+    "python -B tests/test_art_review_metadata.py --phase regression",
+    "python -B tests/test_art_production_catalog.py --phase regression",
+    "python -B -m unittest discover -s tests -p test_art_tools.py -v",
+    "python -B tools/art_review_metadata.py --check",
+    "python -B tools/art_production_catalog.py --check"
+  ],
+  "generated_paths": [
+    "docs/knowledge-base/cartoon-art-metadata.json",
+    "docs/knowledge-base/cartoon-art-metadata.md",
+    "docs/knowledge-base/cartoon-production-catalog.json",
+    "docs/knowledge-base/cartoon-production-catalog.md"
+  ],
+  "pending_gates": [
+    "Finish revised018 departure, same-origin023 arrival and mirrored rear-arrival native/browser checks and obtain the scoped human motion decision.",
+    "Reproduce final selected sources, especially raw018-v2 through the fixed exporter and its color adapter. V1 has full authoring smoke/regression; do not attribute that record to v2. V2 currently has actual fixed-fit export plus color smoke/regression/fresh replay. The new integration replay must close the source-to-runtime chain.",
+    "Validate a fresh full43 staging pack, then independently compare all2594 member payloads against the approved private candidate and exact prior-production delta. Execute a named corrupt-member control if a new comparison helper is introduced.",
+    "Regenerate the four catalog outputs after acceptance, pack and parent-owned hashed learning documents stabilize. Run the listed authoring smokes before regressions, then both --check commands. Record any Windows symlink privilege skips explicitly if they occur.",
+    "Parent's final Windows inactive-desktop build/smoke/regression, platform CI and post-merge audit remain delivery checks; none were run by this pre-integration review."
+  ]
+}

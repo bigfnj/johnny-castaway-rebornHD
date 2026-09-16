@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "status": "requested",
+  "request": {
+    "prompt": "Edit only Johnny's EYES in this game sprite. He is cross-eyed: both black pupils sit too close to his nose. Move BOTH BLACK PUPILS MUCH FARTHER APART. Put the left-on-screen pupil into the OUTER LEFT HALF of its white eyeball, and the right-on-screen pupil into the OUTER RIGHT HALF of its white eyeball. There must be clearly more white space between each pupil and the nose. The change must be plainly visible, not a microscopic shift. Keep the black pupil size, eye outlines, catchlights and relaxed eyebrows. Keep the cap, beard and entire body pose intact. Return the full 1024x1536 transparent PNG sprite, same framing, no background or shadow.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v3.png"
+    ]
+  },
+  "input_roles": [
+    "010-v3 edit target"
+  ],
+  "user_feedback": "the front view looks slightly cross-eyed  can you add some space to the pupils",
+  "reason_for_iteration": "v2/v3 still retained an inward gaze. Request a more visible outward shift.",
+  "approval": "Pending pupil-spacing and native review."
+}

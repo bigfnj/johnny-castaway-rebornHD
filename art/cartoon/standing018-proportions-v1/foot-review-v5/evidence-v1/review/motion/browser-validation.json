@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "html_sha256": "3dc2fde8141eb74cb2f96dbbc764ec458561095d5d982da33e64e1a2854b887c",
+  "checker_sha256": "5aa64a669a5a2cea5a7a2e50726e1990620d8a1a645a3134e1868deb61ce45d4",
+  "smoke_passed": 1,
+  "regressions_after_smoke": [
+    "waypoint_front: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "front_arc: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "waypoint_rear: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility"
+  ],
+  "unique_native_images": 182,
+  "executed_counts": {
+    "display_panels": 328,
+    "timestamp_boundaries": 319,
+    "pose_crops": 172,
+    "reference_choices": 4
+  },
+  "display_references_checked": 328,
+  "screenshots_sha256": {
+    "browser-validation-waypoint_front-frame018-1280.png": "1313851463a943effd914d94ef975b00d6d1c9991c9787f2998038db4265ab15",
+    "browser-validation-waypoint_front-frame023-1280.png": "4330cbad3769deeefa5dfb360c336d099d09579792dea2e5d78f01deb9bab7ef",
+    "browser-validation-waypoint_front-frame022-1280.png": "114a25d8df8848852536f478d866a61052260a9654ef96954f0c7ff9604dea9a",
+    "browser-validation-waypoint_front-frame003-1280.png": "c6ccda073387b001da97f91a4675d8e670307fde65dff9d8fb17d98e516d99a1",
+    "browser-validation-front_arc-frame018-1280.png": "12b23e701e5cef48e625c6f2951ad0d20dafdc2f4128af582052734628e8abeb",
+    "browser-validation-front_arc-frame003-1280.png": "a7825cda3b07beaa533ad4f35ae726e6126b427d046dc08d03f4b97297b4805a",
+    "browser-validation-waypoint_rear-frame018-1280.png": "da3630049250cb5ad66e8ccf50df17e51d9058898aaa62a3cb879fbd1813038b",
+    "browser-validation-waypoint_rear-frame023-1280.png": "8bf44ddfde28792b0ac45beaf66f77d23d4e283b817bc20bf2adb7722672f174",
+    "browser-validation-waypoint_rear-frame022-1280.png": "c527c174311f211e79d7f475f21d01aa9d03d88a60a323044cc9871a4309487c"
+  },
+  "browser_errors": [],
+  "request_failures": [],
+  "scope": "Exact three-clip018 native pixel/timing/control validation, including active-clip cache membership after each switch. No performance-saving measurement or human motion approval inferred."
+}

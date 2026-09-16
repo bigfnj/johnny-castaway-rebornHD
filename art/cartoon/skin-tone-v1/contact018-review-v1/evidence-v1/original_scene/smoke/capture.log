@@ -1,0 +1,35 @@
+zipvfs: opened archive 'scrantic_data.zip' (150 entries)
+Loading resources ....................................................................................................................................................................................
+HD assets enabled (scale=2, render=1280x960)
+rand seed: 11 (forced)
+island backdrop: OCEAN02.SCR
+Clouds Pos: 89, 32
+Clouds Pos: 136, 26
+TURN DRIVER: island_seed=11 path_seed=2 clip=front_arc style=hd
+TURN ISLAND: highTide=1 offset=0,0 raft=0 night=0 holiday=0
+TURN SEGMENT: prime api=adsPlayWalk(3,3,3,3) start_ms=0
+
+ +-- CALCULATE PATH --
+ |
+ |  . walking from D to D:
+ |  . possible paths:  D
+ |  . chosen path: D
+ +--------------------
+
+WALKING:  spot=3 hdg=3 next=3  -  data 0 479 216 18
+
+TURN DRAW: flip=0 x=478 y=216 frame=18
+TURN ANIMATE: delay_ticks=80
+    ------> Animate clouds
+Clouds Pos: 87, 32
+Clouds Pos: 135, 26
+TURN WAIT: ticks=0 logical_ms=0
+TURN DISPLAY: 1 logical_ms=0 file=display-001.ppm
+ ******* WAIT: 6 ticks *******
+
+    ------> Animate walking
+WALKING: end walk
+
+TURN ANIMATE: delay_ticks=0
+jc_reborn: stopping after 1 frame(s) as requested
+Captured frame: final.ppm (1280x960)

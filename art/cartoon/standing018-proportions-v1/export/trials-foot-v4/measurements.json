@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "scope": "Technical draft measurement only. No color correction, native capture, human acceptance or full unchanged exporter-suite rerun.",
+  "source": [
+    {
+      "path": "art/cartoon/standing018-proportions-v1/018-torso-v2.png",
+      "sha256": "c170f8b6cea7c8c3c0cfcad5dea1ac5591e9d92b5de156afeee7a19c1e2ec89c"
+    },
+    {
+      "path": "art/cartoon/standing018-proportions-v1/018-foot-v4.png",
+      "sha256": "6ba5a7bdce36a0a8ed4e3912baa1415c3be4b6d38a437f289ae8a7d02dccb83a"
+    }
+  ],
+  "raw_mode": "RGBA",
+  "raw_canvas": [
+    1024,
+    1536
+  ],
+  "raw_alpha_range": [
+    0,
+    254
+  ],
+  "raw_corner_rgba": [
+    [
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "cap_raw": [
+    409.0,
+    35
+  ],
+  "affine_forward": [
+    0.1,
+    0,
+    -23.900000000000006,
+    0,
+    0.1,
+    -3.25
+  ],
+  "runtime_canvas": [
+    64,
+    154
+  ],
+  "source_alpha8_centers_fit": true,
+  "foot_regions_raw": {
+    "near": "300<=x<560, y>=1300",
+    "far": "580<=x<740, y>=1250"
+  },
+  "foot_bounds_by_alpha_threshold": {
+    "8": {
+      "near": {
+        "raw_y": 1493,
+        "hd_source_center_y": 146.1,
+        "bounds_raw_exclusive": [
+          319,
+          1300,
+          560,
+          1494
+        ]
+      },
+      "far": {
+        "raw_y": 1463,
+        "hd_source_center_y": 143.1,
+        "bounds_raw_exclusive": [
+          580,
+          1250,
+          726,
+          1464
+        ]
+      }
+    },
+    "128": {
+      "near": {
+        "raw_y": 1492,
+        "hd_source_center_y": 146.0,
+        "bounds_raw_exclusive": [
+          320,
+          1300,
+          560,
+          1493
+        ]
+      },
+      "far": {
+        "raw_y": 1462,
+        "hd_source_center_y": 143.0,
+        "bounds_raw_exclusive": [
+          580,
+          1250,
+          726,
+          1463
+        ]
+      }
+    },
+    "250": {
+      "near": {
+        "raw_y": 1490,
+        "hd_source_center_y": 145.8,
+        "bounds_raw_exclusive": [
+          320,
+          1300,
+          560,
+          1491
+        ]
+      },
+      "far": {
+        "raw_y": 1462,
+        "hd_source_center_y": 143.0,
+        "bounds_raw_exclusive": [
+          580,
+          1250,
+          725,
+          1463
+        ]
+      }
+    }
+  },
+  "alpha8_near_hd": 146.1,
+  "alpha8_far_hd": 143.1,
+  "alpha8_separation_hd": 3.0,
+  "v2_alpha8_near_far_hd": [
+    146.0,
+    138.5
+  ],
+  "requested_alpha8_far_target_hd": [
+    144,
+    145
+  ],
+  "target_observation": "V4 far sole is143.1HD, still0.9 to1.9HD above the requested range. Near sole is146.1HD. This is a source-contour comparison, not proof of native sand contact.",
+  "cloth_expression": "600<=y<1150, alpha>=128, min(R,G,B)>=170, max(R,G,B)-min(R,G,B)<45",
+  "cloth_raw_y_range": [
+    794,
+    1046
+  ],
+  "cloth_hd_y_range": [
+    76.2,
+    101.4
+  ],
+  "raw_region_comparisons": {
+    "upper_body": {
+      "row_range_exclusive": [
+        0,
+        700
+      ],
+      "all_rgba_changed_pixels": 476526,
+      "rgba_changed_with_either_alpha8": 162948,
+      "alpha_changed_with_either_alpha8": 37175,
+      "alpha8_silhouette_changed_pixels": 1971,
+      "alpha8_union_pixels": 172917,
+      "alpha8_intersection_over_union": 0.9886014677562067,
+      "v2_alpha8_bounds_relative_rows": [
+        312,
+        34,
+        723,
+        700
+      ],
+      "v4_alpha8_bounds_relative_rows": [
+        311,
+        34,
+        725,
+        700
+      ]
+    },
+    "shorts_region": {
+      "row_range_exclusive": [
+        700,
+        1100
+      ],
+      "all_rgba_changed_pixels": 267385,
+      "rgba_changed_with_either_alpha8": 88436,
+      "alpha_changed_with_either_alpha8": 18973,
+      "alpha8_silhouette_changed_pixels": 1322,
+      "alpha8_union_pixels": 103324,
+      "alpha8_intersection_over_union": 0.987205295962216,
+      "v2_alpha8_bounds_relative_rows": [
+        377,
+        0,
+        702,
+        400
+      ],
+      "v4_alpha8_bounds_relative_rows": [
+        376,
+        0,
+        704,
+        400
+      ]
+    }
+  },
+  "runtime_region_comparisons": {
+    "upper_body": {
+      "row_range_exclusive": [
+        0,
+        67
+      ],
+      "all_rgba_changed_pixels": 1908,
+      "rgba_changed_with_either_alpha8": 1766,
+      "alpha_changed_with_either_alpha8": 626,
+      "alpha8_silhouette_changed_pixels": 14,
+      "alpha8_union_pixels": 1841,
+      "alpha8_intersection_over_union": 0.9923954372623575,
+      "v2_alpha8_bounds_relative_rows": [
+        7,
+        0,
+        49,
+        67
+      ],
+      "v4_alpha8_bounds_relative_rows": [
+        7,
+        0,
+        49,
+        67
+      ]
+    },
+    "shorts_region": {
+      "row_range_exclusive": [
+        67,
+        107
+      ],
+      "all_rgba_changed_pixels": 1034,
+      "rgba_changed_with_either_alpha8": 930,
+      "alpha_changed_with_either_alpha8": 339,
+      "alpha8_silhouette_changed_pixels": 14,
+      "alpha8_union_pixels": 1087,
+      "alpha8_intersection_over_union": 0.9871205151793928,
+      "v2_alpha8_bounds_relative_rows": [
+        14,
+        0,
+        47,
+        40
+      ],
+      "v4_alpha8_bounds_relative_rows": [
+        14,
+        0,
+        47,
+        40
+      ]
+    }
+  },
+  "preservation_limit": "Imagegen did not preserve upper-body or shorts bytes exactly. Threshold-silhouette overlap and bounds describe the size of differences; they do not prove anatomical identity. Hidden RGB changes are counted separately from alpha8-supported changes.",
+  "runtime": [
+    {
+      "path": "build/standing018-proportions/stage-v2/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "b1bf6834e30e11ccff6a4f4a66e8a0d1bd7bf3d1f5ca82eeb98d34c88b45b29f"
+    },
+    {
+      "path": "build/standing018-proportions/stage-v4/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "927a6ab6eacfec9fda56b3b67d1c3d27cc7f7e8275fe3eec45a1b03e42f4453b"
+    }
+  ],
+  "measurement_source_sha256": "d5df4e56e62c9dea1e6a2b0c502b8c0b5d64ed510e938607af2c2ced7fb88f1e"
+}

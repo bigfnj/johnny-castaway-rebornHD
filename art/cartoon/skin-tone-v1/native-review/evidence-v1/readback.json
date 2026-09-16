@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "evidence_sha256": "74cb66e3c0adcbcc4234026b58b76bd5fa6839aa1cf35a704073113cf36c05ff",
+  "retained_files_readback": 143,
+  "byte_exact_copy_readbacks": 137,
+  "current_source_pins_verified": 85,
+  "native_reports_and_logs": 48,
+  "capture_payload_hashes_retained": 1256,
+  "retained_failure_readback": true,
+  "scope": "Preservation readback only; no native or authoring gate rerun.",
+  "verification_script": {
+    "path": "build/skin-tone/verify_native_evidence.py",
+    "sha256": "d29123a0720cc7ff39c53360a5d6df34ec1c127cfd1174901038f3ad64ca01fb"
+  }
+}

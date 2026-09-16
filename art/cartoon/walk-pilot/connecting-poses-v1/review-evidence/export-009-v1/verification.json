@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "scope": "Technical009-v1 export only; no pose, motion, native, human or production acceptance.",
+  "selected_frame": 9,
+  "source": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/009-connecting-v1.png",
+    "sha256": "2ce5bb02e2f965e620a2832545dd8b49dbd2e52301830c18baca645edb48c2a6"
+  },
+  "exporter": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/export.py",
+    "sha256": "bbbd0778ba2a92f161790937406fdc35a21f73e03599ac3f8575ddb11b5935d5"
+  },
+  "tests": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/test_export.py",
+    "sha256": "cb756d6c2468f8f9cb29394c511decab86392540c7a699f01dd99d32224d0579"
+  },
+  "adapted_from": {
+    "path": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+    "sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+  },
+  "reference_index": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/reference/source-index.json",
+    "sha256": "f0093341b6d8cd3f9a2a4539e111b748e68a4eee715e3a76ae2f790e00aaac05"
+  },
+  "unchanged_function_ast": [
+    "sha",
+    "require",
+    "png",
+    "check_frame",
+    "reference",
+    "source_bytes",
+    "measure_cap",
+    "render"
+  ],
+  "adaptation": "Allowed frames, three original geometry/hash configurations, CLI and technical scope labels. Tests substitute the three frames, explicit excluded11 and cross-frame cases. No filter/refusal algorithm refactor.",
+  "python_version": "3.11.15",
+  "pillow_version": "12.3.0",
+  "preserved_byte_identical": [
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/009-v1/recipe.json",
+      "sha256": "a3e4e9bd8c2bec2bcd581fcbc0fe77945c67b4fb3a3bd261f6af7c6b3bf9bc56"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/009-v1/export-report.json",
+      "sha256": "655a9a1133e7ae54b38a3a143129f5def55627d6793e4e5571a48bd1783f1fa0"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/export-009-v1/smoke.json",
+      "sha256": "c7993d0923af7f7bc5f024fcf94997fcfc8a26c38b6fc07f510695825415ea8b"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/export-009-v1/regression.json",
+      "sha256": "ed27f61cc94df8841500473cbbc9091d5f3251dc56c9509e92c11f8d16684587"
+    }
+  ],
+  "runtime_and_padded": [
+    {
+      "path": "build/connecting-analysis/export009-v1/padded/009.png",
+      "sha256": "bd54ec14d024e5374892040a69268a885bf82119d656bf3bd88c3bf2be07a0ad"
+    },
+    {
+      "path": "build/connecting-analysis/export009-v1/BMP/JOHNWALK.BMP/009.png",
+      "sha256": "4d9584133241db74595d657a68482e73c91a486a605247ce04aa7b0cd35e7311"
+    }
+  ],
+  "runtime_canvas": [
+    80,
+    148
+  ],
+  "cap_raw": [
+    650.0,
+    28
+  ],
+  "alpha8_centers_hd": [
+    6.550000000000001,
+    0.19999999999999973,
+    71.75,
+    145.6
+  ],
+  "filtered_alpha8_bounds_hd_exclusive": [
+    6,
+    0,
+    72,
+    146
+  ],
+  "smoke_passed": 3,
+  "regression_passed": 24,
+  "executed_mutations_fired": 19,
+  "mutation_witness": "Each fresh python -B process executed its changed exporter SHA and exactly one named unittest failure. Guards retained in source with condition replaced by True; extra filter and cap-target controls also fired.",
+  "limits": [
+    "Only009 has generated-candidate smoke and replay.010/012 use original-pixel and synthetic-geometry coverage.",
+    "Commercial RESOURCE files and original executable not reread/rerun.",
+    "Source-center fit permits low-alpha filter fringe retained in padded output.",
+    "No production ZIP, approval ledger, old exporters or historical references were changed."
+  ]
+}

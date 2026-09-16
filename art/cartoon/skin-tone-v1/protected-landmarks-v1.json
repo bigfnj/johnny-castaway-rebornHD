@@ -1,0 +1,3852 @@
+{
+  "schema_version": 1,
+  "scope": "Independent protected material landmarks; expected RGBA comes only from frozen source sprites.",
+  "source_index": "input-index.json",
+  "source_index_sha256": "d1a694d71efb2c2ac3aea6b2d42f2cf82abe0c0ca1b09a7a6185df8ae64d1dc6",
+  "coordinate_convention": "Zero-based x,y in each unmirrored runtime PNG full canvas. Region hashes cover row-major decoded RGBA bytes.",
+  "selection_method": "Appearance-based coordinate proposals followed by visual review of all 28 original sprites. No correction implementation, correction masks, or corrected exports were inspected before freezing this file.",
+  "proposed_script_sha256": "bb7f13a4ad6b487a5f04c1f31864267c49173650efa76ae0ec82c15653591b4e",
+  "limitations": "Sparse protected-material samples, not an exhaustive segmentation. Hidden rear-view eyes are explicitly excluded. Regions cover only interior hat white, hair/beard and shorts white.",
+  "frame_count": 28,
+  "landmark_count": 222,
+  "region_count": 84,
+  "frames": [
+    {
+      "frame": 0,
+      "input": "inputs/000.png",
+      "input_sha256": "9fef4cef56033a7cf35c36d96a839c42e7d7d23832acf0a34ebc6ff52e040e96",
+      "canvas": [
+        80,
+        152
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            49,
+            5
+          ],
+          "rgba": [
+            252,
+            252,
+            253,
+            254
+          ],
+          "region_xywh": [
+            48,
+            4,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "58e8c47f4c9491dbecf6a5edfde01d3d62172451c4aa74a0cafa2840c6be37fb"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            44,
+            12
+          ],
+          "rgba": [
+            160,
+            101,
+            0,
+            253
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            50,
+            33
+          ],
+          "rgba": [
+            78,
+            57,
+            41,
+            253
+          ],
+          "region_xywh": [
+            49,
+            32,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "12621aa22d8f4c4fd6db2febae0bcfd47c03ae040fb4cc6bc08735ba04ad57d1"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            43,
+            84
+          ],
+          "rgba": [
+            253,
+            252,
+            253,
+            254
+          ],
+          "region_xywh": [
+            42,
+            83,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "69a1d59a549e8c071e415830891c388a5f9839c57bc9d59d1213f99b27f5a986"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            54,
+            12
+          ],
+          "rgba": [
+            47,
+            46,
+            45,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            54,
+            19
+          ],
+          "rgba": [
+            200,
+            213,
+            219,
+            252
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            55,
+            21
+          ],
+          "rgba": [
+            26,
+            24,
+            24,
+            255
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            53,
+            30
+          ],
+          "rgba": [
+            104,
+            74,
+            53,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            48,
+            54
+          ],
+          "rgba": [
+            131,
+            99,
+            73,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 1,
+      "input": "inputs/001.png",
+      "input_sha256": "aeb1119d7576c6668d27c4caf02a45f7f7b4beced945d5886720f124d49a0759",
+      "canvas": [
+        96,
+        144
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            66,
+            6
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            65,
+            5,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "65f2d8c849691ee68729572f3fa1db775db9b11d98e3a15647cbd2e0d81cc8b8"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            60,
+            13
+          ],
+          "rgba": [
+            141,
+            100,
+            6,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            66,
+            35
+          ],
+          "rgba": [
+            87,
+            62,
+            42,
+            253
+          ],
+          "region_xywh": [
+            65,
+            34,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "a30c9ff8e7b847eb89a5bb13a1a4b5ddaa2617b9552e82306afacc861cc5ef3c"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            56,
+            87
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            253
+          ],
+          "region_xywh": [
+            55,
+            86,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "bd0f16ce11f1e9f0f7a0855409265e499c9fe8cbdb91ec83a750bb26191376b8"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            69,
+            13
+          ],
+          "rgba": [
+            53,
+            52,
+            50,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            71,
+            21
+          ],
+          "rgba": [
+            231,
+            241,
+            246,
+            253
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            73,
+            22
+          ],
+          "rgba": [
+            57,
+            58,
+            58,
+            255
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            69,
+            39
+          ],
+          "rgba": [
+            121,
+            87,
+            60,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 2,
+      "input": "inputs/002.png",
+      "input_sha256": "125c4f1db0d8a31e169fe7146b3d78d2fccdfc1211676aef6b66be30c9d07d4b",
+      "canvas": [
+        96,
+        146
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            66,
+            5
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            65,
+            4,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "eeb30454547fd1849110ecea1591ab3164c49e3fc33321c3db6ab4cf4df22cde"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            59,
+            13
+          ],
+          "rgba": [
+            197,
+            129,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            66,
+            37
+          ],
+          "rgba": [
+            111,
+            79,
+            58,
+            253
+          ],
+          "region_xywh": [
+            65,
+            36,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "12862ed91b91177880db2fd9436be5418a1dbc0d599ec4d4ae7d00efdb78a221"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            57,
+            86
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            56,
+            85,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "3bb05b2fc5431fc2dd9d5920467f04b3c2118ce108cb2139fa83b726ec0ff70b"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            67,
+            13
+          ],
+          "rgba": [
+            46,
+            48,
+            47,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            70,
+            21
+          ],
+          "rgba": [
+            255,
+            255,
+            255,
+            253
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            72,
+            21
+          ],
+          "rgba": [
+            28,
+            26,
+            26,
+            250
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            70,
+            32
+          ],
+          "rgba": [
+            126,
+            89,
+            63,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 3,
+      "input": "inputs/003.png",
+      "input_sha256": "36778a48ed8caaa23a56ac47da8e82fdcd292998e32e79e5cd26b40c6ab462e3",
+      "canvas": [
+        80,
+        152
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            49,
+            5
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            48,
+            4,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "5888b95ae7fc9c53893879748407664d346346376c60aaf67b20269de15781c9"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            53,
+            9
+          ],
+          "rgba": [
+            172,
+            128,
+            21,
+            253
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            50,
+            34
+          ],
+          "rgba": [
+            96,
+            71,
+            52,
+            253
+          ],
+          "region_xywh": [
+            49,
+            33,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "77fdca7a7223674dcd9af8c1bd5ccfe18d874b6cb0287523bbb48512b1fecf58"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            47,
+            77
+          ],
+          "rgba": [
+            253,
+            252,
+            253,
+            254
+          ],
+          "region_xywh": [
+            46,
+            76,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "24cb89ffa1e41efca826c5451ec64c53382e484041e950aa3903b336ec915bad"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            52,
+            12
+          ],
+          "rgba": [
+            46,
+            46,
+            48,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            54,
+            20
+          ],
+          "rgba": [
+            255,
+            255,
+            255,
+            251
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            55,
+            21
+          ],
+          "rgba": [
+            60,
+            59,
+            59,
+            255
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            56,
+            38
+          ],
+          "rgba": [
+            113,
+            82,
+            61,
+            250
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            49,
+            53
+          ],
+          "rgba": [
+            120,
+            94,
+            73,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 4,
+      "input": "inputs/004.png",
+      "input_sha256": "1081959ce4092c4d05d343037ddd25a835b407b641d1e34d949b02660b4d81cd",
+      "canvas": [
+        80,
+        148
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            62,
+            5
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            61,
+            4,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "8608e5a7d776aea977c74b0d8b834532be66367edbf2978fcd6397f519064cd9"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            54,
+            14
+          ],
+          "rgba": [
+            216,
+            149,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            62,
+            37
+          ],
+          "rgba": [
+            119,
+            86,
+            63,
+            254
+          ],
+          "region_xywh": [
+            61,
+            36,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "41aba03bd07991561f0b3f6dbe390f8692ee9cfe96c29a989ea86a3c280bc271"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            48,
+            86
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            47,
+            85,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "7d01d2eafe5da10bbd125d5799aef945ab87c6efa8620b5693a15f49cdf5aee9"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            61,
+            14
+          ],
+          "rgba": [
+            31,
+            31,
+            31,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            65,
+            22
+          ],
+          "rgba": [
+            205,
+            214,
+            221,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            68,
+            22
+          ],
+          "rgba": [
+            31,
+            33,
+            35,
+            254
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            64,
+            40
+          ],
+          "rgba": [
+            136,
+            98,
+            71,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            55,
+            54
+          ],
+          "rgba": [
+            221,
+            146,
+            96,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 5,
+      "input": "inputs/005.png",
+      "input_sha256": "e3b5c4f94f9715a35b5242e8bce9af6372191141f2f17ad2cb79b272778b6dc2",
+      "canvas": [
+        96,
+        144
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            68,
+            6
+          ],
+          "rgba": [
+            249,
+            248,
+            249,
+            254
+          ],
+          "region_xywh": [
+            67,
+            5,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "19618414c5da2afdef1ca9c723825e100f396c183dbb766dddc4dfcee4b42fba"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            61,
+            14
+          ],
+          "rgba": [
+            157,
+            95,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            68,
+            36
+          ],
+          "rgba": [
+            92,
+            67,
+            50,
+            253
+          ],
+          "region_xywh": [
+            67,
+            35,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "d300a9b0ffc36121725b869930d1d22e3bbbe66b0d2699336cc1a707abfd13ff"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            59,
+            86
+          ],
+          "rgba": [
+            249,
+            248,
+            249,
+            254
+          ],
+          "region_xywh": [
+            58,
+            85,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "cfd443f55d0ecc412cde75ab9c3813d319586fc4bcb3f54796ef3c15e54172a7"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            72,
+            13
+          ],
+          "rgba": [
+            52,
+            50,
+            47,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            74,
+            21
+          ],
+          "rgba": [
+            216,
+            225,
+            230,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            76,
+            21
+          ],
+          "rgba": [
+            55,
+            32,
+            19,
+            255
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            69,
+            36
+          ],
+          "rgba": [
+            132,
+            96,
+            71,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            63,
+            54
+          ],
+          "rgba": [
+            231,
+            156,
+            108,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 6,
+      "input": "inputs/006.png",
+      "input_sha256": "47bd9a71c29ccd7e4f6cfeb5620c96b5952ee2cd13ad4681b996af1346d413b5",
+      "canvas": [
+        96,
+        148
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            64,
+            6
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            63,
+            5,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "3abc51f1bb844b0a9415a752f8cdeab7e3ac294a129cc287e5f9dd6742ee6a64"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            58,
+            14
+          ],
+          "rgba": [
+            245,
+            170,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            67,
+            39
+          ],
+          "rgba": [
+            103,
+            74,
+            54,
+            253
+          ],
+          "region_xywh": [
+            66,
+            38,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "3679142fb0aca0690cc07201064895314e3904b2a1f3f86eeb9b45bab3b63e5c"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            57,
+            88
+          ],
+          "rgba": [
+            253,
+            252,
+            253,
+            254
+          ],
+          "region_xywh": [
+            56,
+            87,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "78d40c93c0ca26e11ccf7a8fb6dd60d5ad86766450b71b786c67b989d405ed85"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            68,
+            13
+          ],
+          "rgba": [
+            57,
+            55,
+            53,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            70,
+            21
+          ],
+          "rgba": [
+            202,
+            211,
+            217,
+            253
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            72,
+            21
+          ],
+          "rgba": [
+            61,
+            37,
+            22,
+            255
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            68,
+            40
+          ],
+          "rgba": [
+            129,
+            93,
+            66,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            56,
+            54
+          ],
+          "rgba": [
+            88,
+            58,
+            39,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 7,
+      "input": "inputs/007.png",
+      "input_sha256": "2a1bbaaf5e192429ebdd0bb256fbd5ed4e826f6f2254f3de317471c6e224d8e9",
+      "canvas": [
+        64,
+        150
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            44,
+            5
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            43,
+            4,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "7a2c8408333248d0c08f3d6ec428d3bc36b58e381959ce9e9bdfcfc4a4d9b1c1"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            36,
+            14
+          ],
+          "rgba": [
+            239,
+            158,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            45,
+            35
+          ],
+          "rgba": [
+            116,
+            87,
+            64,
+            253
+          ],
+          "region_xywh": [
+            44,
+            34,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "f5132df6c621092096c4ff99a6705450dc02cb4b77d2b2a574a02bbb5f15f16a"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            38,
+            78
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            37,
+            77,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "edc8b799492fcbad112ecc42756edd4bccd4825f688b61d60a6e0ae5697b1fb9"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            47,
+            12
+          ],
+          "rgba": [
+            39,
+            39,
+            46,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            48,
+            21
+          ],
+          "rgba": [
+            255,
+            255,
+            255,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            50,
+            21
+          ],
+          "rgba": [
+            50,
+            53,
+            55,
+            255
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            48,
+            31
+          ],
+          "rgba": [
+            121,
+            90,
+            68,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            44,
+            55
+          ],
+          "rgba": [
+            102,
+            79,
+            61,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 8,
+      "input": "inputs/008.png",
+      "input_sha256": "eee73c081b9947a357e813f1503a64638f5a2ca3e0a706c70571847d13222a0a",
+      "canvas": [
+        80,
+        150
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            58,
+            5
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            57,
+            4,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "67a22d9b4a23d88aefe91d79a576e375927cf5cbd3a8fb0adf5316fc061e1792"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            50,
+            14
+          ],
+          "rgba": [
+            244,
+            177,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            58,
+            36
+          ],
+          "rgba": [
+            122,
+            88,
+            65,
+            253
+          ],
+          "region_xywh": [
+            57,
+            35,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "157c62c304e779e911eda39e6486827716576e4c7517e16ffbff13c5e9dd23c5"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            47,
+            84
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            46,
+            83,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "6a41419224b8d88870be18f582f00ee4155975add9539a2cc264cc01b727ed6b"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            60,
+            13
+          ],
+          "rgba": [
+            55,
+            53,
+            50,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            62,
+            21
+          ],
+          "rgba": [
+            210,
+            219,
+            224,
+            253
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            64,
+            21
+          ],
+          "rgba": [
+            55,
+            36,
+            23,
+            255
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            60,
+            40
+          ],
+          "rgba": [
+            135,
+            101,
+            76,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            51,
+            53
+          ],
+          "rgba": [
+            206,
+            140,
+            92,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 9,
+      "input": "inputs/009.png",
+      "input_sha256": "4d9584133241db74595d657a68482e73c91a486a605247ce04aa7b0cd35e7311",
+      "canvas": [
+        80,
+        148
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            48,
+            5
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            47,
+            4,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "c67389b20bca2c759bb2905beaf3eccd092101e38252b7aea5d1a526037fc3e5"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            49,
+            9
+          ],
+          "rgba": [
+            163,
+            112,
+            0,
+            253
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            50,
+            38
+          ],
+          "rgba": [
+            103,
+            75,
+            56,
+            253
+          ],
+          "region_xywh": [
+            49,
+            37,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "a05d24ce38861c08d5e83adc3991e1cc86ab10ac6f1428399300af543528efb0"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            32,
+            83
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            31,
+            82,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "6c6f346bba4fb383f3bd44906f4c9ad63ba1207d9c6f5e01e91a5121dcb7e699"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            51,
+            12
+          ],
+          "rgba": [
+            53,
+            51,
+            49,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            50,
+            20
+          ],
+          "rgba": [
+            225,
+            235,
+            240,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            52,
+            21
+          ],
+          "rgba": [
+            41,
+            44,
+            45,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            55,
+            37
+          ],
+          "rgba": [
+            109,
+            80,
+            58,
+            251
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            43,
+            54
+          ],
+          "rgba": [
+            51,
+            38,
+            28,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 10,
+      "input": "inputs/010.png",
+      "input_sha256": "fded838277a290a3509868fe19443bd90e2b4277d2e8668ebad7683802be60d4",
+      "canvas": [
+        80,
+        148
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            29,
+            5
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            28,
+            4,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "4f6854d3dec58fcca8386fbea8fcff45eec6ad35b2dc7f1034aa6e2aa88670c5"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            32,
+            8
+          ],
+          "rgba": [
+            143,
+            107,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            33,
+            37
+          ],
+          "rgba": [
+            124,
+            90,
+            67,
+            254
+          ],
+          "region_xywh": [
+            32,
+            36,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "c55a8117788a5fffa4cf3e60724c62fcb12847f77109d769564a89bb6092c8d7"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            27,
+            82
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            26,
+            81,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "49bf577234fbd290b2b2527595c8eeb4cc886be1d98af22289223de34d0a0317"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            31,
+            10
+          ],
+          "rgba": [
+            47,
+            40,
+            20,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            31,
+            19
+          ],
+          "rgba": [
+            249,
+            255,
+            255,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            32,
+            21
+          ],
+          "rgba": [
+            0,
+            0,
+            0,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            40,
+            35
+          ],
+          "rgba": [
+            131,
+            95,
+            70,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            34,
+            54
+          ],
+          "rgba": [
+            127,
+            97,
+            77,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 11,
+      "input": "inputs/011.png",
+      "input_sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+      "canvas": [
+        64,
+        156
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            20,
+            6
+          ],
+          "rgba": [
+            251,
+            251,
+            251,
+            254
+          ],
+          "region_xywh": [
+            19,
+            5,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "5738d27c6a44e00eaade37c7ab1e54620998f4eb9b7b2d5e3595be15ef77e250"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            15,
+            10
+          ],
+          "rgba": [
+            255,
+            208,
+            8,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            27,
+            22
+          ],
+          "rgba": [
+            71,
+            53,
+            39,
+            253
+          ],
+          "region_xywh": [
+            26,
+            21,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "693ce3ed4db72560c41d5ea0b006777bdb99ace09eda7aa0638e79a943c94f7b"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            33,
+            73
+          ],
+          "rgba": [
+            251,
+            251,
+            251,
+            254
+          ],
+          "region_xywh": [
+            32,
+            72,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "88b53c4e234f6528a5df9167b4eed448a70e29d3809f4743e11fd40c1717388c"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            13,
+            12
+          ],
+          "rgba": [
+            34,
+            34,
+            34,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            21,
+            19
+          ],
+          "rgba": [
+            92,
+            68,
+            50,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": [
+        "eye-white",
+        "eye-ink"
+      ]
+    },
+    {
+      "frame": 12,
+      "input": "inputs/012.png",
+      "input_sha256": "2c07b88265d354106debba83507ba676fd2b82ac64ede4f5634c10f187ed3624",
+      "canvas": [
+        80,
+        146
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            37,
+            7
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            36,
+            6,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "6967e64f7893b0a876a39fb9a80dc261373199b22471d56c4968f286c0802498"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            28,
+            12
+          ],
+          "rgba": [
+            203,
+            150,
+            22,
+            255
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            38,
+            22
+          ],
+          "rgba": [
+            80,
+            57,
+            41,
+            253
+          ],
+          "region_xywh": [
+            37,
+            21,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "01416b393c4b53593e136adfe61e23ad466dbaacfa97137d16b500dc95dfeed3"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            33,
+            74
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            32,
+            73,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "6967e64f7893b0a876a39fb9a80dc261373199b22471d56c4968f286c0802498"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            49,
+            11
+          ],
+          "rgba": [
+            40,
+            28,
+            8,
+            255
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            48,
+            19
+          ],
+          "rgba": [
+            108,
+            63,
+            43,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": [
+        "eye-white",
+        "eye-ink"
+      ]
+    },
+    {
+      "frame": 15,
+      "input": "inputs/015.png",
+      "input_sha256": "c74f85cdd79ed13f180f3cb3c8c5962ba0453d587a2c8da15c844a2c046eb5d8",
+      "canvas": [
+        80,
+        146
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            33,
+            7
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            32,
+            6,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "f7b952237298b01c420cc02c284242fb95c433775eb7dc9db14b4bf5a1e614b3"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            25,
+            12
+          ],
+          "rgba": [
+            175,
+            116,
+            12,
+            253
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            34,
+            22
+          ],
+          "rgba": [
+            67,
+            46,
+            33,
+            253
+          ],
+          "region_xywh": [
+            33,
+            21,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "f428cec4874253e311c617180850af043756ebba54ea83c3689dc45954629fa7"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            27,
+            75
+          ],
+          "rgba": [
+            252,
+            253,
+            252,
+            254
+          ],
+          "region_xywh": [
+            26,
+            74,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "9e4c700abc5428f42263809733c7c8c06b617657402f090b84ff7ad8d96bb8ad"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            24,
+            11
+          ],
+          "rgba": [
+            35,
+            32,
+            26,
+            255
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            45,
+            17
+          ],
+          "rgba": [
+            96,
+            66,
+            46,
+            252
+          ]
+        }
+      ],
+      "hidden_roles": [
+        "eye-white",
+        "eye-ink"
+      ]
+    },
+    {
+      "frame": 16,
+      "input": "inputs/016.png",
+      "input_sha256": "1cb3d6249486eeecec29ff2040c452c28d14ff8a6f2d79d265e0f17ef2e38d92",
+      "canvas": [
+        64,
+        148
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            30,
+            4
+          ],
+          "rgba": [
+            251,
+            250,
+            251,
+            254
+          ],
+          "region_xywh": [
+            29,
+            3,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "1bf3c4c62a160529bf6804ef303b46bae69c4a4552e5c829bb7f48d32bc6d9cc"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            30,
+            8
+          ],
+          "rgba": [
+            174,
+            124,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            35,
+            36
+          ],
+          "rgba": [
+            91,
+            64,
+            45,
+            253
+          ],
+          "region_xywh": [
+            34,
+            35,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "e6ebb7a9e5e7d0646be1c85321acd467823c05abb9879ba59d406c1047f9bb98"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            26,
+            81
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            25,
+            80,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "a835a724bc2b93a2c628ed79b2034c039d8f4ca40f200353f6de576b67dcb37b"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            29,
+            10
+          ],
+          "rgba": [
+            38,
+            31,
+            17,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            31,
+            18
+          ],
+          "rgba": [
+            206,
+            217,
+            224,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            32,
+            20
+          ],
+          "rgba": [
+            33,
+            31,
+            29,
+            254
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            40,
+            33
+          ],
+          "rgba": [
+            110,
+            79,
+            56,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            34,
+            53
+          ],
+          "rgba": [
+            72,
+            54,
+            41,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 17,
+      "input": "inputs/017.png",
+      "input_sha256": "60e3a77a64620502d2b5198911a7805e19aaedf07801c7a00a92c030b4924de1",
+      "canvas": [
+        80,
+        150
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            54,
+            4
+          ],
+          "rgba": [
+            252,
+            251,
+            252,
+            254
+          ],
+          "region_xywh": [
+            53,
+            3,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "32c1127eadcccc856b212ee1af693c1110d0df19e5ea6f7a58939044c29e4d3c"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            54,
+            8
+          ],
+          "rgba": [
+            143,
+            109,
+            31,
+            253
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            54,
+            37
+          ],
+          "rgba": [
+            97,
+            70,
+            50,
+            253
+          ],
+          "region_xywh": [
+            53,
+            36,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "db6356e47ae99bc5166d7de7461c3c4aaf0f1fd947163f3b6990b7aeba2bcfe2"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            38,
+            82
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            37,
+            81,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "fb287ce5444457a05e30a97920db37567bd371a8d7d67edb9430927cf6a7cf43"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            57,
+            11
+          ],
+          "rgba": [
+            51,
+            51,
+            49,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            55,
+            19
+          ],
+          "rgba": [
+            226,
+            237,
+            241,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            57,
+            20
+          ],
+          "rgba": [
+            53,
+            57,
+            58,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            46,
+            53
+          ],
+          "rgba": [
+            86,
+            67,
+            51,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 18,
+      "input": "inputs/018.png",
+      "input_sha256": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190",
+      "canvas": [
+        64,
+        154
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            20,
+            6
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            19,
+            5,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "35a878e809398e0dfc0ed6d65623bab16191cf0d2af7f965e00f3bf708e59625"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            15,
+            10
+          ],
+          "rgba": [
+            242,
+            170,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            26,
+            22
+          ],
+          "rgba": [
+            80,
+            57,
+            41,
+            253
+          ],
+          "region_xywh": [
+            25,
+            21,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "b4cac32c616cb276d4904d3b21d1ebdea5a59f2080db886a93ee09d486d83468"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            30,
+            74
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            29,
+            73,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "181496bdf4fd409173e5f4530e3c1ad86e1d65e39606e3ebd9637fc40517118f"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            13,
+            12
+          ],
+          "rgba": [
+            39,
+            39,
+            37,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            21,
+            19
+          ],
+          "rgba": [
+            101,
+            72,
+            53,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": [
+        "eye-white",
+        "eye-ink"
+      ]
+    },
+    {
+      "frame": 19,
+      "input": "inputs/019.png",
+      "input_sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+      "canvas": [
+        64,
+        152
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            22,
+            7
+          ],
+          "rgba": [
+            253,
+            252,
+            253,
+            254
+          ],
+          "region_xywh": [
+            21,
+            6,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "66ea4de55c4592d4354468391d298f6cc56f9584334f1646b200e932ef557884"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            15,
+            9
+          ],
+          "rgba": [
+            165,
+            107,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            26,
+            22
+          ],
+          "rgba": [
+            82,
+            62,
+            46,
+            253
+          ],
+          "region_xywh": [
+            25,
+            21,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "c687b6649a9af2bc801cf77263f3b8c36993bbab85813de85895043c01ba6930"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            31,
+            72
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            30,
+            71,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "a63e888226bd83b6270ab7f11bfa4f207ce5210b265a01364752183e9b225b68"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            13,
+            12
+          ],
+          "rgba": [
+            25,
+            25,
+            26,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            22,
+            17
+          ],
+          "rgba": [
+            84,
+            63,
+            47,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": [
+        "eye-white",
+        "eye-ink"
+      ]
+    },
+    {
+      "frame": 20,
+      "input": "inputs/020.png",
+      "input_sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+      "canvas": [
+        48,
+        150
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            24,
+            8
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            23,
+            7,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "5ca0fd6ebf107b71ad2e2525b73f28f9558610c72a19cbb8cc64ea8f92ad53e7"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            15,
+            9
+          ],
+          "rgba": [
+            160,
+            105,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            26,
+            22
+          ],
+          "rgba": [
+            104,
+            80,
+            66,
+            253
+          ],
+          "region_xywh": [
+            25,
+            21,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "4f7de596f54ced8000b536b0c2152ba83da5486e625ccce9527eca3d39dd4e5e"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            31,
+            73
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            30,
+            72,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "c3e91f1f260efa800d078484b8ed9a4ecd5ab72f0a33b43b3e801a2ac2269d8a"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            13,
+            11
+          ],
+          "rgba": [
+            45,
+            44,
+            42,
+            254
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            32,
+            20
+          ],
+          "rgba": [
+            111,
+            88,
+            72,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": [
+        "eye-white",
+        "eye-ink"
+      ]
+    },
+    {
+      "frame": 21,
+      "input": "inputs/021.png",
+      "input_sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+      "canvas": [
+        64,
+        150
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            22,
+            7
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            21,
+            6,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "59659dec6b966423157fb633894e385de69ba9d493e0b2a0abbe98b8c0ae072a"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            14,
+            10
+          ],
+          "rgba": [
+            189,
+            160,
+            40,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            27,
+            22
+          ],
+          "rgba": [
+            96,
+            70,
+            55,
+            253
+          ],
+          "region_xywh": [
+            26,
+            21,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "e1576b140b4d700a73f7288e3c16f2df11f0d2780f34149129fcbdf8bbfe4742"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            32,
+            73
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            31,
+            72,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "f0a0bc7cc269361c0aca42c7c89760e26a31f29a7d7c3e3735f0386ce43403a2"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            13,
+            11
+          ],
+          "rgba": [
+            25,
+            25,
+            28,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            20,
+            18
+          ],
+          "rgba": [
+            101,
+            73,
+            58,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": [
+        "eye-white",
+        "eye-ink"
+      ]
+    },
+    {
+      "frame": 22,
+      "input": "inputs/022.png",
+      "input_sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+      "canvas": [
+        64,
+        148
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            20,
+            6
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            19,
+            5,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "70000201dfd3fcc9be2fc14ef8e76e67cdf431dd11285f644ced75078aae7eed"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            15,
+            10
+          ],
+          "rgba": [
+            241,
+            170,
+            2,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            27,
+            23
+          ],
+          "rgba": [
+            99,
+            72,
+            54,
+            253
+          ],
+          "region_xywh": [
+            26,
+            22,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "a65377f0d6d6e7cc782953d83d52dd8f3fe0c5531af19942dc71d87a4e3f0e98"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            33,
+            75
+          ],
+          "rgba": [
+            253,
+            252,
+            253,
+            254
+          ],
+          "region_xywh": [
+            32,
+            74,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "05c03a74b42935b3e4eccc08d51a73069f35cc55d398bbf13866a4ccc6674738"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            13,
+            12
+          ],
+          "rgba": [
+            30,
+            30,
+            28,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            26,
+            27
+          ],
+          "rgba": [
+            109,
+            78,
+            57,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": [
+        "eye-white",
+        "eye-ink"
+      ]
+    },
+    {
+      "frame": 23,
+      "input": "inputs/023.png",
+      "input_sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+      "canvas": [
+        64,
+        156
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            20,
+            6
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            19,
+            5,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "5db23782038424a0a5869ee070223ce214a2b2f91ea893758ed5af22070e9924"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            15,
+            10
+          ],
+          "rgba": [
+            251,
+            180,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            26,
+            22
+          ],
+          "rgba": [
+            79,
+            58,
+            41,
+            253
+          ],
+          "region_xywh": [
+            25,
+            21,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "cb60fd85cd973523f4d67f7f8b423ca611796fcefb749275a35abc2caf872abf"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            32,
+            74
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            31,
+            73,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "81e6c01c0d69750d10dd8f15d50725121556c90754119bc69ccffe4f3f686ef6"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            13,
+            12
+          ],
+          "rgba": [
+            38,
+            38,
+            37,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            21,
+            19
+          ],
+          "rgba": [
+            93,
+            68,
+            48,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": [
+        "eye-white",
+        "eye-ink"
+      ]
+    },
+    {
+      "frame": 24,
+      "input": "inputs/024.png",
+      "input_sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+      "canvas": [
+        64,
+        150
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            21,
+            4
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            20,
+            3,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "ed135d9ffc66e53467a5690df7548d2f1e892980c0e383adfb202121c55fe41f"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            18,
+            8
+          ],
+          "rgba": [
+            226,
+            166,
+            1,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            23,
+            36
+          ],
+          "rgba": [
+            77,
+            59,
+            42,
+            253
+          ],
+          "region_xywh": [
+            22,
+            35,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "f271f809d9691224636928f470d4f1946b9416d22b1ec0e27781e66eeba3f0a6"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            40,
+            82
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            39,
+            81,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "aa811d1ea479a755ee043a814f321f3e089b057c2673739f378fe6fbe38ddea1"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            17,
+            11
+          ],
+          "rgba": [
+            44,
+            41,
+            39,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            19,
+            19
+          ],
+          "rgba": [
+            241,
+            249,
+            252,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            18,
+            20
+          ],
+          "rgba": [
+            32,
+            9,
+            7,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            27,
+            33
+          ],
+          "rgba": [
+            93,
+            71,
+            51,
+            254
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            31,
+            52
+          ],
+          "rgba": [
+            80,
+            62,
+            43,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 25,
+      "input": "inputs/025.png",
+      "input_sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+      "canvas": [
+        80,
+        148
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            27,
+            4
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            26,
+            3,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "dd0cd3eebe5da8784015ec6aaafb7a8d8a56e47e3479db2f91ed7ef3d851ef8f"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            24,
+            8
+          ],
+          "rgba": [
+            224,
+            162,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            30,
+            35
+          ],
+          "rgba": [
+            73,
+            54,
+            38,
+            253
+          ],
+          "region_xywh": [
+            29,
+            34,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "99f00225c0615ba1a9a9d5478cbd5292122e2b1a4734426602db772330e1e05e"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            39,
+            73
+          ],
+          "rgba": [
+            252,
+            253,
+            252,
+            254
+          ],
+          "region_xywh": [
+            38,
+            72,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "0dc117fec9ed6a68badccbb5f96f2566ef410e8d59fa0275164d3163c797f87d"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            23,
+            11
+          ],
+          "rgba": [
+            43,
+            40,
+            38,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            25,
+            19
+          ],
+          "rgba": [
+            250,
+            255,
+            255,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            24,
+            20
+          ],
+          "rgba": [
+            29,
+            10,
+            8,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            33,
+            33
+          ],
+          "rgba": [
+            96,
+            73,
+            52,
+            254
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            37,
+            53
+          ],
+          "rgba": [
+            92,
+            77,
+            57,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 26,
+      "input": "inputs/026.png",
+      "input_sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+      "canvas": [
+        80,
+        146
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            29,
+            4
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            28,
+            3,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "6116f90c431ed3db33e8cfb45ce6a7db7dabb4ff73aa5df129d26623a2dcdd72"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            26,
+            8
+          ],
+          "rgba": [
+            226,
+            167,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            30,
+            37
+          ],
+          "rgba": [
+            70,
+            53,
+            37,
+            253
+          ],
+          "region_xywh": [
+            29,
+            36,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "8c1cf63e7d7d964946a9eb4cf79343890744e8688ed7e1926de61d36c658c3b5"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            48,
+            83
+          ],
+          "rgba": [
+            253,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            47,
+            82,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "d810b36992266c63f4fff667e34ea1e1e5f83e9185fbe908efd0424b2e10c39e"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            22,
+            8
+          ],
+          "rgba": [
+            56,
+            48,
+            27,
+            241
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            27,
+            19
+          ],
+          "rgba": [
+            249,
+            255,
+            255,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            26,
+            20
+          ],
+          "rgba": [
+            29,
+            10,
+            8,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            37,
+            38
+          ],
+          "rgba": [
+            136,
+            63,
+            43,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            38,
+            53
+          ],
+          "rgba": [
+            98,
+            81,
+            58,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 27,
+      "input": "inputs/027.png",
+      "input_sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+      "canvas": [
+        64,
+        144
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            21,
+            4
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            20,
+            3,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "e50f60533ae47f977595991bc6162b892c78d4a2e7c91ac294e27c96dddcffd8"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            18,
+            8
+          ],
+          "rgba": [
+            227,
+            168,
+            0,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            22,
+            37
+          ],
+          "rgba": [
+            79,
+            60,
+            42,
+            253
+          ],
+          "region_xywh": [
+            21,
+            36,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "8e07835db626f987a421c4d29b2d8644ada5957a736bdb0eb18f5607d4166698"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            27,
+            81
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            26,
+            80,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "f333f7c5a865ce66cf0f6255ecc3411f7a3c68119fa179a40419e22d370fac26"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            17,
+            11
+          ],
+          "rgba": [
+            42,
+            40,
+            38,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            19,
+            19
+          ],
+          "rgba": [
+            250,
+            255,
+            255,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            18,
+            20
+          ],
+          "rgba": [
+            27,
+            9,
+            7,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            27,
+            33
+          ],
+          "rgba": [
+            91,
+            69,
+            48,
+            254
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            31,
+            52
+          ],
+          "rgba": [
+            67,
+            51,
+            35,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 28,
+      "input": "inputs/028.png",
+      "input_sha256": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4",
+      "canvas": [
+        64,
+        144
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            23,
+            5
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            22,
+            4,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "36ea198bd62180a7caaca08b86eeea687a37c16edb199dd702262c187f56dbf4"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            17,
+            8
+          ],
+          "rgba": [
+            191,
+            155,
+            46,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            23,
+            35
+          ],
+          "rgba": [
+            106,
+            79,
+            61,
+            253
+          ],
+          "region_xywh": [
+            22,
+            34,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "44336e4d80fbdd35f61985cc7e2735336589b5a572231fe78105976b3bfdc805"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            32,
+            79
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            31,
+            78,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "e368ae3ee714f0979f637407be28c1abfded70786cb0efd9e12ca5ad80f1c332"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            17,
+            11
+          ],
+          "rgba": [
+            56,
+            54,
+            52,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            20,
+            22
+          ],
+          "rgba": [
+            255,
+            255,
+            255,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            18,
+            20
+          ],
+          "rgba": [
+            45,
+            42,
+            41,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            22,
+            36
+          ],
+          "rgba": [
+            127,
+            100,
+            79,
+            254
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            30,
+            51
+          ],
+          "rgba": [
+            121,
+            96,
+            78,
+            253
+          ]
+        }
+      ],
+      "hidden_roles": []
+    },
+    {
+      "frame": 29,
+      "input": "inputs/029.png",
+      "input_sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+      "canvas": [
+        64,
+        150
+      ],
+      "landmarks": [
+        {
+          "role": "hat-white",
+          "xy": [
+            23,
+            5
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            22,
+            4,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "9482e362093d76f8a66f267ca7bb74b80bea7835a20b39206ab91aec8bd3dd3b"
+        },
+        {
+          "role": "hat-gold",
+          "xy": [
+            18,
+            8
+          ],
+          "rgba": [
+            186,
+            151,
+            43,
+            254
+          ]
+        },
+        {
+          "role": "hair-or-beard",
+          "xy": [
+            23,
+            35
+          ],
+          "rgba": [
+            112,
+            87,
+            69,
+            253
+          ],
+          "region_xywh": [
+            22,
+            34,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "be82e3f7934a6414b19abaeb34895d3dfe2049f635eb07f84b89b43aa6b076cf"
+        },
+        {
+          "role": "shorts-white",
+          "xy": [
+            35,
+            75
+          ],
+          "rgba": [
+            252,
+            252,
+            252,
+            254
+          ],
+          "region_xywh": [
+            34,
+            74,
+            3,
+            3
+          ],
+          "region_rgba_sha256": "adb65c87dc0e1ad5c470a3bdd378f5685602550e589af1d47aa227e8da667ab1"
+        },
+        {
+          "role": "cap-ink",
+          "xy": [
+            17,
+            11
+          ],
+          "rgba": [
+            57,
+            55,
+            52,
+            253
+          ]
+        },
+        {
+          "role": "eye-white",
+          "xy": [
+            19,
+            19
+          ],
+          "rgba": [
+            255,
+            255,
+            255,
+            254
+          ]
+        },
+        {
+          "role": "eye-ink",
+          "xy": [
+            18,
+            20
+          ],
+          "rgba": [
+            46,
+            42,
+            40,
+            253
+          ]
+        },
+        {
+          "role": "hair-brown-highlight",
+          "xy": [
+            21,
+            43
+          ],
+          "rgba": [
+            138,
+            109,
+            89,
+            253
+          ]
+        },
+        {
+          "role": "chest-hair",
+          "xy": [
+            29,
+            53
+          ],
+          "rgba": [
+            103,
+            83,
+            68,
+            254
+          ]
+        }
+      ],
+      "hidden_roles": []
+    }
+  ]
+}

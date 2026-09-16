@@ -1,0 +1,1437 @@
+{
+  "status": "PASS",
+  "clip": "travel_cb",
+  "phase": "full",
+  "segments": {
+    "prime": {
+      "api_arguments": [
+        2,
+        1,
+        2,
+        1
+      ],
+      "start_ms": 0,
+      "rows": [
+        [
+          1,
+          516,
+          233,
+          17
+        ]
+      ],
+      "draws": [
+        [
+          1,
+          515,
+          233,
+          17
+        ]
+      ],
+      "delays": [
+        80,
+        0
+      ],
+      "chosen_path": "C",
+      "end_ms": 120
+    },
+    "travel": {
+      "api_arguments": [
+        2,
+        1,
+        1,
+        1
+      ],
+      "start_ms": 120,
+      "rows": [
+        [
+          1,
+          515,
+          235,
+          9
+        ],
+        [
+          0,
+          522,
+          233,
+          28
+        ],
+        [
+          0,
+          515,
+          235,
+          29
+        ],
+        [
+          0,
+          511,
+          237,
+          24
+        ],
+        [
+          0,
+          504,
+          237,
+          25
+        ],
+        [
+          0,
+          499,
+          238,
+          26
+        ],
+        [
+          0,
+          494,
+          241,
+          27
+        ],
+        [
+          0,
+          491,
+          241,
+          28
+        ],
+        [
+          0,
+          482,
+          244,
+          29
+        ],
+        [
+          0,
+          477,
+          249,
+          24
+        ],
+        [
+          0,
+          470,
+          249,
+          25
+        ],
+        [
+          0,
+          463,
+          251,
+          26
+        ],
+        [
+          0,
+          457,
+          255,
+          27
+        ],
+        [
+          1,
+          447,
+          256,
+          9
+        ],
+        [
+          1,
+          448,
+          257,
+          17
+        ]
+      ],
+      "draws": [
+        [
+          1,
+          514,
+          235,
+          9
+        ],
+        [
+          0,
+          521,
+          233,
+          28
+        ],
+        [
+          0,
+          514,
+          235,
+          29
+        ],
+        [
+          0,
+          510,
+          237,
+          24
+        ],
+        [
+          0,
+          503,
+          237,
+          25
+        ],
+        [
+          0,
+          498,
+          238,
+          26
+        ],
+        [
+          0,
+          493,
+          241,
+          27
+        ],
+        [
+          0,
+          490,
+          241,
+          28
+        ],
+        [
+          0,
+          481,
+          244,
+          29
+        ],
+        [
+          0,
+          476,
+          249,
+          24
+        ],
+        [
+          0,
+          469,
+          249,
+          25
+        ],
+        [
+          0,
+          462,
+          251,
+          26
+        ],
+        [
+          0,
+          456,
+          255,
+          27
+        ],
+        [
+          1,
+          446,
+          256,
+          9
+        ],
+        [
+          1,
+          447,
+          257,
+          17
+        ]
+      ],
+      "delays": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        80,
+        0
+      ],
+      "chosen_path": "CB",
+      "end_ms": 3400
+    }
+  },
+  "displays": [
+    {
+      "index": 1,
+      "logical_ms": 0,
+      "segment": "prime",
+      "segment_ms": 0,
+      "role": "standing",
+      "stored_walk_row": [
+        1,
+        516,
+        233,
+        17
+      ],
+      "actual_draw": [
+        1,
+        515,
+        233,
+        17
+      ],
+      "draw_ordinal": 0,
+      "stage_draw_ordinal": 0,
+      "ppm": "display-001.ppm",
+      "png": "display-001.png",
+      "pixels_sha256": "6a508e88a624f3955991931a60a634961f47f22d0c409cb97a0e3db29645ef0a",
+      "png_sha256": "6f272f4c4b353f62d783f58a19376f0246f8eec6bfe2784339fb8ea77c2c98ea",
+      "duration_ms": 120
+    },
+    {
+      "index": 2,
+      "logical_ms": 120,
+      "segment": "prime",
+      "segment_ms": 120,
+      "role": "standing",
+      "stored_walk_row": [
+        1,
+        516,
+        233,
+        17
+      ],
+      "actual_draw": [
+        1,
+        515,
+        233,
+        17
+      ],
+      "draw_ordinal": 0,
+      "stage_draw_ordinal": 0,
+      "ppm": "display-002.ppm",
+      "png": "display-002.png",
+      "pixels_sha256": "6a508e88a624f3955991931a60a634961f47f22d0c409cb97a0e3db29645ef0a",
+      "png_sha256": "6f272f4c4b353f62d783f58a19376f0246f8eec6bfe2784339fb8ea77c2c98ea",
+      "duration_ms": 0
+    },
+    {
+      "index": 3,
+      "logical_ms": 120,
+      "segment": "travel",
+      "segment_ms": 0,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        515,
+        235,
+        9
+      ],
+      "actual_draw": [
+        1,
+        514,
+        235,
+        9
+      ],
+      "draw_ordinal": 1,
+      "stage_draw_ordinal": 0,
+      "ppm": "display-003.ppm",
+      "png": "display-003.png",
+      "pixels_sha256": "1e8ff179b49409158fdab00ef0acbfa7fd14be4967985e1f7a3163388363d630",
+      "png_sha256": "d09b7144c34e94e0911da33f8b1459ac8c3883f487cbdd3abc2dd1fba1a082a1",
+      "duration_ms": 40
+    },
+    {
+      "index": 4,
+      "logical_ms": 160,
+      "segment": "travel",
+      "segment_ms": 40,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        515,
+        235,
+        9
+      ],
+      "actual_draw": [
+        1,
+        514,
+        235,
+        9
+      ],
+      "draw_ordinal": 1,
+      "stage_draw_ordinal": 0,
+      "ppm": "display-004.ppm",
+      "png": "display-004.png",
+      "pixels_sha256": "3f1970fa1ee285fe63e0d04994d37f281345fb3cbef3697b6deb184731d6ab02",
+      "png_sha256": "d45147f1da8b76e17fbfb95086ae566592a92b1c32e4fbc657591c91a60092ad",
+      "duration_ms": 80
+    },
+    {
+      "index": 5,
+      "logical_ms": 240,
+      "segment": "travel",
+      "segment_ms": 120,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        522,
+        233,
+        28
+      ],
+      "actual_draw": [
+        0,
+        521,
+        233,
+        28
+      ],
+      "draw_ordinal": 2,
+      "stage_draw_ordinal": 1,
+      "ppm": "display-005.ppm",
+      "png": "display-005.png",
+      "pixels_sha256": "3c85a84c224ac71fc5f18207c023619ea5f9754ee0648b01b7a7155d4b3c9636",
+      "png_sha256": "714fb52a1c3fb571b369147e24db5dec1f96768c8dfc58f83ac3b3bfe2a3e4ca",
+      "duration_ms": 80
+    },
+    {
+      "index": 6,
+      "logical_ms": 320,
+      "segment": "travel",
+      "segment_ms": 200,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        522,
+        233,
+        28
+      ],
+      "actual_draw": [
+        0,
+        521,
+        233,
+        28
+      ],
+      "draw_ordinal": 2,
+      "stage_draw_ordinal": 1,
+      "ppm": "display-006.ppm",
+      "png": "display-006.png",
+      "pixels_sha256": "0373f9c1d1ff5d8c90a32121c87a1ac221a7a82e6a9b84d39ed4ffd4b2a62eb5",
+      "png_sha256": "28923719f20cd6de2b8ca25d435ff327eb57ca783ec98864118e89fa0d891a64",
+      "duration_ms": 40
+    },
+    {
+      "index": 7,
+      "logical_ms": 360,
+      "segment": "travel",
+      "segment_ms": 240,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        515,
+        235,
+        29
+      ],
+      "actual_draw": [
+        0,
+        514,
+        235,
+        29
+      ],
+      "draw_ordinal": 3,
+      "stage_draw_ordinal": 2,
+      "ppm": "display-007.ppm",
+      "png": "display-007.png",
+      "pixels_sha256": "70e09047fdd6051d1bda53294e0f99fc976d82fa7a749f72bbbf42989d47d866",
+      "png_sha256": "05448bb7a0ed7aeac10f85723ca14b794177e787b644978853e3554874b55683",
+      "duration_ms": 120
+    },
+    {
+      "index": 8,
+      "logical_ms": 480,
+      "segment": "travel",
+      "segment_ms": 360,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        511,
+        237,
+        24
+      ],
+      "actual_draw": [
+        0,
+        510,
+        237,
+        24
+      ],
+      "draw_ordinal": 4,
+      "stage_draw_ordinal": 3,
+      "ppm": "display-008.ppm",
+      "png": "display-008.png",
+      "pixels_sha256": "a49e4aeff850fc2ed0e042ac2476015e995f520d436278d185e8042baec20a80",
+      "png_sha256": "d5277d3d5aa59c3bbe52f6a71446fc444f4988cb094e9045b6a6293ea276e15c",
+      "duration_ms": 120
+    },
+    {
+      "index": 9,
+      "logical_ms": 600,
+      "segment": "travel",
+      "segment_ms": 480,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        504,
+        237,
+        25
+      ],
+      "actual_draw": [
+        0,
+        503,
+        237,
+        25
+      ],
+      "draw_ordinal": 5,
+      "stage_draw_ordinal": 4,
+      "ppm": "display-009.ppm",
+      "png": "display-009.png",
+      "pixels_sha256": "901c76bc53546bf6afa43c9e91129957fdfd67613282b3d92c23705902c672e8",
+      "png_sha256": "a6754431073962feb96d423165eb9d33a6f981ec100022c2a8a2d52fafa1fd35",
+      "duration_ms": 40
+    },
+    {
+      "index": 10,
+      "logical_ms": 640,
+      "segment": "travel",
+      "segment_ms": 520,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        504,
+        237,
+        25
+      ],
+      "actual_draw": [
+        0,
+        503,
+        237,
+        25
+      ],
+      "draw_ordinal": 5,
+      "stage_draw_ordinal": 4,
+      "ppm": "display-010.ppm",
+      "png": "display-010.png",
+      "pixels_sha256": "713a01d1813cdb09cc6a163e63ff16ee66f939b10d4d3c6894595d68b0e9df58",
+      "png_sha256": "105e2f1056c32f019dcb1804859092c55dfc017cb4877560663ac11f566e48f3",
+      "duration_ms": 80
+    },
+    {
+      "index": 11,
+      "logical_ms": 720,
+      "segment": "travel",
+      "segment_ms": 600,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        499,
+        238,
+        26
+      ],
+      "actual_draw": [
+        0,
+        498,
+        238,
+        26
+      ],
+      "draw_ordinal": 6,
+      "stage_draw_ordinal": 5,
+      "ppm": "display-011.ppm",
+      "png": "display-011.png",
+      "pixels_sha256": "62f9e32cb34766dfed42b9f30b185a8c39eba44e3d7427d272b52573acf27d39",
+      "png_sha256": "0d2263fd510f9844452afdaebb589c7ad3d5ed1218f3dd7bcc071a89e7ba6211",
+      "duration_ms": 80
+    },
+    {
+      "index": 12,
+      "logical_ms": 800,
+      "segment": "travel",
+      "segment_ms": 680,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        499,
+        238,
+        26
+      ],
+      "actual_draw": [
+        0,
+        498,
+        238,
+        26
+      ],
+      "draw_ordinal": 6,
+      "stage_draw_ordinal": 5,
+      "ppm": "display-012.ppm",
+      "png": "display-012.png",
+      "pixels_sha256": "cb55e984ccfd5f2f723ef03952e6de64ec4daad2bf76f7939404a365ca5939c5",
+      "png_sha256": "c734a0b563c095c50e597a11bc63aeaca0031b7a9cfeae2e97377cc92e069f5a",
+      "duration_ms": 40
+    },
+    {
+      "index": 13,
+      "logical_ms": 840,
+      "segment": "travel",
+      "segment_ms": 720,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        494,
+        241,
+        27
+      ],
+      "actual_draw": [
+        0,
+        493,
+        241,
+        27
+      ],
+      "draw_ordinal": 7,
+      "stage_draw_ordinal": 6,
+      "ppm": "display-013.ppm",
+      "png": "display-013.png",
+      "pixels_sha256": "9f6ec642ce8092480661ceea84051503abb47e077cf41dbc5c287e3c5da3707e",
+      "png_sha256": "0f1fdc198bf079902d66baca0fca2709b55767b45356aa85274f3402221b422e",
+      "duration_ms": 120
+    },
+    {
+      "index": 14,
+      "logical_ms": 960,
+      "segment": "travel",
+      "segment_ms": 840,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        491,
+        241,
+        28
+      ],
+      "actual_draw": [
+        0,
+        490,
+        241,
+        28
+      ],
+      "draw_ordinal": 8,
+      "stage_draw_ordinal": 7,
+      "ppm": "display-014.ppm",
+      "png": "display-014.png",
+      "pixels_sha256": "81a9f46137b1a09c6a2f92d6a81772d20a2116355b8271d46aed62cda1a70b58",
+      "png_sha256": "60074cb9ae987901e167bdff4197b8000e5be15b8b09200f431537bd2069a5bc",
+      "duration_ms": 120
+    },
+    {
+      "index": 15,
+      "logical_ms": 1080,
+      "segment": "travel",
+      "segment_ms": 960,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        482,
+        244,
+        29
+      ],
+      "actual_draw": [
+        0,
+        481,
+        244,
+        29
+      ],
+      "draw_ordinal": 9,
+      "stage_draw_ordinal": 8,
+      "ppm": "display-015.ppm",
+      "png": "display-015.png",
+      "pixels_sha256": "5d0429267791b3f5302ec39edf9c3383d690e6d5184eaf7240851372e21b39b7",
+      "png_sha256": "a6c280e63fd5379c9406e4721d4727a5d8ca0276420908987deb5846468f041a",
+      "duration_ms": 40
+    },
+    {
+      "index": 16,
+      "logical_ms": 1120,
+      "segment": "travel",
+      "segment_ms": 1000,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        482,
+        244,
+        29
+      ],
+      "actual_draw": [
+        0,
+        481,
+        244,
+        29
+      ],
+      "draw_ordinal": 9,
+      "stage_draw_ordinal": 8,
+      "ppm": "display-016.ppm",
+      "png": "display-016.png",
+      "pixels_sha256": "a85aa7e68db143bbb336a37705d8e0a10e100451c24583c8bbbe13d02fa7c1a5",
+      "png_sha256": "9bbaae4dffd2f8e3a3b0e8a164cbc2fd34db3a20fe50fa8792137af3480e8bf8",
+      "duration_ms": 80
+    },
+    {
+      "index": 17,
+      "logical_ms": 1200,
+      "segment": "travel",
+      "segment_ms": 1080,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        477,
+        249,
+        24
+      ],
+      "actual_draw": [
+        0,
+        476,
+        249,
+        24
+      ],
+      "draw_ordinal": 10,
+      "stage_draw_ordinal": 9,
+      "ppm": "display-017.ppm",
+      "png": "display-017.png",
+      "pixels_sha256": "6593b189756908c04afbaa6ef8d05d080dfc1b3999b7a3fc5e8e5126e1b1d021",
+      "png_sha256": "1f3f4433d0348aaab5d202d5a0aa39912c5ac7494834aabf5a80012723206031",
+      "duration_ms": 80
+    },
+    {
+      "index": 18,
+      "logical_ms": 1280,
+      "segment": "travel",
+      "segment_ms": 1160,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        477,
+        249,
+        24
+      ],
+      "actual_draw": [
+        0,
+        476,
+        249,
+        24
+      ],
+      "draw_ordinal": 10,
+      "stage_draw_ordinal": 9,
+      "ppm": "display-018.ppm",
+      "png": "display-018.png",
+      "pixels_sha256": "4c329469f0e09d976d18ab8d12f7a8f896a5f967f3213f5e282b2ba9e9bb7549",
+      "png_sha256": "cfcf7d441113eb5bcb6c14b6f3b8364eaa1857818beef42c284195f0095bcb89",
+      "duration_ms": 40
+    },
+    {
+      "index": 19,
+      "logical_ms": 1320,
+      "segment": "travel",
+      "segment_ms": 1200,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        470,
+        249,
+        25
+      ],
+      "actual_draw": [
+        0,
+        469,
+        249,
+        25
+      ],
+      "draw_ordinal": 11,
+      "stage_draw_ordinal": 10,
+      "ppm": "display-019.ppm",
+      "png": "display-019.png",
+      "pixels_sha256": "82b5981684c287b2afa8ad2700eff6eb44efeecc60ad1cd33017ed799be74210",
+      "png_sha256": "357ab6c412be211c336939a4f9fe7990123bef3b142c8e3c861a89d893647883",
+      "duration_ms": 120
+    },
+    {
+      "index": 20,
+      "logical_ms": 1440,
+      "segment": "travel",
+      "segment_ms": 1320,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        463,
+        251,
+        26
+      ],
+      "actual_draw": [
+        0,
+        462,
+        251,
+        26
+      ],
+      "draw_ordinal": 12,
+      "stage_draw_ordinal": 11,
+      "ppm": "display-020.ppm",
+      "png": "display-020.png",
+      "pixels_sha256": "17a0a0746cff375a426801b611be3fe1a81d1f64eff3819c412598f30d3c6ce3",
+      "png_sha256": "7b77c31b2a9811375420b2d1a9be6750e97a81d5299388b5f90fe69aee35bc67",
+      "duration_ms": 120
+    },
+    {
+      "index": 21,
+      "logical_ms": 1560,
+      "segment": "travel",
+      "segment_ms": 1440,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        457,
+        255,
+        27
+      ],
+      "actual_draw": [
+        0,
+        456,
+        255,
+        27
+      ],
+      "draw_ordinal": 13,
+      "stage_draw_ordinal": 12,
+      "ppm": "display-021.ppm",
+      "png": "display-021.png",
+      "pixels_sha256": "6fe559dd411f2d0ab4bd424b8c20e17dd51396200e1aa2d8208eae76132376bc",
+      "png_sha256": "fb7da5d2ff4dab0083fc4c0f8249d97d1799bd8248c1f7661581de13e7a71f27",
+      "duration_ms": 40
+    },
+    {
+      "index": 22,
+      "logical_ms": 1600,
+      "segment": "travel",
+      "segment_ms": 1480,
+      "role": "travel",
+      "stored_walk_row": [
+        0,
+        457,
+        255,
+        27
+      ],
+      "actual_draw": [
+        0,
+        456,
+        255,
+        27
+      ],
+      "draw_ordinal": 13,
+      "stage_draw_ordinal": 12,
+      "ppm": "display-022.ppm",
+      "png": "display-022.png",
+      "pixels_sha256": "823af52ed0be3b0f961e76c124050769563053c9d096fda45b81c66fede07231",
+      "png_sha256": "26b873d1c18f8546a0856358cf7c14991dd2bdeaa46dc04b83905e56d2e62e35",
+      "duration_ms": 80
+    },
+    {
+      "index": 23,
+      "logical_ms": 1680,
+      "segment": "travel",
+      "segment_ms": 1560,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        447,
+        256,
+        9
+      ],
+      "actual_draw": [
+        1,
+        446,
+        256,
+        9
+      ],
+      "draw_ordinal": 14,
+      "stage_draw_ordinal": 13,
+      "ppm": "display-023.ppm",
+      "png": "display-023.png",
+      "pixels_sha256": "58ac019f9df548041c65a654546d9cf5f75a8c166680de8d3aebd7bde427f099",
+      "png_sha256": "b4d6d0541bd1bb8798ee3a022fa728167f473e3a1ae60f0d7b46133fc85ffc90",
+      "duration_ms": 80
+    },
+    {
+      "index": 24,
+      "logical_ms": 1760,
+      "segment": "travel",
+      "segment_ms": 1640,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        447,
+        256,
+        9
+      ],
+      "actual_draw": [
+        1,
+        446,
+        256,
+        9
+      ],
+      "draw_ordinal": 14,
+      "stage_draw_ordinal": 13,
+      "ppm": "display-024.ppm",
+      "png": "display-024.png",
+      "pixels_sha256": "e22244d03ea1c44f4c785e503228589e247c2505ea5bbe9a6815b8c895f85225",
+      "png_sha256": "76df9aab336d419eb37b632d95ba41acf20cb90935cb4ed50fd7aa98e9f9dd5c",
+      "duration_ms": 40
+    },
+    {
+      "index": 25,
+      "logical_ms": 1800,
+      "segment": "travel",
+      "segment_ms": 1680,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-025.ppm",
+      "png": "display-025.png",
+      "pixels_sha256": "bc0fe9aa9b5481a1cb0b32ce82a37cd6c2eee3cfb03a386e0db428797b7d4587",
+      "png_sha256": "a798689df42135dea0cb9a67099877f6685c50ae05777f5f3e2370549ba0378e",
+      "duration_ms": 120
+    },
+    {
+      "index": 26,
+      "logical_ms": 1920,
+      "segment": "travel",
+      "segment_ms": 1800,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-026.ppm",
+      "png": "display-026.png",
+      "pixels_sha256": "ac743cf4513ee51bf81813f1a09bd2a56c799bce8994a1d310478f4c7e712893",
+      "png_sha256": "c6b69b60ef02269f65b2ccd4e12b55ff5e17a4b5c83633eda5e00557cec356b1",
+      "duration_ms": 160
+    },
+    {
+      "index": 27,
+      "logical_ms": 2080,
+      "segment": "travel",
+      "segment_ms": 1960,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-027.ppm",
+      "png": "display-027.png",
+      "pixels_sha256": "0756f9a3e6de5f120ad5f9dcf0571cf9097f1593497007fb4d12e26c4b5f7a75",
+      "png_sha256": "1d6c25f3fbad03dbeac702bd4156be914c68df6aa84cb4ca41b43950ebf8ecbf",
+      "duration_ms": 160
+    },
+    {
+      "index": 28,
+      "logical_ms": 2240,
+      "segment": "travel",
+      "segment_ms": 2120,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-028.ppm",
+      "png": "display-028.png",
+      "pixels_sha256": "09499c839b20805bbb6e0cde361cbcf674fdb5f2b11f9fd36c49128dff0ade41",
+      "png_sha256": "f2d50ca771e912988ecd0726ac7962513a4105c8d14b402540eecc1a1ff757ff",
+      "duration_ms": 160
+    },
+    {
+      "index": 29,
+      "logical_ms": 2400,
+      "segment": "travel",
+      "segment_ms": 2280,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-029.ppm",
+      "png": "display-029.png",
+      "pixels_sha256": "41c3ad9ec786b2bb12de4e2a3a775cb644b272fa009f9ab5a54358b0066262f8",
+      "png_sha256": "5752e67ccc0e978b58e46fac8d2b62257a11a95c64c9053ed36e7e6127cf0701",
+      "duration_ms": 160
+    },
+    {
+      "index": 30,
+      "logical_ms": 2560,
+      "segment": "travel",
+      "segment_ms": 2440,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-030.ppm",
+      "png": "display-030.png",
+      "pixels_sha256": "7bfae2158003bccfc9a3944a60703f515332f207e2f9093c98ec32e349560513",
+      "png_sha256": "a7aad967600ff33e6a03ba1e28fc1ccd7a1a2bee83eb4bb708c8609d5bb2f8de",
+      "duration_ms": 160
+    },
+    {
+      "index": 31,
+      "logical_ms": 2720,
+      "segment": "travel",
+      "segment_ms": 2600,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-031.ppm",
+      "png": "display-031.png",
+      "pixels_sha256": "6b7d0dfdd94838afc6901f39ff2b5fbac135282b04e894a4cc635dd6e0c84643",
+      "png_sha256": "9287bec52bb1bfe31f830ba43b7ba91c5e4f70ac1c58ca0f6cfbf9be828fdfda",
+      "duration_ms": 160
+    },
+    {
+      "index": 32,
+      "logical_ms": 2880,
+      "segment": "travel",
+      "segment_ms": 2760,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-032.ppm",
+      "png": "display-032.png",
+      "pixels_sha256": "47aa8641f523a86293e174063e2aff06dce2260b2f81a442130fbad1cbc1fec2",
+      "png_sha256": "4b15aaf82065ec1a202225fdcfac08d53a42c5304b250f7b476a9e666cb62ecd",
+      "duration_ms": 160
+    },
+    {
+      "index": 33,
+      "logical_ms": 3040,
+      "segment": "travel",
+      "segment_ms": 2920,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-033.ppm",
+      "png": "display-033.png",
+      "pixels_sha256": "2397dee03dc4be21e0ddc1d1485545cd7da2d668178d21184f3fb05b75a076a1",
+      "png_sha256": "6e802436f470ef6fb8f638acd93d469816eb28fe6b266a0fc987d94a2668680c",
+      "duration_ms": 160
+    },
+    {
+      "index": 34,
+      "logical_ms": 3200,
+      "segment": "travel",
+      "segment_ms": 3080,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-034.ppm",
+      "png": "display-034.png",
+      "pixels_sha256": "2154b94b4282d4b2a9fbb35271f8461e51ba1edefdf187ade4708ef189cddcf7",
+      "png_sha256": "3345314285b72bd9728dfb9f5dfc449449b785af1bf3001b028daee9c63e485d",
+      "duration_ms": 160
+    },
+    {
+      "index": 35,
+      "logical_ms": 3360,
+      "segment": "travel",
+      "segment_ms": 3240,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-035.ppm",
+      "png": "display-035.png",
+      "pixels_sha256": "69bd4cb573044e580d4fd275e2704876c16fcd1ca632d77de2f800916ca458e3",
+      "png_sha256": "9678785fe09d6cd4a7d84218dd6cefe931b08d05cc1465760c6dcc1a68cc3fac",
+      "duration_ms": 40
+    },
+    {
+      "index": 36,
+      "logical_ms": 3400,
+      "segment": "travel",
+      "segment_ms": 3280,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        448,
+        257,
+        17
+      ],
+      "actual_draw": [
+        1,
+        447,
+        257,
+        17
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-036.ppm",
+      "png": "display-036.png",
+      "pixels_sha256": "69bd4cb573044e580d4fd275e2704876c16fcd1ca632d77de2f800916ca458e3",
+      "png_sha256": "9678785fe09d6cd4a7d84218dd6cefe931b08d05cc1465760c6dcc1a68cc3fac",
+      "duration_ms": 0
+    }
+  ],
+  "completed_waits": [
+    [
+      0,
+      0
+    ],
+    [
+      6,
+      120
+    ],
+    [
+      0,
+      120
+    ],
+    [
+      2,
+      160
+    ],
+    [
+      4,
+      240
+    ],
+    [
+      4,
+      320
+    ],
+    [
+      2,
+      360
+    ],
+    [
+      6,
+      480
+    ],
+    [
+      6,
+      600
+    ],
+    [
+      2,
+      640
+    ],
+    [
+      4,
+      720
+    ],
+    [
+      4,
+      800
+    ],
+    [
+      2,
+      840
+    ],
+    [
+      6,
+      960
+    ],
+    [
+      6,
+      1080
+    ],
+    [
+      2,
+      1120
+    ],
+    [
+      4,
+      1200
+    ],
+    [
+      4,
+      1280
+    ],
+    [
+      2,
+      1320
+    ],
+    [
+      6,
+      1440
+    ],
+    [
+      6,
+      1560
+    ],
+    [
+      2,
+      1600
+    ],
+    [
+      4,
+      1680
+    ],
+    [
+      4,
+      1760
+    ],
+    [
+      2,
+      1800
+    ],
+    [
+      6,
+      1920
+    ],
+    [
+      8,
+      2080
+    ],
+    [
+      8,
+      2240
+    ],
+    [
+      8,
+      2400
+    ],
+    [
+      8,
+      2560
+    ],
+    [
+      8,
+      2720
+    ],
+    [
+      8,
+      2880
+    ],
+    [
+      8,
+      3040
+    ],
+    [
+      8,
+      3200
+    ],
+    [
+      8,
+      3360
+    ],
+    [
+      2,
+      3400
+    ]
+  ],
+  "display_count": 36,
+  "duration_ms": 3400,
+  "loaded_art": [
+    "data/hd/BMP/BACKGRND.BMP/001.png",
+    "data/hd/BMP/BACKGRND.BMP/002.png",
+    "data/hd/BMP/BACKGRND.BMP/016.png",
+    "data/hd/BMP/BACKGRND.BMP/017.png",
+    "data/hd/BMP/BACKGRND.BMP/018.png",
+    "data/hd/BMP/BACKGRND.BMP/019.png",
+    "data/hd/BMP/BACKGRND.BMP/020.png",
+    "data/hd/BMP/BACKGRND.BMP/021.png",
+    "data/hd/BMP/BACKGRND.BMP/022.png",
+    "data/hd/BMP/BACKGRND.BMP/023.png",
+    "data/hd/BMP/BACKGRND.BMP/024.png",
+    "data/hd/BMP/BACKGRND.BMP/025.png",
+    "data/hd/BMP/BACKGRND.BMP/026.png",
+    "data/hd/BMP/BACKGRND.BMP/027.png",
+    "data/hd/BMP/BACKGRND.BMP/028.png",
+    "data/hd/BMP/BACKGRND.BMP/029.png",
+    "data/hd/BMP/BACKGRND.BMP/030.png",
+    "data/hd/BMP/BACKGRND.BMP/031.png",
+    "data/hd/BMP/BACKGRND.BMP/032.png",
+    "data/hd/BMP/BACKGRND.BMP/033.png",
+    "data/hd/BMP/BACKGRND.BMP/034.png",
+    "data/hd/BMP/BACKGRND.BMP/035.png",
+    "data/hd/BMP/BACKGRND.BMP/036.png",
+    "data/hd/BMP/BACKGRND.BMP/037.png",
+    "data/hd/BMP/BACKGRND.BMP/038.png",
+    "data/hd/BMP/BACKGRND.BMP/039.png",
+    "data/hd/BMP/BACKGRND.BMP/040.png",
+    "data/hd/BMP/BACKGRND.BMP/041.png",
+    "data/hd/BMP/JOHNWALK.BMP/009.png",
+    "data/hd/BMP/JOHNWALK.BMP/010.png",
+    "data/hd/BMP/JOHNWALK.BMP/012.png",
+    "data/hd/BMP/JOHNWALK.BMP/013.png",
+    "data/hd/BMP/JOHNWALK.BMP/014.png",
+    "data/hd/BMP/JOHNWALK.BMP/030.png",
+    "data/hd/BMP/JOHNWALK.BMP/031.png",
+    "data/hd/BMP/JOHNWALK.BMP/032.png",
+    "data/hd/BMP/JOHNWALK.BMP/033.png",
+    "data/hd/BMP/JOHNWALK.BMP/034.png",
+    "data/hd/BMP/JOHNWALK.BMP/035.png",
+    "data/hd/BMP/MRAFT.BMP/000.png",
+    "data/hd/BMP/MRAFT.BMP/001.png",
+    "data/hd/BMP/MRAFT.BMP/002.png",
+    "data/hd/BMP/MRAFT.BMP/003.png",
+    "data/hd/BMP/MRAFT.BMP/004.png",
+    "data/hd/BMP/MRAFT.BMP/005.png",
+    "data/hd/BMP/MRAFT.BMP/006.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/012.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/013.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/014.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/015.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/000.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/001.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/002.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/003.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/004.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/005.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/006.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/007.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/008.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/011.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/015.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/016.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/017.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/018.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/019.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/020.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/021.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/022.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/023.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/024.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/025.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/026.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/027.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/028.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/029.png",
+    "data/styles/cartoon/SCR/OCEAN02.SCR.png"
+  ],
+  "log_sha256": "2bf406c1ee80d8967d7fdcfe9c6e69dab12f5c3f772bdb375a596e1b2d30f6af",
+  "scope": "Native port connecting route, actual API prime/departure/travel/waypoint/arrival; all observed timestamps and origins. No original-binary timing claim.",
+  "candidate": false,
+  "command": [
+    "/out/baseline-v1/connecting_walk_probe",
+    "cartoon",
+    "full",
+    "travel_cb"
+  ],
+  "exit_code": 0,
+  "archive_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+  "executable_sha256": "d8b6214f7951d7f7a5170c0f7999ea74648a2991165b6c8696530d0046271dc5"
+}

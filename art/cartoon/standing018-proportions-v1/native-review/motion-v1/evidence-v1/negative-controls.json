@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "clip": "waypoint_rear",
+      "display": 63,
+      "frame": 18,
+      "flip_x": 1,
+      "altered_scene_pixel": [
+        787,
+        419
+      ],
+      "result": "FIRED",
+      "exact_failure": "unchanged outside018 canvas",
+      "altered_rgb_sha256": "8a3f1b64f5fc03ced94f0a88296ba6bd245ae9157111ca233227df657272d555"
+    },
+    {
+      "clip": "waypoint_front",
+      "display": 41,
+      "frame": 23,
+      "flip_x": 0,
+      "altered_scene_pixel": [
+        867,
+        451
+      ],
+      "result": "FIRED",
+      "exact_failure": "prior pose and scene pixel identity:23",
+      "altered_rgb_sha256": "49f9c8f17cee0b81513d515549f270397dabfb5371bea1e36ebbb342ed0edbfb"
+    }
+  ],
+  "positive_before_and_after": true,
+  "report_bindings": {
+    "waypoint_rear": {
+      "baseline_report_sha256": "7dcbf7a00e0db7d0ead0bb9a3a693e1b79cbc21af0fb443f72ad943cd53773ba",
+      "candidate_report_sha256": "e09fa5081308abf417b5af819321b85f6840686813cb297fd9f537935e697164"
+    },
+    "waypoint_front": {
+      "baseline_report_sha256": "13976be57b62dbefb65ae6d99b04c7381d8ef3703420df067c9f5cbb8b0e375b",
+      "candidate_report_sha256": "3ce70a510c3eb6dbfee8b49acffcac309d7518fc200ca6d4afe7d7bebdbedff2"
+    }
+  },
+  "summary_sha256": "190b66d4200c890f61ab06bcb3ce7f5a5b5d7b7601250cb4bc90284d4a4f8456",
+  "executed_comparer_sha256": "3a0f820e46900b92ad2ef62d720c3e1c62138b82de2867c83691bc6a2a8f5c49",
+  "checker_sha256": "3d02dc63dc8bf04c4391703938aa3444b57e817a97d52f19801f78c6d6efbb79",
+  "archive_sha256": "7a50f72fe65382917a1d38412dad97315542831ea5fd06eec9570734a7afdb52",
+  "runtime018_sha256": "21cf94cd90d369b20b6d3b8ef60b7cc2848f919ff828578320502aec9a17c55b",
+  "scope": "Two memory-only changed-pixel controls on bound actual full-capture buffers; no capture files, artwork or production mutations."
+}

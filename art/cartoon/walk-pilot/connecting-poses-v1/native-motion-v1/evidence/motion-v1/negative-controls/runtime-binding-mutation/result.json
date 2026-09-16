@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "selection_sha256": "f4fc27c61da5006e27dd8a76622d10bf6cd6aeaf43f0676a6ebdc31314f35ea3",
+  "production_unchanged_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+  "records": [
+    {
+      "variant": "enabled",
+      "result": "PASS",
+      "exit_code": 0,
+      "executed_validator_sha256": "261884a8d55a86430723ce005a3fec24dbc20323bd87a6cc27b51bbeb650cee5",
+      "checker_sha256": "0dd86be00c27cb5b778a5986e232d022c035919613aa3dde4ea0a8f7b6cf0bb8",
+      "stdout_sha256": "af694bf71920347ea1f88048af824ca980afb8d18b0eea9434782e16d6404c4b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "expected_failure": null
+    },
+    {
+      "variant": "removed",
+      "result": "FIRED",
+      "exit_code": 1,
+      "executed_validator_sha256": "8a8883e982f8146e409769dab7cd57685864d3f1413f34d3301deed9dff7c6de",
+      "checker_sha256": "0dd86be00c27cb5b778a5986e232d022c035919613aa3dde4ea0a8f7b6cf0bb8",
+      "stdout_sha256": "08d322e52e6f7f3fa6d715063836e8d5902ef10ee845c780d4ef538adb3fd78a",
+      "stderr_sha256": "587974b0ef8194eda96282d6b5e60480142542dbd2a33f436c6651eec2c104fb",
+      "expected_failure": "same-canvas wrong-frame substitution SURVIVED:009"
+    }
+  ],
+  "scope": "Copied real checker and validator in fresh python -B processes. One assert condition replaced by True; valid same-size wrong-pose bytes then trigger exactly one named checker failure. No package or source mutation."
+}

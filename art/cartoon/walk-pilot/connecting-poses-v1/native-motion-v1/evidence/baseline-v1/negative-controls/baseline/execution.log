@@ -1,0 +1,12 @@
+WITNESS executing connecting baseline guards {'config.py': '82df0b9d383ba8363be86b5c99edfbbe753bb4b0bd72c5eeaebe6f9e9e1a0c87', 'capture.py': 'c9c5008f3dc3efe5ddefd02522f6621e744e8c61e6b3a85fd48d5f0c6b589bec', 'native_core.py': '996e60eb4e64d98ce0107d68db9f2cffb9229189eafbd9befdfaa61dafe2472e', 'negative_baseline.py': '4e62f7e7e637e78be5cce39482a37f09a8ca68aaa1861ec040415c3c7b1c7e52'}
+CONTROL PASS original table contracts
+FIRED wrong-table-fingerprint: original-derived table identity
+FIRED missing-table-row: complete original-derived walk table
+FIRED wrong-explicit-pose-sequence: connecting sequence:front_arc
+FIRED missing-arrival-role: valid final arrival and non-sentinel rows:front_arc
+FIRED sentinel-in-selected-turn: valid final arrival and non-sentinel rows:front_arc
+FIRED changed-configured-duration: connecting timing budget:front_arc
+FIRED wrong-waypoint-prediction: connecting capture: independent compiled C trace agrees with source contract:waypoint_front:travel
+FIRED wrong-selected-waypoint-path: connecting capture: actual selected configured path:travel
+FIRED wrong-terminal-role: connecting capture: actual configured approved arrival
+PASS nine executed baseline negatives and restored native positive control

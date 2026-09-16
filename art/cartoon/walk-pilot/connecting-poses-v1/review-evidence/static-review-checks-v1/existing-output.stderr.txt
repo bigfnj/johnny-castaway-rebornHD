@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "<repo>\art\cartoon\walk-pilot\connecting-poses-v1\build_review.py", line 60, in <module>
+    main()
+  File "<repo>\art\cartoon\walk-pilot\connecting-poses-v1\build_review.py", line 53, in main
+    args.output.mkdir(parents=True, exist_ok=False)
+  File "<python-runtime>\Lib\pathlib.py", line 1116, in mkdir
+    os.mkdir(self, mode)
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: '<repo>\\build\\connecting-analysis\\review-negatives\\run-v2\\occupied-output'

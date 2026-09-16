@@ -1,0 +1,1653 @@
+{
+  "status": "PASS",
+  "clip": "rear_arc",
+  "phase": "full",
+  "segments": {
+    "prime": {
+      "api_arguments": [
+        3,
+        6,
+        3,
+        6
+      ],
+      "start_ms": 0,
+      "rows": [
+        [
+          0,
+          485,
+          217,
+          0
+        ]
+      ],
+      "draws": [
+        [
+          0,
+          484,
+          217,
+          0
+        ]
+      ],
+      "delays": [
+        80,
+        0
+      ],
+      "chosen_path": "D",
+      "end_ms": 120
+    },
+    "travel": {
+      "api_arguments": [
+        3,
+        6,
+        4,
+        2
+      ],
+      "start_ms": 120,
+      "rows": [
+        [
+          1,
+          480,
+          215,
+          23
+        ],
+        [
+          0,
+          477,
+          217,
+          12
+        ],
+        [
+          0,
+          479,
+          216,
+          23
+        ],
+        [
+          1,
+          465,
+          217,
+          3
+        ],
+        [
+          1,
+          459,
+          218,
+          4
+        ],
+        [
+          1,
+          448,
+          220,
+          5
+        ],
+        [
+          1,
+          437,
+          217,
+          6
+        ],
+        [
+          1,
+          438,
+          217,
+          7
+        ],
+        [
+          1,
+          427,
+          217,
+          8
+        ],
+        [
+          1,
+          418,
+          217,
+          1
+        ],
+        [
+          1,
+          410,
+          214,
+          2
+        ],
+        [
+          1,
+          407,
+          212,
+          3
+        ],
+        [
+          1,
+          400,
+          213,
+          4
+        ],
+        [
+          1,
+          394,
+          212,
+          6
+        ],
+        [
+          1,
+          395,
+          212,
+          7
+        ],
+        [
+          1,
+          387,
+          212,
+          8
+        ],
+        [
+          1,
+          380,
+          211,
+          0
+        ]
+      ],
+      "draws": [
+        [
+          1,
+          479,
+          215,
+          23
+        ],
+        [
+          0,
+          476,
+          217,
+          12
+        ],
+        [
+          0,
+          478,
+          216,
+          23
+        ],
+        [
+          1,
+          464,
+          217,
+          3
+        ],
+        [
+          1,
+          458,
+          218,
+          4
+        ],
+        [
+          1,
+          447,
+          220,
+          5
+        ],
+        [
+          1,
+          436,
+          217,
+          6
+        ],
+        [
+          1,
+          437,
+          217,
+          7
+        ],
+        [
+          1,
+          426,
+          217,
+          8
+        ],
+        [
+          1,
+          417,
+          217,
+          1
+        ],
+        [
+          1,
+          409,
+          214,
+          2
+        ],
+        [
+          1,
+          406,
+          212,
+          3
+        ],
+        [
+          1,
+          399,
+          213,
+          4
+        ],
+        [
+          1,
+          393,
+          212,
+          6
+        ],
+        [
+          1,
+          394,
+          212,
+          7
+        ],
+        [
+          1,
+          386,
+          212,
+          8
+        ],
+        [
+          1,
+          379,
+          211,
+          0
+        ]
+      ],
+      "delays": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        80,
+        0
+      ],
+      "chosen_path": "DE",
+      "end_ms": 3640
+    }
+  },
+  "displays": [
+    {
+      "index": 1,
+      "logical_ms": 0,
+      "segment": "prime",
+      "segment_ms": 0,
+      "role": "standing",
+      "stored_walk_row": [
+        0,
+        485,
+        217,
+        0
+      ],
+      "actual_draw": [
+        0,
+        484,
+        217,
+        0
+      ],
+      "draw_ordinal": 0,
+      "stage_draw_ordinal": 0,
+      "ppm": "display-001.ppm",
+      "png": "display-001.png",
+      "pixels_sha256": "e4cef32e55ee3173b3155acbeed5aab6b75b3619902808e9db9fec96e997718d",
+      "png_sha256": "261c3e66139cd61db79ac74c0766ec0661c85d81b01dcb4c6962e4d2266df26e",
+      "duration_ms": 120,
+      "baseline_pixels_sha256": "624b77270b53a73515e2a771fcf8fd3710cc5c090a62065cbd2b9c5f43e6ec00",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 2,
+      "logical_ms": 120,
+      "segment": "prime",
+      "segment_ms": 120,
+      "role": "standing",
+      "stored_walk_row": [
+        0,
+        485,
+        217,
+        0
+      ],
+      "actual_draw": [
+        0,
+        484,
+        217,
+        0
+      ],
+      "draw_ordinal": 0,
+      "stage_draw_ordinal": 0,
+      "ppm": "display-002.ppm",
+      "png": "display-002.png",
+      "pixels_sha256": "e4cef32e55ee3173b3155acbeed5aab6b75b3619902808e9db9fec96e997718d",
+      "png_sha256": "261c3e66139cd61db79ac74c0766ec0661c85d81b01dcb4c6962e4d2266df26e",
+      "duration_ms": 0,
+      "baseline_pixels_sha256": "624b77270b53a73515e2a771fcf8fd3710cc5c090a62065cbd2b9c5f43e6ec00",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 3,
+      "logical_ms": 120,
+      "segment": "travel",
+      "segment_ms": 0,
+      "role": "ordinary turn",
+      "stored_walk_row": [
+        1,
+        480,
+        215,
+        23
+      ],
+      "actual_draw": [
+        1,
+        479,
+        215,
+        23
+      ],
+      "draw_ordinal": 1,
+      "stage_draw_ordinal": 0,
+      "ppm": "display-003.ppm",
+      "png": "display-003.png",
+      "pixels_sha256": "2c32e1430abc9f9cf29a2a8d62cec9a3ac8face9a3afde738510bd85524ded1c",
+      "png_sha256": "1c3fd0797e6f733602927ca27e02b12f955ce67a65ae968ee290ff9cf8039d49",
+      "duration_ms": 40,
+      "baseline_pixels_sha256": "19fafbc24221e6e7dc544288e19da5c795c7e4c627af6d801ba9feaa7960de18",
+      "changed_scene_pixels": 1487,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 4,
+      "logical_ms": 160,
+      "segment": "travel",
+      "segment_ms": 40,
+      "role": "ordinary turn",
+      "stored_walk_row": [
+        1,
+        480,
+        215,
+        23
+      ],
+      "actual_draw": [
+        1,
+        479,
+        215,
+        23
+      ],
+      "draw_ordinal": 1,
+      "stage_draw_ordinal": 0,
+      "ppm": "display-004.ppm",
+      "png": "display-004.png",
+      "pixels_sha256": "c1317e3d263ddb9f7f1594d74ae72a19c47ace3c635aa6a4270504af6f3caee2",
+      "png_sha256": "77812ef56c0ab530196798cfcb0e595120c523fd7ab789719f41a44766cadf69",
+      "duration_ms": 80,
+      "baseline_pixels_sha256": "cc6bb296cd63528755495d82a25cfb450324ad497adec58e8e21a780e249c871",
+      "changed_scene_pixels": 1487,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 5,
+      "logical_ms": 240,
+      "segment": "travel",
+      "segment_ms": 120,
+      "role": "ordinary turn",
+      "stored_walk_row": [
+        0,
+        477,
+        217,
+        12
+      ],
+      "actual_draw": [
+        0,
+        476,
+        217,
+        12
+      ],
+      "draw_ordinal": 2,
+      "stage_draw_ordinal": 1,
+      "ppm": "display-005.ppm",
+      "png": "display-005.png",
+      "pixels_sha256": "4b8fefde6d72b6598ddeac4dc462e73bbdd36055aff2724e5252cb273eca33f3",
+      "png_sha256": "881ef17e974d4f647da2eba139be21e5fedbca8d96da9a2e0d99f04dadf3602e",
+      "duration_ms": 80,
+      "baseline_pixels_sha256": "cb757983b5b06ceff0df649765adb2d3fc6d1e33f758aada16808164dd865b53",
+      "changed_scene_pixels": 1907,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 6,
+      "logical_ms": 320,
+      "segment": "travel",
+      "segment_ms": 200,
+      "role": "ordinary turn",
+      "stored_walk_row": [
+        0,
+        477,
+        217,
+        12
+      ],
+      "actual_draw": [
+        0,
+        476,
+        217,
+        12
+      ],
+      "draw_ordinal": 2,
+      "stage_draw_ordinal": 1,
+      "ppm": "display-006.ppm",
+      "png": "display-006.png",
+      "pixels_sha256": "cdf75897a735b6319c53032fba3960b27ae73d593bdd6c2b3ceddc450aed2e10",
+      "png_sha256": "af6189ad8dc366a2758173509a28d966c5b581992158f5f6beee611645d8fb7d",
+      "duration_ms": 40,
+      "baseline_pixels_sha256": "25d2815bb7e25514b4e7002a89d704f7cdda3d2c473aa369bdf268848418cf4f",
+      "changed_scene_pixels": 1907,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 7,
+      "logical_ms": 360,
+      "segment": "travel",
+      "segment_ms": 240,
+      "role": "ordinary turn",
+      "stored_walk_row": [
+        0,
+        479,
+        216,
+        23
+      ],
+      "actual_draw": [
+        0,
+        478,
+        216,
+        23
+      ],
+      "draw_ordinal": 3,
+      "stage_draw_ordinal": 2,
+      "ppm": "display-007.ppm",
+      "png": "display-007.png",
+      "pixels_sha256": "551662bf3f32a8b3e8a29a32ae4c893bb60d28e2ecac1bfe53c066177031e0ad",
+      "png_sha256": "53326238fe43016de3794e745e6f2b69b88e2e71272532a57070abcf0f2b0829",
+      "duration_ms": 120,
+      "baseline_pixels_sha256": "649cce449dba7239aab15ebbb27eb9c3b87906e19c050f068d1abfad62b2e01d",
+      "changed_scene_pixels": 1487,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 8,
+      "logical_ms": 480,
+      "segment": "travel",
+      "segment_ms": 360,
+      "role": "ordinary turn",
+      "stored_walk_row": [
+        1,
+        465,
+        217,
+        3
+      ],
+      "actual_draw": [
+        1,
+        464,
+        217,
+        3
+      ],
+      "draw_ordinal": 4,
+      "stage_draw_ordinal": 3,
+      "ppm": "display-008.ppm",
+      "png": "display-008.png",
+      "pixels_sha256": "29a69688c5eaebd008549191a12261d258b7a2a1efcadbf984a362548e21b342",
+      "png_sha256": "bfe7bfd2fae132d0812ddf1ea9192df168aaae24d7ce6719d8558c82c95b88b6",
+      "duration_ms": 120,
+      "baseline_pixels_sha256": "ba60f07510c3de3679b6d3ddc5528bd6fb065a1e96f441987ab409a58fdc6a89",
+      "changed_scene_pixels": 1147,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 9,
+      "logical_ms": 600,
+      "segment": "travel",
+      "segment_ms": 480,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        459,
+        218,
+        4
+      ],
+      "actual_draw": [
+        1,
+        458,
+        218,
+        4
+      ],
+      "draw_ordinal": 5,
+      "stage_draw_ordinal": 4,
+      "ppm": "display-009.ppm",
+      "png": "display-009.png",
+      "pixels_sha256": "a1d167fbaa21df4d1848da4f8a1a134e2f494e11eeda204dc76cc01f4f25a5f0",
+      "png_sha256": "62bbc3c2170fcbab68eb1177eada05043728651a3ccb0f29f2be6a407636abc2",
+      "duration_ms": 40,
+      "baseline_pixels_sha256": "53012e7b1bf3f2b25e3f43e09f12146a6768edb79d396dc78bfe96a12807bb65",
+      "changed_scene_pixels": 1363,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 10,
+      "logical_ms": 640,
+      "segment": "travel",
+      "segment_ms": 520,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        459,
+        218,
+        4
+      ],
+      "actual_draw": [
+        1,
+        458,
+        218,
+        4
+      ],
+      "draw_ordinal": 5,
+      "stage_draw_ordinal": 4,
+      "ppm": "display-010.ppm",
+      "png": "display-010.png",
+      "pixels_sha256": "736001b15dbc7ef040802da60d1fe25169aa44f2cbd908fdff50d3771eb5dc69",
+      "png_sha256": "62d5535da1ba63ff9da909e12532815dd326736535f147d7788d1c39c7c32bd0",
+      "duration_ms": 80,
+      "baseline_pixels_sha256": "a320e7347b7a47197444aa475dd8ff0ffcd35826284364f5df3476aadd73f706",
+      "changed_scene_pixels": 1363,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 11,
+      "logical_ms": 720,
+      "segment": "travel",
+      "segment_ms": 600,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        448,
+        220,
+        5
+      ],
+      "actual_draw": [
+        1,
+        447,
+        220,
+        5
+      ],
+      "draw_ordinal": 6,
+      "stage_draw_ordinal": 5,
+      "ppm": "display-011.ppm",
+      "png": "display-011.png",
+      "pixels_sha256": "39b70b73b4aa2bb4d1d59afaa5544d82609de01ab2c3c010fddadf2619c889cc",
+      "png_sha256": "3b7e4109bea2eb6647e6432fb0d66c783dc24a0101cf66589e31a37a1281b4b8",
+      "duration_ms": 80,
+      "baseline_pixels_sha256": "d5000235a5f35aa9c6c5f64acda0d4728a1fdf6897ee9e0913aacb1477609d30",
+      "changed_scene_pixels": 1181,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 12,
+      "logical_ms": 800,
+      "segment": "travel",
+      "segment_ms": 680,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        448,
+        220,
+        5
+      ],
+      "actual_draw": [
+        1,
+        447,
+        220,
+        5
+      ],
+      "draw_ordinal": 6,
+      "stage_draw_ordinal": 5,
+      "ppm": "display-012.ppm",
+      "png": "display-012.png",
+      "pixels_sha256": "eb823f5829221e71689ae5746e90f06f8e5d08799027c0dfaf7536067939fdf3",
+      "png_sha256": "e586620daddb4dc5f4588242270c986bdaefabe50d68d42a7f1a6d7bac7791f9",
+      "duration_ms": 40,
+      "baseline_pixels_sha256": "adf1954d15bdf986d52a71266b834b750de0a9c96d7be2c93051621f27010841",
+      "changed_scene_pixels": 1181,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 13,
+      "logical_ms": 840,
+      "segment": "travel",
+      "segment_ms": 720,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        437,
+        217,
+        6
+      ],
+      "actual_draw": [
+        1,
+        436,
+        217,
+        6
+      ],
+      "draw_ordinal": 7,
+      "stage_draw_ordinal": 6,
+      "ppm": "display-013.ppm",
+      "png": "display-013.png",
+      "pixels_sha256": "76e4d249469de75aad53bb0e2f8708676f0a2f278345e2d8f355aa395df5ad24",
+      "png_sha256": "0f720a8879655e3a0761eddbf0be6eef2f16635e19576d93f4d65b533092df27",
+      "duration_ms": 120,
+      "baseline_pixels_sha256": "35c9da75470832ed106249d7eb7d2c546e3fff1ed88dda25702b0f6a456b69be",
+      "changed_scene_pixels": 733,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 14,
+      "logical_ms": 960,
+      "segment": "travel",
+      "segment_ms": 840,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        438,
+        217,
+        7
+      ],
+      "actual_draw": [
+        1,
+        437,
+        217,
+        7
+      ],
+      "draw_ordinal": 8,
+      "stage_draw_ordinal": 7,
+      "ppm": "display-014.ppm",
+      "png": "display-014.png",
+      "pixels_sha256": "be6766d5e0d2e29ed0d015f87ac3218a24bc423889161fc2d4902ed6fbbec723",
+      "png_sha256": "46a10ca26025de3240807af22e3ae308ea742c3c56bd5a16d243b6aabbca03ad",
+      "duration_ms": 120,
+      "baseline_pixels_sha256": "1b01a348e41f0c8e3b35a30f5c471cda5274d4dedaff9f4a5c0eb2edd56021d7",
+      "changed_scene_pixels": 665,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 15,
+      "logical_ms": 1080,
+      "segment": "travel",
+      "segment_ms": 960,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        427,
+        217,
+        8
+      ],
+      "actual_draw": [
+        1,
+        426,
+        217,
+        8
+      ],
+      "draw_ordinal": 9,
+      "stage_draw_ordinal": 8,
+      "ppm": "display-015.ppm",
+      "png": "display-015.png",
+      "pixels_sha256": "b577512d3e1d62da4fc4df68d4982a1d25ef2024599cd1e6f4eb10b4925e4608",
+      "png_sha256": "1ec56fcc7e5c3e2f484f04d565ba1df50e5dcffb4fc3a1afef6b20da9b335443",
+      "duration_ms": 40,
+      "baseline_pixels_sha256": "5249df7430817498367297af238a300fc025f852591605d09949edc665ee3880",
+      "changed_scene_pixels": 1302,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 16,
+      "logical_ms": 1120,
+      "segment": "travel",
+      "segment_ms": 1000,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        427,
+        217,
+        8
+      ],
+      "actual_draw": [
+        1,
+        426,
+        217,
+        8
+      ],
+      "draw_ordinal": 9,
+      "stage_draw_ordinal": 8,
+      "ppm": "display-016.ppm",
+      "png": "display-016.png",
+      "pixels_sha256": "94fde79bb8ac2d2ea95baeacb075646599f008c8141fb1f9c9cc5bccaf0b29a3",
+      "png_sha256": "616880fcc86fb73d16ed78787c6e00c1bdb3ebe51fcfb261ee383515cc3d0db3",
+      "duration_ms": 80,
+      "baseline_pixels_sha256": "67cc109857d2c26991514ab770c9f8ff0e83f7960bd44e320e55ff58fbf88e5a",
+      "changed_scene_pixels": 1302,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 17,
+      "logical_ms": 1200,
+      "segment": "travel",
+      "segment_ms": 1080,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        418,
+        217,
+        1
+      ],
+      "actual_draw": [
+        1,
+        417,
+        217,
+        1
+      ],
+      "draw_ordinal": 10,
+      "stage_draw_ordinal": 9,
+      "ppm": "display-017.ppm",
+      "png": "display-017.png",
+      "pixels_sha256": "e4940ac07258f8c3442f338a42b77f2de0d39376241722743914efe71882735f",
+      "png_sha256": "91b7c25bd22411d433f7d587eb122d6082a8b94ab591981b3605f502af493516",
+      "duration_ms": 80,
+      "baseline_pixels_sha256": "5b652c01be1e7aca3410603d4f41eb2c9a42a95ad053b808aaea35f06b614489",
+      "changed_scene_pixels": 1448,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 18,
+      "logical_ms": 1280,
+      "segment": "travel",
+      "segment_ms": 1160,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        418,
+        217,
+        1
+      ],
+      "actual_draw": [
+        1,
+        417,
+        217,
+        1
+      ],
+      "draw_ordinal": 10,
+      "stage_draw_ordinal": 9,
+      "ppm": "display-018.ppm",
+      "png": "display-018.png",
+      "pixels_sha256": "156acafd55dc82765d219fc19f12803631ed00ba1b20c95a773a51a080d6ce54",
+      "png_sha256": "e2baee1419e8957f0e297a4cf40eaf463213c158c6746364663e920dd28e029c",
+      "duration_ms": 40,
+      "baseline_pixels_sha256": "e35a8688d34d66b075d63e83ac1c285111e8fa94e24654fc988f31bb1b9ff33e",
+      "changed_scene_pixels": 1448,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 19,
+      "logical_ms": 1320,
+      "segment": "travel",
+      "segment_ms": 1200,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        410,
+        214,
+        2
+      ],
+      "actual_draw": [
+        1,
+        409,
+        214,
+        2
+      ],
+      "draw_ordinal": 11,
+      "stage_draw_ordinal": 10,
+      "ppm": "display-019.ppm",
+      "png": "display-019.png",
+      "pixels_sha256": "f8a745e92993b72dd74f252699baa209f266861df4195156da38800a39ea1c9f",
+      "png_sha256": "ccc7780205d804cee7ded899954ff9235acc7d1aaff56d0b6bc469bf9df234e1",
+      "duration_ms": 120,
+      "baseline_pixels_sha256": "9c8a6611c400ec51ee622f0770198e82d6c24682e77ebd553abbee0f003a75b0",
+      "changed_scene_pixels": 1468,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 20,
+      "logical_ms": 1440,
+      "segment": "travel",
+      "segment_ms": 1320,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        407,
+        212,
+        3
+      ],
+      "actual_draw": [
+        1,
+        406,
+        212,
+        3
+      ],
+      "draw_ordinal": 12,
+      "stage_draw_ordinal": 11,
+      "ppm": "display-020.ppm",
+      "png": "display-020.png",
+      "pixels_sha256": "b6ddbc77566d59a85a9defd9dd0e72eea891d60f2b24317ff0d46253aa17abc6",
+      "png_sha256": "e5f2becd6211d30ee4983e2cb5c438cb06fe6a3f2c760010d7f036f3476054f1",
+      "duration_ms": 120,
+      "baseline_pixels_sha256": "21d84c8822a34450beb224cef62375433d51952f3d531fd470ca84e0bb6e769e",
+      "changed_scene_pixels": 1147,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 21,
+      "logical_ms": 1560,
+      "segment": "travel",
+      "segment_ms": 1440,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        400,
+        213,
+        4
+      ],
+      "actual_draw": [
+        1,
+        399,
+        213,
+        4
+      ],
+      "draw_ordinal": 13,
+      "stage_draw_ordinal": 12,
+      "ppm": "display-021.ppm",
+      "png": "display-021.png",
+      "pixels_sha256": "304d3120c9d6964b764eac8ab3f7fa79e9eb7c2240667e750909744af432c6d2",
+      "png_sha256": "a6e97e53ce314337f8dba16e21adc7eea7493423ec4c845664b04910b798a4a7",
+      "duration_ms": 40,
+      "baseline_pixels_sha256": "0895c099ede722ff685e7abdb552d58b4908f079c8f50fad35a3f5b7a062bc0d",
+      "changed_scene_pixels": 1526,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 22,
+      "logical_ms": 1600,
+      "segment": "travel",
+      "segment_ms": 1480,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        400,
+        213,
+        4
+      ],
+      "actual_draw": [
+        1,
+        399,
+        213,
+        4
+      ],
+      "draw_ordinal": 13,
+      "stage_draw_ordinal": 12,
+      "ppm": "display-022.ppm",
+      "png": "display-022.png",
+      "pixels_sha256": "74081a07b04f98538c2cfcfbb315c2f7eec04d3c0429c1834e0315727d66608a",
+      "png_sha256": "dc55b4cd34ef6b769084ee59eb0e22f8219f030fbfe3749e1034f9fe381ef314",
+      "duration_ms": 80,
+      "baseline_pixels_sha256": "57f51d0dae363b34543cf086cd646c41e517c010bebff9d80b61761bbdc01b4d",
+      "changed_scene_pixels": 1526,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 23,
+      "logical_ms": 1680,
+      "segment": "travel",
+      "segment_ms": 1560,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        394,
+        212,
+        6
+      ],
+      "actual_draw": [
+        1,
+        393,
+        212,
+        6
+      ],
+      "draw_ordinal": 14,
+      "stage_draw_ordinal": 13,
+      "ppm": "display-023.ppm",
+      "png": "display-023.png",
+      "pixels_sha256": "e30d5f972e2857a21b688ae7a3ad36f9bd126e2baa7927b707e49acd1c319f23",
+      "png_sha256": "6989eb931c82743055ee1d5c2d4cde637574d853199db42df089f5259d38b602",
+      "duration_ms": 80,
+      "baseline_pixels_sha256": "96046da49f6954c2875347388cc23db61d4f3fbc3cfc8efe5219cb7e1fe7bdf1",
+      "changed_scene_pixels": 1423,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 24,
+      "logical_ms": 1760,
+      "segment": "travel",
+      "segment_ms": 1640,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        394,
+        212,
+        6
+      ],
+      "actual_draw": [
+        1,
+        393,
+        212,
+        6
+      ],
+      "draw_ordinal": 14,
+      "stage_draw_ordinal": 13,
+      "ppm": "display-024.ppm",
+      "png": "display-024.png",
+      "pixels_sha256": "2c6750a2f2b95b4a53b458a455f2771f2e627fd75ec17f4da17911d1df1253e8",
+      "png_sha256": "6f24666ff34c4f922358570de7034da82cba4caee1a08f5f2cf20d8d473e3366",
+      "duration_ms": 40,
+      "baseline_pixels_sha256": "af5293fad90ca77b92817c9e80ed8ab47d1ba47a94d200b0788fd2160acefb16",
+      "changed_scene_pixels": 1423,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 25,
+      "logical_ms": 1800,
+      "segment": "travel",
+      "segment_ms": 1680,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        395,
+        212,
+        7
+      ],
+      "actual_draw": [
+        1,
+        394,
+        212,
+        7
+      ],
+      "draw_ordinal": 15,
+      "stage_draw_ordinal": 14,
+      "ppm": "display-025.ppm",
+      "png": "display-025.png",
+      "pixels_sha256": "0ae1c4bc936cb8b52fb2f0e0720d8ec08b1b39121e8c4c1e9defa24c39ce0981",
+      "png_sha256": "9af4690906c4bccea077796861f597efbed5c071ccdb8715597b8e3dddc9e147",
+      "duration_ms": 120,
+      "baseline_pixels_sha256": "1553c16967dd2e4645f80de5ecc175cc123ea6b2d57e3fe5a8f7737b583e7380",
+      "changed_scene_pixels": 1202,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 26,
+      "logical_ms": 1920,
+      "segment": "travel",
+      "segment_ms": 1800,
+      "role": "travel",
+      "stored_walk_row": [
+        1,
+        387,
+        212,
+        8
+      ],
+      "actual_draw": [
+        1,
+        386,
+        212,
+        8
+      ],
+      "draw_ordinal": 16,
+      "stage_draw_ordinal": 15,
+      "ppm": "display-026.ppm",
+      "png": "display-026.png",
+      "pixels_sha256": "fa8a8da8e96ce6f28f5bfc0fc896a31ccb1afb1cfa7f19c4708928fc7a6f2a30",
+      "png_sha256": "e7acd478cf4681043fbbf7fe62d48bc9f87cfd8370b285fa4a6cce5e03b175c6",
+      "duration_ms": 120,
+      "baseline_pixels_sha256": "d0ed2845422990065c9e1670ca6b2e33bfb9479389a77722b866cde17bff0828",
+      "changed_scene_pixels": 1595,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 27,
+      "logical_ms": 2040,
+      "segment": "travel",
+      "segment_ms": 1920,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-027.ppm",
+      "png": "display-027.png",
+      "pixels_sha256": "0edea24fd21f39644493b0b2f7766a043a141ff6667be49fd06faa5299333388",
+      "png_sha256": "7bfc7b74e10ece2c33983895945eade2d6a4590bd084bb14d09952418f5716b0",
+      "duration_ms": 40,
+      "baseline_pixels_sha256": "620beb0fd267d4fd8267c0a0a333f91c7e3a268455d8f813dd4a50761b2db221",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 28,
+      "logical_ms": 2080,
+      "segment": "travel",
+      "segment_ms": 1960,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-028.ppm",
+      "png": "display-028.png",
+      "pixels_sha256": "5845de3e87f4f490c4acabbf5c95d4007725f0ce533f27ae84b3d831967bc248",
+      "png_sha256": "19325ef7fbf2ecbabaadf6188baecd6613634d1ff8d65719aeb1fd224c79cd6e",
+      "duration_ms": 160,
+      "baseline_pixels_sha256": "c4e5ef7da4aa8a6d6a5ccd7f87b1e1f4c514da1b2692bec1f427141b3d391217",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 29,
+      "logical_ms": 2240,
+      "segment": "travel",
+      "segment_ms": 2120,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-029.ppm",
+      "png": "display-029.png",
+      "pixels_sha256": "ae8af7d93133aa5bdecb5e9a151ee64043a6a4ea98eec9442a8357b3b1277501",
+      "png_sha256": "c6fb25ca041d0f7928e9987a44693c5366dfca32abc16b126ea98566f2da65cd",
+      "duration_ms": 160,
+      "baseline_pixels_sha256": "f59771805639f6e50794185d75f105ef79395722835eecf937e7b940e8c61173",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 30,
+      "logical_ms": 2400,
+      "segment": "travel",
+      "segment_ms": 2280,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-030.ppm",
+      "png": "display-030.png",
+      "pixels_sha256": "b6a3008bb46ced89684d1666ab2988078c3e4e874afb06e6153d6ecaaab1d449",
+      "png_sha256": "42ace511e628e3ec8a9c90e0cd9d63d119a8b83f3cc2b129cc65aa6582bd4855",
+      "duration_ms": 160,
+      "baseline_pixels_sha256": "ce8b7462bb07db2488f891dad0dd2e01e3990fb3df90ea42a54ec9c95784f566",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 31,
+      "logical_ms": 2560,
+      "segment": "travel",
+      "segment_ms": 2440,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-031.ppm",
+      "png": "display-031.png",
+      "pixels_sha256": "3695150f3d04cf2daaf5991ed2055d860fe98b1f7b334f9f075f4f0eb6ea80be",
+      "png_sha256": "524a2d54637186bc9cd6958b5c0d4af3513a0950002e38b32b569896455f9266",
+      "duration_ms": 160,
+      "baseline_pixels_sha256": "2ad46066fac9d2a8402cea4d6057deadb9d3d036ab8fb5d835add8731c916fc2",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 32,
+      "logical_ms": 2720,
+      "segment": "travel",
+      "segment_ms": 2600,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-032.ppm",
+      "png": "display-032.png",
+      "pixels_sha256": "63dcc4d72c56f339c8a76c6f6cfae4154b8891113718b0850bd31be67dc7d7f4",
+      "png_sha256": "846c7818a5ac0f02af2101b9a982225391d136a60343cc9527d5c1171b44ee0c",
+      "duration_ms": 160,
+      "baseline_pixels_sha256": "09a5b4ed9b90d761075cfcb83eacb29c5d5f9cf707ddf3d9251eaf531dd5aab0",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 33,
+      "logical_ms": 2880,
+      "segment": "travel",
+      "segment_ms": 2760,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-033.ppm",
+      "png": "display-033.png",
+      "pixels_sha256": "f8d398c99bc26c5db39e48f0d4a606d4cece8d3210782ed115fc42ace41f545c",
+      "png_sha256": "f3f3dcbbf08e08bfeb4852126488a323db1b677f2ac43397de1e5414c37007e9",
+      "duration_ms": 160,
+      "baseline_pixels_sha256": "3801ab294d032dc7e3938633d54868758c23dc037dc81f89daefc4a8a43aaa7f",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 34,
+      "logical_ms": 3040,
+      "segment": "travel",
+      "segment_ms": 2920,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-034.ppm",
+      "png": "display-034.png",
+      "pixels_sha256": "9314aa11d69c01f68318fe3cc0a5b2048d0d7a222ba1d0cd757389b865b75261",
+      "png_sha256": "078d46bb0a73c76a47843fa47ca9579d859905d9db1f7f4b1cd3180e9484438f",
+      "duration_ms": 160,
+      "baseline_pixels_sha256": "2cce70230ed098343c70095e9f40f5c6cc6feedbfd03d62767d64a8fff732394",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 35,
+      "logical_ms": 3200,
+      "segment": "travel",
+      "segment_ms": 3080,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-035.ppm",
+      "png": "display-035.png",
+      "pixels_sha256": "4e8dfe210f0ad6ccacfe5fd3800955a9e5197b5bd43ce2a0fd35ed054ed16609",
+      "png_sha256": "56253ab736a8a5ca3f7ac3c44fe1b2feedbf327aa76591ae74d7d667d6587f70",
+      "duration_ms": 160,
+      "baseline_pixels_sha256": "68108d0a3b5b1f3439b9f513a9ff9eed51b3b752d2e3e058079c4228c569be5a",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 36,
+      "logical_ms": 3360,
+      "segment": "travel",
+      "segment_ms": 3240,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-036.ppm",
+      "png": "display-036.png",
+      "pixels_sha256": "1632590f7e7dcb2c7155bc00655fa268ad1d8a11b99fed969ea44d0063fa3209",
+      "png_sha256": "63e65e894550b8badb1e8120670fae8978993180d362b2b37a2d03061ef7014d",
+      "duration_ms": 160,
+      "baseline_pixels_sha256": "81edae11940db863333d523f0283f0e65a091633d4e3748bb8599144b20ca5fc",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 37,
+      "logical_ms": 3520,
+      "segment": "travel",
+      "segment_ms": 3400,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-037.ppm",
+      "png": "display-037.png",
+      "pixels_sha256": "0411e4ca82f2ad010081db71d246176454888fd9437cfaec189db5b20fe82091",
+      "png_sha256": "d93e976e5013a140a6a6b4927af6873352ba6d5fb839ed2b0e3cfc3b2e3dc433",
+      "duration_ms": 120,
+      "baseline_pixels_sha256": "afa05d7fef98a0aefe7a92d7af83461e244c3c3e50c7655087fd71d822cbfd07",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    },
+    {
+      "index": 38,
+      "logical_ms": 3640,
+      "segment": "travel",
+      "segment_ms": 3520,
+      "role": "arrival",
+      "stored_walk_row": [
+        1,
+        380,
+        211,
+        0
+      ],
+      "actual_draw": [
+        1,
+        379,
+        211,
+        0
+      ],
+      "draw_ordinal": 17,
+      "stage_draw_ordinal": 16,
+      "ppm": "display-038.ppm",
+      "png": "display-038.png",
+      "pixels_sha256": "0411e4ca82f2ad010081db71d246176454888fd9437cfaec189db5b20fe82091",
+      "png_sha256": "d93e976e5013a140a6a6b4927af6873352ba6d5fb839ed2b0e3cfc3b2e3dc433",
+      "duration_ms": 0,
+      "baseline_pixels_sha256": "afa05d7fef98a0aefe7a92d7af83461e244c3c3e50c7655087fd71d822cbfd07",
+      "changed_scene_pixels": 1088,
+      "comparison": "different only at transformed actual skin-mask support"
+    }
+  ],
+  "completed_waits": [
+    [
+      0,
+      0
+    ],
+    [
+      6,
+      120
+    ],
+    [
+      0,
+      120
+    ],
+    [
+      2,
+      160
+    ],
+    [
+      4,
+      240
+    ],
+    [
+      4,
+      320
+    ],
+    [
+      2,
+      360
+    ],
+    [
+      6,
+      480
+    ],
+    [
+      6,
+      600
+    ],
+    [
+      2,
+      640
+    ],
+    [
+      4,
+      720
+    ],
+    [
+      4,
+      800
+    ],
+    [
+      2,
+      840
+    ],
+    [
+      6,
+      960
+    ],
+    [
+      6,
+      1080
+    ],
+    [
+      2,
+      1120
+    ],
+    [
+      4,
+      1200
+    ],
+    [
+      4,
+      1280
+    ],
+    [
+      2,
+      1320
+    ],
+    [
+      6,
+      1440
+    ],
+    [
+      6,
+      1560
+    ],
+    [
+      2,
+      1600
+    ],
+    [
+      4,
+      1680
+    ],
+    [
+      4,
+      1760
+    ],
+    [
+      2,
+      1800
+    ],
+    [
+      6,
+      1920
+    ],
+    [
+      6,
+      2040
+    ],
+    [
+      2,
+      2080
+    ],
+    [
+      8,
+      2240
+    ],
+    [
+      8,
+      2400
+    ],
+    [
+      8,
+      2560
+    ],
+    [
+      8,
+      2720
+    ],
+    [
+      8,
+      2880
+    ],
+    [
+      8,
+      3040
+    ],
+    [
+      8,
+      3200
+    ],
+    [
+      8,
+      3360
+    ],
+    [
+      8,
+      3520
+    ],
+    [
+      6,
+      3640
+    ]
+  ],
+  "display_count": 38,
+  "duration_ms": 3640,
+  "loaded_art": [
+    "data/hd/BMP/BACKGRND.BMP/001.png",
+    "data/hd/BMP/BACKGRND.BMP/002.png",
+    "data/hd/BMP/BACKGRND.BMP/016.png",
+    "data/hd/BMP/BACKGRND.BMP/017.png",
+    "data/hd/BMP/BACKGRND.BMP/018.png",
+    "data/hd/BMP/BACKGRND.BMP/019.png",
+    "data/hd/BMP/BACKGRND.BMP/020.png",
+    "data/hd/BMP/BACKGRND.BMP/021.png",
+    "data/hd/BMP/BACKGRND.BMP/022.png",
+    "data/hd/BMP/BACKGRND.BMP/023.png",
+    "data/hd/BMP/BACKGRND.BMP/024.png",
+    "data/hd/BMP/BACKGRND.BMP/025.png",
+    "data/hd/BMP/BACKGRND.BMP/026.png",
+    "data/hd/BMP/BACKGRND.BMP/027.png",
+    "data/hd/BMP/BACKGRND.BMP/028.png",
+    "data/hd/BMP/BACKGRND.BMP/029.png",
+    "data/hd/BMP/BACKGRND.BMP/030.png",
+    "data/hd/BMP/BACKGRND.BMP/031.png",
+    "data/hd/BMP/BACKGRND.BMP/032.png",
+    "data/hd/BMP/BACKGRND.BMP/033.png",
+    "data/hd/BMP/BACKGRND.BMP/034.png",
+    "data/hd/BMP/BACKGRND.BMP/035.png",
+    "data/hd/BMP/BACKGRND.BMP/036.png",
+    "data/hd/BMP/BACKGRND.BMP/037.png",
+    "data/hd/BMP/BACKGRND.BMP/038.png",
+    "data/hd/BMP/BACKGRND.BMP/039.png",
+    "data/hd/BMP/BACKGRND.BMP/040.png",
+    "data/hd/BMP/BACKGRND.BMP/041.png",
+    "data/hd/BMP/JOHNWALK.BMP/013.png",
+    "data/hd/BMP/JOHNWALK.BMP/014.png",
+    "data/hd/BMP/JOHNWALK.BMP/030.png",
+    "data/hd/BMP/JOHNWALK.BMP/031.png",
+    "data/hd/BMP/JOHNWALK.BMP/032.png",
+    "data/hd/BMP/JOHNWALK.BMP/033.png",
+    "data/hd/BMP/JOHNWALK.BMP/034.png",
+    "data/hd/BMP/JOHNWALK.BMP/035.png",
+    "data/hd/BMP/MRAFT.BMP/000.png",
+    "data/hd/BMP/MRAFT.BMP/001.png",
+    "data/hd/BMP/MRAFT.BMP/002.png",
+    "data/hd/BMP/MRAFT.BMP/003.png",
+    "data/hd/BMP/MRAFT.BMP/004.png",
+    "data/hd/BMP/MRAFT.BMP/005.png",
+    "data/hd/BMP/MRAFT.BMP/006.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/012.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/013.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/014.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/015.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/000.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/001.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/002.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/003.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/004.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/005.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/006.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/007.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/008.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/009.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/010.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/011.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/012.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/015.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/016.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/017.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/018.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/019.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/020.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/021.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/022.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/023.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/024.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/025.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/026.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/027.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/028.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/029.png",
+    "data/styles/cartoon/SCR/OCEAN02.SCR.png"
+  ],
+  "log_sha256": "117636c6ccff2d1325d988e8dd859e48afe2aa1ac141da4fcadac09d411057c7",
+  "scope": "Actual port route/wait timing and drawing; no original-binary parity claim.",
+  "candidate": true,
+  "changed_displays": 38,
+  "unchanged_displays": 0,
+  "frames_with_visible_color_changes": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    12,
+    23
+  ],
+  "archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf",
+  "base_archive_sha256": "21194cf35e5b60eebfa9ba48520509ae8f86a72f26313b945f019671d1f345c5",
+  "executable_sha256": "203aebb8c15881a41108b2b4fb97f5f9c6d025aa595a678b4dd84906011f7563",
+  "command": [
+    "/out/baseline-v1/connecting_walk_probe",
+    "cartoon",
+    "full",
+    "rear_arc"
+  ],
+  "exit_code": 0
+}

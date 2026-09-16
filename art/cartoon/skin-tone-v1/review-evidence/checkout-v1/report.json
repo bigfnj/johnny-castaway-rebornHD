@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "capability": "fresh Windows autocrlf checkout preserves hashed corrector",
+      "protection_present": true,
+      "status": "PASS",
+      "file": "art/cartoon/skin-tone-v1/correct.py",
+      "source_sha256": "70be24d13eb34317f602b0b66f952a4d3dbe8e29935b4f6c8353f15c8e9d3534",
+      "checkout_sha256": "70be24d13eb34317f602b0b66f952a4d3dbe8e29935b4f6c8353f15c8e9d3534",
+      "failure": null
+    },
+    {
+      "capability": "fresh Windows autocrlf checkout preserves hashed corrector",
+      "protection_present": false,
+      "status": "FIRED",
+      "file": "art/cartoon/skin-tone-v1/correct.py",
+      "source_sha256": "70be24d13eb34317f602b0b66f952a4d3dbe8e29935b4f6c8353f15c8e9d3534",
+      "checkout_sha256": "97e554d980ee58cdfef1445c3d037d9a9fe892e4b13f2cab6e0a2ddc82abb095",
+      "failure": "art/cartoon/skin-tone-v1/correct.py: byte identity changed"
+    },
+    {
+      "capability": "fresh Windows autocrlf checkout preserves hashed corrector",
+      "protection_present": true,
+      "status": "PASS",
+      "file": "art/cartoon/skin-tone-v1/correct.py",
+      "source_sha256": "70be24d13eb34317f602b0b66f952a4d3dbe8e29935b4f6c8353f15c8e9d3534",
+      "checkout_sha256": "70be24d13eb34317f602b0b66f952a4d3dbe8e29935b4f6c8353f15c8e9d3534",
+      "failure": null
+    }
+  ]
+}

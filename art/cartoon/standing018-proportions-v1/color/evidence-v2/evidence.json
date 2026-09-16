@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "scope": "New018-v2 color technical evidence only; revised proportions are pending human review.",
+  "recipe_sha256": "eb92e5ba8b5aa8c6578d55ef5f3e68faa97f6212eaec60ed61d92de3bdf898c2",
+  "candidate_png_sha256": "21cf94cd90d369b20b6d3b8ef60b7cc2848f919ff828578320502aec9a17c55b",
+  "files": [
+    {
+      "path": "recipe.json",
+      "source": "build/standing018-proportions/color-v2/recipe.json",
+      "sha256": "eb92e5ba8b5aa8c6578d55ef5f3e68faa97f6212eaec60ed61d92de3bdf898c2",
+      "size": 2743
+    },
+    {
+      "path": "sprites/018.png",
+      "source": "build/standing018-proportions/color-v2/sprites/018.png",
+      "sha256": "21cf94cd90d369b20b6d3b8ef60b7cc2848f919ff828578320502aec9a17c55b",
+      "size": 12732
+    },
+    {
+      "path": "masks/018.png",
+      "source": "build/standing018-proportions/color-v2/masks/018.png",
+      "sha256": "6b3b6866fff63be41937a3dd5d536d1412b00cb2d1133c48f07cfc35d10bb29c",
+      "size": 991
+    },
+    {
+      "path": "protected-cap/018.png",
+      "source": "build/standing018-proportions/color-v2/protected-cap/018.png",
+      "sha256": "8d3475a89f1320a416444f190ea2adca61add21d95c6f0d3687f9c015407b519",
+      "size": 120
+    },
+    {
+      "path": "checks/smoke.json",
+      "source": "build/standing018-proportions/color-checks-v2/smoke.json",
+      "sha256": "61e7130f5ed96a8ea81ea907e08d4bc7e618626355e2c0f8905afbe3ce88ac1e",
+      "size": 755
+    },
+    {
+      "path": "checks/regression.json",
+      "source": "build/standing018-proportions/color-checks-v2/regression.json",
+      "sha256": "c05b4d520ea1219ede44348dd2b18008c9c95ff7356a3a66aad97c6fe6eb043c",
+      "size": 3455
+    },
+    {
+      "path": "checks/damaged-input.json",
+      "source": "build/standing018-proportions/color-checks-v2/damaged-input.json",
+      "sha256": "f7895cc375fe523ded38761bd831f42ba0ad705ec185b73155f7e06a73793686",
+      "size": 3003
+    },
+    {
+      "path": "checks/damaged-cap.json",
+      "source": "build/standing018-proportions/color-checks-v2/damaged-cap.json",
+      "sha256": "e80869a42d4b0812fc416f03878d3d9df281daaf665e64958485a19357a83514",
+      "size": 3003
+    },
+    {
+      "path": "checks/damaged-calibration.json",
+      "source": "build/standing018-proportions/color-checks-v2/damaged-calibration.json",
+      "sha256": "1e08ec4d68bb4242f471471b4cc1ed3b4e5c7e7fe6918f7d18eb9f9ebc7801fa",
+      "size": 2998
+    },
+    {
+      "path": "source-export/recipe.json",
+      "source": "build/standing018-proportions/stage-v2/runtime/recipe.json",
+      "sha256": "a9775a7d471ea172ec638ea17a823186c775fb8284e988172f586930cb062d33",
+      "size": 1763
+    },
+    {
+      "path": "source-export/export-report.json",
+      "source": "build/standing018-proportions/stage-v2/runtime/export-report.json",
+      "sha256": "f0ee70b5010de17615480d388e29091f01e5ef1841c02417953bfc18de3029f2",
+      "size": 2078
+    },
+    {
+      "path": "source-export/BMP/JOHNWALK.BMP/018.png",
+      "source": "build/standing018-proportions/stage-v2/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "b1bf6834e30e11ccff6a4f4a66e8a0d1bd7bf3d1f5ca82eeb98d34c88b45b29f",
+      "size": 12376
+    }
+  ],
+  "bound_files_sha256": {
+    "art/cartoon/standing018-proportions-v1/color/correct018.py": "5a34a0c7ff7918f5a67d5d844fa0e35787c388396fdf29df91e0d1fba4b844a3",
+    "art/cartoon/standing018-proportions-v1/color/test_color018.py": "ac744056fa6a1ca716acc33189230da47aa1589d53534b44a583e338b38440ee",
+    "art/cartoon/standing018-proportions-v1/color/reference-v2.json": "2912b2ba7d5fd363a02e0f8955524d508f20506de90855d201ba6f9f10544efc",
+    "art/cartoon/standing018-proportions-v1/color/COLOR.md": "09d18574c0707c0a87c071e7feee10b3c4db665dcc1ac2697d0ae07b55e7121c"
+  },
+  "readback": "All12 copied files byte-identical to original outputs; helper/annotation identities separately pinned."
+}

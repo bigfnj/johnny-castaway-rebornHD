@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "phase": "smoke",
+  "inputs_sha256": {
+    "recipe": "044d421dc3d0a33451f7c4dff34b9a5e375a544ddee848dca83f755b2382af8f",
+    "adapter": "93c70549e1be851a6b1c1731d2cab89404511a21b8b82d72f943a0485e6a8356",
+    "test": "ac744056fa6a1ca716acc33189230da47aa1589d53534b44a583e338b38440ee",
+    "annotation": "e1bde6bf34f91a5d81a308187a305b7344d31e8acf5f2a51fab6afc29406acf1"
+  },
+  "actual_frame": {
+    "frame": 18,
+    "material_points": 7,
+    "material_regions": 3,
+    "changed_pixels": 1736,
+    "reference_base_rgb": [
+      252,
+      148,
+      88
+    ]
+  },
+  "negative_controls": [],
+  "fresh_replay": null,
+  "no_op_controls": [],
+  "scope": "Only selected018-foot-v5 color; no anatomy, native-playback or full28-pose revalidation. Assertions and test input identities come from the byte-unchanged018 test.",
+  "inherited_test_scope": "Only new018-v2 color; no anatomy, native-playback or full28-pose revalidation.",
+  "runner_sha256": "278f60da69a3b561abef56050731102cfc76a16b2a864e21608f1478eec04dde",
+  "runner_path": "art/cartoon/standing018-proportions-v1/color/check_foot_v5.py",
+  "adapter_path": "art/cartoon/standing018-proportions-v1/color/correct018_foot_v5.py",
+  "test_path": "art/cartoon/standing018-proportions-v1/color/test_color018.py"
+}

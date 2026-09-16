@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "status": "requested",
+  "request": {
+    "prompt": "Use case: precise-object-edit.\nEdit target: the provided front-facing Cartoon Johnny game sprite, JOHNWALK010.\nChange ONLY the gaze: the user finds him slightly cross-eyed. Increase the horizontal space between his two black pupils by moving the pupil inside the eye on the LEFT of the picture slightly LEFT, and the pupil inside the eye on the RIGHT of the picture slightly RIGHT. Aim for about10 raw pixels outward per pupil at this1024-pixel width. Keep each black pupil and its white catchlight the same size and shape; keep them comfortably inside the white eyeball. The result should look calmly focused straight ahead, with parallel natural gaze, not divergent or surprised.\nPreserve the white eye outlines, eyebrows, eyelids, nose, head angle and expression. Preserve the rest of the character and composition: sailor cap with anchor and dark brim, shaggy brown hair and beard, bare chest, ragged white shorts, lowered arms, screen-left supporting leg and screen-right raised foot. Do not move, rescale or redraw the body pose.\nReturn the complete1024x1536 sprite at the same scale and position, with genuine transparent alpha background. No extra background, glow, halo, shadow, labels or objects. This is a pupil-spacing correction, not a new pose or character design.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v1.png"
+    ]
+  },
+  "input_roles": [
+    "010-v1 edit target"
+  ],
+  "user_feedback": "the front view looks slightly cross-eyed  can you add some space to the pupils",
+  "approval": "Pupil spacing correction pending human review; complete transition review remains pending."
+}

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 98, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 72, in main
+    return one(a.review, a.output, a.case)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 39, in one
+    build.validate_pair(left, right, 'waypoint_front', executable)
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\build_review.py", line 42, in validate_pair
+    assert report['archive_sha256'] == digest and report['executable_sha256'] == executable, 'capture archive/executable identity:' + kind + ':' + clip
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: capture archive/executable identity:candidate:waypoint_front

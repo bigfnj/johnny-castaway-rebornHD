@@ -1,0 +1,21 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--init",
+    "--network",
+    "none",
+    "--mount",
+    "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses,target=/source,readonly",
+    "--mount",
+    "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/build/connecting-poses/native-motion-v1,target=/out",
+    "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+    "python3",
+    "-B",
+    "/source/art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/negative_baseline.py"
+  ],
+  "started_ns": 1789572498609837300,
+  "finished_ns": 1789572540773046400,
+  "exit_code": 0
+}

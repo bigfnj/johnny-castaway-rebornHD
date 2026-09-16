@@ -1,0 +1,294 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "test_sha256": "89333b3eae7ba27c879adbf8ddb742d9cb17875124845927db2b7d65238ee0aa",
+  "algorithm_sha256": "70be24d13eb34317f602b0b66f952a4d3dbe8e29935b4f6c8353f15c8e9d3534",
+  "recipe_sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+  "protected_annotations_sha256": "6e1843ab2553a15d5ac4870f803062f97aa4c57de2d002fa604345c77bc63eff",
+  "frames": [
+    {
+      "frame": 0,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1089
+    },
+    {
+      "frame": 1,
+      "status": "PASS",
+      "material_points": 8,
+      "material_regions": 3,
+      "changed_pixels": 1637
+    },
+    {
+      "frame": 2,
+      "status": "PASS",
+      "material_points": 8,
+      "material_regions": 3,
+      "changed_pixels": 1468
+    },
+    {
+      "frame": 3,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1147
+    },
+    {
+      "frame": 4,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1528
+    },
+    {
+      "frame": 5,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1652
+    },
+    {
+      "frame": 6,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1423
+    },
+    {
+      "frame": 7,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1203
+    },
+    {
+      "frame": 8,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1598
+    },
+    {
+      "frame": 9,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1886
+    },
+    {
+      "frame": 10,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1733
+    },
+    {
+      "frame": 11,
+      "status": "PASS",
+      "material_points": 6,
+      "material_regions": 3,
+      "changed_pixels": 1410
+    },
+    {
+      "frame": 12,
+      "status": "PASS",
+      "material_points": 6,
+      "material_regions": 3,
+      "changed_pixels": 1910
+    },
+    {
+      "frame": 15,
+      "status": "PASS",
+      "material_points": 6,
+      "material_regions": 3,
+      "changed_pixels": 1797
+    },
+    {
+      "frame": 16,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1689
+    },
+    {
+      "frame": 17,
+      "status": "PASS",
+      "material_points": 8,
+      "material_regions": 3,
+      "changed_pixels": 1629
+    },
+    {
+      "frame": 18,
+      "status": "PASS",
+      "material_points": 6,
+      "material_regions": 3,
+      "changed_pixels": 1470
+    },
+    {
+      "frame": 19,
+      "status": "PASS",
+      "material_points": 6,
+      "material_regions": 3,
+      "changed_pixels": 1516
+    },
+    {
+      "frame": 20,
+      "status": "PASS",
+      "material_points": 6,
+      "material_regions": 3,
+      "changed_pixels": 1550
+    },
+    {
+      "frame": 21,
+      "status": "PASS",
+      "material_points": 6,
+      "material_regions": 3,
+      "changed_pixels": 1645
+    },
+    {
+      "frame": 22,
+      "status": "PASS",
+      "material_points": 6,
+      "material_regions": 3,
+      "changed_pixels": 1606
+    },
+    {
+      "frame": 23,
+      "status": "PASS",
+      "material_points": 6,
+      "material_regions": 3,
+      "changed_pixels": 1488
+    },
+    {
+      "frame": 24,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1424
+    },
+    {
+      "frame": 25,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1682
+    },
+    {
+      "frame": 26,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1708
+    },
+    {
+      "frame": 27,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1501
+    },
+    {
+      "frame": 28,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1322
+    },
+    {
+      "frame": 29,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 0
+    }
+  ],
+  "negative_controls": [
+    {
+      "case": "alpha",
+      "status": "FIRED",
+      "failure": "024.png: alpha identity"
+    },
+    {
+      "case": "hat-white",
+      "status": "FIRED",
+      "failure": "024.png: protected hat-white point"
+    },
+    {
+      "case": "hat-gold",
+      "status": "FIRED",
+      "failure": "024.png: protected hat-gold point"
+    },
+    {
+      "case": "hair-or-beard",
+      "status": "FIRED",
+      "failure": "024.png: protected hair-or-beard point"
+    },
+    {
+      "case": "shorts-white",
+      "status": "FIRED",
+      "failure": "024.png: protected shorts-white point"
+    },
+    {
+      "case": "eye-white",
+      "status": "FIRED",
+      "failure": "024.png: protected eye-white point"
+    },
+    {
+      "case": "eye-ink",
+      "status": "FIRED",
+      "failure": "024.png: protected eye-ink point"
+    },
+    {
+      "case": "cap-ink",
+      "status": "FIRED",
+      "failure": "024.png: protected cap-ink point"
+    },
+    {
+      "case": "lower-hair",
+      "status": "FIRED",
+      "failure": "024.png: protected lower-hair point"
+    },
+    {
+      "case": "outside-mask",
+      "status": "FIRED",
+      "failure": "024.png: outside-mask identity"
+    },
+    {
+      "case": "wrong-skin-base",
+      "status": "FIRED",
+      "failure": "024.png: reference skin base"
+    },
+    {
+      "case": "changed-reference",
+      "status": "FIRED",
+      "failure": "029.png: canonical PNG identity"
+    },
+    {
+      "case": "disable-cap-exclusion",
+      "status": "FIRED",
+      "failure": "024.png: cap excluded from mask",
+      "executed_source_sha256": "a044ab2696a0f4b212297ebd7b9c0e4c7fa78c5d1a564143f394d157fd9c0ad7",
+      "execution_witness": {
+        "status": "PASS",
+        "frames": 28,
+        "changed_frames": 27,
+        "reference_frame": 29
+      }
+    },
+    {
+      "case": "disable-color-gain",
+      "status": "FIRED",
+      "failure": "024.png: expected skin correction",
+      "executed_source_sha256": "8b01eeab0510f6d3c4337e0b9c41431dd0733802234bbfbeeb56ee6dc4bf52e9",
+      "execution_witness": {
+        "status": "PASS",
+        "frames": 28,
+        "changed_frames": 0,
+        "reference_frame": 29
+      }
+    }
+  ],
+  "positive_restoration": true,
+  "limitations": "Sparse independent material witnesses and exact mask/alpha checks complement visual review; they do not prove perfect semantic segmentation."
+}

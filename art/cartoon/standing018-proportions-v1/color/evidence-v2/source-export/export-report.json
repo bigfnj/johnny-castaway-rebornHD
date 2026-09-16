@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export only; not native capture or human acceptance.",
+  "preview_only": false,
+  "runtime_sprites_written": true,
+  "runtime_fit_all_source_centers": true,
+  "scale": 0.1,
+  "padding_hd": 64,
+  "reference_hashes": {
+    "source.json": "bd2ba0025626593641c575b794d9380bf66613dae9b7f456d5715aa810d9ceae",
+    "metadata.json": "130dcd25e05c45e22143adca37cb139679523f8dc4a84abce14efc9a170982d5",
+    "018-native.png": "d4390dbd4e9df53d506dbedf540c4a2a0d867c23d3c5221743dad0bf07d2dbd8",
+    "018-nearest8.png": "228783a6a48523333a069592318308967e75537b83bb1a446c85c69fa7181c7a"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "frames": [
+    {
+      "frame": 18,
+      "source": "018-torso-v2.png",
+      "source_sha256": "c170f8b6cea7c8c3c0cfcad5dea1ac5591e9d92b5de156afeee7a19c1e2ec89c",
+      "cap_raw": [
+        408.5,
+        35
+      ],
+      "runtime_canvas": [
+        64,
+        154
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -23.85,
+        0,
+        0.1,
+        -3.25
+      ],
+      "alpha8_source_bounds": [
+        312,
+        34,
+        726,
+        1493
+      ],
+      "alpha8_centers_hd": [
+        7.399999999999999,
+        0.20000000000000018,
+        48.699999999999996,
+        146.0
+      ],
+      "source_centers_fit_runtime": true,
+      "filtered_alpha8_bounds_hd_exclusive": [
+        7,
+        0,
+        49,
+        147
+      ],
+      "padded_canvas": [
+        192,
+        282
+      ]
+    }
+  ],
+  "outputs_sha256": {
+    "padded/018.png": "336eb2f9a07f1fe6435d74078c1e8ad6df9bf5c5b90d772852e5f26badf2022c",
+    "BMP/JOHNWALK.BMP/018.png": "b1bf6834e30e11ccff6a4f4a66e8a0d1bd7bf3d1f5ca82eeb98d34c88b45b29f"
+  },
+  "filter_limit": "Source-center fit does not promise absence of low-alpha filter fringe; padded output retains it.",
+  "recipe_sha256": "a9775a7d471ea172ec638ea17a823186c775fb8284e988172f586930cb062d33",
+  "export_source_sha256": "c382582ad113c917ee8b5f8e0ebda392ceb5f746bdb4be9982b7a51f04418c63"
+}

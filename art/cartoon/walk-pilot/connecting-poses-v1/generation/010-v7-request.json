@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "prompt": "Image 1 is the full-body sprite to correct. Image 2 shows the desired longer supporting leg. In image 1, the supporting SCREEN-LEFT lower leg was accidentally shortened far too much. Restore that calf and shin to ALMOST the length shown in image 2: move the entire bottom-left foot DOWN by about 65 pixels, leaving the very lowest sole around y=1485 on this 1536-pixel-tall image. The shin must lengthen naturally to connect the knee to the lowered ankle. Retain the foot size, toe shapes and direction from image 2. Keep the knee, shorts and upper leg in their current positions. The foot should be only about 15 pixels higher than in image 2, NOT the large roughly 80-pixel difference currently seen. Keep all other features unchanged: face, pupil spacing, cap, beard, body, both arms, shorts and the raised screen-right leg and foot. Same 1024x1536 framing and character scale, transparent background. Do not recenter or rescale. Return only the complete sprite.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v6.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v5.png"
+    ]
+  },
+  "input_roles": [
+    "010-v6 edit target with excessive shin shortening",
+    "010-v5 supporting leg proportions reference"
+  ],
+  "scope": "Restore supporting leg length after v6 overshot the small fit correction. Preserve approved face-v1 gaze transfer."
+}

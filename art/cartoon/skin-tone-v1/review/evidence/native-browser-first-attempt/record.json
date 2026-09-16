@@ -1,0 +1,19 @@
+{
+  "status": "FAILED test-harness wait; not a native/art failure",
+  "command": "& $env:TOOLBOX_PYTHON -B art/cartoon/skin-tone-v1/review/check_native.py --review build/skin-tone/native-review/review-v1",
+  "observed_stdout": [
+    "WITNESS served HTML SHA256=13991046dd3a451b3886171a62df4fada4a92864cc3b07774e170730153c9d84",
+    "SMOKE PASS exact native images loaded; default Front waypoint and Normal timer progress"
+  ],
+  "files": {
+    "check_native.py": {
+      "source": "art/cartoon/skin-tone-v1/review/check_native.py",
+      "sha256": "5568f45be7842c43f641fa892e9d924b0a8b53b131b8d23c7cd79a74db778147"
+    },
+    "browser-validation-failure.json": {
+      "source": "build/skin-tone/native-review/review-v1/browser-validation-failure.json",
+      "sha256": "ae1e2a5bfcee0596cadecc3de34b1be3506bd474f7e82d1c1f26f421a84bc561"
+    }
+  },
+  "diagnosis": "The deterministic regression replaces requestAnimationFrame. The new asynchronous clip load waited using Playwright default RAF polling, so readiness polling stalled after the first clip switch. Use explicit timer polling for readiness; no viewer/capture/art bytes change."
+}

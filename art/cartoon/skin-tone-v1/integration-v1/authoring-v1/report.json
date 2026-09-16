@@ -1,0 +1,214 @@
+{
+  "scope": "Unmodified maintained suites; all smoke stages before regressions; checks do not reread external originals.",
+  "python": "3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]",
+  "inputs": {
+    "assets/scrantic_data.zip": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "art/cartoon/pack.json": "0b4fc904b08417e1cd4eeab044767190151e0eb793155f8d0ca25326dce1e7de",
+    "art/cartoon/skin-tone-v1/production-acceptance.json": "ad3570cccb0d1b9331d17c8299789557ec0d506935d6a1e0111933d247ded519",
+    "docs/art-style-learnings.md": "7b0f29bae7649968b2685c072456794f4f02a69854b093e2fd916f3f7bdbfd2c",
+    "docs/knowledge-base/cartoon-art-metadata.json": "8b1cfab0279d064937b80650b5c18b2c01fca77c27151ea6b3574e1558883a1c",
+    "docs/knowledge-base/cartoon-art-metadata.md": "94a21de80033404bad9f1fd30b085a4dcb03d78c496794db59be20b8eaef1446",
+    "docs/knowledge-base/cartoon-production-catalog.json": "37bbf9f74076e819af153c93e1f939544ef3bd5e335cb8721c3ad2999473884d",
+    "docs/knowledge-base/cartoon-production-catalog.md": "637e38f393ab15550ebaee0b9a6e589b06e038d1237e512cd827515d381b935c",
+    "tools/art_common.py": "846e294c3303f18565f4a48456fec9410a2f70924439648c42488b67ef24faab",
+    "tools/art_inventory.py": "0f17eecde17a412e011b4f7ba2fb427c414137461bf84fc34904ce4b2c30eb31",
+    "tools/art_pack.py": "54e69d9228cfc6cf74803f32d720700743c26d379648cfe73d893d4428c21baf",
+    "tools/art_production_catalog.py": "da0d62964022b01b530fc74f69abe995ac686e4e7586b56711b8aa982482da68",
+    "tools/art_review_metadata.py": "6bd6088673392520d8f082099d249e736742094d2a7ce39e4573039bdb76142f",
+    "tools/build_web.py": "602a0f1a7d7db27f27f0a9ae7d13b4ca49a6be108176202f2827f7a47764b259",
+    "tools/inventory_scenes.py": "f4950f39557e5bb937b5158f22ddf5050ac8bb9f11f022265aa542994dbdee52",
+    "tools/verify_macos_arch.py": "97ea1e9ecc411fbffdf4530be555387ddd787d91a2ec964e63b79e32d55af9b7",
+    "tests/art_pilot_fixture.py": "a9149c3d8f5ce70a71ba57e9f93e4a07fc0c790842c94f54529df6afb0294eeb",
+    "tests/test_art_inventory.py": "1d72fa04dfc61eaf1d4fe61ca56f00e468f7c8ae46d0de84dc10d7807cd63b6e",
+    "tests/test_art_pilot_history.py": "454105f566a9d56af90da463d6f637ad7e62b8c01581c152a217b6db08c3014b",
+    "tests/test_art_production_catalog.py": "fa105c942f6280b8fb95712c55fd9002342c13448a6e71a94190b377e909d1ad",
+    "tests/test_art_review_metadata.py": "1593d8f539901ceb31eedbb4f2fa73aa7ae46a9a4683e003a9de900349fbb658",
+    "tests/test_art_tools.py": "7a6bf7d56e76b2a37f83054830b1ca5d6a65e6a77d0048964dee90f3bf11ac55",
+    "tests/test_build_contracts.py": "b2738686d711000aa00d6e959a584118945049bc08343044761c6056eab9a7f6",
+    "tests/test_drawing_bounds.py": "a1fc12c39929b3ccfc9e7f856dd3fe61124ee69bb67a3e6896bb2f7e519d4f5d",
+    "tests/test_extractor_mutations.py": "dcf65d0ac0bf35be074965d1d5eaec56c35a652fa07cbde3aa47eb64e9957780",
+    "tests/test_extractors.py": "7c36183e06d40332b92483c70b20a63f7c09040094d1265748ec7eeb6dac1752",
+    "tests/test_frame_limits.py": "e30044441f6ff8a71f64cac4657ece87a495abb46d649099852a2a0ed633f4b2",
+    "tests/test_frame_mutations.py": "7d1a2034eb9ccc845e1890c23fcef8aa41bd389f4cbb9b7d77950a2785ec760b",
+    "tests/test_graphics_alloc.py": "60168b658044728960fc0b19988619a1b07f68155e42e2f7ab5e1ed269201bb8",
+    "tests/test_lifecycle.py": "49f4e34dd300299c6f4671e0a1fbf5ceb335a6ea42b57bbc08691a253cdb8760",
+    "tests/test_lifecycle_mutations.py": "78a24f0f2052274e31aa30a1c92718eb0c6c7966f96f0dbac4dce5aa65c30c7d",
+    "tests/test_linux_audio_delivery_mutations.py": "51dddd8056ee40b79e25cec62db1b87776a33c6835629eb8bebd877e916fd647",
+    "tests/test_palm_mutations.py": "47b94a03c383b10e9af779958a0532c740b462615e2aebf253d4eb6443371f5b",
+    "tests/test_palm_renderer.py": "51f09056dc6b6e294a87d8da5ab5d4ab6230b50fadcfa392f4c1a3e3acd6cc9f",
+    "tests/test_platform_mutations.py": "d2eec8e6fdc005a97b73618002b333ecc28804ae45ced8a72b5aed65f932b11f",
+    "tests/test_runtime_data.py": "1f159203ff218153a8901807317e8871bc5de3084c1e4ea2eb1117eff914c297",
+    "tests/test_runtime_data_project.py": "b1d0bcfed1d61d7bf0ca8d57b53dca450a0edf56874ffabf38708cb3d36d0d5c",
+    "tests/test_scene_inventory.py": "01de703b82bd507cbc2db643b19e1a4850997db74dc7a1d7685a70a7415dc8a9",
+    "tests/test_uncompress.py": "134705360edfb3d6535168e0022e2154f3b1e7466cb2576ba9065a50e4597b62",
+    "tests/test_uncompress_mutations.py": "e5029358f791be70e5dba9f5b9e8d8e92eaa0f22785fabfee9f68bb8a5b2cbdf",
+    "tests/test_unix_build_flow.py": "ec270d2aa189c7890177322f24b979f0f532814584d32091937f87811b52eebe",
+    "tests/test_wave_mutations.py": "bece4243a0c9032dac8aba1d56d4dd97e0d819ffa532e31c9a161b2022282d96",
+    "tests/test_wave_renderer.py": "98da1fd8eee4d4a61c83f3b79147f3bcd730a96d6344ffb5eef8ec53e80cd0e8",
+    "tests/test_web_timing_mutations.py": "050e636d1eccfd83af7175e5b8f4f9e1e3cff478ca5c1b7104070b8151cf338f",
+    "tests/test_web_workflow_flow.py": "f8448dfe5c1e45744d385d9913860420a13561d5bad9754389b6c97710d7a9b2",
+    "tests/test_web_wrapper.py": "269c76551e25643bc1ecf96ea364bcb68eb50dfcd0bbc1458e9ab1f388c1c740",
+    "tests/web-art-controls.py": "9aaf725b61f7ba575935e5e1e516adefca45a4dbad8a8ee16e6bd3c2ed4abc76",
+    "tests/web-audio-timing.py": "fa421e87d0e0c9dd8ffc42c566c08bf13bf8244fa7475236f01f341d2404834b",
+    "tests/web-logging.py": "429e80ec4565df1e4344ff457cea2a5b94a3b33ffbd53dcec9930672b2bb3d39",
+    "tests/web-smoke.py": "45dfb318e956361afb481ac14e45dbfe821e1f6bba69eeedd32693c76c1590c1"
+  },
+  "runs": [
+    {
+      "label": "inventory-smoke",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "tests/test_art_inventory.py",
+        "--smoke"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.063,
+      "log": "inventory-smoke.log",
+      "sha256": "185a68791a109277592db99bdd774284188ff5c24744a4202c4f9ca7ca6b92ed"
+    },
+    {
+      "label": "history-smoke",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.907,
+      "log": "history-smoke.log",
+      "sha256": "e02443e75d7c78b94537604150eabfff2d7e3f48a01249df63a648cd28400e63"
+    },
+    {
+      "label": "metadata-smoke",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.891,
+      "log": "metadata-smoke.log",
+      "sha256": "b931df849abfabc542b383635e000a6bc1160dca028cef1f842720bc6504c788"
+    },
+    {
+      "label": "catalog-smoke",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "tests/test_art_production_catalog.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.812,
+      "log": "catalog-smoke.log",
+      "sha256": "882af687bb1dba10f3c401045859fe86ddf8567f16374cd22105eb2996e4f388"
+    },
+    {
+      "label": "inventory-regression",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "tests/test_art_inventory.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.359,
+      "log": "inventory-regression.log",
+      "sha256": "bb7dd92e80d37b8e4a62cb13c3c0160f2838f0b07bbdd16e844bf7a4ed0c7a3b"
+    },
+    {
+      "label": "history-regression",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 16.734,
+      "log": "history-regression.log",
+      "sha256": "43327bc6f49a55c530a0b6a86f8f8b4a1190c3ff9492ebbf4080a66fa99dff8b"
+    },
+    {
+      "label": "metadata-regression",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 9.078,
+      "log": "metadata-regression.log",
+      "sha256": "4444c858ad01957724825964875efc7f885e2ad871b17fdb5e3f6f2c8dcf816f"
+    },
+    {
+      "label": "catalog-regression",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "tests/test_art_production_catalog.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.032,
+      "log": "catalog-regression.log",
+      "sha256": "2be7ebfb13d92065254f32019007951181213c68ac6c004ea51cdb3ca33ac4dd"
+    },
+    {
+      "label": "art-tools-regression",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_art_tools.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.843,
+      "log": "art-tools-regression.log",
+      "sha256": "44435172b5855003bc3968f39b3b1b72978927760fa23eeb83c4a499038eb644"
+    },
+    {
+      "label": "metadata-reproduction",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "tools/art_review_metadata.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.578,
+      "log": "metadata-reproduction.log",
+      "sha256": "aa3307a3cce0a0405448b06a83d6f2d7e955bf0f14eecb19bd518619ac5e2122"
+    },
+    {
+      "label": "catalog-reproduction",
+      "command": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "tools/art_production_catalog.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.719,
+      "log": "catalog-reproduction.log",
+      "sha256": "27928a2b0ad2cdc3300fd6da07b5e2d2be90deffb442fd169beea947df64b757"
+    }
+  ],
+  "passed": true,
+  "changed_inputs": []
+}

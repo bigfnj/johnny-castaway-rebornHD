@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_BEFORE_CAPTURE",
+  "candidate_version": 1,
+  "archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf",
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "entrypoint": "art/cartoon/skin-tone-v1/native-review/capture_candidate.py --candidate-version 1",
+  "exit_code": 1,
+  "stderr": "Traceback (most recent call last):\n  File \"/source/art/cartoon/skin-tone-v1/native-review/capture_candidate.py\", line 9, in <module>\n    from PIL import Image\nModuleNotFoundError: No module named 'PIL'\n",
+  "native_executable_launched": false,
+  "resolution": "Prepare fresh candidate-v2 metadata with hash-bound host-decoded L mask bytes. Capture uses standard-library mask storage; original PNG masks and all corrected sprite bytes remain bound. No container install or image change."
+}

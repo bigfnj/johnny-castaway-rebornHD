@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "prompt": "Use case: precise-object-edit. Image 1 is the full-body sprite to edit. Image 2 is the user's APPROVED Face v1 gaze reference. Change ONLY the pupils in image 1 to match the relative pupil placement in image 2: both eyes looking forward with the same comfortable spacing as image 2. Preserve image 1's eye outlines, eyebrows, nose, beard, head size and placement; use image 2 only for the pupil positions, not a larger head. Preserve the entire body, shorts, cap, hands, leg order, raised screen-right foot, planted screen-left foot, pose, proportions and framing of image 1. Maintain the 1024 by 1536 portrait canvas and the same character height. Keep all toes and cap fully inside the canvas. Transparent background, no shadow, glow or backdrop. Return one full-body sprite, not a close-up or comparison.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-face-v1.png"
+    ]
+  },
+  "input_roles": [
+    "Full-body 010 v1 edit target, with prior fit passing",
+    "User-approved face-v1 pupil placement reference only"
+  ],
+  "user_feedback": "faCE v1 is good",
+  "scope": "Apply the approved gaze to the full-body sprite. Native transition approval still pending."
+}

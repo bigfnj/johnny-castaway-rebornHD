@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "recipe_sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+  "executed_helper_sha256": "6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01",
+  "positive_before_and_after": true,
+  "decoded_masks_equal_png": 28,
+  "capture_helper_sha256": "192eeed94739117253059567f08b874d32a3b545b30b90ef44b4ec8da7a5c8e9",
+  "candidate_archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf",
+  "native_launched": false,
+  "production_modified": false,
+  "controls": [
+    {
+      "case": "same-canvas-pose-swap",
+      "status": "FIRED",
+      "failure": "FAIL connecting capture: unchanged alpha:009",
+      "exit_code": 1,
+      "stdout": "WITNESS executed prepare_candidate.py SHA256=6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01\n",
+      "stderr": "FAIL connecting capture: unchanged alpha:009\n"
+    },
+    {
+      "case": "changed-alpha",
+      "status": "FIRED",
+      "failure": "FAIL connecting capture: unchanged alpha:008",
+      "exit_code": 1,
+      "stdout": "WITNESS executed prepare_candidate.py SHA256=6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01\n",
+      "stderr": "FAIL connecting capture: unchanged alpha:008\n"
+    },
+    {
+      "case": "outside-mask-rgb",
+      "status": "FIRED",
+      "failure": "FAIL connecting capture: only skin-mask RGB changes:000",
+      "exit_code": 1,
+      "stdout": "WITNESS executed prepare_candidate.py SHA256=6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01\n",
+      "stderr": "FAIL connecting capture: only skin-mask RGB changes:000\n"
+    },
+    {
+      "case": "changed-mask-bytes",
+      "status": "FIRED",
+      "failure": "FAIL connecting capture: skin mask hash:012",
+      "exit_code": 1,
+      "stdout": "WITNESS executed prepare_candidate.py SHA256=6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01\n",
+      "stderr": "FAIL connecting capture: skin mask hash:012\n"
+    },
+    {
+      "case": "stale-cap-binding",
+      "status": "FIRED",
+      "failure": "FAIL connecting capture: cap exclusion binding:009",
+      "exit_code": 1,
+      "stdout": "WITNESS executed prepare_candidate.py SHA256=6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01\n",
+      "stderr": "FAIL connecting capture: cap exclusion binding:009\n"
+    },
+    {
+      "case": "wrong-source-row",
+      "status": "FIRED",
+      "failure": "FAIL connecting capture: exact input:009",
+      "exit_code": 1,
+      "stdout": "WITNESS executed prepare_candidate.py SHA256=6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01\n",
+      "stderr": "FAIL connecting capture: exact input:009\n"
+    },
+    {
+      "case": "stale-algorithm",
+      "status": "FIRED",
+      "failure": "FAIL connecting capture: correction binding:correct.py",
+      "exit_code": 1,
+      "stdout": "WITNESS executed prepare_candidate.py SHA256=6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01\n",
+      "stderr": "FAIL connecting capture: correction binding:correct.py\n"
+    },
+    {
+      "case": "changed-decoded-mask",
+      "status": "FIRED",
+      "failure": "FAIL connecting capture: prepared decoded mask:9",
+      "exit_code": 1,
+      "stdout": "WITNESS executed prepare_candidate.py SHA256=6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01\n",
+      "stderr": "FAIL connecting capture: prepared decoded mask:9\n"
+    }
+  ]
+}

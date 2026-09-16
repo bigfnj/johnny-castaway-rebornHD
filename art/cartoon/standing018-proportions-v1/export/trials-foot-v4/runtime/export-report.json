@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export only; not native capture or human acceptance.",
+  "preview_only": false,
+  "runtime_sprites_written": true,
+  "runtime_fit_all_source_centers": true,
+  "scale": 0.1,
+  "padding_hd": 64,
+  "reference_hashes": {
+    "source.json": "bd2ba0025626593641c575b794d9380bf66613dae9b7f456d5715aa810d9ceae",
+    "metadata.json": "130dcd25e05c45e22143adca37cb139679523f8dc4a84abce14efc9a170982d5",
+    "018-native.png": "d4390dbd4e9df53d506dbedf540c4a2a0d867c23d3c5221743dad0bf07d2dbd8",
+    "018-nearest8.png": "228783a6a48523333a069592318308967e75537b83bb1a446c85c69fa7181c7a"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "frames": [
+    {
+      "frame": 18,
+      "source": "018-foot-v4.png",
+      "source_sha256": "6ba5a7bdce36a0a8ed4e3912baa1415c3be4b6d38a437f289ae8a7d02dccb83a",
+      "cap_raw": [
+        409.0,
+        35
+      ],
+      "runtime_canvas": [
+        64,
+        154
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -23.900000000000006,
+        0,
+        0.1,
+        -3.25
+      ],
+      "alpha8_source_bounds": [
+        311,
+        34,
+        726,
+        1494
+      ],
+      "alpha8_centers_hd": [
+        7.2499999999999964,
+        0.20000000000000018,
+        48.64999999999999,
+        146.1
+      ],
+      "source_centers_fit_runtime": true,
+      "filtered_alpha8_bounds_hd_exclusive": [
+        7,
+        0,
+        49,
+        147
+      ],
+      "padded_canvas": [
+        192,
+        282
+      ]
+    }
+  ],
+  "outputs_sha256": {
+    "padded/018.png": "4b8c5407c80706a0b7cbc933e1f918279267418a37311d6a7649c8feac1be88c",
+    "BMP/JOHNWALK.BMP/018.png": "927a6ab6eacfec9fda56b3b67d1c3d27cc7f7e8275fe3eec45a1b03e42f4453b"
+  },
+  "filter_limit": "Source-center fit does not promise absence of low-alpha filter fringe; padded output retains it.",
+  "recipe_sha256": "b7777189a158389f5d25de5d9412453b070f3f754293a9772d1dd72512ab99cf",
+  "export_source_sha256": "c382582ad113c917ee8b5f8e0ebda392ceb5f746bdb4be9982b7a51f04418c63"
+}

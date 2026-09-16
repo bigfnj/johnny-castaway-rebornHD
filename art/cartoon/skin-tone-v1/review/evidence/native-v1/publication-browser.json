@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "html_sha256": "13991046dd3a451b3886171a62df4fada4a92864cc3b07774e170730153c9d84",
+  "checker_sha256": "304d4264d5b6b3c30221b36523b899d9ff3db9352bcd6ae84ed0ef2547cc8061",
+  "smoke_passed": 1,
+  "regressions_after_smoke": [
+    "front_arc: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "rear_arc: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "travel_cb: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "travel_ec: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "waypoint_front: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "waypoint_rear: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "wait015: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "wait016: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility"
+  ],
+  "unique_native_images": 548,
+  "executed_counts": {
+    "display_panels": 596,
+    "timestamp_boundaries": 572,
+    "pose_crops": 300,
+    "reference_choices": 8
+  },
+  "display_references_checked": 596,
+  "screenshots_sha256": {
+    "publication-browser-front_arc-frame024-1280.png": "80cd3f261e32cfef506f5788791b60725ce1f7d2b0d56511f47fcd867dd1596d",
+    "publication-browser-front_arc-frame029-1280.png": "0959c195eabf4c5fdecc2bddaa561f2d3e2342fd1caba28571dd11301b96a7a1",
+    "publication-browser-travel_cb-frame024-1280.png": "6fa04c744a5370eb38037ce150ee67b218327b3af8f836e555e021739e6e221e",
+    "publication-browser-travel_cb-frame029-1280.png": "7e7265626ba5bfc1c507e08b98f1146baad28236326bc78cdb402167d3479515",
+    "publication-browser-travel_ec-frame024-1280.png": "86c2c57edac97c7747a2334536dc6486ce2cfdb9494358f9b7a408b314a3c9af",
+    "publication-browser-travel_ec-frame029-1280.png": "746eae56ef0d3af8c90ce591d907ed4d18e885eae0f338449435c529abcf32b0",
+    "publication-browser-waypoint_front-frame024-1280.png": "faebcf072c4eaa7c5cb206e300a0606c97eb274427682c526478aa56530403af",
+    "publication-browser-waypoint_front-frame029-1280.png": "8944e17ed01d6a6fcd04b11c79fc39698e768c9ced9c4f6defb91d8610d46700",
+    "publication-browser-wait015-frame015-1280.png": "cb6c148531df41e94496c5d03512aa5d7fe4521d19dcef95491807850568f1ec",
+    "publication-browser-wait016-frame016-1280.png": "d9a554c58c96f2c74c2332ab20b6f32eecf7269c86ea6ea3e993510c3ae9d521"
+  },
+  "browser_errors": [],
+  "request_failures": [],
+  "scope": "Exact eight-clip native color pixel/timing/control validation, including exact active-clip cache membership after each switch. No memory-savings measurement or human color approval inferred."
+}

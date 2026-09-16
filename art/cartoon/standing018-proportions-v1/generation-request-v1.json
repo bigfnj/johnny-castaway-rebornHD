@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "status": "Image generation requested; output pending",
+  "tool": "built-in image_gen",
+  "scope": "Torso and shorts proportions for standing018; no human or production approval",
+  "user_steering_exact": "should we re-render with a longer torso and bring the shorts more in-line w/ the original?",
+  "inputs": [
+    {
+      "path": "art/cartoon/arrival-pilot-v1/018-pose-v1.png",
+      "role": "high-resolution edit target"
+    },
+    {
+      "path": "art/cartoon/arrival-pilot-v1/reference/018-nearest8.png",
+      "role": "supplied-original geometry; diagnostic colors"
+    },
+    {
+      "path": "art/cartoon/skin-tone-v1/exports-v2/sprites/018.png",
+      "role": "approved corrected skin colors"
+    }
+  ],
+  "prompt": "Use case: precise-object-edit.\nAsset type: a transparent full-body animation sprite for Johnny Castaway, standing pose 018.\nEdit target: Image 1, the high-resolution Cartoon Johnny. Image 2 is the ORIGINAL pixel-art pose, geometry reference only; ignore its diagnostic colors. Image 3 is the CURRENT APPROVED skin-color version of this same Cartoon pose, color reference only.\n\nPrimary correction: lengthen the LOWER TORSO and bring the waist and ragged shorts down to match the original proportions. The current shorts sit too high. Do not simply stretch both exposed legs. Keep the cap, head, face, beard, shoulders, upper chest/back, camera angle and facing direction in the same place and at the same scale as Image 1. Extend the lower back/abdomen naturally; lower the waistband and shorts approximately 120–140 pixels on this 1024x1536 canvas, with the ragged hem about 100–120 pixels lower. Keep the same recognizable shorts design, slim build, bent elbows and hands resting naturally at the pockets; adjust the lower arms only as necessary to reach the lowered waistband without deforming the shoulders.\n\nRebuild the exposed leg connections under the lowered shorts so BOTH FEET are resting, not one raised in mid-step. Keep the nearer foot at screen left, slightly lower than the smaller farther foot at screen right. The nearer sole should finish around source y1505 and the farther sole around y1465, about 40 pixels apart in vertical depth. This is a relaxed standing pose at a three-quarter rear angle. The current smaller foot is much too high; bring it down naturally. Preserve the existing foot direction and approximate horizontal locations, natural ankles, correct toe anatomy and slim calves. No extra toes, detached limbs or crossed legs. Avoid excessively long shins: most of the correction belongs in the torso and lowered shorts.\n\nPreserve the approved lighter warm skin color from Image 3, with flat base RGB 252,148,88 (#FC9458), natural existing shading and dark ink. Preserve white cap with projecting dark brim/gold band, brown hair and scruffy beard, and white shorts. No tan/orange palette shift.\n\nOutput one character only, exactly 1024x1536 RGBA, genuinely transparent background, no island, ground, shadow, glow, matte, labels or comparison panels. Keep the top of the cap near y35 and all toes fully inside the canvas. Preserve the original upper-body character identity and line quality. This is a targeted proportion correction, not a new character design."
+}

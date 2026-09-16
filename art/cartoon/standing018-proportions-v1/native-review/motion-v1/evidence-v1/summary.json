@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "clips": {
+    "front_arc": {
+      "display_count": 36,
+      "duration_ms": 3400,
+      "changed_displays": 2,
+      "unchanged_displays": 34
+    },
+    "waypoint_front": {
+      "display_count": 54,
+      "duration_ms": 4840,
+      "changed_displays": 12,
+      "unchanged_displays": 42
+    },
+    "waypoint_rear": {
+      "display_count": 74,
+      "duration_ms": 6520,
+      "changed_displays": 14,
+      "unchanged_displays": 60
+    }
+  },
+  "new_clip_order": [
+    "waypoint_front",
+    "waypoint_rear"
+  ],
+  "new_clip_phases": [
+    "smoke",
+    "full",
+    "repeat"
+  ],
+  "reused_front_arc_directory": "build/standing018-proportions/native-review/color-v2/front_arc",
+  "archive_sha256": "7a50f72fe65382917a1d38412dad97315542831ea5fd06eec9570734a7afdb52",
+  "runtime018_sha256": "21cf94cd90d369b20b6d3b8ef60b7cc2848f919ff828578320502aec9a17c55b",
+  "executable_sha256": "203aebb8c15881a41108b2b4fb97f5f9c6d025aa595a678b4dd84906011f7563",
+  "base_archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf",
+  "helper_sha256": "3a0f820e46900b92ad2ef62d720c3e1c62138b82de2867c83691bc6a2a8f5c49",
+  "scope": "Three native clips including reused exact Front turn; human motion review pending, no production change."
+}

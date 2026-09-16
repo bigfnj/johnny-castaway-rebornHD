@@ -1,0 +1,100 @@
+{
+  "status": "PASS; local diagnostic, not a new art approval",
+  "panels": [
+    {
+      "kind": "original_scene",
+      "label": "Original pose geometry",
+      "note": "Original sprite and island. Diagnostic colors; judge contact and shape.",
+      "image": "original_scene.png",
+      "png_sha256": "bbd14d460198e1edccee5f029e3085e9275bffb160f0a3270dee489a46dbef62",
+      "report": "build/skin-tone/contact018-review-v1/original_scene/full/report.json",
+      "report_sha256": "6014d80eb6b8a8e020bce9539c3b4f7a398b5c20a8b4f2bb91867a92a7574f99",
+      "archive_sha256": "91075b95cbe37d4f8a1145adf7d9c2b02f5e12124e952ad3ca93d90cb6d715d1"
+    },
+    {
+      "kind": "original_johnny",
+      "label": "Original pose on Cartoon island",
+      "note": "Original sprite, same Cartoon island. Diagnostic sprite colors.",
+      "image": "original_johnny.png",
+      "png_sha256": "638377703beb0ee51b81863960e24ef445a8511acea99c9b9980e3380b599162",
+      "report": "build/skin-tone/contact018-review-v1/original_johnny/full/report.json",
+      "report_sha256": "ef0e7d53eae9d2f0d7fac9dd6d531879d09e57efc16a54fa32528635c49fc0a5",
+      "archive_sha256": "d7797181cf2e30699709946f0983b6899f0c7428785f9c596dea8ac150619f20"
+    },
+    {
+      "kind": "cartoon",
+      "label": "Current Cartoon",
+      "note": "Current pose with the approved skin colors. Geometry is unchanged.",
+      "image": "cartoon.png",
+      "png_sha256": "c6009c32fd90e05de50aae4e775084d9b9b13bbf2327008f2d65f5d3a15f48fe",
+      "report": "build/skin-tone/native-review/candidate-v2/front_arc/full/report.json",
+      "report_sha256": "d87ef06a2ebd82bb387ef4e558b42b9e84554a0c273723b9f6492eba85cdf643",
+      "archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf"
+    }
+  ],
+  "bundle": {
+    "panels": [
+      {
+        "kind": "original_scene",
+        "label": "Original pose geometry",
+        "note": "Original sprite and island. Diagnostic colors; judge contact and shape.",
+        "image": "original_scene.png",
+        "png_sha256": "bbd14d460198e1edccee5f029e3085e9275bffb160f0a3270dee489a46dbef62",
+        "report": "build/skin-tone/contact018-review-v1/original_scene/full/report.json",
+        "report_sha256": "6014d80eb6b8a8e020bce9539c3b4f7a398b5c20a8b4f2bb91867a92a7574f99",
+        "archive_sha256": "91075b95cbe37d4f8a1145adf7d9c2b02f5e12124e952ad3ca93d90cb6d715d1"
+      },
+      {
+        "kind": "original_johnny",
+        "label": "Original pose on Cartoon island",
+        "note": "Original sprite, same Cartoon island. Diagnostic sprite colors.",
+        "image": "original_johnny.png",
+        "png_sha256": "638377703beb0ee51b81863960e24ef445a8511acea99c9b9980e3380b599162",
+        "report": "build/skin-tone/contact018-review-v1/original_johnny/full/report.json",
+        "report_sha256": "ef0e7d53eae9d2f0d7fac9dd6d531879d09e57efc16a54fa32528635c49fc0a5",
+        "archive_sha256": "d7797181cf2e30699709946f0983b6899f0c7428785f9c596dea8ac150619f20"
+      },
+      {
+        "kind": "cartoon",
+        "label": "Current Cartoon",
+        "note": "Current pose with the approved skin colors. Geometry is unchanged.",
+        "image": "cartoon.png",
+        "png_sha256": "c6009c32fd90e05de50aae4e775084d9b9b13bbf2327008f2d65f5d3a15f48fe",
+        "report": "build/skin-tone/native-review/candidate-v2/front_arc/full/report.json",
+        "report_sha256": "d87ef06a2ebd82bb387ef4e558b42b9e84554a0c273723b9f6492eba85cdf643",
+        "archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf"
+      }
+    ],
+    "pose": [
+      940,
+      425,
+      95,
+      175
+    ],
+    "feet": [
+      954,
+      548,
+      66,
+      40
+    ],
+    "frame": 18,
+    "draw": [
+      0,
+      478,
+      216,
+      18
+    ],
+    "logical_ms": 0
+  },
+  "files_sha256": {
+    "cartoon.png": "c6009c32fd90e05de50aae4e775084d9b9b13bbf2327008f2d65f5d3a15f48fe",
+    "original_johnny.png": "638377703beb0ee51b81863960e24ef445a8511acea99c9b9980e3380b599162",
+    "original_scene.png": "bbd14d460198e1edccee5f029e3085e9275bffb160f0a3270dee489a46dbef62",
+    "review.html": "15da6c42a4df81a0977e2c78a77c1204ae86d413fcae5acc8b74bc9bae0c1be0"
+  },
+  "summary_sha256": "b87646d86066ea40f2883b39932e2895644c708c25a0990058f2e10dd3b898fc",
+  "outside018_changed_pixels": 0,
+  "builder_sha256": "4563e7fe0813f4f9e33279ddc494674acafa69f3cb494daf99c4e002845165a1",
+  "template_sha256": "67a557f3d882ce63031eeedae15faea51412ff98b0f100a1b6abc649b3cd5aa5",
+  "limits": "Supplied original resource pixels rendered by port with its diagnostic palette. Not original-executable colors or DOSBox output. Geometry/placement untouched; camera crops identical and nearest-neighbor."
+}

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "html_sha256": "1f9e9100fb6add44815ef8f6bc2ee0ded6458925f78b19b8ccc20d515ff09c18",
+  "checker_sha256": "d0826e92ad7e031d5378c2ef9fa88418aee1830725d76444e7a1fb79679182c0",
+  "smoke_passed": 1,
+  "regressions_after_smoke": [
+    "front_arc: all display pixels/timestamps, all pose crops/selectors, connecting choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "rear_arc: all display pixels/timestamps, all pose crops/selectors, connecting choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "travel_cb: all display pixels/timestamps, all pose crops/selectors, connecting choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "travel_ec: all display pixels/timestamps, all pose crops/selectors, connecting choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "waypoint_front: all display pixels/timestamps, all pose crops/selectors, connecting choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "waypoint_rear: all display pixels/timestamps, all pose crops/selectors, connecting choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility"
+  ],
+  "unique_native_images": 290,
+  "executed_counts": {
+    "display_panels": 576,
+    "timestamp_boundaries": 558,
+    "pose_crops": 292,
+    "connecting_choices": 10
+  },
+  "display_references_checked": 576,
+  "screenshots_sha256": {
+    "publication-browser-front_arc-frame009-1280.png": "7f9eea2a67547fb1f19e67028107bfd5fef4a48c58cca4576189d0366877d7c5",
+    "publication-browser-front_arc-frame010-1280.png": "922f8ce62c058b6e59173675af101d778045a425ab82b192f10c93cd350a8b57",
+    "publication-browser-rear_arc-frame012-1280.png": "c8dda25768f1de5eff51a3f1e308c0125b6e7fb22e0b3bb3631f6d0d282774ed",
+    "publication-browser-travel_cb-frame009-1280.png": "a944151fded864935d7c06a9c7cdf038cd492d080856f996e82d8449772725ff",
+    "publication-browser-travel_ec-frame009-1280.png": "25d2f1d1c00dfb4ed665f2a7b7cc5633df10aff89d7036cca50bf4dac09798bd",
+    "publication-browser-waypoint_front-frame009-1280.png": "0541c2478b1eb8697fb7544825a1cba30f0d2935e3ca08c35ad85e40060f4cf6",
+    "publication-browser-waypoint_front-frame010-1280.png": "cb6c4efd2913262134dedd8ce1558a7f140b44298526f1d3cf02b17a290dcb74",
+    "publication-browser-waypoint_rear-frame012-1280.png": "16cce2e339a8cb0f88d9460a6a77127df609a110ac95a9c2180cd0cf3a65a850"
+  },
+  "browser_errors": [],
+  "request_failures": [],
+  "scope": "Exact native connecting pixel/timing/control validation; no human transition approval inferred."
+}

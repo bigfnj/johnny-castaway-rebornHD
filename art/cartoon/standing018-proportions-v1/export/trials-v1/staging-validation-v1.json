@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "scope": "Staging adapter only; no image rendering or anatomy validation.",
+  "adapter_sha256": "a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312",
+  "probe_sha256": "8ebeeda777500b7dcde6c760747f25be75a3c5be199ded0d2d9c4774be349048",
+  "positive_before": {
+    "exit_code": 0,
+    "stdout": "WITNESS stage.py SHA256=a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312\nPASS byte-exact018 authoring staging: build/new-stage\n",
+    "stderr": "",
+    "executed_source_sha256": "a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312"
+  },
+  "positive_after": {
+    "exit_code": 0,
+    "stdout": "WITNESS stage.py SHA256=a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312\nPASS byte-exact018 authoring staging: build/new-stage\n",
+    "stderr": "",
+    "executed_source_sha256": "a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312"
+  },
+  "controls": [
+    {
+      "case": "wrong-raw-identity",
+      "expected_failure": "source-identity:018",
+      "normal": {
+        "exit_code": 1,
+        "stdout": "WITNESS stage.py SHA256=a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312\n",
+        "stderr": "FAIL source-identity:018\n",
+        "executed_source_sha256": "a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312"
+      },
+      "mutant": {
+        "exit_code": 0,
+        "stdout": "WITNESS stage.py SHA256=f740291ee307429a8b8a233b03d83013b2c74a2405704ed8d102ed9770db5126\nPASS byte-exact018 authoring staging: build/new-stage\n",
+        "stderr": "",
+        "executed_source_sha256": "f740291ee307429a8b8a233b03d83013b2c74a2405704ed8d102ed9770db5126"
+      },
+      "result": "FIRED",
+      "failed_expectations": 1
+    },
+    {
+      "case": "changed-exporter",
+      "expected_failure": "frozen-input:export.py",
+      "normal": {
+        "exit_code": 1,
+        "stdout": "WITNESS stage.py SHA256=a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312\n",
+        "stderr": "FAIL frozen-input:export.py\n",
+        "executed_source_sha256": "a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312"
+      },
+      "mutant": {
+        "exit_code": 0,
+        "stdout": "WITNESS stage.py SHA256=2741e2f761930b571ee9a8adf920578d0eef6935634e391597061a3f5731dce1\nPASS byte-exact018 authoring staging: build/new-stage\n",
+        "stderr": "",
+        "executed_source_sha256": "2741e2f761930b571ee9a8adf920578d0eef6935634e391597061a3f5731dce1"
+      },
+      "result": "FIRED",
+      "failed_expectations": 1
+    },
+    {
+      "case": "changed-reference",
+      "expected_failure": "frozen-input:reference/source.json",
+      "normal": {
+        "exit_code": 1,
+        "stdout": "WITNESS stage.py SHA256=a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312\n",
+        "stderr": "FAIL frozen-input:reference/source.json\n",
+        "executed_source_sha256": "a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312"
+      },
+      "mutant": {
+        "exit_code": 0,
+        "stdout": "WITNESS stage.py SHA256=2741e2f761930b571ee9a8adf920578d0eef6935634e391597061a3f5731dce1\nPASS byte-exact018 authoring staging: build/new-stage\n",
+        "stderr": "",
+        "executed_source_sha256": "2741e2f761930b571ee9a8adf920578d0eef6935634e391597061a3f5731dce1"
+      },
+      "result": "FIRED",
+      "failed_expectations": 1
+    },
+    {
+      "case": "changed-legacy",
+      "expected_failure": "frozen-legacy-export",
+      "normal": {
+        "exit_code": 1,
+        "stdout": "WITNESS stage.py SHA256=a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312\n",
+        "stderr": "FAIL frozen-legacy-export\n",
+        "executed_source_sha256": "a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312"
+      },
+      "mutant": {
+        "exit_code": 0,
+        "stdout": "WITNESS stage.py SHA256=8258156f0ebb4091329e46507ba3a8ebb99e0308ca3815632b82a62f359b0e62\nPASS byte-exact018 authoring staging: build/new-stage\n",
+        "stderr": "",
+        "executed_source_sha256": "8258156f0ebb4091329e46507ba3a8ebb99e0308ca3815632b82a62f359b0e62"
+      },
+      "result": "FIRED",
+      "failed_expectations": 1
+    },
+    {
+      "case": "occupied-output",
+      "expected_failure": "staging-already-exists",
+      "normal": {
+        "exit_code": 1,
+        "stdout": "WITNESS stage.py SHA256=a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312\n",
+        "stderr": "FAIL staging-already-exists\n",
+        "executed_source_sha256": "a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312"
+      },
+      "mutant": {
+        "exit_code": 0,
+        "stdout": "WITNESS stage.py SHA256=e2ac7c24ba0027e89dca55a19518ead8f4f9821ab3b2dadc152f060b55b2afcf\nPASS byte-exact018 authoring staging: build/new-stage\n",
+        "stderr": "",
+        "executed_source_sha256": "e2ac7c24ba0027e89dca55a19518ead8f4f9821ab3b2dadc152f060b55b2afcf"
+      },
+      "result": "FIRED",
+      "failed_expectations": 1
+    },
+    {
+      "case": "outside-build",
+      "expected_failure": "staging-outside-build",
+      "normal": {
+        "exit_code": 1,
+        "stdout": "WITNESS stage.py SHA256=a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312\n",
+        "stderr": "FAIL staging-outside-build\n",
+        "executed_source_sha256": "a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312"
+      },
+      "mutant": {
+        "exit_code": 0,
+        "stdout": "WITNESS stage.py SHA256=e0321073593b91fffcf00eb3af796e186cdfa45639dbc2d81b1c437f7ff6c28c\nPASS byte-exact018 authoring staging: not-build\n",
+        "stderr": "",
+        "executed_source_sha256": "e0321073593b91fffcf00eb3af796e186cdfa45639dbc2d81b1c437f7ff6c28c"
+      },
+      "result": "FIRED",
+      "failed_expectations": 1
+    },
+    {
+      "case": "wrong-source-extension",
+      "expected_failure": "source-path",
+      "normal": {
+        "exit_code": 1,
+        "stdout": "WITNESS stage.py SHA256=a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312\n",
+        "stderr": "FAIL source-path\n",
+        "executed_source_sha256": "a299da3280ec136f4039fc2bcff9c6e523a8aa0173a4266fe94bdb5d156a5312"
+      },
+      "mutant": {
+        "exit_code": 0,
+        "stdout": "WITNESS stage.py SHA256=a328a87389de27f6664f903c8f60e85626f081c077384b994d36d38286b51ad0\nPASS byte-exact018 authoring staging: build/new-stage\n",
+        "stderr": "",
+        "executed_source_sha256": "a328a87389de27f6664f903c8f60e85626f081c077384b994d36d38286b51ad0"
+      },
+      "result": "FIRED",
+      "failed_expectations": 1
+    }
+  ],
+  "historical_inputs_unchanged": true
+}

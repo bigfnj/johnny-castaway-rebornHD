@@ -1,0 +1,486 @@
+=== gate: johnny-castaway-rebornHD (Release) ===
+
+=== configure + build ===
+OK   build clean, no warnings
+
+=== smoke ===
+
+== the binary answers without touching the archive ==
+  ok   version exits 0 and reports the version from CMakeLists
+  ok   help exits non-zero and lists the new options
+
+== the archive is found without being told where it is ==
+  ok   dump runs from an unrelated working directory
+
+== bad arguments are refused, not silently accepted ==
+  ok   a non-numeric seed is rejected rather than read as 0
+  ok   a zero frame count is rejected
+  ok   an out-of-range ADS tag is rejected
+  ok   an unknown switch is refused rather than silently ignored
+  ok   a fatal error reaches stderr instead of raising a dialog nobody can click
+
+== bounded graphical runs start, work, and tear down cleanly ==
+  ok   a bounded story run exits 0 through the normal shutdown path
+  ok   and it actually reaches the island cloud path, not just the common case
+  ok   the same seed produces the same run twice
+  ok   a different seed produces a different run
+  ok   night forces the NIGHT.SCR backdrop
+  ok   day forces an OCEAN backdrop even at night
+  ok   clouds still animate over the night backdrop
+  ok   bench mode runs bounded and exits 0
+  ok   a single TTM plays bounded and exits 0
+
+== malformed resources are refused, not executed ==
+  ok   a TTM with more tags in its bytecode than its TAG: chunk declares is refused
+  ok   a TTM opcode whose arguments run past the end of the script is refused
+  ok   and the dump disassembler refuses that same truncated TTM
+  ok   a 12-argument TTM opcode is decoded rather than overflowing the argument buffer
+  ok   an ADS naming a TTM slot outside the slot table is refused
+  ok   an ADS opcode whose arguments run past the end of the script is refused
+  ok   a BMP declaring more images than a sprite slot holds is refused
+  ok   a BMP whose image table outruns its pixel data is refused when loaded
+  ok   and refused on the headless dump path, which walks the same pixels separately
+  ok   a resource name shorter than its own type suffix is refused
+
+27 passed, 0 failed
+
+=== screensaver behaviour (/p preview, and the focus rules) ===
+
+== Windows can tell the user what this is ==
+  ok   the .scr carries the name shown in the Screen Saver dropdown
+  ok   its embedded version matches CMakeLists.txt
+  ok   and it identifies itself as the screensaver, not the console build
+
+== /p preview draws into the window it is given ==
+  ok   a preview window appeared inside the host
+  ok   it is parented to the supplied handle
+  ok   it is visible
+  ok   and the process owns NO top-level window
+  ok   and it did not steal the foreground
+  ok   and it is still running rather than having exited immediately
+
+== losing the foreground ends a screensaver, not a background run ==
+  ok   with /s, deactivation ends it
+  ok   without /s, deactivation is ignored
+
+== art style settings use a real Windows dialog ==
+  ok   Cancel (hd saved) config dialog opens without an archive
+  ok   Cancel (hd saved) shows both styles and the saved selection
+  ok   Cancel (hd saved) closes through the dialog action
+  ok   Cancel (hd saved) leaves settings byte-identical
+  ok   OK config dialog opens without an archive
+  ok   OK shows both styles and the saved selection
+  ok   OK closes through the dialog action
+  ok   OK saves Cartoon and retains the latest story progress
+  ok   OK after story progress changes config dialog opens without an archive
+  ok   OK after story progress changes shows both styles and the saved selection
+  ok   OK after story progress changes closes through the dialog action
+  ok   OK after story progress changes saves Cartoon and retains the latest story progress
+  ok   Cancel (cartoon saved) config dialog opens without an archive
+  ok   Cancel (cartoon saved) shows both styles and the saved selection
+  ok   Cancel (cartoon saved) closes through the dialog action
+  ok   Cancel (cartoon saved) leaves settings byte-identical
+
+27 passed, 0 failed
+
+=== art-style smoke ===
+== art styles: bounded real-engine smoke ==
+  ok   hd loads TEST.TTM and captures a bounded run
+  ok   cartoon loads TEST.TTM and captures a bounded run
+2 art-style checks passed, 0 failed
+
+=== wave renderer smoke ===
+PASS tests/test_wave_renderer.py: HD and Cartoon complete actual wave captures
+WITNESS wave assertion executed: smoke
+Wave renderer: 1 checks passed
+
+=== palm renderer smoke ===
+PASS tests/test_palm_renderer.py: HD and Cartoon finish actual D/E captures
+WITNESS palm assertion executed: smoke
+
+=== RESOURCE decoder smoke ===
+WITNESS decoder assertion executed: rle-complete
+PASS rle-complete
+WITNESS decoder assertion executed: lzw-complete
+PASS lzw-complete
+Decoder smoke: 2/2 passed
+
+=== engine ownership smoke ===
+WITNESS lifecycle assertion executed: scene-release
+PASS scene-release
+WITNESS lifecycle assertion executed: graphics-release
+PASS graphics-release
+Lifecycle smoke: 2/2 passed
+
+=== frame limits smoke ===
+WITNESS frame assertion cli-ordinary BEGIN
+WITNESS frame CLI process value='13' exit=0
+PASS frame limits: cli-ordinary
+WITNESS frame assertion tick-ordinary BEGIN
+PASS frame limits: tick-ordinary
+Frame smoke: 2/2 passed
+
+=== platform constructor smoke ===
+PASS platform allocation success
+PASS platform allocation png-success
+
+=== legacy extractor smoke ===
+WITNESS tools/extract_sound.c sound-help: assertion executed
+WITNESS tools/extract_walk_data.c walk-help: assertion executed
+WITNESS tools/extract_sound.c sound-valid: assertion executed
+WITNESS tools/extract_sound.c sound-valid: assertion executed
+WITNESS tools/extract_walk_data.c walk-valid: assertion executed
+WITNESS tools/extract_walk_data.c walk-valid: assertion executed
+INFO synthetic layout coverage only; this suite does not read an original executable. Evidence: D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\build\connecting-poses\windows-verification\connecting-color-foot-promotion-v1\temp\jcr-extractors-b8dhtzp9
+PASS extractors smoke: 4/4
+
+=== PowerShell Web wrapper smoke ===
+Wrapper evidence: D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\build\maintenance-wrapper\tmpbuc2q2fg
+WITNESS scripts/build_web.ps1: container delegation/exit assertion executed
+WITNESS scripts/build_web.ps1: local delegation/exit assertion executed
+WITNESS scripts/build_web.ps1: container delegation/exit assertion executed
+WITNESS scripts/build_web.ps1: local delegation/exit assertion executed
+INFO wrapper uses recording builder/SDK fixtures; real SDK compilation is a separate required build
+PASS PowerShell wrapper smoke
+
+=== art inventory smoke ===
+test_distinct_new_output (__main__.InventoryCliTests.test_distinct_new_output) ... ok
+test_stdout_only (__main__.InventoryCliTests.test_stdout_only) ... ok
+test_same_path (__main__.InventoryCliTests.test_same_path) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.523s
+
+OK
+
+=== art approval history smoke ===
+WITNESS module 6bd6088673392520d8f082099d249e736742094d2a7ce39e4573039bdb76142f
+test_smoke_replacement (__main__.HistoryTests.test_smoke_replacement) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.343s
+
+OK
+
+=== regression (legacy extractor bytes and failure handling) ===
+WITNESS tools/extract_sound.c sound-max: assertion executed
+WITNESS tools/extract_sound.c sound-max: assertion executed
+WITNESS tools/extract_walk_data.c walk-table: assertion executed
+WITNESS tools/extract_walk_data.c walk-table: assertion executed
+WITNESS tools/extract_walk_data.c walk-stdout: assertion executed
+WITNESS tools/extract_walk_data.c walk-stdout: assertion executed
+WITNESS tools/extract_sound.c sound-missing: assertion executed
+WITNESS tools/extract_sound.c sound-missing: assertion executed
+WITNESS tools/extract_walk_data.c walk-missing: assertion executed
+WITNESS tools/extract_walk_data.c walk-missing: assertion executed
+WITNESS tools/extract_sound.c sound-truncated: assertion executed
+WITNESS tools/extract_sound.c sound-truncated: assertion executed
+WITNESS tools/extract_sound.c sound-header: assertion executed
+WITNESS tools/extract_sound.c sound-header: assertion executed
+WITNESS tools/extract_walk_data.c walk-truncated: assertion executed
+WITNESS tools/extract_walk_data.c walk-truncated: assertion executed
+WITNESS tools/extract_sound.c sound-existing: assertion executed
+WITNESS tools/extract_sound.c sound-existing: assertion executed
+WITNESS tools/extract_sound.c sound-existing: assertion executed
+WITNESS tools/extract_walk_data.c walk-existing: assertion executed
+WITNESS tools/extract_walk_data.c walk-existing: assertion executed
+WITNESS tools/extract_sound.c sound-bad-output: assertion executed
+WITNESS tools/extract_sound.c sound-bad-output: assertion executed
+WITNESS tools/extract_walk_data.c walk-bad-output: assertion executed
+WITNESS tools/extract_sound.c sound-arguments: assertion executed
+WITNESS tools/extract_sound.c sound-arguments: assertion executed
+WITNESS tools/extract_sound.c sound-arguments: assertion executed
+WITNESS tools/extract_sound.c sound-arguments: assertion executed
+WITNESS tools/extract_sound.c sound-arguments: assertion executed
+WITNESS tools/extract_sound.c sound-arguments: assertion executed
+WITNESS tools/extract_walk_data.c walk-arguments: assertion executed
+WITNESS tools/extract_walk_data.c walk-arguments: assertion executed
+WITNESS tools/extract_walk_data.c walk-arguments: assertion executed
+WITNESS tools/extract_walk_data.c walk-arguments: assertion executed
+WITNESS tools/extract_walk_data.c walk-arguments: assertion executed
+INFO synthetic layout coverage only; this suite does not read an original executable. Evidence: D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\build\connecting-poses\windows-verification\connecting-color-foot-promotion-v1\temp\jcr-extractors-fjxp7dg8
+PASS extractors regression: 14/14
+
+=== regression (PowerShell Web wrapper compatibility) ===
+Wrapper evidence: D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\build\maintenance-wrapper\tmp45rrzvq_
+WITNESS scripts/build_web.ps1: relative delegation/exit assertion executed
+WITNESS scripts/build_web.ps1: container-failure delegation/exit assertion executed
+WITNESS scripts/build_web.ps1: local-failure delegation/exit assertion executed
+WITNESS scripts/build_web.ps1: relative delegation/exit assertion executed
+WITNESS scripts/build_web.ps1: container-failure delegation/exit assertion executed
+WITNESS scripts/build_web.ps1: local-failure delegation/exit assertion executed
+INFO wrapper uses recording builder/SDK fixtures; real SDK compilation is a separate required build
+PASS PowerShell wrapper regression
+
+=== regression (platform constructors and failures) ===
+PASS platform allocation surface-struct
+PASS platform allocation surface-pixels
+PASS platform allocation borrowed-wrapper
+PASS platform allocation window-1
+PASS platform allocation window-2
+PASS platform allocation window-3
+PASS platform allocation native-window
+PASS platform allocation native-context
+PASS platform allocation png-wrapper
+
+=== regression (RESOURCE decoder completeness) ===
+WITNESS decoder assertion executed: rle-complete
+PASS rle-complete
+WITNESS decoder assertion executed: lzw-complete
+PASS lzw-complete
+WITNESS decoder assertion executed: rle-short-output
+PASS rle-short-output
+WITNESS decoder assertion executed: lzw-short-output
+PASS lzw-short-output
+WITNESS decoder assertion executed: rle-literal
+PASS rle-literal
+WITNESS decoder assertion executed: rle-mixed
+PASS rle-mixed
+WITNESS decoder assertion executed: lzw-dictionary
+PASS lzw-dictionary
+WITNESS decoder assertion executed: lzw-full-buffer-early
+PASS lzw-full-buffer-early
+WITNESS decoder assertion executed: resource-rle-complete
+PASS resource-rle-complete
+WITNESS decoder assertion executed: resource-rle-short
+PASS resource-rle-short
+WITNESS decoder assertion executed: resource-lzw-short
+PASS resource-lzw-short
+Decoder regression: 11/11 passed
+
+=== regression (engine ownership and cleanup) ===
+WITNESS lifecycle assertion executed: scene-release
+PASS scene-release
+WITNESS lifecycle assertion executed: graphics-release
+PASS graphics-release
+WITNESS lifecycle assertion executed: benchmark-release
+PASS benchmark-release
+WITNESS lifecycle assertion executed: standalone-saved-zone
+PASS standalone-saved-zone
+WITNESS lifecycle assertion executed: reinitialize
+PASS reinitialize
+Lifecycle regression: 5/5 passed
+
+=== regression (frame parsing and stopping boundaries) ===
+WITNESS frame assertion cli-ordinary BEGIN
+WITNESS frame CLI process value='13' exit=0
+PASS frame limits: cli-ordinary
+WITNESS frame assertion tick-ordinary BEGIN
+PASS frame limits: tick-ordinary
+WITNESS frame assertion cli-valid-1 BEGIN
+WITNESS frame CLI process value='1' exit=0
+PASS frame limits: cli-valid-1
+WITNESS frame assertion cli-valid-2147483647 BEGIN
+WITNESS frame CLI process value='2147483647' exit=0
+PASS frame limits: cli-valid-2147483647
+WITNESS frame assertion cli-valid-2147483648 BEGIN
+WITNESS frame CLI process value='2147483648' exit=0
+PASS frame limits: cli-valid-2147483648
+WITNESS frame assertion cli-valid-4294967294 BEGIN
+WITNESS frame CLI process value='4294967294' exit=0
+PASS frame limits: cli-valid-4294967294
+WITNESS frame assertion cli-valid-4294967295 BEGIN
+WITNESS frame CLI process value='4294967295' exit=0
+PASS frame limits: cli-valid-4294967295
+WITNESS frame assertion cli-valid-+13 BEGIN
+WITNESS frame CLI process value='+13' exit=0
+PASS frame limits: cli-valid-+13
+WITNESS frame assertion cli-valid-13 BEGIN
+WITNESS frame CLI process value=' 13' exit=0
+PASS frame limits: cli-valid-13
+WITNESS frame assertion cli-invalid-0 BEGIN
+WITNESS frame CLI process value='0' exit=1
+PASS frame limits: cli-invalid-0
+WITNESS frame assertion cli-invalid--1 BEGIN
+WITNESS frame CLI process value='-1' exit=1
+PASS frame limits: cli-invalid--1
+WITNESS frame assertion cli-invalid-empty BEGIN
+WITNESS frame CLI process value='' exit=1
+PASS frame limits: cli-invalid-empty
+WITNESS frame assertion cli-invalid-abc BEGIN
+WITNESS frame CLI process value='abc' exit=1
+PASS frame limits: cli-invalid-abc
+WITNESS frame assertion cli-invalid-13x BEGIN
+WITNESS frame CLI process value='13x' exit=1
+PASS frame limits: cli-invalid-13x
+WITNESS frame assertion cli-invalid-1.5 BEGIN
+WITNESS frame CLI process value='1.5' exit=1
+PASS frame limits: cli-invalid-1.5
+WITNESS frame assertion cli-invalid-4294967296 BEGIN
+WITNESS frame CLI process value='4294967296' exit=1
+PASS frame limits: cli-invalid-4294967296
+WITNESS frame assertion cli-invalid-9223372036854775807 BEGIN
+WITNESS frame CLI process value='9223372036854775807' exit=1
+PASS frame limits: cli-invalid-9223372036854775807
+WITNESS frame assertion cli-invalid-9223372036854775808 BEGIN
+WITNESS frame CLI process value='9223372036854775808' exit=1
+PASS frame limits: cli-invalid-9223372036854775808
+WITNESS frame assertion cli-invalid-18446744073709551616 BEGIN
+WITNESS frame CLI process value='18446744073709551616' exit=1
+PASS frame limits: cli-invalid-18446744073709551616
+WITNESS frame assertion cli-invalid--9223372036854775809 BEGIN
+WITNESS frame CLI process value='-9223372036854775809' exit=1
+PASS frame limits: cli-invalid--9223372036854775809
+WITNESS frame assertion tick-maximum BEGIN
+PASS frame limits: tick-maximum
+WITNESS frame assertion tick-unlimited BEGIN
+PASS frame limits: tick-unlimited
+Frame regression: 22/22 passed
+
+=== regression (art-style pixels and configuration) ===
+== portable PNG decoder: premultiplied alpha ==
+  ok   portable PNG decoder executes and preserves all alpha controls
+== art styles: real rendered pixels ==
+  ok   Cartoon preserves the fixed 1280x960 render dimensions
+  ok   default style produces the same pixels as explicit HD
+  ok   opaque color survives PNG channel conversion
+  ok   fully transparent source preserves destination color
+  ok   half-alpha source blends over the known destination
+  ok   quarter-alpha source blends over the known destination
+  ok   Cartoon retains intentional opaque magenta
+  ok   HD retains its legacy magenta transparency behavior
+  ok   sprite flip reverses actual PNG columns
+  ok   right-edge clipping preserves the visible source columns
+  ok   missing-cartoon fallback still completes a bounded capture
+  ok   missing-cartoon fallback renders the correct source
+  ok   missing-both fallback still completes a bounded capture
+  ok   missing-both fallback renders the correct source
+  ok   wrong-size refuses the named asset without timing out
+  ok   corrupt-png refuses the named asset without timing out
+  ok   unsupported-png refuses the named asset without timing out
+  ok   missing-manifest refuses the named asset without timing out
+  ok   nested-manifest refuses the named asset without timing out
+  ok   incomplete-pack refuses the named asset without timing out
+== art styles: persisted setting and transient CLI override ==
+  ok   setstyle cartoon saves without opening graphics
+  ok   style persistence retains existing story progress
+  ok   a fresh process uses the saved Cartoon setting
+  ok   explicit HD overrides the saved style for this run
+  ok   a transient CLI override leaves saved settings unchanged
+  ok   failed settings replacement retains the previous file and reports failure
+  ok   unknown style is refused without changing saved settings
+  ok   invalid saved style length 11 uses HD after a preceding Cartoon setting
+  ok   invalid saved style length 200 uses HD after a preceding Cartoon setting
+  ok   real story day rollover preserves the saved Cartoon style
+31 art-style checks passed, 0 failed
+
+=== regression (wave alpha, restoration and fallback) ===
+PASS tests/test_wave_renderer.py: HD and Cartoon complete actual wave captures
+WITNESS wave assertion executed: smoke
+PASS tests/test_wave_renderer.py: repeated translucent waves remain at one source-over blend
+WITNESS wave assertion executed: half-alpha
+PASS tests/test_wave_renderer.py: the next transparent frame clears old translucent and opaque pixels
+WITNESS wave assertion executed: transparent
+PASS tests/test_wave_renderer.py: opaque redraw and untouched black destination stay stable
+WITNESS wave assertion executed: opaque
+PASS tests/test_wave_renderer.py: overlapping neighbors survive restoration in current draw order
+WITNESS wave assertion executed: overlap
+PASS tests/test_wave_renderer.py: HD retains its exact legacy wave pixels
+WITNESS wave assertion executed: hd-legacy
+PASS tests/test_wave_renderer.py: Cartoon without active tide replacements equals HD byte-for-byte
+WITNESS wave assertion executed: inactive-tide
+INFO: optional pre-change executable comparison was not requested; independent legacy/fallback pixel checks executed.
+Wave renderer: 7 checks passed
+
+=== regression (palm alpha, clipping and fallback) ===
+PASS tests/test_palm_renderer.py: HD and Cartoon finish actual D/E captures
+WITNESS palm assertion executed: smoke
+PASS tests/test_palm_renderer.py: palm alpha128 remains128 away from Johnny on both routes
+WITNESS palm assertion executed: outside-alpha
+PASS tests/test_palm_renderer.py: palm-over-partial-Johnny preserves tree color and Johnny coverage
+WITNESS palm assertion executed: overlap
+PASS tests/test_palm_renderer.py: opaque palm still occludes Johnny
+WITNESS palm assertion executed: opaque
+PASS tests/test_palm_renderer.py: transparent palm preserves Johnny and empty background
+WITNESS palm assertion executed: transparent
+PASS tests/test_palm_renderer.py: source-atop respects scaled offset, clip and negative origin
+WITNESS palm assertion executed: clipping
+PASS tests/test_palm_renderer.py: HD retains its original source-over pixels
+WITNESS palm assertion executed: hd-legacy
+PASS tests/test_palm_renderer.py: partial Cartoon without palm replacements retains HD behavior
+WITNESS palm assertion executed: partial-fallback
+INFO historical pre-change driver unavailable; independent HD pixels and current full-frame fallback parity run above
+
+=== regression (art authoring tools) ===
+test_accepted_hash_mutation_is_rejected (test_art_tools.ArtToolsTests.test_accepted_hash_mutation_is_rejected) ... ok
+test_all_filters_rgb_rgba_and_grayscale_alpha (test_art_tools.ArtToolsTests.test_all_filters_rgb_rgba_and_grayscale_alpha) ... ok
+test_alpha_channel_is_required_for_sprites (test_art_tools.ArtToolsTests.test_alpha_channel_is_required_for_sprites) ... ok
+test_alpha_declaration_is_checked_against_pixels (test_art_tools.ArtToolsTests.test_alpha_declaration_is_checked_against_pixels) ... ok
+test_bad_deflate_with_correct_chunk_crc_is_rejected (test_art_tools.ArtToolsTests.test_bad_deflate_with_correct_chunk_crc_is_rejected) ... ok
+test_build_is_repeatable_preserves_originals_and_refuses_overwrite (test_art_tools.ArtToolsTests.test_build_is_repeatable_preserves_originals_and_refuses_overwrite) ... ok
+test_complete_coverage_requires_all_original_slots (test_art_tools.ArtToolsTests.test_complete_coverage_requires_all_original_slots) ... ok
+test_complete_pack_accepts_blank_sprite_and_opaque_rgb_screen (test_art_tools.ArtToolsTests.test_complete_pack_accepts_blank_sprite_and_opaque_rgb_screen) ... ok
+test_corrupt_crc_mutation_names_one_asset (test_art_tools.ArtToolsTests.test_corrupt_crc_mutation_names_one_asset) ... ok
+test_duplicate_accepted_path_mutation_names_one_asset (test_art_tools.ArtToolsTests.test_duplicate_accepted_path_mutation_names_one_asset) ... ok
+test_duplicate_archive_member_mutation_names_one_asset (test_art_tools.ArtToolsTests.test_duplicate_archive_member_mutation_names_one_asset) ... ok
+test_inventory_exports_unmodified_and_records_exact_aliases (test_art_tools.ArtToolsTests.test_inventory_exports_unmodified_and_records_exact_aliases) ... ok
+test_missing_accepted_file_mutation_names_one_asset (test_art_tools.ArtToolsTests.test_missing_accepted_file_mutation_names_one_asset) ... ok
+test_missing_coverage_mutation_names_one_asset (test_art_tools.ArtToolsTests.test_missing_coverage_mutation_names_one_asset) ... ok
+test_source_hash_mutation_is_rejected (test_art_tools.ArtToolsTests.test_source_hash_mutation_is_rejected) ... ok
+test_traversal_path_is_rejected_before_opening_a_file (test_art_tools.ArtToolsTests.test_traversal_path_is_rejected_before_opening_a_file) ... ok
+test_true_alpha_preserves_opaque_magenta_and_binary_control (test_art_tools.ArtToolsTests.test_true_alpha_preserves_opaque_magenta_and_binary_control) ... ok
+test_unrecorded_png_is_rejected (test_art_tools.ArtToolsTests.test_unrecorded_png_is_rejected) ... ok
+test_unsupported_png_mutations_name_one_asset (test_art_tools.ArtToolsTests.test_unsupported_png_mutations_name_one_asset) ... ok
+test_wrong_dimensions_mutation_names_one_asset (test_art_tools.ArtToolsTests.test_wrong_dimensions_mutation_names_one_asset) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.319s
+
+OK
+
+=== regression (art inventory source preservation) ===
+test_directory_symlink_alias (__main__.InventoryCliTests.test_directory_symlink_alias) ... skipped "directory symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'D:\\\\.ai-work\\\\worktrees\\\\johnny-cartoon-connecting-poses\\\\build\\\\connecting-poses\\\\windows-verification\\\\connecting-color-foot-promotion-v1\\\\temp\\\\johnny-inventory-cli-il9s5thd' -> 'D:\\\\.ai-work\\\\worktrees\\\\johnny-cartoon-connecting-poses\\\\build\\\\connecting-poses\\\\windows-verification\\\\connecting-color-foot-promotion-v1\\\\temp\\\\johnny-inventory-cli-il9s5thd\\\\alias'"
+test_distinct_existing_output (__main__.InventoryCliTests.test_distinct_existing_output) ... ok
+test_distinct_new_output (__main__.InventoryCliTests.test_distinct_new_output) ... ok
+test_distinct_output_with_export (__main__.InventoryCliTests.test_distinct_output_with_export) ... ok
+test_file_symlink_alias (__main__.InventoryCliTests.test_file_symlink_alias) ... skipped "file symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'D:\\\\.ai-work\\\\worktrees\\\\johnny-cartoon-connecting-poses\\\\build\\\\connecting-poses\\\\windows-verification\\\\connecting-color-foot-promotion-v1\\\\temp\\\\johnny-inventory-cli-g2y6stbc\\\\fixture.zip' -> 'D:\\\\.ai-work\\\\worktrees\\\\johnny-cartoon-connecting-poses\\\\build\\\\connecting-poses\\\\windows-verification\\\\connecting-color-foot-promotion-v1\\\\temp\\\\johnny-inventory-cli-g2y6stbc\\\\symlink.json'"
+test_hardlink_alias (__main__.InventoryCliTests.test_hardlink_alias) ... ok
+test_identity_checked_before_archive_parsing (__main__.InventoryCliTests.test_identity_checked_before_archive_parsing) ... ok
+test_identity_checked_before_export (__main__.InventoryCliTests.test_identity_checked_before_export) ... ok
+test_relative_path_alias (__main__.InventoryCliTests.test_relative_path_alias) ... ok
+test_same_path (__main__.InventoryCliTests.test_same_path) ... ok
+test_stdout_only (__main__.InventoryCliTests.test_stdout_only) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.263s
+
+OK (skipped=2)
+
+=== regression (art approval history) ===
+WITNESS module 6bd6088673392520d8f082099d249e736742094d2a7ce39e4573039bdb76142f
+test_all_pilot_slots_can_preserve_history_without_inheritance (__main__.HistoryTests.test_all_pilot_slots_can_preserve_history_without_inheritance) ... ok
+test_both_suites_after_future_promotion (__main__.HistoryTests.test_both_suites_after_future_promotion) ... FIRED Git LF rule docs/knowledge-base/cartoon-art-metadata.json via git version 2.55.0.windows.5
+FIRED Git LF rule docs/knowledge-base/cartoon-art-metadata.md via git version 2.55.0.windows.5
+FIRED Git LF rule docs/knowledge-base/cartoon-original-reference.json via git version 2.55.0.windows.5
+PASS future028 promotion: 84 historical and replacement tests
+ok
+test_declaration_shape (__main__.HistoryTests.test_declaration_shape) ... ok
+test_false_replacement (__main__.HistoryTests.test_false_replacement) ... ok
+test_history_and_original_facts_unchanged (__main__.HistoryTests.test_history_and_original_facts_unchanged) ... ok
+test_history_identity (__main__.HistoryTests.test_history_identity) ... ok
+test_history_pointer (__main__.HistoryTests.test_history_pointer) ... ok
+test_missing_active_pointer (__main__.HistoryTests.test_missing_active_pointer) ... ok
+test_nested_selected_approval (__main__.HistoryTests.test_nested_selected_approval) ... ok
+test_new_review_of_unchanged_pixels_is_explicit (__main__.HistoryTests.test_new_review_of_unchanged_pixels_is_explicit) ... ok
+test_pending_replacement (__main__.HistoryTests.test_pending_replacement) ... ok
+test_production_bytes (__main__.HistoryTests.test_production_bytes) ... ok
+test_recipe_canvas (__main__.HistoryTests.test_recipe_canvas) ... ok
+test_recipe_coverage (__main__.HistoryTests.test_recipe_coverage) ... ok
+test_recipe_hash (__main__.HistoryTests.test_recipe_hash) ... ok
+test_recipe_pointer (__main__.HistoryTests.test_recipe_pointer) ... ok
+test_replacement_list (__main__.HistoryTests.test_replacement_list) ... ok
+test_review_pointer (__main__.HistoryTests.test_review_pointer) ... ok
+test_schema2_deviations_are_historical (__main__.HistoryTests.test_schema2_deviations_are_historical) ... ok
+test_shared_inheritance_hash_guard (__main__.HistoryTests.test_shared_inheritance_hash_guard) ... ok
+test_unapproved_replacement (__main__.HistoryTests.test_unapproved_replacement) ... ok
+test_undeclared_replacement (__main__.HistoryTests.test_undeclared_replacement) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 14.347s
+
+OK
+
+=== regression (golden dump corpus) ===
+OK   dump regression: 2452 file(s) byte-identical to the golden corpus
+
+gate passed

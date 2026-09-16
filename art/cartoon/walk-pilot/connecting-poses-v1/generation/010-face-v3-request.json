@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "status": "requested",
+  "request": {
+    "prompt": "Correct the pupil placement in image1, using image2 as the comparison. These are the same aligned cartoon head. Image1 has pupils TOO FAR OUTWARD (wall-eyed). Image2 has pupils TOO FAR INWARD (cross-eyed). Place EACH pupil HALFWAY BETWEEN its position in image1 and its position in image2. The result should have each black pupil near the CENTER OF ITS OWN WHITE EYEBALL, looking naturally straight ahead. Maintain the same pupil sizes, catchlights and vertical height. Change only the two pupil positions. Keep the eyeball outlines, eyebrows, cap, hair, nose and beard identical to image1. Same close-up composition and transparent background. Return only one corrected head.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-face-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-face-v1.png"
+    ]
+  },
+  "input_roles": [
+    "outward-gaze face2 edit target",
+    "inward-gaze face1 comparison"
+  ],
+  "scope": "Intermediate pupil position study; not runtimeart.",
+  "reason_for_iteration": "Face-v2 overshot outward; use midpoint toward natural gaze."
+}

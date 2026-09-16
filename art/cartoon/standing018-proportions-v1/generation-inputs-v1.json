@@ -1,0 +1,47 @@
+{
+  "inputs": [
+    {
+      "path": "art/cartoon/arrival-pilot-v1/018-pose-v1.png",
+      "sha256": "4ed63ba9245dd30ac414caadba1a13febac240ffcbfa767c4f939a4bd83ddab2"
+    },
+    {
+      "path": "art/cartoon/arrival-pilot-v1/reference/018-nearest8.png",
+      "sha256": "228783a6a48523333a069592318308967e75537b83bb1a446c85c69fa7181c7a"
+    },
+    {
+      "path": "art/cartoon/skin-tone-v1/exports-v2/sprites/018.png",
+      "sha256": "17234ac49697108bbaadec45beb3de9ff4e5e54d05bdfb5a75c1c45604e625cf"
+    },
+    {
+      "path": "art/cartoon/standing018-proportions-v1/018-torso-v1.png",
+      "sha256": "0f7f636dbc6410797042c449cd37e59b93a26257bac9cc56b140df66952b44f8"
+    }
+  ],
+  "requests": [
+    {
+      "path": "art/cartoon/standing018-proportions-v1/generation-request-v1.json",
+      "sha256": "bd81ef0064008ba76f094573a69eb0ec83f2cc3e250b3aedecd6456341097d9b",
+      "prompt_utf8_sha256": "0fb15329c174a1470c84622c70402c9bd24633fca4322c4cdde862cb6a56fb85"
+    },
+    {
+      "path": "art/cartoon/standing018-proportions-v1/generation-request-v2.json",
+      "sha256": "e16d166cdf19af37be27223f28936b5c24262508b9bcd3e30d8b2ff87a1093f7",
+      "prompt_utf8_sha256": "94335d8f5533bb32bdb55ec9e57d7ff1dae4672b26a794ed0a5db7d13d548645"
+    }
+  ],
+  "schema_version": 1,
+  "tool": "built-in image_gen",
+  "ordered_input_paths": {
+    "v1": [
+      "art/cartoon/arrival-pilot-v1/018-pose-v1.png",
+      "art/cartoon/arrival-pilot-v1/reference/018-nearest8.png",
+      "art/cartoon/skin-tone-v1/exports-v2/sprites/018.png"
+    ],
+    "v2": [
+      "art/cartoon/standing018-proportions-v1/018-torso-v1.png",
+      "art/cartoon/arrival-pilot-v1/reference/018-nearest8.png",
+      "art/cartoon/skin-tone-v1/exports-v2/sprites/018.png"
+    ]
+  },
+  "scope": "Exact input order and bytes for the two recorded image edits. Reference roles and full prompts are in the bound request files. No generation output is automatically approved."
+}

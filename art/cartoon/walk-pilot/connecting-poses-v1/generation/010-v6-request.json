@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "prompt": "Use case: precise-object-edit. Edit this exact full-body cartoon sprite. Make one small fit correction: raise the PLANTED FOOT at the BOTTOM LEFT of the image, including its complete sole and toes, UP by approximately 15 pixels within this 1024x1536 canvas. Shorten the lower shin just enough to connect naturally. Keep that foot's size, direction, toe shapes and contact angle unchanged. The lowest sole must sit about 50 pixels above the bottom edge instead of about 35 pixels. Do NOT move the cap, head, eyes, beard, torso, arms, shorts, knees or raised screen-right foot. Preserve the approved pupil spacing exactly. Do not globally rescale or recenter the character. Same 1024x1536 transparent canvas, no floor, no shadow, no glow. One full-body sprite.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v5.png"
+    ]
+  },
+  "input_roles": [
+    "Full-body 010-v5 edit target"
+  ],
+  "scope": "Targeted planted-foot fit correction after fixed-scale export found bottom overhang of 0.10HD. Preserve gaze from approved face-v1 transfer."
+}

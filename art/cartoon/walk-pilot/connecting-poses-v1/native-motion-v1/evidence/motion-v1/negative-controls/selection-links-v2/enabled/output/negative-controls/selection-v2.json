@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "candidate_version": 2,
+  "positive_control_before_and_after": true,
+  "mutations": [
+    {
+      "mutation": "frame009 uses frame010 runtime with valid hash and same canvas",
+      "result": "FIRED",
+      "expected_failure": "selected runtime output binding:009"
+    },
+    {
+      "mutation": "frame010 uses frame009 runtime with valid hash and same canvas",
+      "result": "FIRED",
+      "expected_failure": "selected runtime output binding:010"
+    },
+    {
+      "mutation": "010 uses existing valid version1 exporter record",
+      "result": "FIRED",
+      "expected_failure": "selected exporter binding:010"
+    },
+    {
+      "mutation": "010 uses existing valid version1 smoke record",
+      "result": "FIRED",
+      "expected_failure": "selected smoke input binding:010"
+    },
+    {
+      "mutation": "010 uses existing valid version1 regression record",
+      "result": "FIRED",
+      "expected_failure": "selected regression input binding:010"
+    },
+    {
+      "mutation": "010 uses existing valid version1 checks record",
+      "result": "FIRED",
+      "expected_failure": "selected verification binding:010"
+    }
+  ],
+  "selection_sha256": "86b31a896e70f8977fcac4ef8eb573e5c96893f3e13e1b319d98674c728a83ab",
+  "executed_validator_sha256": "ba20285862b233049c63e3ffdb858eb1334765410d2be9a7425f5a9ef72480e9",
+  "harness_sha256": "1a264a79bc6a38ded82fcc867c07c154929a261bc5d6b40a697e4d455c4cbddd",
+  "scope": "Actual validator on the complete handoff: two same-canvas wrong-pose substitutions, plus four existing valid version1 tool/evidence substitutions for version2. Hashes establish identity; no human approval inferred."
+}

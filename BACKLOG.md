@@ -16,8 +16,8 @@ merged main `c903fb5`, the 40-asset delivery and fresh core/platform/authoring r
 
 | Item | Evidence and next useful action |
 | --- | --- |
-| Expand Cartoon by complete motion families | Production contains 40 assets: 20 walking poses, 5 standing views covering all 8 directions, and 15 island assets. The [production catalog](docs/knowledge-base/cartoon-production-catalog.md) tracks all 2,401 slots and supplied-original references. The complete front 024-029 and rear 011/019-023 families remain intact. The [profile delivery](docs/cartoon-profile-walk-verification.md) adds 001-008 together, including shared turn 003, after both native directions and ordinary departures were approved. Standing 000/015/016/017/018 retain their earlier scoped approvals. Ordinary 009/010/012 are the next connecting-pose batch. Other scenery states, holidays, rafts and most story animations still use fallback. Keep "Cartoon (preview)" until coverage is complete; PNG coverage does not review palette primitives, fades or every story interaction. |
-| Review remaining connecting poses 009/010/012 | The [profile family](art/cartoon/walk-pilot/profile-walk-v1/README.md) delivers 001-008 together, including shared 003, with native walking and ordinary-departure approval. Next author 009/010/012 with complete route/story contexts. 009 connects profile 003 to the accepted front 024-029 walk; 010/012 occur in compiled departure/waypoint paths despite no direct route-table rows. The [dependency summary](art/cartoon/walk-pilot/front-arrival-v1/ordinary-turns-v1/reference/dependency-summary.json) retains original references and separately attributed static TTM sites: 003=37, 009=5, 010=8, 012=2. These counts do not establish executed scene coverage. Unseen story uses of 003 remain to review. |
+| Expand Cartoon by complete motion families | Production contains 43 assets: 28 Johnny poses and 15 island assets. The [production catalog](docs/knowledge-base/cartoon-production-catalog.md) tracks all 2,401 slots and supplied-original references. Front 024-029, rear 011/019-023 and profile 001-008 are delivered, as are standing 000/015/016/017/018 and ordinary connecting 009/010/012. The [connecting delivery](docs/cartoon-connecting-poses-verification.md) includes the accepted lighter skin palette and corrected018 foot contact. Other scenery states, holidays, rafts and most story animations still use fallback. Keep "Cartoon (preview)" until coverage is complete; PNG coverage does not review palette primitives, fades or every story interaction. |
+| Review connecting poses in their story contexts | Ordinary native walking review covers009/010/012, including intermediate waypoints. Separately attributed static TTM sites are009=5,010=8,012=2; these counts do not establish executed story coverage. Exercise the actual story placements before claiming every use reviewed. Preserve the accepted geometry, skin palette and exact native walking timing separately. |
 | Compare first-pose and direction-dependent waiting against the original | Existing `ads.c:1110-1114` initializes timer and delay to6, then replaces only delay with the first `walkAnimate` result. Same-heading and positive-adjacent cases return the terminal80 immediately, retaining a six-tick timer; negative-adjacent cases return6 then80, which the later assignment honors. Current native direction-ring captures total1080ms increasing versus13880ms decreasing; these are sums of requested waits, not stopwatch measurements. Source/table reachability includes eligible STAND#15-to#1, #1-to#2 and repeated#1, but no random-story run was captured. Before changing the scheduler, compare same-heading and both adjacent directions against the windowed original, including pose onset, destination hold and next-scene onset. Preserve current art approvals separately. Compact native ring evidence is under `art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/review-evidence/native-v1/`. |
 | Review shared standing poses in their story contexts | The [wait/turn trace](art/cartoon/walk-pilot/front-arrival-v1/trace/trace.json) identifies31 static017 draws across eight TTM resources, including17 in SJLEAVES.000 has8 sites across5 resources;015 has1 in GJVIS5;018 has1 in SJLEAVES;016 has no attributed static TTM sites in this trace. Original and port counts agree, but linear script attribution does not execute every branch. Native arrival and direction-ring approvals do not review these story placements or contacts. Exercise them before claiming complete scene coverage, preserving the original-versus-port SJLEAVES delay distinction. |
 | Establish the remaining frontal walking sequence | Original JOHNWALK frames 033-035 visually form a frontal group with 010, but do not occur in the compiled walk table. Trace their complete TTM uses and timing before calling them a complete cycle or unused art. The [walking reference](art/cartoon/walk-expansion-v1/reference/NOTES.md) preserves the distinction; sprite 013 is a tiny placeholder, not a full character pose. |
@@ -53,6 +53,15 @@ merged main `c903fb5`, the 40-asset delivery and fresh core/platform/authoring r
 
 ## Profile-walk authoring checkpoint
 
+The later [connecting delivery](docs/cartoon-connecting-poses-verification.md)
+closes the connecting-pose, skin-palette and standing018 foot promotion items.
+The user accepted the matched lighter colors, retained the revised shorts and
+torso, then accepted foot-v5 with "much better proceed". Production uses27
+outputs from the frozen color bundle and the separately exported/normalized018.
+All2594 payloads match the final reviewed private package;15 island assets remain
+unchanged. Future image generations must receive fresh color/material checks
+and original-foot-contact comparisons before motion approval.
+
 Historical static-preview reconstruction needs explicit output isolation in the
 future shared authoring tool. An isolated execution of the actual profile
 `build_review.py` reproduced its frozen HTML and record with the old 32-asset
@@ -72,6 +81,14 @@ bounded by the capture set; this is not evidence of an accumulating memory leak.
 Before longer reviews, measure lazy loading and redraw-on-change in a shared
 successor while preserving this accepted checkpoint's exact helper/evidence
 bytes. No performance saving is claimed without a measured comparison.
+The connecting-pose viewer currently uses the same preload/redraw pattern for
+290 unique captures across six clips. Include that larger review when measuring
+the shared successor; its capture cache is also finite.
+The new skin-color viewer references 548 unique native images but loads only
+the selected clip and releases prior clip references. Browser regressions check
+exact active-clip membership; removing cache release triggers a named failure.
+This is a verified loading policy, not a measured memory or speed saving.
+Keep the historical viewers intact and carry the policy into a shared successor.
 
 The [approved profile family](art/cartoon/walk-pilot/profile-walk-v1/README.md)
 contains 001-008, including the lowered 003 tucked foot and revised far-arm

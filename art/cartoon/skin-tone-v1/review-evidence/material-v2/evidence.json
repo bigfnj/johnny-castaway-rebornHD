@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "scope": "Independent material witnesses, original-only semantic corrections and visual readback of export-v2. No human color approval, native parity or exhaustive material segmentation implied.",
+  "files_sha256": {
+    "export-recipe.json": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+    "helpers/cap_annotations.py": "e39c367d08e1054dcae0559f1d5db79a018d684b3d2cb2a4cbbf8d6d7fa45f2a",
+    "helpers/freeze_landmarks.py": "85e38fe76b7d519cb9b61090a480c9d1f4afa7adffb786bd7fd65dc90b451ed0",
+    "helpers/inspect_outputs.py": "06adc322e0fbe9dc9597454aafb4e73f2915f29361e52b6d189d4dbff24c3c9c",
+    "helpers/revise_landmarks.py": "09094e9f7f5802064afc15ea3ce88b806c3a1df199bdaffa28f45b0fb61c054e",
+    "helpers/select_landmarks.py": "bb7f13a4ad6b487a5f04c1f31864267c49173650efa76ae0ec82c15653591b4e",
+    "images/body-mask-check-0.png": "f6f8594fdd7a80181ef87b2161464193d0fb9870ba6d15609306a9c69ff232b5",
+    "images/body-mask-check-1.png": "566bbb8414465fd9f13aacc1c153df5b2b4a7c42a8533fb00975c91bd70f47a4",
+    "images/head-mask-check-0.png": "afdefc81775327edc8a86b7e7b5c2db4779b2444ecbebcdbfc61c21d55c46c16",
+    "images/head-mask-check-1.png": "2e84640cfa481cc38a4dfad139f746981e77afab6240cd3126749697394b5526",
+    "images/head-mask-check-2.png": "86b9ca656e4710bb79660d86cac9b7a8d5db71bdbef121e633f8877e9a2d492e",
+    "images/head-mask-check-3.png": "8cf3e3401aa3444f63d861050610fa26cf1dd975941f03cddc62f982d9e02d71",
+    "images/head-mask-check-4.png": "f8de239dc78d39a83145fc0add5ea45e293d153859293929d59256694a5955b2",
+    "images/head-mask-check-5.png": "cc0fc7d6f7aada6828340ba8cb30435d3c6cd00acf0557bd2d65b37570209123",
+    "images/head-mask-check-6.png": "f1caf89ce303ecf3a0ce350fcf0951f1b9bf5e1e173a23bc55d6c4b69941b1ad",
+    "material-review.json": "3965dc94323cebcbff3594cc89afa8f605d094d85b49678741bad9d09e9002db",
+    "original-grids/cap-boundaries-0.png": "e45cd37137c1c9a6d00b5cf71c53c5314474ba5a4a1af4ca478d746d12cc9cc5",
+    "original-grids/cap-boundaries-1.png": "a3e27054a4105781dffd31e1d8aa0eea493ac136768e2809e63a9963432b274f",
+    "original-grids/cap-boundaries-2.png": "01a7831a19f9ec9e4055ad5ba87cabc95f29b93c4dff97db57df9c8719ea0bdf",
+    "original-grids/cap-boundaries-3.png": "2e46d06e6817bfa4070f941cb35d89e467541de86b8900676577bea473d741a6",
+    "original-grids/cap-boundaries-4.png": "c17ef430b6c8a44b547e020560efb712d23a7ed90b9b826b8047e7e03bc239c0",
+    "original-grids/cap-boundaries-5.png": "1af7bc1c4e2deb4f2dd7d85ae42100cc474e52da263f5fa86ef7f2742d3dcbdf",
+    "original-grids/cap-boundaries-6.png": "4099d3f8bbde981f70ef46ad3f518e9e65d6f2c39ceb8d253d26a8b54e5ea3ab",
+    "original-grids/chest-all-0.png": "6a0ba2b669a15ae2d8769e38ec14713cc79aa89394a72c1c04b9047f383dc59e",
+    "original-grids/chest-all-1.png": "fdc71f32491bee1cdc5c9b9797d70c17442e231b84c8fbd331be592a64375ab2",
+    "original-grids/chest004-grid.png": "2db8f9de0e177e53efecceffc503ca8a74aee6cdbaf31fe7387001614762302b",
+    "original-grids/chest005-grid.png": "9ccf89900d605683cd04f922384c2d4fa2060dc33cee4760fb230d9aa0d39006",
+    "original-grids/chest008-grid.png": "0711bee8740feeea0bab25795b12f955725692cc4a6de1e1802936144a6d0af2",
+    "raw-readback.json": "6578f1b66e0efd4d0e9cfcca9e9f4d1238a962e4bc5007aa1c1f7f0db5d72b80"
+  },
+  "external_inputs_sha256": {
+    "../../protected-landmarks-v1.json": "44d904d6c72fd9706036dd746391e3bae180c3dbe9df2a918eec36bb05c49c97",
+    "../../protected-landmarks-v2.json": "6e1843ab2553a15d5ac4870f803062f97aa4c57de2d002fa604345c77bc63eff",
+    "../../protected-cap-polygons-v1.json": "9364a91c5e3481a8f0616aa87a0d29b848481b9e53cdf9360f45ba986f7f7c0f",
+    "../../input-index.json": "d1a694d71efb2c2ac3aea6b2d42f2cf82abe0c0ca1b09a7a6185df8ae64d1dc6"
+  },
+  "frozen_helper_scope": "Historical scratch helpers preserved exactly as executed. Reproduce commands must stage them at their documented scratch depth. Do not replay freeze/revise writers against retained witness files."
+}

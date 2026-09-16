@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "executed_helper_sha256": {
+    "config.py": "82df0b9d383ba8363be86b5c99edfbbe753bb4b0bd72c5eeaebe6f9e9e1a0c87",
+    "capture.py": "c9c5008f3dc3efe5ddefd02522f6621e744e8c61e6b3a85fd48d5f0c6b589bec",
+    "native_core.py": "996e60eb4e64d98ce0107d68db9f2cffb9229189eafbd9befdfaa61dafe2472e",
+    "negative_baseline.py": "4e62f7e7e637e78be5cce39482a37f09a8ca68aaa1861ec040415c3c7b1c7e52"
+  },
+  "mutations": [
+    {
+      "name": "wrong-table-fingerprint",
+      "status": "FIRED",
+      "expected_failure": "original-derived table identity"
+    },
+    {
+      "name": "missing-table-row",
+      "status": "FIRED",
+      "expected_failure": "complete original-derived walk table"
+    },
+    {
+      "name": "wrong-explicit-pose-sequence",
+      "status": "FIRED",
+      "expected_failure": "connecting sequence:front_arc"
+    },
+    {
+      "name": "missing-arrival-role",
+      "status": "FIRED",
+      "expected_failure": "valid final arrival and non-sentinel rows:front_arc"
+    },
+    {
+      "name": "sentinel-in-selected-turn",
+      "status": "FIRED",
+      "expected_failure": "valid final arrival and non-sentinel rows:front_arc"
+    },
+    {
+      "name": "changed-configured-duration",
+      "status": "FIRED",
+      "expected_failure": "connecting timing budget:front_arc"
+    },
+    {
+      "name": "wrong-waypoint-prediction",
+      "status": "FIRED",
+      "expected_failure": "connecting capture: independent compiled C trace agrees with source contract:waypoint_front:travel"
+    },
+    {
+      "name": "wrong-selected-waypoint-path",
+      "status": "FIRED",
+      "expected_failure": "connecting capture: actual selected configured path:travel"
+    },
+    {
+      "name": "wrong-terminal-role",
+      "status": "FIRED",
+      "expected_failure": "connecting capture: actual configured approved arrival"
+    }
+  ],
+  "count": 9,
+  "positive_original_contract_and_restored_native_parse": true,
+  "fresh_trace_witness": {
+    "executable_sha256": "60ceaaf121d97ddf95a0979ea165c4d1c4dc18ed367ac33420a02898be9b1f26",
+    "build_started_ns": 1789572499489099111,
+    "executable_mtime_ns": 1789572501309206000,
+    "case": "waypoint_front:travel",
+    "expected_frame_mutation": [
+      10,
+      12
+    ],
+    "engine_source_mutated": false
+  },
+  "baseline_build_sha256": "adfd1b7b37cbea0ad5177649623b060f883366a0d393a9ed1921391154ba8533",
+  "baseline_waypoint_report_sha256": "74daf07fcf86ac639198fd0eb8255dbc5b0798cd3697492b0c1fda681f087ca9",
+  "protected_inputs_unchanged": 60,
+  "scope": "Six contract-input negatives, one incorrect prediction checked against a freshly compiled unchanged C observer, one actual captured selected-path mutation, and one terminal role annotation mutation. No altered engine or original binary timing claim."
+}

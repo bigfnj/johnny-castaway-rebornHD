@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "smoke_passed": 1,
+  "mutations": [
+    {
+      "input": "review-v1/review.html",
+      "result": "FIRED",
+      "expected_failure": "preserve published HTML identity",
+      "mutated_sha256": "e33f8867ed351860224b01a1daa5afd4b9908fd2b9ad081078c30ab3910cfa6d"
+    },
+    {
+      "input": "candidate-v2/candidate-selection.json",
+      "result": "FIRED",
+      "expected_failure": "preserve captured selection identity",
+      "mutated_sha256": "32483bf0c48fe6cc81ff7e20ee047d4ff6d6fe000814dafed96ddfb5a272c9c9"
+    },
+    {
+      "input": "candidate-v2/front_arc/full/report.json",
+      "result": "FIRED",
+      "expected_failure": "preserve captured full report:candidate:front_arc",
+      "mutated_sha256": "a011f49e2356c3dce914a5b9ffe33de89664a5fd550a2ac48ccadd49b7559701"
+    }
+  ],
+  "restored_positives": 3,
+  "publication_sha256": "c3cd325a6d7852d9df5ec41aae94f248c0381d1b5b7ca671c56fe086a44c8fe9",
+  "executed_preserver_sha256": "dfb1df49fe9da93699e438564cfc598272649c56cb850e94b2d34089e41df63f",
+  "harness_sha256": "3f4e79b75f6e864d832244c295d0e9f45219c0bbde1aee40b9a1624363ccbdf1",
+  "original_inputs_sha256": {
+    "review-v1/review.html": "1f9e9100fb6add44815ef8f6bc2ee0ded6458925f78b19b8ccc20d515ff09c18",
+    "review-v1/review-record.json": "59d7ba02027981ec12e1a1a903590f4a0a1eba9554e0e6a712de5834c8d716cf",
+    "review-v1/browser-validation.json": "d6b3da6d2dc013a5ae3faf6967921e2dab6bd7607059b2dd164b8c2f4993d219",
+    "candidate-v2/preparation.json": "d60d18c69390a11e7edd498ea8de20e413caf47456bf3b31878934f866f7cbb8",
+    "candidate-v2/candidate-selection.json": "86b31a896e70f8977fcac4ef8eb573e5c96893f3e13e1b319d98674c728a83ab",
+    "baseline-v1/front_arc/full/report.json": "bc0ffbe67883884d66a023174ae6bc36c8f98f12e0384fca0fe358fe9aac17c8",
+    "baseline-v1/rear_arc/full/report.json": "0092ef1d9e1574013f1af43d997384e36e18bc8e22a4c20320b4db9f4213d8b5",
+    "baseline-v1/travel_cb/full/report.json": "e878a8e3181b918f301b036be7f02cf85614d96e5ff5e527c7c47516fbbf35bd",
+    "baseline-v1/travel_ec/full/report.json": "424531613f9c2932c10b6f5a0f36b9eef2eb3419bc2b8884ee78838fc6720066",
+    "baseline-v1/waypoint_front/full/report.json": "74daf07fcf86ac639198fd0eb8255dbc5b0798cd3697492b0c1fda681f087ca9",
+    "baseline-v1/waypoint_rear/full/report.json": "635c3a82d5f62107533173aad1b0bc8edb361e2ea0889c23b7cb48c89aba5cf3",
+    "candidate-v2/front_arc/full/report.json": "838b25c682c1be97f4e092e413709a856f877c2aae8b19d4434b5a9937e3b76d",
+    "candidate-v2/rear_arc/full/report.json": "a09de9ab991d44762c7c7278873c7fa04e7c107478a8227c4f27485e567e5e8b",
+    "candidate-v2/travel_cb/full/report.json": "7df07c012680232aadf3a3a920e41df9fad1f9178081c5bda99cbaccc1a337b3",
+    "candidate-v2/travel_ec/full/report.json": "caad7411906976a7ae6d4aa5609d1d78add1d615f7792ae2ecbd22e5ce44c470",
+    "candidate-v2/waypoint_front/full/report.json": "8ac1f3b802a7ccfee266b76e741556bb6a8abd9f51180e12cdc65ed5e3762ef9",
+    "candidate-v2/waypoint_rear/full/report.json": "2a2eee6479987a5eafa5808fbd80acabe6c2a043dd5eaec64cd16a0339c238ac"
+  },
+  "scope": "Actual preservation identity checker executed on published inputs and isolated copies. Changed valid HTML/selection/report bytes fail named checks, each restored positive passes. No actual review, publication, candidate or historical evidence edited."
+}

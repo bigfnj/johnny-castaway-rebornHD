@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "status": "Changed018 composition and retained identities verified; pending human contact and motion decision.",
+  "scope": "Read-only addendum to the prior43-asset preintegration review. No production, ledger, candidate, catalog or staging output was written. No repeat of the prior complete43-asset source tests.",
+  "prior_audit": {
+    "path": "art/cartoon/standing018-proportions-v1/preintegration-audit-v1.json",
+    "sha256": "eb94eca606fc0d9154e6d158f45b7a961f4f97e7b7370dc8e7476cc425550d67"
+  },
+  "selected018": {
+    "raw": {
+      "path": "art/cartoon/standing018-proportions-v1/018-foot-v5.png",
+      "sha256": "97922bacf481925f29640606e305ba1747b7de5fb1b01439e4fcdaf8e2621c5e"
+    },
+    "fixed_export_source": {
+      "path": "art/cartoon/standing018-proportions-v1/color/evidence-foot-v5/source-export/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "183cdf4b4f23e4164e7e290456ff8b8082301b8d952ad577b186ab4663a9c5b2"
+    },
+    "normalized_runtime": {
+      "path": "art/cartoon/standing018-proportions-v1/color/evidence-foot-v5/sprites/018.png",
+      "sha256": "5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f"
+    },
+    "color_recipe": {
+      "path": "art/cartoon/standing018-proportions-v1/color/evidence-foot-v5/recipe.json",
+      "sha256": "044d421dc3d0a33451f7c4dff34b9a5e375a544ddee848dca83f755b2382af8f"
+    },
+    "color_evidence": {
+      "path": "art/cartoon/standing018-proportions-v1/color/evidence-foot-v5/evidence.json",
+      "sha256": "b5b3362b7582c0c874fb983be5a96d140d6bad2b4f6c253546379e49e2762ac2"
+    }
+  },
+  "private_packages": {
+    "prior_v2": {
+      "path": "build/standing018-proportions/native-review/color-v2/scrantic_data.zip",
+      "sha256": "7a50f72fe65382917a1d38412dad97315542831ea5fd06eec9570734a7afdb52"
+    },
+    "selected_foot_v5": {
+      "path": "build/standing018-proportions/foot-v5-motion/scrantic_data.zip",
+      "sha256": "561edb2c9b4b4857b723af1505ce8d2654616aae2942325389604a4d88804521"
+    },
+    "selected_preparation": {
+      "path": "build/standing018-proportions/foot-v5-motion/preparation.json",
+      "sha256": "e33b23b225a222328091336443fb1112ebdb07ad93de7478850ebe11aa699251"
+    }
+  },
+  "fresh_member_comparison": {
+    "method": "Read every named payload in both pinned ZIPs and compare bytes directly; check duplicate names and exact selected018 bytes.",
+    "member_count_each": 2594,
+    "added_members": [],
+    "removed_members": [],
+    "changed_members": [
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/018.png"
+    ],
+    "unchanged_payloads": 2593,
+    "prior018_sha256": "21cf94cd90d369b20b6d3b8ef60b7cc2848f919ff828578320502aec9a17c55b"
+  },
+  "retained_evidence_readback": {
+    "copied_files_verified": 17,
+    "bound_sources_helpers_docs_verified": 10,
+    "mismatches": []
+  },
+  "production_still_unchanged": {
+    "archive": {
+      "path": "assets/scrantic_data.zip",
+      "sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db"
+    },
+    "pack": {
+      "path": "art/cartoon/pack.json",
+      "sha256": "bdf55967d89ab269d938fa1091be43d0c994ce985c4ac4c4be2899172be4a5b6"
+    }
+  },
+  "inherited_invariants_from_prior_audit": [
+    "Final composition remains43Cartoon assets:28Johnny plus15unchanged island assets, with2594total archive members.",
+    "The prior40-asset production delta remains3new009/010/012 payloads plus24changed existingJohnny payloads.029 remains byte-identical and all15island payloads remain unchanged.",
+    "Exactly27Johnny use the prior approved skin-tone-v1/exports-v2 recipe; only018 now selects the foot-v5 color recipe.",
+    "Existing HD-proxy source_sha256 semantics,15island ledger inheritance and full43-PNG standard-builder staging remain as specified in the prior audit."
+  ],
+  "integration_changes_from_prior_audit": [
+    "After the pending human contact/motion decision, bind the new v5 human decision, raw/source/color chain, technical evidence and final native/browser evidence in a new aggregate acceptance. Do not infer that the historicalv2 still approval approves v5 contact.",
+    "Point only018 at art/cartoon/standing018-proportions-v1/color/evidence-foot-v5/recipe.json and PNG5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f. Keep the other27Johnny selections and15island rows from the prior plan.",
+    "Compare the standard-builder output by all2594member payloads against selected private561edb2c9b4b4857b723af1505ce8d2654616aae2942325389604a4d88804521, rather than against superseded7a50f72f."
+  ],
+  "geometry_and_approval_limit": "Color preserves allalpha and placement relative to the newv5 source. Imagegen changed other upper/shorts pixels as documented; oldv2 was not preserved byte-for-byte. The sole144.6/146.1HD measurements meet the technical target but do not establish human contact acceptance, universal contact resolution or original-executable parity.",
+  "pending_checks": [
+    "Finish final native/browser evidence and obtain the explicit human contact/motion decision.",
+    "Then perform standard integration, metadata regeneration, delivery gates and final audit under root coordination."
+  ],
+  "probe_source_sha256": "0033d86a3ce23edcba8d153f861700afbd8e4f8e40472ca603a34826c7e3b0ae"
+}

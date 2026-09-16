@@ -1,0 +1,90 @@
+{
+  "clip": "front_arc",
+  "segments": {
+    "prime": {
+      "api_arguments": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "start_ms": 0,
+      "rows": [
+        [
+          0,
+          479,
+          216,
+          18
+        ]
+      ],
+      "draws": [
+        [
+          0,
+          478,
+          216,
+          18
+        ]
+      ],
+      "delays": [
+        80,
+        0
+      ],
+      "chosen_path": "D"
+    }
+  },
+  "completed_waits": [
+    [
+      0,
+      0
+    ]
+  ],
+  "display_count": 1,
+  "duration_ms": 0,
+  "status": "PASS",
+  "phase": "smoke",
+  "kind": "original_scene",
+  "style": "hd",
+  "displays": [
+    {
+      "index": 1,
+      "logical_ms": 0,
+      "segment": "prime",
+      "segment_ms": 0,
+      "role": "standing",
+      "stored_walk_row": [
+        0,
+        479,
+        216,
+        18
+      ],
+      "actual_draw": [
+        0,
+        478,
+        216,
+        18
+      ],
+      "draw_ordinal": 0,
+      "stage_draw_ordinal": 0,
+      "ppm": "display-001.ppm",
+      "png": "display-001.png",
+      "pixels_sha256": "a3b675f751060fd5f209c012f7c597943f1d1e0af6e1edb15ba38e9bd24e7ef0",
+      "png_sha256": "bbd14d460198e1edccee5f029e3085e9275bffb160f0a3270dee489a46dbef62",
+      "duration_ms": 0,
+      "baseline_pixels_sha256": "8b918fc43e7edb709018c075373e8bf52b9f1fcb14c9bcc7833d9816bd7fa20f"
+    }
+  ],
+  "loaded_art": [],
+  "command": [
+    "/out/connecting_walk_probe",
+    "hd",
+    "smoke",
+    "front_arc"
+  ],
+  "exit_code": 0,
+  "archive_sha256": "91075b95cbe37d4f8a1145adf7d9c2b02f5e12124e952ad3ca93d90cb6d715d1",
+  "executable_sha256": "203aebb8c15881a41108b2b4fb97f5f9c6d025aa595a678b4dd84906011f7563",
+  "log_sha256": "757d691393aeedf47ae798da270ceef23cec48a10fdd61d6b9c068c3d00ba72b",
+  "capture_helper_sha256": "cd5ce9bd1586d966a9729233bffc7d2e10c0828f7759ff05bc4c13697471c00c",
+  "reference_report_sha256": "701be438618e79cd81e90cb12798c980c498202a78d60a1df7a66ca35e1fc0f4",
+  "scope": "Supplied original artwork decoded by unchanged port; exact same observed path, draw and timing. Not DOSBox or original-executable parity."
+}

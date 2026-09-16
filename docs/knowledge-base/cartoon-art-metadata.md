@@ -100,7 +100,7 @@ hashes use exact preserved bytes; the maintained pack ledger uses the text polic
 
 See [art guidance](../cartoon-art.md), [learnings](../art-style-learnings.md),
 [motion review](../../art/cartoon/motion-review.md) and
-[current production acceptance](../../art/cartoon/walk-pilot/profile-walk-v1/acceptance.json).
+[current production acceptance](../../art/cartoon/skin-tone-v1/production-acceptance.json).
 
 ## Current production and preserved pilot
 
@@ -123,10 +123,10 @@ Each current production mapping below resolves to its own accepted record; a rep
 | `BMP/BACKGRND.BMP/013` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json` |
 | `BMP/BACKGRND.BMP/014` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json` |
 | `BMP/BACKGRND.BMP/015` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json` |
-| `BMP/JOHNWALK.BMP/024` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json` |
-| `BMP/JOHNWALK.BMP/025` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json` |
-| `BMP/JOHNWALK.BMP/026` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json` |
-| `BMP/JOHNWALK.BMP/027` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json` |
-| `BMP/JOHNWALK.BMP/028` | replaced | `art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json` | `art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json` |
-| `BMP/JOHNWALK.BMP/029` | replaced | `art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json` | `art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json` |
+| `BMP/JOHNWALK.BMP/024` | replaced | `art/cartoon/skin-tone-v1/production-acceptance.json` | `art/cartoon/skin-tone-v1/exports-v2/recipe.json` |
+| `BMP/JOHNWALK.BMP/025` | replaced | `art/cartoon/skin-tone-v1/production-acceptance.json` | `art/cartoon/skin-tone-v1/exports-v2/recipe.json` |
+| `BMP/JOHNWALK.BMP/026` | replaced | `art/cartoon/skin-tone-v1/production-acceptance.json` | `art/cartoon/skin-tone-v1/exports-v2/recipe.json` |
+| `BMP/JOHNWALK.BMP/027` | replaced | `art/cartoon/skin-tone-v1/production-acceptance.json` | `art/cartoon/skin-tone-v1/exports-v2/recipe.json` |
+| `BMP/JOHNWALK.BMP/028` | replaced | `art/cartoon/skin-tone-v1/production-acceptance.json` | `art/cartoon/skin-tone-v1/exports-v2/recipe.json` |
+| `BMP/JOHNWALK.BMP/029` | replaced | `art/cartoon/skin-tone-v1/production-acceptance.json` | `art/cartoon/skin-tone-v1/exports-v2/recipe.json` |
 | `SCR/OCEAN02.SCR` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json` |

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Johnny's skin tone</title>
+<style>
+:root{color-scheme:dark;font-family:Segoe UI,Arial,sans-serif;background:#14222d;color:#edf5f8}*{box-sizing:border-box}body{margin:0}main{max-width:1440px;margin:auto;padding:20px}h1{font-size:26px;margin:0 0 7px}p{color:#b5c8d5;line-height:1.5;margin:6px 0 16px}button,select,a{font:inherit}button,select{padding:8px 12px;border:1px solid #526979;border-radius:7px;background:#243946;color:inherit}button{cursor:pointer}button:hover{background:#335163}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:16px 0}.panels{display:grid;grid-template-columns:1fr 1fr .8fr;gap:14px}.panel{padding:12px;background:#21343f;border-radius:9px;min-width:0}.panel h2{font-size:17px;margin:0 0 10px}.stage{height:480px;display:flex;justify-content:center;align-items:flex-start;overflow:hidden;background:repeating-conic-gradient(#293c48 0% 25%,#263743 0% 50%) 0/36px 36px}.stage img{image-rendering:pixelated;max-width:none;flex:none}.reference{border:1px solid #a5d7c1}.tag{font-size:13px;color:#b8e8d4}.muted{font-size:14px;color:#b5c8d5}.mask-panel{display:none}.masks .mask-panel{display:block}.masks .panels{grid-template-columns:1fr 1fr 1fr}.masks .reference{display:none}.sheets{display:flex;gap:12px;flex-wrap:wrap}.sheets a{color:#b9dfed}#pose-note{min-height:22px}footer{margin-top:20px;color:#b5c8d5;font-size:14px}@media(max-width:850px){.panels,.masks .panels{grid-template-columns:1fr 1fr}.reference{grid-column:1/-1}.stage{height:390px}.stage img{max-height:390px;width:auto!important}.mask-panel{grid-column:1/-1}}
+</style>
+<main><h1>Johnny's skin tone</h1><p>Compare the earlier colors with the lighter tone you chose. Every pose stays the same.</p>
+<div class="toolbar"><button id="prev" aria-label="Previous pose">Previous</button><label>Pose <select id="pose"></select></label><button id="next" aria-label="Next pose">Next</button><label><input type="checkbox" id="mask-toggle"> Show color mask</label></div>
+<p id="pose-note" class="tag"></p><div class="panels">
+<section class="panel"><h2>Earlier colors</h2><div class="stage"><img id="before" alt="Selected pose before color correction"></div></section>
+<section class="panel"><h2>Matched colors</h2><div class="stage"><img id="after" alt="Same pose with matched skin color"></div></section>
+<section class="panel reference"><h2>Color reference · 029</h2><div class="stage"><img id="reference" alt="Unchanged frame029 color reference"></div><p class="tag">Unchanged</p></section>
+<section class="panel mask-panel"><h2>Color mask</h2><div class="stage"><img id="overlay" alt="Magenta highlight over the color mask"></div><p class="muted">Magenta shows where the color adjustment can apply. Darker areas receive less adjustment.</p></section>
+</div><footer><p>Still-pose color check. The island animation review follows.</p><div class="sheets" id="sheets"></div></footer></main>
+<script id="review-data" type="application/json">__DATA__</script>
+<script>
+const data=JSON.parse(document.getElementById('review-data').textContent),select=document.getElementById('pose');
+data.frames.forEach(row=>{const option=document.createElement('option');option.value=row.frame;option.textContent=String(row.frame).padStart(3,'0')+(row.reference_unchanged?' · reference':'');select.appendChild(option)});
+function assign(id,path,row){const im=document.getElementById(id);im.src=path;im.style.width=(row.canvas[0]*3)+'px';im.style.height=(row.canvas[1]*3)+'px'}
+function render(){const row=data.frames.find(x=>x.frame===Number(select.value));['before','after','overlay'].forEach(key=>assign(key,row[key],row));document.getElementById('pose-note').textContent=row.reference_unchanged?'Pose029 is the chosen reference. Its colors are unchanged.':'Pose '+String(row.frame).padStart(3,'0')+' · identical pose and size';document.body.dataset.frame=row.frame}
+select.value=data.default_frame;select.addEventListener('change',render);['prev','next'].forEach((id,d)=>document.getElementById(id).addEventListener('click',()=>{select.selectedIndex=(select.selectedIndex+(d?1:-1)+data.frames.length)%data.frames.length;render()}));
+document.getElementById('mask-toggle').addEventListener('change',event=>document.body.classList.toggle('masks',event.target.checked));
+const reference=data.frames.find(x=>x.frame===data.reference_frame);assign('reference',reference.before,reference);data.sheets.forEach((path,index)=>{const a=document.createElement('a');a.href=path;a.textContent='Contact sheet '+(index+1);a.target='_blank';a.rel='noopener';document.getElementById('sheets').appendChild(a)});render();
+</script></html>

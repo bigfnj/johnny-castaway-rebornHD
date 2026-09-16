@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "scope": "Independent static 009 review builder checks; no approval or native motion claim.",
+  "prior_harness_attempt": {
+    "logs_directory": "build/connecting-analysis/review-negatives",
+    "result": "All three builder rejections executed; audit stopped on unescaped Windows path text assertion for FileExistsError before writing its report.",
+    "correction": "Match repr(path) for FileExistsError; repeat all controls in separate run-v2 directory."
+  },
+  "status": "PASS",
+  "runs": [
+    {
+      "name": "positive",
+      "command": [
+        "${PYTHON}",
+        "-B",
+        "art/cartoon/walk-pilot/connecting-poses-v1/build_review.py",
+        "--export",
+        "build/connecting-analysis/export009-v1",
+        "--output",
+        "build/connecting-analysis/review-negatives/run-v2/positive"
+      ],
+      "returncode": 0,
+      "logs": {
+        "stdout": {
+          "path": "build/connecting-analysis/review-negatives/run-v2/positive.stdout.txt",
+          "sha256": "a64fd33fb709a7e327f1f9b7bab0dde81710107e80e2606a14b02d169e72e5d8"
+        },
+        "stderr": {
+          "path": "build/connecting-analysis/review-negatives/run-v2/positive.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "witness": "PASS and HTML exactly equals published checkpoint"
+    },
+    {
+      "name": "corrupted-runtime",
+      "command": [
+        "${PYTHON}",
+        "-B",
+        "art/cartoon/walk-pilot/connecting-poses-v1/build_review.py",
+        "--export",
+        "build/connecting-analysis/review-negatives/run-v2/corrupted-runtime-input",
+        "--output",
+        "build/connecting-analysis/review-negatives/run-v2/corrupted-runtime-output"
+      ],
+      "returncode": 1,
+      "logs": {
+        "stdout": {
+          "path": "build/connecting-analysis/review-negatives/run-v2/corrupted-runtime.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "build/connecting-analysis/review-negatives/run-v2/corrupted-runtime.stderr.txt",
+          "sha256": "52518f9039217451dcf5d6a9190971137150d81d2519fcd079cacd7861552513"
+        }
+      },
+      "witness": "candidate-png:009 naming mutated 009.png exactly once",
+      "mutated_path": "build/connecting-analysis/review-negatives/run-v2/corrupted-runtime-input/BMP/JOHNWALK.BMP/009.png",
+      "mutated_sha256": "8d30d422209d907bc17fabbe061c681cd99506a9d40d63eb6e60453cff49fcd5",
+      "output_not_created": true
+    },
+    {
+      "name": "wrong-recipe-frame",
+      "command": [
+        "${PYTHON}",
+        "-B",
+        "art/cartoon/walk-pilot/connecting-poses-v1/build_review.py",
+        "--export",
+        "build/connecting-analysis/review-negatives/run-v2/wrong-frame-input",
+        "--output",
+        "build/connecting-analysis/review-negatives/run-v2/wrong-frame-output"
+      ],
+      "returncode": 1,
+      "logs": {
+        "stdout": {
+          "path": "build/connecting-analysis/review-negatives/run-v2/wrong-recipe-frame.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "build/connecting-analysis/review-negatives/run-v2/wrong-recipe-frame.stderr.txt",
+          "sha256": "c44557b22568e79388a49d4e1bf2f251c3bdaa723b96f08eea4c44e353e82581"
+        }
+      },
+      "witness": "candidate-frame:009 naming mutated recipe.json exactly once",
+      "mutated_path": "build/connecting-analysis/review-negatives/run-v2/wrong-frame-input/recipe.json",
+      "mutated_sha256": "383c8ba3ef883a20b4a84ca4f7218785d84908237a29f1e56fcb077226a0c998",
+      "output_not_created": true
+    },
+    {
+      "name": "existing-output",
+      "command": [
+        "${PYTHON}",
+        "-B",
+        "art/cartoon/walk-pilot/connecting-poses-v1/build_review.py",
+        "--export",
+        "build/connecting-analysis/export009-v1",
+        "--output",
+        "build/connecting-analysis/review-negatives/run-v2/occupied-output"
+      ],
+      "returncode": 1,
+      "logs": {
+        "stdout": {
+          "path": "build/connecting-analysis/review-negatives/run-v2/existing-output.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "build/connecting-analysis/review-negatives/run-v2/existing-output.stderr.txt",
+          "sha256": "d659ef1fb809cddfb94f126b38dff74776751c18c4f82ffeb2326b5bcc3e791a"
+        }
+      },
+      "witness": "FileExistsError naming occupied output exactly once",
+      "unchanged_files": {
+        "review-record.json": "02e1f8705a041db90b8774c3c9f8a071d080e0233e102951c0ca595eacd40789",
+        "sentinel.txt": "426fd5d6e02f3395cb39f31f16eab40ba0a2a23e60812d61908ec987aa4616ba"
+      },
+      "no_new_files": true
+    }
+  ],
+  "embedded_blobs": {
+    "original": {
+      "sha256": "2d155c460695ed3ae4577b07f54e52c0e268de9ad5591aa45281513820540479",
+      "canvas": [
+        40,
+        74
+      ],
+      "mode": "RGBA"
+    },
+    "candidate": {
+      "sha256": "4d9584133241db74595d657a68482e73c91a486a605247ce04aa7b0cd35e7311",
+      "canvas": [
+        80,
+        148
+      ],
+      "mode": "RGBA"
+    },
+    "identity017": {
+      "sha256": "60e3a77a64620502d2b5198911a7805e19aaedf07801c7a00a92c030b4924de1",
+      "canvas": [
+        80,
+        150
+      ],
+      "mode": "RGBA"
+    },
+    "identity003": {
+      "sha256": "36778a48ed8caaa23a56ac47da8e82fdcd292998e32e79e5cd26b40c6ab462e3",
+      "canvas": [
+        80,
+        152
+      ],
+      "mode": "RGBA"
+    }
+  },
+  "runtime_canvas": [
+    80,
+    148
+  ],
+  "identity_sources": {
+    "identity017": "assets/scrantic_data.zip::data/styles/cartoon/BMP/JOHNWALK.BMP/017.png",
+    "identity003": "assets/scrantic_data.zip::data/styles/cartoon/BMP/JOHNWALK.BMP/003.png"
+  },
+  "production_and_actual_review_unchanged": true,
+  "protected_inputs_sha256": {
+    "art/cartoon/walk-pilot/connecting-poses-v1/build_review.py": "470ac09499a95197694eec1250c94221e5743a76781b92b2ca70833a4be89687",
+    "art/cartoon/walk-pilot/connecting-poses-v1/review-template.html": "b7feaacd987b577c62f429a864f2889cd67d3ab9850f951504c80baa7a6118e9",
+    "art/cartoon/walk-pilot/connecting-poses-v1/reference/009-source.json": "7923b3d1572951a358d63fdbeb45c25c5a3bf769ce93327ebd89328b0c2e1fd1",
+    "art/cartoon/walk-pilot/connecting-poses-v1/reference/009-original-native.png": "2d155c460695ed3ae4577b07f54e52c0e268de9ad5591aa45281513820540479",
+    "build/connecting-analysis/export009-v1/recipe.json": "a3e4e9bd8c2bec2bcd581fcbc0fe77945c67b4fb3a3bd261f6af7c6b3bf9bc56",
+    "build/connecting-analysis/export009-v1/export-report.json": "655a9a1133e7ae54b38a3a143129f5def55627d6793e4e5571a48bd1783f1fa0",
+    "build/connecting-analysis/export009-v1/BMP/JOHNWALK.BMP/009.png": "4d9584133241db74595d657a68482e73c91a486a605247ce04aa7b0cd35e7311",
+    "assets/scrantic_data.zip": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+    "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/pose009-v1/review.html": "c6d1bd218f35cd5cbf5f8f9baec709fe1cc3c6934e32bfb106b4852fa37c5481",
+    "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/pose009-v1/review-record.json": "ba8d05de49777cd1dadb7f9ab3742f29a23e7f1a9391da2ce88249bea369a3b0"
+  },
+  "audit_script_sha256": "7de32c80359edef97e2501657d51f0491600f09711fa974f120cf409e230ae9f",
+  "limits": [
+    "Three named rejection controls executed in fresh copied inputs.",
+    "Embedded PNG identity and geometry verified; browser pixel rendering was not rerun.",
+    "This verifies the present static checkpoint and these three guards, not arbitrary forged report/recipe resistance.",
+    "No tracked files, actual review evidence, production archive or original export were edited."
+  ]
+}

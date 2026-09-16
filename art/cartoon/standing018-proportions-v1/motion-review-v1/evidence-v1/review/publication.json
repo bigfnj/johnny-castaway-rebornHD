@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8932/standing018-motion-v1/review.html",
+  "slug": "standing018-motion-v1",
+  "html_sha256": "6c27eb46186eb2469d70f879a72b5c1a2865c69e2ecc425bba7aeaeeb9d630ac",
+  "review_record_sha256": "0d1977ddf3bbad5f81034cfb2630ce11dd02f66e32b479492de05ccfda78eb5f",
+  "served_files_checked": 201,
+  "publication_binding_controls": [
+    {
+      "case": "stale-html",
+      "failure": "publication tested HTML binding"
+    },
+    {
+      "case": "stale-checker",
+      "failure": "publication tested checker binding"
+    },
+    {
+      "case": "stale-review",
+      "failure": "publication negative review binding"
+    }
+  ],
+  "positive_before_and_restored_after": true,
+  "publisher_sha256": "0efd91f1db5f0f1d38e1bed53c5aeadb46b7d95fedfa9214dd7fbb0982c81b0e",
+  "negative_result_sha256": "19ac99aa7200f565e70ae6156317f4be813e99388546ac38844df928bb4bcc1d",
+  "served_browser_sha256": "39d7119eb6787d653a3f51ece5062994482c45f7760a7a6de55a259d642f8f4a",
+  "screenshots_sha256": {
+    "published-waypoint_front-last018-1280.png": "8c909ce8ddcf84ed0a7395bf3d7a58c97cb500be5165c7a99ad19ee18a3fd5a2",
+    "published-front_arc-last018-1280.png": "2de24dc4dcd9030a9f317161292713fd7edb8958ed6f75539f03a22c12c6f02a",
+    "published-waypoint_rear-last018-1280.png": "7894e0f504ed5395a31074451e2fd45ee19638a64b5f1f4b563f39f5f376d053"
+  },
+  "scope": "Verified local review published unchanged; human motion approval pending.",
+  "finished_existing_after_screenshot_helper_timeout": true
+}

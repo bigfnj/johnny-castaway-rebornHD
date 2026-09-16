@@ -1,0 +1,1566 @@
+{
+  "method": "Explicit original-derived table rows and native API boundaries, independently checked against compiled unchanged walk/calcpath before rendering. All display times are observed separately.",
+  "source_table": "src/data/walk_data.h",
+  "source_sha256": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769",
+  "source_lf_sha256": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70",
+  "clips": {
+    "front_arc": {
+      "prime": {
+        "api_arguments": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "chosen_path": "D",
+        "draws": [
+          {
+            "frame": 18,
+            "flip_x": 0,
+            "x": 478,
+            "y": 216,
+            "delay_ticks": 80,
+            "role": "standing",
+            "table_row": 326
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          3,
+          3,
+          2,
+          7
+        ],
+        "chosen_path": "DC",
+        "draws": [
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 464,
+            "y": 217,
+            "delay_ticks": 6,
+            "role": "ordinary turn",
+            "table_row": 316
+          },
+          {
+            "frame": 9,
+            "flip_x": 1,
+            "x": 472,
+            "y": 220,
+            "delay_ticks": 6,
+            "role": "ordinary turn",
+            "table_row": 315
+          },
+          {
+            "frame": 10,
+            "flip_x": 0,
+            "x": 479,
+            "y": 219,
+            "delay_ticks": 6,
+            "role": "ordinary turn",
+            "table_row": 314
+          },
+          {
+            "frame": 9,
+            "flip_x": 0,
+            "x": 479,
+            "y": 220,
+            "delay_ticks": 6,
+            "role": "ordinary turn",
+            "table_row": 321
+          },
+          {
+            "frame": 28,
+            "flip_x": 1,
+            "x": 480,
+            "y": 218,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 278
+          },
+          {
+            "frame": 29,
+            "flip_x": 1,
+            "x": 486,
+            "y": 220,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 279
+          },
+          {
+            "frame": 24,
+            "flip_x": 1,
+            "x": 499,
+            "y": 223,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 280
+          },
+          {
+            "frame": 25,
+            "flip_x": 1,
+            "x": 498,
+            "y": 223,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 281
+          },
+          {
+            "frame": 26,
+            "flip_x": 1,
+            "x": 503,
+            "y": 224,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 282
+          },
+          {
+            "frame": 27,
+            "flip_x": 1,
+            "x": 506,
+            "y": 227,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 283
+          },
+          {
+            "frame": 28,
+            "flip_x": 1,
+            "x": 508,
+            "y": 226,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 284
+          },
+          {
+            "frame": 29,
+            "flip_x": 1,
+            "x": 513,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 285
+          },
+          {
+            "frame": 24,
+            "flip_x": 1,
+            "x": 520,
+            "y": 233,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 286
+          },
+          {
+            "frame": 25,
+            "flip_x": 1,
+            "x": 520,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 287
+          },
+          {
+            "frame": 17,
+            "flip_x": 0,
+            "x": 521,
+            "y": 233,
+            "delay_ticks": 80,
+            "role": "arrival",
+            "table_row": 276
+          }
+        ],
+        "expected_native_duration_ms": 3280
+      }
+    },
+    "rear_arc": {
+      "prime": {
+        "api_arguments": [
+          3,
+          6,
+          3,
+          6
+        ],
+        "chosen_path": "D",
+        "draws": [
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 484,
+            "y": 217,
+            "delay_ticks": 80,
+            "role": "standing",
+            "table_row": 329
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          3,
+          6,
+          4,
+          2
+        ],
+        "chosen_path": "DE",
+        "draws": [
+          {
+            "frame": 23,
+            "flip_x": 1,
+            "x": 479,
+            "y": 215,
+            "delay_ticks": 6,
+            "role": "ordinary turn",
+            "table_row": 319
+          },
+          {
+            "frame": 12,
+            "flip_x": 0,
+            "x": 476,
+            "y": 217,
+            "delay_ticks": 6,
+            "role": "ordinary turn",
+            "table_row": 318
+          },
+          {
+            "frame": 23,
+            "flip_x": 0,
+            "x": 478,
+            "y": 216,
+            "delay_ticks": 6,
+            "role": "ordinary turn",
+            "table_row": 317
+          },
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 464,
+            "y": 217,
+            "delay_ticks": 6,
+            "role": "ordinary turn",
+            "table_row": 316
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 458,
+            "y": 218,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 289
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 447,
+            "y": 220,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 290
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 436,
+            "y": 217,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 291
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 437,
+            "y": 217,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 292
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 426,
+            "y": 217,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 293
+          },
+          {
+            "frame": 1,
+            "flip_x": 1,
+            "x": 417,
+            "y": 217,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 294
+          },
+          {
+            "frame": 2,
+            "flip_x": 1,
+            "x": 409,
+            "y": 214,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 295
+          },
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 406,
+            "y": 212,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 296
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 399,
+            "y": 213,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 297
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 393,
+            "y": 212,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 298
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 394,
+            "y": 212,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 299
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 386,
+            "y": 212,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 300
+          },
+          {
+            "frame": 0,
+            "flip_x": 1,
+            "x": 379,
+            "y": 211,
+            "delay_ticks": 80,
+            "role": "arrival",
+            "table_row": 416
+          }
+        ],
+        "expected_native_duration_ms": 3520
+      }
+    },
+    "travel_cb": {
+      "prime": {
+        "api_arguments": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "chosen_path": "C",
+        "draws": [
+          {
+            "frame": 17,
+            "flip_x": 1,
+            "x": 515,
+            "y": 233,
+            "delay_ticks": 80,
+            "role": "standing",
+            "table_row": 270
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "chosen_path": "CB",
+        "draws": [
+          {
+            "frame": 9,
+            "flip_x": 1,
+            "x": 514,
+            "y": 235,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 196
+          },
+          {
+            "frame": 28,
+            "flip_x": 0,
+            "x": 521,
+            "y": 233,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 197
+          },
+          {
+            "frame": 29,
+            "flip_x": 0,
+            "x": 514,
+            "y": 235,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 198
+          },
+          {
+            "frame": 24,
+            "flip_x": 0,
+            "x": 510,
+            "y": 237,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 199
+          },
+          {
+            "frame": 25,
+            "flip_x": 0,
+            "x": 503,
+            "y": 237,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 200
+          },
+          {
+            "frame": 26,
+            "flip_x": 0,
+            "x": 498,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 201
+          },
+          {
+            "frame": 27,
+            "flip_x": 0,
+            "x": 493,
+            "y": 241,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 202
+          },
+          {
+            "frame": 28,
+            "flip_x": 0,
+            "x": 490,
+            "y": 241,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 203
+          },
+          {
+            "frame": 29,
+            "flip_x": 0,
+            "x": 481,
+            "y": 244,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 204
+          },
+          {
+            "frame": 24,
+            "flip_x": 0,
+            "x": 476,
+            "y": 249,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 205
+          },
+          {
+            "frame": 25,
+            "flip_x": 0,
+            "x": 469,
+            "y": 249,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 206
+          },
+          {
+            "frame": 26,
+            "flip_x": 0,
+            "x": 462,
+            "y": 251,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 207
+          },
+          {
+            "frame": 27,
+            "flip_x": 0,
+            "x": 456,
+            "y": 255,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 208
+          },
+          {
+            "frame": 9,
+            "flip_x": 1,
+            "x": 446,
+            "y": 256,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 209
+          },
+          {
+            "frame": 17,
+            "flip_x": 1,
+            "x": 447,
+            "y": 257,
+            "delay_ticks": 80,
+            "role": "arrival",
+            "table_row": 155
+          }
+        ],
+        "expected_native_duration_ms": 3280
+      }
+    },
+    "travel_ec": {
+      "prime": {
+        "api_arguments": [
+          4,
+          7,
+          4,
+          7
+        ],
+        "chosen_path": "E",
+        "draws": [
+          {
+            "frame": 17,
+            "flip_x": 0,
+            "x": 394,
+            "y": 213,
+            "delay_ticks": 80,
+            "role": "standing",
+            "table_row": 421
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          4,
+          7,
+          2,
+          6
+        ],
+        "chosen_path": "EC",
+        "draws": [
+          {
+            "frame": 28,
+            "flip_x": 1,
+            "x": 395,
+            "y": 212,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 356
+          },
+          {
+            "frame": 29,
+            "flip_x": 1,
+            "x": 401,
+            "y": 214,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 357
+          },
+          {
+            "frame": 24,
+            "flip_x": 1,
+            "x": 414,
+            "y": 216,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 358
+          },
+          {
+            "frame": 25,
+            "flip_x": 1,
+            "x": 412,
+            "y": 216,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 359
+          },
+          {
+            "frame": 26,
+            "flip_x": 1,
+            "x": 417,
+            "y": 217,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 360
+          },
+          {
+            "frame": 27,
+            "flip_x": 1,
+            "x": 421,
+            "y": 220,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 361
+          },
+          {
+            "frame": 28,
+            "flip_x": 1,
+            "x": 422,
+            "y": 219,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 362
+          },
+          {
+            "frame": 29,
+            "flip_x": 1,
+            "x": 428,
+            "y": 221,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 363
+          },
+          {
+            "frame": 24,
+            "flip_x": 1,
+            "x": 436,
+            "y": 225,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 364
+          },
+          {
+            "frame": 25,
+            "flip_x": 1,
+            "x": 433,
+            "y": 226,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 365
+          },
+          {
+            "frame": 9,
+            "flip_x": 0,
+            "x": 434,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 366
+          },
+          {
+            "frame": 3,
+            "flip_x": 0,
+            "x": 439,
+            "y": 226,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 367
+          },
+          {
+            "frame": 4,
+            "flip_x": 0,
+            "x": 443,
+            "y": 227,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 368
+          },
+          {
+            "frame": 5,
+            "flip_x": 0,
+            "x": 444,
+            "y": 230,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 369
+          },
+          {
+            "frame": 6,
+            "flip_x": 0,
+            "x": 454,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 370
+          },
+          {
+            "frame": 7,
+            "flip_x": 0,
+            "x": 470,
+            "y": 228,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 371
+          },
+          {
+            "frame": 8,
+            "flip_x": 0,
+            "x": 472,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 372
+          },
+          {
+            "frame": 1,
+            "flip_x": 0,
+            "x": 473,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 373
+          },
+          {
+            "frame": 2,
+            "flip_x": 0,
+            "x": 487,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 374
+          },
+          {
+            "frame": 3,
+            "flip_x": 0,
+            "x": 498,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 375
+          },
+          {
+            "frame": 4,
+            "flip_x": 0,
+            "x": 505,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 376
+          },
+          {
+            "frame": 6,
+            "flip_x": 0,
+            "x": 504,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 377
+          },
+          {
+            "frame": 7,
+            "flip_x": 0,
+            "x": 518,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 378
+          },
+          {
+            "frame": 8,
+            "flip_x": 0,
+            "x": 518,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 379
+          },
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 526,
+            "y": 231,
+            "delay_ticks": 80,
+            "role": "arrival",
+            "table_row": 275
+          }
+        ],
+        "expected_native_duration_ms": 4480
+      }
+    },
+    "waypoint_front": {
+      "prime": {
+        "api_arguments": [
+          3,
+          7,
+          3,
+          7
+        ],
+        "chosen_path": "D",
+        "draws": [
+          {
+            "frame": 17,
+            "flip_x": 0,
+            "x": 479,
+            "y": 219,
+            "delay_ticks": 80,
+            "role": "standing",
+            "table_row": 330
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          3,
+          7,
+          5,
+          3
+        ],
+        "chosen_path": "DCF",
+        "draws": [
+          {
+            "frame": 28,
+            "flip_x": 1,
+            "x": 480,
+            "y": 218,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 278
+          },
+          {
+            "frame": 29,
+            "flip_x": 1,
+            "x": 486,
+            "y": 220,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 279
+          },
+          {
+            "frame": 24,
+            "flip_x": 1,
+            "x": 499,
+            "y": 223,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 280
+          },
+          {
+            "frame": 25,
+            "flip_x": 1,
+            "x": 498,
+            "y": 223,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 281
+          },
+          {
+            "frame": 26,
+            "flip_x": 1,
+            "x": 503,
+            "y": 224,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 282
+          },
+          {
+            "frame": 27,
+            "flip_x": 1,
+            "x": 506,
+            "y": 227,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 283
+          },
+          {
+            "frame": 28,
+            "flip_x": 1,
+            "x": 508,
+            "y": 226,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 284
+          },
+          {
+            "frame": 29,
+            "flip_x": 1,
+            "x": 513,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 285
+          },
+          {
+            "frame": 24,
+            "flip_x": 1,
+            "x": 520,
+            "y": 233,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 286
+          },
+          {
+            "frame": 25,
+            "flip_x": 1,
+            "x": 520,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 287
+          },
+          {
+            "frame": 10,
+            "flip_x": 0,
+            "x": 521,
+            "y": 233,
+            "delay_ticks": 6,
+            "role": "waypoint turn",
+            "table_row": 260
+          },
+          {
+            "frame": 9,
+            "flip_x": 1,
+            "x": 514,
+            "y": 234,
+            "delay_ticks": 6,
+            "role": "waypoint turn",
+            "table_row": 261
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 501,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 245
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 490,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 246
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 491,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 247
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 483,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 248
+          },
+          {
+            "frame": 1,
+            "flip_x": 1,
+            "x": 474,
+            "y": 234,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 249
+          },
+          {
+            "frame": 2,
+            "flip_x": 1,
+            "x": 466,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 250
+          },
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 462,
+            "y": 230,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 251
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 456,
+            "y": 230,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 252
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 448,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 253
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 438,
+            "y": 228,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 254
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 440,
+            "y": 228,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 255
+          },
+          {
+            "frame": 21,
+            "flip_x": 0,
+            "x": 442,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 256
+          },
+          {
+            "frame": 22,
+            "flip_x": 0,
+            "x": 437,
+            "y": 230,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 257
+          },
+          {
+            "frame": 23,
+            "flip_x": 0,
+            "x": 433,
+            "y": 225,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 258
+          },
+          {
+            "frame": 18,
+            "flip_x": 0,
+            "x": 433,
+            "y": 225,
+            "delay_ticks": 80,
+            "role": "arrival",
+            "table_row": 483
+          }
+        ],
+        "expected_native_duration_ms": 4720
+      }
+    },
+    "waypoint_rear": {
+      "prime": {
+        "api_arguments": [
+          1,
+          3,
+          1,
+          3
+        ],
+        "chosen_path": "B",
+        "draws": [
+          {
+            "frame": 18,
+            "flip_x": 0,
+            "x": 452,
+            "y": 254,
+            "delay_ticks": 80,
+            "role": "standing",
+            "table_row": 157
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "chosen_path": "BAE",
+        "draws": [
+          {
+            "frame": 11,
+            "flip_x": 0,
+            "x": 445,
+            "y": 252,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 109
+          },
+          {
+            "frame": 19,
+            "flip_x": 0,
+            "x": 438,
+            "y": 254,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 110
+          },
+          {
+            "frame": 20,
+            "flip_x": 0,
+            "x": 432,
+            "y": 253,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 111
+          },
+          {
+            "frame": 21,
+            "flip_x": 0,
+            "x": 423,
+            "y": 252,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 112
+          },
+          {
+            "frame": 22,
+            "flip_x": 0,
+            "x": 418,
+            "y": 252,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 113
+          },
+          {
+            "frame": 23,
+            "flip_x": 0,
+            "x": 412,
+            "y": 249,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 114
+          },
+          {
+            "frame": 11,
+            "flip_x": 0,
+            "x": 405,
+            "y": 248,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 115
+          },
+          {
+            "frame": 19,
+            "flip_x": 0,
+            "x": 398,
+            "y": 250,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 116
+          },
+          {
+            "frame": 20,
+            "flip_x": 0,
+            "x": 392,
+            "y": 249,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 117
+          },
+          {
+            "frame": 21,
+            "flip_x": 0,
+            "x": 385,
+            "y": 248,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 118
+          },
+          {
+            "frame": 22,
+            "flip_x": 0,
+            "x": 379,
+            "y": 248,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 119
+          },
+          {
+            "frame": 23,
+            "flip_x": 0,
+            "x": 373,
+            "y": 245,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 120
+          },
+          {
+            "frame": 11,
+            "flip_x": 0,
+            "x": 366,
+            "y": 245,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 121
+          },
+          {
+            "frame": 19,
+            "flip_x": 0,
+            "x": 358,
+            "y": 247,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 122
+          },
+          {
+            "frame": 20,
+            "flip_x": 0,
+            "x": 352,
+            "y": 246,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 123
+          },
+          {
+            "frame": 21,
+            "flip_x": 0,
+            "x": 345,
+            "y": 247,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 124
+          },
+          {
+            "frame": 22,
+            "flip_x": 0,
+            "x": 340,
+            "y": 248,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 125
+          },
+          {
+            "frame": 23,
+            "flip_x": 0,
+            "x": 333,
+            "y": 244,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 126
+          },
+          {
+            "frame": 11,
+            "flip_x": 0,
+            "x": 326,
+            "y": 243,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 127
+          },
+          {
+            "frame": 19,
+            "flip_x": 0,
+            "x": 321,
+            "y": 245,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 128
+          },
+          {
+            "frame": 20,
+            "flip_x": 0,
+            "x": 317,
+            "y": 245,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 129
+          },
+          {
+            "frame": 21,
+            "flip_x": 0,
+            "x": 311,
+            "y": 244,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 130
+          },
+          {
+            "frame": 22,
+            "flip_x": 0,
+            "x": 302,
+            "y": 244,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 131
+          },
+          {
+            "frame": 12,
+            "flip_x": 0,
+            "x": 296,
+            "y": 241,
+            "delay_ticks": 6,
+            "role": "waypoint turn",
+            "table_row": 95
+          },
+          {
+            "frame": 19,
+            "flip_x": 1,
+            "x": 305,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 0
+          },
+          {
+            "frame": 20,
+            "flip_x": 1,
+            "x": 321,
+            "y": 235,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 1
+          },
+          {
+            "frame": 21,
+            "flip_x": 1,
+            "x": 321,
+            "y": 233,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 2
+          },
+          {
+            "frame": 22,
+            "flip_x": 1,
+            "x": 325,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 3
+          },
+          {
+            "frame": 23,
+            "flip_x": 1,
+            "x": 331,
+            "y": 227,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 4
+          },
+          {
+            "frame": 11,
+            "flip_x": 1,
+            "x": 338,
+            "y": 223,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 5
+          },
+          {
+            "frame": 19,
+            "flip_x": 1,
+            "x": 344,
+            "y": 223,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 6
+          },
+          {
+            "frame": 20,
+            "flip_x": 1,
+            "x": 357,
+            "y": 222,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 7
+          },
+          {
+            "frame": 21,
+            "flip_x": 1,
+            "x": 355,
+            "y": 221,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 8
+          },
+          {
+            "frame": 22,
+            "flip_x": 1,
+            "x": 360,
+            "y": 221,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 9
+          },
+          {
+            "frame": 23,
+            "flip_x": 1,
+            "x": 365,
+            "y": 217,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 10
+          },
+          {
+            "frame": 11,
+            "flip_x": 1,
+            "x": 371,
+            "y": 215,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 11
+          },
+          {
+            "frame": 19,
+            "flip_x": 1,
+            "x": 376,
+            "y": 215,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 12
+          },
+          {
+            "frame": 20,
+            "flip_x": 1,
+            "x": 386,
+            "y": 213,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 13
+          },
+          {
+            "frame": 21,
+            "flip_x": 1,
+            "x": 384,
+            "y": 213,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 14
+          },
+          {
+            "frame": 22,
+            "flip_x": 1,
+            "x": 389,
+            "y": 213,
+            "delay_ticks": 6,
+            "role": "travel",
+            "table_row": 15
+          },
+          {
+            "frame": 18,
+            "flip_x": 1,
+            "x": 394,
+            "y": 209,
+            "delay_ticks": 80,
+            "role": "arrival",
+            "table_row": 419
+          }
+        ],
+        "expected_native_duration_ms": 6400
+      }
+    },
+    "wait015": {
+      "prime": {
+        "api_arguments": [
+          0,
+          4,
+          0,
+          4
+        ],
+        "chosen_path": "A",
+        "draws": [
+          {
+            "frame": 15,
+            "flip_x": 0,
+            "x": 298,
+            "y": 241,
+            "delay_ticks": 80,
+            "role": "standing",
+            "table_row": 104
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          0,
+          4,
+          0,
+          4
+        ],
+        "chosen_path": "A",
+        "draws": [
+          {
+            "frame": 15,
+            "flip_x": 0,
+            "x": 298,
+            "y": 241,
+            "delay_ticks": 80,
+            "role": "arrival",
+            "table_row": 104
+          }
+        ],
+        "expected_native_duration_ms": 120
+      }
+    },
+    "wait016": {
+      "prime": {
+        "api_arguments": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "chosen_path": "A",
+        "draws": [
+          {
+            "frame": 16,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 80,
+            "role": "standing",
+            "table_row": 100
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "chosen_path": "A",
+        "draws": [
+          {
+            "frame": 16,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 80,
+            "role": "arrival",
+            "table_row": 100
+          }
+        ],
+        "expected_native_duration_ms": 120
+      }
+    }
+  }
+}

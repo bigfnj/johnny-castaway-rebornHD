@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "negative_inputs_passed": 6,
+  "executed_guard_removals_fired": 3,
+  "records": [
+    {
+      "helper": "prepare_candidate.py",
+      "variant": "zero",
+      "version": 0,
+      "result": "PASS",
+      "executed_helper_sha256": "c1b90d836586464000095b5c1de89de9518e2e45d53cce1736ef23ef39a16b9d",
+      "stdout_sha256": "3775f4bfc3945c00c0bb50691ad4681cb72536dac598b7a11c108e49c3e126b4",
+      "stderr_sha256": "1ad5bc334f06da4d379d2af7f654a9769fc81c0c0b67de84d576a2c38571713a"
+    },
+    {
+      "helper": "prepare_candidate.py",
+      "variant": "negative",
+      "version": -1,
+      "result": "PASS",
+      "executed_helper_sha256": "c1b90d836586464000095b5c1de89de9518e2e45d53cce1736ef23ef39a16b9d",
+      "stdout_sha256": "3775f4bfc3945c00c0bb50691ad4681cb72536dac598b7a11c108e49c3e126b4",
+      "stderr_sha256": "1ad5bc334f06da4d379d2af7f654a9769fc81c0c0b67de84d576a2c38571713a"
+    },
+    {
+      "helper": "prepare_candidate.py",
+      "variant": "removed",
+      "version": 0,
+      "result": "FIRED",
+      "executed_helper_sha256": "dd39776855318e971c526301c6128e3d52eff8a030eb41251772b748a212a2fb",
+      "stdout_sha256": "85a685adc2dc6607b9da9b0424c339d9fbe98fb1a77a9ead2fd0e48f27384853",
+      "stderr_sha256": "c34e77e7a2e95dd0ef7a09ea4e0407e1a88e0961fb8d92d2f231bec3303db1f9"
+    },
+    {
+      "helper": "check_selection.py",
+      "variant": "zero",
+      "version": 0,
+      "result": "PASS",
+      "executed_helper_sha256": "32f9b0ecaea5cc6715d48058dc8eaaba267cbb337a25c5e7a77e2cf807a88d2d",
+      "stdout_sha256": "e6ad62aa8f27e712ff7cfbc5466273615d37ac16be5246fe30664ea277de950b",
+      "stderr_sha256": "f1f638bfd03dcece0a569f0c3160e76c83ac88fa43123931efe7c2913755296f"
+    },
+    {
+      "helper": "check_selection.py",
+      "variant": "negative",
+      "version": -1,
+      "result": "PASS",
+      "executed_helper_sha256": "32f9b0ecaea5cc6715d48058dc8eaaba267cbb337a25c5e7a77e2cf807a88d2d",
+      "stdout_sha256": "e6ad62aa8f27e712ff7cfbc5466273615d37ac16be5246fe30664ea277de950b",
+      "stderr_sha256": "f1f638bfd03dcece0a569f0c3160e76c83ac88fa43123931efe7c2913755296f"
+    },
+    {
+      "helper": "check_selection.py",
+      "variant": "removed",
+      "version": 0,
+      "result": "FIRED",
+      "executed_helper_sha256": "211680c05ec0130dd0d826817ca23731d83f0c96a398320f4bf5eac09b0fa3da",
+      "stdout_sha256": "45d6226f188d7c7ffdf9776b9cae7dd4ef79006d1e668fd054075e6cbad76703",
+      "stderr_sha256": "798dd56f03eb1a29afca7d60686f7141f0133c4d32b20ef5deec4eaa59585348"
+    },
+    {
+      "helper": "capture_candidate.py",
+      "variant": "zero",
+      "version": 0,
+      "result": "PASS",
+      "executed_helper_sha256": "3d48bc8f432d1d1972da4e1ec024230d0b4ebec942b48a7255e5c8254c564a59",
+      "stdout_sha256": "c5ecdc086d0aa8b02b8966361414d0d8a74b09636e8dcb9b53507cda5017d2e7",
+      "stderr_sha256": "93d89f37a7f17b775b52dd5c0f7e7b3ef09d09756e3c5ec7815ac2ba77c9cf5f"
+    },
+    {
+      "helper": "capture_candidate.py",
+      "variant": "negative",
+      "version": -1,
+      "result": "PASS",
+      "executed_helper_sha256": "3d48bc8f432d1d1972da4e1ec024230d0b4ebec942b48a7255e5c8254c564a59",
+      "stdout_sha256": "c5ecdc086d0aa8b02b8966361414d0d8a74b09636e8dcb9b53507cda5017d2e7",
+      "stderr_sha256": "324e17448003c9e4132c9b92dbb03863b77c9cdac6181cebdb6d29341040f62d"
+    },
+    {
+      "helper": "capture_candidate.py",
+      "variant": "removed",
+      "version": 0,
+      "result": "FIRED",
+      "executed_helper_sha256": "0718591042d25e28aba878d020756bdd14f214117d29b0ec2086f436da79fd40",
+      "stdout_sha256": "a377cb3351f84396aaead7336c2fdf1b58cb5361420104c292b59a6002666f61",
+      "stderr_sha256": "caba420cc7422d3dbdb2cf52f6fb545c61e3822c0fcdc8e741ebc159f04106b5"
+    }
+  ],
+  "production_unchanged_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+  "scope": "Real copied helper main() executes before missing downstream input. Guard removal causes exactly one named unittest failure. No native launch or package output in these controls."
+}

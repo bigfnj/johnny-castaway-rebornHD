@@ -1,0 +1,8 @@
+{
+  "status": "FAILED optional screenshot pass after served smoke and all three regressions passed",
+  "exception": "playwright._impl._errors.TimeoutError: Page.wait_for_function: Timeout 90000ms exceeded.",
+  "location": "publish.py:66",
+  "cause": "Screenshot helper disabled requestAnimationFrame to freeze playback but used default animation-frame polling for wait_for_function.",
+  "correction": "Use explicit50ms readiness polling in the screenshot helper. Published HTML and images were already verified; no page/art changes.",
+  "served_browser_record": "build/standing018-proportions/motion-review-v1/publication-browser.json"
+}

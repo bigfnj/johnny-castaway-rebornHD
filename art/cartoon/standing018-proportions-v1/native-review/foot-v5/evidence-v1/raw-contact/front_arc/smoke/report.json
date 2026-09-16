@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "clip": "front_arc",
+  "phase": "smoke",
+  "displays": [
+    {
+      "index": 1,
+      "logical_ms": 0,
+      "duration_ms": 0,
+      "role": "standing",
+      "actual_draw": [
+        0,
+        478,
+        216,
+        18
+      ],
+      "ppm": "display-001.ppm",
+      "png": "display-001.png",
+      "pixels_sha256": "5a7c4791e857ab6ba2727c9ef08403c4b45f33c84f57e097a388abae351942bd",
+      "png_sha256": "184d322e4ffcc073ee38e101da556983c168da71f38af2f8f9084028bfbec5bb"
+    }
+  ],
+  "display_count": 1,
+  "duration_ms": 0,
+  "changed018_displays": 1,
+  "unchanged_other_displays": 0,
+  "changed_pixels_outside018": 0,
+  "archive_sha256": "85f136dd71a1425c3169b7a1dfc921b18fac45f38821a81f55df69bc53db4d2d",
+  "base_archive_sha256": "7a50f72fe65382917a1d38412dad97315542831ea5fd06eec9570734a7afdb52",
+  "runtime018_sha256": "183cdf4b4f23e4164e7e290456ff8b8082301b8d952ad577b186ab4663a9c5b2",
+  "executable_sha256": "203aebb8c15881a41108b2b4fb97f5f9c6d025aa595a678b4dd84906011f7563",
+  "baseline_report_sha256": "c365175fd1cf3a4262657485930e3dd7b45c9d504cc0d0cd8443863895d0c702",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--init",
+    "--network",
+    "none",
+    "--mount",
+    "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses,target=/source,readonly",
+    "--mount",
+    "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/build/standing018-proportions/foot-v5-contact,target=/out",
+    "--workdir",
+    "/out/front_arc/smoke",
+    "--env",
+    "HOME=/out/front_arc/smoke/profile",
+    "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "/source/build/skin-tone/native-review/baseline-v1/connecting_walk_probe",
+    "cartoon",
+    "smoke",
+    "front_arc"
+  ],
+  "exit_code": 0,
+  "helper_sha256": "48da0bab8382cc18768315d33a9cb35994ce9a30db95c2bd6d4c3c6aec642622",
+  "comparison_helper_sha256": "3a0f820e46900b92ad2ef62d720c3e1c62138b82de2867c83691bc6a2a8f5c49",
+  "log_sha256": "bd97e2de0cb5169fc738761934020fbdb594ccd44dcc88d20efb3ae2b248b161",
+  "scope": "Rawv5 contact diagnostic only. No palette or geometry approval, no production changes."
+}

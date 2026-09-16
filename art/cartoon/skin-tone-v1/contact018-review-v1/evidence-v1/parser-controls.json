@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "positive_before_after": true,
+  "controls": [
+    {
+      "name": "wrong018-origin",
+      "status": "FIRED",
+      "message": "unchanged native path/draw/timing transcript:original_johnny",
+      "altered_log_sha256": "26af26cf00202979a4b0621040abc9fa077f04cddd8603c52b5409549d097435"
+    },
+    {
+      "name": "loaded018-override",
+      "status": "FIRED",
+      "message": "exact diagnostic PNG-load set:original_johnny",
+      "altered_log_sha256": "729a7d0cb65b868e8c1d36384188f69637ad2d38be6eb966c6748117277ef260"
+    }
+  ],
+  "executed_capture_sha256": "cd5ce9bd1586d966a9729233bffc7d2e10c0828f7759ff05bc4c13697471c00c",
+  "checker_sha256": "26c3a08ced5eff6a8c4b093d8da95bdd7fad01b32ed849446d31a47b42a021b9",
+  "original_log_sha256": "6babc244e8ef24ee9847789dfdaaf7dc39433c19c82def8f962aa730cb81be2e",
+  "scope": "Two parser input mutations; no capture file or runtime source changed."
+}

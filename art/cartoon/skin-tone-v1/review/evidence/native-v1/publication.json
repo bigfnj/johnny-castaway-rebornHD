@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8932/cartoon-skin-tone-v1/review.html",
+  "served_files": 669,
+  "html_sha256": "13991046dd3a451b3886171a62df4fada4a92864cc3b07774e170730153c9d84",
+  "review_record_sha256": "f98d14196b270b95ccf78181602762b2216c50254682eae6e33115dc36269384",
+  "browser_validation_sha256": "b68da5e26df013fc87307d51ca5b379473916ecf1f66875e5d3a10cd13ce5f10",
+  "candidate_preparation_sha256": "de962b6083bbd495797843416cbf81b08334114cd1c1b25db66119041c783a5e",
+  "candidate_archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf",
+  "recipe_sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+  "review_directory": "review-v1",
+  "candidate_directory": "candidate-v2",
+  "guard_records_sha256": {
+    "build/skin-tone/native-review/negative-controls/browser-v1.json": "fa3f0d5504e64a8d9c26a4655fc55acc5c3e540b5189f26fb2061854228084a7",
+    "build/skin-tone/native-review/negative-controls/native-v2.json": "163e0121f21e1d8bd83f66b82dfde3c91d7c75bd0200e78348e54f56651bd3b3",
+    "build/skin-tone/native-review-toolchecks-v3/inputs-v2.json": "f1ec93d6f38575875ab01e2670169d99293da74a778996ece4738708b1b8c56a"
+  },
+  "browser_smoke_then_regression": {
+    "status": "PASS",
+    "html_sha256": "13991046dd3a451b3886171a62df4fada4a92864cc3b07774e170730153c9d84",
+    "checker_sha256": "304d4264d5b6b3c30221b36523b899d9ff3db9352bcd6ae84ed0ef2547cc8061",
+    "smoke_passed": 1,
+    "regressions_after_smoke": [
+      "front_arc: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+      "rear_arc: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+      "travel_cb: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+      "travel_ec: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+      "waypoint_front: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+      "waypoint_rear: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+      "wait015: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+      "wait016: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility"
+    ],
+    "unique_native_images": 548,
+    "executed_counts": {
+      "display_panels": 596,
+      "timestamp_boundaries": 572,
+      "pose_crops": 300,
+      "reference_choices": 8
+    },
+    "display_references_checked": 596,
+    "screenshots_sha256": {
+      "publication-browser-front_arc-frame024-1280.png": "80cd3f261e32cfef506f5788791b60725ce1f7d2b0d56511f47fcd867dd1596d",
+      "publication-browser-front_arc-frame029-1280.png": "0959c195eabf4c5fdecc2bddaa561f2d3e2342fd1caba28571dd11301b96a7a1",
+      "publication-browser-travel_cb-frame024-1280.png": "6fa04c744a5370eb38037ce150ee67b218327b3af8f836e555e021739e6e221e",
+      "publication-browser-travel_cb-frame029-1280.png": "7e7265626ba5bfc1c507e08b98f1146baad28236326bc78cdb402167d3479515",
+      "publication-browser-travel_ec-frame024-1280.png": "86c2c57edac97c7747a2334536dc6486ce2cfdb9494358f9b7a408b314a3c9af",
+      "publication-browser-travel_ec-frame029-1280.png": "746eae56ef0d3af8c90ce591d907ed4d18e885eae0f338449435c529abcf32b0",
+      "publication-browser-waypoint_front-frame024-1280.png": "faebcf072c4eaa7c5cb206e300a0606c97eb274427682c526478aa56530403af",
+      "publication-browser-waypoint_front-frame029-1280.png": "8944e17ed01d6a6fcd04b11c79fc39698e768c9ced9c4f6defb91d8610d46700",
+      "publication-browser-wait015-frame015-1280.png": "cb6c148531df41e94496c5d03512aa5d7fe4521d19dcef95491807850568f1ec",
+      "publication-browser-wait016-frame016-1280.png": "d9a554c58c96f2c74c2332ab20b6f32eecf7269c86ea6ea3e993510c3ae9d521"
+    },
+    "browser_errors": [],
+    "request_failures": [],
+    "scope": "Exact eight-clip native color pixel/timing/control validation, including exact active-clip cache membership after each switch. No memory-savings measurement or human color approval inferred."
+  },
+  "publisher_sha256": "869734b89c2fd13f90ad18e3ac8e83adf35023bd5f5e7c3f27a70a2bc5615e6a",
+  "scope": "Published eight native earlier/matched-color comparisons and28-pose still review; human color approval remains separate. Production unchanged."
+}

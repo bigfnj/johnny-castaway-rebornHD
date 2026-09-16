@@ -1,0 +1,14 @@
+{
+  "method": "Screen-space smaller-foot regions: original native x>=18,y>=67 excluding exact gray shadow128,128,128,255; revised runtime x>=34,y>=120 withalpha>=8. This is a region observation, not an anatomical left/right label.",
+  "original_reference": "art/cartoon/arrival-pilot-v1/reference/018-native.png",
+  "original_reference_sha256": "d4390dbd4e9df53d506dbedf540c4a2a0d867c23d3c5221743dad0bf07d2dbd8",
+  "revised_runtime": "build/standing018-proportions/color-v2/sprites/018.png",
+  "revised_runtime_sha256": "21cf94cd90d369b20b6d3b8ef60b7cc2848f919ff828578320502aec9a17c55b",
+  "original_smaller_foot_last_runtime_row": 143,
+  "revised_smaller_foot_last_runtime_row": 138,
+  "original_last_scene_row": 561,
+  "revised_last_scene_row": 556,
+  "revised_ends_higher_hd_pixels": 5,
+  "visual_observation": "At the exact mirrored arrival, the original smaller foot visually joins its contact shadow at the shore; the revised smaller screen-left foot remains visibly higher above the shore. The original sprite includes a gray contact shadow that the revised sprite does not, so the difference includes both foot geometry and ground-contact artwork.",
+  "limit": "Port diagnostic palette is not the original executable color rendering. No numerical claim of exact sand-boundary gap is made. The actual scene is identical outside018 in every captured display."
+}

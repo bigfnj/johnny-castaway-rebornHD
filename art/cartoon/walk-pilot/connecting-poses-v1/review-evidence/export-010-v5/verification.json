@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "selected_frame": 10,
+  "scope": "Technical010-v5 at explicit version2 registration; not human motion or production acceptance.",
+  "source": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v5.png",
+    "sha256": "cceef504e777f1fe9f794c35832c7c6e4273526fabc49b27a7d2032ae4056729"
+  },
+  "exporter": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/export_v2.py",
+    "sha256": "ced3c0303d5ac39ea43e7f875c49d2d6907a312d88a6d0a1bd1bfb863ed9043f"
+  },
+  "tests": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/test_export_v2.py",
+    "sha256": "cced7415c42104f1bb2e9d1353d2fe262b6321f997f1420b48928b52ff0a0160"
+  },
+  "old_tools_preserved": [
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/export.py",
+      "sha256": "bbbd0778ba2a92f161790937406fdc35a21f73e03599ac3f8575ddb11b5935d5"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/test_export.py",
+      "sha256": "cb756d6c2468f8f9cb29394c511decab86392540c7a699f01dd99d32224d0579"
+    }
+  ],
+  "render_function_ast_unchanged": true,
+  "cap_target_hd": [
+    35,
+    0.1
+  ],
+  "change": "Translate upward by0.15HD from the original technical margin. Scale0.1, original X35, source pixels, fixed80x148 canvas, filter math and actual fit guard remain unchanged.",
+  "derivation": {
+    "source_cap_y": 23,
+    "alpha8_source_bounds_y_exclusive": [
+      23,
+      1502
+    ],
+    "valid_target_y_for_source_centers": {
+      "lower_inclusive": "-0.05",
+      "upper_exclusive": "0.15"
+    },
+    "valid_target_y_for_complete_source_cells": {
+      "lower_inclusive": "0",
+      "upper_inclusive": "0.10"
+    },
+    "selected_target_y": "0.10",
+    "alpha8_centers_hd": [
+      4.650000000000002,
+      0.1499999999999999,
+      65.85000000000001,
+      147.95000000000002
+    ],
+    "filtered_alpha8_bounds_hd_exclusive": [
+      4,
+      0,
+      66,
+      148
+    ],
+    "filtered_nonzero_pixels_outside_runtime": 25,
+    "outside_max_alpha": 4,
+    "fringe_limit": "All alpha>=8 source cells and filtered pixels fit. Lower-alpha resampling fringe remains in the padded diagnostic; no all-nonzero-alpha-inside claim."
+  },
+  "preserved_byte_identical": [
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/010-v5/recipe.json",
+      "sha256": "f3a48ffc9b7316d0402d928544e156a4c3604b59088360392e1e3e17d713e500"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/010-v5/export-report.json",
+      "sha256": "dfa97ee278f08a267b1b4624442cc4b004bcdf1403f2366cb8af6f4bff8a5446"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/export-010-v5/smoke.json",
+      "sha256": "a07790449651b7eec063e79c248748c5abd91835e63b35f6e7038d1ef3d46b0a"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/export-010-v5/regression.json",
+      "sha256": "77df505fb7266b48803311c4517e20752049547794eaa0c487782d773d5c651c"
+    }
+  ],
+  "runtime_and_padded": [
+    {
+      "path": "build/connecting-analysis/export010-v5/BMP/JOHNWALK.BMP/010.png",
+      "sha256": "fded838277a290a3509868fe19443bd90e2b4277d2e8668ebad7683802be60d4"
+    },
+    {
+      "path": "build/connecting-analysis/export010-v5/padded/010.png",
+      "sha256": "f33ce8d9f9a2e426382d73805efbe9798a0e56a47d3caa7710ca8064f53429c7"
+    }
+  ],
+  "smoke_passed": 3,
+  "regression_passed": 27,
+  "executed_v2_mutations_fired": 21,
+  "mutation_scope": "Actual version2 exporter, including fixed-Y registration guard removal and target-Y constant change, executes in fresh python -B processes. Every mutant produced exactly one named failure. Previous version1 proofs are not counted here.",
+  "prior009012_compatibility": "Regression renders both frozen recipes and compares runtime and padded PNG hashes against their preserved version1 reports.",
+  "python_version": "3.11.15",
+  "pillow_version": "12.3.0"
+}

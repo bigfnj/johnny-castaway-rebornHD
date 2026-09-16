@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\skin-tone-v1\review\check_native.py", line 182, in <module>
+    check(args.review, record_name=args.record_name, base_url=args.base_url, expected_html=args.expected_html)
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\skin-tone-v1\review\check_native.py", line 77, in check
+    assert set(page.evaluate('[...cache.keys()]')) == clip_urls and page.evaluate('pendingLoads.size') == 0, 'exact selected clip cache; previous references released:' + name
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: exact selected clip cache; previous references released:front_arc
