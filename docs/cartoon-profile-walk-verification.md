@@ -54,6 +54,18 @@ new checkpoint needs explicitly different output paths; do not remove or weaken
 the historical preservation guards. Local browser validation is sufficient for
 a replay when the original publication slug is occupied.
 
+The earlier static builders also target their historical review-evidence
+directories. An isolated post-merge probe reproduced the original first-pose
+HTML and record with the pinned 32-asset baseline. With the promoted archive,
+the same builder left HTML unchanged but rewrote the saved record's archive
+hash. Use the production reconstruction above for accepted art. Recreate static
+history only in an isolated scratch harness that redirects `ROOT`/`HERE` and any
+derived path globals to copied inputs, the recorded baseline and fresh outputs;
+a separate checkout alone does
+not redirect the hard-coded destinations. Leave the accepted historical files
+intact. This reproduced offline helper limitation is tracked in BACKLOG for the
+shared tooling successor.
+
 ## Integration
 
 The standard pack builder produced SHA256
@@ -98,4 +110,8 @@ ledger rows, complete reviewed-private member equality, 102 protected inputs,
 It found no new actionable defect. Its SHA256 is
 `79694fd2b591bd3b6f5df6c01ff1c3d65767d78a974791a5e3ba051beae7879e`.
 
-Merge and post-merge audit results will be recorded after completion.
+PR14 merged tested feature head `3295acc1d8b4979b14891cbb2bac82b4dfd2c149` as
+main `c903fb57ce5c4224dede16992288c70f47a7a3d7`; their complete trees match.
+[Feature CI](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/35109871512)
+passed all four platforms. The [post-merge audit](cartoon-profile-walk-post-merge-audit.md)
+records fresh source review, local deployment and the remaining follow-ups.

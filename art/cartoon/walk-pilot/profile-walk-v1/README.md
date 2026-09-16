@@ -9,6 +9,18 @@ adds this family while inheriting the previous 32 assets. See the
 
 The following draft and historical records preserve how that result was reached.
 
+For the approved pack, use [production reconstruction](production-integration-v1/README.md).
+The historical static `build_review.py` and `revision_v2.py` write into their
+original review-evidence directories. Do not run them against retained evidence
+in the current checkout. Old static replay requires an isolated scratch harness
+that redirects every input/output path (`ROOT`/`HERE` and any derived globals)
+to copied inputs, the recorded baseline archive and fresh review destinations.
+A separate checkout alone does not change
+the helper's fixed output paths.
+The post-merge audit reproduced a changed archive hash in the old review record
+when the first builder was run with the promoted pack; the displayed HTML stayed
+identical. The original tracked records remain intact.
+
 The current candidate contains all eight profile poses with the revised far-arm
 swing. The user approved the lowered003 tucked foot with "much better proceed",
 preferred006's visible background arm, and approved008-v3's forward-arm direction

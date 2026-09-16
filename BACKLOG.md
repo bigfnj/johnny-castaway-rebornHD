@@ -9,6 +9,8 @@ The later [maintenance audit](docs/maintenance-post-merge-audit.md) and
 and the original-first art metadata work.
 The [standing-family audit](docs/cartoon-standing-post-merge-audit.md) covers
 merged main`fecfdb3`, the 32-asset delivery and its fresh deployment checks.
+The [profile-walk audit](docs/cartoon-profile-walk-post-merge-audit.md) covers
+merged main `c903fb5`, the 40-asset delivery and fresh core/platform/authoring review.
 
 ## Open work
 
@@ -50,6 +52,26 @@ merged main`fecfdb3`, the 32-asset delivery and its fresh deployment checks.
 | Review remaining compiler diagnostics when touching those paths | Pinned Emscripten 6.0.9 still reports existing unused parameters/non-Windows parent-window state and C11 pedantic diagnostics from Emscripten macros; vendored miniz reports its large-file I/O choice. Native Windows phase-one build is warning-free. Keep SDK/vendor diagnostics distinct from actionable project warnings and do not silence them globally. |
 
 ## Profile-walk authoring checkpoint
+
+Historical static-preview reconstruction needs explicit output isolation in the
+future shared authoring tool. An isolated execution of the actual profile
+`build_review.py` reproduced its frozen HTML and record with the old 32-asset
+archive. With the promoted 40-asset archive, it left the HTML unchanged but
+overwrote the existing `review-record.json` archive hash. The current README and
+delivery guide now direct old-checkpoint replay to an isolated harness with
+pinned copied inputs and redirected fresh outputs; a separate checkout alone
+does not redirect the fixed destinations. Original tracked evidence was not
+changed. Add configurable output paths and refusal of mismatched existing records to the successor, with
+historical and promoted archive controls. This affects offline evidence replay,
+not application rendering.
+
+The post-merge review also identified a small offline-tool cleanup opportunity:
+the profile native viewer preloads all 234 unique full-scene captures and redraws
+both canvases on every animation tick, even between pose changes. Its cache is
+bounded by the capture set; this is not evidence of an accumulating memory leak.
+Before longer reviews, measure lazy loading and redraw-on-change in a shared
+successor while preserving this accepted checkpoint's exact helper/evidence
+bytes. No performance saving is claimed without a measured comparison.
 
 The [approved profile family](art/cartoon/walk-pilot/profile-walk-v1/README.md)
 contains 001-008, including the lowered 003 tucked foot and revised far-arm
