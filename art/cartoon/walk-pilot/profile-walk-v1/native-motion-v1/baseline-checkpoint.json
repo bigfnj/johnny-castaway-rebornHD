@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "status": "baseline complete; candidate on hold for human arm-design review",
+  "source_commit": "a7a1fc3bd6cf707616609f77a690c83f2dcb6790",
+  "production_archive_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+  "evidence_root": "art/cartoon/walk-pilot/profile-walk-v1/native-motion-v1/evidence/baseline-v1",
+  "files_sha256": {
+    "preparation.json": "90c47a9322151ab34b30a8dad7d3fa04707688db91b310890e928d789a1afbe8",
+    "route_driver.c": "49af2314c457195b9f243dcef79f8b40f7a82223a5c92ca7ba31cb29f3affb10",
+    "trace_driver.c": "1616492a15bb5ed468c790d74df6228cc922b5b1af58c406dab5477845473b70",
+    "baseline-v1/build.json": "a46522aa6deb7cf6e28cccd01108d90592029f1b6391b2c7e1611f4a46ac5153",
+    "baseline-v1/build.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-v1/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-v1/trace-build.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-v1/trace-build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-v1/independent-trace.json": "64b44155b04e0b955a4e5021acf5022ae265e347a306593784d2cc0ba715f515",
+    "baseline-v1/route-contract.json": "ce335291d17e79474a0436059ea81a2db6596fc18927d423cb6058189330f111",
+    "baseline-v1/summary.json": "feed5d38ba67b7de58da03ec2d14190f929d702b60b12c645843000988ada2fa",
+    "baseline-v1/right/smoke/capture.log": "cab1777ef3ecbf21a0581fd95ae25cccd6336c02fcf84d4da4ffebb6b0f8127f",
+    "baseline-v1/right/smoke/report.json": "50e58f1c31076d7ede89adb698adc4a5d6b8bc86109e62a478b92325d427bb06",
+    "baseline-v1/right/full/capture.log": "76b96cda2e914023beae382b1d0c71f56cae8e0c9aa75e280485f7b39a1b04da",
+    "baseline-v1/right/full/report.json": "e53e0be1ea703cb7abbe990c5adad6cb42a37a2c65b72d0a14c2284b1fbb5c7d",
+    "baseline-v1/right/repeat/capture.log": "76b96cda2e914023beae382b1d0c71f56cae8e0c9aa75e280485f7b39a1b04da",
+    "baseline-v1/right/repeat/report.json": "dceb84f22727791c56905ed49d1cace65f0146236f954882fab437ae840684e3",
+    "baseline-v1/left/smoke/capture.log": "043f94dc25b7d0dba56232319728cdf77e564b2d9610732af7e60a75d9eb5c6b",
+    "baseline-v1/left/smoke/report.json": "81fa44dcaabfd6b72d51ed87f1ae075418bba62cdeb4792249fb832123ded841",
+    "baseline-v1/left/full/capture.log": "3d521bece2e56019255a90f45eac789b108ea182d204f94b0bb0b9c845adffab",
+    "baseline-v1/left/full/report.json": "e49e76dbaf182b602fb982c64ce938ae5153ea3b3eeaba02162f89f71cbc5dd8",
+    "baseline-v1/left/repeat/capture.log": "3d521bece2e56019255a90f45eac789b108ea182d204f94b0bb0b9c845adffab",
+    "baseline-v1/left/repeat/report.json": "1282aa70995ad1bf945cc1758c574e2696af13bbed9add9356a613a2c355cdcf",
+    "baseline-v1/right_boundary/smoke/capture.log": "ceb59c3a29ed2dd283b7d4ff6a08562fbdbfc4acefe8b610b0594b8bb9e4bf57",
+    "baseline-v1/right_boundary/smoke/report.json": "a1e16ee3510e7082903e0301919d163b667742ffce1c9ce79843f287ca4216f0",
+    "baseline-v1/right_boundary/full/capture.log": "66d814d63952693f734523eca19c84d83dd29554cf50bf0984890f7a7c8ffde2",
+    "baseline-v1/right_boundary/full/report.json": "b1ff1903c5b1b84af0cba14b610c12447f5f2c6f872d2455ecee9785c2109f8e",
+    "baseline-v1/right_boundary/repeat/capture.log": "66d814d63952693f734523eca19c84d83dd29554cf50bf0984890f7a7c8ffde2",
+    "baseline-v1/right_boundary/repeat/report.json": "0ea5a3efa151d29efa7b72a69770bb62cfab3416a1821c3630eb5eafe0913e52",
+    "baseline-v1/left_boundary/smoke/capture.log": "7d8a218a7a90c64bfe53de366ddfe14a490252f227aedbb6039ae5f09c14b01c",
+    "baseline-v1/left_boundary/smoke/report.json": "7d339529f74ea6e9cfb72abdfb07742bc8f7084dbe5d458c355967ccf0d9ec92",
+    "baseline-v1/left_boundary/full/capture.log": "34855f0d56356914708d66374a1d740e986e94fcdadbeb028584f14c151bf89c",
+    "baseline-v1/left_boundary/full/report.json": "9cd2128ddb1a39275c5a7129da5689aa66087c6d68d2906a7f8d8d4f9ea7197a",
+    "baseline-v1/left_boundary/repeat/capture.log": "34855f0d56356914708d66374a1d740e986e94fcdadbeb028584f14c151bf89c",
+    "baseline-v1/left_boundary/repeat/report.json": "8c6b92d944fce2fe1bd521fbbe256baf7f70c656d5e3464ca8cf47c8b36b2a60",
+    "helpers/capture.py": "5549512a91a7759515e230f445524ae3b269ede44700b6402440fd5ff8b6d2ac",
+    "helpers/config.py": "e489e0e86f4a5fc340f361d222588896dfb5fbcba3434365f607b9e44ee1320b",
+    "helpers/native_core.py": "286c83033e8e089f4b9dde8696ab7a9e60757baf132c1e8670f736f747bcf490",
+    "helpers/prepare.py": "5fcfdc28d87ebe4e051fce82688eaacd274ea330b2b5dce6ffb8f534c2fcaebb"
+  },
+  "clips": {
+    "right": {
+      "displays": 34,
+      "duration_ms": 3280
+    },
+    "left": {
+      "displays": 62,
+      "duration_ms": 5560
+    },
+    "right_boundary": {
+      "displays": 36,
+      "duration_ms": 3400
+    },
+    "left_boundary": {
+      "displays": 64,
+      "duration_ms": 5680
+    }
+  },
+  "completed": [
+    "Independent compiled C trace of all four route contracts",
+    "Fresh unchanged-source native observer",
+    "Each route smoke then full then exact fresh-process repeat",
+    "Protected production source/archive identity"
+  ],
+  "not_run": [
+    "Candidate packaging",
+    "Candidate native capture/comparison",
+    "Browser smoke/regression",
+    "Native/browser negative controls",
+    "Publication",
+    "Human motion approval"
+  ],
+  "helper_snapshot_scope": "Files present and hash-bound at native build; execution evidence is in the named reports. Future candidate/review helpers are not validated by this baseline.",
+  "omitted": "All PPM/PNG captures, private ZIP copies, native executables and profile settings remain local scratch; display image hashes are retained in reports.",
+  "preserver_sha256": "9c8e7652d1bb1ea2ba4d69373ae11f5c27b195908ca735751920f865f5485dbb"
+}

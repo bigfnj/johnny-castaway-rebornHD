@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8932/profile-walk-motion-v1/review.html",
+  "html_sha256": "09f3c4f86f4f79de53cd5fba9eb13b8be1a2012432d360ce50912317a235afbb",
+  "served_file_count": 235,
+  "served_smoke_passed": true,
+  "browser_smoke_then_regression": {
+    "status": "PASS",
+    "html_sha256": "09f3c4f86f4f79de53cd5fba9eb13b8be1a2012432d360ce50912317a235afbb",
+    "checker_sha256": "1d0473f5a6b20ef69d158e949463c871681dce50409d8854eff36ef76ad637c5",
+    "smoke_passed": 1,
+    "regressions_after_smoke": [
+      "right: every display pixel/timestamp, every pose crop/selector, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+      "left: every display pixel/timestamp, every pose crop/selector, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+      "right_boundary: every display pixel/timestamp, every pose crop/selector, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+      "left_boundary: every display pixel/timestamp, every pose crop/selector, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility"
+    ],
+    "unique_native_images": 234,
+    "display_references_checked": 392,
+    "screenshots_sha256": {
+      "right-frame001-1280.png": "31e746d9026efb2a78ee3af8da4567f8f75dd45dcc0c9ab0395318f66a3d62e5",
+      "right-frame003-1280.png": "28613d616910ae7f110d1b31d3c5510b1ec29ca3896a606d2aa1751c87771ecc",
+      "right-frame004-1280.png": "50cd9763afb56476769cb6b65aa6e7c0076d3cf3b174421e76c2371c839ac193",
+      "right-frame008-1280.png": "6ee6eb2760085551c79c624d9a5d4b58b3639aa0bcc50b09e279ccd5e54f8b89",
+      "left-frame001-1280.png": "55179d0ae6f35e8bcc44e83aec3213a16fc60b49e60a562d743d26ee3a51db1b",
+      "left-frame003-1280.png": "9a4b630925d02c550bb2fb4c51a8255412f79d325d760bc486dcc69b5703dd40",
+      "left-frame004-1280.png": "77e430a98b7f8f6233623a85a99ef4b6273a577778cabd596e09c3fdcceaa173",
+      "left-frame008-1280.png": "65ac81e12b49d952a447aa95aff6abc4fe50cc5a44375673033960eb55c7719c",
+      "right_boundary-frame001-1280.png": "6ce0c7fd978a5021c6e8158ca19436e20a0c1d3a71451ce2b16046c059f738c2",
+      "right_boundary-frame003-1280.png": "6e369c034ed63e4ad465b20975d65a6a1897eeaec04189f3b353ff862f6d8741",
+      "right_boundary-frame004-1280.png": "9393a547126df60e0416a3d3b5be2609ad669a1113016dd6f929e5850444f32a",
+      "right_boundary-frame008-1280.png": "5484506f62c3f142f983773751bccf1aaf5ae2dc69c0a029ca970d98ece462bd",
+      "left_boundary-frame001-1280.png": "b0b0c956a449942688aa439b1edad5828b864718b242031ef9bd9962c747cfbd",
+      "left_boundary-frame003-1280.png": "08fde5ad360b3f66dd68ec9f2ab9c4ef4ffda3e9348a744bd3f92a419a665be1",
+      "left_boundary-frame004-1280.png": "818b17bc2d463ffbf21aa61c5f6d0ca2cdc33886d89c89f06444e5f04b50a838",
+      "left_boundary-frame008-1280.png": "b65cb32e81ac9e676cf550ca5ab66a67b4f5a3ef36f1aae25c3ead92b2601acb"
+    },
+    "browser_errors": [],
+    "request_failures": [],
+    "scope": "Local exact native profile pixel/timing/control validation. Human gait review remains separate."
+  },
+  "negative_control": "Appended HTML byte causes exactly one named served identity failure.",
+  "publisher_sha256": "c823aecc4cb075288076d5d2ae6c9c33ff752117f0877f6f02aee185a77bc306",
+  "scope": "Published complete native profile comparison; user approval of whole gait remains separate. Production unchanged."
+}

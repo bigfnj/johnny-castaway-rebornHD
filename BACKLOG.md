@@ -49,6 +49,16 @@ merged main`fecfdb3`, the 32-asset delivery and its fresh deployment checks.
 | Share exporter and native-review configuration for later families | The017 and016 authoring checkpoints preserve the same premultiplied filtering with different source hashes, cap targets and canvases. A copied native adapter initially retained a017 metadata label while packaging016; comparison checks rejected it before review. The new000/015 shared exporter now requires an explicit frame and recipe match, with historical-filter parity and executed mutation checks. Future native review should likewise make frame identity, registration and route inputs explicit shared configuration before larger batches. Preserve historical exporters/recipes and their exact bytes; verify new common tooling against their outputs instead of rewriting accepted evidence. This is a maintenance opportunity, not a measured speedup. |
 | Review remaining compiler diagnostics when touching those paths | Pinned Emscripten 6.0.9 still reports existing unused parameters/non-Windows parent-window state and C11 pedantic diagnostics from Emscripten macros; vendored miniz reports its large-file I/O choice. Native Windows phase-one build is warning-free. Keep SDK/vendor diagnostics distinct from actionable project warnings and do not silence them globally. |
 
+## Profile-walk authoring checkpoint
+
+The [complete profile draft](art/cartoon/walk-pilot/profile-walk-v1/README.md)
+now contains 001-008, including the lowered 003 tucked foot and revised far-arm
+swing. This supersedes the earlier "no new ordinary art" status for shared 003
+only; 009/010/012 remain ungenerated. Each selected profile export passed smoke
+then regression. Full native gait and ordinary 003 departures still need human
+review before integration. The shipped 32 assets are unchanged. Preserve the
+[image lessons](docs/art-style-learnings-profile-walk.md) for future style packs.
+
 ## Standing-family capture evidence
 
 The [standing delivery](docs/cartoon-standing-verification.md) again encountered

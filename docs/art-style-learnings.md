@@ -264,6 +264,11 @@ rather than rewriting the historical request as a confidently ordered path list.
 
 ## Next style
 
+The [profile walking lessons](art-style-learnings-profile-walk.md) preserve the
+latest arm-swing decisions, scoped 008 direction approval, canvas-fit corrections
+and measured drift after targeted image edits. Its complete gait remains a draft
+until the separate native motion review is accepted.
+
 The [post-merge audit](cartoon-post-merge-audit.md) records delivery verification,
 the remaining maintenance findings and the scope of the approved scene.
 

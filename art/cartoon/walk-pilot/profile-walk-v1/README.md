@@ -1,4 +1,38 @@
-# Profile walking: first pose checkpoint
+# Profile walking: complete cycle draft
+
+The current candidate contains all eight profile poses with the revised far-arm
+swing. The user approved the lowered003 tucked foot with "much better proceed",
+preferred006's visible background arm, and approved008-v3's forward-arm direction
+with "Yes, use this arm direction". These decisions authorize this full-cycle
+draft; they do not constitute acceptance of its complete gait or story contexts.
+
+| Frame | Current raw drawing | Arm treatment |
+|---|---|---|
+| 001 | `001-profile-v3.png` | Strong forward far-arm swing |
+| 002 | `002-profile-v2.png` | Forward far arm returning toward the body |
+| 003 | `003-profile-v2.png` | Passing pose, far arm occluded; lowered tucked foot retained |
+| 004 | `004-profile-v3.png` | Modest rear far-arm reveal |
+| 005 | `005-profile-v4.png` | Strong rear far-arm swing |
+| 006 | `006-profile-v1.png` | User-preferred rear arm retained |
+| 007 | `007-profile-v1.png` | Passing pose, far arm occluded |
+| 008 | `008-profile-v4.png` | Approved forward-arm direction with inward foot-fit correction |
+
+`candidate-selection.json` binds the final technical export handoff.
+`cycle-provenance-v1.json`, `arm-generation-001002.json` and
+`arm-completion-provenance-v1.json` preserve the actual calls and used ancestors.
+The historical cycle record remains pending-at-capture; `approval008-arm-v3.json`
+records the subsequent scoped decision. `approval003-v2.json` records the earlier
+pose checkpoint. No profile artwork has entered the production ZIP.
+
+The [native motion checkpoint](native-motion-v1/README.md) documents the complete
+right and left routes, ordinary003 departure probes, actual timing and current
+verification state. It uses private candidate packaging and the unchanged native
+engine. Review full motion before integrating all eight as a single family.
+
+The [profile lessons](../../../../docs/art-style-learnings-profile-walk.md)
+preserve the arm-direction decision and practical generation constraints.
+
+## Historical first-pose checkpoint
 
 Branch `art/cartoon-profile-walk` starts at production `00f1ba7`. The user asked
 to continue after approving the standing direction ring. This bundle prepares

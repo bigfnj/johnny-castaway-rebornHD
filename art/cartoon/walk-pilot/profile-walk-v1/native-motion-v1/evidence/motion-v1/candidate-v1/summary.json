@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "clips": {
+    "right": {
+      "display_count": 34,
+      "duration_ms": 3280,
+      "changed_displays": 20,
+      "unchanged_displays": 14
+    },
+    "left": {
+      "display_count": 62,
+      "duration_ms": 5560,
+      "changed_displays": 48,
+      "unchanged_displays": 14
+    },
+    "right_boundary": {
+      "display_count": 36,
+      "duration_ms": 3400,
+      "changed_displays": 22,
+      "unchanged_displays": 14
+    },
+    "left_boundary": {
+      "display_count": 64,
+      "duration_ms": 5680,
+      "changed_displays": 50,
+      "unchanged_displays": 14
+    }
+  },
+  "archive_sha256": "d476a447f84dcb996c0ef2e229a18ca5e2b0ad03de57cc538b6933a42318d82c",
+  "baseline_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+  "executable_sha256": "b3ade0d79a55667632e5c7076fae74957f6f6244e3bc82de5ab2bb48216be81f",
+  "helper_sha256": "7db0ec68ba1718cffd65de22efb6596426fe49444ce67c6d50ed37f856c8624f",
+  "parser_sha256": "5549512a91a7759515e230f445524ae3b269ede44700b6402440fd5ff8b6d2ac",
+  "scope": "Each of four candidate clips smoke then full exact baseline comparison then fresh-process repeat. Eight profile canvases only; all prior-approved poses and backgrounds unchanged."
+}

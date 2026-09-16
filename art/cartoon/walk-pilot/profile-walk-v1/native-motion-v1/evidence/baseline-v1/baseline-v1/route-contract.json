@@ -1,0 +1,911 @@
+{
+  "method": "Exact source-table rows and specified public call boundaries; independently checked against compiled walk.c. First timer is 6 ticks. Display events are separately observed. No original-binary timing claim.",
+  "source_table": "src/data/walk_data.h",
+  "source_sha256": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769",
+  "clips": {
+    "right": {
+      "prime": {
+        "api_arguments": [
+          5,
+          6,
+          5,
+          6
+        ],
+        "chosen_path": "F",
+        "draws": [
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 439,
+            "y": 226,
+            "delay_ticks": 80,
+            "role": "standing"
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          5,
+          6,
+          2,
+          6
+        ],
+        "chosen_path": "FC",
+        "draws": [
+          {
+            "frame": 3,
+            "flip_x": 0,
+            "x": 439,
+            "y": 226,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 4,
+            "flip_x": 0,
+            "x": 443,
+            "y": 227,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 0,
+            "x": 444,
+            "y": 230,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 0,
+            "x": 454,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 0,
+            "x": 470,
+            "y": 228,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 0,
+            "x": 472,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 1,
+            "flip_x": 0,
+            "x": 473,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 2,
+            "flip_x": 0,
+            "x": 487,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 3,
+            "flip_x": 0,
+            "x": 498,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 4,
+            "flip_x": 0,
+            "x": 505,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 0,
+            "x": 504,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 0,
+            "x": 518,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 0,
+            "x": 518,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 526,
+            "y": 231,
+            "delay_ticks": 80,
+            "role": "arrival"
+          }
+        ],
+        "expected_native_duration_ms": 3160
+      }
+    },
+    "left": {
+      "prime": {
+        "api_arguments": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "chosen_path": "C",
+        "draws": [
+          {
+            "frame": 0,
+            "flip_x": 1,
+            "x": 506,
+            "y": 231,
+            "delay_ticks": 80,
+            "role": "standing"
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          2,
+          2,
+          0,
+          2
+        ],
+        "chosen_path": "CA",
+        "draws": [
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 502,
+            "y": 233,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 491,
+            "y": 235,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 484,
+            "y": 235,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 486,
+            "y": 235,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 476,
+            "y": 236,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 1,
+            "flip_x": 1,
+            "x": 468,
+            "y": 239,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 2,
+            "flip_x": 1,
+            "x": 454,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 449,
+            "y": 236,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 443,
+            "y": 237,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 434,
+            "y": 239,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 425,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 426,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 417,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 1,
+            "flip_x": 1,
+            "x": 409,
+            "y": 241,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 2,
+            "flip_x": 1,
+            "x": 398,
+            "y": 240,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 393,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 389,
+            "y": 239,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 380,
+            "y": 240,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 367,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 369,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 360,
+            "y": 239,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 1,
+            "flip_x": 1,
+            "x": 352,
+            "y": 242,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 2,
+            "flip_x": 1,
+            "x": 345,
+            "y": 242,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 340,
+            "y": 241,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 335,
+            "y": 244,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 324,
+            "y": 246,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 324,
+            "y": 246,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 314,
+            "y": 243,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 315,
+            "y": 243,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 306,
+            "y": 243,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 1,
+            "flip_x": 1,
+            "x": 296,
+            "y": 245,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 2,
+            "flip_x": 1,
+            "x": 288,
+            "y": 243,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 0,
+            "flip_x": 1,
+            "x": 284,
+            "y": 241,
+            "delay_ticks": 80,
+            "role": "arrival"
+          }
+        ],
+        "expected_native_duration_ms": 5440
+      }
+    },
+    "right_boundary": {
+      "prime": {
+        "api_arguments": [
+          5,
+          7,
+          5,
+          7
+        ],
+        "chosen_path": "F",
+        "draws": [
+          {
+            "frame": 17,
+            "flip_x": 0,
+            "x": 434,
+            "y": 228,
+            "delay_ticks": 80,
+            "role": "standing"
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          5,
+          7,
+          2,
+          6
+        ],
+        "chosen_path": "FC",
+        "draws": [
+          {
+            "frame": 3,
+            "flip_x": 0,
+            "x": 439,
+            "y": 226,
+            "delay_ticks": 6,
+            "role": "ordinary turn"
+          },
+          {
+            "frame": 3,
+            "flip_x": 0,
+            "x": 439,
+            "y": 226,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 4,
+            "flip_x": 0,
+            "x": 443,
+            "y": 227,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 0,
+            "x": 444,
+            "y": 230,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 0,
+            "x": 454,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 0,
+            "x": 470,
+            "y": 228,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 0,
+            "x": 472,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 1,
+            "flip_x": 0,
+            "x": 473,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 2,
+            "flip_x": 0,
+            "x": 487,
+            "y": 232,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 3,
+            "flip_x": 0,
+            "x": 498,
+            "y": 229,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 4,
+            "flip_x": 0,
+            "x": 505,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 0,
+            "x": 504,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 0,
+            "x": 518,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 0,
+            "x": 518,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 526,
+            "y": 231,
+            "delay_ticks": 80,
+            "role": "arrival"
+          }
+        ],
+        "expected_native_duration_ms": 3280
+      }
+    },
+    "left_boundary": {
+      "prime": {
+        "api_arguments": [
+          2,
+          3,
+          2,
+          3
+        ],
+        "chosen_path": "C",
+        "draws": [
+          {
+            "frame": 18,
+            "flip_x": 0,
+            "x": 520,
+            "y": 230,
+            "delay_ticks": 80,
+            "role": "standing"
+          }
+        ],
+        "expected_native_duration_ms": 120
+      },
+      "travel": {
+        "api_arguments": [
+          2,
+          3,
+          0,
+          2
+        ],
+        "chosen_path": "CA",
+        "draws": [
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 506,
+            "y": 231,
+            "delay_ticks": 6,
+            "role": "ordinary turn"
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 502,
+            "y": 233,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 491,
+            "y": 235,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 484,
+            "y": 235,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 486,
+            "y": 235,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 476,
+            "y": 236,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 1,
+            "flip_x": 1,
+            "x": 468,
+            "y": 239,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 2,
+            "flip_x": 1,
+            "x": 454,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 449,
+            "y": 236,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 443,
+            "y": 237,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 434,
+            "y": 239,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 425,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 426,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 417,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 1,
+            "flip_x": 1,
+            "x": 409,
+            "y": 241,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 2,
+            "flip_x": 1,
+            "x": 398,
+            "y": 240,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 393,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 389,
+            "y": 239,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 380,
+            "y": 240,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 367,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 369,
+            "y": 238,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 360,
+            "y": 239,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 1,
+            "flip_x": 1,
+            "x": 352,
+            "y": 242,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 2,
+            "flip_x": 1,
+            "x": 345,
+            "y": 242,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 3,
+            "flip_x": 1,
+            "x": 340,
+            "y": 241,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 4,
+            "flip_x": 1,
+            "x": 335,
+            "y": 244,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 324,
+            "y": 246,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 5,
+            "flip_x": 1,
+            "x": 324,
+            "y": 246,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 6,
+            "flip_x": 1,
+            "x": 314,
+            "y": 243,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 7,
+            "flip_x": 1,
+            "x": 315,
+            "y": 243,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 8,
+            "flip_x": 1,
+            "x": 306,
+            "y": 243,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 1,
+            "flip_x": 1,
+            "x": 296,
+            "y": 245,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 2,
+            "flip_x": 1,
+            "x": 288,
+            "y": 243,
+            "delay_ticks": 6,
+            "role": "travel"
+          },
+          {
+            "frame": 0,
+            "flip_x": 1,
+            "x": 284,
+            "y": 241,
+            "delay_ticks": 80,
+            "role": "arrival"
+          }
+        ],
+        "expected_native_duration_ms": 5560
+      }
+    }
+  }
+}

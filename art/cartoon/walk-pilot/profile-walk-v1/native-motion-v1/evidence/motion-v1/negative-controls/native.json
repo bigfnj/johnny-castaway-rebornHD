@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "positive_control_before_and_after": true,
+  "executed_helper_sha256": {
+    "capture.py": "5549512a91a7759515e230f445524ae3b269ede44700b6402440fd5ff8b6d2ac",
+    "capture_candidate.py": "7db0ec68ba1718cffd65de22efb6596426fe49444ce67c6d50ed37f856c8624f",
+    "native_core.py": "286c83033e8e089f4b9dde8696ab7a9e60757baf132c1e8670f736f747bcf490",
+    "config.py": "e489e0e86f4a5fc340f361d222588896dfb5fbcba3434365f607b9e44ee1320b"
+  },
+  "harness_sha256": "2182311bf40628631bfd22cb44074d8331f8d8c6def408e6b61976634c09ba91",
+  "mutations": [
+    {
+      "name": "wrong-selected-path",
+      "status": "FIRED",
+      "expected_failure": "profile capture: actual selected direct path:travel"
+    },
+    {
+      "name": "changed-display-time",
+      "status": "FIRED",
+      "expected_failure": "profile capture: identical native display logical_ms"
+    },
+    {
+      "name": "changed-approved-standing-pixel",
+      "status": "FIRED",
+      "expected_failure": "profile capture: all prior-approved pose/background pixels unchanged"
+    }
+  ],
+  "native_build_witness": {
+    "executable_sha256": "b3ade0d79a55667632e5c7076fae74957f6f6244e3bc82de5ab2bb48216be81f",
+    "build_started_ns": 1789565943130438327,
+    "executable_mtime_ns": 1789565962415429000
+  },
+  "scope": "Three executed input mutations through current Python parser/comparison guards. The original freshly built native observer produced the bound baseline/candidate; no mutated engine was built or claimed."
+}

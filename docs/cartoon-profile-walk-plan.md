@@ -35,3 +35,15 @@ Keep exact prompts, actual ordered input paths, preserved hashes, generated
 ancestors, raw output bytes, measurements and scoped human decisions. Static
 pose approval does not constitute gait or runtime acceptance. Native tests run
 without taking over the user's active desktop.
+
+## Current checkpoint
+
+All eight profile candidates are authored. The lowered 003 pose, 006 background
+arm preference and 008 forward-arm direction are recorded in the source bundle.
+The complete cycle includes new far-arm continuity edits through001/002 and
+004/005, with passing-pose occlusion in003/007.008 received a separate canvas-fit
+correction. Each selected export passed 3 smoke checks then 24 regressions with the
+unchanged exporter. See `candidate-selection.json` in the
+[source bundle](../art/cartoon/walk-pilot/profile-walk-v1/README.md) for exact
+versions and hashes. Full native motion and ordinary 003 departure review are
+the next human checkpoint. Production integration remains pending.

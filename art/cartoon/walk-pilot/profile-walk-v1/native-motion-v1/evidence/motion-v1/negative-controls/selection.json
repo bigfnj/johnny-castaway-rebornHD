@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "positive_control_before_and_after": true,
+  "mutations": [
+    {
+      "mutation": "frame001 uses frame005 runtime with valid hash and same canvas",
+      "result": "FIRED",
+      "expected_failure": "selected runtime output binding:001"
+    },
+    {
+      "mutation": "frame005 uses frame001 runtime with valid hash and same canvas",
+      "result": "FIRED",
+      "expected_failure": "selected runtime output binding:005"
+    }
+  ],
+  "selection_sha256": "6ef901aba18803962f0890e27cbec2d13a7aaa77891424d43b5a32acb9052968",
+  "executed_validator_sha256": "0fc7603dd8251949ab84f093d1f2e107112cc8b2af4e7624c6861c932a833112",
+  "harness_sha256": "dbdcfa7f34f781b578ceb3c789fdb6c4bb01a8c37c6b06bc6391ceabd8d0adcf",
+  "scope": "Actual validator executed on complete real handoff, then two same-canvas wrong-pose substitutions. Hashes establish identity; no human approval inferred."
+}

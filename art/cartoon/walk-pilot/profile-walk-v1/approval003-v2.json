@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "accepted-static-pose",
+  "recorded_date": "2026-09-16",
+  "resource": "JOHNWALK.BMP",
+  "frame": 3,
+  "selected_source": "003-profile-v2.png",
+  "selected_source_sha256": "1bb60fad5ec369fd5f5f097d98e3d5b57ee81d6766f2ecdb6b2f75f681719d9e",
+  "runtime_png_sha256": "36778a48ed8caaa23a56ac47da8e82fdcd292998e32e79e5cd26b40c6ab462e3",
+  "human_decision": {
+    "question": "In the revised profile-walk preview, does 003's slightly lower tucked foot look right now?",
+    "response_verbatim": "much better proceed",
+    "preceding_feedback_verbatim": "can you slightly lower the tucked foot please ?",
+    "review_url": "http://127.0.0.1:8932/profile-walk-key-v2/review.html",
+    "interpretation": "Accept the latest targeted tucked-foot revision of static pose003 and continue authoring the remaining profile cycle. The response resolves the immediately preceding scoped review request. Ambient UI naming an older front-refresh tab does not change that target."
+  },
+  "scope": {
+    "accepted": "The displayed static003-v2 pose, including its lower tucked foot.",
+    "continued_work_authorized": "Expand the 001-008 profile family using original pose geometry and the selected Cartoon appearance, then review the complete motion.",
+    "001": "001-profile-v2.png remains the selected checkpoint draft. This response is not a separate explicit approval of001.",
+    "remaining_frames": "002,004,005,006,007,008 require generation, technical export and full-cycle review.",
+    "not_accepted": [
+      "Complete gait or transitions",
+      "Native playback or scene acceptance",
+      "Production promotion of any profile frame",
+      "Earlier003-v1 as the final pose"
+    ]
+  },
+  "bound_files_sha256": {
+    "003-profile-v2.png": "1bb60fad5ec369fd5f5f097d98e3d5b57ee81d6766f2ecdb6b2f75f681719d9e",
+    "003-call-v2.json": "fd4dd020fb70a8c636ee0e4476b3104da4f7ca95f3f58ab1922328dbd122fe8a",
+    "provenance003-v2.json": "5d90c5df2198d1011eb673508175c74ac0f3ad9c273e09439c0d59ffb6bf3e04",
+    "review-request-v2.json": "6ddb3561a7b08a566075c76d45d059e4ee6c0cff4a64597c7146fa559e0282fa",
+    "review-evidence/pose-check-v2/review.html": "30b1ead1b959786da9fda18d6e65ab3d2f80159ef94cabc0b9e2d0d6c258270a",
+    "review-evidence/pose-check-v2/review-record.json": "27b2309412b2efaef13366651cb7cd34c16ac2aa309cc12892672bcaab617c27",
+    "exports/003-v2/recipe.json": "80e59864034e07809aa0b28921533ce3f604b280ff1aa663ed27322fa9ae7518",
+    "exports/003-v2/export-report.json": "8b355322b2152174e984af8ea90e4c0c6ffa197f4df462d17c128f61bcede298"
+  },
+  "path_basis": "Bound file paths are relative to this profile-walk-v1 directory. The runtime hash names the displayed exported003 bytes, not a production member.",
+  "history_policy": "The pending review request, generation provenance and earlier checkpoint records remain unchanged as historical evidence. This additive record supplies the later human decision."
+}
