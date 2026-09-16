@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "phase": "smoke",
+  "case_count": 2,
+  "helper_sha256": "4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc",
+  "test_sha256": "80cc75c8787c267df343bb73efa23bb4f67ae2db15dcab34863eaa384a2b9321",
+  "source_index_sha256": "7173a1cbe9412e65f79e574589b3d83e05af506d55082cf465f6d813bc99c460",
+  "scope": "Fresh Python subprocesses run the actual helper. Regression corrupts disposable inputs and rebinds container hashes for semantic controls. No production or reference pixels changed.",
+  "cases": [
+    {
+      "label": "prepare-eight-from-verified-original-dump",
+      "exit_code": 0,
+      "stdout": "WITNESS profile-reference SHA256=4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc\nPASS {\"exact_nearest8_pngs\": 8, \"frames\": 8, \"native_pngs\": 8, \"original_facts_unchanged\": true}\n",
+      "stderr": "",
+      "expected_named_failure": null,
+      "status": "PASS"
+    },
+    {
+      "label": "check-preserved-eight-references",
+      "exit_code": 0,
+      "stdout": "WITNESS profile-reference SHA256=4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc\nPASS {\"exact_nearest8_pngs\": 8, \"frames\": 8, \"native_pngs\": 8, \"original_facts_unchanged\": true}\n",
+      "stderr": "",
+      "expected_named_failure": null,
+      "status": "PASS"
+    }
+  ]
+}

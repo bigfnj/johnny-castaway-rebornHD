@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "accepted-arm-direction",
+  "recorded_date": "2026-09-16",
+  "resource": "JOHNWALK.BMP",
+  "frame": 8,
+  "selected_source": "008-profile-v3.png",
+  "selected_source_sha256": "782ea302e5a3de953d2a374e6cb7a0d64f273f320eb135451830c1fbcfd9e2d2",
+  "human_decision": {
+    "response_verbatim": "Yes, use this arm direction",
+    "review_target": "The displayed008-v3 forward far-arm study, following the user's request to retain006-v1's background arm and revisit arm continuity across the profile poses.",
+    "interpretation": "Use this forward far-arm treatment as the visual direction for the profile cycle. This decision is scoped to arm direction in the displayed still."
+  },
+  "scope": {
+    "accepted": "The forward far-arm direction, depth and treatment shown by008-v3.",
+    "authorized_follow_up": "Apply the selected counter-swing treatment to the other profile poses, preserving their existing near-arm phases and leg geometry, then review full motion.",
+    "runtime_fit_at_decision": "008-v3 still overhangs the80-pixel runtime canvas by0.65HD at the screen-right foot. Its runtime export is refused; the retained output is a padded diagnostic preview. A later targeted fit correction remains necessary.",
+    "not_accepted": [
+      "The unresolved008-v3 foot overhang",
+      "Any later arm or fit revision automatically",
+      "Complete gait, transitions or native playback",
+      "Production promotion"
+    ]
+  },
+  "bound_files_sha256": {
+    "008-profile-v3.png": "782ea302e5a3de953d2a374e6cb7a0d64f273f320eb135451830c1fbcfd9e2d2",
+    "008-call-v3.json": "4cc8c2b44954d877376b7a94417e87475d271f678dd865d99bde885175392f97",
+    "cycle-provenance-v1.json": "aa49b9e29d737b9cb6e41e27f1312be2be5c08c9dd49dae25c7c6a1aac712ac0",
+    "exports/008-v3/recipe.json": "3b1278622670692af4eaa6c5083b9744089eae1210e9c5569cc706bd1abf8194",
+    "exports/008-v3/export-report.json": "195d1d74c66e4fc4d9b79ea0bc29d6b52bcf01912498fd90631c37e3d60d83d5",
+    "review-evidence/cycle-export-v1/rejected008-v3.json": "c348a3d4de75f95fa12da80eda693a6b2bd79add1d7c1eb936667d21a82daff3"
+  },
+  "path_basis": "All bound paths are relative to this profile-walk-v1 folder.",
+  "history_policy": "Generation provenance and the fit refusal remain unchanged historical evidence. This additive record supplies the later scoped human decision without changing those earlier statuses."
+}

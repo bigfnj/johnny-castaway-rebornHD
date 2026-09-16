@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "scope": "Actual rejected source export invocation; distinct from synthetic guard-removal mutations.",
+  "command": ["python", "-B", "art/cartoon/walk-pilot/profile-walk-v1/export.py", "--frame", "1", "--prepare", "--source", "001-profile-v1.png", "--output", "build/profile-walk/export001-refused-v1"],
+  "source_sha256": "08e7c8008deff3894236f09ff9f14a8d81557789d1a376955c91780946c93e4d",
+  "exporter_sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2",
+  "exit_code": 1,
+  "stdout": "WITNESS export.py SHA256=244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2\n",
+  "stderr": "FAIL runtime-overhang:001\n",
+  "stdout_stderr_storage": "Tool-observed text normalized to LF; not a raw process-log byte hash.",
+  "failure_count": 1,
+  "output_directory_absent_verified": true,
+  "runtime_canvas": [96, 144],
+  "alpha8_source_centers_hd": [7.65, 0.2999999999999998, 98.75, 143.20000000000002],
+  "right_overhang_hd": 2.75,
+  "preserved_preview_recipe": "001-rejected-recipe.json",
+  "preserved_preview_report": "001-rejected-export.json",
+  "resolution": "Retain source v1. Root generated v2 through a separate image edit; scale and cap-target policy remain fixed."
+}

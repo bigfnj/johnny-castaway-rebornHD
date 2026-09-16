@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "mutation": "native pose selector shifted by one",
+  "result": "FIRED",
+  "expected_failure": "pose selector native ordinal:right:0",
+  "actual_exit_code": 1,
+  "harness_sha256": "c583977ca35a05776539fb2a81d479d71827861f34aa2a6a24baed837e49e43f",
+  "executed_checker_sha256": "1d0473f5a6b20ef69d158e949463c871681dce50409d8854eff36ef76ad637c5",
+  "original_html_sha256": "09f3c4f86f4f79de53cd5fba9eb13b8be1a2012432d360ce50912317a235afbb",
+  "executed_mutant_html_sha256": "0107f66e818a018e0ec111e1ecc61f25aa3258c3fe6dc23ef326c36dde5cda1b",
+  "positive_control": "Existing complete browser-validation.json must pass before mutation; mutant smoke passed before specific regression failure.",
+  "scope": "Headless browser executed changed HTML and the same complete checker. No native engine mutation."
+}

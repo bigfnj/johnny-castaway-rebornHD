@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "scope": "Rejected export fit evidence only; all raw sources retained separately.",
+  "exporter_sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2",
+  "measurements": [
+    {
+      "frame": 4,
+      "version": 1,
+      "source": "004-profile-v1.png",
+      "source_sha256": "2b6c06c8fbc0b3b5e9428808fd1a7b6bba56eb44114b8c6744190e58ed69d2e0",
+      "measurement": {
+        "frame": 4,
+        "source": "004-profile-v1.png",
+        "source_sha256": "2b6c06c8fbc0b3b5e9428808fd1a7b6bba56eb44114b8c6744190e58ed69d2e0",
+        "cap_raw": [
+          668.5,
+          18
+        ],
+        "runtime_canvas": [
+          80,
+          148
+        ],
+        "affine_forward": [
+          0.1,
+          0,
+          -0.8500000000000085,
+          0,
+          0.1,
+          -1.55
+        ],
+        "alpha8_source_bounds": [
+          169,
+          17,
+          897,
+          1493
+        ],
+        "alpha8_centers_hd": [
+          16.09999999999999,
+          0.19999999999999996,
+          88.8,
+          147.7
+        ],
+        "source_centers_fit_runtime": false,
+        "filtered_alpha8_bounds_hd_exclusive": [
+          16,
+          0,
+          89,
+          148
+        ],
+        "padded_canvas": [
+          208,
+          276
+        ]
+      },
+      "measurement_method": "Unchanged exporter prepare/render(preview_only=True), in memory; no runtime PNG written.",
+      "historical_runtime_attempt": "NOT RUN: measurement failed before candidate testing",
+      "smoke_regression": "NOT RUN: rejected source; selected revision tested separately."
+    },
+    {
+      "frame": 5,
+      "version": 1,
+      "source": "005-profile-v1.png",
+      "source_sha256": "2999ade1770d37d8b8fa4899344726fedd6556742dfd8b12ae8ad181a2ee1bf8",
+      "measurement": {
+        "frame": 5,
+        "source": "005-profile-v1.png",
+        "source_sha256": "2999ade1770d37d8b8fa4899344726fedd6556742dfd8b12ae8ad181a2ee1bf8",
+        "cap_raw": [
+          703.0,
+          19
+        ],
+        "runtime_canvas": [
+          96,
+          144
+        ],
+        "affine_forward": [
+          0.1,
+          0,
+          3.700000000000003,
+          0,
+          0.1,
+          -1.6500000000000001
+        ],
+        "alpha8_source_bounds": [
+          63,
+          18,
+          1001,
+          1439
+        ],
+        "alpha8_centers_hd": [
+          10.050000000000004,
+          0.19999999999999996,
+          103.75000000000001,
+          142.2
+        ],
+        "source_centers_fit_runtime": false,
+        "filtered_alpha8_bounds_hd_exclusive": [
+          10,
+          0,
+          104,
+          143
+        ],
+        "padded_canvas": [
+          224,
+          272
+        ]
+      },
+      "measurement_method": "Unchanged exporter prepare/render(preview_only=True), in memory; no runtime PNG written.",
+      "historical_runtime_attempt": "NOT RUN: measurement failed before candidate testing",
+      "smoke_regression": "NOT RUN: rejected source; selected revision tested separately."
+    },
+    {
+      "frame": 5,
+      "version": 2,
+      "source": "005-profile-v2.png",
+      "source_sha256": "59a65b1b84c3d48452df29243657ea69ac1909f2833fe4a56c072be707f9cb04",
+      "measurement": {
+        "frame": 5,
+        "source": "005-profile-v2.png",
+        "source_sha256": "59a65b1b84c3d48452df29243657ea69ac1909f2833fe4a56c072be707f9cb04",
+        "cap_raw": [
+          150.5,
+          0
+        ],
+        "runtime_canvas": [
+          96,
+          144
+        ],
+        "affine_forward": [
+          0.1,
+          0,
+          58.95,
+          0,
+          0.1,
+          0.25
+        ],
+        "alpha8_source_bounds": [
+          0,
+          0,
+          1024,
+          1536
+        ],
+        "alpha8_centers_hd": [
+          59.0,
+          0.3,
+          161.3,
+          153.8
+        ],
+        "source_centers_fit_runtime": false,
+        "filtered_alpha8_bounds_hd_exclusive": [
+          58,
+          0,
+          160,
+          154
+        ],
+        "padded_canvas": [
+          224,
+          272
+        ]
+      },
+      "measurement_method": "Unchanged exporter prepare/render(preview_only=True), in memory; no runtime PNG written.",
+      "historical_runtime_attempt": {
+        "exit_code": 1,
+        "failure": "runtime-overhang:005",
+        "executed_exporter_sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2",
+        "output_absent_verified": true
+      },
+      "smoke_regression": "NOT RUN: rejected source; selected revision tested separately."
+    },
+    {
+      "frame": 8,
+      "version": 1,
+      "source": "008-profile-v1.png",
+      "source_sha256": "0b6853921a95e255e7846e0053198a13e513bf7b4b07fd4a869d31fd7af8256f",
+      "measurement": {
+        "frame": 8,
+        "source": "008-profile-v1.png",
+        "source_sha256": "0b6853921a95e255e7846e0053198a13e513bf7b4b07fd4a869d31fd7af8256f",
+        "cap_raw": [
+          674.5,
+          18
+        ],
+        "runtime_canvas": [
+          80,
+          150
+        ],
+        "affine_forward": [
+          0.1,
+          0,
+          -5.450000000000003,
+          0,
+          0.1,
+          -1.55
+        ],
+        "alpha8_source_bounds": [
+          134,
+          17,
+          937,
+          1448
+        ],
+        "alpha8_centers_hd": [
+          7.999999999999998,
+          0.19999999999999996,
+          88.2,
+          143.2
+        ],
+        "source_centers_fit_runtime": false,
+        "filtered_alpha8_bounds_hd_exclusive": [
+          8,
+          0,
+          89,
+          144
+        ],
+        "padded_canvas": [
+          208,
+          278
+        ]
+      },
+      "measurement_method": "Unchanged exporter prepare/render(preview_only=True), in memory; no runtime PNG written.",
+      "historical_runtime_attempt": "NOT RUN: measurement failed before candidate testing",
+      "smoke_regression": "NOT RUN: rejected source; selected revision tested separately."
+    }
+  ],
+  "005_v2_background_observation": "Visible dark/glowing background and alpha>=8 across the full source canvas invalidated cap measurement. Root supplied a new clean-transparent image edit; no technical mask was used.",
+  "copies_sha256": {
+    "review-evidence/cycle-export-v1/rejected005-v2/recipe.json": "c4f754b52cc2bae1cc1a40e79c4450affe677eaaccdee826e33861d924b86f39",
+    "review-evidence/cycle-export-v1/rejected005-v2/export-report.json": "e155253d21552041899793cacb414913431267d201a4b80232b7594a14ec0268"
+  },
+  "no_runtime_sprites_promoted": true
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export only; not native capture or human acceptance.",
+  "preview_only": false,
+  "runtime_sprites_written": true,
+  "runtime_fit_all_source_centers": true,
+  "scale": 0.1,
+  "padding_hd": 64,
+  "reference_hashes": {
+    "007-source.json": "6a04e4906b9817c652fb1bb9d7c6a309d2516075259ce74c5156b7efde2644c9",
+    "007-original-native.png": "8f56b47bd0f6087c0e4ebaeebf1d352adb96fbf1ba5799f10e301876d899ace2",
+    "007-original-nearest8.png": "14dc2e96394f8c4604f1fa084c84e6c70ceede645db8b3d95074980a745b10c3"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "frames": [
+    {
+      "frame": 7,
+      "source": "007-profile-v1.png",
+      "source_sha256": "5df49fcd711c6a88400cba7e0fd475ed3549e19ac2fda9989a8361c99f9e675c",
+      "cap_raw": [
+        628.5,
+        17
+      ],
+      "runtime_canvas": [
+        64,
+        150
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -14.850000000000001,
+        0,
+        0.1,
+        -1.4500000000000002
+      ],
+      "alpha8_source_bounds": [
+        371,
+        16,
+        741,
+        1476
+      ],
+      "alpha8_centers_hd": [
+        22.299999999999997,
+        0.19999999999999996,
+        59.199999999999996,
+        146.10000000000002
+      ],
+      "source_centers_fit_runtime": true,
+      "filtered_alpha8_bounds_hd_exclusive": [
+        22,
+        0,
+        60,
+        147
+      ],
+      "padded_canvas": [
+        192,
+        278
+      ]
+    }
+  ],
+  "outputs_sha256": {
+    "padded/007.png": "a73c4f4d1b09d014afe2bf369d5f6c4163bde19016cce62834f1ec749cba70c3",
+    "BMP/JOHNWALK.BMP/007.png": "2a1bbaaf5e192429ebdd0bb256fbd5ed4e826f6f2254f3de317471c6e224d8e9"
+  },
+  "filter_limit": "Source-center fit does not promise absence of low-alpha filter fringe; padded output retains it.",
+  "recipe_sha256": "2b3d5e1be5954e2ca108b4a2b5fbea6036f8dd4cd961f7c1c215551196e8a3b0",
+  "export_source_sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "status": "PASS with one identified handoff-validation gap fixed and verified",
+  "recorded_date": "2026-09-16",
+  "head_commit_during_audit": "a7a1fc3bd6cf707616609f77a690c83f2dcb6790",
+  "scope": "Independent read-only review of native helper contracts, final technical profile selection, authoring provenance and private archive preparation. This record preserves that audit without granting artistic or production acceptance.",
+  "state_at_audit_capture": {
+    "native_candidate_results": "Pending review by this auditor; native candidate capture was in progress. No completed candidate-native result is asserted here.",
+    "human_motion_approval": "Pending. Existing003-v2 static-pose and008-v3 arm-direction decisions remain limited to their recorded scope.",
+    "production_approval": false,
+    "production_unchanged": true
+  },
+  "verification_method": {
+    "executed_here": "Read-only Python probes using toolbox Python with -B and -c, plus direct source and JSON inspection. All artifact identities below were read from actual files.",
+    "retained_command_limit": "The transient probe scripts are in the session tool transcript, not retained as a replayable repository test. No exact command or test execution is invented by this record.",
+    "not_rerun": "No native capture, image generation, broad exporter suite, or mutation harness was rerun for this audit. The named mutation results were independently read back from their executed evidence."
+  },
+  "selection": {
+    "manifest": {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/candidate-selection.json",
+      "sha256": "6ef901aba18803962f0890e27cbec2d13a7aaa77891424d43b5a32acb9052968"
+    },
+    "bound_file_references_verified": 60,
+    "selected": [
+      {
+        "frame": 1,
+        "version": 3,
+        "source_sha256": "ae339f62213fa3d8ef2e936cdf88b75eb5658312d86337db0d4a1f0c588dcf7e",
+        "runtime_sha256": "aeb1119d7576c6668d27c4caf02a45f7f7b4beced945d5886720f124d49a0759"
+      },
+      {
+        "frame": 2,
+        "version": 2,
+        "source_sha256": "ce3f388061ddc14c80561f8300ebc7e8e78a31a3142e87658838dc9e4d0c022b",
+        "runtime_sha256": "125c4f1db0d8a31e169fe7146b3d78d2fccdfc1211676aef6b66be30c9d07d4b"
+      },
+      {
+        "frame": 3,
+        "version": 2,
+        "source_sha256": "1bb60fad5ec369fd5f5f097d98e3d5b57ee81d6766f2ecdb6b2f75f681719d9e",
+        "runtime_sha256": "36778a48ed8caaa23a56ac47da8e82fdcd292998e32e79e5cd26b40c6ab462e3"
+      },
+      {
+        "frame": 4,
+        "version": 3,
+        "source_sha256": "8377ee4c72ec574f9f6c45d3bc4c43d659c3ec85b255a053273caefd0db7726d",
+        "runtime_sha256": "1081959ce4092c4d05d343037ddd25a835b407b641d1e34d949b02660b4d81cd"
+      },
+      {
+        "frame": 5,
+        "version": 4,
+        "source_sha256": "fc5ad3226f664990ae4ed1326eb017b297cb81e85c45da9f9ca63929f6872982",
+        "runtime_sha256": "e3b5c4f94f9715a35b5242e8bce9af6372191141f2f17ad2cb79b272778b6dc2"
+      },
+      {
+        "frame": 6,
+        "version": 1,
+        "source_sha256": "90627d13750610cd7433e698a0cd186692fd23d7ded762ec73ae9dde36acd067",
+        "runtime_sha256": "47bd9a71c29ccd7e4f6cfeb5620c96b5952ee2cd13ad4681b996af1346d413b5"
+      },
+      {
+        "frame": 7,
+        "version": 1,
+        "source_sha256": "5df49fcd711c6a88400cba7e0fd475ed3549e19ac2fda9989a8361c99f9e675c",
+        "runtime_sha256": "2a1bbaaf5e192429ebdd0bb256fbd5ed4e826f6f2254f3de317471c6e224d8e9"
+      },
+      {
+        "frame": 8,
+        "version": 4,
+        "source_sha256": "8d74970387db6850aa7bb644b46d2d7f68a0ae2360c0e1ddbd8f7fa9df400744",
+        "runtime_sha256": "eee73c081b9947a357e813f1503a64638f5a2ca3e0a706c70571847d13222a0a"
+      }
+    ],
+    "checks": [
+      "Every path/SHA256 binding in the complete manifest matches its actual file.",
+      "All eight frame labels and source versions agree with each single-frame recipe and export report.",
+      "Source filename/hash, recipe hash, runtime and padded output hashes agree across the handoff and exporter records.",
+      "All eight original canvases doubled match the runtime canvases; all cap targets match the preserved original source records.",
+      "First alpha>=128 row midpoint was independently read from each generated PNG; fixed0.1 affine placement agrees with the recipe and handoff.",
+      "Each selected smoke/regression report binds the same frame, recipe, exporter and test tool and records3 smoke checks and24 regressions.",
+      "Selection remains explicitly technical and production_approved=false."
+    ]
+  },
+  "generation_provenance": {
+    "records": [
+      {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/provenance-v1.json",
+        "sha256": "716c3fe3e75edc091a3573fa538193dc81b6e0e1e570d25f94614ba4c7a73fa1"
+      },
+      {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/provenance003-v2.json",
+        "sha256": "5d90c5df2198d1011eb673508175c74ac0f3ad9c273e09439c0d59ffb6bf3e04"
+      },
+      {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/cycle-provenance-v1.json",
+        "sha256": "aa49b9e29d737b9cb6e41e27f1312be2be5c08c9dd49dae25c7c6a1aac712ac0"
+      },
+      {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/arm-generation-001002.json",
+        "sha256": "37a8ea3c57e1a42f7e31ea85295b4ab538ac646dbc5623e51a5db63401becb92"
+      },
+      {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/arm-completion-provenance-v1.json",
+        "sha256": "dafe41e484edadc198dca77aadb159a62cc62f75a367b3c5cc1997dc1b4d72b7"
+      }
+    ],
+    "attempt_entries_verified": 21,
+    "selected_sources_with_verified_chain": 8,
+    "checks": [
+      "Every recorded raw and call hash matches the preserved file.",
+      "Every prompt UTF-8 hash matches the exact saved call prompt.",
+      "Actual ordered reference paths agree with the saved call and preserved reference hashes.",
+      "Every recorded generator-cache output was available and matched the preserved raw bytes during this audit."
+    ],
+    "cache_limit": "Generator-cache paths are historical workstation provenance, not portable reconstruction prerequisites. The tracked raw images and calls remain the reusable authoring evidence."
+  },
+  "scoped_approvals": {
+    "records": [
+      {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/approval003-v2.json",
+        "sha256": "7e177359c1b20c185050e7c7ee9f3bef18bba1190751cf4f47bd54fc97d47f5f"
+      },
+      {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/approval008-arm-v3.json",
+        "sha256": "177fdc6b2f14367559240ac851d92e612a7cb3f4f4ce57dd57a5730fb4ca9e6b"
+      }
+    ],
+    "checks": "All bound approval files match.003-v2 is a static-pose decision;008-v3 is an arm-direction decision with its historical0.65HD foot-fit failure retained. Neither grants whole-cycle or native approval to this selection."
+  },
+  "archive_comparison": {
+    "production": {
+      "path": "assets/scrantic_data.zip",
+      "sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6"
+    },
+    "private_candidate": {
+      "path": "build/profile-walk/native-motion-v1/candidate-v1/scrantic_data.zip",
+      "sha256": "d476a447f84dcb996c0ef2e229a18ca5e2b0ad03de57cc538b6933a42318d82c"
+    },
+    "preparation_record": {
+      "path": "build/profile-walk/native-motion-v1/candidate-v1/preparation.json",
+      "sha256": "e6766da49b7598bbe81aa45a77ca1f50a1783412b068df49fd94506e760caaf2"
+    },
+    "unchanged_prior_member_payloads": 2583,
+    "exact_new_selected_pngs": 8,
+    "candidate_unique_members": 2591,
+    "checks": [
+      "Candidate member order is all2583 baseline names followed by exactly the eight named Cartoon001-008 additions.",
+      "Every old member payload was compared byte-for-byte and remains unchanged.",
+      "Each added PNG is byte-identical to that frame runtime selected in the manifest.",
+      "No duplicate members and no production ZIP change. Whole ZIP envelope equality is not the payload preservation contract."
+    ]
+  },
+  "resolved_finding": {
+    "issue": "The initial private builder accepted individually valid paths/hashes and matching canvases without tying each runtime PNG to its frame recipe/export report.001 and005 share96x144, so a wrong-pose substitution could pass those initial predicates.",
+    "fix": "validate_selection now checks frame, source, recipe/report relationships, runtime/padded outputs, placement, original-reference agreement and completed runtime fit before candidate creation.",
+    "validator": {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/native-motion-v1/prepare_candidate.py",
+      "sha256": "0fc7603dd8251949ab84f093d1f2e107112cc8b2af4e7624c6861c932a833112"
+    },
+    "negative_harness": {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/native-motion-v1/check_selection.py",
+      "sha256": "dbdcfa7f34f781b578ceb3c789fdb6c4bb01a8c37c6b06bc6391ceabd8d0adcf"
+    },
+    "executed_negative_evidence": {
+      "path": "build/profile-walk/native-motion-v1/negative-controls/selection.json",
+      "sha256": "4fd38af9d15921ecc82a8a58dcbbce3405ef177341d18e57b49d6a529651b191"
+    },
+    "negative_results": [
+      {
+        "mutation": "frame001 uses frame005 runtime with valid hash and same canvas",
+        "result": "FIRED",
+        "expected_failure": "selected runtime output binding:001"
+      },
+      {
+        "mutation": "frame005 uses frame001 runtime with valid hash and same canvas",
+        "result": "FIRED",
+        "expected_failure": "selected runtime output binding:005"
+      }
+    ],
+    "positive_control_before_and_after": true,
+    "audit_confirmation": "Read back the actual executed guard report, matched validator/harness/selection hashes to current files, and inspected the code and non-degenerate same-size swap controls. No remaining concrete finding in this bounded review."
+  },
+  "source_and_presentation_review": "Source walk.c, configured table slices and retained baseline reports agree on actual origins, mirrored C-to-A route, standing priming/arrival, ordinary003 prefixes and repeated005. Comparison masks use full2x sprite canvases at the native origins. The viewer uses a fixed shared camera and recorded logical-port timestamps; these checks do not establish anatomy, original-executable parity or artistic motion quality.",
+  "writes_during_audit": "None. This new additive JSON record was written afterward on request; historical evidence, artwork, code and production were not edited by the auditor."
+}

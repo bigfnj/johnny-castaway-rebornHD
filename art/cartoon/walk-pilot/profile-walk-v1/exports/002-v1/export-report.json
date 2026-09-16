@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export only; not native capture or human acceptance.",
+  "preview_only": false,
+  "runtime_sprites_written": true,
+  "runtime_fit_all_source_centers": true,
+  "scale": 0.1,
+  "padding_hd": 64,
+  "reference_hashes": {
+    "002-source.json": "63e6962d70779ccbc5553ef2cf3523fbf58e5f211ba8f545b496fedd6d0e437e",
+    "002-original-native.png": "c1629bd15af61911ebf7e73f3a95a97e3322b5eb0a603ff8b3cceafeb644079c",
+    "002-original-nearest8.png": "ac6cc66fe1f3edaa66b19e5857f238c5abb70ad4fec188afe9d56ada2f97198f"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "frames": [
+    {
+      "frame": 2,
+      "source": "002-profile-v1.png",
+      "source_sha256": "71696dff24446e6615ed254e29450f9385d0e264270f4865bc700619eea9a90b",
+      "cap_raw": [
+        681.5,
+        19
+      ],
+      "runtime_canvas": [
+        96,
+        146
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        1.8499999999999943,
+        0,
+        0.1,
+        -1.6500000000000001
+      ],
+      "alpha8_source_bounds": [
+        207,
+        18,
+        853,
+        1455
+      ],
+      "alpha8_centers_hd": [
+        22.599999999999994,
+        0.19999999999999996,
+        87.1,
+        143.8
+      ],
+      "source_centers_fit_runtime": true,
+      "filtered_alpha8_bounds_hd_exclusive": [
+        22,
+        0,
+        88,
+        144
+      ],
+      "padded_canvas": [
+        224,
+        274
+      ]
+    }
+  ],
+  "outputs_sha256": {
+    "padded/002.png": "69f3bec6fa9ccc2def05727910122c2261b5e93f5ef84a527320c8dd23531b19",
+    "BMP/JOHNWALK.BMP/002.png": "57bf7b8598928b9f8182bee2bca7b90aa8de86ada6d5a2303ab565b0645b545f"
+  },
+  "filter_limit": "Source-center fit does not promise absence of low-alpha filter fringe; padded output retains it.",
+  "recipe_sha256": "82affd1f29cf76b4640196e3e2ba7224480e138aee13089389392b2e828c114e",
+  "export_source_sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+}

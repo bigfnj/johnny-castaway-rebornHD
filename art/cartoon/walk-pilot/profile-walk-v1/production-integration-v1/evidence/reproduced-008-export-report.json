@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export only; not native capture or human acceptance.",
+  "preview_only": false,
+  "runtime_sprites_written": true,
+  "runtime_fit_all_source_centers": true,
+  "scale": 0.1,
+  "padding_hd": 64,
+  "reference_hashes": {
+    "008-source.json": "2e7894606c061d54e32e5abae507723dff3905248b40a8503aa34127cf94bbef",
+    "008-original-native.png": "9a1675829c300e3dcf493134f800b5e9a35b3b5cd533add592f37384bd12d693",
+    "008-original-nearest8.png": "1c0b183d0d6378ec00ca1b8f9b455fc26b25add8efcca991ac31022990e2b9dc"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "frames": [
+    {
+      "frame": 8,
+      "source": "008-profile-v4.png",
+      "source_sha256": "8d74970387db6850aa7bb644b46d2d7f68a0ae2360c0e1ddbd8f7fa9df400744",
+      "cap_raw": [
+        681.5,
+        17
+      ],
+      "runtime_canvas": [
+        80,
+        150
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -6.150000000000006,
+        0,
+        0.1,
+        -1.4500000000000002
+      ],
+      "alpha8_source_bounds": [
+        133,
+        16,
+        831,
+        1451
+      ],
+      "alpha8_centers_hd": [
+        7.199999999999996,
+        0.19999999999999996,
+        76.9,
+        143.60000000000002
+      ],
+      "source_centers_fit_runtime": true,
+      "filtered_alpha8_bounds_hd_exclusive": [
+        7,
+        0,
+        77,
+        144
+      ],
+      "padded_canvas": [
+        208,
+        278
+      ]
+    }
+  ],
+  "outputs_sha256": {
+    "padded/008.png": "c23011e17a3e30c3b46cabefeeebe7576a485e5d69d8b22d3df1fd189c43fbf8",
+    "BMP/JOHNWALK.BMP/008.png": "eee73c081b9947a357e813f1503a64638f5a2ca3e0a706c70571847d13222a0a"
+  },
+  "filter_limit": "Source-center fit does not promise absence of low-alpha filter fringe; padded output retains it.",
+  "recipe_sha256": "a47b2ee8c7fc7f530c81886697ce3bb131f5909cbe8bd2a47b3a4de939e837f0",
+  "export_source_sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+}

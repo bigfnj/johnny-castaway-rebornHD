@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "html_sha256": "30b1ead1b959786da9fda18d6e65ab3d2f80159ef94cabc0b9e2d0d6c258270a",
+  "checker_sha256": "02a9a2aeac662704dab0f1148bb1dd8312d4b79f0289806fe250ae3f29cf8e9f",
+  "cases": [
+    {
+      "frame": "003",
+      "feet": false,
+      "mirrored": false,
+      "both_canvas_pixels": "PASS"
+    },
+    {
+      "frame": "003",
+      "feet": false,
+      "mirrored": true,
+      "both_canvas_pixels": "PASS"
+    },
+    {
+      "frame": "003",
+      "feet": true,
+      "mirrored": false,
+      "both_canvas_pixels": "PASS"
+    },
+    {
+      "frame": "003",
+      "feet": true,
+      "mirrored": true,
+      "both_canvas_pixels": "PASS"
+    },
+    {
+      "frame": "001",
+      "feet": false,
+      "mirrored": false,
+      "both_canvas_pixels": "PASS"
+    },
+    {
+      "frame": "001",
+      "feet": false,
+      "mirrored": true,
+      "both_canvas_pixels": "PASS"
+    },
+    {
+      "frame": "001",
+      "feet": true,
+      "mirrored": false,
+      "both_canvas_pixels": "PASS"
+    },
+    {
+      "frame": "001",
+      "feet": true,
+      "mirrored": true,
+      "both_canvas_pixels": "PASS"
+    },
+    {
+      "mutation": "substitute-standing000-for-candidate003",
+      "failure": "canvas-candidate-003",
+      "status": "FIRED"
+    }
+  ],
+  "scope": "Headless static viewer and pixels. No native engine or artistic acceptance.",
+  "console_errors": []
+}

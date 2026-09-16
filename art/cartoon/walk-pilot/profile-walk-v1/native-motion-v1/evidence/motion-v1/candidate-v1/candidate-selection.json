@@ -1,0 +1,500 @@
+{
+  "schema_version": 1,
+  "scope": "Technical draft selection of the complete profile cycle001-008 for motion/native review. This is not cycle or production approval; earlier individual key reviews remain separate.",
+  "production_approved": false,
+  "baseline_archive": {
+    "path": "assets/scrantic_data.zip",
+    "sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6"
+  },
+  "retained_production_assets": 32,
+  "exporter": {
+    "path": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+    "sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+  },
+  "test_tool": {
+    "path": "art/cartoon/walk-pilot/profile-walk-v1/test_export.py",
+    "sha256": "c01330d60a155fb5a880b463360037b2513a549bdeb8c3aa9b19c11669ed6db8"
+  },
+  "family_scale_exact": {
+    "numerator": 1,
+    "denominator": 10
+  },
+  "frames": [
+    {
+      "frame": 1,
+      "version": 3,
+      "source": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/001-profile-v3.png",
+        "sha256": "ae339f62213fa3d8ef2e936cdf88b75eb5658312d86337db0d4a1f0c588dcf7e"
+      },
+      "recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/001-v3/recipe.json",
+        "sha256": "6aca4b7675e54ce85585eeffa0c3489a5fabd194196b13209c0e8f229c477749"
+      },
+      "export_report": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/001-v3/export-report.json",
+        "sha256": "fb470fa878d032e6dad467263483bdca570145dded97ff149b07f6f0f2e174af"
+      },
+      "runtime": {
+        "path": "build/profile-walk/export001-v3/BMP/JOHNWALK.BMP/001.png",
+        "sha256": "aeb1119d7576c6668d27c4caf02a45f7f7b4beced945d5886720f124d49a0759",
+        "canvas": [
+          96,
+          144
+        ]
+      },
+      "padded": {
+        "path": "build/profile-walk/export001-v3/padded/001.png",
+        "sha256": "292589eaf0d3a1f5f3008f7e42f4d74b6444a37281ce2dfe3f3a236384919112",
+        "canvas": [
+          224,
+          272
+        ]
+      },
+      "smoke": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/001-v3/smoke.json",
+        "sha256": "090561fd89689e0f3f28367834ae40cc0f520da79a5fe5c8e2363632695cfc78",
+        "passed": 3
+      },
+      "regression": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/001-v3/regression.json",
+        "sha256": "fc6e939a2358cd2b03ff1fecb7c0d66e388b884ed8dff853299072b912319b56",
+        "passed": 24,
+        "mutation_status": "NOT RUN: use --mutation-check"
+      },
+      "source_centers_fit_runtime": true,
+      "alpha8_source_centers_hd": [
+        7.65,
+        0.20000000000000018,
+        92.95,
+        142.8
+      ],
+      "cap_raw": [
+        705,
+        20
+      ],
+      "cap_target_hd": [
+        72,
+        0.25
+      ]
+    },
+    {
+      "frame": 2,
+      "version": 2,
+      "source": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/002-profile-v2.png",
+        "sha256": "ce3f388061ddc14c80561f8300ebc7e8e78a31a3142e87658838dc9e4d0c022b"
+      },
+      "recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/002-v2/recipe.json",
+        "sha256": "e032880eeec5ab43014e3a5db5f555bb79d5231cb3d7d8a0188d089e4e29745e"
+      },
+      "export_report": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/002-v2/export-report.json",
+        "sha256": "f3e798bf2badf3ce147bb30867842226693fc017ecb6ed982cc2c8457863333f"
+      },
+      "runtime": {
+        "path": "build/profile-walk/export002-v2/BMP/JOHNWALK.BMP/002.png",
+        "sha256": "125c4f1db0d8a31e169fe7146b3d78d2fccdfc1211676aef6b66be30c9d07d4b",
+        "canvas": [
+          96,
+          146
+        ]
+      },
+      "padded": {
+        "path": "build/profile-walk/export002-v2/padded/002.png",
+        "sha256": "ee8239693a909dbcd561cfd35e1f4d5bbf2e68ecbbbe226b0e82a8bd1fe67952",
+        "canvas": [
+          224,
+          274
+        ]
+      },
+      "smoke": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/002-v2/smoke.json",
+        "sha256": "52cd020742e64114bcdbeb65eca7a33d53aa9859324ba5fd89755b8227c5c2ea",
+        "passed": 3
+      },
+      "regression": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/002-v2/regression.json",
+        "sha256": "a288116342da12d01c00c235b5b51d939258b8506c48429173367678a66cd752",
+        "passed": 24,
+        "mutation_status": "NOT RUN: use --mutation-check"
+      },
+      "source_centers_fit_runtime": true,
+      "alpha8_source_centers_hd": [
+        22.600000000000005,
+        0.19999999999999996,
+        87.30000000000001,
+        143.8
+      ],
+      "cap_raw": [
+        680.5,
+        19
+      ],
+      "cap_target_hd": [
+        70,
+        0.25
+      ]
+    },
+    {
+      "frame": 3,
+      "version": 2,
+      "source": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/003-profile-v2.png",
+        "sha256": "1bb60fad5ec369fd5f5f097d98e3d5b57ee81d6766f2ecdb6b2f75f681719d9e"
+      },
+      "recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/003-v2/recipe.json",
+        "sha256": "80e59864034e07809aa0b28921533ce3f604b280ff1aa663ed27322fa9ae7518"
+      },
+      "export_report": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/003-v2/export-report.json",
+        "sha256": "8b355322b2152174e984af8ea90e4c0c6ffa197f4df462d17c128f61bcede298"
+      },
+      "runtime": {
+        "path": "build/profile-walk/export003-v2/BMP/JOHNWALK.BMP/003.png",
+        "sha256": "36778a48ed8caaa23a56ac47da8e82fdcd292998e32e79e5cd26b40c6ab462e3",
+        "canvas": [
+          80,
+          152
+        ]
+      },
+      "padded": {
+        "path": "build/profile-walk/export003-v2/padded/003.png",
+        "sha256": "1cadc70b17f09368f2ec1478ed688bff09ef664f00073d464a20b9703366f73a",
+        "canvas": [
+          208,
+          280
+        ]
+      },
+      "smoke": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/export003-v2/smoke.json",
+        "sha256": "4770df393890b87b1366346ade28fcea2e248479953351add8b53cdebf950212",
+        "passed": 3
+      },
+      "regression": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/export003-v2/regression.json",
+        "sha256": "080d5aa284a991fcf85113742529f52045b2db1a354e861d63dcf3546cac42ed",
+        "passed": 24,
+        "mutation_status": "NOT RUN: use --mutation-check"
+      },
+      "source_centers_fit_runtime": true,
+      "alpha8_source_centers_hd": [
+        26.65,
+        0.19999999999999996,
+        64.65,
+        145.8
+      ],
+      "cap_raw": [
+        601,
+        19
+      ],
+      "cap_target_hd": [
+        54,
+        0.25
+      ]
+    },
+    {
+      "frame": 4,
+      "version": 3,
+      "source": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/004-profile-v3.png",
+        "sha256": "8377ee4c72ec574f9f6c45d3bc4c43d659c3ec85b255a053273caefd0db7726d"
+      },
+      "recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/004-v3/recipe.json",
+        "sha256": "6d1cf6ab4e7344faa35df6cc4969a245f491b8e6abdb42e978dccbfd799be1bb"
+      },
+      "export_report": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/004-v3/export-report.json",
+        "sha256": "a9539763870d5c70fd609dbb2f9e4ba9df74e2925f7276bd9d0b7be4fa8ca9d2"
+      },
+      "runtime": {
+        "path": "build/profile-walk/export004-v3/BMP/JOHNWALK.BMP/004.png",
+        "sha256": "1081959ce4092c4d05d343037ddd25a835b407b641d1e34d949b02660b4d81cd",
+        "canvas": [
+          80,
+          148
+        ]
+      },
+      "padded": {
+        "path": "build/profile-walk/export004-v3/padded/004.png",
+        "sha256": "690c4a18236f85f57b1a36a78310b8853178f5c6380e85b5404e8953a346877f",
+        "canvas": [
+          208,
+          276
+        ]
+      },
+      "smoke": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/004-v3/smoke.json",
+        "sha256": "2341e382c8536596585a8eb3caf4e9ace890ba2dedec777c2513f12fca546c10",
+        "passed": 3
+      },
+      "regression": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/004-v3/regression.json",
+        "sha256": "1b01539522d89b6d3aa4ba4b8f3fc7a772ad94bff8acd73829d20b0b47635470",
+        "passed": 24,
+        "mutation_status": "NOT RUN: use --mutation-check"
+      },
+      "source_centers_fit_runtime": true,
+      "alpha8_source_centers_hd": [
+        14.34999999999999,
+        0.30000000000000004,
+        77.75,
+        147.9
+      ],
+      "cap_raw": [
+        686,
+        16
+      ],
+      "cap_target_hd": [
+        66,
+        0.25
+      ]
+    },
+    {
+      "frame": 5,
+      "version": 4,
+      "source": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/005-profile-v4.png",
+        "sha256": "fc5ad3226f664990ae4ed1326eb017b297cb81e85c45da9f9ca63929f6872982"
+      },
+      "recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/005-v4/recipe.json",
+        "sha256": "dd7a896d3e3755175d2c9e9ce1963ec5a8575ebbe80fe5a847370496637f9000"
+      },
+      "export_report": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/005-v4/export-report.json",
+        "sha256": "8df17a02eb98c2aa3057f9d9fa18b866cbd563817829d93c3f9a9d1899c0890a"
+      },
+      "runtime": {
+        "path": "build/profile-walk/export005-v4/BMP/JOHNWALK.BMP/005.png",
+        "sha256": "e3b5c4f94f9715a35b5242e8bce9af6372191141f2f17ad2cb79b272778b6dc2",
+        "canvas": [
+          96,
+          144
+        ]
+      },
+      "padded": {
+        "path": "build/profile-walk/export005-v4/padded/005.png",
+        "sha256": "a7fec7e4706600e15b0215cd1a7415fa2b1db80e85465b2230538e56bf7c04a7",
+        "canvas": [
+          224,
+          272
+        ]
+      },
+      "smoke": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/005-v4/smoke.json",
+        "sha256": "d1ae66f474a721b8abf91b84d334cbc12246bfb988b2b35e68e19bbe1727c73c",
+        "passed": 3
+      },
+      "regression": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/005-v4/regression.json",
+        "sha256": "c4d989434f72b4cb1c9dd3612e718061b88be1a4cb336642db770a0d880ce35b",
+        "passed": 24,
+        "mutation_status": "NOT RUN: use --mutation-check"
+      },
+      "source_centers_fit_runtime": true,
+      "alpha8_source_centers_hd": [
+        9.950000000000003,
+        0.19999999999999996,
+        92.35000000000001,
+        142.4
+      ],
+      "cap_raw": [
+        703,
+        17
+      ],
+      "cap_target_hd": [
+        74,
+        0.25
+      ]
+    },
+    {
+      "frame": 6,
+      "version": 1,
+      "source": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/006-profile-v1.png",
+        "sha256": "90627d13750610cd7433e698a0cd186692fd23d7ded762ec73ae9dde36acd067"
+      },
+      "recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/006-v1/recipe.json",
+        "sha256": "2c59ff38ee792a401fb6309118c5eb67690308748211199ce623061b91e44edb"
+      },
+      "export_report": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/006-v1/export-report.json",
+        "sha256": "49c6c61859fb8536e9a9d57066881f21f8c00653cf3b38de1a06ca95665c5053"
+      },
+      "runtime": {
+        "path": "build/profile-walk/export006-v1/BMP/JOHNWALK.BMP/006.png",
+        "sha256": "47bd9a71c29ccd7e4f6cfeb5620c96b5952ee2cd13ad4681b996af1346d413b5",
+        "canvas": [
+          96,
+          148
+        ]
+      },
+      "padded": {
+        "path": "build/profile-walk/export006-v1/padded/006.png",
+        "sha256": "bf6781ac261461c90d149b235fb5974dd222026a76b0a6c1b58478296a6f213c",
+        "canvas": [
+          224,
+          276
+        ]
+      },
+      "smoke": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/006-v1/smoke.json",
+        "sha256": "758787d61bbe176a26fa076432452a013b0bf48f61a7e0f59ec751c6a6a60f42",
+        "passed": 3
+      },
+      "regression": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/006-v1/regression.json",
+        "sha256": "a34e83828bde0995ca892ceed40cce79ae15d3d0fa968bc2779347fe67c24eb6",
+        "passed": 24,
+        "mutation_status": "NOT RUN: use --mutation-check"
+      },
+      "source_centers_fit_runtime": true,
+      "alpha8_source_centers_hd": [
+        14.549999999999997,
+        0.19999999999999996,
+        90.35000000000001,
+        142.4
+      ],
+      "cap_raw": [
+        687,
+        17
+      ],
+      "cap_target_hd": [
+        70,
+        0.25
+      ]
+    },
+    {
+      "frame": 7,
+      "version": 1,
+      "source": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/007-profile-v1.png",
+        "sha256": "5df49fcd711c6a88400cba7e0fd475ed3549e19ac2fda9989a8361c99f9e675c"
+      },
+      "recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/007-v1/recipe.json",
+        "sha256": "21324359dbbf9052e798c382888f63c53e4f6fd59e285961a9249ee45a569170"
+      },
+      "export_report": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/007-v1/export-report.json",
+        "sha256": "f46ed81acfe549c460accf19d2d52c25ca174cda1a09ba012ccff3a2a50b4fe0"
+      },
+      "runtime": {
+        "path": "build/profile-walk/export007-v1/BMP/JOHNWALK.BMP/007.png",
+        "sha256": "2a1bbaaf5e192429ebdd0bb256fbd5ed4e826f6f2254f3de317471c6e224d8e9",
+        "canvas": [
+          64,
+          150
+        ]
+      },
+      "padded": {
+        "path": "build/profile-walk/export007-v1/padded/007.png",
+        "sha256": "a73c4f4d1b09d014afe2bf369d5f6c4163bde19016cce62834f1ec749cba70c3",
+        "canvas": [
+          192,
+          278
+        ]
+      },
+      "smoke": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/007-v1/smoke.json",
+        "sha256": "71e2b9fe5761983350c8985de2f30797806f52aa1e0bf7b0d468b96b9958bbd7",
+        "passed": 3
+      },
+      "regression": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/007-v1/regression.json",
+        "sha256": "5506ed92d6128563b89e91820d68bfecdd2ea9cad9767bb2eba4c96914f099b8",
+        "passed": 24,
+        "mutation_status": "NOT RUN: use --mutation-check"
+      },
+      "source_centers_fit_runtime": true,
+      "alpha8_source_centers_hd": [
+        22.299999999999997,
+        0.19999999999999996,
+        59.199999999999996,
+        146.10000000000002
+      ],
+      "cap_raw": [
+        628.5,
+        17
+      ],
+      "cap_target_hd": [
+        48,
+        0.25
+      ]
+    },
+    {
+      "frame": 8,
+      "version": 4,
+      "source": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/008-profile-v4.png",
+        "sha256": "8d74970387db6850aa7bb644b46d2d7f68a0ae2360c0e1ddbd8f7fa9df400744"
+      },
+      "recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/008-v4/recipe.json",
+        "sha256": "9710c583577b65765f65a7ee1d5415a6434491e5e82216b70c6824de4b937fe0"
+      },
+      "export_report": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/008-v4/export-report.json",
+        "sha256": "bd7984c114c431cde77340423241027f181cd28a22410011fdc163b85455d17e"
+      },
+      "runtime": {
+        "path": "build/profile-walk/export008-v4/BMP/JOHNWALK.BMP/008.png",
+        "sha256": "eee73c081b9947a357e813f1503a64638f5a2ca3e0a706c70571847d13222a0a",
+        "canvas": [
+          80,
+          150
+        ]
+      },
+      "padded": {
+        "path": "build/profile-walk/export008-v4/padded/008.png",
+        "sha256": "c23011e17a3e30c3b46cabefeeebe7576a485e5d69d8b22d3df1fd189c43fbf8",
+        "canvas": [
+          208,
+          278
+        ]
+      },
+      "smoke": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/008-v4/smoke.json",
+        "sha256": "59b2cc2f41e2588be74896b3000fe9a7d32270c98e3296796e25195512648be4",
+        "passed": 3
+      },
+      "regression": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/cycle-export-v1/008-v4/regression.json",
+        "sha256": "656b6bf84fc5bbee6f689214e484b46a8acf877e16f5fb0ae7461681a1a70c88",
+        "passed": 24,
+        "mutation_status": "NOT RUN: use --mutation-check"
+      },
+      "source_centers_fit_runtime": true,
+      "alpha8_source_centers_hd": [
+        7.199999999999996,
+        0.19999999999999996,
+        76.9,
+        143.60000000000002
+      ],
+      "cap_raw": [
+        681.5,
+        17
+      ],
+      "cap_target_hd": [
+        62,
+        0.25
+      ]
+    }
+  ],
+  "mutation_policy": {
+    "new_cycle_mutations": "NOT RUN: unchanged exporter and tests already have executed guard mutations.",
+    "prior_record": {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/export-tool-v1/validation.json",
+      "sha256": "2d4bb028ed40deb4fd7d24b851d833e4304cd3137ec1c12438c8604fad7d1a52"
+    }
+  },
+  "limits": [
+    "Fit and byte identity do not establish anatomical correctness or native motion acceptance.",
+    "Build paths refer to reproducible ignored runtime/padded outputs; portable recipes and test reports are retained.",
+    "003 is shared with ordinary turns and story draws; the selection does not approve all such uses."
+  ]
+}

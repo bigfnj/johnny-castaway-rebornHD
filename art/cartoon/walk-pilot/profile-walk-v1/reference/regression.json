@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "phase": "regression",
+  "case_count": 8,
+  "helper_sha256": "4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc",
+  "test_sha256": "80cc75c8787c267df343bb73efa23bb4f67ae2db15dcab34863eaa384a2b9321",
+  "source_index_sha256": "7173a1cbe9412e65f79e574589b3d83e05af506d55082cf465f6d813bc99c460",
+  "scope": "Fresh Python subprocesses run the actual helper. Regression corrupts disposable inputs and rebinds container hashes for semantic controls. No production or reference pixels changed.",
+  "cases": [
+    {
+      "label": "original-facts",
+      "exit_code": 1,
+      "stdout": "WITNESS profile-reference SHA256=4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc\n",
+      "stderr": "FAIL 003-source.json: original fact row differs\n",
+      "expected_named_failure": "003-source.json: original fact row differs",
+      "status": "FIRED"
+    },
+    {
+      "label": "cap-registration",
+      "exit_code": 1,
+      "stdout": "WITNESS profile-reference SHA256=4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc\n",
+      "stderr": "FAIL 003-source.json: registration differs\n",
+      "expected_named_failure": "003-source.json: registration differs",
+      "status": "FIRED"
+    },
+    {
+      "label": "source-provenance",
+      "exit_code": 1,
+      "stdout": "WITNESS profile-reference SHA256=4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc\n",
+      "stderr": "FAIL 003-source.json: provenance/limit differs\n",
+      "expected_named_failure": "003-source.json: provenance/limit differs",
+      "status": "FIRED"
+    },
+    {
+      "label": "damaged-native",
+      "exit_code": 1,
+      "stdout": "WITNESS profile-reference SHA256=4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc\n",
+      "stderr": "FAIL 003-original-native.png: original RGBA differs\n",
+      "expected_named_failure": "003-original-native.png: original RGBA differs",
+      "status": "FIRED"
+    },
+    {
+      "label": "damaged-nearest8",
+      "exit_code": 1,
+      "stdout": "WITNESS profile-reference SHA256=4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc\n",
+      "stderr": "FAIL 003-original-nearest8.png: exact8 pixel replication differs\n",
+      "expected_named_failure": "003-original-nearest8.png: exact8 pixel replication differs",
+      "status": "FIRED"
+    },
+    {
+      "label": "wrong-frame-scope",
+      "exit_code": 1,
+      "stdout": "WITNESS profile-reference SHA256=4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc\n",
+      "stderr": "FAIL source-index.json: frame scope\n",
+      "expected_named_failure": "source-index.json: frame scope",
+      "status": "FIRED"
+    },
+    {
+      "label": "existing-output",
+      "exit_code": 1,
+      "stdout": "WITNESS profile-reference SHA256=4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc\n",
+      "stderr": "FAIL output: must be a fresh directory\n",
+      "expected_named_failure": "output: must be a fresh directory",
+      "status": "FIRED"
+    },
+    {
+      "label": "original-xpm-raw-identity",
+      "exit_code": 1,
+      "stdout": "WITNESS profile-reference SHA256=4f9bfa4200175af4dc903bfbffd3909904be8234774f1b130284d106a6e23cfc\n",
+      "stderr": "FAIL original-frame-identity:003\n",
+      "expected_named_failure": "original-frame-identity:003",
+      "status": "FIRED"
+    }
+  ]
+}

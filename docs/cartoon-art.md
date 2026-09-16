@@ -1,8 +1,9 @@
 # Cartoon art production
 
-The [production plan](cartoon-production-plan.md) begins the next bounded batch:
-a complete [slot catalog](knowledge-base/cartoon-production-catalog.md), followed
-by additional walking directions with separate key, motion and scene reviews.
+The [production plan](cartoon-production-plan.md) tracks the completed
+[slot catalog](knowledge-base/cartoon-production-catalog.md) and successive
+walking families. The current [profile-walk batch](cartoon-profile-walk-plan.md)
+covers 001-008 with separate pose, motion and scene reviews.
 
 Read [image authoring lessons](art-style-learnings.md) before starting another
 style or animation family. It preserves the Cartoon pilot's generation,
@@ -24,9 +25,12 @@ keep their earlier approvals through explicit selected inheritance; the original
 pilot's drawings and pose observations remain preserved as history.
 The [standing family](../art/cartoon/walk-pilot/front-arrival-v1/README.md) adds
 000/015/016/017 alongside018, covering all eight standing directions and bringing
-the pack to32 assets. Native arrival and direction-ring approvals are scoped
-separately from unreviewed story interactions. The original-only ordinary-turn
-dependency trace keeps003 with the future complete001-008 profile-walk batch.
+the pack to 32 assets. Native arrival and direction-ring approvals are scoped
+separately from unreviewed story interactions. The
+[profile family](../art/cartoon/walk-pilot/profile-walk-v1/README.md) adds 001-008
+together, bringing the pack to 40 assets. Both native directions, standing
+connections and ordinary 003 departures were approved with "Yes, keep this profile
+walk". Ordinary 009/010/012 and unreviewed story interactions remain later work.
 Each family retains its actual human review; aggregate pack approvals explicitly
 inherit earlier reviewed assets rather than silently replacing their provenance.
 

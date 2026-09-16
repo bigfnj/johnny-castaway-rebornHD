@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export checkpoint for selected profile-walk frames001-008; native and human motion approval remain separate.",
+  "status": "PASS: all eight selected frames fit the fixed original canvases and have passing smoke then regression reports.",
+  "selection": {
+    "path": "candidate-selection.json",
+    "sha256": "6ef901aba18803962f0890e27cbec2d13a7aaa77891424d43b5a32acb9052968"
+  },
+  "environment": {
+    "python": "3.11.15",
+    "pillow": "12.3.0"
+  },
+  "unchanged_tools": {
+    "exporter_sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2",
+    "test_sha256": "c01330d60a155fb5a880b463360037b2513a549bdeb8c3aa9b19c11669ed6db8"
+  },
+  "selected_checks": [
+    {
+      "frame": 1,
+      "version": 3,
+      "smoke_passed": 3,
+      "regression_passed": 24,
+      "execution": "Current candidate smoke then regression executed.",
+      "source_centers_fit_runtime": true
+    },
+    {
+      "frame": 2,
+      "version": 2,
+      "smoke_passed": 3,
+      "regression_passed": 24,
+      "execution": "Current candidate smoke then regression executed.",
+      "source_centers_fit_runtime": true
+    },
+    {
+      "frame": 3,
+      "version": 2,
+      "smoke_passed": 3,
+      "regression_passed": 24,
+      "execution": "Earlier unchanged003-v2 smoke then regression records retained; no redundant rerun.",
+      "source_centers_fit_runtime": true
+    },
+    {
+      "frame": 4,
+      "version": 3,
+      "smoke_passed": 3,
+      "regression_passed": 24,
+      "execution": "Current candidate smoke then regression executed.",
+      "source_centers_fit_runtime": true
+    },
+    {
+      "frame": 5,
+      "version": 4,
+      "smoke_passed": 3,
+      "regression_passed": 24,
+      "execution": "Current candidate smoke then regression executed.",
+      "source_centers_fit_runtime": true
+    },
+    {
+      "frame": 6,
+      "version": 1,
+      "smoke_passed": 3,
+      "regression_passed": 24,
+      "execution": "Current candidate smoke then regression executed.",
+      "source_centers_fit_runtime": true
+    },
+    {
+      "frame": 7,
+      "version": 1,
+      "smoke_passed": 3,
+      "regression_passed": 24,
+      "execution": "Current candidate smoke then regression executed.",
+      "source_centers_fit_runtime": true
+    },
+    {
+      "frame": 8,
+      "version": 4,
+      "smoke_passed": 3,
+      "regression_passed": 24,
+      "execution": "Current candidate smoke then regression executed.",
+      "source_centers_fit_runtime": true
+    }
+  ],
+  "mutation_status": {
+    "new_cycle_mutations": "NOT RUN: unchanged exporter and tests already have executed guard mutations.",
+    "prior_record": {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/export-tool-v1/validation.json",
+      "sha256": "2d4bb028ed40deb4fd7d24b851d833e4304cd3137ec1c12438c8604fad7d1a52"
+    }
+  },
+  "registration": {
+    "shared_scale_exact": {
+      "numerator": 1,
+      "denominator": 10
+    },
+    "placement": "Original per-frame cap X and fixed0.25HD cap Y; translation only. No per-pose rescaling, cropping correction, masking, or anatomy warps.",
+    "frame004_observation": {
+      "prior_cap_raw": [
+        669,
+        18
+      ],
+      "selected_cap_raw": [
+        686,
+        16
+      ],
+      "prior_affine_forward": [
+        0.1,
+        0,
+        -0.9000000000000057,
+        0,
+        0.1,
+        -1.55
+      ],
+      "selected_affine_forward": [
+        0.1,
+        0,
+        -2.6000000000000085,
+        0,
+        0.1,
+        -1.35
+      ],
+      "placement_delta_hd": [
+        -1.7,
+        0.2
+      ],
+      "meaning": "The selected drawing's measured cap moved from the earlier004-v2 drawing; fixed registration translates the entire drawing accordingly. Flagged to parent for native motion review; this is not a canvas-fit failure."
+    }
+  },
+  "historical_candidates": [
+    {
+      "versions": [
+        "004-v1",
+        "005-v1",
+        "008-v1"
+      ],
+      "status": "Read-only fit measurements failed; no runtime export or tests attempted.",
+      "record": "review-evidence/cycle-export-v1/rejected-fit-measurements.json"
+    },
+    {
+      "version": "005-v2",
+      "status": "Runtime export refused runtime-overhang:005; generated background alpha caused incorrect cap and oversized footprint. Padded preview retained without masking. Superseded by005-v3, then selected005-v4.",
+      "runtime_output_absent": true,
+      "record": "review-evidence/cycle-export-v1/rejected005-v2/export-report.json"
+    },
+    {
+      "versions": [
+        "002-v1",
+        "004-v2",
+        "005-v3"
+      ],
+      "status": "Smoke3 and regression24 passed before arm-direction review; superseded by selected arm revisions. Their passing reports remain historical."
+    },
+    {
+      "version": "008-v2",
+      "status": "Fit passed and runtime exported, but no smoke/regression because the immediate arm revision superseded it."
+    },
+    {
+      "version": "008-v3",
+      "status": "Runtime export refused runtime-overhang:008 (0.65HD right); padded preview retained. Human approval covered arm direction only. Later008-v4 fits and is selected.",
+      "runtime_output_absent": true,
+      "record": "review-evidence/cycle-export-v1/rejected008-v3.json"
+    }
+  ],
+  "production": {
+    "path": "assets/scrantic_data.zip",
+    "sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+    "changed": false,
+    "production_approved": false
+  },
+  "unpublished_viewer": {
+    "retained_under_ignored_build": true,
+    "status": "Cancelled before build, publication, or browser validation because the user approved the inline arm image. No viewer evidence is claimed."
+  },
+  "copy_verification": {
+    "status": "Exact source bytes copied; hashes checked after copy.",
+    "files_sha256": {
+      "exports/001-v3/recipe.json": "6aca4b7675e54ce85585eeffa0c3489a5fabd194196b13209c0e8f229c477749",
+      "exports/001-v3/export-report.json": "fb470fa878d032e6dad467263483bdca570145dded97ff149b07f6f0f2e174af",
+      "review-evidence/cycle-export-v1/001-v3/smoke.json": "090561fd89689e0f3f28367834ae40cc0f520da79a5fe5c8e2363632695cfc78",
+      "review-evidence/cycle-export-v1/001-v3/regression.json": "fc6e939a2358cd2b03ff1fecb7c0d66e388b884ed8dff853299072b912319b56",
+      "exports/002-v2/recipe.json": "e032880eeec5ab43014e3a5db5f555bb79d5231cb3d7d8a0188d089e4e29745e",
+      "exports/002-v2/export-report.json": "f3e798bf2badf3ce147bb30867842226693fc017ecb6ed982cc2c8457863333f",
+      "review-evidence/cycle-export-v1/002-v2/smoke.json": "52cd020742e64114bcdbeb65eca7a33d53aa9859324ba5fd89755b8227c5c2ea",
+      "review-evidence/cycle-export-v1/002-v2/regression.json": "a288116342da12d01c00c235b5b51d939258b8506c48429173367678a66cd752",
+      "exports/003-v2/recipe.json": "80e59864034e07809aa0b28921533ce3f604b280ff1aa663ed27322fa9ae7518",
+      "exports/003-v2/export-report.json": "8b355322b2152174e984af8ea90e4c0c6ffa197f4df462d17c128f61bcede298",
+      "exports/004-v3/recipe.json": "6d1cf6ab4e7344faa35df6cc4969a245f491b8e6abdb42e978dccbfd799be1bb",
+      "exports/004-v3/export-report.json": "a9539763870d5c70fd609dbb2f9e4ba9df74e2925f7276bd9d0b7be4fa8ca9d2",
+      "review-evidence/cycle-export-v1/004-v3/smoke.json": "2341e382c8536596585a8eb3caf4e9ace890ba2dedec777c2513f12fca546c10",
+      "review-evidence/cycle-export-v1/004-v3/regression.json": "1b01539522d89b6d3aa4ba4b8f3fc7a772ad94bff8acd73829d20b0b47635470",
+      "exports/005-v4/recipe.json": "dd7a896d3e3755175d2c9e9ce1963ec5a8575ebbe80fe5a847370496637f9000",
+      "exports/005-v4/export-report.json": "8df17a02eb98c2aa3057f9d9fa18b866cbd563817829d93c3f9a9d1899c0890a",
+      "review-evidence/cycle-export-v1/005-v4/smoke.json": "d1ae66f474a721b8abf91b84d334cbc12246bfb988b2b35e68e19bbe1727c73c",
+      "review-evidence/cycle-export-v1/005-v4/regression.json": "c4d989434f72b4cb1c9dd3612e718061b88be1a4cb336642db770a0d880ce35b",
+      "exports/006-v1/recipe.json": "2c59ff38ee792a401fb6309118c5eb67690308748211199ce623061b91e44edb",
+      "exports/006-v1/export-report.json": "49c6c61859fb8536e9a9d57066881f21f8c00653cf3b38de1a06ca95665c5053",
+      "review-evidence/cycle-export-v1/006-v1/smoke.json": "758787d61bbe176a26fa076432452a013b0bf48f61a7e0f59ec751c6a6a60f42",
+      "review-evidence/cycle-export-v1/006-v1/regression.json": "a34e83828bde0995ca892ceed40cce79ae15d3d0fa968bc2779347fe67c24eb6",
+      "exports/007-v1/recipe.json": "21324359dbbf9052e798c382888f63c53e4f6fd59e285961a9249ee45a569170",
+      "exports/007-v1/export-report.json": "f46ed81acfe549c460accf19d2d52c25ca174cda1a09ba012ccff3a2a50b4fe0",
+      "review-evidence/cycle-export-v1/007-v1/smoke.json": "71e2b9fe5761983350c8985de2f30797806f52aa1e0bf7b0d468b96b9958bbd7",
+      "review-evidence/cycle-export-v1/007-v1/regression.json": "5506ed92d6128563b89e91820d68bfecdd2ea9cad9767bb2eba4c96914f099b8",
+      "exports/008-v4/recipe.json": "9710c583577b65765f65a7ee1d5415a6434491e5e82216b70c6824de4b937fe0",
+      "exports/008-v4/export-report.json": "bd7984c114c431cde77340423241027f181cd28a22410011fdc163b85455d17e",
+      "review-evidence/cycle-export-v1/008-v4/smoke.json": "59b2cc2f41e2588be74896b3000fe9a7d32270c98e3296796e25195512648be4",
+      "review-evidence/cycle-export-v1/008-v4/regression.json": "656b6bf84fc5bbee6f689214e484b46a8acf877e16f5fb0ae7461681a1a70c88"
+    }
+  },
+  "historical_and_selected_cycle_records_sha256": {
+    "review-evidence/cycle-export-v1/rejected-fit-measurements.json": "40bbb4a3eec9c7f8b5cba07cc5543a8d43dcee792a3d374d5bdad12319b19ff6",
+    "review-evidence/cycle-export-v1/rejected008-v3.json": "c348a3d4de75f95fa12da80eda693a6b2bd79add1d7c1eb936667d21a82daff3",
+    "review-evidence/cycle-export-v1/001-v3/regression.json": "fc6e939a2358cd2b03ff1fecb7c0d66e388b884ed8dff853299072b912319b56",
+    "review-evidence/cycle-export-v1/001-v3/smoke.json": "090561fd89689e0f3f28367834ae40cc0f520da79a5fe5c8e2363632695cfc78",
+    "review-evidence/cycle-export-v1/002-v1/regression.json": "4dbc16721f5a647965fa2e9191a3e743893276bfb2e728119f0a96dfff2f1e55",
+    "review-evidence/cycle-export-v1/002-v1/smoke.json": "c8934e1ee3c61e7011bc6ac8e9367d44eec5ba68a73339982c30dd2f05f9f048",
+    "review-evidence/cycle-export-v1/002-v2/regression.json": "a288116342da12d01c00c235b5b51d939258b8506c48429173367678a66cd752",
+    "review-evidence/cycle-export-v1/002-v2/smoke.json": "52cd020742e64114bcdbeb65eca7a33d53aa9859324ba5fd89755b8227c5c2ea",
+    "review-evidence/cycle-export-v1/004-v2/regression.json": "ca4b84f35315e4ce73ff4af1149e20a26a86e6948785b73c91e19172e3b6a07c",
+    "review-evidence/cycle-export-v1/004-v2/smoke.json": "d1a9afb0f335cc8e064e01241cdaefe4cde452be11688dd19a26b8b151113978",
+    "review-evidence/cycle-export-v1/004-v3/regression.json": "1b01539522d89b6d3aa4ba4b8f3fc7a772ad94bff8acd73829d20b0b47635470",
+    "review-evidence/cycle-export-v1/004-v3/smoke.json": "2341e382c8536596585a8eb3caf4e9ace890ba2dedec777c2513f12fca546c10",
+    "review-evidence/cycle-export-v1/005-v3/regression.json": "e4d9e8f58efffaf762b917d66b32b2d5e7938f26029fd588f78365aeedc05ed2",
+    "review-evidence/cycle-export-v1/005-v3/smoke.json": "4bf7c65e38fbf29de3c4c922f53dc51ce222acfc49f1d1fce4cfb7c2c9628dc3",
+    "review-evidence/cycle-export-v1/005-v4/regression.json": "c4d989434f72b4cb1c9dd3612e718061b88be1a4cb336642db770a0d880ce35b",
+    "review-evidence/cycle-export-v1/005-v4/smoke.json": "d1ae66f474a721b8abf91b84d334cbc12246bfb988b2b35e68e19bbe1727c73c",
+    "review-evidence/cycle-export-v1/006-v1/regression.json": "a34e83828bde0995ca892ceed40cce79ae15d3d0fa968bc2779347fe67c24eb6",
+    "review-evidence/cycle-export-v1/006-v1/smoke.json": "758787d61bbe176a26fa076432452a013b0bf48f61a7e0f59ec751c6a6a60f42",
+    "review-evidence/cycle-export-v1/007-v1/regression.json": "5506ed92d6128563b89e91820d68bfecdd2ea9cad9767bb2eba4c96914f099b8",
+    "review-evidence/cycle-export-v1/007-v1/smoke.json": "71e2b9fe5761983350c8985de2f30797806f52aa1e0bf7b0d468b96b9958bbd7",
+    "review-evidence/cycle-export-v1/008-v4/regression.json": "656b6bf84fc5bbee6f689214e484b46a8acf877e16f5fb0ae7461681a1a70c88",
+    "review-evidence/cycle-export-v1/008-v4/smoke.json": "59b2cc2f41e2588be74896b3000fe9a7d32270c98e3296796e25195512648be4",
+    "review-evidence/cycle-export-v1/rejected005-v2/export-report.json": "e155253d21552041899793cacb414913431267d201a4b80232b7594a14ec0268",
+    "review-evidence/cycle-export-v1/rejected005-v2/recipe.json": "c4f754b52cc2bae1cc1a40e79c4450affe677eaaccdee826e33861d924b86f39"
+  },
+  "limits": [
+    "Fit and byte identity do not establish anatomical correctness or native motion acceptance.",
+    "Build paths refer to reproducible ignored runtime/padded outputs; portable recipes and test reports are retained.",
+    "003 is shared with ordinary turns and story draws; the selection does not approve all such uses."
+  ]
+}

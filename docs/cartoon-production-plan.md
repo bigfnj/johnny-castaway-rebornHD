@@ -16,8 +16,10 @@ application. Work starts from `0f7d7fd` on `art/cartoon-production-foundation`.
 | Delivery | Accepted assets only, updated evidence and coverage, merged work and audit | Preserve previous art; native smoke then regression; inspect the final merged code and document remaining issues |
 
 The full catalog is preparation, not permission to generate every resource at
-once. The original 21 approved assets were the starting baseline; the accepted
-rear walking family and its standing arrival now bring production coverage to 28.
+once. The original 21 approved assets were the starting baseline. The rear walk,
+its arrival, and the completed standing family now bring production coverage to
+32. The approved [profile-walk batch](cartoon-profile-walk-plan.md) adds eight
+poses together and brings the pack to 40 assets.
 Drafts have separate source records and do not acquire acceptance from similar
 poses, shared bytes or approval of a different direction.
 
@@ -64,11 +66,14 @@ The rear-three-quarter key was approved with "looks good yes". Its complete
 six-pose walk was subsequently approved in the native island review with
 "Yes, keep this walk". The user then approved standing arrival 018 with
 "nailed it, proceed", completing that displayed rear arrival in Cartoon.
-The next bounded review can revisit the front walk using the rear family's
-knee/foot continuity lessons. Before replacing its assets, explicitly transition
-the original pilot metadata's approval history. Eight of the ten unique
-wait/turn-table assets still use HD fallback; other placements and story uses
-of 018 remain outside this arrival review. Large-scale asset generation,
+The front walk refresh and all standing directions have since been accepted,
+with explicit inheritance of earlier approvals. Profile walking 001-008, including
+shared ordinary-turn 003, is now approved in both native directions and its
+reviewed ordinary departure contexts. Three of the ten unique wait/turn-table
+assets still use HD fallback: 009, 010 and 012. These connecting poses and their
+complete route/story contexts are the next bounded art batch.
+Other placements and story uses of the standing art remain outside its reviewed
+arrival/direction-ring contexts. Large-scale asset generation,
 low-tide scenery, other characters, action scenes and code-drawn effects remain
 outside the current production batch. Existing engine maintenance findings stay
 in [BACKLOG.md](../BACKLOG.md); address a reproduced blocker when its affected
