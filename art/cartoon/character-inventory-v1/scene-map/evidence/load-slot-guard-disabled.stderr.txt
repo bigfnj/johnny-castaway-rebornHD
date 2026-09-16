@@ -1,0 +1,21 @@
+test_actual_sites_and_ambiguity_coverage (__main__.Regression.test_actual_sites_and_ambiguity_coverage) ... ok
+test_current_resource_identity_guard (__main__.Regression.test_current_resource_identity_guard) ... ok
+test_global_tag_resets_delay_inference (__main__.Regression.test_global_tag_resets_delay_inference) ... ok
+test_missing_load_selector_is_refused (__main__.Regression.test_missing_load_selector_is_refused) ... FAIL
+test_native_cd_and_no_water_exit_frames (__main__.Regression.test_native_cd_and_no_water_exit_frames) ... ok
+test_original_identity_guard (__main__.Regression.test_original_identity_guard) ... ok
+test_reused_slot_stays_ambiguous (__main__.Regression.test_reused_slot_stays_ambiguous) ... ok
+test_unassigned_draw_is_explicit (__main__.Regression.test_unassigned_draw_is_explicit) ... ok
+
+======================================================================
+FAIL: test_missing_load_selector_is_refused (__main__.Regression.test_missing_load_selector_is_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-character-inventory\art\cartoon\character-inventory-v1\scene-map\test_scene_map.py", line 45, in test_missing_load_selector_is_refused
+    with self.assertRaisesRegex(ValueError,'unresolved-load-slot: X.TTM:0'):
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.073s
+
+FAILED (failures=1)

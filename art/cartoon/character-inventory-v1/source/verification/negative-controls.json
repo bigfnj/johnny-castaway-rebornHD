@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "helper_sha256": "ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853",
+  "test_sha256": "c94d6dda92a1ebacedc63aaa7ceccb0ab3fac836b05cd36a7b7d6265202f3707",
+  "extraction_index_sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2",
+  "negative_controls_fired": 7,
+  "runs": [
+    {
+      "name": "positive_before",
+      "returncode": 0,
+      "expected_failure": null,
+      "result": "PASS",
+      "stdout": "WITNESS original-inventory ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853\nPASS {\"checked_frames\": 4, \"palette_limit\": \"Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.\", \"phase\": \"smoke\", \"status\": \"PASS\", \"total_frames\": 2402, \"verified_dump_files\": 2453}\n",
+      "stderr": ""
+    },
+    {
+      "name": "changed_pixel_with_refreshed_png_hash",
+      "returncode": 1,
+      "expected_failure": "native/BMP/JOHNWALK.BMP/018.png: original RGBA pixel identity differs",
+      "result": "FIRED",
+      "stdout": "WITNESS original-inventory ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853\n",
+      "stderr": "FAIL native/BMP/JOHNWALK.BMP/018.png: original RGBA pixel identity differs\n"
+    },
+    {
+      "name": "missing_frame_row",
+      "returncode": 1,
+      "expected_failure": "index.json: missing or duplicate frame rows",
+      "result": "FIRED",
+      "stdout": "WITNESS original-inventory ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853\n",
+      "stderr": "FAIL index.json: missing or duplicate frame rows\n"
+    },
+    {
+      "name": "wrong_frame_mapping",
+      "returncode": 1,
+      "expected_failure": "BMP/JOHNWALK.BMP/018: frame/source mapping differs",
+      "result": "FIRED",
+      "stdout": "WITNESS original-inventory ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853\n",
+      "stderr": "FAIL BMP/JOHNWALK.BMP/018: frame/source mapping differs\n"
+    },
+    {
+      "name": "false_original_palette_parity",
+      "returncode": 1,
+      "expected_failure": "index.json: palette scope differs",
+      "result": "FIRED",
+      "stdout": "WITNESS original-inventory ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853\n",
+      "stderr": "FAIL index.json: palette scope differs\n"
+    },
+    {
+      "name": "changed_dump_report",
+      "returncode": 1,
+      "expected_failure": "report.json: original dump report identity",
+      "result": "FIRED",
+      "stdout": "WITNESS original-inventory ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853\n",
+      "stderr": "FAIL report.json: original dump report identity\n"
+    },
+    {
+      "name": "changed_original_volume",
+      "returncode": 1,
+      "expected_failure": "RESOURCE.001: supplied-original input identity",
+      "result": "FIRED",
+      "stdout": "WITNESS original-inventory ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853\n",
+      "stderr": "FAIL RESOURCE.001: supplied-original input identity\n"
+    },
+    {
+      "name": "existing_output_refused",
+      "returncode": 1,
+      "expected_failure": "build\\character-inventory\\originals\\controls-v1\\positive: refusing to overwrite existing extraction",
+      "result": "FIRED",
+      "stdout": "WITNESS original-inventory ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853\n",
+      "stderr": "FAIL build\\character-inventory\\originals\\controls-v1\\positive: refusing to overwrite existing extraction\n"
+    },
+    {
+      "name": "same_corruption_accepted_only_after_rgba_guard_removal",
+      "returncode": 0,
+      "expected_failure": null,
+      "result": "PASS",
+      "stdout": "EXECUTED_MUTANT_BYTES_SHA256=155ddff56130b8017c5ccb294e2182b83b0fc8fead52a327e9e4da4d225d75d2\nWITNESS original-inventory ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853\nPASS {\"checked_frames\": 4, \"palette_limit\": \"Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.\", \"phase\": \"smoke\", \"status\": \"PASS\", \"total_frames\": 2402, \"verified_dump_files\": 2453}\n",
+      "stderr": ""
+    },
+    {
+      "name": "positive_after",
+      "returncode": 0,
+      "expected_failure": null,
+      "result": "PASS",
+      "stdout": "WITNESS original-inventory ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853\nPASS {\"checked_frames\": 4, \"palette_limit\": \"Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.\", \"phase\": \"smoke\", \"status\": \"PASS\", \"total_frames\": 2402, \"verified_dump_files\": 2453}\n",
+      "stderr": ""
+    }
+  ],
+  "guard_removal": {
+    "artifact": "prepare-rgba-guard-removed.py",
+    "sha256": "155ddff56130b8017c5ccb294e2182b83b0fc8fead52a327e9e4da4d225d75d2",
+    "witness": "EXECUTED_MUTANT_BYTES_SHA256",
+    "change": "Exactly the original RGBA comparison removed; unchanged wrong PNG plus refreshed PNG hash then passes."
+  },
+  "source_and_extraction_unchanged": true,
+  "scope": "Fresh processes exercise actual prepare/check entrypoints using isolated copied fixtures. No original, production or frozen reference bytes modified."
+}

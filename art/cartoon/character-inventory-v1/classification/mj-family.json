@@ -1,0 +1,628 @@
+{
+  "schema_version": 1,
+  "source_index_sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2",
+  "scope": "Visual inspection of all 17 supplied-original MJ atlas pages, 491 frame slots. Diagnostic colors are geometry aids; no character class is inferred solely from resource names or script actions. Uncertain small details remain review candidates.",
+  "resources": [
+    {
+      "resource": "MJBATH.BMP",
+      "default_class": "johnny_partial",
+      "overrides": [
+        {
+          "frames": [
+            4,
+            5,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          "class": "johnny_composite",
+          "note": "Bather with visible washing item, held clothes, or bird/branch action in the same drawing."
+        },
+        {
+          "frames": [
+            24,
+            25,
+            26,
+            27,
+            28
+          ],
+          "class": "johnny_full",
+          "note": "Complete dressed Johnny poses."
+        },
+        {
+          "frames": [
+            29
+          ],
+          "class": "placeholder",
+          "note": "8x1 marker-sized frame."
+        },
+        {
+          "frames": [
+            30,
+            31,
+            33,
+            34
+          ],
+          "class": "not_johnny",
+          "note": "Ripples, branch, and bird/clothing detail without Johnny."
+        },
+        {
+          "frames": [
+            32
+          ],
+          "class": "uncertain",
+          "note": "Tiny striped rectangular detail; no defensible face or limb identification at atlas scale."
+        }
+      ],
+      "notes": "Hatless bathing upper-body drawings remain character work. Frames000-003,006-007,035-036 show only upper body; classify as partial even with water marks. Pure water/branch/bird pieces are retained as dependencies.",
+      "reviewed_pages": [
+        "MJBATH.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJBOTTLE.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            5,
+            6,
+            7,
+            44,
+            45,
+            50
+          ],
+          "class": "johnny_full",
+          "note": "Whole-body reaching, standing or slumped Johnny."
+        },
+        {
+          "frames": [
+            8,
+            9,
+            10,
+            11,
+            20,
+            23,
+            24,
+            37
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny or his upper body holding the bottle/message."
+        },
+        {
+          "frames": [
+            16,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            35,
+            36,
+            41,
+            43,
+            49
+          ],
+          "class": "johnny_partial",
+          "note": "Detached arm/hand, lower body, or incomplete body layer; includes arm-less full-height body036."
+        },
+        {
+          "frames": [
+            3,
+            15,
+            19,
+            21,
+            22,
+            25,
+            33,
+            38,
+            39,
+            40,
+            42
+          ],
+          "class": "placeholder",
+          "note": "One-/two-row marker frames."
+        }
+      ],
+      "notes": "Bottle, cork, paper-like and fragment drawings are not Johnny. Several action frames deliberately split limbs and body across slots; retain assembly dependencies. Small handheld detail around hands029-032 is not separately identified.",
+      "reviewed_pages": [
+        "MJBOTTLE.BMP-01.png",
+        "MJBOTTLE.BMP-02.png"
+      ]
+    },
+    {
+      "resource": "MJBTL2.BMP",
+      "default_class": "placeholder",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            1,
+            2,
+            3,
+            33,
+            36
+          ],
+          "class": "not_johnny",
+          "note": "Bottle shapes without character."
+        },
+        {
+          "frames": [
+            8,
+            9,
+            10,
+            11,
+            12,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29
+          ],
+          "class": "johnny_full",
+          "note": "Whole-body throwing or standing poses."
+        },
+        {
+          "frames": [
+            13
+          ],
+          "class": "johnny_composite",
+          "note": "Thought vignette contains tiny Johnny and another figure with scenery."
+        },
+        {
+          "frames": [
+            15
+          ],
+          "class": "johnny_partial",
+          "note": "Detached head/upper-chest close-up."
+        }
+      ],
+      "notes": "Numerous single-row placeholder slots. The thought vignette remains character art despite its small figures and enclosing bubble.",
+      "reviewed_pages": [
+        "MJBTL2.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJCOCO.BMP",
+      "default_class": "johnny_partial",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            8,
+            21,
+            22
+          ],
+          "class": "johnny_full",
+          "note": "Whole-body balance/reach/side-standing poses."
+        },
+        {
+          "frames": [
+            5,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            19,
+            29,
+            30,
+            32,
+            36,
+            37
+          ],
+          "class": "johnny_composite",
+          "note": "Body or limb/chest section visibly holds coconut or coconut piece."
+        },
+        {
+          "frames": [
+            38,
+            39,
+            40,
+            41,
+            42,
+            43
+          ],
+          "class": "not_johnny",
+          "note": "Small coconut/food fragment silhouettes, no identifiable body part."
+        }
+      ],
+      "notes": "Many heads, headless bodies and arms are separate layers:016-017,020,023-028,031,033-035,044-046. These must stay in the character inventory. Small handheld coconut sections are marked composite even when only an arm is drawn.",
+      "reviewed_pages": [
+        "MJCOCO.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJDIVE.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            12,
+            13,
+            14,
+            21,
+            23
+          ],
+          "class": "johnny_full",
+          "note": "Climbing or diving Johnny silhouettes; some fingers drawn disconnected but within whole-pose canvas."
+        },
+        {
+          "frames": [
+            9,
+            10,
+            11,
+            15
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny visibly integrated with palm leaf or water-entry splash."
+        },
+        {
+          "frames": [
+            0,
+            19,
+            20,
+            25
+          ],
+          "class": "uncertain",
+          "note": "Tiny skin-colored detail tiles000/019/020 and possible fingertips above coconut/leaf025 need enlarged native-pixel identification."
+        }
+      ],
+      "notes": "Palm trunk/leaves/coconuts, splash-only frames016-018 and arcs027-029 are separate non-character dependencies. Do not exclude tree-associated frames009-011, which visibly contain Johnny.",
+      "reviewed_pages": [
+        "MJDIVE.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJFISH1.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [
+        {
+          "frames": [
+            20,
+            21,
+            28,
+            29
+          ],
+          "class": "johnny_partial",
+          "note": "Lower-body layers and tiny facial/eye details."
+        },
+        {
+          "frames": [
+            22,
+            23,
+            24,
+            25,
+            26
+          ],
+          "class": "not_johnny",
+          "note": "Detached rod segments and water ripples."
+        }
+      ],
+      "notes": "Most full- or upper-body poses hold a fishing rod, so are composites. Partial lower-body and facial layers must be included independently.",
+      "reviewed_pages": [
+        "MJFISH1.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJFISH2.BMP",
+      "default_class": "johnny_partial",
+      "overrides": [
+        {
+          "frames": [
+            3,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny poses with fishing rod/line."
+        },
+        {
+          "frames": [
+            19,
+            20,
+            21,
+            22,
+            26
+          ],
+          "class": "uncertain",
+          "note": "Tiny red/black fragments do not resolve defensibly into body part versus fishing-prop detail on this sheet."
+        },
+        {
+          "frames": [
+            23
+          ],
+          "class": "not_johnny",
+          "note": "Detached sailor cap; costume dependency, no visible Johnny."
+        },
+        {
+          "frames": [
+            24
+          ],
+          "class": "johnny_full",
+          "note": "Complete Johnny with hands at torso; any tiny catch detail is not separately resolved."
+        }
+      ],
+      "notes": "Head and detached arm/hand/body layers000-002,004-005,015-018,025 count as Johnny. Keep uncertain fragments for enlarged context review.",
+      "reviewed_pages": [
+        "MJFISH2.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJFISH3.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            1,
+            12,
+            29,
+            30,
+            35
+          ],
+          "class": "johnny_partial",
+          "note": "Detached arm/hand or mouth/face detail."
+        },
+        {
+          "frames": [
+            26,
+            27
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny head with a boot-shaped object at the mouth."
+        },
+        {
+          "frames": [
+            28,
+            33,
+            34,
+            36
+          ],
+          "class": "uncertain",
+          "note": "Small patterned/black details could be fins, catch fragments or character layers; retain for closer action-context review."
+        }
+      ],
+      "notes": "Crab, green fish, starfish, lifebelt, plank, octopus, boots and splash-only drawings are non-character dependencies. The large patterned shapes on fish002-004 appear to be fish tail/fins, not detached Johnny arms.",
+      "reviewed_pages": [
+        "MJFISH3.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJJOG1.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {
+          "frames": [
+            2
+          ],
+          "class": "placeholder",
+          "note": "8x2 marker-sized slot."
+        }
+      ],
+      "notes": "Whole Johnny in tracksuit/headband warming up and stretching; costume variant, not the sailor-shorts model.",
+      "reviewed_pages": [
+        "MJJOG1.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJJOG2.BMP",
+      "default_class": "johnny_full",
+      "overrides": [],
+      "notes": "All24 drawings visibly contain complete tracksuit Johnny jogging across several view directions.",
+      "reviewed_pages": [
+        "MJJOG2.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJRAFT2.BMP",
+      "default_class": "placeholder",
+      "overrides": [
+        {
+          "frames": [
+            2,
+            3,
+            4,
+            5,
+            29,
+            30,
+            41,
+            42,
+            45
+          ],
+          "class": "not_johnny",
+          "note": "Wood fragments/planks without character."
+        },
+        {
+          "frames": [
+            14,
+            20,
+            21,
+            22,
+            23
+          ],
+          "class": "johnny_full",
+          "note": "Kneeling/crawling Johnny."
+        },
+        {
+          "frames": [
+            15,
+            16,
+            19
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny visibly entangled with raft wood or debris."
+        },
+        {
+          "frames": [
+            17,
+            18
+          ],
+          "class": "johnny_partial",
+          "note": "Detached forearm/hand."
+        }
+      ],
+      "notes": "Most slots are tiny placeholders. Wood-only dependencies are kept separate from the few character composites; do not regenerate this entire resource as a Johnny cycle.",
+      "reviewed_pages": [
+        "MJRAFT2.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJREAD.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [
+        {
+          "frames": [
+            19,
+            25
+          ],
+          "class": "johnny_partial",
+          "note": "Headless seated body and isolated forearm lifting sailor cap."
+        },
+        {
+          "frames": [
+            20,
+            24,
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "class": "not_johnny",
+          "note": "Leaf, detached cap, splash/ripple and glint effect without body."
+        },
+        {
+          "frames": [
+            27,
+            28,
+            29,
+            30
+          ],
+          "class": "johnny_full",
+          "note": "Getting up/kneeling/standing poses with no held book."
+        }
+      ],
+      "notes": "Most seated poses visibly hold a book, including hat-off variants. Frame025 is not just a cap: the attached forearm makes it character work.",
+      "reviewed_pages": [
+        "MJREAD.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJSANDC.BMP",
+      "default_class": "johnny_full",
+      "overrides": [],
+      "notes": "All11 frames visibly contain whole Johnny kneeling, gathering/kicking sand, hopping or standing. Sand streaks in007-009 are built into those drawings; retain their edges/context.",
+      "reviewed_pages": [
+        "MJSANDC.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJTELE.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            18,
+            19,
+            20,
+            21
+          ],
+          "class": "johnny_full",
+          "note": "Whole-body standing/shrugging poses without telescope."
+        },
+        {
+          "frames": [
+            8,
+            10
+          ],
+          "class": "johnny_partial",
+          "note": "Lower-body layer and isolated iris/pupil detail from telescope close-up."
+        },
+        {
+          "frames": [
+            9,
+            16
+          ],
+          "class": "not_johnny",
+          "note": "Empty lens ring and question-mark effect."
+        }
+      ],
+      "notes": "Telescope handling poses include upper-body-only composites. Eye/lid views011-012 and017 appear inside the telescope rim and remain character composites, not generic lens props. Tiny eye identity is inferred visually from the neighboring open/closed-eye views.",
+      "reviewed_pages": [
+        "MJTELE.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJTELE2.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [],
+      "notes": "All4 complete Johnny poses hold a telescope, viewed from different directions.",
+      "reviewed_pages": [
+        "MJTELE2.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MJ_AMB.BMP",
+      "default_class": "johnny_partial",
+      "overrides": [
+        {
+          "frames": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            27,
+            28
+          ],
+          "class": "johnny_full",
+          "note": "Complete hands-in-pockets/standing poses."
+        }
+      ],
+      "notes": "Every remaining frame is visibly a Johnny head, head/arm assembly, headless body or torso/arm layer. The cap-playing close-ups are character work; this resource is not a complete one-drawing-per-pose cycle.",
+      "reviewed_pages": [
+        "MJ_AMB.BMP-01.png"
+      ]
+    }
+  ]
+}

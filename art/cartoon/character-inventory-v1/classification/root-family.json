@@ -1,0 +1,590 @@
+{
+  "schema_version": 1,
+  "source_index_sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2",
+  "resources": [
+    {
+      "resource": "BACKGRND.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Island, palm, rocks, waves, clouds and shadows; no Johnny pixels.",
+      "reviewed_pages": [
+        "BACKGRND.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "BOAT.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Boat only; checked full native canvas for occupants.",
+      "reviewed_pages": [
+        "BOAT.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "CLOUDS.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Cloud forms.",
+      "reviewed_pages": [
+        "CLOUDS.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "COCOHEAD.BMP",
+      "default_class": "johnny_partial",
+      "overrides": [],
+      "notes": "Separate Johnny heads and a headless body in 008; must be assembled with the matching scene parts.",
+      "reviewed_pages": [
+        "COCOHEAD.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "COCONUTS.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Coconuts and cast shadows.",
+      "reviewed_pages": [
+        "COCONUTS.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "DRUNKJON.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            21,
+            22
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny and bottle in the same image; 021 is a partial upper body in water."
+        },
+        {
+          "frames": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "class": "johnny_full",
+          "note": "Exaggerated falling/deformed body poses with party hat."
+        },
+        {
+          "frames": [
+            19,
+            20
+          ],
+          "class": "johnny_partial",
+          "note": "Head or upper body emerging from water."
+        }
+      ],
+      "notes": "Johnny in a party hat; bottle, falling and water-entry sequence. White arcs and bottle fragments alone are not character drawings.",
+      "reviewed_pages": [
+        "DRUNKJON.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "ENDCRDTS.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "The End lettering.",
+      "reviewed_pages": [
+        "ENDCRDTS.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "FIRE.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            29,
+            30
+          ],
+          "class": "placeholder",
+          "note": "Single-pixel 8x1 slot; not a redraw target."
+        },
+        {
+          "frames": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            31,
+            32
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny handling sticks/fire-making props."
+        },
+        {
+          "frames": [
+            13,
+            14
+          ],
+          "class": "johnny_full",
+          "note": "Kneeling transitions."
+        },
+        {
+          "frames": [
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            25,
+            26,
+            27,
+            28
+          ],
+          "class": "johnny_partial",
+          "note": "Lower bodies, heads, torso or separate arms. 028 includes a stick."
+        }
+      ],
+      "notes": "Fire-making contains whole-body actions, separately assembled body parts, sticks and effects.",
+      "reviewed_pages": [
+        "FIRE.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "FIRE1.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Fire, smoke, sticks and impact graphic only.",
+      "reviewed_pages": [
+        "FIRE1.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "FIRE2.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            3,
+            8
+          ],
+          "class": "placeholder",
+          "note": "Single-pixel 8x1 slot."
+        }
+      ],
+      "notes": "Fish, boots, fish bones and small object fragments.",
+      "reviewed_pages": [
+        "FIRE2.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "FIRE3.BMP",
+      "default_class": "johnny_full",
+      "overrides": [],
+      "notes": "Three kneeling reaching poses; no separate held prop visible.",
+      "reviewed_pages": [
+        "FIRE3.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "FIRE4.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            3,
+            9,
+            10,
+            11,
+            12,
+            16
+          ],
+          "class": "placeholder",
+          "note": "Single-pixel 8x1 slot."
+        },
+        {
+          "frames": [
+            1,
+            2,
+            4,
+            8,
+            15,
+            17,
+            22,
+            24,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33
+          ],
+          "class": "johnny_composite",
+          "note": "Seated Johnny with stick/food or combined exaggerated eating action."
+        },
+        {
+          "frames": [
+            5,
+            6,
+            7,
+            13,
+            14,
+            21,
+            23,
+            34
+          ],
+          "class": "johnny_partial",
+          "note": "Head, mouth, torso, arm or legs; 023 is a face/hand fragment."
+        }
+      ],
+      "notes": "Seated eating actions, exaggerated face shapes and separate limb/face pieces.",
+      "reviewed_pages": [
+        "FIRE4.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "FIRE5.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Fish remains, boot and fish.",
+      "reviewed_pages": [
+        "FIRE5.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "FISHMAN.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [],
+      "notes": "Johnny with fishing rod; two facing directions.",
+      "reviewed_pages": [
+        "FISHMAN.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "HOLIDAY.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Pumpkin, clover, decorated tree and New Year banner. No embedded Johnny.",
+      "reviewed_pages": [
+        "HOLIDAY.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "JATA.BMP",
+      "default_class": "johnny_composite",
+      "overrides": [],
+      "notes": "Johnny and island/beach pixels in the same image.",
+      "reviewed_pages": [
+        "JATA.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "JCHANGE.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            1,
+            2,
+            6,
+            7,
+            9
+          ],
+          "class": "johnny_partial",
+          "note": "Visible arm or hand connected to a garment. Retain the cloth-only frames with this sequence."
+        }
+      ],
+      "notes": "Changing-clothes overlays. Cloth-only frames remain dependencies, not anatomy.",
+      "reviewed_pages": [
+        "JCHANGE.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "JOHNWALK.BMP",
+      "default_class": "johnny_full",
+      "overrides": [
+        {
+          "frames": [
+            13
+          ],
+          "class": "placeholder",
+          "note": "8x1 canvas with one gray pixel; not an outstanding pose."
+        }
+      ],
+      "notes": "Core walking and standing resource: 28 accepted Cartoon slots, 7 pending drawings and one placeholder.",
+      "reviewed_pages": [
+        "JOHNWALK.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "JOHNWOUL.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            15
+          ],
+          "class": "johnny_full",
+          "note": "Whole-body squash/stretch/falling actions."
+        },
+        {
+          "frames": [
+            1,
+            13,
+            14,
+            16
+          ],
+          "class": "johnny_partial",
+          "note": "Headless body or upper-body fragment."
+        },
+        {
+          "frames": [
+            8
+          ],
+          "class": "johnny_composite",
+          "note": "Johnny entering water with splash in the same bitmap."
+        }
+      ],
+      "notes": "Falling and water entry; arc overlays alone are effects.",
+      "reviewed_pages": [
+        "JOHNWOUL.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "LILFISH.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Fish and tails only.",
+      "reviewed_pages": [
+        "LILFISH.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "LILIPUTS.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "All 102 frames show the small green-shirted/blue-trousered visitor and its tools, not Johnny.",
+      "reviewed_pages": [
+        "LILIPUTS.BMP-01.png",
+        "LILIPUTS.BMP-02.png",
+        "LILIPUTS.BMP-03.png"
+      ]
+    },
+    {
+      "resource": "LITEBULB.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            2,
+            3
+          ],
+          "class": "johnny_full",
+          "note": "Idea and thinking poses."
+        }
+      ],
+      "notes": "Idea punctuation and two Johnny reactions.",
+      "reviewed_pages": [
+        "LITEBULB.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MEANWHIL.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Clock face and green clock-hand limbs, not Johnny anatomy.",
+      "reviewed_pages": [
+        "MEANWHIL.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MEXCWALK.BMP",
+      "default_class": "johnny_full",
+      "overrides": [],
+      "notes": "Eight distinct brisk walking poses in another resource; not covered by JOHNWALK acceptance.",
+      "reviewed_pages": [
+        "MEXCWALK.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "MRAFT.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            5,
+            6
+          ],
+          "class": "placeholder",
+          "note": "Single-pixel 8x1 slot."
+        }
+      ],
+      "notes": "Raft construction pieces.",
+      "reviewed_pages": [
+        "MRAFT.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "TANKER.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Ship directions; no visible Johnny.",
+      "reviewed_pages": [
+        "TANKER.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "THNKBUBL.BMP",
+      "default_class": "not_johnny",
+      "overrides": [
+        {
+          "frames": [
+            2,
+            4
+          ],
+          "class": "johnny_composite",
+          "note": "002 Johnny on island; 004 Johnny at table opposite another person. Scene pixels are inseparable."
+        }
+      ],
+      "notes": "Thought-bubble scenes include two embedded Johnny drawings.",
+      "reviewed_pages": [
+        "THNKBUBL.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "TRUNK.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Tree trunk and canopy.",
+      "reviewed_pages": [
+        "TRUNK.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "ZZZZS.BMP",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Sleep lettering only.",
+      "reviewed_pages": [
+        "ZZZZS.BMP-01.png"
+      ]
+    },
+    {
+      "resource": "INTRO.SCR",
+      "default_class": "johnny_composite",
+      "overrides": [],
+      "notes": "Title screen includes fishing Johnny embedded in the scene. Inspected native 640x480 screen.",
+      "reviewed_pages": [
+        "INTRO.SCR-01.png"
+      ]
+    },
+    {
+      "resource": "ISLAND2.SCR",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Inspected full native screen; environment/title scene without visible Johnny.",
+      "reviewed_pages": [
+        "ISLAND2.SCR-01.png"
+      ]
+    },
+    {
+      "resource": "ISLETEMP.SCR",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Inspected full native screen; environment/title scene without visible Johnny.",
+      "reviewed_pages": [
+        "ISLETEMP.SCR-01.png"
+      ]
+    },
+    {
+      "resource": "JOFFICE.SCR",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Inspected full native screen; environment/title scene without visible Johnny.",
+      "reviewed_pages": [
+        "JOFFICE.SCR-01.png"
+      ]
+    },
+    {
+      "resource": "NIGHT.SCR",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Inspected full native screen; environment/title scene without visible Johnny.",
+      "reviewed_pages": [
+        "NIGHT.SCR-01.png"
+      ]
+    },
+    {
+      "resource": "OCEAN00.SCR",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Inspected full native screen; environment/title scene without visible Johnny.",
+      "reviewed_pages": [
+        "OCEAN00.SCR-01.png"
+      ]
+    },
+    {
+      "resource": "OCEAN01.SCR",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Inspected full native screen; environment/title scene without visible Johnny.",
+      "reviewed_pages": [
+        "OCEAN01.SCR-01.png"
+      ]
+    },
+    {
+      "resource": "OCEAN02.SCR",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Inspected full native screen; environment/title scene without visible Johnny.",
+      "reviewed_pages": [
+        "OCEAN02.SCR-01.png"
+      ]
+    },
+    {
+      "resource": "THEEND.SCR",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Inspected full native screen; environment/title scene without visible Johnny.",
+      "reviewed_pages": [
+        "THEEND.SCR-01.png"
+      ]
+    },
+    {
+      "resource": "SUZBEACH.SCR",
+      "default_class": "not_johnny",
+      "overrides": [],
+      "notes": "Beach screen includes a reclining other character under a blanket, not Johnny. Inspected full native screen.",
+      "reviewed_pages": [
+        "SUZBEACH.SCR-01.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "scope": "Complete original-only visual inventory across every BMP and SCR resource; no character classification in this source record.",
+  "source": {
+    "resource_sha256": {
+      "RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+      "RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+    },
+    "dump_report_sha256": "1983679cff95f0abfd00d21451c46d905506c44ef7edad66f0accead749fcc73",
+    "historical_dump_engine_sha256": "6ac61dc53dc926a311d89fcf2e27ff7cefbbac7f4c60e2491f69114230400865",
+    "method": "Reused all 2453 exact-hash-verified native dump outputs; no original executable or decompressor rerun.",
+    "bundled_archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "prepare_lf_utf8_sha256": "ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853",
+    "maintained_tools_lf_utf8_sha256": {
+      "tools/art_common.py": "4f38057cf6b02a99111f11a542b6abcb8e8834f973f227ee9524d4aac1090e10",
+      "tools/art_review_metadata.py": "1fdd90051897575dd18ec04832f694e8a3a7bfec6f4cb92d8f85bbde961a8b73",
+      "tools/inventory_scenes.py": "258759d0a5547e32884b3ab2d79060726b051d51c9c63655e21a57e605318fcc"
+    },
+    "pillow_version": "12.3.0"
+  },
+  "counts": {
+    "original_resources": 127,
+    "bmp_resources": 117,
+    "screen_resources": 10,
+    "original_frames": 2402,
+    "original_bmp_frames": 2392,
+    "original_screens": 10,
+    "bundled_slots": 2401,
+    "bundled_bmp_slots": 2391,
+    "original_only_frames": [
+      "BMP/SA_DEMO.BMP/000"
+    ]
+  },
+  "palette_limit": "Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.",
+  "native_png_root": "build/character-inventory/originals/",
+  "native_png_retention": "All2402 PNGs remain local ignored review outputs. This source bundle retains only code, hashes, dimensions and mappings; selected reference artwork is a separate root-owned review decision.",
+  "historical_dump": {
+    "manifest": "historical-dump-manifest.json",
+    "reference": "docs/knowledge-base/original-image-comparison.md",
+    "local_cache_hint": "johnny-maintenance/build/maintenance/original-pixel-reference",
+    "decoder_execution": "Historical native decoder; not rerun for this extraction."
+  },
+  "validation": {
+    "source_manifest_files": 2453,
+    "smoke_frames": 4,
+    "regression_frames": 2402,
+    "historical_johnwalk_rgba_matches": 36,
+    "fresh_process_negative_controls": 7,
+    "rgba_guard_removal_executed": true
+  },
+  "files_sha256": {
+    "frame-index.json": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2",
+    "historical-dump-manifest.json": "1983679cff95f0abfd00d21451c46d905506c44ef7edad66f0accead749fcc73",
+    "verification/smoke.json": "13853c3f2c2fa8eadb54ca467c8867adc694d63727208bc7e3dc00ba1fdfc276",
+    "verification/regression.json": "c00d55302cf8ec1d98035e3a02c0189122fd1c734d31eb3ed1e34306d974419a",
+    "verification/negative-controls.json": "fd14c71e096d2bdd4f01a85acbc73bc71d05e890a36da321d199cdcef1116514",
+    "prepare.py": "ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853",
+    "test_prepare.py": "c94d6dda92a1ebacedc63aaa7ceccb0ab3fac836b05cd36a7b7d6265202f3707"
+  }
+}
