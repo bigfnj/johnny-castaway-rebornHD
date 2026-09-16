@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "html_sha256": "13991046dd3a451b3886171a62df4fada4a92864cc3b07774e170730153c9d84",
+  "checker_sha256": "304d4264d5b6b3c30221b36523b899d9ff3db9352bcd6ae84ed0ef2547cc8061",
+  "smoke_passed": 1,
+  "regressions_after_smoke": [
+    "front_arc: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "rear_arc: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "travel_cb: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "travel_ec: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "waypoint_front: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "waypoint_rear: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "wait015: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility",
+    "wait016: all display pixels/timestamps, all pose crops/selectors, reference choices, arrival/departure, pause/step/replay/Slow/repeat,1280 visibility"
+  ],
+  "unique_native_images": 548,
+  "executed_counts": {
+    "display_panels": 596,
+    "timestamp_boundaries": 572,
+    "pose_crops": 300,
+    "reference_choices": 8
+  },
+  "display_references_checked": 596,
+  "screenshots_sha256": {
+    "browser-validation-front_arc-frame024-1280.png": "e33bc974238aa92ecf445006b97fa108480731afdde17e36c9a3b317be62134b",
+    "browser-validation-front_arc-frame029-1280.png": "4758252339b8c0acd62414266ae498618e788671f601abcc30c96aeb478d81e8",
+    "browser-validation-travel_cb-frame024-1280.png": "6fa04c744a5370eb38037ce150ee67b218327b3af8f836e555e021739e6e221e",
+    "browser-validation-travel_cb-frame029-1280.png": "7e7265626ba5bfc1c507e08b98f1146baad28236326bc78cdb402167d3479515",
+    "browser-validation-travel_ec-frame024-1280.png": "fc49743dfcd77f2b7931ff9ec4e2fc214583af7fb82b8cc0442fd992f3298c9d",
+    "browser-validation-travel_ec-frame029-1280.png": "bdf6963a6a297bcdc3f6de6c683238c915e0d1fe836a5aee7b3333fb99c014c2",
+    "browser-validation-waypoint_front-frame024-1280.png": "dbed787fd3b628df1642e250629441d08850b0c3992659ac13dcfd23617ee932",
+    "browser-validation-waypoint_front-frame029-1280.png": "a4fc4acfbd85703ed0c947390d042e4bc37a2f92babef2b91d5382c19c733a36",
+    "browser-validation-wait015-frame015-1280.png": "55b5c784038c7f56275bba5c1c93887b9d6d6fd7f9120138b19be4c8b945fe1e",
+    "browser-validation-wait016-frame016-1280.png": "ff0f0dc02a1aa35419167004f45aaa4ef732bdcde12f1be645f96dbeb60ebb1a"
+  },
+  "browser_errors": [],
+  "request_failures": [],
+  "scope": "Exact eight-clip native color pixel/timing/control validation, including exact active-clip cache membership after each switch. No memory-savings measurement or human color approval inferred."
+}

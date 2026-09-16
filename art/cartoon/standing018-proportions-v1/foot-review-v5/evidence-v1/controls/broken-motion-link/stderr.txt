@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\negative_controls.py", line 80, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\negative_controls.py", line 56, in main
+    if a.case: return one(a.review, a.output, a.case)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\negative_controls.py", line 46, in one
+    check.contact_check(target, record_name='mutant-browser.json')
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\check_review.py", line 84, in contact_check
+    assert page.locator('#motion-link').get_attribute('href') == 'motion/review.html', 'contact motion link destination'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: contact motion link destination

@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "candidate_version": 2,
+  "positive_control_before_and_after": true,
+  "executed_helper_sha256": {
+    "capture_candidate.py": "3d48bc8f432d1d1972da4e1ec024230d0b4ebec942b48a7255e5c8254c564a59",
+    "native_core.py": "996e60eb4e64d98ce0107d68db9f2cffb9229189eafbd9befdfaa61dafe2472e",
+    "config.py": "82df0b9d383ba8363be86b5c99edfbbe753bb4b0bd72c5eeaebe6f9e9e1a0c87"
+  },
+  "harness_sha256": "7b8c02d6e3741c0403b2cb6ab268746eb1693390fe6cda89052d80c5f221ce15",
+  "candidate_archive_sha256": "21194cf35e5b60eebfa9ba48520509ae8f86a72f26313b945f019671d1f345c5",
+  "selection_sha256": "86b31a896e70f8977fcac4ef8eb573e5c96893f3e13e1b319d98674c728a83ab",
+  "baseline_report_sha256": "bc0ffbe67883884d66a023174ae6bc36c8f98f12e0384fca0fe358fe9aac17c8",
+  "candidate_report_sha256": "838b25c682c1be97f4e092e413709a856f877c2aae8b19d4434b5a9937e3b76d",
+  "mutations": [
+    {
+      "name": "changed-display-time",
+      "status": "FIRED",
+      "expected_failure": "connecting capture: identical native display logical_ms",
+      "mutation": {
+        "display_index": 1,
+        "delta_ms": 20
+      }
+    },
+    {
+      "name": "changed-outside-candidate-canvas",
+      "status": "FIRED",
+      "expected_failure": "connecting capture: unchanged outside placed frame:9",
+      "mutation": {
+        "frame": 9,
+        "display_index": 5,
+        "pixel": [
+          0,
+          0
+        ],
+        "component": "red",
+        "xor": 1,
+        "report_hash_updated": true,
+        "location_basis": "Outside the exact placed009 canvas."
+      }
+    },
+    {
+      "name": "changed-approved-standing-pixel",
+      "status": "FIRED",
+      "expected_failure": "connecting capture: all prior-approved pose/background pixels unchanged",
+      "mutation": {
+        "frame": 17,
+        "display_index": 25,
+        "pixel": [
+          1097,
+          467
+        ],
+        "component": "red",
+        "xor": 1,
+        "report_hash_updated": true,
+        "location_basis": "An alpha255 pixel of the retained approved017 PNG, mirrored according to the actual draw."
+      }
+    }
+  ],
+  "native_build_witness": {
+    "executable_sha256": "d8b6214f7951d7f7a5170c0f7999ea74648a2991165b6c8696530d0046271dc5",
+    "build_started_ns": 1789572187170766743,
+    "executable_mtime_ns": 1789572203592736300
+  },
+  "scope": "Three executed input mutations through the real comparison on candidate-v2 front_arc. Capture files remain untouched; altered pixel readers and matching report hashes exist only in memory. No modified-engine replay claim."
+}

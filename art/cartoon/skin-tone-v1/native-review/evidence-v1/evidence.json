@@ -1,0 +1,1572 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "Native skin-tone evidence preservation only; human color review and production promotion remain separate.",
+  "source_commit": "3af0242a74f234aab231d9203b48f78ca8e5c1b4",
+  "candidate_version": 2,
+  "baseline_archive_sha256": "21194cf35e5b60eebfa9ba48520509ae8f86a72f26313b945f019671d1f345c5",
+  "candidate_archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf",
+  "recipe_sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "native_executable_sha256": "203aebb8c15881a41108b2b4fb97f5f9c6d025aa595a678b4dd84906011f7563",
+  "coverage": {
+    "clips": 8,
+    "full_displays_per_package": 298,
+    "changed_displays": 286,
+    "unchanged_displays": 12,
+    "poses": 28,
+    "visibly_changed_poses": 27,
+    "all_smokes_before_full": true,
+    "fresh_repeats_exact": true
+  },
+  "checks": {
+    "smoke": 2,
+    "regression": 6,
+    "source_mutations_fired": 4,
+    "handoff_controls_fired": 8,
+    "native_controls_fired": 4
+  },
+  "retained_failure": "records/native/candidate-v1-launch-failure.json",
+  "copy_records": [
+    {
+      "path": "records/native/preparation.json",
+      "source": "build/skin-tone/native-review/preparation.json",
+      "sha256": "ddfd95bb1cc24d1974da49049afe282c84b12ac9567f045ebc70a64b73648b6b",
+      "size": 283598
+    },
+    {
+      "path": "records/native/route_driver.c",
+      "source": "build/skin-tone/native-review/route_driver.c",
+      "sha256": "cc8dd66227fd15f2e2214c9d7e9b4a6b9554c7f0c39e75da3daa9543a26d3ab6",
+      "size": 6639
+    },
+    {
+      "path": "records/native/trace_driver.c",
+      "source": "build/skin-tone/native-review/trace_driver.c",
+      "sha256": "1616492a15bb5ed468c790d74df6228cc922b5b1af58c406dab5477845473b70",
+      "size": 1300
+    },
+    {
+      "path": "records/native/candidate-v1-launch-failure.json",
+      "source": "build/skin-tone/native-review/candidate-v1-launch-failure.json",
+      "sha256": "838fbe84d95beff415456373c13337108d0c96d33cc8655d7d0b5f1b1c9c4ff2",
+      "size": 869
+    },
+    {
+      "path": "records/native/baseline-v1/build.json",
+      "source": "build/skin-tone/native-review/baseline-v1/build.json",
+      "sha256": "849a8895eb67fa6d640121f6bdcf4c3e66e3252eff364724b2a99b532f5d2444",
+      "size": 8925
+    },
+    {
+      "path": "records/native/baseline-v1/build.stderr.txt",
+      "source": "build/skin-tone/native-review/baseline-v1/build.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "records/native/baseline-v1/build.stdout.txt",
+      "source": "build/skin-tone/native-review/baseline-v1/build.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/full/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/front_arc/full/capture.log",
+      "sha256": "6a60dadd2a0762489f12d008e83532899159c626a3d66e0bdfcf7fc1c0bd090f",
+      "size": 16231
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/full/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/front_arc/full/report.json",
+      "sha256": "b1c165003e7a2bb93815d120a783f3b3ac489be16dce97d2d8be25d0a8e00a7b",
+      "size": 31395
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/repeat/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/front_arc/repeat/capture.log",
+      "sha256": "6a60dadd2a0762489f12d008e83532899159c626a3d66e0bdfcf7fc1c0bd090f",
+      "size": 16231
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/repeat/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/front_arc/repeat/report.json",
+      "sha256": "47da429ab8a6c2935ad4b694a0f30fab50d5475a21b9265d9f768bbdabddfc76",
+      "size": 31397
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/smoke/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/front_arc/smoke/capture.log",
+      "sha256": "bd97e2de0cb5169fc738761934020fbdb594ccd44dcc88d20efb3ae2b248b161",
+      "size": 7576
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/smoke/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/front_arc/smoke/report.json",
+      "sha256": "9c6d204105b2f95a1853e878b0c6583d0bf47b1cfc7b9cc366095428f7f56d1d",
+      "size": 5672
+    },
+    {
+      "path": "records/native/baseline-v1/independent-trace.json",
+      "source": "build/skin-tone/native-review/baseline-v1/independent-trace.json",
+      "sha256": "2788b7390bafdcea9531916e85e9043f7b80c09b986437c86883c82b5b75789a",
+      "size": 23254
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/full/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/rear_arc/full/capture.log",
+      "sha256": "117636c6ccff2d1325d988e8dd859e48afe2aa1ac141da4fcadac09d411057c7",
+      "size": 16826
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/full/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/rear_arc/full/report.json",
+      "sha256": "d498af2420d02c4425205184e1d09758342a7e027a61268960fbaf19112c8114",
+      "size": 32959
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/repeat/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/rear_arc/repeat/capture.log",
+      "sha256": "117636c6ccff2d1325d988e8dd859e48afe2aa1ac141da4fcadac09d411057c7",
+      "size": 16826
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/repeat/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/rear_arc/repeat/report.json",
+      "sha256": "4e9d863f1f27d594b0583ec21998e691930841b0f240833dfbc6702f0b8fc303",
+      "size": 32961
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/smoke/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/rear_arc/smoke/capture.log",
+      "sha256": "b58d220c126ea127b1d18d9cbb5db19a6c2b19edc9298aedbd21ccb4e0196a86",
+      "size": 7573
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/smoke/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/rear_arc/smoke/report.json",
+      "sha256": "df329ec264847e2222785cdaba2f34401657eb60409c76883e487a196e9d6977",
+      "size": 5666
+    },
+    {
+      "path": "records/native/baseline-v1/route-contract.json",
+      "source": "build/skin-tone/native-review/baseline-v1/route-contract.json",
+      "sha256": "00183f24cd65f34c92354fdd8a82950c6451f3b6d5db12454618b009bd8ec40f",
+      "size": 35351
+    },
+    {
+      "path": "records/native/baseline-v1/summary.json",
+      "source": "build/skin-tone/native-review/baseline-v1/summary.json",
+      "sha256": "0ba72c8fdce49a073b329d66c754aecf7af8bd8cd231a40a7ebc7144ee926f65",
+      "size": 39204
+    },
+    {
+      "path": "records/native/baseline-v1/trace-build.stderr.txt",
+      "source": "build/skin-tone/native-review/baseline-v1/trace-build.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "records/native/baseline-v1/trace-build.stdout.txt",
+      "source": "build/skin-tone/native-review/baseline-v1/trace-build.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/full/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_cb/full/capture.log",
+      "sha256": "b633df002b3fdc79c852059820535c47f33dcaf7a630ff7b5086474b4214fcd8",
+      "size": 16219
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/full/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_cb/full/report.json",
+      "sha256": "51e8106a88508a3c509ad4302d343ac0c907a88b17a812163fa2f1a8feccc190",
+      "size": 31357
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/repeat/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_cb/repeat/capture.log",
+      "sha256": "b633df002b3fdc79c852059820535c47f33dcaf7a630ff7b5086474b4214fcd8",
+      "size": 16219
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/repeat/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_cb/repeat/report.json",
+      "sha256": "f6cc05e0aa96fb8489d0a0591be2cc56a79ca4afc606c424554f053ec8a186ca",
+      "size": 31359
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/smoke/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_cb/smoke/capture.log",
+      "sha256": "ea631edf77c7b6efb99ed588fe6018ac9267591ac73c5df95d6bee36e35c1844",
+      "size": 7576
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/smoke/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_cb/smoke/report.json",
+      "sha256": "b5b0c94eced83a0a4da0e18036636da3860a5d2d576617c8a75cc00a17b888a5",
+      "size": 5672
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/full/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_ec/full/capture.log",
+      "sha256": "9f7507ad380065d5644070c5c066d9fd13afee420e36cd5c143762fedb9527c7",
+      "size": 20007
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/full/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_ec/full/report.json",
+      "sha256": "b4da3ad1d7229020f60c4d5828cd9f765d16b3aefb208adc4bfefda3954dd315",
+      "size": 42129
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/repeat/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_ec/repeat/capture.log",
+      "sha256": "9f7507ad380065d5644070c5c066d9fd13afee420e36cd5c143762fedb9527c7",
+      "size": 20007
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/repeat/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_ec/repeat/report.json",
+      "sha256": "fdab0cb24e4f2aa169279f68022f229ad2a1e1e5740cc4c2fdb4137ba883ab0f",
+      "size": 42131
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/smoke/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_ec/smoke/capture.log",
+      "sha256": "ede5d5cf8dfbb45186190a5a0c16b80596a0194381090c1ad2abefd301a843d3",
+      "size": 7576
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/smoke/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/travel_ec/smoke/report.json",
+      "sha256": "acda9597dab98e07c422dc08f8a570328b93cef6db90d66b589ede06659d6eaf",
+      "size": 5672
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/full/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/wait015/full/capture.log",
+      "sha256": "d487df6d1350c9cbacdec125f9a936f19f9aad6141cb91a9d293dbe1b698651a",
+      "size": 8615
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/full/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/wait015/full/report.json",
+      "sha256": "b04dc861fb3325be2549b03d3e98e3f4962e6a56396be4ace553a9942aa4b1d4",
+      "size": 8715
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/repeat/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/wait015/repeat/capture.log",
+      "sha256": "d487df6d1350c9cbacdec125f9a936f19f9aad6141cb91a9d293dbe1b698651a",
+      "size": 8615
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/repeat/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/wait015/repeat/report.json",
+      "sha256": "b2ff11b99d4a77ad4d9d1fdf10411e010d9774c24e3d1ecfcdce72b014e5c5d7",
+      "size": 8717
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/smoke/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/wait015/smoke/capture.log",
+      "sha256": "00ea6d923238b51ff2b9fa8c917c4d59f688f956ee98e94a6a86822ae2a2cb99",
+      "size": 7574
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/smoke/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/wait015/smoke/report.json",
+      "sha256": "ca3833851da141e9a2a0fad932509be0ae20fef64b8dd7efa9dd17d4192962df",
+      "size": 5668
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/full/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/wait016/full/capture.log",
+      "sha256": "b04522742a24b18a356c9d1775a1b9a99b8d94391ed8b1020e6ab4b194461521",
+      "size": 8615
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/full/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/wait016/full/report.json",
+      "sha256": "fdecd1ee0099919d67fd243412038dbbca6d32ddd73b9b5a96302a865fb44ab2",
+      "size": 8715
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/repeat/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/wait016/repeat/capture.log",
+      "sha256": "b04522742a24b18a356c9d1775a1b9a99b8d94391ed8b1020e6ab4b194461521",
+      "size": 8615
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/repeat/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/wait016/repeat/report.json",
+      "sha256": "0647bf9b7bf0e8c600416c70c44a54dedb7958ffbbdcdd9d69e8c15043294aaf",
+      "size": 8717
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/smoke/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/wait016/smoke/capture.log",
+      "sha256": "4428cb7644196924e3856bdfa62e4bb547a51a7bc9f07665a96d73b47f24270b",
+      "size": 7574
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/smoke/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/wait016/smoke/report.json",
+      "sha256": "76d661bccab6355e34eb798a10f476773db6ba133239cd22950070bef84289fc",
+      "size": 5668
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/full/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_front/full/capture.log",
+      "sha256": "8dd265645c8e7b580431be84c3ca82b9c4789f8777d7b46ba34601b226ded443",
+      "size": 20981
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/full/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_front/full/report.json",
+      "sha256": "f93c3e9592a954791281aee7aa11790af048ea9e62436a11263854d65e323db1",
+      "size": 45146
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/repeat/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_front/repeat/capture.log",
+      "sha256": "8dd265645c8e7b580431be84c3ca82b9c4789f8777d7b46ba34601b226ded443",
+      "size": 20981
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/repeat/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_front/repeat/report.json",
+      "sha256": "d813aaa63711146ef1f8f7da773ef7a948b21276118a0c4016ea16a5af2f6b7b",
+      "size": 45148
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/smoke/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_front/smoke/capture.log",
+      "sha256": "cb551136c7d2b87bb55279baaf4c2f0cbc8c9226afce0d380bb64d7c67b47c55",
+      "size": 7581
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/smoke/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_front/smoke/report.json",
+      "sha256": "9329e625c5a427b6c5064345bef5fd944553ece9b2fb88eaca373b5004a5c55b",
+      "size": 5682
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/full/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_rear/full/capture.log",
+      "sha256": "8fe8a2d7ba9f122630017d04e29463c48d6335cad09a1a9f905c6093db21a843",
+      "size": 26383
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/full/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_rear/full/report.json",
+      "sha256": "4929f755f9d278a4c263c3bc5938882d7c510cba2bf9766185b2e6fdfbec3701",
+      "size": 60655
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/repeat/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_rear/repeat/capture.log",
+      "sha256": "8fe8a2d7ba9f122630017d04e29463c48d6335cad09a1a9f905c6093db21a843",
+      "size": 26383
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/repeat/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_rear/repeat/report.json",
+      "sha256": "6a3b2bd62fb8b6b0fe19159d13793b43fcfbd5a0a0bdc7401d7a216bd87f4881",
+      "size": 60657
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/smoke/capture.log",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_rear/smoke/capture.log",
+      "sha256": "172f06549398e603938a346a1834734c34f0944a365c89b9a8ceb0deaf94a81c",
+      "size": 7580
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/smoke/report.json",
+      "source": "build/skin-tone/native-review/baseline-v1/waypoint_rear/smoke/report.json",
+      "sha256": "333fa7a38964e5d174af6b87fc783f3125785165c79764d7eb23e415a5fa5e1a",
+      "size": 5680
+    },
+    {
+      "path": "records/native/candidate-v1/correction-recipe.json",
+      "source": "build/skin-tone/native-review/candidate-v1/correction-recipe.json",
+      "sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+      "size": 35538
+    },
+    {
+      "path": "records/native/candidate-v1/input-index.json",
+      "source": "build/skin-tone/native-review/candidate-v1/input-index.json",
+      "sha256": "d1a694d71efb2c2ac3aea6b2d42f2cf82abe0c0ca1b09a7a6185df8ae64d1dc6",
+      "size": 14258
+    },
+    {
+      "path": "records/native/candidate-v1/preparation.json",
+      "source": "build/skin-tone/native-review/candidate-v1/preparation.json",
+      "sha256": "04e976996552f3390fca135c3e80c6ad109bb6bdb1471f6db628f81297838d15",
+      "size": 17494
+    },
+    {
+      "path": "records/native/candidate-v2/correction-recipe.json",
+      "source": "build/skin-tone/native-review/candidate-v2/correction-recipe.json",
+      "sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+      "size": 35538
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/full/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/front_arc/full/capture.log",
+      "sha256": "6a60dadd2a0762489f12d008e83532899159c626a3d66e0bdfcf7fc1c0bd090f",
+      "size": 16231
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/full/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/front_arc/full/report.json",
+      "sha256": "d87ef06a2ebd82bb387ef4e558b42b9e84554a0c273723b9f6492eba85cdf643",
+      "size": 39262
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/repeat/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/front_arc/repeat/capture.log",
+      "sha256": "6a60dadd2a0762489f12d008e83532899159c626a3d66e0bdfcf7fc1c0bd090f",
+      "size": 16231
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/repeat/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/front_arc/repeat/report.json",
+      "sha256": "fa80943a7c98e2cace800f844dc8b1ee988534781caa2e7ad33a7a916de26550",
+      "size": 39264
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/smoke/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/front_arc/smoke/capture.log",
+      "sha256": "bd97e2de0cb5169fc738761934020fbdb594ccd44dcc88d20efb3ae2b248b161",
+      "size": 7576
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/smoke/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/front_arc/smoke/report.json",
+      "sha256": "701be438618e79cd81e90cb12798c980c498202a78d60a1df7a66ca35e1fc0f4",
+      "size": 6083
+    },
+    {
+      "path": "records/native/candidate-v2/input-index.json",
+      "source": "build/skin-tone/native-review/candidate-v2/input-index.json",
+      "sha256": "d1a694d71efb2c2ac3aea6b2d42f2cf82abe0c0ca1b09a7a6185df8ae64d1dc6",
+      "size": 14258
+    },
+    {
+      "path": "records/native/candidate-v2/preparation.json",
+      "source": "build/skin-tone/native-review/candidate-v2/preparation.json",
+      "sha256": "de962b6083bbd495797843416cbf81b08334114cd1c1b25db66119041c783a5e",
+      "size": 20966
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/full/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/rear_arc/full/capture.log",
+      "sha256": "117636c6ccff2d1325d988e8dd859e48afe2aa1ac141da4fcadac09d411057c7",
+      "size": 16826
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/full/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/rear_arc/full/report.json",
+      "sha256": "a6ad9b1afaa90e39edec19b75d4fbae848c1ad305f69f71c3e4e5060c4ef395c",
+      "size": 41358
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/repeat/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/rear_arc/repeat/capture.log",
+      "sha256": "117636c6ccff2d1325d988e8dd859e48afe2aa1ac141da4fcadac09d411057c7",
+      "size": 16826
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/repeat/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/rear_arc/repeat/report.json",
+      "sha256": "44692eeefb465d3e25a9ae423af201931a38084c6e49503fd00dbe0cb49ffa28",
+      "size": 41360
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/smoke/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/rear_arc/smoke/capture.log",
+      "sha256": "b58d220c126ea127b1d18d9cbb5db19a6c2b19edc9298aedbd21ccb4e0196a86",
+      "size": 7573
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/smoke/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/rear_arc/smoke/report.json",
+      "sha256": "8d2ac39819b39a1ce025812c7a80847a290afa68e65d1e0a55356df90fdd8c9a",
+      "size": 6076
+    },
+    {
+      "path": "records/native/candidate-v2/summary.json",
+      "source": "build/skin-tone/native-review/candidate-v2/summary.json",
+      "sha256": "19cd32be48dae5f93ab11eca3287105deb7d1cd4c4fd6eb16df8abcef3e3c140",
+      "size": 2340
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/full/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_cb/full/capture.log",
+      "sha256": "b633df002b3fdc79c852059820535c47f33dcaf7a630ff7b5086474b4214fcd8",
+      "size": 16219
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/full/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_cb/full/report.json",
+      "sha256": "348e305eecfa35a2fe3fd811b96cd3154e817fb39d81f27875d045fd7132ba7d",
+      "size": 39201
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/repeat/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_cb/repeat/capture.log",
+      "sha256": "b633df002b3fdc79c852059820535c47f33dcaf7a630ff7b5086474b4214fcd8",
+      "size": 16219
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/repeat/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_cb/repeat/report.json",
+      "sha256": "b47d7c0d5f6c0227d48c56a3ab4d08a0c0294dc28de97321d65463b5fcaa5220",
+      "size": 39203
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/smoke/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_cb/smoke/capture.log",
+      "sha256": "ea631edf77c7b6efb99ed588fe6018ac9267591ac73c5df95d6bee36e35c1844",
+      "size": 7576
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/smoke/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_cb/smoke/report.json",
+      "sha256": "6836076363c7ed4daee9b75f20b55ba4ce6a4235911da721e080855482c43b97",
+      "size": 6083
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/full/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_ec/full/capture.log",
+      "sha256": "9f7507ad380065d5644070c5c066d9fd13afee420e36cd5c143762fedb9527c7",
+      "size": 20007
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/full/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_ec/full/report.json",
+      "sha256": "15f04f29fe3b6242cfaadc0155a629944e3f98f0bcefcc23080509b8e1b1b3cb",
+      "size": 53032
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/repeat/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_ec/repeat/capture.log",
+      "sha256": "9f7507ad380065d5644070c5c066d9fd13afee420e36cd5c143762fedb9527c7",
+      "size": 20007
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/repeat/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_ec/repeat/report.json",
+      "sha256": "75b21a2e2985e289d5463c63768fb25639178a8d37ef96e2cd65c31e298212df",
+      "size": 53034
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/smoke/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_ec/smoke/capture.log",
+      "sha256": "ede5d5cf8dfbb45186190a5a0c16b80596a0194381090c1ad2abefd301a843d3",
+      "size": 7576
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/smoke/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/travel_ec/smoke/report.json",
+      "sha256": "dccbafbbdcc330a1ebefd3252ba5c4b17053117d65e6f36e2e1c18e5bd37dd1b",
+      "size": 6083
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/full/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/wait015/full/capture.log",
+      "sha256": "d487df6d1350c9cbacdec125f9a936f19f9aad6141cb91a9d293dbe1b698651a",
+      "size": 8615
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/full/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/wait015/full/report.json",
+      "sha256": "70ca2e1b686b88afef8046ffc21ca5cba2d0525e72808082786601db27f59dd5",
+      "size": 9982
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/repeat/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/wait015/repeat/capture.log",
+      "sha256": "d487df6d1350c9cbacdec125f9a936f19f9aad6141cb91a9d293dbe1b698651a",
+      "size": 8615
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/repeat/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/wait015/repeat/report.json",
+      "sha256": "d1ab7bf699ccfad60677586ce9c803247885e71a16589388caf74fc9eebda311",
+      "size": 9984
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/smoke/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/wait015/smoke/capture.log",
+      "sha256": "00ea6d923238b51ff2b9fa8c917c4d59f688f956ee98e94a6a86822ae2a2cb99",
+      "size": 7574
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/smoke/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/wait015/smoke/report.json",
+      "sha256": "2a749a79b9a312db696c5cac737faf430ed417448b05cc719e8194f6d3a83e95",
+      "size": 6079
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/full/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/wait016/full/capture.log",
+      "sha256": "b04522742a24b18a356c9d1775a1b9a99b8d94391ed8b1020e6ab4b194461521",
+      "size": 8615
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/full/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/wait016/full/report.json",
+      "sha256": "570cb93ec8f1a2b54b067063a465525eec42b8c7c6453035409512b195c0fa33",
+      "size": 9982
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/repeat/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/wait016/repeat/capture.log",
+      "sha256": "b04522742a24b18a356c9d1775a1b9a99b8d94391ed8b1020e6ab4b194461521",
+      "size": 8615
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/repeat/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/wait016/repeat/report.json",
+      "sha256": "f7414fcfe43218c11815c7f9a970a6b7c9a9f3e15f87575fd51cdf601c4e86d0",
+      "size": 9984
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/smoke/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/wait016/smoke/capture.log",
+      "sha256": "4428cb7644196924e3856bdfa62e4bb547a51a7bc9f07665a96d73b47f24270b",
+      "size": 7574
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/smoke/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/wait016/smoke/report.json",
+      "sha256": "1a48ead361b83af4e28100386a91a0aa774b54bb7a81a54b9b6d82e7ac6eed1b",
+      "size": 6079
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/full/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_front/full/capture.log",
+      "sha256": "8dd265645c8e7b580431be84c3ca82b9c4789f8777d7b46ba34601b226ded443",
+      "size": 20981
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/full/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_front/full/report.json",
+      "sha256": "13976be57b62dbefb65ae6d99b04c7381d8ef3703420df067c9f5cbb8b0e375b",
+      "size": 56938
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/repeat/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_front/repeat/capture.log",
+      "sha256": "8dd265645c8e7b580431be84c3ca82b9c4789f8777d7b46ba34601b226ded443",
+      "size": 20981
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/repeat/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_front/repeat/report.json",
+      "sha256": "a6c2753528066d6403dc5958969a01155b05118aaf58b59043deee3e465c1158",
+      "size": 56940
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/smoke/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_front/smoke/capture.log",
+      "sha256": "cb551136c7d2b87bb55279baaf4c2f0cbc8c9226afce0d380bb64d7c67b47c55",
+      "size": 7581
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/smoke/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_front/smoke/report.json",
+      "sha256": "13aa5723f100af2ac7ecb53f8f1b0cb01f80165fff0924cea697ba05de5420ca",
+      "size": 6093
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/full/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_rear/full/capture.log",
+      "sha256": "8fe8a2d7ba9f122630017d04e29463c48d6335cad09a1a9f905c6093db21a843",
+      "size": 26383
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/full/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_rear/full/report.json",
+      "sha256": "7dcbf7a00e0db7d0ead0bb9a3a693e1b79cbc21af0fb443f72ad943cd53773ba",
+      "size": 76745
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/repeat/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_rear/repeat/capture.log",
+      "sha256": "8fe8a2d7ba9f122630017d04e29463c48d6335cad09a1a9f905c6093db21a843",
+      "size": 26383
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/repeat/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_rear/repeat/report.json",
+      "sha256": "8c2fd49a702b1bbc114f7073baeddd4c844e27883ecbe3672fd80635d0909e8d",
+      "size": 76747
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/smoke/capture.log",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_rear/smoke/capture.log",
+      "sha256": "172f06549398e603938a346a1834734c34f0944a365c89b9a8ceb0deaf94a81c",
+      "size": 7580
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/smoke/report.json",
+      "source": "build/skin-tone/native-review/candidate-v2/waypoint_rear/smoke/report.json",
+      "sha256": "f1283f8462cf80e963ccf2ac6d710d2211240d1d2fb3d9e6ff9a1b188e4e72a1",
+      "size": 6091
+    },
+    {
+      "path": "records/native/negative-controls/native-v2.json",
+      "source": "build/skin-tone/native-review/negative-controls/native-v2.json",
+      "sha256": "163e0121f21e1d8bd83f66b82dfde3c91d7c75bd0200e78348e54f56651bd3b3",
+      "size": 1806
+    },
+    {
+      "path": "records/toolchecks-v3/smoke.json",
+      "source": "build/skin-tone/native-review-toolchecks-v3/smoke.json",
+      "sha256": "d08a61c73bfecee0c8b2312e4ea09c657259800d1ff568bf4ef662a3fbba6bbd",
+      "size": 414
+    },
+    {
+      "path": "records/toolchecks-v3/regression.json",
+      "source": "build/skin-tone/native-review-toolchecks-v3/regression.json",
+      "sha256": "e3c7bf248b701b9d1ad69564e52c35ac7285f336f403600cfdf0c37325fb9262",
+      "size": 5753
+    },
+    {
+      "path": "records/toolchecks-v3/inputs-v2.json",
+      "source": "build/skin-tone/native-review-toolchecks-v3/inputs-v2.json",
+      "sha256": "f1ec93d6f38575875ab01e2670169d99293da74a778996ece4738708b1b8c56a",
+      "size": 3526
+    },
+    {
+      "path": "helpers/capture.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/capture.py",
+      "sha256": "15f368f38fbc82dec12caca71af5f9d1b074f170ddcfe25abcfaac7e487947c6",
+      "size": 3671
+    },
+    {
+      "path": "helpers/capture_candidate.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/capture_candidate.py",
+      "sha256": "192eeed94739117253059567f08b874d32a3b545b30b90ef44b4ec8da7a5c8e9",
+      "size": 6372
+    },
+    {
+      "path": "helpers/check_inputs.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/check_inputs.py",
+      "sha256": "3a6c37394427b9f7f8870f756f585f4c22b4cc074e3465e1f9e46f69117ecabf",
+      "size": 6194
+    },
+    {
+      "path": "helpers/check_native.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/check_native.py",
+      "sha256": "959e1522b618be5b70eb265d932acee9e5339af68dc817a4de5f12eea969d756",
+      "size": 4777
+    },
+    {
+      "path": "helpers/config.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/config.py",
+      "sha256": "efefbe4ad86645f064fe85ac1a6954d330896d76c3db470eb70bb3272bbe8908",
+      "size": 5833
+    },
+    {
+      "path": "helpers/legacy.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/legacy.py",
+      "sha256": "f19b09f4acb6785c391ae6ee99764ca136c0a2cee91b2acd4a7558eca586d151",
+      "size": 755
+    },
+    {
+      "path": "helpers/mask_data.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/mask_data.py",
+      "sha256": "fa2d8dc09612bd2698a4725751fc24001740ebf90d66cc0d531284734eaeb769",
+      "size": 426
+    },
+    {
+      "path": "helpers/native_core.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/native_core.py",
+      "sha256": "799b648e1932bbf25ddfbdc54527fbc7d8792b04262be49a5adc964c0538bbab",
+      "size": 399
+    },
+    {
+      "path": "helpers/prepare.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/prepare.py",
+      "sha256": "e4a29327d43c360c362b3e82849d77e859049256d1e27e2045abddc1cd9f7349",
+      "size": 6129
+    },
+    {
+      "path": "helpers/prepare_candidate.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/prepare_candidate.py",
+      "sha256": "6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01",
+      "size": 8450
+    },
+    {
+      "path": "helpers/skin_compare.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/skin_compare.py",
+      "sha256": "3721daefabff3c35f593973cffcd5c6c039ef55ab5937c950a6e0b9e88a7b9b1",
+      "size": 3317
+    },
+    {
+      "path": "helpers/test_compare.py",
+      "source": "art/cartoon/skin-tone-v1/native-review/test_compare.py",
+      "sha256": "4901ca5f873c05d4541affacfc2c325a290ada531585f7d9b701f99855ecdd03",
+      "size": 5554
+    },
+    {
+      "path": "helpers/README.md",
+      "source": "art/cartoon/skin-tone-v1/native-review/README.md",
+      "sha256": "c13b3e16ba0559b0df4c7b29637fa0e101798cffb96e206c767b44ced55c9234",
+      "size": 8387
+    },
+    {
+      "path": "dependencies/art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/native_core.py",
+      "source": "art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/native_core.py",
+      "sha256": "996e60eb4e64d98ce0107d68db9f2cffb9229189eafbd9befdfaa61dafe2472e",
+      "size": 5419
+    },
+    {
+      "path": "dependencies/art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/capture.py",
+      "source": "art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/capture.py",
+      "sha256": "c9c5008f3dc3efe5ddefd02522f6621e744e8c61e6b3a85fd48d5f0c6b589bec",
+      "size": 10431
+    },
+    {
+      "path": "dependencies/art/cartoon/arrival-pilot-v1/review-evidence/native-v1/helpers/capture_format.py",
+      "source": "art/cartoon/arrival-pilot-v1/review-evidence/native-v1/helpers/capture_format.py",
+      "sha256": "1a956d08ef659cd537e1530bcf13cc9da153a1bf34a1730fd344e91a107c4195",
+      "size": 8183
+    },
+    {
+      "path": "dependencies/art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/review-evidence/native-v1/route_driver.c",
+      "source": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/review-evidence/native-v1/route_driver.c",
+      "sha256": "018f87786fe46e7c84d4450d9a6876010cf8ac4af0ad6417290fe2e812f09a99",
+      "size": 5475
+    },
+    {
+      "path": "dependencies/art/cartoon/walk-pilot/front-arrival-v1/trace/trace.py",
+      "source": "art/cartoon/walk-pilot/front-arrival-v1/trace/trace.py",
+      "sha256": "3051b890d207635e8c34d305d0601da53e8103030cb9eb1f656e93fde2e05f5a",
+      "size": 15187
+    }
+  ],
+  "files": [
+    {
+      "path": "capture-payloads.json",
+      "sha256": "b4206e6aabd79d9e88e651303c7ed7b3a9523a1bae20a8e1faf3dbf7068fcdfd",
+      "size": 526043
+    },
+    {
+      "path": "commands.json",
+      "sha256": "8893eb20d3c37a8f7f97fd75a566066e9be348d3371fdc74433806aa7bc3b4e0",
+      "size": 3192
+    },
+    {
+      "path": "dependencies/art/cartoon/arrival-pilot-v1/review-evidence/native-v1/helpers/capture_format.py",
+      "sha256": "1a956d08ef659cd537e1530bcf13cc9da153a1bf34a1730fd344e91a107c4195",
+      "size": 8183
+    },
+    {
+      "path": "dependencies/art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/capture.py",
+      "sha256": "c9c5008f3dc3efe5ddefd02522f6621e744e8c61e6b3a85fd48d5f0c6b589bec",
+      "size": 10431
+    },
+    {
+      "path": "dependencies/art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/native_core.py",
+      "sha256": "996e60eb4e64d98ce0107d68db9f2cffb9229189eafbd9befdfaa61dafe2472e",
+      "size": 5419
+    },
+    {
+      "path": "dependencies/art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/review-evidence/native-v1/route_driver.c",
+      "sha256": "018f87786fe46e7c84d4450d9a6876010cf8ac4af0ad6417290fe2e812f09a99",
+      "size": 5475
+    },
+    {
+      "path": "dependencies/art/cartoon/walk-pilot/front-arrival-v1/trace/trace.py",
+      "sha256": "3051b890d207635e8c34d305d0601da53e8103030cb9eb1f656e93fde2e05f5a",
+      "size": 15187
+    },
+    {
+      "path": "excluded-payloads.json",
+      "sha256": "37f9443fd1761edc6747c2671f90d77e464cab2e5a857057249065dba0d538fa",
+      "size": 11658
+    },
+    {
+      "path": "helpers/capture.py",
+      "sha256": "15f368f38fbc82dec12caca71af5f9d1b074f170ddcfe25abcfaac7e487947c6",
+      "size": 3671
+    },
+    {
+      "path": "helpers/capture_candidate.py",
+      "sha256": "192eeed94739117253059567f08b874d32a3b545b30b90ef44b4ec8da7a5c8e9",
+      "size": 6372
+    },
+    {
+      "path": "helpers/check_inputs.py",
+      "sha256": "3a6c37394427b9f7f8870f756f585f4c22b4cc074e3465e1f9e46f69117ecabf",
+      "size": 6194
+    },
+    {
+      "path": "helpers/check_native.py",
+      "sha256": "959e1522b618be5b70eb265d932acee9e5339af68dc817a4de5f12eea969d756",
+      "size": 4777
+    },
+    {
+      "path": "helpers/config.py",
+      "sha256": "efefbe4ad86645f064fe85ac1a6954d330896d76c3db470eb70bb3272bbe8908",
+      "size": 5833
+    },
+    {
+      "path": "helpers/legacy.py",
+      "sha256": "f19b09f4acb6785c391ae6ee99764ca136c0a2cee91b2acd4a7558eca586d151",
+      "size": 755
+    },
+    {
+      "path": "helpers/mask_data.py",
+      "sha256": "fa2d8dc09612bd2698a4725751fc24001740ebf90d66cc0d531284734eaeb769",
+      "size": 426
+    },
+    {
+      "path": "helpers/native_core.py",
+      "sha256": "799b648e1932bbf25ddfbdc54527fbc7d8792b04262be49a5adc964c0538bbab",
+      "size": 399
+    },
+    {
+      "path": "helpers/prepare.py",
+      "sha256": "e4a29327d43c360c362b3e82849d77e859049256d1e27e2045abddc1cd9f7349",
+      "size": 6129
+    },
+    {
+      "path": "helpers/prepare_candidate.py",
+      "sha256": "6e425e2a924b8ec95957e11615897dc616ff0199b7a6192908f31a2b8d4f1a01",
+      "size": 8450
+    },
+    {
+      "path": "helpers/README.md",
+      "sha256": "c13b3e16ba0559b0df4c7b29637fa0e101798cffb96e206c767b44ced55c9234",
+      "size": 8387
+    },
+    {
+      "path": "helpers/skin_compare.py",
+      "sha256": "3721daefabff3c35f593973cffcd5c6c039ef55ab5937c950a6e0b9e88a7b9b1",
+      "size": 3317
+    },
+    {
+      "path": "helpers/test_compare.py",
+      "sha256": "4901ca5f873c05d4541affacfc2c325a290ada531585f7d9b701f99855ecdd03",
+      "size": 5554
+    },
+    {
+      "path": "preserve.py",
+      "sha256": "0fb342722c1596668cff7ebf40527f8acc43d7d73226bf693e0c4542ec907de8",
+      "size": 9784
+    },
+    {
+      "path": "records/native/baseline-v1/build.json",
+      "sha256": "849a8895eb67fa6d640121f6bdcf4c3e66e3252eff364724b2a99b532f5d2444",
+      "size": 8925
+    },
+    {
+      "path": "records/native/baseline-v1/build.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "records/native/baseline-v1/build.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/full/capture.log",
+      "sha256": "6a60dadd2a0762489f12d008e83532899159c626a3d66e0bdfcf7fc1c0bd090f",
+      "size": 16231
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/full/report.json",
+      "sha256": "b1c165003e7a2bb93815d120a783f3b3ac489be16dce97d2d8be25d0a8e00a7b",
+      "size": 31395
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/repeat/capture.log",
+      "sha256": "6a60dadd2a0762489f12d008e83532899159c626a3d66e0bdfcf7fc1c0bd090f",
+      "size": 16231
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/repeat/report.json",
+      "sha256": "47da429ab8a6c2935ad4b694a0f30fab50d5475a21b9265d9f768bbdabddfc76",
+      "size": 31397
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/smoke/capture.log",
+      "sha256": "bd97e2de0cb5169fc738761934020fbdb594ccd44dcc88d20efb3ae2b248b161",
+      "size": 7576
+    },
+    {
+      "path": "records/native/baseline-v1/front_arc/smoke/report.json",
+      "sha256": "9c6d204105b2f95a1853e878b0c6583d0bf47b1cfc7b9cc366095428f7f56d1d",
+      "size": 5672
+    },
+    {
+      "path": "records/native/baseline-v1/independent-trace.json",
+      "sha256": "2788b7390bafdcea9531916e85e9043f7b80c09b986437c86883c82b5b75789a",
+      "size": 23254
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/full/capture.log",
+      "sha256": "117636c6ccff2d1325d988e8dd859e48afe2aa1ac141da4fcadac09d411057c7",
+      "size": 16826
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/full/report.json",
+      "sha256": "d498af2420d02c4425205184e1d09758342a7e027a61268960fbaf19112c8114",
+      "size": 32959
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/repeat/capture.log",
+      "sha256": "117636c6ccff2d1325d988e8dd859e48afe2aa1ac141da4fcadac09d411057c7",
+      "size": 16826
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/repeat/report.json",
+      "sha256": "4e9d863f1f27d594b0583ec21998e691930841b0f240833dfbc6702f0b8fc303",
+      "size": 32961
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/smoke/capture.log",
+      "sha256": "b58d220c126ea127b1d18d9cbb5db19a6c2b19edc9298aedbd21ccb4e0196a86",
+      "size": 7573
+    },
+    {
+      "path": "records/native/baseline-v1/rear_arc/smoke/report.json",
+      "sha256": "df329ec264847e2222785cdaba2f34401657eb60409c76883e487a196e9d6977",
+      "size": 5666
+    },
+    {
+      "path": "records/native/baseline-v1/route-contract.json",
+      "sha256": "00183f24cd65f34c92354fdd8a82950c6451f3b6d5db12454618b009bd8ec40f",
+      "size": 35351
+    },
+    {
+      "path": "records/native/baseline-v1/summary.json",
+      "sha256": "0ba72c8fdce49a073b329d66c754aecf7af8bd8cd231a40a7ebc7144ee926f65",
+      "size": 39204
+    },
+    {
+      "path": "records/native/baseline-v1/trace-build.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "records/native/baseline-v1/trace-build.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/full/capture.log",
+      "sha256": "b633df002b3fdc79c852059820535c47f33dcaf7a630ff7b5086474b4214fcd8",
+      "size": 16219
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/full/report.json",
+      "sha256": "51e8106a88508a3c509ad4302d343ac0c907a88b17a812163fa2f1a8feccc190",
+      "size": 31357
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/repeat/capture.log",
+      "sha256": "b633df002b3fdc79c852059820535c47f33dcaf7a630ff7b5086474b4214fcd8",
+      "size": 16219
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/repeat/report.json",
+      "sha256": "f6cc05e0aa96fb8489d0a0591be2cc56a79ca4afc606c424554f053ec8a186ca",
+      "size": 31359
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/smoke/capture.log",
+      "sha256": "ea631edf77c7b6efb99ed588fe6018ac9267591ac73c5df95d6bee36e35c1844",
+      "size": 7576
+    },
+    {
+      "path": "records/native/baseline-v1/travel_cb/smoke/report.json",
+      "sha256": "b5b0c94eced83a0a4da0e18036636da3860a5d2d576617c8a75cc00a17b888a5",
+      "size": 5672
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/full/capture.log",
+      "sha256": "9f7507ad380065d5644070c5c066d9fd13afee420e36cd5c143762fedb9527c7",
+      "size": 20007
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/full/report.json",
+      "sha256": "b4da3ad1d7229020f60c4d5828cd9f765d16b3aefb208adc4bfefda3954dd315",
+      "size": 42129
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/repeat/capture.log",
+      "sha256": "9f7507ad380065d5644070c5c066d9fd13afee420e36cd5c143762fedb9527c7",
+      "size": 20007
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/repeat/report.json",
+      "sha256": "fdab0cb24e4f2aa169279f68022f229ad2a1e1e5740cc4c2fdb4137ba883ab0f",
+      "size": 42131
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/smoke/capture.log",
+      "sha256": "ede5d5cf8dfbb45186190a5a0c16b80596a0194381090c1ad2abefd301a843d3",
+      "size": 7576
+    },
+    {
+      "path": "records/native/baseline-v1/travel_ec/smoke/report.json",
+      "sha256": "acda9597dab98e07c422dc08f8a570328b93cef6db90d66b589ede06659d6eaf",
+      "size": 5672
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/full/capture.log",
+      "sha256": "d487df6d1350c9cbacdec125f9a936f19f9aad6141cb91a9d293dbe1b698651a",
+      "size": 8615
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/full/report.json",
+      "sha256": "b04dc861fb3325be2549b03d3e98e3f4962e6a56396be4ace553a9942aa4b1d4",
+      "size": 8715
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/repeat/capture.log",
+      "sha256": "d487df6d1350c9cbacdec125f9a936f19f9aad6141cb91a9d293dbe1b698651a",
+      "size": 8615
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/repeat/report.json",
+      "sha256": "b2ff11b99d4a77ad4d9d1fdf10411e010d9774c24e3d1ecfcdce72b014e5c5d7",
+      "size": 8717
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/smoke/capture.log",
+      "sha256": "00ea6d923238b51ff2b9fa8c917c4d59f688f956ee98e94a6a86822ae2a2cb99",
+      "size": 7574
+    },
+    {
+      "path": "records/native/baseline-v1/wait015/smoke/report.json",
+      "sha256": "ca3833851da141e9a2a0fad932509be0ae20fef64b8dd7efa9dd17d4192962df",
+      "size": 5668
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/full/capture.log",
+      "sha256": "b04522742a24b18a356c9d1775a1b9a99b8d94391ed8b1020e6ab4b194461521",
+      "size": 8615
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/full/report.json",
+      "sha256": "fdecd1ee0099919d67fd243412038dbbca6d32ddd73b9b5a96302a865fb44ab2",
+      "size": 8715
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/repeat/capture.log",
+      "sha256": "b04522742a24b18a356c9d1775a1b9a99b8d94391ed8b1020e6ab4b194461521",
+      "size": 8615
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/repeat/report.json",
+      "sha256": "0647bf9b7bf0e8c600416c70c44a54dedb7958ffbbdcdd9d69e8c15043294aaf",
+      "size": 8717
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/smoke/capture.log",
+      "sha256": "4428cb7644196924e3856bdfa62e4bb547a51a7bc9f07665a96d73b47f24270b",
+      "size": 7574
+    },
+    {
+      "path": "records/native/baseline-v1/wait016/smoke/report.json",
+      "sha256": "76d661bccab6355e34eb798a10f476773db6ba133239cd22950070bef84289fc",
+      "size": 5668
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/full/capture.log",
+      "sha256": "8dd265645c8e7b580431be84c3ca82b9c4789f8777d7b46ba34601b226ded443",
+      "size": 20981
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/full/report.json",
+      "sha256": "f93c3e9592a954791281aee7aa11790af048ea9e62436a11263854d65e323db1",
+      "size": 45146
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/repeat/capture.log",
+      "sha256": "8dd265645c8e7b580431be84c3ca82b9c4789f8777d7b46ba34601b226ded443",
+      "size": 20981
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/repeat/report.json",
+      "sha256": "d813aaa63711146ef1f8f7da773ef7a948b21276118a0c4016ea16a5af2f6b7b",
+      "size": 45148
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/smoke/capture.log",
+      "sha256": "cb551136c7d2b87bb55279baaf4c2f0cbc8c9226afce0d380bb64d7c67b47c55",
+      "size": 7581
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_front/smoke/report.json",
+      "sha256": "9329e625c5a427b6c5064345bef5fd944553ece9b2fb88eaca373b5004a5c55b",
+      "size": 5682
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/full/capture.log",
+      "sha256": "8fe8a2d7ba9f122630017d04e29463c48d6335cad09a1a9f905c6093db21a843",
+      "size": 26383
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/full/report.json",
+      "sha256": "4929f755f9d278a4c263c3bc5938882d7c510cba2bf9766185b2e6fdfbec3701",
+      "size": 60655
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/repeat/capture.log",
+      "sha256": "8fe8a2d7ba9f122630017d04e29463c48d6335cad09a1a9f905c6093db21a843",
+      "size": 26383
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/repeat/report.json",
+      "sha256": "6a3b2bd62fb8b6b0fe19159d13793b43fcfbd5a0a0bdc7401d7a216bd87f4881",
+      "size": 60657
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/smoke/capture.log",
+      "sha256": "172f06549398e603938a346a1834734c34f0944a365c89b9a8ceb0deaf94a81c",
+      "size": 7580
+    },
+    {
+      "path": "records/native/baseline-v1/waypoint_rear/smoke/report.json",
+      "sha256": "333fa7a38964e5d174af6b87fc783f3125785165c79764d7eb23e415a5fa5e1a",
+      "size": 5680
+    },
+    {
+      "path": "records/native/candidate-v1/correction-recipe.json",
+      "sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+      "size": 35538
+    },
+    {
+      "path": "records/native/candidate-v1/input-index.json",
+      "sha256": "d1a694d71efb2c2ac3aea6b2d42f2cf82abe0c0ca1b09a7a6185df8ae64d1dc6",
+      "size": 14258
+    },
+    {
+      "path": "records/native/candidate-v1/preparation.json",
+      "sha256": "04e976996552f3390fca135c3e80c6ad109bb6bdb1471f6db628f81297838d15",
+      "size": 17494
+    },
+    {
+      "path": "records/native/candidate-v1-launch-failure.json",
+      "sha256": "838fbe84d95beff415456373c13337108d0c96d33cc8655d7d0b5f1b1c9c4ff2",
+      "size": 869
+    },
+    {
+      "path": "records/native/candidate-v2/correction-recipe.json",
+      "sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+      "size": 35538
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/full/capture.log",
+      "sha256": "6a60dadd2a0762489f12d008e83532899159c626a3d66e0bdfcf7fc1c0bd090f",
+      "size": 16231
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/full/report.json",
+      "sha256": "d87ef06a2ebd82bb387ef4e558b42b9e84554a0c273723b9f6492eba85cdf643",
+      "size": 39262
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/repeat/capture.log",
+      "sha256": "6a60dadd2a0762489f12d008e83532899159c626a3d66e0bdfcf7fc1c0bd090f",
+      "size": 16231
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/repeat/report.json",
+      "sha256": "fa80943a7c98e2cace800f844dc8b1ee988534781caa2e7ad33a7a916de26550",
+      "size": 39264
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/smoke/capture.log",
+      "sha256": "bd97e2de0cb5169fc738761934020fbdb594ccd44dcc88d20efb3ae2b248b161",
+      "size": 7576
+    },
+    {
+      "path": "records/native/candidate-v2/front_arc/smoke/report.json",
+      "sha256": "701be438618e79cd81e90cb12798c980c498202a78d60a1df7a66ca35e1fc0f4",
+      "size": 6083
+    },
+    {
+      "path": "records/native/candidate-v2/input-index.json",
+      "sha256": "d1a694d71efb2c2ac3aea6b2d42f2cf82abe0c0ca1b09a7a6185df8ae64d1dc6",
+      "size": 14258
+    },
+    {
+      "path": "records/native/candidate-v2/preparation.json",
+      "sha256": "de962b6083bbd495797843416cbf81b08334114cd1c1b25db66119041c783a5e",
+      "size": 20966
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/full/capture.log",
+      "sha256": "117636c6ccff2d1325d988e8dd859e48afe2aa1ac141da4fcadac09d411057c7",
+      "size": 16826
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/full/report.json",
+      "sha256": "a6ad9b1afaa90e39edec19b75d4fbae848c1ad305f69f71c3e4e5060c4ef395c",
+      "size": 41358
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/repeat/capture.log",
+      "sha256": "117636c6ccff2d1325d988e8dd859e48afe2aa1ac141da4fcadac09d411057c7",
+      "size": 16826
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/repeat/report.json",
+      "sha256": "44692eeefb465d3e25a9ae423af201931a38084c6e49503fd00dbe0cb49ffa28",
+      "size": 41360
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/smoke/capture.log",
+      "sha256": "b58d220c126ea127b1d18d9cbb5db19a6c2b19edc9298aedbd21ccb4e0196a86",
+      "size": 7573
+    },
+    {
+      "path": "records/native/candidate-v2/rear_arc/smoke/report.json",
+      "sha256": "8d2ac39819b39a1ce025812c7a80847a290afa68e65d1e0a55356df90fdd8c9a",
+      "size": 6076
+    },
+    {
+      "path": "records/native/candidate-v2/summary.json",
+      "sha256": "19cd32be48dae5f93ab11eca3287105deb7d1cd4c4fd6eb16df8abcef3e3c140",
+      "size": 2340
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/full/capture.log",
+      "sha256": "b633df002b3fdc79c852059820535c47f33dcaf7a630ff7b5086474b4214fcd8",
+      "size": 16219
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/full/report.json",
+      "sha256": "348e305eecfa35a2fe3fd811b96cd3154e817fb39d81f27875d045fd7132ba7d",
+      "size": 39201
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/repeat/capture.log",
+      "sha256": "b633df002b3fdc79c852059820535c47f33dcaf7a630ff7b5086474b4214fcd8",
+      "size": 16219
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/repeat/report.json",
+      "sha256": "b47d7c0d5f6c0227d48c56a3ab4d08a0c0294dc28de97321d65463b5fcaa5220",
+      "size": 39203
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/smoke/capture.log",
+      "sha256": "ea631edf77c7b6efb99ed588fe6018ac9267591ac73c5df95d6bee36e35c1844",
+      "size": 7576
+    },
+    {
+      "path": "records/native/candidate-v2/travel_cb/smoke/report.json",
+      "sha256": "6836076363c7ed4daee9b75f20b55ba4ce6a4235911da721e080855482c43b97",
+      "size": 6083
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/full/capture.log",
+      "sha256": "9f7507ad380065d5644070c5c066d9fd13afee420e36cd5c143762fedb9527c7",
+      "size": 20007
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/full/report.json",
+      "sha256": "15f04f29fe3b6242cfaadc0155a629944e3f98f0bcefcc23080509b8e1b1b3cb",
+      "size": 53032
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/repeat/capture.log",
+      "sha256": "9f7507ad380065d5644070c5c066d9fd13afee420e36cd5c143762fedb9527c7",
+      "size": 20007
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/repeat/report.json",
+      "sha256": "75b21a2e2985e289d5463c63768fb25639178a8d37ef96e2cd65c31e298212df",
+      "size": 53034
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/smoke/capture.log",
+      "sha256": "ede5d5cf8dfbb45186190a5a0c16b80596a0194381090c1ad2abefd301a843d3",
+      "size": 7576
+    },
+    {
+      "path": "records/native/candidate-v2/travel_ec/smoke/report.json",
+      "sha256": "dccbafbbdcc330a1ebefd3252ba5c4b17053117d65e6f36e2e1c18e5bd37dd1b",
+      "size": 6083
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/full/capture.log",
+      "sha256": "d487df6d1350c9cbacdec125f9a936f19f9aad6141cb91a9d293dbe1b698651a",
+      "size": 8615
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/full/report.json",
+      "sha256": "70ca2e1b686b88afef8046ffc21ca5cba2d0525e72808082786601db27f59dd5",
+      "size": 9982
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/repeat/capture.log",
+      "sha256": "d487df6d1350c9cbacdec125f9a936f19f9aad6141cb91a9d293dbe1b698651a",
+      "size": 8615
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/repeat/report.json",
+      "sha256": "d1ab7bf699ccfad60677586ce9c803247885e71a16589388caf74fc9eebda311",
+      "size": 9984
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/smoke/capture.log",
+      "sha256": "00ea6d923238b51ff2b9fa8c917c4d59f688f956ee98e94a6a86822ae2a2cb99",
+      "size": 7574
+    },
+    {
+      "path": "records/native/candidate-v2/wait015/smoke/report.json",
+      "sha256": "2a749a79b9a312db696c5cac737faf430ed417448b05cc719e8194f6d3a83e95",
+      "size": 6079
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/full/capture.log",
+      "sha256": "b04522742a24b18a356c9d1775a1b9a99b8d94391ed8b1020e6ab4b194461521",
+      "size": 8615
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/full/report.json",
+      "sha256": "570cb93ec8f1a2b54b067063a465525eec42b8c7c6453035409512b195c0fa33",
+      "size": 9982
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/repeat/capture.log",
+      "sha256": "b04522742a24b18a356c9d1775a1b9a99b8d94391ed8b1020e6ab4b194461521",
+      "size": 8615
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/repeat/report.json",
+      "sha256": "f7414fcfe43218c11815c7f9a970a6b7c9a9f3e15f87575fd51cdf601c4e86d0",
+      "size": 9984
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/smoke/capture.log",
+      "sha256": "4428cb7644196924e3856bdfa62e4bb547a51a7bc9f07665a96d73b47f24270b",
+      "size": 7574
+    },
+    {
+      "path": "records/native/candidate-v2/wait016/smoke/report.json",
+      "sha256": "1a48ead361b83af4e28100386a91a0aa774b54bb7a81a54b9b6d82e7ac6eed1b",
+      "size": 6079
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/full/capture.log",
+      "sha256": "8dd265645c8e7b580431be84c3ca82b9c4789f8777d7b46ba34601b226ded443",
+      "size": 20981
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/full/report.json",
+      "sha256": "13976be57b62dbefb65ae6d99b04c7381d8ef3703420df067c9f5cbb8b0e375b",
+      "size": 56938
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/repeat/capture.log",
+      "sha256": "8dd265645c8e7b580431be84c3ca82b9c4789f8777d7b46ba34601b226ded443",
+      "size": 20981
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/repeat/report.json",
+      "sha256": "a6c2753528066d6403dc5958969a01155b05118aaf58b59043deee3e465c1158",
+      "size": 56940
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/smoke/capture.log",
+      "sha256": "cb551136c7d2b87bb55279baaf4c2f0cbc8c9226afce0d380bb64d7c67b47c55",
+      "size": 7581
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_front/smoke/report.json",
+      "sha256": "13aa5723f100af2ac7ecb53f8f1b0cb01f80165fff0924cea697ba05de5420ca",
+      "size": 6093
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/full/capture.log",
+      "sha256": "8fe8a2d7ba9f122630017d04e29463c48d6335cad09a1a9f905c6093db21a843",
+      "size": 26383
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/full/report.json",
+      "sha256": "7dcbf7a00e0db7d0ead0bb9a3a693e1b79cbc21af0fb443f72ad943cd53773ba",
+      "size": 76745
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/repeat/capture.log",
+      "sha256": "8fe8a2d7ba9f122630017d04e29463c48d6335cad09a1a9f905c6093db21a843",
+      "size": 26383
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/repeat/report.json",
+      "sha256": "8c2fd49a702b1bbc114f7073baeddd4c844e27883ecbe3672fd80635d0909e8d",
+      "size": 76747
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/smoke/capture.log",
+      "sha256": "172f06549398e603938a346a1834734c34f0944a365c89b9a8ceb0deaf94a81c",
+      "size": 7580
+    },
+    {
+      "path": "records/native/candidate-v2/waypoint_rear/smoke/report.json",
+      "sha256": "f1283f8462cf80e963ccf2ac6d710d2211240d1d2fb3d9e6ff9a1b188e4e72a1",
+      "size": 6091
+    },
+    {
+      "path": "records/native/negative-controls/native-v2.json",
+      "sha256": "163e0121f21e1d8bd83f66b82dfde3c91d7c75bd0200e78348e54f56651bd3b3",
+      "size": 1806
+    },
+    {
+      "path": "records/native/preparation.json",
+      "sha256": "ddfd95bb1cc24d1974da49049afe282c84b12ac9567f045ebc70a64b73648b6b",
+      "size": 283598
+    },
+    {
+      "path": "records/native/route_driver.c",
+      "sha256": "cc8dd66227fd15f2e2214c9d7e9b4a6b9554c7f0c39e75da3daa9543a26d3ab6",
+      "size": 6639
+    },
+    {
+      "path": "records/native/trace_driver.c",
+      "sha256": "1616492a15bb5ed468c790d74df6228cc922b5b1af58c406dab5477845473b70",
+      "size": 1300
+    },
+    {
+      "path": "records/toolchecks-v3/inputs-v2.json",
+      "sha256": "f1ec93d6f38575875ab01e2670169d99293da74a778996ece4738708b1b8c56a",
+      "size": 3526
+    },
+    {
+      "path": "records/toolchecks-v3/regression.json",
+      "sha256": "e3c7bf248b701b9d1ad69564e52c35ac7285f336f403600cfdf0c37325fb9262",
+      "size": 5753
+    },
+    {
+      "path": "records/toolchecks-v3/smoke.json",
+      "sha256": "d08a61c73bfecee0c8b2312e4ea09c657259800d1ff568bf4ef662a3fbba6bbd",
+      "size": 414
+    },
+    {
+      "path": "REPRODUCE.md",
+      "sha256": "c051c4b086c19a7b5f02b03735861e617898cd996b8f749ba9740394bcf61c1f",
+      "size": 5543
+    },
+    {
+      "path": "source-pins.json",
+      "sha256": "7241e7e33f8b6a99cbc3278af26bece28ed038566071a456e9175cb2e91bb192",
+      "size": 9376
+    }
+  ],
+  "omissions": "PPM/PNG captures, ZIPs, raw artwork and native binaries are not copied. Hash manifests, original reports, source pins and replay instructions are retained."
+}

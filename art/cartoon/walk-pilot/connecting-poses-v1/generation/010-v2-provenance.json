@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen.imagegen",
+  "model_identifier": "not exposed by tool",
+  "generation_seed": "not exposed by tool",
+  "raw": "art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v2.png",
+  "raw_sha256": "a04f364f42ad87a5b835f2fe6a96576647ceb90a91bc0e4ae86e53a91f8773c1",
+  "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-d50c8f4e-6968-4ad7-8ccb-daa9c3bff103.png",
+  "cache_bytes_identical": true,
+  "request_record": "art/cartoon/walk-pilot/connecting-poses-v1/generation/010-v2-request.json",
+  "request_record_sha256": "9aef8071bbdadcf74694841385ddd10afb37e3fd2b66b2d367ac261c32060c14",
+  "prompt_utf8_sha256": "b2290c2ad19c857865e0c473cafa1592e2391e6c8df09e28c6ec906f443a7477",
+  "actual_reference_order": [
+    {
+      "actual_path": "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v1.png",
+      "preserved_path": "art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v1.png",
+      "sha256": "be5886d91155871b60d6769d660632e018379c5c0108092c120a8906b366e8e5"
+    }
+  ],
+  "measurements": {
+    "canvas": [
+      1024,
+      1536
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "bounds_exclusive_by_alpha_threshold": {
+      "1": [
+        45,
+        20,
+        962,
+        1504
+      ],
+      "8": [
+        206,
+        23,
+        819,
+        1502
+      ],
+      "128": [
+        206,
+        24,
+        818,
+        1501
+      ]
+    },
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "status": "Superseded: pupil-spacing change remained too subtle. Retained as an actual edit ancestor.",
+  "user_feedback": "the front view looks slightly cross-eyed  can you add some space to the pupils",
+  "edit_limit": "Prompted pupil displacement is a target, not a measured exact movement. No claim that all other pixels stayed identical.",
+  "alterations": "Raw generator output copied exactly; no manual pixel editing, color key or alpha thresholding."
+}

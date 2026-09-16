@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "clip": "waypoint_rear",
+      "display": 63,
+      "frame": 18,
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "altered_pixel": [
+        787,
+        419
+      ],
+      "result": "FIRED",
+      "exact_failure": "unchanged outside018 canvas",
+      "altered_rgb_sha256": "d94843b3b6c5950df0f825b8d965c2091305482dcdb64a71e6d61638d25cde49"
+    },
+    {
+      "clip": "waypoint_front",
+      "display": 41,
+      "frame": 23,
+      "actual_draw": [
+        0,
+        433,
+        225,
+        23
+      ],
+      "altered_pixel": [
+        867,
+        451
+      ],
+      "result": "FIRED",
+      "exact_failure": "prior pose and scene pixel identity:23",
+      "altered_rgb_sha256": "49f9c8f17cee0b81513d515549f270397dabfb5371bea1e36ebbb342ed0edbfb"
+    }
+  ],
+  "positive_before_after": true,
+  "report_bindings": {
+    "waypoint_rear": {
+      "baseline_report_sha256": "e09fa5081308abf417b5af819321b85f6840686813cb297fd9f537935e697164",
+      "candidate_report_sha256": "9a90b3e9eed16587d07ac4fd0bdf401ff7cc9a8c3224386bbf64d008bedd63aa"
+    },
+    "waypoint_front": {
+      "baseline_report_sha256": "3ce70a510c3eb6dbfee8b49acffcac309d7518fc200ca6d4afe7d7bebdbedff2",
+      "candidate_report_sha256": "51361c0078ba8e9297cc7b48deae0993394b6e81bd0f1bd6d988ec0ef54f40cb"
+    }
+  },
+  "summary_sha256": "b4152ef1d4bc21809ffc5822bf30023e1a426eea466d02cbd2e3403b81dc384c",
+  "archive_sha256": "561edb2c9b4b4857b723af1505ce8d2654616aae2942325389604a4d88804521",
+  "runtime018_sha256": "5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f",
+  "executed_comparison_helper_sha256": "3a0f820e46900b92ad2ef62d720c3e1c62138b82de2867c83691bc6a2a8f5c49",
+  "capture_helper_sha256": "c44069364e59ac7e70ef25aac3afd6d5fefb1ccdd39f5a1956c73e615d09da8f",
+  "checker_sha256": "0622734dfc45738ce78fced0dd141ec9afac777b08577d2c1938151693ca65a3",
+  "scope": "Two memory-only altered actual final-native buffers; no image/capture/production changes."
+}

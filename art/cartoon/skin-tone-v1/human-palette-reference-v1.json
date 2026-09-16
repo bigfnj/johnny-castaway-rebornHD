@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "human-selected palette reference; no corrected-output approval assigned",
+  "user_answer_exact": "Use image 2’s lighter tone; correct colors in code",
+  "context": "The user confirmed the poses are accurate. This decision selects the skin-color reference and authorizes code-based color correction while retaining pose geometry.",
+  "scope": "Skin colors only. Preserve all existing pose geometry, canvas placement, silhouettes, alpha, facial expression and non-skin materials. This record does not approve any as-yet-unseen corrected output or assign production promotion.",
+  "canonical_reference": {
+    "frame": 29,
+    "label": "The existing approved front-walk029 skin tone visible in image2",
+    "screenshot": {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/skin-color-audit-v1/user-shot2.png",
+      "sha256": "9efae44b05d928cb9d046f55616d9fb02eb844f80701cfff9d154d331c8e2a91"
+    },
+    "runtime_png": {
+      "path": "art/cartoon/skin-tone-v1/inputs/029.png",
+      "sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a"
+    },
+    "archive_member": "data/styles/cartoon/BMP/JOHNWALK.BMP/029.png",
+    "generated_raw_png": {
+      "path": "art/cartoon/walk-pilot/front-refresh-v1/029-heel-fit-v2.png",
+      "sha256": "e8efc7e91972fc7dca1bb3080a3cddc38b4e7519cb4fb7aaf98c31a1acbb922a"
+    },
+    "export_recipe": {
+      "path": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+      "sha256": "8b72e60b5598e29909f5897a47e4304a54f9e5b96564624811e0f57e56218725"
+    },
+    "matched_clip": "waypoint_front",
+    "clip_label": "Front waypoint",
+    "actual_draw_flip_x_y_frame": [
+      1,
+      486,
+      220,
+      29
+    ],
+    "possible_display_indices": [
+      5,
+      6
+    ],
+    "possible_logical_ms": [
+      240,
+      320
+    ],
+    "ambiguity": "The two fixed camera crops are pixel-identical. The screenshot identifies029 unequivocally but cannot distinguish these two timestamps."
+  },
+  "screenshot_identification_proof": {
+    "path": "art/cartoon/skin-tone-v1/review-evidence/screenshot-match-v1/result.json",
+    "sha256": "fa8dd426ca2cc4493e3960e36880d59f12f8a89c693eef2485cbc3967ac97eea"
+  },
+  "input_index": {
+    "path": "art/cartoon/skin-tone-v1/input-index.json",
+    "sha256": "d1a694d71efb2c2ac3aea6b2d42f2cf82abe0c0ca1b09a7a6185df8ae64d1dc6"
+  },
+  "approval_boundary": "Earlier pose approvals remain historical and intact. This new approval concerns the skin-color direction and method only; native color-review validation and human review of corrected results follow separately."
+}

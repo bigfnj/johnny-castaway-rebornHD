@@ -1,0 +1,55 @@
+{
+  "phase": "regression",
+  "passed": 6,
+  "tests": [
+    "test_lower_weight_is_support",
+    "test_mirrored_support",
+    "test_no_change_in_empty_mask",
+    "test_outside_row_refused",
+    "test_outside_side_refused",
+    "test_unmasked_neighbor_refused"
+  ],
+  "compiled_source_sha256": "3721daefabff3c35f593973cffcd5c6c039ef55ab5937c950a6e0b9e88a7b9b1",
+  "witness": "WITNESS skin-compare compiled-source=3721daefabff3c35f593973cffcd5c6c039ef55ab5937c950a6e0b9e88a7b9b1 pid=68620",
+  "native_launched": false,
+  "mutation": null,
+  "failures": 0,
+  "mutations": [
+    {
+      "name": "disabled-skin-support",
+      "status": "FIRED",
+      "test": "test_unmasked_neighbor_refused",
+      "compiled_source_sha256": "afc79afb1927445c5e8e79bef5af36940ef8f675828778fb20e1bd054eebc9ab",
+      "exit_code": 1,
+      "stdout": "WITNESS skin-compare compiled-source=afc79afb1927445c5e8e79bef5af36940ef8f675828778fb20e1bd054eebc9ab pid=67660\n",
+      "stderr": "test_unmasked_neighbor_refused (__main__.Placement.test_unmasked_neighbor_refused) ... FAIL\n\n======================================================================\nFAIL: test_unmasked_neighbor_refused (__main__.Placement.test_unmasked_neighbor_refused)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\.ai-work\\worktrees\\johnny-cartoon-connecting-poses\\art\\cartoon\\skin-tone-v1\\native-review\\test_compare.py\", line 47, in test_unmasked_neighbor_refused\n    with self.assertRaisesRegex(ValueError, 'outside transformed skin mask:009'):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 1 test in 0.009s\n\nFAILED (failures=1)\n"
+    },
+    {
+      "name": "disabled-mirroring",
+      "status": "FIRED",
+      "test": "test_mirrored_support",
+      "compiled_source_sha256": "b0d04b1ad43525101554f6a749e0e8d4f716b59c47637f0693847bac2db6b97a",
+      "exit_code": 1,
+      "stdout": "WITNESS skin-compare compiled-source=b0d04b1ad43525101554f6a749e0e8d4f716b59c47637f0693847bac2db6b97a pid=43480\n",
+      "stderr": "test_mirrored_support (__main__.Placement.test_mirrored_support) ... ERROR\n\n======================================================================\nERROR: test_mirrored_support (__main__.Placement.test_mirrored_support)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\.ai-work\\worktrees\\johnny-cartoon-connecting-poses\\art\\cartoon\\skin-tone-v1\\native-review\\test_compare.py\", line 44, in test_mirrored_support\n    self.assertEqual(CURRENT.compare_pixels(self.before, self.changed(22,40), [1,10,20,9], self.mask), 1)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\.ai-work\\worktrees\\johnny-cartoon-connecting-poses\\art\\cartoon\\skin-tone-v1\\native-review\\skin_compare.py:disabled-mirroring\", line 32, in compare_pixels\n  File \"D:\\.ai-work\\worktrees\\johnny-cartoon-connecting-poses\\art\\cartoon\\walk-pilot\\connecting-poses-v1\\native-motion-v1\\native_core.py\", line 19, in require\n    raise ValueError('connecting capture: ' + label)\nValueError: connecting capture: outside transformed skin mask:009\n\n----------------------------------------------------------------------\nRan 1 test in 0.007s\n\nFAILED (errors=1)\n"
+    },
+    {
+      "name": "disabled-outside-row",
+      "status": "FIRED",
+      "test": "test_outside_row_refused",
+      "compiled_source_sha256": "3a8cb2b58d96fda29c5f0cc8dbf5325678ceaacbd5ceef98611df3eb3e100ad9",
+      "exit_code": 1,
+      "stdout": "WITNESS skin-compare compiled-source=3a8cb2b58d96fda29c5f0cc8dbf5325678ceaacbd5ceef98611df3eb3e100ad9 pid=38344\n",
+      "stderr": "test_outside_row_refused (__main__.Placement.test_outside_row_refused) ... FAIL\n\n======================================================================\nFAIL: test_outside_row_refused (__main__.Placement.test_outside_row_refused)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\.ai-work\\worktrees\\johnny-cartoon-connecting-poses\\art\\cartoon\\skin-tone-v1\\native-review\\test_compare.py\", line 51, in test_outside_row_refused\n    with self.assertRaisesRegex(ValueError, 'outside skin canvas:009'):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 1 test in 0.007s\n\nFAILED (failures=1)\n"
+    },
+    {
+      "name": "disabled-outside-side",
+      "status": "FIRED",
+      "test": "test_outside_side_refused",
+      "compiled_source_sha256": "96b8b61bc6e2782357b4e09242cfc78750602b30dd663e437e327e07daa78c5f",
+      "exit_code": 1,
+      "stdout": "WITNESS skin-compare compiled-source=96b8b61bc6e2782357b4e09242cfc78750602b30dd663e437e327e07daa78c5f pid=13324\n",
+      "stderr": "test_outside_side_refused (__main__.Placement.test_outside_side_refused) ... FAIL\n\n======================================================================\nFAIL: test_outside_side_refused (__main__.Placement.test_outside_side_refused)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"D:\\.ai-work\\worktrees\\johnny-cartoon-connecting-poses\\art\\cartoon\\skin-tone-v1\\native-review\\test_compare.py\", line 55, in test_outside_side_refused\n    with self.assertRaisesRegex(ValueError, 'outside skin canvas:009'):\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 1 test in 0.008s\n\nFAILED (failures=1)\n"
+    }
+  ]
+}

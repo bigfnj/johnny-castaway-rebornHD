@@ -1,0 +1,51 @@
+"""Execute the viewer source binding against retained real capture reports."""
+import copy
+import hashlib
+import json
+from pathlib import Path
+import sys
+
+ROOT = Path(__file__).resolve().parents[2]
+HERE = ROOT / 'art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1'
+sys.path.insert(0, str(HERE))
+import build_review
+import config
+
+out = config.OUT / 'negative-controls/viewer-source-binding'
+out.mkdir(parents=True, exist_ok=False)
+contract = config.contract()['clips']
+reports = {name: config.load_json(config.OUT / 'baseline-v1' / name / 'full/report.json') for name in config.CLIPS}
+for clip, report in reports.items():
+    build_review.source_identity(report, 'baseline', clip, contract)
+print('SMOKE PASS six real baseline reports bind their clip and full source contracts')
+assert reports['front_arc']['display_count'] == reports['travel_cb']['display_count']
+assert reports['front_arc']['duration_ms'] == reports['travel_cb']['duration_ms']
+results = []
+cases = []
+for target, supplied in [('front_arc', 'travel_cb'), ('travel_cb', 'front_arc')]:
+    cases.append(('swapped-' + supplied + '-as-' + target, target, copy.deepcopy(reports[supplied]), 'capture clip/phase identity:baseline:' + target))
+spoofed = copy.deepcopy(reports['travel_cb'])
+spoofed['clip'] = 'front_arc'
+cases.append(('swapped-clip-with-spoofed-label', 'front_arc', spoofed, 'capture source contract:baseline:front_arc:prime'))
+for name, clip, report, witness in cases:
+    path = out / (name + '.json')
+    path.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8', newline='\n')
+    try:
+        build_review.source_identity(report, 'baseline', clip, contract)
+    except AssertionError as error:
+        assert str(error) == witness, (name, str(error))
+        results.append({'name': name, 'result': 'FIRED', 'expected_failure': witness,
+                        'mutated_report_sha256': config.sha(path.read_bytes())})
+        print('FIRED ' + witness)
+    else:
+        raise AssertionError('swapped clip SURVIVED:' + name)
+for clip, report in reports.items():
+    build_review.source_identity(report, 'baseline', clip, contract)
+record = {'status': 'PASS', 'smoke_reports': 6, 'mutations': results, 'restored_positive_reports': 6,
+          'executed_builder_sha256': config.sha((HERE / 'build_review.py').read_bytes()),
+          'harness_sha256': config.sha(Path(__file__).read_bytes()),
+          'source_reports_sha256': {name: config.sha((config.OUT / 'baseline-v1' / name / 'full/report.json').read_bytes()) for name in reports},
+          'scope': 'Actual viewer source-identity function executes on six real reports, then equal-count/equal-duration clip swaps and a spoofed label. No native rerun, candidate creation or production mutation.'}
+(out / 'result.json').write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8', newline='\n')
+(out / 'harness.py.txt').write_bytes(Path(__file__).read_bytes())
+print('PASS restored source bindings; ' + config.sha((out / 'result.json').read_bytes()))

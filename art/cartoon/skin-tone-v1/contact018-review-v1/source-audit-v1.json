@@ -1,0 +1,45 @@
+{
+  "status": "Independent agent observations retained; geometry diagnosis only",
+  "observer": "front_motion_review",
+  "scope": "Observations reported by the independent source/geometry reviewer. The comparison author independently executed the native captures, package preservation checks and zero-outside018 comparison; the reviewer supplied the index-plane and foot measurements below.",
+  "supplied_resource_sha256": {
+    "data/RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+    "data/RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+  },
+  "original_reference": "art/cartoon/arrival-pilot-v1/reference/018-native.png",
+  "original_source_record": "art/cartoon/arrival-pilot-v1/reference/source.json",
+  "current_sprite": "art/cartoon/skin-tone-v1/exports-v2/sprites/018.png",
+  "measurements": {
+    "method": "Original excludes exact diagnostic gray shadow RGBA128,128,128,255. Cartoon uses alpha>=8. Regions are screen-space pixel heuristics, not anatomical left/right classification.",
+    "original_near_foot_last_native_row": 73,
+    "original_near_foot_last_doubled_row": 147,
+    "original_smaller_foot_last_native_row": 71,
+    "original_smaller_foot_last_doubled_row": 143,
+    "original_smaller_foot_region": "native x>=18,y>=67",
+    "cartoon_near_foot_last_row": 141,
+    "cartoon_smaller_foot_last_row": 131,
+    "cartoon_smaller_foot_region": "runtime x>=34,y>=120",
+    "draw_origin_hd": [956,432],
+    "cartoon_smaller_foot_last_scene_row": 563,
+    "original_smaller_foot_last_scene_row": 575,
+    "cartoon_clean_shoreline_observation": "At scene x992..1004, sand starts aroundy568..570; gap is approximately6HD pixels, dependent on sampled column."
+  },
+  "supplied_vs_bundled_audit": {
+    "johnny018": "34 differing indices; index0 transparency silhouette identical32x77. Foot rows>=67 differ at only two larger-foot pixels(6,72)6->5 and(7,72)12->5. Smaller-foot indices and both sole extents match.",
+    "island000": "9 differing indices total; zero in relevant islandlocalROI x180..222,y0..20. Shoreline top silhouette matches.",
+    "palm_shadow014": "Supplied versus bundled contact-shadow indices differ at scene(498,287),(499,287),(499,289), plusmargin(498,295). Therefore bundled captures would not establish exact original contact-shadow appearance.",
+    "resolution": "Both final diagnostic packages use the supplied resource pair directly; no bundled-resource substitution remains in original panels."
+  },
+  "independent_final_package_readback": {
+    "original_scene_sha256": "91075b95cbe37d4f8a1145adf7d9c2b02f5e12124e952ad3ca93d90cb6d715d1",
+    "original_scene_members": 150,
+    "original_scene_png_removals": 2444,
+    "original_scene_other_retained_payloads_exact": 148,
+    "original_johnny_sha256": "d7797181cf2e30699709946f0983b6899f0c7428785f9c596dea8ac150619f20",
+    "original_johnny_members": 2592,
+    "original_johnny_png_removals": 2,
+    "original_johnny_other_retained_payloads_exact": 2590,
+    "scope": "Exactly two retained resource members replaced by supplied bytes; HD scale2 retained;018 override absent from both paths; smoke execution archive matches prepared archive; first draw unmirrored018 at478,216."
+  },
+  "limit": "Original panels retain the port diagnostic palette. These measurements and captures establish source geometry/contact differences; they do not prove original executable palette, compositing or timing parity."
+}

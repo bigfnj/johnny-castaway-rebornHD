@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status_at_request": "Human motion review pending. This file does not grant approval.",
+  "question": "In the new connecting-pose preview (http://127.0.0.1:8932/connecting-turns-motion-v1/review.html), do the three new poses look natural across all six clips at Normal speed? Please check the front pose's gaze and foot lift. To inspect the eyes, choose Front turn, then 010 under Connecting pose.",
+  "options": [
+    "Yes, keep these connecting poses",
+    "Adjust the front pose",
+    "Adjust another transition"
+  ],
+  "url": "http://127.0.0.1:8932/connecting-turns-motion-v1/review.html",
+  "html_sha256": "1f9e9100fb6add44815ef8f6bc2ee0ded6458925f78b19b8ccc20d515ff09c18",
+  "candidate_selection": "art/cartoon/walk-pilot/connecting-poses-v1/candidate-selection-v2.json",
+  "candidate_selection_sha256": "86b31a896e70f8977fcac4ef8eb573e5c96893f3e13e1b319d98674c728a83ab",
+  "candidate_archive_sha256": "21194cf35e5b60eebfa9ba48520509ae8f86a72f26313b945f019671d1f345c5",
+  "selected_sources": {
+    "009": "009-connecting-v1.png",
+    "010": "010-connecting-v5.png",
+    "012": "012-connecting-v1.png"
+  },
+  "clips": [
+    "front_arc",
+    "rear_arc",
+    "travel_cb",
+    "travel_ec",
+    "waypoint_front",
+    "waypoint_rear"
+  ],
+  "scope": "Six captured port walking/turning contexts only. Original-executable timing and separately attributed story uses are not approved by this question.",
+  "production_approved": false
+}

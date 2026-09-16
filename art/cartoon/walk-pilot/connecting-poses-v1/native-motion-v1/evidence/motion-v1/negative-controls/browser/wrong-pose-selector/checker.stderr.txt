@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\walk-pilot\connecting-poses-v1\native-motion-v1\check_review.py", line 165, in <module>
+    check(args.review, expected_html=args.expected_html)
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\walk-pilot\connecting-poses-v1\native-motion-v1\check_review.py", line 92, in check
+    assert state['pose'] == pose and not state['playing'], 'pose selector native ordinal:' + name + ':' + str(pose)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: pose selector native ordinal:front_arc:0

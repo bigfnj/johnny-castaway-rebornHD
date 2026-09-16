@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connecting pose 009</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#15232d;color:#eef4f6;font:16px system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:24px}h1{font-size:26px;margin:0 0 12px}p{line-height:1.5;color:#c9d6dd}.controls{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}button{font:inherit;padding:9px 14px;border:1px solid #7896a8;border-radius:6px;background:#213b4a;color:white}button[aria-pressed=true]{background:#31775e}.panels{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{border:1px solid #506776;border-radius:8px;overflow:hidden;background:#263742}h2{font-size:17px;padding:12px 16px;margin:0}canvas{display:block;width:100%;height:auto}.note{padding:0 16px;font-size:14px}.status{color:#a5e0c0}.identity{display:flex;gap:24px;align-items:center;margin-top:22px;padding:16px;background:#223641;border-radius:8px}.identity img{height:152px;max-width:100px;object-fit:contain;image-rendering:pixelated;background:#bcc8ce}.reference{display:flex;gap:12px;align-items:center}.small{font-size:14px}@media(max-width:700px){main{padding:12px}.panels{grid-template-columns:1fr}.identity{flex-wrap:wrap}}
+</style>
+<main><h1>Connecting pose 009</h1>
+<p>Check the three-quarter turn, relaxed arms and the depth between his feet. This pose connects the profile and front views.</p>
+<div class="controls"><button id="mirror" aria-pressed="false">Face left</button><button id="feet" aria-pressed="false">Enlarge legs</button></div>
+<div class="panels"><section class="panel"><h2>Original 009</h2><canvas id="original" width="512" height="640"></canvas><p class="note">The original uses a diagnostic palette. Gray ground marks are shadows.</p></section><section class="panel"><h2>Cartoon 009 · draft v1</h2><canvas id="candidate" width="512" height="640"></canvas><p class="note">Both feet stay near the ground. Check the stance and shorts before we review the complete transition.</p></section></div>
+<p class="status" id="status" role="status">Loading references...</p>
+<div class="identity"><div class="reference"><img id="identity017" alt="Approved standing three-quarter view 017"><div>Approved 017<p class="small">Three-quarter identity</p></div></div><div class="reference"><img id="identity003" alt="Approved profile passing pose 003"><div>Approved 003<p class="small">Profile identity</p></div></div></div>
+<p class="small">Static pose check only. The new pose has not been installed in the application.</p></main>
+<script id="review-data" type="application/json">__REVIEW_DATA__</script>
+<script>
+const data=JSON.parse(document.getElementById('review-data').textContent);
+const state={mirror:false,feet:false,ready:false};const images={};
+async function load(name,url){const img=new Image();img.src=url;await img.decode();images[name]=img;}
+function draw(which){const canvas=document.getElementById(which),ctx=canvas.getContext('2d'),zoom=state.feet?5:4,w=data.canvas[0]*zoom,h=data.canvas[1]*zoom,x=(canvas.width-w)/2,y=state.feet?-362:16;ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#bcc8ce';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.strokeStyle='#647b89';ctx.strokeRect(x-.5,y-.5,w+1,h+1);ctx.save();ctx.imageSmoothingEnabled=false;if(state.mirror){ctx.translate(x+w,y);ctx.scale(-1,1);ctx.drawImage(images[which],0,0,w,h);}else{ctx.drawImage(images[which],x,y,w,h);}ctx.restore();}
+function render(){if(!state.ready)return;draw('original');draw('candidate');document.getElementById('status').textContent='Pose 009 | '+(state.mirror?'facing left':'facing right')+' | '+(state.feet?'leg detail':'whole body')+' | static pose review only';for(const id of ['mirror','feet'])document.getElementById(id).setAttribute('aria-pressed',String(state[id]));document.getElementById('mirror').textContent=state.mirror?'Face right':'Face left';document.getElementById('feet').textContent=state.feet?'Show whole body':'Enlarge legs';}
+document.getElementById('mirror').addEventListener('click',()=>{state.mirror=!state.mirror;render();});document.getElementById('feet').addEventListener('click',()=>{state.feet=!state.feet;render();});
+Promise.all(['original','candidate','identity017','identity003'].map(name=>load(name,data[name]))).then(()=>{for(const id of ['identity017','identity003'])document.getElementById(id).src=data[id];state.ready=true;render();window.reviewReady=true;}).catch(error=>{document.getElementById('status').textContent='Review failed to load: '+error.message;console.error(error);});
+</script></html>

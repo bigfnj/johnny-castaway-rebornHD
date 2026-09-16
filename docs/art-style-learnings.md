@@ -269,6 +269,14 @@ latest arm-swing decisions, scoped 008 direction approval, canvas-fit correction
 and measured drift after targeted image edits. Its later native motion approval
 covers both displayed directions and standing/ordinary 003 connections.
 
+The [connecting-pose lessons](art-style-learnings-connecting-poses.md) preserve
+the accepted 009 still, selected Face v1 gaze, rejected pupil/leg edits and the
+distinction between original geometry and a subpixel filtering margin. That
+batch's poses, matched skin colors and revised018 foot contact now have scoped
+human acceptance. The [delivery verification](cartoon-connecting-poses-verification.md)
+records their combined integration. Keep the color-only28-pose checkpoint
+separate from the later018 geometry edits and their new color mask.
+
 The [post-merge audit](cartoon-post-merge-audit.md) records delivery verification,
 the remaining maintenance findings and the scope of the approved scene.
 

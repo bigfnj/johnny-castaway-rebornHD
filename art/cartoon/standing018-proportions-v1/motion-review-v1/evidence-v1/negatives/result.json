@@ -1,0 +1,61 @@
+{
+  "status": "PASS",
+  "executed_negative_count": 7,
+  "controls": [
+    {
+      "case": "wrong-native-clip",
+      "expected_failure": "capture clip/phase identity:candidate:waypoint_front",
+      "exit_code": 1,
+      "stdout_sha256": "9eab574badf036020116f0a82c4d9814ccc6f146be443dad772c4ae22fa7064d",
+      "stderr_sha256": "46f998b62b7a4f3f72d7c4357538ac3ad33eafa94fc02062f4e12962d744120e"
+    },
+    {
+      "case": "wrong-native-archive",
+      "expected_failure": "capture archive/executable identity:candidate:waypoint_front",
+      "exit_code": 1,
+      "stdout_sha256": "37424729e69b9ddb5783d996577c6fb7d545167c8e9caf1a7f873637f0bb77b9",
+      "stderr_sha256": "218972f37ae6ebac7b8341cad7ec5f74fe3b29674d58837c67b692c906e4fd4d"
+    },
+    {
+      "case": "changed-native-time",
+      "expected_failure": "matching native panel timeline:waypoint_front",
+      "exit_code": 1,
+      "stdout_sha256": "9d32b0b309a81831c6209c8c142250ef75ab3c13adef9a6472a2abecd8c41b1f",
+      "stderr_sha256": "89c04d9b6ce017f73ab900ca2d712e58e161b351f6b6c6a6cea3365f7588f3b3"
+    },
+    {
+      "case": "changed-model-time",
+      "expected_failure": "review native time/draw binding:waypoint_front",
+      "exit_code": 1,
+      "stdout_sha256": "18df92dacb54240913f66552eb85c95a9774488492648ad3af1c828fa2da6f65",
+      "stderr_sha256": "90762b5b644c4cd8489a12a63e581ab0b6916d029eb339dfe676d44374531051"
+    },
+    {
+      "case": "changed-camera",
+      "expected_failure": "review fixed full-canvas camera:waypoint_front",
+      "exit_code": 1,
+      "stdout_sha256": "2113190aa9d0e8cced7b7c7417d714cf1db2500bc514086985d092b0f2aac7cd",
+      "stderr_sha256": "e65fd6aaef8008c6e09ff2185a0f2fe79c2bc33d7a08540c4c47a3bcce375eba"
+    },
+    {
+      "case": "wrong-image-side",
+      "expected_failure": "review native image binding:waypoint_front",
+      "exit_code": 1,
+      "stdout_sha256": "6cf013391f1f71f99b28cac27c0e90a733d0ddb6e7dca1bb479d272f36fda10b",
+      "stderr_sha256": "94d09707c3da42c43401ce0f21fe036cdc76d5bbd8892f0fd2f2ac8d8423fb56"
+    },
+    {
+      "case": "wrong018-selector",
+      "expected_failure": "reference selector native ordinal:",
+      "exit_code": 1,
+      "stdout_sha256": "d94a007211086adcc0d43d76bc714d512f71a8e0692e05c4f3c1c256fe46986b",
+      "stderr_sha256": "c11716677e58c888d230d83ca5aa2a5cad3cacadf08d4614e50631605d9d2f4f"
+    }
+  ],
+  "positive_before_and_restored_after": "exact retained source model passes",
+  "review_record_sha256": "0d1977ddf3bbad5f81034cfb2630ce11dd02f66e32b479492de05ccfda78eb5f",
+  "builder_sha256": "3c6342bd88f2a30200a9a201a33188a8b2a8b89b7d65dcbe55b05067163e96f3",
+  "checker_sha256": "dd80ff3671ff9312bf7e57f660261da466297ef96a6d3b101ca5bf0fbbfbf58b",
+  "harness_sha256": "0d096f80247a0c89916a8627fb9c2f898db4facba2635d5c148ff1251b3341f3",
+  "scope": "New report/model adapter and018 occurrence DOM selector. Existing playback/cache behavior is covered by the positive browser run; historical mutation matrices are not rerun."
+}

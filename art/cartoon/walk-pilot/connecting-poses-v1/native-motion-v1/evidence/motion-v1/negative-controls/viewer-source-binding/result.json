@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "smoke_reports": 6,
+  "mutations": [
+    {
+      "name": "swapped-travel_cb-as-front_arc",
+      "result": "FIRED",
+      "expected_failure": "capture clip/phase identity:baseline:front_arc",
+      "mutated_report_sha256": "e878a8e3181b918f301b036be7f02cf85614d96e5ff5e527c7c47516fbbf35bd"
+    },
+    {
+      "name": "swapped-front_arc-as-travel_cb",
+      "result": "FIRED",
+      "expected_failure": "capture clip/phase identity:baseline:travel_cb",
+      "mutated_report_sha256": "bc0ffbe67883884d66a023174ae6bc36c8f98f12e0384fca0fe358fe9aac17c8"
+    },
+    {
+      "name": "swapped-clip-with-spoofed-label",
+      "result": "FIRED",
+      "expected_failure": "capture source contract:baseline:front_arc:prime",
+      "mutated_report_sha256": "94360bc54d775fb21fd45c8ec5b084299643d296bfa2ac0aa01edd12f663dbfa"
+    }
+  ],
+  "restored_positive_reports": 6,
+  "executed_builder_sha256": "f308fb45e9402e04b288bf3c2466c4c8b8cb31e68f955b7bca7563930d02ddb1",
+  "harness_sha256": "730946e6f66bf3aa91f9626c39076898f1efad7ef658f653655a2c1f5da4f894",
+  "source_reports_sha256": {
+    "front_arc": "bc0ffbe67883884d66a023174ae6bc36c8f98f12e0384fca0fe358fe9aac17c8",
+    "rear_arc": "0092ef1d9e1574013f1af43d997384e36e18bc8e22a4c20320b4db9f4213d8b5",
+    "travel_cb": "e878a8e3181b918f301b036be7f02cf85614d96e5ff5e527c7c47516fbbf35bd",
+    "travel_ec": "424531613f9c2932c10b6f5a0f36b9eef2eb3419bc2b8884ee78838fc6720066",
+    "waypoint_front": "74daf07fcf86ac639198fd0eb8255dbc5b0798cd3697492b0c1fda681f087ca9",
+    "waypoint_rear": "635c3a82d5f62107533173aad1b0bc8edb361e2ea0889c23b7cb48c89aba5cf3"
+  },
+  "scope": "Actual viewer source-identity function executes on six real reports, then equal-count/equal-duration clip swaps and a spoofed label. No native rerun, candidate creation or production mutation."
+}

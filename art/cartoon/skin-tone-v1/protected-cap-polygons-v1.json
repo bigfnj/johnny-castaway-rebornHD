@@ -1,0 +1,1837 @@
+{
+  "schema_version": 1,
+  "scope": "Original-only visual cap exclusion annotations for the color corrector; these become algorithm inputs, not independent evidence of mask correctness.",
+  "input_index_sha256": "d1a694d71efb2c2ac3aea6b2d42f2cf82abe0c0ca1b09a7a6185df8ae64d1dc6",
+  "coordinate_convention": "Pixel-edge coordinates. Protect pixel (x,y) when y+0.5 is strictly less than the piecewise-linear lower boundary at x+0.5. The polygon includes transparent space above the cap and a narrow adjoining hair/ink margin; forehead skin is below the traced boundary.",
+  "limitations": "Hand-traced lower boundaries protect the complete visible white crown, gold band, anchor and dark brim. Mixed antialias pixels on the cap/hair boundary have no unique material assignment. This does not segment other materials.",
+  "frames": [
+    {
+      "frame": 0,
+      "input": "inputs/000.png",
+      "input_sha256": "9fef4cef56033a7cf35c36d96a839c42e7d7d23832acf0a34ebc6ff52e040e96",
+      "canvas": [
+        80,
+        152
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          19
+        ],
+        [
+          38,
+          19
+        ],
+        [
+          49,
+          14
+        ],
+        [
+          58,
+          14
+        ],
+        [
+          64,
+          15
+        ],
+        [
+          80,
+          15
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          15
+        ],
+        [
+          64,
+          15
+        ],
+        [
+          58,
+          14
+        ],
+        [
+          49,
+          14
+        ],
+        [
+          38,
+          19
+        ],
+        [
+          0,
+          19
+        ]
+      ],
+      "protected_pixel_count": 1356,
+      "mask_l_sha256": "4a3a2ed039b5a146af0945a1e4a8eb5557ac567d35f6a41dc86c9cbb46f11c42"
+    },
+    {
+      "frame": 1,
+      "input": "inputs/001.png",
+      "input_sha256": "aeb1119d7576c6668d27c4caf02a45f7f7b4beced945d5886720f124d49a0759",
+      "canvas": [
+        96,
+        144
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          20
+        ],
+        [
+          53,
+          20
+        ],
+        [
+          65,
+          15
+        ],
+        [
+          74,
+          15
+        ],
+        [
+          82,
+          18
+        ],
+        [
+          96,
+          18
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          96,
+          0
+        ],
+        [
+          96,
+          18
+        ],
+        [
+          82,
+          18
+        ],
+        [
+          74,
+          15
+        ],
+        [
+          65,
+          15
+        ],
+        [
+          53,
+          20
+        ],
+        [
+          0,
+          20
+        ]
+      ],
+      "protected_pixel_count": 1789,
+      "mask_l_sha256": "def7bb8f7ab07401db404e736562c382213416377ee1798df7214f860d07d7a5"
+    },
+    {
+      "frame": 2,
+      "input": "inputs/002.png",
+      "input_sha256": "125c4f1db0d8a31e169fe7146b3d78d2fccdfc1211676aef6b66be30c9d07d4b",
+      "canvas": [
+        96,
+        146
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          20
+        ],
+        [
+          53,
+          20
+        ],
+        [
+          65,
+          15
+        ],
+        [
+          73,
+          15
+        ],
+        [
+          81,
+          18
+        ],
+        [
+          96,
+          18
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          96,
+          0
+        ],
+        [
+          96,
+          18
+        ],
+        [
+          81,
+          18
+        ],
+        [
+          73,
+          15
+        ],
+        [
+          65,
+          15
+        ],
+        [
+          53,
+          20
+        ],
+        [
+          0,
+          20
+        ]
+      ],
+      "protected_pixel_count": 1792,
+      "mask_l_sha256": "c4c9ef2007ca09020b78912bd84970efee01ca36444cba09afa17da46ae0e9a9"
+    },
+    {
+      "frame": 3,
+      "input": "inputs/003.png",
+      "input_sha256": "36778a48ed8caaa23a56ac47da8e82fdcd292998e32e79e5cd26b40c6ab462e3",
+      "canvas": [
+        80,
+        152
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          19
+        ],
+        [
+          39,
+          19
+        ],
+        [
+          49,
+          14
+        ],
+        [
+          58,
+          14
+        ],
+        [
+          65,
+          15
+        ],
+        [
+          80,
+          15
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          15
+        ],
+        [
+          65,
+          15
+        ],
+        [
+          58,
+          14
+        ],
+        [
+          49,
+          14
+        ],
+        [
+          39,
+          19
+        ],
+        [
+          0,
+          19
+        ]
+      ],
+      "protected_pixel_count": 1358,
+      "mask_l_sha256": "8fedaff3232292acd11ffb6928bd1719d8d59b1e58d168336acd6e5071fe992d"
+    },
+    {
+      "frame": 4,
+      "input": "inputs/004.png",
+      "input_sha256": "1081959ce4092c4d05d343037ddd25a835b407b641d1e34d949b02660b4d81cd",
+      "canvas": [
+        80,
+        148
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          21
+        ],
+        [
+          47,
+          21
+        ],
+        [
+          61,
+          16
+        ],
+        [
+          69,
+          16
+        ],
+        [
+          76,
+          18
+        ],
+        [
+          80,
+          18
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          18
+        ],
+        [
+          76,
+          18
+        ],
+        [
+          69,
+          16
+        ],
+        [
+          61,
+          16
+        ],
+        [
+          47,
+          21
+        ],
+        [
+          0,
+          21
+        ]
+      ],
+      "protected_pixel_count": 1565,
+      "mask_l_sha256": "cf58574206231d03a132b1fddb8151311dca0a43d150482be123f9fb8d1ce400"
+    },
+    {
+      "frame": 5,
+      "input": "inputs/005.png",
+      "input_sha256": "e3b5c4f94f9715a35b5242e8bce9af6372191141f2f17ad2cb79b272778b6dc2",
+      "canvas": [
+        96,
+        144
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          21
+        ],
+        [
+          55,
+          21
+        ],
+        [
+          68,
+          15
+        ],
+        [
+          76,
+          15
+        ],
+        [
+          83,
+          18
+        ],
+        [
+          96,
+          18
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          96,
+          0
+        ],
+        [
+          96,
+          18
+        ],
+        [
+          83,
+          18
+        ],
+        [
+          76,
+          15
+        ],
+        [
+          68,
+          15
+        ],
+        [
+          55,
+          21
+        ],
+        [
+          0,
+          21
+        ]
+      ],
+      "protected_pixel_count": 1858,
+      "mask_l_sha256": "01848148f4dac1374bda6fed51805b80fb6dd4d17a448dabddcf86263c5093e3"
+    },
+    {
+      "frame": 6,
+      "input": "inputs/006.png",
+      "input_sha256": "47bd9a71c29ccd7e4f6cfeb5620c96b5952ee2cd13ad4681b996af1346d413b5",
+      "canvas": [
+        96,
+        148
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          21
+        ],
+        [
+          53,
+          21
+        ],
+        [
+          65,
+          15
+        ],
+        [
+          73,
+          15
+        ],
+        [
+          81,
+          18
+        ],
+        [
+          96,
+          18
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          96,
+          0
+        ],
+        [
+          96,
+          18
+        ],
+        [
+          81,
+          18
+        ],
+        [
+          73,
+          15
+        ],
+        [
+          65,
+          15
+        ],
+        [
+          53,
+          21
+        ],
+        [
+          0,
+          21
+        ]
+      ],
+      "protected_pixel_count": 1851,
+      "mask_l_sha256": "e367c28c2feeb89591d162fe088dec1392a54de976b17f6b98d7bc0faf23dc08"
+    },
+    {
+      "frame": 7,
+      "input": "inputs/007.png",
+      "input_sha256": "2a1bbaaf5e192429ebdd0bb256fbd5ed4e826f6f2254f3de317471c6e224d8e9",
+      "canvas": [
+        64,
+        150
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          20
+        ],
+        [
+          31,
+          20
+        ],
+        [
+          43,
+          15
+        ],
+        [
+          50,
+          15
+        ],
+        [
+          57,
+          16
+        ],
+        [
+          64,
+          16
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          16
+        ],
+        [
+          57,
+          16
+        ],
+        [
+          50,
+          15
+        ],
+        [
+          43,
+          15
+        ],
+        [
+          31,
+          20
+        ],
+        [
+          0,
+          20
+        ]
+      ],
+      "protected_pixel_count": 1155,
+      "mask_l_sha256": "003c707d39e46abd2643ffa6cfa10081e0c48a6f252d15cd12fb5380537c24b3"
+    },
+    {
+      "frame": 8,
+      "input": "inputs/008.png",
+      "input_sha256": "eee73c081b9947a357e813f1503a64638f5a2ca3e0a706c70571847d13222a0a",
+      "canvas": [
+        80,
+        150
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          21
+        ],
+        [
+          44,
+          21
+        ],
+        [
+          58,
+          15
+        ],
+        [
+          66,
+          15
+        ],
+        [
+          73,
+          18
+        ],
+        [
+          80,
+          18
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          18
+        ],
+        [
+          73,
+          18
+        ],
+        [
+          66,
+          15
+        ],
+        [
+          58,
+          15
+        ],
+        [
+          44,
+          21
+        ],
+        [
+          0,
+          21
+        ]
+      ],
+      "protected_pixel_count": 1536,
+      "mask_l_sha256": "ed997293634d167b03789bb0145463eeae1263a2b67110980831da435eebfd2f"
+    },
+    {
+      "frame": 9,
+      "input": "inputs/009.png",
+      "input_sha256": "4d9584133241db74595d657a68482e73c91a486a605247ce04aa7b0cd35e7311",
+      "canvas": [
+        80,
+        148
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          18
+        ],
+        [
+          36,
+          18
+        ],
+        [
+          48,
+          14
+        ],
+        [
+          58,
+          14
+        ],
+        [
+          64,
+          16
+        ],
+        [
+          80,
+          16
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          16
+        ],
+        [
+          64,
+          16
+        ],
+        [
+          58,
+          14
+        ],
+        [
+          48,
+          14
+        ],
+        [
+          36,
+          18
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "protected_pixel_count": 1323,
+      "mask_l_sha256": "7b050e8848883b0ee262d22efacf0b2dfbdd52a18fe535df26a9e3f0d9eb2764"
+    },
+    {
+      "frame": 10,
+      "input": "inputs/010.png",
+      "input_sha256": "fded838277a290a3509868fe19443bd90e2b4277d2e8668ebad7683802be60d4",
+      "canvas": [
+        80,
+        148
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          16
+        ],
+        [
+          24,
+          16
+        ],
+        [
+          28,
+          14
+        ],
+        [
+          40,
+          14
+        ],
+        [
+          45,
+          16
+        ],
+        [
+          80,
+          16
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          16
+        ],
+        [
+          45,
+          16
+        ],
+        [
+          40,
+          14
+        ],
+        [
+          28,
+          14
+        ],
+        [
+          24,
+          16
+        ],
+        [
+          0,
+          16
+        ]
+      ],
+      "protected_pixel_count": 1247,
+      "mask_l_sha256": "7a1820d1b16b3db0fa41a4b3e5d4fecdeedc83d53ef5da09daa9231aaca8ef10"
+    },
+    {
+      "frame": 11,
+      "input": "inputs/011.png",
+      "input_sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+      "canvas": [
+        64,
+        156
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          64,
+          19
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          19
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 1138,
+      "mask_l_sha256": "000a3ededf2d96ae28d8b39711d17b7db3e7d7d004d17f75ae37131e2dd7ac6d"
+    },
+    {
+      "frame": 12,
+      "input": "inputs/012.png",
+      "input_sha256": "2c07b88265d354106debba83507ba676fd2b82ac64ede4f5634c10f187ed3624",
+      "canvas": [
+        80,
+        146
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          18
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          80,
+          18
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          18
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "protected_pixel_count": 1440,
+      "mask_l_sha256": "581ec447a3686e608311bd2149923449b56bf2d2c7b465868d2b9cd3b550c8f8"
+    },
+    {
+      "frame": 15,
+      "input": "inputs/015.png",
+      "input_sha256": "c74f85cdd79ed13f180f3cb3c8c5962ba0453d587a2c8da15c844a2c046eb5d8",
+      "canvas": [
+        80,
+        146
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          18
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          80,
+          18
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          18
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "protected_pixel_count": 1440,
+      "mask_l_sha256": "581ec447a3686e608311bd2149923449b56bf2d2c7b465868d2b9cd3b550c8f8"
+    },
+    {
+      "frame": 16,
+      "input": "inputs/016.png",
+      "input_sha256": "1cb3d6249486eeecec29ff2040c452c28d14ff8a6f2d79d265e0f17ef2e38d92",
+      "canvas": [
+        64,
+        148
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          24,
+          15
+        ],
+        [
+          28,
+          13
+        ],
+        [
+          40,
+          13
+        ],
+        [
+          45,
+          15
+        ],
+        [
+          64,
+          15
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          15
+        ],
+        [
+          45,
+          15
+        ],
+        [
+          40,
+          13
+        ],
+        [
+          28,
+          13
+        ],
+        [
+          24,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 927,
+      "mask_l_sha256": "c860d5c3751d8e385e32612944a120ce0c0cf579905d245719c722d26cbc5964"
+    },
+    {
+      "frame": 17,
+      "input": "inputs/017.png",
+      "input_sha256": "60e3a77a64620502d2b5198911a7805e19aaedf07801c7a00a92c030b4924de1",
+      "canvas": [
+        80,
+        150
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          17
+        ],
+        [
+          42,
+          17
+        ],
+        [
+          52,
+          13
+        ],
+        [
+          61,
+          13
+        ],
+        [
+          67,
+          15
+        ],
+        [
+          80,
+          15
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          15
+        ],
+        [
+          67,
+          15
+        ],
+        [
+          61,
+          13
+        ],
+        [
+          52,
+          13
+        ],
+        [
+          42,
+          17
+        ],
+        [
+          0,
+          17
+        ]
+      ],
+      "protected_pixel_count": 1259,
+      "mask_l_sha256": "e37d1529e206eb067480e6d4604035bf7650da4c7375efd3a7ff8a6554b48046"
+    },
+    {
+      "frame": 18,
+      "input": "inputs/018.png",
+      "input_sha256": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190",
+      "canvas": [
+        64,
+        154
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          64,
+          19
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          19
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 1138,
+      "mask_l_sha256": "669ba9efb1b65fdbe49d0bf40fd64d9e8f1de75622965d29e96c38e399a04956"
+    },
+    {
+      "frame": 19,
+      "input": "inputs/019.png",
+      "input_sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+      "canvas": [
+        64,
+        152
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          64,
+          19
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          19
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 1138,
+      "mask_l_sha256": "8c7af8048fec4f43712e4225e7258ecc98954b4a429f431f259c1d26670f81fc"
+    },
+    {
+      "frame": 20,
+      "input": "inputs/020.png",
+      "input_sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+      "canvas": [
+        48,
+        150
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          48,
+          19
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          48,
+          0
+        ],
+        [
+          48,
+          19
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 834,
+      "mask_l_sha256": "8eeb9955dec9ca1aed28d945af60f477c02e83163f70f8e3fc061b380784254d"
+    },
+    {
+      "frame": 21,
+      "input": "inputs/021.png",
+      "input_sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+      "canvas": [
+        64,
+        150
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          64,
+          19
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          19
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 1138,
+      "mask_l_sha256": "db5c473483977f5cb0ddace953eb1ceb1f1ff2ae5db15dffb5183c498a0f3dfc"
+    },
+    {
+      "frame": 22,
+      "input": "inputs/022.png",
+      "input_sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+      "canvas": [
+        64,
+        148
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          64,
+          19
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          19
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 1138,
+      "mask_l_sha256": "b51c90f80a2a6af976e119146863583691c8f8698f74ed1ae705aa377e31613c"
+    },
+    {
+      "frame": 23,
+      "input": "inputs/023.png",
+      "input_sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+      "canvas": [
+        64,
+        156
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          64,
+          19
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          19
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 1138,
+      "mask_l_sha256": "000a3ededf2d96ae28d8b39711d17b7db3e7d7d004d17f75ae37131e2dd7ac6d"
+    },
+    {
+      "frame": 24,
+      "input": "inputs/024.png",
+      "input_sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+      "canvas": [
+        64,
+        150
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          33,
+          16
+        ],
+        [
+          64,
+          16
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          16
+        ],
+        [
+          33,
+          16
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 966,
+      "mask_l_sha256": "8c07ed2a739f21af669a3979f45aadfeada71d80e38d657c1ee8f99e74288849"
+    },
+    {
+      "frame": 25,
+      "input": "inputs/025.png",
+      "input_sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+      "canvas": [
+        80,
+        148
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          19,
+          15
+        ],
+        [
+          22,
+          13
+        ],
+        [
+          30,
+          13
+        ],
+        [
+          39,
+          16
+        ],
+        [
+          80,
+          16
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          16
+        ],
+        [
+          39,
+          16
+        ],
+        [
+          30,
+          13
+        ],
+        [
+          22,
+          13
+        ],
+        [
+          19,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 1216,
+      "mask_l_sha256": "2564b345aed69372466fcb171d49929b918b47d00631c56cd4a498e3b15309e5"
+    },
+    {
+      "frame": 26,
+      "input": "inputs/026.png",
+      "input_sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+      "canvas": [
+        80,
+        146
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          21,
+          15
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          32,
+          13
+        ],
+        [
+          41,
+          16
+        ],
+        [
+          80,
+          16
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          80,
+          0
+        ],
+        [
+          80,
+          16
+        ],
+        [
+          41,
+          16
+        ],
+        [
+          32,
+          13
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          21,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 1214,
+      "mask_l_sha256": "7a4e0ff2d26541899e8601c831b579caf8c967b6a48c183c552a8e577bfb2de3"
+    },
+    {
+      "frame": 27,
+      "input": "inputs/027.png",
+      "input_sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+      "canvas": [
+        64,
+        144
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          33,
+          16
+        ],
+        [
+          64,
+          16
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          16
+        ],
+        [
+          33,
+          16
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 966,
+      "mask_l_sha256": "7d37a1674df9ad186843c91bc23673c02ff0117dd2c5c4f7fa920781a57268e8"
+    },
+    {
+      "frame": 28,
+      "input": "inputs/028.png",
+      "input_sha256": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4",
+      "canvas": [
+        64,
+        144
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          33,
+          17
+        ],
+        [
+          64,
+          17
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          17
+        ],
+        [
+          33,
+          17
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 1003,
+      "mask_l_sha256": "1e5b37a042e8b89aa42588441e329acb676fcb3d7ca70a9312a7cef2521418aa"
+    },
+    {
+      "frame": 29,
+      "input": "inputs/029.png",
+      "input_sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+      "canvas": [
+        64,
+        150
+      ],
+      "lower_boundary_pixel_edges": [
+        [
+          0,
+          15
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          33,
+          17
+        ],
+        [
+          64,
+          17
+        ]
+      ],
+      "polygon_pixel_edges": [
+        [
+          0,
+          0
+        ],
+        [
+          64,
+          0
+        ],
+        [
+          64,
+          17
+        ],
+        [
+          33,
+          17
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          16,
+          13
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "protected_pixel_count": 1003,
+      "mask_l_sha256": "c9ca79683e47fe5d19b3eedebff40cf4c2b2bf539a4ea35a0d1c2885fc997582"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "status": "PASS; local draftv1 still-color diagnostic, unpublished",
+  "commands_in_execution_order": [
+    "& $env:TOOLBOX_PYTHON -B art/cartoon/skin-tone-v1/review/build_diagnostics.py --export build/skin-tone/export-v1 --output build/skin-tone/diagnostics-v1",
+    "& $env:TOOLBOX_PYTHON -B art/cartoon/skin-tone-v1/review/check_diagnostics.py --review build/skin-tone/diagnostics-v1",
+    "& $env:TOOLBOX_PYTHON -B art/cartoon/skin-tone-v1/review/negative_diagnostics.py --export build/skin-tone/export-v1 --output build/skin-tone/diagnostic-negatives-v1"
+  ],
+  "files": {
+    "review-record.json": {
+      "executed_source": "build/skin-tone/diagnostics-v1/review-record.json",
+      "sha256": "3609bc2b52ac007f36e28659aa8939d7587a7c3f5b5af99a6518634dece67477"
+    },
+    "browser-validation.json": {
+      "executed_source": "build/skin-tone/diagnostics-v1/browser-validation.json",
+      "sha256": "79b37f754775c0c352f75c4f0ef57558cee8381c6798e32e266e8de998ea13e0"
+    },
+    "negative-result.json": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/result.json",
+      "sha256": "33e224ad797b29e3dfc6904373c8c9bcd5fe1ebc93df76a4607c31efbeb4db66"
+    },
+    "negative-logs/existing-output.stderr.txt": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/existing-output.stderr.txt",
+      "sha256": "0d084cb8f6cebbb4820071e8945fb56c1146df5c797b565483d2dc4d56d9d016"
+    },
+    "negative-logs/existing-output.stdout.txt": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/existing-output.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "negative-logs/positive-after.stderr.txt": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/positive-after.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "negative-logs/positive-after.stdout.txt": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/positive-after.stdout.txt",
+      "sha256": "917b648785fb5a5dc758ec57264febec7a11a39b7159b2612f240f92c7b238fb"
+    },
+    "negative-logs/positive-before.stderr.txt": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/positive-before.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "negative-logs/positive-before.stdout.txt": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/positive-before.stdout.txt",
+      "sha256": "917b648785fb5a5dc758ec57264febec7a11a39b7159b2612f240f92c7b238fb"
+    },
+    "negative-logs/stale-corrected-png.stderr.txt": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/stale-corrected-png.stderr.txt",
+      "sha256": "3c7e5f5412a02f6935f0fd4c417cde5ba3248559ac449644f4f235ec6fbc146c"
+    },
+    "negative-logs/stale-corrected-png.stdout.txt": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/stale-corrected-png.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "negative-logs/stale-mask-png.stderr.txt": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/stale-mask-png.stderr.txt",
+      "sha256": "9925b022dd8ab0372510a8554c702fb8ee182efad546f856db84784ef1f9e315"
+    },
+    "negative-logs/stale-mask-png.stdout.txt": {
+      "executed_source": "build/skin-tone/diagnostic-negatives-v1/stale-mask-png.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "helpers/build_diagnostics.py": {
+      "executed_source": "art/cartoon/skin-tone-v1/review/build_diagnostics.py",
+      "sha256": "4f8ca94e658198657dac03fc207ef99eded52a87df408a050b43b8a85969fe0d"
+    },
+    "helpers/check_diagnostics.py": {
+      "executed_source": "art/cartoon/skin-tone-v1/review/check_diagnostics.py",
+      "sha256": "c2c6e5003845badb4ae96d16473429362470583614545e0fe53d5b5087d11f8b"
+    },
+    "helpers/negative_diagnostics.py": {
+      "executed_source": "art/cartoon/skin-tone-v1/review/negative_diagnostics.py",
+      "sha256": "4d7954824844746ebd28bce95977f2a9d5e37758a655f2b85f4f6644a8a753b9"
+    },
+    "helpers/still-template.html": {
+      "executed_source": "art/cartoon/skin-tone-v1/review/still-template.html",
+      "sha256": "abdd97679998d0912340f6cb0437bf25c385e7c86978ed1173f602d8139f2f0b"
+    }
+  },
+  "visual_inspection": [
+    "build/skin-tone/diagnostics-v1/browser-colors-024.png",
+    "build/skin-tone/diagnostics-v1/contact-sheet-07.png"
+  ],
+  "limits": [
+    "Draftv1 mask remains under independent review; root identified tiny cap-fringe leakage and will supersede this export with a protected-mask version.",
+    "No human output approval, native comparison or publication claimed.",
+    "Contact sheet and browser screenshot bytes remain under build; their hashes are bound by copied review/browser records."
+  ]
+}

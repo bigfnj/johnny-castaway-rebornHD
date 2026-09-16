@@ -1,0 +1,90 @@
+{
+  "status": "PASS requested diagnostic; no art correction or new approval",
+  "files_sha256": {
+    "summary.json": "e31975472492f89054d898777097441e8a4064fea1460f7a759bf95cf8593840",
+    "observations.json": "783a715420b74408ea02b96627e0672377e90ce3cdc0d55a60b8b5bf9049b9ed",
+    "original-arrival-nearest4.png": "1f445768dc1ca2df54c34b82e56eb15611cd2d9470311f87d1ad759155cd0f1a",
+    "revised-arrival-nearest4.png": "2d3e643c53934ddf2f6435614b748f5b73be60d2e8b9455cb249cef31aea1e76",
+    "smoke/report.json": "e31ef55aeec643cd962a8dea33f70067b5370be2d7c9cab1134da8e71b068f3a",
+    "smoke/capture.log": "e0038afc0dc63ab66f6694d4b4d0af20cfa123412c26fe1f851540f91e0606fe",
+    "full/report.json": "295d34ac2fb44974fa75412aa24eb599745deb594f27c93991bacec9749a0198",
+    "full/capture.log": "8c087f80a2cb64e1749aa591e41d5d7c1da7b0940be6e833c824f8dc877da320",
+    "full/original-display-063.png": "d52aab01cee973f664949046f23a20f956cf5db3567fded2333edc9d3bd2ebb7",
+    "full/revised-display-063.png": "f36d947873e1b7d8037b4f4671f79482d7eeb1fbbc92c50b10b1c9df802ef5e4",
+    "full/revised-report.json": "e09fa5081308abf417b5af819321b85f6840686813cb297fd9f537935e697164",
+    "helpers/capture.py": "6ad2dd6976e85e8fb87d62caa0c78b83dc3267effbcddfeb19e7b7c8684a2cee",
+    "helpers/preserve.py": "053fef79cfbc9b9255b9b39b821f48f4d0109794eeb01a4b3819ff186985bb04",
+    "helpers/README.md": "a6d69d23a10635cb551d4155dfb95c0da5e83565793216d70b2f3378c991f0ba"
+  },
+  "copy_sources": {
+    "summary.json": "build/standing018-proportions/original-mirror-v1/summary.json",
+    "observations.json": "build/standing018-proportions/original-mirror-v1/observations.json",
+    "original-arrival-nearest4.png": "build/standing018-proportions/original-mirror-v1/original-arrival-nearest4.png",
+    "revised-arrival-nearest4.png": "build/standing018-proportions/original-mirror-v1/revised-arrival-nearest4.png",
+    "smoke/report.json": "build/standing018-proportions/original-mirror-v1/smoke/report.json",
+    "smoke/capture.log": "build/standing018-proportions/original-mirror-v1/smoke/capture.log",
+    "full/report.json": "build/standing018-proportions/original-mirror-v1/full/report.json",
+    "full/capture.log": "build/standing018-proportions/original-mirror-v1/full/capture.log",
+    "full/original-display-063.png": "build/standing018-proportions/original-mirror-v1/full/display-063.png",
+    "full/revised-display-063.png": "build/standing018-proportions/motion-v1/waypoint_rear/full/display-063.png",
+    "full/revised-report.json": "build/standing018-proportions/motion-v1/waypoint_rear/full/report.json",
+    "helpers/capture.py": "art/cartoon/standing018-proportions-v1/native-review/original-mirror-v1/capture.py",
+    "helpers/preserve.py": "art/cartoon/standing018-proportions-v1/native-review/original-mirror-v1/preserve.py",
+    "helpers/README.md": "art/cartoon/standing018-proportions-v1/native-review/original-mirror-v1/README.md"
+  },
+  "linked_evidence": {
+    "art/cartoon/skin-tone-v1/contact018-review-v1/evidence-v1/evidence.json": "b0c897a84d291a85b9a150e66313bd9042526d6af501132c39d12d68fb5466dd",
+    "art/cartoon/standing018-proportions-v1/native-review/motion-v1/evidence-v1/evidence.json": "2d8e4936518d735d1e7d160961e8ac646dd88fc5889569f8a0e198071bfef53e",
+    "art/cartoon/arrival-pilot-v1/reference/source.json": "bd2ba0025626593641c575b794d9380bf66613dae9b7f456d5715aa810d9ceae"
+  },
+  "summary": {
+    "status": "PASS",
+    "sequence": [
+      "smoke",
+      "full"
+    ],
+    "arrival_display": 63,
+    "arrival_ms": 4920,
+    "actual_draw": [
+      1,
+      394,
+      209,
+      18
+    ],
+    "archive_sha256": "d7797181cf2e30699709946f0983b6899f0c7428785f9c596dea8ac150619f20",
+    "executable_sha256": "203aebb8c15881a41108b2b4fb97f5f9c6d025aa595a678b4dd84906011f7563",
+    "helper_sha256": "6ad2dd6976e85e8fb87d62caa0c78b83dc3267effbcddfeb19e7b7c8684a2cee",
+    "original_resource_sha256": {
+      "data/RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+      "data/RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+    },
+    "reports_sha256": {
+      "smoke": "e31ef55aeec643cd962a8dea33f70067b5370be2d7c9cab1134da8e71b068f3a",
+      "full": "295d34ac2fb44974fa75412aa24eb599745deb594f27c93991bacec9749a0198"
+    },
+    "comparison_crop_xyxy": [
+      784,
+      410,
+      864,
+      588
+    ],
+    "enlargement": "nearest4, same scene crop",
+    "scope": "One requested original mirrored-arrival comparison. No repeat, new browser, art changes or production writes."
+  },
+  "observations": {
+    "method": "Screen-space smaller-foot regions: original native x>=18,y>=67 excluding exact gray shadow128,128,128,255; revised runtime x>=34,y>=120 withalpha>=8. This is a region observation, not an anatomical left/right label.",
+    "original_reference": "art/cartoon/arrival-pilot-v1/reference/018-native.png",
+    "original_reference_sha256": "d4390dbd4e9df53d506dbedf540c4a2a0d867c23d3c5221743dad0bf07d2dbd8",
+    "revised_runtime": "build/standing018-proportions/color-v2/sprites/018.png",
+    "revised_runtime_sha256": "21cf94cd90d369b20b6d3b8ef60b7cc2848f919ff828578320502aec9a17c55b",
+    "original_smaller_foot_last_runtime_row": 143,
+    "revised_smaller_foot_last_runtime_row": 138,
+    "original_last_scene_row": 561,
+    "revised_last_scene_row": 556,
+    "revised_ends_higher_hd_pixels": 5,
+    "visual_observation": "At the exact mirrored arrival, the original smaller foot visually joins its contact shadow at the shore; the revised smaller screen-left foot remains visibly higher above the shore. The original sprite includes a gray contact shadow that the revised sprite does not, so the difference includes both foot geometry and ground-contact artwork.",
+    "limit": "Port diagnostic palette is not the original executable color rendering. No numerical claim of exact sand-boundary gap is made. The actual scene is identical outside018 in every captured display."
+  },
+  "scope": "One new supplied-original018 route smoke then full, same observer and original_johnny archive. No repeat, browser publication, source/art/production edits.",
+  "excluded_bulk": "ZIP/executable/PPMs remain scratch and are hash-bound in reports; displayed arrival PNGs and nearest4 crops retained. Original and revised capture data remain unchanged."
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "status": "requested",
+  "request": {
+    "prompt": "Use case: style-transfer.\nAsset type: single transparent game sprite, Johnny Castaway JOHNWALK frame 012, 1024x1536 portrait.\nImage1 is the ORIGINAL pose and controls the limb geometry. Image2 is the approved straight-back Cartoon identity, NOT the exact target pose. Image3 is approved neighboring turning pose009 for consistent proportions and relaxed arms. Create one new frame012 in this same style.\nJohnny faces directly AWAY from the viewer: back of head, ears, shaggy brown hair, lean bare back, loose ragged white shorts, calves and heels. Preserve the approved white sailor captain cap and yellow rear band exactly. The front brim and anchor face away and should NOT appear on the back of the cap. Do not show his face or put a beard down the center of his back.\nFollow the original image1 rear turning step, with a mild asymmetric weight shift. Both legs descend beneath their respective shorts openings, knees softly bent rather than rigid. The screen-left knee inclines slightly toward the center and its heel sits slightly inward; the screen-right leg is straighter with a small offset. Heels are near the same ground plane. Show plausible rear-view feet with the visible heels as the main shapes and toes only where they wrap around the far outside edge. No toe clusters sticking out of calf or ankle. Do not make a wide stride or an exaggerated lifted leg.\nChange the approved reference image2 arms: hands must leave his hips and hang down beside the thighs as in original image1, elbows softly bent outward, relaxed fingers with clear gaps between arms and torso. Preserve the original arm/hand depth and rear orientation. This is an ordinary turning pose, not hands in pockets.\nUse exact approved character scale, hair and shorts construction, clean black ink contours and restrained cel shading. Image1's red-and-white pixel pattern is a diagnostic palette, not checkered clothes or skin. Its gray patch is ground shadow and should not be drawn.\nComplete character about1430 pixels tall, cap top near y30 and lowest heel near y1460, with clear margin all around and no clipping. Match the approved head/body scale and do not flatten or stretch anatomy. Genuine transparent alpha background, transparent margins, no glow/halo, no ground shadow, checkerboard, text or extra toes. Return one complete sprite.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/reference/012-original-nearest8.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/015-rear-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/009-connecting-v1.png"
+    ]
+  },
+  "input_roles": [
+    "supplied-original geometry reference",
+    "approved facing-direction identity reference",
+    "approved009 style/proportions reference"
+  ],
+  "approval": "Pending human transition review."
+}

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\negative_controls.py", line 80, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\negative_controls.py", line 56, in main
+    if a.case: return one(a.review, a.output, a.case)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\negative_controls.py", line 23, in one
+    build.validate_pair(left, right, 'waypoint_rear', right['executable_sha256'])
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\build_review.py", line 46, in validate_pair
+    assert report['archive_sha256'] == digest and report['executable_sha256'] == executable, 'capture archive/executable identity:' + kind + ':' + clip
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: capture archive/executable identity:baseline:waypoint_rear

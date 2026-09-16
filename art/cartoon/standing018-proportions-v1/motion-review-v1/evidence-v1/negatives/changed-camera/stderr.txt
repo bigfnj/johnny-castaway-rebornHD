@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 98, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 72, in main
+    return one(a.review, a.output, a.case)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 61, in one
+    check.validate_model(model, review)
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\check_review.py", line 43, in validate_model
+    assert values['all_canvas_union_hd_xyxy'] == union and values['camera_hd_xywh'] == camera, 'review fixed full-canvas camera:' + clip
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: review fixed full-canvas camera:waypoint_front

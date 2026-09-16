@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "scope": "Technical draft measurement only. No color correction, native capture, human acceptance or full unchanged exporter-suite rerun.",
+  "source": [
+    {
+      "path": "art/cartoon/standing018-proportions-v1/018-torso-v2.png",
+      "sha256": "c170f8b6cea7c8c3c0cfcad5dea1ac5591e9d92b5de156afeee7a19c1e2ec89c"
+    },
+    {
+      "path": "art/cartoon/standing018-proportions-v1/018-foot-v3.png",
+      "sha256": "dc4bc9bb99baf226e7cd3086a5f88b8fcacb4faf521b53c1214d5c86fdb484b1"
+    }
+  ],
+  "raw_mode": "RGBA",
+  "raw_canvas": [
+    1024,
+    1536
+  ],
+  "raw_alpha_range": [
+    0,
+    254
+  ],
+  "raw_corner_rgba": [
+    [
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "cap_raw": [
+    408.5,
+    35
+  ],
+  "affine_forward": [
+    0.1,
+    0,
+    -23.85,
+    0,
+    0.1,
+    -3.25
+  ],
+  "runtime_canvas": [
+    64,
+    154
+  ],
+  "source_alpha8_centers_fit": true,
+  "foot_regions_raw": {
+    "near": "300<=x<560, y>=1300",
+    "far": "580<=x<740, y>=1250"
+  },
+  "foot_bounds_by_alpha_threshold": {
+    "8": {
+      "near": {
+        "raw_y": 1492,
+        "hd_source_center_y": 146.0,
+        "bounds_raw_exclusive": [
+          319,
+          1300,
+          560,
+          1493
+        ]
+      },
+      "far": {
+        "raw_y": 1436,
+        "hd_source_center_y": 140.4,
+        "bounds_raw_exclusive": [
+          580,
+          1250,
+          727,
+          1437
+        ]
+      }
+    },
+    "128": {
+      "near": {
+        "raw_y": 1491,
+        "hd_source_center_y": 145.9,
+        "bounds_raw_exclusive": [
+          320,
+          1300,
+          560,
+          1492
+        ]
+      },
+      "far": {
+        "raw_y": 1435,
+        "hd_source_center_y": 140.3,
+        "bounds_raw_exclusive": [
+          580,
+          1250,
+          726,
+          1436
+        ]
+      }
+    },
+    "250": {
+      "near": {
+        "raw_y": 1490,
+        "hd_source_center_y": 145.8,
+        "bounds_raw_exclusive": [
+          321,
+          1300,
+          560,
+          1491
+        ]
+      },
+      "far": {
+        "raw_y": 1434,
+        "hd_source_center_y": 140.20000000000002,
+        "bounds_raw_exclusive": [
+          580,
+          1250,
+          725,
+          1435
+        ]
+      }
+    }
+  },
+  "alpha8_near_hd": 146.0,
+  "alpha8_far_hd": 140.4,
+  "alpha8_separation_hd": 5.599999999999994,
+  "v2_alpha8_near_far_hd": [
+    146.0,
+    138.5
+  ],
+  "requested_alpha8_far_target_hd": [
+    144,
+    145
+  ],
+  "target_observation": "V3 moves the far sole only1.9HD lower, leaving3.6 to4.6HD to the requested range. Near sole remains146.0HD. This is a source-contour comparison, not proof of native sand contact.",
+  "cloth_expression": "600<=y<1150, alpha>=128, min(R,G,B)>=170, max(R,G,B)-min(R,G,B)<45",
+  "cloth_raw_y_range": [
+    793,
+    1047
+  ],
+  "cloth_hd_y_range": [
+    76.10000000000001,
+    101.5
+  ],
+  "raw_region_comparisons": {
+    "upper_body": {
+      "row_range_exclusive": [
+        0,
+        700
+      ],
+      "all_rgba_changed_pixels": 395186,
+      "rgba_changed_with_either_alpha8": 159804,
+      "alpha_changed_with_either_alpha8": 32650,
+      "alpha8_silhouette_changed_pixels": 664,
+      "alpha8_union_pixels": 171560,
+      "alpha8_intersection_over_union": 0.996129633947307,
+      "v2_alpha8_bounds_relative_rows": [
+        312,
+        34,
+        723,
+        700
+      ],
+      "v3_alpha8_bounds_relative_rows": [
+        312,
+        34,
+        724,
+        700
+      ]
+    },
+    "shorts_region": {
+      "row_range_exclusive": [
+        700,
+        1100
+      ],
+      "all_rgba_changed_pixels": 233139,
+      "rgba_changed_with_either_alpha8": 85972,
+      "alpha_changed_with_either_alpha8": 17257,
+      "alpha8_silhouette_changed_pixels": 465,
+      "alpha8_union_pixels": 102375,
+      "alpha8_intersection_over_union": 0.9954578754578755,
+      "v2_alpha8_bounds_relative_rows": [
+        377,
+        0,
+        702,
+        400
+      ],
+      "v3_alpha8_bounds_relative_rows": [
+        377,
+        0,
+        703,
+        400
+      ]
+    }
+  },
+  "runtime_region_comparisons": {
+    "upper_body": {
+      "row_range_exclusive": [
+        0,
+        67
+      ],
+      "all_rgba_changed_pixels": 1794,
+      "rgba_changed_with_either_alpha8": 1720,
+      "alpha_changed_with_either_alpha8": 502,
+      "alpha8_silhouette_changed_pixels": 5,
+      "alpha8_union_pixels": 1832,
+      "alpha8_intersection_over_union": 0.9972707423580786,
+      "v2_alpha8_bounds_relative_rows": [
+        7,
+        0,
+        49,
+        67
+      ],
+      "v3_alpha8_bounds_relative_rows": [
+        7,
+        0,
+        49,
+        67
+      ]
+    },
+    "shorts_region": {
+      "row_range_exclusive": [
+        67,
+        107
+      ],
+      "all_rgba_changed_pixels": 948,
+      "rgba_changed_with_either_alpha8": 891,
+      "alpha_changed_with_either_alpha8": 271,
+      "alpha8_silhouette_changed_pixels": 3,
+      "alpha8_union_pixels": 1076,
+      "alpha8_intersection_over_union": 0.9972118959107806,
+      "v2_alpha8_bounds_relative_rows": [
+        14,
+        0,
+        47,
+        40
+      ],
+      "v3_alpha8_bounds_relative_rows": [
+        14,
+        0,
+        47,
+        40
+      ]
+    }
+  },
+  "preservation_limit": "Imagegen did not preserve upper-body or shorts bytes exactly. Threshold-silhouette overlap and bounds describe the size of differences; they do not prove anatomical identity. Hidden RGB changes are counted separately from alpha8-supported changes.",
+  "runtime": [
+    {
+      "path": "build/standing018-proportions/stage-v2/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "b1bf6834e30e11ccff6a4f4a66e8a0d1bd7bf3d1f5ca82eeb98d34c88b45b29f"
+    },
+    {
+      "path": "build/standing018-proportions/stage-v3/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "abcb0e5de0e21252cce79585ef264ec1b38e0e260ecf5403ba8f56308605acca"
+    }
+  ],
+  "measurement_source_sha256": "33f141dada1a8bab75719f53fc1e3954f83664f14b1783d8e002f727927092a7"
+}

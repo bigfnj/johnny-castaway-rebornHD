@@ -1,0 +1,28 @@
+{
+  "status": "PASS; local protected-maskv2 still review, unpublished",
+  "commands_in_execution_order": [
+    "& $env:TOOLBOX_PYTHON -B art/cartoon/skin-tone-v1/review/build_diagnostics.py --export build/skin-tone/export-v2 --output build/skin-tone/diagnostics-v2",
+    "& $env:TOOLBOX_PYTHON -B art/cartoon/skin-tone-v1/review/check_diagnostics.py --review build/skin-tone/diagnostics-v2"
+  ],
+  "files": {
+    "review-record.json": {
+      "executed_source": "build/skin-tone/diagnostics-v2/review-record.json",
+      "sha256": "0c491d62cf88765d077daa1d87016e06204215d032166dd89d7d2d6db119c5c3"
+    },
+    "browser-validation.json": {
+      "executed_source": "build/skin-tone/diagnostics-v2/browser-validation.json",
+      "sha256": "e19a39a53756f91200c8d58d5cf4a96ea1d7238e8c026280c8314f719619544a"
+    }
+  },
+  "unchanged_helpers_and_executed_guard_evidence": {
+    "path": "art/cartoon/skin-tone-v1/review/evidence/diagnostics-v1/manifest.json",
+    "sha256": "2b4371493b367268e43a8aaefb64e8c1f9183fd2f451dda7c0d35321eaa77883"
+  },
+  "visual_inspection": [
+    "build/skin-tone/diagnostics-v2/browser-mask-024.png"
+  ],
+  "limits": [
+    "Still-pose inspection only; native color playback and human review remain separate.",
+    "No unchanged diagnostic mutation controls rerun; prior source hashes verified exactly."
+  ]
+}

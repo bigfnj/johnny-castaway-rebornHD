@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\native-review\build_still.py", line 58, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\native-review\build_still.py", line 37, in main
+    png=(folder/first['png']).read_bytes();assert sha(png)==first['png_sha256'],'bound018 PNG:'+kind+':'+str(folder/first['png'])
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: bound018 PNG:revised:build\standing018-proportions\still-binding-v2-final\candidate\front_arc\full\display-001.png

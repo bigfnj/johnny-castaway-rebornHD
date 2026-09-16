@@ -1,0 +1,216 @@
+{
+  "status": "PASS",
+  "scope": "Selected018-foot-v5 technical color and authoring evidence only; native contact/motion and human approval are separate. No production change.",
+  "recipe_sha256": "044d421dc3d0a33451f7c4dff34b9a5e375a544ddee848dca83f755b2382af8f",
+  "candidate_png_sha256": "5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f",
+  "source_png_sha256": "183cdf4b4f23e4164e7e290456ff8b8082301b8d952ad577b186ab4663a9c5b2",
+  "changed_rgb_pixels": 1736,
+  "source_export": {
+    "smoke_cases": 3,
+    "regression_cases": 20,
+    "order": [
+      "smoke",
+      "regression"
+    ]
+  },
+  "color_checks": {
+    "order": [
+      "smoke",
+      "regression"
+    ],
+    "negative_controls_fired": 14,
+    "fresh_replay": [
+      "sprites/018.png",
+      "masks/018.png",
+      "protected-cap/018.png",
+      "recipe.json"
+    ],
+    "nondegenerate_no_op_controls": [
+      "same-base",
+      "zero-mask"
+    ],
+    "additional_actual_source_version_refusal": "valid historicalv2 runtime rejected with018 runtime source identity",
+    "limit": "No new mask, fit or test assertion logic. Existing frozen tests execute through a v5 module-injection runner. This evidence does not claim new source-removal mutants or a full28-frame rerun."
+  },
+  "geometry_scope": "The color pass preserves every alpha value and pixel position of its v5 source. Image generation changed v2 geometry; it was not a byte-preserving foot-only edit.",
+  "v2_to_v5_comparison": {
+    "upper_body": {
+      "row_range_exclusive": [
+        0,
+        67
+      ],
+      "all_rgba_changed_pixels": 1918,
+      "rgba_changed_with_either_alpha8": 1761,
+      "alpha_changed_with_either_alpha8": 632,
+      "alpha8_silhouette_changed_pixels": 14,
+      "alpha8_union_pixels": 1842,
+      "alpha8_intersection_over_union": 0.992399565689468,
+      "v2_alpha8_bounds_relative_rows": [
+        7,
+        0,
+        49,
+        67
+      ],
+      "v5_alpha8_bounds_relative_rows": [
+        7,
+        0,
+        49,
+        67
+      ]
+    },
+    "shorts_region": {
+      "row_range_exclusive": [
+        67,
+        107
+      ],
+      "all_rgba_changed_pixels": 1042,
+      "rgba_changed_with_either_alpha8": 933,
+      "alpha_changed_with_either_alpha8": 339,
+      "alpha8_silhouette_changed_pixels": 15,
+      "alpha8_union_pixels": 1088,
+      "alpha8_intersection_over_union": 0.9862132352941176,
+      "v2_alpha8_bounds_relative_rows": [
+        14,
+        0,
+        47,
+        40
+      ],
+      "v5_alpha8_bounds_relative_rows": [
+        14,
+        0,
+        47,
+        40
+      ]
+    }
+  },
+  "cloth_hd_y_range": [
+    76.2,
+    101.5
+  ],
+  "sole_hd_source_center_y": {
+    "near": 146.1,
+    "far": 144.6
+  },
+  "files": [
+    {
+      "path": "recipe.json",
+      "source": "build/standing018-proportions/color-foot-v5/recipe.json",
+      "sha256": "044d421dc3d0a33451f7c4dff34b9a5e375a544ddee848dca83f755b2382af8f",
+      "size": 2763
+    },
+    {
+      "path": "sprites/018.png",
+      "source": "build/standing018-proportions/color-foot-v5/sprites/018.png",
+      "sha256": "5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f",
+      "size": 12911
+    },
+    {
+      "path": "masks/018.png",
+      "source": "build/standing018-proportions/color-foot-v5/masks/018.png",
+      "sha256": "78f3e8eae280bb2176d4cfcbe7fb928ee5ab211df430024ff329b6d61b9beb62",
+      "size": 1009
+    },
+    {
+      "path": "protected-cap/018.png",
+      "source": "build/standing018-proportions/color-foot-v5/protected-cap/018.png",
+      "sha256": "8d3475a89f1320a416444f190ea2adca61add21d95c6f0d3687f9c015407b519",
+      "size": 120
+    },
+    {
+      "path": "checks/smoke.json",
+      "source": "build/standing018-proportions/color-checks-foot-v5/smoke.json",
+      "sha256": "4b48e76bb7ef991b4a5354353caf9fbdf529dae995bd390201badfee4ca07f50",
+      "size": 1285
+    },
+    {
+      "path": "checks/regression.json",
+      "source": "build/standing018-proportions/color-checks-foot-v5/regression.json",
+      "sha256": "7a62f22e5b0a133ed769bf50c82e350638975604c32c968aa68a4cc8cd072367",
+      "size": 3985
+    },
+    {
+      "path": "checks/damaged-input.json",
+      "source": "build/standing018-proportions/color-checks-foot-v5/damaged-input.json",
+      "sha256": "a9edee25efbb9071b556655cb735541e4ba916694acbe78d2614e8166a0b4bc6",
+      "size": 2961
+    },
+    {
+      "path": "checks/damaged-cap.json",
+      "source": "build/standing018-proportions/color-checks-foot-v5/damaged-cap.json",
+      "sha256": "6ecce1e7ff047cec725c45960c66272623219959fd1c795f51ae83d9254e7758",
+      "size": 2961
+    },
+    {
+      "path": "checks/damaged-calibration.json",
+      "source": "build/standing018-proportions/color-checks-foot-v5/damaged-calibration.json",
+      "sha256": "e387de4d854ac9d7b75103ba2c05490e7466d471ff9d40d843dd90558e2becaa",
+      "size": 2955
+    },
+    {
+      "path": "checks/source-version-control.json",
+      "source": "build/standing018-proportions/color-checks-foot-v5/source-version-control.json",
+      "sha256": "818edc70194a25ad5064dac80a6918cf426a62b4a1e3638e51dbef1ab8612562",
+      "size": 1115
+    },
+    {
+      "path": "source-export/recipe.json",
+      "source": "build/standing018-proportions/stage-v5/runtime/recipe.json",
+      "sha256": "38acb81be045ef29a187586bfc9b280c48b3dcf4f48266dee6c5c9483cf9779e",
+      "size": 1762
+    },
+    {
+      "path": "source-export/export-report.json",
+      "source": "build/standing018-proportions/stage-v5/runtime/export-report.json",
+      "sha256": "7aaf781ed8ebf5d3e17fe23bfc45f787a4e3c9a6ac8f37ee90442441f4fb8662",
+      "size": 2076
+    },
+    {
+      "path": "source-export/BMP/JOHNWALK.BMP/018.png",
+      "source": "build/standing018-proportions/stage-v5/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "183cdf4b4f23e4164e7e290456ff8b8082301b8d952ad577b186ab4663a9c5b2",
+      "size": 12630
+    },
+    {
+      "path": "source-export/checks/smoke.json",
+      "source": "build/standing018-proportions/stage-v5/tests/smoke.json",
+      "sha256": "89776a66628ddbdadca710dcdc42ea35a066b4e763552817344eb0868295be22",
+      "size": 556
+    },
+    {
+      "path": "source-export/checks/regression.json",
+      "source": "build/standing018-proportions/stage-v5/tests/regression.json",
+      "sha256": "00ebb316565324b4095163b413c1b1216d839ce92ff5a7b292bc22a07a07b161",
+      "size": 1120
+    },
+    {
+      "path": "check_color_v5_version.py",
+      "source": "build/standing018-proportions/check_color_v5_version.py",
+      "sha256": "f48e53040f5a3c67587dbc705c27eb0f5443c0952998cc180f83180634ca289e",
+      "size": 1868
+    },
+    {
+      "path": "source-v2-comparison.json",
+      "source": "art/cartoon/standing018-proportions-v1/export/trials-foot-v5/measurements.json",
+      "sha256": "f2a4c37152bea800a3a52343545f05f7175b566d7cb06a041631b951eda963bf",
+      "size": 6076
+    }
+  ],
+  "generated_evidence_sha256": {
+    "adapter-diff.txt": "f205bd9f54ee2dbb8ba4fe72438590fd9a405fe8ddfcf3c8c4cb5d2b5d7e31f8"
+  },
+  "bound_files_sha256": {
+    "art/cartoon/standing018-proportions-v1/color/correct018.py": "5a34a0c7ff7918f5a67d5d844fa0e35787c388396fdf29df91e0d1fba4b844a3",
+    "art/cartoon/standing018-proportions-v1/color/correct018_foot_v5.py": "93c70549e1be851a6b1c1731d2cab89404511a21b8b82d72f943a0485e6a8356",
+    "art/cartoon/standing018-proportions-v1/color/test_color018.py": "ac744056fa6a1ca716acc33189230da47aa1589d53534b44a583e338b38440ee",
+    "art/cartoon/standing018-proportions-v1/color/check_foot_v5.py": "278f60da69a3b561abef56050731102cfc76a16b2a864e21608f1478eec04dde",
+    "art/cartoon/standing018-proportions-v1/color/reference-foot-v5.json": "e1bde6bf34f91a5d81a308187a305b7344d31e8acf5f2a51fab6afc29406acf1",
+    "art/cartoon/standing018-proportions-v1/color/FOOT_V5.md": "5cd62711bab021a157a1f46f23fa23f78b185ae9ce6a75ad48a4780774c98d75",
+    "art/cartoon/skin-tone-v1/correct.py": "70be24d13eb34317f602b0b66f952a4d3dbe8e29935b4f6c8353f15c8e9d3534",
+    "art/cartoon/standing018-proportions-v1/export/trials-foot-v5/evidence.json": "62beeca0264ed934a61a3c32ca5a222c92d6472a761a4a4f6191e091b1253a4c",
+    "art/cartoon/standing018-proportions-v1/018-foot-v5.png": "97922bacf481925f29640606e305ba1747b7de5fb1b01439e4fcdaf8e2621c5e",
+    "art/cartoon/arrival-pilot-v1/export.py": "c382582ad113c917ee8b5f8e0ebda392ceb5f746bdb4be9982b7a51f04418c63"
+  },
+  "helper_source_sha256": "5bf883894d9df394556c220f5d4b190bf59b8fc79a70df8b11894121be160536",
+  "replay": "Follow ../FOOT_V5.md with fresh build paths. The copied source-version probe is replayed after restoring it to build/standing018-proportions/check_color_v5_version.py in an isolated reconstruction; it preserves existing output paths.",
+  "readback": "All17 copied files byte-identical to source outputs; generated diff and10 bound helper/source/docs records separately hashed."
+}

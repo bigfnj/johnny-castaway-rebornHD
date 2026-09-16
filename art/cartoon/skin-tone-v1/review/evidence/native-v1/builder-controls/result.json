@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "executed_builder_sha256": "8cda74f66be5ea72f4b74183c1b305da89e67763033f2d9c86caa6e4f5e4ca7d",
+  "checker_sha256": "e3e05577612ac94a998b402e9d11e8325be886696062ff4bda69f3ed04579ae4",
+  "baseline_source_positive_before_and_after": 8,
+  "source_reports_sha256": {
+    "front_arc": "b1c165003e7a2bb93815d120a783f3b3ac489be16dce97d2d8be25d0a8e00a7b",
+    "rear_arc": "d498af2420d02c4425205184e1d09758342a7e027a61268960fbaf19112c8114",
+    "travel_cb": "51e8106a88508a3c509ad4302d343ac0c907a88b17a812163fa2f1a8feccc190",
+    "travel_ec": "b4da3ad1d7229020f60c4d5828cd9f765d16b3aefb208adc4bfefda3954dd315",
+    "waypoint_front": "f93c3e9592a954791281aee7aa11790af048ea9e62436a11263854d65e323db1",
+    "waypoint_rear": "4929f755f9d278a4c263c3bc5938882d7c510cba2bf9766185b2e6fdfbec3701",
+    "wait015": "b04dc861fb3325be2549b03d3e98e3f4962e6a56396be4ace553a9942aa4b1d4",
+    "wait016": "fdecd1ee0099919d67fd243412038dbbca6d32ddd73b9b5a96302a865fb44ab2"
+  },
+  "candidate_preparation_sha256": "de962b6083bbd495797843416cbf81b08334114cd1c1b25db66119041c783a5e",
+  "wrong_still_record_sha256": "3609bc2b52ac007f36e28659aa8939d7587a7c3f5b5af99a6518634dece67477",
+  "controls": [
+    {
+      "case": "swapped-equal-duration-route",
+      "status": "FIRED",
+      "failure": "capture clip/phase identity:baseline:front_arc"
+    },
+    {
+      "case": "spoofed-route-name",
+      "status": "FIRED",
+      "failure": "capture source contract:baseline:front_arc:prime"
+    },
+    {
+      "case": "wrong-capture-phase",
+      "status": "FIRED",
+      "failure": "capture clip/phase identity:baseline:front_arc"
+    },
+    {
+      "case": "mismatched-still-recipe",
+      "status": "FIRED",
+      "failure": "stills use exact captured correction recipe",
+      "exit_code": 1
+    },
+    {
+      "case": "occupied-review",
+      "status": "FIRED",
+      "failure": "preserve existing native color review",
+      "exit_code": 1
+    }
+  ],
+  "scope": "Source binding positives bracket three altered-report controls. Fresh builder processes refuse the actual earlier still recipe and an occupied output. No input, capture or existing review modified."
+}

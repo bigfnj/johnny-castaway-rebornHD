@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "status": "requested",
+  "request": {
+    "prompt": "Use case: precise-object-edit.\nEdit the provided front-facing Cartoon Johnny sprite. The last attempt moved the pupils too little and he still looks cross-eyed. Change only the black pupils and their catchlights, NOT the eye outlines.\nCENTER EACH PUPIL WITHIN ITS OWN WHITE EYEBALL, so he looks comfortably straight forward at a distant point. In this1024x1536 image, the pupil in the eye on the LEFT side of the picture should be centered around x=475, and the pupil in the eye on the RIGHT side of the picture around x=545, both around y=240. These are visual targets. Move the left pupil visibly left and the right pupil visibly right. Increase their center-to-center spacing to about70 raw pixels; do not make another nearly identical inward-looking result. Keep plenty of visible white between each pupil and the nose-side eye edge. Do NOT make the eyes wall-eyed or change the shapes or size of the black pupils.\nPreserve the white eyeballs, eyelids, brows, nose, face and calm focus expression. Preserve every other visual element and full-body placement: sailor cap with brim and anchor, beard, chest, shorts, arms, screen-left foot on ground and screen-right raised foot. No new pose, rescaling or anatomy changes.\nOutput one full1024x1536 sprite at the original framing with actual transparent alpha background. No added glow, background, shadow, text or labels.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v2.png"
+    ]
+  },
+  "input_roles": [
+    "010-v2 edit target"
+  ],
+  "user_feedback": "the front view looks slightly cross-eyed  can you add some space to the pupils",
+  "reason_for_iteration": "v2 produced only a small observed outward pupil shift; make spacing visibly natural before review.",
+  "approval": "Pupil correction and native transitions pending."
+}

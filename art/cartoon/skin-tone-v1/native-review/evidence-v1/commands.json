@@ -1,0 +1,89 @@
+{
+  "provenance": "Actual native launch argv transcribed from execution tool calls; phases and native child commands are separately retained in reports.",
+  "host_working_directory": "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses",
+  "host_python": "TOOLBOX_PYTHON (Python3.11.15, Pillow12.3.0)",
+  "host_preparation": [
+    "python -B art/cartoon/skin-tone-v1/native-review/prepare.py --baseline build/connecting-poses/native-motion-v1/candidate-v2/scrantic_data.zip",
+    "python -B art/cartoon/skin-tone-v1/native-review/prepare_candidate.py --export build/skin-tone/export-v2 --candidate-version 1",
+    "python -B art/cartoon/skin-tone-v1/native-review/prepare_candidate.py --export build/skin-tone/export-v2 --candidate-version 2"
+  ],
+  "native_launches": [
+    {
+      "label": "baseline",
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--init",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses,target=/source,readonly",
+        "--mount",
+        "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/build/skin-tone/native-review,target=/out",
+        "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+        "xvfb-run",
+        "-a",
+        "-s",
+        "-screen 0 1280x960x24",
+        "python3",
+        "-B",
+        "/source/art/cartoon/skin-tone-v1/native-review/capture.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "label": "candidate1-failed-before-native",
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--init",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses,target=/source,readonly",
+        "--mount",
+        "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/build/skin-tone/native-review,target=/out",
+        "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+        "xvfb-run",
+        "-a",
+        "-s",
+        "-screen 0 1280x960x24",
+        "python3",
+        "-B",
+        "/source/art/cartoon/skin-tone-v1/native-review/capture_candidate.py",
+        "--candidate-version",
+        "1"
+      ],
+      "exit_code": 1
+    },
+    {
+      "label": "candidate2",
+      "argv": [
+        "docker",
+        "run",
+        "--rm",
+        "--init",
+        "--network",
+        "none",
+        "--mount",
+        "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses,target=/source,readonly",
+        "--mount",
+        "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/build/skin-tone/native-review,target=/out",
+        "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+        "xvfb-run",
+        "-a",
+        "-s",
+        "-screen 0 1280x960x24",
+        "python3",
+        "-B",
+        "/source/art/cartoon/skin-tone-v1/native-review/capture_candidate.py",
+        "--candidate-version",
+        "2"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "replay": "Use a fresh isolated checkout/output root and substitute host bind paths only; see REPRODUCE.md."
+}

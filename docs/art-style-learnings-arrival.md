@@ -56,3 +56,85 @@ the earlier 27 approvals explicitly. Candidate recipe bytes remain separate
 from production metadata additions. Preserve text bytes before hash linking,
 including on Windows checkout; the new arrival subtree has an explicit Git
 attribute for this purpose.
+
+## Recheck contact at shoreline placements
+
+During the later skin-color review, the user identified the smaller screen-right
+foot of018 hovering over water at the initial Front turn placement. This is a
+different location from the approved rear arrival: actual native draw `(478,216)`,
+unmirrored, rather than `(298,240)`. The color correction retained every alpha
+byte and pixel position, so it did not introduce this geometry difference.
+The user approved the new colors separately; production promotion is held while
+the newly raised contact issue is resolved.
+
+At 2x scale, visible-pixel measurements excluding the original gray shadow put
+the original feet's bottom rows at147 and143. Cartoon alpha>=8 gives141 and131.
+These are qualified pixel-region observations, not anatomical annotations. The
+smaller foot is higher, and its separation from the nearer foot is greater.
+Retain the previous approval alongside this later context-specific finding.
+
+For the comparison, use the exact native origin, a fixed camera, and the actual
+scene palette. The stored original018 reference uses diagnostic colors and is
+useful for geometry, not a faithful game screenshot. Show original artwork on
+the original island and on the Cartoon island to separate pose contact from
+shoreline shape. Label port-rendered original artwork accurately; it is not a
+capture of the original executable. A pose approval at one arrival does not
+establish ground contact at every island position or mirrored use.
+
+The new diagnostic captures use the supplied-original RESOURCE pair in private
+packages. They confirm that original018 meets the sand on the unchanged Cartoon
+island; no pixel outside018's placed canvas differs from the current Cartoon
+capture. Each diagnostic passed a native smoke capture, full route and fresh
+repeat with identical draw origins and timing. The fallback renderer still uses
+diagnostic colors, so these panels establish geometry, not original-executable
+color or compositing parity. Preserve that limitation rather than inventing a
+palette to make the source look familiar.
+
+The user's next observation located the mismatch higher in the body: original
+shorts sit lower. Measuring the waistband and hem showed that simply lengthening
+both shins would preserve the wrong proportions. Cartoon waistband/hem were
+about67–70/94–95HD versus original80–83/104–106. Extend the lower torso and lower
+the shorts first, then reconnect hands and legs to the intended contacts while
+keeping cap/head/shoulders registered. The near exposed leg can become shorter
+proportionally even as its foot reaches farther down the canvas.
+
+The [proportion study](../art/cartoon/standing018-proportions-v1/README.md)
+retains two generated drafts and their exact prompts. Both undershot the numeric
+instructions, despite moving in the requested direction. Measure each result
+and check native placement before assigning success. V2 reaches the shoreline
+edge in the native smoke; the user accepted its still proportions with "much
+better proceed". The subsequent motion review remains separate. Newly generated
+geometry also needs newly reviewed color masks
+and material samples; an older018 mask cannot be transferred blindly.
+
+Use a same-origin walking-to-standing transition to expose a proportion change.
+The revised018 keeps its cap registered, but its lower waist/hem differ visibly
+from walking023. A technically exact renderer comparison cannot decide whether
+that reads naturally at Normal speed. Mirroring can also expose a contact issue
+at a different shoreline position even after the unmirrored still is approved.
+Keep both views in the motion review and compare the original at the same draw
+origin before attributing a remaining gap to the new anatomy or the engine.
+
+The exact mirrored018 comparison now confirms a5HD-pixel smaller-foot height
+difference: original skin ends at runtime143/global561 versus revised138/global556.
+The original gray shadow is separate artwork. All74 displays retain identical
+timing and placement, and every pixel outside018's canvas matches. Keep this
+contact correction separate from the pending waist-transition judgment.
+Evidence is retained under the proportion study's
+`native-review/original-mirror-v1/evidence-v1/`.
+
+The user accepted the shorts while rejecting the mirrored foot contact. Keep
+those decisions separate. The foot-only edits repeatedly undershot numeric
+instructions: the first50-raw-pixel request moved the smaller sole only19raw
+pixels. A relative instruction bringing both soles almost onto the same ground
+line produced successive improvements. Preserve each draft, measure at the fixed
+runtime scale, and check the actual shoreline before another human review.
+For a sprite without the original contact shadow, reaching the original skin's
+last row may still leave a visible gap; inspect clean sand under the foot too.
+
+Even this localized foot edit shifted the uncorrected near-calf base from
+252,154,94 to252,162,103. Its fresh color pass returns that sample to the chosen
+252,148,88 and preserves the new sprite's alpha exactly. A request to keep the
+rest unchanged is not evidence of RGB or silhouette identity. Check the selected
+result against the approved source and retain qualified differences; v5's
+upper-body and shorts bounds stay fixed but their edge pixels are not identical.

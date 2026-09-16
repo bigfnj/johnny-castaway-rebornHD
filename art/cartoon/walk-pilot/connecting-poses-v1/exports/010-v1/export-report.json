@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export only; not native capture or human acceptance.",
+  "preview_only": false,
+  "runtime_sprites_written": true,
+  "runtime_fit_all_source_centers": true,
+  "scale": 0.1,
+  "padding_hd": 64,
+  "reference_hashes": {
+    "010-source.json": "45b82869688776db44d040c8389259af9c0c86b326ac13e74d6e89d1ca0075dc",
+    "010-original-native.png": "060f132143f5663425e94ec8646ba3484339c95164875e9ed0882d02b2d717db",
+    "010-original-nearest8.png": "2531998326010ab253505a80f45906e586083c74fbac0438c814be79271c749d"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "frames": [
+    {
+      "frame": 10,
+      "source": "010-connecting-v1.png",
+      "source_sha256": "be5886d91155871b60d6769d660632e018379c5c0108092c120a8906b366e8e5",
+      "cap_raw": [
+        510.5,
+        24
+      ],
+      "runtime_canvas": [
+        80,
+        148
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -16.050000000000004,
+        0,
+        0.1,
+        -2.1500000000000004
+      ],
+      "alpha8_source_bounds": [
+        206,
+        23,
+        818,
+        1501
+      ],
+      "alpha8_centers_hd": [
+        4.599999999999998,
+        0.19999999999999973,
+        65.69999999999999,
+        147.9
+      ],
+      "source_centers_fit_runtime": true,
+      "filtered_alpha8_bounds_hd_exclusive": [
+        4,
+        0,
+        66,
+        148
+      ],
+      "padded_canvas": [
+        208,
+        276
+      ]
+    }
+  ],
+  "outputs_sha256": {
+    "padded/010.png": "606fe2f6f6950d3aba580f948266fe3aa6bb51c5dc69a53ea1dd61093fe29cce",
+    "BMP/JOHNWALK.BMP/010.png": "076b7ec10dfb9d62092097285804cc14d1867c2224e1db34fb36417ed81c051b"
+  },
+  "filter_limit": "Source-center fit does not promise absence of low-alpha filter fringe; padded output retains it.",
+  "recipe_sha256": "05537f68a1403da087c324c4cb70cd4688019f06ec7549904817a22afeb73a2f",
+  "export_source_sha256": "bbbd0778ba2a92f161790937406fdc35a21f73e03599ac3f8575ddb11b5935d5"
+}

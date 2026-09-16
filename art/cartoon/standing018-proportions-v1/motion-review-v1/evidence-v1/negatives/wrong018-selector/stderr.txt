@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 98, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 72, in main
+    return one(a.review, a.output, a.case)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 53, in one
+    check.check(target, record_name='mutant-browser.json')
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\check_review.py", line 143, in check
+    assert state['pose'] == pose and state['frame'] == row['frame'] and not state['playing'], 'reference selector native ordinal:' + name + ':' + str(pose)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: reference selector native ordinal:waypoint_front:27

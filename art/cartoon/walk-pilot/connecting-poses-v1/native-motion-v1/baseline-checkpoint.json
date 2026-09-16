@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "status": "PASS baseline; candidate motion review is a separate checkpoint",
+  "source_commit": "3af0242a74f234aab231d9203b48f78ca8e5c1b4",
+  "production_archive_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+  "evidence_root": "art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/evidence/baseline-v1",
+  "files_sha256": {
+    "preparation.json": "e37433b049ba358ed629ae9d7fb915d709048733e6165ab71be14085ac28aebc",
+    "route_driver.c": "d8d30adbb29d8151eb1dc88f2612a50c400188a1e4ca777383eeaa02d0b5f794",
+    "trace_driver.c": "1616492a15bb5ed468c790d74df6228cc922b5b1af58c406dab5477845473b70",
+    "baseline-v1/build.json": "adfd1b7b37cbea0ad5177649623b060f883366a0d393a9ed1921391154ba8533",
+    "baseline-v1/build.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-v1/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-v1/trace-build.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-v1/trace-build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-v1/independent-trace.json": "ce9f920ff5f4098a9c245f839c5844974f744e03279fdc1f9c763a91b00dd361",
+    "baseline-v1/route-contract.json": "86e7f6d698103d13d384e67cd62844da3edeca228811fbd5d0281d2fde1aea3b",
+    "baseline-v1/summary.json": "9804e89dc9b063e87cd86a85e76cb3ffed2115679dee160e668193c628380a27",
+    "baseline-v1/front_arc/smoke/capture.log": "0eda22c3b92a4414fd5773e1a7620e0751097084a538461b896bab372d81fb6f",
+    "baseline-v1/front_arc/smoke/report.json": "bc70f83935d9339156196a426faef0887346c4c0d9717e2650f9aee2c180e978",
+    "baseline-v1/front_arc/full/capture.log": "5512eb68ef6b36c97f26b35e6b337e17aba5ad52e33e8d6a5c618fece4426ffc",
+    "baseline-v1/front_arc/full/report.json": "bc0ffbe67883884d66a023174ae6bc36c8f98f12e0384fca0fe358fe9aac17c8",
+    "baseline-v1/front_arc/repeat/capture.log": "5512eb68ef6b36c97f26b35e6b337e17aba5ad52e33e8d6a5c618fece4426ffc",
+    "baseline-v1/front_arc/repeat/report.json": "4904c1fdfa9b954e1e3c6a4381accd42c18f2047f9875a84f27d41aa2d8ad16f",
+    "baseline-v1/rear_arc/smoke/capture.log": "9c0a0da820feed4bf317d0d78abc94ddba8c6f48f70fc5281c4b934eeb66c314",
+    "baseline-v1/rear_arc/smoke/report.json": "e4a7be05b7560179cac3b1ff31f09bb385d6770fb0891ea79bc83ed79124894b",
+    "baseline-v1/rear_arc/full/capture.log": "401a68ec7f1cceb640610e903f17dd50fd6cc7f4bbd190591b949941b7248bca",
+    "baseline-v1/rear_arc/full/report.json": "0092ef1d9e1574013f1af43d997384e36e18bc8e22a4c20320b4db9f4213d8b5",
+    "baseline-v1/rear_arc/repeat/capture.log": "401a68ec7f1cceb640610e903f17dd50fd6cc7f4bbd190591b949941b7248bca",
+    "baseline-v1/rear_arc/repeat/report.json": "1f0f071b20c340e186d0a11574e8f651311aa1714376961fa7c3f29954ea52c3",
+    "baseline-v1/travel_cb/smoke/capture.log": "c3884aa21f27f889742311b83b13694a3defa8f51f3c4ca4deb3ef76d9db314b",
+    "baseline-v1/travel_cb/smoke/report.json": "55e7ba93816d3071065941392775cf0fbe6e0b229ab677fc84722065ea7d2fba",
+    "baseline-v1/travel_cb/full/capture.log": "2bf406c1ee80d8967d7fdcfe9c6e69dab12f5c3f772bdb375a596e1b2d30f6af",
+    "baseline-v1/travel_cb/full/report.json": "e878a8e3181b918f301b036be7f02cf85614d96e5ff5e527c7c47516fbbf35bd",
+    "baseline-v1/travel_cb/repeat/capture.log": "2bf406c1ee80d8967d7fdcfe9c6e69dab12f5c3f772bdb375a596e1b2d30f6af",
+    "baseline-v1/travel_cb/repeat/report.json": "fefc05865d50e52b4ec8435b21ea35936efee5f690582bc4579e2ca3a9b061f2",
+    "baseline-v1/travel_ec/smoke/capture.log": "78beb38b6eb7c906f385a8963884ef965e2cfa5f5017dcb0cbae4df1483357be",
+    "baseline-v1/travel_ec/smoke/report.json": "fbda033eb4c2f68551d8b0b932ab7f314b9196501cb092ce231a5bc4aad4fef4",
+    "baseline-v1/travel_ec/full/capture.log": "4c28e147d28ec8de2a7f31a907edf84f44034ed0fcb358427799207f73ebe577",
+    "baseline-v1/travel_ec/full/report.json": "424531613f9c2932c10b6f5a0f36b9eef2eb3419bc2b8884ee78838fc6720066",
+    "baseline-v1/travel_ec/repeat/capture.log": "4c28e147d28ec8de2a7f31a907edf84f44034ed0fcb358427799207f73ebe577",
+    "baseline-v1/travel_ec/repeat/report.json": "98edf586467b8ce8e90f8f8c32d63cc0eb155d3ffadb520ac86834e17025a66b",
+    "baseline-v1/waypoint_front/smoke/capture.log": "fdeded4be152926bfe7d61f9553c52cb291b4e89c273c46b79b1ec2685b0cb48",
+    "baseline-v1/waypoint_front/smoke/report.json": "184540669a59eef5b1f1afc6c8a8a38c610688a3e7e0e9b23fdad69401e2bbf5",
+    "baseline-v1/waypoint_front/full/capture.log": "25017ba39694a338c99faa6db159543d2c8aad8a360e43e5e778492bc88623d6",
+    "baseline-v1/waypoint_front/full/report.json": "74daf07fcf86ac639198fd0eb8255dbc5b0798cd3697492b0c1fda681f087ca9",
+    "baseline-v1/waypoint_front/repeat/capture.log": "25017ba39694a338c99faa6db159543d2c8aad8a360e43e5e778492bc88623d6",
+    "baseline-v1/waypoint_front/repeat/report.json": "b40e19339fc3ea1202affedb869139faf38a9742bcdb224bd7fd08c1524df33a",
+    "baseline-v1/waypoint_rear/smoke/capture.log": "cc87b325330cc06fe7d03afc14204a535c034dea73b25dbdb4d15d302d5ef0c4",
+    "baseline-v1/waypoint_rear/smoke/report.json": "569d745d0a1429e57578911a186d3b9814cf441e9cb077dc84686cfadc4ec66e",
+    "baseline-v1/waypoint_rear/full/capture.log": "c155134e84e7f787ae6aec80dc3b4897d880eb4e004799f37732b94ea104ce4b",
+    "baseline-v1/waypoint_rear/full/report.json": "635c3a82d5f62107533173aad1b0bc8edb361e2ea0889c23b7cb48c89aba5cf3",
+    "baseline-v1/waypoint_rear/repeat/capture.log": "c155134e84e7f787ae6aec80dc3b4897d880eb4e004799f37732b94ea104ce4b",
+    "baseline-v1/waypoint_rear/repeat/report.json": "a4b3632ba8107a3f43e3201dda0732e616265549370cec7a0362c4556a2fc6c0",
+    "negative-controls/baseline/report.json": "e5d2f95391f5216a06086da63d8533eada869d283b7ee6a90b10fe933df9823f",
+    "negative-controls/baseline/execution.log": "960a4a233650e477def6ffaa816b75281a5929908f008dd31a29bdfe24bdc77b",
+    "negative-controls/baseline/execution.json": "66fcd5c583da7738ecfbd3795b89db5868117c5fb2626a3ab4276448ecc51f68",
+    "negative-controls/baseline/wrong-waypoint-prediction/trace-build.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "negative-controls/baseline/wrong-waypoint-prediction/trace-build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "negative-controls/baseline/wrong-selected-waypoint-path/capture.log": "b2ffd075feb69ad92bc0b66c2b210886b1b35e52d300fdffc94c2bb47a47eda3",
+    "negative-controls/baseline/wrong-terminal-role/capture.log": "25017ba39694a338c99faa6db159543d2c8aad8a360e43e5e778492bc88623d6",
+    "helpers/capture.py": "c9c5008f3dc3efe5ddefd02522f6621e744e8c61e6b3a85fd48d5f0c6b589bec",
+    "helpers/config.py": "82df0b9d383ba8363be86b5c99edfbbe753bb4b0bd72c5eeaebe6f9e9e1a0c87",
+    "helpers/native_core.py": "996e60eb4e64d98ce0107d68db9f2cffb9229189eafbd9befdfaa61dafe2472e",
+    "helpers/prepare.py": "916b905d52bce70687a76d3a3f15738530a7de2f21b3066cdd568f18c016f93d",
+    "helpers/negative_baseline.py": "4e62f7e7e637e78be5cce39482a37f09a8ca68aaa1861ec040415c3c7b1c7e52",
+    "helpers/host-run_baseline_negatives.py": "fae9b18650da956ddeb6f7360c6de052554fa823a97b02fde0577cba04e94415",
+    "helpers/BASELINE.md": "a710dec63f9b65cfbeceff9391654a6479459451de969778d037bc761c06f89f",
+    "helpers/preserve_baseline.py": "cc6dc9939deab5d4c1df463b681a8650bad113ec9e020e1c589a946afc3fb3f8"
+  },
+  "clips": {
+    "front_arc": {
+      "displays": 36,
+      "duration_ms": 3400
+    },
+    "rear_arc": {
+      "displays": 38,
+      "duration_ms": 3640
+    },
+    "travel_cb": {
+      "displays": 36,
+      "duration_ms": 3400
+    },
+    "travel_ec": {
+      "displays": 50,
+      "duration_ms": 4600
+    },
+    "waypoint_front": {
+      "displays": 54,
+      "duration_ms": 4840
+    },
+    "waypoint_rear": {
+      "displays": 74,
+      "duration_ms": 6520
+    }
+  },
+  "completed": [
+    "Independent compiled C trace of all twelve prime/travel contracts",
+    "Fresh unchanged-source native observer",
+    "All six smoke clips before six full and exact fresh-process repeats",
+    "Nine executed baseline input negatives with restored positive control",
+    "Protected production source/archive identity"
+  ],
+  "not_validated_by_this_checkpoint": [
+    "Candidate capture/comparison",
+    "Browser review",
+    "Publication",
+    "Human motion approval"
+  ],
+  "helper_snapshot_scope": "Files hash-bound at native build and baseline negative execution. Only the named execution reports establish coverage; copied unrelated helper files do not imply execution.",
+  "omitted": "All PPM/PNG captures, private ZIP copies, native executables and profile settings remain local scratch; display image hashes are retained in reports.",
+  "preserver_sha256": "cc6dc9939deab5d4c1df463b681a8650bad113ec9e020e1c589a946afc3fb3f8"
+}

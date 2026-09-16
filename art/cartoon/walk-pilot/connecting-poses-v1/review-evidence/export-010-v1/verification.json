@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "scope": "Technical010-v1 export only; no pose, motion, native, human or production acceptance.",
+  "selected_frame": 10,
+  "source": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v1.png",
+    "sha256": "be5886d91155871b60d6769d660632e018379c5c0108092c120a8906b366e8e5"
+  },
+  "exporter": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/export.py",
+    "sha256": "bbbd0778ba2a92f161790937406fdc35a21f73e03599ac3f8575ddb11b5935d5"
+  },
+  "tests": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/test_export.py",
+    "sha256": "cb756d6c2468f8f9cb29394c511decab86392540c7a699f01dd99d32224d0579"
+  },
+  "reference_index": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/reference/source-index.json",
+    "sha256": "f0093341b6d8cd3f9a2a4539e111b748e68a4eee715e3a76ae2f790e00aaac05"
+  },
+  "python_version": "3.11.15",
+  "pillow_version": "12.3.0",
+  "preserved_byte_identical": [
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/010-v1/recipe.json",
+      "sha256": "05537f68a1403da087c324c4cb70cd4688019f06ec7549904817a22afeb73a2f"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/010-v1/export-report.json",
+      "sha256": "479a75cea2b961c96bd935c074ea5cc7381921a6e648527c68f38c3a43a99db5"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/export-010-v1/smoke.json",
+      "sha256": "8f8bf7f47d5f4d045b93fe498e94ee61dc5bcf7f92aa725d33fa324a0ed16dd8"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/export-010-v1/regression.json",
+      "sha256": "06cc382d4ffb4d34d41cf7d71186adc997b39b492e0f31a4898b755f09322d31"
+    }
+  ],
+  "runtime_and_padded": [
+    {
+      "path": "build/connecting-analysis/export010-v1/padded/010.png",
+      "sha256": "606fe2f6f6950d3aba580f948266fe3aa6bb51c5dc69a53ea1dd61093fe29cce"
+    },
+    {
+      "path": "build/connecting-analysis/export010-v1/BMP/JOHNWALK.BMP/010.png",
+      "sha256": "076b7ec10dfb9d62092097285804cc14d1867c2224e1db34fb36417ed81c051b"
+    }
+  ],
+  "runtime_canvas": [
+    80,
+    148
+  ],
+  "cap_raw": [
+    510.5,
+    24
+  ],
+  "alpha8_centers_hd": [
+    4.599999999999998,
+    0.19999999999999973,
+    65.69999999999999,
+    147.9
+  ],
+  "filtered_alpha8_bounds_hd_exclusive": [
+    4,
+    0,
+    66,
+    148
+  ],
+  "smoke_passed": 3,
+  "regression_passed": 24,
+  "mutation_status": "NOT RERUN: unchanged exporter and test bytes already passed19 executed mutations on009.",
+  "prior_executed_mutation_record": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/export-009-v1/regression.json",
+    "sha256": "ed27f61cc94df8841500473cbbc9091d5f3251dc56c9509e92c11f8d16684587"
+  },
+  "limits": [
+    "Fixed0.1 scale and original-derived placement, without per-pose fitting.",
+    "Source-center fit does not exclude low-alpha filter fringe retained in padded output.",
+    "Technical results do not grant anatomy, motion, native or production approval."
+  ]
+}

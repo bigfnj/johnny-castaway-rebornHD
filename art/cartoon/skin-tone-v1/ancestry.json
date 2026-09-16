@@ -1,0 +1,2591 @@
+{
+  "schema_version": 1,
+  "scope": "Pre-correction ancestry and executed source audit for 28 frozen runtime inputs. No color correction, new generation, or production approval assigned.",
+  "input_index": {
+    "path": "art/cartoon/skin-tone-v1/input-index.json",
+    "sha256": "d1a694d71efb2c2ac3aea6b2d42f2cf82abe0c0ca1b09a7a6185df8ae64d1dc6"
+  },
+  "production_pack": {
+    "kind": "git_blob",
+    "commit": "3af0242a74f234aab231d9203b48f78ca8e5c1b4",
+    "path": "art/cartoon/pack.json",
+    "sha256": "6d1d7e546b86afe2df85460256434d805e7797a0dbaae071fc59600cd3514383",
+    "checkout_comparison": "Working pack JSON equals this Git blob; checkout CRLF differs from Git LF bytes. Recover this pinned Git blob after future production changes."
+  },
+  "baseline_commit": "3af0242a74f234aab231d9203b48f78ca8e5c1b4",
+  "production_archive_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+  "private_candidate_archive_sha256": "21194cf35e5b60eebfa9ba48520509ae8f86a72f26313b945f019671d1f345c5",
+  "technical_selection": {
+    "path": "art/cartoon/walk-pilot/connecting-poses-v1/candidate-selection-v2.json",
+    "sha256": "86b31a896e70f8977fcac4ef8eb573e5c96893f3e13e1b319d98674c728a83ab"
+  },
+  "canonical_lighter_reference": {
+    "frame": 29,
+    "raw_source": {
+      "kind": "file",
+      "path": "art/cartoon/walk-pilot/front-refresh-v1/029-heel-fit-v2.png",
+      "sha256": "e8efc7e91972fc7dca1bb3080a3cddc38b4e7519cb4fb7aaf98c31a1acbb922a"
+    },
+    "runtime_png_sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+    "scope": "Existing029 artwork chosen after user selected screenshot2 lighter tone; not a newly generated reference."
+  },
+  "prior_acceptance_records": {
+    "art/cartoon/walk-pilot/front-arrival-v1/production-acceptance.json": {
+      "sha256": "848bf24e9b50e0cf490f72229dfa7699ed9a710b346cf8cbb49cb90df691b672",
+      "accepted_at_recording": true,
+      "scope": "New production approval covers standing000/015/016/017.017 appearance and its native E-to-A arrival,016 appearance and both shown front waiting turns, then000 in both side orientations and015 from behind with all five standing views in the complete eight-heading ring at A in both captured native orders were separately accepted. Existing28 assets retain their earlier approval origins. Ordinary003/009/010/012 turns, profile001-008 walking, unseen routes and story interactions are not newly approved.",
+      "human_response": "excellent, proceed"
+    },
+    "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json": {
+      "sha256": "c27809ad50d08d69d8cf41116c0ed91b2300f6640f772e37f03c93a737e62ab1",
+      "accepted_at_recording": true,
+      "scope": "Accept the complete Cartoon profile walk001-008 as displayed in both native F-to-C and C-to-A routes, including arm swing, standing connections and the two ordinary003 departure contexts. These eight poses are approved together for production integration. Existing32 assets retain their earlier acceptances.",
+      "human_response": "Yes, keep this profile walk"
+    },
+    "art/cartoon/walk-expansion-v1/production-acceptance.json": {
+      "sha256": "70942da086c93ca2fca2693fc35fb295be7d1ea38c29c38598124b5a1c16adc8",
+      "accepted_at_recording": true,
+      "scope": "New approval covers six rear-oblique walking sprites as displayed on the layered Cartoon island at Normal speed, including the previously questioned 8-to-9 walking-pose transition. The other twenty-one assets retain their earlier approvals; this record inherits them without claiming they were newly reviewed here. It does not establish original anatomical parity or approve unseen routes, directions, interactions, or scenery states.",
+      "human_response": "Yes, keep this walk"
+    },
+    "art/cartoon/arrival-pilot-v1/production-acceptance.json": {
+      "sha256": "52d71dd6255a544791d2de24c64882716b95cb0e90085f23a798612aef71f4e2",
+      "accepted_at_recording": true,
+      "scope": "New approval covers standing frame018 and the displayed rear-walk arrival on the layered Cartoon island, including the smaller foot ground-contact appearance. The previous27 assets retain their own approvals. Unseen routes, mirrored directions, standalone turns and the SJLEAVES story sequence were not newly reviewed.",
+      "human_response": "nailed it, proceed"
+    },
+    "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json": {
+      "sha256": "ce7f3832982bcfbef13f9ce6dc06c1f60ce774b89aca088247442040fd767a0c",
+      "accepted_at_recording": true,
+      "scope": "The six Calm focus walking sprites as displayed in the layered island scene, with the existing 15 island assets. Approval covers visible appearance and motion, including the reviewed original-leg difference; it is not anatomical parity or approval of unseen states.",
+      "human_response": "looks good"
+    },
+    "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json": {
+      "sha256": "80c385a861a2520e6c672bd4bbae3b08f6159b425bf310c7a9cc44a4eadecfee",
+      "accepted_at_recording": true,
+      "scope": "New approval covers revised front walking frames 028/029 in the displayed standalone motion and native E-to-A route on the Cartoon island. The other twenty-six accepted assets retain their earlier per-asset approval records. The final mirrored HD standing frame 017 remains unchanged; it was observed as the existing arrival context, not approved as new Cartoon artwork.",
+      "human_response": "pass- proceed"
+    }
+  },
+  "historical_acceptance_limit": "These records approve exact earlier uncorrected bytes in their stated scopes. They do not approve revised colors.",
+  "pose_reviews": {
+    "connecting_motion": {
+      "record": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/human-motion-feedback-v1.json",
+        "sha256": "d862ee009fdf6bd34b91155b1eb3d70b6a04941ebfd244c0e4d2531fcd24152c"
+      },
+      "scope": "Poses accepted as shown; color consistency disputed; not complete production acceptance.",
+      "exact_pose_feedback": "while you work on that, the actual poses are accurate and well done."
+    },
+    "static009": {
+      "record": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/human-pose009-v1.json",
+        "sha256": "1d7e33bc99ae9fe1074db01af15bbf3dc3a7e0b4528ac1a32c681c9c40eb7cc1"
+      },
+      "scope": "Static009 pose only."
+    },
+    "face010": {
+      "record": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/human-face010-v1.json",
+        "sha256": "c6ac9ae1c00c057bf85ad5052f950d60d0ee2620f39dbfa3ced16ab0b5cf0d45"
+      },
+      "scope": "Face-v1 gaze only, carried by full-body v5."
+    }
+  },
+  "source_validation_notes": [
+    "All 25 existing Johnny inputs are exact production members.009/010/012 are selected draft members and absent from production.",
+    "Private candidate retains all 2,591 production payloads unchanged and adds only 009/010/012.",
+    "All 28 raw hashes equal ancestor recipe entries. Existing acceptance records bind all 25 production PNG hashes and recipes.",
+    "All 28 decoded RGBA arrays reconstruct exactly with recorded 0.1 scale and original registration.024–027 use historical direct-canvas filtering; others use 64 HD padding and crop.",
+    "An ancestor technical recipe can retain its historical pending-review status; later immutable acceptance records supply approval. Old records are not rewritten.",
+    "No raw source, alpha, registration, recipe, or historical acceptance was altered by this audit.",
+    "Median/mode statistics describe bounded color samples, not semantic masks or palette-quality scores."
+  ],
+  "measurement_method": {
+    "alpha_min": 250,
+    "rgb_expression": "R>=200 and65<G<205 and40<B<155 and R-G>45 and G-B>15",
+    "runtime_min_y": "int(runtime_height * .65)",
+    "raw_min_y": "int((runtime_height * .65 - affine_ty) / affine_scale)",
+    "selection": "Retain y>=min_y; channel-wise median and most frequent exactRGB. Equal-frequency mode ordering follows first-seen image order.",
+    "limit": "Near-opaque lower-leg/foot warm-color proxy, not correction mask. Generated interiors often have alpha254; alpha255 alone biases samples."
+  },
+  "executed_validation": {
+    "status": "PASS",
+    "python": "3.11.15",
+    "pillow": "12.3.0",
+    "numpy": "2.4.6",
+    "input_frames_checked": 28,
+    "raw_recipe_hashes_checked": 28,
+    "exact_rgba_reconstructions": 28,
+    "production_acceptance_rows_checked": 25,
+    "production_payloads_unchanged_in_private_candidate": 2591,
+    "production_writes": 0,
+    "preserved_replay_smoke": {
+      "frame": 29,
+      "exit_code": 0,
+      "stdout": "PASS 1 frozen inputs reproduced pixel-exactly; no files written"
+    },
+    "preserved_replay_regression": {
+      "frames": 28,
+      "exit_code": 0,
+      "stdout": "PASS 28 frozen inputs reproduced pixel-exactly; no files written"
+    },
+    "method": "Independent in-memory replay: RGBa affine BICUBIC at 8x, LANCZOS, RGBA conversion; decoded pixel comparison, not re-encoded PNG-envelope comparison."
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/000.png",
+        "sha256": "9fef4cef56033a7cf35c36d96a839c42e7d7d23832acf0a34ebc6ff52e040e96",
+        "rgba_sha256": "b02687baa7e26ec29da17d2922b8428c43437a4acae0fc6dd0df0337924e391b",
+        "alpha_sha256": "43b4eaf561a88c01b4f31ca41f11fe3751660ae5427a98e59d241e769a7a6537",
+        "canvas": [
+          80,
+          152
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/000-profile-v1.png",
+        "sha256": "ae989a65335c10a24da3176ff6fd568dc4a2cb6fddda185002c60dcdae3d3a12"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/exports/000/runtime-recipe-v1.json",
+        "sha256": "9fd8d2d75c3fb0cbd1ac463acc236a5c7655d2e0f50bbd3bd42a3cc7a4c6b2d0"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/export.py",
+        "sha256": "542c0527ea0f997821b10304fdfa7d85dcfbfe894297d620858e60cd9a80fb43"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/front-arrival-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -5.850000000000001,
+          0,
+          0.1,
+          -1.9500000000000002
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          598.5,
+          22
+        ],
+        "cap_target_hd": [
+          54,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "b02687baa7e26ec29da17d2922b8428c43437a4acae0fc6dd0df0337924e391b",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 46799,
+          "median_rgb": [
+            254,
+            152,
+            100
+          ],
+          "mode_rgb": [
+            254,
+            152,
+            100
+          ],
+          "mode_samples": 3276
+        },
+        "runtime_input": {
+          "samples": 396,
+          "median_rgb": [
+            252,
+            151,
+            99
+          ],
+          "mode_rgb": [
+            253,
+            152,
+            99
+          ],
+          "mode_samples": 9
+        }
+      }
+    },
+    {
+      "frame": 1,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/001.png",
+        "sha256": "aeb1119d7576c6668d27c4caf02a45f7f7b4beced945d5886720f124d49a0759",
+        "rgba_sha256": "290377019b600cd9464f62bf5aa6fdbe28d00da31d4a7cb6186e34c78904ca15",
+        "alpha_sha256": "2f8e68a7473286e15852ba26db80fb8ac16503bed4fed3f47244105b342a5b85",
+        "canvas": [
+          96,
+          144
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/001-profile-v3.png",
+        "sha256": "ae339f62213fa3d8ef2e936cdf88b75eb5658312d86337db0d4a1f0c588dcf7e"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/001-v3/runtime-recipe-v1.json",
+        "sha256": "e8e04ba482d6f4febdfce056791f450cb65d77b43643e807dfa488dc1a097bb2"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+        "sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          1.5,
+          0,
+          0.1,
+          -1.75
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          705,
+          20
+        ],
+        "cap_target_hd": [
+          72,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "290377019b600cd9464f62bf5aa6fdbe28d00da31d4a7cb6186e34c78904ca15",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 82556,
+          "median_rgb": [
+            253,
+            161,
+            104
+          ],
+          "mode_rgb": [
+            254,
+            162,
+            104
+          ],
+          "mode_samples": 5477
+        },
+        "runtime_input": {
+          "samples": 709,
+          "median_rgb": [
+            252,
+            160,
+            103
+          ],
+          "mode_rgb": [
+            252,
+            160,
+            103
+          ],
+          "mode_samples": 29
+        }
+      }
+    },
+    {
+      "frame": 2,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/002.png",
+        "sha256": "125c4f1db0d8a31e169fe7146b3d78d2fccdfc1211676aef6b66be30c9d07d4b",
+        "rgba_sha256": "00a5e296c52e3429caef5c41744cdd819d1e7035dd4fd9e4ce792c9604c4b8bb",
+        "alpha_sha256": "110b48cd212028c5f4ccd234d6871f5a5e37abef11a42560a1836456e3c25233",
+        "canvas": [
+          96,
+          146
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/002-profile-v2.png",
+        "sha256": "ce3f388061ddc14c80561f8300ebc7e8e78a31a3142e87658838dc9e4d0c022b"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/002-v2/runtime-recipe-v1.json",
+        "sha256": "34a4f2408fa3e122504b7cdcd1853e96c90617e2bb5e6610e25b3ce994af286a"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+        "sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          1.9500000000000028,
+          0,
+          0.1,
+          -1.6500000000000001
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          680.5,
+          19
+        ],
+        "cap_target_hd": [
+          70,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "00a5e296c52e3429caef5c41744cdd819d1e7035dd4fd9e4ce792c9604c4b8bb",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 75575,
+          "median_rgb": [
+            254,
+            163,
+            104
+          ],
+          "mode_rgb": [
+            254,
+            163,
+            105
+          ],
+          "mode_samples": 4814
+        },
+        "runtime_input": {
+          "samples": 642,
+          "median_rgb": [
+            252,
+            161,
+            104
+          ],
+          "mode_rgb": [
+            252,
+            161,
+            104
+          ],
+          "mode_samples": 20
+        }
+      }
+    },
+    {
+      "frame": 3,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/003.png",
+        "sha256": "36778a48ed8caaa23a56ac47da8e82fdcd292998e32e79e5cd26b40c6ab462e3",
+        "rgba_sha256": "d8c140c67824c336c574647c922c13cdeb52d6de195f3133c8d7122ef1007d3b",
+        "alpha_sha256": "e87b1f122aefd8c9e11a353b82590324294851ef7956c30f55e6a7b4c97cf98f",
+        "canvas": [
+          80,
+          152
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/003-profile-v2.png",
+        "sha256": "1bb60fad5ec369fd5f5f097d98e3d5b57ee81d6766f2ecdb6b2f75f681719d9e"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/003-v2/runtime-recipe-v1.json",
+        "sha256": "ea60439aa5544e9c8fa9f50b949e3da78251d52c8b72a4ae44f9dd6c9ff53764"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+        "sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -6.100000000000001,
+          0,
+          0.1,
+          -1.6500000000000001
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          601,
+          19
+        ],
+        "cap_target_hd": [
+          54,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "d8c140c67824c336c574647c922c13cdeb52d6de195f3133c8d7122ef1007d3b",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 52862,
+          "median_rgb": [
+            254,
+            160,
+            105
+          ],
+          "mode_rgb": [
+            254,
+            160,
+            105
+          ],
+          "mode_samples": 3861
+        },
+        "runtime_input": {
+          "samples": 440,
+          "median_rgb": [
+            252,
+            159,
+            104
+          ],
+          "mode_rgb": [
+            252,
+            159,
+            105
+          ],
+          "mode_samples": 25
+        }
+      }
+    },
+    {
+      "frame": 4,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/004.png",
+        "sha256": "1081959ce4092c4d05d343037ddd25a835b407b641d1e34d949b02660b4d81cd",
+        "rgba_sha256": "e67cb649e3201e5319ad12718fb9e300d1d04d7939c8c41d4eb76a6e8ff979e8",
+        "alpha_sha256": "129c48d7daf82a95ca49cf0ac3c52facf03ebf83cde8e66ad6a0032582dafc79",
+        "canvas": [
+          80,
+          148
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/004-profile-v3.png",
+        "sha256": "8377ee4c72ec574f9f6c45d3bc4c43d659c3ec85b255a053273caefd0db7726d"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/004-v3/runtime-recipe-v1.json",
+        "sha256": "01d7b1f9f4cd1a480dbc8c0ceae7966cfbc0d9df30d9fc0531839c709cd53d76"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+        "sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -2.6000000000000085,
+          0,
+          0.1,
+          -1.35
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          686,
+          16
+        ],
+        "cap_target_hd": [
+          66,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "e67cb649e3201e5319ad12718fb9e300d1d04d7939c8c41d4eb76a6e8ff979e8",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 83106,
+          "median_rgb": [
+            254,
+            165,
+            106
+          ],
+          "mode_rgb": [
+            254,
+            165,
+            106
+          ],
+          "mode_samples": 5727
+        },
+        "runtime_input": {
+          "samples": 721,
+          "median_rgb": [
+            252,
+            164,
+            106
+          ],
+          "mode_rgb": [
+            252,
+            164,
+            107
+          ],
+          "mode_samples": 34
+        }
+      }
+    },
+    {
+      "frame": 5,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/005.png",
+        "sha256": "e3b5c4f94f9715a35b5242e8bce9af6372191141f2f17ad2cb79b272778b6dc2",
+        "rgba_sha256": "61ca35a27a7227af7a25ec4cad008337ebf6924f95ee52cd1f31731ff13bf865",
+        "alpha_sha256": "a3242391e82b7d88ba799b76843ecb3a22eeddf6bd6d938f7f240c3ac668998f",
+        "canvas": [
+          96,
+          144
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/005-profile-v4.png",
+        "sha256": "fc5ad3226f664990ae4ed1326eb017b297cb81e85c45da9f9ca63929f6872982"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/005-v4/runtime-recipe-v1.json",
+        "sha256": "5a1fe71686c792614670514859a697d5efa04b82faca7ab5b45d48b875bf02c1"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+        "sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          3.700000000000003,
+          0,
+          0.1,
+          -1.4500000000000002
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          703,
+          17
+        ],
+        "cap_target_hd": [
+          74,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "61ca35a27a7227af7a25ec4cad008337ebf6924f95ee52cd1f31731ff13bf865",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 87541,
+          "median_rgb": [
+            254,
+            165,
+            109
+          ],
+          "mode_rgb": [
+            254,
+            166,
+            110
+          ],
+          "mode_samples": 5299
+        },
+        "runtime_input": {
+          "samples": 772,
+          "median_rgb": [
+            252,
+            164,
+            109
+          ],
+          "mode_rgb": [
+            252,
+            164,
+            109
+          ],
+          "mode_samples": 46
+        }
+      }
+    },
+    {
+      "frame": 6,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/006.png",
+        "sha256": "47bd9a71c29ccd7e4f6cfeb5620c96b5952ee2cd13ad4681b996af1346d413b5",
+        "rgba_sha256": "c3e354ec0197fd62be448475250145467a4e2714d6ca8ff4dd52b896323703ea",
+        "alpha_sha256": "81983616f41402d734c07d85aa9b32ed638d8aaa48ed642115747399e8dd511b",
+        "canvas": [
+          96,
+          148
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/006-profile-v1.png",
+        "sha256": "90627d13750610cd7433e698a0cd186692fd23d7ded762ec73ae9dde36acd067"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/006-v1/runtime-recipe-v1.json",
+        "sha256": "624208160b743428930ecf547ad3e362e5051d80f17a95a67029b83d5437d157"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+        "sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          1.2999999999999972,
+          0,
+          0.1,
+          -1.4500000000000002
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          687,
+          17
+        ],
+        "cap_target_hd": [
+          70,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "c3e354ec0197fd62be448475250145467a4e2714d6ca8ff4dd52b896323703ea",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 81196,
+          "median_rgb": [
+            254,
+            164,
+            105
+          ],
+          "mode_rgb": [
+            254,
+            164,
+            105
+          ],
+          "mode_samples": 5645
+        },
+        "runtime_input": {
+          "samples": 688,
+          "median_rgb": [
+            252,
+            162,
+            104
+          ],
+          "mode_rgb": [
+            252,
+            163,
+            105
+          ],
+          "mode_samples": 19
+        }
+      }
+    },
+    {
+      "frame": 7,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/007.png",
+        "sha256": "2a1bbaaf5e192429ebdd0bb256fbd5ed4e826f6f2254f3de317471c6e224d8e9",
+        "rgba_sha256": "4a3a524237d77100d8e40d8052b75ab4ffb8ba2576228db8badb5b5f24776819",
+        "alpha_sha256": "0303e40a2c20bb9fb0637329c110a8ffe2be932096be5b6f892bd543d44ffa06",
+        "canvas": [
+          64,
+          150
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/007-profile-v1.png",
+        "sha256": "5df49fcd711c6a88400cba7e0fd475ed3549e19ac2fda9989a8361c99f9e675c"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/007-v1/runtime-recipe-v1.json",
+        "sha256": "2b3d5e1be5954e2ca108b4a2b5fbea6036f8dd4cd961f7c1c215551196e8a3b0"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+        "sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -14.850000000000001,
+          0,
+          0.1,
+          -1.4500000000000002
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          628.5,
+          17
+        ],
+        "cap_target_hd": [
+          48,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "4a3a524237d77100d8e40d8052b75ab4ffb8ba2576228db8badb5b5f24776819",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 56118,
+          "median_rgb": [
+            254,
+            165,
+            108
+          ],
+          "mode_rgb": [
+            254,
+            165,
+            108
+          ],
+          "mode_samples": 3548
+        },
+        "runtime_input": {
+          "samples": 461,
+          "median_rgb": [
+            252,
+            164,
+            107
+          ],
+          "mode_rgb": [
+            252,
+            164,
+            108
+          ],
+          "mode_samples": 15
+        }
+      }
+    },
+    {
+      "frame": 8,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/008.png",
+        "sha256": "eee73c081b9947a357e813f1503a64638f5a2ca3e0a706c70571847d13222a0a",
+        "rgba_sha256": "735600667552d3beb185b351f8dae095476773950e0f90d401d43a510b50c511",
+        "alpha_sha256": "361101a42fdede02e36fb64a53a6248e8a70674acc2d241e182f15b3e5ac762c",
+        "canvas": [
+          80,
+          150
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/008-profile-v4.png",
+        "sha256": "8d74970387db6850aa7bb644b46d2d7f68a0ae2360c0e1ddbd8f7fa9df400744"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/008-v4/runtime-recipe-v1.json",
+        "sha256": "a47b2ee8c7fc7f530c81886697ce3bb131f5909cbe8bd2a47b3a4de939e837f0"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+        "sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -6.150000000000006,
+          0,
+          0.1,
+          -1.4500000000000002
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          681.5,
+          17
+        ],
+        "cap_target_hd": [
+          62,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "735600667552d3beb185b351f8dae095476773950e0f90d401d43a510b50c511",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 78174,
+          "median_rgb": [
+            253,
+            165,
+            101
+          ],
+          "mode_rgb": [
+            254,
+            166,
+            102
+          ],
+          "mode_samples": 4888
+        },
+        "runtime_input": {
+          "samples": 673,
+          "median_rgb": [
+            252,
+            164,
+            100
+          ],
+          "mode_rgb": [
+            252,
+            164,
+            101
+          ],
+          "mode_samples": 22
+        }
+      }
+    },
+    {
+      "frame": 9,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/009.png",
+        "sha256": "4d9584133241db74595d657a68482e73c91a486a605247ce04aa7b0cd35e7311",
+        "rgba_sha256": "683505d115a8c332c6e7b2dfa6426f2dd50163364701926ab4eed40da63b16d6",
+        "alpha_sha256": "d81bf0c1a3a8b5ae7dd77b80c3d863ceb16855a7dc715719d9633cf67dfe22c7",
+        "canvas": [
+          80,
+          148
+        ]
+      },
+      "on_main_before_correction": false,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/009-connecting-v1.png",
+        "sha256": "2ce5bb02e2f965e620a2832545dd8b49dbd2e52301830c18baca645edb48c2a6"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/009-v1/recipe.json",
+        "sha256": "a3e4e9bd8c2bec2bcd581fcbc0fe77945c67b4fb3a3bd261f6af7c6b3bf9bc56"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/export.py",
+        "sha256": "bbbd0778ba2a92f161790937406fdc35a21f73e03599ac3f8575ddb11b5935d5"
+      },
+      "prior_production_acceptance": null,
+      "pose_review_ids": [
+        "connecting_motion",
+        "static009"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -11,
+          0,
+          0.1,
+          -2.5500000000000003
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          650,
+          28
+        ],
+        "cap_target_hd": [
+          54,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "683505d115a8c332c6e7b2dfa6426f2dd50163364701926ab4eed40da63b16d6",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 81786,
+          "median_rgb": [
+            254,
+            155,
+            105
+          ],
+          "mode_rgb": [
+            254,
+            155,
+            105
+          ],
+          "mode_samples": 7210
+        },
+        "runtime_input": {
+          "samples": 687,
+          "median_rgb": [
+            252,
+            154,
+            104
+          ],
+          "mode_rgb": [
+            252,
+            154,
+            105
+          ],
+          "mode_samples": 39
+        }
+      }
+    },
+    {
+      "frame": 10,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/010.png",
+        "sha256": "fded838277a290a3509868fe19443bd90e2b4277d2e8668ebad7683802be60d4",
+        "rgba_sha256": "e05d2989a8006568172dddb949a7de866397d7309cf60fabcd0f42a95be9848c",
+        "alpha_sha256": "a9d691840081f6a579e4fda87f3b78326d6a3c6c849470a33e9d00a71d70c27a",
+        "canvas": [
+          80,
+          148
+        ]
+      },
+      "on_main_before_correction": false,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/010-connecting-v5.png",
+        "sha256": "cceef504e777f1fe9f794c35832c7c6e4273526fabc49b27a7d2032ae4056729"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/010-v5/recipe.json",
+        "sha256": "f3a48ffc9b7316d0402d928544e156a4c3604b59088360392e1e3e17d713e500"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/export_v2.py",
+        "sha256": "ced3c0303d5ac39ea43e7f875c49d2d6907a312d88a6d0a1bd1bfb863ed9043f"
+      },
+      "prior_production_acceptance": null,
+      "pose_review_ids": [
+        "connecting_motion",
+        "face010"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -16,
+          0,
+          0.1,
+          -2.2
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          510,
+          23
+        ],
+        "cap_target_hd": [
+          35,
+          0.1
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "e05d2989a8006568172dddb949a7de866397d7309cf60fabcd0f42a95be9848c",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 67514,
+          "median_rgb": [
+            254,
+            157,
+            105
+          ],
+          "mode_rgb": [
+            254,
+            157,
+            105
+          ],
+          "mode_samples": 4974
+        },
+        "runtime_input": {
+          "samples": 583,
+          "median_rgb": [
+            252,
+            156,
+            104
+          ],
+          "mode_rgb": [
+            252,
+            156,
+            105
+          ],
+          "mode_samples": 22
+        }
+      }
+    },
+    {
+      "frame": 11,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/011.png",
+        "sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+        "rgba_sha256": "f0afe4284402371da2e9b78c12dcccc186f27bdfd3950a32319b0bf365c98f91",
+        "alpha_sha256": "1012705fcaabb2082a54e8627fd9db839aaa950746698094bdfd7aa8b7407818",
+        "canvas": [
+          64,
+          156
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-expansion-v1/011-pose-v2.png",
+        "sha256": "0f70a034f6047589732327c017eb6d2fc94b5fe22fedb7608ef898fd1a97a9fb"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+        "sha256": "4740d0c115caa56f0dcc79032e92aac84fdb4356fd661a27b9f862ffe9213795"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-expansion-v1/export.py",
+        "sha256": "d467dc20eaf640c83dcd60568135e44234bbf27875448f8f801e126d01c9f09e"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-expansion-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -23.75,
+          0,
+          0.1,
+          -3.35
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          407.5,
+          36
+        ],
+        "cap_target_hd": [
+          17,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "f0afe4284402371da2e9b78c12dcccc186f27bdfd3950a32319b0bf365c98f91",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 48708,
+          "median_rgb": [
+            253,
+            142,
+            91
+          ],
+          "mode_rgb": [
+            254,
+            143,
+            92
+          ],
+          "mode_samples": 3113
+        },
+        "runtime_input": {
+          "samples": 394,
+          "median_rgb": [
+            252,
+            140,
+            90
+          ],
+          "mode_rgb": [
+            252,
+            142,
+            90
+          ],
+          "mode_samples": 13
+        }
+      }
+    },
+    {
+      "frame": 12,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/012.png",
+        "sha256": "2c07b88265d354106debba83507ba676fd2b82ac64ede4f5634c10f187ed3624",
+        "rgba_sha256": "5cb9961c0c16be818f5a8bdfeafb57c38b47366edc949456a2685498b3dcf581",
+        "alpha_sha256": "ba7484019a9e44989ea0f1a1e718dc83b9239b55ce5439d37530df53b931886c",
+        "canvas": [
+          80,
+          146
+        ]
+      },
+      "on_main_before_correction": false,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/012-connecting-v1.png",
+        "sha256": "c47764297c26c3fdd701d5dea7ca72ba332e48308e26de6a85a8a9f8a03aeb57"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/exports/012-v1/recipe.json",
+        "sha256": "609bbb81fe454a40d0aed18c3506c62a8d76f0b76b5cee663765b03275f90290"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/export.py",
+        "sha256": "bbbd0778ba2a92f161790937406fdc35a21f73e03599ac3f8575ddb11b5935d5"
+      },
+      "prior_production_acceptance": null,
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -12.950000000000003,
+          0,
+          0.1,
+          -2.0500000000000003
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          519.5,
+          23
+        ],
+        "cap_target_hd": [
+          39,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "5cb9961c0c16be818f5a8bdfeafb57c38b47366edc949456a2685498b3dcf581",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 77165,
+          "median_rgb": [
+            253,
+            157,
+            102
+          ],
+          "mode_rgb": [
+            254,
+            158,
+            103
+          ],
+          "mode_samples": 5542
+        },
+        "runtime_input": {
+          "samples": 689,
+          "median_rgb": [
+            252,
+            156,
+            101
+          ],
+          "mode_rgb": [
+            252,
+            156,
+            102
+          ],
+          "mode_samples": 35
+        }
+      }
+    },
+    {
+      "frame": 15,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/015.png",
+        "sha256": "c74f85cdd79ed13f180f3cb3c8c5962ba0453d587a2c8da15c844a2c046eb5d8",
+        "rgba_sha256": "4ef537ddfe57c6e5b147a3e889a562acd0b069c947748a6c6748024de552cece",
+        "alpha_sha256": "6e62052e5e6bf3657edf7401b8fb37714e278300f7d4855b2b83ae6049d8db52",
+        "canvas": [
+          80,
+          146
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/015-rear-v1.png",
+        "sha256": "dbd88e081fafbe906f9a9482128bb54fad1b142d1dc18f240e099bfe7e227578"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/exports/015/runtime-recipe-v1.json",
+        "sha256": "c1390aec9d4bb1f36fd8304dd23af1b82934143fd8770a00f3a222f1fc662d2e"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/export.py",
+        "sha256": "542c0527ea0f997821b10304fdfa7d85dcfbfe894297d620858e60cd9a80fb43"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/front-arrival-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -15.850000000000001,
+          0,
+          0.1,
+          -1.35
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          508.5,
+          16
+        ],
+        "cap_target_hd": [
+          35,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "4ef537ddfe57c6e5b147a3e889a562acd0b069c947748a6c6748024de552cece",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 79915,
+          "median_rgb": [
+            254,
+            148,
+            92
+          ],
+          "mode_rgb": [
+            254,
+            149,
+            93
+          ],
+          "mode_samples": 5297
+        },
+        "runtime_input": {
+          "samples": 691,
+          "median_rgb": [
+            252,
+            147,
+            90
+          ],
+          "mode_rgb": [
+            252,
+            148,
+            91
+          ],
+          "mode_samples": 35
+        }
+      }
+    },
+    {
+      "frame": 16,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/016.png",
+        "sha256": "1cb3d6249486eeecec29ff2040c452c28d14ff8a6f2d79d265e0f17ef2e38d92",
+        "rgba_sha256": "b1e9b950734be6f75d4b17cacdbc44e44a97bf17a35e27ef2370e37b2324eb4e",
+        "alpha_sha256": "6d5c1d23089d7097c5e2d23be977889b2625202f2dd6216aa5b2f8486391b4ae",
+        "canvas": [
+          64,
+          148
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/016-toe-fit-v2.png",
+        "sha256": "d89066217905e3e1a2fa509f1f9d6cfecbb084cb7fba50844a32a9d8c181c052"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/runtime-recipe-v1.json",
+        "sha256": "39767c855e40425e4faacbe7404348c1b0c766de5c9b7d66097c8b187996a8dd"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/export.py",
+        "sha256": "3946f7b9a93351652c6d69c73635fb3c3df2dcbf0675f9c816be6bb1ad9845f0"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/front-arrival-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -16.200000000000003,
+          0,
+          0.1,
+          -2.35
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          512,
+          26
+        ],
+        "cap_target_hd": [
+          35,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "b1e9b950734be6f75d4b17cacdbc44e44a97bf17a35e27ef2370e37b2324eb4e",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 74565,
+          "median_rgb": [
+            254,
+            148,
+            94
+          ],
+          "mode_rgb": [
+            254,
+            148,
+            94
+          ],
+          "mode_samples": 6234
+        },
+        "runtime_input": {
+          "samples": 628,
+          "median_rgb": [
+            252,
+            146,
+            93
+          ],
+          "mode_rgb": [
+            252,
+            146,
+            93
+          ],
+          "mode_samples": 32
+        }
+      }
+    },
+    {
+      "frame": 17,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/017.png",
+        "sha256": "60e3a77a64620502d2b5198911a7805e19aaedf07801c7a00a92c030b4924de1",
+        "rgba_sha256": "6b7675328a0d6521875217f62b18d9d5de948b9bfe82f922afc8eb61d6608647",
+        "alpha_sha256": "57cf5e4970879efc8774bfc42bae89d52ab37ae5191022c364161ae6a92a167f",
+        "canvas": [
+          80,
+          150
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/017-foot-depth-v3.png",
+        "sha256": "d1fab951de823fc5612860a5fac48bd586a533177a3e5e26d2605f41d4272c1d"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/runtime017-recipe-v1.json",
+        "sha256": "97fb4e81ac60226c8246f3062b6e08a47112c0857b8b6828211c6d34e805f8d1"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/front-arrival-v1/export.py",
+        "sha256": "56fc9e13ce266203d69c13e48d1187b60228681d2c46f4ddba8b3b9734f942d2"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/front-arrival-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -5.100000000000001,
+          0,
+          0.1,
+          -3.75
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          631,
+          40
+        ],
+        "cap_target_hd": [
+          58,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "6b7675328a0d6521875217f62b18d9d5de948b9bfe82f922afc8eb61d6608647",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 70445,
+          "median_rgb": [
+            253,
+            144,
+            94
+          ],
+          "mode_rgb": [
+            254,
+            144,
+            95
+          ],
+          "mode_samples": 5536
+        },
+        "runtime_input": {
+          "samples": 589,
+          "median_rgb": [
+            252,
+            142,
+            93
+          ],
+          "mode_rgb": [
+            252,
+            142,
+            94
+          ],
+          "mode_samples": 33
+        }
+      }
+    },
+    {
+      "frame": 18,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/018.png",
+        "sha256": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190",
+        "rgba_sha256": "055b60d512913804bcbddb65c79acf6db03e9641d67c4ec8e9b52c2ec43d3132",
+        "alpha_sha256": "4f27f4e4a108d1ba39e3226b6935f290943b54dc903df6afcb4b622f0b54e6bd",
+        "canvas": [
+          64,
+          154
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/arrival-pilot-v1/018-pose-v1.png",
+        "sha256": "4ed63ba9245dd30ac414caadba1a13febac240ffcbfa767c4f939a4bd83ddab2"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/arrival-pilot-v1/runtime-recipe-v1.json",
+        "sha256": "c2690a73c9f1fb5101acb6765eda868fd4839b7754d5889b9961b572fa11d0af"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/arrival-pilot-v1/export.py",
+        "sha256": "c382582ad113c917ee8b5f8e0ebda392ceb5f746bdb4be9982b7a51f04418c63"
+      },
+      "prior_production_acceptance": "art/cartoon/arrival-pilot-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -23.75,
+          0,
+          0.1,
+          -3.25
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          407.5,
+          35
+        ],
+        "cap_target_hd": [
+          17,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "055b60d512913804bcbddb65c79acf6db03e9641d67c4ec8e9b52c2ec43d3132",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 60167,
+          "median_rgb": [
+            254,
+            143,
+            88
+          ],
+          "mode_rgb": [
+            254,
+            144,
+            88
+          ],
+          "mode_samples": 5196
+        },
+        "runtime_input": {
+          "samples": 487,
+          "median_rgb": [
+            252,
+            143,
+            87
+          ],
+          "mode_rgb": [
+            252,
+            143,
+            88
+          ],
+          "mode_samples": 20
+        }
+      }
+    },
+    {
+      "frame": 19,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/019.png",
+        "sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+        "rgba_sha256": "41643660cdb3ffea6b3582322d4fa3a3e00527860001abdc0ab785ca0a786deb",
+        "alpha_sha256": "abe03f13dde3fe20ec63cea484bd0736f0a2dd55c1660f49785fc564db5aa974",
+        "canvas": [
+          64,
+          152
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-expansion-v1/019-pose-v1.png",
+        "sha256": "1f4c7f4354ed8a5d589503f41188ce20091607432c3dfd24a6aa03b138ed9ea4"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+        "sha256": "4740d0c115caa56f0dcc79032e92aac84fdb4356fd661a27b9f862ffe9213795"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-expansion-v1/export.py",
+        "sha256": "d467dc20eaf640c83dcd60568135e44234bbf27875448f8f801e126d01c9f09e"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-expansion-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -24.1,
+          0,
+          0.1,
+          -4.25
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          411,
+          45
+        ],
+        "cap_target_hd": [
+          17,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "41643660cdb3ffea6b3582322d4fa3a3e00527860001abdc0ab785ca0a786deb",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 57865,
+          "median_rgb": [
+            253,
+            135,
+            89
+          ],
+          "mode_rgb": [
+            254,
+            136,
+            89
+          ],
+          "mode_samples": 6235
+        },
+        "runtime_input": {
+          "samples": 490,
+          "median_rgb": [
+            252,
+            134,
+            88
+          ],
+          "mode_rgb": [
+            252,
+            135,
+            89
+          ],
+          "mode_samples": 26
+        }
+      }
+    },
+    {
+      "frame": 20,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/020.png",
+        "sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+        "rgba_sha256": "49e7e8907a93e28fb26a2ef988794f4e28ec4d03b2b85ea1aeb4439f4d550f37",
+        "alpha_sha256": "6d41d4141667c3bcdc3e917b21a03020e6adf91d22d9dee0fcb08a877a2a2888",
+        "canvas": [
+          48,
+          150
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-expansion-v1/020-heel-fit-v5.png",
+        "sha256": "fbbc47b7e5449d4eb85264d5be8faf3ae0f5971768a76762db6a2fac6e89f681"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+        "sha256": "4740d0c115caa56f0dcc79032e92aac84fdb4356fd661a27b9f862ffe9213795"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-expansion-v1/export.py",
+        "sha256": "d467dc20eaf640c83dcd60568135e44234bbf27875448f8f801e126d01c9f09e"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-expansion-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -24.050000000000004,
+          0,
+          0.1,
+          -2.95
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          410.5,
+          32
+        ],
+        "cap_target_hd": [
+          17,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "49e7e8907a93e28fb26a2ef988794f4e28ec4d03b2b85ea1aeb4439f4d550f37",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 59793,
+          "median_rgb": [
+            254,
+            160,
+            104
+          ],
+          "mode_rgb": [
+            254,
+            160,
+            104
+          ],
+          "mode_samples": 5292
+        },
+        "runtime_input": {
+          "samples": 521,
+          "median_rgb": [
+            252,
+            158,
+            103
+          ],
+          "mode_rgb": [
+            252,
+            158,
+            103
+          ],
+          "mode_samples": 25
+        }
+      }
+    },
+    {
+      "frame": 21,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/021.png",
+        "sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+        "rgba_sha256": "9ef710a46fb372c3d2a010580665fbde45d7b5a60d998680f8d669310d92b5de",
+        "alpha_sha256": "b592b0eb98b86bc56ceaf08d445330cbed2e3ddb608a9bc15f5b26b472df3bb5",
+        "canvas": [
+          64,
+          150
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-expansion-v1/021-left-knee-v2.png",
+        "sha256": "15ad79825ee819f6a28cf140912a9affd9f24c11392c0c85b5a223d03e0c1964"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+        "sha256": "4740d0c115caa56f0dcc79032e92aac84fdb4356fd661a27b9f862ffe9213795"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-expansion-v1/export.py",
+        "sha256": "d467dc20eaf640c83dcd60568135e44234bbf27875448f8f801e126d01c9f09e"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-expansion-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -24.050000000000004,
+          0,
+          0.1,
+          -2.45
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          410.5,
+          27
+        ],
+        "cap_target_hd": [
+          17,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "9ef710a46fb372c3d2a010580665fbde45d7b5a60d998680f8d669310d92b5de",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 63242,
+          "median_rgb": [
+            254,
+            144,
+            91
+          ],
+          "mode_rgb": [
+            254,
+            145,
+            92
+          ],
+          "mode_samples": 5709
+        },
+        "runtime_input": {
+          "samples": 549,
+          "median_rgb": [
+            252,
+            143,
+            90
+          ],
+          "mode_rgb": [
+            252,
+            143,
+            91
+          ],
+          "mode_samples": 31
+        }
+      }
+    },
+    {
+      "frame": 22,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/022.png",
+        "sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+        "rgba_sha256": "04b4068c5a33c02c8fa81ff6a403c19d96553a449031c28dba335aec70d09a6b",
+        "alpha_sha256": "e5ed30d7acc11e789b6b2108a2977ceffe47924e83462a8d93c5e87d4d5dffb7",
+        "canvas": [
+          64,
+          148
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-expansion-v1/022-foot-fit-v4.png",
+        "sha256": "bf5ab145730b9d022a196ced1f487f02811150e393f65f89245a99579c81f670"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+        "sha256": "4740d0c115caa56f0dcc79032e92aac84fdb4356fd661a27b9f862ffe9213795"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-expansion-v1/export.py",
+        "sha256": "d467dc20eaf640c83dcd60568135e44234bbf27875448f8f801e126d01c9f09e"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-expansion-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -24.25,
+          0,
+          0.1,
+          -3.25
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          412.5,
+          35
+        ],
+        "cap_target_hd": [
+          17,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "04b4068c5a33c02c8fa81ff6a403c19d96553a449031c28dba335aec70d09a6b",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 67546,
+          "median_rgb": [
+            254,
+            152,
+            99
+          ],
+          "mode_rgb": [
+            254,
+            153,
+            99
+          ],
+          "mode_samples": 4493
+        },
+        "runtime_input": {
+          "samples": 563,
+          "median_rgb": [
+            252,
+            151,
+            97
+          ],
+          "mode_rgb": [
+            252,
+            152,
+            97
+          ],
+          "mode_samples": 19
+        }
+      }
+    },
+    {
+      "frame": 23,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/023.png",
+        "sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+        "rgba_sha256": "e9a89269df84b700f552ef1eb4ba72b7c37b100a9abc336c0f4ae9adca15e6c9",
+        "alpha_sha256": "5c1ee3bf7fb5e8a57ad4e05ecdb0542f14bed9a85a2e475d78b042f50f3c4cfc",
+        "canvas": [
+          64,
+          156
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-expansion-v1/023-pose-v1.png",
+        "sha256": "1b33f52d9df250d069f7f0e7bb6924ab34c65a432c9df2211ac0bff2785c13a7"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json",
+        "sha256": "4740d0c115caa56f0dcc79032e92aac84fdb4356fd661a27b9f862ffe9213795"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-expansion-v1/export.py",
+        "sha256": "d467dc20eaf640c83dcd60568135e44234bbf27875448f8f801e126d01c9f09e"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-expansion-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -23.700000000000003,
+          0,
+          0.1,
+          -3.25
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          407,
+          35
+        ],
+        "cap_target_hd": [
+          17,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "e9a89269df84b700f552ef1eb4ba72b7c37b100a9abc336c0f4ae9adca15e6c9",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 56086,
+          "median_rgb": [
+            253,
+            138,
+            87
+          ],
+          "mode_rgb": [
+            254,
+            139,
+            88
+          ],
+          "mode_samples": 4058
+        },
+        "runtime_input": {
+          "samples": 465,
+          "median_rgb": [
+            252,
+            137,
+            86
+          ],
+          "mode_rgb": [
+            252,
+            137,
+            87
+          ],
+          "mode_samples": 14
+        }
+      }
+    },
+    {
+      "frame": 24,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/024.png",
+        "sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+        "rgba_sha256": "efe5d336bc4b006cf93029bf804777c15b2680221703f4e05209b3c127affc29",
+        "alpha_sha256": "6bf0c790058fadd9205fd28b591af4ae6010816de6614d73b75af98225146262",
+        "canvas": [
+          64,
+          150
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "zip_member",
+        "archive": {
+          "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/source-images.zip",
+          "sha256": "b6bf6893cf4ac5942a9e3cd58ab4de9d0ecee57d82248d5ceb27eee5b94a1ae3"
+        },
+        "member": "024-calm-pose-v2.png",
+        "sha256": "13196b9ffc12fcf55dc2ee6e72649e58372eaeacc76d5c61da5a2f12763a4adb"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "sha256": "77ffb83239754f6765800973ed323f185e5665e546855f4b7eb05d6715d18ee3"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/export.py",
+        "sha256": "da53bfeceb70feb42b93114d59149d7fcc97b59b12e8433e4ba3532d61d18b36"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -21,
+          0,
+          0.1,
+          -3.95
+        ],
+        "padding_hd": 0,
+        "cap_raw": [
+          385,
+          42
+        ],
+        "cap_target_hd": [
+          17.5,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "efe5d336bc4b006cf93029bf804777c15b2680221703f4e05209b3c127affc29",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 53294,
+          "median_rgb": [
+            254,
+            134,
+            85
+          ],
+          "mode_rgb": [
+            254,
+            134,
+            86
+          ],
+          "mode_samples": 3183
+        },
+        "runtime_input": {
+          "samples": 443,
+          "median_rgb": [
+            252,
+            132,
+            84
+          ],
+          "mode_rgb": [
+            252,
+            133,
+            86
+          ],
+          "mode_samples": 12
+        }
+      }
+    },
+    {
+      "frame": 25,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/025.png",
+        "sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+        "rgba_sha256": "8ccb884f2ab06de75bfed089e2ef180bc830ba45d21bce93ad098d89f4726fff",
+        "alpha_sha256": "5cc7e8d15b5002cad73fc07dc5b6526704afc29f28f68b4ef12d7fead6fa8e78",
+        "canvas": [
+          80,
+          148
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "zip_member",
+        "archive": {
+          "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/source-images.zip",
+          "sha256": "b6bf6893cf4ac5942a9e3cd58ab4de9d0ecee57d82248d5ceb27eee5b94a1ae3"
+        },
+        "member": "025-calm-eyes-v1.png",
+        "sha256": "656061532b3833c092dd76d57d0cdd2e9e21a1b59f8cf0f360c5c0250494b20c"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "sha256": "77ffb83239754f6765800973ed323f185e5665e546855f4b7eb05d6715d18ee3"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/export.py",
+        "sha256": "da53bfeceb70feb42b93114d59149d7fcc97b59b12e8433e4ba3532d61d18b36"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -15,
+          0,
+          0.1,
+          -3.95
+        ],
+        "padding_hd": 0,
+        "cap_raw": [
+          385,
+          42
+        ],
+        "cap_target_hd": [
+          23.5,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "8ccb884f2ab06de75bfed089e2ef180bc830ba45d21bce93ad098d89f4726fff",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 64421,
+          "median_rgb": [
+            253,
+            132,
+            84
+          ],
+          "mode_rgb": [
+            254,
+            132,
+            84
+          ],
+          "mode_samples": 5280
+        },
+        "runtime_input": {
+          "samples": 543,
+          "median_rgb": [
+            252,
+            130,
+            83
+          ],
+          "mode_rgb": [
+            252,
+            130,
+            84
+          ],
+          "mode_samples": 23
+        }
+      }
+    },
+    {
+      "frame": 26,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/026.png",
+        "sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+        "rgba_sha256": "196bf4f9089b59183ef3690de6e84902dc2870f9b952ac08a5b88c6814ae9351",
+        "alpha_sha256": "92858ed080a9582e23138606487c497710836a8ff8aa41d4b46d78c20b9a6c75",
+        "canvas": [
+          80,
+          146
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "zip_member",
+        "archive": {
+          "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/source-images.zip",
+          "sha256": "b6bf6893cf4ac5942a9e3cd58ab4de9d0ecee57d82248d5ceb27eee5b94a1ae3"
+        },
+        "member": "026-calm-eyes-v1.png",
+        "sha256": "20336e0fa8ab6ec930a78307e32719fd6a7d6a871e22803dd8b197724f34e110"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "sha256": "77ffb83239754f6765800973ed323f185e5665e546855f4b7eb05d6715d18ee3"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/export.py",
+        "sha256": "da53bfeceb70feb42b93114d59149d7fcc97b59b12e8433e4ba3532d61d18b36"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -13,
+          0,
+          0.1,
+          -3.95
+        ],
+        "padding_hd": 0,
+        "cap_raw": [
+          385,
+          42
+        ],
+        "cap_target_hd": [
+          25.5,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "196bf4f9089b59183ef3690de6e84902dc2870f9b952ac08a5b88c6814ae9351",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 63102,
+          "median_rgb": [
+            253,
+            131,
+            87
+          ],
+          "mode_rgb": [
+            254,
+            131,
+            87
+          ],
+          "mode_samples": 3281
+        },
+        "runtime_input": {
+          "samples": 530,
+          "median_rgb": [
+            251,
+            130,
+            86
+          ],
+          "mode_rgb": [
+            252,
+            130,
+            87
+          ],
+          "mode_samples": 24
+        }
+      }
+    },
+    {
+      "frame": 27,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/027.png",
+        "sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+        "rgba_sha256": "faa5ccb4e95559ded0c0f60dd7b12c1bb3235e2819b073189126bee91a6a9fb6",
+        "alpha_sha256": "882e7b3ab1b9d794aae396061b12089aa788f62177d4aeff64436f7ca7be1a67",
+        "canvas": [
+          64,
+          144
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "zip_member",
+        "archive": {
+          "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/source-images.zip",
+          "sha256": "b6bf6893cf4ac5942a9e3cd58ab4de9d0ecee57d82248d5ceb27eee5b94a1ae3"
+        },
+        "member": "027-calm-eyes-v1.png",
+        "sha256": "02adcafbd8548901b29eeb5a5f61a6f1fbe3c72b854410cd403139420ba241d6"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json",
+        "sha256": "77ffb83239754f6765800973ed323f185e5665e546855f4b7eb05d6715d18ee3"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/export.py",
+        "sha256": "da53bfeceb70feb42b93114d59149d7fcc97b59b12e8433e4ba3532d61d18b36"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -21,
+          0,
+          0.1,
+          -3.95
+        ],
+        "padding_hd": 0,
+        "cap_raw": [
+          385,
+          42
+        ],
+        "cap_target_hd": [
+          17.5,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "faa5ccb4e95559ded0c0f60dd7b12c1bb3235e2819b073189126bee91a6a9fb6",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 61895,
+          "median_rgb": [
+            253,
+            134,
+            88
+          ],
+          "mode_rgb": [
+            254,
+            135,
+            89
+          ],
+          "mode_samples": 3851
+        },
+        "runtime_input": {
+          "samples": 518,
+          "median_rgb": [
+            252,
+            133,
+            87
+          ],
+          "mode_rgb": [
+            252,
+            133,
+            88
+          ],
+          "mode_samples": 15
+        }
+      }
+    },
+    {
+      "frame": 28,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/028.png",
+        "sha256": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4",
+        "rgba_sha256": "062e2f76c8b47e13dc0ea4d778f119aa43ba52ebf9ba2020a72cde890544cbaa",
+        "alpha_sha256": "c62012a7be1816d920d2cd3a451d442dacab081e7ca37a0f6cc71dbb4b55d590",
+        "canvas": [
+          64,
+          144
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/front-refresh-v1/028-occluded-arm-v4.png",
+        "sha256": "f5c0a043e869a7c219d6127981f90e4bbb5b6b4b4a9922ac3b43d4c06f60042c"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+        "sha256": "8b72e60b5598e29909f5897a47e4304a54f9e5b96564624811e0f57e56218725"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/helpers/export.py",
+        "sha256": "93b545b37033f572adaaa511271de177cfcf98971f54e32f534d1159b8ff7186"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -21.35,
+          0,
+          0.1,
+          -3.75
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          388.5,
+          40
+        ],
+        "cap_target_hd": [
+          17.5,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "062e2f76c8b47e13dc0ea4d778f119aa43ba52ebf9ba2020a72cde890544cbaa",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 64560,
+          "median_rgb": [
+            254,
+            146,
+            90
+          ],
+          "mode_rgb": [
+            254,
+            146,
+            90
+          ],
+          "mode_samples": 5252
+        },
+        "runtime_input": {
+          "samples": 560,
+          "median_rgb": [
+            252,
+            144.5,
+            89
+          ],
+          "mode_rgb": [
+            252,
+            144,
+            89
+          ],
+          "mode_samples": 19
+        }
+      }
+    },
+    {
+      "frame": 29,
+      "runtime_input": {
+        "path": "art/cartoon/skin-tone-v1/inputs/029.png",
+        "sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+        "rgba_sha256": "11a710b5dafdf991480860dec1caade8a24ec4febd06a754e973e81db891d7c6",
+        "alpha_sha256": "753264f28edbb4c14a3a516065a6a3cf75faa40cb034ccb66089d13d3b6755a8",
+        "canvas": [
+          64,
+          150
+        ]
+      },
+      "on_main_before_correction": true,
+      "raw_source": {
+        "kind": "file",
+        "path": "art/cartoon/walk-pilot/front-refresh-v1/029-heel-fit-v2.png",
+        "sha256": "e8efc7e91972fc7dca1bb3080a3cddc38b4e7519cb4fb7aaf98c31a1acbb922a"
+      },
+      "ancestor_recipe": {
+        "path": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json",
+        "sha256": "8b72e60b5598e29909f5897a47e4304a54f9e5b96564624811e0f57e56218725"
+      },
+      "ancestor_exporter": {
+        "path": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/helpers/export.py",
+        "sha256": "93b545b37033f572adaaa511271de177cfcf98971f54e32f534d1159b8ff7186"
+      },
+      "prior_production_acceptance": "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json",
+      "pose_review_ids": [
+        "connecting_motion"
+      ],
+      "render_registration": {
+        "affine_forward": [
+          0.1,
+          0,
+          -21.300000000000004,
+          0,
+          0.1,
+          -3.75
+        ],
+        "padding_hd": 64,
+        "cap_raw": [
+          388,
+          40
+        ],
+        "cap_target_hd": [
+          17.5,
+          0.25
+        ]
+      },
+      "validation": {
+        "raw_matches_recipe_sha256": true,
+        "input_matches_bound_archive_member": true,
+        "input_matches_index_png_rgba_alpha_and_canvas": true,
+        "reconstructed_rgba_sha256": "11a710b5dafdf991480860dec1caade8a24ec4febd06a754e973e81db891d7c6",
+        "reconstructed_rgba_exact": true
+      },
+      "measured_uncorrected_colors": {
+        "raw_source": {
+          "samples": 58613,
+          "median_rgb": [
+            254,
+            149,
+            89
+          ],
+          "mode_rgb": [
+            254,
+            149,
+            89
+          ],
+          "mode_samples": 4888
+        },
+        "runtime_input": {
+          "samples": 493,
+          "median_rgb": [
+            252,
+            147,
+            88
+          ],
+          "mode_rgb": [
+            252,
+            147,
+            88
+          ],
+          "mode_samples": 16
+        }
+      }
+    }
+  ]
+}

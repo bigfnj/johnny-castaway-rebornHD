@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "clips": {
+    "front_arc": {
+      "display_count": 36,
+      "duration_ms": 3400,
+      "changed_displays": 2,
+      "unchanged_displays": 34
+    },
+    "waypoint_front": {
+      "display_count": 54,
+      "duration_ms": 4840,
+      "changed_displays": 12,
+      "unchanged_displays": 42
+    },
+    "waypoint_rear": {
+      "display_count": 74,
+      "duration_ms": 6520,
+      "changed_displays": 14,
+      "unchanged_displays": 60
+    }
+  },
+  "ordered_phases_per_clip": [
+    "smoke",
+    "full",
+    "repeat"
+  ],
+  "archive_sha256": "561edb2c9b4b4857b723af1505ce8d2654616aae2942325389604a4d88804521",
+  "base_archive_sha256": "7a50f72fe65382917a1d38412dad97315542831ea5fd06eec9570734a7afdb52",
+  "runtime018_sha256": "5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f",
+  "executable_sha256": "203aebb8c15881a41108b2b4fb97f5f9c6d025aa595a678b4dd84906011f7563",
+  "color_recipe_sha256": "044d421dc3d0a33451f7c4dff34b9a5e375a544ddee848dca83f755b2382af8f",
+  "helper_sha256": "c44069364e59ac7e70ef25aac3afd6d5fefb1ccdd39f5a1956c73e615d09da8f",
+  "comparison_helper_sha256": "3a0f820e46900b92ad2ef62d720c3e1c62138b82de2867c83691bc6a2a8f5c49",
+  "scope": "Three complete normalizedv5 clips against reviewedv2; all other art/pixels/timing retained. New human foot/contact/motion review pending."
+}

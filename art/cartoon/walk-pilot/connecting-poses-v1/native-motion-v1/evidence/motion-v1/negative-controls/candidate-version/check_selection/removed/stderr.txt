@@ -1,0 +1,14 @@
+test_check_selection_positive_version (__main__.CandidateVersion.test_check_selection_positive_version) ... FAIL
+
+======================================================================
+FAIL: test_check_selection_positive_version (__main__.CandidateVersion.test_check_selection_positive_version)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\build\connecting-analysis\check_candidate_versions.py", line 37, in test
+    self.assertIs(type(caught), AssertionError, 'positive-version guard before reading any selection/capture input')
+AssertionError: <class 'FileNotFoundError'> is not <class 'AssertionError'> : positive-version guard before reading any selection/capture input
+
+----------------------------------------------------------------------
+Ran 1 test in 0.003s
+
+FAILED (failures=1)

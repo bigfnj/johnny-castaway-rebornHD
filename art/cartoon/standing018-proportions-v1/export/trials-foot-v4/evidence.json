@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "scope": "Technical draft measurement only. No color correction, native capture, human acceptance or full unchanged exporter-suite rerun.",
+  "files_sha256": {
+    "staging.json": "23b08d6304dfccb242644014e418ab46d1bb292fc963d6399346b21618fbd965",
+    "preview/recipe.json": "b7777189a158389f5d25de5d9412453b070f3f754293a9772d1dd72512ab99cf",
+    "preview/export-report.json": "177604f67d30646e36f925701406039e44ba93b5d0d1515d0320e0ec2995ea18",
+    "runtime/recipe.json": "b7777189a158389f5d25de5d9412453b070f3f754293a9772d1dd72512ab99cf",
+    "runtime/export-report.json": "06f026eaf6b76cc96859f05e0db6b6ddb998b90a90b67e15e97bbcc466729bf1",
+    "measurements.json": "ea0095ca4a96dc98e77e29b6a3a7d06b1cd14364a6adcdb7a4fc05e151521d5c",
+    "measure_foot_v4.py": "d5df4e56e62c9dea1e6a2b0c502b8c0b5d64ed510e938607af2c2ced7fb88f1e"
+  },
+  "measurement_source_path": "build/standing018-proportions/measure_foot_v4.py",
+  "raw_sources_sha256": {
+    "art/cartoon/standing018-proportions-v1/018-torso-v2.png": "c170f8b6cea7c8c3c0cfcad5dea1ac5591e9d92b5de156afeee7a19c1e2ec89c",
+    "art/cartoon/standing018-proportions-v1/018-foot-v4.png": "6ba5a7bdce36a0a8ed4e3912baa1415c3be4b6d38a437f289ae8a7d02dccb83a"
+  },
+  "runtime_pngs_retained_in_ignored_build": [
+    {
+      "path": "build/standing018-proportions/stage-v2/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "b1bf6834e30e11ccff6a4f4a66e8a0d1bd7bf3d1f5ca82eeb98d34c88b45b29f"
+    },
+    {
+      "path": "build/standing018-proportions/stage-v4/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "927a6ab6eacfec9fda56b3b67d1c3d27cc7f7e8275fe3eec45a1b03e42f4453b"
+    }
+  ],
+  "commands": [
+    "python -B art/cartoon/standing018-proportions-v1/export/stage.py --source art/cartoon/standing018-proportions-v1/018-foot-v4.png --source-sha256 6ba5a7bdce36a0a8ed4e3912baa1415c3be4b6d38a437f289ae8a7d02dccb83a --work build/standing018-proportions/stage-v4",
+    "python -B build/standing018-proportions/stage-v4/authoring/export.py --prepare --source 018-foot-v4.png --output build/standing018-proportions/stage-v4/preview --preview-only",
+    "python -B build/standing018-proportions/stage-v4/authoring/export.py --recipe build/standing018-proportions/stage-v4/preview/recipe.json --output build/standing018-proportions/stage-v4/runtime",
+    "python -B build/standing018-proportions/measure_foot_v4.py"
+  ],
+  "command_results": [
+    "PASS byte-exact018 authoring staging",
+    "PASS arrival018 PREVIEW ONLY",
+    "PASS arrival018 runtime-canvas candidate written; not promoted",
+    "PASS measurement and byte-exact evidence preservation"
+  ],
+  "interpreter": "Python3.11.15 with Pillow12.3.0, NumPy2.4.6"
+}

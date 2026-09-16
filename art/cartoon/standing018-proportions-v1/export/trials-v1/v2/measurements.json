@@ -1,0 +1,66 @@
+{
+  "scope": "Read-only technical measurements of a nonselected draft. ROI labels and neutral-white cloth bounds are diagnostic, not independent anatomical ground truth.",
+  "source": {
+    "path": "art/cartoon/standing018-proportions-v1/018-torso-v2.png",
+    "sha256": "c170f8b6cea7c8c3c0cfcad5dea1ac5591e9d92b5de156afeee7a19c1e2ec89c"
+  },
+  "source_mode": "RGBA",
+  "source_canvas": [
+    1024,
+    1536
+  ],
+  "source_alpha_range": [
+    0,
+    254
+  ],
+  "corner_alpha": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "cap_raw": [
+    408.5,
+    35
+  ],
+  "affine_forward": [
+    0.1,
+    0,
+    -23.85,
+    0,
+    0.1,
+    -3.25
+  ],
+  "regions_raw": {
+    "near_sole": "300<=x<560, y>=1300, alpha>=8",
+    "far_sole": "580<=x<740, y>=1250, alpha>=8",
+    "cloth": "600<=y<1150, alpha>=128, min(R,G,B)>=170, max(R,G,B)-min(R,G,B)<45"
+  },
+  "near_sole_raw_y": 1492,
+  "far_sole_raw_y": 1417,
+  "near_sole_hd_center": 146.0,
+  "far_sole_hd_center": 138.5,
+  "sole_separation_hd": 7.5,
+  "cloth_raw_y_range": [
+    793,
+    1046
+  ],
+  "cloth_hd_y_range": [
+    76.10000000000001,
+    101.4
+  ],
+  "runtime": {
+    "path": "build/standing018-proportions/stage-v2/runtime/BMP/JOHNWALK.BMP/018.png",
+    "sha256": "b1bf6834e30e11ccff6a4f4a66e8a0d1bd7bf3d1f5ca82eeb98d34c88b45b29f",
+    "mode": "RGBA",
+    "canvas": [
+      64,
+      154
+    ],
+    "alpha_range": [
+      0,
+      255
+    ]
+  },
+  "measurement_source_sha256": "2c9a992c77768fd567bb1128b974c5725d726d889b069fb244750cdd4654b5bd"
+}

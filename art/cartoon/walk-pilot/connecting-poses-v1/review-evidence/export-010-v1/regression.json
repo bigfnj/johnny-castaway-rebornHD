@@ -1,0 +1,40 @@
+{
+  "inputs_sha256": {
+    "export": "bbbd0778ba2a92f161790937406fdc35a21f73e03599ac3f8575ddb11b5935d5",
+    "test": "cb756d6c2468f8f9cb29394c511decab86392540c7a699f01dd99d32224d0579",
+    "recipe": "05537f68a1403da087c324c4cb70cd4688019f06ec7549904817a22afeb73a2f",
+    "legacy_export": "56fc9e13ce266203d69c13e48d1187b60228681d2c46f4ddba8b3b9734f942d2",
+    "selected_frame": 10
+  },
+  "phase": "regression",
+  "passed": 24,
+  "cases": [
+    "reference-source",
+    "reference-native",
+    "reference-nearest8",
+    "source-path",
+    "prepare-canvas",
+    "cap-outline",
+    "recipe-reference",
+    "render-contract",
+    "recipe-frame",
+    "source-identity",
+    "source-canvas",
+    "fixed-registration",
+    "runtime-canvas",
+    "runtime-overhang",
+    "allowed-frame",
+    "output-exists",
+    "explicit-input",
+    "normal-synthetic",
+    "preview-overhang",
+    "recipe-byte-identity",
+    "legacy-filter-parity",
+    "explicit-prepare",
+    "original-cap-target",
+    "all-frame-configurations"
+  ],
+  "mutations": [],
+  "mutation_status": "NOT RUN: use --mutation-check",
+  "limit": "Authoring-only checks; no anatomical correctness or original-engine playback parity claim. Source mutations execute in fresh python -B processes."
+}

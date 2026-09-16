@@ -1,0 +1,231 @@
+{
+  "status": "PASS",
+  "method": "Compare whole scene and sprite-canvas RGB pixels after the recorded fixed native camera and nearest-neighbor display scaling; not a palette-median inference.",
+  "script": {
+    "path": "art/cartoon/skin-tone-v1/review-evidence/screenshot-match-v1/match_screenshots.py",
+    "sha256": "cebec202b3e76887072e2402981a25608dd3ce3577519b0614beee6e754ede30"
+  },
+  "review_record": {
+    "path": "build/connecting-poses/native-motion-v1/review-v1/review-record.json",
+    "sha256": "59d7ba02027981ec12e1a1a903590f4a0a1eba9554e0e6a712de5834c8d716cf"
+  },
+  "pillow_version": "12.3.0",
+  "numpy_version": "2.4.6",
+  "matches": [
+    {
+      "screenshot": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/skin-color-audit-v1/user-shot1.png",
+        "sha256": "87f2c0b5f04ccc127ac51cce88ad0dc585318dac496d9f42243400e757bca2f0"
+      },
+      "screenshot_scene_origin_xy": [
+        44,
+        46
+      ],
+      "visible_scene_size": [
+        473,
+        350
+      ],
+      "matching_camera_hd_xywh": [
+        850,
+        420,
+        288,
+        212
+      ],
+      "nearest_preview_size": [
+        475,
+        350
+      ],
+      "matching_displays": [
+        {
+          "rgb_mean_absolute_error_0_255": 0.014704520285915635,
+          "exact_rgb_pixel_fraction": 0.9966958622772576,
+          "clip": "waypoint_front",
+          "display_index": 7,
+          "logical_ms": 360,
+          "actual_draw": [
+            1,
+            499,
+            223,
+            24
+          ],
+          "pose_index_zero_based": 3,
+          "png": {
+            "path": "build/connecting-poses/native-motion-v1/candidate-v2/waypoint_front/full/display-007.png",
+            "sha256": "05259f82a0d32d45ccb15322d561cd8a88feb22c3ea2a58723d7fc5615cd1a34"
+          },
+          "report": {
+            "path": "build/connecting-poses/native-motion-v1/candidate-v2/waypoint_front/full/report.json",
+            "sha256": "8ac1f3b802a7ccfee266b76e741556bb6a8abd9f51180e12cdc65ed5e3762ef9"
+          }
+        }
+      ],
+      "next_distinct_pose": {
+        "rgb_mean_absolute_error_0_255": 7.266537803281989,
+        "exact_rgb_pixel_fraction": 0.8992691029900333,
+        "clip": "waypoint_front",
+        "display_index": 8,
+        "logical_ms": 480,
+        "actual_draw": [
+          1,
+          498,
+          223,
+          25
+        ],
+        "pose_index_zero_based": 4,
+        "png": {
+          "path": "build/connecting-poses/native-motion-v1/candidate-v2/waypoint_front/full/display-008.png",
+          "sha256": "8d0f8f9467da4d5823305e80dbed54329f3eafc606de529bab21e11f99f925b0"
+        },
+        "report": {
+          "path": "build/connecting-poses/native-motion-v1/candidate-v2/waypoint_front/full/report.json",
+          "sha256": "8ac1f3b802a7ccfee266b76e741556bb6a8abd9f51180e12cdc65ed5e3762ef9"
+        }
+      },
+      "full_sprite_canvas_region_in_preview_xyxy": [
+        244,
+        42,
+        349,
+        290
+      ],
+      "sprite_region_metrics": {
+        "rgb_mean_absolute_error_0_255": 0.04251152073732719,
+        "exact_rgb_pixel_fraction": 0.9961213517665131
+      },
+      "native_displays_compared": 216,
+      "excluded_by_scene_width": [
+        {
+          "clip": "front_arc",
+          "natural_width_at_350px_height": 366,
+          "reason": "Too narrow to cover the observed scene width without distorting the fixed camera."
+        },
+        {
+          "clip": "travel_cb",
+          "natural_width_at_350px_height": 380,
+          "reason": "Too narrow to cover the observed scene width without distorting the fixed camera."
+        }
+      ]
+    },
+    {
+      "screenshot": {
+        "path": "art/cartoon/walk-pilot/connecting-poses-v1/review-evidence/skin-color-audit-v1/user-shot2.png",
+        "sha256": "9efae44b05d928cb9d046f55616d9fb02eb844f80701cfff9d154d331c8e2a91"
+      },
+      "screenshot_scene_origin_xy": [
+        40,
+        44
+      ],
+      "visible_scene_size": [
+        475,
+        350
+      ],
+      "matching_camera_hd_xywh": [
+        850,
+        420,
+        288,
+        212
+      ],
+      "nearest_preview_size": [
+        475,
+        350
+      ],
+      "matching_displays": [
+        {
+          "rgb_mean_absolute_error_0_255": 0.01957293233082707,
+          "exact_rgb_pixel_fraction": 0.9966676691729324,
+          "clip": "waypoint_front",
+          "display_index": 5,
+          "logical_ms": 240,
+          "actual_draw": [
+            1,
+            486,
+            220,
+            29
+          ],
+          "pose_index_zero_based": 2,
+          "png": {
+            "path": "build/connecting-poses/native-motion-v1/candidate-v2/waypoint_front/full/display-005.png",
+            "sha256": "0be7a1420ad28cd66bbb3685e80278d2d927725336dcd59922c8cb8878731c65"
+          },
+          "report": {
+            "path": "build/connecting-poses/native-motion-v1/candidate-v2/waypoint_front/full/report.json",
+            "sha256": "8ac1f3b802a7ccfee266b76e741556bb6a8abd9f51180e12cdc65ed5e3762ef9"
+          }
+        },
+        {
+          "rgb_mean_absolute_error_0_255": 0.01957293233082707,
+          "exact_rgb_pixel_fraction": 0.9966676691729324,
+          "clip": "waypoint_front",
+          "display_index": 6,
+          "logical_ms": 320,
+          "actual_draw": [
+            1,
+            486,
+            220,
+            29
+          ],
+          "pose_index_zero_based": 2,
+          "png": {
+            "path": "build/connecting-poses/native-motion-v1/candidate-v2/waypoint_front/full/display-006.png",
+            "sha256": "70ff217c3779edcc25212cf5bd30cdcf67f6d52d5ac59c1da67a90556ff2087c"
+          },
+          "report": {
+            "path": "build/connecting-poses/native-motion-v1/candidate-v2/waypoint_front/full/report.json",
+            "sha256": "8ac1f3b802a7ccfee266b76e741556bb6a8abd9f51180e12cdc65ed5e3762ef9"
+          }
+        }
+      ],
+      "next_distinct_pose": {
+        "rgb_mean_absolute_error_0_255": 5.668908270676692,
+        "exact_rgb_pixel_fraction": 0.9085052631578947,
+        "clip": "waypoint_front",
+        "display_index": 1,
+        "logical_ms": 0,
+        "actual_draw": [
+          0,
+          479,
+          219,
+          17
+        ],
+        "pose_index_zero_based": 0,
+        "png": {
+          "path": "build/connecting-poses/native-motion-v1/candidate-v2/waypoint_front/full/display-001.png",
+          "sha256": "55a3d9bd788c81d806c7648374b76db2442cc5235635bfc3ab151bc495d3faad"
+        },
+        "report": {
+          "path": "build/connecting-poses/native-motion-v1/candidate-v2/waypoint_front/full/report.json",
+          "sha256": "8ac1f3b802a7ccfee266b76e741556bb6a8abd9f51180e12cdc65ed5e3762ef9"
+        }
+      },
+      "full_sprite_canvas_region_in_preview_xyxy": [
+        201,
+        33,
+        306,
+        280
+      ],
+      "sprite_region_metrics": {
+        "rgb_mean_absolute_error_0_255": 0.07454533770323243,
+        "exact_rgb_pixel_fraction": 0.9960285328706381
+      },
+      "native_displays_compared": 216,
+      "excluded_by_scene_width": [
+        {
+          "clip": "front_arc",
+          "natural_width_at_350px_height": 366,
+          "reason": "Too narrow to cover the observed scene width without distorting the fixed camera."
+        },
+        {
+          "clip": "travel_cb",
+          "natural_width_at_350px_height": 380,
+          "reason": "Too narrow to cover the observed scene width without distorting the fixed camera."
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Screenshot1 identifies frame024 at360ms in Front waypoint.",
+    "Screenshot2 identifies frame029 at240ms or320ms in Front waypoint. Those camera crops are identical; the full1280x960 captures differ elsewhere.",
+    "The screenshot crops exclude UI timing labels. This establishes the source pose and scene, not the exact wall-clock moment.",
+    "Small screenshot/render rounding differences remain; this is a near-exact comparison, not byte identity.",
+    "No image, color, alpha, geometry, production archive or existing evidence was modified."
+  ]
+}

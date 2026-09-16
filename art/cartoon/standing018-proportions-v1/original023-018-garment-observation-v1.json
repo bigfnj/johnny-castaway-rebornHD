@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scope": "Read-only qualitative supplied-original023 versus018 garment comparison at equal full-canvas origin. No Cartoon023 garment measurement, image modification, engine repair or native original-executable comparison.",
+  "source_record": {
+    "path": "art/cartoon/walk-expansion-v1/reference/source.json",
+    "sha256": "040106d15a0c6460a044a7989ddcfea12d494bc6838ee1fad83a3793e2f2cfa4"
+  },
+  "metadata": {
+    "path": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+    "sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629"
+  },
+  "decoder": {
+    "path": "art/cartoon/walk-expansion-v1/reference/extract.py",
+    "sha256": "9f2ac986ae7f29c84a672f2a77fd0f2ba75be135a3c2c8666a31a4b34adca5cc",
+    "method": "Call prepare in memory with the identified local dump, current pinned walk_data.h and retained source.json. Its source checks pass; both resulting RGBA hashes match the recorded originals. Index0 becomes transparent and other indices use the port dump palette. No PNG was written."
+  },
+  "resource_sha256": {
+    "RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+    "RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+  },
+  "dump_engine_sha256": "6ac61dc53dc926a311d89fcf2e27ff7cefbbac7f4c60e2491f69114230400865",
+  "frames": [
+    {
+      "frame": 23,
+      "dump_relative_path": "dump/BMP/JOHNWALK.BMP.023.xpm",
+      "xpm_sha256": "bca2ddc1f6875aa08eec34de0582c4f11bab6ff1869c09c279bb72432b9cd280",
+      "canvas": [32, 78],
+      "rgba_sha256": "e73c7ffa084a4092d5dcd0d804689de584c3326fe59afcd0ecb2d8aa2ad43a0f",
+      "observed_waist_rows_native": [39, 40],
+      "observed_asymmetric_hem_rows_native": [53, 54],
+      "lower_ink_reaches_native_row": 55
+    },
+    {
+      "frame": 18,
+      "dump_relative_path": "dump/BMP/JOHNWALK.BMP.018.xpm",
+      "xpm_sha256": "f245a5dcf6ee412292898de67ff0a9ae336919e2b6f7df708661d9bd467bc4a0",
+      "canvas": [32, 77],
+      "rgba_sha256": "7400c2d2d4556cd83b8ac7539fd55a754c4d78aff833841b7023f82e336dd78f",
+      "observed_waist_rows_native": [40, 41],
+      "observed_hem_rows_native": [52, 53]
+    }
+  ],
+  "interpretation": "The standing018 waist begins about1 native pixel (2HD) lower than walking023. Its hem is about1 to2 native pixels higher, with asymmetrical walking leg holes making an exact single-edge comparison inappropriate. The original does not support a large downward translation of the entire shorts on this transition.",
+  "method_limits": [
+    "Garment edges were read from decoded nearest-neighbor pixels and original indexed rows, distinguishing contiguous neutral cloth from colored skin dither. They are qualitative observations, not independently annotated anatomical landmarks.",
+    "Port-palette decoding does not establish original-executable color or compositing parity.",
+    "Cartoon023's comparable waistband and hem were not measured. A possible future review of its shorts height remains unconfirmed.",
+    "The revised018 smaller foot appears slightly above sand at mirrored waypoint_rear draw[1,394,209,18]. Original018 at that exact mirrored origin has not been compared. This note establishes neither an engine bug nor universal ground-contact resolution."
+  ]
+}

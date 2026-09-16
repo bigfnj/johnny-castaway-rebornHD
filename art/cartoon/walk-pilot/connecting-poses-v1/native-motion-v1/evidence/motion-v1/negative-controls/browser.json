@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "name": "wrong-pose-selector",
+      "result": "FIRED",
+      "expected_failure": "pose selector native ordinal:front_arc:0",
+      "actual_exit_code": 1,
+      "executed_html_sha256": "af992588a4641cdc37afc1b09a995c345b0f0423580560d1312a87b25cb17311",
+      "stdout_sha256": "b074f5e3eee78b68d2355401f21493a72889d1417dd7983d57813d1a3bfc9137",
+      "stderr_sha256": "f46880e4f192f83de64521a325fe4f41fe54ccc426dbbec3da3be19161883a55"
+    },
+    {
+      "name": "changed-served-html",
+      "result": "FIRED",
+      "expected_failure": "exact served HTML",
+      "actual_exit_code": 1,
+      "executed_html_sha256": "e33f8867ed351860224b01a1daa5afd4b9908fd2b9ad081078c30ab3910cfa6d",
+      "stdout_sha256": "cb31d2bf12dc8443dd832e351986e09bb19387d1c0e88c48d11e601498c46c58",
+      "stderr_sha256": "04900d41c6279bbaec22c864e8a457d34d70379440854af3059297c74c31106a"
+    }
+  ],
+  "harness_sha256": "4eebedab3d4cb18723f5c14b0b65dec78b6543eee3799fabbe321aafffef7bc4",
+  "executed_checker_sha256": "d0826e92ad7e031d5378c2ef9fa88418aee1830725d76444e7a1fb79679182c0",
+  "original_html_sha256": "1f9e9100fb6add44815ef8f6bc2ee0ded6458925f78b19b8ccc20d515ff09c18",
+  "positive_control_sha256": "d6b3da6d2dc013a5ae3faf6967921e2dab6bd7607059b2dd164b8c2f4993d219",
+  "scope": "Fresh headless browsers request both mutated pages. Wrong selector executes through smoke before named regression; changed served bytes fail exact HTTP identity. No production/native mutation.",
+  "review_directory": "review-v1"
+}

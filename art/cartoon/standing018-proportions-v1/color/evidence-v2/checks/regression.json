@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "inputs_sha256": {
+    "recipe": "eb92e5ba8b5aa8c6578d55ef5f3e68faa97f6212eaec60ed61d92de3bdf898c2",
+    "adapter": "5a34a0c7ff7918f5a67d5d844fa0e35787c388396fdf29df91e0d1fba4b844a3",
+    "test": "ac744056fa6a1ca716acc33189230da47aa1589d53534b44a583e338b38440ee",
+    "annotation": "2912b2ba7d5fd363a02e0f8955524d508f20506de90855d201ba6f9f10544efc"
+  },
+  "actual_frame": {
+    "frame": 18,
+    "material_points": 7,
+    "material_regions": 3,
+    "changed_pixels": 1673,
+    "reference_base_rgb": [
+      252,
+      148,
+      88
+    ]
+  },
+  "negative_controls": [
+    {
+      "case": "alpha",
+      "result": "FIRED",
+      "failure": "018.png: alpha identity"
+    },
+    {
+      "case": "cap-pixel",
+      "result": "FIRED",
+      "failure": "018.png: full cap identity"
+    },
+    {
+      "case": "cap-mask",
+      "result": "FIRED",
+      "failure": "018.png: full cap mask exclusion"
+    },
+    {
+      "case": "outside-mask",
+      "result": "FIRED",
+      "failure": "018.png: outside-mask identity"
+    },
+    {
+      "case": "wrong-base",
+      "result": "FIRED",
+      "failure": "018.png: reference skin base"
+    },
+    {
+      "case": "unchanged-input",
+      "result": "FIRED",
+      "failure": "018.png: expected skin correction"
+    },
+    {
+      "case": "hair-or-beard",
+      "result": "FIRED",
+      "failure": "018.png: protected hair-or-beard point"
+    },
+    {
+      "case": "shorts-white",
+      "result": "FIRED",
+      "failure": "018.png: protected shorts-white point"
+    },
+    {
+      "case": "lower-beard",
+      "result": "FIRED",
+      "failure": "018.png: protected lower-beard point"
+    },
+    {
+      "case": "hair-or-beard-region",
+      "result": "FIRED",
+      "failure": "018.png: protected hair-or-beard region"
+    },
+    {
+      "case": "shorts-white-region",
+      "result": "FIRED",
+      "failure": "018.png: protected shorts-white region"
+    },
+    {
+      "case": "stale-input",
+      "result": "FIRED",
+      "failure": "018: annotation input binding",
+      "stdout": "WITNESS correct018.py SHA256=5a34a0c7ff7918f5a67d5d844fa0e35787c388396fdf29df91e0d1fba4b844a3\n",
+      "stderr": "FAIL 018: annotation input binding\n",
+      "exit_code": 1
+    },
+    {
+      "case": "stale-cap",
+      "result": "FIRED",
+      "failure": "018: new cap input binding",
+      "stdout": "WITNESS correct018.py SHA256=5a34a0c7ff7918f5a67d5d844fa0e35787c388396fdf29df91e0d1fba4b844a3\n",
+      "stderr": "FAIL 018: new cap input binding\n",
+      "exit_code": 1
+    },
+    {
+      "case": "stale-calibration",
+      "result": "FIRED",
+      "failure": "018: new calibration patch",
+      "stdout": "WITNESS correct018.py SHA256=5a34a0c7ff7918f5a67d5d844fa0e35787c388396fdf29df91e0d1fba4b844a3\n",
+      "stderr": "FAIL 018: new calibration patch\n",
+      "exit_code": 1
+    }
+  ],
+  "fresh_replay": {
+    "files_identical": [
+      "sprites/018.png",
+      "masks/018.png",
+      "protected-cap/018.png",
+      "recipe.json"
+    ],
+    "stdout": "WITNESS correct018.py SHA256=5a34a0c7ff7918f5a67d5d844fa0e35787c388396fdf29df91e0d1fba4b844a3\n{\"status\": \"PASS\", \"changed_pixels\": 1673, \"candidate_png_sha256\": \"21cf94cd90d369b20b6d3b8ef60b7cc2848f919ff828578320502aec9a17c55b\"}\n",
+    "stderr": ""
+  },
+  "no_op_controls": [
+    "same-base",
+    "zero-mask"
+  ],
+  "scope": "Only new018-v2 color; no anatomy, native-playback or full28-pose revalidation."
+}

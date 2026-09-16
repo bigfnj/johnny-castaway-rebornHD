@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "candidate_version": 2,
+  "clips": {
+    "front_arc": {
+      "display_count": 36,
+      "duration_ms": 3400,
+      "changed_displays": 4,
+      "unchanged_displays": 32
+    },
+    "rear_arc": {
+      "display_count": 38,
+      "duration_ms": 3640,
+      "changed_displays": 2,
+      "unchanged_displays": 36
+    },
+    "travel_cb": {
+      "display_count": 36,
+      "duration_ms": 3400,
+      "changed_displays": 4,
+      "unchanged_displays": 32
+    },
+    "travel_ec": {
+      "display_count": 50,
+      "duration_ms": 4600,
+      "changed_displays": 1,
+      "unchanged_displays": 49
+    },
+    "waypoint_front": {
+      "display_count": 54,
+      "duration_ms": 4840,
+      "changed_displays": 2,
+      "unchanged_displays": 52
+    },
+    "waypoint_rear": {
+      "display_count": 74,
+      "duration_ms": 6520,
+      "changed_displays": 1,
+      "unchanged_displays": 73
+    }
+  },
+  "archive_sha256": "21194cf35e5b60eebfa9ba48520509ae8f86a72f26313b945f019671d1f345c5",
+  "baseline_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+  "executable_sha256": "d8b6214f7951d7f7a5170c0f7999ea74648a2991165b6c8696530d0046271dc5",
+  "helper_sha256": "3d48bc8f432d1d1972da4e1ec024230d0b4ebec942b48a7255e5c8254c564a59",
+  "parser_sha256": "c9c5008f3dc3efe5ddefd02522f6621e744e8c61e6b3a85fd48d5f0c6b589bec",
+  "scope": "Each of six candidate clips smoke then full exact baseline comparison then fresh-process repeat. Three connecting canvases only; all prior-approved poses and backgrounds unchanged."
+}

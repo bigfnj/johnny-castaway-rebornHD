@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "executed_negative_count": 4,
+  "controls": [
+    {
+      "case": "old-baseline",
+      "expected_failure": "capture archive/executable identity:baseline:waypoint_rear",
+      "exit_code": 1,
+      "stdout_sha256": "a52547d8b4a96e493b4175373faaccfc9fd3b4cae13626f1cad5d9f2a6d572ff",
+      "stderr_sha256": "bba39646463fb5e57c325e7df0a61ba023884c3d95322af169ab063ae7f1a3df"
+    },
+    {
+      "case": "wrong018-occurrence",
+      "expected_failure": "contact mirrored arrival occurrence",
+      "exit_code": 1,
+      "stdout_sha256": "764b34988edaf8ec8841e836b785a7350fc7a58fa89a6700690bae9211b2dcca",
+      "stderr_sha256": "ce060ab4fcdcf835ef74e14f4275cf237ce22b9f09cc18319369e156ff7ced58"
+    },
+    {
+      "case": "wrong-contact-image",
+      "expected_failure": "contact image/source binding:revised",
+      "exit_code": 1,
+      "stdout_sha256": "e15fdbe29a0e5884a062835834a3488caa2591e790cbac996df6a017b9ef39cc",
+      "stderr_sha256": "4907c9e20df2f3818bf2e5dc25fdeec008c99724f589cadbc5dc903e73132603"
+    },
+    {
+      "case": "broken-motion-link",
+      "expected_failure": "contact motion link destination",
+      "exit_code": 1,
+      "stdout_sha256": "9bdfa853274f5b3896dbcc6c69c38dfd9f9e8623c5d801698874d5bfe9615ffd",
+      "stderr_sha256": "d7136bea58293902aaa4f14034cd5db3bf31b2320435ac9a5815d1fdc22cd334"
+    }
+  ],
+  "restored_positive": true,
+  "review_record_sha256": "0637c7f5b1d3b26223ecfadf136fbfed869de1b07458d8c898795be2a2a2d18a",
+  "builder_sha256": "dd792d6aec0fb3762c3c757a116c3f159385dd4e6a3006fa0383d31a1abfd6bf",
+  "checker_sha256": "5c11d84bdec8a39fd027615225cc5f2d41773327b650420fbab3614582b6a160",
+  "harness_sha256": "d92b98ee074308949fb5d2df65b1f6bdff55362627c983c15c893dd0a761bcf6",
+  "scope": "Only changed baseline, actual mirrored018 selection, three-panel image binding and motion link. Existing motion control mutation matrices are retained, not rerun."
+}

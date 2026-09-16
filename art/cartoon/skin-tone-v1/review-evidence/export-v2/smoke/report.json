@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "phase": "smoke",
+  "test_sha256": "89333b3eae7ba27c879adbf8ddb742d9cb17875124845927db2b7d65238ee0aa",
+  "algorithm_sha256": "70be24d13eb34317f602b0b66f952a4d3dbe8e29935b4f6c8353f15c8e9d3534",
+  "recipe_sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+  "protected_annotations_sha256": "6e1843ab2553a15d5ac4870f803062f97aa4c57de2d002fa604345c77bc63eff",
+  "frames": [
+    {
+      "frame": 24,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 1424
+    },
+    {
+      "frame": 29,
+      "status": "PASS",
+      "material_points": 9,
+      "material_regions": 3,
+      "changed_pixels": 0
+    }
+  ],
+  "negative_controls": [],
+  "positive_restoration": false,
+  "limitations": "Sparse independent material witnesses and exact mask/alpha checks complement visual review; they do not prove perfect semantic segmentation."
+}

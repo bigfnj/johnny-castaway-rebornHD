@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "selection_sha256": "86b31a896e70f8977fcac4ef8eb573e5c96893f3e13e1b319d98674c728a83ab",
+  "harness_sha256": "98cd110d3b5322af0d93fd67af24e4f701be881b697352a661910161b83dc6fe",
+  "records": [
+    {
+      "case": "enabled",
+      "result": "PASS",
+      "failure_count": 0,
+      "executed_validator_sha256": "ba20285862b233049c63e3ffdb858eb1334765410d2be9a7425f5a9ef72480e9",
+      "executed_checker_sha256": "1a264a79bc6a38ded82fcc867c07c154929a261bc5d6b40a697e4d455c4cbddd",
+      "stdout_sha256": "dabb87a782357f7843fd701c82c587de6e298303f0c63f8cc01cad344a724bc8",
+      "stderr_sha256": "35dac50af0e911015601434a192acc639687736cd76981694fdec070c6073bd2"
+    },
+    {
+      "case": "exporter",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_validator_sha256": "8f14b15d5995a64ae3500c862adfe12cde4444410c029b2015197aad8fe7f97c",
+      "executed_checker_sha256": "1a264a79bc6a38ded82fcc867c07c154929a261bc5d6b40a697e4d455c4cbddd",
+      "stdout_sha256": "7af3704525c61b0c79c6652042906829cc85a5398076abc566bb6e817531d290",
+      "stderr_sha256": "1ed7b2a76f51a71ddcecbe283c8aca563b4e833b49fdb472ee9180f7c1749878"
+    },
+    {
+      "case": "test-inputs",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_validator_sha256": "f555cfa7b8b9e11a689e0e2288dac507e03e7c9cafe76bf5bd9c977127632804",
+      "executed_checker_sha256": "1a264a79bc6a38ded82fcc867c07c154929a261bc5d6b40a697e4d455c4cbddd",
+      "stdout_sha256": "7ba5bcda4aa02c829a5db4f66f732041f29c2f4fc5bc1b463b32b1dc4db87849",
+      "stderr_sha256": "088ffd178c2fb0044143859c64638502bb4e34020f02e67c28e47f56d2f3c1a8"
+    },
+    {
+      "case": "verification",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_validator_sha256": "509c7b3a2b7e54f523023dad4a8d821c270a6527ba4c2aeee22f14af721ce6c0",
+      "executed_checker_sha256": "1a264a79bc6a38ded82fcc867c07c154929a261bc5d6b40a697e4d455c4cbddd",
+      "stdout_sha256": "b072dd320cd68e621b3b22f8b5f760a75d95cdd8e243baf0d543db71c6c6c9d3",
+      "stderr_sha256": "57ad7f7b8f41eee9664ab369f074142908abe858b50071c70df01e61d544b82b"
+    },
+    {
+      "case": "runtime",
+      "result": "FIRED",
+      "failure_count": 1,
+      "executed_validator_sha256": "2710f05d6487c2f74f533b75e40833248566d7904bec46442551521623d38d9a",
+      "executed_checker_sha256": "1a264a79bc6a38ded82fcc867c07c154929a261bc5d6b40a697e4d455c4cbddd",
+      "stdout_sha256": "a58aac36e318a28a213f123d2e80508b4e98194e28590b57b652e5ec875da4a0",
+      "stderr_sha256": "ae8474af27fd9ec134069ecebdfc15511cc6236b746b830f9f3f20bb13d67936"
+    }
+  ],
+  "production_unchanged_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+  "scope": "Actual final mixed-version checker executes in fresh python -B processes. Four individual validator assert conditions replaced by True, each produces exactly one named unittest failure. Enabled control passes all six valid-file input substitutions. No archive/source mutation."
+}

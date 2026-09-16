@@ -1,0 +1,368 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "Windows full gate for accepted connecting poses, shared skin colors and foot-v5 018 integration.",
+  "source_archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+  "deployed_archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+  "head_at_start": "3af0242a74f234aab231d9203b48f78ca8e5c1b4",
+  "head_scope": "Production working inputs were integrated before commit; source hashes, not HEAD alone, identify the tested state.",
+  "exit_code": 0,
+  "elapsed_seconds": 175.554,
+  "build_warning_free": true,
+  "smoke_precedes_all_regressions": true,
+  "ordered_stages": [
+    "=== gate: johnny-castaway-rebornHD (Release) ===",
+    "=== configure + build ===",
+    "=== smoke ===",
+    "=== screensaver behaviour (/p preview, and the focus rules) ===",
+    "=== art-style smoke ===",
+    "=== wave renderer smoke ===",
+    "=== palm renderer smoke ===",
+    "=== RESOURCE decoder smoke ===",
+    "=== engine ownership smoke ===",
+    "=== frame limits smoke ===",
+    "=== platform constructor smoke ===",
+    "=== legacy extractor smoke ===",
+    "=== PowerShell Web wrapper smoke ===",
+    "=== art inventory smoke ===",
+    "=== art approval history smoke ===",
+    "=== regression (legacy extractor bytes and failure handling) ===",
+    "=== regression (PowerShell Web wrapper compatibility) ===",
+    "=== regression (platform constructors and failures) ===",
+    "=== regression (RESOURCE decoder completeness) ===",
+    "=== regression (engine ownership and cleanup) ===",
+    "=== regression (frame parsing and stopping boundaries) ===",
+    "=== regression (art-style pixels and configuration) ===",
+    "=== regression (wave alpha, restoration and fallback) ===",
+    "=== regression (palm alpha, clipping and fallback) ===",
+    "=== regression (art authoring tools) ===",
+    "=== regression (art inventory source preservation) ===",
+    "=== regression (art approval history) ===",
+    "=== regression (golden dump corpus) ==="
+  ],
+  "golden_2452_files_byte_identical": true,
+  "retained_capture_count": 32,
+  "all_retained_captures_complete_with_markers": true,
+  "input_desktop_preserved": true,
+  "poll_checks": 335,
+  "observed_inactive_window_count": 261,
+  "protected_inputs_unchanged": true,
+  "integration_inputs_unchanged": true,
+  "explicit_skip_lines": [
+    "test_directory_symlink_alias (__main__.InventoryCliTests.test_directory_symlink_alias) ... skipped \"directory symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'D:\\\\\\\\.ai-work\\\\\\\\worktrees\\\\\\\\johnny-cartoon-connecting-poses\\\\\\\\build\\\\\\\\connecting-poses\\\\\\\\windows-verification\\\\\\\\connecting-color-foot-promotion-v1\\\\\\\\temp\\\\\\\\johnny-inventory-cli-il9s5thd' -> 'D:\\\\\\\\.ai-work\\\\\\\\worktrees\\\\\\\\johnny-cartoon-connecting-poses\\\\\\\\build\\\\\\\\connecting-poses\\\\\\\\windows-verification\\\\\\\\connecting-color-foot-promotion-v1\\\\\\\\temp\\\\\\\\johnny-inventory-cli-il9s5thd\\\\\\\\alias'\"",
+    "test_file_symlink_alias (__main__.InventoryCliTests.test_file_symlink_alias) ... skipped \"file symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'D:\\\\\\\\.ai-work\\\\\\\\worktrees\\\\\\\\johnny-cartoon-connecting-poses\\\\\\\\build\\\\\\\\connecting-poses\\\\\\\\windows-verification\\\\\\\\connecting-color-foot-promotion-v1\\\\\\\\temp\\\\\\\\johnny-inventory-cli-g2y6stbc\\\\\\\\fixture.zip' -> 'D:\\\\\\\\.ai-work\\\\\\\\worktrees\\\\\\\\johnny-cartoon-connecting-poses\\\\\\\\build\\\\\\\\connecting-poses\\\\\\\\windows-verification\\\\\\\\connecting-color-foot-promotion-v1\\\\\\\\temp\\\\\\\\johnny-inventory-cli-g2y6stbc\\\\\\\\symlink.json'\""
+  ],
+  "toolchain": {
+    "cmake": {
+      "version_output": "cmake version 4.3.1\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+      "executable_sha256": "f05482595d42888f2befe209d8aa4848560c8a05356411043241a15e7d3f86a7",
+      "path_at_preservation": "C:\\Program Files\\CMake\\bin\\cmake.EXE"
+    },
+    "pwsh": {
+      "version_output": "PowerShell 7.6.5",
+      "executable_sha256": "362a356ce7f0940ec74f73a8fc2c990a2cc24a38a11c90bbd8eca947110ad139",
+      "path_at_preservation": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\powershell\\pwsh.EXE"
+    },
+    "python_on_gate_path": {
+      "version_output": "Python 3.11.15",
+      "executable_sha256": "3adbbf2af609e206e3ca18cd55fc7c4b52f5c8bb8218dd99fd5a9e50d7a193cd",
+      "path_at_preservation": "C:\\Anthropic\\.Python3\\python.EXE"
+    },
+    "launcher_python": {
+      "version": "3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]",
+      "executable_sha256": "de13d8017f63cb63b0b5bfd2f25e69245c9196433a224856ca1abde1e24d0cb7",
+      "Pillow_version": "12.3.0",
+      "psutil_version": "7.2.2"
+    }
+  },
+  "binaries": {
+    "extract_sound.exe": {
+      "sha256": "1711d87afa5850e75f24502252383ac6a0a3cb2bc0fd88cb6464e6fc5ec1728f",
+      "mtime_ns": 1789590446644444200
+    },
+    "extract_walk_data.exe": {
+      "sha256": "cc6839ae90b8d5dea5d8ccb6ecb380734b0880a603984ca559b43f7c18832e99",
+      "mtime_ns": 1789590447276495300
+    },
+    "jc_frame_test.exe": {
+      "sha256": "e5edfba028c912523872ce69cc234d771e94c9834e08bcc0405a6ae0417b3855",
+      "mtime_ns": 1789590447863601800
+    },
+    "jc_lifecycle_test.exe": {
+      "sha256": "b77eeb082e355167b0b0769f5bfe5bd4cb2a4202e47e02ef86771cb0d43df012",
+      "mtime_ns": 1789590452479441100
+    },
+    "jc_palm_test.exe": {
+      "sha256": "31a71d7812508222397677268b1d0bc2bbadcadefea64a79e25aa5af0f19ab7d",
+      "mtime_ns": 1789590456750228000
+    },
+    "jc_platform_alloc_test.exe": {
+      "sha256": "3be5bb6d5575576bd28de07d77722d463e15485b37d7ba4a2bdefad315b850be",
+      "mtime_ns": 1789590457677120900
+    },
+    "jc_png_test.exe": {
+      "sha256": "ff88d830626da1973ca29cd4cd706eaad4c29809506b1b5854206915cce9a108",
+      "mtime_ns": 1789590458701187500
+    },
+    "jc_reborn.exe": {
+      "sha256": "7d6ddd4407fe7027a7c5796df7c7d0e37d5dabc6e7267aa50b4354830c32c42e",
+      "mtime_ns": 1789590463795417100
+    },
+    "jc_reborn.scr": {
+      "sha256": "4a83f872b5a70170fa12a50aed5e1d13e66cd659e9e60a27014258707d588464",
+      "mtime_ns": 1789590468743867400
+    },
+    "jc_uncompress_test.exe": {
+      "sha256": "a4127ca404eaf72b7fcc1c27a6960d0553e32428f268f3da147b9e09a9a5c8b8",
+      "mtime_ns": 1789590469354671800
+    }
+  },
+  "launch_command": "& $env:TOOLBOX_PYTHON -B build/connecting-poses/windows-verification/run_gate.py --zip-sha256 4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be --label connecting-color-foot-promotion-v1",
+  "gate_command": [
+    "pwsh",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-connecting-poses\\build\\connecting-poses\\windows-verification\\connecting-color-foot-promotion-v1\\gate-retained.ps1"
+  ],
+  "limitations": [
+    "Inactive desktop tests real Windows code without displaying it on the input desktop.",
+    "Compiler warnings are surfaced by the gate, not automatically fatal.",
+    "Renderer PPMs and native binaries remain in ignored scratch; exact hashes and small native logs are retained.",
+    "Maintained catalog reproduction and other-platform CI are separate checks.",
+    "This feature-worktree gate is not a post-merge main deployment check."
+  ],
+  "files": [
+    {
+      "path": "run/result.json",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/result.json",
+      "sha256": "b4fae91272f25f05df68840b5a057ec8e01796559847cc873090846f3b96793b"
+    },
+    {
+      "path": "run/running.json",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/running.json",
+      "sha256": "5eb70a430f1405dc9553dbbaf224f33ac39763e365b4b1b78f362e4ff0e21fd0"
+    },
+    {
+      "path": "run/gate.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/gate.log",
+      "sha256": "4a355dbd3ae331671c1473de3b0a39b869d0e195a2d39ce24090339c1d037f41"
+    },
+    {
+      "path": "run/adaptation.json",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/adaptation.json",
+      "sha256": "b3fad8b2bb24f21a727f5386dcadc0c312019baa61d574fe6dd147bc43af5ab6"
+    },
+    {
+      "path": "run/gate-adaptation.diff",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/gate-adaptation.diff",
+      "sha256": "68f091af7e5f3535b879c75611c5f94b21d3abbbf84cd7ae19036d0ba7e7ec2a"
+    },
+    {
+      "path": "run/gate-retained.ps1",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/gate-retained.ps1",
+      "sha256": "f004e199ac525e795d82e8022a23377ace3d76d7909a7bb90c8f9c7cc74d89e1"
+    },
+    {
+      "path": "run/integration-start.json",
+      "source": "build/connecting-poses/windows-verification/integration-start.json",
+      "sha256": "150a8dfc9d8400b97a1a2c9b4fd19341102723194a2b595a26a57cd07e97f978"
+    },
+    {
+      "path": "helpers/run_gate.py",
+      "source": "build/connecting-poses/windows-verification/run_gate.py",
+      "sha256": "a442d850b6930cce0aae3e2d8e1cc84e81b420c638d88f9fa2decf3722c89dc6"
+    },
+    {
+      "path": "helpers/preserve_windows.py.txt",
+      "source": "build/connecting-poses/windows-verification/preserve_windows.py",
+      "sha256": "7024bd8288081b2643a0e04749f49b53417fee13b415270e918b5409ff462725"
+    },
+    {
+      "path": "helpers/gate.ps1",
+      "source": "gate.ps1",
+      "sha256": "7eb40f38d9c34f990f22628b54b853459385175016250e3eefa074a2ecf30394"
+    },
+    {
+      "path": "helpers/motion_review.py",
+      "source": "external-scratch/original-pose-review/motion_review.py",
+      "sha256": "86312fd1bad0786c2e1ee56c9eb6aab69cb1bf9f1295ec84430769877490f55d"
+    },
+    {
+      "path": "build/CMakeCache.txt",
+      "source": "build/CMakeCache.txt",
+      "sha256": "e7e05ff4510533ddce1d5e6bffd9c73603515a7c5444311b8e7a73a0f21f4e9b"
+    },
+    {
+      "path": "build/4.3.1/CMakeCCompiler.cmake",
+      "source": "build/CMakeFiles/4.3.1/CMakeCCompiler.cmake",
+      "sha256": "a0bd1a398ada9b98763971c3a5ea0450ad7c4f575298d01b3935cf4c507839a0"
+    },
+    {
+      "path": "build/4.3.1/CMakeSystem.cmake",
+      "source": "build/CMakeFiles/4.3.1/CMakeSystem.cmake",
+      "sha256": "cb655f074177502b26612fa979ee72c606731a0b59f300e936ebba161d8cce09"
+    },
+    {
+      "path": "captures/wave-smoke/active/current-cartoon-01.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-smoke/active/current-cartoon-01.log",
+      "sha256": "31816932c5f6589fc9815941cc5d6bce248d2d172850703b21253eeb58a21cc3"
+    },
+    {
+      "path": "captures/wave-smoke/active/current-hd-01.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-smoke/active/current-hd-01.log",
+      "sha256": "4924d6211a54474c296627764013e9f38c66db04242b717df4b8d53ebb00382f"
+    },
+    {
+      "path": "captures/wave-regression/active/current-cartoon-01.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/active/current-cartoon-01.log",
+      "sha256": "e24118ef3473d5f9f3740cb0258317266983d79547d41bf946790f16d9639667"
+    },
+    {
+      "path": "captures/wave-regression/active/current-cartoon-05.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/active/current-cartoon-05.log",
+      "sha256": "60a7ad4c175a7958fbe38729741da1f05dac9b61fbe6c1c6de1594e77fbe4fe0"
+    },
+    {
+      "path": "captures/wave-regression/active/current-cartoon-07.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/active/current-cartoon-07.log",
+      "sha256": "38af18179b5703d533bf9ed80fd683c091b61b4de5a19ba48e809e22947015fd"
+    },
+    {
+      "path": "captures/wave-regression/active/current-cartoon-11.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/active/current-cartoon-11.log",
+      "sha256": "556ff67e54f878311651dcf539765f827f05d4ed06b05cbe2188e93739ea3966"
+    },
+    {
+      "path": "captures/wave-regression/active/current-hd-01.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/active/current-hd-01.log",
+      "sha256": "d1f5dbbf9ca8cada13d23eaecb3cc6ed73ed99b8333958bb13756efad9058a94"
+    },
+    {
+      "path": "captures/wave-regression/active/current-hd-05.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/active/current-hd-05.log",
+      "sha256": "1071f025a945c5de92e77f614239b67cc65631b87ca768ad2e9fd7d728ac7b1c"
+    },
+    {
+      "path": "captures/wave-regression/active/current-hd-11.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/active/current-hd-11.log",
+      "sha256": "dadf2c0552226959e684861035ac6ed77e176c83c3394c81597400d74e29189e"
+    },
+    {
+      "path": "captures/wave-regression/inactive/current-cartoon-01.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/inactive/current-cartoon-01.log",
+      "sha256": "ff3e9e2deaba1a5b9122409834fc621b1e4e7008db35dadd89a6c49b859b2632"
+    },
+    {
+      "path": "captures/wave-regression/inactive/current-cartoon-05.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/inactive/current-cartoon-05.log",
+      "sha256": "086ed6736ed05e32c9ca9b88994a7d0c257dbaf65417e11b3a4c7f0d03126fe3"
+    },
+    {
+      "path": "captures/wave-regression/inactive/current-cartoon-11.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/inactive/current-cartoon-11.log",
+      "sha256": "1dcd39d563c31d7340cc51e3430f39b5f114c79a5c735b249c0d6499f858b8f4"
+    },
+    {
+      "path": "captures/wave-regression/inactive/current-hd-01.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/inactive/current-hd-01.log",
+      "sha256": "463a30e891ee28d5b716dc4a22c915005bc6e5986b1fa4a347e9d38e9a5a4523"
+    },
+    {
+      "path": "captures/wave-regression/inactive/current-hd-05.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/inactive/current-hd-05.log",
+      "sha256": "efcdb841c83449d9f13c38a7a463e193d05eb7b471cce53a0bdd2f2c52603805"
+    },
+    {
+      "path": "captures/wave-regression/inactive/current-hd-11.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/wave-regression/inactive/current-hd-11.log",
+      "sha256": "80ee1fd8085c9a6636ffbcaef76ab30db92c1ab9cfafa7a3587dc084f46e8bc6"
+    },
+    {
+      "path": "captures/palm-smoke/alpha128-active1-original0/current-cartoon-de.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-smoke/alpha128-active1-original0/current-cartoon-de.log",
+      "sha256": "be9938528dcae4a21961883c20c46e49188d55153b43cb8d9181a899b78a77c0"
+    },
+    {
+      "path": "captures/palm-smoke/alpha128-active1-original0/current-cartoon-ed.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-smoke/alpha128-active1-original0/current-cartoon-ed.log",
+      "sha256": "c55dc181804592e17f4237341deaf93ede3309b3a9ac88d9102769dd679e1c89"
+    },
+    {
+      "path": "captures/palm-smoke/alpha128-active1-original0/current-hd-de.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-smoke/alpha128-active1-original0/current-hd-de.log",
+      "sha256": "cb606ce79a03f93588e95b99b7b975c6b0d94bdadd0cba5266fca51c4916b07b"
+    },
+    {
+      "path": "captures/palm-smoke/alpha128-active1-original0/current-hd-ed.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-smoke/alpha128-active1-original0/current-hd-ed.log",
+      "sha256": "42f4bb8e663ea29a33e26f264595912472516dbb2c5ad2f1b7a69d5b4bad531c"
+    },
+    {
+      "path": "captures/palm-regression/alpha0-active1-original0/current-cartoon-de.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha0-active1-original0/current-cartoon-de.log",
+      "sha256": "7336295e5e38f7fc9d5126fb450cdbc370fa44fee27b52e142a39174bacba97a"
+    },
+    {
+      "path": "captures/palm-regression/alpha0-active1-original0/current-cartoon-ed.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha0-active1-original0/current-cartoon-ed.log",
+      "sha256": "57a771b57610a1215c3172e33c7f778c98a455e67a0b362a86e0dcab23be7c85"
+    },
+    {
+      "path": "captures/palm-regression/alpha128-active0-original0/current-cartoon-de.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha128-active0-original0/current-cartoon-de.log",
+      "sha256": "29ed718cdd48dee44a85c11821636a686206c391f2018f38ecbd8888e5853b8a"
+    },
+    {
+      "path": "captures/palm-regression/alpha128-active0-original0/current-cartoon-ed.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha128-active0-original0/current-cartoon-ed.log",
+      "sha256": "ddb35aaf36d1a7b6dae821265a10c396ac2a7d2415b13ce40a72ae6cb83d9524"
+    },
+    {
+      "path": "captures/palm-regression/alpha128-active0-original0/current-hd-de.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha128-active0-original0/current-hd-de.log",
+      "sha256": "80a10723590331fc4206de3287255e32100520eecb62954d725b749c11a1cccd"
+    },
+    {
+      "path": "captures/palm-regression/alpha128-active0-original0/current-hd-ed.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha128-active0-original0/current-hd-ed.log",
+      "sha256": "f2c2124c13555ca5c06de12b2c2fe1a158c467c69a5b54650c501698060e6bf0"
+    },
+    {
+      "path": "captures/palm-regression/alpha128-active1-original0/current-cartoon-de.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha128-active1-original0/current-cartoon-de.log",
+      "sha256": "5532642c03be9f7c707f9d6599b31f3654dcf76f9c485c4355daf36623739f5d"
+    },
+    {
+      "path": "captures/palm-regression/alpha128-active1-original0/current-cartoon-ed.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha128-active1-original0/current-cartoon-ed.log",
+      "sha256": "ad3cf3a283f27300b247d625c9dd92d11c93671031e576a27993bdfe8454f468"
+    },
+    {
+      "path": "captures/palm-regression/alpha128-active1-original0/current-cartoon-none.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha128-active1-original0/current-cartoon-none.log",
+      "sha256": "69efc6e9fe0b1c4c701972ac1ab2ba589795be0ebc55341ecaefcf1924c5214f"
+    },
+    {
+      "path": "captures/palm-regression/alpha128-active1-original0/current-hd-de.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha128-active1-original0/current-hd-de.log",
+      "sha256": "da750a2878fbacf201a373a5d4e75c9f49e32ff2e765faea8e11a6a73a06431b"
+    },
+    {
+      "path": "captures/palm-regression/alpha128-active1-original0/current-hd-ed.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha128-active1-original0/current-hd-ed.log",
+      "sha256": "cf1185cad658f2c5964aadb7fc8c120fe0b790cafd043f8b9cbe8c072247d72f"
+    },
+    {
+      "path": "captures/palm-regression/alpha255-active1-original0/current-cartoon-de.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha255-active1-original0/current-cartoon-de.log",
+      "sha256": "2e1b844fcce6a2e6502e736efcf2c5348da6dcfc6910ff6acab352d9f35f53f5"
+    },
+    {
+      "path": "captures/palm-regression/alpha255-active1-original0/current-cartoon-ed.log",
+      "source": "build/connecting-poses/windows-verification/connecting-color-foot-promotion-v1/palm-regression/alpha255-active1-original0/current-cartoon-ed.log",
+      "sha256": "d753f8f29b43b2b59dc7d51f99813d5740c163a755c334f0df6e6a3f374cf7b6"
+    }
+  ]
+}

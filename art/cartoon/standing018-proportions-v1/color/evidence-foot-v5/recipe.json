@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "operation": "post-export-color-correction",
+  "scope": "New018-foot-v5 contact and motion preview only; no production or revised-pose approval.",
+  "algorithm": {
+    "path": "art/cartoon/skin-tone-v1/correct.py",
+    "sha256": "70be24d13eb34317f602b0b66f952a4d3dbe8e29935b4f6c8353f15c8e9d3534"
+  },
+  "adapter_sha256": "93c70549e1be851a6b1c1731d2cab89404511a21b8b82d72f943a0485e6a8356",
+  "pillow_version": "12.3.0",
+  "numpy_version": "2.4.6",
+  "canonical_reference": {
+    "frame": 29,
+    "input_sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+    "calibration_sha256": "6d960c6d70d6228f9c5285f3d7331f8c77083c75cca2c766a6c36ac84e9bfa65"
+  },
+  "target_base_rgb": [
+    252,
+    148,
+    88
+  ],
+  "inputs": {
+    "source": {
+      "path": "build/standing018-proportions/stage-v5/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "183cdf4b4f23e4164e7e290456ff8b8082301b8d952ad577b186ab4663a9c5b2"
+    },
+    "source_export_recipe": {
+      "path": "build/standing018-proportions/stage-v5/runtime/recipe.json",
+      "sha256": "38acb81be045ef29a187586bfc9b280c48b3dcf4f48266dee6c5c9483cf9779e"
+    },
+    "source_export_report": {
+      "path": "build/standing018-proportions/stage-v5/runtime/export-report.json",
+      "sha256": "7aaf781ed8ebf5d3e17fe23bfc45f787a4e3c9a6ac8f37ee90442441f4fb8662"
+    },
+    "annotation": {
+      "path": "art/cartoon/standing018-proportions-v1/color/reference-foot-v5.json",
+      "sha256": "e1bde6bf34f91a5d81a308187a305b7344d31e8acf5f2a51fab6afc29406acf1"
+    }
+  },
+  "frames": [
+    {
+      "frame": 18,
+      "path": "BMP/JOHNWALK.BMP/018.png",
+      "member": "data/styles/cartoon/BMP/JOHNWALK.BMP/018.png",
+      "runtime_canvas": [
+        64,
+        154
+      ],
+      "input_sha256": "183cdf4b4f23e4164e7e290456ff8b8082301b8d952ad577b186ab4663a9c5b2",
+      "candidate_png": "sprites/018.png",
+      "candidate_png_sha256": "5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f",
+      "rgba_sha256": "1a3bd2927a6e017576018495e5c235fbf6214e2d00a507390552d8304bd69588",
+      "alpha_sha256": "193eb8d6d69e55fbece27c43a2cad1575bd5c9a3c6b6ff1561ad3bec4729a221",
+      "mask": "masks/018.png",
+      "mask_sha256": "78f3e8eae280bb2176d4cfcbe7fb928ee5ab211df430024ff329b6d61b9beb62",
+      "protected_cap_mask_l_sha256": "669ba9efb1b65fdbe49d0bf40fd64d9e8f1de75622965d29e96c38e399a04956",
+      "base_before_rgb": [
+        252,
+        162,
+        103
+      ],
+      "base_target_rgb": [
+        252,
+        148,
+        88
+      ],
+      "base_after_rgb": [
+        252,
+        148,
+        88
+      ],
+      "channel_gain": [
+        1.0,
+        0.9135802469135802,
+        0.8543689320388349
+      ],
+      "changed_pixels": 1736
+    }
+  ]
+}

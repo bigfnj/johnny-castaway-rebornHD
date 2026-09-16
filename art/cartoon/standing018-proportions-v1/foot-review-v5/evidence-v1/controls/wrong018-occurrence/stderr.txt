@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\negative_controls.py", line 80, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\negative_controls.py", line 56, in main
+    if a.case: return one(a.review, a.output, a.case)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\negative_controls.py", line 28, in one
+    check.validate_contact(review, values)
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\foot-review-v5\check_review.py", line 33, in validate_contact
+    assert values['display_index'] == 63 and values['draw'] == [1, 394, 209, 18] and values['logical_ms'] == 4920, 'contact mirrored arrival occurrence'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: contact mirrored arrival occurrence

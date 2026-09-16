@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "scope": "Technical connecting-pose-010 review only; no runtime or motion approval.",
+  "reference_hashes": {
+    "010-source.json": "45b82869688776db44d040c8389259af9c0c86b326ac13e74d6e89d1ca0075dc",
+    "010-original-native.png": "060f132143f5663425e94ec8646ba3484339c95164875e9ed0882d02b2d717db",
+    "010-original-nearest8.png": "2531998326010ab253505a80f45906e586083c74fbac0438c814be79271c749d"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "scale_exact": {
+    "numerator": 1,
+    "denominator": 10
+  },
+  "normalization": "none",
+  "padding_hd": 64,
+  "resampling": {
+    "working_mode": "RGBa",
+    "affine": "BICUBIC",
+    "oversample": 8,
+    "downsample": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "pillow_version": "12.3.0",
+  "cap_target_hd": [
+    35,
+    0.25
+  ],
+  "cap_measurement": "First alpha>=128 row; its pixel-edge horizontal midpoint and row top. Outline observation, not an anatomical landmark.",
+  "target_basis": "Original010 top-row pixel-edge midpoint doubled to35HD; y0.25 is the inherited deliberate filter margin.",
+  "frames": [
+    {
+      "frame": 10,
+      "source": "010-connecting-v5.png",
+      "source_sha256": "cceef504e777f1fe9f794c35832c7c6e4273526fabc49b27a7d2032ae4056729",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        80,
+        148
+      ],
+      "cap_raw": [
+        510.0,
+        23
+      ],
+      "cap_target_hd": [
+        35,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -16.0,
+        0,
+        0.1,
+        -2.0500000000000003
+      ]
+    }
+  ]
+}

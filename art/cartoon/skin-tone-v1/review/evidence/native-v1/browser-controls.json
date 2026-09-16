@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "name": "wrong-pose-selector",
+      "result": "FIRED",
+      "expected_failure": "pose selector native ordinal:front_arc:0",
+      "actual_exit_code": 1,
+      "executed_html_sha256": "253862931dab99c6383118c3f1b8ef2ec549e3410b1389c40c656df4570ba8c1",
+      "stdout_sha256": "a3042e2a9a9ab69ff8e63bb3ac2487b97e733a2a2492be74168d18e266fdf82f",
+      "stderr_sha256": "5255cba157679a00e7153cb932df77d0dbf68053eca6b99edbd12c6908282c81"
+    },
+    {
+      "name": "retained-previous-clip-cache",
+      "result": "FIRED",
+      "expected_failure": "exact selected clip cache; previous references released:front_arc",
+      "actual_exit_code": 1,
+      "executed_html_sha256": "c56b5d45555c995d5161c3bece6d0d7a95af2efb5fb0a3898a8dedd4f5a64317",
+      "stdout_sha256": "85b43f7e6c1d16b89adfe8dd590e238d7c179c67c86cea2f61d8a2e3ca2107b2",
+      "stderr_sha256": "83d91591ed954fa3965df31bdfe2f35a3e93f71cd3b9b1c0b7d4fa8fe815c773"
+    },
+    {
+      "name": "changed-served-html",
+      "result": "FIRED",
+      "expected_failure": "exact served HTML",
+      "actual_exit_code": 1,
+      "executed_html_sha256": "60c6462042eed75528688b5ef57bcbc53cc747dc3971e6bcf8f7da97ba17adec",
+      "stdout_sha256": "e3ea0f2eef8fc612332c6caadd0d4b5d1a4b0f063c34b9a12423538b04a3df41",
+      "stderr_sha256": "8ef3063066e9b3d247fe5b6286514e8d2d85000818f67656ca25af4cb0f12a98"
+    }
+  ],
+  "harness_sha256": "f99a442e6d0e222f32cb3e556fb8db13f13a7f43e872955b3a41fe16cb798bbc",
+  "executed_checker_sha256": "304d4264d5b6b3c30221b36523b899d9ff3db9352bcd6ae84ed0ef2547cc8061",
+  "original_html_sha256": "13991046dd3a451b3886171a62df4fada4a92864cc3b07774e170730153c9d84",
+  "positive_control_sha256": "b68da5e26df013fc87307d51ca5b379473916ecf1f66875e5d3a10cd13ce5f10",
+  "scope": "Fresh headless browsers request three mutated color pages. Wrong selector and disabled prior-clip cache release execute through smoke before their named regressions; changed served bytes fail exact HTTP identity. No production/native mutation.",
+  "review_directory": "review-v1"
+}

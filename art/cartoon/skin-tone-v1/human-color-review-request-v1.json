@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "status": "Human skin-color review requested; response pending",
+  "time_observed_before_question_utc": "2026-09-16 17:39:12 UTC",
+  "question": "In the new color review (http://127.0.0.1:8932/cartoon-skin-tone-v1/review.html), does the right-hand \"Matched colors\" motion keep Johnny’s skin consistently at image 2’s lighter tone? Please judge the colors; the approved poses are unchanged.",
+  "options": [
+    "Yes, keep these colors",
+    "I still see a shade change"
+  ],
+  "url": "http://127.0.0.1:8932/cartoon-skin-tone-v1/review.html",
+  "default_clip": "waypoint_front",
+  "default_speed": "Normal",
+  "html_sha256": "13991046dd3a451b3886171a62df4fada4a92864cc3b07774e170730153c9d84",
+  "review_record_sha256": "f98d14196b270b95ccf78181602762b2216c50254682eae6e33115dc36269384",
+  "candidate_archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf",
+  "correction_recipe": "exports-v2/recipe.json",
+  "correction_recipe_sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+  "scope": "Color-only correction of all 28 current/draft Cartoon Johnny walking and standing sprites against user-selected 029. The page provides eight native clips and all 28 stills. No claim is made about which clips the user has personally viewed.",
+  "preserved": "Approved poses, every alpha byte, canvas dimensions, positions, cap and protected material samples; 029 remains byte-identical.",
+  "technical_checks": "Sprite smoke/regression and 14 controls passed. Eight native clips cover 298 displays, 286 skin-mask-only changes and 12 identical reference displays. Local and served browser smoke/regression passed, all 669 served files match.",
+  "production_approved": false,
+  "production_archive_unchanged_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+  "earlier_pose_feedback": "art/cartoon/walk-pilot/connecting-poses-v1/human-motion-feedback-v1.json",
+  "palette_reference_decision": "human-palette-reference-v1.json"
+}

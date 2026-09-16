@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "command": [
+    "${PYTHON}",
+    "-B",
+    "art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/publish.py",
+    "--server-root",
+    "D:/.ai-work/worktrees/johnny-art-metadata/build/art-review",
+    "--review",
+    "build/connecting-poses/native-motion-v1/review-v1",
+    "--guard",
+    "build/connecting-poses/native-motion-v1/negative-controls/selection-v2.json",
+    "--guard",
+    "build/connecting-poses/native-motion-v1/negative-controls/native-v2.json",
+    "--guard",
+    "build/connecting-poses/native-motion-v1/negative-controls/baseline/report.json",
+    "--guard",
+    "build/connecting-poses/native-motion-v1/negative-controls/candidate-version/result.json",
+    "--guard",
+    "build/connecting-poses/native-motion-v1/negative-controls/selection-links-v2/result.json",
+    "--guard",
+    "build/connecting-poses/native-motion-v1/negative-controls/viewer-source-binding/result.json"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 35.5539186000824,
+  "executed_helper_sha256": "bb3e2afb7cfa9dd528963aec4782c0cfe4e64a2b30bf186eb6325de035eda4c4",
+  "runner_sha256": "21118c07387f18a1e4d92e800734d0ecb3217c1c3dbc4f8f06f16743754ffbcc",
+  "outputs_sha256": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "b0c9f4ac246b9d4ea4994d8e3eee273fb9a20f561c874f0fe75a6733817ac26f"
+  }
+}

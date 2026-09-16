@@ -1,0 +1,72 @@
+{
+  "status": "PASS; human foot-contact review pending",
+  "bundle": {
+    "panels": [
+      {
+        "kind": "original",
+        "label": "Original pose",
+        "note": "Original pose at this exact arrival.",
+        "image": "original.png",
+        "png_sha256": "d52aab01cee973f664949046f23a20f956cf5db3567fded2333edc9d3bd2ebb7",
+        "report_sha256": "295d34ac2fb44974fa75412aa24eb599745deb594f27c93991bacec9749a0198",
+        "archive_sha256": "d7797181cf2e30699709946f0983b6899f0c7428785f9c596dea8ac150619f20"
+      },
+      {
+        "kind": "current",
+        "label": "Previous version",
+        "note": "Accepted shorts; smaller foot still high.",
+        "image": "current.png",
+        "png_sha256": "f36d947873e1b7d8037b4f4671f79482d7eeb1fbbc92c50b10b1c9df802ef5e4",
+        "report_sha256": "e09fa5081308abf417b5af819321b85f6840686813cb297fd9f537935e697164",
+        "archive_sha256": "7a50f72fe65382917a1d38412dad97315542831ea5fd06eec9570734a7afdb52"
+      },
+      {
+        "kind": "revised",
+        "label": "Corrected foot",
+        "note": "The smaller foot has been lowered.",
+        "image": "revised.png",
+        "png_sha256": "b12aaa108405ec0c4c6a2a4d6f217ba9da4a50e197368456d02c543cd330d25e",
+        "report_sha256": "9a90b3e9eed16587d07ac4fd0bdf401ff7cc9a8c3224386bbf64d008bedd63aa",
+        "archive_sha256": "561edb2c9b4b4857b723af1505ce8d2654616aae2942325389604a4d88804521"
+      }
+    ],
+    "pose": [
+      784,
+      410,
+      80,
+      178
+    ],
+    "feet": [
+      792,
+      546,
+      60,
+      34
+    ],
+    "frame": 18,
+    "draw": [
+      1,
+      394,
+      209,
+      18
+    ],
+    "logical_ms": 4920,
+    "display_index": 63,
+    "motion": "motion/review.html"
+  },
+  "files_sha256": {
+    "original.png": "d52aab01cee973f664949046f23a20f956cf5db3567fded2333edc9d3bd2ebb7",
+    "inputs/original-report.json": "295d34ac2fb44974fa75412aa24eb599745deb594f27c93991bacec9749a0198",
+    "current.png": "f36d947873e1b7d8037b4f4671f79482d7eeb1fbbc92c50b10b1c9df802ef5e4",
+    "inputs/current-report.json": "e09fa5081308abf417b5af819321b85f6840686813cb297fd9f537935e697164",
+    "revised.png": "b12aaa108405ec0c4c6a2a4d6f217ba9da4a50e197368456d02c543cd330d25e",
+    "inputs/revised-report.json": "9a90b3e9eed16587d07ac4fd0bdf401ff7cc9a8c3224386bbf64d008bedd63aa",
+    "review.html": "9557a43cadf948a06acc7280f138742b2b36916c4408bffdc3adf31fafc2f1d1"
+  },
+  "motion_record_sha256": "947b2aa27e41e33ac2189f9ae6c1c5767a7eb7e0989476cb3f156f2187bb1503",
+  "builder_sha256": "dd792d6aec0fb3762c3c757a116c3f159385dd4e6a3006fa0383d31a1abfd6bf",
+  "contact_template_sha256": "e12a5da607048a6d63a9b86a66e94b628784d525b75f4a2dbdccf58dc35a9a1a",
+  "baseline_archive_sha256": "7a50f72fe65382917a1d38412dad97315542831ea5fd06eec9570734a7afdb52",
+  "candidate_archive_sha256": "561edb2c9b4b4857b723af1505ce8d2654616aae2942325389604a4d88804521",
+  "runtime018_sha256": "5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f",
+  "scope": "Original/current-v2/new mirrored018 still, separate two-panel actual motion. Diagnostic source palette explained in About; no original synchronized walking claim."
+}

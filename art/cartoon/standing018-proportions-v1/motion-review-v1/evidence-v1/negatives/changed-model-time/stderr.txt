@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 98, in <module>
+    if __name__ == '__main__': main()
+                               ^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 72, in main
+    return one(a.review, a.output, a.case)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\negative_controls.py", line 61, in one
+    check.validate_model(model, review)
+  File "D:\.ai-work\worktrees\johnny-cartoon-connecting-poses\art\cartoon\standing018-proportions-v1\motion-review-v1\check_review.py", line 34, in validate_model
+    assert all(row[k] == b[k] for k in config.TIMELINE_KEYS if k != 'index') and row['pose_index'] == b['draw_ordinal'] and row['frame'] == b['actual_draw'][3], 'review native time/draw binding:' + clip
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: review native time/draw binding:waypoint_front

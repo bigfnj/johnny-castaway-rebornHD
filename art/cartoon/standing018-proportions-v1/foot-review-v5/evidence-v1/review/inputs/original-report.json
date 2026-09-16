@@ -1,0 +1,1268 @@
+{
+  "status": "PASS",
+  "clip": "waypoint_rear",
+  "phase": "full",
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--init",
+    "--network",
+    "none",
+    "--mount",
+    "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses,target=/source,readonly",
+    "--mount",
+    "type=bind,source=D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/build/standing018-proportions/original-mirror-v1,target=/out",
+    "--workdir",
+    "/out/full",
+    "--env",
+    "HOME=/out/full/profile",
+    "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "/source/build/skin-tone/native-review/baseline-v1/connecting_walk_probe",
+    "cartoon",
+    "full",
+    "waypoint_rear"
+  ],
+  "exit_code": 0,
+  "archive_sha256": "d7797181cf2e30699709946f0983b6899f0c7428785f9c596dea8ac150619f20",
+  "executable_sha256": "203aebb8c15881a41108b2b4fb97f5f9c6d025aa595a678b4dd84906011f7563",
+  "displays": [
+    {
+      "index": 1,
+      "logical_ms": 0,
+      "duration_ms": 120,
+      "role": "standing",
+      "actual_draw": [
+        0,
+        452,
+        254,
+        18
+      ],
+      "ppm": "display-001.ppm",
+      "pixels_sha256": "aff036d3b12b99c052827384d7ed285b3ca5f03e165e5d300fa01c384fc5e205",
+      "revised_pixels_sha256": "295fbf155fd7534fb6151799c837ba8fccc5f49d1d36940fa1782ddd5f945bd1"
+    },
+    {
+      "index": 2,
+      "logical_ms": 120,
+      "duration_ms": 0,
+      "role": "standing",
+      "actual_draw": [
+        0,
+        452,
+        254,
+        18
+      ],
+      "ppm": "display-002.ppm",
+      "pixels_sha256": "aff036d3b12b99c052827384d7ed285b3ca5f03e165e5d300fa01c384fc5e205",
+      "revised_pixels_sha256": "295fbf155fd7534fb6151799c837ba8fccc5f49d1d36940fa1782ddd5f945bd1"
+    },
+    {
+      "index": 3,
+      "logical_ms": 120,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        445,
+        252,
+        11
+      ],
+      "ppm": "display-003.ppm",
+      "pixels_sha256": "1f816bab680b4ae1add7e93e28a889ecf539649e7d57cfab0ec058d8d4694e99",
+      "revised_pixels_sha256": "1f816bab680b4ae1add7e93e28a889ecf539649e7d57cfab0ec058d8d4694e99"
+    },
+    {
+      "index": 4,
+      "logical_ms": 160,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        445,
+        252,
+        11
+      ],
+      "ppm": "display-004.ppm",
+      "pixels_sha256": "d6703b7d62c59b41b1f75cf9c01957c77d8a78e08f3c1dcd07d001ff717d096a",
+      "revised_pixels_sha256": "d6703b7d62c59b41b1f75cf9c01957c77d8a78e08f3c1dcd07d001ff717d096a"
+    },
+    {
+      "index": 5,
+      "logical_ms": 240,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        438,
+        254,
+        19
+      ],
+      "ppm": "display-005.ppm",
+      "pixels_sha256": "c46bd12f8af3567d37b06e2ad1665d3062b3241273b238c1cf2f59571f627f8c",
+      "revised_pixels_sha256": "c46bd12f8af3567d37b06e2ad1665d3062b3241273b238c1cf2f59571f627f8c"
+    },
+    {
+      "index": 6,
+      "logical_ms": 320,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        438,
+        254,
+        19
+      ],
+      "ppm": "display-006.ppm",
+      "pixels_sha256": "9229a279907a57fcae994719ace2b93869abdce2435a89150614fe1b34c63794",
+      "revised_pixels_sha256": "9229a279907a57fcae994719ace2b93869abdce2435a89150614fe1b34c63794"
+    },
+    {
+      "index": 7,
+      "logical_ms": 360,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        432,
+        253,
+        20
+      ],
+      "ppm": "display-007.ppm",
+      "pixels_sha256": "7881c02ad3d5fcd214776f041969ca7baec208b2d37ce0a2b37c6bb062698c68",
+      "revised_pixels_sha256": "7881c02ad3d5fcd214776f041969ca7baec208b2d37ce0a2b37c6bb062698c68"
+    },
+    {
+      "index": 8,
+      "logical_ms": 480,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        423,
+        252,
+        21
+      ],
+      "ppm": "display-008.ppm",
+      "pixels_sha256": "3c6971d4defbb271e3d0fdc06e4e86fe138581fb2e96bb8a4aae3ab366163027",
+      "revised_pixels_sha256": "3c6971d4defbb271e3d0fdc06e4e86fe138581fb2e96bb8a4aae3ab366163027"
+    },
+    {
+      "index": 9,
+      "logical_ms": 600,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        418,
+        252,
+        22
+      ],
+      "ppm": "display-009.ppm",
+      "pixels_sha256": "6e0106b7e2314ecbbf15138e69c97dbb9b9f75edc35dd56d83ac6f3a7966601c",
+      "revised_pixels_sha256": "6e0106b7e2314ecbbf15138e69c97dbb9b9f75edc35dd56d83ac6f3a7966601c"
+    },
+    {
+      "index": 10,
+      "logical_ms": 640,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        418,
+        252,
+        22
+      ],
+      "ppm": "display-010.ppm",
+      "pixels_sha256": "7d5465cc98cee4978029ca78edc859eb14a45a497445ebc431b74afec8ef474e",
+      "revised_pixels_sha256": "7d5465cc98cee4978029ca78edc859eb14a45a497445ebc431b74afec8ef474e"
+    },
+    {
+      "index": 11,
+      "logical_ms": 720,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        412,
+        249,
+        23
+      ],
+      "ppm": "display-011.ppm",
+      "pixels_sha256": "dcd9b5f7e2a2703371c5f0244361741b922ab06752218856d1bc7267ce96d29f",
+      "revised_pixels_sha256": "dcd9b5f7e2a2703371c5f0244361741b922ab06752218856d1bc7267ce96d29f"
+    },
+    {
+      "index": 12,
+      "logical_ms": 800,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        412,
+        249,
+        23
+      ],
+      "ppm": "display-012.ppm",
+      "pixels_sha256": "010f9cbd98d19f9206715bbfcb9f32c8a15fa4ff20c2d3cae33e08da9e70f0f1",
+      "revised_pixels_sha256": "010f9cbd98d19f9206715bbfcb9f32c8a15fa4ff20c2d3cae33e08da9e70f0f1"
+    },
+    {
+      "index": 13,
+      "logical_ms": 840,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        405,
+        248,
+        11
+      ],
+      "ppm": "display-013.ppm",
+      "pixels_sha256": "efa05b99a347145fbacad9127812c087f5c7b0fcced2d447a628fc857f98a89c",
+      "revised_pixels_sha256": "efa05b99a347145fbacad9127812c087f5c7b0fcced2d447a628fc857f98a89c"
+    },
+    {
+      "index": 14,
+      "logical_ms": 960,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        398,
+        250,
+        19
+      ],
+      "ppm": "display-014.ppm",
+      "pixels_sha256": "5fade8b9bfa7e2ae6fe6a6bf0786b002354d053f5aac8b96a7b81b790f33f1e3",
+      "revised_pixels_sha256": "5fade8b9bfa7e2ae6fe6a6bf0786b002354d053f5aac8b96a7b81b790f33f1e3"
+    },
+    {
+      "index": 15,
+      "logical_ms": 1080,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        392,
+        249,
+        20
+      ],
+      "ppm": "display-015.ppm",
+      "pixels_sha256": "74004e5ada2ef880f1034d029da30d3372fff2726b61ee556602a4985ead3e57",
+      "revised_pixels_sha256": "74004e5ada2ef880f1034d029da30d3372fff2726b61ee556602a4985ead3e57"
+    },
+    {
+      "index": 16,
+      "logical_ms": 1120,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        392,
+        249,
+        20
+      ],
+      "ppm": "display-016.ppm",
+      "pixels_sha256": "c9fd9f822abb5812d741b0e074291eaf76893e44c4cb86419568fc14fd63ea7a",
+      "revised_pixels_sha256": "c9fd9f822abb5812d741b0e074291eaf76893e44c4cb86419568fc14fd63ea7a"
+    },
+    {
+      "index": 17,
+      "logical_ms": 1200,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        385,
+        248,
+        21
+      ],
+      "ppm": "display-017.ppm",
+      "pixels_sha256": "ed9be85389f86f187522298e473e09a0a9b03f755a7ef5a41d6984046b971c22",
+      "revised_pixels_sha256": "ed9be85389f86f187522298e473e09a0a9b03f755a7ef5a41d6984046b971c22"
+    },
+    {
+      "index": 18,
+      "logical_ms": 1280,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        385,
+        248,
+        21
+      ],
+      "ppm": "display-018.ppm",
+      "pixels_sha256": "a248847f398bd563cfef5323a17422a2e5822170c355de08b6c72146ef08c42b",
+      "revised_pixels_sha256": "a248847f398bd563cfef5323a17422a2e5822170c355de08b6c72146ef08c42b"
+    },
+    {
+      "index": 19,
+      "logical_ms": 1320,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        379,
+        248,
+        22
+      ],
+      "ppm": "display-019.ppm",
+      "pixels_sha256": "b3e2c2395edef707ebf0826a60b8a83063841b702f0efe1ebabddfceb8af1107",
+      "revised_pixels_sha256": "b3e2c2395edef707ebf0826a60b8a83063841b702f0efe1ebabddfceb8af1107"
+    },
+    {
+      "index": 20,
+      "logical_ms": 1440,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        373,
+        245,
+        23
+      ],
+      "ppm": "display-020.ppm",
+      "pixels_sha256": "5ea9ff3b8977f5b203d081f5c8a7fc9d273568ac7c589f424f61d88452fe2a93",
+      "revised_pixels_sha256": "5ea9ff3b8977f5b203d081f5c8a7fc9d273568ac7c589f424f61d88452fe2a93"
+    },
+    {
+      "index": 21,
+      "logical_ms": 1560,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        366,
+        245,
+        11
+      ],
+      "ppm": "display-021.ppm",
+      "pixels_sha256": "ca60f58cdac98c8c35df5fe89859ae79d423fd245ba72f0ef851f6f8d9c40795",
+      "revised_pixels_sha256": "ca60f58cdac98c8c35df5fe89859ae79d423fd245ba72f0ef851f6f8d9c40795"
+    },
+    {
+      "index": 22,
+      "logical_ms": 1600,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        366,
+        245,
+        11
+      ],
+      "ppm": "display-022.ppm",
+      "pixels_sha256": "def022303d348bf2c28f49be869aa7241839ee7ac9b97439ef6e3c2ef49db805",
+      "revised_pixels_sha256": "def022303d348bf2c28f49be869aa7241839ee7ac9b97439ef6e3c2ef49db805"
+    },
+    {
+      "index": 23,
+      "logical_ms": 1680,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        358,
+        247,
+        19
+      ],
+      "ppm": "display-023.ppm",
+      "pixels_sha256": "a27372ef460d175e08629f5df54943dd5a8a167619ce7b1887c1c1dc3c15a5a6",
+      "revised_pixels_sha256": "a27372ef460d175e08629f5df54943dd5a8a167619ce7b1887c1c1dc3c15a5a6"
+    },
+    {
+      "index": 24,
+      "logical_ms": 1760,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        358,
+        247,
+        19
+      ],
+      "ppm": "display-024.ppm",
+      "pixels_sha256": "89ca0fc381c580130f735b4b253553ea4d571f5638a5e391c8259ca4c8044c31",
+      "revised_pixels_sha256": "89ca0fc381c580130f735b4b253553ea4d571f5638a5e391c8259ca4c8044c31"
+    },
+    {
+      "index": 25,
+      "logical_ms": 1800,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        352,
+        246,
+        20
+      ],
+      "ppm": "display-025.ppm",
+      "pixels_sha256": "86de1e16471e59a342e7e6ce0e3ba6e716b89cb8c12ee1bd9984f38ea3488894",
+      "revised_pixels_sha256": "86de1e16471e59a342e7e6ce0e3ba6e716b89cb8c12ee1bd9984f38ea3488894"
+    },
+    {
+      "index": 26,
+      "logical_ms": 1920,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        345,
+        247,
+        21
+      ],
+      "ppm": "display-026.ppm",
+      "pixels_sha256": "27850a57f12f903f0dcedfd8afd9092af8a14d939e643885ec28c97fd47001e8",
+      "revised_pixels_sha256": "27850a57f12f903f0dcedfd8afd9092af8a14d939e643885ec28c97fd47001e8"
+    },
+    {
+      "index": 27,
+      "logical_ms": 2040,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        340,
+        248,
+        22
+      ],
+      "ppm": "display-027.ppm",
+      "pixels_sha256": "c4d74909858c500e0cc4a4e3244cbc6fd8ba195d0e985c67b3025fe8b08a390e",
+      "revised_pixels_sha256": "c4d74909858c500e0cc4a4e3244cbc6fd8ba195d0e985c67b3025fe8b08a390e"
+    },
+    {
+      "index": 28,
+      "logical_ms": 2080,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        340,
+        248,
+        22
+      ],
+      "ppm": "display-028.ppm",
+      "pixels_sha256": "f891b53dcf9503499af2dc2f63646a9e85327829befd42166d78c0ac30c8271d",
+      "revised_pixels_sha256": "f891b53dcf9503499af2dc2f63646a9e85327829befd42166d78c0ac30c8271d"
+    },
+    {
+      "index": 29,
+      "logical_ms": 2160,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        333,
+        244,
+        23
+      ],
+      "ppm": "display-029.ppm",
+      "pixels_sha256": "c08e33078f5f69d4b49146307757542f49aa99cf6449874cd73595e85cd9c3b2",
+      "revised_pixels_sha256": "c08e33078f5f69d4b49146307757542f49aa99cf6449874cd73595e85cd9c3b2"
+    },
+    {
+      "index": 30,
+      "logical_ms": 2240,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        333,
+        244,
+        23
+      ],
+      "ppm": "display-030.ppm",
+      "pixels_sha256": "c47b4a63347c3824ff5ce153cdebc147589cbf8f82e227ec7db0b368d21dc693",
+      "revised_pixels_sha256": "c47b4a63347c3824ff5ce153cdebc147589cbf8f82e227ec7db0b368d21dc693"
+    },
+    {
+      "index": 31,
+      "logical_ms": 2280,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        326,
+        243,
+        11
+      ],
+      "ppm": "display-031.ppm",
+      "pixels_sha256": "5e391bc6b5a123bfb206c7923ea17be3f2baec1afe29f5b3128d6089cfc5c95d",
+      "revised_pixels_sha256": "5e391bc6b5a123bfb206c7923ea17be3f2baec1afe29f5b3128d6089cfc5c95d"
+    },
+    {
+      "index": 32,
+      "logical_ms": 2400,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        321,
+        245,
+        19
+      ],
+      "ppm": "display-032.ppm",
+      "pixels_sha256": "5af4d4a58ce51f2e9a6a092f08aa2f0deef29731d37d543135d096840816d79c",
+      "revised_pixels_sha256": "5af4d4a58ce51f2e9a6a092f08aa2f0deef29731d37d543135d096840816d79c"
+    },
+    {
+      "index": 33,
+      "logical_ms": 2520,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        317,
+        245,
+        20
+      ],
+      "ppm": "display-033.ppm",
+      "pixels_sha256": "aae6ef6620e67291edf3c0dddb758d1cd389dfb7d6a3047509289a921e66c7cb",
+      "revised_pixels_sha256": "aae6ef6620e67291edf3c0dddb758d1cd389dfb7d6a3047509289a921e66c7cb"
+    },
+    {
+      "index": 34,
+      "logical_ms": 2560,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        317,
+        245,
+        20
+      ],
+      "ppm": "display-034.ppm",
+      "pixels_sha256": "d8be3fd7b0ed624e9e7946633c6954a1735ee327f743c7fc695d6201b29c79ff",
+      "revised_pixels_sha256": "d8be3fd7b0ed624e9e7946633c6954a1735ee327f743c7fc695d6201b29c79ff"
+    },
+    {
+      "index": 35,
+      "logical_ms": 2640,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        311,
+        244,
+        21
+      ],
+      "ppm": "display-035.ppm",
+      "pixels_sha256": "099f169f8d7691c84a6ca664b21db4994a81ed29d8960f5b167cd4dd06f27cd9",
+      "revised_pixels_sha256": "099f169f8d7691c84a6ca664b21db4994a81ed29d8960f5b167cd4dd06f27cd9"
+    },
+    {
+      "index": 36,
+      "logical_ms": 2720,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        311,
+        244,
+        21
+      ],
+      "ppm": "display-036.ppm",
+      "pixels_sha256": "b1fdd211d6c89d5eb10a9f93322f9dd5cf9d62b3b8e1fc2bae4a3efdf07611a3",
+      "revised_pixels_sha256": "b1fdd211d6c89d5eb10a9f93322f9dd5cf9d62b3b8e1fc2bae4a3efdf07611a3"
+    },
+    {
+      "index": 37,
+      "logical_ms": 2760,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        0,
+        302,
+        244,
+        22
+      ],
+      "ppm": "display-037.ppm",
+      "pixels_sha256": "d6a4a6ffbca017216613eda4407154f8ccd9c9e51d1058c759fb68d6a0234177",
+      "revised_pixels_sha256": "d6a4a6ffbca017216613eda4407154f8ccd9c9e51d1058c759fb68d6a0234177"
+    },
+    {
+      "index": 38,
+      "logical_ms": 2880,
+      "duration_ms": 120,
+      "role": "waypoint turn",
+      "actual_draw": [
+        0,
+        296,
+        241,
+        12
+      ],
+      "ppm": "display-038.ppm",
+      "pixels_sha256": "321b6c97c48e5d858aa562d4eef7b17f4f7d86ba942c1bae1f50edd3ff655837",
+      "revised_pixels_sha256": "321b6c97c48e5d858aa562d4eef7b17f4f7d86ba942c1bae1f50edd3ff655837"
+    },
+    {
+      "index": 39,
+      "logical_ms": 3000,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        305,
+        238,
+        19
+      ],
+      "ppm": "display-039.ppm",
+      "pixels_sha256": "62a19ca820228ed441f3b43714c1d721f5a38fa5b33ddb10e6e3a5ebe1736fe7",
+      "revised_pixels_sha256": "62a19ca820228ed441f3b43714c1d721f5a38fa5b33ddb10e6e3a5ebe1736fe7"
+    },
+    {
+      "index": 40,
+      "logical_ms": 3040,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        305,
+        238,
+        19
+      ],
+      "ppm": "display-040.ppm",
+      "pixels_sha256": "89de3588ca9ad0f0fd14959a74ebc8619dcf0bd5ce34cf0a135c97f398de1074",
+      "revised_pixels_sha256": "89de3588ca9ad0f0fd14959a74ebc8619dcf0bd5ce34cf0a135c97f398de1074"
+    },
+    {
+      "index": 41,
+      "logical_ms": 3120,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        321,
+        235,
+        20
+      ],
+      "ppm": "display-041.ppm",
+      "pixels_sha256": "4ca382177a0091794e86039f517f710800191e41b511ce3be36a014dd1c6f923",
+      "revised_pixels_sha256": "4ca382177a0091794e86039f517f710800191e41b511ce3be36a014dd1c6f923"
+    },
+    {
+      "index": 42,
+      "logical_ms": 3200,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        321,
+        235,
+        20
+      ],
+      "ppm": "display-042.ppm",
+      "pixels_sha256": "b4bc45c3d72b83f5791a366023517e5cf65bb6a4b3ff53c8530fa6cd7ad72104",
+      "revised_pixels_sha256": "b4bc45c3d72b83f5791a366023517e5cf65bb6a4b3ff53c8530fa6cd7ad72104"
+    },
+    {
+      "index": 43,
+      "logical_ms": 3240,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        321,
+        233,
+        21
+      ],
+      "ppm": "display-043.ppm",
+      "pixels_sha256": "8d900712c00a213c221f98707ae182832a9a57fe89f516172caf5539ff667f6c",
+      "revised_pixels_sha256": "8d900712c00a213c221f98707ae182832a9a57fe89f516172caf5539ff667f6c"
+    },
+    {
+      "index": 44,
+      "logical_ms": 3360,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        325,
+        232,
+        22
+      ],
+      "ppm": "display-044.ppm",
+      "pixels_sha256": "25de17b6e5e5b64680d0c69271f490cd3f835479db95f4ed8951d0dfe77bde0a",
+      "revised_pixels_sha256": "25de17b6e5e5b64680d0c69271f490cd3f835479db95f4ed8951d0dfe77bde0a"
+    },
+    {
+      "index": 45,
+      "logical_ms": 3480,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        331,
+        227,
+        23
+      ],
+      "ppm": "display-045.ppm",
+      "pixels_sha256": "1548ece693972c730ea138df329eb0af712961abdb8e623aa1164b2fa115b09f",
+      "revised_pixels_sha256": "1548ece693972c730ea138df329eb0af712961abdb8e623aa1164b2fa115b09f"
+    },
+    {
+      "index": 46,
+      "logical_ms": 3520,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        331,
+        227,
+        23
+      ],
+      "ppm": "display-046.ppm",
+      "pixels_sha256": "49b0046cba2c8c2921a32b353e0a3da4933f44507b612df05c37487564deec9b",
+      "revised_pixels_sha256": "49b0046cba2c8c2921a32b353e0a3da4933f44507b612df05c37487564deec9b"
+    },
+    {
+      "index": 47,
+      "logical_ms": 3600,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        338,
+        223,
+        11
+      ],
+      "ppm": "display-047.ppm",
+      "pixels_sha256": "c4044a2119e9b329529e8408ac55c3db4a2cb27952a5961bc013c2b654ef387b",
+      "revised_pixels_sha256": "c4044a2119e9b329529e8408ac55c3db4a2cb27952a5961bc013c2b654ef387b"
+    },
+    {
+      "index": 48,
+      "logical_ms": 3680,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        338,
+        223,
+        11
+      ],
+      "ppm": "display-048.ppm",
+      "pixels_sha256": "e8b8a055f89628d1acd87782768fda64e830454373e7738697f9c5557339d85f",
+      "revised_pixels_sha256": "e8b8a055f89628d1acd87782768fda64e830454373e7738697f9c5557339d85f"
+    },
+    {
+      "index": 49,
+      "logical_ms": 3720,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        344,
+        223,
+        19
+      ],
+      "ppm": "display-049.ppm",
+      "pixels_sha256": "14aa79e4a94019ca1941bb8911ae255f491d0c8a6a0e62cbc01ebbae6e71feb9",
+      "revised_pixels_sha256": "14aa79e4a94019ca1941bb8911ae255f491d0c8a6a0e62cbc01ebbae6e71feb9"
+    },
+    {
+      "index": 50,
+      "logical_ms": 3840,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        357,
+        222,
+        20
+      ],
+      "ppm": "display-050.ppm",
+      "pixels_sha256": "cf4c1543f6d11e07894abd0ce366e8a33b1e78bbae7de5a4c562bbd63d1840e6",
+      "revised_pixels_sha256": "cf4c1543f6d11e07894abd0ce366e8a33b1e78bbae7de5a4c562bbd63d1840e6"
+    },
+    {
+      "index": 51,
+      "logical_ms": 3960,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        355,
+        221,
+        21
+      ],
+      "ppm": "display-051.ppm",
+      "pixels_sha256": "23c6165ec4bc21259e3b3f956c646413fc674ea361c143a069e2800d62ef78be",
+      "revised_pixels_sha256": "23c6165ec4bc21259e3b3f956c646413fc674ea361c143a069e2800d62ef78be"
+    },
+    {
+      "index": 52,
+      "logical_ms": 4000,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        355,
+        221,
+        21
+      ],
+      "ppm": "display-052.ppm",
+      "pixels_sha256": "374c572a59a31f7c0e75643a36adbb6cda95906cf3d7e90854351fd535f40751",
+      "revised_pixels_sha256": "374c572a59a31f7c0e75643a36adbb6cda95906cf3d7e90854351fd535f40751"
+    },
+    {
+      "index": 53,
+      "logical_ms": 4080,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        360,
+        221,
+        22
+      ],
+      "ppm": "display-053.ppm",
+      "pixels_sha256": "c87e39e8f869bd37c2a27f5ee116ae72784fd268a048ecd745d28593edd38ce5",
+      "revised_pixels_sha256": "c87e39e8f869bd37c2a27f5ee116ae72784fd268a048ecd745d28593edd38ce5"
+    },
+    {
+      "index": 54,
+      "logical_ms": 4160,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        360,
+        221,
+        22
+      ],
+      "ppm": "display-054.ppm",
+      "pixels_sha256": "d23b04a91568842479a273865ed3f656ff9772ab923a84e67ea0ed2535473f37",
+      "revised_pixels_sha256": "d23b04a91568842479a273865ed3f656ff9772ab923a84e67ea0ed2535473f37"
+    },
+    {
+      "index": 55,
+      "logical_ms": 4200,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        365,
+        217,
+        23
+      ],
+      "ppm": "display-055.ppm",
+      "pixels_sha256": "872f1e0a0ffcb573f03115daba8da647a5dd2693456971663137b8c3f85628e2",
+      "revised_pixels_sha256": "872f1e0a0ffcb573f03115daba8da647a5dd2693456971663137b8c3f85628e2"
+    },
+    {
+      "index": 56,
+      "logical_ms": 4320,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        371,
+        215,
+        11
+      ],
+      "ppm": "display-056.ppm",
+      "pixels_sha256": "a458b5fcc9fb3893a7174c917c0d9405c0ab0cb812b8f06e207572a624281874",
+      "revised_pixels_sha256": "a458b5fcc9fb3893a7174c917c0d9405c0ab0cb812b8f06e207572a624281874"
+    },
+    {
+      "index": 57,
+      "logical_ms": 4440,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        376,
+        215,
+        19
+      ],
+      "ppm": "display-057.ppm",
+      "pixels_sha256": "62498bdf2d8e5b75aa8a0c5d462a400d3f08d1bf58114fc6ed48c9ce036ddb13",
+      "revised_pixels_sha256": "62498bdf2d8e5b75aa8a0c5d462a400d3f08d1bf58114fc6ed48c9ce036ddb13"
+    },
+    {
+      "index": 58,
+      "logical_ms": 4480,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        376,
+        215,
+        19
+      ],
+      "ppm": "display-058.ppm",
+      "pixels_sha256": "652a3963e9b2a564224966d43ae7aef6cf3eabc018e93b310b82200762bf73bb",
+      "revised_pixels_sha256": "652a3963e9b2a564224966d43ae7aef6cf3eabc018e93b310b82200762bf73bb"
+    },
+    {
+      "index": 59,
+      "logical_ms": 4560,
+      "duration_ms": 80,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        386,
+        213,
+        20
+      ],
+      "ppm": "display-059.ppm",
+      "pixels_sha256": "513f2c67a6e1a235de7f012c1dde7e96aaa7e4df32c68b9fc0f1d0f0511248cd",
+      "revised_pixels_sha256": "513f2c67a6e1a235de7f012c1dde7e96aaa7e4df32c68b9fc0f1d0f0511248cd"
+    },
+    {
+      "index": 60,
+      "logical_ms": 4640,
+      "duration_ms": 40,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        386,
+        213,
+        20
+      ],
+      "ppm": "display-060.ppm",
+      "pixels_sha256": "b8e97e1c781b319d6d8cec08e1a606d6a8a32f4bdead52e05a3601c1976871b1",
+      "revised_pixels_sha256": "b8e97e1c781b319d6d8cec08e1a606d6a8a32f4bdead52e05a3601c1976871b1"
+    },
+    {
+      "index": 61,
+      "logical_ms": 4680,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        384,
+        213,
+        21
+      ],
+      "ppm": "display-061.ppm",
+      "pixels_sha256": "49fddcf1fc1777c56bc4239847fca648e6ee70c322123df8f80ceaea2e2fad63",
+      "revised_pixels_sha256": "49fddcf1fc1777c56bc4239847fca648e6ee70c322123df8f80ceaea2e2fad63"
+    },
+    {
+      "index": 62,
+      "logical_ms": 4800,
+      "duration_ms": 120,
+      "role": "travel",
+      "actual_draw": [
+        1,
+        389,
+        213,
+        22
+      ],
+      "ppm": "display-062.ppm",
+      "pixels_sha256": "12574ac2e939e9766ed206d471866e08bd6c4eac0d6542d843d39821f3096f09",
+      "revised_pixels_sha256": "12574ac2e939e9766ed206d471866e08bd6c4eac0d6542d843d39821f3096f09"
+    },
+    {
+      "index": 63,
+      "logical_ms": 4920,
+      "duration_ms": 40,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-063.ppm",
+      "pixels_sha256": "c8597b041bf5b39fd9e0ed69e063b99fdce4cf7391be043f8b79d01e709b1962",
+      "revised_pixels_sha256": "730e0e2197e9be68400367b7e3eb3620439a2cb83945b6d7926d8bf874f6015c",
+      "png": "display-063.png",
+      "png_sha256": "d52aab01cee973f664949046f23a20f956cf5db3567fded2333edc9d3bd2ebb7"
+    },
+    {
+      "index": 64,
+      "logical_ms": 4960,
+      "duration_ms": 160,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-064.ppm",
+      "pixels_sha256": "93e7d7fe3bedf167f2739513bb12366af04880b50a660b8f1af292ac2f2bac8a",
+      "revised_pixels_sha256": "5ebbeb39ded2eaf5fe8cd65fa5bc79ebefc610a0392a039dcf5e04eac57e18a2",
+      "png": "display-064.png",
+      "png_sha256": "4b2e6f92aac46b545f17b7f59bc7368b9d2102574ab9ee7dc7fde9f3232a9d24"
+    },
+    {
+      "index": 65,
+      "logical_ms": 5120,
+      "duration_ms": 160,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-065.ppm",
+      "pixels_sha256": "234537638d46d15544673517d0037861f0bf39d1dc77659a03649d8ac8515823",
+      "revised_pixels_sha256": "4fe21b60a50a66fe611b5284d6ae7dd631b8b28b1e88ef464d4586788588bed3",
+      "png": "display-065.png",
+      "png_sha256": "342d93a351c68a464caab4f43710a1bc4c94fb4013d82b448dc7ea15bec52650"
+    },
+    {
+      "index": 66,
+      "logical_ms": 5280,
+      "duration_ms": 160,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-066.ppm",
+      "pixels_sha256": "a2549f524c5e066b3a05e7bfbead4c40c711d8ae86b85e7e1719b2dbb7106e0f",
+      "revised_pixels_sha256": "e80746d666423e20858b37e9deb710fb1a8540bbad4d3f0dde515773b9fa10f1",
+      "png": "display-066.png",
+      "png_sha256": "3ee53c8cd55d0845832f9c99e5a16dc8856e03b75b44e86d54095974105ff90b"
+    },
+    {
+      "index": 67,
+      "logical_ms": 5440,
+      "duration_ms": 160,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-067.ppm",
+      "pixels_sha256": "5a04e412157828f06602761ef5602add5bc422c81d0881f82d337d8c34095872",
+      "revised_pixels_sha256": "94dd58f6144949bb0a768d9b9ddc45277eafadb3ce912ec43122d11aa12f0c3a",
+      "png": "display-067.png",
+      "png_sha256": "741547c03761da38a7e49fbf9f09cd8815da75dad9cd2f304cc3379aba6ac5ce"
+    },
+    {
+      "index": 68,
+      "logical_ms": 5600,
+      "duration_ms": 160,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-068.ppm",
+      "pixels_sha256": "58f5a9d264c42ba18891138335f3e6d1cfc50b8123f803ef4e1fd8caebff7045",
+      "revised_pixels_sha256": "005c1d76fd5c3a61a99890a74dba92969d5f6dfc071d7d42d893f6409e1e9c31",
+      "png": "display-068.png",
+      "png_sha256": "3adddefde6486a584d7149af241c933468f59a9f603e413d2244ab8b61963b77"
+    },
+    {
+      "index": 69,
+      "logical_ms": 5760,
+      "duration_ms": 160,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-069.ppm",
+      "pixels_sha256": "d3dab995218e180f901d93cbc2265545a7e61cc9c34fbfd942f014c8032bd2f9",
+      "revised_pixels_sha256": "db769d3dc0181aad5504ef081a8a72600827c12c58dbf51bdc83d626e4e34a6f",
+      "png": "display-069.png",
+      "png_sha256": "0d4c0a9e9b6801a7b6b1b8305289310d81db8bde3f80c4f6864bf40a232c9264"
+    },
+    {
+      "index": 70,
+      "logical_ms": 5920,
+      "duration_ms": 160,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-070.ppm",
+      "pixels_sha256": "405e00ac7e468d12f7055e44717e3ab803df6745f7dbb58946559e9c5f4016df",
+      "revised_pixels_sha256": "1942bfdb192ec86109a8a3779648af7ff404a7454e6ef71af7befd61afdb2cdb",
+      "png": "display-070.png",
+      "png_sha256": "39e9137a11e4c744b5113c7ad171aea61e5e95df49ab82d694e7a04f4d893d2a"
+    },
+    {
+      "index": 71,
+      "logical_ms": 6080,
+      "duration_ms": 160,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-071.ppm",
+      "pixels_sha256": "790e7cb1a4e4cb25941d9520f3737f886130b3855ffcb483fa19dcd280fabb97",
+      "revised_pixels_sha256": "b6c7de39ef9b6492d6a09558509e6e06b09817a1cb1823af48f0efe8d35512ae",
+      "png": "display-071.png",
+      "png_sha256": "6f6ef3a13f61fb844e89e237e0a79fd8c435bb3511d5e1ac19b4b468198367fb"
+    },
+    {
+      "index": 72,
+      "logical_ms": 6240,
+      "duration_ms": 160,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-072.ppm",
+      "pixels_sha256": "b2d446e1ae338e97bd931b0a81b7489679ef43799fea7d973570ac564f04db40",
+      "revised_pixels_sha256": "56dae641f8bb285670da248d6b99b351ad1dda4ee516401d8d17b5dd1aab742c",
+      "png": "display-072.png",
+      "png_sha256": "1b8123bc4b0f8f071287f5388de3bb3940863ee36995a90fc4dd9e4c5160e7b9"
+    },
+    {
+      "index": 73,
+      "logical_ms": 6400,
+      "duration_ms": 120,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-073.ppm",
+      "pixels_sha256": "99632006b25b75f2aaec427558f6b2375c312e9889718a78017065e3947e6d5d",
+      "revised_pixels_sha256": "22e5fdea67558b8ae08625ebc289d412414c767cfbcce03efd827c011abfcc38",
+      "png": "display-073.png",
+      "png_sha256": "248ee57c6b68a8fa1061ad58a4c9ac827c6c2c0b47034587027c64b683ea093a"
+    },
+    {
+      "index": 74,
+      "logical_ms": 6520,
+      "duration_ms": 0,
+      "role": "arrival",
+      "actual_draw": [
+        1,
+        394,
+        209,
+        18
+      ],
+      "ppm": "display-074.ppm",
+      "pixels_sha256": "99632006b25b75f2aaec427558f6b2375c312e9889718a78017065e3947e6d5d",
+      "revised_pixels_sha256": "22e5fdea67558b8ae08625ebc289d412414c767cfbcce03efd827c011abfcc38",
+      "png": "display-074.png",
+      "png_sha256": "248ee57c6b68a8fa1061ad58a4c9ac827c6c2c0b47034587027c64b683ea093a"
+    }
+  ],
+  "display_count": 74,
+  "duration_ms": 6520,
+  "unchanged_non018_displays": 60,
+  "changed_pixels_outside018": 0,
+  "loaded_art": [
+    "data/hd/BMP/BACKGRND.BMP/001.png",
+    "data/hd/BMP/BACKGRND.BMP/002.png",
+    "data/hd/BMP/BACKGRND.BMP/016.png",
+    "data/hd/BMP/BACKGRND.BMP/017.png",
+    "data/hd/BMP/BACKGRND.BMP/018.png",
+    "data/hd/BMP/BACKGRND.BMP/019.png",
+    "data/hd/BMP/BACKGRND.BMP/020.png",
+    "data/hd/BMP/BACKGRND.BMP/021.png",
+    "data/hd/BMP/BACKGRND.BMP/022.png",
+    "data/hd/BMP/BACKGRND.BMP/023.png",
+    "data/hd/BMP/BACKGRND.BMP/024.png",
+    "data/hd/BMP/BACKGRND.BMP/025.png",
+    "data/hd/BMP/BACKGRND.BMP/026.png",
+    "data/hd/BMP/BACKGRND.BMP/027.png",
+    "data/hd/BMP/BACKGRND.BMP/028.png",
+    "data/hd/BMP/BACKGRND.BMP/029.png",
+    "data/hd/BMP/BACKGRND.BMP/030.png",
+    "data/hd/BMP/BACKGRND.BMP/031.png",
+    "data/hd/BMP/BACKGRND.BMP/032.png",
+    "data/hd/BMP/BACKGRND.BMP/033.png",
+    "data/hd/BMP/BACKGRND.BMP/034.png",
+    "data/hd/BMP/BACKGRND.BMP/035.png",
+    "data/hd/BMP/BACKGRND.BMP/036.png",
+    "data/hd/BMP/BACKGRND.BMP/037.png",
+    "data/hd/BMP/BACKGRND.BMP/038.png",
+    "data/hd/BMP/BACKGRND.BMP/039.png",
+    "data/hd/BMP/BACKGRND.BMP/040.png",
+    "data/hd/BMP/BACKGRND.BMP/041.png",
+    "data/hd/BMP/JOHNWALK.BMP/013.png",
+    "data/hd/BMP/JOHNWALK.BMP/014.png",
+    "data/hd/BMP/JOHNWALK.BMP/030.png",
+    "data/hd/BMP/JOHNWALK.BMP/031.png",
+    "data/hd/BMP/JOHNWALK.BMP/032.png",
+    "data/hd/BMP/JOHNWALK.BMP/033.png",
+    "data/hd/BMP/JOHNWALK.BMP/034.png",
+    "data/hd/BMP/JOHNWALK.BMP/035.png",
+    "data/hd/BMP/MRAFT.BMP/000.png",
+    "data/hd/BMP/MRAFT.BMP/001.png",
+    "data/hd/BMP/MRAFT.BMP/002.png",
+    "data/hd/BMP/MRAFT.BMP/003.png",
+    "data/hd/BMP/MRAFT.BMP/004.png",
+    "data/hd/BMP/MRAFT.BMP/005.png",
+    "data/hd/BMP/MRAFT.BMP/006.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/012.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/013.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/014.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/015.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/000.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/001.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/002.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/003.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/004.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/005.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/006.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/007.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/008.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/009.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/010.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/011.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/012.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/015.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/016.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/017.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/019.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/020.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/021.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/022.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/023.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/024.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/025.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/026.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/027.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/028.png",
+    "data/styles/cartoon/BMP/JOHNWALK.BMP/029.png",
+    "data/styles/cartoon/SCR/OCEAN02.SCR.png"
+  ],
+  "original_resource_sha256": {
+    "data/RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+    "data/RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+  },
+  "reference_report_sha256": "e09fa5081308abf417b5af819321b85f6840686813cb297fd9f537935e697164",
+  "helper_sha256": "6ad2dd6976e85e8fb87d62caa0c78b83dc3267effbcddfeb19e7b7c8684a2cee",
+  "log_sha256": "8c087f80a2cb64e1749aa591e41d5d7c1da7b0940be6e833c824f8dc877da320",
+  "scope": "Supplied-original geometry rendered by port diagnostic palette; exact mirrored arrival against revised018. No original-executable color/timing claim."
+}

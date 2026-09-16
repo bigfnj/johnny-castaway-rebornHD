@@ -1,0 +1,23 @@
+{
+  "case": "valid-historical-v2-runtime-refused-by-v5-source-pin",
+  "result": "FIRED",
+  "command": [
+    "python",
+    "-B",
+    "art/cartoon/standing018-proportions-v1/color/correct018_foot_v5.py",
+    "--runtime",
+    "build/standing018-proportions/stage-v2/runtime",
+    "--annotations",
+    "art/cartoon/standing018-proportions-v1/color/reference-foot-v5.json",
+    "--annotations-sha256",
+    "e1bde6bf34f91a5d81a308187a305b7344d31e8acf5f2a51fab6afc29406acf1",
+    "--output",
+    "build/standing018-proportions/color-checks-foot-v5/rejected-v2-runtime"
+  ],
+  "returncode": 1,
+  "stdout": "WITNESS correct018.py SHA256=93c70549e1be851a6b1c1731d2cab89404511a21b8b82d72f943a0485e6a8356\n",
+  "stderr": "FAIL 018: runtime source identity\n",
+  "adapter_sha256": "93c70549e1be851a6b1c1731d2cab89404511a21b8b82d72f943a0485e6a8356",
+  "test_source_sha256": "f48e53040f5a3c67587dbc705c27eb0f5443c0952998cc180f83180634ca289e",
+  "scope": "Executed source-version refusal only; no new guard or removal mutation. The adapter changes the source constant and preview scope, while existing guard logic is unchanged."
+}

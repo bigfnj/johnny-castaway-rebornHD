@@ -1,0 +1,176 @@
+{
+  "status": "PASS; published technical color review; human corrected-output approval pending at capture",
+  "url": "http://127.0.0.1:8932/cartoon-skin-tone-v1/review.html",
+  "html_sha256": "13991046dd3a451b3886171a62df4fada4a92864cc3b07774e170730153c9d84",
+  "recipe_sha256": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+  "candidate_archive_sha256": "bdc62b0c34835196e6dfa6541ee54f9c72f9824a0c24a0beab4bee3a33393eaf",
+  "native_evidence": {
+    "path": "art/cartoon/skin-tone-v1/native-review/evidence-v1/evidence.json",
+    "sha256": "74cb66e3c0adcbcc4234026b58b76bd5fa6839aa1cf35a704073113cf36c05ff"
+  },
+  "native_evidence_readback": {
+    "path": "art/cartoon/skin-tone-v1/native-review/evidence-v1/readback.json",
+    "sha256": "63e7c85921859a9d4100deadc6cb064ae2b9c2269aa87357fca73ad0192ca744"
+  },
+  "files": {
+    "review.html": {
+      "source": "build/skin-tone/native-review/review-v1/review.html",
+      "sha256": "13991046dd3a451b3886171a62df4fada4a92864cc3b07774e170730153c9d84"
+    },
+    "review-record.json": {
+      "source": "build/skin-tone/native-review/review-v1/review-record.json",
+      "sha256": "f98d14196b270b95ccf78181602762b2216c50254682eae6e33115dc36269384"
+    },
+    "browser-validation.json": {
+      "source": "build/skin-tone/native-review/review-v1/browser-validation.json",
+      "sha256": "b68da5e26df013fc87307d51ca5b379473916ecf1f66875e5d3a10cd13ce5f10"
+    },
+    "publication-browser.json": {
+      "source": "build/skin-tone/native-review/review-v1/publication-browser.json",
+      "sha256": "8020a5ae1e8caf9e34001464fc5a74c3065363d49dafd41aa0bf1be14e39d192"
+    },
+    "publication.json": {
+      "source": "build/skin-tone/native-review/review-v1/publication.json",
+      "sha256": "9082fc63949e0ac48841b78cdb01a02d0216676ac100b1bc1106e75056dde5cf"
+    },
+    "browser-controls/changed-served-html/browser-validation-failure.json": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/changed-served-html/browser-validation-failure.json",
+      "sha256": "6fce0151a6d09a8a307c84b0063dbc64d1f7728b3f8486d091dcd3f8d6b45e79"
+    },
+    "browser-controls/changed-served-html/checker.stderr.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/changed-served-html/checker.stderr.txt",
+      "sha256": "8ef3063066e9b3d247fe5b6286514e8d2d85000818f67656ca25af4cb0f12a98"
+    },
+    "browser-controls/changed-served-html/checker.stdout.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/changed-served-html/checker.stdout.txt",
+      "sha256": "e3ea0f2eef8fc612332c6caadd0d4b5d1a4b0f063c34b9a12423538b04a3df41"
+    },
+    "browser-controls/changed-served-html/review.html": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/changed-served-html/review.html",
+      "sha256": "60c6462042eed75528688b5ef57bcbc53cc747dc3971e6bcf8f7da97ba17adec"
+    },
+    "browser-controls/retained-previous-clip-cache/browser-validation-failure.json": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/retained-previous-clip-cache/browser-validation-failure.json",
+      "sha256": "8ae615be18c98b764efee271121b3f7ed12b53d2f35ffdfe692e46708a16cb1a"
+    },
+    "browser-controls/retained-previous-clip-cache/checker.stderr.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/retained-previous-clip-cache/checker.stderr.txt",
+      "sha256": "83d91591ed954fa3965df31bdfe2f35a3e93f71cd3b9b1c0b7d4fa8fe815c773"
+    },
+    "browser-controls/retained-previous-clip-cache/checker.stdout.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/retained-previous-clip-cache/checker.stdout.txt",
+      "sha256": "85b43f7e6c1d16b89adfe8dd590e238d7c179c67c86cea2f61d8a2e3ca2107b2"
+    },
+    "browser-controls/retained-previous-clip-cache/review.html": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/retained-previous-clip-cache/review.html",
+      "sha256": "c56b5d45555c995d5161c3bece6d0d7a95af2efb5fb0a3898a8dedd4f5a64317"
+    },
+    "browser-controls/wrong-pose-selector/browser-validation-failure.json": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/wrong-pose-selector/browser-validation-failure.json",
+      "sha256": "f8d6adaebf0ded79fc175e4d093c5f4cf4196868c5dca83491f06f0e26d4f971"
+    },
+    "browser-controls/wrong-pose-selector/checker.stderr.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/wrong-pose-selector/checker.stderr.txt",
+      "sha256": "5255cba157679a00e7153cb932df77d0dbf68053eca6b99edbd12c6908282c81"
+    },
+    "browser-controls/wrong-pose-selector/checker.stdout.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/wrong-pose-selector/checker.stdout.txt",
+      "sha256": "a3042e2a9a9ab69ff8e63bb3ac2487b97e733a2a2492be74168d18e266fdf82f"
+    },
+    "browser-controls/wrong-pose-selector/review.html": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1/wrong-pose-selector/review.html",
+      "sha256": "253862931dab99c6383118c3f1b8ef2ec549e3410b1389c40c656df4570ba8c1"
+    },
+    "builder-controls/mismatched-still-recipe.stderr.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-builder-v1/mismatched-still-recipe.stderr.txt",
+      "sha256": "a2f1d6491f17382b42367d29c4e9308146e18322d389ef960d870aab57b86058"
+    },
+    "builder-controls/mismatched-still-recipe.stdout.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-builder-v1/mismatched-still-recipe.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "builder-controls/occupied-review.stderr.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-builder-v1/occupied-review.stderr.txt",
+      "sha256": "a95c00bc1394e25d8ef73f0e925b615a5db7db36cf3228f7488a0f161c64681b"
+    },
+    "builder-controls/occupied-review.stdout.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-builder-v1/occupied-review.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "builder-controls/result.json": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-builder-v1/result.json",
+      "sha256": "c446e8f06645664aac797f03c8219a2c080a00e217c8f043cffdcb5bf2b4b8ca"
+    },
+    "builder-controls/occupied/sentinel.txt": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-builder-v1/occupied/sentinel.txt",
+      "sha256": "e707300875d2b9e3153c40bece82a5221e47a39710dcd5eb16c3be7105cb040d"
+    },
+    "browser-controls.json": {
+      "source": "build/skin-tone/native-review/negative-controls/browser-v1.json",
+      "sha256": "fa3f0d5504e64a8d9c26a4655fc55acc5c3e540b5189f26fb2061854228084a7"
+    },
+    "publication-readback.json": {
+      "source": "build/skin-tone/native-review/negative-controls/publication-readback-v1/result.json",
+      "sha256": "cd183b92957906ba192f851d708b436b7d694033354d257fee78a0c5a9583aed"
+    },
+    "helpers/build_diagnostics.py": {
+      "source": "art/cartoon/skin-tone-v1/review/build_diagnostics.py",
+      "sha256": "4f8ca94e658198657dac03fc207ef99eded52a87df408a050b43b8a85969fe0d"
+    },
+    "helpers/build_native.py": {
+      "source": "art/cartoon/skin-tone-v1/review/build_native.py",
+      "sha256": "8cda74f66be5ea72f4b74183c1b305da89e67763033f2d9c86caa6e4f5e4ca7d"
+    },
+    "helpers/check_diagnostics.py": {
+      "source": "art/cartoon/skin-tone-v1/review/check_diagnostics.py",
+      "sha256": "c2c6e5003845badb4ae96d16473429362470583614545e0fe53d5b5087d11f8b"
+    },
+    "helpers/check_native.py": {
+      "source": "art/cartoon/skin-tone-v1/review/check_native.py",
+      "sha256": "304d4264d5b6b3c30221b36523b899d9ff3db9352bcd6ae84ed0ef2547cc8061"
+    },
+    "helpers/check_native_builder.py": {
+      "source": "art/cartoon/skin-tone-v1/review/check_native_builder.py",
+      "sha256": "e3e05577612ac94a998b402e9d11e8325be886696062ff4bda69f3ed04579ae4"
+    },
+    "helpers/check_publication_readback.py": {
+      "source": "art/cartoon/skin-tone-v1/review/check_publication_readback.py",
+      "sha256": "443c4665f8b9744beadba51d7bb90f5b8c25bb3d52f23b412196371e0e50e9e4"
+    },
+    "helpers/native-template.html": {
+      "source": "art/cartoon/skin-tone-v1/review/native-template.html",
+      "sha256": "6f176577e1cfbcf32c9047781b9c95b0c49ed09129bf0f70f62e658e0b4def83"
+    },
+    "helpers/negative_diagnostics.py": {
+      "source": "art/cartoon/skin-tone-v1/review/negative_diagnostics.py",
+      "sha256": "4d7954824844746ebd28bce95977f2a9d5e37758a655f2b85f4f6644a8a753b9"
+    },
+    "helpers/negative_native_browser.py": {
+      "source": "art/cartoon/skin-tone-v1/review/negative_native_browser.py",
+      "sha256": "f99a442e6d0e222f32cb3e556fb8db13f13a7f43e872955b3a41fe16cb798bbc"
+    },
+    "helpers/preserve_browser.py": {
+      "source": "art/cartoon/skin-tone-v1/review/preserve_browser.py",
+      "sha256": "a3eb111361aa57bc8acdedf6843a6eece6c7ea9a98921a787fdfc6fc87d8edce"
+    },
+    "helpers/publish_native.py": {
+      "source": "art/cartoon/skin-tone-v1/review/publish_native.py",
+      "sha256": "869734b89c2fd13f90ad18e3ac8e83adf35023bd5f5e7c3f27a70a2bc5615e6a"
+    },
+    "helpers/README.md": {
+      "source": "art/cartoon/skin-tone-v1/review/README.md",
+      "sha256": "05dfa658360aefd15959b971af141cf15c5a13025414a3c6af319727ea03bf5a"
+    },
+    "helpers/still-template.html": {
+      "source": "art/cartoon/skin-tone-v1/review/still-template.html",
+      "sha256": "abdd97679998d0912340f6cb0437bf25c385e7c86978ed1173f602d8139f2f0b"
+    }
+  },
+  "native_source_scope": "The linked native binder preserves capture reports, preparations, adapters, helpers, native/input controls and retained first-launch failure. Those files are not duplicated here.",
+  "limits": [
+    "Full native PNGs, PPMs, private ZIPs and binaries remain local or reconstructable. Their hashes remain bound by the native and browser records.",
+    "Browser screenshots and generated contact sheets remain local with hashes in browser/still records.",
+    "This checkpoint preserves the published review and technical checks. Human color approval is separate.",
+    "One-time preservation writer. Do not rerun into an existing historical evidence path."
+  ]
+}

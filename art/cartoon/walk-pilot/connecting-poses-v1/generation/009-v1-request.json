@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "status": "requested",
+  "request": {
+    "prompt": "Use case: style-transfer.\nAsset type: transparent full-body game animation sprite, JOHNWALK frame 009, 1024 x 1536 portrait.\nCreate ONE new Cartoon Johnny pose. Image 1 is the supplied-original frame 009 and controls the body orientation, limb placement and ground contact. Its red/white pixel pattern is a diagnostic palette, NOT clothing or skin coloring. Its gray ground shadow is NOT a foot. Images 2 and 3 are approved Cartoon identity and drawing-style references, NOT pose templates.\nMatch image 1's three-quarter front-right turning view, leaning slightly into the turn toward screen-right. He is between a strict right profile and a forward-facing stance. Both eyes can be seen, the farther eye smaller. Keep the calm, attentive focus expression. He is lean, bare chested, with warm peach skin, tousled brown hair and a long scruffy brown beard. Preserve the distinctive white sailor captain cap with a black projecting brim, yellow band and black anchor, plus natural loose ragged white shorts with two plausible separate leg openings.\nClosely follow image 1's silhouette: near shoulder and relaxed arm descend diagonally toward screen-left, hand just outside the shorts at hip height; the smaller far forearm/hand is visible along screen-right. Arms hang naturally away from the torso, not hands planted on hips. One leg is slightly behind and left in the image with its foot higher in the ground plane; the other is forward and screen-right with its foot lower, pointing toward screen-right. Knees are soft, close to straight. Both feet are close to the ground; do not turn this into the tucked-foot pose of image 3. Keep original foot depth and modest stance width. Do not invent a broad split stride or swap limb depth.\nUse the exact clean ink contours and restrained cel shading of images 2 and 3, matching head/body scale, beard texture, cap identity and shorts design. At 1024x1536, draw the complete character about 1450 pixels tall with cap top near y=35 and lowest toes near y=1485. Leave margin around all fingers, cap and toes. Do not clip the silhouette.\nBackground must be genuinely transparent alpha, including the entire margin. No drawn checkerboard, colored background, glow, halo, ground shadow, text, labels, extra characters or extra toes. The low-alpha display halos in the references are not part of the character design. Return only the single complete sprite.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/front-arrival-v1/ordinary-turns-v1/reference/009-original-nearest8.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/front-arrival-v1/017-foot-depth-v3.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-connecting-poses/art/cartoon/walk-pilot/profile-walk-v1/003-profile-v2.png"
+    ]
+  },
+  "input_roles": [
+    "original geometry reference",
+    "approved identity reference",
+    "approved profile identity and proportion reference"
+  ],
+  "approval": "Pending human pose and native transition review."
+}

@@ -1,0 +1,271 @@
+{
+  "schema_version": 1,
+  "scope": "Technical source measurement only. Separate v5 authoring smoke/regression passed; this record does not represent color correction, native capture or human acceptance.",
+  "source": [
+    {
+      "path": "art/cartoon/standing018-proportions-v1/018-torso-v2.png",
+      "sha256": "c170f8b6cea7c8c3c0cfcad5dea1ac5591e9d92b5de156afeee7a19c1e2ec89c"
+    },
+    {
+      "path": "art/cartoon/standing018-proportions-v1/018-foot-v5.png",
+      "sha256": "97922bacf481925f29640606e305ba1747b7de5fb1b01439e4fcdaf8e2621c5e"
+    }
+  ],
+  "raw_mode": "RGBA",
+  "raw_canvas": [
+    1024,
+    1536
+  ],
+  "raw_alpha_range": [
+    0,
+    254
+  ],
+  "raw_corner_rgba": [
+    [
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      2,
+      1,
+      0
+    ],
+    [
+      1,
+      1,
+      0,
+      0
+    ]
+  ],
+  "cap_raw": [
+    408.5,
+    35
+  ],
+  "affine_forward": [
+    0.1,
+    0,
+    -23.85,
+    0,
+    0.1,
+    -3.25
+  ],
+  "runtime_canvas": [
+    64,
+    154
+  ],
+  "source_alpha8_centers_fit": true,
+  "foot_regions_raw": {
+    "near": "300<=x<560, y>=1300",
+    "far": "580<=x<740, y>=1250"
+  },
+  "foot_bounds_by_alpha_threshold": {
+    "8": {
+      "near": {
+        "raw_y": 1493,
+        "hd_source_center_y": 146.1,
+        "bounds_raw_exclusive": [
+          319,
+          1300,
+          560,
+          1494
+        ]
+      },
+      "far": {
+        "raw_y": 1478,
+        "hd_source_center_y": 144.6,
+        "bounds_raw_exclusive": [
+          580,
+          1250,
+          729,
+          1479
+        ]
+      }
+    },
+    "128": {
+      "near": {
+        "raw_y": 1492,
+        "hd_source_center_y": 146.0,
+        "bounds_raw_exclusive": [
+          320,
+          1300,
+          560,
+          1493
+        ]
+      },
+      "far": {
+        "raw_y": 1477,
+        "hd_source_center_y": 144.5,
+        "bounds_raw_exclusive": [
+          580,
+          1250,
+          728,
+          1478
+        ]
+      }
+    },
+    "250": {
+      "near": {
+        "raw_y": 1491,
+        "hd_source_center_y": 145.9,
+        "bounds_raw_exclusive": [
+          321,
+          1300,
+          560,
+          1492
+        ]
+      },
+      "far": {
+        "raw_y": 1477,
+        "hd_source_center_y": 144.5,
+        "bounds_raw_exclusive": [
+          580,
+          1250,
+          727,
+          1478
+        ]
+      }
+    }
+  },
+  "alpha8_near_hd": 146.1,
+  "alpha8_far_hd": 144.6,
+  "alpha8_separation_hd": 1.5,
+  "v2_alpha8_near_far_hd": [
+    146.0,
+    138.5
+  ],
+  "requested_alpha8_far_target_hd": [
+    144,
+    145
+  ],
+  "target_observation": "V5 far sole is144.6HD within the requested range. Near sole is146.1HD. This is a source-contour comparison, not proof of native sand contact.",
+  "cloth_expression": "600<=y<1150, alpha>=128, min(R,G,B)>=170, max(R,G,B)-min(R,G,B)<45",
+  "cloth_raw_y_range": [
+    794,
+    1047
+  ],
+  "cloth_hd_y_range": [
+    76.2,
+    101.5
+  ],
+  "raw_region_comparisons": {
+    "upper_body": {
+      "row_range_exclusive": [
+        0,
+        700
+      ],
+      "all_rgba_changed_pixels": 471995,
+      "rgba_changed_with_either_alpha8": 163205,
+      "alpha_changed_with_either_alpha8": 39688,
+      "alpha8_silhouette_changed_pixels": 2088,
+      "alpha8_union_pixels": 173000,
+      "alpha8_intersection_over_union": 0.9879306358381503,
+      "v2_alpha8_bounds_relative_rows": [
+        312,
+        34,
+        723,
+        700
+      ],
+      "v5_alpha8_bounds_relative_rows": [
+        312,
+        34,
+        726,
+        700
+      ]
+    },
+    "shorts_region": {
+      "row_range_exclusive": [
+        700,
+        1100
+      ],
+      "all_rgba_changed_pixels": 265560,
+      "rgba_changed_with_either_alpha8": 87856,
+      "alpha_changed_with_either_alpha8": 19977,
+      "alpha8_silhouette_changed_pixels": 1417,
+      "alpha8_union_pixels": 103392,
+      "alpha8_intersection_over_union": 0.9862948777468276,
+      "v2_alpha8_bounds_relative_rows": [
+        377,
+        0,
+        702,
+        400
+      ],
+      "v5_alpha8_bounds_relative_rows": [
+        376,
+        0,
+        705,
+        400
+      ]
+    }
+  },
+  "runtime_region_comparisons": {
+    "upper_body": {
+      "row_range_exclusive": [
+        0,
+        67
+      ],
+      "all_rgba_changed_pixels": 1918,
+      "rgba_changed_with_either_alpha8": 1761,
+      "alpha_changed_with_either_alpha8": 632,
+      "alpha8_silhouette_changed_pixels": 14,
+      "alpha8_union_pixels": 1842,
+      "alpha8_intersection_over_union": 0.992399565689468,
+      "v2_alpha8_bounds_relative_rows": [
+        7,
+        0,
+        49,
+        67
+      ],
+      "v5_alpha8_bounds_relative_rows": [
+        7,
+        0,
+        49,
+        67
+      ]
+    },
+    "shorts_region": {
+      "row_range_exclusive": [
+        67,
+        107
+      ],
+      "all_rgba_changed_pixels": 1042,
+      "rgba_changed_with_either_alpha8": 933,
+      "alpha_changed_with_either_alpha8": 339,
+      "alpha8_silhouette_changed_pixels": 15,
+      "alpha8_union_pixels": 1088,
+      "alpha8_intersection_over_union": 0.9862132352941176,
+      "v2_alpha8_bounds_relative_rows": [
+        14,
+        0,
+        47,
+        40
+      ],
+      "v5_alpha8_bounds_relative_rows": [
+        14,
+        0,
+        47,
+        40
+      ]
+    }
+  },
+  "preservation_limit": "Imagegen did not preserve upper-body or shorts bytes exactly. Threshold-silhouette overlap and bounds describe the size of differences; they do not prove anatomical identity. Hidden RGB changes are counted separately from alpha8-supported changes.",
+  "runtime": [
+    {
+      "path": "build/standing018-proportions/stage-v2/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "b1bf6834e30e11ccff6a4f4a66e8a0d1bd7bf3d1f5ca82eeb98d34c88b45b29f"
+    },
+    {
+      "path": "build/standing018-proportions/stage-v5/runtime/BMP/JOHNWALK.BMP/018.png",
+      "sha256": "183cdf4b4f23e4164e7e290456ff8b8082301b8d952ad577b186ab4663a9c5b2"
+    }
+  ],
+  "measurement_source_sha256": "09a51b0d2ac75b9d85bda7bcb85ac433fad79569ba4804b6f82ad3d855c55abf"
+}

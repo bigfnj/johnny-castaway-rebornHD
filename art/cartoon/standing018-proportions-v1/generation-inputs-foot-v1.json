@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen",
+  "scope": "Exact ordered references and prompts for three localized foot-edit attempts. No geometry edits in code. Selection and human approval remain separate.",
+  "requests": [
+    {
+      "version": 3,
+      "request_sha256": "471a79916d427ce60301a81571fea2e1fe459a6d0f44beb2200266556276f476",
+      "prompt_utf8_sha256": "29dcba0ce5223ff0deacde238176d803756c2eb7e74fd7874580a8369c08f04c",
+      "result_sha256": "f0c3f011f1fd40e9f5de7b72b6810d15ef95297fc91be9dc8ef01d2322fc9692",
+      "output_sha256": "dc4bc9bb99baf226e7cd3086a5f88b8fcacb4faf521b53c1214d5c86fdb484b1",
+      "inputs": [
+        {
+          "path": "art/cartoon/standing018-proportions-v1/018-torso-v2.png",
+          "sha256": "c170f8b6cea7c8c3c0cfcad5dea1ac5591e9d92b5de156afeee7a19c1e2ec89c",
+          "role": "edit target"
+        },
+        {
+          "path": "art/cartoon/arrival-pilot-v1/reference/018-nearest8.png",
+          "sha256": "228783a6a48523333a069592318308967e75537b83bb1a446c85c69fa7181c7a",
+          "role": "original geometry only; diagnostic colors and shadow excluded"
+        },
+        {
+          "path": "art/cartoon/standing018-proportions-v1/color/evidence-v2/sprites/018.png",
+          "sha256": "21cf94cd90d369b20b6d3b8ef60b7cc2848f919ff828578320502aec9a17c55b",
+          "role": "lighter skin color reference"
+        }
+      ],
+      "request": "art/cartoon/standing018-proportions-v1/generation-request-v3.json",
+      "result": "art/cartoon/standing018-proportions-v1/generation-result-v3.json",
+      "output": "art/cartoon/standing018-proportions-v1/018-foot-v3.png"
+    },
+    {
+      "version": 4,
+      "request_sha256": "0ca03c03582d2cc253de0005b16dc5d26401b67cf7b98e01829e9930358053c3",
+      "prompt_utf8_sha256": "260d50b523fffafe2c0f7b4a308a36e98427aa1c27c83cba35f78d7d613ab10e",
+      "result_sha256": "1e0993d9449b7d341f55197482e15a8d88b032a24a68373ac0f925b11ae5f238",
+      "output_sha256": "6ba5a7bdce36a0a8ed4e3912baa1415c3be4b6d38a437f289ae8a7d02dccb83a",
+      "inputs": [
+        {
+          "path": "art/cartoon/standing018-proportions-v1/018-foot-v3.png",
+          "sha256": "dc4bc9bb99baf226e7cd3086a5f88b8fcacb4faf521b53c1214d5c86fdb484b1",
+          "role": "edit target"
+        }
+      ],
+      "request": "art/cartoon/standing018-proportions-v1/generation-request-v4.json",
+      "result": "art/cartoon/standing018-proportions-v1/generation-result-v4.json",
+      "output": "art/cartoon/standing018-proportions-v1/018-foot-v4.png"
+    },
+    {
+      "version": 5,
+      "request_sha256": "dba42c592b1bb6c8989b936580dd390032de6618274dd15d6bc569fc445a1961",
+      "prompt_utf8_sha256": "eb00560c60133a0d2c967a7ab6dbcb2a39ebe36ae26b7d44ac2296189b7c6f3f",
+      "result_sha256": "cfbc799c2398825212f978360376780d0540c4a3aebdb23e1d8f0fafd3e376ce",
+      "output_sha256": "97922bacf481925f29640606e305ba1747b7de5fb1b01439e4fcdaf8e2621c5e",
+      "inputs": [
+        {
+          "path": "art/cartoon/standing018-proportions-v1/018-foot-v4.png",
+          "sha256": "6ba5a7bdce36a0a8ed4e3912baa1415c3be4b6d38a437f289ae8a7d02dccb83a",
+          "role": "edit target"
+        }
+      ],
+      "request": "art/cartoon/standing018-proportions-v1/generation-request-v5.json",
+      "result": "art/cartoon/standing018-proportions-v1/generation-result-v5.json",
+      "output": "art/cartoon/standing018-proportions-v1/018-foot-v5.png"
+    }
+  ]
+}
