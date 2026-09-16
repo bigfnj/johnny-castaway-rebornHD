@@ -5,6 +5,22 @@ to continue after approving the standing direction ring. This bundle prepares
 the complete 001-008 family and presents two drafts for human pose review.
 No profile artwork has entered the production archive or acceptance ledger.
 
+The user subsequently requested a slightly lower tucked foot in003. The
+[revised comparison](review-evidence/pose-check-v2/review.html) uses
+`003-profile-v2.png`;001-v2 is unchanged. Exact edit input and prompt are in
+`provenance003-v2.json` and `003-call-v2.json`. The 45-raw-pixel lowering was a
+prompt target, not an asserted exact displacement. This revision awaits human
+review and does not approve either pose or the full gait.
+
+The revised003 passed export smoke3 then regression24 with unchanged tools,
+followed by browser smoke and the eight existing pixel/control cases. The
+browser's wrong-pose negative control also fired. Its fixed scale/canvas stay
+0.1 and80x152. The measured cap moved half a raw pixel horizontally and was
+remeasured for registration; no body-normalization or artistic pixel surgery
+was used. Reproduce its export with `exports/003-v2/recipe.json` into
+`build/profile-walk/export003-v2`, then run `revision_v2.py build`, `smoke`,
+`regression` and optionally `publish`. The initial checkpoint remains below.
+
 | Displayed pose | Selected drawing | Purpose |
 |---|---|---|
 | 003 | `003-profile-v1.png` | Upright support leg, tucked lifted foot, lowered near arm; shared walking/ordinary-turn slot |
