@@ -7,6 +7,8 @@ decisions. Historical detail remains in Git and the linked art records.
 The later [maintenance audit](docs/maintenance-post-merge-audit.md) and
 [maintenance verification](docs/maintenance-verification.md) cover the second pass
 and the original-first art metadata work.
+The [standing-family audit](docs/cartoon-standing-post-merge-audit.md) covers
+merged main`fecfdb3`, the 32-asset delivery and its fresh deployment checks.
 
 ## Open work
 

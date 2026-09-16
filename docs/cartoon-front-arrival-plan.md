@@ -21,7 +21,7 @@ no new artwork generated or approved. Existing Cartoon023 remains unchanged.
 | Front waiting turn | Approved:016 exported and native-checked in both same-spot1-to7 and7-to1 turns with017. User: "Yes, keep this turn" at front-turn016-v1. Preserve the original120ms intermediate frames and1600ms final hold. |
 | Remaining waiting directions | Approved with "excellent, proceed" at standing-ring-v1:000/015 alongside016/017/018 through all eight headings in both native orders. Export and native smoke/regression passed; original placement, reflections and timing are retained. |
 | Deferred ordinary turns | Preserve original-only003,009,010,012 preparation. Begin the next batch with complete001-008 profile dependencies before generating shared003; then review009/010/012 in actual departure/waypoint and story contexts. |
-| Integration | Promote only reviewed assets with explicit inherited approvals, reproducible export recipes, unchanged prior PNGs and smoke before regression. Merge after the agreed family review; run the post-merge audit and update BACKLOG. |
+| Integration | Complete: four exact approved PNGs added, all2579 earlier payloads preserved,32-asset metadata and native checks passed. PR13 merged as`fecfdb3` after all four CI platforms passed. Post-merge deployment/audit status is recorded in the delivery verification. |
 
 Immediate E-to-A uses23 walking positions, then mirrored017 at logical
 origin(293,243), following027 at(300,242). Arrival hold is1600ms. Same-spot

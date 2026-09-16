@@ -102,8 +102,21 @@ four annotation-only recipes, all approvals,63 bound native ring files,
 discrepancy. Its SHA256 is
 `014996e4af77a1c45057be4cd87ab2d06925edcceb52e6751994c07d920c87f2`.
 
-The final local Windows gate passed. Cross-platform CI and merge evidence are
-in progress; this record does not yet claim a merge or post-merge audit.
+The final local Windows gate passed. [PR13](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/13)
+merged feature head`edc4adc86b43d11e273a50cde5d6375f27ea1cdc` as main
+`fecfdb3498ccd35fa0bba49762f024d98ececb10`. Their complete Git trees are identical.
+[Final feature CI](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/35037737373)
+passed Windows, Linux, macOS and Web. The primary checkout fast-forwarded to
+that merge. [Merged-main CI](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/35038114051)
+also passed all four platforms on`fecfdb3`. The
+[post-merge audit](cartoon-standing-post-merge-audit.md) records fresh core,
+platform and authoring review, a successful main data refresh, smoke followed
+by31 art regressions, and exact package reconstruction. It found no new
+actionable defect; existing issues remain in BACKLOG.
+
+Engine/platform source, maintained tools/tests, CMake, gate and workflow files
+remain unchanged from the pre-batch main`707a20b`. New code is confined to the
+offline authoring/review bundle; Python is not a runtime dependency.
 
 ## Retained Windows capture failure
 
