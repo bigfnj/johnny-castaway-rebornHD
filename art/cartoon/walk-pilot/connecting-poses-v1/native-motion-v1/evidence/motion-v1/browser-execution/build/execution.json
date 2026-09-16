@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "command": [
+    "${PYTHON}",
+    "-B",
+    "art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/build_review.py",
+    "--candidate",
+    "build/connecting-poses/native-motion-v1/candidate-v2",
+    "--selection",
+    "art/cartoon/walk-pilot/connecting-poses-v1/candidate-selection-v2.json",
+    "--output",
+    "build/connecting-poses/native-motion-v1/review-v1"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 15.120545387268066,
+  "executed_helper_sha256": "f308fb45e9402e04b288bf3c2466c4c8b8cb31e68f955b7bca7563930d02ddb1",
+  "runner_sha256": "21118c07387f18a1e4d92e800734d0ecb3217c1c3dbc4f8f06f16743754ffbcc",
+  "outputs_sha256": {
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.txt": "579a1343d50cc61492f92de42a0a11b035b0691c487b83a1da3e8d8c5b6e05db"
+  }
+}

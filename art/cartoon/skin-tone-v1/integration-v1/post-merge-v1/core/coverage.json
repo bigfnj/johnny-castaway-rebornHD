@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "head": "9ea8293f8efbd45a25717b4f8dd3bc5139586259",
+  "files": [
+    {
+      "path": "src/engine/jc_reborn.c",
+      "sha256": "50d9904cffd7c3cba9877ecec383370c612622ccd31a5a013e77755903c358c4",
+      "lf_utf8_sha256": "2fbda78360af7016404db75148a48860d9192b84c42253f9e58f4a0efd59e590",
+      "base_git_sha256": "2fbda78360af7016404db75148a48860d9192b84c42253f9e58f4a0efd59e590",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 776,
+      "review_scope": "Full CLI state machine, config modes, dispatch and shutdown"
+    },
+    {
+      "path": "src/engine/config.c",
+      "sha256": "a87b4e3d050912d7a82f3efa2d681be2ac20a72cadca3581dffa6d7e572bba58",
+      "lf_utf8_sha256": "fbd4a579e28056a1e38ae65e44805d227d8dc1c81ec543ddd57a54b324f9476a",
+      "base_git_sha256": "fbd4a579e28056a1e38ae65e44805d227d8dc1c81ec543ddd57a54b324f9476a",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 157,
+      "review_scope": "Full config read/write and cached-path ownership"
+    },
+    {
+      "path": "src/engine/resource.c",
+      "sha256": "8b60a6d5936dd67ca014aaedde799e8b6f0a567ac482c836bd922a4fa93c6f43",
+      "lf_utf8_sha256": "7a6f30dccc8295e19749a3ed0b322425b6c249802a4d42960b6f5b9e44b34a1c",
+      "base_git_sha256": "7a6f30dccc8295e19749a3ed0b322425b6c249802a4d42960b6f5b9e44b34a1c",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 564,
+      "review_scope": "Full map, resource parsers, name borrowing and lookup"
+    },
+    {
+      "path": "src/engine/resource.h",
+      "sha256": "dfb8a1c118fb69a515931b939e7a32e05cc05688b2c09875b496211dcac412af",
+      "lf_utf8_sha256": "a22cee6196d85f1c76c3e85bc44c3926281c46f650fdf5c00cb6f915f575da33",
+      "base_git_sha256": "a22cee6196d85f1c76c3e85bc44c3926281c46f650fdf5c00cb6f915f575da33",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 142,
+      "review_scope": "Resource ownership fields and public API"
+    },
+    {
+      "path": "src/engine/uncompress.c",
+      "sha256": "c8c0483ef3ae43e242ecbfff622c4735aef6f330ebce04f4cda8b43bfbba6b15",
+      "lf_utf8_sha256": "8718e77512eceeb4ebecb28009889aff08d7a4dcbe1a85d8473b101268c46a4a",
+      "base_git_sha256": "8718e77512eceeb4ebecb28009889aff08d7a4dcbe1a85d8473b101268c46a4a",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 319,
+      "review_scope": "Full LZW/RLE boundary and allocation handling"
+    },
+    {
+      "path": "src/engine/utils.c",
+      "sha256": "c50c4ae6de6a59e4fbd1a169592eb920778449f8c000175cb55d66595343c10f",
+      "lf_utf8_sha256": "4207d99946b0fee2fd00186435d42928ad9e2952481262827513ec336d705491",
+      "base_git_sha256": "4207d99946b0fee2fd00186435d42928ad9e2952481262827513ec336d705491",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 311,
+      "review_scope": "Full file/byte helpers, string ownership, error and calendar paths"
+    },
+    {
+      "path": "src/engine/story.c",
+      "sha256": "b503cca4115b5852f4ed9cdc02c5aef77498c793bac9fdb2b517b19cd8c4b9a4",
+      "lf_utf8_sha256": "32148bd4879931d8db5cf91ab4349e347ec279c4c552efaeca85032ffb89902f",
+      "base_git_sha256": "32148bd4879931d8db5cf91ab4349e347ec279c4c552efaeca85032ffb89902f",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 324,
+      "review_scope": "Full scene selection, date updates, transition and island lifecycle"
+    },
+    {
+      "path": "src/engine/ads.c",
+      "sha256": "c4d53220327f62676a159f1b3651626a8dabafdfa5bf625b5e94d443280eb4f6",
+      "lf_utf8_sha256": "d8eab364f3c9bb772910ed082197a5fe8f3a69572eb622e2a16038ae2b26c1a8",
+      "base_git_sha256": "d8eab364f3c9bb772910ed082197a5fe8f3a69572eb622e2a16038ae2b26c1a8",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 1157,
+      "review_scope": "Full ADS parser, dispatch, scheduling, scene and island ownership"
+    },
+    {
+      "path": "src/engine/ttm.c",
+      "sha256": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6",
+      "lf_utf8_sha256": "4a856f695a64eeab5d2c255b9c53395bc89b4e475b72cd50af3773972556eba3",
+      "base_git_sha256": "4a856f695a64eeab5d2c255b9c53395bc89b4e475b72cd50af3773972556eba3",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 497,
+      "review_scope": "Full TTM tag scan, VM, string decoding and slot lifecycle"
+    },
+    {
+      "path": "src/engine/ttm.h",
+      "sha256": "7a6a8d40da48f8316d204cc4a8bb664e7cf3950dde0a75f79c0a6bf8b080e48d",
+      "lf_utf8_sha256": "e41bc75724bf027784398b8dd37f581c5a2dcf1cd72974b70a1c53d8c51cace3",
+      "base_git_sha256": "e41bc75724bf027784398b8dd37f581c5a2dcf1cd72974b70a1c53d8c51cace3",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 39,
+      "review_scope": "Public VM API"
+    },
+    {
+      "path": "src/engine/walk.c",
+      "sha256": "d6b88ef1e16a2ad10944ce520485a472d4b13d53fd744087e9c5e573e1908f9d",
+      "lf_utf8_sha256": "a6d49c73188850642a68ff5da1053e032d2c566d0d5e4f0554c1c17946de09b3",
+      "base_git_sha256": "a6d49c73188850642a68ff5da1053e032d2c566d0d5e4f0554c1c17946de09b3",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 223,
+      "review_scope": "Full path, heading, arrival and palm ordering"
+    },
+    {
+      "path": "src/engine/calcpath.c",
+      "sha256": "8035aef05017584b5e7e5db1dcac898ba3f51efe444efc072705d5f0523cfacb",
+      "lf_utf8_sha256": "bf175908dba9a6d82543704b1dbc667ab56c68a8faf18bca49f618a1b17e17ba",
+      "base_git_sha256": "bf175908dba9a6d82543704b1dbc667ab56c68a8faf18bca49f618a1b17e17ba",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 141,
+      "review_scope": "Full recursive path enumeration and fallback"
+    },
+    {
+      "path": "src/engine/calcpath.h",
+      "sha256": "4b5c614adc8a960e1bbab746aa159c4c908e3377d38a2d3c0f353ae0726d915d",
+      "lf_utf8_sha256": "5669447b1713f66d8c0e2e7c6914dafc4d7ba118a357bcc0a49bff1198595f7d",
+      "base_git_sha256": "5669447b1713f66d8c0e2e7c6914dafc4d7ba118a357bcc0a49bff1198595f7d",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 30,
+      "review_scope": "Public path API"
+    },
+    {
+      "path": "src/engine/dump.c",
+      "sha256": "b2e46c22fa854bbc0d75413b441f4afc0afb10d42b6ead737e70bc5d7e92babd",
+      "lf_utf8_sha256": "d4e7e991f1a2d23d3a949ba841035173e85037f6154bad8d31bd5a4e255799fd",
+      "base_git_sha256": "d4e7e991f1a2d23d3a949ba841035173e85037f6154bad8d31bd5a4e255799fd",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 590,
+      "review_scope": "Full BMP/SCR/ADS/TTM dump and file-close handling"
+    },
+    {
+      "path": "src/engine/bench.c",
+      "sha256": "ca747e19369cd2b57e547393ec4b63cefe3ff1f6a95d4d30fd22b218228ed03c",
+      "lf_utf8_sha256": "9be63997007f0978ff62e5c2d7ff9cbfdd7eb1b51554a68f3382a927d98e0b68",
+      "base_git_sha256": "9be63997007f0978ff62e5c2d7ff9cbfdd7eb1b51554a68f3382a927d98e0b68",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 49,
+      "review_scope": "Full benchmark slot and sprite calls"
+    },
+    {
+      "path": "src/engine/events.c",
+      "sha256": "041ac9fce76af2c3e1fc2eeef56ea9b92b45e1a4adc0087d5318720ccc2d57d2",
+      "lf_utf8_sha256": "13d297427e0e9d712e7e6b25eab4d5ac12519597835da7e084b44e65470a9fd8",
+      "base_git_sha256": "13d297427e0e9d712e7e6b25eab4d5ac12519597835da7e084b44e65470a9fd8",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 273,
+      "review_scope": "Full event, bounded-run, delay and exit paths"
+    },
+    {
+      "path": "src/engine/art_style.c",
+      "sha256": "ce25a6fa8f81f79fd59beea2e63da89d12c33aa69ce14708e089b2ab3ed0c289",
+      "lf_utf8_sha256": "722cfb1998b917f43dde913425c1d70060d9cdc00afcf21441431e4ee0cf900e",
+      "base_git_sha256": "722cfb1998b917f43dde913425c1d70060d9cdc00afcf21441431e4ee0cf900e",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 386,
+      "review_scope": "Full manifest validation, source fallback and PNG ownership"
+    },
+    {
+      "path": "src/engine/graphics.c",
+      "sha256": "bdb81a2c3af2d1f28014ba3d0d5ffe2fa1886d999d8862594e44444a74bf9e92",
+      "lf_utf8_sha256": "1d3f66ffe5e8f0179cb3a602916f36d7f91a69d27be85b1964752330a06adc56",
+      "base_git_sha256": "1d3f66ffe5e8f0179cb3a602916f36d7f91a69d27be85b1964752330a06adc56",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 1041,
+      "review_scope": "Selected ownership/call paths: lines1-355,818-end; release, init, display, sprite load and fade; drawing middle not fully reread"
+    },
+    {
+      "path": "src/engine/island.c",
+      "sha256": "222810695a00989322c058aeed272a5f671be9abf168f0702b328e96096bae39",
+      "lf_utf8_sha256": "f02ab16e374c26053743f4c202efadd199ee3c7dc883c38d94bb873dc90711fc",
+      "base_git_sha256": "f02ab16e374c26053743f4c202efadd199ee3c7dc883c38d94bb873dc90711fc",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 371,
+      "review_scope": "Selected ownership and live-wave setup: lines1-230; remaining animation handled by parallel platform audit"
+    },
+    {
+      "path": "src/engine/sound.c",
+      "sha256": "eec8a1b43e33eccbd4e7f835ca55b7d9ab952818f2093f6a996d69d1ce6a91ee",
+      "lf_utf8_sha256": "83787c86ad22d0a9a19b96ab8159874a3af332a5d0c2ae78d0631d3d9128e383",
+      "base_git_sha256": "83787c86ad22d0a9a19b96ab8159874a3af332a5d0c2ae78d0631d3d9128e383",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 233,
+      "review_scope": "Full common audio lifecycle and buffer/callback ownership"
+    },
+    {
+      "path": "src/engine/mytypes.h",
+      "sha256": "cd9d251a4025cb9894b3d13dfb0c05568eadd53b7c15ee16f2af49b6c07cad84",
+      "lf_utf8_sha256": "ea0e741dbb269cf373309cd81efec31bc9df6d651cc9873e161001c869cd0972",
+      "base_git_sha256": "ea0e741dbb269cf373309cd81efec31bc9df6d651cc9873e161001c869cd0972",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 44,
+      "review_scope": "Integer aliases"
+    },
+    {
+      "path": "src/data/story_data.h",
+      "sha256": "0f7d6cbd9a37b411839a2a9376c15e035388d00cb0f8cbf4b898dcc93eaff6f6",
+      "lf_utf8_sha256": "51446802f188ea95ac8db0eed5a09ded878cbff86f209d9f1628dbe134448cb5",
+      "base_git_sha256": "51446802f188ea95ac8db0eed5a09ded878cbff86f209d9f1628dbe134448cb5",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 149,
+      "review_scope": "Full63-entry scene table and flags; static domain census"
+    },
+    {
+      "path": "src/data/calcpath_data.h",
+      "sha256": "fdaf8cc409388b1425485801597b272105c6a788eb30825b74441e21f5041237",
+      "lf_utf8_sha256": "06f98ba87a82bb61f330f7f2ac6075a486f2ee141bb9b3637f5ff25b16977904",
+      "base_git_sha256": "06f98ba87a82bb61f330f7f2ac6075a486f2ee141bb9b3637f5ff25b16977904",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 100,
+      "review_scope": "Full fixed6-node directed transition table; independent simple-path census"
+    },
+    {
+      "path": "src/data/walk_data.h",
+      "sha256": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769",
+      "lf_utf8_sha256": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70",
+      "base_git_sha256": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70",
+      "same_as_base_after_lf_normalization": true,
+      "lines": 539,
+      "review_scope": "Initial travel data plus complete machine-read table identity; not all movement rows visually reread"
+    }
+  ]
+}

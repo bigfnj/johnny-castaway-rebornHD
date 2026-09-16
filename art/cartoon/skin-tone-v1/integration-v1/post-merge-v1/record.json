@@ -1,0 +1,282 @@
+{
+  "audited_main": "9ea8293f8efbd45a25717b4f8dd3bc5139586259",
+  "scope": "Exact copies of the completed main core/platform/authoring review. Historical build paths in reports describe the original execution. Replaying a saved audit helper requires its original build/connecting-poses/post-merge-* location. No bulk native captures are copied.",
+  "files": [
+    {
+      "path": "core/audit.json",
+      "source": "build/connecting-poses/post-merge-core/audit.json",
+      "sha256": "e6bc4c09048a96a31147a989b035b78767584bd6d86b0b8cf7c1ae7c097aeae4",
+      "bytes": 8648
+    },
+    {
+      "path": "core/audit.md",
+      "source": "build/connecting-poses/post-merge-core/audit.md",
+      "sha256": "abdbe118865aa221f7a8c6f94395f196ae9aa422a2e20dc555fbfee4d9a9cb92",
+      "bytes": 2362
+    },
+    {
+      "path": "core/collect_audit.py",
+      "source": "build/connecting-poses/post-merge-core/collect_audit.py",
+      "sha256": "9f661e60f5315f3b5cf2665db388282061d10e323916556c013e82ada74346b1",
+      "bytes": 18813
+    },
+    {
+      "path": "core/coverage.json",
+      "source": "build/connecting-poses/post-merge-core/coverage.json",
+      "sha256": "4e6d8b2e38b9695bdc0b07e8306fb41e2de6d203615f6dd3774d1d7001080b49",
+      "bytes": 11409
+    },
+    {
+      "path": "core/facts.json",
+      "source": "build/connecting-poses/post-merge-core/facts.json",
+      "sha256": "f396882aea65397d2c05c24018023ee60c497701489cb06f0faec76165e1e374",
+      "bytes": 24253
+    },
+    {
+      "path": "platform/adaptation.json",
+      "source": "build/connecting-poses/post-merge-platform/adaptation.json",
+      "sha256": "2a95833d09cb149af0659ef074b5b5f4a86a706f5b352ac46fdb5bf6b3a85c21",
+      "bytes": 813
+    },
+    {
+      "path": "platform/audit.json",
+      "source": "build/connecting-poses/post-merge-platform/audit.json",
+      "sha256": "2e08f2b09d6b2069c63eea999061a58f6eb418b2604c952d755ca80ac016c426",
+      "bytes": 13364
+    },
+    {
+      "path": "platform/gate-adaptation.diff",
+      "source": "build/connecting-poses/post-merge-platform/gate-adaptation.diff",
+      "sha256": "603404efab71407fdb1578fc52d90c64b80caac335e724f9ee795070440e1782",
+      "bytes": 2539
+    },
+    {
+      "path": "platform/gate.log",
+      "source": "build/connecting-poses/post-merge-platform/gate.log",
+      "sha256": "2c9d9bf889aa1ab385bf7b680c4178969a6996955039fb43582ed0a4b94288fc",
+      "bytes": 27891
+    },
+    {
+      "path": "platform/readback.json",
+      "source": "build/connecting-poses/post-merge-platform/readback.json",
+      "sha256": "d04f68c9b188c344d26ec82d4ebc250d45f7a44704eba4fdd55973bbf66ca404",
+      "bytes": 317
+    },
+    {
+      "path": "platform/record.py",
+      "source": "build/connecting-poses/post-merge-platform/record.py",
+      "sha256": "caf62a94aee5c68f2d4235d6045aa8d1aa38c4aa9fdac5c2b4b4ed90eca21621",
+      "bytes": 10569
+    },
+    {
+      "path": "platform/result.json",
+      "source": "build/connecting-poses/post-merge-platform/result.json",
+      "sha256": "e1d71254791a3e85734f8acef0c6ea505d87e3b46b001fcacf5ef5147349cbe5",
+      "bytes": 22372
+    },
+    {
+      "path": "platform/running.json",
+      "source": "build/connecting-poses/post-merge-platform/running.json",
+      "sha256": "7f930cbfc8d95724042b425141f31d462cf91f3283281918ebc311b3b02885ef",
+      "bytes": 15630
+    },
+    {
+      "path": "authoring/audit.json",
+      "source": "build/connecting-poses/post-merge-authoring/audit.json",
+      "sha256": "2240c86f043a1e3a5a942d50eacf57c3573cdaa99f1d1cbf8c9ca22894259533",
+      "bytes": 3507
+    },
+    {
+      "path": "authoring/binder_readback.py",
+      "source": "build/connecting-poses/post-merge-authoring/binder_readback.py",
+      "sha256": "2ef1c8270e50b7dae348e5f18f7bbe2c6633c1e6e817784eb8b702789324603c",
+      "bytes": 6140
+    },
+    {
+      "path": "authoring/check-metadata.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/check-metadata.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "authoring/check-metadata.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/check-metadata.stdout.txt",
+      "sha256": "f31a2da85ed2024238226c2557f0b38133499a96bf2d39c1bf1f058a82f08ca6",
+      "bytes": 269
+    },
+    {
+      "path": "authoring/check-production.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/check-production.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "authoring/check-production.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/check-production.stdout.txt",
+      "sha256": "343c5ce655dde80b7ac694f5b34b5cd442cbfd0cff77a0f5e52668c02e2f1a0d",
+      "bytes": 343
+    },
+    {
+      "path": "authoring/checkout-files.json",
+      "source": "build/connecting-poses/post-merge-authoring/checkout-files.json",
+      "sha256": "67a0c7967576fa890f076cdfa523e1700e89106479ba80006bb08c7471c6efc4",
+      "bytes": 519953
+    },
+    {
+      "path": "authoring/checks.json",
+      "source": "build/connecting-poses/post-merge-authoring/checks.json",
+      "sha256": "ab9af71d005d930f9460fe89447174dece80b9fb94827fd1f70b9bf5ad27c2cc",
+      "bytes": 8566
+    },
+    {
+      "path": "authoring/evidence-readback.json",
+      "source": "build/connecting-poses/post-merge-authoring/evidence-readback.json",
+      "sha256": "721aff17e4b56608b687be268ec01f474dca7aeadbf23d5dcb665cd8627fd692",
+      "bytes": 4615
+    },
+    {
+      "path": "authoring/missing-evidence-v1.json",
+      "source": "build/connecting-poses/post-merge-authoring/missing-evidence-v1.json",
+      "sha256": "82d14399727a6f939385cb93b0781a885101c455c7e27db44092c3f173d80d7e",
+      "bytes": 1097
+    },
+    {
+      "path": "authoring/readback.py",
+      "source": "build/connecting-poses/post-merge-authoring/readback.py",
+      "sha256": "e4500e5e66832724a84ac9fd336dabb2dfff8ec5d2794a4805a1376800772972",
+      "bytes": 10522
+    },
+    {
+      "path": "authoring/regression-history.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/regression-history.stderr.txt",
+      "sha256": "714f229823d422dbdb062283b4f2e7fcf01821c0325e3ee2aeb97ffe14cd7dac",
+      "bytes": 2052
+    },
+    {
+      "path": "authoring/regression-history.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/regression-history.stdout.txt",
+      "sha256": "1a81fdc04d25a5cdb87a0e2ec0a9bfa0a3eb7e2fc8d01cdb82a95e9a16e1c804",
+      "bytes": 437
+    },
+    {
+      "path": "authoring/regression-inventory.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/regression-inventory.stderr.txt",
+      "sha256": "43c962e2b80929890c826581f2f451707a5b115e66cdb3bc8d623065bf55fd3f",
+      "bytes": 1726
+    },
+    {
+      "path": "authoring/regression-inventory.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/regression-inventory.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "authoring/regression-metadata.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/regression-metadata.stderr.txt",
+      "sha256": "1c67560c4521ca521fe666bea3f780ef3f983fc1076fb16be3e5796f61b0a284",
+      "bytes": 5327
+    },
+    {
+      "path": "authoring/regression-metadata.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/regression-metadata.stdout.txt",
+      "sha256": "b356597b25558d2449adf8db521d79e4ed075e4adeab1aa81254d91bc086554e",
+      "bytes": 375
+    },
+    {
+      "path": "authoring/regression-pack-tools.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/regression-pack-tools.stderr.txt",
+      "sha256": "c30555b179bcf92250231b4dcab4bb6c43b1908bad8f8318f8b6184e3c2dd102",
+      "bytes": 2733
+    },
+    {
+      "path": "authoring/regression-pack-tools.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/regression-pack-tools.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "authoring/regression-production.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/regression-production.stderr.txt",
+      "sha256": "fe8bee167c8bf38e58c3ee8dd8c78d01d67cf9a9f1d7e2798148a757472b3eaa",
+      "bytes": 5048
+    },
+    {
+      "path": "authoring/regression-production.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/regression-production.stdout.txt",
+      "sha256": "5869b823999e2293f966e18324eafe9d22fdbd010d89cc3df4e07dbeb6cd23a8",
+      "bytes": 80
+    },
+    {
+      "path": "authoring/REPORT.md",
+      "source": "build/connecting-poses/post-merge-authoring/REPORT.md",
+      "sha256": "04eaffe195b5ac8167670da759d1d797fbff37b5e5482f2ad34f6d017f28ef47",
+      "bytes": 3635
+    },
+    {
+      "path": "authoring/restored-evidence-v2.json",
+      "source": "build/connecting-poses/post-merge-authoring/restored-evidence-v2.json",
+      "sha256": "f0a301f014a34959992fa1e4e402cad63447002cee695e5bee471bb708b5e670",
+      "bytes": 681421
+    },
+    {
+      "path": "authoring/run_checks.py",
+      "source": "build/connecting-poses/post-merge-authoring/run_checks.py",
+      "sha256": "c4a6944ef2f3049cb9ef96eb411182b37e510377dc0f88eaaf36c1825a695b5c",
+      "bytes": 3565
+    },
+    {
+      "path": "authoring/smoke-history.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/smoke-history.stderr.txt",
+      "sha256": "a3d2a2a5f96843750c3a9270231f70e842621a3e97d9550537d6e6874e9afdad",
+      "bytes": 174
+    },
+    {
+      "path": "authoring/smoke-history.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/smoke-history.stdout.txt",
+      "sha256": "ffc4b5351470e9bc32c62f8db57deb2f9bc5eb24c1c031a5f4f7f8e676b9bafa",
+      "bytes": 80
+    },
+    {
+      "path": "authoring/smoke-inventory.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/smoke-inventory.stderr.txt",
+      "sha256": "98df64b3fe7697bb65313e88e59422b0ebdf4a5edb6d55269d44bfe86da90383",
+      "bytes": 320
+    },
+    {
+      "path": "authoring/smoke-inventory.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/smoke-inventory.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "authoring/smoke-metadata.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/smoke-metadata.stderr.txt",
+      "sha256": "97d49ffef47949fa127d6208345625531025dfe586a1812005b7216c3bfe184c",
+      "bytes": 250
+    },
+    {
+      "path": "authoring/smoke-metadata.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/smoke-metadata.stdout.txt",
+      "sha256": "ffc4b5351470e9bc32c62f8db57deb2f9bc5eb24c1c031a5f4f7f8e676b9bafa",
+      "bytes": 80
+    },
+    {
+      "path": "authoring/smoke-production.stderr.txt",
+      "source": "build/connecting-poses/post-merge-authoring/smoke-production.stderr.txt",
+      "sha256": "04eaef6d51dae2196ba4a7ff3c9aea62285c3c0240418a8e13268480c71d54da",
+      "bytes": 303
+    },
+    {
+      "path": "authoring/smoke-production.stdout.txt",
+      "source": "build/connecting-poses/post-merge-authoring/smoke-production.stdout.txt",
+      "sha256": "5869b823999e2293f966e18324eafe9d22fdbd010d89cc3df4e07dbeb6cd23a8",
+      "bytes": 80
+    },
+    {
+      "path": "authoring/source-hashes.json",
+      "source": "build/connecting-poses/post-merge-authoring/source-hashes.json",
+      "sha256": "01d9a9fc6ab409fa66da69ceac406240d6f80ec920b5e55412dce16c96563d9f",
+      "bytes": 13544
+    }
+  ]
+}

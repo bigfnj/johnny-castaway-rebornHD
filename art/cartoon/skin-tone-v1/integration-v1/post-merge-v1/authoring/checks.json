@@ -1,0 +1,281 @@
+{
+  "commit": "9ea8293f8efbd45a25717b4f8dd3bc5139586259",
+  "runner_sha256": "c4a6944ef2f3049cb9ef96eb411182b37e510377dc0f88eaaf36c1825a695b5c",
+  "status": "PASS",
+  "ordered_checks": [
+    {
+      "order": 1,
+      "label": "smoke-inventory",
+      "argv": [
+        "python",
+        "-B",
+        "tests/test_art_inventory.py",
+        "--smoke"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 1.078,
+      "tests_run": 3,
+      "skip_lines": [],
+      "logs": {
+        "stdout": {
+          "path": "smoke-inventory.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "smoke-inventory.stderr.txt",
+          "sha256": "98df64b3fe7697bb65313e88e59422b0ebdf4a5edb6d55269d44bfe86da90383"
+        }
+      }
+    },
+    {
+      "order": 2,
+      "label": "smoke-history",
+      "argv": [
+        "python",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.922,
+      "tests_run": 1,
+      "skip_lines": [],
+      "logs": {
+        "stdout": {
+          "path": "smoke-history.stdout.txt",
+          "sha256": "ffc4b5351470e9bc32c62f8db57deb2f9bc5eb24c1c031a5f4f7f8e676b9bafa"
+        },
+        "stderr": {
+          "path": "smoke-history.stderr.txt",
+          "sha256": "a3d2a2a5f96843750c3a9270231f70e842621a3e97d9550537d6e6874e9afdad"
+        }
+      }
+    },
+    {
+      "order": 3,
+      "label": "smoke-metadata",
+      "argv": [
+        "python",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.86,
+      "tests_run": 2,
+      "skip_lines": [],
+      "logs": {
+        "stdout": {
+          "path": "smoke-metadata.stdout.txt",
+          "sha256": "ffc4b5351470e9bc32c62f8db57deb2f9bc5eb24c1c031a5f4f7f8e676b9bafa"
+        },
+        "stderr": {
+          "path": "smoke-metadata.stderr.txt",
+          "sha256": "97d49ffef47949fa127d6208345625531025dfe586a1812005b7216c3bfe184c"
+        }
+      }
+    },
+    {
+      "order": 4,
+      "label": "smoke-production",
+      "argv": [
+        "python",
+        "-B",
+        "tests/test_art_production_catalog.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.843,
+      "tests_run": 3,
+      "skip_lines": [],
+      "logs": {
+        "stdout": {
+          "path": "smoke-production.stdout.txt",
+          "sha256": "5869b823999e2293f966e18324eafe9d22fdbd010d89cc3df4e07dbeb6cd23a8"
+        },
+        "stderr": {
+          "path": "smoke-production.stderr.txt",
+          "sha256": "04eaef6d51dae2196ba4a7ff3c9aea62285c3c0240418a8e13268480c71d54da"
+        }
+      }
+    },
+    {
+      "order": 5,
+      "label": "regression-inventory",
+      "argv": [
+        "python",
+        "-B",
+        "tests/test_art_inventory.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 2.5,
+      "tests_run": 11,
+      "skip_lines": [
+        "test_directory_symlink_alias (__main__.InventoryCliTests.test_directory_symlink_alias) ... skipped \"directory symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-n7pt6822' -> 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-n7pt6822\\\\\\\\alias'\"",
+        "test_file_symlink_alias (__main__.InventoryCliTests.test_file_symlink_alias) ... skipped \"file symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-tejl070_\\\\\\\\fixture.zip' -> 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-tejl070_\\\\\\\\symlink.json'\"",
+        "OK (skipped=2)"
+      ],
+      "logs": {
+        "stdout": {
+          "path": "regression-inventory.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "regression-inventory.stderr.txt",
+          "sha256": "43c962e2b80929890c826581f2f451707a5b115e66cdb3bc8d623065bf55fd3f"
+        }
+      }
+    },
+    {
+      "order": 6,
+      "label": "regression-history",
+      "argv": [
+        "python",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 17.156,
+      "tests_run": 22,
+      "skip_lines": [],
+      "logs": {
+        "stdout": {
+          "path": "regression-history.stdout.txt",
+          "sha256": "1a81fdc04d25a5cdb87a0e2ec0a9bfa0a3eb7e2fc8d01cdb82a95e9a16e1c804"
+        },
+        "stderr": {
+          "path": "regression-history.stderr.txt",
+          "sha256": "714f229823d422dbdb062283b4f2e7fcf01821c0325e3ee2aeb97ffe14cd7dac"
+        }
+      }
+    },
+    {
+      "order": 7,
+      "label": "regression-metadata",
+      "argv": [
+        "python",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 8.312,
+      "tests_run": 60,
+      "skip_lines": [],
+      "logs": {
+        "stdout": {
+          "path": "regression-metadata.stdout.txt",
+          "sha256": "b356597b25558d2449adf8db521d79e4ed075e4adeab1aa81254d91bc086554e"
+        },
+        "stderr": {
+          "path": "regression-metadata.stderr.txt",
+          "sha256": "1c67560c4521ca521fe666bea3f780ef3f983fc1076fb16be3e5796f61b0a284"
+        }
+      }
+    },
+    {
+      "order": 8,
+      "label": "regression-production",
+      "argv": [
+        "python",
+        "-B",
+        "tests/test_art_production_catalog.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.016,
+      "tests_run": 63,
+      "skip_lines": [],
+      "logs": {
+        "stdout": {
+          "path": "regression-production.stdout.txt",
+          "sha256": "5869b823999e2293f966e18324eafe9d22fdbd010d89cc3df4e07dbeb6cd23a8"
+        },
+        "stderr": {
+          "path": "regression-production.stderr.txt",
+          "sha256": "fe8bee167c8bf38e58c3ee8dd8c78d01d67cf9a9f1d7e2798148a757472b3eaa"
+        }
+      }
+    },
+    {
+      "order": 9,
+      "label": "regression-pack-tools",
+      "argv": [
+        "python",
+        "-B",
+        "tests/test_art_tools.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.687,
+      "tests_run": 20,
+      "skip_lines": [],
+      "logs": {
+        "stdout": {
+          "path": "regression-pack-tools.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stderr": {
+          "path": "regression-pack-tools.stderr.txt",
+          "sha256": "c30555b179bcf92250231b4dcab4bb6c43b1908bad8f8318f8b6184e3c2dd102"
+        }
+      }
+    },
+    {
+      "order": 10,
+      "label": "check-metadata",
+      "argv": [
+        "python",
+        "-B",
+        "tools/art_review_metadata.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.531,
+      "tests_run": null,
+      "skip_lines": [],
+      "logs": {
+        "stdout": {
+          "path": "check-metadata.stdout.txt",
+          "sha256": "f31a2da85ed2024238226c2557f0b38133499a96bf2d39c1bf1f058a82f08ca6"
+        },
+        "stderr": {
+          "path": "check-metadata.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    },
+    {
+      "order": 11,
+      "label": "check-production",
+      "argv": [
+        "python",
+        "-B",
+        "tools/art_production_catalog.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 3.406,
+      "tests_run": null,
+      "skip_lines": [],
+      "logs": {
+        "stdout": {
+          "path": "check-production.stdout.txt",
+          "sha256": "343c5ce655dde80b7ac694f5b34b5cd442cbfd0cff77a0f5e52668c02e2f1a0d"
+        },
+        "stderr": {
+          "path": "check-production.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    }
+  ],
+  "scope": "Fresh merged-main maintained authoring tests and catalog verification. No image generation or long raw-source replay. Existing mutation matrices are not repeated; built-in regression negative cases run normally."
+}

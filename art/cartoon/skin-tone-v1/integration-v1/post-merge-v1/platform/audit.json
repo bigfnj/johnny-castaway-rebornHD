@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "status": "PASS_WITH_EXISTING_BACKLOG",
+  "head": "9ea8293f8efbd45a25717b4f8dd3bc5139586259",
+  "prior_main": "3af0242a74f234aab231d9203b48f78ca8e5c1b4",
+  "scope": "Fresh bounded platform/adapter/build review plus full Windows deployment gate on merged main. No tracked source edits.",
+  "source_diff_paths": [
+    "src",
+    "platform",
+    "CMakeLists.txt",
+    "cmake",
+    "gate.ps1",
+    ".github/workflows/ci.yml",
+    "tests",
+    "tools"
+  ],
+  "source_diff_empty": true,
+  "inspected": [
+    {
+      "path": "platform/platform.h",
+      "sha256": "d44c885dac7188ce20c1c9b726e43f0796a1312639ad2136b248469ad1b0f11b",
+      "coverage": "Full interface and ownership/yield/preview contract."
+    },
+    {
+      "path": "platform/platform_windows.c",
+      "sha256": "4db7c0906dd3b572a931afb0c711b203b68e76321f102baaf1f9bb8a7543b4db",
+      "coverage": "Raw input175-230; platform/window setup and teardown337-547; owned/borrowed surfaces704-762; audio refill, initialization and teardown1040-1295."
+    },
+    {
+      "path": "platform/platform_linux.c",
+      "sha256": "c57c9aefad8f40e959116772438f0bdbda7403438b1b7188f2453cbecbc66687",
+      "coverage": "Display/window construction and destruction57-168; resize presentation238-277; owned/borrowed surfaces303-361; ALSA worker, setup, failure cleanup and close678-898."
+    },
+    {
+      "path": "platform/platform_macos.m",
+      "sha256": "4f1a5dd1d0aab31c223f9a3ed9f7f2e540d4fd8bca329ca28dba8cb9e15af365",
+      "coverage": "CoreGraphics draw65-128; application/window/view ownership140-243; surface ownership280-323; AudioQueue setup/refill/teardown580-660."
+    },
+    {
+      "path": "platform/platform_web.c",
+      "sha256": "559e223cbf6f6ba51ad6d9a2a6ae4c3a1685fbb28d9625b1efc59ca3be48ee4b",
+      "coverage": "Application/window lifecycle68-124; cached presentation and heap-view lifetime195-252; surfaces262-319; unconditional yield558-582; audio allocation/pump/close597-753."
+    },
+    {
+      "path": "platform/zipvfs.c",
+      "sha256": "1cb46f55871ac87a0f4ddee7d463282e822269875c77e49f81e101a1c2adec49",
+      "coverage": "Full archive search/open/read/temp-file ownership and shutdown."
+    },
+    {
+      "path": "platform/png_loader.c",
+      "sha256": "05cbc18bc03a3c7b48c15c2ae010242b37b489302acabf753192605aaeffaf1d",
+      "coverage": "Full WIC/portable decoder adapter, failure cleanup, premultiplied pixels and borrowed surface handoff."
+    },
+    {
+      "path": "platform/png_decoder.c",
+      "sha256": "e98e3e9a9c3970d8366bcb5e7c8e57a7e5e71b0fad3913d42638cc072fdc2f6a",
+      "coverage": "Full chunk/decompression/filtering, size and allocation guards, failure cleanup and premultiplied BGRA conversion."
+    },
+    {
+      "path": "src/engine/graphics.c",
+      "sha256": "bdb81a2c3af2d1f28014ba3d0d5ffe2fa1886d999d8862594e44444a74bf9e92",
+      "coverage": "Relevant platform callsites: background/layer release60-86; capture and graphics teardown237-265; layer construction327-353; borrowed background/sprite ownership762-832."
+    },
+    {
+      "path": "src/engine/sound.c",
+      "sha256": "eec8a1b43e33eccbd4e7f835ca55b7d9ab952818f2093f6a996d69d1ce6a91ee",
+      "coverage": "Callback shared state55-85; backend open and common teardown143-209."
+    },
+    {
+      "path": "src/engine/events.c",
+      "sha256": "041ac9fce76af2c3e1fc2eeef56ea9b92b45e1a4adc0087d5318720ccc2d57d2",
+      "coverage": "Quit teardown, atexit registration and bounded-wait entry185-224."
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "0090f05332c00493b4f4fdd30fc6a25efd6b383a6f3373a3eb0c98d7a65d0962",
+      "coverage": "Compiler/platform/source/library selection, screensaver target, resource versioning, native runtime-data prerequisite and Web preload dependency."
+    },
+    {
+      "path": "cmake/RuntimeData.cmake",
+      "sha256": "636026ff42a78acb3716f61c44988ebf3d307313dc5964d752e1f28e6f16e905",
+      "coverage": "Full always-run copy_if_different prerequisite and explicit executable dependency."
+    },
+    {
+      "path": "gate.ps1",
+      "sha256": "7eb40f38d9c34f990f22628b54b853459385175016250e3eefa074a2ecf30394",
+      "coverage": "Verified byte-identical established full gate, executed against merged main; archive identity and ordered smoke/regression stages."
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "sha256": "961a98e691d264786d0bc942aa781db62254451d9f533a38d882fb9c0821f6f2",
+      "coverage": "Previously inspected platform jobs unchanged by merge; current identity checked, no new CI execution claimed here."
+    },
+    {
+      "path": "tools/build-macos.sh",
+      "sha256": "0503c544316ad4cfaf3b3b189e5bbd056f73bcab4ca78be3e0565ef55220c0cb",
+      "coverage": "Archive deployment callsite60 inspected; not a new complete direct-Clang audit."
+    },
+    {
+      "path": "tools/build_web.py",
+      "sha256": "602a0f1a7d7db27f27f0a9ae7d13b4ca49a6be108176202f2827f7a47764b259",
+      "coverage": "Source archive hash/preload binding callsite inspected; not a new complete builder audit."
+    }
+  ],
+  "new_actionable_findings": [],
+  "existing_backlog_confirmed": [
+    {
+      "item": "Windows foreground raw-input cleanup",
+      "source": "platform/platform_windows.c:175",
+      "backlog": "BACKLOG.md:26",
+      "status": "Existing WM_INPUT returns omit DefWindowProc; no new OS-resource leak measurement."
+    },
+    {
+      "item": "Common audio state initialized after worker start",
+      "source": "src/engine/sound.c:158",
+      "backlog": "BACKLOG.md:27",
+      "status": "Existing currentRemaining assignment after backend open and zero-length NULL memcpy remain; no new audible/race measurement."
+    },
+    {
+      "item": "Post-open audio failures",
+      "source": "platform/platform_windows.c:1073",
+      "related": "platform/platform_macos.m:592; platform/platform_macos.m:654",
+      "backlog": "BACKLOG.md:40",
+      "status": "Existing unchecked refill/enqueue/start results; initial construction cleanup is present. No physical-device failure injected."
+    },
+    {
+      "item": "Full-frame presentation and flip cache optimization",
+      "source": "platform/platform_web.c:237",
+      "backlog": "BACKLOG.md:47-48",
+      "status": "Existing measurement-first opportunity. No new saving claimed."
+    },
+    {
+      "item": "Physical desktop/audio coverage",
+      "source": "platform/platform_linux.c:124",
+      "backlog": "BACKLOG.md:38-39",
+      "status": "This Windows run and static read do not add Linux window-manager or macOS rendered-scene/physical-audio coverage."
+    },
+    {
+      "item": "Capture marker diagnostic/retention",
+      "source": "tests/test_palm_renderer.py",
+      "backlog": "BACKLOG.md:41-43",
+      "status": "No recurrence in this main gate.32 captures and markers retained. Cause and automatic temporary failure-retention work remain open."
+    }
+  ],
+  "intentional_or_nonleak_paths": [
+    "SurfaceFrom borrows pixels consistently on all4 backends; engine explicitly frees decoded sprite/background pixels before the wrapper.",
+    "Native frame-yield and non-Windows preview-parent setters intentionally do no work under the shared interface.",
+    "Linux audio callback takes the common nonrecursive mutex itself; adding an outer callback lock would deadlock.",
+    "Windows close deliberately leaves a driver-owned buffer allocated if unprepare fails; no new ordinary-run leak demonstrated.",
+    "Portable PNG unsupported formats returnNULL for existing per-asset fallback; not a missing function.",
+    "Web retained presentation buffer is one current-canvas cache; this audit makes no hot-restart or no-exit-runtime teardown claim."
+  ],
+  "windows_gate": {
+    "status": "PASS",
+    "exit_code": 0,
+    "elapsed_seconds": 149.272,
+    "source_archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "deployed_archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "warning_free": true,
+    "ordered_smoke_then_regression": true,
+    "stages": [
+      "=== gate: johnny-castaway-rebornHD (Release) ===",
+      "=== configure + build ===",
+      "=== smoke ===",
+      "=== screensaver behaviour (/p preview, and the focus rules) ===",
+      "=== art-style smoke ===",
+      "=== wave renderer smoke ===",
+      "=== palm renderer smoke ===",
+      "=== RESOURCE decoder smoke ===",
+      "=== engine ownership smoke ===",
+      "=== frame limits smoke ===",
+      "=== platform constructor smoke ===",
+      "=== legacy extractor smoke ===",
+      "=== PowerShell Web wrapper smoke ===",
+      "=== art inventory smoke ===",
+      "=== art approval history smoke ===",
+      "=== regression (legacy extractor bytes and failure handling) ===",
+      "=== regression (PowerShell Web wrapper compatibility) ===",
+      "=== regression (platform constructors and failures) ===",
+      "=== regression (RESOURCE decoder completeness) ===",
+      "=== regression (engine ownership and cleanup) ===",
+      "=== regression (frame parsing and stopping boundaries) ===",
+      "=== regression (art-style pixels and configuration) ===",
+      "=== regression (wave alpha, restoration and fallback) ===",
+      "=== regression (palm alpha, clipping and fallback) ===",
+      "=== regression (art authoring tools) ===",
+      "=== regression (art inventory source preservation) ===",
+      "=== regression (art approval history) ===",
+      "=== regression (golden dump corpus) ==="
+    ],
+    "golden_2452_byte_identical": true,
+    "retained_ppms": 32,
+    "all_retained_ppms_and_markers_verified": true,
+    "input_desktop_preserved": true,
+    "poll_checks": 285,
+    "observed_inactive_windows": 256,
+    "protected_inputs_unchanged": true,
+    "explicit_skips": [
+      "Inventory directory and file symlinks: WinError1314;9 of11 cases executed, including hardlink."
+    ],
+    "launcher_sha256": "a442d850b6930cce0aae3e2d8e1cc84e81b420c638d88f9fa2decf3722c89dc6",
+    "result_sha256": "e1d71254791a3e85734f8acef0c6ea505d87e3b46b001fcacf5ef5147349cbe5",
+    "log_sha256": "2c9d9bf889aa1ab385bf7b680c4178969a6996955039fb43582ed0a4b94288fc",
+    "capture_location": "build/connecting-poses/windows-verification/connecting-main-v1",
+    "binaries": {
+      "extract_sound.exe": "5fa6a801f52f2e51f7c5628d3c67ab755aef04f49b25c8bbadeb97964d27d30a",
+      "extract_walk_data.exe": "bfa8e3df07fa662783a3160f5f8ba91b0034e340b1498ebe27e8fd0cf006ba2c",
+      "jc_frame_test.exe": "fd7e17974df7bc53cf3f085cb658942b10c4b3e215b54566905f34b5c4a75acd",
+      "jc_lifecycle_test.exe": "917c1b9243f299f0cfe42545cf4a269831ebf2349b3f20e50526ba53220c3640",
+      "jc_palm_test.exe": "29e2f598ea90d7652f0d4c03590285724e45b29487b15d25d4de05834bb10804",
+      "jc_platform_alloc_test.exe": "0206681ac123538d7fcf4016d6dc0b24d8d01c6e048997dee86cd3f2bb8a04ed",
+      "jc_png_test.exe": "26448fc88444a773065d9c2797c8f893e9d74b2b06cd84592a41c78fe5022ce9",
+      "jc_reborn.exe": "103f1816ea738a5e483646638ffef15cd5e62d320f36b05df3c58981d5db8cd5",
+      "jc_reborn.scr": "3dd55913c6eb3fd29c111e9430f8cf55a177e987942bb22b856a34698e93b22f",
+      "jc_uncompress_test.exe": "ba8224cf8567f84fa5fe0e7fc59655af62ccf1ad37decea5e56d6aa17bd0d85d"
+    }
+  },
+  "exact_small_copies": [
+    {
+      "path": "build/connecting-poses/post-merge-platform/result.json",
+      "source": "build/connecting-poses/windows-verification/connecting-main-v1/result.json",
+      "sha256": "e1d71254791a3e85734f8acef0c6ea505d87e3b46b001fcacf5ef5147349cbe5"
+    },
+    {
+      "path": "build/connecting-poses/post-merge-platform/running.json",
+      "source": "build/connecting-poses/windows-verification/connecting-main-v1/running.json",
+      "sha256": "7f930cbfc8d95724042b425141f31d462cf91f3283281918ebc311b3b02885ef"
+    },
+    {
+      "path": "build/connecting-poses/post-merge-platform/gate.log",
+      "source": "build/connecting-poses/windows-verification/connecting-main-v1/gate.log",
+      "sha256": "2c9d9bf889aa1ab385bf7b680c4178969a6996955039fb43582ed0a4b94288fc"
+    },
+    {
+      "path": "build/connecting-poses/post-merge-platform/adaptation.json",
+      "source": "build/connecting-poses/windows-verification/connecting-main-v1/adaptation.json",
+      "sha256": "2a95833d09cb149af0659ef074b5b5f4a86a706f5b352ac46fdb5bf6b3a85c21"
+    },
+    {
+      "path": "build/connecting-poses/post-merge-platform/gate-adaptation.diff",
+      "source": "build/connecting-poses/windows-verification/connecting-main-v1/gate-adaptation.diff",
+      "sha256": "603404efab71407fdb1578fc52d90c64b80caac335e724f9ee795070440e1782"
+    }
+  ],
+  "limits": [
+    "No new fault arose that justified extra probes or unchanged mutation reruns.",
+    "No sanitizer, physical-device failure, cross-platform native session or new performance experiment was run by this audit.",
+    "This is bounded review of listed regions, not proof that all paths are defect-free.",
+    "Full gate/captures retain the launcher fixed output location; compact copied logs and review record live here.",
+    "Core ADS/TTM/story semantics and complete art provenance are separate audit scopes."
+  ]
+}

@@ -95,3 +95,10 @@ selected runtime. It does not infer which individual clip the user watched or
 exhaustive story parity. Standard integration and delivery checks are now
 authorized and in progress. The separate
 [delivery verification](cartoon-connecting-poses-verification.md) records results.
+
+Delivery completed through [PR #15](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/15),
+merged as `9ea8293f8efbd45a25717b4f8dd3bc5139586259`. The standard package contains
+43 accepted assets and all 2,594 member payloads match the approved preview.
+Local smoke/regression and all four PR platform jobs passed before merge.
+Earlier pending statements above describe their historical checkpoints. The
+fresh audit of main and final verification are recorded in the delivery guide.

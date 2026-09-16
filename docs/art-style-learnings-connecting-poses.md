@@ -1,9 +1,12 @@
 # Connecting poses: preserve motion context and reference roles
 
-This is a working record for 009, 010 and 012. The user has accepted the poses
-in the native preview, while disputing inconsistent skin colors. Corrected-color
-review and production promotion remain pending. Keep pose approval separate
-from palette approval and preserve the earlier pending-at-capture records.
+This records the delivered 009, 010 and 012 poses, their corrected skin palette,
+and lessons from the standing018 contact correction. The user accepted the poses,
+then the matched lighter colors, and finally the foot correction. The combined
+package is on main through [PR #15](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/15).
+Keep those scoped approvals separate and preserve earlier pending-at-capture
+records. The [delivery verification](cartoon-connecting-poses-verification.md)
+identifies the current production outputs.
 
 ## Separate geometry from identity
 

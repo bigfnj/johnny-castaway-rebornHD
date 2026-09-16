@@ -1,8 +1,10 @@
 # Cartoon connecting poses, colors and foot contact
 
-The approved artwork is integrated into the 43-asset production package. Local
-delivery checks passed. Platform CI, main integration and the final audit will
-be recorded below when complete.
+The approved artwork is integrated into the 43-asset production package on main
+through [PR #15](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/15),
+merged as `9ea8293f8efbd45a25717b4f8dd3bc5139586259`. Local delivery checks and all
+four platform CI jobs passed. The [fresh main audit](cartoon-connecting-poses-post-merge-audit.md)
+records repeated verification and the restoration of three omitted review files.
 
 The user accepted the connecting poses, selected the lighter 029 skin reference,
 approved the matched colors, and accepted the revised 018 foot with "much better
@@ -64,7 +66,7 @@ color corrections before comparison with the retained runtime PNGs.
 | Maintained authoring | Nine smoke cases pass before regression suites: inventory 11 cases with two explicit Windows symlink-privilege skips, history 22, metadata 60, catalog 63 and art tools 20. Both generated catalogs reproduce. Windows hardlink controls pass. [Evidence](../art/cartoon/skin-tone-v1/integration-v1/authoring-v1/evidence.json). |
 | Windows full gate | Fresh Release build has no compiler warnings. All smoke stages pass before regressions; 2,452 golden files match. Source and deployed archives both match the production SHA. All 32 retained renderer captures are complete. The inactive desktop preserves the user's input desktop. [Evidence](../art/cartoon/skin-tone-v1/integration-v1/windows-v1/evidence.json). |
 | Checkout preservation | Removing the standing-source `-text` rule changes the named prompt bytes in an actual autocrlf checkout; restoring it preserves the recorded SHA. Frozen whitespace-control fixtures retain their exact bytes through narrowly scoped attributes. |
-| Platform CI and main | Pending branch CI and authorized merge, followed by a fresh audit of main. |
+| Platform CI and main | Windows, Linux, macOS and Web passed for PR15 and merged main. Fresh main Windows deployment and authoring checks passed again. The post-merge audit restored three ignored browser-execution evidence records; runtime art and all package bytes were already correct. [CI record](cartoon-connecting-poses-ci.json). |
 
 No runtime C, platform backend, maintained authoring tool or test implementation
 changes are part of this delivery. Cartoon remains partial while other scenery,

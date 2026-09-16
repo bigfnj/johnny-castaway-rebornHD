@@ -1,5 +1,14 @@
 # Standing018 proportions
 
+Current status: foot-v5 is approved and delivered on main through
+[PR #15](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/15).
+Production uses the normalized PNG with SHA256
+`5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f`.
+The [delivery verification](../../../docs/cartoon-connecting-poses-verification.md)
+records the combined 43-asset package and tests. The notes below preserve the
+earlier checkpoints in order, including pending decisions that were later
+resolved. They are not outstanding requests for another art approval.
+
 The user identified a hovering foot in the Front turn color preview, then
 proposed a longer torso and lower shorts after comparing the original pose:
 "should we re-render with a longer torso and bring the shorts more in-line w/ the original?"

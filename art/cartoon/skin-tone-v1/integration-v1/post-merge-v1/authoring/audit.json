@@ -1,0 +1,49 @@
+{
+  "status": "PASS_AFTER_RESTORATION_STAGED",
+  "commit": "9ea8293f8efbd45a25717b4f8dd3bc5139586259",
+  "runner_sha256": "e4500e5e66832724a84ac9fd336dabb2dfff8ec5d2794a4805a1376800772972",
+  "checks_sha256": "ab9af71d005d930f9460fe89447174dece80b9fb94827fd1f70b9bf5ad27c2cc",
+  "checkout_files": 1352,
+  "checkout_bytes": 55097158,
+  "frozen_checkout_mismatches": [],
+  "authorized_unbound_current_doc_edits_during_audit": [
+    "art/cartoon/standing018-proportions-v1/README.md"
+  ],
+  "durable_binders": 24,
+  "durable_reference_checks": 1119,
+  "unique_referenced_paths_worktree_and_index": 1041,
+  "restored_evidence_readback_sha256": "f0a301f014a34959992fa1e4e402cad63447002cee695e5bee471bb708b5e670",
+  "initial_failure_report_sha256": "82d14399727a6f939385cb93b0781a885101c455c7e27db44092c3f173d80d7e",
+  "source_fingerprints": 102,
+  "approval_recipe_source_member_bindings": 43,
+  "production_archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+  "protected_integration_inputs": 55,
+  "runtime_platform_maintained_tool_test_build_ci_changes_from_baseline": [],
+  "findings": [
+    {
+      "status": "RESTORED_AND_STAGED_BY_PARENT",
+      "issue": "Three copied browser execution evidence records were absent from merged commit because their nested build directory was ignored.",
+      "runtime_impact": "None. Artwork, production ZIP, original evidence binder bytes and tests are unchanged.",
+      "affected_binder": "art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/evidence.json",
+      "affected_paths": [
+        "art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/evidence/motion-v1/browser-execution/build/execution.json",
+        "art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/evidence/motion-v1/browser-execution/build/stderr.txt",
+        "art/cartoon/walk-pilot/connecting-poses-v1/native-motion-v1/evidence/motion-v1/browser-execution/build/stdout.txt"
+      ],
+      "resolution": "Parent copied original feature-worktree bytes and force-staged explicit files. All expected, feature-source, working and staged hashes match. Follow-up commit is pending.",
+      "backlog": "Add a copied-evidence completeness check against the Git index: recursively resolve durable binder destination members and require each staged blob to exist with its expected SHA256. Distinguish documented external/local-only inputs. A negative control must omit an ignored nested build member and name that missing path."
+    }
+  ],
+  "review_scope": [
+    "Fresh reading of maintained pack/catalog/pilot-history paths and test fixtures.",
+    "Fresh reading of selected v5 color adapter, combined integration helper, mutation witness path and replay instructions.",
+    "New-helper AST parsing and exact source fingerprints; not a claim that every duplicated historical helper was manually audited.",
+    "Image learnings retain original-first pose/placement, material calibration, mask/classification limits and separate human approval history."
+  ],
+  "limits": [
+    "No new image generation, native capture, original-executable parity claim, or long raw-source replay.",
+    "Existing source mutation matrices were not repeated; regression suites include their normal negative-input cases.",
+    "Two inventory Windows symlink-privilege cases were explicitly skipped; hardlink cases ran.",
+    "Historical native review replay intentionally requires isolated pinned baseline inputs; published checkpoint writers must not be rerun."
+  ]
+}

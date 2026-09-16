@@ -1,0 +1,836 @@
+{
+  "schema_version": 1,
+  "head": "9ea8293f8efbd45a25717b4f8dd3bc5139586259",
+  "baseline": "3af0242a74f234aab231d9203b48f78ca8e5c1b4",
+  "source_diff_names": [],
+  "archive": {
+    "sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "members": 2594,
+    "resource_payload_sha256": {
+      "data/RESOURCE.MAP": "65f5e30383b3d5a5f1c4fca1b49d57cc31d72bfaf90a49ce61d5990d449d59da",
+      "data/RESOURCE.001": "f4e97a342a3c3c5b31c85cc4b177dba05363a81ad9a49b3961c26f6a4508bd02"
+    },
+    "resource_payloads_match_historical_static_inventory": true
+  },
+  "static_inventory": {
+    "path": "docs/knowledge-base/port-inventory.json",
+    "sha256": "ebfe199988297ffe150a2e47eebd9b39b17c8320315932883f6dca3097f63f4b",
+    "scope": "Historical static facts reused only after checking current MAP/001 payload identity; historical executable proofs not rerun.",
+    "summary": {
+      "port_resource_types": {
+        "ADS": 10,
+        "BMP": 116,
+        "PAL": 1,
+        "SCR": 10,
+        "TTM": 41,
+        "VIN": 1
+      },
+      "original_resource_types": {
+        "ADS": 10,
+        "BMP": 117,
+        "PAL": 1,
+        "SCR": 10,
+        "TTM": 41,
+        "VIN": 1
+      },
+      "story_entries": 63,
+      "ads_tags": 66,
+      "ttm_declared_tags": 616,
+      "ttm_global_tags": 611,
+      "ttm_local_labels": 5,
+      "bitmap_frames": 2391,
+      "missing_port_resources": [
+        "SA_DEMO.BMP"
+      ],
+      "unresolved_ads_ttm_references": [],
+      "unreferenced_from_story_ttm_files": [
+        "FIRE.TTM",
+        "GJGULL1.TTM",
+        "GJLILIPU.TTM",
+        "GJVIS5W.TTM",
+        "MJCOCO1.TTM"
+      ]
+    },
+    "command_support_overview": [
+      {
+        "language": "ADS",
+        "opcode": "1070",
+        "command": "IF_LASTPLAYED_LOCAL",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:569",
+        "total": 1
+      },
+      {
+        "language": "ADS",
+        "opcode": "1330",
+        "command": "IF_UNKNOWN_1",
+        "status": "ignored",
+        "note": "Condition is read and logged but not evaluated.",
+        "source": "src/engine/ads.c:583",
+        "total": 55
+      },
+      {
+        "language": "ADS",
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:593",
+        "total": 500
+      },
+      {
+        "language": "ADS",
+        "opcode": "1360",
+        "command": "IF_NOT_RUNNING",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:604",
+        "total": 76
+      },
+      {
+        "language": "ADS",
+        "opcode": "1370",
+        "command": "IF_IS_RUNNING",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:611",
+        "total": 30
+      },
+      {
+        "language": "ADS",
+        "opcode": "1420",
+        "command": "AND",
+        "status": "structural_noop",
+        "note": "Logged only; surrounding condition handling is specialized.",
+        "source": "src/engine/ads.c:617",
+        "total": 47
+      },
+      {
+        "language": "ADS",
+        "opcode": "1430",
+        "command": "OR",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:621",
+        "total": 30
+      },
+      {
+        "language": "ADS",
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:626",
+        "total": 584
+      },
+      {
+        "language": "ADS",
+        "opcode": "1520",
+        "command": "ADD_SCENE_LOCAL",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:638",
+        "total": 1
+      },
+      {
+        "language": "ADS",
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:656",
+        "total": 866
+      },
+      {
+        "language": "ADS",
+        "opcode": "2010",
+        "command": "STOP_SCENE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:669",
+        "total": 111
+      },
+      {
+        "language": "ADS",
+        "opcode": "2014",
+        "command": "UNKNOWN_5",
+        "status": "unhandled",
+        "note": "No playback switch case; default logs the opcode as a tag.",
+        "source": "src/engine/ads.c:548",
+        "total": 0
+      },
+      {
+        "language": "ADS",
+        "opcode": "3010",
+        "command": "RANDOM_START",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:682",
+        "total": 77
+      },
+      {
+        "language": "ADS",
+        "opcode": "3020",
+        "command": "NOP",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:688",
+        "total": 17
+      },
+      {
+        "language": "ADS",
+        "opcode": "30FF",
+        "command": "RANDOM_END",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:695",
+        "total": 77
+      },
+      {
+        "language": "ADS",
+        "opcode": "4000",
+        "command": "UNKNOWN_6",
+        "status": "ignored",
+        "note": "Three arguments are read but have no playback effect.",
+        "source": "src/engine/ads.c:701",
+        "total": 4
+      },
+      {
+        "language": "ADS",
+        "opcode": "F010",
+        "command": "FADE_OUT",
+        "status": "ignored",
+        "note": "Script fade command logs only; story-level fades are a separate path.",
+        "source": "src/engine/ads.c:706",
+        "total": 67
+      },
+      {
+        "language": "ADS",
+        "opcode": "F200",
+        "command": "GOSUB_TAG",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:710",
+        "total": 12
+      },
+      {
+        "language": "ADS",
+        "opcode": "FFF0",
+        "command": "END_IF",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:729",
+        "total": 0
+      },
+      {
+        "language": "ADS",
+        "opcode": "FFFF",
+        "command": "END",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ads.c:719",
+        "total": 133
+      },
+      {
+        "language": "TTM",
+        "opcode": "001F",
+        "command": "SAVE_BACKGROUND",
+        "status": "unhandled",
+        "note": "No playback switch case; decoded arguments are consumed without an operation.",
+        "source": "src/engine/ttm.c:288",
+        "total": 0
+      },
+      {
+        "language": "TTM",
+        "opcode": "0080",
+        "command": "DRAW_BACKGROUND",
+        "status": "ignored",
+        "note": "Playback logs only; no draw or image-slot release.",
+        "source": "src/engine/ttm.c:290",
+        "total": 190
+      },
+      {
+        "language": "TTM",
+        "opcode": "0110",
+        "command": "PURGE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:295",
+        "total": 528
+      },
+      {
+        "language": "TTM",
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:303",
+        "total": 6631
+      },
+      {
+        "language": "TTM",
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "status": "modified",
+        "note": "Values below four ticks are clamped to four.",
+        "source": "src/engine/ttm.c:308",
+        "total": 1147
+      },
+      {
+        "language": "TTM",
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:313",
+        "total": 456
+      },
+      {
+        "language": "TTM",
+        "opcode": "1061",
+        "command": "SET_PALETTE_SLOT",
+        "status": "ignored",
+        "note": "Palette slot argument has no effect.",
+        "source": "src/engine/ttm.c:324",
+        "total": 41
+      },
+      {
+        "language": "TTM",
+        "opcode": "1101",
+        "command": "LOCAL_TAG",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:328",
+        "total": 5
+      },
+      {
+        "language": "TTM",
+        "opcode": "1111",
+        "command": "TAG",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:332",
+        "total": 611
+      },
+      {
+        "language": "TTM",
+        "opcode": "1121",
+        "command": "TTM_UNKNOWN_1",
+        "status": "ignored",
+        "note": "Region identifier is read but not stored.",
+        "source": "src/engine/ttm.c:336",
+        "total": 61
+      },
+      {
+        "language": "TTM",
+        "opcode": "1201",
+        "command": "GOTO_TAG",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:343",
+        "total": 75
+      },
+      {
+        "language": "TTM",
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:349",
+        "total": 217
+      },
+      {
+        "language": "TTM",
+        "opcode": "2012",
+        "command": "SET_FRAME1",
+        "status": "ignored",
+        "note": "Arguments are read and logged only.",
+        "source": "src/engine/ttm.c:355",
+        "total": 52
+      },
+      {
+        "language": "TTM",
+        "opcode": "2022",
+        "command": "TIMER",
+        "status": "approximate",
+        "note": "Uses the arithmetic mean of both arguments; source explicitly questions this formula.",
+        "source": "src/engine/ttm.c:361",
+        "total": 152
+      },
+      {
+        "language": "TTM",
+        "opcode": "4004",
+        "command": "SET_CLIP_ZONE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:368",
+        "total": 52
+      },
+      {
+        "language": "TTM",
+        "opcode": "4110",
+        "command": "FADE_OUT",
+        "status": "unhandled",
+        "note": "No playback switch case; decoded arguments are consumed without an operation.",
+        "source": "src/engine/ttm.c:288",
+        "total": 0
+      },
+      {
+        "language": "TTM",
+        "opcode": "4120",
+        "command": "FADE_IN",
+        "status": "unhandled",
+        "note": "No playback switch case; decoded arguments are consumed without an operation.",
+        "source": "src/engine/ttm.c:288",
+        "total": 0
+      },
+      {
+        "language": "TTM",
+        "opcode": "4204",
+        "command": "COPY_ZONE_TO_BG",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:377",
+        "total": 38
+      },
+      {
+        "language": "TTM",
+        "opcode": "4214",
+        "command": "SAVE_IMAGE1",
+        "status": "stub",
+        "note": "Playback calls grSaveImage1, whose body does not save anything.",
+        "source": "src/engine/graphics.c:385",
+        "total": 60
+      },
+      {
+        "language": "TTM",
+        "opcode": "A002",
+        "command": "DRAW_PIXEL",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:389",
+        "total": 63
+      },
+      {
+        "language": "TTM",
+        "opcode": "A054",
+        "command": "SAVE_ZONE",
+        "status": "stub",
+        "note": "grSaveZone does not save the requested zone.",
+        "source": "src/engine/graphics.c:399",
+        "total": 1
+      },
+      {
+        "language": "TTM",
+        "opcode": "A064",
+        "command": "RESTORE_ZONE",
+        "status": "partial",
+        "note": "Drops the entire saved layer rather than restoring the requested rectangle.",
+        "source": "src/engine/graphics.c:411",
+        "total": 1
+      },
+      {
+        "language": "TTM",
+        "opcode": "A0A4",
+        "command": "DRAW_LINE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:406",
+        "total": 784
+      },
+      {
+        "language": "TTM",
+        "opcode": "A104",
+        "command": "DRAW_RECT",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:416",
+        "total": 111
+      },
+      {
+        "language": "TTM",
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:426",
+        "total": 437
+      },
+      {
+        "language": "TTM",
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:437",
+        "total": 12546
+      },
+      {
+        "language": "TTM",
+        "opcode": "A510",
+        "command": "DRAW_SPRITE1",
+        "status": "unhandled",
+        "note": "No playback switch case; decoded arguments are consumed without an operation.",
+        "source": "src/engine/ttm.c:288",
+        "total": 0
+      },
+      {
+        "language": "TTM",
+        "opcode": "A524",
+        "command": "DRAW_SPRITE_FLIP",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:447",
+        "total": 2822
+      },
+      {
+        "language": "TTM",
+        "opcode": "A530",
+        "command": "DRAW_SPRITE3",
+        "status": "unhandled",
+        "note": "No playback switch case; decoded arguments are consumed without an operation.",
+        "source": "src/engine/ttm.c:288",
+        "total": 0
+      },
+      {
+        "language": "TTM",
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "status": "partial",
+        "note": "Clears the full layer; ignores the supplied saved-region identifier.",
+        "source": "src/engine/ttm.c:457",
+        "total": 6814
+      },
+      {
+        "language": "TTM",
+        "opcode": "B606",
+        "command": "DRAW_SCREEN",
+        "status": "ignored",
+        "note": "Six arguments are read and logged without drawing.",
+        "source": "src/engine/ttm.c:463",
+        "total": 6
+      },
+      {
+        "language": "TTM",
+        "opcode": "C020",
+        "command": "LOAD_SAMPLE",
+        "status": "unhandled",
+        "note": "No playback switch case; decoded arguments are consumed without an operation.",
+        "source": "src/engine/ttm.c:288",
+        "total": 0
+      },
+      {
+        "language": "TTM",
+        "opcode": "C030",
+        "command": "SELECT_SAMPLE",
+        "status": "unhandled",
+        "note": "No playback switch case; decoded arguments are consumed without an operation.",
+        "source": "src/engine/ttm.c:288",
+        "total": 0
+      },
+      {
+        "language": "TTM",
+        "opcode": "C040",
+        "command": "DESELECT_SAMPLE",
+        "status": "unhandled",
+        "note": "No playback switch case; decoded arguments are consumed without an operation.",
+        "source": "src/engine/ttm.c:288",
+        "total": 0
+      },
+      {
+        "language": "TTM",
+        "opcode": "C051",
+        "command": "PLAY_SAMPLE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:467",
+        "total": 535
+      },
+      {
+        "language": "TTM",
+        "opcode": "C060",
+        "command": "STOP_SAMPLE",
+        "status": "unhandled",
+        "note": "No playback switch case; decoded arguments are consumed without an operation.",
+        "source": "src/engine/ttm.c:288",
+        "total": 0
+      },
+      {
+        "language": "TTM",
+        "opcode": "F01F",
+        "command": "LOAD_SCREEN",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:472",
+        "total": 40
+      },
+      {
+        "language": "TTM",
+        "opcode": "F02F",
+        "command": "LOAD_IMAGE",
+        "status": "implemented_unverified_parity",
+        "note": "Playback contains handling; original-engine behavior has not been compared scene by scene.",
+        "source": "src/engine/ttm.c:477",
+        "total": 263
+      },
+      {
+        "language": "TTM",
+        "opcode": "F05F",
+        "command": "LOAD_PALETTE",
+        "status": "ignored",
+        "note": "Palette filename is read and logged only.",
+        "source": "src/engine/ttm.c:482",
+        "total": 41
+      }
+    ]
+  },
+  "path_domain_census": {
+    "method": "Independent exhaustive simple-node permutations filtered by current transition table; static analysis, not native engine execution.",
+    "pairs": [
+      {
+        "from": 0,
+        "to": 0,
+        "count": 1,
+        "maximum_nodes": 1
+      },
+      {
+        "from": 0,
+        "to": 1,
+        "count": 2,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 0,
+        "to": 2,
+        "count": 3,
+        "maximum_nodes": 4
+      },
+      {
+        "from": 0,
+        "to": 3,
+        "count": 4,
+        "maximum_nodes": 4
+      },
+      {
+        "from": 0,
+        "to": 4,
+        "count": 3,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 0,
+        "to": 5,
+        "count": 3,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 1,
+        "to": 0,
+        "count": 2,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 1,
+        "to": 1,
+        "count": 1,
+        "maximum_nodes": 1
+      },
+      {
+        "from": 1,
+        "to": 2,
+        "count": 2,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 1,
+        "to": 3,
+        "count": 3,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 1,
+        "to": 4,
+        "count": 2,
+        "maximum_nodes": 4
+      },
+      {
+        "from": 1,
+        "to": 5,
+        "count": 2,
+        "maximum_nodes": 6
+      },
+      {
+        "from": 2,
+        "to": 0,
+        "count": 3,
+        "maximum_nodes": 4
+      },
+      {
+        "from": 2,
+        "to": 1,
+        "count": 2,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 2,
+        "to": 2,
+        "count": 1,
+        "maximum_nodes": 1
+      },
+      {
+        "from": 2,
+        "to": 3,
+        "count": 5,
+        "maximum_nodes": 6
+      },
+      {
+        "from": 2,
+        "to": 4,
+        "count": 4,
+        "maximum_nodes": 4
+      },
+      {
+        "from": 2,
+        "to": 5,
+        "count": 3,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 3,
+        "to": 0,
+        "count": 4,
+        "maximum_nodes": 4
+      },
+      {
+        "from": 3,
+        "to": 1,
+        "count": 3,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 3,
+        "to": 2,
+        "count": 5,
+        "maximum_nodes": 6
+      },
+      {
+        "from": 3,
+        "to": 3,
+        "count": 1,
+        "maximum_nodes": 1
+      },
+      {
+        "from": 3,
+        "to": 4,
+        "count": 4,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 3,
+        "to": 5,
+        "count": 4,
+        "maximum_nodes": 6
+      },
+      {
+        "from": 4,
+        "to": 0,
+        "count": 3,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 4,
+        "to": 1,
+        "count": 2,
+        "maximum_nodes": 4
+      },
+      {
+        "from": 4,
+        "to": 2,
+        "count": 4,
+        "maximum_nodes": 4
+      },
+      {
+        "from": 4,
+        "to": 3,
+        "count": 4,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 4,
+        "to": 4,
+        "count": 1,
+        "maximum_nodes": 1
+      },
+      {
+        "from": 4,
+        "to": 5,
+        "count": 2,
+        "maximum_nodes": 4
+      },
+      {
+        "from": 5,
+        "to": 0,
+        "count": 3,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 5,
+        "to": 1,
+        "count": 2,
+        "maximum_nodes": 6
+      },
+      {
+        "from": 5,
+        "to": 2,
+        "count": 3,
+        "maximum_nodes": 5
+      },
+      {
+        "from": 5,
+        "to": 3,
+        "count": 4,
+        "maximum_nodes": 6
+      },
+      {
+        "from": 5,
+        "to": 4,
+        "count": 2,
+        "maximum_nodes": 4
+      },
+      {
+        "from": 5,
+        "to": 5,
+        "count": 1,
+        "maximum_nodes": 1
+      }
+    ],
+    "max_paths": 5,
+    "max_nodes": 6,
+    "unconnected_pairs": []
+  },
+  "story_domain_census": {
+    "entries": 63,
+    "invalid_endpoint_rows": [],
+    "final_candidates_by_day": {
+      "1": 20,
+      "2": 20,
+      "3": 20,
+      "4": 20,
+      "5": 20,
+      "6": 19,
+      "7": 20,
+      "8": 20,
+      "9": 20,
+      "10": 20,
+      "11": 20
+    },
+    "nonfinal_min_candidates": 28,
+    "nonfinal_eligibility_cases": 88
+  },
+  "limits": [
+    "No full native run, sanitizer, leak detector or performance benchmark was executed for this read-only audit.",
+    "No unsupported-opcode effect or random-story parity was inferred from static command counts.",
+    "File hashes identify inspected bytes; they do not prove every path is correct."
+  ]
+}
