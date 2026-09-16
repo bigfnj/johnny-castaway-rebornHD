@@ -1,8 +1,9 @@
 # Profile walking: arm continuity and generation lessons
 
 This records the 001-008 authoring checkpoint on `art/cartoon-profile-walk`.
-The complete native gait still requires human acceptance. Production remains
-the 32-asset pack until that review and integration pass.
+The user accepted the full native gait with "Yes, keep this profile walk" after
+reviewing both directions and the standing/ordinary 003 connections. The eight
+profile assets extend the pack to 40; unseen story uses remain outside that review.
 
 ## Arm direction belongs to the whole cycle
 

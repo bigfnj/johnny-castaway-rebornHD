@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "scope": "Technical profile-walk-001 review only; no runtime or motion approval.",
+  "reference_hashes": {
+    "001-source.json": "550ba848889a690bb016acf97e09011b2a8c10f7b1e474e8d1dbfdc1c674b053",
+    "001-original-native.png": "a8eccac35a1f596717fd9e8494ee6aec7d1188eb894b664a25cadba6d5620bdf",
+    "001-original-nearest8.png": "6e9d3529acef2cd7fc95b5ee03f65a9a017d054f428ef1b34799769e2a34b8b7"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "scale_exact": {
+    "numerator": 1,
+    "denominator": 10
+  },
+  "normalization": "none",
+  "padding_hd": 64,
+  "resampling": {
+    "working_mode": "RGBa",
+    "affine": "BICUBIC",
+    "oversample": 8,
+    "downsample": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "pillow_version": "12.3.0",
+  "cap_target_hd": [
+    72,
+    0.25
+  ],
+  "cap_measurement": "First alpha>=128 row; its pixel-edge horizontal midpoint and row top. Outline observation, not an anatomical landmark.",
+  "target_basis": "Original001 top-row pixel-edge midpoint doubled to72HD; y0.25 is the inherited deliberate filter margin.",
+  "frames": [
+    {
+      "frame": 1,
+      "source": "001-profile-v3.png",
+      "source_sha256": "ae339f62213fa3d8ef2e936cdf88b75eb5658312d86337db0d4a1f0c588dcf7e",
+      "generated_canvas": [
+        1024,
+        1536
+      ],
+      "runtime_canvas": [
+        96,
+        144
+      ],
+      "cap_raw": [
+        705.0,
+        20
+      ],
+      "cap_target_hd": [
+        72,
+        0.25
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        1.5,
+        0,
+        0.1,
+        -1.75
+      ],
+      "path": "BMP/JOHNWALK.BMP/001.png",
+      "candidate_png_sha256": "aeb1119d7576c6668d27c4caf02a45f7f7b4beced945d5886720f124d49a0759"
+    }
+  ],
+  "reviewed_recipe": {
+    "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/001-v3/recipe.json",
+    "sha256": "6aca4b7675e54ce85585eeffa0c3489a5fabd194196b13209c0e8f229c477749"
+  },
+  "runtime_annotation_limit": "Canonical path and reviewed PNG identity added to a copy. Rendering fields and raw source identity are unchanged; human review is recorded separately."
+}

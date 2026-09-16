@@ -18,7 +18,8 @@ application. Work starts from `0f7d7fd` on `art/cartoon-production-foundation`.
 The full catalog is preparation, not permission to generate every resource at
 once. The original 21 approved assets were the starting baseline. The rear walk,
 its arrival, and the completed standing family now bring production coverage to
-32. The [profile-walk batch](cartoon-profile-walk-plan.md) is the current draft work.
+32. The approved [profile-walk batch](cartoon-profile-walk-plan.md) adds eight
+poses together and brings the pack to 40 assets.
 Drafts have separate source records and do not acquire acceptance from similar
 poses, shared bytes or approval of a different direction.
 
@@ -66,9 +67,11 @@ six-pose walk was subsequently approved in the native island review with
 "Yes, keep this walk". The user then approved standing arrival 018 with
 "nailed it, proceed", completing that displayed rear arrival in Cartoon.
 The front walk refresh and all standing directions have since been accepted,
-with explicit inheritance of earlier approvals. Four of the ten unique
-wait/turn-table assets still use HD fallback: 003, 009, 010 and 012. The next
-delivery family is profile walking 001-008, including shared ordinary-turn 003.
+with explicit inheritance of earlier approvals. Profile walking 001-008, including
+shared ordinary-turn 003, is now approved in both native directions and its
+reviewed ordinary departure contexts. Three of the ten unique wait/turn-table
+assets still use HD fallback: 009, 010 and 012. These connecting poses and their
+complete route/story contexts are the next bounded art batch.
 Other placements and story uses of the standing art remain outside its reviewed
 arrival/direction-ring contexts. Large-scale asset generation,
 low-tide scenery, other characters, action scenes and code-drawn effects remain

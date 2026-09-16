@@ -1,4 +1,13 @@
-# Profile walking: complete cycle draft
+# Profile walking: approved complete cycle
+
+The user accepted the full native preview with "Yes, keep this profile walk".
+The [human decision](human-motion-approval-v1.json) binds the exact eight sprites,
+published page and native evidence. It covers both displayed directions,
+standing connections and ordinary 003 departures. The [production acceptance](acceptance.json)
+adds this family while inheriting the previous 32 assets. See the
+[delivery verification](../../../../docs/cartoon-profile-walk-verification.md).
+
+The following draft and historical records preserve how that result was reached.
 
 The current candidate contains all eight profile poses with the revised far-arm
 swing. The user approved the lowered003 tucked foot with "much better proceed",

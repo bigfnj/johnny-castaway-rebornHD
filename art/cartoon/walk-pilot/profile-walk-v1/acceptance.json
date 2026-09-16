@@ -1,0 +1,356 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-16",
+  "accepted": true,
+  "acceptance_record": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+  "human_question": "In the new profile-walk preview, does the right-hand Cartoon walk feel natural at Normal speed in both directions, including the arm swing and standing transitions? The two \u201cordinary 003 departure\u201d routes also let you check the shared turning pose.",
+  "human_response": "Yes, keep this profile walk",
+  "reviewed_url": "http://127.0.0.1:8932/profile-walk-motion-v1/review.html",
+  "reviewed_html_sha256": "09f3c4f86f4f79de53cd5fba9eb13b8be1a2012432d360ce50912317a235afbb",
+  "scope": "Accept the complete Cartoon profile walk001-008 as displayed in both native F-to-C and C-to-A routes, including arm swing, standing connections and the two ordinary003 departure contexts. These eight poses are approved together for production integration. Existing32 assets retain their earlier acceptances.",
+  "runtime_coverage": "partial",
+  "newly_accepted_assets": [
+    "BMP/JOHNWALK.BMP/001.png",
+    "BMP/JOHNWALK.BMP/002.png",
+    "BMP/JOHNWALK.BMP/003.png",
+    "BMP/JOHNWALK.BMP/004.png",
+    "BMP/JOHNWALK.BMP/005.png",
+    "BMP/JOHNWALK.BMP/006.png",
+    "BMP/JOHNWALK.BMP/007.png",
+    "BMP/JOHNWALK.BMP/008.png"
+  ],
+  "inherited_acceptances": [
+    {
+      "path": "art/cartoon/walk-pilot/front-arrival-v1/production-acceptance.json",
+      "sha256": "848bf24e9b50e0cf490f72229dfa7699ed9a710b346cf8cbb49cb90df691b672",
+      "asset_paths": [
+        "BMP/BACKGRND.BMP/000.png",
+        "BMP/BACKGRND.BMP/003.png",
+        "BMP/BACKGRND.BMP/004.png",
+        "BMP/BACKGRND.BMP/005.png",
+        "BMP/BACKGRND.BMP/006.png",
+        "BMP/BACKGRND.BMP/007.png",
+        "BMP/BACKGRND.BMP/008.png",
+        "BMP/BACKGRND.BMP/009.png",
+        "BMP/BACKGRND.BMP/010.png",
+        "BMP/BACKGRND.BMP/011.png",
+        "BMP/BACKGRND.BMP/012.png",
+        "BMP/BACKGRND.BMP/013.png",
+        "BMP/BACKGRND.BMP/014.png",
+        "BMP/BACKGRND.BMP/015.png",
+        "BMP/JOHNWALK.BMP/024.png",
+        "BMP/JOHNWALK.BMP/025.png",
+        "BMP/JOHNWALK.BMP/026.png",
+        "BMP/JOHNWALK.BMP/027.png",
+        "BMP/JOHNWALK.BMP/028.png",
+        "BMP/JOHNWALK.BMP/029.png",
+        "SCR/OCEAN02.SCR.png",
+        "BMP/JOHNWALK.BMP/011.png",
+        "BMP/JOHNWALK.BMP/019.png",
+        "BMP/JOHNWALK.BMP/020.png",
+        "BMP/JOHNWALK.BMP/021.png",
+        "BMP/JOHNWALK.BMP/022.png",
+        "BMP/JOHNWALK.BMP/023.png",
+        "BMP/JOHNWALK.BMP/018.png",
+        "BMP/JOHNWALK.BMP/000.png",
+        "BMP/JOHNWALK.BMP/015.png",
+        "BMP/JOHNWALK.BMP/016.png",
+        "BMP/JOHNWALK.BMP/017.png"
+      ]
+    }
+  ],
+  "accepted_assets": [
+    {
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+      "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/012.png",
+      "sha256": "701fc7909c3cc150ece7125c04f493f27da75d07446cc43cc6acae70fde1aa18",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/013.png",
+      "sha256": "72714deba94d2e7de946b9f30532e2482ac7a1b1027c442e77e443e5c9b7186c",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/014.png",
+      "sha256": "ddfbff021d56c093456b4a9f9476f9439fbe482c45e66ddfb0c9f2993f9e324f",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/015.png",
+      "sha256": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/024.png",
+      "sha256": "0abfd64409dbfdc153236e627d7fc6c33f742e6b5ec77bc60b5e789ba4e13838",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/025.png",
+      "sha256": "3c19fa2faad55ce417a4e5315a7008aae28a8e1fee28f77964590601868176a0",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/026.png",
+      "sha256": "5082ddb851148384f73d0479e04482cb2d558db29ccb3aa59580e3c559b1f00e",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/027.png",
+      "sha256": "cb0df788a37b0b60ad303489f0c6c22b4388e8ec34b921701b0490f6bccd1c18",
+      "recipe": "art/cartoon/walk-pilot/calm-focus-runtime-v1/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/028.png",
+      "sha256": "5b645ae3003c54dc65946118999f0f3906ca0f7fa47a10fa61c60ba10b46e3f4",
+      "recipe": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/029.png",
+      "sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+      "recipe": "art/cartoon/walk-pilot/front-refresh-v1/review-evidence/motion-v1/export/recipe.json"
+    },
+    {
+      "path": "SCR/OCEAN02.SCR.png",
+      "sha256": "099249884c73c863436983ec4d4f5650e77e6e5748ef65bf417d0785b1acf294",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/011.png",
+      "sha256": "4c4eda27a5817bf81cc8da6433b49d4cc802d1c66d6e2d24128243f729a3e814",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/019.png",
+      "sha256": "fcf0db81f5f1c45a4555086d5292e8911161aa1abb7f8f225f37de2b8ee729b5",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/020.png",
+      "sha256": "bce56169766b79bea1c7a0eea0b78e20f93e043fb7c991627663d75d49767e56",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/021.png",
+      "sha256": "b9153bc7d84c8c990fe0889e6535cfa4988ee65e14923a94d7be7ad6674d05dd",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/022.png",
+      "sha256": "cf8c116176888990862bb4b5196475306706237abdf72babfc475bfefcce76ea",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/023.png",
+      "sha256": "4013f66fbb2c5451e4d9a4d3fc59318f85718eb0e839eb64b468570deea45cc9",
+      "recipe": "art/cartoon/walk-expansion-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/018.png",
+      "sha256": "5ab7fb306a39eab69d419f3602101a72e3cca30d15e6432c58a6beaf975e9190",
+      "recipe": "art/cartoon/arrival-pilot-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/000.png",
+      "sha256": "9fef4cef56033a7cf35c36d96a839c42e7d7d23832acf0a34ebc6ff52e040e96",
+      "recipe": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/exports/000/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/015.png",
+      "sha256": "c74f85cdd79ed13f180f3cb3c8c5962ba0453d587a2c8da15c844a2c046eb5d8",
+      "recipe": "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/exports/015/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/016.png",
+      "sha256": "1cb3d6249486eeecec29ff2040c452c28d14ff8a6f2d79d265e0f17ef2e38d92",
+      "recipe": "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/017.png",
+      "sha256": "60e3a77a64620502d2b5198911a7805e19aaedf07801c7a00a92c030b4924de1",
+      "recipe": "art/cartoon/walk-pilot/front-arrival-v1/runtime017-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/001.png",
+      "sha256": "aeb1119d7576c6668d27c4caf02a45f7f7b4beced945d5886720f124d49a0759",
+      "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/001-v3/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/002.png",
+      "sha256": "125c4f1db0d8a31e169fe7146b3d78d2fccdfc1211676aef6b66be30c9d07d4b",
+      "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/002-v2/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/003.png",
+      "sha256": "36778a48ed8caaa23a56ac47da8e82fdcd292998e32e79e5cd26b40c6ab462e3",
+      "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/003-v2/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/004.png",
+      "sha256": "1081959ce4092c4d05d343037ddd25a835b407b641d1e34d949b02660b4d81cd",
+      "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/004-v3/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/005.png",
+      "sha256": "e3b5c4f94f9715a35b5242e8bce9af6372191141f2f17ad2cb79b272778b6dc2",
+      "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/005-v4/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/006.png",
+      "sha256": "47bd9a71c29ccd7e4f6cfeb5620c96b5952ee2cd13ad4681b996af1346d413b5",
+      "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/006-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/007.png",
+      "sha256": "2a1bbaaf5e192429ebdd0bb256fbd5ed4e826f6f2254f3de317471c6e224d8e9",
+      "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/007-v1/runtime-recipe-v1.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/008.png",
+      "sha256": "eee73c081b9947a357e813f1503a64638f5a2ca3e0a706c70571847d13222a0a",
+      "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/008-v4/runtime-recipe-v1.json"
+    }
+  ],
+  "human_review_record": {
+    "path": "art/cartoon/walk-pilot/profile-walk-v1/human-motion-approval-v1.json",
+    "sha256": "2b3b7a4c20c43b4504d7a58e6c6a2560dd0cfc85d3cdde2d2e180ff6663a91c9"
+  },
+  "runtime_recipes": [
+    {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/001-v3/runtime-recipe-v1.json",
+      "sha256": "e8e04ba482d6f4febdfce056791f450cb65d77b43643e807dfa488dc1a097bb2",
+      "reviewed_recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/001-v3/recipe.json",
+      "reviewed_recipe_sha256": "6aca4b7675e54ce85585eeffa0c3489a5fabd194196b13209c0e8f229c477749"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/002-v2/runtime-recipe-v1.json",
+      "sha256": "34a4f2408fa3e122504b7cdcd1853e96c90617e2bb5e6610e25b3ce994af286a",
+      "reviewed_recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/002-v2/recipe.json",
+      "reviewed_recipe_sha256": "e032880eeec5ab43014e3a5db5f555bb79d5231cb3d7d8a0188d089e4e29745e"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/003-v2/runtime-recipe-v1.json",
+      "sha256": "ea60439aa5544e9c8fa9f50b949e3da78251d52c8b72a4ae44f9dd6c9ff53764",
+      "reviewed_recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/003-v2/recipe.json",
+      "reviewed_recipe_sha256": "80e59864034e07809aa0b28921533ce3f604b280ff1aa663ed27322fa9ae7518"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/004-v3/runtime-recipe-v1.json",
+      "sha256": "01d7b1f9f4cd1a480dbc8c0ceae7966cfbc0d9df30d9fc0531839c709cd53d76",
+      "reviewed_recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/004-v3/recipe.json",
+      "reviewed_recipe_sha256": "6d1cf6ab4e7344faa35df6cc4969a245f491b8e6abdb42e978dccbfd799be1bb"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/005-v4/runtime-recipe-v1.json",
+      "sha256": "5a1fe71686c792614670514859a697d5efa04b82faca7ab5b45d48b875bf02c1",
+      "reviewed_recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/005-v4/recipe.json",
+      "reviewed_recipe_sha256": "dd7a896d3e3755175d2c9e9ce1963ec5a8575ebbe80fe5a847370496637f9000"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/006-v1/runtime-recipe-v1.json",
+      "sha256": "624208160b743428930ecf547ad3e362e5051d80f17a95a67029b83d5437d157",
+      "reviewed_recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/006-v1/recipe.json",
+      "reviewed_recipe_sha256": "2c59ff38ee792a401fb6309118c5eb67690308748211199ce623061b91e44edb"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/007-v1/runtime-recipe-v1.json",
+      "sha256": "2b3d5e1be5954e2ca108b4a2b5fbea6036f8dd4cd961f7c1c215551196e8a3b0",
+      "reviewed_recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/007-v1/recipe.json",
+      "reviewed_recipe_sha256": "21324359dbbf9052e798c382888f63c53e4f6fd59e285961a9249ee45a569170"
+    },
+    {
+      "path": "art/cartoon/walk-pilot/profile-walk-v1/exports/008-v4/runtime-recipe-v1.json",
+      "sha256": "a47b2ee8c7fc7f530c81886697ce3bb131f5909cbe8bd2a47b3a4de939e837f0",
+      "reviewed_recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/008-v4/recipe.json",
+      "reviewed_recipe_sha256": "9710c583577b65765f65a7ee1d5415a6434491e5e82216b70c6824de4b937fe0"
+    }
+  ],
+  "technical_selection": {
+    "path": "art/cartoon/walk-pilot/profile-walk-v1/candidate-selection.json",
+    "sha256": "6ef901aba18803962f0890e27cbec2d13a7aaa77891424d43b5a32acb9052968"
+  },
+  "technical_evidence": {
+    "path": "art/cartoon/walk-pilot/profile-walk-v1/native-motion-v1/evidence.json",
+    "sha256": "93213a10de7b9572ae43dd943c04fac4c0428c75858cadb4f190b95dd5ea8cca"
+  },
+  "publication": {
+    "path": "art/cartoon/walk-pilot/profile-walk-v1/native-motion-v1/evidence/motion-v1/publication.json",
+    "sha256": "0feeb6dee22052286b236a47669c1685be168dca4ff0b9aec4823c958d04d03d"
+  },
+  "source_identity_policy": "pack.json source_sha256 identifies the bundled HD proxy. Generated raw source, original indexed reference and reviewed runtime PNG hashes are distinct and retained in their own records.",
+  "historical_approval_policy": "All earlier approval and reviewed candidate recipe bytes remain unchanged. pilot_history stays pinned to the original21-asset pilot with only028/029 marked replaced.",
+  "production_archive_expected": {
+    "baseline_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+    "reviewed_private_archive_sha256": "d476a447f84dcb996c0ef2e229a18ca5e2b0ad03de57cc538b6933a42318d82c",
+    "member_count": 2591,
+    "cartoon_asset_count": 40,
+    "prior_members_to_preserve": 2583,
+    "new_members": [
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/001.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/002.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/003.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/004.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/005.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/006.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/007.png",
+      "data/styles/cartoon/BMP/JOHNWALK.BMP/008.png"
+    ]
+  },
+  "production_verification": "art/cartoon/walk-pilot/profile-walk-v1/production-integration-v1/verification.json",
+  "retained_limits": [
+    "No approval of unseen routes, story interactions, remaining009/010/012 poses or other asset families is implied.",
+    "Artistic acceptance does not establish exact original anatomy, palette or original-executable timing parity.",
+    "Frozen technical records retain their pending-at-capture wording; this separate record supplies the later human decision.",
+    "Shared003 is approved for the reviewed profile cycle and two ordinary departure probes; unseen story interactions are not covered by that approval."
+  ]
+}

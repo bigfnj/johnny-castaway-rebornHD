@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export only; not native capture or human acceptance.",
+  "preview_only": false,
+  "runtime_sprites_written": true,
+  "runtime_fit_all_source_centers": true,
+  "scale": 0.1,
+  "padding_hd": 64,
+  "reference_hashes": {
+    "006-source.json": "f53a690d70ef29bdbd9a6693ba9dc097963c2008b444b451116707f8031511e2",
+    "006-original-native.png": "ab03f6386c4d3e02b865d1991b7c3dd6fa6eb9809322df651aee7423c549ca72",
+    "006-original-nearest8.png": "1269b4c701df5b5e31b7fec133ea1843e88bcfe3e1ae8a6476b1443766032e5d"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "frames": [
+    {
+      "frame": 6,
+      "source": "006-profile-v1.png",
+      "source_sha256": "90627d13750610cd7433e698a0cd186692fd23d7ded762ec73ae9dde36acd067",
+      "cap_raw": [
+        687.0,
+        17
+      ],
+      "runtime_canvas": [
+        96,
+        148
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        1.2999999999999972,
+        0,
+        0.1,
+        -1.4500000000000002
+      ],
+      "alpha8_source_bounds": [
+        132,
+        16,
+        891,
+        1439
+      ],
+      "alpha8_centers_hd": [
+        14.549999999999997,
+        0.19999999999999996,
+        90.35000000000001,
+        142.4
+      ],
+      "source_centers_fit_runtime": true,
+      "filtered_alpha8_bounds_hd_exclusive": [
+        14,
+        0,
+        91,
+        143
+      ],
+      "padded_canvas": [
+        224,
+        276
+      ]
+    }
+  ],
+  "outputs_sha256": {
+    "padded/006.png": "bf6781ac261461c90d149b235fb5974dd222026a76b0a6c1b58478296a6f213c",
+    "BMP/JOHNWALK.BMP/006.png": "47bd9a71c29ccd7e4f6cfeb5620c96b5952ee2cd13ad4681b996af1346d413b5"
+  },
+  "filter_limit": "Source-center fit does not promise absence of low-alpha filter fringe; padded output retains it.",
+  "recipe_sha256": "624208160b743428930ecf547ad3e362e5051d80f17a95a67029b83d5437d157",
+  "export_source_sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2"
+}

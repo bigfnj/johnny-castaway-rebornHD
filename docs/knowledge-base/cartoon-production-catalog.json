@@ -17,8 +17,8 @@
     "slots": 2401,
     "sprites": 2391,
     "screens": 10,
-    "accepted": 32,
-    "pending": 2369,
+    "accepted": 40,
+    "pending": 2361,
     "hd_proxy_blank_slots": 119,
     "distinct_hd_png_bytes": 2141,
     "exact_duplicate_slots": 260,
@@ -30,7 +30,7 @@
       "resource": "JOHNWALK.BMP",
       "priority": 1,
       "slots": 36,
-      "accepted": 17,
+      "accepted": 25,
       "hd_proxy_blank_slots": 1
     },
     {
@@ -37569,10 +37569,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/001-v3/runtime-recipe-v1.json",
+        "png_sha256": "aeb1119d7576c6668d27c4caf02a45f7f7b4beced945d5886720f124d49a0759"
       }
     },
     {
@@ -37607,10 +37607,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/002-v2/runtime-recipe-v1.json",
+        "png_sha256": "125c4f1db0d8a31e169fe7146b3d78d2fccdfc1211676aef6b66be30c9d07d4b"
       }
     },
     {
@@ -37645,10 +37645,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/003-v2/runtime-recipe-v1.json",
+        "png_sha256": "36778a48ed8caaa23a56ac47da8e82fdcd292998e32e79e5cd26b40c6ab462e3"
       }
     },
     {
@@ -37683,10 +37683,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/004-v3/runtime-recipe-v1.json",
+        "png_sha256": "1081959ce4092c4d05d343037ddd25a835b407b641d1e34d949b02660b4d81cd"
       }
     },
     {
@@ -37721,10 +37721,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/005-v4/runtime-recipe-v1.json",
+        "png_sha256": "e3b5c4f94f9715a35b5242e8bce9af6372191141f2f17ad2cb79b272778b6dc2"
       }
     },
     {
@@ -37759,10 +37759,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/006-v1/runtime-recipe-v1.json",
+        "png_sha256": "47bd9a71c29ccd7e4f6cfeb5620c96b5952ee2cd13ad4681b996af1346d413b5"
       }
     },
     {
@@ -37797,10 +37797,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/007-v1/runtime-recipe-v1.json",
+        "png_sha256": "2a1bbaaf5e192429ebdd0bb256fbd5ed4e826f6f2254f3de317471c6e224d8e9"
       }
     },
     {
@@ -37835,10 +37835,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json",
+        "recipe": "art/cartoon/walk-pilot/profile-walk-v1/exports/008-v4/runtime-recipe-v1.json",
+        "png_sha256": "eee73c081b9947a357e813f1503a64638f5a2ca3e0a706c70571847d13222a0a"
       }
     },
     {
@@ -93214,12 +93214,16 @@
       "basis": "utf8-normalized-newlines"
     },
     "art/cartoon/pack.json": {
-      "sha256": "2f360507b3ba297e8e087538ba34cc7874f44d12f48e8a14252faa1324b3f4dd",
+      "sha256": "6d1d7e546b86afe2df85460256434d805e7797a0dbaae071fc59600cd3514383",
       "basis": "utf8-normalized-newlines"
     },
     "docs/knowledge-base/cartoon-original-reference.json": {
       "sha256": "f6293e86dc4773fa5548f205df73afa970729662dab06a5bff111c3b0f9692ef",
       "basis": "utf8-normalized-newlines"
+    },
+    "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json": {
+      "sha256": "c27809ad50d08d69d8cf41116c0ed91b2300f6640f772e37f03c93a737e62ab1",
+      "basis": "file-bytes"
     },
     "art/cartoon/walk-pilot/front-arrival-v1/production-acceptance.json": {
       "sha256": "848bf24e9b50e0cf490f72229dfa7699ed9a710b346cf8cbb49cb90df691b672",
@@ -93283,6 +93287,38 @@
     },
     "art/cartoon/walk-pilot/front-arrival-v1/runtime017-recipe-v1.json": {
       "sha256": "97fb4e81ac60226c8246f3062b6e08a47112c0857b8b6828211c6d34e805f8d1",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/profile-walk-v1/exports/001-v3/runtime-recipe-v1.json": {
+      "sha256": "e8e04ba482d6f4febdfce056791f450cb65d77b43643e807dfa488dc1a097bb2",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/profile-walk-v1/exports/002-v2/runtime-recipe-v1.json": {
+      "sha256": "34a4f2408fa3e122504b7cdcd1853e96c90617e2bb5e6610e25b3ce994af286a",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/profile-walk-v1/exports/003-v2/runtime-recipe-v1.json": {
+      "sha256": "ea60439aa5544e9c8fa9f50b949e3da78251d52c8b72a4ae44f9dd6c9ff53764",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/profile-walk-v1/exports/004-v3/runtime-recipe-v1.json": {
+      "sha256": "01d7b1f9f4cd1a480dbc8c0ceae7966cfbc0d9df30d9fc0531839c709cd53d76",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/profile-walk-v1/exports/005-v4/runtime-recipe-v1.json": {
+      "sha256": "5a1fe71686c792614670514859a697d5efa04b82faca7ab5b45d48b875bf02c1",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/profile-walk-v1/exports/006-v1/runtime-recipe-v1.json": {
+      "sha256": "624208160b743428930ecf547ad3e362e5051d80f17a95a67029b83d5437d157",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/profile-walk-v1/exports/007-v1/runtime-recipe-v1.json": {
+      "sha256": "2b3d5e1be5954e2ca108b4a2b5fbea6036f8dd4cd961f7c1c215551196e8a3b0",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/walk-pilot/profile-walk-v1/exports/008-v4/runtime-recipe-v1.json": {
+      "sha256": "a47b2ee8c7fc7f530c81886697ce3bb131f5909cbe8bd2a47b3a4de939e837f0",
       "basis": "file-bytes"
     },
     "art/cartoon/walk-expansion-v1/reference/metadata.json": {

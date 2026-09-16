@@ -45,5 +45,8 @@ The complete cycle includes new far-arm continuity edits through001/002 and
 correction. Each selected export passed 3 smoke checks then 24 regressions with the
 unchanged exporter. See `candidate-selection.json` in the
 [source bundle](../art/cartoon/walk-pilot/profile-walk-v1/README.md) for exact
-versions and hashes. Full native motion and ordinary 003 departure review are
-the next human checkpoint. Production integration remains pending.
+versions and hashes. The user then accepted full native motion and ordinary 003
+departures with "Yes, keep this profile walk". The separate human approval
+supersedes pending-at-capture status without rewriting historical evidence.
+The [delivery verification](cartoon-profile-walk-verification.md) records
+integration and subsequent checks.

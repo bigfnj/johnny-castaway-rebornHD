@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "scope": "Windows full delivery gate after approved profile001-008 integration. Existing assertions and smoke-before-regression order preserved; no runtime or maintained test edits.",
+  "status": "PASS",
+  "head_at_record": "e09123e375ea1004a09fa3540097cff2ac8963ea",
+  "head_scope": "Working production inputs are recorded by running.json hashes; HEAD alone does not claim they were committed at run time.",
+  "source_archive_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+  "deployed_archive_sha256": "1649218b32a4d11595806f8680e351a4f47950fcefbafdf8de758c2d225913db",
+  "archive_member_count": 2591,
+  "new_profile_png_sha256": {
+    "001": "aeb1119d7576c6668d27c4caf02a45f7f7b4beced945d5886720f124d49a0759",
+    "002": "125c4f1db0d8a31e169fe7146b3d78d2fccdfc1211676aef6b66be30c9d07d4b",
+    "003": "36778a48ed8caaa23a56ac47da8e82fdcd292998e32e79e5cd26b40c6ab462e3",
+    "004": "1081959ce4092c4d05d343037ddd25a835b407b641d1e34d949b02660b4d81cd",
+    "005": "e3b5c4f94f9715a35b5242e8bce9af6372191141f2f17ad2cb79b272778b6dc2",
+    "006": "47bd9a71c29ccd7e4f6cfeb5620c96b5952ee2cd13ad4681b996af1346d413b5",
+    "007": "2a1bbaaf5e192429ebdd0bb256fbd5ed4e826f6f2254f3de317471c6e224d8e9",
+    "008": "eee73c081b9947a357e813f1503a64638f5a2ca3e0a706c70571847d13222a0a"
+  },
+  "binaries": {
+    "extract_sound.exe": {
+      "sha256": "2f64d2941c188b7b8442913990ae6c008c37bcc25d60329d674ca7fc234762cb",
+      "mtime_ns": 1789568892102936900
+    },
+    "extract_walk_data.exe": {
+      "sha256": "6574cbdeaeb69efe2a019d7a02660ec28f40afa786e5fb2b7d7fb1046dd7e919",
+      "mtime_ns": 1789568892726674100
+    },
+    "jc_frame_test.exe": {
+      "sha256": "9556bd2ac7978e9134647a576cce812c568e5f688101d1e811e1806ed16344e2",
+      "mtime_ns": 1789568893226428600
+    },
+    "jc_lifecycle_test.exe": {
+      "sha256": "6aaea3ab39c191e1054d15f7f078b54ebf7152c4f9a9df8239110d4f46257c90",
+      "mtime_ns": 1789568897697720000
+    },
+    "jc_palm_test.exe": {
+      "sha256": "61386ab766254c782662b16a0020236b58063e8e47ec4eb01db3fff07f284c2e",
+      "mtime_ns": 1789568902210031800
+    },
+    "jc_platform_alloc_test.exe": {
+      "sha256": "c76e3ac0331229769372d491aaeae2ab3917bc681880fb1f6a59dbb13e5b291d",
+      "mtime_ns": 1789568903128865200
+    },
+    "jc_png_test.exe": {
+      "sha256": "f2051de70b796104276765e5a514d48ddb635086e6006e2d3e746424e618ec60",
+      "mtime_ns": 1789568904063568700
+    },
+    "jc_reborn.exe": {
+      "sha256": "307cfdcf43b8ecda8806d1b0cc7c63f697ba791b526f936a9033011887aeceec",
+      "mtime_ns": 1789568908833189100
+    },
+    "jc_reborn.scr": {
+      "sha256": "e77466a8133bd987c7f02b162fcdbc6429a87cf429fe5a56e55bf6f31a7d6527",
+      "mtime_ns": 1789568913515483200
+    },
+    "jc_uncompress_test.exe": {
+      "sha256": "ee9787ef91a75bdb263a4a9567f9a2779ea986dc2ee5869cca585f4291b105eb",
+      "mtime_ns": 1789568914106351700
+    }
+  },
+  "gate": {
+    "exit_code": 0,
+    "elapsed_seconds": 173.151,
+    "build_warning_status": true,
+    "golden_dump_2452_byte_identical": true,
+    "art_style_smoke_checks": 2,
+    "art_style_regression_checks": 31,
+    "explicit_skips": [
+      {
+        "test": "test_directory_symlink_alias",
+        "reason": "Windows symlink creation privilege unavailable, WinError1314."
+      },
+      {
+        "test": "test_file_symlink_alias",
+        "reason": "Windows symlink creation privilege unavailable, WinError1314."
+      }
+    ],
+    "ordered_stages": [
+      "=== gate: johnny-castaway-rebornHD (Release) ===",
+      "=== configure + build ===",
+      "=== smoke ===",
+      "=== screensaver behaviour (/p preview, and the focus rules) ===",
+      "=== art-style smoke ===",
+      "=== wave renderer smoke ===",
+      "=== palm renderer smoke ===",
+      "=== RESOURCE decoder smoke ===",
+      "=== engine ownership smoke ===",
+      "=== frame limits smoke ===",
+      "=== platform constructor smoke ===",
+      "=== legacy extractor smoke ===",
+      "=== PowerShell Web wrapper smoke ===",
+      "=== art inventory smoke ===",
+      "=== art approval history smoke ===",
+      "=== regression (legacy extractor bytes and failure handling) ===",
+      "=== regression (PowerShell Web wrapper compatibility) ===",
+      "=== regression (platform constructors and failures) ===",
+      "=== regression (RESOURCE decoder completeness) ===",
+      "=== regression (engine ownership and cleanup) ===",
+      "=== regression (frame parsing and stopping boundaries) ===",
+      "=== regression (art-style pixels and configuration) ===",
+      "=== regression (wave alpha, restoration and fallback) ===",
+      "=== regression (palm alpha, clipping and fallback) ===",
+      "=== regression (art authoring tools) ===",
+      "=== regression (art inventory source preservation) ===",
+      "=== regression (art approval history) ===",
+      "=== regression (golden dump corpus) ==="
+    ],
+    "input_desktop_preserved": true,
+    "poll_checks": 330,
+    "observed_inactive_window_count": 297,
+    "protected_inputs_unchanged": true,
+    "retained_capture_count": 32,
+    "complete_ppm_count": 32,
+    "capture_marker_count": 32,
+    "adaptation": {
+      "original_gate_sha256": "7eb40f38d9c34f990f22628b54b853459385175016250e3eefa074a2ecf30394",
+      "adapted_gate_sha256": "605abe6dd709d47ffe5507b32763115e605face6736c808651dd708e82395c82",
+      "diff_sha256": "c4d8f1633b32b7a8a9be21898e7f4b09961d1c708e4e914f9e68fc38e0aadd2a",
+      "retained_work_paths": [
+        "build/profile-walk/windows-verification/profile-promotion-v1/wave-smoke",
+        "build/profile-walk/windows-verification/profile-promotion-v1/wave-regression",
+        "build/profile-walk/windows-verification/profile-promotion-v1/palm-smoke",
+        "build/profile-walk/windows-verification/profile-promotion-v1/palm-regression"
+      ],
+      "changes": "Repository root assignment and four explicit existing --work options only. No test assertions, ordering, build flags or runtime sources changed."
+    }
+  },
+  "evidence": [
+    {
+      "path": "build/profile-walk/windows-verification/profile-promotion-v1/result.json",
+      "sha256": "95f5c0537c0f3af5ef49c1d83b03df14ce55e4b4c51e9b1a9f9238d1bd32c06c"
+    },
+    {
+      "path": "build/profile-walk/windows-verification/profile-promotion-v1/running.json",
+      "sha256": "b1f2dbdb6c76afc57d2f9e01ece86b1c0fc841f5d05d7209857674e165da78dc"
+    },
+    {
+      "path": "build/profile-walk/windows-verification/profile-promotion-v1/gate.log",
+      "sha256": "451073ad71fd67f9f89521837b6f89207ff770c9d822c671e92397c8d6c26968"
+    },
+    {
+      "path": "build/profile-walk/windows-verification/profile-promotion-v1/adaptation.json",
+      "sha256": "ac01fb8306407195b861d81b373e7baf121d91ba7d769ff88ad6222a4d5432bd"
+    },
+    {
+      "path": "build/profile-walk/windows-verification/profile-promotion-v1/gate-adaptation.diff",
+      "sha256": "c4d8f1633b32b7a8a9be21898e7f4b09961d1c708e4e914f9e68fc38e0aadd2a"
+    },
+    {
+      "path": "build/profile-walk/windows-verification/profile-promotion-v1/gate-retained.ps1",
+      "sha256": "605abe6dd709d47ffe5507b32763115e605face6736c808651dd708e82395c82"
+    },
+    {
+      "path": "build/profile-walk/windows-verification/run_gate.py",
+      "sha256": "a442d850b6930cce0aae3e2d8e1cc84e81b420c638d88f9fa2decf3722c89dc6"
+    },
+    {
+      "path": "build/profile-walk/windows-verification/launcher-adaptation.diff",
+      "sha256": "637463d01381e72f3a9f2649e6b2f973e6ce36fed55e2ba65175bb6d35dcb7e8"
+    },
+    {
+      "path": "build/profile-walk/windows-verification/preparation.json",
+      "sha256": "c8065ff9c6e7e7e21abdf7dc8b460702257be53db8a52c427ec1a4391d03dae5"
+    },
+    {
+      "path": "build/profile-walk/windows-verification/syntax-checks.json",
+      "sha256": "5ec51b700a55651d8a6af3105924429a62ce1f5ecb0e03389d63ccbcd0ecbc9c"
+    },
+    {
+      "path": "build/profile-walk/windows-verification/finalize.py",
+      "sha256": "4273c180bc26b19f9fbf37aebb7b94cf58427cc0f32204c62a881b941a6984a4"
+    }
+  ],
+  "inactive_helper": {
+    "description": "Existing original-pose-review motion_review.py OffscreenDesktop and NativeProcess classes, external scratch helper unchanged.",
+    "sha256": "86312fd1bad0786c2e1ee56c9eb6aab69cb1bf9f1295ec84430769877490f55d"
+  },
+  "limitations": "This is the feature worktree gate. Merged-main data deployment and fresh checks are separate. Scratch scripts contain machine-local paths; this summary uses repository-relative artifact paths."
+}

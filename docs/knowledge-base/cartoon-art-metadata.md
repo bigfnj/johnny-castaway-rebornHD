@@ -100,7 +100,7 @@ hashes use exact preserved bytes; the maintained pack ledger uses the text polic
 
 See [art guidance](../cartoon-art.md), [learnings](../art-style-learnings.md),
 [motion review](../../art/cartoon/motion-review.md) and
-[current production acceptance](../../art/cartoon/walk-pilot/front-arrival-v1/production-acceptance.json).
+[current production acceptance](../../art/cartoon/walk-pilot/profile-walk-v1/acceptance.json).
 
 ## Current production and preserved pilot
 
