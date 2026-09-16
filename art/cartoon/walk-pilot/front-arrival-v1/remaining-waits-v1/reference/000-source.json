@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "source_label": "Stored supplied-original JOHNWALK frame 000; no Cartoon or HD-derived geometry.",
+  "original_frame": {
+    "frame": 0,
+    "resource": "JOHNWALK.BMP",
+    "canvas": [
+      40,
+      76
+    ],
+    "xpm_sha256": "f26c3a4e429da553acb5f0e8b00a886324f025074471a12b3a17317a1266eb4b",
+    "index_plane_sha256": "ce1b03a3067b983190510cf6d198e7a5c02b43d672c8963be4b5bc5631f2660e",
+    "rgba_sha256": "9cbcb4d4ca5c0236eb3d7060cc33d0ac6c4dc1aa543d179603ca463374e2428c",
+    "visible_bounds_exclusive": [
+      0,
+      0,
+      33,
+      76
+    ],
+    "transparent_index": 0,
+    "first_row_visible_span_x_exclusive": [
+      26,
+      28
+    ],
+    "landmark_limit": "Visible bounds include original shadow; first-row extent is a measured pixel feature, not an engine or anatomical anchor.",
+    "encoded_uses": [
+      {
+        "group": "A wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "B wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "C wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "D wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "E wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      },
+      {
+        "group": "F wait",
+        "draw_count": 2,
+        "flip_x": [
+          false,
+          true
+        ]
+      }
+    ]
+  },
+  "original_source_record": "art/cartoon/walk-expansion-v1/reference/source.json",
+  "original_source_record_sha256": "040106d15a0c6460a044a7989ddcfea12d494bc6838ee1fad83a3793e2f2cfa4",
+  "original_metadata_record": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+  "original_metadata_record_sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629",
+  "resource_sha256": {
+    "RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+    "RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+  },
+  "historical_dump_engine_sha256": "6ac61dc53dc926a311d89fcf2e27ff7cefbbac7f4c60e2491f69114230400865",
+  "scope": "Copied and validated preserved original extraction. Commercial RESOURCE files and original executable were not reread or rerun in this step.",
+  "palette_limit": "Original indices use the port dump palette and index 0 transparency. Original executable color/compositing and timing parity are not established.",
+  "hash_policy": "Exact file bytes for stored records and PNGs; RGBA hashes cover decoded row-major RGBA bytes.",
+  "files": {
+    "000-original-native.png": "e671e0c24432a633450d7e64e5e5f8aa54f7b31ca9e2381ecbd6b15ff130be52",
+    "000-original-nearest8.png": "b61aeae2496fc2a169bbdb8ca1254802499a59a5ea282894773f865e64ffc321"
+  },
+  "nearest8": {
+    "scale_exact": {
+      "numerator": 8,
+      "denominator": 1
+    },
+    "filter": "NEAREST",
+    "verification": "All decoded RGBA bytes equal native pixel replication into 8x8 blocks."
+  },
+  "registration": {
+    "native_canvas": [
+      40,
+      76
+    ],
+    "runtime_canvas": [
+      80,
+      152
+    ],
+    "native_top_visible_span_x_exclusive": [
+      26,
+      28
+    ],
+    "native_top_pixel_edge_midpoint_x": 27.0,
+    "runtime_top_pixel_edge_midpoint_x": 54.0,
+    "suggested_cap_target_hd": [
+      54.0,
+      0.25
+    ],
+    "generated_art_scale_exact": {
+      "numerator": 1,
+      "denominator": 10
+    },
+    "target_basis": "X is the original top-row cap-outline midpoint at 2x. Y=0.25 is the inherited deliberate filter margin, not a measured original point. No engine or anatomical anchor is claimed."
+  },
+  "wait_table": {
+    "trace_record": "art/cartoon/walk-pilot/front-arrival-v1/trace/trace.json",
+    "trace_record_sha256": "84542ebc9c922b2a99dd86f35d0a8f0dcddd1f6d0bddfc0ac3999b2dca8c7a91",
+    "uses": [
+      {
+        "group": "A wait",
+        "table_row": {
+          "row": 102,
+          "source_line": 115,
+          "raw": [
+            1,
+            285,
+            241,
+            0
+          ],
+          "frame": 0,
+          "flip_x": true,
+          "x": 284,
+          "y": 241,
+          "heading": 2,
+          "heading_name": "W"
+        },
+        "compiled_case": "wait-A-2",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 1,
+            "x": 284,
+            "y": 241,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "A wait",
+        "table_row": {
+          "row": 106,
+          "source_line": 119,
+          "raw": [
+            0,
+            305,
+            241,
+            0
+          ],
+          "frame": 0,
+          "flip_x": false,
+          "x": 304,
+          "y": 241,
+          "heading": 6,
+          "heading_name": "E"
+        },
+        "compiled_case": "wait-A-6",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 304,
+            "y": 241,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "B wait",
+        "table_row": {
+          "row": 156,
+          "source_line": 169,
+          "raw": [
+            1,
+            439,
+            255,
+            0
+          ],
+          "frame": 0,
+          "flip_x": true,
+          "x": 438,
+          "y": 255,
+          "heading": 2,
+          "heading_name": "W"
+        },
+        "compiled_case": "wait-B-2",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 1,
+            "x": 438,
+            "y": 255,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "B wait",
+        "table_row": {
+          "row": 160,
+          "source_line": 173,
+          "raw": [
+            0,
+            459,
+            255,
+            0
+          ],
+          "frame": 0,
+          "flip_x": false,
+          "x": 458,
+          "y": 255,
+          "heading": 6,
+          "heading_name": "E"
+        },
+        "compiled_case": "wait-B-6",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 458,
+            "y": 255,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "C wait",
+        "table_row": {
+          "row": 271,
+          "source_line": 284,
+          "raw": [
+            1,
+            507,
+            231,
+            0
+          ],
+          "frame": 0,
+          "flip_x": true,
+          "x": 506,
+          "y": 231,
+          "heading": 2,
+          "heading_name": "W"
+        },
+        "compiled_case": "wait-C-2",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 1,
+            "x": 506,
+            "y": 231,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "C wait",
+        "table_row": {
+          "row": 275,
+          "source_line": 288,
+          "raw": [
+            0,
+            527,
+            231,
+            0
+          ],
+          "frame": 0,
+          "flip_x": false,
+          "x": 526,
+          "y": 231,
+          "heading": 6,
+          "heading_name": "E"
+        },
+        "compiled_case": "wait-C-6",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 526,
+            "y": 231,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "D wait",
+        "table_row": {
+          "row": 325,
+          "source_line": 338,
+          "raw": [
+            1,
+            465,
+            217,
+            0
+          ],
+          "frame": 0,
+          "flip_x": true,
+          "x": 464,
+          "y": 217,
+          "heading": 2,
+          "heading_name": "W"
+        },
+        "compiled_case": "wait-D-2",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 1,
+            "x": 464,
+            "y": 217,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "D wait",
+        "table_row": {
+          "row": 329,
+          "source_line": 342,
+          "raw": [
+            0,
+            485,
+            217,
+            0
+          ],
+          "frame": 0,
+          "flip_x": false,
+          "x": 484,
+          "y": 217,
+          "heading": 6,
+          "heading_name": "E"
+        },
+        "compiled_case": "wait-D-6",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 484,
+            "y": 217,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "E wait",
+        "table_row": {
+          "row": 416,
+          "source_line": 429,
+          "raw": [
+            1,
+            380,
+            211,
+            0
+          ],
+          "frame": 0,
+          "flip_x": true,
+          "x": 379,
+          "y": 211,
+          "heading": 2,
+          "heading_name": "W"
+        },
+        "compiled_case": "wait-E-2",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 1,
+            "x": 379,
+            "y": 211,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "E wait",
+        "table_row": {
+          "row": 420,
+          "source_line": 433,
+          "raw": [
+            0,
+            400,
+            211,
+            0
+          ],
+          "frame": 0,
+          "flip_x": false,
+          "x": 399,
+          "y": 211,
+          "heading": 6,
+          "heading_name": "E"
+        },
+        "compiled_case": "wait-E-6",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 399,
+            "y": 211,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "F wait",
+        "table_row": {
+          "row": 482,
+          "source_line": 495,
+          "raw": [
+            1,
+            420,
+            226,
+            0
+          ],
+          "frame": 0,
+          "flip_x": true,
+          "x": 419,
+          "y": 226,
+          "heading": 2,
+          "heading_name": "W"
+        },
+        "compiled_case": "wait-F-2",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 1,
+            "x": 419,
+            "y": 226,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "F wait",
+        "table_row": {
+          "row": 486,
+          "source_line": 499,
+          "raw": [
+            0,
+            440,
+            226,
+            0
+          ],
+          "frame": 0,
+          "flip_x": false,
+          "x": 439,
+          "y": 226,
+          "heading": 6,
+          "heading_name": "E"
+        },
+        "compiled_case": "wait-F-6",
+        "actual_draws": [
+          {
+            "frame": 0,
+            "flip_x": 0,
+            "x": 439,
+            "y": 226,
+            "delay_ticks": 80
+          }
+        ]
+      }
+    ],
+    "scope": "Relevant rows and compiled C state-machine draws from the preserved trace; not a new native capture, original executable timing calibration or approval of every story use. Port tick 20ms makes final delay 80 ticks equal 1600ms."
+  }
+}

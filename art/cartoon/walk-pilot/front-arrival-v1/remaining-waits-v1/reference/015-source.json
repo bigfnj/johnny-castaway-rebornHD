@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "source_label": "Stored supplied-original JOHNWALK frame 015; no Cartoon or HD-derived geometry.",
+  "original_frame": {
+    "frame": 15,
+    "resource": "JOHNWALK.BMP",
+    "canvas": [
+      40,
+      73
+    ],
+    "xpm_sha256": "1868ed5f620a8c3b1cfc8785e97e85bf065f9c3782f3e0a333978fdc236b0b82",
+    "index_plane_sha256": "08a7fab37f74fe66ddb42da60715a24768bc08a5e4f6cd706a8047016627e117",
+    "rgba_sha256": "fff35e9e2d51dd348c4445a05b97778a02256efae9ad99e82ca71590e3a07774",
+    "visible_bounds_exclusive": [
+      0,
+      0,
+      34,
+      73
+    ],
+    "transparent_index": 0,
+    "first_row_visible_span_x_exclusive": [
+      16,
+      19
+    ],
+    "landmark_limit": "Visible bounds include original shadow; first-row extent is a measured pixel feature, not an engine or anatomical anchor.",
+    "encoded_uses": [
+      {
+        "group": "A wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "B wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "C wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "D wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "E wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "F wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      }
+    ]
+  },
+  "original_source_record": "art/cartoon/walk-expansion-v1/reference/source.json",
+  "original_source_record_sha256": "040106d15a0c6460a044a7989ddcfea12d494bc6838ee1fad83a3793e2f2cfa4",
+  "original_metadata_record": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+  "original_metadata_record_sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629",
+  "resource_sha256": {
+    "RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+    "RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+  },
+  "historical_dump_engine_sha256": "6ac61dc53dc926a311d89fcf2e27ff7cefbbac7f4c60e2491f69114230400865",
+  "scope": "Copied and validated preserved original extraction. Commercial RESOURCE files and original executable were not reread or rerun in this step.",
+  "palette_limit": "Original indices use the port dump palette and index 0 transparency. Original executable color/compositing and timing parity are not established.",
+  "hash_policy": "Exact file bytes for stored records and PNGs; RGBA hashes cover decoded row-major RGBA bytes.",
+  "files": {
+    "015-original-native.png": "0ec7a74ec974aa38fef751f22d7f9c42f198a8e5d1bff711bbed1f6bb7414b66",
+    "015-original-nearest8.png": "afba9900490c794c0260081208278b197758bd95360df3e4374eb227c09621e0"
+  },
+  "nearest8": {
+    "scale_exact": {
+      "numerator": 8,
+      "denominator": 1
+    },
+    "filter": "NEAREST",
+    "verification": "All decoded RGBA bytes equal native pixel replication into 8x8 blocks."
+  },
+  "registration": {
+    "native_canvas": [
+      40,
+      73
+    ],
+    "runtime_canvas": [
+      80,
+      146
+    ],
+    "native_top_visible_span_x_exclusive": [
+      16,
+      19
+    ],
+    "native_top_pixel_edge_midpoint_x": 17.5,
+    "runtime_top_pixel_edge_midpoint_x": 35.0,
+    "suggested_cap_target_hd": [
+      35.0,
+      0.25
+    ],
+    "generated_art_scale_exact": {
+      "numerator": 1,
+      "denominator": 10
+    },
+    "target_basis": "X is the original top-row cap-outline midpoint at 2x. Y=0.25 is the inherited deliberate filter margin, not a measured original point. No engine or anatomical anchor is claimed."
+  },
+  "wait_table": {
+    "trace_record": "art/cartoon/walk-pilot/front-arrival-v1/trace/trace.json",
+    "trace_record_sha256": "84542ebc9c922b2a99dd86f35d0a8f0dcddd1f6d0bddfc0ac3999b2dca8c7a91",
+    "uses": [
+      {
+        "group": "A wait",
+        "table_row": {
+          "row": 104,
+          "source_line": 117,
+          "raw": [
+            0,
+            299,
+            241,
+            15
+          ],
+          "frame": 15,
+          "flip_x": false,
+          "x": 298,
+          "y": 241,
+          "heading": 4,
+          "heading_name": "N"
+        },
+        "compiled_case": "wait-A-4",
+        "actual_draws": [
+          {
+            "frame": 15,
+            "flip_x": 0,
+            "x": 298,
+            "y": 241,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "B wait",
+        "table_row": {
+          "row": 158,
+          "source_line": 171,
+          "raw": [
+            0,
+            453,
+            255,
+            15
+          ],
+          "frame": 15,
+          "flip_x": false,
+          "x": 452,
+          "y": 255,
+          "heading": 4,
+          "heading_name": "N"
+        },
+        "compiled_case": "wait-B-4",
+        "actual_draws": [
+          {
+            "frame": 15,
+            "flip_x": 0,
+            "x": 452,
+            "y": 255,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "C wait",
+        "table_row": {
+          "row": 273,
+          "source_line": 286,
+          "raw": [
+            0,
+            521,
+            231,
+            15
+          ],
+          "frame": 15,
+          "flip_x": false,
+          "x": 520,
+          "y": 231,
+          "heading": 4,
+          "heading_name": "N"
+        },
+        "compiled_case": "wait-C-4",
+        "actual_draws": [
+          {
+            "frame": 15,
+            "flip_x": 0,
+            "x": 520,
+            "y": 231,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "D wait",
+        "table_row": {
+          "row": 327,
+          "source_line": 340,
+          "raw": [
+            0,
+            479,
+            217,
+            15
+          ],
+          "frame": 15,
+          "flip_x": false,
+          "x": 478,
+          "y": 217,
+          "heading": 4,
+          "heading_name": "N"
+        },
+        "compiled_case": "wait-D-4",
+        "actual_draws": [
+          {
+            "frame": 15,
+            "flip_x": 0,
+            "x": 478,
+            "y": 217,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "E wait",
+        "table_row": {
+          "row": 418,
+          "source_line": 431,
+          "raw": [
+            0,
+            394,
+            214,
+            15
+          ],
+          "frame": 15,
+          "flip_x": false,
+          "x": 393,
+          "y": 214,
+          "heading": 4,
+          "heading_name": "N"
+        },
+        "compiled_case": "wait-E-4",
+        "actual_draws": [
+          {
+            "frame": 15,
+            "flip_x": 0,
+            "x": 393,
+            "y": 214,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      {
+        "group": "F wait",
+        "table_row": {
+          "row": 484,
+          "source_line": 497,
+          "raw": [
+            0,
+            434,
+            226,
+            15
+          ],
+          "frame": 15,
+          "flip_x": false,
+          "x": 433,
+          "y": 226,
+          "heading": 4,
+          "heading_name": "N"
+        },
+        "compiled_case": "wait-F-4",
+        "actual_draws": [
+          {
+            "frame": 15,
+            "flip_x": 0,
+            "x": 433,
+            "y": 226,
+            "delay_ticks": 80
+          }
+        ]
+      }
+    ],
+    "scope": "Relevant rows and compiled C state-machine draws from the preserved trace; not a new native capture, original executable timing calibration or approval of every story use. Port tick 20ms makes final delay 80 ticks equal 1600ms."
+  }
+}

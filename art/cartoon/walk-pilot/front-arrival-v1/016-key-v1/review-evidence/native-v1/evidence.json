@@ -1,0 +1,354 @@
+{
+  "status": "published technical checkpoint; human approval recorded separately",
+  "url": "http://127.0.0.1:8932/front-turn016-v1/review.html",
+  "source_commit": "c56f76871d9950933913912f5828c1499b1fa4a1",
+  "executable_sha256": "176418178af29ea782c4e389be92fd1057b883740f107e0d022e50bf171e6bab",
+  "production_archive_sha256": "1da6ddba0f22d679193fc35b824b975b62dc9ca1966f312d91649f18d8793b63",
+  "approved017_baseline_archive_sha256": "795c2ad7fda8586f68d07714e36dc85ec3d2954fd25cd8b3d1c52d94dc55327b",
+  "candidate016_archive_sha256": "16421422b99f7573c005b9525c62364bc7072e6e0008292d062f9ac1a9d0ac0a",
+  "candidate_art_input_sha256": {
+    "build/front-arrival/export-v3/BMP/JOHNWALK.BMP/017.png": "60e3a77a64620502d2b5198911a7805e19aaedf07801c7a00a92c030b4924de1",
+    "build/front-arrival/export016-v2/BMP/JOHNWALK.BMP/016.png": "1cb3d6249486eeecec29ff2040c452c28d14ff8a6f2d79d265e0f17ef2e38d92",
+    "build/front-arrival/export016-v2/recipe.json": "47806f8ae481735023238a0afa341eff393169cb4fb2134005ff55ecf4382bca",
+    "build/front-arrival/export016-v2/export-report.json": "a34597c3d281f0edd2a3c858f0f6b68fd07a4cee694b4a4eb09f3b3f1bb5d937",
+    "art/cartoon/walk-pilot/front-arrival-v1/016-key-v1/016-toe-fit-v2.png": "d89066217905e3e1a2fa509f1f9d6cfecbb084cb7fba50844a32a9d8c181c052"
+  },
+  "baseline": {
+    "status": "PASS",
+    "clips": {
+      "A1-to-A7": {
+        "display_count": 18,
+        "duration_ms": 1960,
+        "segments": {
+          "prime": {
+            "api_arguments": [
+              0,
+              1,
+              0,
+              1
+            ],
+            "start_ms": 0,
+            "rows": [
+              [
+                1,
+                294,
+                243,
+                17
+              ]
+            ],
+            "draws": [
+              [
+                1,
+                293,
+                243,
+                17
+              ]
+            ],
+            "delays": [
+              80,
+              0
+            ],
+            "end_ms": 120
+          },
+          "turn": {
+            "api_arguments": [
+              0,
+              1,
+              0,
+              7
+            ],
+            "start_ms": 120,
+            "rows": [
+              [
+                0,
+                300,
+                243,
+                16
+              ],
+              [
+                0,
+                300,
+                243,
+                17
+              ],
+              [
+                0,
+                300,
+                243,
+                17
+              ]
+            ],
+            "draws": [
+              [
+                0,
+                299,
+                243,
+                16
+              ],
+              [
+                0,
+                299,
+                243,
+                17
+              ],
+              [
+                0,
+                299,
+                243,
+                17
+              ]
+            ],
+            "delays": [
+              6,
+              6,
+              80,
+              0
+            ],
+            "end_ms": 1960
+          }
+        }
+      },
+      "A7-to-A1": {
+        "display_count": 16,
+        "duration_ms": 1840,
+        "segments": {
+          "prime": {
+            "api_arguments": [
+              0,
+              7,
+              0,
+              7
+            ],
+            "start_ms": 0,
+            "rows": [
+              [
+                0,
+                300,
+                243,
+                17
+              ]
+            ],
+            "draws": [
+              [
+                0,
+                299,
+                243,
+                17
+              ]
+            ],
+            "delays": [
+              80,
+              0
+            ],
+            "end_ms": 120
+          },
+          "turn": {
+            "api_arguments": [
+              0,
+              7,
+              0,
+              1
+            ],
+            "start_ms": 120,
+            "rows": [
+              [
+                0,
+                300,
+                243,
+                16
+              ],
+              [
+                1,
+                294,
+                243,
+                17
+              ]
+            ],
+            "draws": [
+              [
+                0,
+                299,
+                243,
+                16
+              ],
+              [
+                1,
+                293,
+                243,
+                17
+              ]
+            ],
+            "delays": [
+              6,
+              80,
+              0
+            ],
+            "end_ms": 1840
+          }
+        }
+      }
+    },
+    "baseline_pack_sha256": "795c2ad7fda8586f68d07714e36dc85ec3d2954fd25cd8b3d1c52d94dc55327b",
+    "executable_sha256": "176418178af29ea782c4e389be92fd1057b883740f107e0d022e50bf171e6bab",
+    "protected_inputs_unchanged": 60,
+    "verification": "Each direction smoke then full then exact fresh-process repeat",
+    "scope": "Baseline only; no candidate016 art, publication or production changes."
+  },
+  "candidate": {
+    "status": "PASS",
+    "clips": {
+      "A1-to-A7": {
+        "display_count": 18,
+        "duration_ms": 1960,
+        "changed_displays": 2,
+        "unchanged_displays": 16
+      },
+      "A7-to-A1": {
+        "display_count": 16,
+        "duration_ms": 1840,
+        "changed_displays": 2,
+        "unchanged_displays": 14
+      }
+    },
+    "archive_sha256": "16421422b99f7573c005b9525c62364bc7072e6e0008292d062f9ac1a9d0ac0a",
+    "baseline_pack_sha256": "795c2ad7fda8586f68d07714e36dc85ec3d2954fd25cd8b3d1c52d94dc55327b",
+    "executable_sha256": "176418178af29ea782c4e389be92fd1057b883740f107e0d022e50bf171e6bab",
+    "capture_helper_sha256": "29d93776c631afc12abaaa70942f2ccf632f3cc68f49fc92e5e8a32cc52ef785",
+    "scope": "Two actual same-spot turn directions; new016 only, approved017 retained. No publication, human016 approval or production change."
+  },
+  "html_sha256": "6705ac2d85d4a99bfb2c6be0d5cdbf432c8d94ac641edb7e3168d10f17c591d2",
+  "native_png_sha256": {
+    "images/A1-to-A7/baseline/display-001.png": "c6266384d2663aadc9cd899ee86a5cfce533795c98e2ef080ffd4bc846230611",
+    "images/A1-to-A7/candidate/display-001.png": "c6266384d2663aadc9cd899ee86a5cfce533795c98e2ef080ffd4bc846230611",
+    "images/A1-to-A7/baseline/display-002.png": "c6266384d2663aadc9cd899ee86a5cfce533795c98e2ef080ffd4bc846230611",
+    "images/A1-to-A7/candidate/display-002.png": "c6266384d2663aadc9cd899ee86a5cfce533795c98e2ef080ffd4bc846230611",
+    "images/A1-to-A7/baseline/display-003.png": "776edbf3d928e733e60469f6ba93f5d464f7272ef4bb8a69f1511bfea5437a23",
+    "images/A1-to-A7/candidate/display-003.png": "ac2252bfb32ab48c3deb0f901d44f507899dcb5bf5e0eedbda0fff6038d36de9",
+    "images/A1-to-A7/baseline/display-004.png": "3f773a9825f6ec37f540afff2fd2318f67b10a2d97f353f3c51f342d2aea55ce",
+    "images/A1-to-A7/candidate/display-004.png": "2f5e5528c70735dfe7850485fa6e35dc7ef54503baf3c6b72df1b99ca17fa55c",
+    "images/A1-to-A7/baseline/display-005.png": "0bd79610739ae92a7219496ded9575f8461b9920077025d90fa3fa26ad8a1862",
+    "images/A1-to-A7/candidate/display-005.png": "0bd79610739ae92a7219496ded9575f8461b9920077025d90fa3fa26ad8a1862",
+    "images/A1-to-A7/baseline/display-006.png": "6457b658514e2e9e90c2bfeda171fce0208baf60a4306a3f1a5d4b66af9abe38",
+    "images/A1-to-A7/candidate/display-006.png": "6457b658514e2e9e90c2bfeda171fce0208baf60a4306a3f1a5d4b66af9abe38",
+    "images/A1-to-A7/baseline/display-007.png": "6457b658514e2e9e90c2bfeda171fce0208baf60a4306a3f1a5d4b66af9abe38",
+    "images/A1-to-A7/candidate/display-007.png": "6457b658514e2e9e90c2bfeda171fce0208baf60a4306a3f1a5d4b66af9abe38",
+    "images/A1-to-A7/baseline/display-008.png": "7c0dc792371d2ed0467715b8564a36f93cc245a99a1e899451c104972b1c534b",
+    "images/A1-to-A7/candidate/display-008.png": "7c0dc792371d2ed0467715b8564a36f93cc245a99a1e899451c104972b1c534b",
+    "images/A1-to-A7/baseline/display-009.png": "73ee7d681399190d3502545959f40960a7175f888723c0c3ecb0a5c6f9f825dc",
+    "images/A1-to-A7/candidate/display-009.png": "73ee7d681399190d3502545959f40960a7175f888723c0c3ecb0a5c6f9f825dc",
+    "images/A1-to-A7/baseline/display-010.png": "52ae4c53212eaa340caa1e28f44b1b0883e4d9e0ca68c2061c4e0bc1ccc904b0",
+    "images/A1-to-A7/candidate/display-010.png": "52ae4c53212eaa340caa1e28f44b1b0883e4d9e0ca68c2061c4e0bc1ccc904b0",
+    "images/A1-to-A7/baseline/display-011.png": "3dda004831f7aecfb9ec0faa270d7882f14261403ae4ce9a4734507fbd8bd147",
+    "images/A1-to-A7/candidate/display-011.png": "3dda004831f7aecfb9ec0faa270d7882f14261403ae4ce9a4734507fbd8bd147",
+    "images/A1-to-A7/baseline/display-012.png": "3754890a00ff954e7052447e23ac6c5c494b19bcd6b908afe80dbbbe9a5a3eeb",
+    "images/A1-to-A7/candidate/display-012.png": "3754890a00ff954e7052447e23ac6c5c494b19bcd6b908afe80dbbbe9a5a3eeb",
+    "images/A1-to-A7/baseline/display-013.png": "d46d4f99a9f37371f3ef9c6efbe89e5d220b9604d927e5793f2216994eda5f8a",
+    "images/A1-to-A7/candidate/display-013.png": "d46d4f99a9f37371f3ef9c6efbe89e5d220b9604d927e5793f2216994eda5f8a",
+    "images/A1-to-A7/baseline/display-014.png": "acb32ebc158dc11a1d55c6b2db85c8d1e26e862f4938082ee890fad3906f742c",
+    "images/A1-to-A7/candidate/display-014.png": "acb32ebc158dc11a1d55c6b2db85c8d1e26e862f4938082ee890fad3906f742c",
+    "images/A1-to-A7/baseline/display-015.png": "407c51738d40593b8355c4b3313537bbc827e7602bb09abd0a164f72d79e862f",
+    "images/A1-to-A7/candidate/display-015.png": "407c51738d40593b8355c4b3313537bbc827e7602bb09abd0a164f72d79e862f",
+    "images/A1-to-A7/baseline/display-016.png": "1c7bf1e54cb96cd04a601d5a22adcbfb9af64a563d62b2de14744770f80b0f64",
+    "images/A1-to-A7/candidate/display-016.png": "1c7bf1e54cb96cd04a601d5a22adcbfb9af64a563d62b2de14744770f80b0f64",
+    "images/A1-to-A7/baseline/display-017.png": "d96a59032af4bb0a552df9f4d4cc8aac030f99fc64a742e61528790a7d140d95",
+    "images/A1-to-A7/candidate/display-017.png": "d96a59032af4bb0a552df9f4d4cc8aac030f99fc64a742e61528790a7d140d95",
+    "images/A1-to-A7/baseline/display-018.png": "d96a59032af4bb0a552df9f4d4cc8aac030f99fc64a742e61528790a7d140d95",
+    "images/A1-to-A7/candidate/display-018.png": "d96a59032af4bb0a552df9f4d4cc8aac030f99fc64a742e61528790a7d140d95",
+    "images/A7-to-A1/baseline/display-001.png": "180cce88702c48d4d3e86b0864020a1c6997dd5497c3f774f31f0373e494c17b",
+    "images/A7-to-A1/candidate/display-001.png": "180cce88702c48d4d3e86b0864020a1c6997dd5497c3f774f31f0373e494c17b",
+    "images/A7-to-A1/baseline/display-002.png": "180cce88702c48d4d3e86b0864020a1c6997dd5497c3f774f31f0373e494c17b",
+    "images/A7-to-A1/candidate/display-002.png": "180cce88702c48d4d3e86b0864020a1c6997dd5497c3f774f31f0373e494c17b",
+    "images/A7-to-A1/baseline/display-003.png": "776edbf3d928e733e60469f6ba93f5d464f7272ef4bb8a69f1511bfea5437a23",
+    "images/A7-to-A1/candidate/display-003.png": "ac2252bfb32ab48c3deb0f901d44f507899dcb5bf5e0eedbda0fff6038d36de9",
+    "images/A7-to-A1/baseline/display-004.png": "3f773a9825f6ec37f540afff2fd2318f67b10a2d97f353f3c51f342d2aea55ce",
+    "images/A7-to-A1/candidate/display-004.png": "2f5e5528c70735dfe7850485fa6e35dc7ef54503baf3c6b72df1b99ca17fa55c",
+    "images/A7-to-A1/baseline/display-005.png": "1df6586146512a5d0e54f5663d2ab861db1877d902847f3cb9e27ebf684e28d9",
+    "images/A7-to-A1/candidate/display-005.png": "1df6586146512a5d0e54f5663d2ab861db1877d902847f3cb9e27ebf684e28d9",
+    "images/A7-to-A1/baseline/display-006.png": "4685ac369b3de306384101a25b1d7c9d9c1c1d069d450a336fee73bb1a736383",
+    "images/A7-to-A1/candidate/display-006.png": "4685ac369b3de306384101a25b1d7c9d9c1c1d069d450a336fee73bb1a736383",
+    "images/A7-to-A1/baseline/display-007.png": "48fb2896670d637ec1c91fe342944365ad2dbdfb612987768959ce17c6c81e3f",
+    "images/A7-to-A1/candidate/display-007.png": "48fb2896670d637ec1c91fe342944365ad2dbdfb612987768959ce17c6c81e3f",
+    "images/A7-to-A1/baseline/display-008.png": "98621ea3cb30111b98805054881edbed5ea41428433a0813f7a59e266cc67ad8",
+    "images/A7-to-A1/candidate/display-008.png": "98621ea3cb30111b98805054881edbed5ea41428433a0813f7a59e266cc67ad8",
+    "images/A7-to-A1/baseline/display-009.png": "72110a6275f41a3d25ffb8b636c203716f07be9c571878d2867b8e9f46ce6913",
+    "images/A7-to-A1/candidate/display-009.png": "72110a6275f41a3d25ffb8b636c203716f07be9c571878d2867b8e9f46ce6913",
+    "images/A7-to-A1/baseline/display-010.png": "c7f3e5ea0cfbb46123c6fd10d6aa2633d6623805428d34e9fa666cf661406c3e",
+    "images/A7-to-A1/candidate/display-010.png": "c7f3e5ea0cfbb46123c6fd10d6aa2633d6623805428d34e9fa666cf661406c3e",
+    "images/A7-to-A1/baseline/display-011.png": "65dc50c8ce8fa49e3d2e4559482ef26867171114eca0ddf68e661f433e78d59a",
+    "images/A7-to-A1/candidate/display-011.png": "65dc50c8ce8fa49e3d2e4559482ef26867171114eca0ddf68e661f433e78d59a",
+    "images/A7-to-A1/baseline/display-012.png": "14746d74864d5f77f43aa131024ce639110374da7348651bdbb8a170c5dc1ce0",
+    "images/A7-to-A1/candidate/display-012.png": "14746d74864d5f77f43aa131024ce639110374da7348651bdbb8a170c5dc1ce0",
+    "images/A7-to-A1/baseline/display-013.png": "2d2d8ac32d9462c7a8e8c53c421034f79e0a69ccd8ac05d2569573eed49ae4c8",
+    "images/A7-to-A1/candidate/display-013.png": "2d2d8ac32d9462c7a8e8c53c421034f79e0a69ccd8ac05d2569573eed49ae4c8",
+    "images/A7-to-A1/baseline/display-014.png": "93f8c5c3ae8dbf1289e89435c9436908365ad76f99ec858cde1c4274584c0641",
+    "images/A7-to-A1/candidate/display-014.png": "93f8c5c3ae8dbf1289e89435c9436908365ad76f99ec858cde1c4274584c0641",
+    "images/A7-to-A1/baseline/display-015.png": "344af79f23711b2c99903ce81ce2f13b034777f33cd1549287216f65bedf1c92",
+    "images/A7-to-A1/candidate/display-015.png": "344af79f23711b2c99903ce81ce2f13b034777f33cd1549287216f65bedf1c92",
+    "images/A7-to-A1/baseline/display-016.png": "344af79f23711b2c99903ce81ce2f13b034777f33cd1549287216f65bedf1c92",
+    "images/A7-to-A1/candidate/display-016.png": "344af79f23711b2c99903ce81ce2f13b034777f33cd1549287216f65bedf1c92"
+  },
+  "files_sha256": {
+    "prepare.py": "d777fb8d13f30497fe353764219bd900294c3ad857426bab382a664b1036c059",
+    "capture.py": "240319e77ad3c2782fe404cb636920320fd88c8f55567dae37e523da2419d45f",
+    "route_driver.c": "bf1d71e7a562b9d6402955b604514c67bbc60a36882bb6286b1e2142bfd6ea82",
+    "preparation.json": "09a7478e336590bac5afc6537482f8668b78dc41e6734d36ee79953d50837b4b",
+    "prepare_candidate_helper.py": "b90c130ee37a478f2e2e0fb75ba7bdef3f367a1601cd328b2c2d31bd63e5b6a0",
+    "prepare_candidate.py": "1900388f7cb6818b3ae70fd2cb815fc68179bd64aefce87e4840e1e8002317a7",
+    "capture_candidate.py": "29d93776c631afc12abaaa70942f2ccf632f3cc68f49fc92e5e8a32cc52ef785",
+    "candidate-packer-adaptation.json": "cf98f3fa3481bfdeead16753f5663e6d36a95377bbb4506e315c5168ba960468",
+    "candidate-packer-correction.json": "510b308453cff79eac580eb46fa1ce594a1427e8e675e93ad1c93933ef60013e",
+    "build_review.py": "82195bc2877e12f8160c91237e0fc18c2b4e6239a1c124fb2a2720e5ebfcc9d4",
+    "check_review.py": "8cfc7dfc0abf5bc621dbdc1c8408219c22900b01b712e7a12f38375d79fa5299",
+    "publish.py": "daba4850ab9bebb613f937f8cc9b953642b1ed1f0cb85b037c8cc03c88bf0923",
+    "publication.json": "fa6fbf6a4ee1a39132a0bbdcfcbbf1d6abe295e8bd4e74e906bb4af931d6c188",
+    "finalize_label.py": "ee02b62d357cdf53863c1d1d8e5e44e80f07cf7c57acc8f986f38831f476a7bb",
+    "view-label-correction.json": "08681374c1c12e24adeff8f55048311de9963c5c88c15b2844736fcc6169d5ff",
+    "browser-label-recheck-failure.json": "f3ddb6412f75444ae06eee0244dc7f66f2cb12e60d27eaa69fd5064b8dfa8ad5",
+    "README.md": "eacc37ef53b7ff1b118c98b941f814dc677bf50e1b5df657cb96b748c6d72e00",
+    "finish.py": "cc99a51ddd8aac71ae3a0e3cab4cd4ad75cd3451225ebbdb6aeb376b46e261dd",
+    "baseline-v1/build.json": "749f06b3756a21cd0b35972e6f5bb62645fcaffd1897f8e1a4e9953f88cc84b4",
+    "baseline-v1/build.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-v1/build.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "baseline-v1/route-contract.json": "a1edd890514bfb508df366b66fb32ded5372afff9bc4de6269a8899a599c9794",
+    "baseline-v1/summary.json": "0bb11881cbad2d26886e12ee99496e11aa92dd5af2a1ce655e660d638195b65c",
+    "candidate-v1/preparation.json": "ea3c0a79d163fd981f10091b966709ef51337f4adb68677c6d94f78f232c9ec0",
+    "candidate-v1/failed-prepare-helper.py": "47fdc77b04058c4555e586dc2983e98ff0db11ff9f4ee88e6a2e95be7eb47456",
+    "candidate-v1/failed-prepare-generator.py": "83537512b8dfe1bcfe4db376ba23d1f407fab6e6c274cb7a1cc92dd5b0641f3d",
+    "candidate-v1/failed-packer-adaptation.json": "cf98f3fa3481bfdeead16753f5663e6d36a95377bbb4506e315c5168ba960468",
+    "candidate-v1/failure.json": "1883f148a4a0d7ecd4bd5e5101710a03095a1c49df57450b81526fd656818d2f",
+    "candidate-v1/A1-to-A7/smoke/capture.log": "cb9943d0da0656c8f667a360ca628bec35622be949f42ca3f646414bea3bfe28",
+    "candidate-v2/preparation.json": "5338998457c4f491cd831bb15fbaf84fdb9c525364f7b3aa7840307fd21c0d3e",
+    "candidate-v2/summary.json": "f985adb510c80a69aadb202b14f46c4eb04fbfcf6ea644dfcb1d7ac8f2e31c4b",
+    "review-v1/review.html": "6705ac2d85d4a99bfb2c6be0d5cdbf432c8d94ac641edb7e3168d10f17c591d2",
+    "review-v1/review-record.json": "d8a0b8be4e1a8ca47d8e1ccb131e262302a0d8414d56687556724257ffa65565",
+    "review-v1/browser-validation.json": "c844c8c54ee15e051745cc85bd265be2bcd5fbce7234f531672fe60ca039eda1",
+    "pre-label-review/review.html": "5c10ddf38bd1fb2cd297f882175aa4464245c4aee5cb848bc53ea3b41b2ff013",
+    "pre-label-review/review-record.json": "55dcbccdcf2af5aa1748c6dd74afc3ee67cb392c50b2f735c57d0ba633613608",
+    "pre-label-review/browser-validation.json": "df1fd06064175f3a25907990b79e0c93cded8669043d684a9de7a5e677b2b285",
+    "baseline-v1/A1-to-A7/smoke/report.json": "d567b952d948148394cf2e17b7ff7d8bf4934b1114e1933586d933880bd36874",
+    "baseline-v1/A1-to-A7/smoke/capture.log": "cea2b6541fc3ebf957d8a88d515046788c1667ea5e8c24b09aedbbd72ff24635",
+    "baseline-v1/A1-to-A7/full/report.json": "e4ed6d54dd52313ebdab730f6ee17bca7dbdd4b9b7fdf76bbb0dc8ae76c519ee",
+    "baseline-v1/A1-to-A7/full/capture.log": "7203854c7e87048208e605c034484c8a7713caff870d513ef3bf85216042f698",
+    "baseline-v1/A1-to-A7/repeat/report.json": "4c825feae1174839ac76c5c8f3021b374a062bdc7c25c4f657bc9f0aded1687c",
+    "baseline-v1/A1-to-A7/repeat/capture.log": "7203854c7e87048208e605c034484c8a7713caff870d513ef3bf85216042f698",
+    "candidate-v2/A1-to-A7/smoke/report.json": "0186073a9fd30271af7152459153291d98164f142f3dba5c9b9aa2868dab981e",
+    "candidate-v2/A1-to-A7/smoke/capture.log": "cb9943d0da0656c8f667a360ca628bec35622be949f42ca3f646414bea3bfe28",
+    "candidate-v2/A1-to-A7/full/report.json": "7daca7a53fef8d5d51ebbb1aaa3e00ab1e97c115ac80d5592102b3d2f6dd00b0",
+    "candidate-v2/A1-to-A7/full/capture.log": "1820047e59c9ed6e0e84fc001ffed255d0f7aecce8e443bffe7fafcb5b6ec82e",
+    "baseline-v1/A7-to-A1/smoke/report.json": "8f912209510ab1a9b67a4bcb799b90db05b27ffb6ec80c2eb5aa70683bc986ec",
+    "baseline-v1/A7-to-A1/smoke/capture.log": "9b4fe77c7c2ebb8fa05836e150da81da9abe1a5fcb7d3e294c9a81e88857a90b",
+    "baseline-v1/A7-to-A1/full/report.json": "abb20ce591776055eef06ceab2cf4077b88aaee8265725fcdbd0f556fb3293bd",
+    "baseline-v1/A7-to-A1/full/capture.log": "daa5f91ebdca248f0cb283287ccbf440222c92336b4df572ea38a6b2088eb11c",
+    "baseline-v1/A7-to-A1/repeat/report.json": "7b47c8731f00b92439ea9b97ec97b8debe33349c4e1d2cceb7f3a4daac197839",
+    "baseline-v1/A7-to-A1/repeat/capture.log": "daa5f91ebdca248f0cb283287ccbf440222c92336b4df572ea38a6b2088eb11c",
+    "candidate-v2/A7-to-A1/smoke/report.json": "771b37e561187e7b4f1f1c803c0db49469b06e48a067d66687430816daa18b02",
+    "candidate-v2/A7-to-A1/smoke/capture.log": "2c0c2556a65c1516ef7a706c01428ed77568f37f6019567ca0e84a0ae9e35930",
+    "candidate-v2/A7-to-A1/full/report.json": "a52e80d99360e0399162b79531d8edea80e0f48ab03c88645560da15d91af040",
+    "candidate-v2/A7-to-A1/full/capture.log": "ea8dbd8a7a0b79a1cd34aa3bdb2728087ee58134a0f07109de033924723691cf"
+  },
+  "published_screenshots_sha256": {
+    "published-A1-to-A7-turning016-1280.png": "6bb53227daab6912efeca90630c06a41a5a873121490b8f4c15c2fd1896b89fc",
+    "published-A7-to-A1-turning016-1280.png": "e2bc6a1ae1d6516832336aeb15d1994d0d42de84f33693f6425e53704e614504"
+  },
+  "scope": "Actual native two-direction turn comparison as shown for016 review, retaining approved017. No production changes or approval assigned by this binder; see separate human review record. Pixel constraints do not establish anatomy or original-executable parity."
+}

@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-cartoon-front-arrival\build\front-arrival\waits-ring-v1\negative-controls\browser\run_checker.py", line 5, in <module>
+    runpy.run_path(str(p),run_name='__main__')
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\.ai-work\worktrees\johnny-cartoon-front-arrival\build\front-arrival\waits-ring-v1\negative-controls\browser\check_review.py", line 132, in <module>
+    main()
+  File "D:\.ai-work\worktrees\johnny-cartoon-front-arrival\build\front-arrival\waits-ring-v1\negative-controls\browser\check_review.py", line 84, in main
+    assert state['heading'] == heading and not state['playing'] and state['view'] == 'walk'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

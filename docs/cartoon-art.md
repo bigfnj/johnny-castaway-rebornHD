@@ -22,6 +22,11 @@ is an approved 028/029 replacement with its own
 Its standalone motion and native island scene are approved. The other 26 assets
 keep their earlier approvals through explicit selected inheritance; the original
 pilot's drawings and pose observations remain preserved as history.
+The [standing family](../art/cartoon/walk-pilot/front-arrival-v1/README.md) adds
+000/015/016/017 alongside018, covering all eight standing directions and bringing
+the pack to32 assets. Native arrival and direction-ring approvals are scoped
+separately from unreviewed story interactions. The original-only ordinary-turn
+dependency trace keeps003 with the future complete001-008 profile-walk batch.
 Each family retains its actual human review; aggregate pack approvals explicitly
 inherit earlier reviewed assets rather than silently replacing their provenance.
 

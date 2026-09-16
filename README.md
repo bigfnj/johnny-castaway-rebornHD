@@ -209,9 +209,9 @@ The browser's Art style selector remembers its choice in local storage and
 reloads the scene. An explicit URL argument, such as
 `?args=window+style+hd`, overrides that saved browser choice for the current run.
 
-The bundled Cartoon preview contains 28 approved assets: twelve walking poses,
-one standing pose and 15 island layers, including one ocean and all nine
-high-tide shore-foam frames.
+The bundled Cartoon preview contains 32 approved assets: twelve walking poses,
+five standing poses covering all eight directions, and 15 island layers,
+including one ocean and all nine high-tide shore-foam frames.
 It is a partial style pack. Other animations and environment states use HD or
 original artwork, so the full story can mix the two styles. The settings label
 is "Cartoon (preview)" until wider artwork coverage is ready.
@@ -222,7 +222,11 @@ missing-pack error. The [approved island](art/cartoon/island-pilot-v1/README.md)
 and [Calm focus walking revision](art/cartoon/walk-pilot/calm-focus-runtime-v1/README.md)
 record their exact scope. The [rear walking family](art/cartoon/walk-expansion-v1/README.md)
 adds six poses; its [rear arrival pose](art/cartoon/arrival-pilot-v1/README.md)
-now completes the reviewed walk in Cartoon.
+completes the reviewed rear walk in Cartoon. The
+[standing family](art/cartoon/walk-pilot/front-arrival-v1/README.md) adds the
+front arrival and remaining standing views, with native reviews of both turn
+directions. Profile walking and its shared ordinary-turn poses remain future
+work; standing coverage does not imply every story use has been reviewed.
 See [Cartoon art production](docs/cartoon-art.md) for
 packaging, [image authoring lessons](docs/art-style-learnings.md) and
 [the walking revision lessons](docs/art-style-learnings-calm-focus.md) before

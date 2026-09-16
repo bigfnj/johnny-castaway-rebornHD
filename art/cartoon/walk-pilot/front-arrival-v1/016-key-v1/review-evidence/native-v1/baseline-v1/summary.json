@@ -1,0 +1,181 @@
+{
+  "status": "PASS",
+  "clips": {
+    "A1-to-A7": {
+      "display_count": 18,
+      "duration_ms": 1960,
+      "segments": {
+        "prime": {
+          "api_arguments": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "start_ms": 0,
+          "rows": [
+            [
+              1,
+              294,
+              243,
+              17
+            ]
+          ],
+          "draws": [
+            [
+              1,
+              293,
+              243,
+              17
+            ]
+          ],
+          "delays": [
+            80,
+            0
+          ],
+          "end_ms": 120
+        },
+        "turn": {
+          "api_arguments": [
+            0,
+            1,
+            0,
+            7
+          ],
+          "start_ms": 120,
+          "rows": [
+            [
+              0,
+              300,
+              243,
+              16
+            ],
+            [
+              0,
+              300,
+              243,
+              17
+            ],
+            [
+              0,
+              300,
+              243,
+              17
+            ]
+          ],
+          "draws": [
+            [
+              0,
+              299,
+              243,
+              16
+            ],
+            [
+              0,
+              299,
+              243,
+              17
+            ],
+            [
+              0,
+              299,
+              243,
+              17
+            ]
+          ],
+          "delays": [
+            6,
+            6,
+            80,
+            0
+          ],
+          "end_ms": 1960
+        }
+      }
+    },
+    "A7-to-A1": {
+      "display_count": 16,
+      "duration_ms": 1840,
+      "segments": {
+        "prime": {
+          "api_arguments": [
+            0,
+            7,
+            0,
+            7
+          ],
+          "start_ms": 0,
+          "rows": [
+            [
+              0,
+              300,
+              243,
+              17
+            ]
+          ],
+          "draws": [
+            [
+              0,
+              299,
+              243,
+              17
+            ]
+          ],
+          "delays": [
+            80,
+            0
+          ],
+          "end_ms": 120
+        },
+        "turn": {
+          "api_arguments": [
+            0,
+            7,
+            0,
+            1
+          ],
+          "start_ms": 120,
+          "rows": [
+            [
+              0,
+              300,
+              243,
+              16
+            ],
+            [
+              1,
+              294,
+              243,
+              17
+            ]
+          ],
+          "draws": [
+            [
+              0,
+              299,
+              243,
+              16
+            ],
+            [
+              1,
+              293,
+              243,
+              17
+            ]
+          ],
+          "delays": [
+            6,
+            80,
+            0
+          ],
+          "end_ms": 1840
+        }
+      }
+    }
+  },
+  "baseline_pack_sha256": "795c2ad7fda8586f68d07714e36dc85ec3d2954fd25cd8b3d1c52d94dc55327b",
+  "executable_sha256": "176418178af29ea782c4e389be92fd1057b883740f107e0d022e50bf171e6bab",
+  "protected_inputs_unchanged": 60,
+  "verification": "Each direction smoke then full then exact fresh-process repeat",
+  "scope": "Baseline only; no candidate016 art, publication or production changes."
+}

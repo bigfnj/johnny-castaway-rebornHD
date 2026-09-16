@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "source_label": "Stored supplied-original JOHNWALK frame 016; no Cartoon or HD-derived geometry.",
+  "original_frame": {
+    "frame": 16,
+    "resource": "JOHNWALK.BMP",
+    "canvas": [
+      32,
+      74
+    ],
+    "xpm_sha256": "0565719afab00212ccd9c004c44dcc525ba81413f14fae31458c95f602bdb8f4",
+    "index_plane_sha256": "cafcca8d0519e6ff23b77370dffb5f6e3c0f01e1d91ec535e6705e1834fd6f10",
+    "rgba_sha256": "b1b051d2e19e70efa14810f93f5a4349c911cbaff91bfe1b0d989d4fb72a163f",
+    "visible_bounds_exclusive": [
+      0,
+      0,
+      32,
+      74
+    ],
+    "transparent_index": 0,
+    "first_row_visible_span_x_exclusive": [
+      15,
+      20
+    ],
+    "landmark_limit": "Visible bounds include original shadow; first-row extent is a measured pixel feature, not an engine or anatomical anchor.",
+    "encoded_uses": [
+      {
+        "group": "A wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "B wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "C wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "D wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "E wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      },
+      {
+        "group": "F wait",
+        "draw_count": 1,
+        "flip_x": [
+          false
+        ]
+      }
+    ]
+  },
+  "original_source_record": "art/cartoon/walk-expansion-v1/reference/source.json",
+  "original_source_record_sha256": "040106d15a0c6460a044a7989ddcfea12d494bc6838ee1fad83a3793e2f2cfa4",
+  "original_metadata_record": "art/cartoon/walk-expansion-v1/reference/metadata.json",
+  "original_metadata_record_sha256": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629",
+  "resource_sha256": {
+    "RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+    "RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+  },
+  "historical_dump_engine_sha256": "6ac61dc53dc926a311d89fcf2e27ff7cefbbac7f4c60e2491f69114230400865",
+  "scope": "Copied and validated preserved original extraction. Commercial RESOURCE files and original executable were not reread or rerun in this step.",
+  "palette_limit": "Original indices use the port dump palette and index 0 transparency. Original executable color/compositing and timing parity are not established.",
+  "hash_policy": "Exact file bytes for stored records and PNGs; RGBA hashes cover decoded row-major RGBA bytes.",
+  "files": {
+    "016-original-native.png": "7968a4d2f2a4c8279f07c40f50ce918ca4691379e48cb0b4901b3d6fcaa1fa2b",
+    "016-original-nearest8.png": "17d68191c85315e1759edf357920d2642f791ce6a5dd5cf1871899c2b0854d92"
+  },
+  "nearest8": {
+    "scale_exact": {
+      "numerator": 8,
+      "denominator": 1
+    },
+    "filter": "NEAREST",
+    "verification": "All decoded RGBA bytes equal native pixel replication into 8x8 blocks."
+  },
+  "registration": {
+    "native_canvas": [
+      32,
+      74
+    ],
+    "runtime_canvas": [
+      64,
+      148
+    ],
+    "native_top_visible_span_x_exclusive": [
+      15,
+      20
+    ],
+    "native_top_pixel_edge_midpoint_x": 17.5,
+    "runtime_top_pixel_edge_midpoint_x": 35,
+    "suggested_cap_target_hd": [
+      35,
+      0.25
+    ],
+    "target_basis": "X is the original top-row cap-outline midpoint at 2x. Y=0.25 is the inherited deliberate filter margin, not a measured original point. No engine or anatomical anchor is claimed."
+  },
+  "pose_observations": {
+    "view": "Front-facing heading 0/S, chest and pelvis toward viewer; not the oblique 017 stance.",
+    "arms": "Both elbows extend outward; forearms return to hands at the waist/shorts pocket sides. No lowered walking arm.",
+    "legs_feet": "Stationary separated legs with outward-directed feet. Preserve modest perspective asymmetry rather than forcing mirror symmetry or one artificial contact line.",
+    "indicative_colored_foot_pixels": {
+      "screen_left_max_y": 71,
+      "screen_right_max_y": 68,
+      "mask": "y>=60, x=[0,16) versus x=[16,32), exact RGBA colors (252,0,0,255), (252,252,252,255), (168,168,0,255); excludes gray shadow and black outline.",
+      "limit": "Colored pixel extents are not anatomical soles, leg identity or a measured ground plane."
+    },
+    "shadow_limit": "Original gray shadow contributes to visible bounds and canvas bottom; do not align generated feet to it.",
+    "anatomical_identity_limit": "No hidden anatomical left/right limb identity has been assigned."
+  },
+  "adjacency": {
+    "trace_record": "art/cartoon/walk-pilot/front-arrival-v1/trace/trace.json",
+    "trace_record_sha256": "84542ebc9c922b2a99dd86f35d0a8f0dcddd1f6d0bddfc0ac3999b2dca8c7a91",
+    "scope": "Retained compiled C state-machine observations, not a new native capture. Runtime tick 20ms gives 120ms intermediate draws and 1600ms final waits.",
+    "cases": {
+      "wait-A-0": {
+        "api_arguments": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "glibc_seed": 2,
+        "draws": [
+          {
+            "frame": 16,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      "A-turn-1-7": {
+        "api_arguments": [
+          0,
+          1,
+          0,
+          7
+        ],
+        "glibc_seed": 2,
+        "draws": [
+          {
+            "frame": 16,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 6
+          },
+          {
+            "frame": 17,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 6
+          },
+          {
+            "frame": 17,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 80
+          }
+        ]
+      },
+      "A-turn-7-1": {
+        "api_arguments": [
+          0,
+          7,
+          0,
+          1
+        ],
+        "glibc_seed": 2,
+        "draws": [
+          {
+            "frame": 16,
+            "flip_x": 0,
+            "x": 299,
+            "y": 243,
+            "delay_ticks": 6
+          },
+          {
+            "frame": 17,
+            "flip_x": 1,
+            "x": 293,
+            "y": 243,
+            "delay_ticks": 80
+          }
+        ]
+      }
+    }
+  }
+}

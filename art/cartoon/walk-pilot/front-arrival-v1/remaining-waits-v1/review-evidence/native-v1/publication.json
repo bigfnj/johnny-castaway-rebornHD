@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "url": "http://127.0.0.1:8932/standing-ring-v1/review.html",
+  "html_sha256": "03dee9b661da7dd724bdd652656dc587851a038ad723261d9eb4e3b077152df9",
+  "served_file_count": 148,
+  "smoke_passed": true,
+  "regressions_after_smoke": [
+    "decreasing: all8 exact heading crops, new-pose controls, every native timestamp boundary and endpoint,1280 visibility",
+    "increasing: all8 exact heading crops, new-pose controls, every native timestamp boundary and endpoint,1280 visibility"
+  ],
+  "browser_errors": [],
+  "request_failures": [],
+  "screenshots_sha256": {
+    "published-heading2-frame000-1280.png": "e00c951b2ae69a4ab1a5c734e6edc543c71926e232100ced6ac2c4acff34d4d8",
+    "published-heading4-frame015-1280.png": "f805f79457e0f23bb03c5677cd695fac34b6d024484328c19a37858b64cc212f",
+    "published-heading6-frame000-1280.png": "31f16bc5cf59e84d4bcb187875be8a0215f9c3be257cfadd9a9884b37edd9784"
+  },
+  "negative_control": "changed HTML causes one named served identity failure",
+  "publisher_sha256": "6d11c78a7a7b35b54cad6eb58f4fe4b7e93647f6cf0b9116cf52c85bbfd67f1e",
+  "scope": "Published native complete-ring000015 comparison with all prior approved art retained; human approval separate, production unchanged."
+}

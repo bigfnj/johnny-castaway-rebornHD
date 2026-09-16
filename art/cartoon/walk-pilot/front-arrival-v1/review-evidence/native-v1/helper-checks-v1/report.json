@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "smoke": "exact bound native pixels",
+  "regression_controls": [
+    "inside accepted",
+    "left rejected",
+    "right rejected",
+    "above rejected",
+    "below rejected"
+  ],
+  "placed_arrival_box_hd_xyxy": [
+    586,
+    486,
+    666,
+    636
+  ],
+  "helper_sha256": "08bba309452e860273f85fabad2eef3fe1edaf7d3319ad6f67143c925120e976",
+  "mutation": {
+    "result": "FIRED",
+    "exit_code": 1,
+    "source_sha256": "182ebf3619f603e7ea392c7273f7e564df0b54a83c18810b015c37454a59c76f",
+    "executed_bytecode_sha256": "9f1c004b91bd513a6290b94401e5cd1d5878238b1120fc393aaa889459a49ff1",
+    "compile_started_ns": 1789511340568872030,
+    "bytecode_mtime_ns": 1789511340589830300,
+    "failure": "frame017 mask rejects outside change:left"
+  },
+  "scope": "Native-pixel mask helper validation only. Candidate017 packaging and native candidate execution await actual artwork."
+}

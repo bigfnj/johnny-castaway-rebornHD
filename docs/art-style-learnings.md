@@ -24,6 +24,9 @@ in `BACKLOG.md`.
 | [Static island sources](../art/cartoon/island-pilot-v1/palm-sand-cloud/README.md) | Palm, sand and cloud prompts, selected ancestry, failed edits and verified exports |
 | [Front walk refresh lessons](art-style-learnings-front-refresh.md) | Hip and shorts connection, far-arm occlusion, original shadows versus foot contact, and preserved approval history |
 | [Front walk refresh bundle](../art/cartoon/walk-pilot/front-refresh-v1/README.md) | Exact 028/029 drafts and prompts, retained 024-027, frozen comparison inputs and separate approvals of standalone motion and the native island scene |
+| [Standing family](../art/cartoon/walk-pilot/front-arrival-v1/README.md) | Original standing geometry, far-foot depth corrections, direct-front toe fit, exact source ancestry and separately scoped native approvals |
+| [Remaining standing views](../art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/README.md) | Side/rear occlusion, explicit per-frame exporter settings, complete direction review and preserved native timing |
+| [Ordinary-turn dependencies](../art/cartoon/walk-pilot/front-arrival-v1/ordinary-turns-v1/reference/NOTES.md) | Why a sprite shared with profile walking must be reviewed with that full cycle, even when it also appears in a turn table |
 
 ## Engine constraints that every style inherits
 
@@ -209,6 +212,19 @@ identity while missing gait defects; short loops can hide route/endpoint issues.
 Synchronized comparisons and frame stepping made these differences reviewable.
 A GIF is convenient but palette-converted; full-color PNG captures remain the
 reference. Compilation or decoder CI alone does not prove correct presentation.
+
+Choose a delivery family from actual dependencies, not table labels alone.
+Ordinary turn003 also repeats within profile walking001-008, so replacing only
+that turn would interrupt the existing cycle. The standing family000/015/016/
+017/018 independently covers eight directions through reflection. Keep route
+rows, compiled observations and static story-script occurrences distinct; none
+automatically reviews the others.
+
+Do not repair a surprising native delay inside an art preview. The full standing
+ring exposed different first-pose scheduling for the two heading orders. Retain
+the observed times, disclose the short direction, offer pose stepping, and
+record the engine question separately for comparison with the original. A human
+art approval is not evidence that inherited timing matches the original binary.
 
 After a major integration change, smoke test first, then regression. Confirm
 selected asset paths, native coordinates, clean exit, original archive-member

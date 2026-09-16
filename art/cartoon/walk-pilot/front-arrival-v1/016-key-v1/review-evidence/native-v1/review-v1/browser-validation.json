@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "html_sha256": "6705ac2d85d4a99bfb2c6be0d5cdbf432c8d94ac641edb7e3168d10f17c591d2",
+  "checker_sha256": "8cfc7dfc0abf5bc621dbdc1c8408219c22900b01b712e7a12f38375d79fa5299",
+  "smoke_passed": 1,
+  "regressions_after_smoke": [
+    "A1-to-A7: all raw display pixels, observed timestamp boundaries, fixed crops, priming/turn step controls, replay and Slow cadence",
+    "A7-to-A1: all raw display pixels, observed timestamp boundaries, fixed crops, priming/turn step controls, replay and Slow cadence"
+  ],
+  "browser_errors": [],
+  "screenshots_sha256": {
+    "A1-to-A7-turning016-1280.png": "d2fe74c26fad0f84c37f5a692750a59f525d453e429b684ce5f453f9779d41ce",
+    "A1-to-A7-starting017-1280.png": "df80f96c70926ddcf1bc92f2666463774f4e6f16713ef2a593d6f73ce06b4e33",
+    "A1-to-A7-settling017-1280.png": "ed414df8f91db3c299a31a39fff37610fdb97db8f06db88dd23b289cb081c1f3",
+    "A7-to-A1-turning016-1280.png": "47e0a46faa7e4e1325cbe74071e72c5b231bed048b1b81ae2cea7eb45df56314",
+    "A7-to-A1-starting017-1280.png": "ce75f92fedae14e65df601d2322bb2e4677847109675ff90aa59a3b46fe524ad",
+    "A7-to-A1-settling017-1280.png": "64f21a44454702b57facbd32ea659520e1f35de6cdc45ddbb227e4e65700bfcf"
+  },
+  "scope": "Bounded local two-direction native pixel/timing/control checks. Root visual checkpoint required before publication; no human016 approval."
+}

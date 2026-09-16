@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export only; not native capture or human acceptance.",
+  "preview_only": false,
+  "runtime_sprites_written": true,
+  "runtime_fit_all_source_centers": true,
+  "scale": 0.1,
+  "padding_hd": 64,
+  "reference_hashes": {
+    "015-source.json": "48a2b5329b1a446babc6421f3a13843b500537063ae42c5826e6df439ac459f4",
+    "015-original-native.png": "0ec7a74ec974aa38fef751f22d7f9c42f198a8e5d1bff711bbed1f6bb7414b66",
+    "015-original-nearest8.png": "afba9900490c794c0260081208278b197758bd95360df3e4374eb227c09621e0"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "frames": [
+    {
+      "frame": 15,
+      "source": "015-rear-v1.png",
+      "source_sha256": "dbd88e081fafbe906f9a9482128bb54fad1b142d1dc18f240e099bfe7e227578",
+      "cap_raw": [
+        508.5,
+        16
+      ],
+      "runtime_canvas": [
+        80,
+        146
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -15.850000000000001,
+        0,
+        0.1,
+        -1.35
+      ],
+      "alpha8_source_bounds": [
+        235,
+        16,
+        779,
+        1466
+      ],
+      "alpha8_centers_hd": [
+        7.699999999999999,
+        0.30000000000000004,
+        62.00000000000001,
+        145.20000000000002
+      ],
+      "source_centers_fit_runtime": true,
+      "filtered_alpha8_bounds_hd_exclusive": [
+        7,
+        0,
+        63,
+        146
+      ],
+      "padded_canvas": [
+        208,
+        274
+      ]
+    }
+  ],
+  "outputs_sha256": {
+    "padded/015.png": "6db40d6dae840b7dfcd5aa5a0aa675bfe9ff504653f5dfc1bd09145cc7dce4af",
+    "BMP/JOHNWALK.BMP/015.png": "c74f85cdd79ed13f180f3cb3c8c5962ba0453d587a2c8da15c844a2c046eb5d8"
+  },
+  "filter_limit": "Source-center fit does not promise absence of low-alpha filter fringe; padded output retains it.",
+  "recipe_sha256": "c1390aec9d4bb1f36fd8304dd23af1b82934143fd8770a00f3a222f1fc662d2e",
+  "export_source_sha256": "542c0527ea0f997821b10304fdfa7d85dcfbfe894297d620858e60cd9a80fb43"
+}

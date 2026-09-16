@@ -1,0 +1,35 @@
+{
+  "html_sha256": "bbf10124966c42b354f31e15bfb5e86f810ef7567ce95a1a7a38677becbb8dbf",
+  "test_sha256": "6f886a36915b766c5e01e14b54d8d2bd9f87cf97aab3decde6b1e674151aa8f3",
+  "smoke_passed": 2,
+  "regressions": [
+    "47 exact logical times and94 full-canvas native pixel hashes; final endpoint stops",
+    "close-up/full-island controls, last-walk-to-arrival stepping and recorded-route repeat",
+    "both full-scene canvases retain aspect and fit1280/1600",
+    "missing-image negative control reports exact candidate capture"
+  ],
+  "mutations": [
+    {
+      "label": "review.html:timed-display",
+      "result": "FIRED",
+      "failure_count": 1,
+      "html_sha256": "2c6ef0a8924a4692691084aee3494c9fafe9cc2e77d63b3d22678b5f76af4270",
+      "witness": "Actual served bytes and loaded browser script digest match; executed timer or canvas pixels fail one named oracle."
+    },
+    {
+      "label": "review.html:candidate-pixel-identity",
+      "result": "FIRED",
+      "failure_count": 1,
+      "html_sha256": "564321fcfce409ff6ba0051b703cbeada51c65e79d4dc65ffdad1b326bfc9b73",
+      "witness": "Actual served bytes and loaded browser script digest match; executed timer or canvas pixels fail one named oracle."
+    },
+    {
+      "label": "review.html:show-arrival-target",
+      "result": "FIRED",
+      "failure_count": 1,
+      "html_sha256": "9d3f126f3ced1d71bbd66f045bc4aad961a26159557d30ed9290ec749008d076",
+      "witness": "Exact served bytes and loaded script executed; Show arrival selected walking028 and failed the017 target oracle."
+    }
+  ],
+  "scope": "Actual Chromium rendering and timer callback, exact native pixels. Browser wall-clock smoke uses a bounded interval; no physical timing claim."
+}

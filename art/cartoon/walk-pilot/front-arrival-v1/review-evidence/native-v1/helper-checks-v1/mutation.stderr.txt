@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/out/check_helpers.py", line 95, in <module>
+    main()
+  File "/out/check_helpers.py", line 55, in main
+    check(args.module)
+  File "/out/check_helpers.py", line 45, in check
+    assert module.outside_equal(pixels, bytes(changed), box) == expected, 'frame017 mask rejects outside change:' + label
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: frame017 mask rejects outside change:left

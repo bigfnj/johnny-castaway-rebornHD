@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "scope": "Technical export only; not native capture or human acceptance.",
+  "preview_only": true,
+  "runtime_sprites_written": false,
+  "runtime_fit_all_source_centers": false,
+  "scale": 0.1,
+  "padding_hd": 64,
+  "reference_hashes": {
+    "source.json": "08501f2e05651f7e818e7ce6f274e564b7c84b1a39f4a9211396559715d70125",
+    "016-original-native.png": "7968a4d2f2a4c8279f07c40f50ce918ca4691379e48cb0b4901b3d6fcaa1fa2b",
+    "016-original-nearest8.png": "17d68191c85315e1759edf357920d2642f791ce6a5dd5cf1871899c2b0854d92"
+  },
+  "reference_limit": "Stored original references checked; commercial RESOURCE inputs are not reread.",
+  "frames": [
+    {
+      "frame": 16,
+      "source": "016-front-v1.png",
+      "source_sha256": "14dcda059e360c0f9726dc0c6be0e951c53cb4422848cd7c917252be0c5cfa1d",
+      "cap_raw": [
+        513.0,
+        26
+      ],
+      "runtime_canvas": [
+        64,
+        148
+      ],
+      "affine_forward": [
+        0.1,
+        0,
+        -16.300000000000004,
+        0,
+        0.1,
+        -2.35
+      ],
+      "alpha8_source_bounds": [
+        223,
+        25,
+        804,
+        1490
+      ],
+      "alpha8_centers_hd": [
+        6.049999999999997,
+        0.20000000000000018,
+        64.05000000000001,
+        146.60000000000002
+      ],
+      "source_centers_fit_runtime": false,
+      "filtered_alpha8_bounds_hd_exclusive": [
+        6,
+        0,
+        65,
+        147
+      ],
+      "padded_canvas": [
+        192,
+        276
+      ]
+    }
+  ],
+  "outputs_sha256": {
+    "padded/016.png": "fc13c37ab0908ba5b685fbae0040559fe541487c9c5c38cb7667c83f365bd76e"
+  },
+  "filter_limit": "Source-center fit does not promise absence of low-alpha filter fringe; padded output retains it.",
+  "recipe_sha256": "d4e17bf6e68b80e583ee3e6bd0d3d9cd513f34b21396b6a53a5b40e4fc72ebed",
+  "export_source_sha256": "3946f7b9a93351652c6d69c73635fb3c3df2dcbf0675f9c816be6bb1ad9845f0"
+}

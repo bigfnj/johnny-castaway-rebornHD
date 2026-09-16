@@ -1,0 +1,8 @@
+{
+  "status": "FAIL",
+  "stage": "first browser recheck after view-label change",
+  "observation": "Page.wait_for_function(window.nativeReviewState&&nativeReviewState.ready) timed out after30000ms before smoke completed.",
+  "cause": "Not established. No page state or request failure detail was retained in this first attempt.",
+  "previous_result": "The same view with its prior Walk close-up label passed the complete bounded browser checks; that evidence is preserved under pre-label-review.",
+  "next_action": "Repeat the required browser check with request/page failure diagnostics. No publication before a passing run."
+}

@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "html_sha256": "03dee9b661da7dd724bdd652656dc587851a038ad723261d9eb4e3b077152df9",
+  "checker_sha256": "f03d4e8fb44ea93184be24a6b965b7d6304c645eb037f0cf2b3d2d27cb962fac",
+  "smoke_passed": 1,
+  "regressions_after_smoke": [
+    "decreasing: every native display pixel/timestamp, all8 heading crops, exact call boundaries, pause/step/replay/Slow/repeat,1280 visibility",
+    "increasing: every native display pixel/timestamp, all8 heading crops, exact call boundaries, pause/step/replay/Slow/repeat,1280 visibility"
+  ],
+  "unique_native_images": 147,
+  "display_references_checked": 260,
+  "screenshots_sha256": {
+    "decreasing-heading2-frame000-1280.png": "0cd839e394215631e5e2b3e6172652fe84924f0ea24779dccc0c61e19e18dc93",
+    "decreasing-heading4-frame015-1280.png": "5116a77507afe098e4ed8cf1dc18fe43a36725b7448598332bb5885f5e8bb715",
+    "decreasing-heading6-frame000-1280.png": "4e5451477d2147e71d065e0ea11400e011036da47b235f4f1ab54229227a4e63",
+    "increasing-heading2-frame000-1280.png": "c145b2ca5cf0e136ed6e7b663ab0668bfcb58e8bc2a7fd8bf7616f21790e36bb",
+    "increasing-heading4-frame015-1280.png": "041ceb7ff8ec95a3b0405f105dfcda68d395f80ed236f439bacc20b11c1652ec",
+    "increasing-heading6-frame000-1280.png": "13c52dcea23794dfb2c8593fe66e58751dfa55420121acc478b2c42afcc887e4"
+  },
+  "browser_errors": [],
+  "request_failures": [],
+  "scope": "Bounded local complete-ring native pixel/timing/control validation. Root visual checkpoint required before publication."
+}

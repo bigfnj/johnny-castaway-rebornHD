@@ -1,0 +1,9 @@
+{
+  "status": "FAIL retained",
+  "stage": "candidate-v1 A1-to-A7 smoke comparison",
+  "native_capture_completed": true,
+  "failure": "turn capture: only016 candidate canvas",
+  "capture_helper_sha256": "29d93776c631afc12abaaa70942f2ccf632f3cc68f49fc92e5e8a32cc52ef785",
+  "cause": "Packer metadata used numeric17 although its ZIP correctly added016.",
+  "correction": "Numeric frame16 in both live helper and generator; passing rerun in candidate-v2."
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "Resolved packaging assumption; no artwork or renderer failure",
+  "initial_execution": {
+    "helper_sha256": "06f501398852c0eb31d12e7fe2f3a286248078907f89fddaf40adbc8e6e2f860",
+    "command": ["${PYTHON}", "-B", "art/cartoon/walk-pilot/front-arrival-v1/production-integration-v1/rebuild.py", "--repo", ".", "--baseline", "build/front-arrival/production-baseline-v1.zip", "--private-candidate", "build/front-arrival/waits-ring-v1/candidate-v1/scrantic_data.zip", "--output", "build/front-arrival/production-integration-v1", "--promote"],
+    "exit_code": 1,
+    "observed_output": [
+      "WITNESS standing-package 06f501398852c0eb31d12e7fe2f3a286248078907f89fddaf40adbc8e6e2f860",
+      "SMOKE PASS four annotated recipes reproduce reviewed PNG and padded bytes",
+      "SMOKE PASS art_pack validates32 approved PNGs",
+      "FAIL built archive: reviewed full-ZIP digest differs"
+    ],
+    "production_modified": false,
+    "complete_member_comparison_had_passed_before_failure": true,
+    "historical_helper_source_retained": false
+  },
+  "standard_builder_archive_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+  "reviewed_private_archive_sha256": "ee180c8b6aa1e07024132bae808fc4d2fcc136714dd12152468a3c9fc511aa2c",
+  "cause": "The standard builder sorts and normalizes Cartoon ZIP entries. The private native review appends017,016,000,015 using each HD entry's metadata. Their2583 named member payloads are equal.",
+  "resolution": "Retain the authoritative standard builder. Require every baseline and approved member identity; compare every private member when supplied. Record production and private archive hashes separately.",
+  "final_execution": "verification.json",
+  "evidence_limit": "Initial console output is transcribed from the recorded tool result; the initial helper revision was not retained. Final commands, logs, source witness and verification are preserved independently."
+}

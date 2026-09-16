@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen.imagegen",
+  "base_commit": "707a20b285fea695b404a02ce9552615561b121a",
+  "status": "Draft017 only; no new human acceptance or production promotion.",
+  "model_identifier": "not exposed by tool",
+  "generation_seed": "not exposed by tool",
+  "attempts": [
+    {
+      "id": "017-v1",
+      "call": "017-call-v1.json",
+      "call_sha256": "a8f5c3992a0a58d4dd41f8c3bc68b4f5c02a5b503d574da62309d4a9722f84b1",
+      "prompt_utf8_sha256": "e453eaf02c7d673c5772b1e6fd7c0cedb204fe463181a7aac3ecb9fe82b4f950",
+      "actual_reference_order": [
+        {
+          "path": "art/cartoon/walk-pilot/front-arrival-v1/reference/017-original-nearest8.png",
+          "sha256": "d3ac095f60c8bbd4ff33250641fbb27f51f938f816fdbff8d82450d8add5f42a"
+        },
+        {
+          "path": "art/cartoon/walk-pilot/front-arrival-v1/reference/024-approved-mirrored.png",
+          "sha256": "b4862f50a362d1eecbad542bb42345a6ffa28b656ce8b6d3cabccea4b41997f1"
+        },
+        {
+          "path": "art/cartoon/johnny-character-v5.png",
+          "sha256": "f52319502fc68ee76b22c74ab18bb6ab57b10d0d5edb54e68bcc2a0ef2686a27"
+        }
+      ],
+      "raw_output": "017-pose-v1.png",
+      "raw_sha256": "28918fa537d9e99d888f0387ca75f362ccbd1da004c3a59992aaa8a8b693033e",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-87cf823f-12a0-4db4-a0e0-d157c608b69d.png",
+      "cache_bytes_identical": true,
+      "disposition": "Technical revision needed: far foot reads lifted; approximately19.3HD projected skin-pixel gap versus6HD in original.",
+      "measurements": {
+        "canvas": [
+          1024,
+          1536
+        ],
+        "alpha_range": [
+          0,
+          254
+        ],
+        "bounds_exclusive_by_alpha_threshold": {
+          "1": [
+            65,
+            38,
+            1010,
+            1507
+          ],
+          "8": [
+            242,
+            40,
+            789,
+            1505
+          ],
+          "128": [
+            242,
+            41,
+            788,
+            1504
+          ]
+        },
+        "warm_foot_pixel_max_y_screen_left_right": [
+          1503,
+          1310
+        ],
+        "measurement_mask": "Separate x halves; y>=1150; alpha>=128; red>1.3*green and red>1.3*blue.",
+        "measurement_limit": "Indicative colored pixel extents, not anatomical ground contacts; no pose correction is performed by this analysis."
+      }
+    },
+    {
+      "id": "017-v2",
+      "call": "017-call-v2.json",
+      "call_sha256": "8877ecb2536b590a80ffc5ff6e1556e0e3bb4e4733bf98bc48bd2b372637ca69",
+      "prompt_utf8_sha256": "9da5b1594de6a872f4e56563aafd966e6e67bdd01bf3590e5aac8a5f209e6d60",
+      "actual_reference_order": [
+        {
+          "path": "art/cartoon/walk-pilot/front-arrival-v1/017-pose-v1.png",
+          "sha256": "28918fa537d9e99d888f0387ca75f362ccbd1da004c3a59992aaa8a8b693033e"
+        },
+        {
+          "path": "art/cartoon/walk-pilot/front-arrival-v1/reference/017-original-nearest8.png",
+          "sha256": "d3ac095f60c8bbd4ff33250641fbb27f51f938f816fdbff8d82450d8add5f42a"
+        }
+      ],
+      "raw_output": "017-foot-depth-v2.png",
+      "raw_sha256": "61182dcb76b2326df12ee5901a13d69f712ab7da2f362197518892c94d4b3475",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-3bfcffd4-db4e-40ee-95e5-e6ad1999160b.png",
+      "cache_bytes_identical": true,
+      "disposition": "Technical revision needed: downward far-foot change is insufficient.",
+      "measurements": {
+        "canvas": [
+          1024,
+          1536
+        ],
+        "alpha_range": [
+          0,
+          254
+        ],
+        "bounds_exclusive_by_alpha_threshold": {
+          "1": [
+            45,
+            38,
+            962,
+            1507
+          ],
+          "8": [
+            242,
+            40,
+            779,
+            1505
+          ],
+          "128": [
+            242,
+            40,
+            778,
+            1504
+          ]
+        },
+        "warm_foot_pixel_max_y_screen_left_right": [
+          1503,
+          1343
+        ],
+        "measurement_mask": "Separate x halves; y>=1150; alpha>=128; red>1.3*green and red>1.3*blue.",
+        "measurement_limit": "Indicative colored pixel extents, not anatomical ground contacts; no pose correction is performed by this analysis."
+      }
+    },
+    {
+      "id": "017-v3",
+      "call": "017-call-v3.json",
+      "call_sha256": "a726385424c4655890e14e8ba637a7023809e3be5f33d2fc70bb26cfd15c6463",
+      "prompt_utf8_sha256": "63286d360a56595594e154ed3f8aec139141097386ead3eedabeda032b98a5ed",
+      "actual_reference_order": [
+        {
+          "path": "art/cartoon/walk-pilot/front-arrival-v1/017-foot-depth-v2.png",
+          "sha256": "61182dcb76b2326df12ee5901a13d69f712ab7da2f362197518892c94d4b3475"
+        }
+      ],
+      "raw_output": "017-foot-depth-v3.png",
+      "raw_sha256": "d1fab951de823fc5612860a5fac48bd586a533177a3e5e26d2605f41d4272c1d",
+      "tool_output_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-27001c8c-4cca-4866-8673-a1666c19a992.png",
+      "cache_bytes_identical": true,
+      "disposition": "Selected technical candidate; human pose and native-motion review pending.",
+      "measurements": {
+        "canvas": [
+          1024,
+          1536
+        ],
+        "alpha_range": [
+          0,
+          254
+        ],
+        "bounds_exclusive_by_alpha_threshold": {
+          "1": [
+            239,
+            37,
+            962,
+            1507
+          ],
+          "8": [
+            241,
+            39,
+            795,
+            1505
+          ],
+          "128": [
+            242,
+            40,
+            794,
+            1504
+          ]
+        },
+        "warm_foot_pixel_max_y_screen_left_right": [
+          1503,
+          1419
+        ],
+        "measurement_mask": "Separate x halves; y>=1150; alpha>=128; red>1.3*green and red>1.3*blue.",
+        "measurement_limit": "Indicative colored pixel extents, not anatomical ground contacts; no pose correction is performed by this analysis."
+      }
+    }
+  ],
+  "selected_for_review": "017-foot-depth-v3.png",
+  "reference_rule": "Supplied-original017 defines geometry; approved current Calm focus024 and canonical character sheet define appearance. Stored017 faces screen-right and runtime E-to-A uses its mirror."
+}
