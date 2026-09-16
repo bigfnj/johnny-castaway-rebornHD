@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Profile walk: first pose check</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#15232d;color:#eef4f6;font:16px system-ui,sans-serif}main{max-width:1140px;margin:auto;padding:24px}h1{font-size:26px;margin:0 0 12px}p{line-height:1.5;margin:10px 0;color:#c9d6dd}.controls{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:20px 0}button,select{font:inherit;padding:9px 14px;border:1px solid #7896a8;border-radius:6px;background:#213b4a;color:white}button[aria-pressed=true]{background:#31775e}.panels{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{border:1px solid #506776;border-radius:8px;overflow:hidden;background:#263742}h2{font-size:17px;padding:12px 16px;margin:0}canvas{display:block;width:100%;height:auto}.note{padding:10px 16px;margin:0;min-height:62px}.status{color:#a5e0c0}.identity{display:flex;gap:20px;align-items:center;margin-top:22px;padding:16px;background:#223641;border-radius:8px}.identity img{width:80px;height:152px;image-rendering:pixelated;background:#c3cdd1}.small{font-size:14px}@media(max-width:700px){main{padding:12px}.panels{grid-template-columns:1fr}.identity{align-items:flex-start}}
+</style>
+<main>
+<h1>Profile walk: first pose check</h1>
+<p id="instruction">Check the lifted foot and supporting leg in003, then the heel and toe angles in001. These are two still poses; the complete walk comes after this check.</p>
+<div class="controls">
+<label>Pose <select id="pose"><option value="003">003 · tucked foot</option><option value="001">001 · wide stride</option></select></label>
+<button id="mirror" aria-pressed="false">Face left</button>
+<button id="feet" aria-pressed="false">Enlarge legs</button>
+</div>
+<div class="panels"><section class="panel"><h2>Original pose</h2><canvas id="original" width="512" height="640"></canvas><p class="note small">Original decoded pixels. Unusual colors are from the diagnostic palette; gray ground marks are shadows.</p></section>
+<section class="panel"><h2 id="draft-title">Cartoon draft ·003 v1</h2><canvas id="candidate" width="512" height="640"></canvas><p class="note small" id="pose-note"></p></section></div>
+<p class="status" id="status" role="status">Loading both references...</p>
+<div class="identity"><img id="identity" alt="Previously approved standing side view000"><div><strong>Approved standing000</strong><p class="small">Appearance reference for the cap, beard, expression and shorts. Both new poses use the same drawing scale. Canvas fit has passed; pose and gait acceptance are still pending.</p></div></div>
+</main>
+<script id="review-data" type="application/json">__REVIEW_DATA__</script>
+<script>
+const data=JSON.parse(document.getElementById('review-data').textContent);
+const state={frame:'003',mirror:false,feet:false,ready:false};
+const images={};
+async function load(name,url){const img=new Image();img.src=url;await img.decode();images[name]=img;}
+function draw(which){const canvas=document.getElementById(which),ctx=canvas.getContext('2d');const entry=data.frames[state.frame];const source=images[state.frame+'-'+which];const zoom=state.feet?5:4;const w=entry.canvas[0]*zoom;const h=entry.canvas[1]*zoom;const x=(canvas.width-w)/2;const y=state.feet?-80*zoom+38:16;ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle='#bcc8ce';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.strokeStyle='#647b89';ctx.strokeRect(x-.5,y-.5,w+1,h+1);ctx.save();ctx.imageSmoothingEnabled=false;if(state.mirror){ctx.translate(x+w,y);ctx.scale(-1,1);ctx.drawImage(source,0,0,w,h);}else ctx.drawImage(source,x,y,w,h);ctx.restore();}
+function render(){if(!state.ready)return;draw('original');draw('candidate');document.getElementById('draft-title').textContent='Cartoon draft ·'+state.frame+' '+data.frames[state.frame].version;document.getElementById('pose-note').textContent=state.frame==='003'?'Look for one flat supporting foot and a distinct tucked foot behind the calf.':'Look for the forward heel down/toes up, with the trailing heel lifted. The forward foot was shortened to fit the canvas.';document.getElementById('status').textContent='Pose '+state.frame+' | '+(state.mirror?'facing left':'facing right')+' | '+(state.feet?'leg detail':'whole body')+' | static pose review only';document.getElementById('mirror').setAttribute('aria-pressed',String(state.mirror));document.getElementById('mirror').textContent=state.mirror?'Face right':'Face left';document.getElementById('feet').setAttribute('aria-pressed',String(state.feet));document.getElementById('feet').textContent=state.feet?'Show whole body':'Enlarge legs';}
+document.getElementById('pose').addEventListener('change',e=>{state.frame=e.target.value;render();});
+document.getElementById('mirror').addEventListener('click',()=>{state.mirror=!state.mirror;render();});
+document.getElementById('feet').addEventListener('click',()=>{state.feet=!state.feet;render();});
+Promise.all(Object.entries(data.frames).flatMap(([frame,v])=>['original','candidate'].map(which=>load(frame+'-'+which,v[which])))).then(()=>{document.getElementById('identity').src=data.identity;state.ready=true;render();window.reviewReady=true;}).catch(error=>{document.getElementById('status').textContent='Review failed to load: '+error.message;console.error(error);});
+</script></html>

@@ -1,8 +1,9 @@
 # Cartoon art production
 
-The [production plan](cartoon-production-plan.md) begins the next bounded batch:
-a complete [slot catalog](knowledge-base/cartoon-production-catalog.md), followed
-by additional walking directions with separate key, motion and scene reviews.
+The [production plan](cartoon-production-plan.md) tracks the completed
+[slot catalog](knowledge-base/cartoon-production-catalog.md) and successive
+walking families. The current [profile-walk batch](cartoon-profile-walk-plan.md)
+covers 001-008 with separate pose, motion and scene reviews.
 
 Read [image authoring lessons](art-style-learnings.md) before starting another
 style or animation family. It preserves the Cartoon pilot's generation,

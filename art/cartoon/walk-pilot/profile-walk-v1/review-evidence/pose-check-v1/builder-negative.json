@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "status": "FIRED",
+      "mutation": "replace build candidate003 with production standing000",
+      "witness": "WITNESS build_review.py SHA256=8a653b549e028d253cad100185270c89670992ebfd9d7d7797ba3e5fcb7ab9ee",
+      "failure": "candidate-png:003",
+      "returncode": 1,
+      "input_restored": true,
+      "prior_review_preserved": true
+    },
+    {
+      "status": "FIRED",
+      "mutation": "replace build candidate003 recipe with empty object",
+      "witness": "WITNESS build_review.py SHA256=8a653b549e028d253cad100185270c89670992ebfd9d7d7797ba3e5fcb7ab9ee",
+      "failure": "candidate-recipe:003",
+      "returncode": 1,
+      "input_restored": true,
+      "prior_review_preserved": true
+    }
+  ]
+}

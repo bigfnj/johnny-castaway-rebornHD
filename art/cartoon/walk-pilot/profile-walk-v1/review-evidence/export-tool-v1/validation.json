@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "scope": "Profile exporter and draft candidates only; no human acceptance, native motion or production integration is assigned.",
+  "python": "3.11.15",
+  "pillow": "12.3.0",
+  "base_commit": "00f1ba7148043079321c95e22d4f527b2e3aa575",
+  "cases": [
+    {
+      "candidate": "003-v1",
+      "frame": 3,
+      "smoke_passed": 3,
+      "regression_passed": 24,
+      "executed_mutations": 19,
+      "all_mutants_one_named_failure": true,
+      "source": "003-profile-v1.png",
+      "source_sha256": "e162155729fd70f649d11da873e66838094dc89fd1f59fb786a72f833632bdea",
+      "source_centers_fit_runtime": true,
+      "runtime_png_sha256": "5229479f15fa81c6bf3702793f3579d6fd5a39bcad24106113310b0d3e6d4b3d",
+      "padded_png_sha256": "3c8dc4172e569ec4a988a6d439ca6624986417f105581143c149971fc2b709e9",
+      "recipe_sha256": "1f3fc54cdab8cafc6fc3890041b081b0d3cd369db77d8408e0adf4d5de726460"
+    },
+    {
+      "candidate": "001-v2",
+      "frame": 1,
+      "smoke_passed": 3,
+      "regression_passed": 24,
+      "executed_mutations": 19,
+      "all_mutants_one_named_failure": true,
+      "source": "001-profile-v2.png",
+      "source_sha256": "ad08c3484d41f200efac23f788d6744742d21efb0108950fa69c604e33b4cf80",
+      "source_centers_fit_runtime": true,
+      "runtime_png_sha256": "e6af8af8165812e4c010e738e1c5a8f9b9d37cb5d1622acb3a7ab0bb961b9af2",
+      "padded_png_sha256": "79bc4715b96aa5d1dfbf326dbd48a74317852b6e9f945e0458146b0a47303eba",
+      "recipe_sha256": "896acfcca0285f9cb3108a3a1de6499b5f3e36001984af86ba63412d1f18861d"
+    }
+  ],
+  "rejected_001_v1": {
+    "runtime_export_exit": 1,
+    "failure": "runtime-overhang:001",
+    "right_overhang_hd": 2.75,
+    "output_absent_verified": true,
+    "record": "review-evidence/export-tool-v1/001-rejected-refusal.json"
+  },
+  "all_eight_configurations_exercised": true,
+  "all_copied_reports_and_recipes_byte_identical": true,
+  "files_sha256": {
+    "export.py": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2",
+    "test_export.py": "c01330d60a155fb5a880b463360037b2513a549bdeb8c3aa9b19c11669ed6db8",
+    "EXPORT.md": "57078bbb99f380984156fc1f3a9ece35140d4ee9f144acbb20b242c5d195c4bb",
+    "reference/source-index.json": "7173a1cbe9412e65f79e574589b3d83e05af506d55082cf465f6d813bc99c460",
+    "review-evidence/export-tool-v1/001-rejected-refusal.json": "622bcf4d7bd74bc132b6ff6a367ba13b36d5943d618d901b21c55aed8e2109f1",
+    "exports/003-v1/recipe.json": "1f3fc54cdab8cafc6fc3890041b081b0d3cd369db77d8408e0adf4d5de726460",
+    "exports/003-v1/export-report.json": "a6857fe2872006eede2076b9edb54c7a3975aff99fd96e1d8da3e8b45de55674",
+    "exports/001-v2/recipe.json": "896acfcca0285f9cb3108a3a1de6499b5f3e36001984af86ba63412d1f18861d",
+    "exports/001-v2/export-report.json": "234474a1315da93da73d9a6231bf40e6b47fe3c2a0402a5ba5d221038209d1d0",
+    "review-evidence/export-tool-v1/003-recipe.json": "1f3fc54cdab8cafc6fc3890041b081b0d3cd369db77d8408e0adf4d5de726460",
+    "review-evidence/export-tool-v1/003-export.json": "a6857fe2872006eede2076b9edb54c7a3975aff99fd96e1d8da3e8b45de55674",
+    "review-evidence/export-tool-v1/003-smoke.json": "01ecb1171b0f4ff577619bcae87fe9fca1bc1f24e6960dd7a67e3323c41bacf0",
+    "review-evidence/export-tool-v1/003-regression.json": "7f9d199bb5afb9f81463bce6982233746e797686d6d406758e69380b8311cee1",
+    "review-evidence/export-tool-v1/001-v2-smoke.json": "09d623c1f075dfd5ab57d8429c1e4aabd8fc32c00ea48de0d88da4f9707e5199",
+    "review-evidence/export-tool-v1/001-v2-regression.json": "8e68bd06aaacb15a0571d650f8c7c234954b5b82145f2968c2ff7e0867127dc7",
+    "review-evidence/export-tool-v1/001-rejected-recipe.json": "a849e809be89e080a1637744b37142c3e2b9c870b6b1a34b83dc7f2bf2fd9c3d",
+    "review-evidence/export-tool-v1/001-rejected-export.json": "76ca19f5923bd840453d9d78db410d611dd466f55771c10fcface4ab56eadda0"
+  },
+  "frozen_legacy_files_unchanged": {
+    "art/cartoon/walk-pilot/front-arrival-v1/export.py": "56fc9e13ce266203d69c13e48d1187b60228681d2c46f4ddba8b3b9734f942d2",
+    "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/export.py": "542c0527ea0f997821b10304fdfa7d85dcfbfe894297d620858e60cd9a80fb43",
+    "art/cartoon/walk-pilot/front-arrival-v1/remaining-waits-v1/test_export.py": "4b01a210a16567308c5ba6202cb77eaa4904e2a9d112de71247e775c665bde8e"
+  },
+  "production_archive_unchanged_sha256": "096a12695b4279ad9bf57537b5d6f9b18d7dab2666298ca8a4cb3fd72e0ba3d6",
+  "limits": [
+    "No preview/browser/native check is included here.",
+    "Source-center fit is not a promise that all low-alpha filter fringe fits.",
+    "Eight configurations are exercised with synthetic pixels; only 001-v2 and 003-v1 are generated-art candidates.",
+    "No production PNG, ledger, metadata catalog or prior approval record is changed by this work."
+  ]
+}

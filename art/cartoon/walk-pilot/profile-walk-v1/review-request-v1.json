@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "pending-human-review",
+  "scope": "Static original-versus-draft pose review for003-v1 and001-v2. Does not approve motion, native scene behavior, other six profile poses or production integration.",
+  "question": "In the profile-walk comparison, do 003's tucked foot and 001's wide stride look right? Please check both poses before I generate the remaining six steps.",
+  "review_url": "http://127.0.0.1:8932/profile-walk-key-v1/review.html",
+  "review_html": "review-evidence/pose-check-v1/review.html",
+  "review_html_sha256": "3c770a5f9ed3aeba21d4f0338cdad53c603b94d0105f40cde9619393617b72ea",
+  "selected": [
+    {
+      "frame": 3,
+      "raw": "003-profile-v1.png",
+      "raw_sha256": "e162155729fd70f649d11da873e66838094dc89fd1f59fb786a72f833632bdea",
+      "runtime_png_sha256": "5229479f15fa81c6bf3702793f3579d6fd5a39bcad24106113310b0d3e6d4b3d"
+    },
+    {
+      "frame": 1,
+      "raw": "001-profile-v2.png",
+      "raw_sha256": "ad08c3484d41f200efac23f788d6744742d21efb0108950fa69c604e33b4cf80",
+      "runtime_png_sha256": "e6af8af8165812e4c010e738e1c5a8f9b9d37cb5d1622acb3a7ab0bb961b9af2"
+    }
+  ],
+  "next_if_approved": "Generate remaining002/004/005/006/007/008 using original geometry; review complete native motion and transitions before promoting the eight-frame family."
+}
