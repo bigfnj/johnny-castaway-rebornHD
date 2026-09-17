@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "resource": "TANKER.BMP",
+  "frame": 10,
+  "version": 1,
+  "status": "appearance_review_draft_not_runtime_accepted",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "style-transfer",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/010-generated-v1.png",
+    "sha256": "5325ece6ec04fdef9cf07f978af685ad7ff433a681780c65d749cb9a1ddc71c0",
+    "canvas": [
+      2092,
+      752
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      236,
+      56,
+      1924,
+      737
+    ],
+    "alpha8_bounds_exclusive": [
+      279,
+      58,
+      1922,
+      646
+    ],
+    "alpha_nonzero_pixels": 539700,
+    "alpha_opaque_pixels": 654,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "cache_source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-7b1e-7210-9921-90642bf1b5ed\\exec-262c9894-9dee-4ff2-9a8a-6a4295f52a34.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/010-v1-request.json",
+    "sha256": "1bfa9263c4cde3437e3b4e188427363ce735058f74a25a0ea654817f9dd79f10"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/010.png",
+      "sha256": "2d8077ced2f5ed80f557a38815870d889e5279a0bbf79961e022b2c95ead6161"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/007-generated-v1.png",
+      "sha256": "32559cec7256e2138a33908fa3f61d3ce8bc5d088693e61d471d87a2e4c5ffa0"
+    }
+  ],
+  "exact_original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/010.png",
+    "sha256": "c7fcbb4afce4db3c196ff5ddf35bdefbc3dd3044dae8c929e60110254122651d"
+  },
+  "reference_source": {
+    "path": "art/cartoon/tanker-v1/reference/source.json",
+    "sha256": "1e375f4f506da889b01c90b3cbb5ba866e022fdd61495399dbbde0c2ec97920b"
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Bow-left diagonal profile remains more side-on than original three-quarter geometry; perspective limitation flagged to root.",
+    "black_preview_caveat": "Transparency is measured from alpha. Hidden RGB at alpha0 is not treated as visible haze."
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "deferred": [
+    "Human appearance approval",
+    "Exact original geometry and final registration",
+    "Native motion, crop and fit review",
+    "Bulk integration tests"
+  ]
+}

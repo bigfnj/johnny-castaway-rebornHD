@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "draft_batch_appearance_review",
+  "resource": "TANKER.BMP",
+  "frame": "003",
+  "tool": "built-in image_gen",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/003-generated-v1.png",
+    "sha256": "9528a0526387a696ae75ac644e042c1e7f117c54bb65748040aaace21fc0a359",
+    "canvas": [
+      1916,
+      821
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      67,
+      142,
+      1878,
+      781
+    ],
+    "meaningful_bounds_alpha8": [
+      77,
+      144,
+      1833,
+      746
+    ]
+  },
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/003-v1-request.json",
+    "sha256": "ceb7241f556447c62db461b85c034a0e560df58775170ee3379ef93866a03100"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/003.png",
+      "sha256": "0bb453d559d04a99a562758438da0a94031b83cf233655b6699cbef95400b212"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/000-generated-v1.png",
+      "sha256": "8247cbb70f76393c69f52dfcfd0a4399f58c11cca34abe9c0823a59845e64dd3"
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/003.png",
+    "sha256": "c6a125305a647b8975067115f3f057c71bf0bede2cb298b445dafd8ec0bc5084"
+  },
+  "approval": null,
+  "production_package_changed": false,
+  "image_processing": "Exact copy of returned PNG; no resampling, recoloring or alpha changes.",
+  "deferred_work": [
+    "Original-canvas uniform fitting and registration",
+    "Yaw and identity continuity in native motion",
+    "Bulk smoke and regressions"
+  ]
+}

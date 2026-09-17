@@ -82,8 +82,8 @@ Johnny drawings retain those scoped approvals.
 Other placements and story uses of the standing art remain outside its reviewed
 arrival/direction-ring contexts. Seasonal decorations and the high/low-tide
 environment groups and ordinary moving clouds are now delivered. NIGHT and the
-remaining ordinary daytime oceans have [visual approval and saved exports](../art/cartoon/environment-v1/README.md), pending bulk integration. Four [coconut orientations](../art/cartoon/coconuts-v1/README.md) now have scoped appearance approval; their shadow drafts and runtime fit remain pending. The user requested at least24 drawings per review, so the next [combined review](../art/cartoon/props-batch-v1/README.md) covers one boat, five raft construction pieces, fifteen sandcastle stages/effects and three idea symbols. Other characters, action scenes and code-drawn
-effects remain later work. Existing engine maintenance findings stay
+remaining ordinary daytime oceans have [visual approval and saved exports](../art/cartoon/environment-v1/README.md), pending bulk integration. Four [coconut orientations](../art/cartoon/coconuts-v1/README.md) have scoped appearance approval; their shadow drafts and runtime fit remain pending. The user approved the entire [24-drawing prop batch](../art/cartoon/props-batch-v1/README.md) with "all approved, nice job, please continue": one boat, five raft construction pieces, fifteen sandcastle stages/effects and three idea symbols. These selected drawings await bulk sizing and integration, separately from the63 production assets. The next batch covers all37 TANKER, GJPROW and SHIPS slots in one review. Other characters, action scenes and code-drawn
+effects remain later work. The [ship batch](../art/cartoon/ships-batch-v1/README.md) contains33 new drawings and four one-pixel original slots retained unchanged after direct inspection. Campfire resource FIRE1000-027 is queued as the next28-drawing group. Existing engine maintenance findings stay
 in [BACKLOG.md](../BACKLOG.md); address a reproduced blocker when its affected
 scene enters review.
 

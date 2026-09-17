@@ -1,0 +1,719 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-17",
+  "accepted": true,
+  "approval_kind": "scoped visual artwork approval",
+  "production_acceptance": false,
+  "human_question": "The 24-drawing review is open at http://127.0.0.1:8941/props-batch-v1/review.html. Does this batch's artwork look right? You can approve the group or list exceptions by resource and frame number. Final sizing and motion checks remain part of bulk integration.",
+  "human_response": "all approved, nice job, please continue",
+  "reviewed_url": "http://127.0.0.1:8941/props-batch-v1/review.html",
+  "scope": "Appearance approval for exactly the 24 selected raw drawings displayed in the bound review. This excludes unselected earlier or alternative outputs, Johnny-containing LITEBULB002/003 and placeholder MRAFT005/006. Final runtime sizing, registration, motion and character interaction were explicitly deferred.",
+  "page": {
+    "path": "art/cartoon/props-batch-v1/review.html",
+    "sha256": "2694080a2c64a0ace7673d142136e7918fc32cf4d135e542001e8fe98acd9768"
+  },
+  "reviewed_selection": {
+    "path": "art/cartoon/props-batch-v1/acceptance/reviewed-selection-v1.json",
+    "sha256": "084c2d648ac72c736f90145a70d484b6c672fb103430f3ad25dcaae391ca2fa1"
+  },
+  "asset_count": 24,
+  "assets": [
+    {
+      "group": "boat-v1",
+      "frame": "000",
+      "selected_raw": {
+        "path": "art/cartoon/boat-v1/generation/000-generated-v1.png",
+        "sha256": "4c2760df85897ac806eae81d45e79e2a5c799d3e1239614dad59eb573c1293b6",
+        "canvas": [
+          1952,
+          806
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/boat-v1/reference/original-000.png",
+        "sha256": "8d133fda6ca7bbfc9286238cb29bf6022ec7c320ec0a39280e1595c5379c8f6b",
+        "canvas": [
+          248,
+          61
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/boat-v1/generation/000-v1-request.json",
+          "sha256": "1d0d902559a70ba2882a88564a9296a5e0ac8e5edf9264ec6f3db296aff68b2c"
+        }
+      ]
+    },
+    {
+      "group": "raft-v1",
+      "frame": "000",
+      "selected_raw": {
+        "path": "art/cartoon/raft-v1/generation/000-generated-v1.png",
+        "sha256": "da718eeb4ea9a2952f2878a0dcb4cd5d8c66a43f6b01b109db477c756b936e8c",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/raft-v1/reference/original-000.png",
+        "sha256": "64bd6e65f7257835eb3873e9105abc8d5e420e6cd789ff97fdb915b5e0f1515f",
+        "canvas": [
+          72,
+          39
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/raft-v1/generation/000-v1-request.json",
+          "sha256": "dd63498b5c2c1cc0e2dfc9f693857fbcc58b611ae468a18fc0266e51d96d3e9c"
+        }
+      ]
+    },
+    {
+      "group": "raft-v1",
+      "frame": "001",
+      "selected_raw": {
+        "path": "art/cartoon/raft-v1/generation/001-generated-v1.png",
+        "sha256": "89700577f85fd1fe16dbf47746f44632202d5f59385dfee3bcb383950b11810c",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/raft-v1/reference/original-001.png",
+        "sha256": "54f5a19e3296630813e7605b12a1b37198d98d0da084229fcfc56f37dcb6c09f",
+        "canvas": [
+          88,
+          39
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/raft-v1/generation/001-v1-request.json",
+          "sha256": "05868731a36a01863eb74d56ee3e4bd515df59bb7da272f35221166393d31f3b"
+        }
+      ]
+    },
+    {
+      "group": "raft-v1",
+      "frame": "002",
+      "selected_raw": {
+        "path": "art/cartoon/raft-v1/generation/002-generated-v2.png",
+        "sha256": "d85206bca212aef4666300814f721771c9d60ae011b2746945f544772dc9ea37",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/raft-v1/reference/original-002.png",
+        "sha256": "e6029e8d236c679a6ed985601c37d495fbfad80f62b374cd1bd7108fc376b923",
+        "canvas": [
+          128,
+          39
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/raft-v1/generation/002-v2-request.json",
+          "sha256": "da52b42584c10eabb1e9cb7e66628d31fcc8bde277110d29ed640effda7a5d31"
+        }
+      ]
+    },
+    {
+      "group": "raft-v1",
+      "frame": "003",
+      "selected_raw": {
+        "path": "art/cartoon/raft-v1/generation/003-generated-v1.png",
+        "sha256": "89400f8f7ec4a625a60d30e17191686af82a0cb5b2e57b622f2bdf6ff4762b5a",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/raft-v1/reference/original-003.png",
+        "sha256": "3fac248695bf272405abd929113910e7785034f296e3cb9892056ac3791a6b16",
+        "canvas": [
+          128,
+          39
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/raft-v1/generation/003-v1-request.json",
+          "sha256": "f0dc825a204f3c377bc8b91194306777263d595ae747e09db11567a778eccd99"
+        }
+      ]
+    },
+    {
+      "group": "raft-v1",
+      "frame": "004",
+      "selected_raw": {
+        "path": "art/cartoon/raft-v1/generation/004-generated-v1.png",
+        "sha256": "320ac29fcdaed65ef50278b033bb72678e643f512966b6446f1526e5eb6f5502",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/raft-v1/reference/original-004.png",
+        "sha256": "0b1a40a4e57fe39d867a0d4338711c69c885e9c466bb0778e8b0fc7d863372c7",
+        "canvas": [
+          128,
+          39
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/raft-v1/generation/004-v1-request.json",
+          "sha256": "f6e273560f0805da18932654c7c476ccf09b31bd52aafa299382d26348ad4a14"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "000",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/000-generated-v1.png",
+        "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef",
+        "canvas": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/000.png",
+        "sha256": "acbabcb5b597ba01bd6211783e8ec4fe90d4c61f3843228cc0a2a5b497ceb2b7",
+        "canvas": [
+          72,
+          57
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/000-v1-request.json",
+          "sha256": "ae0cca615da9100d5e68a7fc699d1c0e4a87bf6934a805db20c85b610e117380"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "001",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/001-generated-v1.png",
+        "sha256": "864761e31779f0765888f3943eb6738a1ce5543698eed38d2f4f040148cea4cb",
+        "canvas": [
+          1503,
+          1047
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/001.png",
+        "sha256": "40c145e40ae22235e96142c910c882b5e0e27ce1ce68f7f2ae907abe15e8cb05",
+        "canvas": [
+          72,
+          48
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/001-v1-request.json",
+          "sha256": "9dd0e55c5927ca9e55a0e4b8c515a35ea98e8cdb5363635f0614e818f92290f1"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "002",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/002-generated-v1.png",
+        "sha256": "f2b180879838cf3a11fabd455be997414e639ebb2d9569db715884388864ed12",
+        "canvas": [
+          1503,
+          1047
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/002.png",
+        "sha256": "b9bc8793772267c8b290eebdf76c7e84c526c1be4ffe335b2312f3c40031ccb3",
+        "canvas": [
+          72,
+          48
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/002-v1-request.json",
+          "sha256": "ac24d7a33e7400ed8f17b796437f9fa87849f226faa3a15b4932d40da059358c"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "003",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/003-generated-v1.png",
+        "sha256": "cf30c27de5a58c7196bebbd4b87a1b6cee595b05f2bc8f6d42de64a0195a048b",
+        "canvas": [
+          1647,
+          955
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/003.png",
+        "sha256": "4ad980c73d64341c20240c11e80021e6b56ef64f7c0a647dd7bd78ef203a167f",
+        "canvas": [
+          72,
+          40
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/003-v1-request.json",
+          "sha256": "22cc1b3b4264b501395dc4eb9215f12cfb50231d90ab0ad4d936a83d7a4075ee"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "004",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/004-generated-v1.png",
+        "sha256": "b3dbe3ac51e18cad46b34995b947142aa84a970738e1306d716cb087777ed26f",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/004.png",
+        "sha256": "69fc047232f31fbcbfd77305c75138b92f44e82474aacdee1580182c89c2b914",
+        "canvas": [
+          64,
+          39
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/004-v1-request.json",
+          "sha256": "ce9d16c0b57da5cf8f2efca1119b85db55e67e0d1c036f222deb4ecaa30c61e0"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "005",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/005-generated-v1.png",
+        "sha256": "b71718dee1fe2df4a90e3fb9e746da73db916084318a57ea92f06e82a4f1d207",
+        "canvas": [
+          1428,
+          1101
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/005.png",
+        "sha256": "4496363c98818bc523e4c3d8e2da4a8c87817aad04f687e0013830c694d8f6e4",
+        "canvas": [
+          48,
+          37
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/005-v1-request.json",
+          "sha256": "51f4adba2d96776e89a74b384cd584c5ce5195045b7423c2d7dd4d58864c15a8"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "006",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/006-generated-v1.png",
+        "sha256": "84fbe55e08ffa14ccbcb825fa57eb244a4675278a4bf14a9e07aaac8862b02ef",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/006.png",
+        "sha256": "4430eafe7c4c9eba21ad1f084836242af9336eeff930d060a1e0a806cbc023be",
+        "canvas": [
+          120,
+          40
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/006-v1-request.json",
+          "sha256": "5a27f2b581bba62712ac968baf01b60a9e6c064e3d574b709380cef4ae686389"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "007",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/007-generated-v1.png",
+        "sha256": "3c8e38925e6ab5bf9769f4cdeed993c75bfbbb2483281982f7f477cdca27d4f0",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/007.png",
+        "sha256": "9c0318b8b0afa0827cc9cd8d109433d0b730486e5202e2525f81bae2c60b07a0",
+        "canvas": [
+          104,
+          47
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/007-v1-request.json",
+          "sha256": "b9f4bd51c1e8ce4a617f628ef8883170d385a75cd401637a6665bf082ca334de"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "008",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/008-generated-v1.png",
+        "sha256": "03b54d7f8b9faa540e16793e700d51302975dd079844908297ed0a0cf64be05f",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/008.png",
+        "sha256": "278eb5b3dd643582e01813d7c29790462d951a64dbb19dee660a14269133cbb5",
+        "canvas": [
+          176,
+          105
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/008-v1-request.json",
+          "sha256": "328c60330396d415cb33fe6eb14b2a5c918f3829233b6081c6393362e2a5184c"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "009",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/009-generated-v2.png",
+        "sha256": "0d8ab7b336bb418518d94f32c07e00614657b8e8ff320f5c21f66a09f442775d",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/009.png",
+        "sha256": "70311cddf307d13a1efc53bb0a41383ad5c7eac22124504dcf2de66449507662",
+        "canvas": [
+          128,
+          95
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/009-v2-request.json",
+          "sha256": "176549d56778bd0b6e7bf8f692df6b9bd420657c0c57eb5480fd54677899074f"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "010",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/010-generated-v2.png",
+        "sha256": "4f95e1374d5640f784430f2d1d8ec739aab2de8bbfdbf2eaacde4778b49b3793",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/010.png",
+        "sha256": "09289254b772b7a68d32b1a6a6b577c0e0557913d2b672dcce02170c585d9a8d",
+        "canvas": [
+          80,
+          48
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/010-v2-request.json",
+          "sha256": "a1838dad9bf213e41f0e8b709b236091acfb673d22ac718601119f183587d581"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "011",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/011-generated-v1.png",
+        "sha256": "26740d4bec75f605d3f7b3b006145f4b11535a316ed1d4e020f351a6f7fb54f3",
+        "canvas": [
+          1742,
+          903
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/011.png",
+        "sha256": "31a99a3bdadfa7a476a074130ac7bfecbed4b864aabb73311d0c8797423afc1f",
+        "canvas": [
+          56,
+          29
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/011-request-v1.json",
+          "sha256": "2cfe9a7f829049742344548d20b25e8392361d2155c0d6111a3e4bb2f80789aa"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "012",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/012-generated-v1.png",
+        "sha256": "df9db25c1b1858190582e0712ad6d1cc70c9e66ad74cfae813f8b6590a122110",
+        "canvas": [
+          1897,
+          829
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/012.png",
+        "sha256": "59d9a1bde923aa134310bcd08b4a5628a62978be8ab9b28e0549bf0908b2be20",
+        "canvas": [
+          48,
+          21
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/012-request-v1.json",
+          "sha256": "fc11aefd347a7d3baa73ff84e6b920c1a0197100645640e1e201a89ee0efcf60"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "013",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/013-generated-v1.png",
+        "sha256": "5461674b21f1d00479107810d27db4e74d7d6f9281295d2e66c3f3f6a8c8be5f",
+        "canvas": [
+          2135,
+          736
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/013.png",
+        "sha256": "4ada2c8bea460d7fc10bcc23c2c490181761b9bac5616bbbdad561ee67b27a01",
+        "canvas": [
+          40,
+          11
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/013-request-v1.json",
+          "sha256": "6be8aa6c20faacdbf82b215a4d3bbf131d393a94f9671a0a00bf70188527b96e"
+        }
+      ]
+    },
+    {
+      "group": "sandcastle-v1",
+      "frame": "014",
+      "selected_raw": {
+        "path": "art/cartoon/sandcastle-v1/generation/014-generated-v1.png",
+        "sha256": "a12b939a7edb25c5826c40d4fb7316a2350fd31f6c13e2d109e5d9e2e05506fd",
+        "canvas": [
+          1844,
+          853
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/014.png",
+        "sha256": "a74e82e8890ca5b6a7f176479fec2181c805073468fecf2ed6337bd6577d1827",
+        "canvas": [
+          80,
+          37
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/sandcastle-v1/generation/014-request-v1.json",
+          "sha256": "02783fa4da3052ddc00797d9a136b49050def8eb7c319ffadfef2d65d2867de6"
+        }
+      ]
+    },
+    {
+      "group": "idea-props-v1",
+      "frame": "000",
+      "selected_raw": {
+        "path": "art/cartoon/idea-props-v1/generation/000-generated-v1.png",
+        "sha256": "3cd39dddb6d6fdfd61f5b03f7e5239c0d1030364d55ea5453845464d75d3be77",
+        "canvas": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/idea-props-v1/reference/original-000.png",
+        "sha256": "9359ef60ce189f9c15bdba7fa8787e23cb047c56e9f774becf71d9b040092588",
+        "canvas": [
+          40,
+          32
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/idea-props-v1/generation/000-v1-request.json",
+          "sha256": "60cf5cdcb38e713ba8948aaffd88e1269fa7f2b5bb5eb9a2103ef921b24dcac2"
+        }
+      ]
+    },
+    {
+      "group": "idea-props-v1",
+      "frame": "001",
+      "selected_raw": {
+        "path": "art/cartoon/idea-props-v1/generation/001-generated-v1.png",
+        "sha256": "469e99007adf4ef1b978db35c983998fb224b5eb8fa6110ab2b0bab4103f0583",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/idea-props-v1/reference/original-001.png",
+        "sha256": "7f94560d32b031b1aa24a154997ebc9f046459baab8fcc4c2c700781a222a7fb",
+        "canvas": [
+          40,
+          23
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/idea-props-v1/generation/001-v1-request.json",
+          "sha256": "73be99ff2a0e865882ee7125949befb1e06f2ceec5542bc06db7a8fed343f34b"
+        }
+      ]
+    },
+    {
+      "group": "idea-props-v1",
+      "frame": "004",
+      "selected_raw": {
+        "path": "art/cartoon/idea-props-v1/generation/004-generated-v1.png",
+        "sha256": "d599dabb570062d2c837c1b35a479947e82a764edc793050e0265edbca81fd56",
+        "canvas": [
+          1254,
+          1254
+        ],
+        "mode": "RGBA"
+      },
+      "original_reference": {
+        "path": "art/cartoon/idea-props-v1/reference/original-004.png",
+        "sha256": "f87f39e2cbebeb10eae27a6056ded7c9be36228467e76f47792800940e5f2202",
+        "canvas": [
+          24,
+          27
+        ],
+        "mode": "RGBA"
+      },
+      "requests": [
+        {
+          "path": "art/cartoon/idea-props-v1/generation/004-v1-request.json",
+          "sha256": "b2430a69b0473c73ed4b1b7d9a2ca212442196ecb165e3156c0a0a4e68735d43"
+        }
+      ]
+    }
+  ],
+  "source_records": [
+    {
+      "path": "art/cartoon/boat-v1/reference/source.json",
+      "sha256": "7d02dcdc9bc2fa863f876779caf3ae747452a2f508cf919c935bf60127087cc8"
+    },
+    {
+      "path": "art/cartoon/raft-v1/reference/source.json",
+      "sha256": "e6d5fe6c8866f9b3216ae39887361a28f99147dae152c2380ccf1b1aa1b69482"
+    },
+    {
+      "path": "art/cartoon/idea-props-v1/reference/source.json",
+      "sha256": "5874d8476854b01172da2fa3a2da62784e89faaddb6896e1278ca7be6982670b"
+    },
+    {
+      "path": "art/cartoon/sandcastle-v1/reference/source.json",
+      "sha256": "7170d2a94d37f287413e95bc5e043a155d1f046509523519baf21fa49e0b1b79"
+    }
+  ],
+  "production_package_at_review": {
+    "path": "assets/scrantic_data.zip",
+    "sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+  },
+  "deferred": "Uniform export fit and registration, native scene/motion checks, bulk smoke/regression and integration audit.",
+  "next_batch": "The instruction to continue authorizes the queued 37 ship-related slots; none of their future artwork is visually approved by this record.",
+  "readback_scope": "Read existing page, selected raw, original reference and request file SHA identities against the recorded selection; no tests or runtime execution."
+}

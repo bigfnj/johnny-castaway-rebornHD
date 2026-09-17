@@ -1,6 +1,6 @@
 # Raft construction art draft
 
-Five independent MRAFT.BMP construction drawings are ready for visual review. They are not exported, packaged, or approved for native placement. Production assets and runtime sources are unchanged. Native construction-state continuity and the bulk verification milestone remain pending.
+The user approved the appearance of all five selected MRAFT.BMP construction drawings in the [combined prop review](../props-batch-v1/acceptance/appearance-v1.json), including 002-v2. They are not exported, packaged, or approved for native placement. Production assets and runtime sources are unchanged. Native construction-state continuity and the bulk verification milestone remain pending.
 
 Selected raw drafts are `generation/000-generated-v1.png`, `001-generated-v1.png`, `002-generated-v2.png`, `003-generated-v1.png`, and `004-generated-v1.png`. Each is an untouched 1536 by 1024 RGBA output from built-in imagegen. Exact prompts and ordered input paths are saved in the matching request JSON files. `generation/record.json` records output hashes, actual alpha bounds, reference hashes, and the selected draft files.
 

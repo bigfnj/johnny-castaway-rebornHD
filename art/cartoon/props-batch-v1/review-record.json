@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "status": "awaiting_batch_appearance_review",
+  "status": "appearance_approved_bulk_integration_pending",
   "date": "2026-09-17",
   "user_batch_instruction": "Lets start queuing up 2 dozen or more per review or were going to spend weeks on this.",
   "reviewed_url": "http://127.0.0.1:8941/props-batch-v1/review.html",
@@ -707,9 +707,24 @@
   },
   "production_package_changed": false,
   "production_acceptance": false,
-  "visual_approval": null,
+  "visual_approval": {
+    "path": "art/cartoon/props-batch-v1/acceptance/appearance-v1.json",
+    "sha256": "ecc5f118676376b223cc64a56eaa4d8e3ab9efabb8c105c1e6c28c7d069cd9b7"
+  },
   "human_question": "The 24-drawing review is open at http://127.0.0.1:8941/props-batch-v1/review.html. Does this batch's artwork look right? You can approve the group or list exceptions by resource and frame number. Final sizing and motion checks remain part of bulk integration.",
-  "preview_check": {"image_elements":48,"loaded_image_elements":48,"missing_images":[],"originals_toggle":"Opened all 24 original comparisons and closed them in the browser.","scope":"Lightweight preview check only; no application smoke or regression execution."},
+  "preview_check": {
+    "image_elements": 48,
+    "loaded_image_elements": 48,
+    "missing_images": [],
+    "originals_toggle": "Opened all 24 original comparisons and closed them in the browser.",
+    "scope": "Lightweight preview check only; no application smoke or regression execution."
+  },
   "preview_scope": "Complete raw images composited on checkerboard, group links and original-image toggle. Generated proportions differ; runtime scale, registration, motion and interactions are pending.",
-  "full_smoke_regression_audit": "deferred to bulk integration"
+  "full_smoke_regression_audit": "deferred to bulk integration",
+  "prior_status": "awaiting_batch_appearance_review",
+  "reviewed_selection_snapshot": {
+    "path": "art/cartoon/props-batch-v1/acceptance/reviewed-selection-v1.json",
+    "sha256": "084c2d648ac72c736f90145a70d484b6c672fb103430f3ad25dcaae391ca2fa1"
+  },
+  "human_response": "all approved, nice job, please continue"
 }

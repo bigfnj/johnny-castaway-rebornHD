@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "resource": "TANKER.BMP",
+  "frame": 12,
+  "version": 2,
+  "status": "selected_for_appearance_review_not_runtime_accepted",
+  "reason": "One targeted generation pass to correct v1 excessive side-view yaw using exact original and013 bow identity key.",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "style-transfer",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-generated-v2.png",
+    "sha256": "9f8a0bb164d1507c1ccaf289d394a5c0c8a501956ab1de02a1cde237e7ee86b7",
+    "canvas": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      114,
+      23,
+      1502,
+      858
+    ],
+    "alpha8_bounds_exclusive": [
+      293,
+      44,
+      1499,
+      856
+    ],
+    "alpha_nonzero_pixels": 527295,
+    "alpha_opaque_pixels": 1728,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "cache_source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-7b1e-7210-9921-90642bf1b5ed\\exec-66289662-2942-4ff3-8a65-a7a8c7a4ade4.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-v2-request.json",
+    "sha256": "7301d66cdfe681bd348722532b3cd7f934296489abc9e3a73a538a29cba20aec"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/012.png",
+      "sha256": "f99902e380dc8720066123a0429d5966cdd4fc6dcdced559f0fd0f86ff750cb3"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/013-generated-v1.png",
+      "sha256": "bf6e7a0498c7bb2634ad24864c65297200800208347750e9e129e5154dafb9c1"
+    }
+  ],
+  "exact_original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/012.png",
+    "sha256": "2f84215a93fec233ed10ec767fa5ebe289445b05a5263e2837f60770da665f9e"
+  },
+  "reference_source": {
+    "path": "art/cartoon/tanker-v1/reference/source.json",
+    "sha256": "1e375f4f506da889b01c90b3cbb5ba866e022fdd61495399dbbde0c2ec97920b"
+  },
+  "supersedes_for_review": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-generated-v1.png",
+    "sha256": "d2e95e0486d5cc6764acec056112ca6817ea2beeed402c1acf5f8a1ed1eaf53d"
+  },
+  "historical_v1_record": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-record-v1.json",
+    "sha256": "24be2465c10951f66bc663a2023c47ae13b35166815fc33dd09e72cf72dea2bb"
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Near-front bow with slight right-side exposure and deckhouse just right of center now matches the intended view family. Exact contour and runtime registration remain pending.",
+    "limits": "This is a visual correction, not a pixel-exact original geometry or animation parity result."
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "deferred": [
+    "Human appearance approval",
+    "Final geometry and registration",
+    "Native motion and bulk integration checks"
+  ]
+}

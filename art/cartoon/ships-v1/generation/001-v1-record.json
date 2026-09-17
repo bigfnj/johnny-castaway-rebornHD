@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "resource": "SHIPS.BMP",
+  "frame": 1,
+  "version": "v1",
+  "status": "draft_visual_review",
+  "human_approval": null,
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "file": "generation/001-v1-request.json",
+    "sha256": "d0689d33c034b43e5d89c47db7fca9c28e09f7ce85a2d6f4b712ac95f0619b5c"
+  },
+  "output": {
+    "file": "generation/001-generated-v1.png",
+    "sha256": "90eba824fe4d5fa9a090d64619f052ddca37e769848e758a47a08ae326a60b7c",
+    "generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-a86e0f92-98ce-4151-bb21-121083b48c18.png",
+    "copied_byte_exact": true,
+    "canvas": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_positive_bounds_exclusive": [
+      183,
+      322,
+      1438,
+      944
+    ],
+    "alpha8_bounds_exclusive": [
+      186,
+      334,
+      1351,
+      675
+    ],
+    "alpha0_pixels": 1289940,
+    "alpha1_through7_pixels": 4281,
+    "alpha8_through255_pixels": 278643,
+    "canvas_edge_alpha": {
+      "top": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "bottom": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "left": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "right": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      }
+    }
+  },
+  "ordered_references": [
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/ships-v1/reference/nearest8/001.png",
+      "sha256": "17d831cc68ebc5cdc858a0c6cade06ec7af8e3f17f4610302c72bf4bdc066fba"
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/ships-v1/reference/approved-boat000-style.png",
+      "sha256": "4c2760df85897ac806eae81d45e79e2a5c799d3e1239614dad59eb573c1293b6"
+    }
+  ],
+  "original_reference": {
+    "file": "reference/original/001.png",
+    "sha256": "654454aa95609f4292c3a436b523a0ad5141e312d1ce8fec8fe91c924113d996",
+    "canvas": [
+      24,
+      8
+    ]
+  },
+  "pixels_postprocessed": false,
+  "native_export_executed": false,
+  "native_review_executed": false,
+  "inspection_limit": "Alpha8 is diagnostic only; no threshold/crop/key is applied. Generated raw geometry is not proven native registration or cross-frame alignment.",
+  "subject_label": "Small source shape; role unconfirmed",
+  "role_evidence": "No unique-slot action attribution in the saved scene map; no native role determination performed."
+}

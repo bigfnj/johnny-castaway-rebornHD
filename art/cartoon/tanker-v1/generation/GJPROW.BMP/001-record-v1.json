@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "resource": "GJPROW.BMP",
+  "frame": 1,
+  "version": 1,
+  "status": "appearance_review_draft_not_runtime_accepted",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "style-transfer",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/GJPROW.BMP/001-generated-v1.png",
+    "sha256": "b901d034c9537e0d0b0d22f5f4c719bab77d5150290d32898a4e5bf3821656f1",
+    "canvas": [
+      1091,
+      1441
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      0,
+      0,
+      1001,
+      1431
+    ],
+    "alpha8_bounds_exclusive": [
+      0,
+      0,
+      998,
+      1429
+    ],
+    "alpha_nonzero_pixels": 931587,
+    "alpha_opaque_pixels": 711,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        254
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        254
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "cache_source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-7b1e-7210-9921-90642bf1b5ed\\exec-e8fc0074-b779-4a28-b248-e4afb1b7b233.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/GJPROW.BMP/001-v1-request.json",
+    "sha256": "b5223261335e67d1450ad8c39c23e098cd00d943e002099617fb8c8350665281"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/tanker-v1/reference/nearest8/GJPROW.BMP/001.png",
+      "sha256": "fa87526bf1e536e21d4a14c3b119b8dfdaf85beed203cf2d0be7f62d6216f1a3"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/000-generated-v1.png",
+      "sha256": "8247cbb70f76393c69f52dfcfd0a4399f58c11cca34abe9c0823a59845e64dd3"
+    }
+  ],
+  "exact_original": {
+    "path": "art/cartoon/tanker-v1/reference/original/GJPROW.BMP/001.png",
+    "sha256": "c006097f309e5a30fa4a7a9f4cb97fb6c1384dabe0b6822bf95407e3943d1a3a"
+  },
+  "reference_source": {
+    "path": "art/cartoon/tanker-v1/reference/source.json",
+    "sha256": "1e375f4f506da889b01c90b3cbb5ba866e022fdd61495399dbbde0c2ec97920b"
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Anchorless tall tapered red hull continuation. Clipped top/left and curved right silhouette retained in concept; exact edge continuity remains untested.",
+    "black_preview_caveat": "Transparency is measured from alpha. Hidden RGB at alpha0 is not treated as visible haze."
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "deferred": [
+    "Human appearance approval",
+    "Exact original geometry and final registration",
+    "Native motion, crop and fit review",
+    "Bulk integration tests"
+  ]
+}

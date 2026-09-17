@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "resource": "TANKER.BMP",
+  "frame": 13,
+  "version": 1,
+  "status": "appearance_review_draft_not_runtime_accepted",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "style-transfer",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/013-generated-v1.png",
+    "sha256": "bf6e7a0498c7bb2634ad24864c65297200800208347750e9e129e5154dafb9c1",
+    "canvas": [
+      1877,
+      838
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      181,
+      42,
+      1805,
+      802
+    ],
+    "alpha8_bounds_exclusive": [
+      184,
+      45,
+      1693,
+      797
+    ],
+    "alpha_nonzero_pixels": 556470,
+    "alpha_opaque_pixels": 2038,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "cache_source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-7b1e-7210-9921-90642bf1b5ed\\exec-26630ddc-1465-4cb9-99a3-9950bc2dc7eb.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/013-v1-request.json",
+    "sha256": "2d405d41c62f81fbde876afa329e86615ed8af7e186825d16b63f3c6740c68ad"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/013.png",
+      "sha256": "8f3f3b9cd4eaa36fec8a01b0546b322b8366df8a8b651dc0e28f063c3c9ccd0f"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/007-generated-v1.png",
+      "sha256": "32559cec7256e2138a33908fa3f61d3ce8bc5d088693e61d471d87a2e4c5ffa0"
+    }
+  ],
+  "exact_original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/013.png",
+    "sha256": "ef725bf2201aaf1c706262d830329a4e212e9d3c08faa7b547fdc09cc52412d2"
+  },
+  "reference_source": {
+    "path": "art/cartoon/tanker-v1/reference/source.json",
+    "sha256": "1e375f4f506da889b01c90b3cbb5ba866e022fdd61495399dbbde0c2ec97920b"
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Symmetric bow view with central stem, pale structure and red funnel; original-facing identity is recognizable.",
+    "black_preview_caveat": "Transparency is measured from alpha. Hidden RGB at alpha0 is not treated as visible haze."
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "deferred": [
+    "Human appearance approval",
+    "Exact original geometry and final registration",
+    "Native motion, crop and fit review",
+    "Bulk integration tests"
+  ]
+}

@@ -1,0 +1,844 @@
+{
+  "schema_version": 1,
+  "scope": "Exact original and HD references for all 14 TANKER frames and both GJPROW pieces. No new artwork or runtime exports in this reference preparation.",
+  "sources": [
+    {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    {
+      "path": "assets/scrantic_data.zip",
+      "sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/source/frame-index.json",
+      "sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/scene-map/resource-map.json",
+      "sha256": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3"
+    }
+  ],
+  "palette_limit": "Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.",
+  "frames": [
+    {
+      "resource": "TANKER.BMP",
+      "frame": 0,
+      "original_member": "native/BMP/TANKER.BMP/000.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/000.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/000.png",
+          "sha256": "a482a25d47b8db5cc6487492e2daddc059bf017b2787b59497424bd2cce79f4c",
+          "canvas": [
+            56,
+            24
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/000.png",
+          "sha256": "4c3fcc98663f3183eec536f6cd5dabf560201089e50229b2d281a9ed38eb1c87",
+          "canvas": [
+            112,
+            48
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/000.png",
+        "sha256": "bc3acccd7f9c714135be47aeac19d73907d906df2a3e2a0aad0e14458540adae",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          448,
+          192
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        50,
+        24
+      ],
+      "index_plane_sha256": "4d2368935c22fbe2f19cb62d880ac379b48c65b84d77609f07aebbe7cae26c4b",
+      "xpm_sha256": "89a09898502c27148fac4791cf718586a22fa81a3615761f12835b4fc81e46f3"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 1,
+      "original_member": "native/BMP/TANKER.BMP/001.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/001.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/001.png",
+          "sha256": "6139d7c983b22affc1cb082b1fe4a502413c7b5b7afda3e2ccc953b0e049f8a3",
+          "canvas": [
+            56,
+            24
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/001.png",
+          "sha256": "ea23e1027c2e9d648fb69cc6e0e7c9a38af8f6a8fe7121f69fcd117879871b09",
+          "canvas": [
+            112,
+            48
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/001.png",
+        "sha256": "afd610b6dd6d1a8a48fe04288f98344739a8496b1fee993f48e821624825ae76",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          448,
+          192
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        51,
+        24
+      ],
+      "index_plane_sha256": "44c2d80bc524081d034fe78b5be388e76ecaefdfb97ca735d9ef20f02a19707b",
+      "xpm_sha256": "a5a31dcd6f5089e34018eb08a5c18dfcbb9e54a440ca2b91d459ffa2ce7aad59"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 2,
+      "original_member": "native/BMP/TANKER.BMP/002.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/002.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/002.png",
+          "sha256": "67f4af795da142f73bfbf188e90c5ede2d273759c31c0216828f7539994748e5",
+          "canvas": [
+            56,
+            24
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/002.png",
+          "sha256": "b96d7a0a18425876bde8471809804add573df03d2f5fbee5f2a77bf649198d95",
+          "canvas": [
+            112,
+            48
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/002.png",
+        "sha256": "976e7b24c8cc7e05e74dc4a3a7eeca92b7ea18ac4829babbb9e7524cb065a8ba",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          448,
+          192
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        52,
+        24
+      ],
+      "index_plane_sha256": "e372ae870aea558b70bc4f8c24496c658ddc31cfc10faa68ea49dfdf3247bf10",
+      "xpm_sha256": "862f00de1c6b157524182b50c85b820e5ada459d9cf3d39bda09014674777347"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 3,
+      "original_member": "native/BMP/TANKER.BMP/003.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/003.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/003.png",
+          "sha256": "c6a125305a647b8975067115f3f057c71bf0bede2cb298b445dafd8ec0bc5084",
+          "canvas": [
+            56,
+            24
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/003.png",
+          "sha256": "3f5af42700341f182468077229ebc65eff68131b5223a20910a49b560c1dc39b",
+          "canvas": [
+            112,
+            48
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/003.png",
+        "sha256": "0bb453d559d04a99a562758438da0a94031b83cf233655b6699cbef95400b212",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          448,
+          192
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        55,
+        24
+      ],
+      "index_plane_sha256": "bf86e2a8337882b97d4e0942dc01628c09d615f3c453d4dcc9a53962f6c12605",
+      "xpm_sha256": "52a2ab4e42c2ff337a66662eb24c8f21b73e366c366a53af9e5e67314dfe267b"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 4,
+      "original_member": "native/BMP/TANKER.BMP/004.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/004.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/004.png",
+          "sha256": "187f7fc4bc882164f7d9f0a3b6908da5e48601c5ec58e8bb164a9f134d4f1740",
+          "canvas": [
+            64,
+            25
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/004.png",
+          "sha256": "0ac775bddae14834515f3044739fb7cf082ad3e35600c7958c05f3909a035a4c",
+          "canvas": [
+            128,
+            50
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/004.png",
+        "sha256": "aeb52dbf442687139b0b23b88bb2fb4b3ea0720b3eb3d5eb148b2c559bda6e0e",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          512,
+          200
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        58,
+        25
+      ],
+      "index_plane_sha256": "a90275a132cdc16431435ce8fc1dd8cf851f994a5b33c862a05f79aa166917ec",
+      "xpm_sha256": "1d57798a6d44dc3210339db53dc13654c5e12924202e28cd38ea69e10c1d1d84"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 5,
+      "original_member": "native/BMP/TANKER.BMP/005.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/005.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/005.png",
+          "sha256": "26df3b3d928f063ba46705f22e986503de75e2b05581c7c8a084da5ce503671a",
+          "canvas": [
+            64,
+            23
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/005.png",
+          "sha256": "5f49dc866bc24284cfbd06642e8bf39ff098f99bb9423c79bdf6b8f1bcf3289a",
+          "canvas": [
+            128,
+            46
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/005.png",
+        "sha256": "606511141731338a27b4570ce1d0ae8f05fbf768d13e933fb4053997aebd9bda",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          512,
+          184
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        64,
+        23
+      ],
+      "index_plane_sha256": "c0236e8350c71bc8a01a5c77a06e792817c086d35a1bad890396f295db28ea59",
+      "xpm_sha256": "28c3063d6d3ea8d0bb47c8f4559df91f14a5ee56984c48b6eb8f553b618b9359"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 6,
+      "original_member": "native/BMP/TANKER.BMP/006.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/006.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/006.png",
+          "sha256": "d0106f4e8e0accfc013fd6098d01990aa400c8f11ca1323609bd789831583abe",
+          "canvas": [
+            72,
+            24
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/006.png",
+          "sha256": "881f49fa410fcee52ed40dc610a0e71c32562bb799a5c467e1285733714ba1c8",
+          "canvas": [
+            144,
+            48
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/006.png",
+        "sha256": "1012846103ef2512c8ebe346303521e25905a3163a13b6ee489fdbffaa01e51a",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          576,
+          192
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        68,
+        24
+      ],
+      "index_plane_sha256": "74c0c8d5a503e9b52370c45ce792a3879cfe847abdfeae8f759ade04d6a38a37",
+      "xpm_sha256": "f1b8f6760c13c4fb3799b8e8cd3e2d6b2f796f6e2a251cc39103ab0af75066a0"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 7,
+      "original_member": "native/BMP/TANKER.BMP/007.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/007.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/007.png",
+          "sha256": "6b520422fe9c7b9112865b6052f3927afb75222852b9d92a9e40f80ce265e8be",
+          "canvas": [
+            72,
+            25
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/007.png",
+          "sha256": "4f3c005d374e8dec3ca06239716581b2a5673edf926775a45bbf036a96059212",
+          "canvas": [
+            144,
+            50
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/007.png",
+        "sha256": "80c623155423d767f39510bd606294af02ca28db5c47a91f91838ead1ad092e6",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          576,
+          200
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        70,
+        25
+      ],
+      "index_plane_sha256": "a75c88c62bacd17dcaed051d2887586aa3f507793ae3bbda5012b56b02f07a0e",
+      "xpm_sha256": "5da35b9bcd5197f983e099391a5ec8c3fd0211d2fd845ddb48b5f067f7f71d53"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 8,
+      "original_member": "native/BMP/TANKER.BMP/008.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/008.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/008.png",
+          "sha256": "ecb920e6936fc2387eef795bda6be206433d9e1b3a83b810f5217ac05c259074",
+          "canvas": [
+            72,
+            23
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/008.png",
+          "sha256": "0cc3a2326ce99c2e6aad91ebeaa2ea30b05e3241d9bc41c7a433d0d165edd2c8",
+          "canvas": [
+            144,
+            46
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/008.png",
+        "sha256": "4176f8b82dcc32cc5a60c84e50880c384437ab74b0840abffad67a18e768da2b",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          576,
+          184
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        67,
+        23
+      ],
+      "index_plane_sha256": "538228c11a3105e2e736165bc71e932bbc37162b334b3b565262d1b9151a03ea",
+      "xpm_sha256": "23c63a7c7af637e9c74bf29d1511627ee79957f7b539cd731b914046ae71c093"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 9,
+      "original_member": "native/BMP/TANKER.BMP/009.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/009.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/009.png",
+          "sha256": "37cf4337d842905c69b635cfdf434cb8f1158d36ee32dfbd6091f693e0c27df0",
+          "canvas": [
+            64,
+            23
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/009.png",
+          "sha256": "a84fe7c56dfb824055487fbad95ec5d101869de6a8e6bf6dd6cb606183d380d6",
+          "canvas": [
+            128,
+            46
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/009.png",
+        "sha256": "6b3d22b304925ec18a67dab3f3246a1b3fbf78b546103fbf4c3822f46299f30c",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          512,
+          184
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        63,
+        23
+      ],
+      "index_plane_sha256": "56265ec95127624bf8d8086e69fd4f2745d5c350a431a2157b7dc2914478caa5",
+      "xpm_sha256": "df9e435d13bf1c3787dc390d062c5be538840861dcb725ab66a925fb8ecf4013"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 10,
+      "original_member": "native/BMP/TANKER.BMP/010.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/010.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/010.png",
+          "sha256": "c7fcbb4afce4db3c196ff5ddf35bdefbc3dd3044dae8c929e60110254122651d",
+          "canvas": [
+            64,
+            23
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/010.png",
+          "sha256": "2ea32366aba29a2152a9c8690e7ffa33bcff968bdcf02ae320045f4eae4121e1",
+          "canvas": [
+            128,
+            46
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/010.png",
+        "sha256": "2d8077ced2f5ed80f557a38815870d889e5279a0bbf79961e022b2c95ead6161",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          512,
+          184
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        57,
+        23
+      ],
+      "index_plane_sha256": "8c20b26be3ebc29f29b36af0b89b90382f4bb638b09a14f9746733366f18c391",
+      "xpm_sha256": "aa90641f86d8cd0ed2617417e37bbf8718269eaaf921b8d6a6992538c8152b84"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 11,
+      "original_member": "native/BMP/TANKER.BMP/011.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/011.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/011.png",
+          "sha256": "e1d70be0e3bc629af0803a84dd7c31c01270e7cd40bad23af1dd77f618e3d69a",
+          "canvas": [
+            56,
+            23
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/011.png",
+          "sha256": "d207693d432ed797b7ae347c8b5deb089461bdfa4ffdaa437a4b16907cb4372d",
+          "canvas": [
+            112,
+            46
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/011.png",
+        "sha256": "0dcd9f5ad9851b4f0b399aba39e4749d1d41350c3bf50387ff5d3e83b7b05bab",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          448,
+          184
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        53,
+        23
+      ],
+      "index_plane_sha256": "8fc2499640770a6a345b007d0ef9d6ab89e175bd6421fedb727501f657aae1f7",
+      "xpm_sha256": "4dbfb995c759097e1524a7f98b4d055bb685a1529458f5fbe5fc17d5859ba12d"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 12,
+      "original_member": "native/BMP/TANKER.BMP/012.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/012.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/012.png",
+          "sha256": "2f84215a93fec233ed10ec767fa5ebe289445b05a5263e2837f60770da665f9e",
+          "canvas": [
+            48,
+            24
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/012.png",
+          "sha256": "badf91744713f56a53e4cbbadeff1ed0f750e48eb146eb31b76290fc034477bc",
+          "canvas": [
+            96,
+            48
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/012.png",
+        "sha256": "f99902e380dc8720066123a0429d5966cdd4fc6dcdced559f0fd0f86ff750cb3",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          384,
+          192
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "index_plane_sha256": "42cfb3f331b507f84c1b1423ba7ce8977a7e8e37e97f5f55dd2d4b3a9a987099",
+      "xpm_sha256": "a3d61d26117508b781915eef01d16af56ce95bd3d5ff13f455d6b7046583d70c"
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": 13,
+      "original_member": "native/BMP/TANKER.BMP/013.png",
+      "hd_member": "data/hd/BMP/TANKER.BMP/013.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/013.png",
+          "sha256": "ef725bf2201aaf1c706262d830329a4e212e9d3c08faa7b547fdc09cc52412d2",
+          "canvas": [
+            56,
+            25
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/TANKER.BMP/013.png",
+          "sha256": "41e39f24776c773a7a8d63cae1c56511ea3e257f1813f8d3e7a0ae916e6c1103",
+          "canvas": [
+            112,
+            50
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/013.png",
+        "sha256": "8f3f3b9cd4eaa36fec8a01b0546b322b8366df8a8b651dc0e28f063c3c9ccd0f",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          448,
+          200
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        49,
+        25
+      ],
+      "index_plane_sha256": "f0141e913ca7f17c98450013ca1636016b99ef1902f1c238c4b21194b6213857",
+      "xpm_sha256": "72346aef4ba0edd5b4985d6e86633b2ed674e827822004a81747da440f35389e"
+    },
+    {
+      "resource": "GJPROW.BMP",
+      "frame": 0,
+      "original_member": "native/BMP/GJPROW.BMP/000.png",
+      "hd_member": "data/hd/BMP/GJPROW.BMP/000.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/GJPROW.BMP/000.png",
+          "sha256": "cf25f3f46c9b13cb90a9c75e9a70569afb7d490daa53ae8d0489c789b3620984",
+          "canvas": [
+            144,
+            133
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/GJPROW.BMP/000.png",
+          "sha256": "8ce23fceaf081fc64f120b66008e03937a4d937f7d266e6e48bfcff927ed9c6f",
+          "canvas": [
+            288,
+            266
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/GJPROW.BMP/000.png",
+        "sha256": "0fc99d1e85c83d0d0de71a3f67294814c2051f63b759257b3fb47871d7ae1c41",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          1152,
+          1064
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        138,
+        133
+      ],
+      "index_plane_sha256": "a048908a927cfa9438104564365becddf8a27b2dff8c43d87cf70c313c2394a7",
+      "xpm_sha256": "b31af40cb1da73c18f5c65f9f5d3531c581f61e43ab59d27912e9008e3beaef5"
+    },
+    {
+      "resource": "GJPROW.BMP",
+      "frame": 1,
+      "original_member": "native/BMP/GJPROW.BMP/001.png",
+      "hd_member": "data/hd/BMP/GJPROW.BMP/001.png",
+      "images": {
+        "original": {
+          "path": "art/cartoon/tanker-v1/reference/original/GJPROW.BMP/001.png",
+          "sha256": "c006097f309e5a30fa4a7a9f4cb97fb6c1384dabe0b6822bf95407e3943d1a3a",
+          "canvas": [
+            128,
+            169
+          ],
+          "mode": "RGBA"
+        },
+        "hd": {
+          "path": "art/cartoon/tanker-v1/reference/hd/GJPROW.BMP/001.png",
+          "sha256": "d7ec0f56216fc874b8ce6b6524f8b8de0eec8ea35b71c31bed8e35149bd3ff0b",
+          "canvas": [
+            256,
+            338
+          ],
+          "mode": "RGBA"
+        }
+      },
+      "nearest8": {
+        "path": "art/cartoon/tanker-v1/reference/nearest8/GJPROW.BMP/001.png",
+        "sha256": "fa87526bf1e536e21d4a14c3b119b8dfdaf85beed203cf2d0be7f62d6216f1a3",
+        "scale": 8,
+        "offset": [
+          0,
+          0
+        ],
+        "canvas": [
+          1024,
+          1352
+        ]
+      },
+      "original_alpha_bounds_exclusive": [
+        0,
+        0,
+        121,
+        169
+      ],
+      "index_plane_sha256": "15bd11445a9376163f429777649550e366312275405fee9288ab71746f75437f",
+      "xpm_sha256": "37f567a861b23dd54444bbdaeb6fd870548ea5bd68390c5fc04881dca276a5ce"
+    }
+  ],
+  "contact_sheets": [
+    {
+      "path": "art/cartoon/tanker-v1/reference/TANKER-original-vs-hd.png",
+      "sha256": "3bc03f9086b241f6a63aab5f0c19a9524fc6f468e03f4a402ce816690a8de00a",
+      "canvas": [
+        1328,
+        1173
+      ],
+      "method": "Original nearest x4, HD nearest x2, composited on neutral paper for inspection only; source PNGs unchanged."
+    },
+    {
+      "path": "art/cartoon/tanker-v1/reference/GJPROW-original-vs-hd.png",
+      "sha256": "476ad679240a0c4030977921fed37f0e0a8a7bfeba57b1d1875f88823fa5e586",
+      "canvas": [
+        1264,
+        825
+      ],
+      "method": "Original nearest x2, HD nearest x1, composited on neutral paper for inspection only; source PNGs unchanged."
+    }
+  ],
+  "static_attribution": [
+    {
+      "resource": "GJPROW.BMP",
+      "actions": [
+        {
+          "ttm": "GJVIS6.TTM",
+          "tag": 8,
+          "description": "tanker arrives",
+          "frames": [
+            0,
+            1
+          ],
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ],
+      "runtime_reachability_proven": false
+    },
+    {
+      "resource": "TANKER.BMP",
+      "actions": [
+        {
+          "ttm": "GJVIS6.TTM",
+          "tag": 9,
+          "description": "voldeez wanders",
+          "frames": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ],
+      "runtime_reachability_proven": false
+    }
+  ],
+  "checks": "Basic exact member-byte identity and decoded dimensions/modes; no tests, new native captures or complete script-execution claim."
+}

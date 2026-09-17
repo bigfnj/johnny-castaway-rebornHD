@@ -1,0 +1,1833 @@
+{
+  "schema_version": 1,
+  "status": "preview_reference_preparation",
+  "resource": "SHIPS.BMP",
+  "scope": "Exact original/HD extraction, nearest8 diagnostic enlargement, contact sheets and copied approved style key only.",
+  "sources": [
+    {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    {
+      "path": "assets/scrantic_data.zip",
+      "sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/source/frame-index.json",
+      "sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/scene-map/resource-map.json",
+      "sha256": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3"
+    }
+  ],
+  "palette_limit": "Supplied-original indexed pixels rendered with the port diagnostic palette. Exact geometry and alpha are preserved; original executable palette/timing parity is not established.",
+  "frames": [
+    {
+      "frame": 0,
+      "images": [
+        {
+          "file": "original/000.png",
+          "source_member": "native/BMP/SHIPS.BMP/000.png",
+          "sha256": "5513ac43ef1ba9cb691ca9ca7b132aa3a24387446ff0fc3603821814f1f56018",
+          "canvas": [
+            32,
+            8
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            29,
+            8
+          ],
+          "nonzero_alpha_pixels": 139
+        },
+        {
+          "file": "hd/000.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/000.png",
+          "sha256": "238b697c0852740ca38e20dd1a463772756c32cb7cd0a48a4407a591f9582685",
+          "canvas": [
+            64,
+            16
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            2,
+            0,
+            58,
+            16
+          ],
+          "nonzero_alpha_pixels": 552
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/000.png",
+        "sha256": "a6ed9bb5d8407a93269904db1031c7ef559ffd7d8713bc65b8bd4a6099c822b5",
+        "canvas": [
+          256,
+          64
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 1,
+      "images": [
+        {
+          "file": "original/001.png",
+          "source_member": "native/BMP/SHIPS.BMP/001.png",
+          "sha256": "654454aa95609f4292c3a436b523a0ad5141e312d1ce8fec8fe91c924113d996",
+          "canvas": [
+            24,
+            8
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            23,
+            8
+          ],
+          "nonzero_alpha_pixels": 115
+        },
+        {
+          "file": "hd/001.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/001.png",
+          "sha256": "c4603325f8233c8594a51327ea7033231731ef9c40eb74355efea110b4b1cdb2",
+          "canvas": [
+            48,
+            16
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            2,
+            0,
+            46,
+            16
+          ],
+          "nonzero_alpha_pixels": 452
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/001.png",
+        "sha256": "17d831cc68ebc5cdc858a0c6cade06ec7af8e3f17f4610302c72bf4bdc066fba",
+        "canvas": [
+          192,
+          64
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 2,
+      "images": [
+        {
+          "file": "original/002.png",
+          "source_member": "native/BMP/SHIPS.BMP/002.png",
+          "sha256": "3cb39db62628c95360c2c333e3a91585b24b91e87f0452079e2f5fcef59fdb2f",
+          "canvas": [
+            32,
+            10
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            25,
+            10
+          ],
+          "nonzero_alpha_pixels": 135
+        },
+        {
+          "file": "hd/002.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/002.png",
+          "sha256": "d2f7db799d5f2d6f29a367b8145f83a525e5952980c0618f3cdb667ba2aa5d37",
+          "canvas": [
+            64,
+            20
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            2,
+            0,
+            50,
+            20
+          ],
+          "nonzero_alpha_pixels": 528
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/002.png",
+        "sha256": "77263d0002ffdc0a28ca7ecc04d74dd85d3781a316b59bda755d989be320de74",
+        "canvas": [
+          256,
+          80
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 3,
+      "images": [
+        {
+          "file": "original/003.png",
+          "source_member": "native/BMP/SHIPS.BMP/003.png",
+          "sha256": "5371dc13e9c4a4c69f7b924f3572a7a577ea422134bea3e7738cd7db624a6061",
+          "canvas": [
+            160,
+            34
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            153,
+            34
+          ],
+          "nonzero_alpha_pixels": 3156
+        },
+        {
+          "file": "hd/003.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/003.png",
+          "sha256": "4b396c01b54d44f007bdbaa99c40bbc53b063b6b39ea1ab9fe2ac14d9c218ebb",
+          "canvas": [
+            320,
+            68
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            2,
+            0,
+            304,
+            68
+          ],
+          "nonzero_alpha_pixels": 12600
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/003.png",
+        "sha256": "8e7d99746ab5a57667e58aa91749196db80d71b28af374c1550b3950150d60e6",
+        "canvas": [
+          1280,
+          272
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 4,
+      "images": [
+        {
+          "file": "original/004.png",
+          "source_member": "native/BMP/SHIPS.BMP/004.png",
+          "sha256": "9e49ad342be9e49d0c08ef41264131727cde5c20b77abc27440a4282ba94c671",
+          "canvas": [
+            160,
+            34
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            153,
+            34
+          ],
+          "nonzero_alpha_pixels": 3165
+        },
+        {
+          "file": "hd/004.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/004.png",
+          "sha256": "996bc0b6b2c551e97968ababcfe02b9834bc7df42b5879b2fcd82cfaf488912a",
+          "canvas": [
+            320,
+            68
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            2,
+            0,
+            306,
+            68
+          ],
+          "nonzero_alpha_pixels": 12636
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/004.png",
+        "sha256": "83bbe4d07a831cae1a35eb9c162b28c9a773100d840cef342a5a539708306f16",
+        "canvas": [
+          1280,
+          272
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 5,
+      "images": [
+        {
+          "file": "original/005.png",
+          "source_member": "native/BMP/SHIPS.BMP/005.png",
+          "sha256": "ed5f893dde3e62faf690087f99503bef9ba57dd12a1cde26133852d16f538564",
+          "canvas": [
+            160,
+            34
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            154,
+            34
+          ],
+          "nonzero_alpha_pixels": 3149
+        },
+        {
+          "file": "hd/005.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/005.png",
+          "sha256": "96e7281d0d8d9ea90e8858108db07accf956e4a68a07fb22e4fd9326776d3df8",
+          "canvas": [
+            320,
+            68
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            308,
+            68
+          ],
+          "nonzero_alpha_pixels": 12572
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/005.png",
+        "sha256": "0127cd54fa3cefec74fd07bf391a9ab5c70680e792140aa9773ad383e4c7d817",
+        "canvas": [
+          1280,
+          272
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 6,
+      "images": [
+        {
+          "file": "original/006.png",
+          "source_member": "native/BMP/SHIPS.BMP/006.png",
+          "sha256": "e2e9a901452baa1752ccde3de3e5306b69cc43bc51cab54ccbaeea34db61cf28",
+          "canvas": [
+            160,
+            34
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            154,
+            34
+          ],
+          "nonzero_alpha_pixels": 3171
+        },
+        {
+          "file": "hd/006.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/006.png",
+          "sha256": "c6ef7126b7493d661a5e928fd2f1fe86bbe512b2b77a27b7fe3493a804df0026",
+          "canvas": [
+            320,
+            68
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            306,
+            68
+          ],
+          "nonzero_alpha_pixels": 12640
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/006.png",
+        "sha256": "646128876e5db031d1e222a8d386fe35061d4f50031a5d45a3db175e77a77d45",
+        "canvas": [
+          1280,
+          272
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 7,
+      "images": [
+        {
+          "file": "original/007.png",
+          "source_member": "native/BMP/SHIPS.BMP/007.png",
+          "sha256": "9bfe233bb8b6fb927c575439e5543f120d94592bcc4c12e6330d8f0309613989",
+          "canvas": [
+            168,
+            102
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            163,
+            102
+          ],
+          "nonzero_alpha_pixels": 6233
+        },
+        {
+          "file": "hd/007.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/007.png",
+          "sha256": "885c789e62f25764ccdb4b587dd51e46e81186a23afd07e8d698a18fe644bc79",
+          "canvas": [
+            336,
+            204
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            2,
+            326,
+            204
+          ],
+          "nonzero_alpha_pixels": 24936
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/007.png",
+        "sha256": "57710a30890d573d757bed92a919bf443378ce21bee4397cd7282072520076e7",
+        "canvas": [
+          1344,
+          816
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 8,
+      "images": [
+        {
+          "file": "original/008.png",
+          "source_member": "native/BMP/SHIPS.BMP/008.png",
+          "sha256": "70a8ba5b15c7a25f8a6dc17c9feb2b99fca70fb6a85369fe50d50a3bd3987a83",
+          "canvas": [
+            168,
+            136
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            166,
+            136
+          ],
+          "nonzero_alpha_pixels": 9577
+        },
+        {
+          "file": "hd/008.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/008.png",
+          "sha256": "ccb04785cf442750ce6223f32ae95a3287d0ae7f795ae9562cc1cdb79a727200",
+          "canvas": [
+            336,
+            272
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            2,
+            332,
+            272
+          ],
+          "nonzero_alpha_pixels": 38452
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/008.png",
+        "sha256": "5f5977fe0061faba8d90b1ba78861c973ffe1e575d867efd076da54985f62567",
+        "canvas": [
+          1344,
+          1088
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 9,
+      "images": [
+        {
+          "file": "original/009.png",
+          "source_member": "native/BMP/SHIPS.BMP/009.png",
+          "sha256": "035d652a7feb5f0dd5f077e9da2acae92ed05d8ab03d0a509ae9804a7b1f0968",
+          "canvas": [
+            168,
+            136
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            166,
+            136
+          ],
+          "nonzero_alpha_pixels": 9583
+        },
+        {
+          "file": "hd/009.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/009.png",
+          "sha256": "6613864e81475f1ffaebd5e527473c1079e30b443dc80a15dc20cdcc33e8497b",
+          "canvas": [
+            336,
+            272
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            2,
+            332,
+            272
+          ],
+          "nonzero_alpha_pixels": 38352
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/009.png",
+        "sha256": "12b05c3a6b165372c86725f40c484c862e8e8596e76ac3c28fa72f8ce715a9c7",
+        "canvas": [
+          1344,
+          1088
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 10,
+      "images": [
+        {
+          "file": "original/010.png",
+          "source_member": "native/BMP/SHIPS.BMP/010.png",
+          "sha256": "ce67ab53d15a75966b00793da79ca4329be8b39565ebd8dc8c05c44f59d19f99",
+          "canvas": [
+            8,
+            1
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "nonzero_alpha_pixels": 1
+        },
+        {
+          "file": "hd/010.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/010.png",
+          "sha256": "d4d196dc3e53f174e7c0874d3d46f94b388c1de3d9a34771a022119a255ad413",
+          "canvas": [
+            16,
+            2
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": null,
+          "nonzero_alpha_pixels": 0
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/010.png",
+        "sha256": "ce9b47a3c4c4b9108ae1d4ab84ab9c06a02f1e7d9d50e3cdc751a000ecd1126c",
+        "canvas": [
+          64,
+          8
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 11,
+      "images": [
+        {
+          "file": "original/011.png",
+          "source_member": "native/BMP/SHIPS.BMP/011.png",
+          "sha256": "ce67ab53d15a75966b00793da79ca4329be8b39565ebd8dc8c05c44f59d19f99",
+          "canvas": [
+            8,
+            1
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "nonzero_alpha_pixels": 1
+        },
+        {
+          "file": "hd/011.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/011.png",
+          "sha256": "d4d196dc3e53f174e7c0874d3d46f94b388c1de3d9a34771a022119a255ad413",
+          "canvas": [
+            16,
+            2
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": null,
+          "nonzero_alpha_pixels": 0
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/011.png",
+        "sha256": "ce9b47a3c4c4b9108ae1d4ab84ab9c06a02f1e7d9d50e3cdc751a000ecd1126c",
+        "canvas": [
+          64,
+          8
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 12,
+      "images": [
+        {
+          "file": "original/012.png",
+          "source_member": "native/BMP/SHIPS.BMP/012.png",
+          "sha256": "ce67ab53d15a75966b00793da79ca4329be8b39565ebd8dc8c05c44f59d19f99",
+          "canvas": [
+            8,
+            1
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "nonzero_alpha_pixels": 1
+        },
+        {
+          "file": "hd/012.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/012.png",
+          "sha256": "d4d196dc3e53f174e7c0874d3d46f94b388c1de3d9a34771a022119a255ad413",
+          "canvas": [
+            16,
+            2
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": null,
+          "nonzero_alpha_pixels": 0
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/012.png",
+        "sha256": "ce9b47a3c4c4b9108ae1d4ab84ab9c06a02f1e7d9d50e3cdc751a000ecd1126c",
+        "canvas": [
+          64,
+          8
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 13,
+      "images": [
+        {
+          "file": "original/013.png",
+          "source_member": "native/BMP/SHIPS.BMP/013.png",
+          "sha256": "ce67ab53d15a75966b00793da79ca4329be8b39565ebd8dc8c05c44f59d19f99",
+          "canvas": [
+            8,
+            1
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "nonzero_alpha_pixels": 1
+        },
+        {
+          "file": "hd/013.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/013.png",
+          "sha256": "d4d196dc3e53f174e7c0874d3d46f94b388c1de3d9a34771a022119a255ad413",
+          "canvas": [
+            16,
+            2
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": null,
+          "nonzero_alpha_pixels": 0
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/013.png",
+        "sha256": "ce9b47a3c4c4b9108ae1d4ab84ab9c06a02f1e7d9d50e3cdc751a000ecd1126c",
+        "canvas": [
+          64,
+          8
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 14,
+      "images": [
+        {
+          "file": "original/014.png",
+          "source_member": "native/BMP/SHIPS.BMP/014.png",
+          "sha256": "824c86d71755efd27e26629301eed1f7cc158bc42b7c0465396383364011d3e1",
+          "canvas": [
+            16,
+            12
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            11,
+            12
+          ],
+          "nonzero_alpha_pixels": 73
+        },
+        {
+          "file": "hd/014.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/014.png",
+          "sha256": "364d8766c11d3ef29163e5a5423b97ff0e0decd0b8b3c7bb9b755ebf29f7d42d",
+          "canvas": [
+            32,
+            24
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            2,
+            22,
+            24
+          ],
+          "nonzero_alpha_pixels": 284
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/014.png",
+        "sha256": "53d4a32ab13d4f6827b19ba219c1c3748b803c30298dad80a23897cf79fd77d1",
+        "canvas": [
+          128,
+          96
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 15,
+      "images": [
+        {
+          "file": "original/015.png",
+          "source_member": "native/BMP/SHIPS.BMP/015.png",
+          "sha256": "4876853543bc22cae2faa2b6b73fcd6a8e4fc729383ecc8300a9ea06fd97892b",
+          "canvas": [
+            16,
+            10
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            10,
+            10
+          ],
+          "nonzero_alpha_pixels": 51
+        },
+        {
+          "file": "hd/015.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/015.png",
+          "sha256": "9aca158ab401803e6836276ecd94d89f70391a2452eb15caa9f8d06f71915a2e",
+          "canvas": [
+            32,
+            20
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            2,
+            20,
+            20
+          ],
+          "nonzero_alpha_pixels": 188
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/015.png",
+        "sha256": "f1ad7d62b129567d378a9b65ffb0e644aebe8a45f7692ee548846d3375f8e430",
+        "canvas": [
+          128,
+          80
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 16,
+      "images": [
+        {
+          "file": "original/016.png",
+          "source_member": "native/BMP/SHIPS.BMP/016.png",
+          "sha256": "b5a2f5444ea0c022bf66184916bca7563833e24223c5922a76b32e8cb9daa4c0",
+          "canvas": [
+            16,
+            10
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            11,
+            10
+          ],
+          "nonzero_alpha_pixels": 53
+        },
+        {
+          "file": "hd/016.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/016.png",
+          "sha256": "757b37ebb20942ca8f4d2c4c6de8984cb1ccdd627a6b2f4ead222face980bcab",
+          "canvas": [
+            32,
+            20
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            2,
+            2,
+            22,
+            20
+          ],
+          "nonzero_alpha_pixels": 200
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/016.png",
+        "sha256": "f59e87de2b46e5fa0ddcdd41d8e6127bbccbc70273f62ca66097524b7fd76337",
+        "canvas": [
+          128,
+          80
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 17,
+      "images": [
+        {
+          "file": "original/017.png",
+          "source_member": "native/BMP/SHIPS.BMP/017.png",
+          "sha256": "3a192af05325167cac59c11243a3776f3e8bdcd09b3373389708a928bd31400d",
+          "canvas": [
+            24,
+            17
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            24,
+            17
+          ],
+          "nonzero_alpha_pixels": 303
+        },
+        {
+          "file": "hd/017.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/017.png",
+          "sha256": "626448c06f256fd929a67d4a45dc1f4ef86a852a5de7a790031eebf5bb52f1d2",
+          "canvas": [
+            48,
+            34
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            48,
+            34
+          ],
+          "nonzero_alpha_pixels": 1212
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/017.png",
+        "sha256": "243815822f66b86e649b64efdb383177bc5b107634015eeb802aaba31dfe1258",
+        "canvas": [
+          192,
+          136
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 18,
+      "images": [
+        {
+          "file": "original/018.png",
+          "source_member": "native/BMP/SHIPS.BMP/018.png",
+          "sha256": "ee3bbbfa5bfed1f00760ae56aef4ba43dbc17f34be8821a99fde5e14c0d1f8eb",
+          "canvas": [
+            8,
+            4
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            3,
+            4
+          ],
+          "nonzero_alpha_pixels": 9
+        },
+        {
+          "file": "hd/018.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/018.png",
+          "sha256": "9ab988e4b20d46900099b779359b450846b0e00f1a1d927541e222547a5a3414",
+          "canvas": [
+            16,
+            8
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            6,
+            8
+          ],
+          "nonzero_alpha_pixels": 36
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/018.png",
+        "sha256": "27baf68cc2fc59e8370f0dc899abbee7a92b7b390b567ea9f420112f703527f7",
+        "canvas": [
+          64,
+          32
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 19,
+      "images": [
+        {
+          "file": "original/019.png",
+          "source_member": "native/BMP/SHIPS.BMP/019.png",
+          "sha256": "a79f9d42f9da8031b8fb20e3876b064cbdf8bbf083567f64fb5a176f0dccaaa7",
+          "canvas": [
+            16,
+            15
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            15,
+            15
+          ],
+          "nonzero_alpha_pixels": 177
+        },
+        {
+          "file": "hd/019.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/019.png",
+          "sha256": "c3442fa2e84b437a58cdb735b71bfe505cf871a4190536d53125a83ba944a233",
+          "canvas": [
+            32,
+            30
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            30,
+            30
+          ],
+          "nonzero_alpha_pixels": 708
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/019.png",
+        "sha256": "c933c55bfe6a3c431931fd32ebf6c24259ec0ad3f4ae2460b5786454f5330bfc",
+        "canvas": [
+          128,
+          120
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    },
+    {
+      "frame": 20,
+      "images": [
+        {
+          "file": "original/020.png",
+          "source_member": "native/BMP/SHIPS.BMP/020.png",
+          "sha256": "f1a181d08b160734e6cd0e591e7b84547724a23c1d0236dbbdd59bb608a106ed",
+          "canvas": [
+            8,
+            8
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            7,
+            8
+          ],
+          "nonzero_alpha_pixels": 44
+        },
+        {
+          "file": "hd/020.png",
+          "source_member": "data/hd/BMP/SHIPS.BMP/020.png",
+          "sha256": "5c8b9a43e2ada394057e3d81660df29ccb2bd2561eb51f2302f80fcce5603968",
+          "canvas": [
+            16,
+            16
+          ],
+          "mode": "RGBA",
+          "alpha_positive_bounds_exclusive": [
+            0,
+            0,
+            14,
+            16
+          ],
+          "nonzero_alpha_pixels": 176
+        }
+      ],
+      "nearest8": {
+        "file": "nearest8/020.png",
+        "sha256": "a77080d6c8c54e819ba012536d0eec03d06674b11b136cf2907af9ad32624cfa",
+        "canvas": [
+          64,
+          64
+        ],
+        "method": "Exact nearest-neighbor8 enlargement only."
+      }
+    }
+  ],
+  "script_attribution": {
+    "resource": "SHIPS.BMP",
+    "port_present": true,
+    "original_present": true,
+    "port_frame_count": 21,
+    "original_frame_count": 21,
+    "port_payload_sha256": "8d8cb24a025e6390ce51697cb2211e24232aaf677872015d49c302fb6a904c98",
+    "original_payload_sha256": "d7fc00398227424afe67d89d71c9a93175d2a64588b3603b9edd93c7fa1a9fff",
+    "ttm_load_associations": [
+      {
+        "resource": "GJGULIVR.TTM",
+        "decoded_sha256": "feed16da0260a04c9859c840cc2f2a9348031c029eb7143db72af0417911cceb",
+        "story_associations": [
+          {
+            "scene": "BUILDING.ADS#4",
+            "description": "LILIPUT 1",
+            "source": "src/data/story_data.h:84",
+            "ttm_entry_tags": [
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 14,
+                "target_present": true,
+                "description": "load mjsleep"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 15,
+                "target_present": true,
+                "description": "walks to sleeping po"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 2,
+                "target_present": true,
+                "description": "sitting down"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 6,
+                "target_present": true,
+                "description": "about to sleep"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 58,
+                "target_present": true,
+                "description": "sleeping "
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 12,
+                "target_present": true,
+                "description": "sleeping timer"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 52,
+                "target_present": true,
+                "description": "LILIPUTS SAIL IN"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 53,
+                "target_present": true,
+                "description": "LILIPUTS ROW ASHORE"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 54,
+                "target_present": true,
+                "description": "FOREMEN HOP OUT"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 61,
+                "target_present": true,
+                "description": "TYING JOHNNY DOWN"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 66,
+                "target_present": true,
+                "description": "TYING JOHNNY TIMER"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 68,
+                "target_present": true,
+                "description": "SLEEPING TIED UP"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 65,
+                "target_present": true,
+                "description": "LILIPUTS LEAVE "
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 63,
+                "target_present": true,
+                "description": "LILIPUTS ROW AWAY"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 64,
+                "target_present": true,
+                "description": "LILIPUTS SAIL AWAY"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 69,
+                "target_present": true,
+                "description": "huh"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 60,
+                "target_present": true,
+                "description": "AWAKE TIED UP"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 67,
+                "target_present": true,
+                "description": "GULL FLIES IN"
+              }
+            ]
+          },
+          {
+            "scene": "BUILDING.ADS#3",
+            "description": "MUNDANE SLEEP",
+            "source": "src/data/story_data.h:85",
+            "ttm_entry_tags": [
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 14,
+                "target_present": true,
+                "description": "load mjsleep"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 15,
+                "target_present": true,
+                "description": "walks to sleeping po"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 2,
+                "target_present": true,
+                "description": "sitting down"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 6,
+                "target_present": true,
+                "description": "about to sleep"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 58,
+                "target_present": true,
+                "description": "sleeping "
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 12,
+                "target_present": true,
+                "description": "sleeping timer"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 9,
+                "target_present": true,
+                "description": "zzzzzzs"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 4,
+                "target_present": true,
+                "description": "roll to the left"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 5,
+                "target_present": true,
+                "description": "roll to the right"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 8,
+                "target_present": true,
+                "description": "restless sleep"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 13,
+                "target_present": true,
+                "description": "restless sleep timer"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 10,
+                "target_present": true,
+                "description": "getting up"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 17,
+                "target_present": true,
+                "description": "sleeping right"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 16,
+                "target_present": true,
+                "description": "sleeping left"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 11,
+                "target_present": true,
+                "description": "walk to c for end"
+              }
+            ]
+          },
+          {
+            "scene": "BUILDING.ADS#6",
+            "description": "LILIPUT 3 NIGHT",
+            "source": "src/data/story_data.h:91",
+            "ttm_entry_tags": [
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 14,
+                "target_present": true,
+                "description": "load mjsleep"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 15,
+                "target_present": true,
+                "description": "walks to sleeping po"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 2,
+                "target_present": true,
+                "description": "sitting down"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 6,
+                "target_present": true,
+                "description": "about to sleep"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 58,
+                "target_present": true,
+                "description": "sleeping "
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 12,
+                "target_present": true,
+                "description": "sleeping timer"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 52,
+                "target_present": true,
+                "description": "LILIPUTS SAIL IN"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 53,
+                "target_present": true,
+                "description": "LILIPUTS ROW ASHORE"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 54,
+                "target_present": true,
+                "description": "FOREMEN HOP OUT"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 61,
+                "target_present": true,
+                "description": "TYING JOHNNY DOWN"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 66,
+                "target_present": true,
+                "description": "TYING JOHNNY TIMER"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 68,
+                "target_present": true,
+                "description": "SLEEPING TIED UP"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 65,
+                "target_present": true,
+                "description": "LILIPUTS LEAVE "
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 63,
+                "target_present": true,
+                "description": "LILIPUTS ROW AWAY"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 64,
+                "target_present": true,
+                "description": "LILIPUTS SAIL AWAY"
+              },
+              {
+                "resource": "GJGULIVR.TTM",
+                "tag": 60,
+                "target_present": true,
+                "description": "AWAKE TIED UP"
+              }
+            ]
+          }
+        ],
+        "association_scope": "TTM resource is referenced by story; this does not prove every loaded BMP/frame runs in that story."
+      },
+      {
+        "resource": "GJLILIPU.TTM",
+        "decoded_sha256": "38b1a39973b2ca09fff84bbd47f7cfe8549928d8ec1e8651f56c32bf2d386c95",
+        "story_associations": [],
+        "association_scope": "TTM resource is referenced by story; this does not prove every loaded BMP/frame runs in that story."
+      },
+      {
+        "resource": "MJSAND.TTM",
+        "decoded_sha256": "70dd9d3648064e085ea409568ca94a60063e04dbff40de77a48b720e55d02a6f",
+        "story_associations": [
+          {
+            "scene": "BUILDING.ADS#1",
+            "description": "MJSAND",
+            "source": "src/data/story_data.h:83",
+            "ttm_entry_tags": [
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 1,
+                "target_present": true,
+                "description": "sandcastle load"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 16,
+                "target_present": true,
+                "description": "WALKS TO CASTLE"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 2,
+                "target_present": true,
+                "description": "sancast stand to kne"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 3,
+                "target_present": true,
+                "description": "build castle"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 5,
+                "target_present": true,
+                "description": "castle grows"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 14,
+                "target_present": true,
+                "description": "johnny pause with ca"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 15,
+                "target_present": true,
+                "description": "castle wilts "
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 7,
+                "target_present": true,
+                "description": "johnny kicks castle"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 8,
+                "target_present": true,
+                "description": "johnny stomps castle"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 10,
+                "target_present": true,
+                "description": "castle dissolves"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 17,
+                "target_present": true,
+                "description": "from castle to A"
+              }
+            ]
+          },
+          {
+            "scene": "BUILDING.ADS#2",
+            "description": "LILIPUT 2",
+            "source": "src/data/story_data.h:86",
+            "ttm_entry_tags": [
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 1,
+                "target_present": true,
+                "description": "sandcastle load"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 16,
+                "target_present": true,
+                "description": "WALKS TO CASTLE"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 2,
+                "target_present": true,
+                "description": "sancast stand to kne"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 3,
+                "target_present": true,
+                "description": "build castle"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 5,
+                "target_present": true,
+                "description": "castle grows"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 40,
+                "target_present": true,
+                "description": "SANDCASTLE KNEE TO S"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 35,
+                "target_present": true,
+                "description": "LILIPUTS SAIL IN"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 41,
+                "target_present": true,
+                "description": "PAUSE WITH SHIP"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 37,
+                "target_present": true,
+                "description": "CANNON FIRE "
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 48,
+                "target_present": true,
+                "description": "JOHNNY RUNS AWAY"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 49,
+                "target_present": true,
+                "description": "KING KONG ROUTINE"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 36,
+                "target_present": true,
+                "description": "LILIPUTS ROW ASHORE"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 53,
+                "target_present": true,
+                "description": "HOP OUT TIMER"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 83,
+                "target_present": true,
+                "description": "HOP OUT DELAY"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 42,
+                "target_present": true,
+                "description": "LILIPUTS HOP OUT"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 84,
+                "target_present": true,
+                "description": "RAISE FLAG"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 57,
+                "target_present": true,
+                "description": "PLANE LAUNCH 1"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 58,
+                "target_present": true,
+                "description": "PLANE LAUNCH 2"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 59,
+                "target_present": true,
+                "description": "PLANE LAUNCH 3"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 60,
+                "target_present": true,
+                "description": "PLANE LAUNCH 4"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 46,
+                "target_present": true,
+                "description": "FLAGS FLY"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 79,
+                "target_present": true,
+                "description": "LOW CIRCLE 1"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 74,
+                "target_present": true,
+                "description": "BACK LO CIRCLE 1"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 77,
+                "target_present": true,
+                "description": "FRONT LO CIRCLE 1"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 81,
+                "target_present": true,
+                "description": "HIGH CIRCLE 1"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 70,
+                "target_present": true,
+                "description": "BACK HI CIRCLE 1"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 75,
+                "target_present": true,
+                "description": "FRONT HI CIRCLE 1"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 82,
+                "target_present": true,
+                "description": "HIGH CIRCLE 2"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 72,
+                "target_present": true,
+                "description": "BACK HI CIRCLE 2"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 76,
+                "target_present": true,
+                "description": "FRONT HI CIRCLE 2"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 80,
+                "target_present": true,
+                "description": "LOW CIRCLE 2"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 73,
+                "target_present": true,
+                "description": "BACK LO CIRCLE 2"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 78,
+                "target_present": true,
+                "description": "FRONT LO CIRCLE 2"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 55,
+                "target_present": true,
+                "description": "PEEK"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 56,
+                "target_present": true,
+                "description": "STAND UP"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 51,
+                "target_present": true,
+                "description": "SWIPE AT PLANES TIME"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 50,
+                "target_present": true,
+                "description": "SWIPE AT PLANES"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 52,
+                "target_present": true,
+                "description": "FALL FROM TREE"
+              },
+              {
+                "resource": "MJSAND.TTM",
+                "tag": 85,
+                "target_present": true,
+                "description": "freeup shapes"
+              }
+            ]
+          }
+        ],
+        "association_scope": "TTM resource is referenced by story; this does not prove every loaded BMP/frame runs in that story."
+      }
+    ],
+    "visual_character_classification": "not_inferred_from_filename",
+    "runtime_reachability_proven": false,
+    "unique_slot_frame_actions": [
+      {
+        "ttm": "GJLILIPU.TTM",
+        "tag": 18,
+        "description": "LILIPUTS SAIL IN",
+        "frames": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      },
+      {
+        "ttm": "GJLILIPU.TTM",
+        "tag": 19,
+        "description": "LILIPUTS ROW ASHORE",
+        "frames": [
+          9,
+          10,
+          11,
+          12,
+          13,
+          18
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      },
+      {
+        "ttm": "GJLILIPU.TTM",
+        "tag": 20,
+        "description": "CANNON FIRE ",
+        "frames": [
+          9,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      },
+      {
+        "ttm": "GJLILIPU.TTM",
+        "tag": 25,
+        "description": "LILIPUTS HOP OUT",
+        "frames": [
+          12
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      },
+      {
+        "ttm": "MJSAND.TTM",
+        "tag": 35,
+        "description": "LILIPUTS SAIL IN",
+        "frames": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      },
+      {
+        "ttm": "MJSAND.TTM",
+        "tag": 36,
+        "description": "LILIPUTS ROW ASHORE",
+        "frames": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      },
+      {
+        "ttm": "MJSAND.TTM",
+        "tag": 37,
+        "description": "CANNON FIRE ",
+        "frames": [
+          9,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      },
+      {
+        "ttm": "MJSAND.TTM",
+        "tag": 57,
+        "description": "PLANE LAUNCH 1",
+        "frames": [
+          12
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      },
+      {
+        "ttm": "MJSAND.TTM",
+        "tag": 58,
+        "description": "PLANE LAUNCH 2",
+        "frames": [
+          12
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      },
+      {
+        "ttm": "MJSAND.TTM",
+        "tag": 59,
+        "description": "PLANE LAUNCH 3",
+        "frames": [
+          12
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      },
+      {
+        "ttm": "MJSAND.TTM",
+        "tag": 60,
+        "description": "PLANE LAUNCH 4",
+        "frames": [
+          12
+        ],
+        "scope": "static unique-script-slot draw attribution, not executed sequence"
+      }
+    ],
+    "ambiguous_draw_site_count": 200,
+    "native_sites": []
+  },
+  "original_contact_sheet": {
+    "file": "original-contact-sheet.png",
+    "source_path": "D:\\.ai-work\\worktrees\\johnny-character-inventory\\build\\character-inventory\\atlas-v1\\SHIPS.BMP-01.png",
+    "sha256": "6bfc4fe993837011a21e200cbf2c9c0128ca26aae852ca68aad2d8327956fe6a",
+    "method": "Exact existing original atlas copy."
+  },
+  "hd_contact_sheet": {
+    "file": "hd-contact-sheet.png",
+    "sha256": "b9ed578e89eebc27430fb48df55e6ae335764f7c9f53e4527b6d26cc55c686ca",
+    "canvas": [
+      1540,
+      698
+    ],
+    "method": "Diagnostic contact sheet: native full canvases, nearest scaled to fit cells, neutral background; inputs unchanged."
+  },
+  "style_reference": {
+    "file": "approved-boat000-style.png",
+    "source_path": "art/cartoon/boat-v1/generation/000-generated-v1.png",
+    "sha256": "4c2760df85897ac806eae81d45e79e2a5c799d3e1239614dad59eb573c1293b6",
+    "canvas": [
+      1952,
+      806
+    ],
+    "role": "Approved occupant-free boat000, contours and colors only; SHIPS geometry remains original-controlled."
+  }
+}

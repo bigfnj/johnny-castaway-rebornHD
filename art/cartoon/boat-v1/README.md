@@ -1,6 +1,6 @@
 # Cartoon motorboat draft
 
-BOAT.BMP000 is an independent boat drawing, with no embedded Johnny. The new raw artwork is awaiting visual approval in the [combined prop review](../props-batch-v1/review.html). It follows the original broadside silhouette with a red cabin, ivory hull, stern ladder and bow railing. The exact approved palm supplies the Cartoon outline and shading reference.
+BOAT.BMP000 is an independent boat drawing, with no embedded Johnny. The user approved its v1 appearance in the [combined prop review](../props-batch-v1/acceptance/appearance-v1.json); runtime fit and motion remain pending. It follows the original broadside silhouette with a red cabin, ivory hull, stern ladder and bow railing. The exact approved palm supplies the Cartoon outline and shading reference.
 
 The exact built-in ImageGen request and unchanged returned PNG are under `generation/`; `generation/record.json` records actual dimensions, alpha and hashes. `reference/source.json` binds the supplied original, current HD proxy and style PNG. Original diagnostic colors are not verified original-executable colors.
 

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "resource": "SHIPS.BMP",
+  "frame": 5,
+  "version": "v2",
+  "status": "draft_visual_review",
+  "human_approval": null,
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "file": "generation/005-v2-request.json",
+    "sha256": "c7d1f4722fa95cc7eca66b322a8ad1ee46b0c84910ca81a2ef6f98ac4eeaefca"
+  },
+  "output": {
+    "file": "generation/005-generated-v2.png",
+    "sha256": "a885f2037cfb75cd042d3b698541a7f9045eabdfa73eafc67d5b6acf101053f9",
+    "generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-2374ef4a-501a-4b73-80f2-0105bd2d7ae3.png",
+    "copied_byte_exact": true,
+    "canvas": [
+      2172,
+      724
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_positive_bounds_exclusive": [
+      71,
+      19,
+      2092,
+      692
+    ],
+    "alpha8_bounds_exclusive": [
+      75,
+      156,
+      2089,
+      555
+    ],
+    "alpha0_pixels": 1079289,
+    "alpha1_through7_pixels": 14394,
+    "alpha8_through255_pixels": 478845,
+    "canvas_edge_alpha": {
+      "top": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "bottom": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "left": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "right": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      }
+    }
+  },
+  "ordered_references": [
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/ships-v1/generation/005-generated-v1.png",
+      "sha256": "2825e87bb438eb2d101580f1cf9c539ffc662852025c033ac24da4db04b33ad1"
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/ships-v1/generation/003-generated-v1.png",
+      "sha256": "5255579e8906bd6bff8f56726627680aa2a2c0af7e80ae85ee9a22af48187d72"
+    }
+  ],
+  "original_reference": {
+    "file": "reference/original/005.png",
+    "sha256": "ed5f893dde3e62faf690087f99503bef9ba57dd12a1cde26133852d16f538564",
+    "canvas": [
+      160,
+      34
+    ]
+  },
+  "pixels_postprocessed": false,
+  "native_export_executed": false,
+  "native_review_executed": false,
+  "inspection_limit": "Alpha8 is diagnostic only; no threshold/crop/key is applied. Generated raw geometry is not proven native registration or cross-frame alignment.",
+  "edit_scope": "Requested water-color-only turquoise correction. Generated edit; no pixel-identity claim for non-water regions."
+}
