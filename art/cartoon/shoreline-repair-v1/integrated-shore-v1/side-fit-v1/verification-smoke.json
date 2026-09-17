@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "smoke",
+  "exporter_sha256": "dd36c72094f50e35109f04955187178e0108da84b8929d47c90e5c9ae96a3fdb",
+  "test_sha256": "6f54cf1f9c2fc1262b82e00e1ac8a630c64aca565acb90368d0b247695d35218",
+  "recipe_sha256": "3002ca095bd647a2e513b92659d5943811ae1787aeacd5181191602670a1e50d",
+  "export_report_sha256": "8489c4449c6fbfe82f8bd4e66a3e4edfd4bec71c4e5d36c5c9999711c6786323",
+  "unchanged_frames": [
+    0,
+    6,
+    7,
+    8
+  ],
+  "scope": "Technical source retention and selected integer placement. Native geometry and human appearance remain separate checks.",
+  "runs": [
+    {
+      "name": "ten_frame_export_readback",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/export.py",
+        "--check"
+      ],
+      "stdout": "WITNESS side-fit dd36c72094f50e35109f04955187178e0108da84b8929d47c90e5c9ae96a3fdb\nPASS side-fit {\"frames\": 10, \"source_pixels_cropped\": 0, \"unchanged_frames\": [0, 6, 7, 8]}\n",
+      "stderr": ""
+    }
+  ]
+}

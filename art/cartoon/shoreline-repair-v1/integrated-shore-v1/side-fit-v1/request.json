@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-17",
+  "user_request": "it may be that the prior waves were placed based on the smaller island, now that it is larger, they need to be re -placed to account for the extra sand. make sense ?",
+  "scope": "Compare new placement of the six existing side-wave drawings against the approved enlarged island. Preserve the selected offshore style, generated center waves and sand shape.",
+  "base_selection": "../wave-approaches-v1/selection.json",
+  "base_private_archive_sha256": "ab5c8094b461307b87d68d2bb148eae5b9ce56d93cb6b93805c27c7fbd8e24ac",
+  "cause": "Side waves retained their older positions while the enlarged ground's visibility mask removed parts of their strokes. Matching recent review pixels did not establish fit to the enlarged shoreline.",
+  "first_comparison": {
+    "left_frames": [3, 4, 5],
+    "left_translation_hd": [-6, 8],
+    "right_frames": [9, 10, 11],
+    "right_translation_hd": [10, 10],
+    "unchanged_frames": [0, 6, 7, 8]
+  },
+  "operation": "Use the full unmasked source drawings at their existing scale. Translate each side family consistently, retain its complete canvas in a registered footprint, then apply the existing visibility rule against the unchanged ground.",
+  "accepted": false,
+  "production_promotion": false,
+  "next_step": "Verify registered footprints and native placement, then show current and repositioned waves with matching scale and looping native timing for human review."
+}

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "files_sha256": {
+    "export_v2.py": "109d55fcada482a42b97208c1c1c65fecfdcd715d6fa0a3a05c59d92e5ada1bc",
+    "check_export_v2.py": "6df4e042116f34b1db512117e257473cfb94f04be1cc2ec53049208da6b438d2",
+    "recipe-v2.json": "94df1f95fa15d03566191faefcea92b415838ad66e5e212fbea2102c13b5a5cb",
+    "verification-v2-smoke.json": "81370322c8df36efbbc3d7c2bcd7e095ef4e23bb106d72661791df86f154bd7e",
+    "verification-v2-regression.json": "3e4a370efea48855f46e5237dbcd5c9ec8f5f5ba679635b44f345bc123b3de78",
+    "REPRODUCTION-V2.md": "959af542a580b7b4f4328c61d1e6bbabf58ab860dfd44cc209cfe00ff1ffa6b8",
+    "preserve_export_v2.py": "b61fd4184a37f7c405a74641b6e4ce088fc7c8916fcdb615b1d5ad7ead832c6a",
+    "candidates/v2/export-report.json": "d60a7c94d970d2aaa78cdc0c3b71c800a0b1cf472ead4459fd14ffbbb90b7e1b",
+    "candidates/v2/BMP/HOLIDAY.BMP/000.png": "1f2ac522476d98afcade5f128c12c0c80f6993b871b611498971f23a44eabf79",
+    "candidates/v2/BMP/HOLIDAY.BMP/001.png": "e6327c07e85d7d8610ed45a502efd283fe1c79fe5850c790bb2808a2ee02176e",
+    "candidates/v2/BMP/HOLIDAY.BMP/002.png": "7d9c5406f8275a1af9c9369305575a24d807ac5b38200e6ad17913a0a8400265",
+    "candidates/v2/BMP/HOLIDAY.BMP/003.png": "e36e103027d2eee53c58c903cd397770a66e5ffce2683e9c0c8ce6e2d988ff92",
+    "candidates/v2/padded/003.png": "97e9e7496bae4d36f75c61279b9fee7d6569db9261eaf3cd834f09f0f8d4455f"
+  },
+  "historical_sha256": {
+    "export.py": "6fab1fa6f5335ca6ddbac22fcba5172d5a86cdd733e48f27034bd39f4d224a74",
+    "recipe-v1.json": "4a2129320c6527306465206149e279c5b183ecb3730a66d752ccb2c46b03ed9d",
+    "candidates/v1/export-report.json": "1060d71d71d21e342f5d8fee7ac7e39263de5b4a5d6826fed2bf9d5999bb2bbd",
+    "native/evidence-v1/evidence.json": "f7741589d8f27e6e798590c846c630723e191ea6552ff9016580b6fbe5284b9e",
+    "native/evidence-v1/readback.json": "26a5bfc64daf6ab7e094a8b7115788763a7e0e31c321e51cf69bb0eaa91862cd",
+    "review/evidence/evidence.json": "cd00dc5b17b6ebfcbc199cd888a945f16eb1f7c34cd786993c43b46fabcf4f19",
+    "review/page/review.html": "6ed92328e2c013675c9d57df3e6d78185223fc4bac7b30cc124a297063b89937",
+    "review/page/manifest.json": "2f951c69d974e3ed134c1b0f2c7b7b28a893166ccbac3e65449e1333e67a2a7a"
+  },
+  "identical_v1_v2_payloads_sha256": {
+    "padded/003.png": "97e9e7496bae4d36f75c61279b9fee7d6569db9261eaf3cd834f09f0f8d4455f",
+    "BMP/HOLIDAY.BMP/003.png": "e36e103027d2eee53c58c903cd397770a66e5ffce2683e9c0c8ce6e2d988ff92",
+    "BMP/HOLIDAY.BMP/000.png": "1f2ac522476d98afcade5f128c12c0c80f6993b871b611498971f23a44eabf79",
+    "BMP/HOLIDAY.BMP/001.png": "e6327c07e85d7d8610ed45a502efd283fe1c79fe5850c790bb2808a2ee02176e",
+    "BMP/HOLIDAY.BMP/002.png": "7d9c5406f8275a1af9c9369305575a24d807ac5b38200e6ad17913a0a8400265"
+  },
+  "v1_limitation": {
+    "path": "recipe-v1.json",
+    "actual_bytes_sha256": "4a2129320c6527306465206149e279c5b183ecb3730a66d752ccb2c46b03ed9d",
+    "canonical_content_sha256": "94df1f95fa15d03566191faefcea92b415838ad66e5e212fbea2102c13b5a5cb",
+    "limitation": "V1 report hashed canonical LF content, while its Windows recipe writer saved CRLF. V1 pixels and frozen evidence remain historical; use this V2 for integration."
+  },
+  "v2_recipe_sha256": "94df1f95fa15d03566191faefcea92b415838ad66e5e212fbea2102c13b5a5cb",
+  "scope": "Use V2 exact LF metadata for integration. PNG pixels match shown V1, so historical native/browser evidence remains applicable. No V1 overwrite, new capture or production promotion."
+}

@@ -1,0 +1,56 @@
+{
+  "source_commit": "1aad361fe78dde2c956e05dc451b8d5bab100af0",
+  "runtime_commit": "1aad361fe78dde2c956e05dc451b8d5bab100af0",
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "inputs": {
+    "baseline": {
+      "path": "build/shoreline-repair-v1/offshore-selected-v1/candidate.zip",
+      "sha256": "ab5c8094b461307b87d68d2bb148eae5b9ce56d93cb6b93805c27c7fbd8e24ac"
+    },
+    "candidate": {
+      "path": "build/shoreline-repair-v1/side-clean-selected-v2/candidate.zip",
+      "sha256": "862d70fc93d1ed26020e15e8b04627dd56e97b47df8d86b99b8312c6cc88c3d0"
+    },
+    "preparation": {
+      "path": "build/shoreline-repair-v1/side-clean-selected-v2/preparation.json",
+      "sha256": "454fc6a546fe9d2ad55441fbcb9e0f28a088fee7ac7861a4b2bc0e0e827fc7b7"
+    }
+  },
+  "capture_arguments": [
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/native/capture_v2.py",
+    "--baseline",
+    "/source/build/shoreline-repair-v1/offshore-selected-v1/candidate.zip",
+    "--candidate",
+    "/source/build/shoreline-repair-v1/side-clean-selected-v2/candidate.zip",
+    "--candidate-sha256",
+    "862d70fc93d1ed26020e15e8b04627dd56e97b47df8d86b99b8312c6cc88c3d0",
+    "--preparation",
+    "/source/build/shoreline-repair-v1/side-clean-selected-v2/preparation.json",
+    "--preparation-sha256",
+    "454fc6a546fe9d2ad55441fbcb9e0f28a088fee7ac7861a4b2bc0e0e827fc7b7",
+    "--runtime-commit",
+    "1aad361fe78dde2c956e05dc451b8d5bab100af0",
+    "--output",
+    "/out/captures"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 525.2368500232697,
+  "no_surviving_task_container": true,
+  "cleanup_exit_code": 0,
+  "launcher_sha256": "b0dc46614251de079fa78ab02f14f517c5889833515d165b5d2eb635c43d9031",
+  "helpers_sha256": {
+    "capture.py": "af4a37d9df7d661b2a8e50733fb5ae72aae645616d3880f5f544dcbb595adddf",
+    "capture_v2.py": "ebbfe2fe4a713adbd604f235d99272bff326cdf1b75be6e85ab316d819f0b5db",
+    "combined.py": "9bc877fd51fe6f795d1d6cd09dc1469211d7b0c2c3750248dab68dead1ecd93f",
+    "prepare.py": "4de3bfa3e4cc8c09a55b781f1b545806fe9c6f9d8b71709d35e7b4259ef33590",
+    "prepare_v2.py": "44f005e5308b0d7b5984295f6d40cd052b0d81a7b1b91211d0afdc9dce933588",
+    "run.py": "2422d96c470a9ab614242de0716e03852c00105cbbd0e899f7e8da272b35ed52",
+    "run_v2.py": "b0dc46614251de079fa78ab02f14f517c5889833515d165b5d2eb635c43d9031"
+  }
+}

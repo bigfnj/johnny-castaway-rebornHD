@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "regression",
+  "exporter_sha256": "f8c1ab32af71e76b0ce8401845cdc4d2dae428ee0077276ddddfb4f13987f57e",
+  "test_sha256": "3d42cffad76668fcc2623b79572e6edd673b3bc0cd86aec561f894fb2785e06b",
+  "recipe_sha256": "3d00c419eca09cd038be84310a1dea8b2d5837d41e95d4c01a2f142913659f8a",
+  "export_report_sha256": "80dffa4ad7434a01949a7aef3fcf283b1bc26937645e9a9086db7a60386ee463",
+  "runtime_sha256": "c524b35d1d30d5a70aa8136e18a0ff739a3b6887673e565831d04883869d9b87",
+  "unchanged_v5_frames": [
+    0,
+    1,
+    2
+  ],
+  "outside_alpha8_pixels": 0,
+  "outside_max_alpha": 4,
+  "outside_nonzero_pixels": 106,
+  "scope": "Technical export only. Small deliberate registration change; no human scene acceptance.",
+  "original_registered_ancestor": {
+    "raw_sha256": "8cada55c5d6156efcb5a2c29a49a56d8f2662ac31c3201662ec2f66456e7ab17",
+    "padded_sha256": "88e1b5c586781fec08231a2fb5755be8fa56ce86a93658b3ac7feb58c119e4df",
+    "runtime_sha256": "03ab2762a2924aa39431cf9940555da96ed76bd20043ef73eb130a61ae879740",
+    "meaningful_bounds_hd": [
+      1,
+      0,
+      299,
+      94
+    ]
+  },
+  "protected_files_sha256": {
+    "art/cartoon/seasonal-v1/export.py": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+    "art/cartoon/seasonal-v1/recipe-v5.json": "5e60af35fd517663b4c0f3c4c26da97d61f81ccad807fadc5bb858c6ed3c848f",
+    "art/cartoon/seasonal-v1/banner-attachment-v1/export.py": "749823dcd4a31ec352ce35e45cae72412807eabe4e9fafb7d258e7c245df400c",
+    "art/cartoon/seasonal-v1/banner-attachment-v1/raw-v1.png": "20707545681b10804aaa77ab075acff9312e75ccc2ceea9c202472032ca06316",
+    "art/cartoon/seasonal-v1/banner-attachment-v1/raw-v2.png": "d55a08ac62755c3ad3c13c72ca6bfed8fcd0fc6b000c9f12d798f60948744d84",
+    "art/cartoon/seasonal-v1/banner-attachment-v1/diagnostic-v1/export-report.json": "562d622be4e7fe5938f87b9ce96316b25e64e644af4c595921878ecac7f024b4",
+    "art/cartoon/seasonal-v1/banner-attachment-v1/diagnostic-v1/diagnostic-crop/003.png": "a3b31c4537314fbc0561e2eafa4c8f65083fd12aa518f693bc865bb0d46ada8b",
+    "art/cartoon/seasonal-v1/banner-attachment-v1/diagnostic-v1/padded/003.png": "3f1bd6beb807655f47a60613324b55716ec06c16ae8e250fc39c59023918411c",
+    "art/cartoon/seasonal-v1/banner-attachment-v1/diagnostic-v2/export-report.json": "552c1bf80f3348b5627e82bc30a9bfde04db3dc082ed64c68f70a301924143b9",
+    "art/cartoon/seasonal-v1/banner-attachment-v1/diagnostic-v2/diagnostic-crop/003.png": "81d45c1bbbd33824aa2982d0f61b4b133d46aef02d5b9e8cc304a2ac9eae1a2b",
+    "art/cartoon/seasonal-v1/banner-attachment-v1/diagnostic-v2/padded/003.png": "518463d192fc881b5504f117bad46acb3dbd4ff3cd9618f75f7f4a88ec6c9e3c",
+    "art/cartoon/seasonal-v1/candidates/v5/BMP/HOLIDAY.BMP/000.png": "1f2ac522476d98afcade5f128c12c0c80f6993b871b611498971f23a44eabf79",
+    "art/cartoon/seasonal-v1/candidates/v5/BMP/HOLIDAY.BMP/001.png": "e6327c07e85d7d8610ed45a502efd283fe1c79fe5850c790bb2808a2ee02176e",
+    "art/cartoon/seasonal-v1/candidates/v5/BMP/HOLIDAY.BMP/002.png": "7d9c5406f8275a1af9c9369305575a24d807ac5b38200e6ad17913a0a8400265",
+    "art/cartoon/seasonal-v1/candidates/v5/BMP/HOLIDAY.BMP/003.png": "03ab2762a2924aa39431cf9940555da96ed76bd20043ef73eb130a61ae879740",
+    "art/cartoon/seasonal-v1/candidates/v5/padded/000.png": "ec6bb22c11ec69de872d39d7205c5e8b8d793a6305c2f44117457b8a1f7604e0"
+  },
+  "guard_removal": {
+    "removed_guard": "    base.require(recipe == prepare(source_path), '003: source or fixed V5 recipe differs')",
+    "mutant_sha256": "48de7ecb1a1882004477246e8c8b5fd286fc636207db18601f23c6287706b045",
+    "driver_sha256": "0fdca406b09fd9bcf9846b0a7bddc9f15755cc66ca313121cecb225ee4902193",
+    "wrong_recipe_sha256": "de5c60281dc3f63b081884dc4b618e8ddd436314aa69c77c1f1a51ceea8055a1",
+    "actual_wrong_runtime_sha256": "f73167f797289a2ffc0eca32e83e24edf664cb8f29d003bc19faa90420793a8e",
+    "replay_note": "Stage the three preserved files together anywhere below the repository and run execute_mutant.py with --recipe and a fresh --output. Scratch only."
+  },
+  "runs": [
+    {
+      "name": "selected_export_readback",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/seasonal-v1/banner-attachment-v1/export_v2.py",
+        "--recipe",
+        ".\\art\\cartoon\\seasonal-v1\\banner-attachment-v1\\recipe-v3.json",
+        "--output",
+        ".\\art\\cartoon\\seasonal-v1\\banner-attachment-v1\\candidates\\v3",
+        "--check"
+      ],
+      "stdout": "WITNESS banner-registration f8c1ab32af71e76b0ce8401845cdc4d2dae428ee0077276ddddfb4f13987f57e\nWITNESS banner-export 749823dcd4a31ec352ce35e45cae72412807eabe4e9fafb7d258e7c245df400c\nPASS banner-export FIT_PASS_PENDING_NATIVE_REVIEW\n",
+      "stderr": ""
+    },
+    {
+      "name": "fresh_process_exact_replay",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/seasonal-v1/banner-attachment-v1/export_v2.py",
+        "--recipe",
+        ".\\art\\cartoon\\seasonal-v1\\banner-attachment-v1\\recipe-v3.json",
+        "--output",
+        ".\\build\\seasonal-v1\\banner-attachment-verification-v3\\replay"
+      ],
+      "stdout": "WITNESS banner-registration f8c1ab32af71e76b0ce8401845cdc4d2dae428ee0077276ddddfb4f13987f57e\nWITNESS banner-export 749823dcd4a31ec352ce35e45cae72412807eabe4e9fafb7d258e7c245df400c\nPASS banner-export FIT_PASS_PENDING_NATIVE_REVIEW\n",
+      "stderr": ""
+    },
+    {
+      "name": "rejected_raw_v1_fixed_placement",
+      "exit_code": 1,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/seasonal-v1/banner-attachment-v1/export.py",
+        "--recipe",
+        ".\\art\\cartoon\\seasonal-v1\\banner-attachment-v1\\recipe-v1.json",
+        "--output",
+        ".\\build\\seasonal-v1\\banner-attachment-verification-v3\\refused-v1"
+      ],
+      "stdout": "WITNESS banner-export 749823dcd4a31ec352ce35e45cae72412807eabe4e9fafb7d258e7c245df400c\n",
+      "stderr": "FAIL 003: meaningful source or filtered alpha overhang\n"
+    },
+    {
+      "name": "rejected_raw_v2_fixed_placement",
+      "exit_code": 1,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/seasonal-v1/banner-attachment-v1/export.py",
+        "--recipe",
+        ".\\art\\cartoon\\seasonal-v1\\banner-attachment-v1\\recipe-v2.json",
+        "--output",
+        ".\\build\\seasonal-v1\\banner-attachment-verification-v3\\refused-v2"
+      ],
+      "stdout": "WITNESS banner-export 749823dcd4a31ec352ce35e45cae72412807eabe4e9fafb7d258e7c245df400c\n",
+      "stderr": "FAIL 003: meaningful source or filtered alpha overhang\n"
+    },
+    {
+      "name": "003_wrong_registration_refused",
+      "exit_code": 1,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/seasonal-v1/banner-attachment-v1/export_v2.py",
+        "--recipe",
+        ".\\build\\seasonal-v1\\banner-attachment-verification-v3\\wrong-registration.json",
+        "--output",
+        ".\\build\\seasonal-v1\\banner-attachment-verification-v3\\refused-registration"
+      ],
+      "stdout": "WITNESS banner-registration f8c1ab32af71e76b0ce8401845cdc4d2dae428ee0077276ddddfb4f13987f57e\nWITNESS banner-export 749823dcd4a31ec352ce35e45cae72412807eabe4e9fafb7d258e7c245df400c\n",
+      "stderr": "FAIL 003: source or fixed V5 recipe differs\n"
+    },
+    {
+      "name": "003_wrong_registration_accepted_only_after_guard_removal",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "build/seasonal-v1/banner-attachment-verification-v3/execute_mutant.py",
+        "--recipe",
+        ".\\build\\seasonal-v1\\banner-attachment-verification-v3\\wrong-registration.json",
+        "--output",
+        ".\\build\\seasonal-v1\\banner-attachment-verification-v3\\mutant-output"
+      ],
+      "stdout": "EXECUTED_MUTANT_SHA256=48de7ecb1a1882004477246e8c8b5fd286fc636207db18601f23c6287706b045\nWITNESS banner-registration f8c1ab32af71e76b0ce8401845cdc4d2dae428ee0077276ddddfb4f13987f57e\nWITNESS banner-export 749823dcd4a31ec352ce35e45cae72412807eabe4e9fafb7d258e7c245df400c\nPASS banner-export FIT_PASS_PENDING_NATIVE_REVIEW\n",
+      "stderr": ""
+    },
+    {
+      "name": "restored_selected_positive",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/seasonal-v1/banner-attachment-v1/export_v2.py",
+        "--recipe",
+        ".\\art\\cartoon\\seasonal-v1\\banner-attachment-v1\\recipe-v3.json",
+        "--output",
+        ".\\art\\cartoon\\seasonal-v1\\banner-attachment-v1\\candidates\\v3",
+        "--check"
+      ],
+      "stdout": "WITNESS banner-registration f8c1ab32af71e76b0ce8401845cdc4d2dae428ee0077276ddddfb4f13987f57e\nWITNESS banner-export 749823dcd4a31ec352ce35e45cae72412807eabe4e9fafb7d258e7c245df400c\nPASS banner-export FIT_PASS_PENDING_NATIVE_REVIEW\n",
+      "stderr": ""
+    }
+  ]
+}

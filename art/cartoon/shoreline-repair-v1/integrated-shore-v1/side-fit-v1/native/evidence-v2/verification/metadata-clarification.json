@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "captured_selection": {
+    "path": "build/shoreline-repair-v1/side-clean-selected-v2/export-report.json",
+    "sha256": "5a3310203e73355ab18fb84736cca47aa1aae2d9e43a1b86c60c1eb3ce2ab99c"
+  },
+  "corrected_selection": {
+    "path": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/native/verification-v2/corrected-selection-v2.json",
+    "sha256": "0e24fc59fe7aea76c5b03d1c90ceac52aaf07cfcd622f72435950ad76c91b29e"
+  },
+  "helper_sha256": "17dd36c13fabc943bdb602bd7a2c64d0f88e9e7101eeb322b957312c0c642816",
+  "correction": "007 raw path/hash now bind foam-shading-v1; identity flag false. Explicit identity flags for all ten rows: seven changed, three unchanged.",
+  "pixel_and_package_changes": 0,
+  "frames": [
+    {
+      "frame": 0,
+      "source": {
+        "path": "art/cartoon/shoreline-repair-v1/smooth-shore-v3/raw.png",
+        "sha256": "19df1e01931cf746e88f6bf696b39e16f009ba7aa1b37f1f7c916b0949822732"
+      },
+      "runtime_sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+      "baseline_sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+      "byte_identical_to_selected": true,
+      "result": "PASS"
+    },
+    {
+      "frame": 3,
+      "source": {
+        "archive": {
+          "path": "assets/scrantic_data.zip",
+          "sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+        },
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+        "sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050"
+      },
+      "runtime_sha256": "3a456347b5106edfd1d197a4df0eaabf7fe4659abdd5cd7f4a45e766b949e4cc",
+      "baseline_sha256": "d28e9b61aa90734b649122f96b462de1c846c610637cb45c2051b20db95b34b9",
+      "byte_identical_to_selected": false,
+      "result": "PASS"
+    },
+    {
+      "frame": 4,
+      "source": {
+        "archive": {
+          "path": "assets/scrantic_data.zip",
+          "sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+        },
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+        "sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143"
+      },
+      "runtime_sha256": "af3826616abb465a81b3ba18498da22c9e31e5cfe4a769eb7bcf6ddd64a7dd0d",
+      "baseline_sha256": "262fc8bdce3dd7671220480ca382870b0fa5729c92a5630bbe5b7f6674134084",
+      "byte_identical_to_selected": false,
+      "result": "PASS"
+    },
+    {
+      "frame": 5,
+      "source": {
+        "archive": {
+          "path": "assets/scrantic_data.zip",
+          "sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+        },
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+        "sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6"
+      },
+      "runtime_sha256": "5b7fe8718684700e4d3aca76307e41c64d6a47427c8e66f34869e7bb35b69545",
+      "baseline_sha256": "b9094eacd1ab1e6548b30505752901519642a7f9d73565267c25f7af5da97503",
+      "byte_identical_to_selected": false,
+      "result": "PASS"
+    },
+    {
+      "frame": 6,
+      "source": {
+        "path": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/006-raw.png",
+        "sha256": "be78ddda6468fdd3d00c20589e700a50fbb6150157591eb1070eeb718e87c5bd"
+      },
+      "runtime_sha256": "2d2c93478a8e06b99a8a86d832bccdf1327d6d1a55cf79a2593dff49dcbd0db5",
+      "baseline_sha256": "2d2c93478a8e06b99a8a86d832bccdf1327d6d1a55cf79a2593dff49dcbd0db5",
+      "byte_identical_to_selected": true,
+      "result": "PASS"
+    },
+    {
+      "frame": 7,
+      "source": {
+        "path": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-shading-v1/007-raw-v1.png",
+        "sha256": "bccf1e15c476c78ed7ffb6f842eaa001c763eff4209c63b3d47162097c5fa8f2"
+      },
+      "runtime_sha256": "623c8f3fb8a4905a15917db963542f178d86472f0809134227bc2053fa800c56",
+      "baseline_sha256": "a9ce74ee70c5c5e28dfed8e0b424bb74a249469f302a04bed3eed1a466e9108b",
+      "byte_identical_to_selected": false,
+      "result": "PASS"
+    },
+    {
+      "frame": 8,
+      "source": {
+        "path": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/008-raw.png",
+        "sha256": "ae9e3795f81be28436ebff6a7c90b19c8998377d0754e4e8ed990ed46bfca2a8"
+      },
+      "runtime_sha256": "4ff1c6672e10d67e789c01584f1fb0dc1299016e391809eca8e5047e4cf1acea",
+      "baseline_sha256": "4ff1c6672e10d67e789c01584f1fb0dc1299016e391809eca8e5047e4cf1acea",
+      "byte_identical_to_selected": true,
+      "result": "PASS"
+    },
+    {
+      "frame": 9,
+      "source": {
+        "archive": {
+          "path": "assets/scrantic_data.zip",
+          "sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+        },
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+        "sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28"
+      },
+      "runtime_sha256": "71e82707e1e9fb08772ab19b2247e2c010c4618b1861b338c10ba1855f54311e",
+      "baseline_sha256": "eb81468edf9ebf3e1622b815ce69f6781e5cb80a2c573bd9e0a31ea8b7a7652d",
+      "byte_identical_to_selected": false,
+      "result": "PASS"
+    },
+    {
+      "frame": 10,
+      "source": {
+        "archive": {
+          "path": "assets/scrantic_data.zip",
+          "sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+        },
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+        "sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02"
+      },
+      "runtime_sha256": "9f25c1c30eeda807fbeb8d706a2f0440c18b474c5bd50984317a516e71e5d850",
+      "baseline_sha256": "fee6e13f4ebbc382da9954a4ebfa1f355dc797f9339c97c2f8555b6d4d11935e",
+      "byte_identical_to_selected": false,
+      "result": "PASS"
+    },
+    {
+      "frame": 11,
+      "source": {
+        "archive": {
+          "path": "assets/scrantic_data.zip",
+          "sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+        },
+        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+        "sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3"
+      },
+      "runtime_sha256": "a7740ab3564218fd3bc52f39da4d770e05e40ab0e0debd32bb2c11cd96dcedc6",
+      "baseline_sha256": "f31e865b2f14a5952b05e4f0f47f9bebdfca34d0424571054d6c995ba17d70c8",
+      "byte_identical_to_selected": false,
+      "result": "PASS"
+    }
+  ],
+  "historical_issue": "Captured row007 inherited the preceding raw path/hash and true identity annotation even though runtime/source_path and package/output checks bound the correct new007."
+}

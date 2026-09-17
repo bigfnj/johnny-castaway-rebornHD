@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "phase": "smoke",
+  "exporter_sha256": "109d55fcada482a42b97208c1c1c65fecfdcd715d6fa0a3a05c59d92e5ada1bc",
+  "checker_sha256": "6df4e042116f34b1db512117e257473cfb94f04be1cc2ec53049208da6b438d2",
+  "recipe_sha256": "94df1f95fa15d03566191faefcea92b415838ad66e5e212fbea2102c13b5a5cb",
+  "export_report_sha256": "d60a7c94d970d2aaa78cdc0c3b71c800a0b1cf472ead4459fd14ffbbb90b7e1b",
+  "historical_v1_actual_recipe_sha256": "4a2129320c6527306465206149e279c5b183ecb3730a66d752ccb2c46b03ed9d",
+  "checks": [
+    "Exact UTF-8 LF recipe bytes match export report SHA256",
+    "All runtime PNGs and padded banner are byte-identical to shown V1"
+  ],
+  "controls": [],
+  "runs": [],
+  "scope": "Metadata serialization correction only. V1 runtime PNGs and shown native/browser evidence remain exact."
+}

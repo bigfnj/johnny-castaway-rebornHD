@@ -1,0 +1,11 @@
+{
+  "status": "FAILED_HARNESS_STARTUP",
+  "phase": "regression",
+  "observed_failure": "Page.wait_for_function: Timeout 60000ms exceeded at initial readiness wait.",
+  "cause": "Regression intercepts requestAnimationFrame for a deterministic clock, but the new readiness wait accidentally used Playwright's default requestAnimationFrame polling. The preceding real-clock smoke passed.",
+  "correction": "Use explicit polling=50 as in the prior proven checker.",
+  "separate_review_finding": "Full low-tide capture ends mid-cycle at2880ms; retain all frames but stop at endpoint instead of looping.",
+  "preserved_checker": "checker-before-polling-fix.py",
+  "superseded_page": "review.html",
+  "next_fresh_output": "build/shoreline-repair-v1/waves-fit-clean-review-v2"
+}

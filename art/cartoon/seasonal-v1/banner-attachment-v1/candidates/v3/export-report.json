@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "status": "FIT_PASS_PENDING_NATIVE_REVIEW",
+  "runtime_ready": true,
+  "preview_only": false,
+  "exporter_sha256": "f8c1ab32af71e76b0ce8401845cdc4d2dae428ee0077276ddddfb4f13987f57e",
+  "reused_exporter_sha256": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+  "parent_recipe_sha256": "5e60af35fd517663b4c0f3c4c26da97d61f81ccad807fadc5bb858c6ed3c848f",
+  "recipe_sha256": "3d00c419eca09cd038be84310a1dea8b2d5837d41e95d4c01a2f142913659f8a",
+  "pillow_version": "12.3.0",
+  "frame": 3,
+  "source_sha256": "d55a08ac62755c3ad3c13c72ca6bfed8fcd0fc6b000c9f12d798f60948744d84",
+  "runtime_canvas": [
+    304,
+    94
+  ],
+  "affine_forward": [
+    0.23,
+    0,
+    -25.099999999999994,
+    0,
+    0.23,
+    -74.28
+  ],
+  "source_alpha8_bounds": [
+    110,
+    324,
+    1425,
+    732
+  ],
+  "alpha8_source_centers_hd": [
+    0.3150000000000084,
+    0.355000000000004,
+    302.53499999999997,
+    93.965
+  ],
+  "filtered_alpha8_bounds_hd": [
+    0,
+    0,
+    303,
+    94
+  ],
+  "outside_runtime_max_alpha": 4,
+  "outside_runtime_alpha8_pixels": 0,
+  "outside_runtime_nonzero_pixels": 106,
+  "outside_by_edge": {
+    "top": {
+      "nonzero_pixels": 28,
+      "alpha8_pixels": 0,
+      "maximum_alpha": 4
+    },
+    "bottom": {
+      "nonzero_pixels": 61,
+      "alpha8_pixels": 0,
+      "maximum_alpha": 4
+    },
+    "left": {
+      "nonzero_pixels": 12,
+      "alpha8_pixels": 0,
+      "maximum_alpha": 4
+    },
+    "right": {
+      "nonzero_pixels": 5,
+      "alpha8_pixels": 0,
+      "maximum_alpha": 4
+    }
+  },
+  "unchanged_v5_props_sha256": {
+    "BMP/HOLIDAY.BMP/000.png": "1f2ac522476d98afcade5f128c12c0c80f6993b871b611498971f23a44eabf79",
+    "BMP/HOLIDAY.BMP/001.png": "e6327c07e85d7d8610ed45a502efd283fe1c79fe5850c790bb2808a2ee02176e",
+    "BMP/HOLIDAY.BMP/002.png": "7d9c5406f8275a1af9c9369305575a24d807ac5b38200e6ad17913a0a8400265"
+  },
+  "outputs_sha256": {
+    "padded/003.png": "1a102b2c4188f5bf64156f4c07ad01f42cead75e465b270f8c148a6f1dcfd53f",
+    "BMP/HOLIDAY.BMP/003.png": "c524b35d1d30d5a70aa8136e18a0ff739a3b6887673e565831d04883869d9b87",
+    "BMP/HOLIDAY.BMP/000.png": "1f2ac522476d98afcade5f128c12c0c80f6993b871b611498971f23a44eabf79",
+    "BMP/HOLIDAY.BMP/001.png": "e6327c07e85d7d8610ed45a502efd283fe1c79fe5850c790bb2808a2ee02176e",
+    "BMP/HOLIDAY.BMP/002.png": "7d9c5406f8275a1af9c9369305575a24d807ac5b38200e6ad17913a0a8400265"
+  },
+  "reused_trial_exporter_sha256": "749823dcd4a31ec352ce35e45cae72412807eabe4e9fafb7d258e7c245df400c",
+  "registration_variant": {
+    "delta_hd_vs_v5": [
+      2,
+      -0.3
+    ],
+    "scale_unchanged": 0.23,
+    "basis": "V2 fixed placement clips 16 meaningful pixels left and 9 below. A 2 HD right shift and 0.3 HD upward shift retain meaningful alpha without shrinking.",
+    "source_alpha8_center_valid_y_delta_hd": [
+      -0.655,
+      -0.265
+    ],
+    "valid_y_interval": "lower inclusive, upper exclusive",
+    "filter_limit": "Retain padded fringe; runtime permits only reported alpha below 8 outside."
+  }
+}

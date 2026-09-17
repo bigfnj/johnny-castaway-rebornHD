@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "status": "DIAGNOSTIC_EXPORTED",
+  "accepted": false,
+  "frame": 7,
+  "changed_frames": [
+    7
+  ],
+  "canvas": [
+    384,
+    256
+  ],
+  "footprint": {
+    "id": "cartoon-island-center-foam-v1",
+    "canvas": [
+      384,
+      256
+    ],
+    "offset_hd": [
+      -32,
+      -90
+    ]
+  },
+  "uniform_resample_count": 1,
+  "exporter_sha256": "400614176a1a06f36d2e6d96813826ca10511c0f856cff3a6d382a0c57facca7",
+  "recipe_sha256": "4a33d7a9f1b1b248245268673489b2945f208a69029bb40b28ab6d99576a116d",
+  "source_sha256": "bccf1e15c476c78ed7ffb6f842eaa001c763eff4209c63b3d47162097c5fa8f2",
+  "unchanged_sibling_pngs": {
+    "BMP/BACKGRND.BMP/000.png": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+    "BMP/BACKGRND.BMP/003.png": "d28e9b61aa90734b649122f96b462de1c846c610637cb45c2051b20db95b34b9",
+    "BMP/BACKGRND.BMP/004.png": "262fc8bdce3dd7671220480ca382870b0fa5729c92a5630bbe5b7f6674134084",
+    "BMP/BACKGRND.BMP/005.png": "b9094eacd1ab1e6548b30505752901519642a7f9d73565267c25f7af5da97503",
+    "BMP/BACKGRND.BMP/006.png": "2d2c93478a8e06b99a8a86d832bccdf1327d6d1a55cf79a2593dff49dcbd0db5",
+    "BMP/BACKGRND.BMP/008.png": "4ff1c6672e10d67e789c01584f1fb0dc1299016e391809eca8e5047e4cf1acea",
+    "BMP/BACKGRND.BMP/009.png": "eb81468edf9ebf3e1622b815ce69f6781e5cb80a2c573bd9e0a31ea8b7a7652d",
+    "BMP/BACKGRND.BMP/010.png": "fee6e13f4ebbc382da9954a4ebfa1f355dc797f9339c97c2f8555b6d4d11935e",
+    "BMP/BACKGRND.BMP/011.png": "f31e865b2f14a5952b05e4f0f47f9bebdfca34d0424571054d6c995ba17d70c8"
+  },
+  "cropped_filtered_alpha": {
+    "nonzero_pixels": 0,
+    "alpha8_pixels": 0,
+    "alpha_sum": 0,
+    "maximum_alpha": 0,
+    "nonzero_bounds": null,
+    "alpha8_bounds": null
+  },
+  "audit_cropped_filtered_alpha": {
+    "nonzero_pixels": 0,
+    "alpha8_pixels": 0,
+    "alpha_sum": 0,
+    "maximum_alpha": 0,
+    "nonzero_bounds": null,
+    "alpha8_bounds": null
+  },
+  "source_coverage": {
+    "nonzero_pixels": 3454,
+    "alpha8_pixels": 2506,
+    "alpha_sum": 444930,
+    "maximum_alpha": 255,
+    "nonzero_bounds": [
+      25,
+      101,
+      362,
+      156
+    ],
+    "alpha8_bounds": [
+      26,
+      104,
+      360,
+      154
+    ]
+  },
+  "retained_coverage": {
+    "nonzero_pixels": 3163,
+    "alpha8_pixels": 2279,
+    "alpha_sum": 401301,
+    "maximum_alpha": 255,
+    "nonzero_bounds": [
+      25,
+      105,
+      362,
+      156
+    ],
+    "alpha8_bounds": [
+      26,
+      105,
+      360,
+      154
+    ]
+  },
+  "visibility_measurements": {
+    "opaque_ground_pixels": 661,
+    "omitted_nonzero_foam_pixels": 291,
+    "changed_foam_alpha_pixels": 718,
+    "nonopaque_land_nonzero_foam_pixels": 705,
+    "maximum_single_layer_continuous_blend_deviation_bound_rgb": 63.03114186851211,
+    "partial_edge_witness": {
+      "world": [
+        791,
+        681
+      ],
+      "ground_alpha": 135,
+      "foam_alpha": 253,
+      "masked_foam_alpha": 119
+    }
+  },
+  "raw_shading": {
+    "alpha8_pixels": 32425,
+    "alpha8_dark_max_rgb_lt100": 0,
+    "alpha8_bounds": [
+      108,
+      415,
+      1438,
+      614
+    ]
+  },
+  "runtime_shading": {
+    "alpha8_pixels": 2279,
+    "alpha8_dark_max_rgb_lt100": 0,
+    "alpha8_bounds": [
+      26,
+      105,
+      360,
+      154
+    ]
+  },
+  "outputs_sha256": {
+    "BMP/BACKGRND.BMP/007.png": "623c8f3fb8a4905a15917db963542f178d86472f0809134227bc2053fa800c56",
+    "audit/007-unmasked.png": "3c5c4cd69f64585f484b087dd84cde2d2761d33f47bff4b303077f23f5336341",
+    "audit/007-padded.png": "6030577d8a15d37c1714c6835dd4f5edd1c41712534d4e790351e6f09b439ceb",
+    "audit/007-audit.png": "7126dac9a7986af6e5312149e79c498c1de5e41a35daee2bf8d267719ce109dc"
+  }
+}

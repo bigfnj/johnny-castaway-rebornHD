@@ -1,0 +1,746 @@
+{
+  "status": "PASS",
+  "copies": {
+    "launch.json": {
+      "source": "build/banner-inset-v1/native-v1/launch.json",
+      "sha256": "8ad9758025f5068013a0c6e6f3b4d94ea84e10d100da71cfc93875eb61eafc1c"
+    },
+    "launch.log": {
+      "source": "build/banner-inset-v1/native-v1/launch.log",
+      "sha256": "6880f61f2c125cc671a48c99bea66d3075b31aaf43038d5b8244d31c5bc67fcc"
+    },
+    "captures/inputs.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/inputs.json",
+      "sha256": "d71b5177ce960f4bb2f4fc404bd3d7e9c1b628fe0490d45f0d4c3d634039d657"
+    },
+    "captures/summary.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/summary.json",
+      "sha256": "52cc4f5413000e9367dd924256f98494b730c6359efd72e66ccddd29228a667e"
+    },
+    "captures/smoke.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/smoke.json",
+      "sha256": "1732282200a2d20035e7aef1eee3c8a906654213ad51cbce8d02bd6f22dfe026"
+    },
+    "captures/negative.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/negative.json",
+      "sha256": "a1cfb11f5397a6a883f7d26cea6bdc7231c86588d1359400dd3b5adfb4d7fe70"
+    },
+    "captures/build.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/build.json",
+      "sha256": "7658c3737bf0c3106fe5d214898fe39327580e1bd565980eb73c87d51f43477f"
+    },
+    "captures/build.stdout.txt": {
+      "source": "build/banner-inset-v1/native-v1/captures/build.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "captures/build.stderr.txt": {
+      "source": "build/banner-inset-v1/native-v1/captures/build.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "captures/day_banner/baseline/smoke/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/report.json",
+      "sha256": "d8d368c76d42428e8d36c48c97199a9e18cf91ae74cd4d9c139b29e579b80482"
+    },
+    "captures/day_banner/baseline/smoke/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/capture.log",
+      "sha256": "e03eb071523113a265bf75589fba5cd66ed82752f9bb11f507eedd6a5e2908d3"
+    },
+    "captures/day_banner/baseline/repeat/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/report.json",
+      "sha256": "d8d368c76d42428e8d36c48c97199a9e18cf91ae74cd4d9c139b29e579b80482"
+    },
+    "captures/day_banner/baseline/repeat/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/capture.log",
+      "sha256": "e03eb071523113a265bf75589fba5cd66ed82752f9bb11f507eedd6a5e2908d3"
+    },
+    "captures/day_banner/candidate/smoke/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/report.json",
+      "sha256": "434a260a489717f9eb7b7fa1f5af1e3db7535d1a5b69763e8183a46af76dfd6a"
+    },
+    "captures/day_banner/candidate/smoke/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/capture.log",
+      "sha256": "e03eb071523113a265bf75589fba5cd66ed82752f9bb11f507eedd6a5e2908d3"
+    },
+    "captures/day_banner/candidate/repeat/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/report.json",
+      "sha256": "434a260a489717f9eb7b7fa1f5af1e3db7535d1a5b69763e8183a46af76dfd6a"
+    },
+    "captures/day_banner/candidate/repeat/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/capture.log",
+      "sha256": "e03eb071523113a265bf75589fba5cd66ed82752f9bb11f507eedd6a5e2908d3"
+    },
+    "captures/night_banner/baseline/smoke/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/report.json",
+      "sha256": "6e399807d2e38b04d7ed267e731775985779188ecede2c8299fd649ce699aa9d"
+    },
+    "captures/night_banner/baseline/smoke/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/capture.log",
+      "sha256": "60755ab08cf4dd640f164b70f2643f6fcfb963a2dea23c81084622f84d13e603"
+    },
+    "captures/night_banner/baseline/repeat/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/report.json",
+      "sha256": "6e399807d2e38b04d7ed267e731775985779188ecede2c8299fd649ce699aa9d"
+    },
+    "captures/night_banner/baseline/repeat/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/capture.log",
+      "sha256": "60755ab08cf4dd640f164b70f2643f6fcfb963a2dea23c81084622f84d13e603"
+    },
+    "captures/night_banner/candidate/smoke/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/report.json",
+      "sha256": "f9fc66633244bcd9cc359ef006b0e3562172248806afd32f335aea322bd1f1b4"
+    },
+    "captures/night_banner/candidate/smoke/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/capture.log",
+      "sha256": "60755ab08cf4dd640f164b70f2643f6fcfb963a2dea23c81084622f84d13e603"
+    },
+    "captures/night_banner/candidate/repeat/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/report.json",
+      "sha256": "f9fc66633244bcd9cc359ef006b0e3562172248806afd32f335aea322bd1f1b4"
+    },
+    "captures/night_banner/candidate/repeat/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/capture.log",
+      "sha256": "60755ab08cf4dd640f164b70f2643f6fcfb963a2dea23c81084622f84d13e603"
+    },
+    "captures/shifted_banner/baseline/smoke/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/report.json",
+      "sha256": "398742a55899324c35a70dec91bfee9fc3f1d0f734f9528b876aceab2ddd97db"
+    },
+    "captures/shifted_banner/baseline/smoke/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/capture.log",
+      "sha256": "b8fefa496c06185b5f419e3cef56e75e51f94c8ede8afcec605f186e8bd64883"
+    },
+    "captures/shifted_banner/baseline/repeat/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/report.json",
+      "sha256": "398742a55899324c35a70dec91bfee9fc3f1d0f734f9528b876aceab2ddd97db"
+    },
+    "captures/shifted_banner/baseline/repeat/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/capture.log",
+      "sha256": "b8fefa496c06185b5f419e3cef56e75e51f94c8ede8afcec605f186e8bd64883"
+    },
+    "captures/shifted_banner/candidate/smoke/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/report.json",
+      "sha256": "3069308fde0f8937dc9425c74de721b5504d703f1ee0a981bd5e6a9c325ddf91"
+    },
+    "captures/shifted_banner/candidate/smoke/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/capture.log",
+      "sha256": "b8fefa496c06185b5f419e3cef56e75e51f94c8ede8afcec605f186e8bd64883"
+    },
+    "captures/shifted_banner/candidate/repeat/report.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/report.json",
+      "sha256": "3069308fde0f8937dc9425c74de721b5504d703f1ee0a981bd5e6a9c325ddf91"
+    },
+    "captures/shifted_banner/candidate/repeat/capture.log": {
+      "source": "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/capture.log",
+      "sha256": "b8fefa496c06185b5f419e3cef56e75e51f94c8ede8afcec605f186e8bd64883"
+    },
+    "preparation.json": {
+      "source": "build/banner-inset-v1/selected-v1/preparation.json",
+      "sha256": "be441e05095356dc7a12f04a5288363052340a132b5191f2786ccbe721c4029f"
+    },
+    "helpers/capture.py": {
+      "source": "art/cartoon/seasonal-v1/banner-inset-v1/native/capture.py",
+      "sha256": "75500b3ff46998948e5e8fe486680933efc78ab0f3b2cbd42b4e8ba85bba5b88"
+    },
+    "helpers/preserve.py": {
+      "source": "art/cartoon/seasonal-v1/banner-inset-v1/native/preserve.py",
+      "sha256": "3561a1b58f25d08d3f59baebee67debe623b8885b9d0d2f127c2175a8b38ce4a"
+    },
+    "helpers/run.py": {
+      "source": "art/cartoon/seasonal-v1/banner-inset-v1/native/run.py",
+      "sha256": "6477c55b45d681dd4482979aeb1065b706b00e2eeb2ad9799c53a0999a6e6148"
+    },
+    "helpers/prepare.py": {
+      "source": "art/cartoon/seasonal-v1/banner-inset-v1/prepare.py",
+      "sha256": "319618d64470bc2c319c6497debf341e0a0abc2f724e9a9c64caad314c52f4a4"
+    },
+    "source/src/data/calcpath_data.h": {
+      "source": "src/data/calcpath_data.h",
+      "sha256": "fdaf8cc409388b1425485801597b272105c6a788eb30825b74441e21f5041237"
+    },
+    "source/src/data/story_data.h": {
+      "source": "src/data/story_data.h",
+      "sha256": "0f7d6cbd9a37b411839a2a9376c15e035388d00cb0f8cbf4b898dcc93eaff6f6"
+    },
+    "source/src/data/walk_data.h": {
+      "source": "src/data/walk_data.h",
+      "sha256": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769"
+    },
+    "source/src/engine/ads.c": {
+      "source": "src/engine/ads.c",
+      "sha256": "c4d53220327f62676a159f1b3651626a8dabafdfa5bf625b5e94d443280eb4f6"
+    },
+    "source/src/engine/ads.h": {
+      "source": "src/engine/ads.h",
+      "sha256": "fbe0925205b5b0ed225152d5892a5aef72e215c1d68e5f94476ddeb66c7996a1"
+    },
+    "source/src/engine/art_style.c": {
+      "source": "src/engine/art_style.c",
+      "sha256": "1c66ab03db3e1cf5ab82f6d4c2fdcaf70829501a30de855e36ffe001d074fa42"
+    },
+    "source/src/engine/art_style.h": {
+      "source": "src/engine/art_style.h",
+      "sha256": "8447d3c38cdabf1e959db7d87f8a8f3ecc013ae082e1545310322bf1e8e5aa6f"
+    },
+    "source/src/engine/bench.c": {
+      "source": "src/engine/bench.c",
+      "sha256": "ca747e19369cd2b57e547393ec4b63cefe3ff1f6a95d4d30fd22b218228ed03c"
+    },
+    "source/src/engine/bench.h": {
+      "source": "src/engine/bench.h",
+      "sha256": "e7ff059877a2c4a747c3675767da29b01f167989f8a2ba9a57d45e47cfcbf3ad"
+    },
+    "source/src/engine/calcpath.c": {
+      "source": "src/engine/calcpath.c",
+      "sha256": "8035aef05017584b5e7e5db1dcac898ba3f51efe444efc072705d5f0523cfacb"
+    },
+    "source/src/engine/calcpath.h": {
+      "source": "src/engine/calcpath.h",
+      "sha256": "4b5c614adc8a960e1bbab746aa159c4c908e3377d38a2d3c0f353ae0726d915d"
+    },
+    "source/src/engine/config.c": {
+      "source": "src/engine/config.c",
+      "sha256": "a87b4e3d050912d7a82f3efa2d681be2ac20a72cadca3581dffa6d7e572bba58"
+    },
+    "source/src/engine/config.h": {
+      "source": "src/engine/config.h",
+      "sha256": "ef00caffb5bba8c4de0e8b09e84911c4c1563fb6d6e5986f3e935e54b0dfcf46"
+    },
+    "source/src/engine/dump.c": {
+      "source": "src/engine/dump.c",
+      "sha256": "b2e46c22fa854bbc0d75413b441f4afc0afb10d42b6ead737e70bc5d7e92babd"
+    },
+    "source/src/engine/dump.h": {
+      "source": "src/engine/dump.h",
+      "sha256": "27ad235d4b052886c296999aae65f8604b6b668b3428860db0aea561827226df"
+    },
+    "source/src/engine/events.c": {
+      "source": "src/engine/events.c",
+      "sha256": "041ac9fce76af2c3e1fc2eeef56ea9b92b45e1a4adc0087d5318720ccc2d57d2"
+    },
+    "source/src/engine/events.h": {
+      "source": "src/engine/events.h",
+      "sha256": "7b73c8f46c470f325fb6b49093cbdc9b4f3c3da598be900d37244bd98bf9ea54"
+    },
+    "source/src/engine/graphics.c": {
+      "source": "src/engine/graphics.c",
+      "sha256": "7bbab71ae7f9d43ea89f7532ac9a696af7ff16c5c8add3b9ac60fd9ad800db65"
+    },
+    "source/src/engine/graphics.h": {
+      "source": "src/engine/graphics.h",
+      "sha256": "e2b388c6e9edfac3237c88467ba38117c4b1918b2a56f4a4d9dcd635e6fd9ecf"
+    },
+    "source/src/engine/island.c": {
+      "source": "src/engine/island.c",
+      "sha256": "9b4f4a99e359a9a1af6d91ec9e3b553017afde981c34a423005155b91fd920d6"
+    },
+    "source/src/engine/island.h": {
+      "source": "src/engine/island.h",
+      "sha256": "78da2a0bcc15e38636aa8ca7d1f9c1fb7fc48b49bf44a8afd895f3b76b3bef58"
+    },
+    "source/src/engine/jc_reborn.c": {
+      "source": "src/engine/jc_reborn.c",
+      "sha256": "50d9904cffd7c3cba9877ecec383370c612622ccd31a5a013e77755903c358c4"
+    },
+    "source/src/engine/mytypes.h": {
+      "source": "src/engine/mytypes.h",
+      "sha256": "cd9d251a4025cb9894b3d13dfb0c05568eadd53b7c15ee16f2af49b6c07cad84"
+    },
+    "source/src/engine/resource.c": {
+      "source": "src/engine/resource.c",
+      "sha256": "8b60a6d5936dd67ca014aaedde799e8b6f0a567ac482c836bd922a4fa93c6f43"
+    },
+    "source/src/engine/resource.h": {
+      "source": "src/engine/resource.h",
+      "sha256": "dfb8a1c118fb69a515931b939e7a32e05cc05688b2c09875b496211dcac412af"
+    },
+    "source/src/engine/sound.c": {
+      "source": "src/engine/sound.c",
+      "sha256": "eec8a1b43e33eccbd4e7f835ca55b7d9ab952818f2093f6a996d69d1ce6a91ee"
+    },
+    "source/src/engine/sound.h": {
+      "source": "src/engine/sound.h",
+      "sha256": "36bf9900ea05f164190b042905e1d5b5e163015055fa1f9f5cd9ec15c54a1e47"
+    },
+    "source/src/engine/story.c": {
+      "source": "src/engine/story.c",
+      "sha256": "b503cca4115b5852f4ed9cdc02c5aef77498c793bac9fdb2b517b19cd8c4b9a4"
+    },
+    "source/src/engine/story.h": {
+      "source": "src/engine/story.h",
+      "sha256": "e2bc55888fa518bbac1566f059111e2b4e278a986639cb825dd28a8677663e0c"
+    },
+    "source/src/engine/ttm.c": {
+      "source": "src/engine/ttm.c",
+      "sha256": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6"
+    },
+    "source/src/engine/ttm.h": {
+      "source": "src/engine/ttm.h",
+      "sha256": "7a6a8d40da48f8316d204cc4a8bb664e7cf3950dde0a75f79c0a6bf8b080e48d"
+    },
+    "source/src/engine/uncompress.c": {
+      "source": "src/engine/uncompress.c",
+      "sha256": "c8c0483ef3ae43e242ecbfff622c4735aef6f330ebce04f4cda8b43bfbba6b15"
+    },
+    "source/src/engine/uncompress.h": {
+      "source": "src/engine/uncompress.h",
+      "sha256": "c58f198f9dad5e00ac344925a0a9c45087253d6c6c950bd06cbc701c906c2148"
+    },
+    "source/src/engine/utils.c": {
+      "source": "src/engine/utils.c",
+      "sha256": "c50c4ae6de6a59e4fbd1a169592eb920778449f8c000175cb55d66595343c10f"
+    },
+    "source/src/engine/utils.h": {
+      "source": "src/engine/utils.h",
+      "sha256": "9e6fb0678b6c62c63bea5f58f1772cf02aa7510809639f4984e94d0fa3d43104"
+    },
+    "source/src/engine/walk.c": {
+      "source": "src/engine/walk.c",
+      "sha256": "d6b88ef1e16a2ad10944ce520485a472d4b13d53fd744087e9c5e573e1908f9d"
+    },
+    "source/src/engine/walk.h": {
+      "source": "src/engine/walk.h",
+      "sha256": "cd828778b83c73428ba9d7897a87aa7254b7d2d54eb1eb3f31a1ed625cbf5a91"
+    },
+    "source/platform/jc_resources.h": {
+      "source": "platform/jc_resources.h",
+      "sha256": "6054a022fe1f5e793c5e6c1744aeb240b5b24e91c5c2a47eebc53ce0d20d7b8a"
+    },
+    "source/platform/platform.h": {
+      "source": "platform/platform.h",
+      "sha256": "d44c885dac7188ce20c1c9b726e43f0796a1312639ad2136b248469ad1b0f11b"
+    },
+    "source/platform/platform_linux.c": {
+      "source": "platform/platform_linux.c",
+      "sha256": "c57c9aefad8f40e959116772438f0bdbda7403438b1b7188f2453cbecbc66687"
+    },
+    "source/platform/platform_web.c": {
+      "source": "platform/platform_web.c",
+      "sha256": "559e223cbf6f6ba51ad6d9a2a6ae4c3a1685fbb28d9625b1efc59ca3be48ee4b"
+    },
+    "source/platform/platform_windows.c": {
+      "source": "platform/platform_windows.c",
+      "sha256": "4db7c0906dd3b572a931afb0c711b203b68e76321f102baaf1f9bb8a7543b4db"
+    },
+    "source/platform/png_decoder.c": {
+      "source": "platform/png_decoder.c",
+      "sha256": "e98e3e9a9c3970d8366bcb5e7c8e57a7e5e71b0fad3913d42638cc072fdc2f6a"
+    },
+    "source/platform/png_decoder.h": {
+      "source": "platform/png_decoder.h",
+      "sha256": "b6ea3e50277f2c23e2f7d40fe5f22caf5e0f5c58fa0dc47a4fb5fea67499a2d2"
+    },
+    "source/platform/png_loader.c": {
+      "source": "platform/png_loader.c",
+      "sha256": "05cbc18bc03a3c7b48c15c2ae010242b37b489302acabf753192605aaeffaf1d"
+    },
+    "source/platform/zipvfs.c": {
+      "source": "platform/zipvfs.c",
+      "sha256": "1cb46f55871ac87a0f4ddee7d463282e822269875c77e49f81e101a1c2adec49"
+    },
+    "source/platform/zipvfs.h": {
+      "source": "platform/zipvfs.h",
+      "sha256": "493de595f2405359f266cef822c1b4279d1ba3d96e1449db6aeccd68cbdb9696"
+    },
+    "source/third_party/miniz/miniz.c": {
+      "source": "third_party/miniz/miniz.c",
+      "sha256": "6a0314b68c9b804f33e27d89aa3144ef7724fd787043ba8c95d1b19be2d64afd"
+    },
+    "source/third_party/miniz/miniz.h": {
+      "source": "third_party/miniz/miniz.h",
+      "sha256": "0c85210868066516ecc76a9c9cbf77c69bb085ade34ab78177bb3acaf8c1a6d7"
+    },
+    "source/third_party/miniz/miniz_common.h": {
+      "source": "third_party/miniz/miniz_common.h",
+      "sha256": "fa5bf07d72efa51640f9d8ee11431fd2538e6218aea9e9328905edeb54187997"
+    },
+    "source/third_party/miniz/miniz_export.h": {
+      "source": "third_party/miniz/miniz_export.h",
+      "sha256": "a467e6a2e6017ad0e43fe18a2e50f5e5dfd2a93fabe3b52dd6bbba7c18700b03"
+    },
+    "source/third_party/miniz/miniz_tdef.c": {
+      "source": "third_party/miniz/miniz_tdef.c",
+      "sha256": "b368132832eebb4680d8849e3b313876c4833bcc9e03f32821665edef9d3f191"
+    },
+    "source/third_party/miniz/miniz_tdef.h": {
+      "source": "third_party/miniz/miniz_tdef.h",
+      "sha256": "13574142e909c529c3c08bbd76be8ac23939370e08fdc9837e635b2e00b4883d"
+    },
+    "source/third_party/miniz/miniz_tinfl.c": {
+      "source": "third_party/miniz/miniz_tinfl.c",
+      "sha256": "457e745d8fef9657b07e4c641548b49f029d54dd70d3fc83568253f51194cda4"
+    },
+    "source/third_party/miniz/miniz_tinfl.h": {
+      "source": "third_party/miniz/miniz_tinfl.h",
+      "sha256": "ef18f995b0151095a0e9ed718114bd03437c607b302ee979a9d371f157bacf8a"
+    },
+    "source/third_party/miniz/miniz_zip.c": {
+      "source": "third_party/miniz/miniz_zip.c",
+      "sha256": "1ab94b269cd6021b006dac0fa78a42c73e1559676d086a16059fb98e21830606"
+    },
+    "source/third_party/miniz/miniz_zip.h": {
+      "source": "third_party/miniz/miniz_zip.h",
+      "sha256": "eff19da6bcd7e127bb4447bf67a6093a6e589ee496fd251a444ec3b58c1d86f4"
+    },
+    "source/CMakeLists.txt": {
+      "source": "CMakeLists.txt",
+      "sha256": "0090f05332c00493b4f4fdd30fc6a25efd6b383a6f3373a3eb0c98d7a65d0962"
+    },
+    "source/art/cartoon/arrival-pilot-v1/review-evidence/native-v1/helpers/capture_format.py": {
+      "source": "art/cartoon/arrival-pilot-v1/review-evidence/native-v1/helpers/capture_format.py",
+      "sha256": "1a956d08ef659cd537e1530bcf13cc9da153a1bf34a1730fd344e91a107c4195"
+    },
+    "dependencies/integrated-capture.py": {
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/native/capture.py",
+      "sha256": "f2e0684f6726ce53951988b5d44c101d3efe44f07e6b3b66277499a9f12a1bae"
+    },
+    "dependencies/integrated-driver.c": {
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/native/driver.c",
+      "sha256": "beb8beae0c3b54562fe51285d184d55ccd2b185fe34cf97b7801d2536abd1b59"
+    },
+    "dependencies/seasonal-capture.py": {
+      "source": "art/cartoon/seasonal-v1/native/capture.py",
+      "sha256": "5a325d6b3db2ae3e7362ede1144977c977542c668596bbfb24b1e0a5bcdfe730"
+    },
+    "captures/adapter-config.json": {
+      "source": "build/banner-inset-v1/native-v1/captures/adapter-config.json",
+      "sha256": "06f198ffd122277b6afc0f875638b79b3a3e389f1ea6b8b2a2c67119a1dc99dc"
+    },
+    "dependencies/banner-native-capture.py": {
+      "source": "art/cartoon/seasonal-v1/banner-attachment-v1/native/capture.py",
+      "sha256": "848f9faa6e7d74482f7662791614aff74a84be8d7688a359eb816ba53ac63844"
+    },
+    "dependencies/banner-native-run.py": {
+      "source": "art/cartoon/seasonal-v1/banner-attachment-v1/native/run.py",
+      "sha256": "3626a129badb60ed2422f0c84bf9d0ee278eecf169141ee17e2009d4643e3055"
+    },
+    "dependencies/banner-native-preserve.py": {
+      "source": "art/cartoon/seasonal-v1/banner-attachment-v1/native/preserve.py",
+      "sha256": "ad237841484555cb5b0a7ebe95fb0823e0b503ea426a346f86da517f999b7943"
+    },
+    "dependencies/banner-prepare.py": {
+      "source": "art/cartoon/seasonal-v1/banner-attachment-v1/prepare.py",
+      "sha256": "7981cbc0823de32fe6cb5a0abb36f79646774fe1d42a1f94aa84de406d4361b0"
+    }
+  },
+  "native_images_sha256": {
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-001.png": "578e098300aadd449e41838aed65c33453616cab65165bd152c92b2b5c45c921",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-005.png": "eb0c8f94eba7e6266c3788902adde3a2afbf0cd7661f14cd562966117a2872e7",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-008.png": "6f7d81398b1918c1e2b64739e00f6124c58786b0a1d234d5acc25a2b8d3376d8",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-011.png": "ba05b338f910daab4581bd05d0863464a88ac0200f329c8e187b0089e3f2fd34",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-015.png": "48f28fef9b3d53eba2a91d7b6d260baa74db400d405d6d23b26bc8f716912ab2",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-018.png": "d21579a1edf8a3b1d8b58a0afe0fd3cb331b095146be8d3b5a0112bf7074f185",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-021.png": "ae3285602e3837c276d0dfd2c90950796fd4a409f742e0b540bcdc7359e7effe",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-025.png": "16b20952def9b4482b4717c2260a57c56f32fcd9b3759628b2205d94f5b1b70f",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-028.png": "2d08ca164f309f3cd81681dc2968e39c64ce3dbe4d86f57992fcdfd204ab7ab1",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-031.png": "ef778669133e9ab105745f14c62114b4681c6efabc339fb972ecf170c97818c0",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-035.png": "30e3356016af610da277eab6894d10d92e22d007f490a1ddd790f23eb0d7bef5",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-038.png": "3049f5af531035a35943825d818ecb2bba594c80577e6f04c31945af1a191307",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-041.png": "3a93316a3069345916c07a2bfc70508405a37be781c33ede7b6ea9304d20dba9",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-045.png": "7f67a0864801e293d1423e22c27b3dbc5f2ceb04778a8a88f928599c9cb617b2",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-048.png": "e1ad1b9495e3851d04be20f34075e9b1c98d4d53e48be3a847bb1fa2ed825ee1",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/display-051.png": "8cd65c061717fe504955ffe2955a1424922e0f6cfe4e2257005b18a4a0e40f6d",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/repeat/final.png": "8cd65c061717fe504955ffe2955a1424922e0f6cfe4e2257005b18a4a0e40f6d",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-001.png": "578e098300aadd449e41838aed65c33453616cab65165bd152c92b2b5c45c921",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-005.png": "eb0c8f94eba7e6266c3788902adde3a2afbf0cd7661f14cd562966117a2872e7",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-008.png": "6f7d81398b1918c1e2b64739e00f6124c58786b0a1d234d5acc25a2b8d3376d8",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-011.png": "ba05b338f910daab4581bd05d0863464a88ac0200f329c8e187b0089e3f2fd34",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-015.png": "48f28fef9b3d53eba2a91d7b6d260baa74db400d405d6d23b26bc8f716912ab2",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-018.png": "d21579a1edf8a3b1d8b58a0afe0fd3cb331b095146be8d3b5a0112bf7074f185",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-021.png": "ae3285602e3837c276d0dfd2c90950796fd4a409f742e0b540bcdc7359e7effe",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-025.png": "16b20952def9b4482b4717c2260a57c56f32fcd9b3759628b2205d94f5b1b70f",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-028.png": "2d08ca164f309f3cd81681dc2968e39c64ce3dbe4d86f57992fcdfd204ab7ab1",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-031.png": "ef778669133e9ab105745f14c62114b4681c6efabc339fb972ecf170c97818c0",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-035.png": "30e3356016af610da277eab6894d10d92e22d007f490a1ddd790f23eb0d7bef5",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-038.png": "3049f5af531035a35943825d818ecb2bba594c80577e6f04c31945af1a191307",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-041.png": "3a93316a3069345916c07a2bfc70508405a37be781c33ede7b6ea9304d20dba9",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-045.png": "7f67a0864801e293d1423e22c27b3dbc5f2ceb04778a8a88f928599c9cb617b2",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-048.png": "e1ad1b9495e3851d04be20f34075e9b1c98d4d53e48be3a847bb1fa2ed825ee1",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/display-051.png": "8cd65c061717fe504955ffe2955a1424922e0f6cfe4e2257005b18a4a0e40f6d",
+    "build/banner-inset-v1/native-v1/captures/day_banner/baseline/smoke/final.png": "8cd65c061717fe504955ffe2955a1424922e0f6cfe4e2257005b18a4a0e40f6d",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-001.png": "307d206a517f035f584da7235753325a36782ff6924366d30b5a4a2479c874cd",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-005.png": "ffcb9504fd6f5f5c1c367941ee4810ff975292a0d251b873ed99058bd26f5e54",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-008.png": "083ce366efc13e31151e78ef185b0f6506eb223f42381d1f982a3295f479f2d6",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-011.png": "5620f01146230053487e14d11a2eb0788447dc537dfc1bbc0278b4a5c5b469cc",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-015.png": "f56fe2ed27578f9b60c4a47d6d5cb511565f363bcf34dd9a375c17bdce53a0d1",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-018.png": "c13408546e30f31b4c6e6104161c37f6405a40f57b8a3cd48f857b8dafa5a18e",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-021.png": "cd56b3168744485f033f8c33a7cf8848b4b5e7d4d312cf08264ec0b59024471b",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-025.png": "c29fbeb1bedab26ee5b06416abddf378d93b6b40c3390616058aaf134851213a",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-028.png": "e7d6ce5307861fb4899d6da1f8f685ec9b9eca351625b779abdf842a8610f036",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-031.png": "378bd720dc4317ec24edde4ecc9f0eb5fd9a5169ff53a3bd4c60ede7b6890158",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-035.png": "d98e044034a22be7db1724ebd7e04b04a2d619ec999a587d9206f06d9418ca54",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-038.png": "043a777fe3412f31bd8e6146e1540ba1217f66f363cff8a4588df4a18d48f84a",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-041.png": "8a4ed56625bfb697fbe60f5238dbe6971017805d822015cf5e357f608579a8b3",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-045.png": "3fafcb6df3b6abb7129dcf33fd61e8ec8c403cd7b465e6698657fdeb53b4b153",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-048.png": "57fa98110d643a14c73c6ef5bdf7a93f6cbc4e0787d13624a6d68f0585e0c0e5",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/display-051.png": "8e902d8a9eff3b6608074d455982b7657f4a6f266b80f1c7ba0718e2627a3af4",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/repeat/final.png": "8e902d8a9eff3b6608074d455982b7657f4a6f266b80f1c7ba0718e2627a3af4",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-001.png": "307d206a517f035f584da7235753325a36782ff6924366d30b5a4a2479c874cd",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-005.png": "ffcb9504fd6f5f5c1c367941ee4810ff975292a0d251b873ed99058bd26f5e54",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-008.png": "083ce366efc13e31151e78ef185b0f6506eb223f42381d1f982a3295f479f2d6",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-011.png": "5620f01146230053487e14d11a2eb0788447dc537dfc1bbc0278b4a5c5b469cc",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-015.png": "f56fe2ed27578f9b60c4a47d6d5cb511565f363bcf34dd9a375c17bdce53a0d1",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-018.png": "c13408546e30f31b4c6e6104161c37f6405a40f57b8a3cd48f857b8dafa5a18e",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-021.png": "cd56b3168744485f033f8c33a7cf8848b4b5e7d4d312cf08264ec0b59024471b",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-025.png": "c29fbeb1bedab26ee5b06416abddf378d93b6b40c3390616058aaf134851213a",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-028.png": "e7d6ce5307861fb4899d6da1f8f685ec9b9eca351625b779abdf842a8610f036",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-031.png": "378bd720dc4317ec24edde4ecc9f0eb5fd9a5169ff53a3bd4c60ede7b6890158",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-035.png": "d98e044034a22be7db1724ebd7e04b04a2d619ec999a587d9206f06d9418ca54",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-038.png": "043a777fe3412f31bd8e6146e1540ba1217f66f363cff8a4588df4a18d48f84a",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-041.png": "8a4ed56625bfb697fbe60f5238dbe6971017805d822015cf5e357f608579a8b3",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-045.png": "3fafcb6df3b6abb7129dcf33fd61e8ec8c403cd7b465e6698657fdeb53b4b153",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-048.png": "57fa98110d643a14c73c6ef5bdf7a93f6cbc4e0787d13624a6d68f0585e0c0e5",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/display-051.png": "8e902d8a9eff3b6608074d455982b7657f4a6f266b80f1c7ba0718e2627a3af4",
+    "build/banner-inset-v1/native-v1/captures/day_banner/candidate/smoke/final.png": "8e902d8a9eff3b6608074d455982b7657f4a6f266b80f1c7ba0718e2627a3af4",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-001.png": "6be7e8717c45499555bc40b40cdca6f0592b13ca31760ac290f78e89ff970427",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-005.png": "45c9241dd64805059625b5a4b011410d8fedb6ec8f47d1d68b45eda74803f40f",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-008.png": "e1e61372effc89a3ff38610e8522826dcf5d3a34965efd85f32d77bb7786708c",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-011.png": "85a06ffd4707986916d444ad7a3b6760024ce9722fe8c1d6471b0fa296fb7698",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-015.png": "83feb63dd3dc4dc6520db15fb06d294c5bd536a7459efa4cc810279c30f95f6e",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-018.png": "1f21574eea326b07b51025330350955823d2c7ec2fcb513b32b369fdcc54fcbf",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-021.png": "a5da9e4c0a73315138f9a1068564aa1221e6cc153655cc5f81666341fe378364",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-025.png": "545cde508a3f43eabaedd1aad70ca481f8e638e336c62cab1a140e031aac125b",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-028.png": "bebdde99e3eb9812cc07b8c9b9a8f340b5e8aa52e40d58f05a39e07e4311d4da",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-031.png": "12d492ec4d37ca922905343bfb5c8774784f149140dabdfb1689e9459df52aeb",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-035.png": "decb159e9fa8f6fccba1484edf4f70d0433b779b83d848353366837b5291ca02",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-038.png": "f8b9204c0ffa81c3d71bb5c4b2de45eb695f116049a14316b7a6b415a95cf746",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-041.png": "27de5fbc261a93093e0da0af6521174483dcfb475ce8d26aa9a19ae30547929a",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-045.png": "22dfc9772f23835635d52d8fc76c433f01e905d15d427f9abb94c744746a1d03",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-048.png": "033922e23cda34b1219c206794fbc8bab1b9939e4cb79b57115b680c16de1c80",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/display-051.png": "009dbba2e7eadb205de8bf9cdd94b867f7132d456a2955a4cf64333998f21ef9",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/repeat/final.png": "009dbba2e7eadb205de8bf9cdd94b867f7132d456a2955a4cf64333998f21ef9",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-001.png": "6be7e8717c45499555bc40b40cdca6f0592b13ca31760ac290f78e89ff970427",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-005.png": "45c9241dd64805059625b5a4b011410d8fedb6ec8f47d1d68b45eda74803f40f",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-008.png": "e1e61372effc89a3ff38610e8522826dcf5d3a34965efd85f32d77bb7786708c",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-011.png": "85a06ffd4707986916d444ad7a3b6760024ce9722fe8c1d6471b0fa296fb7698",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-015.png": "83feb63dd3dc4dc6520db15fb06d294c5bd536a7459efa4cc810279c30f95f6e",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-018.png": "1f21574eea326b07b51025330350955823d2c7ec2fcb513b32b369fdcc54fcbf",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-021.png": "a5da9e4c0a73315138f9a1068564aa1221e6cc153655cc5f81666341fe378364",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-025.png": "545cde508a3f43eabaedd1aad70ca481f8e638e336c62cab1a140e031aac125b",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-028.png": "bebdde99e3eb9812cc07b8c9b9a8f340b5e8aa52e40d58f05a39e07e4311d4da",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-031.png": "12d492ec4d37ca922905343bfb5c8774784f149140dabdfb1689e9459df52aeb",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-035.png": "decb159e9fa8f6fccba1484edf4f70d0433b779b83d848353366837b5291ca02",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-038.png": "f8b9204c0ffa81c3d71bb5c4b2de45eb695f116049a14316b7a6b415a95cf746",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-041.png": "27de5fbc261a93093e0da0af6521174483dcfb475ce8d26aa9a19ae30547929a",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-045.png": "22dfc9772f23835635d52d8fc76c433f01e905d15d427f9abb94c744746a1d03",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-048.png": "033922e23cda34b1219c206794fbc8bab1b9939e4cb79b57115b680c16de1c80",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/display-051.png": "009dbba2e7eadb205de8bf9cdd94b867f7132d456a2955a4cf64333998f21ef9",
+    "build/banner-inset-v1/native-v1/captures/night_banner/baseline/smoke/final.png": "009dbba2e7eadb205de8bf9cdd94b867f7132d456a2955a4cf64333998f21ef9",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-001.png": "7715c7fe48ac1359b29315c45a3c59b9d12d4b550ee3f78b9c83fb3bfd22a5ac",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-005.png": "ac7ede8aedaf381514624a91ca9d4773ee049315b0eb1be07a876754c5c10f39",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-008.png": "71aa713aa1b6485ea2643e52de98f1937bd16b2dde9f4f192211327b6165925a",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-011.png": "bf64a9f9ab7ddca2bdd2666176cc04b42bb153420c2221539761b2eb8106ce4a",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-015.png": "d30fadbff5ad1f648a43783831374541803e2b17bbb2993be018304c1291ecdf",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-018.png": "7606e350955660b7e75e8b02fa8156925950dc40b8e5f837074be6b3f6e9e2e7",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-021.png": "62160f4abdede3a25159e1527f7ef09668573878e9e64ea944b9cf748370b4b8",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-025.png": "1f991ef582e98d7ea841e2ee58e4a19a0f2427a31387db5562d639a0eab6b982",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-028.png": "6c2950f15344d89b79b152b7e3d0a5ffd2f94c65275d88e1f23523d4b13f56cf",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-031.png": "a5f694f0becd8379085efb8c32c7616ba7bed735c81c4fc5ac89f4659502c7c9",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-035.png": "974026b94c7803b4cd6bed209745c6aee1398f39f4d89a4c64e3e008f1220c9b",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-038.png": "0ce813d150917929fe08b688fd6a6f398ddea9b2905be31bca16783c4cab9a84",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-041.png": "2cca6ef890f55e4df90948ecef2bb57b1fdc29853061318b291d5c727193ea93",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-045.png": "8cc39d23ce0fa57224878cb9c239ac8eb3bcdb27c69bd1aff2e3f55c589b9f60",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-048.png": "b820e80c1679608ab1cf307a834acc00d1f5b0bf5e66b4838a1568c96f7688b3",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/display-051.png": "c506e7bdb73226bedb9da7f3faf9b32ca210ba5aeb71fe5cfddbbdedc0fee14f",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/repeat/final.png": "c506e7bdb73226bedb9da7f3faf9b32ca210ba5aeb71fe5cfddbbdedc0fee14f",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-001.png": "7715c7fe48ac1359b29315c45a3c59b9d12d4b550ee3f78b9c83fb3bfd22a5ac",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-005.png": "ac7ede8aedaf381514624a91ca9d4773ee049315b0eb1be07a876754c5c10f39",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-008.png": "71aa713aa1b6485ea2643e52de98f1937bd16b2dde9f4f192211327b6165925a",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-011.png": "bf64a9f9ab7ddca2bdd2666176cc04b42bb153420c2221539761b2eb8106ce4a",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-015.png": "d30fadbff5ad1f648a43783831374541803e2b17bbb2993be018304c1291ecdf",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-018.png": "7606e350955660b7e75e8b02fa8156925950dc40b8e5f837074be6b3f6e9e2e7",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-021.png": "62160f4abdede3a25159e1527f7ef09668573878e9e64ea944b9cf748370b4b8",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-025.png": "1f991ef582e98d7ea841e2ee58e4a19a0f2427a31387db5562d639a0eab6b982",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-028.png": "6c2950f15344d89b79b152b7e3d0a5ffd2f94c65275d88e1f23523d4b13f56cf",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-031.png": "a5f694f0becd8379085efb8c32c7616ba7bed735c81c4fc5ac89f4659502c7c9",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-035.png": "974026b94c7803b4cd6bed209745c6aee1398f39f4d89a4c64e3e008f1220c9b",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-038.png": "0ce813d150917929fe08b688fd6a6f398ddea9b2905be31bca16783c4cab9a84",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-041.png": "2cca6ef890f55e4df90948ecef2bb57b1fdc29853061318b291d5c727193ea93",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-045.png": "8cc39d23ce0fa57224878cb9c239ac8eb3bcdb27c69bd1aff2e3f55c589b9f60",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-048.png": "b820e80c1679608ab1cf307a834acc00d1f5b0bf5e66b4838a1568c96f7688b3",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/display-051.png": "c506e7bdb73226bedb9da7f3faf9b32ca210ba5aeb71fe5cfddbbdedc0fee14f",
+    "build/banner-inset-v1/native-v1/captures/night_banner/candidate/smoke/final.png": "c506e7bdb73226bedb9da7f3faf9b32ca210ba5aeb71fe5cfddbbdedc0fee14f",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-001.png": "e9593a6440f9862fe2727ec460df5850a407d4b15736e32e5d8418b18a9b2ff9",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-005.png": "caff03e372f935d031e9526a161d6bcf0137f6dea26c0cf25410294f1e6da2e6",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-008.png": "394eb2914afc4f727225a47f2bcb5f5211335393fa6e8a6cb3f37e89c07e71e4",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-011.png": "becace21b85975b53f13ef6e10c77573569d32a1571afe700f556840b9063f58",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-015.png": "d2959fc45263ffb9fd85ba2ba87e5ec7884ec877e1c0543f4ac498e315afa53a",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-018.png": "dd6596eb66bf250b9a2d893efaa359c2cadcabdb3dde0102f35d487d1c14b89b",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-021.png": "3dc45f5bb0890808c4f3377b72fe7005da1cb802899ecfdb2dde9efccc734145",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-025.png": "fdd08df9dd1f10f2e80b344c9e83878b66e31a8948a920309d77e0ad6e64b840",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-028.png": "ebdafa28eaf7f1bcd40708ab0192773ed8c08694f2918b5c7a2c1a19c8e1b2f5",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-031.png": "9fe81e0ddffac0acf4cbc8f80468991393a2b136ecc96cf8ac873c24ef677754",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-035.png": "32c19b425235b8885bf9792a788adfe804b3615a871890369b38d7ba212c57b8",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-038.png": "7f4ea1ac945a6d8b8980e589984b494747ed75f204025cfe0e8de1a1856964ce",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-041.png": "24d138afcff7b2c91102f31d40a2771492f27b9ee0f3b13c328ef8c8695f60d5",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-045.png": "8862736b4e2eb60f326001a3686db63a6202f5100e384591696fd91e7d72e797",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-048.png": "f206b2b6f4cdc4f42fc71f2b82d2b6b6cbbcf1d91ac3ef0c66d08e58757f2db7",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/display-051.png": "1b4d14a8b0e1e82fe8bb9b7bf80096ac6ae9a68183ed282cba17d21c2fe7e0d3",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/repeat/final.png": "1b4d14a8b0e1e82fe8bb9b7bf80096ac6ae9a68183ed282cba17d21c2fe7e0d3",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-001.png": "e9593a6440f9862fe2727ec460df5850a407d4b15736e32e5d8418b18a9b2ff9",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-005.png": "caff03e372f935d031e9526a161d6bcf0137f6dea26c0cf25410294f1e6da2e6",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-008.png": "394eb2914afc4f727225a47f2bcb5f5211335393fa6e8a6cb3f37e89c07e71e4",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-011.png": "becace21b85975b53f13ef6e10c77573569d32a1571afe700f556840b9063f58",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-015.png": "d2959fc45263ffb9fd85ba2ba87e5ec7884ec877e1c0543f4ac498e315afa53a",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-018.png": "dd6596eb66bf250b9a2d893efaa359c2cadcabdb3dde0102f35d487d1c14b89b",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-021.png": "3dc45f5bb0890808c4f3377b72fe7005da1cb802899ecfdb2dde9efccc734145",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-025.png": "fdd08df9dd1f10f2e80b344c9e83878b66e31a8948a920309d77e0ad6e64b840",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-028.png": "ebdafa28eaf7f1bcd40708ab0192773ed8c08694f2918b5c7a2c1a19c8e1b2f5",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-031.png": "9fe81e0ddffac0acf4cbc8f80468991393a2b136ecc96cf8ac873c24ef677754",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-035.png": "32c19b425235b8885bf9792a788adfe804b3615a871890369b38d7ba212c57b8",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-038.png": "7f4ea1ac945a6d8b8980e589984b494747ed75f204025cfe0e8de1a1856964ce",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-041.png": "24d138afcff7b2c91102f31d40a2771492f27b9ee0f3b13c328ef8c8695f60d5",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-045.png": "8862736b4e2eb60f326001a3686db63a6202f5100e384591696fd91e7d72e797",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-048.png": "f206b2b6f4cdc4f42fc71f2b82d2b6b6cbbcf1d91ac3ef0c66d08e58757f2db7",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/display-051.png": "1b4d14a8b0e1e82fe8bb9b7bf80096ac6ae9a68183ed282cba17d21c2fe7e0d3",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/baseline/smoke/final.png": "1b4d14a8b0e1e82fe8bb9b7bf80096ac6ae9a68183ed282cba17d21c2fe7e0d3",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-001.png": "8f4bfd3ee0ebe866d815e29d3b0e8c67d7878a6daac45c5988d4b6bd76c8221a",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-005.png": "d547357152b0018849870e8562c65c29bd79499e47152c463693476da71e2cdf",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-008.png": "def7e757df90b783a6bcea426ebdad53fa59695a4e1a3f8b3d43c1c8152fab4e",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-011.png": "c313e70c16104c084be6beccbbfff556f5411a3f5afadbd44eaf127bf9e949ef",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-015.png": "47646be53860b05ecb51b10fe427a87656c3e03b83275ce8f32c5224c52b4935",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-018.png": "355dda3e21f8962b1cea579b552ae7b4f299de3f8e633e1c34fc16f997bea923",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-021.png": "f3760a6b56d91cdf99f1ad946f6f172d94c4eb6500c86a8acbdec043397901b9",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-025.png": "f14cc5daff972c5e68f8cd255d10d108a45e41d10dd73015362ccc92ccc7508f",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-028.png": "221c573366a1e7f2de1646016ce99e86361a9d248e7a348870d84f24526b50e4",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-031.png": "69dbf377f9632250e324d91c65b7a3e47965993a1fa21143103f0b14104756f4",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-035.png": "06d101b78ec5c484ef243ad61a9d007e516bb481a1bea6b32030722422ec791c",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-038.png": "aa5a4a9a4178e1de6071f830cc123b061bb9d80b32aa56409483bbe7ec71c8ae",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-041.png": "fa9db1a4cd079825aad6553f7eaf53eb4b422437fc3990fa8ac3af3054d9af11",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-045.png": "433eddcba3ea0d348035c33e9ad070d189853febd582674d76f76a3e479cf104",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-048.png": "b8387a7cde392c37fe5bf4d2c5a6b3d52349af652dce702dcf89f4b9c869b2b5",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/display-051.png": "bc81a11acb05d1dfce5e3e9bbdff6a73bf770d4baff630acf2a4099d5c18428b",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/repeat/final.png": "bc81a11acb05d1dfce5e3e9bbdff6a73bf770d4baff630acf2a4099d5c18428b",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-001.png": "8f4bfd3ee0ebe866d815e29d3b0e8c67d7878a6daac45c5988d4b6bd76c8221a",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-005.png": "d547357152b0018849870e8562c65c29bd79499e47152c463693476da71e2cdf",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-008.png": "def7e757df90b783a6bcea426ebdad53fa59695a4e1a3f8b3d43c1c8152fab4e",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-011.png": "c313e70c16104c084be6beccbbfff556f5411a3f5afadbd44eaf127bf9e949ef",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-015.png": "47646be53860b05ecb51b10fe427a87656c3e03b83275ce8f32c5224c52b4935",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-018.png": "355dda3e21f8962b1cea579b552ae7b4f299de3f8e633e1c34fc16f997bea923",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-021.png": "f3760a6b56d91cdf99f1ad946f6f172d94c4eb6500c86a8acbdec043397901b9",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-025.png": "f14cc5daff972c5e68f8cd255d10d108a45e41d10dd73015362ccc92ccc7508f",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-028.png": "221c573366a1e7f2de1646016ce99e86361a9d248e7a348870d84f24526b50e4",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-031.png": "69dbf377f9632250e324d91c65b7a3e47965993a1fa21143103f0b14104756f4",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-035.png": "06d101b78ec5c484ef243ad61a9d007e516bb481a1bea6b32030722422ec791c",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-038.png": "aa5a4a9a4178e1de6071f830cc123b061bb9d80b32aa56409483bbe7ec71c8ae",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-041.png": "fa9db1a4cd079825aad6553f7eaf53eb4b422437fc3990fa8ac3af3054d9af11",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-045.png": "433eddcba3ea0d348035c33e9ad070d189853febd582674d76f76a3e479cf104",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-048.png": "b8387a7cde392c37fe5bf4d2c5a6b3d52349af652dce702dcf89f4b9c869b2b5",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/display-051.png": "bc81a11acb05d1dfce5e3e9bbdff6a73bf770d4baff630acf2a4099d5c18428b",
+    "build/banner-inset-v1/native-v1/captures/shifted_banner/candidate/smoke/final.png": "bc81a11acb05d1dfce5e3e9bbdff6a73bf770d4baff630acf2a4099d5c18428b"
+  },
+  "protected_sha256": {
+    "src/data/calcpath_data.h": "fdaf8cc409388b1425485801597b272105c6a788eb30825b74441e21f5041237",
+    "src/data/story_data.h": "0f7d6cbd9a37b411839a2a9376c15e035388d00cb0f8cbf4b898dcc93eaff6f6",
+    "src/data/walk_data.h": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769",
+    "src/engine/ads.c": "c4d53220327f62676a159f1b3651626a8dabafdfa5bf625b5e94d443280eb4f6",
+    "src/engine/ads.h": "fbe0925205b5b0ed225152d5892a5aef72e215c1d68e5f94476ddeb66c7996a1",
+    "src/engine/art_style.c": "1c66ab03db3e1cf5ab82f6d4c2fdcaf70829501a30de855e36ffe001d074fa42",
+    "src/engine/art_style.h": "8447d3c38cdabf1e959db7d87f8a8f3ecc013ae082e1545310322bf1e8e5aa6f",
+    "src/engine/bench.c": "ca747e19369cd2b57e547393ec4b63cefe3ff1f6a95d4d30fd22b218228ed03c",
+    "src/engine/bench.h": "e7ff059877a2c4a747c3675767da29b01f167989f8a2ba9a57d45e47cfcbf3ad",
+    "src/engine/calcpath.c": "8035aef05017584b5e7e5db1dcac898ba3f51efe444efc072705d5f0523cfacb",
+    "src/engine/calcpath.h": "4b5c614adc8a960e1bbab746aa159c4c908e3377d38a2d3c0f353ae0726d915d",
+    "src/engine/config.c": "a87b4e3d050912d7a82f3efa2d681be2ac20a72cadca3581dffa6d7e572bba58",
+    "src/engine/config.h": "ef00caffb5bba8c4de0e8b09e84911c4c1563fb6d6e5986f3e935e54b0dfcf46",
+    "src/engine/dump.c": "b2e46c22fa854bbc0d75413b441f4afc0afb10d42b6ead737e70bc5d7e92babd",
+    "src/engine/dump.h": "27ad235d4b052886c296999aae65f8604b6b668b3428860db0aea561827226df",
+    "src/engine/events.c": "041ac9fce76af2c3e1fc2eeef56ea9b92b45e1a4adc0087d5318720ccc2d57d2",
+    "src/engine/events.h": "7b73c8f46c470f325fb6b49093cbdc9b4f3c3da598be900d37244bd98bf9ea54",
+    "src/engine/graphics.c": "7bbab71ae7f9d43ea89f7532ac9a696af7ff16c5c8add3b9ac60fd9ad800db65",
+    "src/engine/graphics.h": "e2b388c6e9edfac3237c88467ba38117c4b1918b2a56f4a4d9dcd635e6fd9ecf",
+    "src/engine/island.c": "9b4f4a99e359a9a1af6d91ec9e3b553017afde981c34a423005155b91fd920d6",
+    "src/engine/island.h": "78da2a0bcc15e38636aa8ca7d1f9c1fb7fc48b49bf44a8afd895f3b76b3bef58",
+    "src/engine/jc_reborn.c": "50d9904cffd7c3cba9877ecec383370c612622ccd31a5a013e77755903c358c4",
+    "src/engine/mytypes.h": "cd9d251a4025cb9894b3d13dfb0c05568eadd53b7c15ee16f2af49b6c07cad84",
+    "src/engine/resource.c": "8b60a6d5936dd67ca014aaedde799e8b6f0a567ac482c836bd922a4fa93c6f43",
+    "src/engine/resource.h": "dfb8a1c118fb69a515931b939e7a32e05cc05688b2c09875b496211dcac412af",
+    "src/engine/sound.c": "eec8a1b43e33eccbd4e7f835ca55b7d9ab952818f2093f6a996d69d1ce6a91ee",
+    "src/engine/sound.h": "36bf9900ea05f164190b042905e1d5b5e163015055fa1f9f5cd9ec15c54a1e47",
+    "src/engine/story.c": "b503cca4115b5852f4ed9cdc02c5aef77498c793bac9fdb2b517b19cd8c4b9a4",
+    "src/engine/story.h": "e2bc55888fa518bbac1566f059111e2b4e278a986639cb825dd28a8677663e0c",
+    "src/engine/ttm.c": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6",
+    "src/engine/ttm.h": "7a6a8d40da48f8316d204cc4a8bb664e7cf3950dde0a75f79c0a6bf8b080e48d",
+    "src/engine/uncompress.c": "c8c0483ef3ae43e242ecbfff622c4735aef6f330ebce04f4cda8b43bfbba6b15",
+    "src/engine/uncompress.h": "c58f198f9dad5e00ac344925a0a9c45087253d6c6c950bd06cbc701c906c2148",
+    "src/engine/utils.c": "c50c4ae6de6a59e4fbd1a169592eb920778449f8c000175cb55d66595343c10f",
+    "src/engine/utils.h": "9e6fb0678b6c62c63bea5f58f1772cf02aa7510809639f4984e94d0fa3d43104",
+    "src/engine/walk.c": "d6b88ef1e16a2ad10944ce520485a472d4b13d53fd744087e9c5e573e1908f9d",
+    "src/engine/walk.h": "cd828778b83c73428ba9d7897a87aa7254b7d2d54eb1eb3f31a1ed625cbf5a91",
+    "platform/jc_resources.h": "6054a022fe1f5e793c5e6c1744aeb240b5b24e91c5c2a47eebc53ce0d20d7b8a",
+    "platform/platform.h": "d44c885dac7188ce20c1c9b726e43f0796a1312639ad2136b248469ad1b0f11b",
+    "platform/platform_linux.c": "c57c9aefad8f40e959116772438f0bdbda7403438b1b7188f2453cbecbc66687",
+    "platform/platform_web.c": "559e223cbf6f6ba51ad6d9a2a6ae4c3a1685fbb28d9625b1efc59ca3be48ee4b",
+    "platform/platform_windows.c": "4db7c0906dd3b572a931afb0c711b203b68e76321f102baaf1f9bb8a7543b4db",
+    "platform/png_decoder.c": "e98e3e9a9c3970d8366bcb5e7c8e57a7e5e71b0fad3913d42638cc072fdc2f6a",
+    "platform/png_decoder.h": "b6ea3e50277f2c23e2f7d40fe5f22caf5e0f5c58fa0dc47a4fb5fea67499a2d2",
+    "platform/png_loader.c": "05cbc18bc03a3c7b48c15c2ae010242b37b489302acabf753192605aaeffaf1d",
+    "platform/zipvfs.c": "1cb46f55871ac87a0f4ddee7d463282e822269875c77e49f81e101a1c2adec49",
+    "platform/zipvfs.h": "493de595f2405359f266cef822c1b4279d1ba3d96e1449db6aeccd68cbdb9696",
+    "third_party/miniz/miniz.c": "6a0314b68c9b804f33e27d89aa3144ef7724fd787043ba8c95d1b19be2d64afd",
+    "third_party/miniz/miniz.h": "0c85210868066516ecc76a9c9cbf77c69bb085ade34ab78177bb3acaf8c1a6d7",
+    "third_party/miniz/miniz_common.h": "fa5bf07d72efa51640f9d8ee11431fd2538e6218aea9e9328905edeb54187997",
+    "third_party/miniz/miniz_export.h": "a467e6a2e6017ad0e43fe18a2e50f5e5dfd2a93fabe3b52dd6bbba7c18700b03",
+    "third_party/miniz/miniz_tdef.c": "b368132832eebb4680d8849e3b313876c4833bcc9e03f32821665edef9d3f191",
+    "third_party/miniz/miniz_tdef.h": "13574142e909c529c3c08bbd76be8ac23939370e08fdc9837e635b2e00b4883d",
+    "third_party/miniz/miniz_tinfl.c": "457e745d8fef9657b07e4c641548b49f029d54dd70d3fc83568253f51194cda4",
+    "third_party/miniz/miniz_tinfl.h": "ef18f995b0151095a0e9ed718114bd03437c607b302ee979a9d371f157bacf8a",
+    "third_party/miniz/miniz_zip.c": "1ab94b269cd6021b006dac0fa78a42c73e1559676d086a16059fb98e21830606",
+    "third_party/miniz/miniz_zip.h": "eff19da6bcd7e127bb4447bf67a6093a6e589ee496fd251a444ec3b58c1d86f4",
+    "CMakeLists.txt": "0090f05332c00493b4f4fdd30fc6a25efd6b383a6f3373a3eb0c98d7a65d0962",
+    "assets/scrantic_data.zip": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "art/cartoon/arrival-pilot-v1/review-evidence/native-v1/helpers/capture_format.py": "1a956d08ef659cd537e1530bcf13cc9da153a1bf34a1730fd344e91a107c4195"
+  },
+  "archive_pair": {
+    "baseline_sha256": "507dac5b524b08450d14119443f19a370b790e1bcd198ec6144563ef2a7f2233",
+    "candidate_sha256": "06ab52ed52fd0cf1249bf5cb14d89da95d31263b482137a021c136063e26e5e0",
+    "member_count": 2598,
+    "unchanged_members": 2597,
+    "changed_member": "data/styles/cartoon/BMP/HOLIDAY.BMP/003.png",
+    "before_png_sha256": "c524b35d1d30d5a70aa8136e18a0ff739a3b6887673e565831d04883869d9b87",
+    "after_png_sha256": "e36e103027d2eee53c58c903cd397770a66e5ffce2683e9c0c8ce6e2d988ff92",
+    "candidate_canvases": {
+      "0": [
+        640,
+        180
+      ],
+      "3": [
+        144,
+        58
+      ],
+      "4": [
+        144,
+        58
+      ],
+      "5": [
+        144,
+        58
+      ],
+      "6": [
+        384,
+        256
+      ],
+      "7": [
+        384,
+        256
+      ],
+      "8": [
+        384,
+        256
+      ],
+      "9": [
+        144,
+        64
+      ],
+      "10": [
+        144,
+        64
+      ],
+      "11": [
+        144,
+        64
+      ]
+    }
+  },
+  "native_summary_sha256": "52cc4f5413000e9367dd924256f98494b730c6359efd72e66ccddd29228a667e",
+  "limits": "Inset banner versus tied draft, exact sources and small native records retained. No human attachment approval. Runtime unchanged during capture and checked before freeze; later footprint changes do not change this historical source snapshot."
+}

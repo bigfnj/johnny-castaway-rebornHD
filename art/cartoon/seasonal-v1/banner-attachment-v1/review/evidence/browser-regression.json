@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "html_sha256": "ae65e690d14f03d37dc5d6491b3a5b0a5ff41e36dc71dd714bb6193d97178924",
+  "manifest_sha256": "9b4f91a9cc876e793ed189dd9236941b0179f476f0620ac8b2f5d905144fc922",
+  "checker_sha256": "f50f72fbb611e631a2fa4ee395ea30bc3567240c54b5dc910e6ab8bb84d94a8a",
+  "checks": [
+    "Day, both banner ends and Normal speed defaults",
+    "Both default panels reconstruct exact native pixels",
+    "day_banner: all native frames/timestamps, four cameras, 1440 ms loop and controls",
+    "night_banner: all native frames/timestamps, four cameras, 1440 ms loop and controls",
+    "shifted_banner: all native frames/timestamps, four cameras, 1440 ms loop and controls"
+  ],
+  "screenshots_sha256": {
+    "browser-regression-banner.png": "0e0cfdd1800feb20d3608ddbcaf9c910151dba59d74b4a1438b92c76c2573c5f",
+    "browser-day_banner.png": "0e0cfdd1800feb20d3608ddbcaf9c910151dba59d74b4a1438b92c76c2573c5f",
+    "browser-night_banner.png": "d1b87fc52452153503b1ed4b019a751b12f57d6713bf8aa6885ec4652344d02f",
+    "browser-shifted_banner.png": "7eeeb46a67b617565450c264ea346e63c6e56535f7e19b6caa082bc7b5d1b491"
+  },
+  "scope": "Pixel/timing/UI verification, not human attachment approval."
+}
