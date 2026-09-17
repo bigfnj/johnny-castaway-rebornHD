@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "status": "draft_visual_review",
+  "tool": "built-in image_gen",
+  "approval": null,
+  "selected_preview": "NIGHT-generated-v2.png",
+  "outputs": [
+    {"file": "NIGHT-generated-v1.png", "sha256": "954ca75a24931648ec80fce6582771d202855033378b01fafc7de84e680f101b", "canvas": [1448, 1086], "mode": "RGB", "request": "NIGHT-v1-request.json", "note": "First style draft. Horizon was too high, so a targeted composition edit followed."},
+    {"file": "NIGHT-generated-v2.png", "sha256": "0177fa8d18653241b98498afb158ce7fdeb6974977a5a3be2dfe31b5a65b099b", "canvas": [1448, 1086], "mode": "RGB", "request": "NIGHT-v2-request.json", "note": "Horizon now close to original placement; moon visually a little lower than source. Human review pending."}
+  ],
+  "planned_export": {"asset": "SCR/NIGHT.SCR.png", "canvas": [1280, 960], "method": "uniform RGB Lanczos resize, scale 160/181", "executed": false},
+  "checks": "Opened raw output and checked RGB mode, 4:3 dimensions and composition for preview. No full smoke, regression or new native capture run.",
+  "production_package_changed": false
+}
