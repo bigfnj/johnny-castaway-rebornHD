@@ -10,6 +10,12 @@ no human approval for the new island yet. Serve this folder and open
 `review.html` for the matched native comparison. Both panels use the
 same restored-size V5 props, not the earlier reduced decorations.
 
+Current direction: the user subsequently rejected the scalloped local fixes
+and requested a substantially broader, smoother front coast. See
+[smooth-shore-v1](smooth-shore-v1/README.md) for the new shape study and the
+explicit canvas/wave work needed to carry it into the application. The native
+comparisons below remain historical evidence, not approval of that silhouette.
+
 ## Restored props
 
 `../seasonal-v1/recipe-v5.json` restores the original V1 transforms. It uses the

@@ -1,0 +1,16 @@
+{
+  "method": "built-in image_gen; precise-object-edit",
+  "scope": "User-requested broad smooth outward front coast. Shape-only draft; not exported into the application.",
+  "prompt": "Use case: precise-object-edit.\nEdit this exact transparent Cartoon island ground sprite. The front shoreline is too scalloped. PUSH THE FRONT BEACH OUTWARD and replace all the small notches, scallops, bumps and individual contact-point bulges with ONE broad, flowing, smoothly rounded coast.\nKeep the 1536x1024 canvas and the island's current registered scale and location. Preserve the upper/back shoreline, its crest around y384, both tips near x188,y510 and x1320,y500, and the warm golden sand style. Do not scale or recenter the whole island.\nRedraw the whole LOWER/front coast as a generous continuous arc: approximately through x300,y554; x400,y578; x490,y586; x640,y618; x820,y626; x1020,y614; x1140,y596; then curve smoothly up to the right tip. These are smooth curve guides, NOT corners. Keep the outer contour within y630. Fill OUTWARD into the old transparent scalloped areas with matching sand and remove every former dark shoreline inside the enlarged beach. There must be only ONE thin dark-brown outer coastline, with no old outline left inside it. Make the front particularly calm and smooth from x400 to x1200: no alternating bulges/dents, no little feet, tabs, toes, peninsula lobes or pinched channels. This is a broad beach edge with breathing room for scenery, not a series of patches.\nMaintain the existing sand colors, gentle highlights and light speckling; extend their painted texture naturally across the added beach. Interior sand opaque with antialiased outer edge. Output only the sand island on genuine RGBA transparency. No water, foam, palm, shadow, people, props, annotations or text. Preserve the upper half of the island and transparent margins as closely as possible.",
+  "input": {
+    "path": "../foam-contact-v2/ground-contact-v4-raw.png",
+    "sha256": "4a9afed1148a03f8ed01d012e221e740a3efae831aac59a9c6f3294737b325c8"
+  },
+  "output": {
+    "path": "raw.png",
+    "sha256": "df6d789714c10bc1d6282a75c86c05770baad73a61990087f246253718a55c97",
+    "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-a712d467-b4ed-421e-9c40-fcc0c6926dd4.png",
+    "accepted": false
+  },
+  "next": "Human approval of broad contour; then explicit scenery-canvas support and shore-aligned foam, native scene testing. Do not crop or shrink back to original sprite bounds."
+}
