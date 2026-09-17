@@ -1,0 +1,635 @@
+{
+  "schema_version": 1,
+  "status": "DIAGNOSTIC_EXPORTED",
+  "accepted": false,
+  "scope": "Technical contact-ground draft pending native/human review.",
+  "limits": "Intentional generated ground edit. No old-ground byte-identity claim. Fixed mapping and disjoint crop ownership are unchanged. Visibility masking is not exact global ground-over-foam compositing. Props are not exported or edited here.",
+  "exporter_sha256": "1745fccf514821726d33687f00b21ad2b4e5e50ab4ce06e1a6daaf9d8db6236a",
+  "recipe_sha256": "f81a4b2e0944537d98c7a06270dd5d514dc63a87a47e916b2d5baa340ac25d7a",
+  "source_sha256": "7265fac3d191fe2d3d948fe81c0b465ead12ffc20a6c95a8996bc40b9e5cdca1",
+  "helpers_sha256": {
+    "art/cartoon/shoreline-repair-v1/foam-contact-v2/export.py": "fae28aba1181761777ae4ed43e088fb6a1cc51b08f20db39135ac81fe4ae1445",
+    "art/cartoon/shoreline-repair-v1/shared-master/export.py": "760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6"
+  },
+  "uniform_resample_count": 1,
+  "world_crop": [
+    540,
+    558,
+    1180,
+    686
+  ],
+  "affine_forward": [
+    0.5,
+    0,
+    -64,
+    0,
+    0.5,
+    -192
+  ],
+  "ground_contacts": [
+    {
+      "world": [
+        757,
+        646
+      ],
+      "ground_rgba": [
+        239,
+        181,
+        93,
+        253
+      ]
+    },
+    {
+      "world": [
+        785,
+        656
+      ],
+      "ground_rgba": [
+        65,
+        28,
+        0,
+        248
+      ]
+    },
+    {
+      "world": [
+        787,
+        658
+      ],
+      "ground_rgba": [
+        80,
+        41,
+        2,
+        248
+      ]
+    }
+  ],
+  "outside_union_nonzero_pixels": [
+    {
+      "world": [
+        1136,
+        603
+      ],
+      "rgba": [
+        85,
+        0,
+        0,
+        3
+      ]
+    },
+    {
+      "world": [
+        1137,
+        604
+      ],
+      "rgba": [
+        63,
+        63,
+        0,
+        4
+      ]
+    },
+    {
+      "world": [
+        1136,
+        605
+      ],
+      "rgba": [
+        116,
+        71,
+        18,
+        96
+      ]
+    },
+    {
+      "world": [
+        1138,
+        605
+      ],
+      "rgba": [
+        85,
+        0,
+        0,
+        3
+      ]
+    }
+  ],
+  "shared_ground_measurements": {
+    "source_alpha8_bounds": [
+      185,
+      382,
+      1331,
+      612
+    ],
+    "source_alpha8_bounds_in_master_hd": [
+      28.5,
+      -1.0,
+      601.5,
+      114.0
+    ],
+    "raw_alpha_outside_master_crop": {
+      "nonzero_pixels": 709,
+      "alpha8_pixels": 138,
+      "maximum_alpha": 220,
+      "alpha_sum": 17469
+    },
+    "filtered_alpha_outside_master_crop": {
+      "nonzero_pixels": 220,
+      "alpha8_pixels": 66,
+      "maximum_alpha": 121,
+      "alpha_sum": 5070
+    },
+    "master_alpha_outside_original_canvas_union": {
+      "nonzero_pixels": 4,
+      "alpha8_pixels": 1,
+      "maximum_alpha": 96,
+      "alpha_sum": 106
+    },
+    "ground_crop_ownership": {
+      "duplicate_pixels": 0,
+      "coverage_matches_original_canvas_union": true,
+      "meaningful_owned_pixels": 46935
+    }
+  },
+  "blend_caveat": "The frozen V2 mask changes partial-edge semantics; its per-frame values are analytic single-layer bounds, not measured native scene error. Native packaging separately verifies all props unchanged.",
+  "frames": [
+    {
+      "frame": 0,
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "canvas": [
+        560,
+        104
+      ],
+      "world_box": [
+        576,
+        558,
+        1136,
+        662
+      ],
+      "ground_family": 0,
+      "owned_ground_rectangles": [
+        [
+          576,
+          558,
+          1136,
+          662
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+      "previous_member_sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+      "foam_composition": "none",
+      "sha256": "39d97e30d0daa73b4e4442359e916f88bca721dd971f8623740b797af8681b49",
+      "ground_png_sha256": "39d97e30d0daa73b4e4442359e916f88bca721dd971f8623740b797af8681b49"
+    },
+    {
+      "frame": 3,
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "canvas": [
+        144,
+        58
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "ground_family": 3,
+      "owned_ground_rectangles": [
+        [
+          540,
+          612,
+          576,
+          670
+        ],
+        [
+          576,
+          662,
+          684,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+      "previous_member_sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+      "foam_composition": "V2 visibility-masked foam OVER new exact owned ground",
+      "sha256": "3da973ac5ad697b2f3fa1316038a31553521b18ec829f025d704bfcef17855c3",
+      "ground_png_sha256": "881f36d1fcc3ac8be5c8be05021fadae9d348716e8bc268755997b4b8905a5f8",
+      "opaque_ground_pixels": 104,
+      "omitted_nonzero_foam_pixels": 10,
+      "changed_foam_alpha_pixels": 28,
+      "nonopaque_land_nonzero_foam_pixels": 50,
+      "maximum_single_layer_continuous_blend_deviation_bound_rgb": 53.327458669742406,
+      "partial_edge_witness": {
+        "world": [
+          568,
+          623
+        ],
+        "ground_alpha": 77,
+        "foam_alpha": 253,
+        "masked_foam_alpha": 177
+      },
+      "input_foam_rgba_sha256": "d2d60cff5fccc1ba25d5856eb9dff6f7112752c648185039192bc24a42345acc",
+      "masked_foam_rgba_sha256": "f1fbe0da24efbf4d65abf141e575ea5d74e85f45c96b53b3a3b0b245a0d596dd"
+    },
+    {
+      "frame": 4,
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "canvas": [
+        144,
+        58
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "ground_family": 3,
+      "owned_ground_rectangles": [
+        [
+          540,
+          612,
+          576,
+          670
+        ],
+        [
+          576,
+          662,
+          684,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+      "previous_member_sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+      "foam_composition": "V2 visibility-masked foam OVER new exact owned ground",
+      "sha256": "503bbb65c819fc340b79ab4550329ad6517623101e2d7659db88624d9ab90b09",
+      "ground_png_sha256": "881f36d1fcc3ac8be5c8be05021fadae9d348716e8bc268755997b4b8905a5f8",
+      "opaque_ground_pixels": 104,
+      "omitted_nonzero_foam_pixels": 35,
+      "changed_foam_alpha_pixels": 79,
+      "nonopaque_land_nonzero_foam_pixels": 88,
+      "maximum_single_layer_continuous_blend_deviation_bound_rgb": 63.5843137254902,
+      "partial_edge_witness": {
+        "world": [
+          617,
+          647
+        ],
+        "ground_alpha": 121,
+        "foam_alpha": 255,
+        "masked_foam_alpha": 134
+      },
+      "input_foam_rgba_sha256": "823b020cdae9abbfeff83a4da90001c849968f3f799b761ec841f280ad97f7f8",
+      "masked_foam_rgba_sha256": "7e9982b6a749b224038e7afac10ccfa85e29e910cd0dbf9dfce306345f6ef325"
+    },
+    {
+      "frame": 5,
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "canvas": [
+        144,
+        58
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "ground_family": 3,
+      "owned_ground_rectangles": [
+        [
+          540,
+          612,
+          576,
+          670
+        ],
+        [
+          576,
+          662,
+          684,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+      "previous_member_sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+      "foam_composition": "V2 visibility-masked foam OVER new exact owned ground",
+      "sha256": "8f023caf93fb3468debd36e6a9dd3b956f08b27580063b4c11ecba26c81f67eb",
+      "ground_png_sha256": "881f36d1fcc3ac8be5c8be05021fadae9d348716e8bc268755997b4b8905a5f8",
+      "opaque_ground_pixels": 104,
+      "omitted_nonzero_foam_pixels": 182,
+      "changed_foam_alpha_pixels": 369,
+      "nonopaque_land_nonzero_foam_pixels": 371,
+      "maximum_single_layer_continuous_blend_deviation_bound_rgb": 62.190726643598616,
+      "partial_edge_witness": {
+        "world": [
+          655,
+          644
+        ],
+        "ground_alpha": 144,
+        "foam_alpha": 253,
+        "masked_foam_alpha": 110
+      },
+      "input_foam_rgba_sha256": "2f68b8047bbf0eaa7e801501840be57bc08502f8a1ea5b7f19445fd66427e956",
+      "masked_foam_rgba_sha256": "756f4e5b212168607b92625e758efa287d8e308f15c6d363fe6b7e0a1cf4b6c2"
+    },
+    {
+      "frame": 6,
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "canvas": [
+        320,
+        50
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "ground_family": 6,
+      "owned_ground_rectangles": [
+        [
+          728,
+          662,
+          1048,
+          688
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+      "previous_member_sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
+      "foam_composition": "V2 visibility-masked foam OVER new exact owned ground",
+      "sha256": "7731081bd13075402f84fd5c8c3118b584779fd982e78f9bc46cda89dcd5f0c1",
+      "ground_png_sha256": "c90420a65ed0b06360877de522ffb93bb40233489641835905ea659fc77068a9",
+      "opaque_ground_pixels": 243,
+      "omitted_nonzero_foam_pixels": 369,
+      "changed_foam_alpha_pixels": 850,
+      "nonopaque_land_nonzero_foam_pixels": 871,
+      "maximum_single_layer_continuous_blend_deviation_bound_rgb": 63.63137254901961,
+      "partial_edge_witness": {
+        "world": [
+          804,
+          670
+        ],
+        "ground_alpha": 122,
+        "foam_alpha": 255,
+        "masked_foam_alpha": 133
+      },
+      "input_foam_rgba_sha256": "d652efff04cb5ddea8783ce3175f5452291a1f43948fe448fd662aca7b3697cd",
+      "masked_foam_rgba_sha256": "0ad4d116f3a8a01369fdc50dad2ac35056ef9cf2537693bf1726d646abb25b08"
+    },
+    {
+      "frame": 7,
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "canvas": [
+        320,
+        50
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "ground_family": 6,
+      "owned_ground_rectangles": [
+        [
+          728,
+          662,
+          1048,
+          688
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+      "previous_member_sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+      "foam_composition": "V2 visibility-masked foam OVER new exact owned ground",
+      "sha256": "e7fdd9ffdaf007852298f881dc32e45e68c304f4c1a91a7de1c196076524715f",
+      "ground_png_sha256": "c90420a65ed0b06360877de522ffb93bb40233489641835905ea659fc77068a9",
+      "opaque_ground_pixels": 243,
+      "omitted_nonzero_foam_pixels": 384,
+      "changed_foam_alpha_pixels": 1033,
+      "nonopaque_land_nonzero_foam_pixels": 1023,
+      "maximum_single_layer_continuous_blend_deviation_bound_rgb": 63.13725490196079,
+      "partial_edge_witness": {
+        "world": [
+          759,
+          653
+        ],
+        "ground_alpha": 140,
+        "foam_alpha": 255,
+        "masked_foam_alpha": 115
+      },
+      "input_foam_rgba_sha256": "b5ae2bcb88bb973861543aa9d3b3f2f8488bdc7327ccc615c4167960e499fbdf",
+      "masked_foam_rgba_sha256": "c81a208313ff61695c49fa7fb1e31618daf8b77737aafc0f1cf1f575c5ee211b"
+    },
+    {
+      "frame": 8,
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "canvas": [
+        320,
+        50
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "ground_family": 6,
+      "owned_ground_rectangles": [
+        [
+          728,
+          662,
+          1048,
+          688
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+      "previous_member_sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
+      "foam_composition": "V2 visibility-masked foam OVER new exact owned ground",
+      "sha256": "9f2e8022966bfd783e5f2074e9330d64828642fb96f1c98760bf9bad082c5049",
+      "ground_png_sha256": "c90420a65ed0b06360877de522ffb93bb40233489641835905ea659fc77068a9",
+      "opaque_ground_pixels": 243,
+      "omitted_nonzero_foam_pixels": 831,
+      "changed_foam_alpha_pixels": 2120,
+      "nonopaque_land_nonzero_foam_pixels": 2104,
+      "maximum_single_layer_continuous_blend_deviation_bound_rgb": 63.23137254901961,
+      "partial_edge_witness": {
+        "world": [
+          991,
+          667
+        ],
+        "ground_alpha": 116,
+        "foam_alpha": 255,
+        "masked_foam_alpha": 139
+      },
+      "input_foam_rgba_sha256": "454b0229b36a92ca83eb965eb01d960dcedac4e88109a06e123c50d58b63b216",
+      "masked_foam_rgba_sha256": "54d9bf678e42872761df545bd7525bb4be26729f725f96c8b32642ba0e89137e"
+    },
+    {
+      "frame": 9,
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "canvas": [
+        144,
+        64
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "ground_family": 9,
+      "owned_ground_rectangles": [
+        [
+          1136,
+          606,
+          1180,
+          670
+        ],
+        [
+          1048,
+          662,
+          1136,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+      "previous_member_sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+      "foam_composition": "V2 visibility-masked foam OVER new exact owned ground",
+      "sha256": "ef182f9da23c6c3ee1f82489a1cd74259cc0a3207fd16c37c838892d24eeea30",
+      "ground_png_sha256": "0c6adc959fb4b3fff140a3fed00c410c8fb3dbd78b8f9c4f894c27833f6e727f",
+      "opaque_ground_pixels": 93,
+      "omitted_nonzero_foam_pixels": 63,
+      "changed_foam_alpha_pixels": 139,
+      "nonopaque_land_nonzero_foam_pixels": 162,
+      "maximum_single_layer_continuous_blend_deviation_bound_rgb": 63.70196078431373,
+      "partial_edge_witness": {
+        "world": [
+          1138,
+          623
+        ],
+        "ground_alpha": 131,
+        "foam_alpha": 255,
+        "masked_foam_alpha": 124
+      },
+      "input_foam_rgba_sha256": "0232bc036ee690ac0096af66db2f08fdafd889ad703c0f8f0163c07f47f36575",
+      "masked_foam_rgba_sha256": "71e2953c521b815a40914beb91e535f3f56ee678658890983864df2a446a70e0"
+    },
+    {
+      "frame": 10,
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "canvas": [
+        144,
+        64
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "ground_family": 9,
+      "owned_ground_rectangles": [
+        [
+          1136,
+          606,
+          1180,
+          670
+        ],
+        [
+          1048,
+          662,
+          1136,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+      "previous_member_sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+      "foam_composition": "V2 visibility-masked foam OVER new exact owned ground",
+      "sha256": "cd922fe74cf57bfeea1b46e6a3a64bd2a846c6ef1652f18c831ba2809ccc1f05",
+      "ground_png_sha256": "0c6adc959fb4b3fff140a3fed00c410c8fb3dbd78b8f9c4f894c27833f6e727f",
+      "opaque_ground_pixels": 93,
+      "omitted_nonzero_foam_pixels": 92,
+      "changed_foam_alpha_pixels": 211,
+      "nonopaque_land_nonzero_foam_pixels": 214,
+      "maximum_single_layer_continuous_blend_deviation_bound_rgb": 55.355755478662054,
+      "partial_edge_witness": {
+        "world": [
+          1058,
+          657
+        ],
+        "ground_alpha": 134,
+        "foam_alpha": 222,
+        "masked_foam_alpha": 105
+      },
+      "input_foam_rgba_sha256": "9b072b0e242bdfa706f1f680029ad923a835245b3bc076ce0a0eb7d8e85ca925",
+      "masked_foam_rgba_sha256": "a9ebe70e54f6e29a263731e196ec39ba6bf63410a877cc60d083d0904efb2f70"
+    },
+    {
+      "frame": 11,
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "canvas": [
+        144,
+        64
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "ground_family": 9,
+      "owned_ground_rectangles": [
+        [
+          1136,
+          606,
+          1180,
+          670
+        ],
+        [
+          1048,
+          662,
+          1136,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+      "previous_member_sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+      "foam_composition": "V2 visibility-masked foam OVER new exact owned ground",
+      "sha256": "3c5521829866428b1ddbee6737c3b9bf166a1f6254b2b1a23c50cabe94edd8c2",
+      "ground_png_sha256": "0c6adc959fb4b3fff140a3fed00c410c8fb3dbd78b8f9c4f894c27833f6e727f",
+      "opaque_ground_pixels": 93,
+      "omitted_nonzero_foam_pixels": 137,
+      "changed_foam_alpha_pixels": 302,
+      "nonopaque_land_nonzero_foam_pixels": 290,
+      "maximum_single_layer_continuous_blend_deviation_bound_rgb": 63.5843137254902,
+      "partial_edge_witness": {
+        "world": [
+          1058,
+          657
+        ],
+        "ground_alpha": 134,
+        "foam_alpha": 255,
+        "masked_foam_alpha": 121
+      },
+      "input_foam_rgba_sha256": "3587074277c36d22d4bca6ed4625e2082ee9e2efd41305fdaf7c288e2338308d",
+      "masked_foam_rgba_sha256": "c490954eebcdbc17bcf4c90bc31cb768aba73949929c9d2efad97ab0be15b2ba"
+    }
+  ],
+  "outputs_sha256": {
+    "master-ground.png": "a7fb8e580f3c1bdd19edf876132411471a03c6627d4c347eb0a366aa77dcb2ce",
+    "master-padded.png": "1d06c538a8e76c04126de9d78957e5fc8eba15e34bb4a8df8b84c4d7d6249349",
+    "ground/000.png": "39d97e30d0daa73b4e4442359e916f88bca721dd971f8623740b797af8681b49",
+    "ground/003.png": "881f36d1fcc3ac8be5c8be05021fadae9d348716e8bc268755997b4b8905a5f8",
+    "ground/006.png": "c90420a65ed0b06360877de522ffb93bb40233489641835905ea659fc77068a9",
+    "ground/009.png": "0c6adc959fb4b3fff140a3fed00c410c8fb3dbd78b8f9c4f894c27833f6e727f",
+    "BMP/BACKGRND.BMP/000.png": "39d97e30d0daa73b4e4442359e916f88bca721dd971f8623740b797af8681b49",
+    "BMP/BACKGRND.BMP/003.png": "3da973ac5ad697b2f3fa1316038a31553521b18ec829f025d704bfcef17855c3",
+    "BMP/BACKGRND.BMP/004.png": "503bbb65c819fc340b79ab4550329ad6517623101e2d7659db88624d9ab90b09",
+    "BMP/BACKGRND.BMP/005.png": "8f023caf93fb3468debd36e6a9dd3b956f08b27580063b4c11ecba26c81f67eb",
+    "BMP/BACKGRND.BMP/006.png": "7731081bd13075402f84fd5c8c3118b584779fd982e78f9bc46cda89dcd5f0c1",
+    "BMP/BACKGRND.BMP/007.png": "e7fdd9ffdaf007852298f881dc32e45e68c304f4c1a91a7de1c196076524715f",
+    "BMP/BACKGRND.BMP/008.png": "9f2e8022966bfd783e5f2074e9330d64828642fb96f1c98760bf9bad082c5049",
+    "BMP/BACKGRND.BMP/009.png": "ef182f9da23c6c3ee1f82489a1cd74259cc0a3207fd16c37c838892d24eeea30",
+    "BMP/BACKGRND.BMP/010.png": "cd922fe74cf57bfeea1b46e6a3a64bd2a846c6ef1652f18c831ba2809ccc1f05",
+    "BMP/BACKGRND.BMP/011.png": "3c5521829866428b1ddbee6737c3b9bf166a1f6254b2b1a23c50cabe94edd8c2"
+  }
+}

@@ -83,9 +83,11 @@ other six wave phases. The separate-strip seams are absent in this composite.
 `review-images/source.json` binds the eight cropped review images to those
 native outputs. The browser loaded both images for all four decoration choices;
 the pumpkin, tree and clover comparisons were visually inspected. The page
-starts on clovers and shows the same V5 props on both sides. A human question
-asks whether this island shape and placement should be kept. No answer is
-recorded here yet.
+starts on clovers and shows the same V5 props on both sides. The user called
+this draft close and marked five remaining trouble spots. This was not final
+approval. [Contact refinement](foam-contact-v2/README.md) preserves the marked
+image, identifies old foam over sand and two clover contact-pad intersections,
+and prepares the next review without shrinking the props.
 
 The shared-master measurements disclose four source pixels outside the union
 of original runtime canvases, with only one at alpha 8 or higher (alpha 74).
