@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "status": "visually approved artwork; technical gates and production integration deferred",
+  "visual_approval": {
+    "path": "art/cartoon/environment-v1/acceptance/day-v1.json",
+    "sha256": "597f716d6eecde4dad910d18b8b1f013abd138eaa722d2bcdefb324655979699"
+  },
+  "production_acceptance": false,
+  "pillow_version": "12.3.0",
+  "method_reference": {
+    "path": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/export.py",
+    "sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0"
+  },
+  "method_scope": "Reuse the established opaque-ocean full-frame RGB Lanczos resize and PNG compression 6 pattern; no source-module execution or creative modification.",
+  "assets": [
+    {
+      "path": "SCR/OCEAN00.SCR.png",
+      "source": {
+        "path": "art/cartoon/environment-v1/generation/OCEAN00-generated-v1.png",
+        "sha256": "a1958112a1d174c9e6596b0befb0541d7e8b049ae52719314c3aee3c2d479042"
+      },
+      "source_sha256": "a1958112a1d174c9e6596b0befb0541d7e8b049ae52719314c3aee3c2d479042",
+      "generated_canvas": [
+        1448,
+        1086
+      ],
+      "generated_mode": "RGB",
+      "runtime_canvas": [
+        1280,
+        960
+      ],
+      "runtime_mode": "RGB",
+      "transform_kind": "opaque_resize",
+      "scale_exact": {
+        "numerator": 160,
+        "denominator": 181
+      },
+      "translation": [
+        0,
+        0
+      ],
+      "resample": "PIL.Image.Resampling.LANCZOS",
+      "png_compress_level": 6,
+      "candidate_png_sha256": "0793cc297b65a406367fc765582a175adc3f7090067944371e999b861e495511",
+      "runtime_rgb_sha256": "0b44f8d4b7d679b228b4481ed483cd87e5f52d0792570703311946ef64a8dcc4",
+      "output_bytes": 976262,
+      "request": {
+        "path": "art/cartoon/environment-v1/generation/OCEAN00-v1-request.json",
+        "sha256": "98254ec9fdea98c158a0cf85651ebe4c7f1f387af97d2a0578d1076b7c7ec387"
+      },
+      "ordered_generation_references": [
+        {
+          "path": "art/cartoon/environment-v1/reference/OCEAN02-approved-raw.png",
+          "sha256": "10a4c01a454082a2f5592f249a59d2e84c5158eca434f6223d502a7fff745f96"
+        },
+        {
+          "path": "art/cartoon/environment-v1/reference/OCEAN00-original.png",
+          "sha256": "ef75d0a622a02d543b3b363fa12cb16c65707ec038fd686c9ae5ee8a0714c557"
+        }
+      ]
+    },
+    {
+      "path": "SCR/OCEAN01.SCR.png",
+      "source": {
+        "path": "art/cartoon/environment-v1/generation/OCEAN01-generated-v1.png",
+        "sha256": "15c621ac702b47bab3cd0b1f0f74cccb4fa6741f3a60301964a567fab53acb4e"
+      },
+      "source_sha256": "15c621ac702b47bab3cd0b1f0f74cccb4fa6741f3a60301964a567fab53acb4e",
+      "generated_canvas": [
+        1448,
+        1086
+      ],
+      "generated_mode": "RGB",
+      "runtime_canvas": [
+        1280,
+        960
+      ],
+      "runtime_mode": "RGB",
+      "transform_kind": "opaque_resize",
+      "scale_exact": {
+        "numerator": 160,
+        "denominator": 181
+      },
+      "translation": [
+        0,
+        0
+      ],
+      "resample": "PIL.Image.Resampling.LANCZOS",
+      "png_compress_level": 6,
+      "candidate_png_sha256": "032b98b363864d0e08d0cf966ed945a37d64bab3779d02879e32d0429285b5f7",
+      "runtime_rgb_sha256": "aec7444f37782d44568a158dc1ee438555e74c489d8111f8117a537cdc5d7061",
+      "output_bytes": 975856,
+      "request": {
+        "path": "art/cartoon/environment-v1/generation/OCEAN01-v1-request.json",
+        "sha256": "d4d7f27a713afaf556463cc5dbff28c990bccfb6ae62e72ab0692166e423acdb"
+      },
+      "ordered_generation_references": [
+        {
+          "path": "art/cartoon/environment-v1/reference/OCEAN02-approved-raw.png",
+          "sha256": "10a4c01a454082a2f5592f249a59d2e84c5158eca434f6223d502a7fff745f96"
+        },
+        {
+          "path": "art/cartoon/environment-v1/reference/OCEAN01-original.png",
+          "sha256": "479c00cb53b2b59e7d2b5a435333accbed1a1d0a86548f5185aeb6db0d86f74d"
+        }
+      ]
+    }
+  ],
+  "basic_readback": {
+    "status": "PASS",
+    "assets": 2,
+    "source_canvas": [
+      1448,
+      1086
+    ],
+    "source_mode": "RGB",
+    "output_canvas": [
+      1280,
+      960
+    ],
+    "output_mode": "RGB",
+    "scope": "Decoded source/output dimensions and modes, raw SHA identities and saved PNG/RGB hashes only; no new test framework."
+  },
+  "deferred": [
+    "Full smoke and regression",
+    "Native combined-scene review",
+    "Production integration and audit"
+  ]
+}

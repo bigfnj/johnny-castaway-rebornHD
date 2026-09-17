@@ -81,8 +81,8 @@ including the lighter skin palette and corrected018 contact. All28 delivered
 Johnny drawings retain those scoped approvals.
 Other placements and story uses of the standing art remain outside its reviewed
 arrival/direction-ring contexts. Seasonal decorations and the high/low-tide
-environment groups and ordinary moving clouds are now delivered. Night and
-alternate oceans are the next bounded scenery groups; other characters, action scenes and code-drawn
+environment groups and ordinary moving clouds are now delivered. NIGHT and the
+remaining ordinary daytime oceans have [visual approval and saved exports](../art/cartoon/environment-v1/README.md), pending bulk integration. Independent coconut props are next; other characters, action scenes and code-drawn
 effects remain later work. Existing engine maintenance findings stay
 in [BACKLOG.md](../BACKLOG.md); address a reproduced blocker when its affected
 scene enters review.

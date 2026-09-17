@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "both_daytime_oceans_visually_approved",
+  "tool": "built-in image_gen",
+  "approval": {
+    "path": "art/cartoon/environment-v1/acceptance/day-v1.json",
+    "sha256": "597f716d6eecde4dad910d18b8b1f013abd138eaa722d2bcdefb324655979699"
+  },
+  "outputs": [
+    {
+      "file": "OCEAN00-generated-v1.png",
+      "sha256": "a1958112a1d174c9e6596b0befb0541d7e8b049ae52719314c3aee3c2d479042",
+      "canvas": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "request": "OCEAN00-v1-request.json",
+      "asset": "SCR/OCEAN00.SCR.png",
+      "note": "Diagonal middle-water swell arrangement translated into approved Cartoon palette."
+    },
+    {
+      "file": "OCEAN01-generated-v1.png",
+      "sha256": "15c621ac702b47bab3cd0b1f0f74cccb4fa6741f3a60301964a567fab53acb4e",
+      "canvas": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "request": "OCEAN01-v1-request.json",
+      "asset": "SCR/OCEAN01.SCR.png",
+      "note": "Calm middle-water band and lower swells translated into approved Cartoon palette."
+    }
+  ],
+  "preview": "art/cartoon/environment-v1/day-review.html",
+  "planned_export": {
+    "canvas": [
+      1280,
+      960
+    ],
+    "method": "uniform RGB Lanczos resize, scale 160/181",
+    "executed": true,
+    "recipe": {
+      "path": "art/cartoon/environment-v1/export/day-recipe.json",
+      "sha256": "195c9607dce080818189c5012fed6ef71b0c5d4c48d195bce051a65e1170f128"
+    },
+    "outputs": [
+      {
+        "path": "art/cartoon/environment-v1/export/SCR/OCEAN00.SCR.png",
+        "sha256": "0793cc297b65a406367fc765582a175adc3f7090067944371e999b861e495511"
+      },
+      {
+        "path": "art/cartoon/environment-v1/export/SCR/OCEAN01.SCR.png",
+        "sha256": "032b98b363864d0e08d0cf966ed945a37d64bab3779d02879e32d0429285b5f7"
+      }
+    ],
+    "mode": "RGB"
+  },
+  "checks": "Basic raw/export size, RGB mode and hash readback passed for both selected artworks. Full smoke, regression, native combined-scene checks and audit remain deferred under the art-first workflow.",
+  "production_package_changed": false,
+  "prior_status": "draft_visual_review",
+  "previous_record_sha256": "bd100d3323aad23363bb384e0f0ffd83fdec8d29dffe7d4c3209978488fa192b",
+  "approved_outputs": [
+    "OCEAN00-generated-v1.png",
+    "OCEAN01-generated-v1.png"
+  ],
+  "historical_preview_checks": "Inspected generated artwork and checked opaque RGB mode and 4:3 dimensions for visual preview. Full smoke/regression/audit deferred under the user's art-first workflow.",
+  "historical_notes_policy": "Original generation output notes and historical preview checks are retained unchanged; the current visual approval is recorded above."
+}

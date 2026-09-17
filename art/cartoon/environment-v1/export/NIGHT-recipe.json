@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "status": "visually approved artwork; technical gates and production integration deferred",
+  "visual_approval": {
+    "path": "art/cartoon/environment-v1/acceptance/NIGHT-v1.json",
+    "sha256": "d7ead0d9749ce973d559344c4403e35a06ff85e2e879bda36af41b95821d6d7d"
+  },
+  "production_acceptance": false,
+  "pillow_version": "12.3.0",
+  "method_reference": {
+    "path": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/export.py",
+    "sha256": "acec0dd32edc7c8bb41bb9695f9b85c33e1ccfe57a68551e4079e8a55e1e74f0"
+  },
+  "method_scope": "Reuse the established opaque-ocean full-frame RGB Lanczos resize and PNG compression6 pattern; no source-module execution or creative modification.",
+  "assets": [
+    {
+      "path": "SCR/NIGHT.SCR.png",
+      "source": {
+        "path": "art/cartoon/environment-v1/generation/NIGHT-generated-v2.png",
+        "sha256": "0177fa8d18653241b98498afb158ce7fdeb6974977a5a3be2dfe31b5a65b099b"
+      },
+      "source_sha256": "0177fa8d18653241b98498afb158ce7fdeb6974977a5a3be2dfe31b5a65b099b",
+      "generated_canvas": [
+        1448,
+        1086
+      ],
+      "generated_mode": "RGB",
+      "runtime_canvas": [
+        1280,
+        960
+      ],
+      "runtime_mode": "RGB",
+      "transform_kind": "opaque_resize",
+      "scale_exact": {
+        "numerator": 160,
+        "denominator": 181
+      },
+      "translation": [
+        0,
+        0
+      ],
+      "resample": "PIL.Image.Resampling.LANCZOS",
+      "png_compress_level": 6,
+      "candidate_png_sha256": "f9153a6a94c988548ce89d9da76afa6de8f71fc6a1bec1470ff8b7f2555c666c",
+      "runtime_rgb_sha256": "7998df86645c90bf99582effacee80ece2c50f184a447ad0b0eaf78216ab06e8",
+      "request": {
+        "path": "art/cartoon/environment-v1/generation/NIGHT-v2-request.json",
+        "sha256": "78d55526af706888870e66ed61c69f53ac1f61b1b45d3342934530f8f6708138"
+      },
+      "ordered_edit_references": [
+        {
+          "path": "art/cartoon/environment-v1/generation/NIGHT-generated-v1.png",
+          "sha256": "954ca75a24931648ec80fce6582771d202855033378b01fafc7de84e680f101b"
+        },
+        {
+          "path": "art/cartoon/environment-v1/reference/NIGHT-original.png",
+          "sha256": "dded491786d2c4c37f84ee57787c1c34c45259b7423788bee8b43499f688d1ec"
+        }
+      ]
+    }
+  ],
+  "basic_readback": {
+    "status": "PASS",
+    "source_canvas": [
+      1448,
+      1086
+    ],
+    "source_mode": "RGB",
+    "output_canvas": [
+      1280,
+      960
+    ],
+    "output_mode": "RGB",
+    "output_bytes": 1040093,
+    "scope": "Decoded source/output dimensions and modes, raw SHA identity and saved PNG/RGB hashes only; no new test framework."
+  },
+  "deferred": [
+    "Full smoke and regression",
+    "Native combined-scene review",
+    "Production integration and audit"
+  ]
+}

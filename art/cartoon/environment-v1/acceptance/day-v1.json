@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-17",
+  "accepted": true,
+  "approval_kind": "scoped visual artwork approval",
+  "production_acceptance": false,
+  "human_question": "Do both new daytime oceans at http://127.0.0.1:8939/day-review.html fit the Cartoon style? The left has diagonal swells; the right has a calmer open-water band.",
+  "human_response": "Yes, keep both oceans",
+  "reviewed_url": "http://127.0.0.1:8939/day-review.html",
+  "scope": "Approve both displayed daytime ocean artworks in the Cartoon style: OCEAN00 with diagonal swells and OCEAN01 with a calmer open-water band. This records artwork approval; native scene, full regression, audit and production-package acceptance remain deferred.",
+  "review_page": {
+    "path": "art/cartoon/environment-v1/day-review.html",
+    "sha256": "62b8f45c548e7d568d7ca84632b9ba7f1b4d6a1e78554e58ae10b984b5ed3c76"
+  },
+  "approved_style_context": {
+    "path": "art/cartoon/environment-v1/reference/OCEAN02-approved-runtime.png",
+    "sha256": "099249884c73c863436983ec4d4f5650e77e6e5748ef65bf417d0785b1acf294"
+  },
+  "assets": [
+    {
+      "asset": "SCR/OCEAN00.SCR.png",
+      "selected_raw": {
+        "path": "art/cartoon/environment-v1/generation/OCEAN00-generated-v1.png",
+        "sha256": "a1958112a1d174c9e6596b0befb0541d7e8b049ae52719314c3aee3c2d479042"
+      },
+      "original_reference": {
+        "path": "art/cartoon/environment-v1/reference/OCEAN00-original.png",
+        "sha256": "ef75d0a622a02d543b3b363fa12cb16c65707ec038fd686c9ae5ee8a0714c557"
+      },
+      "runtime_export": {
+        "path": "art/cartoon/environment-v1/export/SCR/OCEAN00.SCR.png",
+        "sha256": "0793cc297b65a406367fc765582a175adc3f7090067944371e999b861e495511",
+        "canvas": [
+          1280,
+          960
+        ],
+        "mode": "RGB"
+      }
+    },
+    {
+      "asset": "SCR/OCEAN01.SCR.png",
+      "selected_raw": {
+        "path": "art/cartoon/environment-v1/generation/OCEAN01-generated-v1.png",
+        "sha256": "15c621ac702b47bab3cd0b1f0f74cccb4fa6741f3a60301964a567fab53acb4e"
+      },
+      "original_reference": {
+        "path": "art/cartoon/environment-v1/reference/OCEAN01-original.png",
+        "sha256": "479c00cb53b2b59e7d2b5a435333accbed1a1d0a86548f5185aeb6db0d86f74d"
+      },
+      "runtime_export": {
+        "path": "art/cartoon/environment-v1/export/SCR/OCEAN01.SCR.png",
+        "sha256": "032b98b363864d0e08d0cf966ed945a37d64bab3779d02879e32d0429285b5f7",
+        "canvas": [
+          1280,
+          960
+        ],
+        "mode": "RGB"
+      }
+    }
+  ],
+  "transform": "Full-frame uniform RGB Lanczos scale 160/181; no crop, shift, recolor or alpha operation.",
+  "verification_scope": "Basic raw/export size, mode and hash readback only. Full smoke, regression and audit deferred under the art-first workflow. No production ZIP, pack or catalog changes."
+}

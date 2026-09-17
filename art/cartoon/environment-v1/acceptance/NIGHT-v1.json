@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-17",
+  "accepted": true,
+  "approval_kind": "scoped visual artwork approval",
+  "production_acceptance": false,
+  "asset": "SCR/NIGHT.SCR.png",
+  "selected_generation": "NIGHT-generated-v2.png",
+  "human_question": "In the night comparison at http://127.0.0.1:8939/review.html, does the Cartoon backdrop have the right moonlight, sky and water style? The moon sits slightly lower than in the original.",
+  "human_response": "Yes, keep this night backdrop",
+  "reviewed_url": "http://127.0.0.1:8939/review.html",
+  "scope": "Approve the selected NIGHT v2 backdrop moonlight, sky and water style, including the disclosed slightly lower moon. This is artwork approval, not native scene, full regression, audit or production-package acceptance.",
+  "review_page": {
+    "path": "art/cartoon/environment-v1/review.html",
+    "sha256": "bda303ea21d663c973b63a34e75b421aa2b71d0e5e4e7dcf4623afeeaf386c74"
+  },
+  "selected_raw": {
+    "path": "art/cartoon/environment-v1/generation/NIGHT-generated-v2.png",
+    "sha256": "0177fa8d18653241b98498afb158ce7fdeb6974977a5a3be2dfe31b5a65b099b"
+  },
+  "original_reference": {
+    "path": "art/cartoon/environment-v1/reference/NIGHT-original.png",
+    "sha256": "dded491786d2c4c37f84ee57787c1c34c45259b7423788bee8b43499f688d1ec"
+  },
+  "day_style_context": {
+    "path": "art/cartoon/environment-v1/reference/OCEAN02-approved-runtime.png",
+    "sha256": "099249884c73c863436983ec4d4f5650e77e6e5748ef65bf417d0785b1acf294"
+  },
+  "runtime_export": {
+    "path": "art/cartoon/environment-v1/export/SCR/NIGHT.SCR.png",
+    "sha256": "f9153a6a94c988548ce89d9da76afa6de8f71fc6a1bec1470ff8b7f2555c666c",
+    "canvas": [
+      1280,
+      960
+    ],
+    "mode": "RGB",
+    "transform": "Full-frame uniform RGB Lanczos scale160/181; no crop, shift, recolor or alpha operation."
+  },
+  "verification_scope": "Basic raw/export size, mode and hash readback only. Full smoke, regression and audit deferred under the art-first workflow. No production ZIP, pack or catalog changes."
+}

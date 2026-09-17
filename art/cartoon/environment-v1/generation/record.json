@@ -1,14 +1,59 @@
 {
   "schema_version": 1,
-  "status": "draft_visual_review",
+  "status": "selected_NIGHT_v2_visually_approved",
   "tool": "built-in image_gen",
-  "approval": null,
+  "approval": {
+    "path": "art/cartoon/environment-v1/acceptance/NIGHT-v1.json",
+    "sha256": "d7ead0d9749ce973d559344c4403e35a06ff85e2e879bda36af41b95821d6d7d"
+  },
   "selected_preview": "NIGHT-generated-v2.png",
   "outputs": [
-    {"file": "NIGHT-generated-v1.png", "sha256": "954ca75a24931648ec80fce6582771d202855033378b01fafc7de84e680f101b", "canvas": [1448, 1086], "mode": "RGB", "request": "NIGHT-v1-request.json", "note": "First style draft. Horizon was too high, so a targeted composition edit followed."},
-    {"file": "NIGHT-generated-v2.png", "sha256": "0177fa8d18653241b98498afb158ce7fdeb6974977a5a3be2dfe31b5a65b099b", "canvas": [1448, 1086], "mode": "RGB", "request": "NIGHT-v2-request.json", "note": "Horizon now close to original placement; moon visually a little lower than source. Human review pending."}
+    {
+      "file": "NIGHT-generated-v1.png",
+      "sha256": "954ca75a24931648ec80fce6582771d202855033378b01fafc7de84e680f101b",
+      "canvas": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "request": "NIGHT-v1-request.json",
+      "note": "First style draft. Horizon was too high, so a targeted composition edit followed."
+    },
+    {
+      "file": "NIGHT-generated-v2.png",
+      "sha256": "0177fa8d18653241b98498afb158ce7fdeb6974977a5a3be2dfe31b5a65b099b",
+      "canvas": [
+        1448,
+        1086
+      ],
+      "mode": "RGB",
+      "request": "NIGHT-v2-request.json",
+      "note": "Horizon now close to original placement; moon visually a little lower than source. Human review pending."
+    }
   ],
-  "planned_export": {"asset": "SCR/NIGHT.SCR.png", "canvas": [1280, 960], "method": "uniform RGB Lanczos resize, scale 160/181", "executed": false},
-  "checks": "Opened raw output and checked RGB mode, 4:3 dimensions and composition for preview. No full smoke, regression or new native capture run.",
-  "production_package_changed": false
+  "planned_export": {
+    "asset": "SCR/NIGHT.SCR.png",
+    "canvas": [
+      1280,
+      960
+    ],
+    "method": "uniform RGB Lanczos resize, scale 160/181",
+    "executed": true,
+    "recipe": {
+      "path": "art/cartoon/environment-v1/export/NIGHT-recipe.json",
+      "sha256": "d1bbecacc355fba2968f349509d49d1adf850bd34e5b9ced32c59121d977b0e0"
+    },
+    "output": {
+      "path": "art/cartoon/environment-v1/export/SCR/NIGHT.SCR.png",
+      "sha256": "f9153a6a94c988548ce89d9da76afa6de8f71fc6a1bec1470ff8b7f2555c666c"
+    },
+    "mode": "RGB"
+  },
+  "checks": "Basic raw/export size, RGB mode and hash readback passed. Full smoke, regression and audit deferred under the art-first workflow.",
+  "production_package_changed": false,
+  "prior_status": "draft_visual_review",
+  "previous_record_sha256": "3b238654178cbd5e382397919b2833c932d9587139fe443f36efc0344444c7eb",
+  "approved_output": "NIGHT-generated-v2.png",
+  "historical_preview_checks": "Opened raw output and checked RGB mode, 4:3 dimensions and composition for preview. No full smoke, regression or new native capture run.",
+  "historical_notes_policy": "The output notes below retain their generation-time meaning, including the then-pending v2 human review; current visual approval is recorded above."
 }
