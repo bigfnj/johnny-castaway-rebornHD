@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "phase": "regression",
+  "status": "PASS",
+  "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+  "test_sha256": "abd4b77474ce35fff3e396aba1ecae9fdc66d4fbde38cddaf5ba378f4b78a03a",
+  "inventory_sha256": "20026a83577fd0f3d64a1b4292c68a94b76d3cf804451dfebae2311d94bc0ee1",
+  "readme_sha256": "08590654371550c4f396f3369865b692441fee6ed9ff6536feb3080b62b4ee14",
+  "summary": {
+    "original_slots": 2402,
+    "port_slots": 2401,
+    "resources": 127,
+    "reference_only": 1,
+    "accepted_johnny": 28,
+    "outstanding_johnny": 1002,
+    "outstanding_classes": {
+      "johnny_composite": 382,
+      "johnny_full": 431,
+      "johnny_partial": 189
+    },
+    "uncertain_port_slots": 84,
+    "outstanding_resources": 76,
+    "distinct_outstanding_originals": 968,
+    "all_classes": {
+      "johnny_composite": 382,
+      "johnny_full": 459,
+      "johnny_partial": 189,
+      "not_johnny": 1162,
+      "placeholder": 126,
+      "uncertain": 84
+    }
+  },
+  "scope": "Mechanics and input identity only. Visual labels, original executable colors and scene execution are not independently validated.",
+  "runs": [
+    {
+      "name": "current_full_catalog_reproduction",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 0,
+      "result": "PASS",
+      "expected_failure": null,
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\nREFERENCE stored original PNG evidence; original executable colors and scene execution were not revalidated\nPASS character-inventory {\"accepted_johnny\": 28, \"all_classes\": {\"johnny_composite\": 382, \"johnny_full\": 459, \"johnny_partial\": 189, \"not_johnny\": 1162, \"placeholder\": 126, \"uncertain\": 84}, \"distinct_outstanding_originals\": 968, \"original_slots\": 2402, \"outstanding_classes\": {\"johnny_composite\": 382, \"johnny_full\": 431, \"johnny_partial\": 189}, \"outstanding_johnny\": 1002, \"outstanding_resources\": 76, \"port_slots\": 2401, \"reference_only\": 1, \"resources\": 127, \"uncertain_port_slots\": 84}\n",
+      "stderr": ""
+    },
+    {
+      "name": "isolated_positive_before",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 0,
+      "result": "PASS",
+      "expected_failure": null,
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\nREFERENCE stored original PNG evidence; original executable colors and scene execution were not revalidated\nPASS character-inventory {\"accepted_johnny\": 28, \"all_classes\": {\"johnny_composite\": 382, \"johnny_full\": 459, \"johnny_partial\": 189, \"not_johnny\": 1162, \"placeholder\": 126, \"uncertain\": 84}, \"distinct_outstanding_originals\": 968, \"original_slots\": 2402, \"outstanding_classes\": {\"johnny_composite\": 382, \"johnny_full\": 431, \"johnny_partial\": 189}, \"outstanding_johnny\": 1002, \"outstanding_resources\": 76, \"port_slots\": 2401, \"reference_only\": 1, \"resources\": 127, \"uncertain_port_slots\": 84}\n",
+      "stderr": ""
+    },
+    {
+      "name": "stale_source_pin",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 1,
+      "result": "FIRED",
+      "expected_failure": "gj-family.json: stale source index",
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\n",
+      "stderr": "ERROR gj-family.json: stale source index\n"
+    },
+    {
+      "name": "missing_resource",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 1,
+      "result": "FIRED",
+      "expected_failure": "classification: missing resources ['GJANGRY.BMP']",
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\n",
+      "stderr": "ERROR classification: missing resources ['GJANGRY.BMP']\n"
+    },
+    {
+      "name": "duplicate_override",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 1,
+      "result": "FIRED",
+      "expected_failure": "GJANGRY.BMP: duplicate override for frame 39",
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\n",
+      "stderr": "ERROR GJANGRY.BMP: duplicate override for frame 39\n"
+    },
+    {
+      "name": "unknown_frame",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 1,
+      "result": "FIRED",
+      "expected_failure": "GJANGRY.BMP: override has unknown frame 1000000",
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\n",
+      "stderr": "ERROR GJANGRY.BMP: override has unknown frame 1000000\n"
+    },
+    {
+      "name": "reviewed_page_coverage",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 1,
+      "result": "FIRED",
+      "expected_failure": "GJANGRY.BMP: incomplete reviewed-page coverage",
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\n",
+      "stderr": "ERROR GJANGRY.BMP: incomplete reviewed-page coverage\n"
+    },
+    {
+      "name": "port_coverage_mismatch",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 1,
+      "result": "FIRED",
+      "expected_failure": "source index: port coverage mismatch",
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\n",
+      "stderr": "ERROR source index: port coverage mismatch\n"
+    },
+    {
+      "name": "missing_preserved_zip_member",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 1,
+      "result": "FIRED",
+      "expected_failure": "reference-originals.zip: member coverage differs from source index",
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\n",
+      "stderr": "ERROR reference-originals.zip: member coverage differs from source index\n"
+    },
+    {
+      "name": "duplicate_preserved_zip_member",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 1,
+      "result": "FIRED",
+      "expected_failure": "reference-originals.zip: duplicate ZIP member",
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\n",
+      "stderr": "ERROR reference-originals.zip: duplicate ZIP member\n"
+    },
+    {
+      "name": "altered_preserved_png",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 1,
+      "result": "FIRED",
+      "expected_failure": "BMP/JOHNWALK.BMP/018: preserved PNG hash mismatch",
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\n",
+      "stderr": "ERROR BMP/JOHNWALK.BMP/018: preserved PNG hash mismatch\n"
+    },
+    {
+      "name": "corrupt_png_accepted_only_by_guard_removed_mutant",
+      "helper_sha256": "2712a4f09409b40e72008c88516c8653cdb76cf7ec5f029bcf9ea478776d0ad1",
+      "returncode": 0,
+      "result": "PASS",
+      "expected_failure": null,
+      "stdout": "WITNESS character-inventory 2712a4f09409b40e72008c88516c8653cdb76cf7ec5f029bcf9ea478776d0ad1\nREFERENCE stored original PNG evidence; original executable colors and scene execution were not revalidated\nPASS character-inventory {\"accepted_johnny\": 28, \"all_classes\": {\"johnny_composite\": 382, \"johnny_full\": 459, \"johnny_partial\": 189, \"not_johnny\": 1162, \"placeholder\": 126, \"uncertain\": 84}, \"distinct_outstanding_originals\": 968, \"original_slots\": 2402, \"outstanding_classes\": {\"johnny_composite\": 382, \"johnny_full\": 431, \"johnny_partial\": 189}, \"outstanding_johnny\": 1002, \"outstanding_resources\": 76, \"port_slots\": 2401, \"reference_only\": 1, \"resources\": 127, \"uncertain_port_slots\": 84}\n",
+      "stderr": ""
+    },
+    {
+      "name": "isolated_positive_after_restoration",
+      "helper_sha256": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "returncode": 0,
+      "result": "PASS",
+      "expected_failure": null,
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\nREFERENCE stored original PNG evidence; original executable colors and scene execution were not revalidated\nPASS character-inventory {\"accepted_johnny\": 28, \"all_classes\": {\"johnny_composite\": 382, \"johnny_full\": 459, \"johnny_partial\": 189, \"not_johnny\": 1162, \"placeholder\": 126, \"uncertain\": 84}, \"distinct_outstanding_originals\": 968, \"original_slots\": 2402, \"outstanding_classes\": {\"johnny_composite\": 382, \"johnny_full\": 431, \"johnny_partial\": 189}, \"outstanding_johnny\": 1002, \"outstanding_resources\": 76, \"port_slots\": 2401, \"reference_only\": 1, \"resources\": 127, \"uncertain_port_slots\": 84}\n",
+      "stderr": ""
+    }
+  ],
+  "negative_controls_fired": 9,
+  "mutation_check": {
+    "artifact": "build_inventory-preserved-png-guard-removed.py",
+    "sha256": "2712a4f09409b40e72008c88516c8653cdb76cf7ec5f029bcf9ea478776d0ad1",
+    "corrupt_member": "native/BMP/JOHNWALK.BMP/018.png",
+    "corrupt_png_sha256": "52f5ae7e37b57aaaa729e0ed4e5d5f47ac3fa96f212df543767721422f11e93b",
+    "change": "Exactly one preserved PNG digest guard removed.",
+    "witness": "WITNESS character-inventory 2712a4f09409b40e72008c88516c8653cdb76cf7ec5f029bcf9ea478776d0ad1",
+    "result": "FIRED: original rejects changed PNG; copied executed mutant accepts the same archive."
+  },
+  "inputs_sha256": {
+    "art/cartoon/arrival-pilot-v1/production-acceptance.json": "52d71dd6255a544791d2de24c64882716b95cb0e90085f23a798612aef71f4e2",
+    "art/cartoon/character-inventory-v1/classification/gj-family.json": "e9684c77398050d7d0eb1ed173f2177e458ee47181edd16089eb6b9f3cad5fe7",
+    "art/cartoon/character-inventory-v1/classification/mj-family.json": "4180f99ef67eb7158b1f764e4e71539b7e2ea952a47c97b8d4fe39178e151f05",
+    "art/cartoon/character-inventory-v1/classification/root-family.json": "fd28ab80af7e34714999109f98330bb95f00270f7d246b31c835c2b5db83f690",
+    "art/cartoon/character-inventory-v1/classification/s-family.json": "1d8f89faa9925344f55fd89395f043da83ac9951592e598aac101fd94e9b306a",
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json": "40b1d14e5bed8b55c5b263b6ecae18120bbb8c4df26c9d3d276f23e4362a96ac",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json": "fe98aabe978b166d5d9f8177ba43cb4b7f0727a363d1f0f80909eac3cbbfc360",
+    "art/cartoon/pack.json": "1d920d4f97fd4294a14f0d36af97fb6c48882a5bceb49f2a9418cef1f8c1bd8f",
+    "art/cartoon/production-plan.json": "9f148db5c26e4db5a6d58b9ccaa18670efb2dcdf305a12f80438c54965d69bd7",
+    "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json": "73355f3a2d1a82b814d39feb46bfb9b052fc72ec32106f96e86b845adfdf476d",
+    "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json": "bee8cd194ad8bf8d745635740fb4a0de944212807cc027399862823535690c08",
+    "art/cartoon/skin-tone-v1/exports-v2/recipe.json": "021d9125b2184cd1389ba990ee6d347ef041bfcca2cec38d6d5258d0a51a2311",
+    "art/cartoon/skin-tone-v1/production-acceptance.json": "ad3570cccb0d1b9331d17c8299789557ec0d506935d6a1e0111933d247ded519",
+    "art/cartoon/standing018-proportions-v1/color/evidence-foot-v5/recipe.json": "044d421dc3d0a33451f7c4dff34b9a5e375a544ddee848dca83f755b2382af8f",
+    "art/cartoon/walk-expansion-v1/production-acceptance.json": "70942da086c93ca2fca2693fc35fb295be7d1ea38c29c38598124b5a1c16adc8",
+    "art/cartoon/walk-expansion-v1/reference/metadata.json": "d710eb638f84f7da2dcdfe004cf5e8010125cb9c4c142b8033641d83098dd629",
+    "art/cartoon/walk-expansion-v1/reference/source.json": "040106d15a0c6460a044a7989ddcfea12d494bc6838ee1fad83a3793e2f2cfa4",
+    "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json": "ce7f3832982bcfbef13f9ce6dc06c1f60ce774b89aca088247442040fd767a0c",
+    "art/cartoon/walk-pilot/front-arrival-v1/production-acceptance.json": "848bf24e9b50e0cf490f72229dfa7699ed9a710b346cf8cbb49cb90df691b672",
+    "art/cartoon/walk-pilot/front-refresh-v1/production-acceptance.json": "80c385a861a2520e6c672bd4bbae3b08f6159b425bf310c7a9cc44a4eadecfee",
+    "art/cartoon/walk-pilot/profile-walk-v1/acceptance.json": "c27809ad50d08d69d8cf41116c0ed91b2300f6640f772e37f03c93a737e62ab1",
+    "art/cartoon/character-inventory-v1/README.md": "08590654371550c4f396f3369865b692441fee6ed9ff6536feb3080b62b4ee14",
+    "art/cartoon/character-inventory-v1/inventory.json": "20026a83577fd0f3d64a1b4292c68a94b76d3cf804451dfebae2311d94bc0ee1",
+    "art/cartoon/character-inventory-v1/reference-originals.zip": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912",
+    "art/cartoon/character-inventory-v1/scene-map/resource-map.json": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3",
+    "art/cartoon/character-inventory-v1/source/frame-index.json": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2",
+    "assets/scrantic_data.zip": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+    "docs/knowledge-base/cartoon-original-reference.json": "f6293e86dc4773fa5548f205df73afa970729662dab06a5bff111c3b0f9692ef",
+    "tools/art_common.py": "2e003886e3504f6af4725eaf875c3d793542dc0efd4ccf45042d670c96f6e914",
+    "tools/art_inventory.py": "0f17eecde17a412e011b4f7ba2fb427c414137461bf84fc34904ce4b2c30eb31",
+    "tools/art_pack.py": "1df59daf81b2bbe6f7826156e7f0d12fd70f9048d576dee2cdc2eac60d1d2239",
+    "tools/art_production_catalog.py": "3ec870dadd15667ef8a6ca267fadebc6294a0a9be04cbd94a259b3e8e4883a99",
+    "tools/art_review_metadata.py": "8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204",
+    "tools/build_web.py": "602a0f1a7d7db27f27f0a9ae7d13b4ca49a6be108176202f2827f7a47764b259",
+    "tools/inventory_scenes.py": "f4950f39557e5bb937b5158f22ddf5050ac8bb9f11f022265aa542994dbdee52",
+    "tools/verify_macos_arch.py": "97ea1e9ecc411fbffdf4530be555387ddd787d91a2ec964e63b79e32d55af9b7"
+  },
+  "original_inputs_unchanged": true,
+  "fixture_restored": true
+}

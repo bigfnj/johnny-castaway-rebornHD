@@ -1,0 +1,43 @@
+WITNESS module 8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204
+test_shoreline_replacement_must_be_declared (__main__.HistoryTests.test_shoreline_replacement_must_be_declared) ... FAIL
+
+======================================================================
+FAIL: test_shoreline_replacement_must_be_declared (__main__.HistoryTests.test_shoreline_replacement_must_be_declared)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_pilot_history.py", line 127, in refused
+    self.report(change, **kwargs)
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_pilot_history.py", line 103, in report
+    return self.fixture_report(change, replace_png, extra_pngs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_pilot_history.py", line 123, in fixture_report
+    return m.build(ROOT)
+           ^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tools\art_review_metadata.py", line 346, in build
+    production = production_history(pack, approved, history_record, lambda path: raw_hashes[path])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tools\art_review_metadata.py", line 207, in production_history
+    origins = approval_origins(current, approved, current_path, record, record_hash)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tools\art_production_catalog.py", line 217, in approval_origins
+    require(set(newly) == set(approved) - inherited_paths, acceptance_path, "new approval coverage differs from inherited complement")
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tools\art_production_catalog.py", line 31, in require
+    raise ArtError(f"{label}: {reason}")
+art_common.ArtError: art/cartoon/front-history-fixture/production-acceptance.json: new approval coverage differs from inherited complement
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_pilot_history.py", line 217, in test_shoreline_replacement_must_be_declared
+    self.refused(damaged, m.PACK, "declared pilot replacements differ from active approvals", extra_pngs=images)
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_pilot_history.py", line 130, in refused
+    self.assertEqual(str(caught), label + ": " + reason)
+AssertionError: 'art/cartoon/front-history-fixture/production-acceptan[60 chars]ment' != 'art/cartoon/pack.json: declared pilot replacements di[22 chars]vals'
+- art/cartoon/front-history-fixture/production-acceptance.json: new approval coverage differs from inherited complement
++ art/cartoon/pack.json: declared pilot replacements differ from active approvals
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.591s
+
+FAILED (failures=1)

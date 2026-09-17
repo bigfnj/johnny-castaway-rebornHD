@@ -1,0 +1,97 @@
+{
+  "status": "PASS",
+  "source_snapshot_sha256": "3f64d1b8cb46eccdc55fdc5d333d39a17830fbe7118cb9fd743ed21a09a60e6c",
+  "selected_pngs": {
+    "BMP/HOLIDAY.BMP/003.png": "e36e103027d2eee53c58c903cd397770a66e5ffce2683e9c0c8ce6e2d988ff92",
+    "BMP/BACKGRND.BMP/000.png": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+    "BMP/BACKGRND.BMP/006.png": "2d2c93478a8e06b99a8a86d832bccdf1327d6d1a55cf79a2593dff49dcbd0db5",
+    "BMP/BACKGRND.BMP/008.png": "4ff1c6672e10d67e789c01584f1fb0dc1299016e391809eca8e5047e4cf1acea",
+    "BMP/BACKGRND.BMP/003.png": "3a456347b5106edfd1d197a4df0eaabf7fe4659abdd5cd7f4a45e766b949e4cc",
+    "BMP/BACKGRND.BMP/004.png": "af3826616abb465a81b3ba18498da22c9e31e5cfe4a769eb7bcf6ddd64a7dd0d",
+    "BMP/BACKGRND.BMP/005.png": "5b7fe8718684700e4d3aca76307e41c64d6a47427c8e66f34869e7bb35b69545",
+    "BMP/BACKGRND.BMP/009.png": "71e82707e1e9fb08772ab19b2247e2c010c4618b1861b338c10ba1855f54311e",
+    "BMP/BACKGRND.BMP/010.png": "9f25c1c30eeda807fbeb8d706a2f0440c18b474c5bd50984317a516e71e5d850",
+    "BMP/BACKGRND.BMP/011.png": "a7740ab3564218fd3bc52f39da4d770e05e40ab0e0debd32bb2c11cd96dcedc6",
+    "BMP/BACKGRND.BMP/007.png": "623c8f3fb8a4905a15917db963542f178d86472f0809134227bc2053fa800c56",
+    "BMP/HOLIDAY.BMP/000.png": "1f2ac522476d98afcade5f128c12c0c80f6993b871b611498971f23a44eabf79",
+    "BMP/HOLIDAY.BMP/001.png": "e6327c07e85d7d8610ed45a502efd283fe1c79fe5850c790bb2808a2ee02176e",
+    "BMP/HOLIDAY.BMP/002.png": "7d9c5406f8275a1af9c9369305575a24d807ac5b38200e6ad17913a0a8400265"
+  },
+  "commands": [
+    {
+      "phase": "smoke",
+      "label": "banner-smoke",
+      "exporter": "art/cartoon/seasonal-v1/banner-inset-v1/export_v2.py",
+      "exporter_sha256": "109d55fcada482a42b97208c1c1c65fecfdcd715d6fa0a3a05c59d92e5ada1bc",
+      "recipe": "art/cartoon/seasonal-v1/banner-inset-v1/recipe-v2.json",
+      "recipe_sha256": "94df1f95fa15d03566191faefcea92b415838ad66e5e212fbea2102c13b5a5cb",
+      "exact_selected_pngs": [
+        "BMP/HOLIDAY.BMP/003.png"
+      ]
+    },
+    {
+      "phase": "regression",
+      "label": "ground",
+      "exporter": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/export.py",
+      "exporter_sha256": "7b9071272c7cee320fcc7c2a38167510313c8475cd4e3215bdb70752779c7fcf",
+      "recipe": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/recipe-v1.json",
+      "recipe_sha256": "0c0de3bf6fc70415b268094ed8a1747b03c21cda095089477da3dc1e3c93d57e",
+      "exact_selected_pngs": [
+        "BMP/BACKGRND.BMP/000.png"
+      ]
+    },
+    {
+      "phase": "regression",
+      "label": "centers",
+      "exporter": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/export_v2.py",
+      "exporter_sha256": "364c6d69eb2b062982cd35568c364d9204ccb915e5da744f6bc79163c535c847",
+      "recipe": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/recipe-v2.json",
+      "recipe_sha256": "53a6ba750c90c9c0b721864d103bd565ae332c6e5a40b00ae98cdc6eb171f4b4",
+      "exact_selected_pngs": [
+        "BMP/BACKGRND.BMP/006.png",
+        "BMP/BACKGRND.BMP/008.png"
+      ]
+    },
+    {
+      "phase": "regression",
+      "label": "sides",
+      "exporter": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/export.py",
+      "exporter_sha256": "dd36c72094f50e35109f04955187178e0108da84b8929d47c90e5c9ae96a3fdb",
+      "recipe": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/recipe-v1.json",
+      "recipe_sha256": "3002ca095bd647a2e513b92659d5943811ae1787aeacd5181191602670a1e50d",
+      "exact_selected_pngs": [
+        "BMP/BACKGRND.BMP/003.png",
+        "BMP/BACKGRND.BMP/004.png",
+        "BMP/BACKGRND.BMP/005.png",
+        "BMP/BACKGRND.BMP/009.png",
+        "BMP/BACKGRND.BMP/010.png",
+        "BMP/BACKGRND.BMP/011.png"
+      ]
+    },
+    {
+      "phase": "regression",
+      "label": "clean007",
+      "exporter": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-shading-v1/export.py",
+      "exporter_sha256": "400614176a1a06f36d2e6d96813826ca10511c0f856cff3a6d382a0c57facca7",
+      "recipe": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-shading-v1/recipe-v1.json",
+      "recipe_sha256": "4a33d7a9f1b1b248245268673489b2945f208a69029bb40b28ab6d99576a116d",
+      "exact_selected_pngs": [
+        "BMP/BACKGRND.BMP/007.png"
+      ]
+    },
+    {
+      "phase": "regression",
+      "label": "seasonal",
+      "exporter": "art/cartoon/seasonal-v1/export_v5.py",
+      "exporter_sha256": "9ff87e42cb7433107ddb93d058f4e3725bf384764e729588bd17c5a29f073cb7",
+      "recipe": "art/cartoon/seasonal-v1/recipe-v5.json",
+      "recipe_sha256": "5e60af35fd517663b4c0f3c4c26da97d61f81ccad807fadc5bb858c6ed3c848f",
+      "exact_selected_pngs": [
+        "BMP/HOLIDAY.BMP/000.png",
+        "BMP/HOLIDAY.BMP/001.png",
+        "BMP/HOLIDAY.BMP/002.png"
+      ]
+    }
+  ],
+  "limit": "Replayed the14 changed assets. The33 inherited outputs are checked byte-for-byte against their prior accepted package, not re-authored."
+}

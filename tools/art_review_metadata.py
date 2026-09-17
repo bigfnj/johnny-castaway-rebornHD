@@ -517,7 +517,7 @@ def markdown(report):
         "pixel-identical to the original installation. The E-to-A sequence is read from the original-derived walk table",
         "and checked against historical HD and Cartoon capture records. This is port timing, not measured original EXE timing.", "",
         "## Comparison findings", "",
-        ("Historical pilot canvases match original dimensions at scale 2. Current production separately declares its named island footprint; current production bytes match their acceptance ledger,"
+        ("Historical pilot canvases match original dimensions at scale 2. Current production separately declares its named island footprints; current production bytes match their acceptance ledger,"
          if any("footprint" in item.get("production", {}) for item in report["assets"]) else
          "Historical and current canvases match original dimensions at scale 2; current production bytes match their acceptance ledger,"),
         "and all recorded affine landmarks map to their declared targets. These are technical checks, not artistic approval.",

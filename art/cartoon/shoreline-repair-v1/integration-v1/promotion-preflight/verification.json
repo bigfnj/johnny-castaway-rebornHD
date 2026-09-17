@@ -1,0 +1,169 @@
+{
+  "status": "PASS",
+  "helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+  "test_sha256": "ba5e7ad630435dd91d1769dbdb1de4669fe0168d83c8123c43c177eba5a1cf9c",
+  "scope": "Disposable promotion preflight only. Synthetic native summaries test refusal logic; they provide no native execution or promotion authorization.",
+  "smoke_before_regression": true,
+  "controls": [
+    {
+      "name": "smoke-preflight",
+      "status": "PASS",
+      "failure": null,
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 0
+    },
+    {
+      "name": "candidate-bytes",
+      "status": "FIRED",
+      "failure": "candidate: verified package identity",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "package-status",
+      "status": "FIRED",
+      "failure": "candidate: verified package identity",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "native-digest",
+      "status": "FIRED",
+      "failure": "native: summary identity",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "native-status",
+      "status": "FIRED",
+      "failure": "native: successful candidate composition required",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "native-phase",
+      "status": "FIRED",
+      "failure": "native: successful candidate composition required",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "native-candidate_sha256",
+      "status": "FIRED",
+      "failure": "native: successful candidate composition required",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "coverage-smoke_captures",
+      "status": "FIRED",
+      "failure": "native: final scoped gate coverage",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "coverage-fresh_repeat_captures",
+      "status": "FIRED",
+      "failure": "native: final scoped gate coverage",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "coverage-negative_controls",
+      "status": "FIRED",
+      "failure": "native: final scoped gate coverage",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "live-ledger",
+      "status": "FIRED",
+      "failure": "production ledger differs from prior",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "live-archive",
+      "status": "FIRED",
+      "failure": "production archive differs from prior",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "full-member-map",
+      "status": "FIRED",
+      "failure": "candidate: complete payload map differs",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "existing-report",
+      "status": "FIRED",
+      "failure": "report: use a fresh output",
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 1
+    },
+    {
+      "name": "removed-native-guard",
+      "status": "PASS",
+      "failure": null,
+      "executed_helper_sha256": "42d8ed5ea7ab34a28d7b6650914f9af07dc20c3891aa2e614a6b27abd5b61eac",
+      "exit_code": 0
+    },
+    {
+      "name": "restored-positive",
+      "status": "PASS",
+      "failure": null,
+      "executed_helper_sha256": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+      "exit_code": 0
+    }
+  ],
+  "guard_removal_accepts_wrong_native_candidate": true,
+  "live_files_unchanged": {
+    "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\assets\\scrantic_data.zip": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\pack.json": "41619e9da46409d52f7177ab0f5257884dc3a22d4589e9db1e59583ee6222658",
+    "build\\shoreline-repair-v1\\integration-v1\\run-v2\\scrantic_data.zip": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+    "build\\shoreline-repair-v1\\integration-v1\\run-v2\\prior-4c8085be.zip": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+  },
+  "production_promoted": false,
+  "files_sha256": {
+    "candidate-bytes.stderr.txt": "f5319d03c26dd0717b0faa37a54f1530456f190f91772b246bd934e126bebe06",
+    "candidate-bytes.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "coverage-fresh_repeat_captures.stderr.txt": "4cab0a3afb90b5778caa77664f75d33857775004c6ca60f8b45f59e179a7f55a",
+    "coverage-fresh_repeat_captures.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "coverage-negative_controls.stderr.txt": "4cab0a3afb90b5778caa77664f75d33857775004c6ca60f8b45f59e179a7f55a",
+    "coverage-negative_controls.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "coverage-smoke_captures.stderr.txt": "4cab0a3afb90b5778caa77664f75d33857775004c6ca60f8b45f59e179a7f55a",
+    "coverage-smoke_captures.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "existing-report.json": "588c50507fe7ce4d758d1a74fb775083de75e88c2791b07478b2938226de5442",
+    "existing-report.stderr.txt": "c0166bdebfdc31aff296875565e3d18239403315ba01833a97f876f90022cea1",
+    "existing-report.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "full-member-map.stderr.txt": "7c90a83fa79606b9f3d5fbff86fd26c60891f52ee584b26ef450f1fe20d29894",
+    "full-member-map.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "live-archive.stderr.txt": "cf1ad9612cb7d19e01319ca2ce570163485421403f9e76a73ac4adf26ca51b51",
+    "live-archive.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "live-ledger.stderr.txt": "df8e498a23c23795aa7838b2603258dc85b5397597d44976bd57d38c989e5a98",
+    "live-ledger.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "native-candidate_sha256.stderr.txt": "e403d634bd4de265826cc90d51519c5098adc12efa87d217159d44aeb3f6d89a",
+    "native-candidate_sha256.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "native-digest.stderr.txt": "df17dbc58fcb9f1b71a197fcc602c60322500e6d1b5ec6402b8086fb2cc77cd2",
+    "native-digest.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "native-phase.stderr.txt": "e403d634bd4de265826cc90d51519c5098adc12efa87d217159d44aeb3f6d89a",
+    "native-phase.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "native-status.stderr.txt": "e403d634bd4de265826cc90d51519c5098adc12efa87d217159d44aeb3f6d89a",
+    "native-status.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "package-status.stderr.txt": "f5319d03c26dd0717b0faa37a54f1530456f190f91772b246bd934e126bebe06",
+    "package-status.stdout.txt": "01bf1e62097a6c18f6a07a70aebf938a9d02a549749a26e39a6c3e7b581f36ee",
+    "removed-native-guard.json": "a6add7e443e721d0d1036d893132d5b49e05e23e81cbdd2a4d602f53b00c32fa",
+    "removed-native-guard.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "removed-native-guard.stdout.txt": "7016f89b942c11b296e1d0a13e9a78530bf8d6e7ca83e39c4bbc994c1398156b",
+    "restored-positive.json": "9863f454a7d295586ef1301ce011e232fdc2c7c5ca97452d9c6f12a4f3cd3c50",
+    "restored-positive.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "restored-positive.stdout.txt": "8b0d921d92f2374219d0e7a0e587af52ead41062309cf55f7189b00f26d84423",
+    "smoke-preflight.json": "9863f454a7d295586ef1301ce011e232fdc2c7c5ca97452d9c6f12a4f3cd3c50",
+    "smoke-preflight.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "smoke-preflight.stdout.txt": "8b0d921d92f2374219d0e7a0e587af52ead41062309cf55f7189b00f26d84423"
+  },
+  "mutant_sha256": "42d8ed5ea7ab34a28d7b6650914f9af07dc20c3891aa2e614a6b27abd5b61eac",
+  "mutant_source_path": "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\preflight-tests-v2\\fixture\\art\\cartoon\\shoreline-repair-v1\\integration-v1\\promote-native-guard-removed.py"
+}

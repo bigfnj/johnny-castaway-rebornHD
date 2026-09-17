@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "Synthetic native fixture and disposable repository only; not native evidence or authorization.",
+  "helper_sha256": "dc3f29b56bd984bdf299fa0ce4551c5e4717b53b73fcb51666205ad1deb34b8f",
+  "test_sha256": "05b79d6e71d0ac37527de92dd852740f2858577ca809e321bfd3d38440c5b377",
+  "controls": [
+    {
+      "name": "smoke-preflight",
+      "status": "PASS",
+      "helper_sha256": "dc3f29b56bd984bdf299fa0ce4551c5e4717b53b73fcb51666205ad1deb34b8f",
+      "exit_code": 0,
+      "fault": null,
+      "disposable_production_restored": true
+    },
+    {
+      "name": "report-write-refused",
+      "status": "PASS",
+      "helper_sha256": "dc3f29b56bd984bdf299fa0ce4551c5e4717b53b73fcb51666205ad1deb34b8f",
+      "exit_code": 1,
+      "fault": "injected report write failure",
+      "disposable_production_restored": true
+    },
+    {
+      "name": "report-write-then-failure",
+      "status": "PASS",
+      "helper_sha256": "dc3f29b56bd984bdf299fa0ce4551c5e4717b53b73fcb51666205ad1deb34b8f",
+      "exit_code": 1,
+      "fault": "injected report write failure",
+      "disposable_production_restored": true
+    },
+    {
+      "name": "removed-rollback",
+      "status": "FIRED",
+      "failure": "rollback failed",
+      "executed_helper_sha256": "f6bc7beb98a9f48c5807bfe2f9c1e58374c8db54adbb230cdbe299491b8249a9",
+      "disposable_files_left_changed_as_expected": true
+    },
+    {
+      "name": "restored-successful-transaction",
+      "status": "PASS",
+      "helper_sha256": "dc3f29b56bd984bdf299fa0ce4551c5e4717b53b73fcb51666205ad1deb34b8f",
+      "exit_code": 0,
+      "fault": null,
+      "disposable_production_restored": true
+    }
+  ],
+  "actual_report_write_failures_after_both_production_files_changed": 2,
+  "archive_and_ledger_rollback_exact": true,
+  "partial_promotion_report_removed": true,
+  "restored_positive_transaction_passed": true,
+  "executed_rollback_removal_detected": true,
+  "live_files_unchanged": {
+    "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\assets\\scrantic_data.zip": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\pack.json": "41619e9da46409d52f7177ab0f5257884dc3a22d4589e9db1e59583ee6222658",
+    "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\preflight-tests-v2\\candidate.zip": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6"
+  }
+}

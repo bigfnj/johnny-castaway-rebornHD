@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "phase": "smoke",
+  "inputs": {
+    "assets/scrantic_data.zip": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+    "art/cartoon/pack.json": "1d920d4f97fd4294a14f0d36af97fb6c48882a5bceb49f2a9418cef1f8c1bd8f",
+    "tools/art_common.py": "2e003886e3504f6af4725eaf875c3d793542dc0efd4ccf45042d670c96f6e914",
+    "tools/art_pack.py": "1df59daf81b2bbe6f7826156e7f0d12fd70f9048d576dee2cdc2eac60d1d2239",
+    "tools/art_inventory.py": "0f17eecde17a412e011b4f7ba2fb427c414137461bf84fc34904ce4b2c30eb31",
+    "tools/art_production_catalog.py": "3ec870dadd15667ef8a6ca267fadebc6294a0a9be04cbd94a259b3e8e4883a99",
+    "tools/art_review_metadata.py": "8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204",
+    "tests/test_art_tools.py": "4b26006c33af2bcb8b699f7bd66cdad5910256b86b397fb9554697bd0185113f",
+    "tests/test_art_inventory.py": "1d72fa04dfc61eaf1d4fe61ca56f00e468f7c8ae46d0de84dc10d7807cd63b6e",
+    "tests/test_art_pilot_history.py": "9612c8aa441860d563e44a29582598f55d2864cc0c0559a48a0ff39ffa60a675",
+    "tests/test_art_review_metadata.py": "1593d8f539901ceb31eedbb4f2fa73aa7ae46a9a4683e003a9de900349fbb658",
+    "tests/test_art_production_catalog.py": "d3474fc4af8865fccef16ea39f77156c743b8e029f462de4ba0af7fc292e02df",
+    "tests/art_pilot_fixture.py": "a9149c3d8f5ce70a71ba57e9f93e4a07fc0c790842c94f54529df6afb0294eeb"
+  },
+  "runs": [
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_tools.py",
+        "ArtToolsTests.test_named_island_footprints_preserve_original_catalog",
+        "ArtToolsTests.test_true_alpha_preserves_opaque_magenta_and_binary_control",
+        "ArtToolsTests.test_inventory_exports_unmodified_and_records_exact_aliases",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "pack-smoke.log",
+      "sha256": "641a279da09cd05bbbcaf66ea157cfccfb4f2ac25a32768542e4a4a8af1cf31e",
+      "tests": 3
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_inventory.py",
+        "--smoke"
+      ],
+      "exit_code": 0,
+      "log": "inventory-smoke.log",
+      "sha256": "1c5e0c3e75cd136e0c4181d437fdcf514cef095acdbce936acb2aa8143ee9cbf",
+      "tests": 3
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "log": "test_art_pilot_history-smoke.log",
+      "sha256": "560805d4c0beb48d2b6a45f4dc6eeea90181c8be46901851bca3034ca95bc923",
+      "tests": 3
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "log": "test_art_review_metadata-smoke.log",
+      "sha256": "bf920c0d5b1f55d93be0277f679f2fe53cd16bfade25804222b0987f8373df76",
+      "tests": 2
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_production_catalog.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "log": "test_art_production_catalog-smoke.log",
+      "sha256": "d4cb7b26d68dc315b80bced15a5a26539a7a881e1acceb9209d2a6c6db59c5f1",
+      "tests": 5
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tools/art_review_metadata.py"
+      ],
+      "exit_code": 0,
+      "log": "art_review_metadata-generate.log",
+      "sha256": "85b3103a9c4436984a2b4b41ce7ed57f096c4724885f4a404b65870cbe289dbe",
+      "tests": null
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tools/art_production_catalog.py"
+      ],
+      "exit_code": 0,
+      "log": "art_production_catalog-generate.log",
+      "sha256": "4255841b094e856362cd55629f1912f868bfaf8ff9a6fbff85caa44b0f4490a3",
+      "tests": null
+    }
+  ]
+}

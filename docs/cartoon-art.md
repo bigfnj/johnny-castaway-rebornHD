@@ -1,5 +1,10 @@
 # Cartoon art production
 
+The [seasonal and shoreline delivery](cartoon-seasonal-verification.md) brings
+the current pack to 47 accepted assets, including four holiday decorations and
+the approved larger island with clean offshore waves. Earlier family counts
+below describe their individual delivery checkpoints.
+
 The [production plan](cartoon-production-plan.md) tracks the completed
 [slot catalog](knowledge-base/cartoon-production-catalog.md) and successive
 walking families. The current [profile-walk batch](cartoon-profile-walk-plan.md)
@@ -62,9 +67,9 @@ data/styles/cartoon/SCR/OCEAN00.SCR.png
 ```
 
 PNG dimensions normally equal the original logical width and height multiplied
-by two. Two [named island footprints](cartoon-footprint-contract.md) permit
-explicit extra padding for Cartoon BACKGRND000 and006-008 while preserving the
-original logical anchors. Other frames keep their original canvas and padding.
+by two. Four [named island footprints](cartoon-footprint-contract.md) permit
+explicit extra padding for Cartoon BACKGRND000,003-005,006-008 and009-011 while
+preserving the original logical anchors. Other frames keep their original canvas and padding.
 The engine uses the original script coordinates. Registered padded sprites flip
 around the original logical canvas; legacy sprites flip using the loaded width. Do not
 trim, center, or independently fit the character into each frame. Foot placement,

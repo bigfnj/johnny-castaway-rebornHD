@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "maintained authoring and generated catalogs after final shoreline/seasonal promotion",
+  "inputs": {
+    "assets/scrantic_data.zip": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+    "art/cartoon/pack.json": "1d920d4f97fd4294a14f0d36af97fb6c48882a5bceb49f2a9418cef1f8c1bd8f",
+    "tools/art_common.py": "2e003886e3504f6af4725eaf875c3d793542dc0efd4ccf45042d670c96f6e914",
+    "tools/art_pack.py": "1df59daf81b2bbe6f7826156e7f0d12fd70f9048d576dee2cdc2eac60d1d2239",
+    "tools/art_inventory.py": "0f17eecde17a412e011b4f7ba2fb427c414137461bf84fc34904ce4b2c30eb31",
+    "tools/art_production_catalog.py": "3ec870dadd15667ef8a6ca267fadebc6294a0a9be04cbd94a259b3e8e4883a99",
+    "tools/art_review_metadata.py": "8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204",
+    "tests/test_art_tools.py": "4b26006c33af2bcb8b699f7bd66cdad5910256b86b397fb9554697bd0185113f",
+    "tests/test_art_inventory.py": "1d72fa04dfc61eaf1d4fe61ca56f00e468f7c8ae46d0de84dc10d7807cd63b6e",
+    "tests/test_art_pilot_history.py": "9612c8aa441860d563e44a29582598f55d2864cc0c0559a48a0ff39ffa60a675",
+    "tests/test_art_review_metadata.py": "1593d8f539901ceb31eedbb4f2fa73aa7ae46a9a4683e003a9de900349fbb658",
+    "tests/test_art_production_catalog.py": "d3474fc4af8865fccef16ea39f77156c743b8e029f462de4ba0af7fc292e02df",
+    "tests/art_pilot_fixture.py": "a9149c3d8f5ce70a71ba57e9f93e4a07fc0c790842c94f54529df6afb0294eeb"
+  },
+  "current_approval": {
+    "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json": "73355f3a2d1a82b814d39feb46bfb9b052fc72ec32106f96e86b845adfdf476d",
+    "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json": "bee8cd194ad8bf8d745635740fb4a0de944212807cc027399862823535690c08"
+  },
+  "outputs": {
+    "docs/knowledge-base/cartoon-art-metadata.json": "790ce5d92a47d5d5dfa7ae264bcd1e56a69f939d947e66a334205563bac8718d",
+    "docs/knowledge-base/cartoon-art-metadata.md": "075bddab79019ca92c92db8d7cb6bfd97faa22392c19bdeec9cf3a3576340b8c",
+    "docs/knowledge-base/cartoon-production-catalog.json": "d39071fdcd39263345ba3b37c7b90ae701bbf6d64c14cd67b34186589848eca5",
+    "docs/knowledge-base/cartoon-production-catalog.md": "19c14a339897ddc296167fb5560d23950a4191b0a6b6fd7b9c3373a46f7ff471"
+  },
+  "production_summary": {
+    "slots": 2401,
+    "sprites": 2391,
+    "screens": 10,
+    "accepted": 47,
+    "pending": 2354,
+    "hd_proxy_blank_slots": 119,
+    "distinct_hd_png_bytes": 2141,
+    "exact_duplicate_slots": 260,
+    "supplied_original_evidence_slots": 51
+  },
+  "pilot_production_summary": {
+    "retained": 5,
+    "replaced": 16
+  },
+  "smoke_tests": 16,
+  "regression_scheduled_tests": 191,
+  "regression_executed_tests": 189,
+  "regression_skipped_tests": 2,
+  "skipped_by_log": {
+    "inventory-regression.log": 2
+  },
+  "source_mutations_fired": 2,
+  "restored_controls": 2,
+  "copied_files_sha256": {
+    "controls/controls.json": "6fa4a12a4a97f6c8f36ad0df45bd12dfe109bfb15b798ff51f180d690ab6471e",
+    "controls/mutant-0.py": "c3dc919fece5a09ba38b61feb3cc4611df2e558a039187dede2ae127c2ff9461",
+    "controls/mutant-1.py": "37fd46e91145a676dc62b299ca968f611442d4b7c463638571ab23c55a393961",
+    "controls/test_shoreline_recipe_footprint_must_match_ledger-disabled.log": "55509a23737442c6bb6f909d7caa63f9fa4812db8e1e1643aef5dce6fc6fa393",
+    "controls/test_shoreline_recipe_footprint_must_match_ledger-positive.log": "7911e2ab956db013d6c6f6bdce62901faa8baaea053b8e04c1c78adb638a49b3",
+    "controls/test_shoreline_recipe_footprint_must_match_ledger-restored.log": "05777f628d4f7684d3345079dd5c5b0df0b3fbf6b16b2e26df648827d92b6ba9",
+    "controls/test_shoreline_replacement_must_be_declared-disabled.log": "04e937935c0aad2de9cb63021076581c1743e26ff603489793e50892b6b62223",
+    "controls/test_shoreline_replacement_must_be_declared-positive.log": "7176f324036d9c084039cd76b216b6aaa742d24545816901255507737c935047",
+    "controls/test_shoreline_replacement_must_be_declared-restored.log": "a85de0b48034e6584fe7fce012433d9836ac0587bb64a82009d4479aaac14612",
+    "first-fixture-attempt/failure.log": "04bb558f52f0e45f5007a2fc7b9d7722d0e4b171889994f2e8aa2cb762708804",
+    "README.md": "dc39e4a46892c51b4f745a418cfb6ec2a2990ab186d0520cf94c9e48a5bae5c3",
+    "run/art_production_catalog-check.log": "4255841b094e856362cd55629f1912f868bfaf8ff9a6fbff85caa44b0f4490a3",
+    "run/art_production_catalog-generate.log": "4255841b094e856362cd55629f1912f868bfaf8ff9a6fbff85caa44b0f4490a3",
+    "run/art_review_metadata-check.log": "85b3103a9c4436984a2b4b41ce7ed57f096c4724885f4a404b65870cbe289dbe",
+    "run/art_review_metadata-generate.log": "85b3103a9c4436984a2b4b41ce7ed57f096c4724885f4a404b65870cbe289dbe",
+    "run/inventory-regression.log": "b76198770e27d0bf020cdda61ffbd15cf5be5231879073d5543899036f9db955",
+    "run/inventory-smoke.log": "1c5e0c3e75cd136e0c4181d437fdcf514cef095acdbce936acb2aa8143ee9cbf",
+    "run/pack-regression.log": "47d099d38131cb4727e6d4d0a5a86a465602ce6e2e46cf3e7afb96752e768282",
+    "run/pack-smoke.log": "641a279da09cd05bbbcaf66ea157cfccfb4f2ac25a32768542e4a4a8af1cf31e",
+    "run/preserve.py": "0e94d90a3e1aecc12de1da682c4787497ac6c9096e67b0b4dc8db56230bf5435",
+    "run/regression.json": "72eaeb73f3034822f0918112a76505e4816dd7404aec01dd447c0c0a1c9013f8",
+    "run/run.py": "782c95d0bac1d8b9b93569de061ed062d2d810de7f970abbced607e65c82bc25",
+    "run/smoke.json": "e6d765aca61f061cca67c05c8e6f631e5a4c73242768631dc761ecbcbab0b63e",
+    "run/test_art_pilot_history-regression.log": "975a64f152133758484e4f2955b0edf9fec3e5f5bc30d325b0fac090f6525b2f",
+    "run/test_art_pilot_history-smoke.log": "560805d4c0beb48d2b6a45f4dc6eeea90181c8be46901851bca3034ca95bc923",
+    "run/test_art_production_catalog-regression.log": "291d913952d7364b9be9012afb5f977413b7127bb0a3861068aabaf223e70294",
+    "run/test_art_production_catalog-smoke.log": "d4cb7b26d68dc315b80bced15a5a26539a7a881e1acceb9209d2a6c6db59c5f1",
+    "run/test_art_review_metadata-regression.log": "d28228ed38e901f1119e61607b61b86c5b0ef0c3336e09e195e2b90d3e1d1291",
+    "run/test_art_review_metadata-smoke.log": "bf920c0d5b1f55d93be0277f679f2fe53cd16bfade25804222b0987f8373df76",
+    "source/tests/test_art_pilot_history.py": "9612c8aa441860d563e44a29582598f55d2864cc0c0559a48a0ff39ffa60a675",
+    "source/tools/art_production_catalog.py": "3ec870dadd15667ef8a6ca267fadebc6294a0a9be04cbd94a259b3e8e4883a99",
+    "source/tools/art_review_metadata.py": "8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204"
+  }
+}

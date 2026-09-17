@@ -15,7 +15,7 @@
     "walking_assets": 6,
     "island_assets": 15
   },
-  "current_acceptance_record": "art/cartoon/skin-tone-v1/production-acceptance.json",
+  "current_acceptance_record": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
   "historical_human_correction_requests": {
     "date": "2026-09-15",
     "basis": "user-visual-review-of-supplied-original-comparison",
@@ -401,7 +401,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+        "member": null,
         "sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
         "canvas": [
           560,
@@ -445,7 +445,7 @@
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
         "historically_human_accepted": true,
-        "production_status": "retained"
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -461,15 +461,27 @@
         "historical_user_review_ids": []
       },
       "production": {
-        "status": "retained",
-        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
-        "sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+        "status": "replaced",
+        "acceptance": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+        "sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
         "member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
         "canvas": [
-          560,
-          104
-        ]
+          640,
+          180
+        ],
+        "footprint": {
+          "id": "cartoon-island-ground-v1",
+          "canvas": [
+            640,
+            180
+          ],
+          "offset_hd": [
+            -36,
+            -10
+          ]
+        },
+        "canvas_matches_original_at_scale": false
       }
     },
     {
@@ -519,7 +531,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+        "member": null,
         "sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
         "canvas": [
           144,
@@ -563,7 +575,7 @@
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
         "historically_human_accepted": true,
-        "production_status": "retained"
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -579,15 +591,27 @@
         "historical_user_review_ids": []
       },
       "production": {
-        "status": "retained",
-        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
-        "sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+        "status": "replaced",
+        "acceptance": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+        "sha256": "3a456347b5106edfd1d197a4df0eaabf7fe4659abdd5cd7f4a45e766b949e4cc",
         "member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
         "canvas": [
-          144,
-          58
-        ]
+          150,
+          66
+        ],
+        "footprint": {
+          "id": "cartoon-island-left-foam-v1",
+          "canvas": [
+            150,
+            66
+          ],
+          "offset_hd": [
+            -6,
+            0
+          ]
+        },
+        "canvas_matches_original_at_scale": false
       }
     },
     {
@@ -637,7 +661,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+        "member": null,
         "sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
         "canvas": [
           144,
@@ -681,7 +705,7 @@
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
         "historically_human_accepted": true,
-        "production_status": "retained"
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -697,15 +721,27 @@
         "historical_user_review_ids": []
       },
       "production": {
-        "status": "retained",
-        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
-        "sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+        "status": "replaced",
+        "acceptance": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+        "sha256": "af3826616abb465a81b3ba18498da22c9e31e5cfe4a769eb7bcf6ddd64a7dd0d",
         "member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
         "canvas": [
-          144,
-          58
-        ]
+          150,
+          66
+        ],
+        "footprint": {
+          "id": "cartoon-island-left-foam-v1",
+          "canvas": [
+            150,
+            66
+          ],
+          "offset_hd": [
+            -6,
+            0
+          ]
+        },
+        "canvas_matches_original_at_scale": false
       }
     },
     {
@@ -755,7 +791,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+        "member": null,
         "sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
         "canvas": [
           144,
@@ -799,7 +835,7 @@
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
         "historically_human_accepted": true,
-        "production_status": "retained"
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -815,15 +851,27 @@
         "historical_user_review_ids": []
       },
       "production": {
-        "status": "retained",
-        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
-        "sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+        "status": "replaced",
+        "acceptance": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+        "sha256": "5b7fe8718684700e4d3aca76307e41c64d6a47427c8e66f34869e7bb35b69545",
         "member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
         "canvas": [
-          144,
-          58
-        ]
+          150,
+          66
+        ],
+        "footprint": {
+          "id": "cartoon-island-left-foam-v1",
+          "canvas": [
+            150,
+            66
+          ],
+          "offset_hd": [
+            -6,
+            0
+          ]
+        },
+        "canvas_matches_original_at_scale": false
       }
     },
     {
@@ -873,7 +921,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+        "member": null,
         "sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
         "canvas": [
           320,
@@ -917,7 +965,7 @@
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
         "historically_human_accepted": true,
-        "production_status": "retained"
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -926,15 +974,27 @@
         "historical_user_review_ids": []
       },
       "production": {
-        "status": "retained",
-        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
-        "sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
+        "status": "replaced",
+        "acceptance": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+        "sha256": "2d2c93478a8e06b99a8a86d832bccdf1327d6d1a55cf79a2593dff49dcbd0db5",
         "member": "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
         "canvas": [
-          320,
-          50
-        ]
+          384,
+          256
+        ],
+        "footprint": {
+          "id": "cartoon-island-center-foam-v1",
+          "canvas": [
+            384,
+            256
+          ],
+          "offset_hd": [
+            -32,
+            -90
+          ]
+        },
+        "canvas_matches_original_at_scale": false
       }
     },
     {
@@ -984,7 +1044,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+        "member": null,
         "sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
         "canvas": [
           320,
@@ -1028,7 +1088,7 @@
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
         "historically_human_accepted": true,
-        "production_status": "retained"
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -1037,15 +1097,27 @@
         "historical_user_review_ids": []
       },
       "production": {
-        "status": "retained",
-        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
-        "sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+        "status": "replaced",
+        "acceptance": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+        "sha256": "623c8f3fb8a4905a15917db963542f178d86472f0809134227bc2053fa800c56",
         "member": "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
         "canvas": [
-          320,
-          50
-        ]
+          384,
+          256
+        ],
+        "footprint": {
+          "id": "cartoon-island-center-foam-v1",
+          "canvas": [
+            384,
+            256
+          ],
+          "offset_hd": [
+            -32,
+            -90
+          ]
+        },
+        "canvas_matches_original_at_scale": false
       }
     },
     {
@@ -1095,7 +1167,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+        "member": null,
         "sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
         "canvas": [
           320,
@@ -1139,7 +1211,7 @@
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
         "historically_human_accepted": true,
-        "production_status": "retained"
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -1148,15 +1220,27 @@
         "historical_user_review_ids": []
       },
       "production": {
-        "status": "retained",
-        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
-        "sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
+        "status": "replaced",
+        "acceptance": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+        "sha256": "4ff1c6672e10d67e789c01584f1fb0dc1299016e391809eca8e5047e4cf1acea",
         "member": "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
         "canvas": [
-          320,
-          50
-        ]
+          384,
+          256
+        ],
+        "footprint": {
+          "id": "cartoon-island-center-foam-v1",
+          "canvas": [
+            384,
+            256
+          ],
+          "offset_hd": [
+            -32,
+            -90
+          ]
+        },
+        "canvas_matches_original_at_scale": false
       }
     },
     {
@@ -1206,7 +1290,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+        "member": null,
         "sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
         "canvas": [
           144,
@@ -1250,7 +1334,7 @@
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
         "historically_human_accepted": true,
-        "production_status": "retained"
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -1266,15 +1350,27 @@
         "historical_user_review_ids": []
       },
       "production": {
-        "status": "retained",
-        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
-        "sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+        "status": "replaced",
+        "acceptance": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+        "sha256": "71e82707e1e9fb08772ab19b2247e2c010c4618b1861b338c10ba1855f54311e",
         "member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
         "canvas": [
-          144,
-          64
-        ]
+          154,
+          74
+        ],
+        "footprint": {
+          "id": "cartoon-island-right-foam-v1",
+          "canvas": [
+            154,
+            74
+          ],
+          "offset_hd": [
+            0,
+            0
+          ]
+        },
+        "canvas_matches_original_at_scale": false
       }
     },
     {
@@ -1324,7 +1420,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+        "member": null,
         "sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
         "canvas": [
           144,
@@ -1368,7 +1464,7 @@
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
         "historically_human_accepted": true,
-        "production_status": "retained"
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -1384,15 +1480,27 @@
         "historical_user_review_ids": []
       },
       "production": {
-        "status": "retained",
-        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
-        "sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+        "status": "replaced",
+        "acceptance": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+        "sha256": "9f25c1c30eeda807fbeb8d706a2f0440c18b474c5bd50984317a516e71e5d850",
         "member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
         "canvas": [
-          144,
-          64
-        ]
+          154,
+          74
+        ],
+        "footprint": {
+          "id": "cartoon-island-right-foam-v1",
+          "canvas": [
+            154,
+            74
+          ],
+          "offset_hd": [
+            0,
+            0
+          ]
+        },
+        "canvas_matches_original_at_scale": false
       }
     },
     {
@@ -1442,7 +1550,7 @@
       },
       "variant": {
         "style": "cartoon",
-        "member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+        "member": null,
         "sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
         "canvas": [
           144,
@@ -1486,7 +1594,7 @@
         "placement_basis": "zero-offset-scene-recipe",
         "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
         "historically_human_accepted": true,
-        "production_status": "retained"
+        "production_status": "replaced"
       },
       "comparison": {
         "canvas_matches_original_at_scale": true,
@@ -1502,15 +1610,27 @@
         "historical_user_review_ids": []
       },
       "production": {
-        "status": "retained",
-        "acceptance": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
-        "recipe": "art/cartoon/island-pilot-v1/side-waves/recipe.json",
-        "sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+        "status": "replaced",
+        "acceptance": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+        "sha256": "a7740ab3564218fd3bc52f39da4d770e05e40ab0e0debd32bb2c11cd96dcedc6",
         "member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
         "canvas": [
-          144,
-          64
-        ]
+          154,
+          74
+        ],
+        "footprint": {
+          "id": "cartoon-island-right-foam-v1",
+          "canvas": [
+            154,
+            74
+          ],
+          "offset_hd": [
+            0,
+            0
+          ]
+        },
+        "canvas_matches_original_at_scale": false
       }
     },
     {
@@ -2726,7 +2846,7 @@
   ],
   "evidence": {
     "art/cartoon/pack.json": {
-      "sha256": "0b4fc904b08417e1cd4eeab044767190151e0eb793155f8d0ca25326dce1e7de",
+      "sha256": "1d920d4f97fd4294a14f0d36af97fb6c48882a5bceb49f2a9418cef1f8c1bd8f",
       "hash_basis": "utf8-normalized-newlines"
     },
     "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json": {
@@ -2789,6 +2909,10 @@
       "sha256": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70",
       "hash_basis": "utf8-normalized-newlines"
     },
+    "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json": {
+      "sha256": "73355f3a2d1a82b814d39feb46bfb9b052fc72ec32106f96e86b845adfdf476d",
+      "hash_basis": "file-bytes"
+    },
     "art/cartoon/skin-tone-v1/production-acceptance.json": {
       "sha256": "ad3570cccb0d1b9331d17c8299789557ec0d506935d6a1e0111933d247ded519",
       "hash_basis": "file-bytes"
@@ -2811,6 +2935,10 @@
     },
     "art/cartoon/walk-expansion-v1/production-acceptance.json": {
       "sha256": "70942da086c93ca2fca2693fc35fb295be7d1ea38c29c38598124b5a1c16adc8",
+      "hash_basis": "file-bytes"
+    },
+    "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json": {
+      "sha256": "bee8cd194ad8bf8d745635740fb4a0de944212807cc027399862823535690c08",
       "hash_basis": "file-bytes"
     },
     "art/cartoon/skin-tone-v1/exports-v2/recipe.json": {
@@ -2921,11 +3049,21 @@
       "BMP/JOHNWALK.BMP/026.png",
       "BMP/JOHNWALK.BMP/027.png",
       "BMP/JOHNWALK.BMP/028.png",
-      "BMP/JOHNWALK.BMP/029.png"
+      "BMP/JOHNWALK.BMP/029.png",
+      "BMP/BACKGRND.BMP/000.png",
+      "BMP/BACKGRND.BMP/003.png",
+      "BMP/BACKGRND.BMP/004.png",
+      "BMP/BACKGRND.BMP/005.png",
+      "BMP/BACKGRND.BMP/006.png",
+      "BMP/BACKGRND.BMP/007.png",
+      "BMP/BACKGRND.BMP/008.png",
+      "BMP/BACKGRND.BMP/009.png",
+      "BMP/BACKGRND.BMP/010.png",
+      "BMP/BACKGRND.BMP/011.png"
     ]
   },
   "production_summary": {
-    "retained": 15,
-    "replaced": 6
+    "retained": 5,
+    "replaced": 16
   }
 }

@@ -121,7 +121,13 @@ Reposition the full unmasked source drawing, then recompute its visibility.
 Moving an already-masked PNG cannot recover the strokes that were removed.
 Use consistent family transforms and enough canvas to retain the complete
 drawing. Keep the sand and the approved wave style fixed during that comparison.
-The first side-family placement draft still requires human motion review.
+The first side-family placement draft required a separate human motion review.
+The final combined review received "Looks good, proceed" after the white-foam
+appearance and inset banner were approved separately. Its
+[selection record](../art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/selection.json)
+binds the displayed page and actual native captures. The wave comparison kept
+the older banner to isolate the wave decision; combine its selected waves with
+the separately approved inset banner when building production.
 
 Match the presentation when comparing motion. The earlier wave review looped
 at a close scale; the later decoration review held still images and ended its
@@ -157,3 +163,19 @@ its actual corrected PNG was bound correctly. Preserve the captured historical
 input, then explicitly bind corrected metadata to the same unchanged pixels.
 Likewise, serialize hash-bound JSON with explicit LF bytes on Windows; a
 canonical-content hash and a file-byte hash must not be mislabeled as equal.
+
+## Integrate reviewed components without losing their scope
+
+Several independently approved reviews can share most of a private package yet
+disagree on one unrelated asset. Compare named archive members when composing
+the final build. A wave review does not silently override a later banner choice.
+Keep both decisions, build through the standard art pack tool, and compare the
+entire member map to the explicit combined selection. Preserve original HD
+`source_sha256` facts separately from raw-generation and accepted-PNG identities.
+
+Reproduce old exports against their recorded input archive. A historical helper
+that reads `assets/scrantic_data.zip` implicitly may consume newly promoted art
+and produce misleading evidence. Recover the pinned baseline into an isolated
+scratch tree instead of replacing the live archive. Final production also needs
+the renderer that understands the registered canvases; deploy code and art as a
+pair and validate the installed archive beside the executable.

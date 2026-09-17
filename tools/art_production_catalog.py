@@ -374,7 +374,7 @@ def markdown(report):
              "## Resource worklist", "", "| Priority | Resource | Slots | Accepted | Pending | Blank HD proxies |", "|---|---|---:|---:|---:|---:|"]
     for family in report["families"]:
         lines.append(f"| {family['priority'] or ''} | `{family['resource']}` | {family['slots']} | {family['accepted']} | {family['slots'] - family['accepted']} | {family['hd_proxy_blank_slots']} |")
-    lines += ["", "## Completion boundary", "", "Slot coverage is separate from visual approval. Validate every candidate PNG, preserve original canvases and script placement, "
+    lines += ["", "## Completion boundary", "", "Slot coverage is separate from visual approval. Validate every candidate PNG, preserve original source identities and script placement, declare any registered runtime footprint explicitly, "
               "review each motion/interaction family in the engine, and retain approval scope and known differences. Palette-driven primitives, scene transitions and application UI are outside the BMP/SCR replacement count.", "",
               "The existing [original-first pilot catalog](cartoon-art-metadata.md) and historical review records remain unchanged. "
               "This production catalog adds a worklist; it does not replace their evidence.", "",

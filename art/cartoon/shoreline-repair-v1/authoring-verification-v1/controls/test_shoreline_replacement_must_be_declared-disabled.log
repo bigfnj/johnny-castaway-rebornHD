@@ -1,0 +1,17 @@
+WITNESS module c3dc919fece5a09ba38b61feb3cc4611df2e558a039187dede2ae127c2ff9461
+test_shoreline_replacement_must_be_declared (__main__.HistoryTests.test_shoreline_replacement_must_be_declared) ... FAIL
+
+======================================================================
+FAIL: test_shoreline_replacement_must_be_declared (__main__.HistoryTests.test_shoreline_replacement_must_be_declared)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_pilot_history.py", line 217, in test_shoreline_replacement_must_be_declared
+    self.refused(damaged, m.PACK, "declared pilot replacements differ from active approvals", extra_pngs=images)
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_pilot_history.py", line 132, in refused
+    self.fail("Expected named refusal: " + label + ": " + reason)
+AssertionError: Expected named refusal: art/cartoon/pack.json: declared pilot replacements differ from active approvals
+
+----------------------------------------------------------------------
+Ran 1 test in 0.952s
+
+FAILED (failures=1)

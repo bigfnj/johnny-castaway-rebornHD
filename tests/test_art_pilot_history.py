@@ -22,6 +22,11 @@ CONTROL = "BMP/JOHNWALK.BMP/029.png"
 NEW = "art/cartoon/front-history-fixture/production-acceptance.json"
 RECIPE = "art/cartoon/front-history-fixture/recipe.json"
 OUTER = "art/cartoon/front-history-fixture/outer-acceptance.json"
+# Independent expected geometry for the four accepted shoreline families.
+SHORELINE = {0: ([640, 180], [-36, -10], "ground")}
+SHORELINE.update({frame: ([150, 66], [-6, 0], "left-foam") for frame in (3, 4, 5)})
+SHORELINE.update({frame: ([384, 256], [-32, -90], "center-foam") for frame in (6, 7, 8)})
+SHORELINE.update({frame: ([154, 74], [0, 0], "right-foam") for frame in (9, 10, 11)})
 m = None
 
 
@@ -48,6 +53,42 @@ def fixture():
             "asset_paths": [item["path"] for item in pack["assets"] if item["path"] != ASSET]}],
         "newly_accepted_assets": [ASSET]}
     return {m.PACK: pack, NEW: accepted, RECIPE: recipe}
+
+
+def shoreline_fixture():
+    """Replace ten shore slots and six Johnny approvals without touching history."""
+    from test_art_tools import png
+    images = {"data/styles/cartoon/BMP/BACKGRND.BMP/" + f"{frame:03}.png": png(*shape)
+              for frame, (shape, _offset, _kind) in SHORELINE.items()}
+
+    def change(records):
+        pack, accepted, recipe = records[m.PACK], records[NEW], records[RECIPE]
+        walk_rows = json.loads((ROOT / m.RECIPES[0]).read_bytes())["frames"]
+        frames = {row["path"]: copy.deepcopy(row) for row in walk_rows}
+        frames[ASSET] = recipe["frames"][0]
+        for frame, (shape, offset, kind) in SHORELINE.items():
+            path = f"BMP/BACKGRND.BMP/{frame:03}.png"
+            footprint = {"id": "cartoon-island-" + kind + "-v1", "canvas": list(shape), "offset_hd": list(offset)}
+            frames[path] = {"path": path, "candidate_png_sha256": m.digest(images["data/styles/cartoon/" + path]),
+                            "runtime_canvas": shape, "footprint": footprint}
+        for item in pack["assets"]:
+            if item["path"] in frames:
+                frame = frames[item["path"]]
+                item.update(sha256=frame["candidate_png_sha256"], recipe=RECIPE, review=NEW)
+                if "footprint" in frame:
+                    item["footprint"] = copy.deepcopy(frame["footprint"])
+        for item in accepted["accepted_assets"]:
+            if item["path"] in frames:
+                item.update(sha256=frames[item["path"]]["candidate_png_sha256"], recipe=RECIPE)
+        selected = sorted(frames)
+        pack["pilot_history"]["replaced_assets"] = list(selected)
+        accepted["newly_accepted_assets"] = list(selected)
+        accepted["inherited_acceptances"][0]["asset_paths"] = [row["path"] for row in pack["assets"]
+                                                              if row["path"] not in frames]
+        recipe["frames"] = list(frames.values())
+        recipe["required_assets"] = selected
+
+    return change, images
 
 
 class HistoryTests(unittest.TestCase):
@@ -148,6 +189,43 @@ class HistoryTests(unittest.TestCase):
             self.assertEqual(original["comparison"]["current_user_review_ids"],
                              current["comparison"]["historical_user_review_ids"])
         self.assertEqual(fingerprints, {path: m.digest((ROOT / path).read_bytes()) for path in fingerprints})
+
+    def test_smoke_all_shoreline_replacements_keep_history(self):
+        with legacy_pilot(ROOT):
+            before = m.build(ROOT)
+        change, images = shoreline_fixture()
+        after = self.valid_report(change, extra_pngs=images)
+        self.assertEqual(after["production_summary"], {"retained": 5, "replaced": 16})
+        self.assertEqual(after["historical_pilot_human_review"], before["current_human_review"])
+        for prior, current in zip(before["assets"], after["assets"]):
+            self.assertEqual(prior["original"], current["original"])
+            self.assertEqual(prior["variant"]["canvas"], current["variant"]["canvas"])
+            self.assertEqual(prior["variant"]["registration"], current["variant"]["registration"])
+            if current["id"].startswith("BMP/BACKGRND.BMP/") and int(current["id"][-3:]) in SHORELINE:
+                shape, offset, kind = SHORELINE[int(current["id"][-3:])]
+                self.assertEqual(current["production"]["canvas"], shape)
+                self.assertEqual(current["production"]["footprint"],
+                                 {"id": "cartoon-island-" + kind + "-v1", "canvas": shape, "offset_hd": offset})
+                self.assertEqual(current["production"]["acceptance"], NEW)
+                self.assertIsNone(current["variant"]["member"])
+
+    def test_shoreline_replacement_must_be_declared(self):
+        change, images = shoreline_fixture()
+        def damaged(records):
+            change(records)
+            records[m.PACK]["pilot_history"]["replaced_assets"].remove("BMP/BACKGRND.BMP/007.png")
+        self.refused(damaged, m.PACK, "declared pilot replacements differ from active approvals", extra_pngs=images)
+        self.assertEqual(self.valid_report(change, extra_pngs=images)["production_summary"]["replaced"], 16)
+
+    def test_shoreline_recipe_footprint_must_match_ledger(self):
+        change, images = shoreline_fixture()
+        path = "BMP/BACKGRND.BMP/007.png"
+        def damaged(records):
+            change(records)
+            row = next(row for row in records[RECIPE]["frames"] if row["path"] == path)
+            row["footprint"]["offset_hd"][0] += 1
+        self.refused(damaged, path, "active recipe footprint differs from ledger", extra_pngs=images)
+        self.assertEqual(self.valid_report(change, extra_pngs=images)["production_summary"]["replaced"], 16)
 
     def test_nested_selected_approval(self):
         def change(records):
@@ -295,11 +373,13 @@ MUTATIONS = [
     ("test_pending_replacement", 'isinstance(current, dict) and current.get("accepted") is True'),
     ("test_unapproved_replacement", 'set(approved) == set(packed)'),
     ("test_undeclared_replacement", 'set(replacements) == changed'),
+    ("test_shoreline_replacement_must_be_declared", 'set(replacements) == changed'),
     ("test_recipe_pointer", 'isinstance(recipe_path, str) and recipe_path == approval.get("recipe")\n                and item.get("review") == origins[path]'),
     ("test_recipe_coverage", 'row is not None'),
     ("test_recipe_hash", 'item.get("sha256") == approval.get("sha256") == row.get("candidate_png_sha256")'),
     ("test_recipe_canvas", 'production[asset]["canvas"] == current_canvas'),
     ("test_recipe_footprint", 'row.get("footprint") == item.get("footprint")'),
+    ("test_shoreline_recipe_footprint_must_match_ledger", 'row.get("footprint") == item.get("footprint")'),
     ("test_production_bytes", 'digest(data) == production_item["sha256"]'),
     ("test_history_and_original_facts_unchanged", 'item = dict(item, **approved[asset], review=ACCEPTANCE)', 'item = item'),
     ("test_smoke_replacement", 'assets[-1]["variant"]["member"] = None', 'pass'),
