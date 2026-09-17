@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "role": "Generation geometry/style references only; no approved replacement or native capture.",
+  "helper_sha256": "ca429378d464d8f19b2528a0a48b0d3a16e9c221181bb592e9eecb0c359844ac",
+  "source_archives": {
+    "art/cartoon/character-inventory-v1/reference-originals.zip": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912",
+    "assets/scrantic_data.zip": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+  },
+  "world_hd_crop_xyxy": [
+    540,
+    558,
+    1180,
+    686
+  ],
+  "cropped_runtime_canvas": [
+    640,
+    128
+  ],
+  "guide_canvas": [
+    1536,
+    1024
+  ],
+  "nearest_runtime_to_guide_scale": 2,
+  "guide_offset_xy": [
+    128,
+    384
+  ],
+  "guide_to_crop_runtime_affine": [
+    0.5,
+    0,
+    -64,
+    0,
+    0.5,
+    -192
+  ],
+  "draw_order": [
+    0,
+    9,
+    3,
+    7
+  ],
+  "phase_note": "009,003,007 follows the final three observed grDrawSprite calls in the unchanged finite-wait native phase probe. This is a fresh direct source composite, not emulation of prior opaque stamping history.",
+  "guides": [
+    {
+      "label": "original",
+      "file": "original-ground-master.png",
+      "sha256": "98a5c621b910fa71ba9aad56e8f96ddd32cba6895886804909154d99f3975cb3",
+      "sources_in_draw_order": [
+        {
+          "frame": 0,
+          "member": "native/BMP/BACKGRND.BMP/000.png",
+          "sha256": "3412e1dc7b7af1d9a4ecd6fa63423b1f71616265d7f37d90e3b331551d6f6798",
+          "source_canvas": [
+            280,
+            52
+          ],
+          "source_to_runtime_nearest_scale": 2,
+          "runtime_canvas": [
+            560,
+            104
+          ],
+          "world_origin_hd": [
+            576,
+            558
+          ]
+        },
+        {
+          "frame": 9,
+          "member": "native/BMP/BACKGRND.BMP/009.png",
+          "sha256": "c2bb4ad5f195d031ebb06606f4bed958ce497208d8ea2fa253b9639b774b1c32",
+          "source_canvas": [
+            72,
+            32
+          ],
+          "source_to_runtime_nearest_scale": 2,
+          "runtime_canvas": [
+            144,
+            64
+          ],
+          "world_origin_hd": [
+            1036,
+            606
+          ]
+        },
+        {
+          "frame": 3,
+          "member": "native/BMP/BACKGRND.BMP/003.png",
+          "sha256": "9ed77826f1c345b9cdd253e1b76f701dec36fab9afed322e92390b473891d833",
+          "source_canvas": [
+            72,
+            29
+          ],
+          "source_to_runtime_nearest_scale": 2,
+          "runtime_canvas": [
+            144,
+            58
+          ],
+          "world_origin_hd": [
+            540,
+            612
+          ]
+        },
+        {
+          "frame": 7,
+          "member": "native/BMP/BACKGRND.BMP/007.png",
+          "sha256": "7158278ec5bd320cec6b5b89c9f7193d6e442f9091f86eb9f4a6cb11455f7952",
+          "source_canvas": [
+            160,
+            25
+          ],
+          "source_to_runtime_nearest_scale": 2,
+          "runtime_canvas": [
+            320,
+            50
+          ],
+          "world_origin_hd": [
+            728,
+            638
+          ]
+        }
+      ],
+      "cropped_composite_rgba_sha256": "7432cb67932e216ba09524cef615e491af5ffeee1cf13c579ef32d72dcc96d26",
+      "omitted_nonzero_alpha_pixels": 68,
+      "omitted_alpha8_pixels": 68,
+      "omitted_world_bounds_xyxy": [
+        854,
+        686,
+        888,
+        688
+      ]
+    },
+    {
+      "label": "cartoon",
+      "file": "cartoon-ground-master.png",
+      "sha256": "12a813357d8f3e85509aa3f4f3c2d3c5f6737cfb3013b7574dbf2777e5701fdf",
+      "sources_in_draw_order": [
+        {
+          "frame": 0,
+          "member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+          "sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+          "source_canvas": [
+            560,
+            104
+          ],
+          "source_to_runtime_nearest_scale": 1,
+          "runtime_canvas": [
+            560,
+            104
+          ],
+          "world_origin_hd": [
+            576,
+            558
+          ]
+        },
+        {
+          "frame": 9,
+          "member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+          "sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+          "source_canvas": [
+            144,
+            64
+          ],
+          "source_to_runtime_nearest_scale": 1,
+          "runtime_canvas": [
+            144,
+            64
+          ],
+          "world_origin_hd": [
+            1036,
+            606
+          ]
+        },
+        {
+          "frame": 3,
+          "member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+          "sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+          "source_canvas": [
+            144,
+            58
+          ],
+          "source_to_runtime_nearest_scale": 1,
+          "runtime_canvas": [
+            144,
+            58
+          ],
+          "world_origin_hd": [
+            540,
+            612
+          ]
+        },
+        {
+          "frame": 7,
+          "member": "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+          "sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+          "source_canvas": [
+            320,
+            50
+          ],
+          "source_to_runtime_nearest_scale": 1,
+          "runtime_canvas": [
+            320,
+            50
+          ],
+          "world_origin_hd": [
+            728,
+            638
+          ]
+        }
+      ],
+      "cropped_composite_rgba_sha256": "9255509e5ce1435ae473fd0b1fbfbb349da8962dfe68344673c5e01922e2d049",
+      "omitted_nonzero_alpha_pixels": 90,
+      "omitted_alpha8_pixels": 0,
+      "omitted_world_bounds_xyxy": [
+        865,
+        686,
+        950,
+        688
+      ]
+    }
+  ],
+  "checks": {
+    "exact_nearest_embedding_and_transparent_padding": "PASS",
+    "guide_count": 2
+  },
+  "limits": "Only000/003/007/009 included. No palm, shadow, Johnny, ocean, props, new rejected shoreline drafts, masks or recoloring. Original diagnostic colors retained, including blue wave water. Requested crop omits two lowerHDrows of007 wave fringe; original yellow/olive ground is wholly above this boundary. This reference is not a native executable screenshot."
+}

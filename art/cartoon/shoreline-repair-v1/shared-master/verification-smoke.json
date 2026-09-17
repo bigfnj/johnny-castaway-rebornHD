@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "phase": "smoke",
+  "scope": "Export integrity and representable ground ownership only; reported crop/uncovered alpha is not waived.",
+  "exporter_sha256": "760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6",
+  "test_sha256": "d70400fc05eb4cedb6858d069433b1bf5037eaf58aea473a1e21358dd62238b4",
+  "recipe_sha256": "fd9006b0bd955234c9a5af718de55b69218bbbdeb7ce93d3063fdbcc6b5f4bff",
+  "export_report_sha256": "80f9c2c7eaaabce154f4a5b3bd89ee28145041763a8bc81af32629cb00994f33",
+  "runs": [
+    {
+      "name": "selected_smoke_readback",
+      "result": "PASS",
+      "stdout": "WITNESS shared-ground 760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6\nDIAGNOSTIC {\"frames\": 10, \"outside_union\": {\"nonzero_pixels\": 4, \"alpha8_pixels\": 1, \"maximum_alpha\": 74, \"alpha_sum\": 85}, \"outside_crop\": {\"nonzero_pixels\": 200, \"alpha8_pixels\": 55, \"maximum_alpha\": 69, \"alpha_sum\": 2556}}\n",
+      "stderr": ""
+    }
+  ]
+}

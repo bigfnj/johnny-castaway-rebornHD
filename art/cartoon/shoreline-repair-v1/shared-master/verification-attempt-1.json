@@ -1,0 +1,12 @@
+{
+  "status": "TEST_ORACLE_CORRECTED",
+  "exporter_sha256": "760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6",
+  "initial_test_sha256": "27bc4cd11d7cf2de5c97c942c59c33754e0c010d2ee26c2a90c69ee73ad38b7c",
+  "failure": "AssertionError: (280, 0) during all-RGBA equality after source-over reconstruction",
+  "measured_master_rgba": [0, 0, 1, 0],
+  "measured_ground000_rgba": [0, 0, 1, 0],
+  "measured_source_over_rgba": [0, 0, 0, 0],
+  "finding": "Lossless rectangular crop preserves hidden RGB at alpha0; source-over onto transparent black normalizes that invisible RGB. The initial oracle conflated exact crop reconstruction with source-over rendering.",
+  "correction": "Verify lossless crop reconstruction byte-exact within representable rectangles. Independently verify source-over alpha everywhere and full RGBA wherever alpha is nonzero. Count normalized alpha0 RGB separately; retain the alpha128 double-blend control.",
+  "production_or_export_pixels_changed": false
+}

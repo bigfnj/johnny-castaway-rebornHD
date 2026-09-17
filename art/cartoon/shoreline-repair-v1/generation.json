@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "method": "built-in image_gen; precise-object-edit",
+  "seed": null,
+  "appearance_approved": false,
+  "production_approved": false,
+  "records": [
+    {
+      "frame": "007",
+      "version": 1,
+      "key": "shore007",
+      "raw": "007-v1.png",
+      "output": "exec-f6bad7e6-6bdd-48b2-add7-b5d6502a0f78.png",
+      "note": "First representative middle shoreline; upper join and small bottom foam clipping require scene review.",
+      "prompt": "Use case: precise-object-edit\nAsset: transparent Cartoon game sprite, BACKGRND007, one center shoreline animation frame.\nInput 1 is the ORIGINAL GEOMETRY edit target on a1536x1024 transparent canvas: its yellow/olive/gray upper strip is solid SAND and its curved white marks are foam. Input2 is the current Cartoon foam at identical coordinates, for the smooth white/pale-cyan line style. Input3 is a scene context for sand COLOR and texture only; do not reproduce that rectangular scene or its blue ocean.\nCreate the corrected standalone sprite on exactly the same1536x1024 canvas and coordinate placement as input1. Keep the full sand-bearing silhouette from input1: the artwork window starts at x128,y412 and is1248x200 pixels; retain the long straight cropped upper edge at y412 and irregular LOWER sand edge near y500-524. Repaint yellow/olive/gray ground as fully opaque warm golden Cartoon beach sand matching input3, with restrained soft ochre texture and a thin dark lower shoreline contour. Keep the original sand extent all the way to that lower edge, even where input2 has transparency. This added sand is the purpose of the correction. No dark stroke along the straight upper crop edge; it must join the island's existing sand without a black seam.\nBelow the sand retain the thin flowing white/pale-cyan foam curves at the source positions and scale, matching input2's illustrated finish. Blue ocean areas and empty padding must be genuine alpha transparency. Preserve the original low, wide proportions and left/right endpoints; do not center, enlarge, shrink, invent a separate island, or add a border. No tree, props, lettering, checkerboard, background color or drop shadow. The output must include BOTH opaque sand and foam, not just foam. All original ground should remain fully opaque; do not fade or erase the sand.",
+      "prompt_file": "prompts/007-v1.txt",
+      "prompt_file_sha256": "0c54301db9c285d5033d87d091a1ab3d9cab56ade562c99210aef1fa0267cbda",
+      "references": [
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference/007-original-native-geometry.png",
+          "sha256": "6ad069ccd9394ea902c74a270252f12c3a9ffe4229ed736355e982b1d8ee99f5"
+        },
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference/007-cartoon-geometry.png",
+          "sha256": "88f457971d4ce25079ab08a6f03af6a7238bf7aada442c1968e67526f2198692"
+        },
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference/007-cartoon-scene-context.png",
+          "sha256": "2b44499b6f745bac6ed4d0880160f7c10e0b3fbb98714138179131df1a5aac6d"
+        }
+      ],
+      "raw_path": "raw/007-v1.png",
+      "raw_sha256": "55a31c6dd44368e53a27c0cce859aa46d5cfdd0aee98ed39fb8bb87e78267075",
+      "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-f6bad7e6-6bdd-48b2-add7-b5d6502a0f78.png"
+    },
+    {
+      "frame": "003",
+      "version": 1,
+      "key": "shore003",
+      "raw": "003-v1.png",
+      "output": "exec-16b0258b-d70c-461c-a728-de34a64a8a86.png",
+      "note": "Rejected before native preview: artwork enlarged/recentered relative to guide. Superseded by003-v2.",
+      "prompt": "Use case: precise-object-edit\nAsset: transparent Cartoon game sprite BACKGRND003, left shoreline animation frame.\nInput1 is the ORIGINAL GEOMETRY edit target. Its yellow/olive/gray strip is solid sand, and blue is seawater. Input2 is the existing Cartoon foam at the same coordinates for line style. Input3 is color/style context only; do not copy the scene, Johnny, or its blue ocean.\nRedraw input1 in the same warm golden illustrated Cartoon sand and white/pale-cyan foam style as inputs2/3. Return a1536x1024 RGBA transparent canvas. Preserve exact position/size: artwork lies in the window x480..1056,y396..628. Sand begins aroundx608,y420, curves down/right tox1056,y548. Retain all that original sand coverage, including the yellow/olive/dithered ground, with warm gold/ochre shading, faint texture and a thin dark LOWER coast contour. The upper sand edge overlaps other sand in the game; do not add a black border or shadow to that joining edge. Keep the foam's C-shaped left curl and long low trailing arcs in their existing positions, all within the original window. Preserve thin smooth lines from input2, not a glowing wave.\nOnly original blue seawater and empty padding become genuinely transparent. Sand must remain fully opaque. No rectangular ocean patch, no full island, no new objects, no lettering, no checkerboard, no bloom/glow/drop shadow. Do not recenter, change scale or lose sand to transparency. Output BOTH the solid original-shaped sand strip and matching foam.",
+      "prompt_file": "prompts/003-v1.txt",
+      "prompt_file_sha256": "3bc4c0176230c564bc13baa839b23c5eca512fba4fe90adb392271501e75b0cc",
+      "references": [
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference/003-original-native-geometry.png",
+          "sha256": "2f4d8b327e3360cf68eabb1aed1194b6fd2ba927b14d57bf23a0bfe01f99a332"
+        },
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference/003-cartoon-geometry.png",
+          "sha256": "ef59a565665b4e29ba40b98393257764de292e3ae3b7aaa570721a7f692caeb9"
+        },
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference/003-cartoon-scene-context.png",
+          "sha256": "2cbe3f7545da6953dc522399c295e2a5c17d106cfeafe1d7932efcb7eb040511"
+        }
+      ],
+      "raw_path": "raw/003-v1.png",
+      "raw_sha256": "6f1e19d9ed87eaf0dd22a80e7c21246ab1fb9016f0783ee2acc166e7bbc09ae8",
+      "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-16b0258b-d70c-461c-a728-de34a64a8a86.png"
+    },
+    {
+      "frame": "003",
+      "version": 2,
+      "key": "shore003v2",
+      "raw": "003-v2.png",
+      "output": "exec-539de971-7928-470c-ae25-a099913fbac9.png",
+      "note": "Targeted original-geometry edit with fewer references; pending scene review.",
+      "prompt": "Edit IMAGE1 itself: preserve its small artwork's EXACT size, placement and outline within the1536x1024 transparent canvas. It is a registered game animation frame, so the large empty padding must remain. Do not zoom or recenter.\nThe yellow/olive/gray region is opaque beach SAND. Repaint only its colors/texture as golden Cartoon sand, using IMAGE2 solely as the sand/white-foam style reference. Keep the sand silhouette from IMAGE1. Its left tip starts around608,420; its right vertical cropped join is atx1056, fromy500toy548. Do NOT add a black border to the upper joining edge. A thin dark contour belongs only along the lower water-facing edge.\nRetain IMAGE1's white foam curves, smoothing them into fine white and pale-cyan illustrated strokes. All blue water pixels become alpha transparent. Everything beyond the original artwork stays transparent. NO bloom or glow, no background, no added objects. Keep the far-left foam curl aroundx528,y440, the trailing arcs ending beforex1056,y628. Do not enlarge this small sprite to fill the canvas. Exact registered geometry of IMAGE1 is more important than decorative detail.",
+      "prompt_file": "prompts/003-v2.txt",
+      "prompt_file_sha256": "23a03319333c13d86c1a2f41f20ddb55d65b1414801a19140d832c0892f73724",
+      "references": [
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference/003-original-native-geometry.png",
+          "sha256": "2f4d8b327e3360cf68eabb1aed1194b6fd2ba927b14d57bf23a0bfe01f99a332"
+        },
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/raw/007-v1.png",
+          "sha256": "55a31c6dd44368e53a27c0cce859aa46d5cfdd0aee98ed39fb8bb87e78267075"
+        }
+      ],
+      "raw_path": "raw/003-v2.png",
+      "raw_sha256": "45e1e111662b5dfdb06d747530e2ae8645f7b8ab22e1bab140b13eb8a68c2c9f",
+      "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-539de971-7928-470c-ae25-a099913fbac9.png"
+    },
+    {
+      "frame": "009",
+      "version": 1,
+      "key": "shore009",
+      "raw": "009-v1.png",
+      "output": "exec-4acdb9b9-be13-4b8b-abc6-1a731a2c7640.png",
+      "note": "First representative right shoreline; pending scene review.",
+      "prompt": "Edit IMAGE1 itself: preserve the exact size, placement and orientation of this small right-side shoreline fragment on its1536x1024 transparent canvas. Empty padding must remain. This is registered game animation art, not a scene to recompose.\nThe yellow/olive/gray inner strip is opaque SAND. Repaint it in warm golden Cartoon beach colors and restrained ochre texture matching IMAGE2, which is STYLE ONLY. Retain IMAGE1's narrow sand silhouette curving from the lower-left atx480,y576 up to the upper-right atx856,y384..472. Preserve these pixel-coordinate anchors. Put a thin dark line only on the lower/right sea-facing edge; no dark border along the upper/left joining edge that overlaps the existing island. Do not fill the large empty area above the strip.\nPreserve the original white foam sweep curving along the lower/right edge, smoothing it into thin white/pale-cyan illustration strokes. Original blue water becomes genuine alpha transparency, and all empty padding stays transparent. Entire artwork must stay withinx480..1056,y384..640. No glow, bloom, ocean rectangle, tree, character, text or shadow. No zoom, recentering or enlarged composition. Opaque sand must remain present; this correction restores missing ground.",
+      "prompt_file": "prompts/009-v1.txt",
+      "prompt_file_sha256": "b29580c323ee15521d73482975a330bb7b9bb7df578256f30d6b9c720470e26b",
+      "references": [
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference/009-original-native-geometry.png",
+          "sha256": "2f0341c10cc9504daec404b3655a37ac718f080e63c8f020a213fc5dfac3f3d5"
+        },
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/raw/007-v1.png",
+          "sha256": "55a31c6dd44368e53a27c0cce859aa46d5cfdd0aee98ed39fb8bb87e78267075"
+        }
+      ],
+      "raw_path": "raw/009-v1.png",
+      "raw_sha256": "da0ff92129feba7466a79c3cf98f0a48857a0f7d0e36a49d9b5314ff9aba77d5",
+      "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-4acdb9b9-be13-4b8b-abc6-1a731a2c7640.png"
+    }
+  ]
+}

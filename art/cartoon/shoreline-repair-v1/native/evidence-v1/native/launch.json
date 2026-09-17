@@ -1,0 +1,40 @@
+{
+  "source_commit": "9ee4bcaf5152c9b67e5dc0b0a92dea11cf0025c6",
+  "container_name": "johnny-shore-228934b476aa",
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "inputs": {
+    "baseline": {
+      "path": "build/shoreline-repair-v1/selected-v1/baseline.zip",
+      "sha256": "3d619201ec02bd7566d99c9fbab146301a286cc1056f1407b732921b9e3f8898"
+    },
+    "candidate": {
+      "path": "build/shoreline-repair-v1/selected-v1/candidate.zip",
+      "sha256": "84376dd94e415e7ee485a79231e17203942d38be678acfe46d1f840f2b93045a"
+    }
+  },
+  "output": "build/shoreline-repair-v1/native-v1",
+  "capture_arguments": [
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/art/cartoon/shoreline-repair-v1/native/capture.py",
+    "--output",
+    "/out/captures",
+    "--baseline",
+    "/source/build/shoreline-repair-v1/selected-v1/baseline.zip",
+    "--baseline-sha256",
+    "3d619201ec02bd7566d99c9fbab146301a286cc1056f1407b732921b9e3f8898",
+    "--candidate",
+    "/source/build/shoreline-repair-v1/selected-v1/candidate.zip",
+    "--candidate-sha256",
+    "84376dd94e415e7ee485a79231e17203942d38be678acfe46d1f840f2b93045a"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 46.91043829917908,
+  "no_surviving_task_container": true,
+  "cleanup_exit_code": 0,
+  "launch_helper_sha256": "c84415ce0591860262db67fd0023a77b9064cb085616460e03e297eda0a8b0c4"
+}

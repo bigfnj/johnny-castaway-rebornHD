@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "method": "built-in image_gen; precise-object-edit",
+  "seed": null,
+  "appearance_approved": false,
+  "production_approved": false,
+  "records": [
+    {
+      "version": 1,
+      "prompt": "Use case: precise-object-edit\nCreate the corrected GROUND-ONLY master for a Cartoon game island. Image1 is our current Cartoon artwork to edit. Image2 is the original island plus original sand-bearing waves at the identical scale/placement, used only for its complete LAND FOOTPRINT. Keep Image1's warm pale golden sand, soft ochre texture, gentle perspective, thin brown coast contour and overall identity. The problem is Image1's land is too small near parts of its lower shore.\nOn the same1536x1024 transparent canvas, extend the sand locally to match all of Image2's yellow/olive/light-gray LAND, including the left toe and broader central lower beach. Preserve original land anchors: top crest y384; left sandy tip aroundx188,y510; the left lobe runs down to abouty558; central lower sand reaches abouty600; right sandy tip nearx1320,y500. The whole land remains a very low wide island, roughly1140px wide and216px high at these fixed coordinates. Do not zoom, recenter or enlarge the upper/back shoreline. Refine the coast as one continuous organic outline with NO internal black coastline, NO straight seams, NO separate attached strips, and NO squared-off cut ends.\nReturn ONLY the complete continuous sand island on genuine transparency. Remove ALL foam, wave strokes and blue water from the output, including Image1's foam: those are separate existing animation layers. Fill the dark oval in Image2 with ordinary sand; it is not a real hole. No palm/tree/shadow, no person, no props, no text, no ground outside the reference shoreline, no halo or bloom. Make the sand opaque through its interior and cleanly antialiased at its edge. The geometry/placement must follow Image2 while the cohesive Cartoon sand appearance follows Image1.",
+      "refs": [
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference-master/cartoon-ground-master.png",
+          "sha256": "12a813357d8f3e85509aa3f4f3c2d3c5f6737cfb3013b7574dbf2777e5701fdf"
+        },
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference-master/original-ground-master.png",
+          "sha256": "98a5c621b910fa71ba9aad56e8f96ddd32cba6895886804909154d99f3975cb3"
+        }
+      ],
+      "output": "exec-2f9884d9-88ef-4c32-b1cc-694b86ac1bc1.png",
+      "status": "rejected: generated island enlarged relative to original reference placement; no export",
+      "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-2f9884d9-88ef-4c32-b1cc-694b86ac1bc1.png",
+      "raw_path": "raw/ground-master-v1.png",
+      "raw_sha256": "db5cc1f0dcd0e0dd6347e17dbbf5bbe2c9383864a45eccfec1ff242e4d7a34d7",
+      "prompt_file": "prompts/ground-master-v1.txt",
+      "prompt_file_sha256": "d1cc9d44b3d5c2e947294ffe970f8aa7dbf375021f28e466e2b41a5dadd5d0ab"
+    },
+    {
+      "version": 2,
+      "prompt": "Edit the FIRST image in place, preserving its exact scale, position and outline. It is a1536x1024 registered game sprite guide with a small, extremely wide shallow island in the middle. The first image is the geometry master; the second image is ONLY the desired Cartoon painting style.\nReplace the first image's yellow, olive and gray LAND pixels with smooth warm golden beach sand in the second image's style. Follow the first image's outer LAND contour, smoothing pixel steps by at most a few pixels. Do not expand the entire island to fill the image. Leave its top crest atx728..868,y384; left sand tip atx188,y510; right sand tip atx1320,y500; main lower sand edge nearx850,y600. Preserve that full original ground footprint, including the small projecting left toe and the central lower shore. Keep the original asymmetry, long flat perspective and roughly1132x216pixel land size. Do not borrow the second image's smaller sand outline.\nOutput GROUND ONLY on true RGBA transparency. All blue water and ALL white curved foam/waves in the first image must become transparent. The light gray/white patches INSIDE the land are sand highlights and must be opaque warm sand. The small black oval inside the upper sand must be filled with sand, not a hole. Use a thin dark-brown contour only on the outer land boundary, soft pale-gold/ochre shading, and faint natural speckles. No tree, shadow, character, props, foam, water, text, halo, checkerboard or background. Do not zoom, resize, recenter or move any land anchor. This is a precise registered repaint of the FIRST image, not a new composition.",
+      "refs": [
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference-master/original-ground-master.png",
+          "sha256": "98a5c621b910fa71ba9aad56e8f96ddd32cba6895886804909154d99f3975cb3"
+        },
+        {
+          "path": "D:/.ai-work/worktrees/johnny-seasonal-decorations/art/cartoon/shoreline-repair-v1/reference-master/cartoon-ground-master.png",
+          "sha256": "12a813357d8f3e85509aa3f4f3c2d3c5f6737cfb3013b7574dbf2777e5701fdf"
+        }
+      ],
+      "output": "exec-bc6ea954-771e-48f0-ab67-e341adec9cc7.png",
+      "status": "pending: selected for fixed-map technical export and native scene review",
+      "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-bc6ea954-771e-48f0-ab67-e341adec9cc7.png",
+      "raw_path": "raw/ground-master-v2.png",
+      "raw_sha256": "bde2f4f2111f532cb94a82ece74fa7745129d61e2ad909e8eadaa3fab4df7d14",
+      "prompt_file": "prompts/ground-master-v2.txt",
+      "prompt_file_sha256": "cd1153a95cecc35d66a9db8bc001a29dbef77e20a485f1cf62c4d61dd26b895f"
+    }
+  ]
+}

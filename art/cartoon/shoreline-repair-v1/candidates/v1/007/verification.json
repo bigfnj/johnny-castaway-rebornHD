@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "scope": "Recipe/export integrity only.377 filtered alpha>=8 pixels are cropped; no visual acceptance or clipping waiver.",
+  "exporter_sha256": "f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264",
+  "test_sha256": "e4e89001f12dd90f7e43eeb99d8987bdd8a5e7114f26dd3445a2166e4a3f3dd5",
+  "recipe_sha256": "1eee6a32ee5a0d3a477f94619f68a41647136dff4f28f4bd0e6ac2d8b97e804d",
+  "guard_removal_sha256": "a0f4933d93fa1909fe6268e00209548091deed4c7e15483730ee74ca2c06d11f",
+  "actual_wrong_canvas_written": [
+    320,
+    51
+  ],
+  "runs": [
+    {
+      "name": "007_smoke_readback",
+      "result": "PASS",
+      "stdout": "WITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\nDIAGNOSTIC {\"frame\": 7, \"runtime_sha256\": \"f4e13827d7e622b3e608f4ac9757b8908e1f47d2fef1f7ab6bd4ee23d7173c84\", \"crop\": {\"nonzero_pixels\": 867, \"alpha8_pixels\": 377, \"alpha255_pixels\": 0, \"maximum_alpha\": 159, \"alpha_sum\": 32970, \"alpha8_bounds\": [64, 134, 384, 186]}}\n",
+      "stderr": ""
+    },
+    {
+      "name": "007_fresh_replay",
+      "result": "PASS",
+      "stdout": "WITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\nDIAGNOSTIC {\"frame\": 7, \"runtime_sha256\": \"f4e13827d7e622b3e608f4ac9757b8908e1f47d2fef1f7ab6bd4ee23d7173c84\", \"crop\": {\"nonzero_pixels\": 867, \"alpha8_pixels\": 377, \"alpha255_pixels\": 0, \"maximum_alpha\": 159, \"alpha_sum\": 32970, \"alpha8_bounds\": [64, 134, 384, 186]}}\n",
+      "stderr": ""
+    },
+    {
+      "name": "007_canvas_change_rejected",
+      "result": "FIRED",
+      "stdout": "WITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\n",
+      "stderr": "FAIL 007: recipe/source/original registration differs\n"
+    },
+    {
+      "name": "007_canvas_change_accepted_only_without_guard",
+      "result": "PASS",
+      "stdout": "EXECUTED_MUTANT_SHA256=a0f4933d93fa1909fe6268e00209548091deed4c7e15483730ee74ca2c06d11f\nWITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\nDIAGNOSTIC {\"frame\": 7, \"runtime_sha256\": \"b5ac74d979e5b827fa2d5c94bde21da97dcb4111b5c3fa651aefeeca3b894e55\", \"crop\": {\"nonzero_pixels\": 796, \"alpha8_pixels\": 320, \"alpha255_pixels\": 0, \"maximum_alpha\": 91, \"alpha_sum\": 27208, \"alpha8_bounds\": [64, 134, 384, 135]}}\n",
+      "stderr": ""
+    },
+    {
+      "name": "007_restored_positive",
+      "result": "PASS",
+      "stdout": "WITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\nDIAGNOSTIC {\"frame\": 7, \"runtime_sha256\": \"f4e13827d7e622b3e608f4ac9757b8908e1f47d2fef1f7ab6bd4ee23d7173c84\", \"crop\": {\"nonzero_pixels\": 867, \"alpha8_pixels\": 377, \"alpha255_pixels\": 0, \"maximum_alpha\": 159, \"alpha_sum\": 32970, \"alpha8_bounds\": [64, 134, 384, 186]}}\n",
+      "stderr": ""
+    }
+  ]
+}
