@@ -19,7 +19,7 @@ against the existing fallback background; it does not approve a new night scene.
 | Browser review | All 96 atlas images reconstruct exact native pixels. Actual browser controls, scene selectors, full-scene view and playback end behavior were checked. The reviewed page and media are retained. |
 | Integration authoring | 16 smoke tests passed before 189 executed regressions; two Windows symlink-privilege fixtures were explicitly skipped. Metadata, production catalog and character inventory regeneration/checks passed. |
 | Windows feature gate | Fresh build, full smoke then regression passed on the first attempt. All 2,452 golden resource files matched, and 32 renderer capture/log pairs were checked. The deployed ZIP equals production; the workstation input desktop remained unchanged. |
-| Cross-platform and main | PR CI and post-merge verification follow this feature checkpoint. |
+| Cross-platform and main | Windows, Linux, macOS and Web passed in [PR CI run 35273503093](https://github.com/bigfnj/johnny-castaway-rebornHD/actions/runs/35273503093). [PR #19](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/19) merged as `a0c2d032e75ac24145acce5c505cf3ac396b9427`, and the primary checkout was updated. The additional cloud-only post-merge validation cycle is deferred under the user's [current workflow](cartoon-art-build-workflow.md). |
 
 The [review checkpoint](cartoon-clouds-review.md) records the pre-approval work.
 The [reusable lessons](art-style-learnings-clouds.md) preserve resource selection,

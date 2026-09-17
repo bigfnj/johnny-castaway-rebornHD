@@ -1,5 +1,7 @@
 # Cartoon production: catalog and walking expansion
 
+Current workflow: the user requested [art construction first, bulk verification later](cartoon-art-build-workflow.md) on 2026-09-17. That instruction supersedes the per-family test and audit cadence documented below. Preserve visual approvals and source records as each family is completed; run full smoke, regression and final code audit at the combined delivery milestone.
+
 The user approved this bounded start on 2026-09-15: establish the production
 catalog, then expand Johnny's walking directions before undertaking the full
 application. Work starts from `0f7d7fd` on `art/cartoon-production-foundation`.
@@ -60,11 +62,11 @@ the original walk table to disguise a mismatch.
 
 ## Verification and remaining scope
 
-After each major implementation phase, run smoke checks before regression
-checks. Newly introduced checks must fail for a witnessed mutation of the
-condition they guard. Re-run the relevant native gates when runtime artwork or
-engine code changes; catalog-only work also receives the existing art-tool and
-metadata regressions. Retain failed-run evidence where it explains a limitation.
+During art construction, use lightweight export and preview checks. Full smoke
+checks, then regressions and the final audit are deferred to the bulk delivery
+under the current workflow. Test actual engine or tooling changes according to
+their scope; do not run the entire suite for every approved drawing. Historical
+test and approval records below retain their original scope.
 
 The rear-three-quarter key was approved with "looks good yes". Its complete
 six-pose walk was subsequently approved in the native island review with
