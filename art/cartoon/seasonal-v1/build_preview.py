@@ -17,7 +17,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 ASSETS = [
     ("000", "halloween", "Halloween pumpkin", (80, 68), (580, 400, 1100, 752),
-     "Revised pumpkin: glowing red eyes and a sharp-toothed evil grin. Check how the approved face reads at game size."),
+     "Approved pumpkin appearance: glowing red eyes, a sharp-toothed evil grin and light surface decay. Placement will be rechecked after the shoreline correction."),
     ("001", "stpatricks", "St. Patrick's clovers", (240, 94), (580, 400, 1100, 752),
      "Check the spacing between the clovers and where their stems meet the sand."),
     ("002", "christmas", "Christmas tree", (112, 130), (580, 400, 1100, 752),
@@ -106,11 +106,11 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     pack = commands.add_parser("package")
     pack.add_argument("--output", type=Path, required=True)
-    pack.add_argument("--version", choices=("v1", "v2", "v3"), required=True)
+    pack.add_argument("--version", choices=("v1", "v2", "v3", "v4"), required=True)
     page = commands.add_parser("review")
     page.add_argument("--baseline", type=Path, required=True)
     page.add_argument("--candidate", type=Path, required=True)
-    page.add_argument("--version", choices=("v1", "v2", "v3"), required=True)
+    page.add_argument("--version", choices=("v1", "v2", "v3", "v4"), required=True)
     args = parser.parse_args()
     if args.command == "package":
         package(args.output.resolve(), args.version)

@@ -8,7 +8,7 @@ Cartoon assets, including all28 approved Johnny poses. Work is isolated on
 
 | Frame | Subject | Runtime canvas | Current review |
 |---|---|---|---|
-| 000 | Halloween pumpkin | 80x68 | Revised red-eye, sharp-toothed face approved with "so much yes"; batch scene review remains open |
+| 000 | Halloween pumpkin | 80x68 | Red-eye, sharp-toothed face and slight rot approved; batch scene placement remains open |
 | 001 | St. Patrick's clovers | 240x94 | Pending |
 | 002 | Christmas tree | 112x130 | Pending |
 | 003 | New Year banner | 304x94 | Pending |
@@ -49,6 +49,28 @@ user's scene review. No engine coordinates or island pixels changed. Version1
 sources, exports and native evidence remain available as a failed-placement
 example; its technical PASS is not visual approval.
 
+The subsequent [original shoreline comparison](island-footprint-v1/README.md)
+established that v2 compensates for a scenery defect. Original high-tide wave
+sprites contain opaque sand extending the island, which the Cartoon wave
+prompts explicitly removed. At sampled clover columns, the resulting ground
+retreat reaches13 HD pixels in the matched phase. The base sand mask is also
+about2.5% smaller by opaque area, but its edge differs by at most one HD row
+at the measured clover stem endpoints. The wave-ground loss is the main cause.
+
+Keep v2-v4 placement provisional. Restore the combined original sand-and-wave
+footprint before more ground props, then reassess the original prop anchors
+and the compensating shrink/raise. A blanket enlargement of the island would
+also move unrelated boundaries. The approved palm, ocean and character art
+do not need wholesale regeneration. This lower shoreline evidence does not
+establish the cause of the earlier upper-shore Johnny018 foot issue.
+
+For future packs, classify sprites by their visible materials as well as their
+resource names. A wave frame may supply ground. Preserve original composite
+coverage across every phase, and compare props at identical positions over
+the original scenery before altering their registration. The first seasonal
+preview compared two decorations on the same Cartoon island; its left panel
+was not an original-scene reference. The page now states that explicitly.
+
 ## Alpha lesson
 
 The broad green/gray haze in some raw previews was RGB beneath alpha0. Actual
@@ -80,6 +102,21 @@ pointed, menacing carved grin as intentional subject details. A generic
 cheerful jack-o-lantern was the wrong interpretation for this application.
 The glow is painted into the sprite; this revision adds no flicker animation.
 
+## Approved slight decay, export v4
+
+The user then requested a slightly rotting pumpkin. A built-in edit of
+`raw/000-v2.png` produced `raw/000-v3.png`, adding restrained olive/brown rind
+patches and weathering while retaining the red eyes and pointed grin.
+`generation-pumpkin-v3.json` and `prompts/000-v3.txt` preserve the exact edit.
+The separate `pumpkin-appearance-v4.json` records the user's response,
+"Yes, keep this amount", to the actual displayed image. Generation-time
+pending fields remain historical rather than being rewritten as approval.
+
+Export v4 retains the same uniform transform and preserves001-003 byte-for-byte.
+This approves the pumpkin's appearance only. Its scene placement must be
+rechecked against the corrected shoreline, and the other three decorations
+remain pending human review. No production assets changed.
+
 ## Review and reproduction
 
 Serve this folder and open `review.html`. Each decoration has matched native
@@ -87,7 +124,7 @@ HD-fallback and Cartoon scenes, a full-scene view and original/HD/draft sprite
 comparisons. Human review concerns appearance, size and ground/banner placement.
 There is no new animation in this batch.
 
-`build_preview.py package --version v3 --output <fresh ZIP>` creates an ignored
+`build_preview.py package --version v4 --output <fresh ZIP>` creates an ignored
 diagnostic archive. It retains all2594 existing production members and adds
 only the four draft HOLIDAY PNGs. The native runner independently validates
 those payloads, full canvases, actual loads, draw positions and changed pixels.
@@ -96,7 +133,7 @@ See [native reproduction and limits](native/README.md).
 After capturing baseline and candidate, use:
 
 ```text
-python -B art/cartoon/seasonal-v1/build_preview.py review --version v3 --baseline build/seasonal-v1/native-baseline-v2 --candidate build/seasonal-v1/native-candidate-v3
+python -B art/cartoon/seasonal-v1/build_preview.py review --version v4 --baseline build/seasonal-v1/native-baseline-v2 --candidate build/seasonal-v1/native-candidate-v4
 ```
 
 The current reviewer shows native Linux stills with approved standing016 and

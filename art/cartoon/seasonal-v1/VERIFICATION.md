@@ -1,9 +1,11 @@
 # Seasonal draft verification
 
-The current human-review candidate is export v3, with the pumpkin appearance
+The current human-review candidate is export v4, with the pumpkin appearance
 approved in the inline generated image. Production remains unchanged.
 The diagnostic ZIP is
-`3dea2b6e0a1435ae286dac964ab7e68e5a72efb0c364d57753d9225c9e8abcdb`.
+`913891794dbf3425059758e328f2a24a93dc95b32942bdb8fcc68ca99e9c6d32`.
+The earlier phase results below remain historical. Later findings qualify
+their scene-contact interpretation; see the shoreline section at the end.
 
 | Phase | Result |
 |---|---|
@@ -74,3 +76,49 @@ It preserves54 exact files. The refreshed browser loaded all five pumpkin
 comparison images from the intended v3 paths, displayed the new face and
 returned no warning/error entries. The other decorations remain pending their
 own visual approval. No runtime code or production archive changed.
+
+## Approved slight decay, export v4
+
+The separate `pumpkin-appearance-v4.json` binds the displayed raw source and
+the user's "Yes, keep this amount" response. It approves the degree of rot,
+retaining the red eyes and evil grin. Scene placement and production promotion
+remain separate. Export smoke preceded a fresh subprocess replay/regression;
+001-003 remain byte-identical and meaningful alpha remains in bounds.
+
+Changed translation and stale-v3 recipe controls failed by name. Removing only
+the v4 selection guard allowed the changed translation and produced a different
+000 PNG; the restored positive passed. The execution results are retained in
+`export-verification-v4-regression.json`.
+
+All30 finite native smoke/repeat runs and30 baseline comparisons passed. Against
+v3, exactly000 changed in the2598-member diagnostic ZIP. The other2597 members
+remain exact. Twenty-four other-scene captures are identical; six pumpkin
+captures differ only within its unchanged canvas. All four loaded PNGs match
+the v4 exports. Altered-pixel and damaged-export-hash controls fired and restored
+positives passed. The native capture container stopped.
+
+`native/evidence-candidate-v4/evidence.json` binds58 compact records, SHA256
+`3695d96669bf74825730ea9c09a6f8a1627467325f460ecaf5003686580e28a6`.
+The browser displayed the actual v4 pumpkin and all five pumpkin images loaded.
+All four decoration selections and both view modes route to v4 paths. Immediate
+image-completion reads during rapid selection changes raced image loading;
+they are not recorded as completed-load checks. No warning/error entries were
+returned by the browser log query. The other decorations' PNGs are unchanged.
+
+## Shoreline finding changes the placement interpretation
+
+The user identified original clovers standing over water in the shared Cartoon
+scene. [Matched original-scene evidence](island-footprint-v1/README.md) confirms
+missing sand from the Cartoon high-tide wave layers as the principal local
+cause. Original wave art supplies opaque ground beyond base000. The Cartoon
+prompts removed it. Thus v2's shrink/raise and the earlier inspected contact
+claims describe a workaround, not restoration of the original scene geometry.
+
+The footprint binder SHA256 is
+`719b740919af58c09f023433d56cf5979a3197841e02502afe546d39b1352698`.
+It retains50 exact files with matched crops, measurements, source identities,
+native reports and reproduction helpers. Both comparison panels use the same
+HD clover at the same original coordinates. The left is original artwork in
+the port with a diagnostic palette, not original-executable color parity.
+One captured high-tide phase is measured; all-phase validation remains work
+for the recommended shoreline correction. No scenery edit was made here.

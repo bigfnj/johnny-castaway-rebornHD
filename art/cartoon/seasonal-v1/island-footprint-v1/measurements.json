@@ -1,0 +1,616 @@
+{
+  "scope": "Column-wise lower sand geometry. Original source PNGs derive from hash-bound supplied-original dump. Native captures use the supplied original resource pair for original and current production forHD/Cartoon. No original executable or original palette-parity claim.",
+  "inputs_sha256": {
+    "original-BACKGRND-000.png": "3412e1dc7b7af1d9a4ecd6fa63423b1f71616265d7f37d90e3b331551d6f6798",
+    "hd-BACKGRND-000.png": "cf6fa1b623371c1b4f2c52eb93a9f33104ea1d658879ff7caa9e1fd91d26da08",
+    "cartoon-BACKGRND-000.png": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+    "original-HOLIDAY-001.png": "33bbbc9b30a27902a2190d4fff7032b371863bd489044de4f7a7713d361fccf2"
+  },
+  "base_canvas": [
+    560,
+    104
+  ],
+  "base_scene_origin_hd": [
+    576,
+    558
+  ],
+  "mask_definition": "original alpha255/HD alpha>=128 excluding legacy magenta/Cartoon alpha>=128; purely diagnostic, no edited production alpha",
+  "base_masks": {
+    "original": {
+      "area_pixels": 40384,
+      "bounds_xyxy": [
+        0,
+        0,
+        558,
+        104
+      ]
+    },
+    "hd": {
+      "area_pixels": 40372,
+      "bounds_xyxy": [
+        0,
+        0,
+        558,
+        104
+      ]
+    },
+    "cartoon": {
+      "area_pixels": 39357,
+      "bounds_xyxy": [
+        4,
+        1,
+        551,
+        103
+      ]
+    }
+  },
+  "original_hd_base_alpha_identical": false,
+  "clover_endpoints_method": "Every source green pixel immediately above a gray ground/shadow pixel; adjacent same-level endpoints grouped. Visually inspected annotated source. These are visible stem endpoints, not inferred botanical attachment.",
+  "native_sand_definition": "original/HD r>=120,g>=120,b<128 (yellow shades); Cartoon r>=95,g>=65,r>1.25b,g>1.08b (warm sand). Lower border/foam not counted. Sampling no-holiday scene avoids green props. Deterministic color separation here, not a universal material classifier.",
+  "clover_stem_endpoints": [
+    {
+      "source_xy": [
+        6,
+        31
+      ],
+      "world_hd_stem_bottom": [
+        678,
+        635
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 637,
+        "hd": 637,
+        "cartoon": 637
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 649,
+          "hd": 649,
+          "cartoon": 636
+        },
+        "low": {
+          "original": 717,
+          "hd": 717,
+          "cartoon": 717
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 13,
+      "base_only_cartoon_retreat_hd": 0,
+      "high_tide_clearance_hd": {
+        "original": 14,
+        "hd": 14,
+        "cartoon": 1
+      }
+    },
+    {
+      "source_xy": [
+        16,
+        32
+      ],
+      "world_hd_stem_bottom": [
+        698,
+        637
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 647,
+        "hd": 647,
+        "cartoon": 647
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 647,
+          "hd": 647,
+          "cartoon": 646
+        },
+        "low": {
+          "original": 717,
+          "hd": 717,
+          "cartoon": 717
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 1,
+      "base_only_cartoon_retreat_hd": 0,
+      "high_tide_clearance_hd": {
+        "original": 10,
+        "hd": 10,
+        "cartoon": 9
+      }
+    },
+    {
+      "source_xy": [
+        21,
+        22
+      ],
+      "world_hd_stem_bottom": [
+        708,
+        617
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 647,
+        "hd": 647,
+        "cartoon": 646
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 647,
+          "hd": 647,
+          "cartoon": 645
+        },
+        "low": {
+          "original": 727,
+          "hd": 727,
+          "cartoon": 727
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 2,
+      "base_only_cartoon_retreat_hd": 1,
+      "high_tide_clearance_hd": {
+        "original": 30,
+        "hd": 30,
+        "cartoon": 28
+      }
+    },
+    {
+      "source_xy": [
+        32,
+        28
+      ],
+      "world_hd_stem_bottom": [
+        730,
+        629
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 637,
+        "hd": 637,
+        "cartoon": 639
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 649,
+          "hd": 649,
+          "cartoon": 637
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 12,
+      "base_only_cartoon_retreat_hd": -2,
+      "high_tide_clearance_hd": {
+        "original": 20,
+        "hd": 20,
+        "cartoon": 8
+      }
+    },
+    {
+      "source_xy": [
+        38,
+        23
+      ],
+      "world_hd_stem_bottom": [
+        742,
+        619
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 637,
+        "hd": 637,
+        "cartoon": 637
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 645,
+          "hd": 645,
+          "cartoon": 636
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 9,
+      "base_only_cartoon_retreat_hd": 0,
+      "high_tide_clearance_hd": {
+        "original": 26,
+        "hd": 26,
+        "cartoon": 17
+      }
+    },
+    {
+      "source_xy": [
+        44,
+        36
+      ],
+      "world_hd_stem_bottom": [
+        754,
+        645
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 641,
+        "hd": 641,
+        "cartoon": 640
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 647,
+          "hd": 647,
+          "cartoon": 639
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 8,
+      "base_only_cartoon_retreat_hd": 1,
+      "high_tide_clearance_hd": {
+        "original": 2,
+        "hd": 2,
+        "cartoon": -6
+      }
+    },
+    {
+      "source_xy": [
+        48,
+        31
+      ],
+      "world_hd_stem_bottom": [
+        762,
+        635
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 645,
+        "hd": 645,
+        "cartoon": 644
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 649,
+          "hd": 649,
+          "cartoon": 642
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 7,
+      "base_only_cartoon_retreat_hd": 1,
+      "high_tide_clearance_hd": {
+        "original": 14,
+        "hd": 14,
+        "cartoon": 7
+      }
+    },
+    {
+      "source_xy": [
+        54,
+        37
+      ],
+      "world_hd_stem_bottom": [
+        774,
+        647
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 649,
+        "hd": 649,
+        "cartoon": 648
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 653,
+          "hd": 653,
+          "cartoon": 647
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 6,
+      "base_only_cartoon_retreat_hd": 1,
+      "high_tide_clearance_hd": {
+        "original": 6,
+        "hd": 6,
+        "cartoon": 0
+      }
+    },
+    {
+      "source_xy": [
+        60,
+        41
+      ],
+      "world_hd_stem_bottom": [
+        786,
+        655
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 653,
+        "hd": 653,
+        "cartoon": 652
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 653,
+          "hd": 653,
+          "cartoon": 650
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 3,
+      "base_only_cartoon_retreat_hd": 1,
+      "high_tide_clearance_hd": {
+        "original": -2,
+        "hd": -2,
+        "cartoon": -5
+      }
+    },
+    {
+      "source_xy": [
+        68,
+        40
+      ],
+      "world_hd_stem_bottom": [
+        802,
+        653
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 657,
+        "hd": 657,
+        "cartoon": 656
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 659,
+          "hd": 659,
+          "cartoon": 654
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 5,
+      "base_only_cartoon_retreat_hd": 1,
+      "high_tide_clearance_hd": {
+        "original": 6,
+        "hd": 6,
+        "cartoon": 1
+      }
+    },
+    {
+      "source_xy": [
+        78,
+        44
+      ],
+      "world_hd_stem_bottom": [
+        822,
+        661
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 659,
+        "hd": 659,
+        "cartoon": 658
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 663,
+          "hd": 663,
+          "cartoon": 657
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 6,
+      "base_only_cartoon_retreat_hd": 1,
+      "high_tide_clearance_hd": {
+        "original": 2,
+        "hd": 2,
+        "cartoon": -4
+      }
+    },
+    {
+      "source_xy": [
+        92,
+        44
+      ],
+      "world_hd_stem_bottom": [
+        850,
+        661
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 657,
+        "hd": 657,
+        "cartoon": 657
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 663,
+          "hd": 663,
+          "cartoon": 655
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 8,
+      "base_only_cartoon_retreat_hd": 0,
+      "high_tide_clearance_hd": {
+        "original": 2,
+        "hd": 2,
+        "cartoon": -6
+      }
+    },
+    {
+      "source_xy": [
+        102,
+        45
+      ],
+      "world_hd_stem_bottom": [
+        870,
+        663
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 657,
+        "hd": 657,
+        "cartoon": 656
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 663,
+          "hd": 663,
+          "cartoon": 654
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 9,
+      "base_only_cartoon_retreat_hd": 1,
+      "high_tide_clearance_hd": {
+        "original": 0,
+        "hd": 0,
+        "cartoon": -9
+      }
+    },
+    {
+      "source_xy": [
+        104,
+        38
+      ],
+      "world_hd_stem_bottom": [
+        874,
+        649
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 657,
+        "hd": 657,
+        "cartoon": 656
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 663,
+          "hd": 663,
+          "cartoon": 655
+        },
+        "low": {
+          "original": 729,
+          "hd": 729,
+          "cartoon": 729
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 8,
+      "base_only_cartoon_retreat_hd": 1,
+      "high_tide_clearance_hd": {
+        "original": 14,
+        "hd": 14,
+        "cartoon": 6
+      }
+    },
+    {
+      "source_xy": [
+        112,
+        43
+      ],
+      "world_hd_stem_bottom": [
+        890,
+        659
+      ],
+      "base_sprite_lower_alpha128_y": {
+        "original": 657,
+        "hd": 657,
+        "cartoon": 656
+      },
+      "native_lower_sand_y": {
+        "high": {
+          "original": 665,
+          "hd": 665,
+          "cartoon": 655
+        },
+        "low": {
+          "original": 727,
+          "hd": 727,
+          "cartoon": 727
+        }
+      },
+      "high_tide_cartoon_retreat_hd": 10,
+      "base_only_cartoon_retreat_hd": 1,
+      "high_tide_clearance_hd": {
+        "original": 6,
+        "hd": 6,
+        "cartoon": -4
+      }
+    }
+  ],
+  "selected_native_columns": [
+    {
+      "name": "pumpkin-center",
+      "world_x": 860,
+      "native_high_sand_bottom": {
+        "original": 663,
+        "hd": 663,
+        "cartoon": 655
+      }
+    },
+    {
+      "name": "tree-center",
+      "world_x": 856,
+      "native_high_sand_bottom": {
+        "original": 663,
+        "hd": 663,
+        "cartoon": 655
+      }
+    },
+    {
+      "name": "clover-left",
+      "world_x": 680,
+      "native_high_sand_bottom": {
+        "original": 649,
+        "hd": 649,
+        "cartoon": 636
+      }
+    },
+    {
+      "name": "clover-middle",
+      "world_x": 784,
+      "native_high_sand_bottom": {
+        "original": 655,
+        "hd": 655,
+        "cartoon": 650
+      }
+    },
+    {
+      "name": "clover-right",
+      "world_x": 894,
+      "native_high_sand_bottom": {
+        "original": 665,
+        "hd": 665,
+        "cartoon": 655
+      }
+    }
+  ],
+  "high_tide_stem_samples_below_sand": {
+    "original": 1,
+    "hd": 1,
+    "cartoon": 6
+  },
+  "max_composed_retreat_hd": 13,
+  "max_base_retreat_hd": 1
+}
