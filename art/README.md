@@ -18,3 +18,8 @@ The final shoreline, offshore wave motion and inset banner are approved. The
 [combined delivery](../docs/cartoon-seasonal-verification.md) identifies the
 selected versions and their integration checks; the draft record preserves
 earlier review history.
+
+The [post-merge audit](../docs/cartoon-seasonal-post-merge-audit.md) is the current
+status reference. Pending-production language inside the versioned shoreline
+and integrated-shore READMEs describes their historical checkpoints; the
+combined delivery above supersedes it.

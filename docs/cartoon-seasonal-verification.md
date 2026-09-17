@@ -5,6 +5,10 @@ complete repositioned side waves, clean white center wave 007, and four seasonal
 decorations. The pumpkin retains its red eyes, sharp grin and slight rot. The
 inset New Year banner meets the existing palm fronds; the palm drawing is unchanged.
 
+PR 17 is merged into main. The [fresh-main audit](cartoon-seasonal-post-merge-audit.md)
+records the post-merge Windows gate, all four CI jobs, package readback and
+parallel core, platform and authoring reviews.
+
 The final user decision was "Looks good, proceed" after the combined wave motion
 review. The [selection record](../art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/selection.json)
 preserves the exact viewer, native evidence and approved wave package identities.
