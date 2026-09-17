@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "tool": "built-in image_gen",
+  "model_identifier": "not exposed by tool",
+  "seed": "not exposed by tool",
+  "acceptance": "Pending human review. Version selection here means technical candidate selection only.",
+  "images": [
+    {
+      "file": "016-generated-v1.png",
+      "sha256": "ac050efc79af1738c1ee848bf3f7d522f8eae0fface6906bfd022a77552da22d",
+      "request": "requests.json",
+      "request_slot": "016",
+      "tool_output_filename": "exec-5b9870ac-075a-4293-bdf4-f8cd5fbe7687.png",
+      "selected": false,
+      "reason": "Meaningful silhouette357px high versus original guide342px, causing excessive height at exact guide scale. Used as edit ancestor."
+    },
+    {
+      "file": "016-generated-v2.png",
+      "sha256": "f16bd7802c23c3dd6040e8d5ddd181ad880e87ecf23e071bb004b9690a52be4e",
+      "request": "016-v2-request.json",
+      "tool_output_filename": "exec-907697bb-47b8-41d6-926f-3d3ed6b7ab23.png",
+      "selected": true,
+      "reason": "Lower outline fits original canvas with uniform technical downsampling. Result is shallower than requested; exact original silhouette equivalence is not claimed."
+    },
+    {
+      "file": "017-generated-v1.png",
+      "sha256": "5e09450ceb5568446a3a3400592aead9e6e10526b871afccf675ac6900e8a70f",
+      "request": "requests.json",
+      "request_slot": "017",
+      "tool_output_filename": "exec-71cbbd1d-be14-49aa-87b2-641e4fdd178a.png",
+      "selected": false,
+      "reason": "Meaningful silhouette436px high versus original guide380px. Too tall for original canvas at guide scale; used as edit ancestor."
+    },
+    {
+      "file": "017-generated-v2.png",
+      "sha256": "c9343aa097d1700cb736287e2e9af36ceaf6affec799913368171fb85c987a58",
+      "request": "017-v2-request.json",
+      "tool_output_filename": "exec-73c78f44-4163-4e26-9105-2a99cf3684ba.png",
+      "selected": true,
+      "reason": "Flatter formation retains separate trailing wisp and lower opening, suitable for original canvas at a documented uniform scale."
+    }
+  ],
+  "alpha_notes": "Tool outputs are RGBA with interior alpha254 and sparse alpha1-7 pixels beyond meaningful outline, as in approved015. Inspect rendered edges; no alpha threshold or color key is applied. Alpha8 measurements are diagnostic only.",
+  "source_cache": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75",
+  "project_copy": "All four raw PNGs copied byte-for-byte into this directory; originals remain at tool destination."
+}

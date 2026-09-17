@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "scope": "Six source references and21 PNG readbacks only; no creative export, engine run or broad suite.",
+  "source_sha256": "05e2031499a2079fe67bbd756d963ba7fee548e644cc9e19c4652f20a568e1a6",
+  "prepare_lf_sha256": "1847754831db1752eac49ff5801b47ba282075da2928ba53a3152dc8b492c489",
+  "verify_lf_sha256": "b35e2587f337d5b06114ea87c075618d7d5e9084feb46d18173d55ff0a0296a6",
+  "ordered_fresh_process_checks": [
+    {
+      "name": "fresh_replay",
+      "arguments": [
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "WITNESS cloud-reference 1847754831db1752eac49ff5801b47ba282075da2928ba53a3152dc8b492c489\nPASS cloud-reference {\"frames\": 6, \"files\": 22, \"check\": true}\n",
+      "stderr": ""
+    },
+    {
+      "name": "wrong_original_archive",
+      "arguments": [
+        "--check",
+        "--originals",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\assets\\scrantic_data.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "WITNESS cloud-reference 1847754831db1752eac49ff5801b47ba282075da2928ba53a3152dc8b492c489\nFAIL art/cartoon/character-inventory-v1/reference-originals.zip: source identity differs\n",
+      "stderr": ""
+    },
+    {
+      "name": "restored_positive",
+      "arguments": [
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "WITNESS cloud-reference 1847754831db1752eac49ff5801b47ba282075da2928ba53a3152dc8b492c489\nPASS cloud-reference {\"frames\": 6, \"files\": 22, \"check\": true}\n",
+      "stderr": ""
+    }
+  ],
+  "pixel_checks": [
+    {
+      "resource": "CLOUDS.BMP",
+      "frame": 0,
+      "exact_guide_replication": true,
+      "source_alpha_values": [
+        0,
+        255
+      ],
+      "hd_vs_original2x_alpha_different_pixels": 276,
+      "hd_vs_original2x_visible_rgb_different_pixels": 656
+    },
+    {
+      "resource": "CLOUDS.BMP",
+      "frame": 1,
+      "exact_guide_replication": true,
+      "source_alpha_values": [
+        0,
+        255
+      ],
+      "hd_vs_original2x_alpha_different_pixels": 60,
+      "hd_vs_original2x_visible_rgb_different_pixels": 136
+    },
+    {
+      "resource": "CLOUDS.BMP",
+      "frame": 2,
+      "exact_guide_replication": true,
+      "source_alpha_values": [
+        0,
+        255
+      ],
+      "hd_vs_original2x_alpha_different_pixels": 104,
+      "hd_vs_original2x_visible_rgb_different_pixels": 0
+    },
+    {
+      "resource": "CLOUDS.BMP",
+      "frame": 3,
+      "exact_guide_replication": true,
+      "source_alpha_values": [
+        0,
+        255
+      ],
+      "hd_vs_original2x_alpha_different_pixels": 36,
+      "hd_vs_original2x_visible_rgb_different_pixels": 0
+    },
+    {
+      "resource": "BACKGRND.BMP",
+      "frame": 16,
+      "exact_guide_replication": true,
+      "source_alpha_values": [
+        0,
+        255
+      ],
+      "hd_vs_original2x_alpha_different_pixels": 4,
+      "hd_vs_original2x_visible_rgb_different_pixels": 352
+    },
+    {
+      "resource": "BACKGRND.BMP",
+      "frame": 17,
+      "exact_guide_replication": true,
+      "source_alpha_values": [
+        0,
+        255
+      ],
+      "hd_vs_original2x_alpha_different_pixels": 0,
+      "hd_vs_original2x_visible_rgb_different_pixels": 820
+    }
+  ],
+  "limitation": "The negative control substitutes an actual wrong archive and proves the source identity guard. No source-removal mutation or original decoder rerun is claimed."
+}

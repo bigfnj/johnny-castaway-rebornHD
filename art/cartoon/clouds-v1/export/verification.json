@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "scope": "Fixed-transform pixel/package replay and three invalid binding inputs; no native run or human approval.",
+  "exporter_lf_sha256": "83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083",
+  "verification_helper_lf_sha256": "06bcff0f64747d396323c4cff1af00713338d1a3d076cc2f298437d0536bd4dd",
+  "recipe_sha256": "6b6ce670d31de1dc918df83a74d9f8035b6ee5a3a695bb858b10fece4494e7e7",
+  "export_report_sha256": "1f0d0a72b22efecc6c10bb9de255328e9e5468fbcd42dcecd3d9d29761e348be",
+  "package_report_sha256": "a162a51e59c705166dd8caa92a6c6ec8ad24e3db7f4da820952cd4f35e6e60b2",
+  "candidate_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "baseline_readback_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+  "ordered_checks": [
+    {
+      "name": "fresh_replay",
+      "arguments": [
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "WITNESS cloud-export 83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083\nPASS cloud-export {\"baseline_sha256\": \"a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66\", \"candidate_sha256\": \"a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d\", \"members\": 2614, \"cartoon_png_members\": 63, \"unchanged_baseline_payloads\": 2612, \"added_members_sha256\": {\"data/styles/cartoon/BMP/BACKGRND.BMP/016.png\": \"c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87\", \"data/styles/cartoon/BMP/BACKGRND.BMP/017.png\": \"6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4\"}}\n",
+      "stderr": ""
+    },
+    {
+      "name": "wrong_016_source_hash",
+      "arguments": [
+        "--check",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\export-controls\\wrong_016_source_hash.json"
+      ],
+      "exit_code": 1,
+      "stdout": "WITNESS cloud-export 83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083\nFAIL recipe: selected source, prompt or fixed registration binding differs\n",
+      "stderr": ""
+    },
+    {
+      "name": "wrong_017_registration",
+      "arguments": [
+        "--check",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\export-controls\\wrong_017_registration.json"
+      ],
+      "exit_code": 1,
+      "stdout": "WITNESS cloud-export 83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083\nFAIL recipe: selected source, prompt or fixed registration binding differs\n",
+      "stderr": ""
+    },
+    {
+      "name": "wrong_baseline_archive",
+      "arguments": [
+        "--check",
+        "--baseline",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\art\\cartoon\\character-inventory-v1\\reference-originals.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "WITNESS cloud-export 83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083\nFAIL baseline archive: identity differs\n",
+      "stderr": ""
+    },
+    {
+      "name": "restored_positive",
+      "arguments": [
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "WITNESS cloud-export 83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083\nPASS cloud-export {\"baseline_sha256\": \"a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66\", \"candidate_sha256\": \"a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d\", \"members\": 2614, \"cartoon_png_members\": 63, \"unchanged_baseline_payloads\": 2612, \"added_members_sha256\": {\"data/styles/cartoon/BMP/BACKGRND.BMP/016.png\": \"c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87\", \"data/styles/cartoon/BMP/BACKGRND.BMP/017.png\": \"6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4\"}}\n",
+      "stderr": ""
+    }
+  ],
+  "relocated_cli_replay": {
+    "status": "PASS",
+    "fresh_root": "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\export-controls\\relocated-iimpp_n6",
+    "copied_files_sha256": {
+      "art/cartoon/clouds-v1/export.py": "83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083",
+      "art/cartoon/clouds-v1/generation/016-generated-v1.png": "ac050efc79af1738c1ee848bf3f7d522f8eae0fface6906bfd022a77552da22d",
+      "art/cartoon/clouds-v1/generation/016-generated-v2.png": "f16bd7802c23c3dd6040e8d5ddd181ad880e87ecf23e071bb004b9690a52be4e",
+      "art/cartoon/clouds-v1/generation/016-v2-request.json": "a87fe6c4a5684a8fa52ec6d14d35c708193d1651205ef880fd578b8108e7af27",
+      "art/cartoon/clouds-v1/generation/017-generated-v1.png": "5e09450ceb5568446a3a3400592aead9e6e10526b871afccf675ac6900e8a70f",
+      "art/cartoon/clouds-v1/generation/017-generated-v2.png": "c9343aa097d1700cb736287e2e9af36ceaf6affec799913368171fb85c987a58",
+      "art/cartoon/clouds-v1/generation/017-v2-request.json": "758d2c7e675d97d8bd26a7e8780c6e70e99dea992e65180fbfd320220912b0cb",
+      "art/cartoon/clouds-v1/generation/requests.json": "ca2557b2787f3486ba3705183579470b827516219ab11894b59d29c1683011e5",
+      "art/cartoon/clouds-v1/recipe.json": "6b6ce670d31de1dc918df83a74d9f8035b6ee5a3a695bb858b10fece4494e7e7",
+      "art/cartoon/clouds-v1/reference/backgrnd-016-guide.png": "b80c9fee6c363d17b84baac5327dc257106d0452510ea9d19c3fa80786114105",
+      "art/cartoon/clouds-v1/reference/backgrnd-016-original.png": "e89b96d0426b4af1d6a692982aab9da852daa71326352fe74519955c71b793ab",
+      "art/cartoon/clouds-v1/reference/backgrnd-017-guide.png": "e54aab9a2271572bb46d33aaec8ae48921217c6947494b0224e83bbe3c0bdada",
+      "art/cartoon/clouds-v1/reference/backgrnd-017-original.png": "ca4ac23cbf15843c0fc166bbbad8a4478013f6f88cd46c36190acc3b1dbbaa16",
+      "art/cartoon/clouds-v1/reference/source.json": "05e2031499a2079fe67bbd756d963ba7fee548e644cc9e19c4652f20a568e1a6",
+      "art/cartoon/clouds-v1/style-reference/approved-cloud-raw.png": "b50454479c9f08d2eebf381d0d110aab4f3fde6c2d046161da4c22a77b1e21ca",
+      "art/cartoon/seasonal-v1/export.py": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d"
+    },
+    "recipe_byte_identical": true,
+    "candidate_byte_identical": true,
+    "five_rendered_pngs_byte_identical": true,
+    "stdout": "WITNESS cloud-export 83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083\nPASS cloud-export {\"baseline_sha256\": \"a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66\", \"candidate_sha256\": \"a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d\", \"members\": 2614, \"cartoon_png_members\": 63, \"unchanged_baseline_payloads\": 2612, \"added_members_sha256\": {\"data/styles/cartoon/BMP/BACKGRND.BMP/016.png\": \"c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87\", \"data/styles/cartoon/BMP/BACKGRND.BMP/017.png\": \"6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4\"}}\n",
+    "stderr": "",
+    "escaping_reference_control": {
+      "input": "D:/old/art/cartoon/clouds-v1/../outside.png",
+      "exit_code": 1,
+      "stdout": "WITNESS cloud-export 83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\export-controls\\relocated-iimpp_n6\\art\\cartoon\\clouds-v1\\export.py\", line 56, in resolve_reference\n    require((not prefix or prefix.endswith('/')) and suffix and\n  File \"D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\export-controls\\relocated-iimpp_n6\\art\\cartoon\\clouds-v1\\export.py\", line 38, in require\n    raise ValueError(message)\nValueError: recorded reference: escaping or invalid batch path\n"
+    },
+    "foreign_batch_control": {
+      "input": "D:/old/art/cartoon/other-batch/input.png",
+      "exit_code": 1,
+      "stdout": "WITNESS cloud-export 83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\export-controls\\relocated-iimpp_n6\\art\\cartoon\\clouds-v1\\export.py\", line 54, in resolve_reference\n    require(normalized.count(marker) == 1, 'recorded reference: missing or ambiguous batch suffix')\n  File \"D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\export-controls\\relocated-iimpp_n6\\art\\cartoon\\clouds-v1\\export.py\", line 38, in require\n    raise ValueError(message)\nValueError: recorded reference: missing or ambiguous batch suffix\n"
+    }
+  },
+  "diagnostic": {
+    "path": "comparison-with-015.png",
+    "sha256": "bd8c0a7e23253dbe3eec5777c102683d8a9afcad92cb4c1f04a81bb57d049e08",
+    "sky_rgb": [
+      91,
+      157,
+      203
+    ],
+    "original_scale": 2,
+    "runtime_scale": 1,
+    "unchanged015_sha256": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+    "used_as_export_input": false
+  },
+  "limits": "Controls execute fresh helper processes with bad recipe hashes/registration and a wrong archive. No source-removal mutant or renderer regression is claimed."
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cloud companions</title><style>
+:root{color-scheme:dark;font:16px/1.5 system-ui,sans-serif;background:#111c28;color:#edf1f4}body{max-width:1480px;margin:auto;padding:24px}h1{margin:0;font-size:28px}p{color:#becad5;margin:8px 0 20px}button,select{font:inherit;background:#26394b;color:inherit;border:1px solid #536779;border-radius:7px;padding:7px 12px}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}label{display:inline-flex;align-items:center;gap:8px}.controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0}.panels{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{border:1px solid #3d5263;border-radius:10px;overflow:hidden;background:#070e16}.panel h2{font-size:17px;margin:0;padding:10px 14px;background:#203040}canvas{width:100%;height:auto;display:block}#seek{width:min(550px,70vw)}#status{font-variant-numeric:tabular-nums;color:#bdcdda;min-height:24px}details{margin-top:20px;color:#aebcc8;font-size:14px}a{color:#add7fb}@media(max-width:800px){.panels{grid-template-columns:1fr}body{padding:14px}}
+</style></head><body>
+<h1>Cloud companions</h1>
+<p>Compare the new medium and large clouds. The small cloud stays unchanged.</p>
+<div class="controls"><label>Scene <select id="scene"></select></label><label>View <select id="view"><option value="sky">Sky close-up</option><option value="full">Full scene</option></select></label><label>Speed <select id="speed"><option value="1">Normal</option><option value="0.5">Slow</option></select></label><button id="play" disabled>Play</button><button id="replay" disabled>Replay</button><button id="prev" disabled aria-label="Previous frame">&#9664;</button><button id="next" disabled aria-label="Next frame">&#9654;</button></div>
+<div class="panels"><section class="panel"><h2>Current clouds</h2><canvas id="before" width="1280" height="340"></canvas></section><section class="panel"><h2>New medium and large clouds</h2><canvas id="after" width="1280" height="340"></canvas></section></div>
+<div class="controls"><input id="seek" type="range" min="0" max="1" value="0" step="1" aria-label="Recorded frame" disabled><span id="status">Loading...</span></div>
+<p id="note"></p>
+<details><summary>About this comparison</summary><p>These are recordings from the game port, using the same cloud positions, speeds and timing on both sides. Normal speed follows the recorded timing. Each scene is a short clip; Replay starts that recording again. The island and waves are unchanged. Night uses the existing night background and the same cloud colors.</p></details>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), controls=['play','replay','prev','next','seek'];
+let manifest, atlases={}, current, index=0, clock=0, playing=false, last=null, ready=false;
+const full=[document.createElement('canvas'),document.createElement('canvas')];
+full.forEach(c=>{c.width=1280;c.height=960;});
+function image(url){return new Promise((resolve,reject)=>{const i=new Image();i.onload=()=>resolve(i);i.onerror=()=>reject(new Error('Image failed: '+url));i.src=url;});}
+function frameCanvas(canvas,id){const ctx=canvas.getContext('2d');const frame=manifest.images[id];frame.tiles.forEach((id,j)=>{const t=manifest.tiles[id];ctx.drawImage(atlases[t.atlas],t.x,t.y,64,64,(j%20)*64,Math.floor(j/20)*64,64,64);});}
+function draw(){if(!ready)return;const r=current.frames[index];[r.baseline,r.candidate].forEach((id,i)=>{frameCanvas(full[i],id);const c=$(i?'after':'before'),h=$('view').value==='sky'?340:960;c.width=1280;c.height=h;c.getContext('2d').drawImage(full[i],0,0,1280,h,0,0,1280,h);});$('seek').value=index;status();}
+function status(){if(!ready)return;$('status').textContent=`Frame ${index+1} of ${current.frames.length} · ${(clock/1000).toFixed(2)} / ${(current.duration_ms/1000).toFixed(2)} s`;$('play').textContent=playing?'Pause':'Play';$('prev').disabled=index===0;$('next').disabled=index===current.frames.length-1;}
+function choose(){if(!ready)return;playing=false;last=null;current=manifest.cases[$('scene').value];index=0;clock=0;$('seek').max=current.frames.length-1;$('note').textContent=current.note;draw();}
+function seek(i){playing=false;last=null;index=Math.max(0,Math.min(current.frames.length-1,i));clock=current.frames[index].time_ms;draw();}
+$('scene').onchange=choose;$('view').onchange=draw;$('speed').onchange=()=>{last=null;};
+$('play').onclick=()=>{if(clock>=current.duration_ms){index=0;clock=0;draw();}playing=!playing;last=null;status();};
+$('replay').onclick=()=>{index=0;clock=0;playing=true;last=null;draw();};
+$('prev').onclick=()=>seek(index-1);$('next').onclick=()=>seek(index+1);$('seek').oninput=()=>seek(Number($('seek').value));
+document.addEventListener('visibilitychange',()=>{last=null;});
+function tick(now){if(ready&&playing&&!document.hidden){if(last!==null)clock=Math.min(current.duration_ms,clock+(now-last)*Number($('speed').value));let i=index;while(i+1<current.frames.length&&current.frames[i+1].time_ms<=clock)i++;if(i!==index){index=i;draw();}if(clock>=current.duration_ms)playing=false;status();}last=document.hidden?null:now;requestAnimationFrame(tick);}
+requestAnimationFrame(tick);
+(async()=>{try{const response=await fetch('manifest.json');if(!response.ok)throw new Error('Manifest unavailable');manifest=await response.json();for(const [id,c]of Object.entries(manifest.cases))$('scene').add(new Option(c.label,id));await Promise.all(Object.keys(manifest.atlases).map(async name=>{atlases[name]=await image(name);}));ready=true;controls.forEach(id=>$(id).disabled=false);$('scene').value=manifest.default_case;choose();window.cloudReview={manifest,full,state:()=>({case:$('scene').value,index,clock,playing,ready})};}catch(e){$('status').textContent=e.message;}})();
+</script></body></html>

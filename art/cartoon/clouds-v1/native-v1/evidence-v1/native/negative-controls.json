@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "name": "actual016placement",
+      "status": "FIRED",
+      "failure": "cloud native: 016 actual cloud blit bounds"
+    },
+    {
+      "name": "outside_pixel",
+      "status": "FIRED",
+      "failure": "cloud native: pixel outside displayed016/017"
+    },
+    {
+      "name": "wrong016canvas",
+      "status": "FIRED",
+      "failure": "cloud native: 016 original scaled canvas"
+    }
+  ],
+  "method": "Actual log/pixels and selected member metadata damaged in memory; each expected named failure and restored positive executed.",
+  "checker_sha256": "902e613aeec8daf4a2ec79bc468c66fd80920e76b66c641fe50807a2fddbc29c"
+}

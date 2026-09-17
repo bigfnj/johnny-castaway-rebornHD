@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "source_commit": "de1e489e5c2fe3b22d03e8650bfc26cc1d8a12cc",
+  "baseline_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+  "candidate_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "native_summary_sha256": "89410d424d87f05a3c728a95fc6d9335077d1c36a1ef5b55bb5c195b184f7c21",
+  "files": {
+    "check_preservation.py": {
+      "sha256": "88faa4f94d27fa5495a73d9abdac5da4f738bd5ba193b9fd7a2ac9733ce6578a",
+      "bytes": 1893,
+      "source": "build/clouds-v1/check_preservation.py"
+    },
+    "native/build.json": {
+      "sha256": "f618c900c09954211ded9429c840d92d7eb0c400105e70df2b3df20c23cb8779",
+      "bytes": 4141,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/build.json"
+    },
+    "native/build.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/build.stderr.txt"
+    },
+    "native/build.stdout.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/build.stdout.txt"
+    },
+    "native/day_left/baseline/repeat/capture.log": {
+      "sha256": "3e21a62df1bc58d3a87e74ce7f7d782e8fb3ad1da6475a0ece651e79a14fb6fc",
+      "bytes": 35524,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_left/baseline/repeat/capture.log"
+    },
+    "native/day_left/baseline/repeat/report.json": {
+      "sha256": "6fd6a09e60015063db225db8721e4218d29d4741e2432f3c584e0d116ff43898",
+      "bytes": 85457,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_left/baseline/repeat/report.json"
+    },
+    "native/day_left/baseline/smoke/capture.log": {
+      "sha256": "3e21a62df1bc58d3a87e74ce7f7d782e8fb3ad1da6475a0ece651e79a14fb6fc",
+      "bytes": 35524,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_left/baseline/smoke/capture.log"
+    },
+    "native/day_left/baseline/smoke/report.json": {
+      "sha256": "6fd6a09e60015063db225db8721e4218d29d4741e2432f3c584e0d116ff43898",
+      "bytes": 85457,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_left/baseline/smoke/report.json"
+    },
+    "native/day_left/candidate/repeat/capture.log": {
+      "sha256": "1775bdb24c70f3c66735678a78d24021a3e8da3f1f782cdb8a41631a9441ec0f",
+      "bytes": 35572,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_left/candidate/repeat/capture.log"
+    },
+    "native/day_left/candidate/repeat/report.json": {
+      "sha256": "fa6087d06fce327525223953af3fd5efb3a1f29570cd6a8cd0e991568cf14c2e",
+      "bytes": 85481,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_left/candidate/repeat/report.json"
+    },
+    "native/day_left/candidate/smoke/capture.log": {
+      "sha256": "1775bdb24c70f3c66735678a78d24021a3e8da3f1f782cdb8a41631a9441ec0f",
+      "bytes": 35572,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_left/candidate/smoke/capture.log"
+    },
+    "native/day_left/candidate/smoke/report.json": {
+      "sha256": "fa6087d06fce327525223953af3fd5efb3a1f29570cd6a8cd0e991568cf14c2e",
+      "bytes": 85481,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_left/candidate/smoke/report.json"
+    },
+    "native/day_right/baseline/repeat/capture.log": {
+      "sha256": "4faac60da0433efb946cb49287cdb72b3db5154fa917fc4ab37024890011bab9",
+      "bytes": 35627,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_right/baseline/repeat/capture.log"
+    },
+    "native/day_right/baseline/repeat/report.json": {
+      "sha256": "285614e1c38dfead8acc7af13e91e08c1baae8e44d34ecd8499e4013f5802f4c",
+      "bytes": 85887,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_right/baseline/repeat/report.json"
+    },
+    "native/day_right/baseline/smoke/capture.log": {
+      "sha256": "4faac60da0433efb946cb49287cdb72b3db5154fa917fc4ab37024890011bab9",
+      "bytes": 35627,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_right/baseline/smoke/capture.log"
+    },
+    "native/day_right/baseline/smoke/report.json": {
+      "sha256": "285614e1c38dfead8acc7af13e91e08c1baae8e44d34ecd8499e4013f5802f4c",
+      "bytes": 85887,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_right/baseline/smoke/report.json"
+    },
+    "native/day_right/candidate/repeat/capture.log": {
+      "sha256": "d5c99d71c2968b05bd3c57211f11b6c269d9ca4342b6b3037b6b66c452aa2296",
+      "bytes": 35675,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_right/candidate/repeat/capture.log"
+    },
+    "native/day_right/candidate/repeat/report.json": {
+      "sha256": "f538358ea4d7697763bb3b365a6715a3eb532e0f54aa954420aa1cbb08c08bdf",
+      "bytes": 85911,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_right/candidate/repeat/report.json"
+    },
+    "native/day_right/candidate/smoke/capture.log": {
+      "sha256": "d5c99d71c2968b05bd3c57211f11b6c269d9ca4342b6b3037b6b66c452aa2296",
+      "bytes": 35675,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_right/candidate/smoke/capture.log"
+    },
+    "native/day_right/candidate/smoke/report.json": {
+      "sha256": "f538358ea4d7697763bb3b365a6715a3eb532e0f54aa954420aa1cbb08c08bdf",
+      "bytes": 85911,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/day_right/candidate/smoke/report.json"
+    },
+    "native/inputs.json": {
+      "sha256": "253075eea5edd285c271c48c478a527ca0b532d02b759722fdc8f54188e0b2c1",
+      "bytes": 8226,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/inputs.json"
+    },
+    "native/negative-controls.json": {
+      "sha256": "906d923b862a66cf372f8eda23c6a174e5164e168ebf9c7e5e62d30a80e715a1",
+      "bytes": 671,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/negative-controls.json"
+    },
+    "native/night_shift_right/baseline/repeat/capture.log": {
+      "sha256": "9b854bd96800032233a63d09a5245bfe61aa22a60cec40fac398afabfc46e410",
+      "bytes": 36345,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/night_shift_right/baseline/repeat/capture.log"
+    },
+    "native/night_shift_right/baseline/repeat/report.json": {
+      "sha256": "2c507e08071646ba7317f5a2b0f3498be3f165685aab08822d85c8a9bfe2a38c",
+      "bytes": 87177,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/night_shift_right/baseline/repeat/report.json"
+    },
+    "native/night_shift_right/baseline/smoke/capture.log": {
+      "sha256": "9b854bd96800032233a63d09a5245bfe61aa22a60cec40fac398afabfc46e410",
+      "bytes": 36345,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/night_shift_right/baseline/smoke/capture.log"
+    },
+    "native/night_shift_right/baseline/smoke/report.json": {
+      "sha256": "2c507e08071646ba7317f5a2b0f3498be3f165685aab08822d85c8a9bfe2a38c",
+      "bytes": 87177,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/night_shift_right/baseline/smoke/report.json"
+    },
+    "native/night_shift_right/candidate/repeat/capture.log": {
+      "sha256": "5a3d95e3d78006bc71b19998d44e35797c5ed1d4e192ab68f4a0aa4cf4e37d5b",
+      "bytes": 36393,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/night_shift_right/candidate/repeat/capture.log"
+    },
+    "native/night_shift_right/candidate/repeat/report.json": {
+      "sha256": "1d9ad27c28b72660dcb4029fba58acf3147e3711865043a431fe4052deb9fc7c",
+      "bytes": 87201,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/night_shift_right/candidate/repeat/report.json"
+    },
+    "native/night_shift_right/candidate/smoke/capture.log": {
+      "sha256": "5a3d95e3d78006bc71b19998d44e35797c5ed1d4e192ab68f4a0aa4cf4e37d5b",
+      "bytes": 36393,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/night_shift_right/candidate/smoke/capture.log"
+    },
+    "native/night_shift_right/candidate/smoke/report.json": {
+      "sha256": "1d9ad27c28b72660dcb4029fba58acf3147e3711865043a431fe4052deb9fc7c",
+      "bytes": 87201,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/night_shift_right/candidate/smoke/report.json"
+    },
+    "native/no_clouds/baseline/repeat/capture.log": {
+      "sha256": "8fd36d9efef647be61046ffa561eaf6eaf26f7d2e61f0915c940eb7852ebb6c8",
+      "bytes": 9398,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/no_clouds/baseline/repeat/capture.log"
+    },
+    "native/no_clouds/baseline/repeat/report.json": {
+      "sha256": "73aa6122157f74dd9197a1c15bcad272ff20577ccb24dd71eb2442a8607150dc",
+      "bytes": 8590,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/no_clouds/baseline/repeat/report.json"
+    },
+    "native/no_clouds/baseline/smoke/capture.log": {
+      "sha256": "8fd36d9efef647be61046ffa561eaf6eaf26f7d2e61f0915c940eb7852ebb6c8",
+      "bytes": 9398,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/no_clouds/baseline/smoke/capture.log"
+    },
+    "native/no_clouds/baseline/smoke/report.json": {
+      "sha256": "73aa6122157f74dd9197a1c15bcad272ff20577ccb24dd71eb2442a8607150dc",
+      "bytes": 8590,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/no_clouds/baseline/smoke/report.json"
+    },
+    "native/no_clouds/candidate/repeat/capture.log": {
+      "sha256": "25c96f9ea95bbc8026215d46f4f88381920862b5af042492365dac6f897763d4",
+      "bytes": 9446,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/no_clouds/candidate/repeat/capture.log"
+    },
+    "native/no_clouds/candidate/repeat/report.json": {
+      "sha256": "9e1cc56ff030f15b781f23e7f6c39d5ac03914b5516c054cfd3f1f9b6d09c4ee",
+      "bytes": 8614,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/no_clouds/candidate/repeat/report.json"
+    },
+    "native/no_clouds/candidate/smoke/capture.log": {
+      "sha256": "25c96f9ea95bbc8026215d46f4f88381920862b5af042492365dac6f897763d4",
+      "bytes": 9446,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/no_clouds/candidate/smoke/capture.log"
+    },
+    "native/no_clouds/candidate/smoke/report.json": {
+      "sha256": "9e1cc56ff030f15b781f23e7f6c39d5ac03914b5516c054cfd3f1f9b6d09c4ee",
+      "bytes": 8614,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/no_clouds/candidate/smoke/report.json"
+    },
+    "native/smoke.json": {
+      "sha256": "959d4829a775019a7d74b432ceea25f052b4e9d34e234b34cef2803f088d18fa",
+      "bytes": 2917,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/smoke.json"
+    },
+    "native/summary.json": {
+      "sha256": "89410d424d87f05a3c728a95fc6d9335077d1c36a1ef5b55bb5c195b184f7c21",
+      "bytes": 3527,
+      "source": "build/clouds-v1/native-v1/review-v1/captures/summary.json"
+    },
+    "preservation-control.json": {
+      "sha256": "ddf72002bc3e1d485809481ff926e6e43d87e5079768aedab087456933040d7a",
+      "bytes": 1588,
+      "source": "build/clouds-v1/preservation-control.json"
+    },
+    "review/atlas-00.png": {
+      "sha256": "6cc6bdfa4859dbeedb760d1733d96c34a6f788814cbfe8e164391354c9e8006a",
+      "bytes": 2787176,
+      "source": "build/clouds-v1/review-v1/atlas-00.png"
+    },
+    "review/atlas-01.png": {
+      "sha256": "43a296f9d91259f88e5475a16a45c77580570d7af84a7651df73fb88f9de0cff",
+      "bytes": 3489973,
+      "source": "build/clouds-v1/review-v1/atlas-01.png"
+    },
+    "review/atlas-02.png": {
+      "sha256": "6321be0862ec0b731acf63b95dadd331c6091238ef322270d685ab19fc0a07d8",
+      "bytes": 3344593,
+      "source": "build/clouds-v1/review-v1/atlas-02.png"
+    },
+    "review/atlas-03.png": {
+      "sha256": "be4e8ba78601a32bf3fb1df7db161203293f402795e323eda7361ada0bc68d69",
+      "bytes": 1584745,
+      "source": "build/clouds-v1/review-v1/atlas-03.png"
+    },
+    "review/atlas-04.png": {
+      "sha256": "bf66ec6b2adc6ebf7acbb3fe5d932a4dc468d287828ea9868111f51e0ca22486",
+      "bytes": 426787,
+      "source": "build/clouds-v1/review-v1/atlas-04.png"
+    },
+    "review/browser-review.md": {
+      "sha256": "36572514976be5050a1e75bdbb211863f4fb43180bfcb9dcca5bd8001278aa87",
+      "bytes": 1477,
+      "source": "art/cartoon/clouds-v1/native-v1/browser-review.md"
+    },
+    "review/build.json": {
+      "sha256": "6620726f5880d770a8d4c88b631dcd0d7936f9a22b9d528ab29f21e50106de4d",
+      "bytes": 876,
+      "source": "build/clouds-v1/review-v1/build.json"
+    },
+    "review/manifest.json": {
+      "sha256": "6e17734c21c5f5214e426e6e5646a3d351dec4b1b51556f53ed26fc3505fb1b2",
+      "bytes": 755444,
+      "source": "build/clouds-v1/review-v1/manifest.json"
+    },
+    "review/review.html": {
+      "sha256": "f5fedab390bc64652b7b3ca3e8efaef9d817dd96771157f578c7fc184479ff21",
+      "bytes": 5879,
+      "source": "build/clouds-v1/review-v1/review.html"
+    },
+    "run/launch.json": {
+      "sha256": "9a4b6d9c0e296bcb23f256e78e1f34a12e0830bcc231d53b7f82963eb489e24a",
+      "bytes": 1221,
+      "source": "build/clouds-v1/native-v1/review-v1/launch.json"
+    },
+    "run/launch.log": {
+      "sha256": "9db4bea0d843b9904310a30531bfc3e60713f249fdbb4b0a4f021540d4ab96b4",
+      "bytes": 567,
+      "source": "build/clouds-v1/native-v1/review-v1/launch.log"
+    }
+  },
+  "source_pins": {
+    "src/data/calcpath_data.h": "fdaf8cc409388b1425485801597b272105c6a788eb30825b74441e21f5041237",
+    "src/data/story_data.h": "0f7d6cbd9a37b411839a2a9376c15e035388d00cb0f8cbf4b898dcc93eaff6f6",
+    "src/data/walk_data.h": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769",
+    "src/engine/ads.c": "c4d53220327f62676a159f1b3651626a8dabafdfa5bf625b5e94d443280eb4f6",
+    "src/engine/ads.h": "fbe0925205b5b0ed225152d5892a5aef72e215c1d68e5f94476ddeb66c7996a1",
+    "src/engine/art_style.c": "f6519bfbb7fb9af09ae19b3d41b546bb644dda1952160eef1956ad7466051513",
+    "src/engine/art_style.h": "5e12338406ceec466fc678e63f5e8019c7bebf3ff60fc8068293d3f9d917c897",
+    "src/engine/bench.c": "ca747e19369cd2b57e547393ec4b63cefe3ff1f6a95d4d30fd22b218228ed03c",
+    "src/engine/bench.h": "e7ff059877a2c4a747c3675767da29b01f167989f8a2ba9a57d45e47cfcbf3ad",
+    "src/engine/calcpath.c": "8035aef05017584b5e7e5db1dcac898ba3f51efe444efc072705d5f0523cfacb",
+    "src/engine/calcpath.h": "4b5c614adc8a960e1bbab746aa159c4c908e3377d38a2d3c0f353ae0726d915d",
+    "src/engine/config.c": "a87b4e3d050912d7a82f3efa2d681be2ac20a72cadca3581dffa6d7e572bba58",
+    "src/engine/config.h": "ef00caffb5bba8c4de0e8b09e84911c4c1563fb6d6e5986f3e935e54b0dfcf46",
+    "src/engine/dump.c": "b2e46c22fa854bbc0d75413b441f4afc0afb10d42b6ead737e70bc5d7e92babd",
+    "src/engine/dump.h": "27ad235d4b052886c296999aae65f8604b6b668b3428860db0aea561827226df",
+    "src/engine/events.c": "041ac9fce76af2c3e1fc2eeef56ea9b92b45e1a4adc0087d5318720ccc2d57d2",
+    "src/engine/events.h": "7b73c8f46c470f325fb6b49093cbdc9b4f3c3da598be900d37244bd98bf9ea54",
+    "src/engine/graphics.c": "fded8d14dbfa432242170e0a16010cb882d02f437d31e5a317bfe2baafcee392",
+    "src/engine/graphics.h": "e2b388c6e9edfac3237c88467ba38117c4b1918b2a56f4a4d9dcd635e6fd9ecf",
+    "src/engine/island.c": "78795472d233c9b54bcd8ff32e032358e5e19434e4de7d2fdb26f521d6600737",
+    "src/engine/island.h": "78da2a0bcc15e38636aa8ca7d1f9c1fb7fc48b49bf44a8afd895f3b76b3bef58",
+    "src/engine/jc_reborn.c": "50d9904cffd7c3cba9877ecec383370c612622ccd31a5a013e77755903c358c4",
+    "src/engine/mytypes.h": "cd9d251a4025cb9894b3d13dfb0c05568eadd53b7c15ee16f2af49b6c07cad84",
+    "src/engine/resource.c": "8b60a6d5936dd67ca014aaedde799e8b6f0a567ac482c836bd922a4fa93c6f43",
+    "src/engine/resource.h": "dfb8a1c118fb69a515931b939e7a32e05cc05688b2c09875b496211dcac412af",
+    "src/engine/sound.c": "eec8a1b43e33eccbd4e7f835ca55b7d9ab952818f2093f6a996d69d1ce6a91ee",
+    "src/engine/sound.h": "36bf9900ea05f164190b042905e1d5b5e163015055fa1f9f5cd9ec15c54a1e47",
+    "src/engine/story.c": "b503cca4115b5852f4ed9cdc02c5aef77498c793bac9fdb2b517b19cd8c4b9a4",
+    "src/engine/story.h": "e2bc55888fa518bbac1566f059111e2b4e278a986639cb825dd28a8677663e0c",
+    "src/engine/ttm.c": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6",
+    "src/engine/ttm.h": "7a6a8d40da48f8316d204cc4a8bb664e7cf3950dde0a75f79c0a6bf8b080e48d",
+    "src/engine/uncompress.c": "c8c0483ef3ae43e242ecbfff622c4735aef6f330ebce04f4cda8b43bfbba6b15",
+    "src/engine/uncompress.h": "c58f198f9dad5e00ac344925a0a9c45087253d6c6c950bd06cbc701c906c2148",
+    "src/engine/utils.c": "c50c4ae6de6a59e4fbd1a169592eb920778449f8c000175cb55d66595343c10f",
+    "src/engine/utils.h": "9e6fb0678b6c62c63bea5f58f1772cf02aa7510809639f4984e94d0fa3d43104",
+    "src/engine/walk.c": "d6b88ef1e16a2ad10944ce520485a472d4b13d53fd744087e9c5e573e1908f9d",
+    "src/engine/walk.h": "cd828778b83c73428ba9d7897a87aa7254b7d2d54eb1eb3f31a1ed625cbf5a91",
+    "platform/jc_resources.h": "6054a022fe1f5e793c5e6c1744aeb240b5b24e91c5c2a47eebc53ce0d20d7b8a",
+    "platform/platform.h": "d44c885dac7188ce20c1c9b726e43f0796a1312639ad2136b248469ad1b0f11b",
+    "platform/platform_linux.c": "c57c9aefad8f40e959116772438f0bdbda7403438b1b7188f2453cbecbc66687",
+    "platform/platform_web.c": "559e223cbf6f6ba51ad6d9a2a6ae4c3a1685fbb28d9625b1efc59ca3be48ee4b",
+    "platform/platform_windows.c": "4db7c0906dd3b572a931afb0c711b203b68e76321f102baaf1f9bb8a7543b4db",
+    "platform/png_decoder.c": "e98e3e9a9c3970d8366bcb5e7c8e57a7e5e71b0fad3913d42638cc072fdc2f6a",
+    "platform/png_decoder.h": "b6ea3e50277f2c23e2f7d40fe5f22caf5e0f5c58fa0dc47a4fb5fea67499a2d2",
+    "platform/png_loader.c": "05cbc18bc03a3c7b48c15c2ae010242b37b489302acabf753192605aaeffaf1d",
+    "platform/zipvfs.c": "1cb46f55871ac87a0f4ddee7d463282e822269875c77e49f81e101a1c2adec49",
+    "platform/zipvfs.h": "493de595f2405359f266cef822c1b4279d1ba3d96e1449db6aeccd68cbdb9696",
+    "third_party/miniz/miniz.c": "6a0314b68c9b804f33e27d89aa3144ef7724fd787043ba8c95d1b19be2d64afd",
+    "third_party/miniz/miniz.h": "0c85210868066516ecc76a9c9cbf77c69bb085ade34ab78177bb3acaf8c1a6d7",
+    "third_party/miniz/miniz_common.h": "fa5bf07d72efa51640f9d8ee11431fd2538e6218aea9e9328905edeb54187997",
+    "third_party/miniz/miniz_export.h": "a467e6a2e6017ad0e43fe18a2e50f5e5dfd2a93fabe3b52dd6bbba7c18700b03",
+    "third_party/miniz/miniz_tdef.c": "b368132832eebb4680d8849e3b313876c4833bcc9e03f32821665edef9d3f191",
+    "third_party/miniz/miniz_tdef.h": "13574142e909c529c3c08bbd76be8ac23939370e08fdc9837e635b2e00b4883d",
+    "third_party/miniz/miniz_tinfl.c": "457e745d8fef9657b07e4c641548b49f029d54dd70d3fc83568253f51194cda4",
+    "third_party/miniz/miniz_tinfl.h": "ef18f995b0151095a0e9ed718114bd03437c607b302ee979a9d371f157bacf8a",
+    "third_party/miniz/miniz_zip.c": "1ab94b269cd6021b006dac0fa78a42c73e1559676d086a16059fb98e21830606",
+    "third_party/miniz/miniz_zip.h": "eff19da6bcd7e127bb4447bf67a6093a6e589ee496fd251a444ec3b58c1d86f4",
+    "CMakeLists.txt": "0090f05332c00493b4f4fdd30fc6a25efd6b383a6f3373a3eb0c98d7a65d0962",
+    "assets/scrantic_data.zip": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+    "art/cartoon/arrival-pilot-v1/review-evidence/native-v1/helpers/capture_format.py": "1a956d08ef659cd537e1530bcf13cc9da153a1bf34a1730fd344e91a107c4195",
+    "art/cartoon/clouds-v1/native-v1/capture.py": "902e613aeec8daf4a2ec79bc468c66fd80920e76b66c641fe50807a2fddbc29c",
+    "art/cartoon/clouds-v1/native-v1/run.py": "f0b0646d52dcbc038acd022024d428d58648dc11ce77ba6b1497f2a111d4bc3c",
+    "art/cartoon/clouds-v1/native-v1/driver.c": "19d9438ae787ce958757975a3cdc2ba43aae55bb29608a5486d417ba1f1f1e6f",
+    "art/cartoon/shoreline-repair-v1/integration-v1/native-final/contract.py": "81369ccb3fbb7620221e41367ce6a010aaa1eca05ffee126b00d43cf27984cbb",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/native/capture.py": "f2e0684f6726ce53951988b5d44c101d3efe44f07e6b3b66277499a9f12a1bae",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/native/driver.c": "beb8beae0c3b54562fe51285d184d55ccd2b185fe34cf97b7801d2536abd1b59",
+    "art/cartoon/seasonal-v1/native/capture.py": "5a325d6b3db2ae3e7362ede1144977c977542c668596bbfb24b1e0a5bcdfe730",
+    "art/cartoon/clouds-v1/native-v1/browser-review.md": "36572514976be5050a1e75bdbb211863f4fb43180bfcb9dcca5bd8001278aa87",
+    "art/cartoon/clouds-v1/native-v1/build_review.py": "84c24679be751044b3c53e9fc78a7eefc3408553580a04ed66eb0c7b15390ace",
+    "art/cartoon/clouds-v1/native-v1/independent-review.md": "0d86d72de6a7f1f9637b748c95131988d9499dbe2508cab8ccb6b547c4fc3582",
+    "art/cartoon/clouds-v1/native-v1/preserve.py": "d8389532e3835e7754aa97d7efd3e01796f30eb0aa13bf9fcecd6c93b0c5f370",
+    "art/cartoon/clouds-v1/native-v1/README.md": "5f6be8eafcfe636012af0e8a6e756a4e1891f184ef7b5f97eac0e75dfbe5be06",
+    "art/cartoon/clouds-v1/native-v1/review-template.html": "f5fedab390bc64652b7b3ca3e8efaef9d817dd96771157f578c7fc184479ff21"
+  },
+  "compiler_stderr_bytes": 0,
+  "runtime_concern_lines": [],
+  "excluded": "Bulk native PPM/PNG sequences, executables and private archives remain scratch. Reports bind their pixels/archive/executable hashes; review atlases retain all three displayed clips losslessly.",
+  "limits": "Explicit native cloud fixtures, submitted pre-clip blit bounds and requested logical timing. No original executable, natural story selection, full traversal/wrap or performance claim."
+}
