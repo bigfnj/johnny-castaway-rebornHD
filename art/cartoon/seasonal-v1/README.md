@@ -8,7 +8,7 @@ Cartoon assets, including all28 approved Johnny poses. Work is isolated on
 
 | Frame | Subject | Runtime canvas | Current review |
 |---|---|---|---|
-| 000 | Halloween pumpkin | 80x68 | Pending |
+| 000 | Halloween pumpkin | 80x68 | Revised red-eye, sharp-toothed face approved with "so much yes"; batch scene review remains open |
 | 001 | St. Patrick's clovers | 240x94 | Pending |
 | 002 | Christmas tree | 112x130 | Pending |
 | 003 | New Year banner | 304x94 | Pending |
@@ -59,6 +59,27 @@ shadows; these are separate from hidden RGB. Runtime framing can exclude faint
 fringe, which is measured and retained in the padded export. No alpha hardening
 was applied.
 
+## Approved pumpkin face revision
+
+After viewing the four-decoration preview, the user requested glowing red eyes,
+razor-sharp teeth and an evil grin instead of the cheerful smile. A targeted
+built-in edit of `raw/000-v1.png` produced `raw/000-v2.png`. The exact prompt,
+reference and response are in `generation-pumpkin-v2.json` and
+`prompts/000-v2.txt`. The user saw that generated image inline and responded
+"so much yes", approving its appearance.
+
+Export v3 uses this revised source for000 and retains the exact v2 uniform
+scale and translation. The changed meaningful-alpha bounds differ by at most
+one raw pixel, only0.14 runtime pixels at this scale. No code redraws the face
+or applies a synthetic glow. The clovers, tree and banner retain their exact
+v2 PNG bytes. This response approves the pumpkin's appearance; it is not an
+approval of the other decorations or a completed production integration.
+
+For later style packs, preserve the pumpkin's red glowing eye cores and
+pointed, menacing carved grin as intentional subject details. A generic
+cheerful jack-o-lantern was the wrong interpretation for this application.
+The glow is painted into the sprite; this revision adds no flicker animation.
+
 ## Review and reproduction
 
 Serve this folder and open `review.html`. Each decoration has matched native
@@ -66,7 +87,7 @@ HD-fallback and Cartoon scenes, a full-scene view and original/HD/draft sprite
 comparisons. Human review concerns appearance, size and ground/banner placement.
 There is no new animation in this batch.
 
-`build_preview.py package --version v2 --output <fresh ZIP>` creates an ignored
+`build_preview.py package --version v3 --output <fresh ZIP>` creates an ignored
 diagnostic archive. It retains all2594 existing production members and adds
 only the four draft HOLIDAY PNGs. The native runner independently validates
 those payloads, full canvases, actual loads, draw positions and changed pixels.
@@ -75,7 +96,7 @@ See [native reproduction and limits](native/README.md).
 After capturing baseline and candidate, use:
 
 ```text
-python -B art/cartoon/seasonal-v1/build_preview.py review --version v2 --baseline build/seasonal-v1/native-baseline-v2 --candidate build/seasonal-v1/native-candidate-v2
+python -B art/cartoon/seasonal-v1/build_preview.py review --version v3 --baseline build/seasonal-v1/native-baseline-v2 --candidate build/seasonal-v1/native-candidate-v3
 ```
 
 The current reviewer shows native Linux stills with approved standing016 and

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "regression",
+  "exporter_sha256": "261923eec27a9919a48384095246cb3fc122251ea27637bd50805ceb1c9ad024",
+  "test_sha256": "d1984fdb70d2c786dc1e6b16d1f9a37698ea764ffbcd88f45e904552b689fec3",
+  "recipe_sha256": "52baf948e79ff768627d37e5fce2de7a98db8d8c3c62d58c49e9a18a3019f139",
+  "scope": "Approved pumpkin face source technical export; composed batch/production approval remains separate.",
+  "guard_removal": {
+    "sha256": "cf9f74850e31fae52324669bbfaf5bec31e86f17724de48d2172d56eafc6718f",
+    "removed_statement": "    base.require(recipe == selected_recipe(), 'recipe-v3: selected inputs or placement differ')",
+    "actual_wrong_png_written": true
+  },
+  "unchanged_frames_verified": [
+    1,
+    2,
+    3
+  ],
+  "new_source_hidden_rgb_independence": true,
+  "meaningful_filtered_alpha_outside_runtime": 0,
+  "raw_alpha8_bounds": [
+    395,
+    450,
+    869,
+    856
+  ],
+  "runs": [
+    {
+      "name": "v3_smoke_readback",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-v3 261923eec27a9919a48384095246cb3fc122251ea27637bd50805ceb1c9ad024\nPASS seasonal-v3 7bdcf07910132090fe087a5a388fb749b97428ff00429a9274354492bf035c2b\n",
+      "stderr": ""
+    },
+    {
+      "name": "fresh_v3_replay",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-v3 261923eec27a9919a48384095246cb3fc122251ea27637bd50805ceb1c9ad024\nPASS seasonal-v3 7bdcf07910132090fe087a5a388fb749b97428ff00429a9274354492bf035c2b\n",
+      "stderr": ""
+    },
+    {
+      "name": "changed_placement_rejected",
+      "result": "FIRED",
+      "stdout": "WITNESS seasonal-v3 261923eec27a9919a48384095246cb3fc122251ea27637bd50805ceb1c9ad024\n",
+      "stderr": "FAIL recipe-v3: selected inputs or placement differ\n"
+    },
+    {
+      "name": "prior_source_recipe_rejected",
+      "result": "FIRED",
+      "stdout": "WITNESS seasonal-v3 261923eec27a9919a48384095246cb3fc122251ea27637bd50805ceb1c9ad024\n",
+      "stderr": "FAIL recipe-v3: selected inputs or placement differ\n"
+    },
+    {
+      "name": "changed_placement_accepted_only_without_guard",
+      "result": "PASS",
+      "stdout": "EXECUTED_MUTANT_SHA256=cf9f74850e31fae52324669bbfaf5bec31e86f17724de48d2172d56eafc6718f\nWITNESS seasonal-v3 261923eec27a9919a48384095246cb3fc122251ea27637bd50805ceb1c9ad024\nPASS seasonal-v3 0d901d4c35e823fc8ca263e0c6510e399fba621adda840734c1b8708a9b9eb00\n",
+      "stderr": ""
+    },
+    {
+      "name": "restored_v3_positive",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-v3 261923eec27a9919a48384095246cb3fc122251ea27637bd50805ceb1c9ad024\nPASS seasonal-v3 7bdcf07910132090fe087a5a388fb749b97428ff00429a9274354492bf035c2b\n",
+      "stderr": ""
+    }
+  ]
+}
