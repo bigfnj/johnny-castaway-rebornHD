@@ -1,0 +1,10 @@
+{
+  "mode": "built-in image_gen",
+  "accepted": false,
+  "prompt": "Use case: precise-object-edit\nAsset type: transparent Cartoon game sprite, exposed low-tide shoreline strip.\nEdit image 1. Keep its hand-drawn style, colors, red starfish, both right-side shell shapes, sand facets, and overall broad crescent structure. Make the strip shallower so it follows the original geometry in image 2 more closely. Preserve the wide horizontal span but reduce its vertical depth by about 15 percent, chiefly raising the low front curve. This is an artistic redraw of a shallower bank, not a squeezed or stretched texture.\nOutput a 1536x1024 RGBA image with the complete strip fully inside x196..1340 and y404..602. The upper left and right peaks are about y405. Its lowest edge is about y600, not y630. Keep the starfish and both shells in their corresponding places and at a coherent natural size. Make the top contour thinner and softer, pale warm ochre rather than heavy dark brown, because this layer joins an existing sand island above it. Keep a thin brown lower outer contour.\nEverything outside the strip must be truly transparent. No shadow, glow, light bloom, water, foam, background, other island, tree, text or extra objects. Keep the transparent image size and padding. Image 2 supplies only the original silhouette and layout; do not use its diagnostic yellow/green colors.",
+  "referenced_image_paths": [
+    "shore-raw-v1.png",
+    "reference/original-shore-guide.png"
+  ],
+  "reason": "V1 meaningful shape was taller/wider than original reference target; shallower artistic redraw requested before runtime export."
+}

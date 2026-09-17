@@ -1,0 +1,115 @@
+{
+  "scope": "Unapproved static beach and rock studies. Earlier drafts retained as ancestors.",
+  "generations": [
+    {
+      "tool": "built-in image_gen",
+      "prompt_record": "generation-shore-v1.json",
+      "prompt_record_sha256": "fb31d405ecac47cd47053ec0c9597d7b6415252bfe608d88c275559e693ac5cf",
+      "raw_output": "shore-raw-v1.png",
+      "raw_output_sha256": "186230935256e9ee5c45caaeefc1d49b107ab1da0d95b1890e803e879f1071ba",
+      "references_in_supplied_order": [
+        {
+          "supplied_path": "reference/original-shore-guide.png",
+          "preserved_path": "reference/original-shore-guide.png",
+          "sha256": "63aa96e81b42a5b8fd320009d2f3f8ee9f869438bee564169d75794672936ce1"
+        },
+        {
+          "supplied_path": "reference/approved-island-style-guide.png",
+          "preserved_path": "reference/approved-island-style-guide.png",
+          "sha256": "ff189bb454207760547edf9cb1ef3b288f2260c35ce5c945a1f87d171bc290f6"
+        },
+        {
+          "supplied_path": "reference/original-static-crop.png",
+          "preserved_path": "reference/original-static-crop.png",
+          "sha256": "0a0c7a02ec18d85e29aa64a76752f41cb4d028de6bcf6ec88f0cbffcfb956aee"
+        }
+      ],
+      "selected_for_static_review": false,
+      "human_approved": false
+    },
+    {
+      "tool": "built-in image_gen",
+      "prompt_record": "generation-shore-v2.json",
+      "prompt_record_sha256": "ce6ddfa7475ece5902b09da1dcdba2160af8605659aa83a2b7880f63397d52f6",
+      "raw_output": "shore-raw-v2.png",
+      "raw_output_sha256": "58d3610a1ad8d99e3f85cecfebea326cdfebf95479f3f528ca186629aa7b86df",
+      "references_in_supplied_order": [
+        {
+          "supplied_path": "shore-raw-v1.png",
+          "preserved_path": "shore-raw-v1.png",
+          "sha256": "186230935256e9ee5c45caaeefc1d49b107ab1da0d95b1890e803e879f1071ba"
+        },
+        {
+          "supplied_path": "reference/original-shore-guide.png",
+          "preserved_path": "reference/original-shore-guide.png",
+          "sha256": "63aa96e81b42a5b8fd320009d2f3f8ee9f869438bee564169d75794672936ce1"
+        }
+      ],
+      "selected_for_static_review": false,
+      "human_approved": false
+    },
+    {
+      "tool": "built-in image_gen",
+      "prompt_record": "generation-shore-v3.json",
+      "prompt_record_sha256": "ff3d7234a6db17ed560f354369f725919cecc463bf181981eccc632512c4cf46",
+      "raw_output": "shore-raw-v3.png",
+      "raw_output_sha256": "3dbb7a3563510de80a040afcd83744824807e392c2e7c4eb9f1f74c82cbe2b9f",
+      "references_in_supplied_order": [
+        {
+          "supplied_path": "shore-raw-v2.png",
+          "preserved_path": "shore-raw-v2.png",
+          "sha256": "58d3610a1ad8d99e3f85cecfebea326cdfebf95479f3f528ca186629aa7b86df"
+        },
+        {
+          "supplied_path": "build/low-tide-v1/static-export-v1/static-closeup.png",
+          "preserved_path": "reference/shore-v2-join-defect.png",
+          "sha256": "2b645b16c535c8ffac17816011b013f5eeff9b161f4de5560647cca02da91c63"
+        }
+      ],
+      "selected_for_static_review": true,
+      "human_approved": false
+    },
+    {
+      "tool": "built-in image_gen",
+      "prompt_record": "generation-rock-v1.json",
+      "prompt_record_sha256": "6008759233bcc0ba2beaefd5e3c31e14f48b681686118496078665975ec42876",
+      "raw_output": "rock-raw-v1.png",
+      "raw_output_sha256": "abcd5a508a1883d41c51fb8cec7351ad6178edb8d536eed3ef6fe904870306c9",
+      "references_in_supplied_order": [
+        {
+          "supplied_path": "reference/original-rock-guide.png",
+          "preserved_path": "reference/original-rock-guide.png",
+          "sha256": "a5879ca926a0cb02daa53c29f9241a14700791f394b6f4fe350646574f4a2d08"
+        },
+        {
+          "supplied_path": "reference/approved-island-style-guide.png",
+          "preserved_path": "reference/approved-island-style-guide.png",
+          "sha256": "ff189bb454207760547edf9cb1ef3b288f2260c35ce5c945a1f87d171bc290f6"
+        }
+      ],
+      "selected_for_static_review": false,
+      "human_approved": false
+    },
+    {
+      "tool": "built-in image_gen",
+      "prompt_record": "generation-rock-v2.json",
+      "prompt_record_sha256": "775b98886ec0e657ccb045142df616f04c677952f6ea2bb88e450d78c456b10e",
+      "raw_output": "rock-raw-v2.png",
+      "raw_output_sha256": "ec6d013a8ca7c8266a7c677aa559c604d763a8c77dbcc6a52020373813c96f1e",
+      "references_in_supplied_order": [
+        {
+          "supplied_path": "rock-raw-v1.png",
+          "preserved_path": "rock-raw-v1.png",
+          "sha256": "abcd5a508a1883d41c51fb8cec7351ad6178edb8d536eed3ef6fe904870306c9"
+        },
+        {
+          "supplied_path": "reference/original-rock-guide.png",
+          "preserved_path": "reference/original-rock-guide.png",
+          "sha256": "a5879ca926a0cb02daa53c29f9241a14700791f394b6f4fe350646574f4a2d08"
+        }
+      ],
+      "selected_for_static_review": true,
+      "human_approved": false
+    }
+  ]
+}

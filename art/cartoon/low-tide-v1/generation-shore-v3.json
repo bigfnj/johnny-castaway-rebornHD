@@ -1,0 +1,11 @@
+{
+  "mode": "built-in image_gen",
+  "accepted": false,
+  "prompt": "Use case: precise-object-edit\nAsset type: transparent lower-beach game sprite, targeted joining-edge repair.\nEdit image 1 ONLY. Image 2 is a diagnostic scene composition explaining the defect, not content to copy into the sprite.\nIn image 2, there are three thin ocean-blue gaps between the existing upper island and this lower beach. To fix them, add more pale golden sand along ONLY the concave U-shaped upper boundary of image 1. Raise this upper boundary across its middle span by about 25 raw pixels, from approximately y480..508 to y455..483. Make it a broad smooth shallow concave lip, with enough sand overlap across the full middle so it joins the existing upper island. Keep the two end peaks in their current positions.\nRemove the hard outline along this TOP overlap boundary: use a soft warm sand-colored edge, because it is a join inside the island, not the outer coastline. Do not feather to broad transparency inside the sand; sand is opaque.\nKeep the lower outer contour, all sand facets below it, starfish, both shells, far left/right tips, their relative positions and overall width unchanged. The object must stay within the existing x190..1346 and y404..595 meaningful bounds. Do not move the complete sprite. Preserve thin dark brown contour along the bottom and external left/right coast only.\nOutput1536x1024 with genuine alpha transparency. Only the same separate lower shore strip, not the upper island, rock, ocean, palm or complete scene. No water, foam, glow, shadow, backdrop or extra objects. Image2 is solely a join guide; the upper island must remain absent from this output.",
+  "referenced_image_paths": [
+    "shore-raw-v2.png",
+    "build/low-tide-v1/static-export-v1/static-closeup.png"
+  ],
+  "reason": "Static native-origin composition exposed three blue gaps. Raise only upper overlap boundary, preserving outer shoreline.",
+  "second_reference_scope": "Technical composition, not native capture."
+}

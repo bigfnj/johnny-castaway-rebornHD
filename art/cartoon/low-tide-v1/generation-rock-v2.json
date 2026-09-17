@@ -1,0 +1,10 @@
+{
+  "mode": "built-in image_gen",
+  "accepted": false,
+  "prompt": "Use case: precise-object-edit\nAsset type: transparent Cartoon game sprite, isolated low-tide rock.\nEdit image 1 using image 2 as the original geometry guide. Keep the warm gray faceted stone, sunny upper-left lighting, thin dark contour and textured hand-painted Cartoon finish. Bring the rock closer to the squat original silhouette: less tall, slightly less bulky, with the original low oblique angle and the high point left of center.\nOutput one 1536x1024 RGBA PNG. Draw the complete rock strictly inside x390..1146 and y338..686, with transparent padding elsewhere. Keep its full base, top, left and right tips within that rectangle. Those dimensions matter because it will sit inside a fixed ring of ocean ripples. Do not clip any part. Redraw the proportions artistically, without stretching facets.\nUse mostly neutral medium warm gray and charcoal-gray facets. Restrict cream/ochre to narrow sunlit upper edges; no sandy cap or beach texture. It is stone, not a sand-covered mound. No water, foam, ground plane, cast shadow, glow, dark halo, extra rock, vegetation or text. Preserve true alpha transparency outside the hard rock silhouette. Image 2 provides shape only, not the diagnostic black/white dithering.",
+  "referenced_image_paths": [
+    "rock-raw-v1.png",
+    "reference/original-rock-guide.png"
+  ],
+  "reason": "V1 drifted taller and acquired broad sandy highlights. Request original low silhouette and stone materials before export."
+}
