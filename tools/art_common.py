@@ -18,6 +18,10 @@ ISLAND_FOOTPRINT = {"id": "cartoon-island-ground-v1", "canvas": [640, 180],
                     "offset_hd": [-36, -10]}
 CENTER_FOAM_FOOTPRINT = {"id": "cartoon-island-center-foam-v1", "canvas": [384, 256],
                          "offset_hd": [-32, -90]}
+LEFT_FOAM_FOOTPRINT = {"id": "cartoon-island-left-foam-v1", "canvas": [150, 66],
+                       "offset_hd": [-6, 0]}
+RIGHT_FOAM_FOOTPRINT = {"id": "cartoon-island-right-foam-v1", "canvas": [154, 74],
+                        "offset_hd": [0, 0]}
 
 
 def cartoon_footprint(path, logical, scale, declaration=None):
@@ -33,6 +37,10 @@ def cartoon_footprint(path, logical, scale, declaration=None):
         contract = ISLAND_FOOTPRINT
     elif path in {f"BMP/BACKGRND.BMP/{i:03}.png" for i in (6, 7, 8)} and list(logical) == [160, 25]:
         contract = CENTER_FOAM_FOOTPRINT
+    elif path in {f"BMP/BACKGRND.BMP/{i:03}.png" for i in (3, 4, 5)} and list(logical) == [72, 29]:
+        contract = LEFT_FOAM_FOOTPRINT
+    elif path in {f"BMP/BACKGRND.BMP/{i:03}.png" for i in (9, 10, 11)} and list(logical) == [72, 32]:
+        contract = RIGHT_FOAM_FOOTPRINT
     if not (contract is not None and type(scale) is int and scale == 2 and declaration == contract
             and all(type(n) is int for key in ("canvas", "offset_hd") for n in declaration[key])):
         raise ArtError(f"{path}: invalid Cartoon footprint declaration")

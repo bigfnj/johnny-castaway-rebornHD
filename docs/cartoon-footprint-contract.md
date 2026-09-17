@@ -1,6 +1,6 @@
 # Registered Cartoon island footprints
 
-The runtime has two fixed, optional footprint contracts. They add transparent
+The runtime has four fixed, optional footprint contracts. They add transparent
 canvas room without changing RESOURCE dimensions, script coordinates, scene
 timing, walking routes, global scale, Original rendering or HD selection.
 Supporting a footprint does not approve artwork or establish visual parity.
@@ -9,6 +9,8 @@ Supporting a footprint does not approve artwork or establish visual parity.
 |---|---|---|---|---|---|---|
 | `cartoon-island-ground-v1` | `BMP/BACKGRND.BMP/000.png` | 280×52 | 560×104 | 640×180 | −36, −10 | −44, −10 |
 | `cartoon-island-center-foam-v1` | `BMP/BACKGRND.BMP/006.png` through 008 | 160×25 | 320×50 | 384×256 | −32, −90 | −32, −90 |
+| `cartoon-island-left-foam-v1` | `BMP/BACKGRND.BMP/003.png` through 005 | 72×29 | 144×58 | 150×66 | −6, 0 | 0, 0 |
+| `cartoon-island-right-foam-v1` | `BMP/BACKGRND.BMP/009.png` through 011 | 72×32 | 144×64 | 154×74 | 0, 0 | −10, 0 |
 
 The authoring ledger row and its referenced recipe row must both declare the
 same `footprint` object. For the ground:
@@ -37,6 +39,13 @@ that every pixel is visible. A scene offset is applied before the asset's HD
 offset. Mirrored X placement uses
 `original_width*scale - registered_width - normal_offset_x`, retaining the old
 logical anchor. Normal, mirrored and atop drawing use the same placement helper.
+
+Left waves keep logical origin 270,306, with registered HD canvas 534,612 through
+684,678. Right waves keep logical origin 518,303, with registered HD canvas
+1036,606 through 1190,680. The side-fit comparison places the unchanged-size
+left source at pixel 0,8 inside its padded canvas and the right source at 10,10.
+Those source placements are authoring choices; the engine only recognizes the
+named canvas and offset. Center waves and the ground keep their existing contracts.
 
 HD fallback remains validated against original×scale when Cartoon is selected.
 It never acquires a registered offset. Original decoding still consumes exactly

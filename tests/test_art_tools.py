@@ -17,7 +17,8 @@ import zlib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
-from art_common import ArtError, CENTER_FOAM_FOOTPRINT, ISLAND_FOOTPRINT, cartoon_footprint, digest, inspect_png
+from art_common import (ArtError, CENTER_FOAM_FOOTPRINT, ISLAND_FOOTPRINT, LEFT_FOAM_FOOTPRINT,
+                        RIGHT_FOAM_FOOTPRINT, cartoon_footprint, digest, inspect_png)
 from art_inventory import inventory
 from art_pack import accepted_pack, build_archive, main
 
@@ -180,7 +181,7 @@ class ArtToolsTests(unittest.TestCase):
         old_file = self.accepted / self.asset
         old_file.unlink()
         self.asset = f"BMP/BACKGRND.BMP/{frame:03}.png"
-        logical = [280, 52] if frame == 0 else [160, 25]
+        logical = [280, 52] if frame == 0 else [72, 29] if frame < 6 else [160, 25] if frame < 9 else [72, 32]
         self.original = png(logical[0]*2, logical[1]*2)
         manifest = {"scale": 2, "BMP": {"BACKGRND.BMP": {"numImages": frame+1, "images": [
             {"index": i, "width": logical[0], "height": logical[1],
@@ -189,23 +190,52 @@ class ArtToolsTests(unittest.TestCase):
             archive.writestr("data/hd/manifest.json", json.dumps(manifest))
             for row in manifest["BMP"]["BACKGRND.BMP"]["images"]:
                 archive.writestr("data/hd/" + row["file"], self.original)
-        footprint = copy.deepcopy(ISLAND_FOOTPRINT if frame == 0 else CENTER_FOAM_FOOTPRINT)
+        footprint = copy.deepcopy(ISLAND_FOOTPRINT if frame == 0 else LEFT_FOAM_FOOTPRINT if frame < 6
+                                  else CENTER_FOAM_FOOTPRINT if frame < 9 else RIGHT_FOAM_FOOTPRINT)
         self.ledger["required_assets"] = [self.asset]
         self.ledger["assets"] = [{"path": self.asset, "source_sha256": digest(self.original),
                                   "footprint": footprint, "alpha": "opaque"}]
         self.write_asset(png(*footprint["canvas"]))
 
     def test_named_island_footprints_preserve_original_catalog(self):
-        for frame in (0, 6, 7, 8):
+        for frame in (0, 3, 4, 5, 6, 7, 8, 9, 10, 11):
             with self.subTest(frame=frame):
                 self.footprint_fixture(frame)
                 _, packed, _ = self.validate()
-                expected = [640, 180] if frame == 0 else [384, 256]
+                expected = [640, 180] if frame == 0 else [150, 66] if frame < 6 else [384, 256] if frame < 9 else [154, 74]
                 info = inspect_png(packed[self.asset], self.asset)
                 self.assertEqual([info["width"], info["height"]], expected)
                 original = inventory(self.archive, ["BACKGRND.BMP"])["assets"][-1]
                 self.assertEqual([original["logical_width"], original["logical_height"]],
-                                 [280, 52] if frame == 0 else [160, 25])
+                                 [280, 52] if frame == 0 else [72, 29] if frame < 6 else [160, 25] if frame < 9 else [72, 32])
+
+    def test_side_footprint_requires_exact_declaration_and_png(self):
+        for frame, footprint in ((3, LEFT_FOAM_FOOTPRINT), (9, RIGHT_FOAM_FOOTPRINT)):
+            self.footprint_fixture(frame)
+            original = copy.deepcopy(footprint)
+            for key, value in (("id", "unknown"), ("offset_hd", [0, 1]), ("canvas", [144, 64])):
+                self.ledger["assets"][0]["footprint"] = dict(original, **{key: value})
+                self.assert_cli_failure(self.asset, "invalid Cartoon footprint declaration")
+            self.ledger["assets"][0]["footprint"] = original
+            self.write_asset(png(original["canvas"][0], original["canvas"][1]-1))
+            self.assert_cli_failure(self.asset, "wrong dimensions")
+            del self.ledger["assets"][0]["footprint"]
+            self.write_asset(png(*original["canvas"]))
+            self.assert_cli_failure(self.asset, "wrong dimensions")
+
+    def test_side_footprint_rejects_wrong_slot_source_scale_and_family(self):
+        for path, logical, scale, declaration in (
+                ("BMP/BACKGRND.BMP/002.png", [72, 29], 2, LEFT_FOAM_FOOTPRINT),
+                ("BMP/BACKGRND.BMP/006.png", [72, 29], 2, LEFT_FOAM_FOOTPRINT),
+                ("BMP/BACKGRND.BMP/008.png", [72, 32], 2, RIGHT_FOAM_FOOTPRINT),
+                ("BMP/BACKGRND.BMP/012.png", [72, 32], 2, RIGHT_FOAM_FOOTPRINT),
+                ("BMP/BACKGRND.BMP/003.png", [73, 29], 2, LEFT_FOAM_FOOTPRINT),
+                ("BMP/BACKGRND.BMP/009.png", [72, 33], 2, RIGHT_FOAM_FOOTPRINT),
+                ("BMP/BACKGRND.BMP/003.png", [72, 29], 1, LEFT_FOAM_FOOTPRINT),
+                ("BMP/BACKGRND.BMP/009.png", [72, 32], 2, LEFT_FOAM_FOOTPRINT)):
+            with self.subTest(path=path, logical=logical, scale=scale):
+                with self.assertRaisesRegex(ArtError, "invalid Cartoon footprint declaration"):
+                    cartoon_footprint(path, logical, scale, declaration)
 
     def test_extended_png_without_declaration_is_refused(self):
         self.footprint_fixture()

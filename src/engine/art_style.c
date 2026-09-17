@@ -312,6 +312,16 @@ static int extendedCenterFoam(const char *name, int image, int width, int height
     return name && strcmp(name, "BACKGRND.BMP") == 0 && image >= 6 && image <= 8 &&
            width == 384 && height == 256;
 }
+static int extendedLeftFoam(const char *name, int image, int width, int height)
+{
+    return name && strcmp(name, "BACKGRND.BMP") == 0 && image >= 3 && image <= 5 &&
+           width == 150 && height == 66;
+}
+static int extendedRightFoam(const char *name, int image, int width, int height)
+{
+    return name && strcmp(name, "BACKGRND.BMP") == 0 && image >= 9 && image <= 11 &&
+           width == 154 && height == 74;
+}
 void artStyleSpriteOffset(const char *name, int image, int width, int height,
                           int flipped, int *dx, int *dy)
 {
@@ -327,6 +337,14 @@ void artStyleSpriteOffset(const char *name, int image, int width, int height,
         /* Preserve the original 320-wide logical anchor when flipping padding. */
         *dx = flipped ? 320 - 384 - (-32) : -32;
         *dy = -90;
+    }
+    else if (selected == &styles[1] && currentScale == 2 &&
+             extendedLeftFoam(name, image, width, height)) {
+        *dx = flipped ? 144 - 150 - (-6) : -6;
+    }
+    else if (selected == &styles[1] && currentScale == 2 &&
+             extendedRightFoam(name, image, width, height)) {
+        *dx = flipped ? 144 - 154 : 0;
     }
 }
 static PlatformSurface *loadPng(const TArtStyle *style, const char *name,
@@ -359,7 +377,9 @@ static PlatformSurface *loadPng(const TArtStyle *style, const char *name,
     int w = platformGetSurfaceWidth(surface), h = platformGetSurfaceHeight(surface);
     int registeredFootprint = strict && currentScale == 2 &&
         ((width == 280 && height == 52 && extendedIsland(name, image, w, h)) ||
-         (width == 160 && height == 25 && extendedCenterFoam(name, image, w, h)));
+         (width == 160 && height == 25 && extendedCenterFoam(name, image, w, h)) ||
+         (width == 72 && height == 29 && extendedLeftFoam(name, image, w, h)) ||
+         (width == 72 && height == 32 && extendedRightFoam(name, image, w, h)));
     if (selected == &styles[1] && !registeredFootprint &&
         (w != width * currentScale || h != height * currentScale)) {
         releaseLoadedSurface(surface);

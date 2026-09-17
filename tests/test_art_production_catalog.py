@@ -116,25 +116,28 @@ def fixture():
             "canvases": {path: [1, 1] for path in paths}, "members": members}
 
 
-def footprint_fixture():
+def footprint_fixture(frame=0, logical=(280, 52), footprint=FOOTPRINT):
     data = fixture()
-    hd = png([b"\x01\x02\x03\xff" * 560] * 104)
-    current = png([b"\x04\x05\x06\x80" * 640] * 180)
+    path = f"BMP/BACKGRND.BMP/{frame:03}.png"
+    hd = png([b"\x01\x02\x03\xff" * (logical[0]*2)] * (logical[1]*2))
+    current = png([b"\x04\x05\x06\x80" * footprint["canvas"][0]] * footprint["canvas"][1])
     manifest = json.loads(data["members"]["data/hd/manifest.json"])
-    manifest["BMP"]["BACKGRND.BMP"] = {"numImages": 1, "images": [
-        {"index": 0, "width": 280, "height": 52, "file": GROUND}]}
+    manifest["BMP"]["BACKGRND.BMP"] = {"numImages": frame+1, "images": [
+        {"index": i, "width": logical[0], "height": logical[1], "file": f"BMP/BACKGRND.BMP/{i:03}.png"}
+        for i in range(frame+1)]}
     data["members"]["data/hd/manifest.json"] = json.dumps(manifest).encode()
-    data["members"]["data/hd/" + GROUND] = hd
-    data["members"][m.PREFIX + GROUND] = current
-    data["canvases"][GROUND] = [280, 52]
-    data["original"]["assets"][GROUND] = {"canvas": [280, 52]}
-    data["pack"]["required_assets"].append(GROUND)
-    data["pack"]["assets"].append({"path": GROUND, "source_sha256": m.digest(hd),
+    for row in manifest["BMP"]["BACKGRND.BMP"]["images"]:
+        data["members"]["data/hd/" + row["file"]] = hd
+        data["canvases"][row["file"]] = list(logical)
+        data["original"]["assets"][row["file"]] = {"canvas": list(logical)}
+    data["members"][m.PREFIX + path] = current
+    data["pack"]["required_assets"].append(path)
+    data["pack"]["assets"].append({"path": path, "source_sha256": m.digest(hd),
         "sha256": m.digest(current), "recipe": RECIPE, "review": REVIEW,
-        "alpha": "transparent", "footprint": copy.deepcopy(FOOTPRINT)})
-    data["records"][REVIEW]["accepted_assets"].append({"path": GROUND, "sha256": m.digest(current), "recipe": RECIPE})
-    data["records"][RECIPE]["frames"].append({"path": GROUND, "candidate_png_sha256": m.digest(current),
-        "runtime_canvas": [640, 180], "footprint": copy.deepcopy(FOOTPRINT)})
+        "alpha": "transparent", "footprint": copy.deepcopy(footprint)})
+    data["records"][REVIEW]["accepted_assets"].append({"path": path, "sha256": m.digest(current), "recipe": RECIPE})
+    data["records"][RECIPE]["frames"].append({"path": path, "candidate_png_sha256": m.digest(current),
+        "runtime_canvas": list(footprint["canvas"]), "footprint": copy.deepcopy(footprint)})
     return data
 
 
@@ -213,6 +216,28 @@ class CatalogTests(unittest.TestCase):
         data = footprint_fixture()
         data["records"][RECIPE]["frames"][-1].pop("footprint")
         self.refused(lambda: report(data), GROUND, "recipe footprint differs from ledger")
+
+    def test_smoke_side_footprints(self):
+        for frame in (3, 4, 5, 9, 10, 11):
+            logical = [72, 29] if frame < 6 else [72, 32]
+            footprint = {"id": "cartoon-island-left-foam-v1" if frame < 6 else "cartoon-island-right-foam-v1",
+                         "canvas": [150, 66] if frame < 6 else [154, 74],
+                         "offset_hd": [-6, 0] if frame < 6 else [0, 0]}
+            data = footprint_fixture(frame, logical, footprint)
+            path = f"BMP/BACKGRND.BMP/{frame:03}.png"
+            row = next(r for r in report(data)["assets"] if r["path"] == path)
+            self.assertEqual(row["footprint"], footprint)
+            self.assertEqual(row["runtime_canvas"], footprint["canvas"])
+            self.assertEqual(row["bundled_logical_canvas"], logical)
+            self.assertEqual(row["hd_proxy"]["canvas"], [2*n for n in logical])
+
+    def test_side_footprint_recipe_binding(self):
+        for frame, logical, footprint in (
+                (3, [72, 29], {"id": "cartoon-island-left-foam-v1", "canvas": [150, 66], "offset_hd": [-6, 0]}),
+                (9, [72, 32], {"id": "cartoon-island-right-foam-v1", "canvas": [154, 74], "offset_hd": [0, 0]})):
+            data = footprint_fixture(frame, logical, footprint)
+            data["records"][RECIPE]["frames"][-1].pop("footprint")
+            self.refused(lambda: report(data), f"BMP/BACKGRND.BMP/{frame:03}.png", "recipe footprint differs from ledger")
 
     def test_footprint_contract_rejects_other_offset(self):
         data = footprint_fixture()

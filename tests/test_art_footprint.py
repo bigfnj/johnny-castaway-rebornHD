@@ -12,11 +12,16 @@ import shutil
 import subprocess
 import tempfile
 
-SMOKE = ['new-ground', 'new-center', 'legacy-ground']
+SMOKE = ['new-ground', 'new-center', 'legacy-ground', 'new-left', 'new-right']
 REGRESSION = ['legacy-center', 'hd-fallback', 'bad-hd-fallback', 'original-fallback',
               'hd-style', 'draw-normal', 'draw-flip', 'draw-atop', 'draw-legacy',
               'draw-offset', 'wrong-ground-height', 'wrong-ground-width', 'wrong-source',
-              'wrong-frame', 'wrong-resource', 'wrong-center-frame', 'wrong-center-height', 'wave-restore']
+              'wrong-frame', 'wrong-resource', 'wrong-center-frame', 'wrong-center-height', 'wave-restore',
+              'legacy-left', 'legacy-right', 'side-hd-fallback', 'side-wave-restore',
+              'draw-left-normal', 'draw-left-flip', 'draw-left-atop', 'draw-left-offset',
+              'draw-right-normal', 'draw-right-flip', 'draw-right-atop', 'draw-right-offset']
+REGRESSION += [f'wrong-{side}-{axis}' for side in ('left', 'right')
+               for axis in ('frame', 'other-end', 'width', 'height', 'source', 'resource', 'scale')]
 
 
 def sha(path):
@@ -76,6 +81,13 @@ def main():
             ('draw-flip', 'art_style.c', '560 - 640 - (-36)', '-36'),
             ('wrong-center-frame', 'art_style.c', 'image >= 6 && image <= 8', 'image >= 6 && image <= 9'),
             ('wave-restore', 'island.c', 'spriteLeft = x + dx', 'spriteLeft = x'),
+            ('wrong-left-frame', 'art_style.c', 'image >= 3 && image <= 5', 'image >= 2 && image <= 5'),
+            ('wrong-right-frame', 'art_style.c', 'image >= 9 && image <= 11', 'image >= 9 && image <= 12'),
+            ('wrong-left-source', 'art_style.c', 'width == 72 && height == 29 && extendedLeftFoam', 'width >= 72 && height == 29 && extendedLeftFoam'),
+            ('wrong-right-height', 'art_style.c', 'width == 154 && height == 74', 'width == 154 && height >= 74'),
+            ('draw-left-flip', 'art_style.c', '144 - 150 - (-6)', '-6'),
+            ('draw-right-flip', 'art_style.c', '144 - 154 : 0', '0 : 0'),
+            ('side-wave-restore', 'island.c', 'spriteLeft = x + dx', 'spriteLeft = x'),
         ]
         for case, filename, old, new in definitions:
             directory = out / ('mutant-' + case)

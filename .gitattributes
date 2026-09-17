@@ -50,6 +50,9 @@ art/cartoon/shoreline-repair-v1/** -text whitespace=cr-at-eol
 # Preserve the observed CMake line ending in a space in this hashed run log.
 art/cartoon/shoreline-repair-v1/integrated-shore-v1/code-verification/windows-v2/run.log whitespace=cr-at-eol,-blank-at-eol
 
+# Preserve the exact unittest prefix before the captured mutation traceback.
+art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/runtime-verification/authoring/mutation-*.log whitespace=cr-at-eol,-blank-at-eol
+
 # This hashed historical capture manifest includes a final blank line.
 art/cartoon/walk-pilot/directional-cycle-v1/review-evidence/direction-clearance-manifest-v1.json whitespace=cr-at-eol,-blank-at-eof
 
