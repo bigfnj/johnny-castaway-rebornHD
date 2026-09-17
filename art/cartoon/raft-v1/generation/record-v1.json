@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "status": "draft_visual_review",
+  "human_approval": null,
+  "tool": "built-in image_gen.imagegen",
+  "generation_order": [
+    4,
+    0,
+    1,
+    2,
+    3
+  ],
+  "source_reference_record": {
+    "path": "reference/source.json",
+    "sha256": "e6d5fe6c8866f9b3216ae39887361a28f99147dae152c2380ccf1b1aa1b69482"
+  },
+  "production_package_changed": false,
+  "runtime_export_executed": false,
+  "native_review_executed": false,
+  "generated_pixels_postprocessed": false,
+  "notes": [
+    "Finished004 was generated first and used as the material/identity reference for000-003.",
+    "Original guides use diagnostic colors and exact nearest-neighbor geometry only.",
+    "All original generated RGBA bytes are copied unchanged. Alpha8 is an inspection diagnostic only, not a crop or mask.",
+    "Visible construction-continuity limitation:002 has seven near log ends,003/004 six. Material treatment is consistent but original placement and exact assembly continuity are not established."
+  ],
+  "outputs": [
+    {
+      "frame": 0,
+      "file": "generation/000-generated-v1.png",
+      "sha256": "da718eeb4ea9a2952f2878a0dcb4cd5d8c66a43f6b01b109db477c756b936e8c",
+      "original_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-135f1100-f961-4f21-894d-95a557b698d0.png",
+      "copied_byte_exact": true,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha0_pixels": 1465222,
+      "alpha1_through7_pixels": 3688,
+      "alpha8_through255_pixels": 103954,
+      "alpha_positive_bounds_exclusive": [
+        364,
+        21,
+        1378,
+        976
+      ],
+      "alpha8_bounds_exclusive": [
+        367,
+        401,
+        1211,
+        703
+      ],
+      "request": {
+        "file": "generation/000-v1-request.json",
+        "sha256": "dd63498b5c2c1cc0e2dfc9f693857fbcc58b611ae468a18fc0266e51d96d3e9c"
+      },
+      "ordered_references": [
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\000-original-guide.png",
+          "sha256": "c5f4135cbe14b73de8197d6aee091e6e0fa87ebcd88b98cfee64da184127991b"
+        },
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\generation\\004-generated-v1.png",
+          "sha256": "320ac29fcdaed65ef50278b033bb72678e643f512966b6446f1526e5eb6f5502"
+        },
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\original-contact-sheet.png",
+          "sha256": "2a529c7984852a953263d18c675281756313f89dfdce2d7ec3ae9ddcd0cfaed1"
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "file": "generation/001-generated-v1.png",
+      "sha256": "89700577f85fd1fe16dbf47746f44632202d5f59385dfee3bcb383950b11810c",
+      "original_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-512bf08a-b917-4e4a-9eb8-8c60b219d6cc.png",
+      "copied_byte_exact": true,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha0_pixels": 1388923,
+      "alpha1_through7_pixels": 5791,
+      "alpha8_through255_pixels": 178150,
+      "alpha_positive_bounds_exclusive": [
+        143,
+        21,
+        1448,
+        984
+      ],
+      "alpha8_bounds_exclusive": [
+        162,
+        369,
+        1395,
+        777
+      ],
+      "request": {
+        "file": "generation/001-v1-request.json",
+        "sha256": "05868731a36a01863eb74d56ee3e4bd515df59bb7da272f35221166393d31f3b"
+      },
+      "ordered_references": [
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\001-original-guide.png",
+          "sha256": "f2d043c543ed67a2e21ffcd5bb7e094880eb90973f3bd5be2213357b7aaa0af2"
+        },
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\generation\\004-generated-v1.png",
+          "sha256": "320ac29fcdaed65ef50278b033bb72678e643f512966b6446f1526e5eb6f5502"
+        },
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\original-contact-sheet.png",
+          "sha256": "2a529c7984852a953263d18c675281756313f89dfdce2d7ec3ae9ddcd0cfaed1"
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "file": "generation/002-generated-v1.png",
+      "sha256": "875846f23094e478d9d90842052ca8b6da320b01c3dd22974df1ebd0aab55cf1",
+      "original_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-f8a6da28-4f11-4ce4-8cab-86b32ba72aa7.png",
+      "copied_byte_exact": true,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha0_pixels": 1294064,
+      "alpha1_through7_pixels": 5891,
+      "alpha8_through255_pixels": 272909,
+      "alpha_positive_bounds_exclusive": [
+        108,
+        21,
+        1522,
+        998
+      ],
+      "alpha8_bounds_exclusive": [
+        110,
+        332,
+        1432,
+        763
+      ],
+      "request": {
+        "file": "generation/002-v1-request.json",
+        "sha256": "d076eab94c02f01ff35b06cf1a4bd6cc1ddb1ddb6618d6b3c5f2fe038cfd0d9f"
+      },
+      "ordered_references": [
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\002-original-guide.png",
+          "sha256": "4dab06d9bf4f068adde486ba77e27d78af0536838a51d9559c22d6d66fcfae6e"
+        },
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\generation\\004-generated-v1.png",
+          "sha256": "320ac29fcdaed65ef50278b033bb72678e643f512966b6446f1526e5eb6f5502"
+        },
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\original-contact-sheet.png",
+          "sha256": "2a529c7984852a953263d18c675281756313f89dfdce2d7ec3ae9ddcd0cfaed1"
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "file": "generation/003-generated-v1.png",
+      "sha256": "89400f8f7ec4a625a60d30e17191686af82a0cb5b2e57b622f2bdf6ff4762b5a",
+      "original_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-db0ee5fe-b49f-41ca-85a9-d74039b4ed4c.png",
+      "copied_byte_exact": true,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha0_pixels": 1303389,
+      "alpha1_through7_pixels": 5585,
+      "alpha8_through255_pixels": 263890,
+      "alpha_positive_bounds_exclusive": [
+        89,
+        21,
+        1448,
+        998
+      ],
+      "alpha8_bounds_exclusive": [
+        135,
+        345,
+        1403,
+        765
+      ],
+      "request": {
+        "file": "generation/003-v1-request.json",
+        "sha256": "f0dc825a204f3c377bc8b91194306777263d595ae747e09db11567a778eccd99"
+      },
+      "ordered_references": [
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\003-original-guide.png",
+          "sha256": "3400b6c417631e3bc9aa0fb8e3ca39c1b9306bdfe76554475a5b2f93308ccf54"
+        },
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\generation\\004-generated-v1.png",
+          "sha256": "320ac29fcdaed65ef50278b033bb72678e643f512966b6446f1526e5eb6f5502"
+        },
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\original-contact-sheet.png",
+          "sha256": "2a529c7984852a953263d18c675281756313f89dfdce2d7ec3ae9ddcd0cfaed1"
+        }
+      ]
+    },
+    {
+      "frame": 4,
+      "file": "generation/004-generated-v1.png",
+      "sha256": "320ac29fcdaed65ef50278b033bb72678e643f512966b6446f1526e5eb6f5502",
+      "original_generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-396e046f-ae3f-414f-8888-507996c12e67.png",
+      "copied_byte_exact": true,
+      "canvas": [
+        1536,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha0_pixels": 1302357,
+      "alpha1_through7_pixels": 5078,
+      "alpha8_through255_pixels": 265429,
+      "alpha_positive_bounds_exclusive": [
+        137,
+        39,
+        1434,
+        998
+      ],
+      "alpha8_bounds_exclusive": [
+        160,
+        351,
+        1376,
+        734
+      ],
+      "request": {
+        "file": "generation/004-v1-request.json",
+        "sha256": "f6e273560f0805da18932654c7c476ccf09b31bd52aafa299382d26348ad4a14"
+      },
+      "ordered_references": [
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\004-original-guide.png",
+          "sha256": "19e6fe035c7c9a80112ea11ab520a64d1ade66158655f371cc325ee2a35c4952"
+        },
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\approved-palm013-runtime.png",
+          "sha256": "72714deba94d2e7de946b9f30532e2482ac7a1b1027c442e77e443e5c9b7186c"
+        },
+        {
+          "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\raft-v1\\reference\\approved-island000-runtime.png",
+          "sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d"
+        }
+      ]
+    }
+  ]
+}

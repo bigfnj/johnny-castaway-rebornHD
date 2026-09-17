@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-17",
+  "accepted": true,
+  "approval_kind": "scoped visual artwork approval",
+  "production_acceptance": false,
+  "resource": "COCONUTS.BMP",
+  "approved_frames": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "human_question": "The new coconut artwork is open at http://127.0.0.1:8940/review.html. Do the four orientations fit the Cartoon style? This is an appearance review; final size and motion checks come during bulk integration.",
+  "human_response": "looks great, proceed",
+  "reviewed_url": "http://127.0.0.1:8940/review.html",
+  "review_page": {
+    "path": "art/cartoon/coconuts-v1/review.html",
+    "sha256": "1715e5d67c382adbb354712284257b5c60fcccbc78037d00df29e099309a3aee"
+  },
+  "scope": "Approve the appearance of the four visible coconut orientations 000-003 in the Cartoon style. The question covers these four orientations only; the separate shadow drafts 004-006 remain pending.",
+  "assets": [
+    {
+      "frame": 0,
+      "asset": "BMP/COCONUTS.BMP/000.png",
+      "selected_raw": {
+        "path": "art/cartoon/coconuts-v1/generation/000-generated-v1.png",
+        "sha256": "1567a5f740779a98517507893fbd24e840615f690710857b9722ec59bac8335e"
+      },
+      "actual_canvas": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "request": {
+        "path": "art/cartoon/coconuts-v1/generation/000-v1-request.json",
+        "sha256": "b3c96ebd859516adecb2f5ce104cf3bbd3168f37ddb665728f0121fb3a3de819"
+      },
+      "ordered_generation_references": [
+        {
+          "path": "art/cartoon/coconuts-v1/reference/000-original-guide.png",
+          "sha256": "836f79ba88ca58f64e54ce3c3d41a25ba06abf423b3ec58eb9c84cc5ab807e7b"
+        },
+        {
+          "path": "art/cartoon/coconuts-v1/reference/approved-palm012-runtime.png",
+          "sha256": "701fc7909c3cc150ece7125c04f493f27da75d07446cc43cc6acae70fde1aa18"
+        }
+      ]
+    },
+    {
+      "frame": 1,
+      "asset": "BMP/COCONUTS.BMP/001.png",
+      "selected_raw": {
+        "path": "art/cartoon/coconuts-v1/generation/001-generated-v1.png",
+        "sha256": "4542b8425aa3456d487733dcfd606ee6ea374a06cd25ebd9966e52cb6f6cbd3e"
+      },
+      "actual_canvas": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "request": {
+        "path": "art/cartoon/coconuts-v1/generation/001-v1-request.json",
+        "sha256": "3c18758b05b8f6ab3307e5406a449a526e07e22292d9afe6be333593c40c1963"
+      },
+      "ordered_generation_references": [
+        {
+          "path": "art/cartoon/coconuts-v1/generation/000-generated-v1.png",
+          "sha256": "1567a5f740779a98517507893fbd24e840615f690710857b9722ec59bac8335e"
+        },
+        {
+          "path": "art/cartoon/coconuts-v1/reference/original-001.png",
+          "sha256": "20f5a785cf87ad959045ed146c1379991940382510cf7221c8cebe0cebca5b84"
+        }
+      ]
+    },
+    {
+      "frame": 2,
+      "asset": "BMP/COCONUTS.BMP/002.png",
+      "selected_raw": {
+        "path": "art/cartoon/coconuts-v1/generation/002-generated-v1.png",
+        "sha256": "acaf1601686adc4e5eeb33ba12830ed798b00550e55ad90e356d8272ef676392"
+      },
+      "actual_canvas": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "request": {
+        "path": "art/cartoon/coconuts-v1/generation/002-v1-request.json",
+        "sha256": "24c087cc06e0b9a9671485880027e3a23123679130aca84437a1574f439ffe36"
+      },
+      "ordered_generation_references": [
+        {
+          "path": "art/cartoon/coconuts-v1/generation/000-generated-v1.png",
+          "sha256": "1567a5f740779a98517507893fbd24e840615f690710857b9722ec59bac8335e"
+        },
+        {
+          "path": "art/cartoon/coconuts-v1/reference/original-002.png",
+          "sha256": "a6d5e0b6b886285b981a9fdd194347789504251cc434ba4c7122d14fae686c07"
+        }
+      ]
+    },
+    {
+      "frame": 3,
+      "asset": "BMP/COCONUTS.BMP/003.png",
+      "selected_raw": {
+        "path": "art/cartoon/coconuts-v1/generation/003-generated-v1.png",
+        "sha256": "223932a8aeb4c4410666021b4bb3947823a29f4aab977f7023065cbfe7b809c4"
+      },
+      "actual_canvas": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        255
+      ],
+      "request": {
+        "path": "art/cartoon/coconuts-v1/generation/003-v1-request.json",
+        "sha256": "1f8337acb3f1f3453175438132509bc2cc7f64c332d87c472c56a5818f7e2530"
+      },
+      "ordered_generation_references": [
+        {
+          "path": "art/cartoon/coconuts-v1/generation/000-generated-v1.png",
+          "sha256": "1567a5f740779a98517507893fbd24e840615f690710857b9722ec59bac8335e"
+        },
+        {
+          "path": "art/cartoon/coconuts-v1/reference/original-003.png",
+          "sha256": "81df1e8b6c27acec38a04a18627459e2657039f281a4b4acf0325c9cce98a12e"
+        }
+      ]
+    }
+  ],
+  "pending_shadow_drafts": [
+    {
+      "frame": 4,
+      "asset": "BMP/COCONUTS.BMP/004.png",
+      "selected_raw": {
+        "path": "art/cartoon/coconuts-v1/generation/004-generated-v1.png",
+        "sha256": "7b672efa4f3348dfdfc333a61dc7ab0100e9d02dec95bec80a5bfb09d837c32c"
+      },
+      "status": "appearance approval pending"
+    },
+    {
+      "frame": 5,
+      "asset": "BMP/COCONUTS.BMP/005.png",
+      "selected_raw": {
+        "path": "art/cartoon/coconuts-v1/generation/005-generated-v1.png",
+        "sha256": "faedb56788522f3871ec1050f9dea98705204ef1fbc0706c75dc32a8d7709949"
+      },
+      "status": "appearance approval pending"
+    },
+    {
+      "frame": 6,
+      "asset": "BMP/COCONUTS.BMP/006.png",
+      "selected_raw": {
+        "path": "art/cartoon/coconuts-v1/generation/006-generated-v1.png",
+        "sha256": "c9b0c6035ec92c81d2eb62d77cb01dc44c2331b7092bf37685ac4a0d0518410c"
+      },
+      "status": "appearance approval pending"
+    }
+  ],
+  "prior_generation_record": {
+    "path": "art/cartoon/coconuts-v1/generation/record.json",
+    "sha256": "a96b93ab46ccb053ba12c42071ae5fae2ae169aa36efdbe837041ed98b261788",
+    "status": "draft_visual_review"
+  },
+  "technical_status": "Final uniform-scale export fit, canvas registration, size consistency, native motion and bulk smoke/regression/audit remain pending. No export or production-package acceptance is recorded here.",
+  "verification_scope": "Raw file SHA identities and actual image dimensions, mode and alpha range were read for this record. No tests or new validation framework were run."
+}

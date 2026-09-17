@@ -2,6 +2,8 @@
 
 On 2026-09-17 the user changed the delivery cadence: "build ALL of the assets FIRST, then bulk smoke-test" so visual iteration can move faster. This replaces the earlier requirement to run the entire validation, merge and post-merge audit cycle after every art approval.
 
+The user subsequently requested "2 dozen or more per review". Queue at least24 drawings per ordinary art review, grouping related props together and identifying each frame clearly. Use parallel generation where shared style references permit it. Collect exceptions in one review instead of pausing for each prop or small resource. Pause earlier only for a fundamental art-direction decision or a blocker that would invalidate the larger batch.
+
 | Stage | Current practice |
 | --- | --- |
 | Draw and review | Work through coherent resource families. Use original artwork for geometry and the approved Cartoon artwork for style. Show stills or motion previews where they help the user judge the art. |
@@ -14,4 +16,4 @@ The cloud CI run was already underway when this decision arrived. Let it finish,
 
 Actual engine changes remain separate from art-only iteration and receive testing appropriate to the changed behavior. Human review remains useful for anatomy, contact, layering and style decisions; it does not require the full software validation cycle first.
 
-The next environment work is NIGHT.SCR and the remaining active ocean screens, followed by independent props and vehicle families. Preserve all earlier character, shoreline, offshore-wave and seasonal approvals.
+NIGHT.SCR and the remaining active ocean screens have visual approval and await integration. Work now covers independent props and vehicle families in larger batches. Preserve all earlier character, shoreline, offshore-wave and seasonal approvals.

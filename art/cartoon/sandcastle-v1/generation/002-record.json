@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "frame": 2,
+  "status": "draft_visual_review",
+  "tool": "built-in image_gen",
+  "approval": null,
+  "selected_raw": {
+    "path": "generation/002-generated-v1.png",
+    "sha256": "f2b180879838cf3a11fabd455be997414e639ebb2d9569db715884388864ed12",
+    "canvas": [
+      1503,
+      1047
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      0,
+      34,
+      1473,
+      986
+    ],
+    "alpha8_bounds_exclusive": [
+      33,
+      101,
+      1471,
+      983
+    ],
+    "edge_alpha_max": 1,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "request": {
+    "path": "generation/002-v1-request.json",
+    "sha256": "ac24d7a33e7400ed8f17b796437f9fa87849f226faa3a15b4932d40da059358c"
+  },
+  "ordered_input_images": [
+    {
+      "path": "reference/nearest8/002.png",
+      "sha256": "97ada94e834a0f6c93fb09189115a8b59b17bee5b7ce4ec7a6b59f27d908ddf4"
+    },
+    {
+      "path": "generation/000-generated-v1.png",
+      "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef"
+    }
+  ],
+  "original_reference": {
+    "path": "reference/original/002.png",
+    "sha256": "b9bc8793772267c8b290eebdf76c7e84c526c1be4ffe335b2312f3c40031ccb3",
+    "canvas": [
+      72,
+      48
+    ],
+    "mode": "RGBA",
+    "alpha_bounds_exclusive": [
+      0,
+      0,
+      69,
+      48
+    ]
+  },
+  "shared_style_key": {
+    "path": "generation/000-generated-v1.png",
+    "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef",
+    "status": "draft shared key; style reference only"
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-58d6017c-83c5-4fdd-9109-a111e5d22651.png",
+  "visual_observation": "Three separate towers present: inner-left and both outer towers. Inner-right and central spire are absent. Side-tower windows reappear compared with generated 001; original architectural and proportional identity is not exact.",
+  "visible_extent_ratio": {
+    "original_alpha_nonzero_width_over_height": 1.4375,
+    "generated_alpha8_width_over_height": 1.6303854875283448,
+    "scope": "Simple extent measurement only; no fitting, clipping or nonuniform scaling was performed."
+  },
+  "verification_scope": "Viewed the shared key and each original guide before the call. Inspected the returned artwork and read actual image dimensions, mode, alpha and PNG hashes. No tests or runtime validation.",
+  "alpha_policy": "All original returned bytes and alpha retained. Alpha >= 8 is used only to report visible bounds, never as an applied threshold.",
+  "production_package_changed": false,
+  "export_executed": false,
+  "deferred_work": [
+    "Human appearance review as part of the 24-item batch",
+    "Geometry/registration and cross-stage identity review",
+    "Uniform runtime export, native motion and bulk smoke/regression/audit"
+  ]
+}

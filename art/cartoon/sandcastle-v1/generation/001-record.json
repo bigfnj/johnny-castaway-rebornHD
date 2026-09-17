@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "frame": 1,
+  "status": "draft_visual_review",
+  "tool": "built-in image_gen",
+  "approval": null,
+  "selected_raw": {
+    "path": "generation/001-generated-v1.png",
+    "sha256": "864761e31779f0765888f3943eb6738a1ce5543698eed38d2f4f040148cea4cb",
+    "canvas": [
+      1503,
+      1047
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      0,
+      20,
+      1475,
+      1047
+    ],
+    "alpha8_bounds_exclusive": [
+      58,
+      162,
+      1443,
+      952
+    ],
+    "edge_alpha_max": 1,
+    "corner_alpha": [
+      0,
+      0,
+      1,
+      0
+    ]
+  },
+  "request": {
+    "path": "generation/001-v1-request.json",
+    "sha256": "9dd0e55c5927ca9e55a0e4b8c515a35ea98e8cdb5363635f0614e818f92290f1"
+  },
+  "ordered_input_images": [
+    {
+      "path": "reference/nearest8/001.png",
+      "sha256": "0b698c9c42250a755436f9dca1fa3c0c5c2f46280f8a86a668c9851a605f2ed3"
+    },
+    {
+      "path": "generation/000-generated-v1.png",
+      "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef"
+    }
+  ],
+  "original_reference": {
+    "path": "reference/original/001.png",
+    "sha256": "40c145e40ae22235e96142c910c882b5e0e27ce1ce68f7f2ae907abe15e8cb05",
+    "canvas": [
+      72,
+      48
+    ],
+    "mode": "RGBA",
+    "alpha_bounds_exclusive": [
+      0,
+      0,
+      69,
+      48
+    ]
+  },
+  "shared_style_key": {
+    "path": "generation/000-generated-v1.png",
+    "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef",
+    "status": "draft shared key; style reference only"
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-3ea683e3-cdb8-4a75-8d47-fa1b6480ce23.png",
+  "visual_observation": "Four separate towers present; central spire absent. The generator redraws the front wall and doorway and omits the small side-tower windows shown by the shared key. It is wider relative to its height than the original silhouette.",
+  "visible_extent_ratio": {
+    "original_alpha_nonzero_width_over_height": 1.4375,
+    "generated_alpha8_width_over_height": 1.7531645569620253,
+    "scope": "Simple extent measurement only; no fitting, clipping or nonuniform scaling was performed."
+  },
+  "verification_scope": "Viewed the shared key and each original guide before the call. Inspected the returned artwork and read actual image dimensions, mode, alpha and PNG hashes. No tests or runtime validation.",
+  "alpha_policy": "All original returned bytes and alpha retained. Alpha >= 8 is used only to report visible bounds, never as an applied threshold.",
+  "production_package_changed": false,
+  "export_executed": false,
+  "deferred_work": [
+    "Human appearance review as part of the 24-item batch",
+    "Geometry/registration and cross-stage identity review",
+    "Uniform runtime export, native motion and bulk smoke/regression/audit"
+  ]
+}

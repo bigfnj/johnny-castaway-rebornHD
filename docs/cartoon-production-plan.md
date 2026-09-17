@@ -82,7 +82,7 @@ Johnny drawings retain those scoped approvals.
 Other placements and story uses of the standing art remain outside its reviewed
 arrival/direction-ring contexts. Seasonal decorations and the high/low-tide
 environment groups and ordinary moving clouds are now delivered. NIGHT and the
-remaining ordinary daytime oceans have [visual approval and saved exports](../art/cartoon/environment-v1/README.md), pending bulk integration. Independent coconut props are next; other characters, action scenes and code-drawn
+remaining ordinary daytime oceans have [visual approval and saved exports](../art/cartoon/environment-v1/README.md), pending bulk integration. Four [coconut orientations](../art/cartoon/coconuts-v1/README.md) now have scoped appearance approval; their shadow drafts and runtime fit remain pending. The user requested at least24 drawings per review, so the next [combined review](../art/cartoon/props-batch-v1/README.md) covers one boat, five raft construction pieces, fifteen sandcastle stages/effects and three idea symbols. Other characters, action scenes and code-drawn
 effects remain later work. Existing engine maintenance findings stay
 in [BACKLOG.md](../BACKLOG.md); address a reproduced blocker when its affected
 scene enters review.

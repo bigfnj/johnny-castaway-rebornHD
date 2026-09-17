@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "frame": 3,
+  "status": "draft_visual_review",
+  "tool": "built-in image_gen",
+  "approval": null,
+  "selected_raw": {
+    "path": "generation/003-generated-v1.png",
+    "sha256": "cf30c27de5a58c7196bebbd4b87a1b6cee595b05f2bc8f6d42de64a0195a048b",
+    "canvas": [
+      1647,
+      955
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      43,
+      25,
+      1588,
+      898
+    ],
+    "alpha8_bounds_exclusive": [
+      46,
+      150,
+      1585,
+      867
+    ],
+    "edge_alpha_max": 0,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "request": {
+    "path": "generation/003-v1-request.json",
+    "sha256": "22cc1b3b4264b501395dc4eb9215f12cfb50231d90ab0ad4d936a83d7a4075ee"
+  },
+  "ordered_input_images": [
+    {
+      "path": "reference/nearest8/003.png",
+      "sha256": "237b3b7361cb19039e6a84db24b5c7ffc3a009eccaedb71758fbe531edc7d490"
+    },
+    {
+      "path": "generation/000-generated-v1.png",
+      "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef"
+    }
+  ],
+  "original_reference": {
+    "path": "reference/original/003.png",
+    "sha256": "4ad980c73d64341c20240c11e80021e6b56ef64f7c0a647dd7bd78ef203a167f",
+    "canvas": [
+      72,
+      40
+    ],
+    "mode": "RGBA",
+    "alpha_bounds_exclusive": [
+      0,
+      0,
+      69,
+      40
+    ]
+  },
+  "shared_style_key": {
+    "path": "generation/000-generated-v1.png",
+    "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef",
+    "status": "draft shared key; style reference only"
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-d684e704-847b-43fe-8746-0b0ab3414547.png",
+  "visual_observation": "Only the two outer towers remain. The generated castle is visibly wider/flatter than the original silhouette; front wall, doorway and crenellation proportions need review.",
+  "visible_extent_ratio": {
+    "original_alpha_nonzero_width_over_height": 1.725,
+    "generated_alpha8_width_over_height": 2.1464435146443517,
+    "scope": "Simple extent measurement only; no fitting, clipping or nonuniform scaling was performed."
+  },
+  "verification_scope": "Viewed the shared key and each original guide before the call. Inspected the returned artwork and read actual image dimensions, mode, alpha and PNG hashes. No tests or runtime validation.",
+  "alpha_policy": "All original returned bytes and alpha retained. Alpha >= 8 is used only to report visible bounds, never as an applied threshold.",
+  "production_package_changed": false,
+  "export_executed": false,
+  "deferred_work": [
+    "Human appearance review as part of the 24-item batch",
+    "Geometry/registration and cross-stage identity review",
+    "Uniform runtime export, native motion and bulk smoke/regression/audit"
+  ]
+}

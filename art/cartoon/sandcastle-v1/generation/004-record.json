@@ -1,0 +1,187 @@
+{
+  "schema_version": 1,
+  "frame": 4,
+  "status": "draft_visual_review",
+  "tool": "built-in image_gen",
+  "approval": null,
+  "selected_raw": {
+    "path": "generation/004-generated-v1.png",
+    "sha256": "b3dbe3ac51e18cad46b34995b947142aa84a970738e1306d716cb087777ed26f",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      25,
+      9,
+      1524,
+      1002
+    ],
+    "alpha8_bounds_exclusive": [
+      152,
+      140,
+      1405,
+      897
+    ],
+    "edge_alpha_max": 0,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "request": {
+    "path": "generation/004-v1-request.json",
+    "sha256": "ce9d16c0b57da5cf8f2efca1119b85db55e67e0d1c036f222deb4ecaa30c61e0"
+  },
+  "ordered_input_images": [
+    {
+      "path": "reference/nearest8/004.png",
+      "sha256": "702ba515bcd2755f153f99ac75927a7545f4c5a8a344345d69444f3e5ef2750d"
+    },
+    {
+      "path": "generation/000-generated-v1.png",
+      "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef"
+    }
+  ],
+  "original_reference": {
+    "path": "reference/original/004.png",
+    "sha256": "69fc047232f31fbcbfd77305c75138b92f44e82474aacdee1580182c89c2b914",
+    "canvas": [
+      64,
+      39
+    ],
+    "mode": "RGBA",
+    "alpha_bounds_exclusive": [
+      0,
+      0,
+      59,
+      39
+    ]
+  },
+  "shared_style_key": {
+    "path": "generation/000-generated-v1.png",
+    "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef",
+    "status": "draft shared key; style reference only"
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-958af284-4469-4a7a-acb6-f643f64a1365.png",
+  "visual_observation": "Only the outer-left tower remains, with a rising rear-right wall. The left tower top and front-wall crenellations are redrawn, not an exact reproduction. Apparent raw-viewer halo samples are alpha 0, including samples inside the doorway; no visible halo defect is established.",
+  "visible_extent_ratio": {
+    "original_alpha_nonzero_width_over_height": 1.5128205128205128,
+    "generated_alpha8_width_over_height": 1.655217965653897,
+    "scope": "Simple extent measurement only; no fitting, clipping or nonuniform scaling was performed."
+  },
+  "verification_scope": "Viewed the shared key and each original guide before the call. Inspected the returned artwork and read actual image dimensions, mode, alpha and PNG hashes. No tests or runtime validation.",
+  "alpha_policy": "All original returned bytes and alpha retained. Alpha >= 8 is used only to report visible bounds, never as an applied threshold.",
+  "production_package_changed": false,
+  "export_executed": false,
+  "deferred_work": [
+    "Human appearance review as part of the 24-item batch",
+    "Geometry/registration and cross-stage identity review",
+    "Uniform runtime export, native motion and bulk smoke/regression/audit"
+  ],
+  "raw_viewer_halo_samples": [
+    {
+      "xy": [
+        250,
+        60
+      ],
+      "rgba": [
+        30,
+        22,
+        10,
+        0
+      ]
+    },
+    {
+      "xy": [
+        120,
+        800
+      ],
+      "rgba": [
+        69,
+        51,
+        25,
+        0
+      ]
+    },
+    {
+      "xy": [
+        600,
+        940
+      ],
+      "rgba": [
+        80,
+        55,
+        25,
+        0
+      ]
+    },
+    {
+      "xy": [
+        40,
+        700
+      ],
+      "rgba": [
+        21,
+        14,
+        6,
+        0
+      ]
+    },
+    {
+      "xy": [
+        700,
+        300
+      ],
+      "rgba": [
+        14,
+        10,
+        3,
+        0
+      ]
+    },
+    {
+      "xy": [
+        900,
+        350
+      ],
+      "rgba": [
+        56,
+        43,
+        21,
+        0
+      ]
+    },
+    {
+      "xy": [
+        840,
+        805
+      ],
+      "rgba": [
+        98,
+        60,
+        20,
+        0
+      ]
+    },
+    {
+      "xy": [
+        840,
+        855
+      ],
+      "rgba": [
+        80,
+        49,
+        16,
+        0
+      ]
+    }
+  ]
+}

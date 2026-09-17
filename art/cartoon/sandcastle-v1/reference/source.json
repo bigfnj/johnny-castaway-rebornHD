@@ -1,0 +1,699 @@
+{
+  "schema_version": 1,
+  "purpose": "Reference preparation for 15 sandcastle drawings; no new art or runtime claim.",
+  "inputs": [
+    {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    {
+      "path": "assets/scrantic_data.zip",
+      "sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/source/frame-index.json",
+      "sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/scene-map/resource-map.json",
+      "sha256": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/scene-map/static-draw-sites.json",
+      "sha256": "2892a584a1816bf70c41c2d0ecb934f2a22e071dbda5629cfe54f185af0acaad"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/classification/s-family.json",
+      "sha256": "1d8f89faa9925344f55fd89395f043da83ac9951592e598aac101fd94e9b306a"
+    },
+    {
+      "path": "art/cartoon/sandcastle-v1/reference/prepare.py",
+      "sha256": "6232b54a8559d1a31d0e814e953fffffd0e57477bdafcac13688805979471e41"
+    }
+  ],
+  "supplied_original_resource_sha256": {
+    "RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+    "RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+  },
+  "palette_limit": "Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.",
+  "original_executable_color_parity": false,
+  "frames": [
+    {
+      "frame": 0,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/000.png",
+        "sha256": "acbabcb5b597ba01bd6211783e8ec4fe90d4c61f3843228cc0a2a5b497ceb2b7",
+        "member": "native/BMP/SANDCAST.BMP/000.png",
+        "canvas": [
+          72,
+          57
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          69,
+          57
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/000.png",
+        "sha256": "063d374d323a07e2b3c61d40c3e8058062fbd8f93f5e2e51f304e356819582e5",
+        "member": "data/hd/BMP/SANDCAST.BMP/000.png",
+        "canvas": [
+          144,
+          114
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/000.png",
+        "sha256": "4bae0e39441b733d46b224773b4b93bff37bb5bd06743bd1a5b65ec4ad0323df",
+        "canvas": [
+          576,
+          456
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 1,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/001.png",
+        "sha256": "40c145e40ae22235e96142c910c882b5e0e27ce1ce68f7f2ae907abe15e8cb05",
+        "member": "native/BMP/SANDCAST.BMP/001.png",
+        "canvas": [
+          72,
+          48
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          69,
+          48
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/001.png",
+        "sha256": "8cb67299c983233956666ddb8b648a0051bb2f7044cc82f8cf1e86800112fff6",
+        "member": "data/hd/BMP/SANDCAST.BMP/001.png",
+        "canvas": [
+          144,
+          96
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/001.png",
+        "sha256": "0b698c9c42250a755436f9dca1fa3c0c5c2f46280f8a86a668c9851a605f2ed3",
+        "canvas": [
+          576,
+          384
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 2,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/002.png",
+        "sha256": "b9bc8793772267c8b290eebdf76c7e84c526c1be4ffe335b2312f3c40031ccb3",
+        "member": "native/BMP/SANDCAST.BMP/002.png",
+        "canvas": [
+          72,
+          48
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          69,
+          48
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/002.png",
+        "sha256": "4cb53d6952662ac90f09f83c93136d514d164bb4224d93df82da4a96ff1a7fc0",
+        "member": "data/hd/BMP/SANDCAST.BMP/002.png",
+        "canvas": [
+          144,
+          96
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/002.png",
+        "sha256": "97ada94e834a0f6c93fb09189115a8b59b17bee5b7ce4ec7a6b59f27d908ddf4",
+        "canvas": [
+          576,
+          384
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 3,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/003.png",
+        "sha256": "4ad980c73d64341c20240c11e80021e6b56ef64f7c0a647dd7bd78ef203a167f",
+        "member": "native/BMP/SANDCAST.BMP/003.png",
+        "canvas": [
+          72,
+          40
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          69,
+          40
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/003.png",
+        "sha256": "c367a4572e12202aa4797b383e6a550b61582e5bbc6c2bee9fa56282bc42d201",
+        "member": "data/hd/BMP/SANDCAST.BMP/003.png",
+        "canvas": [
+          144,
+          80
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/003.png",
+        "sha256": "237b3b7361cb19039e6a84db24b5c7ffc3a009eccaedb71758fbe531edc7d490",
+        "canvas": [
+          576,
+          320
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 4,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/004.png",
+        "sha256": "69fc047232f31fbcbfd77305c75138b92f44e82474aacdee1580182c89c2b914",
+        "member": "native/BMP/SANDCAST.BMP/004.png",
+        "canvas": [
+          64,
+          39
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          59,
+          39
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/004.png",
+        "sha256": "4fb891d9e9b20b86beef46dabdb14eea6f54bc5480324316f5100d43f65283c1",
+        "member": "data/hd/BMP/SANDCAST.BMP/004.png",
+        "canvas": [
+          128,
+          78
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/004.png",
+        "sha256": "702ba515bcd2755f153f99ac75927a7545f4c5a8a344345d69444f3e5ef2750d",
+        "canvas": [
+          512,
+          312
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 5,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/005.png",
+        "sha256": "4496363c98818bc523e4c3d8e2da4a8c87817aad04f687e0013830c694d8f6e4",
+        "member": "native/BMP/SANDCAST.BMP/005.png",
+        "canvas": [
+          48,
+          37
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          48,
+          37
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/005.png",
+        "sha256": "1b0d16daf9f3c5d1772944e6aac2da2089425402ef3029bbb1db211e31a55ccd",
+        "member": "data/hd/BMP/SANDCAST.BMP/005.png",
+        "canvas": [
+          96,
+          74
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/005.png",
+        "sha256": "57e6895b41d08500a28cca06d61005c14f8f43f9293956fae3fe41e43a9dbc62",
+        "canvas": [
+          384,
+          296
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 6,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/006.png",
+        "sha256": "4430eafe7c4c9eba21ad1f084836242af9336eeff930d060a1e0a806cbc023be",
+        "member": "native/BMP/SANDCAST.BMP/006.png",
+        "canvas": [
+          120,
+          40
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          114,
+          40
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/006.png",
+        "sha256": "9592817d7c16ab0f0c05002ba9b2b3609ff67e98bc998cc0433dca5f7ea9a54b",
+        "member": "data/hd/BMP/SANDCAST.BMP/006.png",
+        "canvas": [
+          240,
+          80
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/006.png",
+        "sha256": "c8cdf5938ec7ad5de500efc3aa198bc40bd8c13b7a62f8ee009b3f707f8bb497",
+        "canvas": [
+          960,
+          320
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 7,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/007.png",
+        "sha256": "9c0318b8b0afa0827cc9cd8d109433d0b730486e5202e2525f81bae2c60b07a0",
+        "member": "native/BMP/SANDCAST.BMP/007.png",
+        "canvas": [
+          104,
+          47
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          104,
+          47
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/007.png",
+        "sha256": "18eb46ba1d803a2227adb6edbb98b1b2a1bf2d3992b36c6979e8bd3921363407",
+        "member": "data/hd/BMP/SANDCAST.BMP/007.png",
+        "canvas": [
+          208,
+          94
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/007.png",
+        "sha256": "5ec99e75f872045ce7daaa14d579e258d29d2a4df19e118b0fc55c742b276bae",
+        "canvas": [
+          832,
+          376
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 8,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/008.png",
+        "sha256": "278eb5b3dd643582e01813d7c29790462d951a64dbb19dee660a14269133cbb5",
+        "member": "native/BMP/SANDCAST.BMP/008.png",
+        "canvas": [
+          176,
+          105
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          7,
+          13,
+          151,
+          94
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/008.png",
+        "sha256": "6462acc0aa4ab9f3334dca83fcc7d9cf2971d30aa3953f49353a6c04976159f6",
+        "member": "data/hd/BMP/SANDCAST.BMP/008.png",
+        "canvas": [
+          352,
+          210
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/008.png",
+        "sha256": "ee7aab69d6230ded101771e6761bd5382bdb2b06e8d970c65a039b0e3fd289c4",
+        "canvas": [
+          1408,
+          840
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 9,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/009.png",
+        "sha256": "70311cddf307d13a1efc53bb0a41383ad5c7eac22124504dcf2de66449507662",
+        "member": "native/BMP/SANDCAST.BMP/009.png",
+        "canvas": [
+          128,
+          95
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          123,
+          95
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/009.png",
+        "sha256": "7084005061cd5ee9266f9dccb4eecf78156833f9690cf1a0e4b9651a05be659f",
+        "member": "data/hd/BMP/SANDCAST.BMP/009.png",
+        "canvas": [
+          256,
+          190
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/009.png",
+        "sha256": "058d0f0235edb3f5747543512c770a81130d7ea87abb85c38c2a03c6156bdf53",
+        "canvas": [
+          1024,
+          760
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 10,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/010.png",
+        "sha256": "09289254b772b7a68d32b1a6a6b577c0e0557913d2b672dcce02170c585d9a8d",
+        "member": "native/BMP/SANDCAST.BMP/010.png",
+        "canvas": [
+          80,
+          48
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          79,
+          48
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/010.png",
+        "sha256": "5ff556378a93da790c75497d629149d2add2a1d676950281e3b9fdb345b3eb70",
+        "member": "data/hd/BMP/SANDCAST.BMP/010.png",
+        "canvas": [
+          160,
+          96
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/010.png",
+        "sha256": "98abc36212c05b664c403c60f53fd145c9bf3c2aba763042e30acbe6fab19eb7",
+        "canvas": [
+          640,
+          384
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 11,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/011.png",
+        "sha256": "31a99a3bdadfa7a476a074130ac7bfecbed4b864aabb73311d0c8797423afc1f",
+        "member": "native/BMP/SANDCAST.BMP/011.png",
+        "canvas": [
+          56,
+          29
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          51,
+          29
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/011.png",
+        "sha256": "3f0f829b9e4aaad2cdf873b211ea282d666a71f2019f91281956152b5a567324",
+        "member": "data/hd/BMP/SANDCAST.BMP/011.png",
+        "canvas": [
+          112,
+          58
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/011.png",
+        "sha256": "2efcb95351e792b15a564cdcc00c477a44926843f69a2bc4eb95c72eadd96d7c",
+        "canvas": [
+          448,
+          232
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 12,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/012.png",
+        "sha256": "59d9a1bde923aa134310bcd08b4a5628a62978be8ab9b28e0549bf0908b2be20",
+        "member": "native/BMP/SANDCAST.BMP/012.png",
+        "canvas": [
+          48,
+          21
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          44,
+          21
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/012.png",
+        "sha256": "db1f82f5ea6d4dbb04b5a62885691240a183ae239a953e6f09b79c45812223a8",
+        "member": "data/hd/BMP/SANDCAST.BMP/012.png",
+        "canvas": [
+          96,
+          42
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/012.png",
+        "sha256": "a2893141718e4803de7f36dba8307c81b5b7c87bf390ad1ae100d55528613ffc",
+        "canvas": [
+          384,
+          168
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 13,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/013.png",
+        "sha256": "4ada2c8bea460d7fc10bcc23c2c490181761b9bac5616bbbdad561ee67b27a01",
+        "member": "native/BMP/SANDCAST.BMP/013.png",
+        "canvas": [
+          40,
+          11
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          35,
+          11
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/013.png",
+        "sha256": "37fad5bed020e7b0b0650f5b13d0901f3d66a2bab50290c583c72f2ba59d2a31",
+        "member": "data/hd/BMP/SANDCAST.BMP/013.png",
+        "canvas": [
+          80,
+          22
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/013.png",
+        "sha256": "bab9748c28801e1d721324c71c78aeb2f994d275640c6d9ff2563ceeb55570d2",
+        "canvas": [
+          320,
+          88
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    },
+    {
+      "frame": 14,
+      "original": {
+        "path": "art/cartoon/sandcastle-v1/reference/original/014.png",
+        "sha256": "a74e82e8890ca5b6a7f176479fec2181c805073468fecf2ed6337bd6577d1827",
+        "member": "native/BMP/SANDCAST.BMP/014.png",
+        "canvas": [
+          80,
+          37
+        ],
+        "matches_inventory_sha256": true,
+        "visible_bounds_exclusive": [
+          0,
+          0,
+          79,
+          37
+        ]
+      },
+      "hd": {
+        "path": "art/cartoon/sandcastle-v1/reference/hd/014.png",
+        "sha256": "45de43d6aab311fff08484de82fb56cf0c9d129068da17a6b8c704d30bf17e89",
+        "member": "data/hd/BMP/SANDCAST.BMP/014.png",
+        "canvas": [
+          160,
+          74
+        ],
+        "matches_inventory_hd_sha256": true
+      },
+      "nearest8": {
+        "path": "art/cartoon/sandcastle-v1/reference/nearest8/014.png",
+        "sha256": "08a7cbc737f99c5251809467543bc2902968d76a31a43de2af73e038230ae202",
+        "canvas": [
+          640,
+          296
+        ],
+        "method": "full original canvas, nearest-neighbor x8"
+      }
+    }
+  ],
+  "approved_cartoon_style": {
+    "path": "art/cartoon/sandcastle-v1/reference/approved-island-000.png",
+    "sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+    "member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+    "canvas": [
+      640,
+      180
+    ],
+    "use": "Sand color, shading, and outline style only; do not inherit this island's shape or canvas."
+  },
+  "root_owned_reference_aliases": [
+    {
+      "path": "art/cartoon/sandcastle-v1/reference/original-000.png",
+      "sha256": "acbabcb5b597ba01bd6211783e8ec4fe90d4c61f3843228cc0a2a5b497ceb2b7"
+    },
+    {
+      "path": "art/cartoon/sandcastle-v1/reference/approved-island000-runtime.png",
+      "sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d"
+    }
+  ],
+  "contact_sheet": {
+    "path": "art/cartoon/sandcastle-v1/reference/original-contact.png",
+    "sha256": "ef3b5b6ee41c1363b420864be0101d4b1921ebe2028761adad374d6da2b3c4f3",
+    "method": "Full original canvases nearest-neighbor x2, diagnostic dark backdrop and labels; no sprite pixels repainted."
+  },
+  "static_actions": {
+    "path": "art/cartoon/sandcastle-v1/reference/static-actions.json",
+    "sha256": "944b3840370d29259980d3e29eaac105a4b676ce76eaa1fcf72261b27c7282fc"
+  },
+  "complete_key_frame": 0,
+  "review_groups_of_five": [
+    {
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "description": "Completed castle and upper construction stages"
+    },
+    {
+      "frames": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "description": "Lowest standing wall and four airborne sand effects"
+    },
+    {
+      "frames": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "description": "Wilting castle, dissolving piles, and collapse variants"
+    }
+  ],
+  "parallel_generation_after_key": {
+    "key": [
+      0
+    ],
+    "construction": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "effects_and_first_collapse": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "remaining_collapse": [
+      11,
+      12,
+      13,
+      14
+    ]
+  }
+}

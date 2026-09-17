@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "draft_visual_review",
+  "tool": "built-in image_gen",
+  "approval": null,
+  "raw": {
+    "path": "generation/000-generated-v1.png",
+    "sha256": "4c2760df85897ac806eae81d45e79e2a5c799d3e1239614dad59eb573c1293b6",
+    "canvas": [
+      1952,
+      806
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "visible_bounds_exclusive": [
+      90,
+      71,
+      1895,
+      766
+    ]
+  },
+  "request": {
+    "path": "generation/000-v1-request.json",
+    "sha256": "1d0d902559a70ba2882a88564a9296a5e0ac8e5edf9264ec6f3db296aff68b2c"
+  },
+  "references": {
+    "path": "reference/source.json",
+    "sha256": "7d02dcdc9bc2fa863f876779caf3ae747452a2f508cf919c935bf60127087cc8"
+  },
+  "production_package_changed": false,
+  "export_executed": false,
+  "deferred_work": [
+    "Original-canvas uniform resampling and registration",
+    "Native scene placement and interactions",
+    "Bulk smoke and regression checks"
+  ]
+}

@@ -1,8 +1,11 @@
 {
   "schema_version": 1,
-  "status": "draft_visual_review",
+  "status": "coconut_orientations_000_003_visually_approved_shadows_004_006_pending",
   "tool": "built-in image_gen",
-  "approval": null,
+  "approval": {
+    "path": "art/cartoon/coconuts-v1/acceptance/appearance-v1.json",
+    "sha256": "92763d747fa5eb03cd025d17ccb192207813a63d5f9138fbd1352a07069bd87d"
+  },
   "outputs": [
     {
       "file": "000-generated-v1.png",
@@ -115,5 +118,20 @@
     "path": "reference/approved-palm-shadow014-runtime.png",
     "sha256": "ddfbff021d56c093456b4a9f9476f9439fbe482c45e66ddfb0c9f2993f9e324f",
     "production_member": "data/styles/cartoon/BMP/BACKGRND.BMP/014.png"
-  }
+  },
+  "prior_status": "draft_visual_review",
+  "previous_record_sha256": "a96b93ab46ccb053ba12c42071ae5fae2ae169aa36efdbe837041ed98b261788",
+  "appearance_approved_frames": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "appearance_pending_frames": [
+    4,
+    5,
+    6
+  ],
+  "approval_scope": "Four visible coconut orientations only. Separate shadow drafts 004-006, final fit and native/bulk validation remain pending.",
+  "historical_notes_policy": "The original seven output records and deferred work are preserved unchanged; this current approval covers only frames 000-003."
 }

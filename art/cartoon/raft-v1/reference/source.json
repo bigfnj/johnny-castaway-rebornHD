@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "status": "preview_reference_prep",
+  "palette_limit": "Supplied-original indexed pixels decoded using the port diagnostic palette. Original colors are geometry cues, not verified original executable palette.",
+  "sources": [
+    {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    {
+      "path": "assets/scrantic_data.zip",
+      "sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/source/frame-index.json",
+      "sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/scene-map/resource-map.json",
+      "sha256": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3"
+    }
+  ],
+  "frames": [
+    {
+      "frame": 0,
+      "images": [
+        {
+          "file": "original-000.png",
+          "source_member": "native/BMP/MRAFT.BMP/000.png",
+          "sha256": "64bd6e65f7257835eb3873e9105abc8d5e420e6cd789ff97fdb915b5e0f1515f",
+          "canvas": [
+            72,
+            39
+          ],
+          "mode": "RGBA",
+          "alpha_bounds_exclusive": [
+            9,
+            13,
+            71,
+            37
+          ]
+        },
+        {
+          "file": "hd-000.png",
+          "source_member": "data/hd/BMP/MRAFT.BMP/000.png",
+          "sha256": "e53bc7ad5481f16f15fc9a18dfa67637e17b68fde01b82da92f7b34140cc0045",
+          "canvas": [
+            144,
+            78
+          ],
+          "mode": "RGBA",
+          "alpha_bounds_exclusive": [
+            20,
+            26,
+            142,
+            74
+          ]
+        }
+      ],
+      "geometry_guide": {
+        "file": "000-original-guide.png",
+        "sha256": "c5f4135cbe14b73de8197d6aee091e6e0fa87ebcd88b98cfee64da184127991b",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "nearest_scale": 8,
+        "offset": [
+          480,
+          356
+        ],
+        "method": "Exact nearest-neighbor enlargement and transparent padding, no artistic edits."
+      }
+    },
+    {
+      "frame": 1,
+      "images": [
+        {
+          "file": "original-001.png",
+          "source_member": "native/BMP/MRAFT.BMP/001.png",
+          "sha256": "54f5a19e3296630813e7605b12a1b37198d98d0da084229fcfc56f37dcb6c09f",
+          "canvas": [
+            88,
+            39
+          ],
+          "mode": "RGBA",
+          "alpha_bounds_exclusive": [
+            0,
+            13,
+            86,
+            37
+          ]
+        },
+        {
+          "file": "hd-001.png",
+          "source_member": "data/hd/BMP/MRAFT.BMP/001.png",
+          "sha256": "ef0066da7747deba687b926986ba36ea84bfd90eba49d0464a42127746cdf128",
+          "canvas": [
+            176,
+            78
+          ],
+          "mode": "RGBA",
+          "alpha_bounds_exclusive": [
+            0,
+            26,
+            172,
+            74
+          ]
+        }
+      ],
+      "geometry_guide": {
+        "file": "001-original-guide.png",
+        "sha256": "f2d043c543ed67a2e21ffcd5bb7e094880eb90973f3bd5be2213357b7aaa0af2",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "nearest_scale": 8,
+        "offset": [
+          416,
+          356
+        ],
+        "method": "Exact nearest-neighbor enlargement and transparent padding, no artistic edits."
+      }
+    },
+    {
+      "frame": 2,
+      "images": [
+        {
+          "file": "original-002.png",
+          "source_member": "native/BMP/MRAFT.BMP/002.png",
+          "sha256": "e6029e8d236c679a6ed985601c37d495fbfad80f62b374cd1bd7108fc376b923",
+          "canvas": [
+            128,
+            39
+          ],
+          "mode": "RGBA",
+          "alpha_bounds_exclusive": [
+            0,
+            3,
+            124,
+            37
+          ]
+        },
+        {
+          "file": "hd-002.png",
+          "source_member": "data/hd/BMP/MRAFT.BMP/002.png",
+          "sha256": "d7d1d728d898a82987940d197df532b2e252f0d51b955b3c1fbc4e5bdf123c3f",
+          "canvas": [
+            256,
+            78
+          ],
+          "mode": "RGBA",
+          "alpha_bounds_exclusive": [
+            0,
+            6,
+            248,
+            74
+          ]
+        }
+      ],
+      "geometry_guide": {
+        "file": "002-original-guide.png",
+        "sha256": "4dab06d9bf4f068adde486ba77e27d78af0536838a51d9559c22d6d66fcfae6e",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "nearest_scale": 8,
+        "offset": [
+          256,
+          356
+        ],
+        "method": "Exact nearest-neighbor enlargement and transparent padding, no artistic edits."
+      }
+    },
+    {
+      "frame": 3,
+      "images": [
+        {
+          "file": "original-003.png",
+          "source_member": "native/BMP/MRAFT.BMP/003.png",
+          "sha256": "3fac248695bf272405abd929113910e7785034f296e3cb9892056ac3791a6b16",
+          "canvas": [
+            128,
+            39
+          ],
+          "mode": "RGBA",
+          "alpha_bounds_exclusive": [
+            0,
+            0,
+            124,
+            37
+          ]
+        },
+        {
+          "file": "hd-003.png",
+          "source_member": "data/hd/BMP/MRAFT.BMP/003.png",
+          "sha256": "3fcfaa6d4892ab534655902fe22628a208cb1f161d4a551790d7d194be1d9461",
+          "canvas": [
+            256,
+            78
+          ],
+          "mode": "RGBA",
+          "alpha_bounds_exclusive": [
+            0,
+            0,
+            248,
+            74
+          ]
+        }
+      ],
+      "geometry_guide": {
+        "file": "003-original-guide.png",
+        "sha256": "3400b6c417631e3bc9aa0fb8e3ca39c1b9306bdfe76554475a5b2f93308ccf54",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "nearest_scale": 8,
+        "offset": [
+          256,
+          356
+        ],
+        "method": "Exact nearest-neighbor enlargement and transparent padding, no artistic edits."
+      }
+    },
+    {
+      "frame": 4,
+      "images": [
+        {
+          "file": "original-004.png",
+          "source_member": "native/BMP/MRAFT.BMP/004.png",
+          "sha256": "0b1a40a4e57fe39d867a0d4338711c69c885e9c466bb0778e8b0fc7d863372c7",
+          "canvas": [
+            128,
+            39
+          ],
+          "mode": "RGBA",
+          "alpha_bounds_exclusive": [
+            0,
+            0,
+            124,
+            37
+          ]
+        },
+        {
+          "file": "hd-004.png",
+          "source_member": "data/hd/BMP/MRAFT.BMP/004.png",
+          "sha256": "603efedf690bbf5c6e3bb661838eb47fea1cdeb445ab4a0e5c6a4a5aeaae82f6",
+          "canvas": [
+            256,
+            78
+          ],
+          "mode": "RGBA",
+          "alpha_bounds_exclusive": [
+            0,
+            0,
+            248,
+            74
+          ]
+        }
+      ],
+      "geometry_guide": {
+        "file": "004-original-guide.png",
+        "sha256": "19e6fe035c7c9a80112ea11ab520a64d1ade66158655f371cc325ee2a35c4952",
+        "canvas": [
+          1536,
+          1024
+        ],
+        "nearest_scale": 8,
+        "offset": [
+          256,
+          356
+        ],
+        "method": "Exact nearest-neighbor enlargement and transparent padding, no artistic edits."
+      }
+    }
+  ],
+  "style_references": [
+    {
+      "file": "approved-island000-runtime.png",
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+      "sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+      "canvas": [
+        640,
+        180
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "approved-palm012-runtime.png",
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/012.png",
+      "sha256": "701fc7909c3cc150ece7125c04f493f27da75d07446cc43cc6acae70fde1aa18",
+      "canvas": [
+        304,
+        138
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "approved-palm013-runtime.png",
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/013.png",
+      "sha256": "72714deba94d2e7de946b9f30532e2482ac7a1b1027c442e77e443e5c9b7186c",
+      "canvas": [
+        48,
+        290
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "contact_sheet": {
+    "file": "original-contact-sheet.png",
+    "source_path": "D:\\.ai-work\\worktrees\\johnny-character-inventory\\build\\character-inventory\\atlas-v1\\MRAFT.BMP-01.png",
+    "sha256": "2a529c7984852a953263d18c675281756313f89dfdce2d7ec3ae9ddcd0cfaed1",
+    "method": "Exact existing atlas copy; includes excluded placeholder005/006."
+  },
+  "uses": {
+    "native": "src/engine/island.c raft construction state: frames000-004",
+    "story": "SJMSUZY.TTM tags3/4/7 statically draw004; SUZY.ADS#2 JOHN MEETS SUZY",
+    "limit": "Static source attribution, no new native execution."
+  }
+}

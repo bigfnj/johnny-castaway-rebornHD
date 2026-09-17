@@ -1,0 +1,1041 @@
+{
+  "schema_version": 1,
+  "scope": "Copied static attribution, not executed scene order, timing, or reachability proof.",
+  "resource": "SANDCAST.BMP",
+  "classification": {
+    "resource": "SANDCAST.BMP",
+    "default_class": "not_johnny",
+    "overrides": [],
+    "notes": "Sandcastle stages, collapse piles and airborne sand. These are character-action dependencies but contain no visible Johnny.",
+    "reviewed_pages": [
+      "SANDCAST.BMP-01.png"
+    ]
+  },
+  "source_files": [
+    {
+      "path": "art/cartoon/character-inventory-v1/scene-map/resource-map.json",
+      "sha256": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/scene-map/static-draw-sites.json",
+      "sha256": "2892a584a1816bf70c41c2d0ecb934f2a22e071dbda5629cfe54f185af0acaad"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/classification/s-family.json",
+      "sha256": "1d8f89faa9925344f55fd89395f043da83ac9951592e598aac101fd94e9b306a"
+    }
+  ],
+  "story_associations": [
+    {
+      "ttm": "MJSAND.TTM",
+      "decoded_sha256": "70dd9d3648064e085ea409568ca94a60063e04dbff40de77a48b720e55d02a6f",
+      "stories": [
+        {
+          "scene": "BUILDING.ADS#1",
+          "description": "MJSAND",
+          "source": "src/data/story_data.h:83"
+        },
+        {
+          "scene": "BUILDING.ADS#2",
+          "description": "LILIPUT 2",
+          "source": "src/data/story_data.h:86"
+        }
+      ]
+    }
+  ],
+  "frame_actions": [
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 3,
+      "description": "build castle",
+      "frames": [
+        8,
+        9
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 5,
+      "description": "castle grows",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        12,
+        13
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 7,
+      "description": "johnny kicks castle",
+      "frames": [
+        6,
+        9,
+        11,
+        14
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 8,
+      "description": "johnny stomps castle",
+      "frames": [
+        6,
+        9
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 10,
+      "description": "castle dissolves",
+      "frames": [
+        11,
+        12,
+        13
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 13,
+      "description": "castle built at A",
+      "frames": [
+        0
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 14,
+      "description": "johnny pause with ca",
+      "frames": [
+        0
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 15,
+      "description": "castle wilts ",
+      "frames": [
+        0,
+        10,
+        14
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 17,
+      "description": "from castle to A",
+      "frames": [
+        6,
+        8,
+        9
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 40,
+      "description": "SANDCASTLE KNEE TO S",
+      "frames": [
+        0
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "tag": 41,
+      "description": "PAUSE WITH SHIP",
+      "frames": [
+        0
+      ],
+      "scope": "static unique-script-slot draw attribution, not executed sequence"
+    }
+  ],
+  "draw_argument_order": [
+    "x",
+    "y",
+    "frame",
+    "slot"
+  ],
+  "draw_sites": [
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 346,
+      "tag": 3,
+      "local_tag": null,
+      "draw": [
+        281,
+        223,
+        9,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          3
+        ],
+        "offset": 326
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 372,
+      "tag": 3,
+      "local_tag": null,
+      "draw": [
+        282,
+        230,
+        8,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          3
+        ],
+        "offset": 326
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 396,
+      "tag": 5,
+      "local_tag": null,
+      "draw": [
+        316,
+        301,
+        13,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": null
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 416,
+      "tag": 5,
+      "local_tag": null,
+      "draw": [
+        312,
+        291,
+        12,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          30
+        ],
+        "offset": 406
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 432,
+      "tag": 5,
+      "local_tag": null,
+      "draw": [
+        308,
+        276,
+        5,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          30
+        ],
+        "offset": 406
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 448,
+      "tag": 5,
+      "local_tag": null,
+      "draw": [
+        297,
+        274,
+        4,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          30
+        ],
+        "offset": 406
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 464,
+      "tag": 5,
+      "local_tag": null,
+      "draw": [
+        297,
+        273,
+        3,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          30
+        ],
+        "offset": 406
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 480,
+      "tag": 5,
+      "local_tag": null,
+      "draw": [
+        297,
+        265,
+        2,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          30
+        ],
+        "offset": 406
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 496,
+      "tag": 5,
+      "local_tag": null,
+      "draw": [
+        297,
+        265,
+        1,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          30
+        ],
+        "offset": 406
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 512,
+      "tag": 5,
+      "local_tag": null,
+      "draw": [
+        297,
+        256,
+        0,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          30
+        ],
+        "offset": 406
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 534,
+      "tag": 13,
+      "local_tag": null,
+      "draw": [
+        297,
+        256,
+        0,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": null
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 560,
+      "tag": 14,
+      "local_tag": null,
+      "draw": [
+        297,
+        256,
+        0,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": null
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 596,
+      "tag": 15,
+      "local_tag": null,
+      "draw": [
+        297,
+        256,
+        0,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": null
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 626,
+      "tag": 15,
+      "local_tag": null,
+      "draw": [
+        297,
+        256,
+        0,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          8
+        ],
+        "offset": 616
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 666,
+      "tag": 15,
+      "local_tag": null,
+      "draw": [
+        297,
+        264,
+        10,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          30
+        ],
+        "offset": 646
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 696,
+      "tag": 15,
+      "local_tag": null,
+      "draw": [
+        297,
+        275,
+        14,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          60
+        ],
+        "offset": 676
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 726,
+      "tag": 10,
+      "local_tag": null,
+      "draw": [
+        309,
+        283,
+        11,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": null
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 746,
+      "tag": 10,
+      "local_tag": null,
+      "draw": [
+        312,
+        291,
+        12,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          60
+        ],
+        "offset": 736
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 762,
+      "tag": 10,
+      "local_tag": null,
+      "draw": [
+        316,
+        301,
+        13,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          60
+        ],
+        "offset": 736
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 784,
+      "tag": 7,
+      "local_tag": null,
+      "draw": [
+        297,
+        275,
+        14,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": null
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 828,
+      "tag": 7,
+      "local_tag": null,
+      "draw": [
+        309,
+        283,
+        11,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          8
+        ],
+        "offset": 808
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 838,
+      "tag": 7,
+      "local_tag": null,
+      "draw": [
+        263,
+        267,
+        6,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          8
+        ],
+        "offset": 808
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 854,
+      "tag": 7,
+      "local_tag": null,
+      "draw": [
+        249,
+        218,
+        9,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          8
+        ],
+        "offset": 808
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 874,
+      "tag": 7,
+      "local_tag": null,
+      "draw": [
+        309,
+        283,
+        11,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          8
+        ],
+        "offset": 808
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 906,
+      "tag": 8,
+      "local_tag": null,
+      "draw": [
+        268,
+        264,
+        6,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": null
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 940,
+      "tag": 8,
+      "local_tag": null,
+      "draw": [
+        284,
+        218,
+        9,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          6
+        ],
+        "offset": 920
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 974,
+      "tag": 17,
+      "local_tag": null,
+      "draw": [
+        270,
+        221,
+        9,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": null
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 1004,
+      "tag": 17,
+      "local_tag": null,
+      "draw": [
+        269,
+        231,
+        8,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          7
+        ],
+        "offset": 984
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 1030,
+      "tag": 17,
+      "local_tag": null,
+      "draw": [
+        293,
+        255,
+        6,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          7
+        ],
+        "offset": 984
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 1278,
+      "tag": 40,
+      "local_tag": null,
+      "draw": [
+        297,
+        256,
+        0,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": null
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 1316,
+      "tag": 40,
+      "local_tag": null,
+      "draw": [
+        297,
+        256,
+        0,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          0
+        ],
+        "offset": 1292
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 1490,
+      "tag": 40,
+      "local_tag": null,
+      "draw": [
+        297,
+        256,
+        0,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": {
+        "command": "SET_DELAY",
+        "args": [
+          8
+        ],
+        "offset": 1470
+      }
+    },
+    {
+      "ttm": "MJSAND.TTM",
+      "offset": 1522,
+      "tag": 41,
+      "local_tag": null,
+      "draw": [
+        297,
+        256,
+        0,
+        2
+      ],
+      "flip": false,
+      "resource": "SANDCAST.BMP",
+      "attribution": "unique-script-slot",
+      "resource_candidates": [
+        "SANDCAST.BMP"
+      ],
+      "linear_resource_hint": "SANDCAST.BMP",
+      "linear_load_offset": 46,
+      "linear_load_same_tag": false,
+      "last_same_tag_delay_instruction": null
+    }
+  ],
+  "frames_without_unique_slot_draw_attribution": [
+    7
+  ],
+  "runtime_reachability_proven": false
+}

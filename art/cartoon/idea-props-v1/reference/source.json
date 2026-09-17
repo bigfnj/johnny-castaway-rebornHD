@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "scope": "Original geometry for LITEBULB.BMP 000,001,004 only; Johnny character frames 002,003 excluded.",
+  "sources": [
+    {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/source/frame-index.json",
+      "sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2"
+    },
+    {
+      "path": "assets/scrantic_data.zip",
+      "sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+    }
+  ],
+  "palette_limit": "Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.",
+  "frames": [
+    {
+      "frame": 0,
+      "original": {
+        "path": "art/cartoon/idea-props-v1/reference/original-000.png",
+        "sha256": "9359ef60ce189f9c15bdba7fa8787e23cb047c56e9f774becf71d9b040092588"
+      },
+      "archive_member": "native/BMP/LITEBULB.BMP/000.png",
+      "canvas": [
+        40,
+        32
+      ],
+      "mode": "RGBA",
+      "index_plane_sha256": "8ee3b5a671063c6908a4a67e7dff82aafec7c1214859fb9debecc3f38bcf671b",
+      "xpm_sha256": "c977327a1a13eb8ae44730e893c3170018ab0be919eb6f742ff1e6d8bd90eadd",
+      "visible_bounds_exclusive": [
+        0,
+        0,
+        33,
+        32
+      ],
+      "guide": {
+        "path": "art/cartoon/idea-props-v1/reference/000-original-guide.png",
+        "sha256": "bf969aa5f0bbc55683bc1cb19644610859518eebe272cda266f4e64f5d1b8788",
+        "canvas": [
+          1024,
+          1024
+        ],
+        "nearest_scale": 24,
+        "offset": [
+          32,
+          128
+        ]
+      }
+    },
+    {
+      "frame": 1,
+      "original": {
+        "path": "art/cartoon/idea-props-v1/reference/original-001.png",
+        "sha256": "7f94560d32b031b1aa24a154997ebc9f046459baab8fcc4c2c700781a222a7fb"
+      },
+      "archive_member": "native/BMP/LITEBULB.BMP/001.png",
+      "canvas": [
+        40,
+        23
+      ],
+      "mode": "RGBA",
+      "index_plane_sha256": "9d4151cefb7eec27fa5a00352cf5c5d65fa2c13b90f3e740d1341f4c04177687",
+      "xpm_sha256": "528435c1c6ac1bafabbb3905b0bd24f00dd9179d3a6d84bcd3cb492f3437543a",
+      "visible_bounds_exclusive": [
+        0,
+        0,
+        35,
+        23
+      ],
+      "guide": {
+        "path": "art/cartoon/idea-props-v1/reference/001-original-guide.png",
+        "sha256": "c4925fd6c274e5e30b28df700dc0e8463dc935446521f4bdd16e762e1cbcadbb",
+        "canvas": [
+          1024,
+          1024
+        ],
+        "nearest_scale": 24,
+        "offset": [
+          32,
+          236
+        ]
+      }
+    },
+    {
+      "frame": 4,
+      "original": {
+        "path": "art/cartoon/idea-props-v1/reference/original-004.png",
+        "sha256": "f87f39e2cbebeb10eae27a6056ded7c9be36228467e76f47792800940e5f2202"
+      },
+      "archive_member": "native/BMP/LITEBULB.BMP/004.png",
+      "canvas": [
+        24,
+        27
+      ],
+      "mode": "RGBA",
+      "index_plane_sha256": "73425fcfb030a3e13c11ce34d3dbbc36272e06e4401cde44867265283006761c",
+      "xpm_sha256": "1a58402414fe0e2273edaa5bb6a7438012a976b1a4a0d9aa2b672bf9b0c9f532",
+      "visible_bounds_exclusive": [
+        0,
+        0,
+        18,
+        27
+      ],
+      "guide": {
+        "path": "art/cartoon/idea-props-v1/reference/004-original-guide.png",
+        "sha256": "4e5cfd4d075265aed39c6d6c25b43b4fadb62f4db831e5a19c07df0573db2b72",
+        "canvas": [
+          1024,
+          1024
+        ],
+        "nearest_scale": 24,
+        "offset": [
+          224,
+          188
+        ]
+      }
+    }
+  ],
+  "approved_style_references": [
+    {
+      "path": "art/cartoon/idea-props-v1/reference/approved-palm012-runtime.png",
+      "sha256": "701fc7909c3cc150ece7125c04f493f27da75d07446cc43cc6acae70fde1aa18",
+      "production_member": "data/styles/cartoon/BMP/BACKGRND.BMP/012.png",
+      "acceptance": {
+        "path": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+        "sha256": "ce7f3832982bcfbef13f9ce6dc06c1f60ce774b89aca088247442040fd767a0c"
+      }
+    },
+    {
+      "path": "art/cartoon/idea-props-v1/reference/approved-johnny000-runtime.png",
+      "sha256": "9cb61e33da65cf89afcf6c03421672c25aa5b83ed9bb9b0305704bcd6bca7b11",
+      "production_member": "data/styles/cartoon/BMP/JOHNWALK.BMP/000.png",
+      "acceptance": {
+        "path": "art/cartoon/skin-tone-v1/production-acceptance.json",
+        "sha256": "ad3570cccb0d1b9331d17c8299789557ec0d506935d6a1e0111933d247ded519"
+      }
+    }
+  ],
+  "preparation": "Original PNGs are exact ZIP member bytes. Each guide preserves RGBA pixels with nearest-neighbor enlargement 24 and centered transparent padding. No creative image edits or runtime export."
+}

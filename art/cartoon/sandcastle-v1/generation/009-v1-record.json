@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "frame": 9,
+  "resource": "SANDCAST.BMP",
+  "status": "draft_visual_review",
+  "human_approval": null,
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "file": "generation/009-v1-request.json",
+    "sha256": "b4a45436cbb3d482909fa8861a4c1b5a4bef089cb405eae78f64a9930367f9e8"
+  },
+  "output": {
+    "file": "generation/009-generated-v1.png",
+    "sha256": "1948ba4bd31236b86e729fafe4eb8eb624ce2b2a185e013ba0c2066c7de1046a",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-31782cd1-67cc-4f82-a025-3457036ca1c6.png",
+    "copied_byte_exact": true,
+    "pixels_postprocessed": false,
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha0_pixels": 1016890,
+    "alpha1_through7_pixels": 386078,
+    "alpha8_through255_pixels": 169896,
+    "alpha_positive_bounds_exclusive": [
+      14,
+      13,
+      1526,
+      1024
+    ],
+    "alpha8_bounds_exclusive": [
+      22,
+      15,
+      1460,
+      1024
+    ],
+    "canvas_edge_alpha": {
+      "top": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "bottom": {
+        "alpha8_pixels": 29,
+        "max_alpha": 245
+      },
+      "left": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "right": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      }
+    }
+  },
+  "ordered_references": [
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sandcastle-v1/reference/nearest8/009.png",
+      "sha256": "058d0f0235edb3f5747543512c770a81130d7ea87abb85c38c2a03c6156bdf53"
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sandcastle-v1/generation/000-generated-v1.png",
+      "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef"
+    }
+  ],
+  "original_reference": {
+    "file": "reference/original/009.png",
+    "sha256": "70311cddf307d13a1efc53bb0a41383ad5c7eac22124504dcf2de66449507662",
+    "canvas": [
+      128,
+      95
+    ]
+  },
+  "native_export_executed": false,
+  "native_review_executed": false,
+  "inspection_limit": "Alpha8 bounds are diagnostic only; no cropping, thresholding, keying or pixel correction has been applied."
+}

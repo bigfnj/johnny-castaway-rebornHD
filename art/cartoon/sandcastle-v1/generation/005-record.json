@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "frame": 5,
+  "status": "draft_visual_review",
+  "tool": "built-in image_gen",
+  "approval": null,
+  "selected_raw": {
+    "path": "generation/005-generated-v1.png",
+    "sha256": "b71718dee1fe2df4a90e3fb9e746da73db916084318a57ea92f06e82a4f1d207",
+    "canvas": [
+      1428,
+      1101
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      25,
+      52,
+      1428,
+      992
+    ],
+    "alpha8_bounds_exclusive": [
+      63,
+      100,
+      1367,
+      987
+    ],
+    "edge_alpha_max": 1,
+    "corner_alpha": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "request": {
+    "path": "generation/005-v1-request.json",
+    "sha256": "51f4adba2d96776e89a74b384cd584c5ce5195045b7423c2d7dd4d58864c15a8"
+  },
+  "ordered_input_images": [
+    {
+      "path": "reference/nearest8/005.png",
+      "sha256": "57e6895b41d08500a28cca06d61005c14f8f43f9293956fae3fe41e43a9dbc62"
+    },
+    {
+      "path": "generation/000-generated-v1.png",
+      "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef"
+    }
+  ],
+  "original_reference": {
+    "path": "reference/original/005.png",
+    "sha256": "4496363c98818bc523e4c3d8e2da4a8c87817aad04f687e0013830c694d8f6e4",
+    "canvas": [
+      48,
+      37
+    ],
+    "mode": "RGBA",
+    "alpha_bounds_exclusive": [
+      0,
+      0,
+      48,
+      37
+    ]
+  },
+  "shared_style_key": {
+    "path": "generation/000-generated-v1.png",
+    "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef",
+    "status": "draft shared key; style reference only"
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-256f4f03-1d28-4fc1-b65c-5c2a137f743c.png",
+  "visual_observation": "No isolated towers remain; front doorway/wall and rising rear-right wall are retained. The raised rear wall has a more regular stepped profile than the original; exact wall and doorway proportions are not established.",
+  "visible_extent_ratio": {
+    "original_alpha_nonzero_width_over_height": 1.2972972972972974,
+    "generated_alpha8_width_over_height": 1.4701240135287486,
+    "scope": "Simple extent measurement only; no fitting, clipping or nonuniform scaling was performed."
+  },
+  "verification_scope": "Viewed the shared key and each original guide before the call. Inspected the returned artwork and read actual image dimensions, mode, alpha and PNG hashes. No tests or runtime validation.",
+  "alpha_policy": "All original returned bytes and alpha retained. Alpha >= 8 is used only to report visible bounds, never as an applied threshold.",
+  "production_package_changed": false,
+  "export_executed": false,
+  "deferred_work": [
+    "Human appearance review as part of the 24-item batch",
+    "Geometry/registration and cross-stage identity review",
+    "Uniform runtime export, native motion and bulk smoke/regression/audit"
+  ]
+}

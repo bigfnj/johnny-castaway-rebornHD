@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "frame": 9,
+  "version": 2,
+  "resource": "SANDCAST.BMP",
+  "status": "selected_draft_visual_review",
+  "human_approval": null,
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "file": "generation/009-v2-request.json",
+    "sha256": "176549d56778bd0b6e7bf8f692df6b9bd420657c0c57eb5480fd54677899074f"
+  },
+  "output": {
+    "file": "generation/009-generated-v2.png",
+    "sha256": "0d8ab7b336bb418518d94f32c07e00614657b8e8ff320f5c21f66a09f442775d",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-63b6b66c-8c94-406a-b455-a3d32124e43f.png",
+    "copied_byte_exact": true,
+    "pixels_postprocessed": false,
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha0_pixels": 1111179,
+    "alpha1_through7_pixels": 310220,
+    "alpha8_through255_pixels": 151465,
+    "alpha_positive_bounds_exclusive": [
+      25,
+      21,
+      1522,
+      1024
+    ],
+    "alpha8_bounds_exclusive": [
+      67,
+      50,
+      1407,
+      1011
+    ],
+    "canvas_edge_alpha": {
+      "top": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "bottom": {
+        "alpha8_pixels": 0,
+        "max_alpha": 1
+      },
+      "left": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "right": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      }
+    }
+  },
+  "ordered_references": [
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sandcastle-v1/generation/009-generated-v1.png",
+      "sha256": "1948ba4bd31236b86e729fafe4eb8eb624ce2b2a185e013ba0c2066c7de1046a"
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sandcastle-v1/reference/nearest8/009.png",
+      "sha256": "058d0f0235edb3f5747543512c770a81130d7ea87abb85c38c2a03c6156bdf53"
+    }
+  ],
+  "previous_version": {
+    "file": "generation/009-generated-v1.png",
+    "sha256": "1948ba4bd31236b86e729fafe4eb8eb624ce2b2a185e013ba0c2066c7de1046a"
+  },
+  "change_requested": "Complete009 particle field with transparent margins.",
+  "native_export_executed": false,
+  "native_review_executed": false,
+  "inspection_limit": "Generated edit; no claim of pixel equality outside the requested change. Alpha8 is diagnostic only, not an applied mask."
+}

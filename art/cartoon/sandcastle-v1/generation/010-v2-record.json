@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "frame": 10,
+  "version": 2,
+  "resource": "SANDCAST.BMP",
+  "status": "selected_draft_visual_review",
+  "human_approval": null,
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "file": "generation/010-v2-request.json",
+    "sha256": "a1838dad9bf213e41f0e8b709b236091acfb673d22ac718601119f183587d581"
+  },
+  "output": {
+    "file": "generation/010-generated-v2.png",
+    "sha256": "4f95e1374d5640f784430f2d1d8ec739aab2de8bbfdbf2eaacde4778b49b3793",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "generated_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-054badb6-a542-4260-b273-49b7b2a642de.png",
+    "copied_byte_exact": true,
+    "pixels_postprocessed": false,
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha0_pixels": 830839,
+    "alpha1_through7_pixels": 8990,
+    "alpha8_through255_pixels": 733035,
+    "alpha_positive_bounds_exclusive": [
+      22,
+      36,
+      1516,
+      939
+    ],
+    "alpha8_bounds_exclusive": [
+      24,
+      98,
+      1514,
+      935
+    ],
+    "canvas_edge_alpha": {
+      "top": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "bottom": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "left": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      },
+      "right": {
+        "alpha8_pixels": 0,
+        "max_alpha": 0
+      }
+    }
+  },
+  "ordered_references": [
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sandcastle-v1/generation/010-generated-v1.png",
+      "sha256": "dc47aff5e89c6052105e1dede41441ec8299fc1bbf456c567368de9ef7b6d8cf"
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sandcastle-v1/generation/000-generated-v1.png",
+      "sha256": "d2314cc0259424837ca8d895c1a91a25d992761b083efe898fd144429f25a1ef"
+    }
+  ],
+  "previous_version": {
+    "file": "generation/010-generated-v1.png",
+    "sha256": "dc47aff5e89c6052105e1dede41441ec8299fc1bbf456c567368de9ef7b6d8cf"
+  },
+  "change_requested": "Crisp warm-brown contour/crease lines matching castle000, without structural redesign.",
+  "native_export_executed": false,
+  "native_review_executed": false,
+  "inspection_limit": "Generated edit; no claim of pixel equality outside the requested change. Alpha8 is diagnostic only, not an applied mask."
+}
