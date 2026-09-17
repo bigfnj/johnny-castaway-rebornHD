@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartoon coconut family</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#142630;color:#edf4f7;font:16px system-ui,sans-serif;padding:24px}
+main{max-width:1400px;margin:auto}
+h1{margin:0 0 8px;font-size:28px}
+p{max-width:980px;color:#c6d6e0;line-height:1.5}
+.family{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:22px}
+figure{margin:0;background:#243d4b;border-radius:10px;padding:16px}
+figcaption{font-size:18px;font-weight:650;margin-bottom:12px}
+.art{aspect-ratio:1;max-height:560px;margin:auto;background-color:#f6f2e8;background-image:linear-gradient(45deg,#e4dfd4 25%,transparent 25%),linear-gradient(-45deg,#e4dfd4 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e4dfd4 75%),linear-gradient(-45deg,transparent 75%,#e4dfd4 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0}
+.art img{display:block;width:100%;height:100%;object-fit:contain}
+small{display:block;margin-top:12px;color:#c6d6e0;line-height:1.5}
+details{margin-top:22px}
+summary{cursor:pointer;padding:10px 0;font-weight:600}
+.reference{margin-top:12px;max-width:1100px}
+.reference img{display:block;width:100%;height:auto}
+.palm{max-width:640px}
+.palm .art{aspect-ratio:304/138;max-height:none}
+.shadows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:12px}
+.note{margin-top:26px;font-size:14px}
+@media(max-width:760px){body{padding:16px}.family,.shadows{grid-template-columns:1fr}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<main>
+<h1>Johnny's coconut family</h1>
+<p>Compare the shape, brown material and pore placement across the four views. The brown coconuts already on the approved palm are the style reference.</p>
+<div class="family">
+<figure>
+<figcaption>Pores up</figcaption>
+<div class="art"><img src="generation/000-generated-v1.png" alt="Coconut draft with its pores facing up"></div>
+<small>Frame 000</small>
+</figure>
+<figure>
+<figcaption>Pores down</figcaption>
+<div class="art"><img src="generation/001-generated-v1.png" alt="Coconut draft with its pores facing down"></div>
+<small>Frame 001</small>
+</figure>
+<figure>
+<figcaption>Pores left</figcaption>
+<div class="art"><img src="generation/002-generated-v1.png" alt="Coconut draft with its pores facing left"></div>
+<small>Frame 002</small>
+</figure>
+<figure>
+<figcaption>Pores right</figcaption>
+<div class="art"><img src="generation/003-generated-v1.png" alt="Coconut draft with its pores facing right"></div>
+<small>Frame 003</small>
+</figure>
+</div>
+<details>
+<summary>Show the original coconut family</summary>
+<figure class="reference">
+<img src="reference/original-contact-sheet.png" alt="Original four coconut orientations and three separate cast shadows, numbered 000 through 006">
+<small>The diagnostic red colors guide shape and orientation only. They are not the target coconut color.</small>
+</figure>
+</details>
+<details>
+<summary>Show the approved palm for color and style</summary>
+<figure class="reference palm">
+<div class="art"><img src="reference/approved-palm012-runtime.png" alt="Approved Cartoon palm canopy with existing brown coconuts"></div>
+<small>Exact approved palm artwork.</small>
+</figure>
+</details>
+<details>
+<summary>Show the three separate shadow drafts</summary>
+<p>The three cast shadows remain separate from the coconut drawings.</p>
+<div class="shadows">
+<figure><figcaption>Small shadow</figcaption>
+<div class="art"><img src="generation/004-generated-v1.png" alt="Small coconut shadow draft"></div><small>Frame 004</small></figure>
+<figure><figcaption>Medium shadow</figcaption>
+<div class="art"><img src="generation/005-generated-v1.png" alt="Medium coconut shadow draft"></div><small>Frame 005</small></figure>
+<figure><figcaption>Wide shadow</figcaption>
+<div class="art"><img src="generation/006-generated-v1.png" alt="Wide coconut shadow draft"></div><small>Frame 006</small></figure>
+</div>
+</details>
+<p class="note">Draft visual review of the complete raw images. Native placement and motion have not been reviewed for these drafts.</p>
+</main>
+</body>
+</html>
