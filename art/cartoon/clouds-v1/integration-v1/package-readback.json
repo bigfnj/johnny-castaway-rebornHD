@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "phase": "prepared; production not yet promoted",
+  "helper": {
+    "path": "art/cartoon/clouds-v1/integration-v1/prepare.py",
+    "sha256": "b7d972c35ada0abcd18f1aad2f9940f4eeb5227e311229b06e102696e5282047"
+  },
+  "baseline_commit": "de1e489e5c2fe3b22d03e8650bfc26cc1d8a12cc",
+  "baseline_archive_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+  "reviewed_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "members": 2614,
+  "accepted_assets": 63,
+  "baseline_payloads_unchanged": 2612,
+  "inherited_ledger_rows_unchanged": true,
+  "pilot_history_unchanged": true,
+  "added_members_sha256": {
+    "data/styles/cartoon/BMP/BACKGRND.BMP/016.png": "c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/017.png": "6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4"
+  },
+  "alpha": {
+    "opaque": 1,
+    "transparent": 62,
+    "blank": 0
+  },
+  "standard_rebuild": {
+    "original_members_preserved": 2550,
+    "archive_sha256": "859f0309caf6165c671e08f6e20a871b6e9077314f2fa6f4cf9f9fc924334ae4"
+  },
+  "standard_rebuild_payloads_equal_review": true,
+  "standard_rebuild_envelope_equal_review": false,
+  "archive_format_note": "The reviewed exporter retains the baseline member order and appends two clouds. The maintained packer rewrites the entire Cartoon prefix, including its manifest, in sorted order with its standard ZIP metadata/compression policy. All2614 payloads match; the ZIP envelope does not. Reproduce the exact approved envelope with the fixed cloud exporter and separately recovered baseline.",
+  "maintained_controls": {
+    "corrupt_accepted016_failure": "BMP/BACKGRND.BMP/016.png: accepted sha256 does not match PNG",
+    "corrupt_accepted016_restored": "PASS",
+    "missing_new_approval_failure": "art/cartoon/clouds-v1/integration-v1/production-acceptance.json: new approval coverage differs from inherited complement",
+    "approval_restored": "PASS"
+  },
+  "control_scope": "Actual disposable accepted PNG corruption and in-memory approval input through maintained validators; no source-removal mutant.",
+  "runtime_recipe": {
+    "path": "art/cartoon/clouds-v1/integration-v1/runtime-recipe.json",
+    "sha256": "992310d432a265c4aa05bf0d8faa6906ef12bbb10c646498fda548d229a8bbe9"
+  },
+  "acceptance": {
+    "path": "art/cartoon/clouds-v1/integration-v1/production-acceptance.json",
+    "sha256": "e55629e66219c2ec6be985ea751fcd529c3497f55e7c6a314fca1ae982ad8fd6"
+  },
+  "ledger": {
+    "path": "art/cartoon/clouds-v1/integration-v1/integrated-pack.json",
+    "sha256": "20e515595c2988317c213480dd33b18db698e981ae094bcb40e90dc6d7a956da"
+  }
+}

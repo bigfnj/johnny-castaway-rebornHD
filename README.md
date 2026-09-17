@@ -209,9 +209,9 @@ The browser's Art style selector remembers its choice in local storage and
 reloads the scene. An explicit URL argument, such as
 `?args=window+style+hd`, overrides that saved browser choice for the current run.
 
-The bundled Cartoon preview contains 40 approved assets: twenty walking poses,
-five standing poses covering all eight directions, and 15 island layers,
-including one ocean and all nine high-tide shore-foam frames.
+The bundled Cartoon preview contains 63 approved assets: 28 Johnny drawings,
+31 island/environment layers and four seasonal decorations. Scenery includes
+one ocean, both tide compositions and all three ordinary moving clouds.
 It is a partial style pack. Other animations and environment states use HD or
 original artwork, so the full story can mix the two styles. The settings label
 is "Cartoon (preview)" until wider artwork coverage is ready.
@@ -227,8 +227,11 @@ completes the reviewed rear walk in Cartoon. The
 front arrival and remaining standing views, with native reviews of both turn
 directions. The [profile walking family](art/cartoon/walk-pilot/profile-walk-v1/README.md)
 adds all eight side-view steps, including shared turning pose 003, with native
-reviews in both directions and ordinary 003 departures. Ordinary poses 009/010/012
-and unseen story uses remain future work.
+reviews in both directions and ordinary 003 departures. The
+[connecting-pose delivery](docs/cartoon-connecting-poses-verification.md)
+adds ordinary poses 009/010/012, the lighter skin palette and corrected018 foot
+contact. The [cloud delivery](docs/cartoon-clouds-verification.md) completes the
+ordinary sky family. Unreviewed story uses remain future work.
 See [Cartoon art production](docs/cartoon-art.md) for
 packaging, [image authoring lessons](docs/art-style-learnings.md) and
 [the walking revision lessons](docs/art-style-learnings-calm-focus.md) before

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "command": [
+    "TOOLBOX_PYTHON",
+    "-B",
+    "art/cartoon/clouds-v1/export.py",
+    "--baseline",
+    "build/clouds-v1/integration-v2/baseline.zip",
+    "--output",
+    "build/clouds-v1/source-replay-v1/export",
+    "--candidate",
+    "build/clouds-v1/source-replay-v1/candidate.zip"
+  ],
+  "exit_code": 0,
+  "exporter_sha256": "83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083",
+  "recipe_sha256": "6b6ce670d31de1dc918df83a74d9f8035b6ee5a3a695bb858b10fece4494e7e7",
+  "baseline_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+  "candidate_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "production_byte_identical": true,
+  "fresh_export_report_sha256": "1f0d0a72b22efecc6c10bb9de255328e9e5468fbcd42dcecd3d9d29761e348be",
+  "fresh_package_report_sha256": "a162a51e59c705166dd8caa92a6c6ec8ad24e3db7f4da820952cd4f35e6e60b2",
+  "fresh_parent_recovery_probe": {
+    "path": "build/clouds-v1/baseline-recovery-zfdki151/build/clouds-v1/integration-v2/baseline.zip",
+    "sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+    "status": "PASS"
+  },
+  "scope": "Actual post-promotion source/export replay with separately recovered baseline; live archive was never temporarily replaced. Scratch outputs are excluded from tracked evidence."
+}

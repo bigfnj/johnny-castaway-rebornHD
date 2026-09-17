@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "scope": "Fixed-transform pixel/package replay and three invalid binding inputs; no native run or human approval.",
+  "exporter_lf_sha256": "1aeb32de2f9c4c607d79522d803a815ba248bcb3fd2b613df1f298373d7d9b1a",
+  "verification_helper_lf_sha256": "7b7b1f5f333159883db6433a449b2f14150ddd85d29a9493895d98349bc52029",
+  "recipe_sha256": "6b6ce670d31de1dc918df83a74d9f8035b6ee5a3a695bb858b10fece4494e7e7",
+  "export_report_sha256": "4cf0d2ded76fb75be542789ec0babf87cca71adea143d143ac5d618bb450ff9d",
+  "package_report_sha256": "256105e442ca1197b6c3abfd138f4370b08fccaa1175e88898756b8decddbacb",
+  "candidate_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "baseline_readback_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+  "ordered_checks": [
+    {
+      "name": "fresh_replay",
+      "arguments": [
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "WITNESS cloud-export 1aeb32de2f9c4c607d79522d803a815ba248bcb3fd2b613df1f298373d7d9b1a\nPASS cloud-export {\"baseline_sha256\": \"a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66\", \"candidate_sha256\": \"a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d\", \"members\": 2614, \"cartoon_png_members\": 63, \"unchanged_baseline_payloads\": 2612, \"added_members_sha256\": {\"data/styles/cartoon/BMP/BACKGRND.BMP/016.png\": \"c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87\", \"data/styles/cartoon/BMP/BACKGRND.BMP/017.png\": \"6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4\"}}\n",
+      "stderr": ""
+    },
+    {
+      "name": "wrong_016_source_hash",
+      "arguments": [
+        "--check",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\export-controls\\wrong_016_source_hash.json"
+      ],
+      "exit_code": 1,
+      "stdout": "WITNESS cloud-export 1aeb32de2f9c4c607d79522d803a815ba248bcb3fd2b613df1f298373d7d9b1a\nFAIL recipe: selected source, prompt or fixed registration binding differs\n",
+      "stderr": ""
+    },
+    {
+      "name": "wrong_017_registration",
+      "arguments": [
+        "--check",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\export-controls\\wrong_017_registration.json"
+      ],
+      "exit_code": 1,
+      "stdout": "WITNESS cloud-export 1aeb32de2f9c4c607d79522d803a815ba248bcb3fd2b613df1f298373d7d9b1a\nFAIL recipe: selected source, prompt or fixed registration binding differs\n",
+      "stderr": ""
+    },
+    {
+      "name": "wrong_baseline_archive",
+      "arguments": [
+        "--check",
+        "--baseline",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\art\\cartoon\\character-inventory-v1\\reference-originals.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "WITNESS cloud-export 1aeb32de2f9c4c607d79522d803a815ba248bcb3fd2b613df1f298373d7d9b1a\nFAIL baseline archive: identity differs\n",
+      "stderr": ""
+    },
+    {
+      "name": "restored_positive",
+      "arguments": [
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "WITNESS cloud-export 1aeb32de2f9c4c607d79522d803a815ba248bcb3fd2b613df1f298373d7d9b1a\nPASS cloud-export {\"baseline_sha256\": \"a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66\", \"candidate_sha256\": \"a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d\", \"members\": 2614, \"cartoon_png_members\": 63, \"unchanged_baseline_payloads\": 2612, \"added_members_sha256\": {\"data/styles/cartoon/BMP/BACKGRND.BMP/016.png\": \"c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87\", \"data/styles/cartoon/BMP/BACKGRND.BMP/017.png\": \"6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4\"}}\n",
+      "stderr": ""
+    }
+  ],
+  "diagnostic": {
+    "path": "comparison-with-015.png",
+    "sha256": "bd8c0a7e23253dbe3eec5777c102683d8a9afcad92cb4c1f04a81bb57d049e08",
+    "sky_rgb": [
+      91,
+      157,
+      203
+    ],
+    "original_scale": 2,
+    "runtime_scale": 1,
+    "unchanged015_sha256": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+    "used_as_export_input": false
+  },
+  "limits": "Controls execute fresh helper processes with bad recipe hashes/registration and a wrong archive. No source-removal mutant or renderer regression is claimed."
+}

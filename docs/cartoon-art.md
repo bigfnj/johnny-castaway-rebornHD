@@ -1,8 +1,9 @@
 # Cartoon art production
 
-The [low-tide delivery](cartoon-low-tide-verification.md) brings the current pack
-to 61 accepted assets, including the exposed beach, detached rock and twelve
-low-tide wave frames. The earlier [seasonal and shoreline delivery](cartoon-seasonal-verification.md)
+The [cloud delivery](cartoon-clouds-verification.md) brings the current pack
+to 63 accepted assets and completes ordinary moving clouds BACKGRND015-017.
+The [low-tide delivery](cartoon-low-tide-verification.md) adds the exposed beach,
+detached rock and twelve low-tide wave frames. The earlier [seasonal and shoreline delivery](cartoon-seasonal-verification.md)
 supplies the approved larger island, high-tide waves and four decorations.
 Earlier family counts below describe their individual delivery checkpoints.
 

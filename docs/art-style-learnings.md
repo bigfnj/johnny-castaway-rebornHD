@@ -271,6 +271,10 @@ rather than rewriting the historical request as a confidently ordered path list.
 
 ## Next style
 
+The [moving cloud lessons](art-style-learnings-clouds.md) explain the actual
+BACKGRND015-017 delivery family, separate original geometry from style, and
+record the accepted clouds' fit, alpha and night-review limitations.
+
 The [profile walking lessons](art-style-learnings-profile-walk.md) preserve the
 latest arm-swing decisions, scoped 008 direction approval, canvas-fit corrections
 and measured drift after targeted image edits. Its later native motion approval

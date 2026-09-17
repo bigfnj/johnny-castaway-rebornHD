@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "scope": "Technical cloud candidates pending human scene approval.",
+  "normalization": "none",
+  "pillow_version": "12.3.0",
+  "resampling": {
+    "working_mode": "RGBa",
+    "affine": "BICUBIC",
+    "oversample": 8,
+    "downsample": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "filter": {
+    "path": "art/cartoon/seasonal-v1/export.py",
+    "lf_sha256": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d"
+  },
+  "padding_hd": 32,
+  "baseline_archive_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+  "inputs_sha256": {
+    "art/cartoon/clouds-v1/reference/source.json": "05e2031499a2079fe67bbd756d963ba7fee548e644cc9e19c4652f20a568e1a6",
+    "art/cartoon/clouds-v1/generation/016-generated-v2.png": "f16bd7802c23c3dd6040e8d5ddd181ad880e87ecf23e071bb004b9690a52be4e",
+    "art/cartoon/clouds-v1/generation/016-v2-request.json": "a87fe6c4a5684a8fa52ec6d14d35c708193d1651205ef880fd578b8108e7af27",
+    "art/cartoon/clouds-v1/generation/requests.json": "ca2557b2787f3486ba3705183579470b827516219ab11894b59d29c1683011e5",
+    "art/cartoon/clouds-v1/generation/016-generated-v1.png": "ac050efc79af1738c1ee848bf3f7d522f8eae0fface6906bfd022a77552da22d",
+    "art/cartoon/clouds-v1/reference/backgrnd-016-guide.png": "b80c9fee6c363d17b84baac5327dc257106d0452510ea9d19c3fa80786114105",
+    "art/cartoon/clouds-v1/style-reference/approved-cloud-raw.png": "b50454479c9f08d2eebf381d0d110aab4f3fde6c2d046161da4c22a77b1e21ca",
+    "art/cartoon/clouds-v1/generation/017-generated-v2.png": "c9343aa097d1700cb736287e2e9af36ceaf6affec799913368171fb85c987a58",
+    "art/cartoon/clouds-v1/generation/017-v2-request.json": "758d2c7e675d97d8bd26a7e8780c6e70e99dea992e65180fbfd320220912b0cb",
+    "art/cartoon/clouds-v1/generation/017-generated-v1.png": "5e09450ceb5568446a3a3400592aead9e6e10526b871afccf675ac6900e8a70f",
+    "art/cartoon/clouds-v1/reference/backgrnd-017-guide.png": "e54aab9a2271572bb46d33aaec8ae48921217c6947494b0224e83bbe3c0bdada"
+  },
+  "frames": [
+    {
+      "frame": 16,
+      "path": "BMP/BACKGRND.BMP/016.png",
+      "source": "art/cartoon/clouds-v1/generation/016-generated-v2.png",
+      "source_sha256": "f16bd7802c23c3dd6040e8d5ddd181ad880e87ecf23e071bb004b9690a52be4e",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        384,
+        114
+      ],
+      "affine_forward": [
+        0.328125,
+        0,
+        -63.3125,
+        0,
+        0.328125,
+        -111.546875
+      ],
+      "raw_anchor": [
+        196,
+        343
+      ],
+      "target_anchor": [
+        1,
+        1
+      ],
+      "request": "art/cartoon/clouds-v1/generation/016-v2-request.json",
+      "request_sha256": "a87fe6c4a5684a8fa52ec6d14d35c708193d1651205ef880fd578b8108e7af27",
+      "ordered_references": [
+        {
+          "path": "art/cartoon/clouds-v1/generation/016-generated-v1.png",
+          "sha256": "ac050efc79af1738c1ee848bf3f7d522f8eae0fface6906bfd022a77552da22d"
+        },
+        {
+          "path": "art/cartoon/clouds-v1/reference/backgrnd-016-guide.png",
+          "sha256": "b80c9fee6c363d17b84baac5327dc257106d0452510ea9d19c3fa80786114105"
+        }
+      ],
+      "initial_request": "art/cartoon/clouds-v1/generation/requests.json",
+      "ordered_initial_references": [
+        {
+          "path": "art/cartoon/clouds-v1/reference/backgrnd-016-guide.png",
+          "sha256": "b80c9fee6c363d17b84baac5327dc257106d0452510ea9d19c3fa80786114105"
+        },
+        {
+          "path": "art/cartoon/clouds-v1/style-reference/approved-cloud-raw.png",
+          "sha256": "b50454479c9f08d2eebf381d0d110aab4f3fde6c2d046161da4c22a77b1e21ca"
+        }
+      ],
+      "fallback": {
+        "native_canvas": [
+          192,
+          57
+        ],
+        "original_member": "native/BMP/BACKGRND.BMP/016.png",
+        "original_sha256": "e89b96d0426b4af1d6a692982aab9da852daa71326352fe74519955c71b793ab",
+        "hd_member": "data/hd/BMP/BACKGRND.BMP/016.png",
+        "hd_sha256": "05487f196124175837e0685f7efc09a27e10306961ed8583157a718d842d012b"
+      }
+    },
+    {
+      "frame": 17,
+      "path": "BMP/BACKGRND.BMP/017.png",
+      "source": "art/cartoon/clouds-v1/generation/017-generated-v2.png",
+      "source_sha256": "c9343aa097d1700cb736287e2e9af36ceaf6affec799913368171fb85c987a58",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        528,
+        152
+      ],
+      "affine_forward": [
+        0.390625,
+        0,
+        -37.28125,
+        0,
+        0.390625,
+        -130.640625
+      ],
+      "raw_anchor": [
+        98,
+        337
+      ],
+      "target_anchor": [
+        1,
+        1
+      ],
+      "request": "art/cartoon/clouds-v1/generation/017-v2-request.json",
+      "request_sha256": "758d2c7e675d97d8bd26a7e8780c6e70e99dea992e65180fbfd320220912b0cb",
+      "ordered_references": [
+        {
+          "path": "art/cartoon/clouds-v1/generation/017-generated-v1.png",
+          "sha256": "5e09450ceb5568446a3a3400592aead9e6e10526b871afccf675ac6900e8a70f"
+        },
+        {
+          "path": "art/cartoon/clouds-v1/reference/backgrnd-017-guide.png",
+          "sha256": "e54aab9a2271572bb46d33aaec8ae48921217c6947494b0224e83bbe3c0bdada"
+        }
+      ],
+      "initial_request": "art/cartoon/clouds-v1/generation/requests.json",
+      "ordered_initial_references": [
+        {
+          "path": "art/cartoon/clouds-v1/reference/backgrnd-017-guide.png",
+          "sha256": "e54aab9a2271572bb46d33aaec8ae48921217c6947494b0224e83bbe3c0bdada"
+        },
+        {
+          "path": "art/cartoon/clouds-v1/style-reference/approved-cloud-raw.png",
+          "sha256": "b50454479c9f08d2eebf381d0d110aab4f3fde6c2d046161da4c22a77b1e21ca"
+        }
+      ],
+      "fallback": {
+        "native_canvas": [
+          264,
+          76
+        ],
+        "original_member": "native/BMP/BACKGRND.BMP/017.png",
+        "original_sha256": "ca4ac23cbf15843c0fc166bbbad8a4478013f6f88cd46c36190acc3b1dbbaa16",
+        "hd_member": "data/hd/BMP/BACKGRND.BMP/017.png",
+        "hd_sha256": "17c76381bdd32a00d82475966483eab59403b4baac7d801c7b423790f42c2a80"
+      }
+    }
+  ]
+}

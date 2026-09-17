@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "builder_sha256": "84c24679be751044b3c53e9fc78a7eefc3408553580a04ed66eb0c7b15390ace",
+  "template_sha256": "f5fedab390bc64652b7b3ca3e8efaef9d817dd96771157f578c7fc184479ff21",
+  "manifest_sha256": "6e17734c21c5f5214e426e6e5646a3d351dec4b1b51556f53ed26fc3505fb1b2",
+  "html_sha256": "f5fedab390bc64652b7b3ca3e8efaef9d817dd96771157f578c7fc184479ff21",
+  "cases": 3,
+  "native_images_reconstructed_exactly": 96,
+  "unique_tiles": 4235,
+  "atlas_bytes": 11633274,
+  "controls": [
+    {
+      "name": "wrong_case",
+      "status": "FIRED",
+      "failure": "cloud review: native report case"
+    },
+    {
+      "name": "wrong_reconstruction",
+      "status": "FIRED",
+      "failure": "cloud review: exact native reconstruction"
+    }
+  ],
+  "scope": "Lossless native pixels and recorded timing. Browser behavior and human appearance are separate checks."
+}

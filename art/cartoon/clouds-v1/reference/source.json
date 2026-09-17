@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "scope": "Six exact original references, current HD, and accepted015 context; no new art or approval.",
+  "palette_limit": "Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.",
+  "pillow_version": "12.3.0",
+  "prepare_lf_sha256": "1847754831db1752eac49ff5801b47ba282075da2928ba53a3152dc8b492c489",
+  "inputs_sha256": {
+    "art/cartoon/character-inventory-v1/source/frame-index.json": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2",
+    "art/cartoon/character-inventory-v1/reference-originals.zip": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912",
+    "assets/scrantic_data.zip": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66"
+  },
+  "supplied_original_pair_sha256": {
+    "RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+    "RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+  },
+  "dump_report_sha256": "1983679cff95f0abfd00d21451c46d905506c44ef7edad66f0accead749fcc73",
+  "historical_decoder_sha256": "6ac61dc53dc926a311d89fcf2e27ff7cefbbac7f4c60e2491f69114230400865",
+  "helper_lf_sha256": {
+    "art/cartoon/character-inventory-v1/source/prepare.py": "ae8f25aad3e410a0062185c23b37011c39eef1f564b3ffeda1487c3702bf8853",
+    "tools/art_common.py": "7a5be25cb3090b10685498c3d73e9daa840d96d526c282c230ddaee3be284bc7",
+    "tools/art_review_metadata.py": "68cf48f5befd494b11aaa740ed3ed89f9e86d4df5d9b25f383f4dfb199237700",
+    "tools/inventory_scenes.py": "258759d0a5547e32884b3ab2d79060726b051d51c9c63655e21a57e605318fcc"
+  },
+  "method": "Verify supplied RESOURCE pair, selected original/bundled resources and six pinned XPMs; byte-copy six archived originals and current HD. No decoder rerun.",
+  "frames": [
+    {
+      "id": "BMP/CLOUDS.BMP/000",
+      "kind": "sprite",
+      "resource": "CLOUDS.BMP",
+      "frame": 0,
+      "canvas": [
+        208,
+        74
+      ],
+      "path": "native/BMP/CLOUDS.BMP/000.png",
+      "xpm_member": "BMP/CLOUDS.BMP.000.xpm",
+      "xpm_sha256": "c44d07d5ab72aa82d66b01ec241134274aa26b2aa0294724b01d26102caf123b",
+      "bundled": {
+        "path": "BMP/CLOUDS.BMP/000.png",
+        "hd_member": "data/hd/BMP/CLOUDS.BMP/000.png",
+        "hd_png_sha256": "d3a2f66848e641b2568a157764a9353191a9bfc280a52346c9b40f316404661b",
+        "canvas": [
+          208,
+          74
+        ]
+      },
+      "png_sha256": "f1deb0f4621863bcffd8766962797e22f3083e25bfa7521f7d16cda200021f64",
+      "rgba_sha256": "5c45f2221a3936dcb51f15b3fd4e4b5d554245dda7c45e92debca641e989651a",
+      "index_plane_sha256": "f87bd860932a74cafafc4f2e1abc37eee502585b4ecf11ee6ffa7ccc42c676c0",
+      "visible_bounds_exclusive": [
+        0,
+        0,
+        203,
+        74
+      ],
+      "transparent_index": 0,
+      "runtime_canvas": [
+        416,
+        148
+      ],
+      "original_alpha_values": [
+        0,
+        255
+      ],
+      "guide": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "integer_scale": 6,
+        "offset": [
+          144,
+          290
+        ],
+        "registration": "source pixel edges map to offset + integer_scale * [x,y]"
+      },
+      "files_sha256": {
+        "clouds-000-original.png": "f1deb0f4621863bcffd8766962797e22f3083e25bfa7521f7d16cda200021f64",
+        "clouds-000-hd.png": "d3a2f66848e641b2568a157764a9353191a9bfc280a52346c9b40f316404661b",
+        "clouds-000-guide.png": "df14c1ad064ecaf60b8036c109ed66545adfae52168948fed099a5aff588dbd9"
+      }
+    },
+    {
+      "id": "BMP/CLOUDS.BMP/001",
+      "kind": "sprite",
+      "resource": "CLOUDS.BMP",
+      "frame": 1,
+      "canvas": [
+        104,
+        34
+      ],
+      "path": "native/BMP/CLOUDS.BMP/001.png",
+      "xpm_member": "BMP/CLOUDS.BMP.001.xpm",
+      "xpm_sha256": "0ec6e6cd56295dc4c1f55d4d74ef94c8ed8f61246949916f396b8d3afd99b012",
+      "bundled": {
+        "path": "BMP/CLOUDS.BMP/001.png",
+        "hd_member": "data/hd/BMP/CLOUDS.BMP/001.png",
+        "hd_png_sha256": "95e0408bdec1036784f34ccecf720de4dd06cae546d22530be499932d83ef1b5",
+        "canvas": [
+          104,
+          34
+        ]
+      },
+      "png_sha256": "579985937a477eba1d19c723fa7c18078af790a14e460c2045921b58c423a5c9",
+      "rgba_sha256": "e5f5681babbecd281355543caf9a86f94805938bbbe9dcd6955da59bb77fff67",
+      "index_plane_sha256": "1179e5983eb7f6ce3e2fc593173f06ce5048f118c052cd67a9f292ea04ac0381",
+      "visible_bounds_exclusive": [
+        0,
+        0,
+        97,
+        34
+      ],
+      "transparent_index": 0,
+      "runtime_canvas": [
+        208,
+        68
+      ],
+      "original_alpha_values": [
+        0,
+        255
+      ],
+      "guide": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "integer_scale": 12,
+        "offset": [
+          144,
+          308
+        ],
+        "registration": "source pixel edges map to offset + integer_scale * [x,y]"
+      },
+      "files_sha256": {
+        "clouds-001-original.png": "579985937a477eba1d19c723fa7c18078af790a14e460c2045921b58c423a5c9",
+        "clouds-001-hd.png": "95e0408bdec1036784f34ccecf720de4dd06cae546d22530be499932d83ef1b5",
+        "clouds-001-guide.png": "a1b18ff790ebcae8274e590a3a761684e358ae7ef34e45792f4f39d8b31d68b5"
+      }
+    },
+    {
+      "id": "BMP/CLOUDS.BMP/002",
+      "kind": "sprite",
+      "resource": "CLOUDS.BMP",
+      "frame": 2,
+      "canvas": [
+        96,
+        17
+      ],
+      "path": "native/BMP/CLOUDS.BMP/002.png",
+      "xpm_member": "BMP/CLOUDS.BMP.002.xpm",
+      "xpm_sha256": "c477365966cc695ea5d0ab258e128719c87c5f3c45d5d8522d74f9d000a872d4",
+      "bundled": {
+        "path": "BMP/CLOUDS.BMP/002.png",
+        "hd_member": "data/hd/BMP/CLOUDS.BMP/002.png",
+        "hd_png_sha256": "ed649bffa18567cf7ea2418bb587f3346e96367b1bf2c366258c339956e5ad8e",
+        "canvas": [
+          96,
+          17
+        ]
+      },
+      "png_sha256": "7fc8d9513c6600557e1a74ad67edd5909d1927fbe976d480af611efa69982bd4",
+      "rgba_sha256": "e254e9c8874d2a2291ffcde5274a11163137f0491dd9fd18683cd3c7d4baf367",
+      "index_plane_sha256": "3439e4068d7b62a9030f0167a3558e0dffc64bc8ea401a23a1718c1efe9c5ab5",
+      "visible_bounds_exclusive": [
+        0,
+        0,
+        91,
+        17
+      ],
+      "transparent_index": 0,
+      "runtime_canvas": [
+        192,
+        34
+      ],
+      "original_alpha_values": [
+        0,
+        255
+      ],
+      "guide": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "integer_scale": 14,
+        "offset": [
+          96,
+          393
+        ],
+        "registration": "source pixel edges map to offset + integer_scale * [x,y]"
+      },
+      "files_sha256": {
+        "clouds-002-original.png": "7fc8d9513c6600557e1a74ad67edd5909d1927fbe976d480af611efa69982bd4",
+        "clouds-002-hd.png": "ed649bffa18567cf7ea2418bb587f3346e96367b1bf2c366258c339956e5ad8e",
+        "clouds-002-guide.png": "fad5de19d8cf2495429c56e634831e74054f122cf89604393c4038095d4bfc7a"
+      }
+    },
+    {
+      "id": "BMP/CLOUDS.BMP/003",
+      "kind": "sprite",
+      "resource": "CLOUDS.BMP",
+      "frame": 3,
+      "canvas": [
+        56,
+        20
+      ],
+      "path": "native/BMP/CLOUDS.BMP/003.png",
+      "xpm_member": "BMP/CLOUDS.BMP.003.xpm",
+      "xpm_sha256": "e8ac1c30f1cd8f43e7a0c0b6901bc970644cac1d1aac5bb9c1a60b944ae95cf9",
+      "bundled": {
+        "path": "BMP/CLOUDS.BMP/003.png",
+        "hd_member": "data/hd/BMP/CLOUDS.BMP/003.png",
+        "hd_png_sha256": "c337ac88fdf579d979b19c6250664a7a015b2741da89444ef3761e7230830be1",
+        "canvas": [
+          56,
+          20
+        ]
+      },
+      "png_sha256": "d63469fde33fe185959d345fff2cd88d1a582bbb9632246001d417b59d34a6e0",
+      "rgba_sha256": "6b9331c9ea426f8b776b363cb597a7704b8386c2b4f4289cabc202260f70f1d1",
+      "index_plane_sha256": "f9f9210fad34d3c53b2a9e165821bfce948527db680cf2c947816aab1b8bccbb",
+      "visible_bounds_exclusive": [
+        0,
+        0,
+        55,
+        20
+      ],
+      "transparent_index": 0,
+      "runtime_canvas": [
+        112,
+        40
+      ],
+      "original_alpha_values": [
+        0,
+        255
+      ],
+      "guide": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "integer_scale": 20,
+        "offset": [
+          208,
+          312
+        ],
+        "registration": "source pixel edges map to offset + integer_scale * [x,y]"
+      },
+      "files_sha256": {
+        "clouds-003-original.png": "d63469fde33fe185959d345fff2cd88d1a582bbb9632246001d417b59d34a6e0",
+        "clouds-003-hd.png": "c337ac88fdf579d979b19c6250664a7a015b2741da89444ef3761e7230830be1",
+        "clouds-003-guide.png": "926f4e1df7b0eda47c7dc19c58a9e7642af904dea8347253305d85b9aebd61c5"
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/016",
+      "kind": "sprite",
+      "resource": "BACKGRND.BMP",
+      "frame": 16,
+      "canvas": [
+        192,
+        57
+      ],
+      "path": "native/BMP/BACKGRND.BMP/016.png",
+      "xpm_member": "BMP/BACKGRND.BMP.016.xpm",
+      "xpm_sha256": "dd33df32d2f031cee79c7f651dfcb23d8128f2b8af00d9523b478208af1441eb",
+      "bundled": {
+        "path": "BMP/BACKGRND.BMP/016.png",
+        "hd_member": "data/hd/BMP/BACKGRND.BMP/016.png",
+        "hd_png_sha256": "05487f196124175837e0685f7efc09a27e10306961ed8583157a718d842d012b",
+        "canvas": [
+          192,
+          57
+        ]
+      },
+      "png_sha256": "e89b96d0426b4af1d6a692982aab9da852daa71326352fe74519955c71b793ab",
+      "rgba_sha256": "7f813eed9033f22a6e5d4de92ccbb378e92b48e08e4818f1456ba767ad64091d",
+      "index_plane_sha256": "da1cc5c27341a9468ccd30132122280988e0d07594fcbba0890499636f8fa984",
+      "visible_bounds_exclusive": [
+        0,
+        0,
+        192,
+        57
+      ],
+      "transparent_index": 0,
+      "runtime_canvas": [
+        384,
+        114
+      ],
+      "original_alpha_values": [
+        0,
+        255
+      ],
+      "guide": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "integer_scale": 6,
+        "offset": [
+          192,
+          341
+        ],
+        "registration": "source pixel edges map to offset + integer_scale * [x,y]"
+      },
+      "files_sha256": {
+        "backgrnd-016-original.png": "e89b96d0426b4af1d6a692982aab9da852daa71326352fe74519955c71b793ab",
+        "backgrnd-016-hd.png": "05487f196124175837e0685f7efc09a27e10306961ed8583157a718d842d012b",
+        "backgrnd-016-guide.png": "b80c9fee6c363d17b84baac5327dc257106d0452510ea9d19c3fa80786114105"
+      }
+    },
+    {
+      "id": "BMP/BACKGRND.BMP/017",
+      "kind": "sprite",
+      "resource": "BACKGRND.BMP",
+      "frame": 17,
+      "canvas": [
+        264,
+        76
+      ],
+      "path": "native/BMP/BACKGRND.BMP/017.png",
+      "xpm_member": "BMP/BACKGRND.BMP.017.xpm",
+      "xpm_sha256": "392782f86ea2ebb967b943e912400d9b0f33342f62ce5fb5cbe1ef778d5b6c51",
+      "bundled": {
+        "path": "BMP/BACKGRND.BMP/017.png",
+        "hd_member": "data/hd/BMP/BACKGRND.BMP/017.png",
+        "hd_png_sha256": "17c76381bdd32a00d82475966483eab59403b4baac7d801c7b423790f42c2a80",
+        "canvas": [
+          264,
+          76
+        ]
+      },
+      "png_sha256": "ca4ac23cbf15843c0fc166bbbad8a4478013f6f88cd46c36190acc3b1dbbaa16",
+      "rgba_sha256": "944374dda51af710f9cea1809af1e59d2f77d96b229bb54345b9f714156116ff",
+      "index_plane_sha256": "ee76ea003d188c1e25a6f8b36f04b36e42bf0481fd9b4bbd3ba98e730fd8534c",
+      "visible_bounds_exclusive": [
+        0,
+        0,
+        262,
+        76
+      ],
+      "transparent_index": 0,
+      "runtime_canvas": [
+        528,
+        152
+      ],
+      "original_alpha_values": [
+        0,
+        255
+      ],
+      "guide": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "integer_scale": 5,
+        "offset": [
+          108,
+          322
+        ],
+        "registration": "source pixel edges map to offset + integer_scale * [x,y]"
+      },
+      "files_sha256": {
+        "backgrnd-017-original.png": "ca4ac23cbf15843c0fc166bbbad8a4478013f6f88cd46c36190acc3b1dbbaa16",
+        "backgrnd-017-hd.png": "17c76381bdd32a00d82475966483eab59403b4baac7d801c7b423790f42c2a80",
+        "backgrnd-017-guide.png": "e54aab9a2271572bb46d33aaec8ae48921217c6947494b0224e83bbe3c0bdada"
+      }
+    }
+  ],
+  "style": {
+    "member": "data/styles/cartoon/BMP/BACKGRND.BMP/015.png",
+    "sha256": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+    "runtime_canvas": [
+      256,
+      72
+    ]
+  },
+  "guide_note": "Different integer guide scales are inspection aids, not a proposed runtime transform. Original alpha and all pixel cells are retained.",
+  "contact": {
+    "original_scale": 2,
+    "hd_scale": 1,
+    "style_scale": 2,
+    "background_rgb": [
+      72,
+      98,
+      118
+    ],
+    "hd_display_only_key": "Opaque RGB168,0,168 keyed to transparent only in contact sheet; saved HD PNGs are untouched."
+  },
+  "files_sha256": {
+    "clouds-000-original.png": "f1deb0f4621863bcffd8766962797e22f3083e25bfa7521f7d16cda200021f64",
+    "clouds-000-hd.png": "d3a2f66848e641b2568a157764a9353191a9bfc280a52346c9b40f316404661b",
+    "clouds-000-guide.png": "df14c1ad064ecaf60b8036c109ed66545adfae52168948fed099a5aff588dbd9",
+    "clouds-001-original.png": "579985937a477eba1d19c723fa7c18078af790a14e460c2045921b58c423a5c9",
+    "clouds-001-hd.png": "95e0408bdec1036784f34ccecf720de4dd06cae546d22530be499932d83ef1b5",
+    "clouds-001-guide.png": "a1b18ff790ebcae8274e590a3a761684e358ae7ef34e45792f4f39d8b31d68b5",
+    "clouds-002-original.png": "7fc8d9513c6600557e1a74ad67edd5909d1927fbe976d480af611efa69982bd4",
+    "clouds-002-hd.png": "ed649bffa18567cf7ea2418bb587f3346e96367b1bf2c366258c339956e5ad8e",
+    "clouds-002-guide.png": "fad5de19d8cf2495429c56e634831e74054f122cf89604393c4038095d4bfc7a",
+    "clouds-003-original.png": "d63469fde33fe185959d345fff2cd88d1a582bbb9632246001d417b59d34a6e0",
+    "clouds-003-hd.png": "c337ac88fdf579d979b19c6250664a7a015b2741da89444ef3761e7230830be1",
+    "clouds-003-guide.png": "926f4e1df7b0eda47c7dc19c58a9e7642af904dea8347253305d85b9aebd61c5",
+    "backgrnd-016-original.png": "e89b96d0426b4af1d6a692982aab9da852daa71326352fe74519955c71b793ab",
+    "backgrnd-016-hd.png": "05487f196124175837e0685f7efc09a27e10306961ed8583157a718d842d012b",
+    "backgrnd-016-guide.png": "b80c9fee6c363d17b84baac5327dc257106d0452510ea9d19c3fa80786114105",
+    "backgrnd-017-original.png": "ca4ac23cbf15843c0fc166bbbad8a4478013f6f88cd46c36190acc3b1dbbaa16",
+    "backgrnd-017-hd.png": "17c76381bdd32a00d82475966483eab59403b4baac7d801c7b423790f42c2a80",
+    "backgrnd-017-guide.png": "e54aab9a2271572bb46d33aaec8ae48921217c6947494b0224e83bbe3c0bdada",
+    "backgrnd-015-accepted.png": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+    "backgrnd-015-accepted-nearest4.png": "7055ff8ab2ac519943cec94ddcafa0567448e81a19d675ba3e8255a4b22e231d",
+    "original-hd-style-contact.png": "26be389328dc38bce62681664ee350fb964ea3eb4d56a86a710c7d62bb712e7e"
+  }
+}

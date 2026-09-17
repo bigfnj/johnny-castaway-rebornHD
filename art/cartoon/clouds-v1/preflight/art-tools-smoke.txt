@@ -1,0 +1,6 @@
+Executed with toolbox Python 3.11, from tests, before the full test_art_tools suite.
+Command: python -B -m unittest -v test_art_tools.ArtToolsTests.test_true_alpha_preserves_opaque_magenta_and_binary_control test_art_tools.ArtToolsTests.test_build_is_repeatable_preserves_originals_and_refuses_overwrite
+Both tests passed. Process exit code 0; unittest reported 2 tests in 0.074s.
+This is a concise result record, not verbatim stdout. Full regression stdout is
+retained in art-tools-regression.txt. These checks exercise maintained tooling;
+they do not establish human acceptance of the newly generated cloud pixels.
