@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "controls": [
+    {
+      "name": "raft_state",
+      "status": "FIRED",
+      "failure": "final native: actual requested raft/state"
+    },
+    {
+      "name": "low_surface",
+      "status": "FIRED",
+      "failure": "final native: 030 low-wave actual placement"
+    },
+    {
+      "name": "outside_pixel",
+      "status": "FIRED",
+      "failure": "final native: pixel outside low-wave rectangles"
+    }
+  ],
+  "adapter_sha256": "634a0946017ee1ec63f69c72c08ddf2112735cb6b3fc9a12ae16c01fa7c1fa00",
+  "method": "Actual captured log/pixels copied and damaged in memory; restored positives rerun; no capture edits."
+}

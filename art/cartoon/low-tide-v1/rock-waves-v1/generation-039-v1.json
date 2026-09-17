@@ -1,0 +1,11 @@
+{
+  "mode": "built-in image_gen",
+  "accepted": false,
+  "scope": "New rock-ring geometry using the approved island wave style; no replacement of approved high-tide waves.",
+  "prompt": "Use case: style-transfer\nAsset type: transparent 2D game sprite, white offshore ripple ring around a low-tide rock, animation phase039.\nInput images: Image1 is the authoritative original ripple geometry guide, in diagnostic colors. Image2 is the approved Cartoon white offshore wave artwork: reuse its thin bright white strokes, small pale cyan accents and broken tapered tips. Image3 shows the approved rock at its exact relative position and is a placement guide ONLY; do not draw the rock.\nPrimary request: adapt the approved white ripple style to the shallow U-shaped oval ring in image1. The ring curves around the left and right sides of the rock, then joins in broad broken arcs across the foreground. Leave the upper center open and completely transparent for the rock. Preserve the low oblique viewpoint and the asymmetric source curve. Two or three broken roughly parallel arcs, not a solid filled crescent. Bright white crests with restrained pale cyan edges only; no dark shading.\nComposition: output1536x1024 RGBA with genuine alpha transparency. Keep all visible strokes strictly inside x156..1380,y350..674, matching the guide's width and height with12px padding. The left and right arc tips are around y350; the deepest foreground arcs reach y665. Leave the rock silhouette in image3 empty: it occupies aboutx396..1164,y194..554. Curve around it with a modest water gap and foreground strokes beneath its bottom. Preserve full left/right tips, no clipping. This will be uniformly reduced into a208x58 sprite.\nConstraints: ripple strokes only. No rock, sand, islands, ocean fill, diagnostic blue, navy, black, gray shadow, dark halo, broad glow, bloom, cast shadow, background rectangle, checkerboard, labels or text. The entire area between and outside the narrow strokes must be truly transparent. Keep a calm small offshore ripple scale, not breaking surf or splashes.",
+  "referenced_image_paths": [
+    "art/cartoon/low-tide-v1/rock-waves-v1/reference/original-039-guide.png",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/006-raw.png",
+    "art/cartoon/low-tide-v1/rock-waves-v1/reference/approved-rock-position.png"
+  ]
+}

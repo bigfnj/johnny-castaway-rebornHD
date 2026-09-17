@@ -1,8 +1,8 @@
 # Cartoon low-tide artwork: first static review
 
-This branch starts the 14-asset low-tide group: exposed beach BACKGRND001, offshore rock002 and twelve waves030-041. Only two provisional static sprites are ready for human review. No production asset, runtime source or acceptance ledger has changed. Main starts at `da787d63279ea91bd6c637e02133821339470bfc`.
+This branch covers the14-asset low-tide group: exposed beach BACKGRND001, offshore rock002 and twelve waves030-041. Static beach/rock appearance is approved; the combined wave candidate is ready for motion review in `motion-review-v1/review.html`. It reuses all nine approved island wave drawings and adds three matching rock-ring drawings. No production asset, runtime source or production acceptance ledger has changed. Main starts at `da787d63279ea91bd6c637e02133821339470bfc`.
 
-Selected studies are `shore-raw-v3.png` and `rock-raw-v2.png`. Both remain unapproved. Open `review/review.html` through a local HTTP server. Start with Earlier Cartoon, then Original shape. Existing-wave and clover views expose the remaining fallback overlays; they do not represent completed low-tide art.
+Selected studies are `shore-raw-v3.png` and `rock-raw-v2.png`. The user subsequently approved their static appearance with "looks good"; `static-shape-approval.json` records the exact exports and review page. Wave artwork and combined motion remain pending. Open `review/review.html` through a local HTTP server. Start with Earlier Cartoon, then Original shape. Existing-wave and clover views expose the remaining fallback overlays; they do not represent completed low-tide art.
 
 ## Decisions and lessons
 
@@ -39,4 +39,4 @@ The private candidate SHA256 is `f46e5cac5508b00cc7a675be4eaf843029cebfeabe80c84
 
 ## Pending
 
-Human approval of static shapes comes first. Then create the twelve low-tide wave sprites in their existing families against the selected beach and rock, preserving the approved white offshore-ripple direction and avoiding dark halo phases. Repeat native smoke and regression checks, review combined motion with clovers and raft positions, update the art inventory and lessons, and complete production integration and the post-merge audit. Approval of this static page alone will not approve that final combined motion.
+Static shapes are approved. The user then asked to reuse the already approved new waves. Re-register the nine island wave drawings from their unmasked ancestors against the low-tide shore, retaining the corrected white center phase. Fit three rock-ring phases in the same style to the separate rock geometry. Repeat native smoke and regression checks, review combined motion with clovers and raft positions, update the art inventory and lessons, and complete production integration and the post-merge audit. Approval of the static page alone does not approve the final combined motion.

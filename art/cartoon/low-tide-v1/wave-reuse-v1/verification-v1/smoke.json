@@ -1,0 +1,27 @@
+{
+  "phase": "smoke",
+  "status": "PASS",
+  "exporter_sha256": "d82bda77cb8c7998bc00e0d64cdd642ca2ecba9beb897d9df6f7ec9f61971108",
+  "verifier_sha256": "0b5fe951054b2beedacf800d11ef4cc0e83f9918145678a88769de943fa02559",
+  "recipe_sha256": "e70a4ad061d9fc8602dbcad26f070b97ea53e658bb373c76343bdb146855de90",
+  "fresh_process": {
+    "command": [
+      "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+      "-B",
+      "D:\\.ai-work\\worktrees\\johnny-cartoon-low-tide\\art\\cartoon\\low-tide-v1\\wave-reuse-v1\\export.py",
+      "--phase",
+      "smoke",
+      "--output",
+      "D:\\.ai-work\\worktrees\\johnny-cartoon-low-tide\\art\\cartoon\\low-tide-v1\\wave-reuse-v1\\verification-v1\\smoke"
+    ],
+    "returncode": 0,
+    "log": "smoke.log",
+    "log_sha256": "5ebc7496e6143b210dfab12ef9086510270c071a662de011b2a633e1b3cc800a"
+  },
+  "representative_frames": [
+    30,
+    33,
+    36
+  ],
+  "report_sha256": "e3cb71f65653431369224e6873a5dcb0995a5f74d098443a870eb6f142d5ade7"
+}

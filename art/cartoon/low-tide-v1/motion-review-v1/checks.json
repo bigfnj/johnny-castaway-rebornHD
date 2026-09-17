@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "97d7177dccdc3d149fba0b518202c59d57d5f4add899344af3c503d885743e14",
+  "review_html_sha256": "a77159628ef4809b0d2ea5057ed4c6603a6c3beb542ae0b96f71d6327cbfbf54",
+  "image_files_exact": 89,
+  "complete_native_frames_reconstructed": 100,
+  "controls": [
+    {
+      "control": "wrong-time",
+      "failure": "none/after/2: native timing",
+      "expected_failure": true
+    },
+    {
+      "control": "shifted-patch",
+      "failure": "none/after/2: native pixels",
+      "expected_failure": true
+    },
+    {
+      "control": "wrong-png-hash",
+      "failure": "prewave-candidate.png: native PNG identity differs",
+      "expected_failure": true
+    },
+    {
+      "control": "wrong-encoded-pixels",
+      "failure": "lossless review image pixel readback differs",
+      "expected_failure": true
+    }
+  ],
+  "restored_positive": true,
+  "scope": "Readback of preserved images, native reports, rendered frame reconstruction and timeline. Four in-memory damaged-input controls; no runtime mutation."
+}
