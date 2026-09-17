@@ -1,0 +1,28 @@
+{
+  "method": "built-in image_gen; precise-object-edit",
+  "accepted": false,
+  "prompt": "Use case: precise-object-edit.\nEdit Image 1, our new broad smooth transparent island ground. Restore ONE distinctive small jut/tongue at the lower LEFT, using Image 2 only as the reference for that left-hand coastal feature. Image 3 is the user's red-marked location, for guidance only; never copy its red marks or background.\nKeep Image 1's generous broad beach and smooth lower/front curve everywhere else. The user likes the character of the left jut but disliked the repeated scallops across the entire front. Restore that one left feature around raw x350..535,y550..605: a rounded sandy tongue extending from the left tip, then one shallow rounded recess where it meets the broad main beach. Follow the character of Image 2's left projection, simplifying it to one clean rounded feature with no tiny serrations or steps. Smoothly merge back into Image 1's broad lower coast near x620,y630. Keep the rest of the front edge x620..1340 broad and smooth, with no additional bumps or individual prop-shaped extensions.\nPreserve Image 1's exact 1536x1024 canvas, registered scale and position, upper/back coast, leftmost and rightmost tips, sand palette, lighting, highlights and texture. No zoom, recentering, global scaling or extra island enlargement. Replace any old contour inside the edited patch so there is only one thin dark-brown outer coastline.\nReturn ONLY the revised sand island on genuine RGBA transparency. No water, foam, palm, tree shadow, people, clovers, pumpkin, red annotations, text, comparison layout or background. We will arrange the side-by-side comparison separately using the authentic original source image.",
+  "refs": [
+    {
+      "path": "../smooth-shore-v1/raw.png",
+      "role": "edit target",
+      "sha256": "df6d789714c10bc1d6282a75c86c05770baad73a61990087f246253718a55c97"
+    },
+    {
+      "path": "../foam-contact-v2/ground-contact-v4-raw.png",
+      "role": "left projection reference only",
+      "sha256": "4a9afed1148a03f8ed01d012e221e740a3efae831aac59a9c6f3294737b325c8"
+    },
+    {
+      "path": "user-feedback.png",
+      "role": "user marked location",
+      "sha256": "69dfeb12db01d090583c096e6838bc21b60d06a90a919a43e8c69f3fae23d0f0"
+    }
+  ],
+  "output": {
+    "path": "raw.png",
+    "sha256": "b628924811d61ed5ccc024285a7282a396688c247ec50de7d57b08431a1bc86f",
+    "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-aa05acdf-0835-4b9e-918a-b7a333c9e750.png"
+  },
+  "observation": "Left jut restored; generator zoomed artwork despite fixed-canvas prompt. Original raw retained, uniform browser-only normalization explicitly recorded in comparison.json. No rescaled raster or runtime export."
+}

@@ -15,6 +15,9 @@ and requested a substantially broader, smoother front coast. See
 [smooth-shore-v1](smooth-shore-v1/README.md) for the new shape study and the
 explicit canvas/wave work needed to carry it into the application. The native
 comparisons below remain historical evidence, not approval of that silhouette.
+The latest request retains the distinctive left jut while smoothing the rest
+of the front. [smooth-shore-v2](smooth-shore-v2/README.md) compares that revision
+with original source artwork and offers the earlier Cartoon as another reference.
 
 ## Restored props
 
