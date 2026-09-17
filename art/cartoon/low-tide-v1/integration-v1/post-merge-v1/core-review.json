@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "status": "NO_NEW_CONCRETE_FINDINGS",
+  "reviewed_commit": "024c9943a08ede16cfa24ed37aa768cf1f020b63",
+  "baseline_commit": "da787d63279ea91bd6c637e02133821339470bfc",
+  "review_time_utc": "2026-09-17T19:09:46.933335+00:00",
+  "checkout_root": "D:/.ai-work/projects/johnny-castaway-rebornHD",
+  "source_file_count": 37,
+  "source_git_bytes": 297685,
+  "source_working_bytes": 306874,
+  "source_lines": 9189,
+  "git_source_diff_from_baseline": [],
+  "git_source_diff_from_reviewed_commit": [],
+  "method": "Fresh static read of all src C files, public headers and static data; ownership and call-path tracing; baseline Git comparison and batched Git-blob readback. No tests executed by this audit.",
+  "new_findings": [],
+  "backlog_at_reviewed_commit": {
+    "path": "BACKLOG.md",
+    "git_blob_sha256": "f9948cc4e5a8ee73922c5887fb8e37fd85660d1b7ff721715633775b037d49ad"
+  },
+  "report": {
+    "path": "art/cartoon/low-tide-v1/integration-v1/post-merge-v1/core-review.md",
+    "sha256": "62f6ef3346fb596b11fd322dc37baeb013cd1ba84a50a2ab22db3222d41973f0"
+  },
+  "scope_limits": [
+    "Platform implementations, authoring tools and package evidence are separately reviewed by other agents.",
+    "No sanitizer, fuzzing, benchmark, full story execution or original-executable parity claim.",
+    "Data tables were read for structure, ranges and call-site use; no fresh original-binary extraction comparison."
+  ],
+  "files": [
+    {
+      "path": "src/data/calcpath_data.h",
+      "git_blob_oid": "04161f6478cbc16c50963151e6c49b47c4365462",
+      "git_blob_sha256": "06f98ba87a82bb61f330f7f2ac6075a486f2ee141bb9b3637f5ff25b16977904",
+      "git_blob_bytes": 2750,
+      "working_sha256": "fdaf8cc409388b1425485801597b272105c6a788eb30825b74441e21f5041237",
+      "working_bytes": 2850,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 100
+    },
+    {
+      "path": "src/data/story_data.h",
+      "git_blob_oid": "13e7f22f8a806e90de078933d499d721d3add62a",
+      "git_blob_sha256": "51446802f188ea95ac8db0eed5a09ded878cbff86f209d9f1628dbe134448cb5",
+      "git_blob_bytes": 10128,
+      "working_sha256": "0f7d6cbd9a37b411839a2a9376c15e035388d00cb0f8cbf4b898dcc93eaff6f6",
+      "working_bytes": 10277,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 149
+    },
+    {
+      "path": "src/data/walk_data.h",
+      "git_blob_oid": "64f145be28225583007aab1cd7b8778949e27afc",
+      "git_blob_sha256": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70",
+      "git_blob_bytes": 13974,
+      "working_sha256": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769",
+      "working_bytes": 14513,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 539
+    },
+    {
+      "path": "src/engine/ads.c",
+      "git_blob_oid": "353572be1df3a8c945964b7ccf907112e76f0425",
+      "git_blob_sha256": "d8eab364f3c9bb772910ed082197a5fe8f3a69572eb622e2a16038ae2b26c1a8",
+      "git_blob_bytes": 37009,
+      "working_sha256": "c4d53220327f62676a159f1b3651626a8dabafdfa5bf625b5e94d443280eb4f6",
+      "working_bytes": 38166,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 1157
+    },
+    {
+      "path": "src/engine/ads.h",
+      "git_blob_oid": "03b7ab806d5f924ff8b782a1cf94aa2ac5caaff1",
+      "git_blob_sha256": "0528a3365871bf052e67c96da6108c1573f64e1802d6fe1452625d01eb4eab22",
+      "git_blob_bytes": 1228,
+      "working_sha256": "fbe0925205b5b0ed225152d5892a5aef72e215c1d68e5f94476ddeb66c7996a1",
+      "working_bytes": 1267,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 39
+    },
+    {
+      "path": "src/engine/art_style.c",
+      "git_blob_oid": "49b3027f57ca3b302911cd9676799075a059a399",
+      "git_blob_sha256": "d546bea68c5259d02f6a0925ee3bf658f9c788f4536176247342b91a5834ac10",
+      "git_blob_bytes": 16314,
+      "working_sha256": "f6519bfbb7fb9af09ae19b3d41b546bb644dda1952160eef1956ad7466051513",
+      "working_bytes": 16753,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 439
+    },
+    {
+      "path": "src/engine/art_style.h",
+      "git_blob_oid": "de561b7c056ea47d1e11538bb880e6c0489acdc5",
+      "git_blob_sha256": "5b1ff50302f8d4bab39cb2c12818232be88b53893707912f7d1587bb01683980",
+      "git_blob_bytes": 1554,
+      "working_sha256": "5e12338406ceec466fc678e63f5e8019c7bebf3ff60fc8068293d3f9d917c897",
+      "working_bytes": 1593,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 39
+    },
+    {
+      "path": "src/engine/bench.c",
+      "git_blob_oid": "71d8a0c0bfa856ada175bba6c334fddfde904c77",
+      "git_blob_sha256": "9be63997007f0978ff62e5c2d7ff9cbfdd7eb1b51554a68f3382a927d98e0b68",
+      "git_blob_bytes": 1365,
+      "working_sha256": "ca747e19369cd2b57e547393ec4b63cefe3ff1f6a95d4d30fd22b218228ed03c",
+      "working_bytes": 1414,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 49
+    },
+    {
+      "path": "src/engine/bench.h",
+      "git_blob_oid": "c4ebf40b863ccd55673895db43e97898e65295c2",
+      "git_blob_sha256": "f83800cc7a099e71c386a2ffb5b395566c5c35ca5c2d23ad5c3a26571c176e96",
+      "git_blob_bytes": 1005,
+      "working_sha256": "e7ff059877a2c4a747c3675767da29b01f167989f8a2ba9a57d45e47cfcbf3ad",
+      "working_bytes": 1036,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 31
+    },
+    {
+      "path": "src/engine/calcpath.c",
+      "git_blob_oid": "9c2c9120cf95a7b7d865000f9a373e18e017aefd",
+      "git_blob_sha256": "bf175908dba9a6d82543704b1dbc667ab56c68a8faf18bca49f618a1b17e17ba",
+      "git_blob_bytes": 3717,
+      "working_sha256": "8035aef05017584b5e7e5db1dcac898ba3f51efe444efc072705d5f0523cfacb",
+      "working_bytes": 3858,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 141
+    },
+    {
+      "path": "src/engine/calcpath.h",
+      "git_blob_oid": "1a6c7f26e399c6952d9f36cc1d713aa1bfaf39cd",
+      "git_blob_sha256": "5669447b1713f66d8c0e2e7c6914dafc4d7ba118a357bcc0a49bff1198595f7d",
+      "git_blob_bytes": 952,
+      "working_sha256": "4b5c614adc8a960e1bbab746aa159c4c908e3377d38a2d3c0f353ae0726d915d",
+      "working_bytes": 982,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 30
+    },
+    {
+      "path": "src/engine/config.c",
+      "git_blob_oid": "7fa92b949456ec3440c845f867c142fbd58a4632",
+      "git_blob_sha256": "fbd4a579e28056a1e38ae65e44805d227d8dc1c81ec543ddd57a54b324f9476a",
+      "git_blob_bytes": 4393,
+      "working_sha256": "a87b4e3d050912d7a82f3efa2d681be2ac20a72cadca3581dffa6d7e572bba58",
+      "working_bytes": 4550,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 157
+    },
+    {
+      "path": "src/engine/config.h",
+      "git_blob_oid": "9824421972cdb3120697222f4c3af736cb91e3b2",
+      "git_blob_sha256": "e62502e00c6a5380991110d310a61c8d72d40a0b81ef0862064f66745520a17a",
+      "git_blob_bytes": 1140,
+      "working_sha256": "ef00caffb5bba8c4de0e8b09e84911c4c1563fb6d6e5986f3e935e54b0dfcf46",
+      "working_bytes": 1180,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 40
+    },
+    {
+      "path": "src/engine/dump.c",
+      "git_blob_oid": "1a70014396567078f5ffec58022c028dc9bcfe86",
+      "git_blob_sha256": "d4e7e991f1a2d23d3a949ba841035173e85037f6154bad8d31bd5a4e255799fd",
+      "git_blob_bytes": 19781,
+      "working_sha256": "b2e46c22fa854bbc0d75413b441f4afc0afb10d42b6ead737e70bc5d7e92babd",
+      "working_bytes": 20371,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 590
+    },
+    {
+      "path": "src/engine/dump.h",
+      "git_blob_oid": "fcff3dee6204ec64179c067d13391e688d64192b",
+      "git_blob_sha256": "428e18a6a44d1256a721bca22dee74efdb73402a8a454449d496c079de3a6d1d",
+      "git_blob_bytes": 1297,
+      "working_sha256": "27ad235d4b052886c296999aae65f8604b6b668b3428860db0aea561827226df",
+      "working_bytes": 1334,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 37
+    },
+    {
+      "path": "src/engine/events.c",
+      "git_blob_oid": "95e9ad0b4c7a7797240e5f0da32194eaa1a523e2",
+      "git_blob_sha256": "13d297427e0e9d712e7e6b25eab4d5ac12519597835da7e084b44e65470a9fd8",
+      "git_blob_bytes": 10120,
+      "working_sha256": "041ac9fce76af2c3e1fc2eeef56ea9b92b45e1a4adc0087d5318720ccc2d57d2",
+      "working_bytes": 10393,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 273
+    },
+    {
+      "path": "src/engine/events.h",
+      "git_blob_oid": "5e2ca1c221bd9672e54d3375f03adc5ad15afaa8",
+      "git_blob_sha256": "eae7cbc8d74a38280a0b320217b2303bf527cd13a7b775192fb58b2f0689dbcc",
+      "git_blob_bytes": 1651,
+      "working_sha256": "7b73c8f46c470f325fb6b49093cbdc9b4f3c3da598be900d37244bd98bf9ea54",
+      "working_bytes": 1699,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 48
+    },
+    {
+      "path": "src/engine/graphics.c",
+      "git_blob_oid": "715c016dd8a15f3a40975114ee768efb5d06479b",
+      "git_blob_sha256": "c48a28ca3402081a5660b9299faa6d202922ad754dd7f4a333c37d4cd3144472",
+      "git_blob_bytes": 34501,
+      "working_sha256": "fded8d14dbfa432242170e0a16010cb882d02f437d31e5a317bfe2baafcee392",
+      "working_bytes": 35557,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 1056
+    },
+    {
+      "path": "src/engine/graphics.h",
+      "git_blob_oid": "84605d6aff1437804719653322c50d52fae2cd79",
+      "git_blob_sha256": "43e57c976553d2c75dd3d5e34068bbd2335eecb78b1ec89e88fdeac3ab43bcf8",
+      "git_blob_bytes": 5220,
+      "working_sha256": "e2b388c6e9edfac3237c88467ba38117c4b1918b2a56f4a4d9dcd635e6fd9ecf",
+      "working_bytes": 5369,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 149
+    },
+    {
+      "path": "src/engine/island.c",
+      "git_blob_oid": "f3198ac6661ade6cf112a384e5264dc4fe163324",
+      "git_blob_sha256": "6e7ddc520499cd2baea3575cec450dcf066602b157eacd7134b59aca25c76fa6",
+      "git_blob_bytes": 12922,
+      "working_sha256": "78795472d233c9b54bcd8ff32e032358e5e19434e4de7d2fdb26f521d6600737",
+      "working_bytes": 13297,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 375
+    },
+    {
+      "path": "src/engine/island.h",
+      "git_blob_oid": "aa8b94a090d9b2db32c375c6a160a280e751c5aa",
+      "git_blob_sha256": "a4a416e70dfeb6b1a50d97074b2a473cc04f21773e6a77d79dad678aa2c32548",
+      "git_blob_bytes": 1605,
+      "working_sha256": "78da2a0bcc15e38636aa8ca7d1f9c1fb7fc48b49bf44a8afd895f3b76b3bef58",
+      "working_bytes": 1662,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 57
+    },
+    {
+      "path": "src/engine/jc_reborn.c",
+      "git_blob_oid": "fa11bc5f943b9edc63f3ec46e0e04ee8d5e241fb",
+      "git_blob_sha256": "2fbda78360af7016404db75148a48860d9192b84c42253f9e58f4a0efd59e590",
+      "git_blob_bytes": 25964,
+      "working_sha256": "50d9904cffd7c3cba9877ecec383370c612622ccd31a5a013e77755903c358c4",
+      "working_bytes": 26740,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 776
+    },
+    {
+      "path": "src/engine/mytypes.h",
+      "git_blob_oid": "6a75f00196f95b9621ddd6979f8e4c10f21fc5e7",
+      "git_blob_sha256": "ea0e741dbb269cf373309cd81efec31bc9df6d651cc9873e161001c869cd0972",
+      "git_blob_bytes": 1239,
+      "working_sha256": "cd9d251a4025cb9894b3d13dfb0c05568eadd53b7c15ee16f2af49b6c07cad84",
+      "working_bytes": 1283,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 44
+    },
+    {
+      "path": "src/engine/resource.c",
+      "git_blob_oid": "8b2ebe7e849f409ce8ab07b65d997ffccca0f3e0",
+      "git_blob_sha256": "7a6f30dccc8295e19749a3ed0b322425b6c249802a4d42960b6f5b9e44b34a1c",
+      "git_blob_bytes": 17462,
+      "working_sha256": "8b60a6d5936dd67ca014aaedde799e8b6f0a567ac482c836bd922a4fa93c6f43",
+      "working_bytes": 18026,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 564
+    },
+    {
+      "path": "src/engine/resource.h",
+      "git_blob_oid": "9158d87f5de9ee83360d8f81ca5074c22888e992",
+      "git_blob_sha256": "a22cee6196d85f1c76c3e85bc44c3926281c46f650fdf5c00cb6f915f575da33",
+      "git_blob_bytes": 3174,
+      "working_sha256": "dfb8a1c118fb69a515931b939e7a32e05cc05688b2c09875b496211dcac412af",
+      "working_bytes": 3316,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 142
+    },
+    {
+      "path": "src/engine/sound.c",
+      "git_blob_oid": "d870183b45e643a6ac665aba0f26fad50a0319a8",
+      "git_blob_sha256": "83787c86ad22d0a9a19b96ab8159874a3af332a5d0c2ae78d0631d3d9128e383",
+      "git_blob_bytes": 7031,
+      "working_sha256": "eec8a1b43e33eccbd4e7f835ca55b7d9ab952818f2093f6a996d69d1ce6a91ee",
+      "working_bytes": 7264,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 233
+    },
+    {
+      "path": "src/engine/sound.h",
+      "git_blob_oid": "ebceb30cbc896bb34d8b3c7e1535157ad4f397f6",
+      "git_blob_sha256": "49cb48645bb85b958edceb7df31f34594824c1039e81178bdcc8b3d940f7f2c2",
+      "git_blob_bytes": 995,
+      "working_sha256": "36bf9900ea05f164190b042905e1d5b5e163015055fa1f9f5cd9ec15c54a1e47",
+      "working_bytes": 1028,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 33
+    },
+    {
+      "path": "src/engine/story.c",
+      "git_blob_oid": "506e30da2a93a2557eff39b418547de383a29a0e",
+      "git_blob_sha256": "32148bd4879931d8db5cf91ab4349e347ec279c4c552efaeca85032ffb89902f",
+      "git_blob_bytes": 8649,
+      "working_sha256": "b503cca4115b5852f4ed9cdc02c5aef77498c793bac9fdb2b517b19cd8c4b9a4",
+      "working_bytes": 8973,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 324
+    },
+    {
+      "path": "src/engine/story.h",
+      "git_blob_oid": "8e93d9e00bdfd7ae448681921b688cab6e65ab43",
+      "git_blob_sha256": "a853a877766b6a9092e372ca94d6f8733dff662ba64e89f98032befd93eb146a",
+      "git_blob_bytes": 1633,
+      "working_sha256": "e2bc55888fa518bbac1566f059111e2b4e278a986639cb825dd28a8677663e0c",
+      "working_bytes": 1677,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 44
+    },
+    {
+      "path": "src/engine/ttm.c",
+      "git_blob_oid": "d577abbf6f259a44abbb7b9195086f99fc50b688",
+      "git_blob_sha256": "4a856f695a64eeab5d2c255b9c53395bc89b4e475b72cd50af3773972556eba3",
+      "git_blob_bytes": 18779,
+      "working_sha256": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6",
+      "working_bytes": 19276,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 497
+    },
+    {
+      "path": "src/engine/ttm.h",
+      "git_blob_oid": "7c1c0084a2dd95cf52d121f265b382c03190e577",
+      "git_blob_sha256": "e41bc75724bf027784398b8dd37f581c5a2dcf1cd72974b70a1c53d8c51cace3",
+      "git_blob_bytes": 1213,
+      "working_sha256": "7a6a8d40da48f8316d204cc4a8bb664e7cf3950dde0a75f79c0a6bf8b080e48d",
+      "working_bytes": 1252,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 39
+    },
+    {
+      "path": "src/engine/uncompress.c",
+      "git_blob_oid": "293e46e65fffc4a7863c10190fb86014647578f2",
+      "git_blob_sha256": "8718e77512eceeb4ebecb28009889aff08d7a4dcbe1a85d8473b101268c46a4a",
+      "git_blob_bytes": 8975,
+      "working_sha256": "c8c0483ef3ae43e242ecbfff622c4735aef6f330ebce04f4cda8b43bfbba6b15",
+      "working_bytes": 9294,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 319
+    },
+    {
+      "path": "src/engine/uncompress.h",
+      "git_blob_oid": "e38dad90f1075591bdab7f8e8694eb1d1565864d",
+      "git_blob_sha256": "6001c379486b6ad09239a7e23d45881fcabeee8228b61aec0629bb1d76ce546e",
+      "git_blob_bytes": 1038,
+      "working_sha256": "c58f198f9dad5e00ac344925a0a9c45087253d6c6c950bd06cbc701c906c2148",
+      "working_bytes": 1070,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 32
+    },
+    {
+      "path": "src/engine/utils.c",
+      "git_blob_oid": "a1e8e48923ebe9f83176c76928451be218242ef0",
+      "git_blob_sha256": "4207d99946b0fee2fd00186435d42928ad9e2952481262827513ec336d705491",
+      "git_blob_bytes": 8020,
+      "working_sha256": "c50c4ae6de6a59e4fbd1a169592eb920778449f8c000175cb55d66595343c10f",
+      "working_bytes": 8331,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 311
+    },
+    {
+      "path": "src/engine/utils.h",
+      "git_blob_oid": "a840f175f1e99347324eb5dcb8bb43f38d10973f",
+      "git_blob_sha256": "4df55daa4c1b468c545bd7523eb261210f5bf9fd150b01dc0331c61f13269c19",
+      "git_blob_bytes": 2998,
+      "working_sha256": "9e6fb0678b6c62c63bea5f58f1772cf02aa7510809639f4984e94d0fa3d43104",
+      "working_bytes": 3078,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 80
+    },
+    {
+      "path": "src/engine/walk.c",
+      "git_blob_oid": "99ede106e84d7efa48b37069db0bbe8e2838483f",
+      "git_blob_sha256": "a6d49c73188850642a68ff5da1053e032d2c566d0d5e4f0554c1c17946de09b3",
+      "git_blob_bytes": 6825,
+      "working_sha256": "d6b88ef1e16a2ad10944ce520485a472d4b13d53fd744087e9c5e573e1908f9d",
+      "working_bytes": 7048,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 223
+    },
+    {
+      "path": "src/engine/walk.h",
+      "git_blob_oid": "209cb0b9dbb0ba6b4484df3f0de183accb185a05",
+      "git_blob_sha256": "e859fa1fd73d13c5372aff3b21086d3a9ac283d3034102cc5d7d70fab606b4a7",
+      "git_blob_bytes": 1064,
+      "working_sha256": "cd828778b83c73428ba9d7897a87aa7254b7d2d54eb1eb3f31a1ed625cbf5a91",
+      "working_bytes": 1097,
+      "checkout_relation": "CRLF checkout of LF Git blob",
+      "lines": 33
+    }
+  ]
+}

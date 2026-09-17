@@ -6,6 +6,11 @@ sources; three rock-ring phases were generated in the same white-foam style.
 The broad spacing between ripple families is retained after the user withdrew
 that objection. No renderer or animation-code change was needed.
 
+[PR18](https://github.com/bigfnj/johnny-castaway-rebornHD/pull/18) is merged into
+main at024c994. Windows, Linux, macOS and Web CI passed before merge. The
+[post-merge audit](cartoon-low-tide-post-merge-audit.md) records the subsequent
+main-checkout review and deployment checks.
+
 The [acceptance record](../art/cartoon/low-tide-v1/integration-v1/production-acceptance.json)
 binds the static approval and the native motion viewer at port8937. Earlier
 draft records retain their original pending status. This does not claim that
@@ -29,6 +34,11 @@ source replay. The [Windows proof](../art/cartoon/low-tide-v1/integration-v1/win
 retains compact logs and source/deployment identities. The preparation helper's
 map-difference control is only a diagnostic on hash maps, not an executed
 corrupt-ZIP refusal or guard-removal test.
+
+The historical native-capture commands also pin the old production archive.
+Reconstruct those captures from the pre-promotion source snapshot and recovered
+static comparison package in isolated scratch. They are not live-main commands.
+The saved motion review remains directly viewable without rebuilding captures.
 
 The [reusable lessons](art-style-learnings-low-tide.md) preserve wave ancestry,
 white007 selection, common family transforms, alpha-fringe measurements,

@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "source_commit": "024c9943a08ede16cfa24ed37aa768cf1f020b63",
+  "status": "PASS",
+  "fresh_commands": [
+    {
+      "command": "& $env:TOOLBOX_PYTHON -B tools/art_review_metadata.py --check",
+      "exit_code": 0,
+      "stdout": "WITNESS art_review_metadata f5fb1aa8aea584cc9f4a97d84d92a55e6d2dee6dcc430136629962e106b61378\r\nREFERENCE stored original-dump evidence; external original inputs were not reread in this run\r\nPASS art-review-metadata {\"assets\": 21, \"island_assets\": 15, \"walking_assets\": 6}\r\n"
+    },
+    {
+      "command": "& $env:TOOLBOX_PYTHON -B tools/art_production_catalog.py --check",
+      "exit_code": 0,
+      "stdout": "REFERENCE HD proxies; stored supplied-original evidence only where linked; no external originals reread\r\nPASS art-production-catalog {\"accepted\": 61, \"distinct_hd_png_bytes\": 2141, \"exact_duplicate_slots\": 260, \"hd_proxy_blank_slots\": 119, \"pending\": 2340, \"screens\": 10, \"slots\": 2401, \"sprites\": 2391, \"supplied_original_evidence_slots\": 51}\r\n"
+    },
+    {
+      "command": "& $env:TOOLBOX_PYTHON -B art/cartoon/character-inventory-v1/build_inventory.py --check",
+      "exit_code": 0,
+      "stdout": "WITNESS character-inventory da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a\r\nREFERENCE stored original PNG evidence; original executable colors and scene execution were not revalidated\r\nPASS character-inventory {\"accepted_johnny\": 28, \"all_classes\": {\"johnny_composite\": 382, \"johnny_full\": 459, \"johnny_partial\": 189, \"not_johnny\": 1162, \"placeholder\": 126, \"uncertain\": 84}, \"distinct_outstanding_originals\": 968, \"original_slots\": 2402, \"outstanding_classes\": {\"johnny_composite\": 382, \"johnny_full\": 431, \"johnny_partial\": 189}, \"outstanding_johnny\": 1002, \"outstanding_resources\": 76, \"port_slots\": 2401, \"reference_only\": 1, \"resources\": 127, \"uncertain_port_slots\": 84}\r\n"
+    }
+  ],
+  "package": {
+    "sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+    "baseline_sha256": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+    "member_count": 2612,
+    "changed_existing": [],
+    "added_members": [
+      "data/styles/cartoon/BMP/BACKGRND.BMP/001.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/002.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/030.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/031.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/032.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/033.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/034.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/035.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/036.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/037.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/038.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/039.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/040.png",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/041.png"
+    ],
+    "existing_payloads_preserved": 2598,
+    "reviewed_archive_exact": true,
+    "accepted_assets": 61,
+    "inherited_47_rows_exact": true,
+    "runtime_manifest_unchanged": true,
+    "pilot_history_unchanged": true,
+    "selected_rows": [
+      {
+        "path": "BMP/BACKGRND.BMP/001.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/002.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/030.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/031.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/032.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/033.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/034.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/035.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/036.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/037.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/038.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/039.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/040.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      },
+      {
+        "path": "BMP/BACKGRND.BMP/041.png",
+        "png_matches": true,
+        "hd_proxy_matches": true
+      }
+    ]
+  },
+  "durable_bindings": {
+    "basis": "Actual merged HEAD Git blobs plus current checkout bytes, not earlier index evidence.",
+    "groups": {
+      "static_native_copies": 64,
+      "waves_native_copies": 118,
+      "windows_feature_copies": 41,
+      "authoring_copies": 22,
+      "generated_outputs": 6,
+      "source_replay_inputs": 40,
+      "selected_authoring_bindings": 20,
+      "acceptance_bindings": 6,
+      "wave_authoring_inputs": 22,
+      "generation_ancestry": 26,
+      "binder_records": 5
+    },
+    "unique_paths": 325,
+    "binder_sha256": {
+      "art/cartoon/low-tide-v1/native-v1/evidence.json": "4fa3d6f95dc7645e06e39e8ecba3518244fd85ca9d6d0509f114a0fb58bea998",
+      "art/cartoon/low-tide-v1/waves-native-v1/evidence-v1/evidence.json": "94461ceb13084a3a35446a9d3c7ce8d747c7a29eb868135a4d3b21e12857279e",
+      "art/cartoon/low-tide-v1/integration-v1/windows-feature-v1/evidence.json": "44203bbd847e1405847d40cb6b1db1c05bc4624d7db304ecbcc3fe8b2feb7229",
+      "art/cartoon/low-tide-v1/integration-v1/authoring-v1/verification.json": "119800588fac29bae2ea38c3938febf7a90cc9cdd3c03f54a1437c5e682e973a",
+      "art/cartoon/low-tide-v1/integration-v1/replay-result.json": "b2b9789b872cb2bec4c53b1a57dffdc29d3a70ba5d1cf53533bb3e3555a0d84a"
+    },
+    "missing_from_commit": [],
+    "raw_digest_differences": {
+      "committed": [
+        "tools/art_common.py",
+        "tools/art_pack.py"
+      ],
+      "checkout": [
+        "docs/knowledge-base/cartoon-production-catalog.json",
+        "docs/knowledge-base/cartoon-production-catalog.md"
+      ]
+    },
+    "text_checkout_resolutions": [
+      {
+        "path": "tools/art_common.py",
+        "git_sha256": "7a5be25cb3090b10685498c3d73e9daa840d96d526c282c230ddaee3be284bc7",
+        "checkout_sha256": "2e003886e3504f6af4725eaf875c3d793542dc0efd4ccf45042d670c96f6e914",
+        "normalized_lf_sha256": "7a5be25cb3090b10685498c3d73e9daa840d96d526c282c230ddaee3be284bc7",
+        "basis": "Git text:auto with core.autocrlf=true; worktree and committed text are exactly equal after CRLF to LF. Historical source-snapshot fingerprints remain exact to their original run; frozen evidence copies were checked byte-for-byte."
+      },
+      {
+        "path": "tools/art_pack.py",
+        "git_sha256": "6072e710753674617447c2baed6c2ab5be9627b178afe650796c3733a6686226",
+        "checkout_sha256": "4dd755019d6d203574e003d83913313eb17aa35288b5543844b76d679c721fd6",
+        "normalized_lf_sha256": "6072e710753674617447c2baed6c2ab5be9627b178afe650796c3733a6686226",
+        "basis": "Git text:auto with core.autocrlf=true; worktree and committed text are exactly equal after CRLF to LF. Historical source-snapshot fingerprints remain exact to their original run; frozen evidence copies were checked byte-for-byte."
+      },
+      {
+        "path": "docs/knowledge-base/cartoon-production-catalog.json",
+        "git_sha256": "8f001c9920d8099fedfe7ae8885a42dbdf4e506f978adb205395c871905b52d7",
+        "checkout_sha256": "42e0eb130b9425178b3d4511c9c42656041de9dcd0c2e7222c2adc3b679adcc8",
+        "normalized_lf_sha256": "8f001c9920d8099fedfe7ae8885a42dbdf4e506f978adb205395c871905b52d7",
+        "basis": "Git text:auto with core.autocrlf=true; worktree and committed text are exactly equal after CRLF to LF. Historical source-snapshot fingerprints remain exact to their original run; frozen evidence copies were checked byte-for-byte."
+      },
+      {
+        "path": "docs/knowledge-base/cartoon-production-catalog.md",
+        "git_sha256": "a33bdf6a665ef7b1a2d41af62bf0c8e175368d47f65718ea04c79568f13efeb5",
+        "checkout_sha256": "31a9557b3ccbcb0c01e444bad0ba8192a8eb93ecf18e581e2cf515133154058c",
+        "normalized_lf_sha256": "a33bdf6a665ef7b1a2d41af62bf0c8e175368d47f65718ea04c79568f13efeb5",
+        "basis": "Git text:auto with core.autocrlf=true; worktree and committed text are exactly equal after CRLF to LF. Historical source-snapshot fingerprints remain exact to their original run; frozen evidence copies were checked byte-for-byte."
+      }
+    ],
+    "unresolved_mismatches": [],
+    "frozen_evidence_copies_exact_in_commit_and_checkout": 245
+  },
+  "limits": [
+    "Only the three reproduction/check CLIs ran freshly. Feature smoke/regression, exporter replay, native and Windows records were hash-read back, not rerun.",
+    "No original external resources, original executable colors, browser or workstation display were revalidated.",
+    "Historical native/export helpers retain their pre-promotion archive pins; use isolated historical source for replay.",
+    "Unrelated untracked -e was neither read nor modified."
+  ],
+  "inspected_sources": {
+    "hash_basis": "Current checkout bytes; maintained text can differ from Git blobs only by documented checkout line endings.",
+    "files_sha256": {
+      ".github/workflows/ci.yml": "8ee81e0e250e5d4b3a08c7cf39d1b41b18481d5fd48a36bad198258bb8864915",
+      "CMakeLists.txt": "0090f05332c00493b4f4fdd30fc6a25efd6b383a6f3373a3eb0c98d7a65d0962",
+      "cmake/RuntimeData.cmake": "636026ff42a78acb3716f61c44988ebf3d307313dc5964d752e1f28e6f16e905",
+      "gate.ps1": "7eb40f38d9c34f990f22628b54b853459385175016250e3eefa074a2ecf30394",
+      "tools/build_web.py": "602a0f1a7d7db27f27f0a9ae7d13b4ca49a6be108176202f2827f7a47764b259",
+      "tools/art_pack.py": "4dd755019d6d203574e003d83913313eb17aa35288b5543844b76d679c721fd6",
+      "tools/art_production_catalog.py": "b6eae10f72a50745d8ed9c465d649fd88623de5bdf56de1a21f5ed37ea246f50",
+      "tools/art_review_metadata.py": "f5fb1aa8aea584cc9f4a97d84d92a55e6d2dee6dcc430136629962e106b61378",
+      "art/cartoon/character-inventory-v1/build_inventory.py": "da82435e3e5b60c6369b8bc179dc47b5f7cd55234287d9be046bf066edc0030a",
+      "art/cartoon/low-tide-v1/export_draft.py": "260cfc364821aa04ff2529130142ea6dda4a7a76c8c35ffa69e4f3e66a2658fb",
+      "art/cartoon/low-tide-v1/pack_wave_draft.py": "3c253d9e67d29a045e1b0d99721be6c76586ff734f7edd0fb644ec4e70d91217",
+      "art/cartoon/low-tide-v1/wave-reuse-v1/export.py": "d82bda77cb8c7998bc00e0d64cdd642ca2ecba9beb897d9df6f7ec9f61971108",
+      "art/cartoon/low-tide-v1/wave-reuse-v1/verify.py": "0b5fe951054b2beedacf800d11ef4cc0e83f9918145678a88769de943fa02559",
+      "art/cartoon/low-tide-v1/rock-waves-v1/export.py": "a3545dbadac99fd90c618b369f2d937fa78045581169df18b1c95f4e8875764b",
+      "art/cartoon/low-tide-v1/waves-native-v1/capture.py": "634a0946017ee1ec63f69c72c08ddf2112735cb6b3fc9a12ae16c01fa7c1fa00",
+      "art/cartoon/low-tide-v1/waves-native-v1/run.py": "bc7415191ba2340e5d4d8c3fca20c53a3e9ed6130cf41e508f7588674486a53c",
+      "art/cartoon/low-tide-v1/integration-v1/prepare.py": "48cd41f1e0baefe030115a0e009aa954dbbd1cfcc39d60b91922690543b6c767",
+      "art/cartoon/low-tide-v1/integration-v1/replay.py": "ccf33259aefb1dba4447267797b11814be726a23d6d3e8e94e7c566e3388d627"
+    }
+  },
+  "first_parent": "da787d63279ea91bd6c637e02133821339470bfc",
+  "maintained_runtime_tools_tests_build_diff_vs_first_parent": []
+}

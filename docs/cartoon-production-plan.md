@@ -4,6 +4,10 @@ The user approved this bounded start on 2026-09-15: establish the production
 catalog, then expand Johnny's walking directions before undertaking the full
 application. Work starts from `0f7d7fd` on `art/cartoon-production-foundation`.
 
+Current delivery: the [low-tide group](cartoon-low-tide-verification.md) brings
+production to61 accepted PNGs. The original scope and phase table below remain
+the workflow history; coverage advances are recorded in the linked deliveries.
+
 ## Scope and sequence
 
 | Phase | Deliverable | Completion evidence |
@@ -69,13 +73,15 @@ six-pose walk was subsequently approved in the native island review with
 The front walk refresh and all standing directions have since been accepted,
 with explicit inheritance of earlier approvals. Profile walking 001-008, including
 shared ordinary-turn 003, is now approved in both native directions and its
-reviewed ordinary departure contexts. Three of the ten unique wait/turn-table
-assets still use HD fallback: 009, 010 and 012. These connecting poses and their
-complete route/story contexts are the next bounded art batch.
+reviewed ordinary departure contexts. Ordinary connecting poses009/010/012
+were subsequently [accepted and integrated](cartoon-connecting-poses-verification.md),
+including the lighter skin palette and corrected018 contact. All28 delivered
+Johnny drawings retain those scoped approvals.
 Other placements and story uses of the standing art remain outside its reviewed
-arrival/direction-ring contexts. Large-scale asset generation,
-low-tide scenery, other characters, action scenes and code-drawn effects remain
-outside the current production batch. Existing engine maintenance findings stay
+arrival/direction-ring contexts. Seasonal decorations and the high/low-tide
+environment groups are now delivered. Clouds, night and alternate oceans are
+the next bounded scenery groups; other characters, action scenes and code-drawn
+effects remain later work. Existing engine maintenance findings stay
 in [BACKLOG.md](../BACKLOG.md); address a reproduced blocker when its affected
 scene enters review.
 

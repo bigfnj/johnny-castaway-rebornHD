@@ -8,7 +8,7 @@ Earlier family counts below describe their individual delivery checkpoints.
 
 The [production plan](cartoon-production-plan.md) tracks the completed
 [slot catalog](knowledge-base/cartoon-production-catalog.md) and successive
-walking families. The current [profile-walk batch](cartoon-profile-walk-plan.md)
+walking families. The delivered [profile-walk batch](cartoon-profile-walk-plan.md)
 covers 001-008 with separate pose, motion and scene reviews.
 
 Read [image authoring lessons](art-style-learnings.md) before starting another
@@ -36,7 +36,9 @@ separately from unreviewed story interactions. The
 [profile family](../art/cartoon/walk-pilot/profile-walk-v1/README.md) adds 001-008
 together, bringing the pack to 40 assets. Both native directions, standing
 connections and ordinary 003 departures were approved with "Yes, keep this profile
-walk". Ordinary 009/010/012 and unreviewed story interactions remain later work.
+walk". Ordinary009/010/012 were subsequently integrated in the
+[connecting-pose delivery](cartoon-connecting-poses-verification.md).
+Unreviewed story interactions remain later work.
 Each family retains its actual human review; aggregate pack approvals explicitly
 inherit earlier reviewed assets rather than silently replacing their provenance.
 

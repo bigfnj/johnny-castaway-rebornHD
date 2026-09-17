@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "main_commit": "024c9943a08ede16cfa24ed37aa768cf1f020b63",
+  "attempt_count": 2,
+  "first_attempt_incomplete": true,
+  "retry_observer_status": "COMPLETED",
+  "gate_result": true,
+  "exit_code": 0,
+  "elapsed_seconds": 162.755,
+  "poll_checks": 310,
+  "private_window_count": 244,
+  "input_desktop_preserved": true,
+  "protected_snapshot_readback": {
+    "low-tide-main-v1": {
+      "protected_file_count": 149,
+      "all_current_bytes_match_launch": true
+    },
+    "low-tide-main-v2": {
+      "protected_file_count": 149,
+      "all_current_bytes_match_launch": true
+    }
+  },
+  "source_and_deployed_zip_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+  "retained_complete_ppms": 32,
+  "retained_capture_markers": 32,
+  "clean_build_marker": true,
+  "explicit_symlink_skips": [
+    "test_directory_symlink_alias (__main__.InventoryCliTests.test_directory_symlink_alias) ... skipped \"directory symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'D:\\\\\\\\.ai-work\\\\\\\\projects\\\\\\\\johnny-castaway-rebornHD\\\\\\\\build\\\\\\\\seasonal-final-windows\\\\\\\\low-tide-main-v2\\\\\\\\temp\\\\\\\\johnny-inventory-cli-zlgcth_q' -> 'D:\\\\\\\\.ai-work\\\\\\\\projects\\\\\\\\johnny-castaway-rebornHD\\\\\\\\build\\\\\\\\seasonal-final-windows\\\\\\\\low-tide-main-v2\\\\\\\\temp\\\\\\\\johnny-inventory-cli-zlgcth_q\\\\\\\\alias'\"",
+    "test_file_symlink_alias (__main__.InventoryCliTests.test_file_symlink_alias) ... skipped \"file symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'D:\\\\\\\\.ai-work\\\\\\\\projects\\\\\\\\johnny-castaway-rebornHD\\\\\\\\build\\\\\\\\seasonal-final-windows\\\\\\\\low-tide-main-v2\\\\\\\\temp\\\\\\\\johnny-inventory-cli-lexn2ahh\\\\\\\\fixture.zip' -> 'D:\\\\\\\\.ai-work\\\\\\\\projects\\\\\\\\johnny-castaway-rebornHD\\\\\\\\build\\\\\\\\seasonal-final-windows\\\\\\\\low-tide-main-v2\\\\\\\\temp\\\\\\\\johnny-inventory-cli-lexn2ahh\\\\\\\\symlink.json'\""
+  ],
+  "dependencies_sha256": {
+    "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe": "de13d8017f63cb63b0b5bfd2f25e69245c9196433a224856ca1abde1e24d0cb7",
+    "D:\\.ai-work\\projects\\johnny-castaway-rebornHD\\art\\cartoon\\shoreline-repair-v1\\integration-v1\\windows-final\\run_gate.py": "605d77d3b909463a13d55773628219bab5109209d6a822ba0248a72b9f3b4109",
+    "D:\\.ai-work\\projects\\johnny-castaway-rebornHD\\art\\cartoon\\skin-tone-v1\\integration-v1\\windows-v1\\helpers\\motion_review.py": "86312fd1bad0786c2e1ee56c9eb6aab69cb1bf9f1295ec84430769877490f55d",
+    "D:\\.ai-work\\projects\\johnny-castaway-rebornHD\\build\\CMakeCache.txt": "c755ae5f5ec3e30cc8fe2ac13d84094bbadce1f1a928a57b5eddcacffd415eaa",
+    "D:\\.ai-work\\projects\\johnny-castaway-rebornHD\\build\\CMakeFiles\\4.3.1\\CMakeCCompiler.cmake": "a0bd1a398ada9b98763971c3a5ea0450ad7c4f575298d01b3935cf4c507839a0",
+    "C:\\Program Files\\CMake\\bin\\cmake.exe": "f05482595d42888f2befe209d8aa4848560c8a05356411043241a15e7d3f86a7",
+    "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe": "c94cdac6a780142920110e5cb8b7339817029eead696e0e97700b45e03216a00"
+  },
+  "cmake_cache_fields": {
+    "CMAKE_COMMAND": "C:/Program Files/CMake/bin/cmake.exe",
+    "CMAKE_C_COMPILER": "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+    "CMAKE_GENERATOR": "Visual Studio 18 2026",
+    "CMAKE_HOME_DIRECTORY": "D:/.ai-work/projects/johnny-castaway-rebornHD"
+  },
+  "built_outputs_sha256": {
+    "jc_reborn.exe": "a1f9b1c1ac39cde5cb66e2b4dc7511cfae83be6df9157a8064132e462c6a4479",
+    "jc_reborn.scr": "0047eebce1f2a1242c9e9047a42a92ddb826078a7c5a07957ff59e24adfe4765"
+  },
+  "main_ci_reference": "../main-ci.json",
+  "excluded_bulk": "PPMs, renderer logs, executables and archives remain in scratch; result.json binds retained capture/log hashes."
+}
