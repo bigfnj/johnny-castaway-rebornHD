@@ -5,8 +5,8 @@ to their intended size and placement. Shrinking and raising those props had
 compensated for missing shoreline ground. This work corrects the scenery;
 the original engine draw origins and sprite canvases remain fixed.
 
-This is an authoring checkpoint. No production asset has changed and there is
-no human approval for the new island yet. Serve this folder and open
+This is an authoring checkpoint. No production asset has changed. The V3 sand
+shape is approved; native scene and wave integration are pending. Serve this folder and open
 `review.html` for the matched native comparison. Both panels use the
 same restored-size V5 props, not the earlier reduced decorations.
 
@@ -15,9 +15,11 @@ and requested a substantially broader, smoother front coast. See
 [smooth-shore-v1](smooth-shore-v1/README.md) for the new shape study and the
 explicit canvas/wave work needed to carry it into the application. The native
 comparisons below remain historical evidence, not approval of that silhouette.
-The latest request retains the distinctive left jut while smoothing the rest
-of the front. [smooth-shore-v2](smooth-shore-v2/README.md) compares that revision
-with original source artwork and offers the earlier Cartoon as another reference.
+The latest annotated reference clarifies two inward shoreline notches, around
+29% and 67% across the original land width. [smooth-shore-v3](smooth-shore-v3/README.md)
+restores both while keeping the broad, smooth intervening beach. It compares
+the draft with original source artwork and V2. The user approved this sand shape.
+V2's single misplaced notch is superseded; it is not the approved silhouette.
 
 ## Restored props
 
