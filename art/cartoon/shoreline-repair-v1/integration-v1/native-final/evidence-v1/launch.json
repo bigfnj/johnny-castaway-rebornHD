@@ -1,0 +1,50 @@
+{
+  "source_commit": "aafb1ca380f7c50e26347893c30b1ca2a8dc4628",
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "container_name": "johnny-integrated-shore-8183fbb6511e",
+  "inputs": {
+    "baseline": {
+      "path": "build/shoreline-repair-v1/integration-v1/run-v2/prior-4c8085be.zip",
+      "sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+    },
+    "candidate": {
+      "path": "build/shoreline-repair-v1/integration-v1/run-v2/scrantic_data.zip",
+      "sha256": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6"
+    }
+  },
+  "phase": "full",
+  "capture_arguments": [
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/art/cartoon/shoreline-repair-v1/integration-v1/native-final/capture.py",
+    "--output",
+    "/out/captures",
+    "--phase",
+    "full",
+    "--baseline",
+    "/source/build/shoreline-repair-v1/integration-v1/run-v2/prior-4c8085be.zip",
+    "--baseline-sha256",
+    "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "--candidate",
+    "/source/build/shoreline-repair-v1/integration-v1/run-v2/scrantic_data.zip",
+    "--candidate-sha256",
+    "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 958.4976687431335,
+  "no_surviving_task_container": true,
+  "cleanup_exit_code": 0,
+  "launcher_sha256": "4e7cbfe22aafcf8ba64185852f756b65199a3c0ae189cf2207b02217462004c6",
+  "helpers_sha256": {
+    "capture.py": "5d65fff74c7b30b8d8ae9c96122e087e0faceac3f0560457f66da61aa35ebd72",
+    "check_inputs.py": "c6f8d0c0af5147eaafac69208cbfa0d50e5ed3c2f17bc65f78098dadc6eaa3f4",
+    "contract.py": "81369ccb3fbb7620221e41367ce6a010aaa1eca05ffee126b00d43cf27984cbb",
+    "preserve.py": "b609dc9e7115d21d50ce80370163d6f402a05f6eb550e5916a2872cf07271c81",
+    "preserve_with_visuals.py": "79872bf96308d7708dcb3fe002a814358cfd4f759dd1329f2564220038b287c6",
+    "run.py": "ce6426a7c42b90c080271b14c107f40f9ce08f604aa5ccfbf50bfbe3e162b079"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "source_commit": "d558430378d1425b2a55ffd32dac47cd0a6b0cb0",
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "container_name": "johnny-integrated-shore-e9a343f6d109",
+  "inputs": {
+    "baseline": {
+      "path": "build/shoreline-repair-v1/selected-v1/baseline.zip",
+      "sha256": "3d619201ec02bd7566d99c9fbab146301a286cc1056f1407b732921b9e3f8898"
+    },
+    "candidate": {
+      "path": "build/shoreline-repair-v1/offshore-selected-v1/candidate.zip",
+      "sha256": "ab5c8094b461307b87d68d2bb148eae5b9ce56d93cb6b93805c27c7fbd8e24ac"
+    }
+  },
+  "phase": "cycle",
+  "capture_arguments": [
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/art/cartoon/shoreline-repair-v1/integrated-shore-v1/native/capture.py",
+    "--output",
+    "/out/captures",
+    "--phase",
+    "cycle",
+    "--baseline",
+    "/source/build/shoreline-repair-v1/selected-v1/baseline.zip",
+    "--baseline-sha256",
+    "3d619201ec02bd7566d99c9fbab146301a286cc1056f1407b732921b9e3f8898",
+    "--candidate",
+    "/source/build/shoreline-repair-v1/offshore-selected-v1/candidate.zip",
+    "--candidate-sha256",
+    "ab5c8094b461307b87d68d2bb148eae5b9ce56d93cb6b93805c27c7fbd8e24ac"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 97.82253098487854,
+  "no_surviving_task_container": true,
+  "cleanup_exit_code": 0,
+  "launcher_sha256": "4e7cbfe22aafcf8ba64185852f756b65199a3c0ae189cf2207b02217462004c6",
+  "helpers_sha256": {
+    "capture.py": "f2e0684f6726ce53951988b5d44c101d3efe44f07e6b3b66277499a9f12a1bae",
+    "check_preparation.py": "e5453d2c80b69c9d7e740e876b6d9015810de24dc358fc870c105b8f13b3d85a",
+    "driver.c": "beb8beae0c3b54562fe51285d184d55ccd2b185fe34cf97b7801d2536abd1b59",
+    "original_cycle.py": "17f417141961d4e4e7112ba7e8841ed559308ed208e6f6ac310d7aef76934b34",
+    "prepare.py": "f30b04b4987f03940206bea88b8d8cab5964b207b232bb302cbb1528ba8c9ec9",
+    "run.py": "4e7cbfe22aafcf8ba64185852f756b65199a3c0ae189cf2207b02217462004c6",
+    "run_original.py": "1615c89fe312a018a5facdcc8cc59e05e6ef5ae9c03050538247f509e137fe84"
+  }
+}

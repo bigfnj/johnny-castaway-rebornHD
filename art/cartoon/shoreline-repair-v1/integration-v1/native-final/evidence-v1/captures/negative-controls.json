@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "contract_sha256": "81369ccb3fbb7620221e41367ce6a010aaa1eca05ffee126b00d43cf27984cbb",
+  "results": [
+    {
+      "name": "ground_offset",
+      "status": "FIRED",
+      "failure": "final native: actual ground surface"
+    },
+    {
+      "name": "left_offset",
+      "status": "FIRED",
+      "failure": "final native: 003 actual wave surface"
+    },
+    {
+      "name": "native_time",
+      "status": "FIRED",
+      "failure": "final native: native timing"
+    },
+    {
+      "name": "phase_omission",
+      "status": "FIRED",
+      "failure": "final native: all wave phases"
+    },
+    {
+      "name": "banner_origin",
+      "status": "FIRED",
+      "failure": "final native: actual holiday origin/canvas"
+    },
+    {
+      "name": "banner_fallback",
+      "status": "FIRED",
+      "failure": "final native: selected holiday dependencies"
+    },
+    {
+      "name": "outside_pixel",
+      "status": "FIRED",
+      "failure": "final native: pixel outside selected ground/waves/holiday"
+    },
+    {
+      "name": "inactive_low_wave_pixel",
+      "status": "FIRED",
+      "failure": "final native: pixel outside selected ground/waves/holiday"
+    }
+  ],
+  "restored_positive": "PASS",
+  "method": "Actual logs and pixels damaged in memory; captured files unchanged."
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "phase": "smoke",
+    "arguments": [
+      "tests/test_art_tools.py",
+      "ArtToolsTests.test_named_island_footprints_preserve_original_catalog",
+      "ArtToolsTests.test_registered_ground_build_preserves_hd",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": "smoke-0.log",
+    "sha256": "cc4ebb0dbe009ac7b9227915f29fc1cc5f4c21467894036d0bbcd1734f52a23a"
+  },
+  {
+    "phase": "smoke",
+    "arguments": [
+      "tests/test_art_production_catalog.py",
+      "--phase",
+      "smoke"
+    ],
+    "exit_code": 0,
+    "log": "smoke-1.log",
+    "sha256": "219dd9182544b25e4fc324ff86080bcb91c9d41384374164330f4e1e27ab0a83"
+  },
+  {
+    "phase": "smoke",
+    "arguments": [
+      "tests/test_art_pilot_history.py",
+      "--phase",
+      "smoke"
+    ],
+    "exit_code": 0,
+    "log": "smoke-2.log",
+    "sha256": "11831970df39a31255818d1968335b43e11c49056907b0d3b210bfd657aa620e"
+  },
+  {
+    "phase": "smoke",
+    "arguments": [
+      "tests/test_art_review_metadata.py",
+      "--phase",
+      "smoke"
+    ],
+    "exit_code": 0,
+    "log": "smoke-3.log",
+    "sha256": "5109ed213070eb5a8946d62f462f6ab76f7a02f38ba459d731d4c8de8a374a98"
+  },
+  {
+    "phase": "regression",
+    "arguments": [
+      "tests/test_art_tools.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "log": "regression-0.log",
+    "sha256": "4977cc94517fef8d14b89c2a8a96e417d314560e11b40ca40644e38b14e0349d"
+  },
+  {
+    "phase": "regression",
+    "arguments": [
+      "tests/test_art_production_catalog.py",
+      "--phase",
+      "regression"
+    ],
+    "exit_code": 0,
+    "log": "regression-1.log",
+    "sha256": "07acf04bd5e6eb7651783f8b58575ff6b4315321952dfac8892cff4766828be9"
+  },
+  {
+    "phase": "regression",
+    "arguments": [
+      "tests/test_art_pilot_history.py",
+      "--phase",
+      "regression"
+    ],
+    "exit_code": 0,
+    "log": "regression-2.log",
+    "sha256": "d4c1e937e3017beab4fe9a13fbe998d61bed5defe65e77162eeeab7524b0a656"
+  },
+  {
+    "phase": "regression",
+    "arguments": [
+      "tests/test_art_review_metadata.py",
+      "--phase",
+      "regression"
+    ],
+    "exit_code": 0,
+    "log": "regression-3.log",
+    "sha256": "64536cae184cd541334c54c08b64488a937e6b782cdc4e4287e18990f3505387"
+  },
+  {
+    "phase": "regression",
+    "arguments": [
+      "tools/art_review_metadata.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "regression-4.log",
+    "sha256": "e4741623abd6a556ae02feb9b82aa1446982161c634ca8d07eadf371584e5226"
+  },
+  {
+    "phase": "regression",
+    "arguments": [
+      "tools/art_production_catalog.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "regression-5.log",
+    "sha256": "343c5ce655dde80b7ac694f5b34b5cd442cbfd0cff77a0f5e52668c02e2f1a0d"
+  }
+]

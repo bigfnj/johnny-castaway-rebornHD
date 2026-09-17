@@ -80,10 +80,14 @@ static void islandSaveWaveBase(struct TTtmSlot *slot)
             if (zipvfs_exists(path)) hasReplacement = 1;
             if (image < slot->numSprites[0]) {
                 PlatformSurface *sprite = slot->sprites[0][image];
-                int spriteRight = x + platformGetSurfaceWidth(sprite);
-                int spriteBottom = y + platformGetSurfaceHeight(sprite);
-                if (x < left) left = x;
-                if (y < top) top = y;
+                int dx, dy;
+                artStyleSpriteOffset("BACKGRND.BMP", image,
+                    platformGetSurfaceWidth(sprite), platformGetSurfaceHeight(sprite), 0, &dx, &dy);
+                int spriteLeft = x + dx, spriteTop = y + dy;
+                int spriteRight = spriteLeft + platformGetSurfaceWidth(sprite);
+                int spriteBottom = spriteTop + platformGetSurfaceHeight(sprite);
+                if (spriteLeft < left) left = spriteLeft;
+                if (spriteTop < top) top = spriteTop;
                 if (spriteRight > right) right = spriteRight;
                 if (spriteBottom > bottom) bottom = spriteBottom;
             }

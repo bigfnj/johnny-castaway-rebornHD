@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "capture_helper_sha256": "923332f7b45be500588fd85eb67d274f913b32490edb44822b405f0e3cbe1c8b",
+  "checker_sha256": "baae7e6c96147806d15faf74c677e960cb91f183bde88569709c4b6a1aed42dd",
+  "baseline_sha256": "6ad5311bf11d994c2c54d0c68024e92d90d28830a7e9972101e6ec44e413c2f6",
+  "actual_log_sha256": "4bed4f8c917902311ef2acac25498165d3367624349362035fd85749871215d7",
+  "checks": [
+    {
+      "name": "wrong_final_frame",
+      "status": "FIRED",
+      "failure": "seasonal: final native wave phases 003/007/009"
+    },
+    {
+      "name": "wrong_wave_origin",
+      "status": "FIRED",
+      "failure": "seasonal: actual wave canvas/origin"
+    },
+    {
+      "name": "valid_three_replacement_fixture",
+      "status": "PASS",
+      "scope": "HD wave bytes in a temporary guard fixture; not proposed artwork."
+    },
+    {
+      "name": "retained_payload_changed",
+      "status": "FIRED",
+      "failure": "seasonal: only three selected wave payloads changed"
+    },
+    {
+      "name": "retained_member_missing",
+      "status": "FIRED",
+      "failure": "seasonal: candidate member set unchanged"
+    },
+    {
+      "name": "duplicate_member",
+      "status": "FIRED",
+      "failure": "seasonal: candidate duplicate members"
+    },
+    {
+      "name": "wrong_wave_canvas",
+      "status": "FIRED",
+      "failure": "seasonal: wave fixed canvas:data/styles/cartoon/BMP/BACKGRND.BMP/003.png"
+    },
+    {
+      "name": "outside_wave_pixel",
+      "status": "FIRED",
+      "failure": "seasonal: changed pixel outside selected wave canvases"
+    },
+    {
+      "name": "no_visible_change",
+      "status": "FIRED",
+      "failure": "seasonal: repair visibly changed native scene"
+    }
+  ],
+  "positive_readback_after_controls": true
+}

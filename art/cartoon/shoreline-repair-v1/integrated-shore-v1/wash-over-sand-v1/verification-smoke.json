@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "smoke",
+  "variant": "wash",
+  "test_sha256": "1f60aa818e92ba9c396498dfccb6abd99cb495b3fa1509d89289942e8f86ec30",
+  "exporter_sha256": "e6ecea7ef2484974e094f8ec135ebc8b536138dc1e3a3d9b5f1338b3e5813d14",
+  "recipe_sha256": "f39f9df9656a6a14753f86e817d9528426cb86914aa9d0432146153bf9a4b04a",
+  "report_sha256": "25b89a01a44302e44ff00f331bafc330555965c3e3633eb724252e9302ed5ec5",
+  "scope": "Focused authoring evidence, not native animation or human approval.",
+  "checks": [
+    "Exact exporter and recipe identities",
+    "Comparison-only status retained",
+    "Ten ordered runtime slots",
+    "Every report-bound output byte hash",
+    "Seven parent PNGs byte-identical; three full-source canvases retain all filtered alpha",
+    "All three runtime RGBA arrays equal direct resample crops without any ground masking"
+  ],
+  "commands": []
+}

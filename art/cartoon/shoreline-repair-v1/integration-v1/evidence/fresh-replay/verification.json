@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "helper_sha256": "473a54c720178ce23319a5c16c3376ce7786cfcc86dca7a47a3da985f11e4cb0",
+  "inputs_sha256": "0f66a19f7bf82e770924f20d4973434aad27ed4921ab22b10fc69a816911e26e",
+  "python_version": "3.11.15",
+  "pillow_version": "12.3.0",
+  "archive_sha256": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+  "baseline_commit": "1aad361fe78dde2c956e05dc451b8d5bab100af0",
+  "baseline_archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+  "reviewed_wave_archive_sha256": "862d70fc93d1ed26020e15e8b04627dd56e97b47df8d86b99b8312c6cc88c3d0",
+  "inset_banner_sha256": "e36e103027d2eee53c58c903cd397770a66e5ffce2683e9c0c8ce6e2d988ff92",
+  "private_zip_read_this_run": false,
+  "private_comparison_limit": "Used the frozen member map extracted from the approved ZIP during integration preparation; did not independently read that private ZIP this run.",
+  "member_count": 2598,
+  "cartoon_asset_count": 47,
+  "added_members": [
+    "data/styles/cartoon/BMP/HOLIDAY.BMP/000.png",
+    "data/styles/cartoon/BMP/HOLIDAY.BMP/001.png",
+    "data/styles/cartoon/BMP/HOLIDAY.BMP/002.png",
+    "data/styles/cartoon/BMP/HOLIDAY.BMP/003.png"
+  ],
+  "changed_members": [
+    "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/011.png"
+  ],
+  "unchanged_existing_members": 2584,
+  "inherited_ledger_rows_unchanged": 33,
+  "reviewed_wave_plus_banner_all_payloads_identical": true,
+  "source_replay_sha256": "de9de21005e5c67fc9757da76ad5425610bd09ee5cefddc2eea6e68f2419af87",
+  "package_smoke": {
+    "alpha": {
+      "blank": 0,
+      "opaque": 1,
+      "transparent": 46
+    },
+    "assets": 47,
+    "coverage": "partial",
+    "style": "cartoon"
+  },
+  "builder": {
+    "alpha": {
+      "blank": 0,
+      "opaque": 1,
+      "transparent": 46
+    },
+    "archive_sha256": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+    "assets": 47,
+    "coverage": "partial",
+    "original_members_preserved": 2550,
+    "style": "cartoon"
+  },
+  "production_promoted": false,
+  "negative_control": {
+    "member": "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+    "failure_count": 1,
+    "stderr": "FAIL data/styles/cartoon/BMP/BACKGRND.BMP/007.png: member content differs",
+    "helper_sha256": "473a54c720178ce23319a5c16c3376ce7786cfcc86dca7a47a3da985f11e4cb0",
+    "mutant_sha256": "502137bff83eeb18d44cbe356fcef70ffb30e02e49f7774bfabe75b518191074",
+    "damaged_archive_sha256": "028dadc32196cee8559f8963fcb3df4d74f3746b1a53358a23962ed30266e525",
+    "guard_removed_accepts_damaged_input": true,
+    "restored_positive_passed": true
+  },
+  "commands_in_execution_order": [
+    {
+      "order": 1,
+      "label": "replay-banner-smoke",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\export_v2.py",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\recipe-v2.json",
+        "--output",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\replay-banner-smoke"
+      ],
+      "exit_code": 0,
+      "stdout": "replay-banner-smoke.stdout.txt",
+      "stderr": "replay-banner-smoke.stderr.txt",
+      "stdout_sha256": "ce014ccd1ed4379403333017410d752f5fd62372a395cc04a624bc426b079de2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "order": 2,
+      "label": "replay-ground",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\export.py",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\recipe-v1.json",
+        "--output",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\replay-ground"
+      ],
+      "exit_code": 0,
+      "stdout": "replay-ground.stdout.txt",
+      "stderr": "replay-ground.stderr.txt",
+      "stdout_sha256": "f32b751259a34bbd05012b89131f86ed46b5c4e844e848730e0cc730aac1de35",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "order": 3,
+      "label": "replay-centers",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\foam-refresh-v1\\export_v2.py",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\foam-refresh-v1\\recipe-v2.json",
+        "--output",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\replay-centers"
+      ],
+      "exit_code": 0,
+      "stdout": "replay-centers.stdout.txt",
+      "stderr": "replay-centers.stderr.txt",
+      "stdout_sha256": "b448ecec24c91a827fe176fa099e7ee03d671fe147122d9b0f40207786969d72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "order": 4,
+      "label": "replay-sides",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\side-fit-v1\\export.py",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\side-fit-v1\\recipe-v1.json",
+        "--output",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\replay-sides",
+        "--archive",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\prior-4c8085be.zip"
+      ],
+      "exit_code": 0,
+      "stdout": "replay-sides.stdout.txt",
+      "stderr": "replay-sides.stderr.txt",
+      "stdout_sha256": "377bb3476ffd917e1dd26849c447fe431b8b647f5dc5c952538873db9449994e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "order": 5,
+      "label": "replay-clean007",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\foam-shading-v1\\export.py",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\foam-shading-v1\\recipe-v1.json",
+        "--output",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\replay-clean007"
+      ],
+      "exit_code": 0,
+      "stdout": "replay-clean007.stdout.txt",
+      "stderr": "replay-clean007.stderr.txt",
+      "stdout_sha256": "ce29fae5dccb5e87ccd00b03e48e256b474717f90737c841aca99a04b6e101db",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "order": 6,
+      "label": "replay-seasonal",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\seasonal-v1\\export_v5.py",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\source-snapshot\\art\\cartoon\\seasonal-v1\\recipe-v5.json",
+        "--output",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\replay-seasonal"
+      ],
+      "exit_code": 0,
+      "stdout": "replay-seasonal.stdout.txt",
+      "stderr": "replay-seasonal.stderr.txt",
+      "stdout_sha256": "c6de3c88615d5a203ad07132837865f18db371ac4d1db3d8731d03e7f6d03805",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "order": 7,
+      "label": "pack-smoke",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\tools\\art_pack.py",
+        "validate",
+        "--archive",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\prior-4c8085be.zip",
+        "--ledger",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\shoreline-repair-v1\\integration-v1\\integrated-pack.json",
+        "--accepted",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\accepted"
+      ],
+      "exit_code": 0,
+      "stdout": "pack-smoke.stdout.txt",
+      "stderr": "pack-smoke.stderr.txt",
+      "stdout_sha256": "4239ed211228f4d32206a74efd378307d6e1ec4935dff37324deb2a127495c7e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "order": 8,
+      "label": "pack-build",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\tools\\art_pack.py",
+        "build",
+        "--archive",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\prior-4c8085be.zip",
+        "--ledger",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\shoreline-repair-v1\\integration-v1\\integrated-pack.json",
+        "--accepted",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\accepted",
+        "--output",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\scrantic_data.zip"
+      ],
+      "exit_code": 0,
+      "stdout": "pack-build.stdout.txt",
+      "stderr": "pack-build.stderr.txt",
+      "stdout_sha256": "e6b2c3b4f1dd2991a84e5e5a53dfac05a418cbae5e824d181ff67d76d9c049e9",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "order": 9,
+      "label": "negative-member",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\shoreline-repair-v1\\integration-v1\\integrate.py",
+        "--repo",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations",
+        "--inputs",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\shoreline-repair-v1\\integration-v1\\inputs.json",
+        "--baseline",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\prior-4c8085be.zip",
+        "--audit-archive",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\negative-clean007.zip"
+      ],
+      "exit_code": 1,
+      "stdout": "negative-member.stdout.txt",
+      "stderr": "negative-member.stderr.txt",
+      "stdout_sha256": "ec8e06799fb9bace1c423137f8b5b15d04c927c5ab1d83b4e599c38bce638824",
+      "stderr_sha256": "493fdc1f4d827e67e4253f005d694da5a2ec11dc99a8462793edba58c318c945"
+    },
+    {
+      "order": 10,
+      "label": "removed-member-guard",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\member-guard-removed.py",
+        "--repo",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations",
+        "--inputs",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\shoreline-repair-v1\\integration-v1\\inputs.json",
+        "--baseline",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\prior-4c8085be.zip",
+        "--audit-archive",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\negative-clean007.zip"
+      ],
+      "exit_code": 0,
+      "stdout": "removed-member-guard.stdout.txt",
+      "stderr": "removed-member-guard.stderr.txt",
+      "stdout_sha256": "baf03a2fcae856f945ec288cb66a003524756a77b508d6e96939a2708d47d3d7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "order": 11,
+      "label": "restored-member-audit",
+      "argv": [
+        "python",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\shoreline-repair-v1\\integration-v1\\integrate.py",
+        "--repo",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations",
+        "--inputs",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\shoreline-repair-v1\\integration-v1\\inputs.json",
+        "--baseline",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\prior-4c8085be.zip",
+        "--audit-archive",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\integration-v1\\replay-v3\\scrantic_data.zip"
+      ],
+      "exit_code": 0,
+      "stdout": "restored-member-audit.stdout.txt",
+      "stderr": "restored-member-audit.stderr.txt",
+      "stdout_sha256": "2d464d47f95434d54645292f4977b16a4ffcafd11ae8387c78cc097f265250d7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "scope": "Exact source replay and standard package build. Native final composition validation and authorized promotion are subsequent distinct steps."
+}

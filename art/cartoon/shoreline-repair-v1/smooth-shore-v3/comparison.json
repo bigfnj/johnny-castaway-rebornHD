@@ -1,0 +1,53 @@
+{
+  "scope": "Shape review only; no native export. Original source colors are diagnostic. Reuses V2 display-only normalization; raw artwork is unmodified.",
+  "display_crop": [
+    128,
+    330,
+    1280,
+    360
+  ],
+  "notch_guides": [
+    520,
+    950
+  ],
+  "draft": {
+    "path": "raw.png",
+    "sha256": "19df1e01931cf746e88f6bf696b39e16f009ba7aa1b37f1f7c916b0949822732",
+    "display_affine": [
+      0.8370423546302943,
+      116.22182340272792,
+      87.36109117013643
+    ],
+    "pixelated": false
+  },
+  "references": {
+    "original": {
+      "path": "../reference-master/original-ground-master.png",
+      "sha256": "98a5c621b910fa71ba9aad56e8f96ddd32cba6895886804909154d99f3975cb3",
+      "display_affine": [
+        1,
+        0,
+        0
+      ],
+      "pixelated": true,
+      "label": "Original source artwork",
+      "note": "The original uses extracted source sprites with diagnostic colors. Compare the sand outline; the blue and white pixels are original wave artwork."
+    },
+    "previous": {
+      "path": "../smooth-shore-v2/raw.png",
+      "sha256": "b628924811d61ed5ccc024285a7282a396688c247ec50de7d57b08431a1bc86f",
+      "display_affine": [
+        0.8370423546302943,
+        116.22182340272792,
+        87.36109117013643
+      ],
+      "pixelated": false,
+      "label": "Previous Cartoon draft",
+      "note": "The previous draft had one inlet too far left and lacked the second inlet."
+    }
+  },
+  "registration": {
+    "method": "Reuse prior draft's uniform display transform because generation keeps approximately the same frame, scale and upper edge. No new raster resampling.",
+    "limit": "Visual shape comparison only. No exact footprint, placement or in-scene acceptance."
+  }
+}

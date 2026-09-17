@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "exporter_sha256": "6fab1fa6f5335ca6ddbac22fcba5172d5a86cdd733e48f27034bd39f4d224a74",
+  "checker_sha256": "d9cac1cd30440d6993340ea65a806ac246e309f7ca363b6618f3a897370a838a",
+  "recipe_sha256": "4a2129320c6527306465206149e279c5b183ecb3730a66d752ccb2c46b03ed9d",
+  "runtime_sha256": "e36e103027d2eee53c58c903cd397770a66e5ffce2683e9c0c8ce6e2d988ff92",
+  "checks": [
+    "304x94 RGBA and original runtime origin",
+    "Exact 8% clean-source affine and meaningful alpha fit",
+    "Other three props byte-identical",
+    "Fresh process exact PNG, padded output and report replay"
+  ],
+  "controls": [
+    {
+      "name": "wrong_scale",
+      "status": "FIRED",
+      "failure": "003: source or fixed V5 recipe differs"
+    },
+    {
+      "name": "wrong_anchor",
+      "status": "FIRED",
+      "failure": "003: source or fixed V5 recipe differs"
+    },
+    {
+      "name": "wrong_affine",
+      "status": "FIRED",
+      "failure": "003: source or fixed V5 recipe differs"
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\export.py",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\recipe-v1.json",
+        "--output",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\candidates\\v1",
+        "--check"
+      ],
+      "stdout": "WITNESS banner-inset-export 6fab1fa6f5335ca6ddbac22fcba5172d5a86cdd733e48f27034bd39f4d224a74\nPASS inset export e36e103027d2eee53c58c903cd397770a66e5ffce2683e9c0c8ce6e2d988ff92 4\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ]
+}

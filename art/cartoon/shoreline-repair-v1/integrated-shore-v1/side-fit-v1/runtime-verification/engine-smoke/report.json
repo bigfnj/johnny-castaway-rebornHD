@@ -1,0 +1,65 @@
+{
+  "phase": "smoke",
+  "status": "PASS",
+  "build": {
+    "command": [
+      "cc",
+      "-std=gnu11",
+      "-O1",
+      "-g",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-I/source/platform",
+      "-I/source/src/engine",
+      "/source/tests/test_art_footprint.c",
+      "/source/src/engine/graphics.c",
+      "-Wl,--gc-sections",
+      "-o",
+      "/out/footprint-probe"
+    ],
+    "sha256": "6368c01f8a27bcdfa8bfa7c3fc877598edef0bfecf8cbab9f2fb4378af1accd8",
+    "rebuilt_timestamp_advanced": true
+  },
+  "cases": [
+    {
+      "case": "new-ground",
+      "exit_code": 0,
+      "output": "WITNESS art footprint new-ground BEGIN\nWITNESS art footprint new-ground PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "new-center",
+      "exit_code": 0,
+      "output": "WITNESS art footprint new-center BEGIN\nWITNESS art footprint new-center PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "legacy-ground",
+      "exit_code": 0,
+      "output": "WITNESS art footprint legacy-ground BEGIN\nWITNESS art footprint legacy-ground PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "new-left",
+      "exit_code": 0,
+      "output": "WITNESS art footprint new-left BEGIN\nWITNESS art footprint new-left PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "new-right",
+      "exit_code": 0,
+      "output": "WITNESS art footprint new-right BEGIN\nWITNESS art footprint new-right PASS\n",
+      "status": "PASS"
+    }
+  ],
+  "mutations": [],
+  "source_sha256": {
+    "src/engine/art_style.c": "54e2580edef74671817dccedea1c989195deb68a52e6d1de0823760e47f1a546",
+    "src/engine/art_style.h": "5e12338406ceec466fc678e63f5e8019c7bebf3ff60fc8068293d3f9d917c897",
+    "src/engine/graphics.c": "fded8d14dbfa432242170e0a16010cb882d02f437d31e5a317bfe2baafcee392",
+    "src/engine/island.c": "78795472d233c9b54bcd8ff32e032358e5e19434e4de7d2fdb26f521d6600737",
+    "tests/test_art_footprint.c": "aec5c01fd8cfaed0154b8a759f5a22ce981789e9b30ab4de98623c4a495c2f20",
+    "tests/test_art_footprint.py": "da017512ca85dca8ea04e41b4c1ac6a50f67adac65c3203d1f9b17965bf27c9a"
+  },
+  "limits": "Headless loader/draw unit probe uses a surface decoder fixture. No native island or PNG decoder parity claim."
+}

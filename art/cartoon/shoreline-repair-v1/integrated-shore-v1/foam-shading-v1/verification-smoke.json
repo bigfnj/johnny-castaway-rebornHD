@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "phase": "smoke",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "pinned-source-canvas",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "recipe-runtime-identities",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "complete-source-fit-and-single-frame-scope",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "exporter_sha256": "400614176a1a06f36d2e6d96813826ca10511c0f856cff3a6d382a0c57facca7",
+  "harness_sha256": "f07a97dda9d1d2a195009251f6c6d18cad40b5ad3aa8a8ab39267a1f5ef1bda8",
+  "recipe_sha256": "4a33d7a9f1b1b248245268673489b2945f208a69029bb40b28ab6d99576a116d",
+  "report_sha256": "acfe1ba2c28530fed9eddbd9a4d92a08054e1d94f97ae4bfe6d3f9475b2229a9",
+  "limits": "Static source/export validation only. Image generation can change geometry; this does not assert alpha identity with the earlier drawing or native scene approval."
+}

@@ -9,7 +9,7 @@ import sys
 import zipfile
 from pathlib import Path
 
-from art_common import ArtError, check_duplicates, digest, inspect_png, read_json, safe_member, source_catalog
+from art_common import ArtError, cartoon_footprint, check_duplicates, digest, inspect_png, read_json, safe_member, source_catalog
 
 
 def accepted_pack(archive, ledger, accepted_dir, label="pack.json"):
@@ -73,7 +73,9 @@ def accepted_pack(archive, ledger, accepted_dir, label="pack.json"):
         data = filename.read_bytes()
         if digest(data) != claimed_hash:
             raise ArtError(f"{path}: accepted sha256 does not match PNG")
-        expected = (source["logical_width"] * runtime["scale"], source["logical_height"] * runtime["scale"])
+        footprint = cartoon_footprint(path, [source["logical_width"], source["logical_height"]],
+                                      runtime["scale"], item.get("footprint"))
+        expected = tuple(footprint["canvas"])
         info = inspect_png(data, path, expected)
         if source["kind"] == "sprite" and info["color_type"] not in (4, 6):
             raise ArtError(f"{path}: sprites require an explicit alpha channel")

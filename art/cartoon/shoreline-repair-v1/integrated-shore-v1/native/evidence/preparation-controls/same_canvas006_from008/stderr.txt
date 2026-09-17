@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\art\cartoon\shoreline-repair-v1\integrated-shore-v1\native\prepare.py", line 33, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\art\cartoon\shoreline-repair-v1\integrated-shore-v1\native\prepare.py", line 20, in main
+    require(row['path']==f'BMP/BACKGRND.BMP/{frame:03}.png' and row['sha256']==sha(raw),'runtime frame/report binding:'+str(frame))
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\art\cartoon\shoreline-repair-v1\integrated-shore-v1\native\capture.py", line 22, in require
+    if not ok: raise ValueError('integrated shore: '+label)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: integrated shore: runtime frame/report binding:6

@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "phase": "regression",
+  "status": "PASS",
+  "exporter_sha256": "50aa0da6717af65bfe51593ac29da28ccb93d571d49ce0809031b0c89fb788e7",
+  "test_sha256": "e0b221b4edbd73ddca164d482b9248c15f7b4fc3bef33c0b64958ebc9a80a2cc",
+  "recipe_sha256": "68e8559a79a5abbf765d8cd6c8d9b7b1d45ff921a264e3aa174fed316ab57d38",
+  "scope": "Current Cartoon shoreline technical placement only; native contact and human approval pending.",
+  "measurements": [
+    {
+      "frame": 0,
+      "png_sha256": "91739835231b14ee9b0ece50fcd6c043530eb44f47798c627e7a334ec218bb2d",
+      "canvas": [
+        80,
+        68
+      ],
+      "changed_from_v1": true,
+      "outside_max_alpha": 3,
+      "outside_alpha8_pixels": 0
+    },
+    {
+      "frame": 1,
+      "png_sha256": "35a4bfc60ed87a04fb4cdf1e3c90e7a1a2da0cc75c85d4235b3966178b33ce5e",
+      "canvas": [
+        240,
+        94
+      ],
+      "changed_from_v1": true,
+      "outside_max_alpha": 4,
+      "outside_alpha8_pixels": 0
+    },
+    {
+      "frame": 2,
+      "png_sha256": "bb2ca61d5520e547e2fc192986a4f7a9fc2d36ec85f239cabcc7ff97fd8c5e0a",
+      "canvas": [
+        112,
+        130
+      ],
+      "changed_from_v1": true,
+      "outside_max_alpha": 1,
+      "outside_alpha8_pixels": 0
+    },
+    {
+      "frame": 3,
+      "png_sha256": "03ab2762a2924aa39431cf9940555da96ed76bd20043ef73eb130a61ae879740",
+      "canvas": [
+        304,
+        94
+      ],
+      "changed_from_v1": false,
+      "outside_max_alpha": 4,
+      "outside_alpha8_pixels": 0
+    }
+  ],
+  "v1_recipe_and_outputs_preserved": true,
+  "resample_prepare_render_function_bodies_unchanged": true,
+  "previous_controls": "export-verification-regression.json retains ten negatives, alpha0/visible RGB axes and executed fixed-registration guard removal for the unchanged guard/filter implementation. This run separately executes the old-placement rejection against v2.",
+  "runs": [
+    {
+      "name": "v2_smoke_exact_readback",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-export 50aa0da6717af65bfe51593ac29da28ccb93d571d49ce0809031b0c89fb788e7\nPASS seasonal-export [{\"frame\": 0, \"outside_max\": 3, \"outside_alpha8\": 0}, {\"frame\": 1, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 2, \"outside_max\": 1, \"outside_alpha8\": 0}, {\"frame\": 3, \"outside_max\": 4, \"outside_alpha8\": 0}]\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    {
+      "name": "v2_fresh_export_replay",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-export 50aa0da6717af65bfe51593ac29da28ccb93d571d49ce0809031b0c89fb788e7\nPASS seasonal-export [{\"frame\": 0, \"outside_max\": 3, \"outside_alpha8\": 0}, {\"frame\": 1, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 2, \"outside_max\": 1, \"outside_alpha8\": 0}, {\"frame\": 3, \"outside_max\": 4, \"outside_alpha8\": 0}]\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    {
+      "name": "v1_placement_recipe_rejected_by_v2",
+      "result": "FIRED",
+      "stdout": "WITNESS seasonal-export 50aa0da6717af65bfe51593ac29da28ccb93d571d49ce0809031b0c89fb788e7\n",
+      "stderr": "FAIL 000: fixed uniform registration differs\n",
+      "returncode": 1
+    },
+    {
+      "name": "v2_positive_after_control",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-export 50aa0da6717af65bfe51593ac29da28ccb93d571d49ce0809031b0c89fb788e7\nPASS seasonal-export [{\"frame\": 0, \"outside_max\": 3, \"outside_alpha8\": 0}, {\"frame\": 1, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 2, \"outside_max\": 1, \"outside_alpha8\": 0}, {\"frame\": 3, \"outside_max\": 4, \"outside_alpha8\": 0}]\n",
+      "stderr": "",
+      "returncode": 0
+    }
+  ]
+}

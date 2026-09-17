@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "source_mutations_fired": 5,
+  "records": [
+    {
+      "suite": "test_art_production_catalog",
+      "cases": [
+        "test_recipe_canvas",
+        "test_footprint_recipe_binding"
+      ],
+      "status": "PASS",
+      "log": "test_art_production_catalog-mutations.log",
+      "sha256": "6894dc8a9b7ed614f38c298d0d1c67c5b81880ce67744ab231d4b80cd83b18b4"
+    },
+    {
+      "suite": "test_art_pilot_history",
+      "cases": [
+        "test_recipe_canvas",
+        "test_recipe_footprint"
+      ],
+      "status": "PASS",
+      "log": "test_art_pilot_history-mutations.log",
+      "sha256": "71706d9668a4056330512a7aacac4f261825f8c3ae8268c44156623dfa523322"
+    },
+    {
+      "suite": "art_common",
+      "variant": "before",
+      "executed_source_sha256": "5661f93900d7b32dc983be73717decb7b50aa99b7371e9df01b3ce0f3f193731",
+      "exit_code": 0,
+      "log": "common-contract-before.log",
+      "sha256": "42fdd4c518483d2c6d058936571c00fa513686f788b0f89deb59931b46764b2e"
+    },
+    {
+      "suite": "art_common",
+      "variant": "disabled",
+      "executed_source_sha256": "21f9adb08e2abea960dd2d9db1ced78b0175996b6ec3a1cd5705345428f21e00",
+      "exit_code": 1,
+      "log": "common-contract-disabled.log",
+      "sha256": "8392c2a86f82cafa917d07ca888504491cb766fcbeef64ecc400c5c118900564"
+    },
+    {
+      "suite": "art_common",
+      "variant": "restored",
+      "executed_source_sha256": "5661f93900d7b32dc983be73717decb7b50aa99b7371e9df01b3ce0f3f193731",
+      "exit_code": 0,
+      "log": "common-contract-restored.log",
+      "sha256": "89f19fa76253cdd3510abe3713391ca53525c87f4b76b3b46fd0e31978706f56"
+    }
+  ]
+}

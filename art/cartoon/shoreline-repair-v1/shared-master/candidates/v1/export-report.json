@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "status": "DIAGNOSTIC_EXPORTED",
+  "accepted": false,
+  "scope": "Unapproved coherent-ground diagnostic; existing foam inputs unchanged before source-over composition. No tide/scene acceptance.",
+  "exporter_sha256": "760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6",
+  "recipe_sha256": "fd9006b0bd955234c9a5af718de55b69218bbbdeb7ce93d3063fdbcc6b5f4bff",
+  "source_sha256": "bde2f4f2111f532cb94a82ece74fa7745129d61e2ad909e8eadaa3fab4df7d14",
+  "reference_sha256": "8cac030442054333c2a006a4914703b376c3f2e2bf83d7c034001f2a16d794a8",
+  "archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+  "uniform_resample_count": 1,
+  "source_alpha8_bounds": [
+    185,
+    383,
+    1331,
+    605
+  ],
+  "source_alpha8_bounds_in_master_hd": [
+    28.5,
+    -0.5,
+    601.5,
+    110.5
+  ],
+  "raw_alpha_outside_master_crop": {
+    "nonzero_pixels": 503,
+    "alpha8_pixels": 98,
+    "maximum_alpha": 121,
+    "alpha_sum": 7715
+  },
+  "filtered_alpha_outside_master_crop": {
+    "nonzero_pixels": 200,
+    "alpha8_pixels": 55,
+    "maximum_alpha": 69,
+    "alpha_sum": 2556
+  },
+  "master_alpha_outside_original_canvas_union": {
+    "nonzero_pixels": 4,
+    "alpha8_pixels": 1,
+    "maximum_alpha": 74,
+    "alpha_sum": 85
+  },
+  "ground_crop_ownership": {
+    "duplicate_pixels": 0,
+    "coverage_matches_original_canvas_union": true,
+    "meaningful_owned_pixels": 45987
+  },
+  "baked_foam_observation": "Selected raw visually inspected: sand and dark outline, no visible white/blue foam. This is a visual observation, not an automatic material classifier.",
+  "alpha_note": "No alpha threshold or material mask. Runtime ground uses exact rectangular master crops. New wave PNG alpha is source-over composition of those crops and the unchanged foam inputs. Outside-union master pixels cannot be represented and are reported, not fitted away.",
+  "frames": [
+    {
+      "frame": 0,
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "canvas": [
+        560,
+        104
+      ],
+      "world_box": [
+        576,
+        558,
+        1136,
+        662
+      ],
+      "ground_family": 0,
+      "owned_ground_rectangles": [
+        [
+          576,
+          558,
+          1136,
+          662
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+      "previous_member_sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+      "foam_composition": "none",
+      "sha256": "fe0e9c333413adf4882aef7e2e0f10c54c3843c184cc94718dd5098e65b73119",
+      "ground_rgba_sha256": "f3777793925a5755485085d7647be7e2bab0e2e0ee80824d6da22f41081b5179"
+    },
+    {
+      "frame": 3,
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "canvas": [
+        144,
+        58
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "ground_family": 3,
+      "owned_ground_rectangles": [
+        [
+          540,
+          612,
+          576,
+          670
+        ],
+        [
+          576,
+          662,
+          684,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+      "previous_member_sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+      "foam_composition": "unchanged source foam OVER owned master ground",
+      "sha256": "e9650a13a2c5737e9d7c665f359b5bc6fe574a0a9edb1ac70f54e1c1b1e8cb19",
+      "ground_rgba_sha256": "03cdc09eb48d6985e460c603c1309970919a54d4483c3593d7b2bec51cc4d53f"
+    },
+    {
+      "frame": 4,
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "canvas": [
+        144,
+        58
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "ground_family": 3,
+      "owned_ground_rectangles": [
+        [
+          540,
+          612,
+          576,
+          670
+        ],
+        [
+          576,
+          662,
+          684,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+      "previous_member_sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+      "foam_composition": "unchanged source foam OVER owned master ground",
+      "sha256": "d2c9bac4d01d6bac89b86a4c143ecf1b4206f89037f9b0b047038e4caa982121",
+      "ground_rgba_sha256": "03cdc09eb48d6985e460c603c1309970919a54d4483c3593d7b2bec51cc4d53f"
+    },
+    {
+      "frame": 5,
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "canvas": [
+        144,
+        58
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "ground_family": 3,
+      "owned_ground_rectangles": [
+        [
+          540,
+          612,
+          576,
+          670
+        ],
+        [
+          576,
+          662,
+          684,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+      "previous_member_sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+      "foam_composition": "unchanged source foam OVER owned master ground",
+      "sha256": "498ede6f7cbf034bb0e9511600162ace0d3c1fbf1dc31c47fc05b215c8ac5d91",
+      "ground_rgba_sha256": "03cdc09eb48d6985e460c603c1309970919a54d4483c3593d7b2bec51cc4d53f"
+    },
+    {
+      "frame": 6,
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "canvas": [
+        320,
+        50
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "ground_family": 6,
+      "owned_ground_rectangles": [
+        [
+          728,
+          662,
+          1048,
+          688
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+      "previous_member_sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
+      "foam_composition": "unchanged source foam OVER owned master ground",
+      "sha256": "7bdbaf5c33ea4fcf8de8eb17806103957124ae11c53ca43e889aa659b9d03d2d",
+      "ground_rgba_sha256": "456fb10689e853c48c1925335d136235c64f45f37e5f34413eb27fa4e07927dc"
+    },
+    {
+      "frame": 7,
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "canvas": [
+        320,
+        50
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "ground_family": 6,
+      "owned_ground_rectangles": [
+        [
+          728,
+          662,
+          1048,
+          688
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+      "previous_member_sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+      "foam_composition": "unchanged source foam OVER owned master ground",
+      "sha256": "cc2756cd7ce6bbb9fb1b516e3a4b4c47fc22c8f4db2debcaeac6a74a3716729a",
+      "ground_rgba_sha256": "456fb10689e853c48c1925335d136235c64f45f37e5f34413eb27fa4e07927dc"
+    },
+    {
+      "frame": 8,
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "canvas": [
+        320,
+        50
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "ground_family": 6,
+      "owned_ground_rectangles": [
+        [
+          728,
+          662,
+          1048,
+          688
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+      "previous_member_sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
+      "foam_composition": "unchanged source foam OVER owned master ground",
+      "sha256": "6ca1fef138b246e373f9b3271cd9a2fa40a3e17440fa2ae0d01b431cd73478f1",
+      "ground_rgba_sha256": "456fb10689e853c48c1925335d136235c64f45f37e5f34413eb27fa4e07927dc"
+    },
+    {
+      "frame": 9,
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "canvas": [
+        144,
+        64
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "ground_family": 9,
+      "owned_ground_rectangles": [
+        [
+          1136,
+          606,
+          1180,
+          670
+        ],
+        [
+          1048,
+          662,
+          1136,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+      "previous_member_sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+      "foam_composition": "unchanged source foam OVER owned master ground",
+      "sha256": "eaf4be8a1b4153bbf21ecfcd78cfb8c28caf6885e9e86bb0d7a7b9f17fcc6230",
+      "ground_rgba_sha256": "7889d8ffa7293bbffcf3dbdb4e9f23db388bbee11390dea803bf4f2d168b2337"
+    },
+    {
+      "frame": 10,
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "canvas": [
+        144,
+        64
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "ground_family": 9,
+      "owned_ground_rectangles": [
+        [
+          1136,
+          606,
+          1180,
+          670
+        ],
+        [
+          1048,
+          662,
+          1136,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+      "previous_member_sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+      "foam_composition": "unchanged source foam OVER owned master ground",
+      "sha256": "3c798e871240d9ba4b294bb7e94f5aa3aba647691a67e8f59688f0c0c58bc0eb",
+      "ground_rgba_sha256": "7889d8ffa7293bbffcf3dbdb4e9f23db388bbee11390dea803bf4f2d168b2337"
+    },
+    {
+      "frame": 11,
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "canvas": [
+        144,
+        64
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "ground_family": 9,
+      "owned_ground_rectangles": [
+        [
+          1136,
+          606,
+          1180,
+          670
+        ],
+        [
+          1048,
+          662,
+          1136,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+      "previous_member_sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+      "foam_composition": "unchanged source foam OVER owned master ground",
+      "sha256": "a192db88a35aa7c13a5630926121b7e49e5e60361d4baaecf1b67eca8d48fcb7",
+      "ground_rgba_sha256": "7889d8ffa7293bbffcf3dbdb4e9f23db388bbee11390dea803bf4f2d168b2337"
+    }
+  ],
+  "outputs_sha256": {
+    "master-ground.png": "2316c860e007504796f3c2347ab82a9ebabb4ffc26793a014841923bcdf7f623",
+    "master-padded.png": "08953b4e2fa6f41567c8a14fd11cf6f135b1ce6c0f2ccd5a8ddb6178ef6b1d8a",
+    "ground/000.png": "fe0e9c333413adf4882aef7e2e0f10c54c3843c184cc94718dd5098e65b73119",
+    "ground/003.png": "d3c057e5dd1c6c06f011dbd52dc6be8ad4323d0ff32760f22beadea21648d10a",
+    "ground/006.png": "9471ff74bd89071b47415217d6e08f43e3664877d3546c8ad54f00c574cd84de",
+    "ground/009.png": "91acfbcbac53298491504eef93bf02701f9286c1ccd6fcc453eff964a3586b0d",
+    "BMP/BACKGRND.BMP/000.png": "fe0e9c333413adf4882aef7e2e0f10c54c3843c184cc94718dd5098e65b73119",
+    "BMP/BACKGRND.BMP/003.png": "e9650a13a2c5737e9d7c665f359b5bc6fe574a0a9edb1ac70f54e1c1b1e8cb19",
+    "BMP/BACKGRND.BMP/004.png": "d2c9bac4d01d6bac89b86a4c143ecf1b4206f89037f9b0b047038e4caa982121",
+    "BMP/BACKGRND.BMP/005.png": "498ede6f7cbf034bb0e9511600162ace0d3c1fbf1dc31c47fc05b215c8ac5d91",
+    "BMP/BACKGRND.BMP/006.png": "7bdbaf5c33ea4fcf8de8eb17806103957124ae11c53ca43e889aa659b9d03d2d",
+    "BMP/BACKGRND.BMP/007.png": "cc2756cd7ce6bbb9fb1b516e3a4b4c47fc22c8f4db2debcaeac6a74a3716729a",
+    "BMP/BACKGRND.BMP/008.png": "6ca1fef138b246e373f9b3271cd9a2fa40a3e17440fa2ae0d01b431cd73478f1",
+    "BMP/BACKGRND.BMP/009.png": "eaf4be8a1b4153bbf21ecfcd78cfb8c28caf6885e9e86bb0d7a7b9f17fcc6230",
+    "BMP/BACKGRND.BMP/010.png": "3c798e871240d9ba4b294bb7e94f5aa3aba647691a67e8f59688f0c0c58bc0eb",
+    "BMP/BACKGRND.BMP/011.png": "a192db88a35aa7c13a5630926121b7e49e5e60361d4baaecf1b67eca8d48fcb7"
+  }
+}

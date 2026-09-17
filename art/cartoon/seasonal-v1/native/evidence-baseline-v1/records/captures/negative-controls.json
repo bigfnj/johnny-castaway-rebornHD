@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "helper_sha256": "5a325d6b3db2ae3e7362ede1144977c977542c668596bbfb24b1e0a5bcdfe730",
+  "method": "Actual retained native log/pixels copied and altered in memory, then executed through the same verification functions. Original capture files untouched; positive readback before and after.",
+  "results": [
+    {
+      "name": "draw_origin",
+      "status": "FIRED",
+      "failure": "seasonal: actual holiday draw mapping"
+    },
+    {
+      "name": "outside_canvas",
+      "status": "FIRED",
+      "failure": "seasonal: pixels outside holiday canvas"
+    },
+    {
+      "name": "wrong_dependency",
+      "status": "FIRED",
+      "failure": "seasonal: selected holiday dependency"
+    }
+  ]
+}

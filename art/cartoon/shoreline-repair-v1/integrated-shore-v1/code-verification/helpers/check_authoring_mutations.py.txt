@@ -1,0 +1,62 @@
+import hashlib
+import importlib.util
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[3]
+OUT = Path(__file__).resolve().parent / 'full-canvas-current-catalog'
+assert json.loads((OUT / 'authoring-regression.json').read_bytes())['status'] == 'PASS'
+sys.path.insert(0, str(ROOT / 'tests'))
+sys.path.insert(0, str(ROOT / 'tools'))
+
+def load(name, path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+records = []
+for suite, cases in [('test_art_production_catalog', ['test_recipe_canvas', 'test_footprint_recipe_binding']),
+                     ('test_art_pilot_history', ['test_recipe_canvas', 'test_recipe_footprint'])]:
+    command = [sys.executable, '-B', '-c',
+               'import sys;sys.path.insert(0,"tests");import '+suite+' as t;t.MUTATIONS=[m for m in t.MUTATIONS if m[0] in '+repr(cases)+'];t.mutations()']
+    result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
+    text = result.stdout + result.stderr
+    path = OUT / (suite + '-mutations.log')
+    path.write_text(text)
+    assert result.returncode == 0 and text.count('FIRED ') == len(cases), text
+    records.append({'suite': suite, 'cases': cases, 'status': 'PASS', 'log': path.name,
+                    'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})
+    print(text, flush=True)
+
+source = ROOT / 'tools/art_common.py'
+mutant = OUT / 'art_common-disabled-contract.py'
+text = source.read_text()
+needle = 'if not (contract is not None'
+assert text.count(needle) == 1
+mutant.write_text(text.replace(needle, 'if False and not (contract is not None'))
+child = '''import hashlib,importlib.util,sys,unittest
+from pathlib import Path
+path=Path(sys.argv[1]);spec=importlib.util.spec_from_file_location('art_common',path)
+module=importlib.util.module_from_spec(spec);sys.modules['art_common']=module;spec.loader.exec_module(module)
+print('WITNESS common '+hashlib.sha256(path.read_bytes()).hexdigest(),flush=True)
+sys.path.insert(0,'tests');import test_art_production_catalog as t;t.m=t.load(t.SOURCE)
+r=unittest.TextTestRunner(verbosity=2).run(unittest.TestSuite([t.CatalogTests('test_footprint_contract_rejects_other_offset')]))
+sys.exit(0 if r.wasSuccessful() else 1)
+'''
+for label, path in [('before', source), ('disabled', mutant), ('restored', source)]:
+    result = subprocess.run([sys.executable, '-B', '-c', child, str(path)], cwd=ROOT, capture_output=True, text=True)
+    text = result.stdout + result.stderr
+    output = OUT / ('common-contract-' + label + '.log')
+    output.write_text(text)
+    checksum = hashlib.sha256(path.read_bytes()).hexdigest()
+    assert 'WITNESS common ' + checksum in text and 'Ran 1 test' in text, text
+    assert result.returncode == (1 if label == 'disabled' else 0), text
+    if label == 'disabled':
+        assert 'FAILED (failures=1)' in text and 'BMP/BACKGRND.BMP/000.png' in text, text
+    records.append({'suite': 'art_common', 'variant': label, 'executed_source_sha256': checksum,
+                    'exit_code': result.returncode, 'log': output.name, 'sha256': hashlib.sha256(output.read_bytes()).hexdigest()})
+    print(label, 'common contract PASS', flush=True)
+(OUT / 'authoring-mutations.json').write_text(json.dumps({'status': 'PASS', 'source_mutations_fired': 5, 'records': records}, indent=2) + '\n')

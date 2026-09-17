@@ -1,0 +1,126 @@
+WITNESS Windows PowerShell 5.1.26100.7019
+STEP configure
+-- Building for: Visual Studio 18 2026
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- The C compiler identification is MSVC 19.51.36252.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Building for Windows
+-- Build type: 
+-- C Compiler: C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe
+-- C Flags: /DWIN32 /D_WINDOWS /W4
+-- Platform sources: platform/platform_windows.c;vs/jc_reborn/jc_reborn.rc
+-- Configuring done (3.9s)
+-- Generating done (0.3s)
+-- Build files have been written to: D:/.ai-work/worktrees/johnny-seasonal-decorations/build/footprint-ps51-v2/source/build
+STEP build required targets
+MSBuild version 18.8.2+ce25c0108 for .NET Framework
+
+  1>Checking Build System
+  Refreshing runtime artwork archive
+  Building Custom Rule D:/.ai-work/worktrees/johnny-seasonal-decorations/build/footprint-ps51-v2/source/CMakeLists.txt
+  Building Custom Rule D:/.ai-work/worktrees/johnny-seasonal-decorations/build/footprint-ps51-v2/source/CMakeLists.txt
+  jc_reborn.c
+  utils.c
+  uncompress.c
+  resource.c
+  dump.c
+  story.c
+  walk.c
+  calcpath.c
+  ads.c
+  ttm.c
+  island.c
+  bench.c
+  graphics.c
+  sound.c
+  events.c
+  config.c
+  art_style.c
+  png_loader.c
+  png_decoder.c
+  zipvfs.c
+  Generating Code...
+  Compiling...
+  miniz.c
+  miniz_tdef.c
+  miniz_tinfl.c
+  miniz_zip.c
+  platform_windows.c
+  Generating Code...
+  jc_reborn.vcxproj -> D:\.ai-work\worktrees\johnny-seasonal-decorations\build\footprint-ps51-v2\source\build\Release\jc_reborn.exe
+MSBuild version 18.8.2+ce25c0108 for .NET Framework
+
+  Building Custom Rule D:/.ai-work/worktrees/johnny-seasonal-decorations/build/footprint-ps51-v2/source/CMakeLists.txt
+  test_png_decoder.c
+  png_decoder.c
+  miniz_tinfl.c
+  Generating Code...
+  jc_png_test.vcxproj -> D:\.ai-work\worktrees\johnny-seasonal-decorations\build\footprint-ps51-v2\source\build\Release\jc_png_test.exe
+STEP base smoke
+
+== the binary answers without touching the archive ==
+  ok   version exits 0 and reports the version from CMakeLists
+  ok   help exits non-zero and lists the new options
+
+== the archive is found without being told where it is ==
+  ok   dump runs from an unrelated working directory
+
+== bad arguments are refused, not silently accepted ==
+  ok   a non-numeric seed is rejected rather than read as 0
+  ok   a zero frame count is rejected
+  ok   an out-of-range ADS tag is rejected
+  ok   an unknown switch is refused rather than silently ignored
+  ok   a fatal error reaches stderr instead of raising a dialog nobody can click
+
+== bounded graphical runs start, work, and tear down cleanly ==
+  ok   a bounded story run exits 0 through the normal shutdown path
+  ok   and it actually reaches the island cloud path, not just the common case
+  ok   the same seed produces the same run twice
+  ok   a different seed produces a different run
+  ok   night forces the NIGHT.SCR backdrop
+  ok   day forces an OCEAN backdrop even at night
+  ok   clouds still animate over the night backdrop
+  ok   bench mode runs bounded and exits 0
+  ok   a single TTM plays bounded and exits 0
+
+== malformed resources are refused, not executed ==
+  ok   a TTM with more tags in its bytecode than its TAG: chunk declares is refused
+  ok   a TTM opcode whose arguments run past the end of the script is refused
+  ok   and the dump disassembler refuses that same truncated TTM
+  ok   a 12-argument TTM opcode is decoded rather than overflowing the argument buffer
+  ok   an ADS naming a TTM slot outside the slot table is refused
+  ok   an ADS opcode whose arguments run past the end of the script is refused
+  ok   a BMP declaring more images than a sprite slot holds is refused
+  ok   a BMP whose image table outruns its pixel data is refused when loaded
+  ok   and refused on the headless dump path, which walks the same pixels separately
+  ok   a resource name shorter than its own type suffix is refused
+
+27 passed, 0 failed
+STEP art smoke
+== art styles: bounded real-engine smoke ==
+  ok   hd loads TEST.TTM and captures a bounded run
+  ok   cartoon loads TEST.TTM and captures a bounded run
+art-style fixtures and captures: D:\.ai-work\worktrees\johnny-seasonal-decorations\build\footprint-ps51-v2\art-smoke-artifacts
+2 art-style checks passed, 0 failed
+STEP portable PNG positive
+WITNESS portable PNG decoder executed
+ok   opaque RGB order
+ok   transparent RGB cleared
+ok   half alpha premultiplied
+ok   quarter alpha premultiplied
+ok   opaque magenta preserved
+STEP Windows 5.1 mutation writer
+FIRED portable-half-alpha: rebuilt 2026-09-17T06:32:48.3761204Z -> 2026-09-17T06:33:45.0942264Z; witnessed exactly one named failure
+RESTORED portable-half-alpha: witnessed assertion passes
+FIRED cartoon-magenta: rebuilt 2026-09-17T06:32:46.3561973Z -> 2026-09-17T06:33:50.8617470Z; witnessed exactly one named failure
+RESTORED cartoon-magenta: witnessed assertion passes
+FIRED cartoon-dimensions: rebuilt 2026-09-17T06:34:00.9312624Z -> 2026-09-17T06:34:09.5614321Z; witnessed exactly one named failure
+RESTORED cartoon-dimensions: witnessed assertion passes
+FIRED config-style-persistence: rebuilt 2026-09-17T06:34:19.7081521Z -> 2026-09-17T06:34:30.2138556Z; witnessed exactly one named failure
+RESTORED config-style-persistence: witnessed assertion passes
+4/4 runtime mutations fired and restored successfully
+PASS isolated PowerShell 5.1 mutation run

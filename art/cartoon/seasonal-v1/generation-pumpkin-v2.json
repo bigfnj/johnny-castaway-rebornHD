@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "subject": "HOLIDAY.BMP/000 pumpkin face revision",
+  "user_request": "can you add the \"glowing red eyes\" back to the pumpkin and make the teeth razor sharp with less of a smile and more of an \"evil grin\"",
+  "prompt_file": "prompts/000-v2.txt",
+  "submitted_prompt": "Use case: precise-object-edit\nAsset type: transparent Cartoon game sprite, single Halloween jack-o-lantern.\nInput image 1 is the existing Cartoon pumpkin to EDIT. Preserve its orange lobed body, green bent stem, cel-shaded ink style, body silhouette, narrow gray ground shadow, camera angle, size, location, empty padding and genuinely transparent RGBA background.\nChange ONLY the carved face: restore sinister glowing RED eyes. Each triangular eye cavity should contain a vivid crimson-red ember with a bright red core and restrained red illumination along the inner carved edge, clearly legible at small game size. Tilt the upper eye edges inward for an ominous glare. No white eyes, no realistic eyeballs, no beams or glow outside the pumpkin.\nReplace the cheerful square-toothed smile with a tighter, menacing evil grin: a dark jagged mouth with long, sharply pointed triangular pumpkin-carved teeth along both top and bottom. Teeth are orange pumpkin flesh with warm cut edges, not white human teeth. Less open happy smile, more angular predatory sneer, corners only slightly raised. Distinct large sharp points that survive reduction to a roughly66 by57 pixel drawing.\nKeep the existing triangular nose. No extra props, leaves, letters, frame, new background or dramatic lighting change. Keep all non-face art and alpha geometry as close to the input as possible. Preserve the 1254 by1254 source canvas and pumpkin position; do not enlarge the object to fill the canvas. Return one edited sprite with real transparency.",
+  "reference_mechanism": "referenced_image_paths",
+  "ordered_references": [
+    {
+      "path": "art/cartoon/seasonal-v1/raw/000-v1.png",
+      "role": "Existing Cartoon pumpkin edit target; preserve body, stem, shadow and transparency"
+    }
+  ],
+  "raw_file": "raw/000-v2.png",
+  "tool_mode": "built-in image_gen",
+  "exposed_seed": null,
+  "appearance_review": {
+    "user_response": "so much yes",
+    "shown_artifact": "Built-in generated raw/000-v2.png displayed inline",
+    "scope": "Approved glowing red eyes and evil sharp-toothed pumpkin face on the generated source. Does not approve the other three decorations or claim review of the later native capture."
+  },
+  "production_status": "Not yet promoted"
+}

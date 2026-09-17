@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "regression",
+  "exporter_sha256": "6a9959d7d97f86f5c2fcd0563b4d2ab71d651631dc679b9b870872ea25edcc82",
+  "test_sha256": "3d05ec7d761cbc8f61f2f168712d08c992872faca3a5b16503990d51244021f5",
+  "recipe_sha256": "b3aadeabdce51590a0bc0414574dc285be59ab236d2aea7e12dee499ca2b82db",
+  "appearance_approval_sha256": "37034347373c6456adcd9a9f7a95003fff0568696718b2909d774ce714435db8",
+  "scope": "Slight decay appearance approved separately after generation/export; recipe retains historical pending status. Placement remains diagnostic during shoreline investigation.",
+  "guard_removal": {
+    "sha256": "9c00ed93f2ea7d61e0c285abb66eeb3d994a33f337c311d83f6c37d3dcbd4c8a",
+    "removed_statement": "    base.require(recipe == selected_recipe(), 'recipe-v4: selected inputs or placement differ')",
+    "actual_wrong_png_written": true
+  },
+  "unchanged_frames_verified": [
+    1,
+    2,
+    3
+  ],
+  "unchanged_frozen_files": 11,
+  "outside_runtime_alpha8_pixels": 0,
+  "outside_runtime_max_alpha": 3,
+  "raw_alpha8_bounds": [
+    394,
+    449,
+    869,
+    856
+  ],
+  "runs": [
+    {
+      "name": "v4_smoke_readback",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-v4 6a9959d7d97f86f5c2fcd0563b4d2ab71d651631dc679b9b870872ea25edcc82\nPASS seasonal-v4 c4c224fc5d8c42bc93d6464c12a6ab73c3bba63d1656c8d0da2f9faed9f15694\n",
+      "stderr": ""
+    },
+    {
+      "name": "fresh_v4_replay",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-v4 6a9959d7d97f86f5c2fcd0563b4d2ab71d651631dc679b9b870872ea25edcc82\nPASS seasonal-v4 c4c224fc5d8c42bc93d6464c12a6ab73c3bba63d1656c8d0da2f9faed9f15694\n",
+      "stderr": ""
+    },
+    {
+      "name": "000_translation_change_rejected",
+      "result": "FIRED",
+      "stdout": "WITNESS seasonal-v4 6a9959d7d97f86f5c2fcd0563b4d2ab71d651631dc679b9b870872ea25edcc82\n",
+      "stderr": "FAIL recipe-v4: selected inputs or placement differ\n"
+    },
+    {
+      "name": "000_prior_source_recipe_rejected",
+      "result": "FIRED",
+      "stdout": "WITNESS seasonal-v4 6a9959d7d97f86f5c2fcd0563b4d2ab71d651631dc679b9b870872ea25edcc82\n",
+      "stderr": "FAIL recipe-v4: selected inputs or placement differ\n"
+    },
+    {
+      "name": "000_translation_change_accepted_only_without_guard",
+      "result": "PASS",
+      "stdout": "EXECUTED_MUTANT_SHA256=9c00ed93f2ea7d61e0c285abb66eeb3d994a33f337c311d83f6c37d3dcbd4c8a\nWITNESS seasonal-v4 6a9959d7d97f86f5c2fcd0563b4d2ab71d651631dc679b9b870872ea25edcc82\nPASS seasonal-v4 4637f3b04095571ba1ba64de4b599f874942fb0a10a1dcaa5d0c41b13e5530b5\n",
+      "stderr": ""
+    },
+    {
+      "name": "restored_v4_positive",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-v4 6a9959d7d97f86f5c2fcd0563b4d2ab71d651631dc679b9b870872ea25edcc82\nPASS seasonal-v4 c4c224fc5d8c42bc93d6464c12a6ab73c3bba63d1656c8d0da2f9faed9f15694\n",
+      "stderr": ""
+    }
+  ]
+}

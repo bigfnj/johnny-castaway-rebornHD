@@ -1,0 +1,58 @@
+{
+  "method": "built-in image_gen; precise-object-edit",
+  "accepted": true,
+  "approval_scope": "Shoreline shape only. User: Yes, keep this shoreline shape. Native scene, foam and production integration remain pending.",
+  "request": "Restore the two original inward shoreline notches identified by the user's arrows; preserve broad smooth intervening coast.",
+  "attempts": [
+    {
+      "prompt_file": "prompt-attempt-1.txt",
+      "prompt": "Use case: precise-object-edit.\nEdit Image 1, the golden cartoon island on a transparent 1536x1024 canvas. Image 2 is the authentic original island geometry reference, in diagnostic colors only. Image 3 is the user's comparison with red arrows specifying exactly TWO inward notches on the FRONT/lower shoreline. Do not copy diagnostic colors, red marks, waves, or comparison layout.\n\nCorrect only the lower coastline of Image 1. The previous draft misplaced one notch too far left and omitted the second. Preserve the broad smooth sandy beach, but reproduce the TWO small, distinct inward recesses seen at the red-arrow origins on the original. Measured horizontally across the sandy island from left tip to right tip, center the first notch at approximately 28% and the second at approximately 66%. In Image 1's present raw canvas these are roughly x=470 and x=995. These are bays cut INWARD/UP into the lower outline, not protrusions pointing down.\n\nThe first should form a shallow rounded indentation just after the left sandy tongue, at x~470, about 30-40 pixels inward from the broad curve, blending back to that curve on either side over roughly 100-130 pixels. Fill/smooth away the old misplaced notch near x350 so the left tongue reaches the correct notch. The second should be a smaller shallow rounded indentation at x~995, about 20-28 pixels inward, blending back over roughly 100-120 pixels. Match their relative character in Image 2: first more pronounced, second subtle but clearly present. Keep a broad smooth convex sweep between them and from the second notch to the right tip. Only these two purposeful notches; no repeated scallops, jagged edge, holes or tiny bumps.\n\nKeep Image 1's exact canvas, current island scale and position, unchanged upper/back coast, leftmost and rightmost tips, golden sand colors, painterly texture and pale highlights. No zoom, resize, recentering, rotation, or global footprint shrink. Render one thin continuous dark brown outer contour, with no old outline remaining inside the edited sand. Island sand only, on genuine RGBA transparency. No water, foam, shadow, tree, props, person, labels, arrows or background.",
+      "refs": [
+        {
+          "path": "../smooth-shore-v2/raw.png",
+          "role": "edit target",
+          "sha256": "b628924811d61ed5ccc024285a7282a396688c247ec50de7d57b08431a1bc86f"
+        },
+        {
+          "path": "../reference-master/original-ground-master.png",
+          "role": "original geometry reference; diagnostic colors",
+          "sha256": "98a5c621b910fa71ba9aad56e8f96ddd32cba6895886804909154d99f3975cb3"
+        },
+        {
+          "path": "user-feedback.png",
+          "role": "user arrows",
+          "sha256": "bbacbb6c6c85e1d0fda33ed39f9d8f178dc1bfab17e033eab6f640865a1ffc71"
+        }
+      ],
+      "output": {
+        "path": "attempt-1.png",
+        "sha256": "f2c0efd19fd1abfccff7e28767305d85fb4f422bd10c0900283e9ba4963c3984",
+        "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-a3bae523-4820-4784-9ea3-c1ce9216f73e.png"
+      },
+      "observation": "Second inlet present near intended position; first inlet apex remained near raw381, too far left. Superseded by local correction."
+    },
+    {
+      "prompt_file": "prompt.txt",
+      "prompt": "Use case: precise-object-edit.\nImage 1 is the edit target: a transparent cartoon sand island with two lower-shore notches. Image 2 shows the user's arrows on the original island, for feature placement only.\nMake ONE local correction: move the FIRST (left) inward bay to the RIGHT by about 95 pixels on the 1536x1024 canvas. Its deepest inward point is currently near x380,y578; it needs to be at x480,y590, and its steeper right-hand shoulder should end near x550,y630. Thus the left sandy tongue becomes slightly longer, reaching to the left edge of this corrected bay. Smoothly fill the old bay at x350..410 with matching golden sand so it no longer remains as a third indentation. The new bay should be only about 25-30 pixels deep relative to a smooth continuation of the neighboring front coast, with a rounded, natural inner corner and a gently curved return to the broad central beach. The first bay's center must be about 29% of island width from the left tip.\nKeep the SECOND notch near x990,y637 exactly where it is. Keep the broad smooth front arc between the two notches. Retain EXACTLY two inward shore notches.\nEverything else must stay fixed: canvas 1536x1024, island scale/position, upper shoreline, both island tips, sand textures and colors, highlight patches, thin dark-brown outline, second notch, and overall generous beach area. No zoom, scaling, recentering, new scallops, props, shadows, water or waves. Return just the corrected sand island on genuine RGBA transparency. No annotations or text.",
+      "refs": [
+        {
+          "path": "attempt-1.png",
+          "role": "edit target",
+          "sha256": "f2c0efd19fd1abfccff7e28767305d85fb4f422bd10c0900283e9ba4963c3984"
+        },
+        {
+          "path": "user-feedback.png",
+          "role": "user arrows",
+          "sha256": "bbacbb6c6c85e1d0fda33ed39f9d8f178dc1bfab17e033eab6f640865a1ffc71"
+        }
+      ],
+      "output": {
+        "path": "raw.png",
+        "sha256": "19df1e01931cf746e88f6bf696b39e16f009ba7aa1b37f1f7c916b0949822732",
+        "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-d50938a6-717c-402e-9325-7d7bf44e635d.png"
+      },
+      "observation": "First inlet moved right, second retained. Selected for human shape review only."
+    }
+  ],
+  "lesson": "Name inward recesses separately from outward juts, identify source-relative positions, and inspect the apex rather than the steep return. Preserve two meaningful coast features without recreating repeated small scallops."
+}

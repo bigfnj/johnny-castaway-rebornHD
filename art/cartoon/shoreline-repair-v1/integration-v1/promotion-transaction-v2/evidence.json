@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "paths_relative_to": "art/cartoon/shoreline-repair-v1/integration-v1",
+  "files_sha256": {
+    "promotion-transaction-v2/fault-removed-rollback.py": "010a1ad4271bb8e7c47661b4a2b493dbd2c76127d09399fda57bfcab9e583efa",
+    "promotion-transaction-v2/fault-report-write-refused.py": "010a1ad4271bb8e7c47661b4a2b493dbd2c76127d09399fda57bfcab9e583efa",
+    "promotion-transaction-v2/fault-report-write-then-failure.py": "36b31ab7b4cd39813c7aba4d9d463aced3f8e254d9e36714bef7b003bc69af43",
+    "promotion-transaction-v2/promote-rollback-removed.py": "f6bc7beb98a9f48c5807bfe2f9c1e58374c8db54adbb230cdbe299491b8249a9",
+    "promotion-transaction-v2/removed-rollback.stderr.txt": "28edead093a804e03277fb83905239bc2fcc16db06b351f6036a12a4d41e5777",
+    "promotion-transaction-v2/removed-rollback.stdout.txt": "1caba7cc45bb856a3278915c46cc800336520fcd815844b5c6592511e50cc514",
+    "promotion-transaction-v2/report-write-refused.stderr.txt": "28edead093a804e03277fb83905239bc2fcc16db06b351f6036a12a4d41e5777",
+    "promotion-transaction-v2/report-write-refused.stdout.txt": "69e7f4e312cc0bda2e26f3dc533082aab7c3bee4ab56eabc75ce389e23bd4ba3",
+    "promotion-transaction-v2/report-write-then-failure.stderr.txt": "28edead093a804e03277fb83905239bc2fcc16db06b351f6036a12a4d41e5777",
+    "promotion-transaction-v2/report-write-then-failure.stdout.txt": "69e7f4e312cc0bda2e26f3dc533082aab7c3bee4ab56eabc75ce389e23bd4ba3",
+    "promotion-transaction-v2/restored-successful-transaction.json": "94f2d0012c38112bc75a5c1bbb760c4fbdc5b9025f2c9ccd6ab2f2dbb92d5772",
+    "promotion-transaction-v2/restored-successful-transaction.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "promotion-transaction-v2/restored-successful-transaction.stdout.txt": "2aebbb0732756e73997a2023eaf32e00f821702c4ded244b3498ac6882f7e88d",
+    "promotion-transaction-v2/smoke-preflight.json": "ecc523fcec987621d26962a16bc046e2eb22356dbb5d8233c9dce8cd47fb5182",
+    "promotion-transaction-v2/smoke-preflight.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "promotion-transaction-v2/smoke-preflight.stdout.txt": "52ad2dc02e09ca917aadd22daa08c23efa695f2391041d51e5bd69c627d4dce7",
+    "promotion-transaction-v2/verification.json": "17a238d382d45ecc0fdf68745e1e83dbffa30bb8688f5bfca301c12a47ec8748"
+  },
+  "external_files_sha256": {
+    "promote_v2.py": "dc3f29b56bd984bdf299fa0ce4551c5e4717b53b73fcb51666205ad1deb34b8f",
+    "promote.py": "93acecbe9bafad58af5a0463e8cd1ab527be886de9321effdc9ad3c113401bf6",
+    "integrate.py": "473a54c720178ce23319a5c16c3376ce7786cfcc86dca7a47a3da985f11e4cb0",
+    "test_promote_v2.py": "05b79d6e71d0ac37527de92dd852740f2858577ca809e321bfd3d38440c5b377",
+    "preserve_transaction.py": "1b00e2c686b7aae1c2fcdc4e9d08ea8e058e778fea0f5fd7a9f5d335e397ec7b",
+    "PROMOTION.md": "b5ea54c9e31f2f0be780d14f153b52e7b92a315607858d1e82e35d8b955bf4b3"
+  },
+  "case_count": 5,
+  "scope": "Disposable transaction fault injection and rollback-removal/restoration proof. Synthetic native data; no actual production promotion.",
+  "excluded": "Copied source fixture and archives remain in ignored scratch. Earlier promotion-preflight binder is immutable."
+}

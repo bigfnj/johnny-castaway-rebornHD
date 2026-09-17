@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "status": "DIAGNOSTIC_EXPORTED",
+  "scope": "Unapproved diagnostic fixed-registration shoreline; meaningful crop is reported, not hidden by fitting.",
+  "frame": 3,
+  "exporter_sha256": "f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264",
+  "recipe_sha256": "01534f062f154b50574c8f51527c1c8e9d6656897422ae6ef564cd4d61b47421",
+  "source_sha256": "45e1e111662b5dfdb06d747530e2ae8645f7b8ab22e1bab140b13eb8a68c2c9f",
+  "filter_sha256": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+  "runtime_canvas": [
+    144,
+    58
+  ],
+  "affine_forward": [
+    0.25,
+    0,
+    -120.0,
+    0,
+    0.25,
+    -99.0
+  ],
+  "source_alpha8_bounds": [
+    507,
+    414,
+    1057,
+    623
+  ],
+  "source_alpha8_edge_bounds_hd": [
+    6.75,
+    4.5,
+    144.25,
+    56.75
+  ],
+  "source_alpha_outside_guide_window": {
+    "nonzero_pixels": 182,
+    "alpha8_pixels": 5,
+    "alpha255_pixels": 0,
+    "maximum_alpha": 8,
+    "alpha_sum": 354,
+    "alpha8_bounds": [
+      1056,
+      547,
+      1057,
+      552
+    ]
+  },
+  "filtered_alpha_outside_runtime": {
+    "nonzero_pixels": 72,
+    "alpha8_pixels": 16,
+    "alpha255_pixels": 0,
+    "maximum_alpha": 15,
+    "alpha_sum": 359,
+    "alpha8_bounds": [
+      296,
+      158,
+      297,
+      174
+    ]
+  },
+  "filtered_alpha_outside_runtime_within_local_pad": {
+    "nonzero_pixels": 72,
+    "alpha8_pixels": 16,
+    "alpha255_pixels": 0,
+    "maximum_alpha": 15,
+    "alpha_sum": 359,
+    "alpha8_bounds": [
+      176,
+      59,
+      177,
+      75
+    ]
+  },
+  "meaningful_clipping_present": true,
+  "coordinate_note": "Source bounds use raw coordinates; filtered full-guide stats include32HD padding. Runtime crop is the original fixed canvas.",
+  "outputs_sha256": {
+    "BMP/BACKGRND.BMP/003.png": "9545db755c17c59ba14ab3d2c2e1a905557102acb77273e58daf9381077552ec",
+    "padded.png": "0799ab00d27ff49b6eafd386682fb5e25107abd6c7a44fa64c3d6221def2f887",
+    "full-guide-padded.png": "e72aa956d56554a7c973eb0b5c8bd0fefc99b7451542fb3784ae8387f0150171"
+  }
+}

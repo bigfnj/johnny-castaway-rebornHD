@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "resource": "HOLIDAY.BMP",
+  "frame_count": 4,
+  "scope": "Exact original and current HD references; no artwork generation or approval.",
+  "palette": "Original index planes use the port diagnostic dump palette, not calibrated original executable colors. HD is separate appearance guidance.",
+  "pillow_version": "12.3.0",
+  "prepare_sha256": "c9668a7c8b8cd427bb78e51b469d3c1cc434259c8bf9b2d0a57a9f9b5ff5640f",
+  "inputs_sha256": {
+    "art/cartoon/character-inventory-v1/source/frame-index.json": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2",
+    "art/cartoon/character-inventory-v1/reference-originals.zip": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912",
+    "assets/scrantic_data.zip": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "path": "BMP/HOLIDAY.BMP/000.png",
+      "label": "Pumpkin",
+      "native_canvas": [
+        40,
+        34
+      ],
+      "runtime_canvas": [
+        80,
+        68
+      ],
+      "original_member": "native/BMP/HOLIDAY.BMP/000.png",
+      "original_png_sha256": "31bb773fb9fa0884cf1f03fd3df7d0f8bfcc55b7eb41f9aa594ac807c0057aad",
+      "original_rgba_sha256": "517f3d35772bf76501755d1a94ae9dfd242edd8115b2ba286bc00fb3ee6be1ae",
+      "original_index_plane_sha256": "fdb8be66deda426a7ad8f131f94e96e8030d2a349fcc4456af22e749344d4ba6",
+      "original_xpm_sha256": "dee9d9a6393243f9a17ab4dfcef8ee28851c457757cb73ed68eeedbcc7c62d05",
+      "hd_member": "data/hd/BMP/HOLIDAY.BMP/000.png",
+      "hd_png_sha256": "fd50ae7766656bc4c609e1a6d94547b35279dbd99a1e4a2aa708adef3bff7df5",
+      "hd_rgba_sha256": "840504fa68c42590c31dd4b7cc8a657d3830073dcd78d504a414ff29d988d67a",
+      "guide": {
+        "canvas": [
+          1024,
+          1024
+        ],
+        "original_integer_scale": 8,
+        "hd_integer_scale": 4,
+        "offset": [
+          352,
+          376
+        ],
+        "registration": "source pixel edges map to offset +8*[x,y]",
+        "hd_display_only_key": "opaque RGB168,0,168 becomes alpha0; saved hd-native PNG is byte-exact"
+      },
+      "files_sha256": {
+        "000-original-native.png": "31bb773fb9fa0884cf1f03fd3df7d0f8bfcc55b7eb41f9aa594ac807c0057aad",
+        "000-original-nearest8.png": "6e306931904b5aea8d3bcf9ebeb6ad77f9e4a5e594c24deaca5ed9da3aeff6b0",
+        "000-original-guide.png": "565c5d3a2b7bf5ee4a200d78f2ba29151ed1667143fca120e6787563b575579c",
+        "000-hd-native.png": "fd50ae7766656bc4c609e1a6d94547b35279dbd99a1e4a2aa708adef3bff7df5",
+        "000-hd-guide.png": "0bae3c0f9fee8f2ffd71632c73f8764d67323082f7c60348b2e27306554f20b6"
+      }
+    },
+    {
+      "frame": 1,
+      "path": "BMP/HOLIDAY.BMP/001.png",
+      "label": "Clovers",
+      "native_canvas": [
+        120,
+        47
+      ],
+      "runtime_canvas": [
+        240,
+        94
+      ],
+      "original_member": "native/BMP/HOLIDAY.BMP/001.png",
+      "original_png_sha256": "33bbbc9b30a27902a2190d4fff7032b371863bd489044de4f7a7713d361fccf2",
+      "original_rgba_sha256": "2680d21fc692a41d259b5aab38c736d305576d0e4df4ced3a1d994d53250bb66",
+      "original_index_plane_sha256": "06dcf7c6ecb4939a0d7552dbed83ea8ad5230a72c5e67ef4839087af9843db9f",
+      "original_xpm_sha256": "45f4675019dbe6b0aaef3ce17dbaab272be8718d48a08dc3f1f785c604b4e2fe",
+      "hd_member": "data/hd/BMP/HOLIDAY.BMP/001.png",
+      "hd_png_sha256": "31a9f81b04c2fbfc8bd3ad4f02920eeb92a10803d4341d62332494e473f24fba",
+      "hd_rgba_sha256": "75d3d4ec3b6a599551268eda87716fc49e107e5649afe88b4c9cacefe2dfcade",
+      "guide": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "original_integer_scale": 8,
+        "hd_integer_scale": 4,
+        "offset": [
+          288,
+          324
+        ],
+        "registration": "source pixel edges map to offset +8*[x,y]",
+        "hd_display_only_key": "opaque RGB168,0,168 becomes alpha0; saved hd-native PNG is byte-exact"
+      },
+      "files_sha256": {
+        "001-original-native.png": "33bbbc9b30a27902a2190d4fff7032b371863bd489044de4f7a7713d361fccf2",
+        "001-original-nearest8.png": "615754e1338173c2a86ab03386c7baa4dd307bb7c662bc0350c8b15360be7ad0",
+        "001-original-guide.png": "6d6deb84ee2c0dd6af11c8fbad7d1e866db095f36e3535f7ded3d5611346f1b9",
+        "001-hd-native.png": "31a9f81b04c2fbfc8bd3ad4f02920eeb92a10803d4341d62332494e473f24fba",
+        "001-hd-guide.png": "17784e1e407434172dd656b1a6cfd79c2c2cd2a0071eacad22e1541360622082"
+      }
+    },
+    {
+      "frame": 2,
+      "path": "BMP/HOLIDAY.BMP/002.png",
+      "label": "Christmas tree",
+      "native_canvas": [
+        56,
+        65
+      ],
+      "runtime_canvas": [
+        112,
+        130
+      ],
+      "original_member": "native/BMP/HOLIDAY.BMP/002.png",
+      "original_png_sha256": "6331d1b5f3ebcef25796dfc00911b51fcd7592406241cc24119a7c461e18957d",
+      "original_rgba_sha256": "5473e82d78b8fd0792c6681ba39f59159a12dec3a31ff3470432d65ebf5f5b13",
+      "original_index_plane_sha256": "4c8bd5bfc5fdf4c750d8f1afdbc72669ec365bb1f3dbd34be890d4bd0f2f25f9",
+      "original_xpm_sha256": "f3cea0662ae82bc7e4c83d69be5709404f3672325774ec2c58425cb8c8a0647d",
+      "hd_member": "data/hd/BMP/HOLIDAY.BMP/002.png",
+      "hd_png_sha256": "b678dac17870d2449a121b1bd30c2c4c58403d80aa26d8cf844cdef1c619aff0",
+      "hd_rgba_sha256": "e521c259cd16455791d9c2e80e01cd4a9176b12278352467d25dcd6a4db9fbae",
+      "guide": {
+        "canvas": [
+          1024,
+          1024
+        ],
+        "original_integer_scale": 8,
+        "hd_integer_scale": 4,
+        "offset": [
+          288,
+          252
+        ],
+        "registration": "source pixel edges map to offset +8*[x,y]",
+        "hd_display_only_key": "opaque RGB168,0,168 becomes alpha0; saved hd-native PNG is byte-exact"
+      },
+      "files_sha256": {
+        "002-original-native.png": "6331d1b5f3ebcef25796dfc00911b51fcd7592406241cc24119a7c461e18957d",
+        "002-original-nearest8.png": "cd2e11722e2fb520066425994ef219a948833de1df0e71f616ef965eade823c7",
+        "002-original-guide.png": "a9213c5d573d1cd69493cb21f287977a7bb1b075b8e6525be86575c3fff7c3b4",
+        "002-hd-native.png": "b678dac17870d2449a121b1bd30c2c4c58403d80aa26d8cf844cdef1c619aff0",
+        "002-hd-guide.png": "4de175492b28dfb18a8e8c2cfba6eebe83ed7ce76a86746f1fe6e035c2474f30"
+      }
+    },
+    {
+      "frame": 3,
+      "path": "BMP/HOLIDAY.BMP/003.png",
+      "label": "New Year banner",
+      "native_canvas": [
+        152,
+        47
+      ],
+      "runtime_canvas": [
+        304,
+        94
+      ],
+      "original_member": "native/BMP/HOLIDAY.BMP/003.png",
+      "original_png_sha256": "f527d5212958ad7d8c204e332ffc0040e08c20e4785198256dc29e25306f097c",
+      "original_rgba_sha256": "f1da8fe36b1149ec96b4ce46e6a132d2b7e8e53273f22789e42aa8e6081a6c60",
+      "original_index_plane_sha256": "0a4c06cbeb35e76bf0f45e1d97fa9e0afc733cdab9197d53a1cafd7c1f5d0532",
+      "original_xpm_sha256": "9e43ec82f3c921a8b7a7d421a8586ebdc0faff2053306a9f1c253600c1d08495",
+      "hd_member": "data/hd/BMP/HOLIDAY.BMP/003.png",
+      "hd_png_sha256": "d37bfa7e164fdccc0b56954871af2d8ad8b12a887b82d2925e1ca19a2b558be9",
+      "hd_rgba_sha256": "8e711a1a7b8e44f81285cf7e7e316b35967ac8b24dcd464cadabe9d1d2882a27",
+      "guide": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "original_integer_scale": 8,
+        "hd_integer_scale": 4,
+        "offset": [
+          160,
+          324
+        ],
+        "registration": "source pixel edges map to offset +8*[x,y]",
+        "hd_display_only_key": "opaque RGB168,0,168 becomes alpha0; saved hd-native PNG is byte-exact"
+      },
+      "files_sha256": {
+        "003-original-native.png": "f527d5212958ad7d8c204e332ffc0040e08c20e4785198256dc29e25306f097c",
+        "003-original-nearest8.png": "6a6c2a43e2b51d60447d8058a614aa3c6043a242543e7a23735414ed405f8f14",
+        "003-original-guide.png": "82ec1adb4d9f12fe0ad0a1c1ac08324b07c0a9a06e5f0aefcd1ca6d5dd2e14cf",
+        "003-hd-native.png": "d37bfa7e164fdccc0b56954871af2d8ad8b12a887b82d2925e1ca19a2b558be9",
+        "003-hd-guide.png": "f2f3e1d9339da417d5658eefb2324d1ded9a70ec684e16331b3092344c7ea8a8"
+      }
+    }
+  ],
+  "contact_sheet": {
+    "path": "original-vs-hd-contact.png",
+    "sha256": "619378dae95f7faeb3c37e7dd0a36e8334f8779761490788e41687b0431adb05",
+    "original_scale": 4,
+    "hd_scale": 2,
+    "background_rgb": [
+      232,
+      231,
+      222
+    ]
+  }
+}

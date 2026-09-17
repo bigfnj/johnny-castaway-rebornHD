@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "smoke",
+  "exporter_sha256": "f8c1ab32af71e76b0ce8401845cdc4d2dae428ee0077276ddddfb4f13987f57e",
+  "test_sha256": "3d42cffad76668fcc2623b79572e6edd673b3bc0cd86aec561f894fb2785e06b",
+  "recipe_sha256": "3d00c419eca09cd038be84310a1dea8b2d5837d41e95d4c01a2f142913659f8a",
+  "export_report_sha256": "80dffa4ad7434a01949a7aef3fcf283b1bc26937645e9a9086db7a60386ee463",
+  "runtime_sha256": "c524b35d1d30d5a70aa8136e18a0ff739a3b6887673e565831d04883869d9b87",
+  "unchanged_v5_frames": [
+    0,
+    1,
+    2
+  ],
+  "outside_alpha8_pixels": 0,
+  "outside_max_alpha": 4,
+  "outside_nonzero_pixels": 106,
+  "scope": "Technical export only. Small deliberate registration change; no human scene acceptance.",
+  "runs": [
+    {
+      "name": "selected_export_readback",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/seasonal-v1/banner-attachment-v1/export_v2.py",
+        "--recipe",
+        ".\\art\\cartoon\\seasonal-v1\\banner-attachment-v1\\recipe-v3.json",
+        "--output",
+        ".\\art\\cartoon\\seasonal-v1\\banner-attachment-v1\\candidates\\v3",
+        "--check"
+      ],
+      "stdout": "WITNESS banner-registration f8c1ab32af71e76b0ce8401845cdc4d2dae428ee0077276ddddfb4f13987f57e\nWITNESS banner-export 749823dcd4a31ec352ce35e45cae72412807eabe4e9fafb7d258e7c245df400c\nPASS banner-export FIT_PASS_PENDING_NATIVE_REVIEW\n",
+      "stderr": ""
+    }
+  ]
+}

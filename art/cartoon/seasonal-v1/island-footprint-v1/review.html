@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Original and Cartoon shoreline comparison</title>
+<style>
+body{margin:0;background:#17252e;color:#eaf3f8;font:17px/1.5 system-ui,sans-serif}main{max-width:1380px;margin:auto;padding:24px}h1{font-size:30px;margin:0 0 12px}h2{font-size:23px;margin-top:28px}p{max-width:1050px}a{color:#9dddff}figure{margin:18px 0;background:#253b49;border-radius:8px;padding:14px}img{display:block;max-width:100%;height:auto;margin:auto;image-rendering:pixelated}figcaption{margin-top:10px;color:#cee2ef}table{border-collapse:collapse;max-width:950px;width:100%}td,th{text-align:left;padding:10px;border-bottom:1px solid #49606f}th{background:#253b49}.note{border-left:4px solid #f1c56c;padding:8px 16px;background:#263640}
+</style>
+</head>
+<body><main>
+<h1>The Cartoon shoreline is missing some ground</h1>
+<p>The same clover artwork is drawn at the same position on both sides. The original wave sprites add sand beyond the base island. Our Cartoon waves retained the foam but omitted that sand, leaving several clover roots over water.</p>
+<p class="note">Left: original scenery artwork rendered by our port, using a diagnostic palette. Right: current Cartoon scenery. Judge the shape and contact with the ground; this is not a color comparison with the original executable.</p>
+<h2>Clover contact, enlarged equally</h2>
+<figure><img src="matched-clover-detail.png" alt="Identical clovers over original scenery on the left and Cartoon scenery on the right, showing missing sand beneath the Cartoon-side roots"><figcaption>Both sides use the same HD clover sprite and placement. The colored original ground beneath several roots becomes water on the Cartoon side.</figcaption></figure>
+<h2>Whole island, matched crop</h2>
+<figure><img src="matched-island.png" alt="Original and Cartoon island geometry side by side at the same scale"><figcaption>The base island is slightly smaller, but missing sand from the wave layers accounts for most of the measured difference at the clovers.</figcaption></figure>
+<table><thead><tr><th>Measurement in this high-tide phase</th><th>Result</th></tr></thead><tbody>
+<tr><td>Ground retreat at sampled clover columns</td><td>Up to 13 rendered pixels</td></tr>
+<tr><td>Original stem endpoints below the measured sand</td><td>Original: 1 of 15; Cartoon: 6 of 15</td></tr>
+<tr><td>Base island alone, opaque mask area</td><td>About 2.5% smaller</td></tr>
+</tbody></table>
+<p>The measured sand boundary excludes foam and some border pixels. The one original endpoint outside it is two rendered pixels below the boundary. These counts describe this captured phase, not every animation state.</p>
+<h2>Recommended next step</h2>
+<p>Restore the original combined ground footprint in the Cartoon shoreline and wave layers, keeping the original placement. Check every wave phase, then recheck the decorations at their original anchors. The current smaller, raised seasonal drafts were compensating for the missing ground.</p>
+<p><a href="../review.html">See the seasonal drafts and approved lightly rotting pumpkin</a> · <a href="README.md">Evidence and reproduction notes</a></p>
+</main></body></html>

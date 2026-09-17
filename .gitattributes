@@ -44,6 +44,26 @@ art/cartoon/arrival-pilot-v1/** -text whitespace=cr-at-eol
 art/cartoon/skin-tone-v1/** -text whitespace=cr-at-eol
 art/cartoon/standing018-proportions-v1/** -text whitespace=cr-at-eol
 art/cartoon/character-inventory-v1/** -text whitespace=cr-at-eol
+art/cartoon/seasonal-v1/** -text whitespace=cr-at-eol
+art/cartoon/shoreline-repair-v1/** -text whitespace=cr-at-eol
+
+# Preserve the observed CMake line ending in a space in this hashed run log.
+art/cartoon/shoreline-repair-v1/integrated-shore-v1/code-verification/windows-v2/run.log whitespace=cr-at-eol,-blank-at-eol
+
+# These immutable native source snapshots retain existing terminal blank lines
+# and the upstream miniz header's observed whitespace. Do not rewrite evidence.
+art/cartoon/seasonal-v1/banner-attachment-v1/native/evidence-v3/source/src/** whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/seasonal-v1/banner-inset-v1/native/evidence-v1/source/src/** whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/seasonal-v1/banner-attachment-v1/native/evidence-v3/source/third_party/miniz/miniz.h whitespace=cr-at-eol,-blank-at-eol
+art/cartoon/seasonal-v1/banner-inset-v1/native/evidence-v1/source/third_party/miniz/miniz.h whitespace=cr-at-eol,-blank-at-eol
+art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/native/evidence-v2/captures/source-snapshot/src/** whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/native/evidence-v2/captures/source-snapshot/third_party/miniz/miniz.h whitespace=cr-at-eol,-blank-at-eol
+art/cartoon/shoreline-repair-v1/integration-v1/native-final/evidence-v1/captures/source-snapshot/src/** whitespace=cr-at-eol,-blank-at-eof
+art/cartoon/shoreline-repair-v1/integration-v1/native-final/evidence-v1/captures/source-snapshot/third_party/miniz/miniz.h whitespace=cr-at-eol,-blank-at-eol
+art/cartoon/shoreline-repair-v1/integration-v1/windows-final/feature-v1/gate-adaptation.diff whitespace=cr-at-eol,-blank-at-eol
+
+# Preserve the exact unittest prefix before the captured mutation traceback.
+art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/runtime-verification/authoring/mutation-*.log whitespace=cr-at-eol,-blank-at-eol
 
 # This hashed historical capture manifest includes a final blank line.
 art/cartoon/walk-pilot/directional-cycle-v1/review-evidence/direction-clearance-manifest-v1.json whitespace=cr-at-eol,-blank-at-eof

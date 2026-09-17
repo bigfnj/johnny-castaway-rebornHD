@@ -1,0 +1,56 @@
+{
+  "status": "DIAGNOSTIC_REPRODUCTION_PASS",
+  "accepted": false,
+  "aggregate_recipe_sha256": "c0b564613949ec1324b41dc15baceb7ce65d5606eeb21e2f6128e52278a29e62",
+  "helper_sha256": "5f856d97d79f9823d2c33603e1ce14681e82aeedec2aa34daecb695c872dc74c",
+  "frame_count": 3,
+  "runs": [
+    {
+      "frame": 3,
+      "phase": "smoke",
+      "stdout": "WITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\nDIAGNOSTIC {\"frame\": 3, \"runtime_sha256\": \"9545db755c17c59ba14ab3d2c2e1a905557102acb77273e58daf9381077552ec\", \"crop\": {\"nonzero_pixels\": 72, \"alpha8_pixels\": 16, \"alpha255_pixels\": 0, \"maximum_alpha\": 15, \"alpha_sum\": 359, \"alpha8_bounds\": [296, 158, 297, 174]}}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "frame": 7,
+      "phase": "smoke",
+      "stdout": "WITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\nDIAGNOSTIC {\"frame\": 7, \"runtime_sha256\": \"f4e13827d7e622b3e608f4ac9757b8908e1f47d2fef1f7ab6bd4ee23d7173c84\", \"crop\": {\"nonzero_pixels\": 867, \"alpha8_pixels\": 377, \"alpha255_pixels\": 0, \"maximum_alpha\": 159, \"alpha_sum\": 32970, \"alpha8_bounds\": [64, 134, 384, 186]}}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "frame": 9,
+      "phase": "smoke",
+      "stdout": "WITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\nDIAGNOSTIC {\"frame\": 9, \"runtime_sha256\": \"58866402fe3cf3a30c2bb27ed9cf3c9bca951a5aec691fd97c12c41bc40a61e8\", \"crop\": {\"nonzero_pixels\": 73, \"alpha8_pixels\": 34, \"alpha255_pixels\": 4, \"maximum_alpha\": 255, \"alpha_sum\": 2884, \"alpha8_bounds\": [151, 126, 259, 189]}}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "frame": 3,
+      "phase": "fresh_replay",
+      "stdout": "WITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\nDIAGNOSTIC {\"frame\": 3, \"runtime_sha256\": \"9545db755c17c59ba14ab3d2c2e1a905557102acb77273e58daf9381077552ec\", \"crop\": {\"nonzero_pixels\": 72, \"alpha8_pixels\": 16, \"alpha255_pixels\": 0, \"maximum_alpha\": 15, \"alpha_sum\": 359, \"alpha8_bounds\": [296, 158, 297, 174]}}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "frame": 7,
+      "phase": "fresh_replay",
+      "stdout": "WITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\nDIAGNOSTIC {\"frame\": 7, \"runtime_sha256\": \"f4e13827d7e622b3e608f4ac9757b8908e1f47d2fef1f7ab6bd4ee23d7173c84\", \"crop\": {\"nonzero_pixels\": 867, \"alpha8_pixels\": 377, \"alpha255_pixels\": 0, \"maximum_alpha\": 159, \"alpha_sum\": 32970, \"alpha8_bounds\": [64, 134, 384, 186]}}\n",
+      "stderr": "",
+      "status": "PASS"
+    },
+    {
+      "frame": 9,
+      "phase": "fresh_replay",
+      "stdout": "WITNESS shore-export f68a2869ff6519fe15f87e776f5c1b027270b4a5b979e9aaa94eccd154dbd264\nDIAGNOSTIC {\"frame\": 9, \"runtime_sha256\": \"58866402fe3cf3a30c2bb27ed9cf3c9bca951a5aec691fd97c12c41bc40a61e8\", \"crop\": {\"nonzero_pixels\": 73, \"alpha8_pixels\": 34, \"alpha255_pixels\": 4, \"maximum_alpha\": 255, \"alpha_sum\": 2884, \"alpha8_bounds\": [151, 126, 259, 189]}}\n",
+      "stderr": "",
+      "status": "PASS"
+    }
+  ],
+  "guard_evidence": {
+    "path": "007/verification.json",
+    "sha256": "17fda617dc02ca507ec42b86f8936ed7e25eadd196b95f83c060ef03bc06b90f"
+  },
+  "limits": "Image/source identity and fixed transform only. Edge counts are geometric, not material segmentation. Native scene/tide contact remains to be reviewed."
+}

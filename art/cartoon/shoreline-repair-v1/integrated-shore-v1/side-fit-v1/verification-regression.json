@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "regression",
+  "exporter_sha256": "dd36c72094f50e35109f04955187178e0108da84b8929d47c90e5c9ae96a3fdb",
+  "test_sha256": "6f54cf1f9c2fc1262b82e00e1ac8a630c64aca565acb90368d0b247695d35218",
+  "recipe_sha256": "3002ca095bd647a2e513b92659d5943811ae1787aeacd5181191602670a1e50d",
+  "export_report_sha256": "8489c4449c6fbfe82f8bd4e66a3e4edfd4bec71c4e5d36c5c9999711c6786323",
+  "unchanged_frames": [
+    0,
+    6,
+    7,
+    8
+  ],
+  "scope": "Technical source retention and selected integer placement. Native geometry and human appearance remain separate checks.",
+  "independent_frame_proof": [
+    {
+      "frame": 3,
+      "source_cropback_exact_rgba_sha256": "d2d60cff5fccc1ba25d5856eb9dff6f7112752c648185039192bc24a42345acc",
+      "source_pixels_cropped": 0,
+      "blank_padding_pixels": 1548,
+      "nonzero_foam_alpha_unchanged_pixels": 1571,
+      "visibility_changed_alpha_pixels": 9,
+      "all_output_rgb_exact_to_integer_paste": true
+    },
+    {
+      "frame": 4,
+      "source_cropback_exact_rgba_sha256": "823b020cdae9abbfeff83a4da90001c849968f3f799b761ec841f280ad97f7f8",
+      "source_pixels_cropped": 0,
+      "blank_padding_pixels": 1548,
+      "nonzero_foam_alpha_unchanged_pixels": 1928,
+      "visibility_changed_alpha_pixels": 27,
+      "all_output_rgb_exact_to_integer_paste": true
+    },
+    {
+      "frame": 5,
+      "source_cropback_exact_rgba_sha256": "2f68b8047bbf0eaa7e801501840be57bc08502f8a1ea5b7f19445fd66427e956",
+      "source_pixels_cropped": 0,
+      "blank_padding_pixels": 1548,
+      "nonzero_foam_alpha_unchanged_pixels": 1804,
+      "visibility_changed_alpha_pixels": 286,
+      "all_output_rgb_exact_to_integer_paste": true
+    },
+    {
+      "frame": 9,
+      "source_cropback_exact_rgba_sha256": "0232bc036ee690ac0096af66db2f08fdafd889ad703c0f8f0163c07f47f36575",
+      "source_pixels_cropped": 0,
+      "blank_padding_pixels": 2180,
+      "nonzero_foam_alpha_unchanged_pixels": 1843,
+      "visibility_changed_alpha_pixels": 26,
+      "all_output_rgb_exact_to_integer_paste": true
+    },
+    {
+      "frame": 10,
+      "source_cropback_exact_rgba_sha256": "9b072b0e242bdfa706f1f680029ad923a835245b3bc076ce0a0eb7d8e85ca925",
+      "source_pixels_cropped": 0,
+      "blank_padding_pixels": 2180,
+      "nonzero_foam_alpha_unchanged_pixels": 1225,
+      "visibility_changed_alpha_pixels": 121,
+      "all_output_rgb_exact_to_integer_paste": true
+    },
+    {
+      "frame": 11,
+      "source_cropback_exact_rgba_sha256": "3587074277c36d22d4bca6ed4625e2082ee9e2efd41305fdaf7c288e2338308d",
+      "source_pixels_cropped": 0,
+      "blank_padding_pixels": 2180,
+      "nonzero_foam_alpha_unchanged_pixels": 1021,
+      "visibility_changed_alpha_pixels": 100,
+      "all_output_rgb_exact_to_integer_paste": true
+    }
+  ],
+  "protected_files_sha256": {
+    "assets/scrantic_data.zip": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "art/cartoon/shoreline-repair-v1/foam-contact-v2/export.py": "fae28aba1181761777ae4ed43e088fb6a1cc51b08f20db39135ac81fe4ae1445",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/recipe-v2.json": "53a6ba750c90c9c0b721864d103bd565ae332c6e5a40b00ae98cdc6eb171f4b4",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/export-report.json": "ceb1dd987098c6f5ee36a77988009b1f290e44f421bfd7f08cd275c34bca999d",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/BMP/BACKGRND.BMP/000.png": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/BMP/BACKGRND.BMP/003.png": "d28e9b61aa90734b649122f96b462de1c846c610637cb45c2051b20db95b34b9",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/BMP/BACKGRND.BMP/004.png": "262fc8bdce3dd7671220480ca382870b0fa5729c92a5630bbe5b7f6674134084",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/BMP/BACKGRND.BMP/005.png": "b9094eacd1ab1e6548b30505752901519642a7f9d73565267c25f7af5da97503",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/BMP/BACKGRND.BMP/006.png": "2d2c93478a8e06b99a8a86d832bccdf1327d6d1a55cf79a2593dff49dcbd0db5",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/BMP/BACKGRND.BMP/007.png": "a9ce74ee70c5c5e28dfed8e0b424bb74a249469f302a04bed3eed1a466e9108b",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/BMP/BACKGRND.BMP/008.png": "4ff1c6672e10d67e789c01584f1fb0dc1299016e391809eca8e5047e4cf1acea",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/BMP/BACKGRND.BMP/009.png": "eb81468edf9ebf3e1622b815ce69f6781e5cb80a2c573bd9e0a31ea8b7a7652d",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/BMP/BACKGRND.BMP/010.png": "fee6e13f4ebbc382da9954a4ebfa1f355dc797f9339c97c2f8555b6d4d11935e",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/candidates/v2/BMP/BACKGRND.BMP/011.png": "f31e865b2f14a5952b05e4f0f47f9bebdfca34d0424571054d6c995ba17d70c8"
+  },
+  "fresh_replay_files": 17,
+  "guard_removal": {
+    "statement": "        require(row == selected, f\"{row['frame']:03}: original source or placement contract differs\")",
+    "mutant_sha256": "dc32b5f22eed37fb17962dacbbe29f011d60fcc0228970951df6dd402b4ed989",
+    "driver_sha256": "02f1778dccb36bbe2c253b318bba3963fdee80c1b11de3a28a69500be9f9d826",
+    "wrong_placement_recipe_sha256": "72ec216f974719edee285ac8c4e74a3d71f85b16f3f319e866625c0d0f324de9",
+    "actual_wrong_003_png_sha256": "5040149e0ceb4477ac259bc8d7bd51c79603b27cd27a3fde1e6e2025c5364889",
+    "restored_positive": "PASS",
+    "replay_note": "Stage preserved control files together below repository root. Execute driver with --recipe wrong-003-placement.json and a fresh scratch --output only."
+  },
+  "runs": [
+    {
+      "name": "ten_frame_export_readback",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/export.py",
+        "--check"
+      ],
+      "stdout": "WITNESS side-fit dd36c72094f50e35109f04955187178e0108da84b8929d47c90e5c9ae96a3fdb\nPASS side-fit {\"frames\": 10, \"source_pixels_cropped\": 0, \"unchanged_frames\": [0, 6, 7, 8]}\n",
+      "stderr": ""
+    },
+    {
+      "name": "fresh_exact_export_replay",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/export.py",
+        "--output",
+        ".\\build\\shoreline-repair-v1\\side-fit-verification-v1\\replay"
+      ],
+      "stdout": "WITNESS side-fit dd36c72094f50e35109f04955187178e0108da84b8929d47c90e5c9ae96a3fdb\nPASS side-fit {\"frames\": 10, \"source_pixels_cropped\": 0, \"unchanged_frames\": [0, 6, 7, 8]}\n",
+      "stderr": ""
+    },
+    {
+      "name": "003_wrong_placement_refused",
+      "exit_code": 1,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/export.py",
+        "--recipe",
+        ".\\build\\shoreline-repair-v1\\side-fit-verification-v1\\wrong-003-placement.json",
+        "--output",
+        ".\\build\\shoreline-repair-v1\\side-fit-verification-v1\\refused"
+      ],
+      "stdout": "WITNESS side-fit dd36c72094f50e35109f04955187178e0108da84b8929d47c90e5c9ae96a3fdb\n",
+      "stderr": "FAIL 003: original source or placement contract differs\n"
+    },
+    {
+      "name": "003_already_masked_source_identity_refused",
+      "exit_code": 1,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/export.py",
+        "--recipe",
+        ".\\build\\shoreline-repair-v1\\side-fit-verification-v1\\wrong-003-masked-source.json",
+        "--output",
+        ".\\build\\shoreline-repair-v1\\side-fit-verification-v1\\refused-masked"
+      ],
+      "stdout": "WITNESS side-fit dd36c72094f50e35109f04955187178e0108da84b8929d47c90e5c9ae96a3fdb\n",
+      "stderr": "FAIL 003: original source or placement contract differs\n"
+    },
+    {
+      "name": "003_wrong_placement_accepted_only_after_guard_removal",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "build/shoreline-repair-v1/side-fit-verification-v1/execute_mutant.py",
+        "--recipe",
+        ".\\build\\shoreline-repair-v1\\side-fit-verification-v1\\wrong-003-placement.json",
+        "--output",
+        ".\\build\\shoreline-repair-v1\\side-fit-verification-v1\\mutant-output"
+      ],
+      "stdout": "EXECUTED_MUTANT_SHA256=dc32b5f22eed37fb17962dacbbe29f011d60fcc0228970951df6dd402b4ed989\nWITNESS side-fit dd36c72094f50e35109f04955187178e0108da84b8929d47c90e5c9ae96a3fdb\nPASS side-fit {\"frames\": 10, \"source_pixels_cropped\": 0, \"unchanged_frames\": [0, 6, 7, 8]}\n",
+      "stderr": ""
+    },
+    {
+      "name": "restored_export_positive",
+      "exit_code": 0,
+      "command": [
+        "python",
+        "-B",
+        "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/export.py",
+        "--check"
+      ],
+      "stdout": "WITNESS side-fit dd36c72094f50e35109f04955187178e0108da84b8929d47c90e5c9ae96a3fdb\nPASS side-fit {\"frames\": 10, \"source_pixels_cropped\": 0, \"unchanged_frames\": [0, 6, 7, 8]}\n",
+      "stderr": ""
+    }
+  ]
+}

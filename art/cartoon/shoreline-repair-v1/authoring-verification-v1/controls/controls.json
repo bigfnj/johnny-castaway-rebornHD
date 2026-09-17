@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "phase": "controls",
+  "inputs": {
+    "assets/scrantic_data.zip": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "art/cartoon/pack.json": "41619e9da46409d52f7177ab0f5257884dc3a22d4589e9db1e59583ee6222658",
+    "tools/art_common.py": "2e003886e3504f6af4725eaf875c3d793542dc0efd4ccf45042d670c96f6e914",
+    "tools/art_pack.py": "1df59daf81b2bbe6f7826156e7f0d12fd70f9048d576dee2cdc2eac60d1d2239",
+    "tools/art_inventory.py": "0f17eecde17a412e011b4f7ba2fb427c414137461bf84fc34904ce4b2c30eb31",
+    "tools/art_production_catalog.py": "3ec870dadd15667ef8a6ca267fadebc6294a0a9be04cbd94a259b3e8e4883a99",
+    "tools/art_review_metadata.py": "8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204",
+    "tests/test_art_tools.py": "4b26006c33af2bcb8b699f7bd66cdad5910256b86b397fb9554697bd0185113f",
+    "tests/test_art_inventory.py": "1d72fa04dfc61eaf1d4fe61ca56f00e468f7c8ae46d0de84dc10d7807cd63b6e",
+    "tests/test_art_pilot_history.py": "9612c8aa441860d563e44a29582598f55d2864cc0c0559a48a0ff39ffa60a675",
+    "tests/test_art_review_metadata.py": "1593d8f539901ceb31eedbb4f2fa73aa7ae46a9a4683e003a9de900349fbb658",
+    "tests/test_art_production_catalog.py": "d3474fc4af8865fccef16ea39f77156c743b8e029f462de4ba0af7fc292e02df",
+    "tests/art_pilot_fixture.py": "a9149c3d8f5ce70a71ba57e9f93e4a07fc0c790842c94f54529df6afb0294eeb"
+  },
+  "runs": [
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--case",
+        "test_shoreline_replacement_must_be_declared",
+        "--module",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\tools\\art_review_metadata.py"
+      ],
+      "exit_code": 0,
+      "log": "test_shoreline_replacement_must_be_declared-positive.log",
+      "sha256": "7176f324036d9c084039cd76b216b6aaa742d24545816901255507737c935047",
+      "tests": 1,
+      "case": "test_shoreline_replacement_must_be_declared",
+      "variant": "positive",
+      "executed_source_sha256": "8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--case",
+        "test_shoreline_replacement_must_be_declared",
+        "--module",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\final-authoring-v1\\controls-v2\\mutant-0.py"
+      ],
+      "exit_code": 1,
+      "log": "test_shoreline_replacement_must_be_declared-disabled.log",
+      "sha256": "04e937935c0aad2de9cb63021076581c1743e26ff603489793e50892b6b62223",
+      "tests": 1,
+      "case": "test_shoreline_replacement_must_be_declared",
+      "variant": "disabled",
+      "executed_source_sha256": "c3dc919fece5a09ba38b61feb3cc4611df2e558a039187dede2ae127c2ff9461"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--case",
+        "test_shoreline_replacement_must_be_declared",
+        "--module",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\tools\\art_review_metadata.py"
+      ],
+      "exit_code": 0,
+      "log": "test_shoreline_replacement_must_be_declared-restored.log",
+      "sha256": "a85de0b48034e6584fe7fce012433d9836ac0587bb64a82009d4479aaac14612",
+      "tests": 1,
+      "case": "test_shoreline_replacement_must_be_declared",
+      "variant": "restored",
+      "executed_source_sha256": "8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--case",
+        "test_shoreline_recipe_footprint_must_match_ledger",
+        "--module",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\tools\\art_review_metadata.py"
+      ],
+      "exit_code": 0,
+      "log": "test_shoreline_recipe_footprint_must_match_ledger-positive.log",
+      "sha256": "7911e2ab956db013d6c6f6bdce62901faa8baaea053b8e04c1c78adb638a49b3",
+      "tests": 1,
+      "case": "test_shoreline_recipe_footprint_must_match_ledger",
+      "variant": "positive",
+      "executed_source_sha256": "8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--case",
+        "test_shoreline_recipe_footprint_must_match_ledger",
+        "--module",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\final-authoring-v1\\controls-v2\\mutant-1.py"
+      ],
+      "exit_code": 1,
+      "log": "test_shoreline_recipe_footprint_must_match_ledger-disabled.log",
+      "sha256": "55509a23737442c6bb6f909d7caa63f9fa4812db8e1e1643aef5dce6fc6fa393",
+      "tests": 1,
+      "case": "test_shoreline_recipe_footprint_must_match_ledger",
+      "variant": "disabled",
+      "executed_source_sha256": "37fd46e91145a676dc62b299ca968f611442d4b7c463638571ab23c55a393961"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--case",
+        "test_shoreline_recipe_footprint_must_match_ledger",
+        "--module",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\tools\\art_review_metadata.py"
+      ],
+      "exit_code": 0,
+      "log": "test_shoreline_recipe_footprint_must_match_ledger-restored.log",
+      "sha256": "05777f628d4f7684d3345079dd5c5b0df0b3fbf6b16b2e26df648827d92b6ba9",
+      "tests": 1,
+      "case": "test_shoreline_recipe_footprint_must_match_ledger",
+      "variant": "restored",
+      "executed_source_sha256": "8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+Use case: style-transfer
+Asset type: independent transparent seasonal sprite for the Johnny Castaway Cartoon game.
+Input images: Image 1 is the original geometry reference and edit target; its pixelated diagnostic colors are not the desired palette. Image 2 is the approved Cartoon island STYLE reference only.
+Style: clean expressive hand-inked cartoon, crisp narrow dark outlines, simple warm cel shading, legible at small game scale. Match the visual language of the palm and island in image 2. Smooth the pixel steps into drawn contours.
+Transparency: actual transparent RGBA background and padding, opaque painted interiors, narrow antialiased edges. No checkerboard, black backdrop, glow, haze or translucent object interiors.
+Primary request: redraw the curved New Year cloth banner from image1, preserving its wide shallow shape, raised ends, gently sagging center and small folded/notched end details. Cream-white cloth with very restrained cool-gray fold shading and a fine dark ink outline. Red hand-drawn serif capital lettering following the original curve.
+Text verbatim: "HAPPY NEW YEAR". Exactly these three words, clearly readable, no extra punctuation, year number or other text.
+Composition: preserve the 1536 by1024 canvas. Original native152 by47 sprite enlarged8x at offset(160,324), occupying x160..1376,y324..700. Preserve the same contour, high end tips around y350 and center bottom near y690. Leave the whole area above the sagging upper edge transparent.
+Constraints: only this one banner, including its small folded ends. No poles, rope extending beyond the original, confetti, champagne, character, island, background or watermark. Do not make a straight rectangular banner or reverse its curvature.

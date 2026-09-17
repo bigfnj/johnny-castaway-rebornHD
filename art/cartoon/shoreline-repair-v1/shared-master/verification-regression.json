@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "scope": "Export integrity and representable ground ownership only; reported crop/uncovered alpha is not waived.",
+  "exporter_sha256": "760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6",
+  "test_sha256": "d70400fc05eb4cedb6858d069433b1bf5037eaf58aea473a1e21358dd62238b4",
+  "recipe_sha256": "fd9006b0bd955234c9a5af718de55b69218bbbdeb7ce93d3063fdbcc6b5f4bff",
+  "export_report_sha256": "80f9c2c7eaaabce154f4a5b3bd89ee28145041763a8bc81af32629cb00994f33",
+  "actual_reconstruction": {
+    "covered_pixels_rgba_exact": 72392,
+    "unrepresentable_nonzero_pixels": [
+      {
+        "world_xy": [
+          1136,
+          603
+        ],
+        "rgba": [
+          63,
+          63,
+          0,
+          4
+        ]
+      },
+      {
+        "world_xy": [
+          1137,
+          604
+        ],
+        "rgba": [
+          63,
+          63,
+          0,
+          4
+        ]
+      },
+      {
+        "world_xy": [
+          1136,
+          605
+        ],
+        "rgba": [
+          127,
+          79,
+          20,
+          74
+        ]
+      },
+      {
+        "world_xy": [
+          1138,
+          605
+        ],
+        "rgba": [
+          85,
+          85,
+          0,
+          3
+        ]
+      }
+    ],
+    "full_master_exact": false,
+    "actual_resample_calls": 1,
+    "source_over_nonzero_rgba_and_all_alpha_exact": true,
+    "zero_alpha_hidden_rgb_normalized_by_source_over": 303
+  },
+  "partial_alpha_witness": {
+    "world_points": [
+      [
+        860,
+        650
+      ],
+      [
+        1040,
+        666
+      ]
+    ],
+    "input_alpha": 128,
+    "actual_reconstructed_alpha": [
+      128,
+      128
+    ],
+    "duplicate_crop_control_alpha": 192,
+    "opaque_and_transparent_controls_exact": true
+  },
+  "guard_removal": {
+    "mutant_sha256": "7952d61a8d3a557f172f3e493ee3df7306f85c378c70b09e7d54399882acdc4e",
+    "removed_statement": "    base.require(all(bool(n)==covered for n,covered in zip(count,expected)), 'master: ground ownership differs from original-canvas union')",
+    "actually_changed_006_png_sha256": "d34debc25641557d31efd1f4cfa83b178d89033bee42d291fe8613b94aed7a3a",
+    "wrong_uncovered_alpha": {
+      "nonzero_pixels": 255,
+      "alpha8_pixels": 247,
+      "maximum_alpha": 255,
+      "alpha_sum": 58537
+    }
+  },
+  "runs": [
+    {
+      "name": "selected_smoke_readback",
+      "result": "PASS",
+      "stdout": "WITNESS shared-ground 760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6\nDIAGNOSTIC {\"frames\": 10, \"outside_union\": {\"nonzero_pixels\": 4, \"alpha8_pixels\": 1, \"maximum_alpha\": 74, \"alpha_sum\": 85}, \"outside_crop\": {\"nonzero_pixels\": 200, \"alpha8_pixels\": 55, \"maximum_alpha\": 69, \"alpha_sum\": 2556}}\n",
+      "stderr": ""
+    },
+    {
+      "name": "fresh_selected_replay",
+      "result": "PASS",
+      "stdout": "WITNESS shared-ground 760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6\nDIAGNOSTIC {\"frames\": 10, \"outside_union\": {\"nonzero_pixels\": 4, \"alpha8_pixels\": 1, \"maximum_alpha\": 74, \"alpha_sum\": 85}, \"outside_crop\": {\"nonzero_pixels\": 200, \"alpha8_pixels\": 55, \"maximum_alpha\": 69, \"alpha_sum\": 2556}}\n",
+      "stderr": ""
+    },
+    {
+      "name": "missing_center_ground_row_rejected",
+      "result": "FIRED",
+      "stdout": "EXECUTED_MUTANT_SHA256=59897d4e54317899ea00c85204e80f40bf0f704a588f49575e09404c95cfb118\nWITNESS shared-ground 760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6\n",
+      "stderr": "FAIL master: ground ownership differs from original-canvas union\n"
+    },
+    {
+      "name": "missing_row_accepted_only_without_guard",
+      "result": "PASS",
+      "stdout": "EXECUTED_MUTANT_SHA256=7952d61a8d3a557f172f3e493ee3df7306f85c378c70b09e7d54399882acdc4e\nWITNESS shared-ground 760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6\nDIAGNOSTIC {\"frames\": 10, \"outside_union\": {\"nonzero_pixels\": 255, \"alpha8_pixels\": 247, \"maximum_alpha\": 255, \"alpha_sum\": 58537}, \"outside_crop\": {\"nonzero_pixels\": 200, \"alpha8_pixels\": 55, \"maximum_alpha\": 69, \"alpha_sum\": 2556}}\n",
+      "stderr": ""
+    },
+    {
+      "name": "duplicate_overlap_ground_rejected",
+      "result": "FIRED",
+      "stdout": "EXECUTED_MUTANT_SHA256=2f83bc1e1cc4a603183e0f691281a087e0fad5befe9f28055e718a7f557fc5a3\nWITNESS shared-ground 760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6\n",
+      "stderr": "FAIL master: duplicate ground ownership\n"
+    },
+    {
+      "name": "restored_selected_positive",
+      "result": "PASS",
+      "stdout": "WITNESS shared-ground 760beeb1919e9ec107245b8af1a8cccc208c30b0c3bca178d1495c594b4274f6\nDIAGNOSTIC {\"frames\": 10, \"outside_union\": {\"nonzero_pixels\": 4, \"alpha8_pixels\": 1, \"maximum_alpha\": 74, \"alpha_sum\": 85}, \"outside_crop\": {\"nonzero_pixels\": 200, \"alpha8_pixels\": 55, \"maximum_alpha\": 69, \"alpha_sum\": 2556}}\n",
+      "stderr": ""
+    }
+  ]
+}

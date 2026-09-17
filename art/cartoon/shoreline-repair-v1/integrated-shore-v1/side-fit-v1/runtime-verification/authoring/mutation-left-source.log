@@ -1,0 +1,17 @@
+WITNESS 4428ab7dc694cdd178ae247b200f19985e2ad0ec6eee2947346de973e64ea315
+test_side_footprint_rejects_wrong_slot_source_scale_and_family (test_art_tools.ArtToolsTests.test_side_footprint_rejects_wrong_slot_source_scale_and_family) ... 
+  test_side_footprint_rejects_wrong_slot_source_scale_and_family (test_art_tools.ArtToolsTests.test_side_footprint_rejects_wrong_slot_source_scale_and_family) (path='BMP/BACKGRND.BMP/003.png', logical=[73, 29], scale=2) ... FAIL
+
+======================================================================
+FAIL: test_side_footprint_rejects_wrong_slot_source_scale_and_family (test_art_tools.ArtToolsTests.test_side_footprint_rejects_wrong_slot_source_scale_and_family) (path='BMP/BACKGRND.BMP/003.png', logical=[73, 29], scale=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-side-wave-fit\build\side-fit-v1\authoring\mutant-left-source\tests\test_art_tools.py", line 237, in test_side_footprint_rejects_wrong_slot_source_scale_and_family
+    with self.assertRaisesRegex(ArtError, "invalid Cartoon footprint declaration"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ArtError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.009s
+
+FAILED (failures=1)

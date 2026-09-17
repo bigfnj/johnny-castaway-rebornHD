@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "subject": "HOLIDAY.BMP/000 slightly rotting variant",
+  "user_request": "Also, the pumpkin, can you make it \"slightly rotting\"",
+  "prompt_file": "prompts/000-v3.txt",
+  "submitted_prompt": "Use case: precise-object-edit\nAsset type: transparent Cartoon game sprite, single Halloween pumpkin.\nInput image 1 is the approved red-eyed, sharp-toothed pumpkin to EDIT.\nPrimary request: make this pumpkin SLIGHTLY ROTTING, as if it has sat on the island a few extra days. Add a few restrained, irregular muted olive-brown and dark ochre decay patches on the outer side lobes and near the lower rind, slight dry wrinkling, and a little browning at the stem base. Keep roughly85-90percent of the pumpkin recognizably bright orange and healthy-looking. Use simple readable cartoon patch shapes that will survive reduction to a small game sprite, not photorealistic mottling. The result should feel subtly weathered and starting to spoil, not badly decomposed.\nPreserve: the approved glowing crimson-red eye cores, inward-slanted triangular eye openings, triangular nose and sharply pointed orange pumpkin-flesh teeth in the angular evil grin. Keep the exact face design and glow intensity, orange cel-shading style, narrow ink contours, overall pumpkin shape and proportions, green bent stem, small gray contact shadow, angle, size, location and padding.\nKeep the original1254by1254 canvas and the sprite in precisely the same place. Real transparent RGBA background. Change only surface wear and restrained decay coloring. No new holes, large cracks, collapsed body, fuzzy mold, worms, insects, slime, drips, extra objects, text or background. Do not turn the whole pumpkin green or brown, and do not change the face or silhouette.",
+  "reference_mechanism": "referenced_image_paths",
+  "ordered_references": [
+    {
+      "path": "art/cartoon/seasonal-v1/raw/000-v2.png",
+      "role": "Approved red-eyed evil-grin pumpkin, preserve face and silhouette"
+    }
+  ],
+  "raw_file": "raw/000-v3.png",
+  "tool_mode": "built-in image_gen",
+  "exposed_seed": null,
+  "appearance_review": {
+    "status": "pending",
+    "scope": "Light surface decay only; keep existing approved face direction."
+  },
+  "production_status": "Draft, not promoted"
+}

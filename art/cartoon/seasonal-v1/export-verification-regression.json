@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "phase": "regression",
+  "status": "PASS",
+  "exporter_sha256": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+  "test_sha256": "4cb33fd43d76f93c2787e525f71cf3784f1b6221b2f8292db60f7153c2872703",
+  "recipe_sha256": "13a3363b72338c07bdb5d75d242a98a547bf688cf5daa676cc0a0ce0f3761d83",
+  "source_sha256": {
+    "raw/000-v1.png": "64034aee0543908e71a9a5227db12356a3c814188bf3892093243be0c43a0113",
+    "raw/001-v1.png": "74fb855b9f4ef13d6e63a41fd9633607f95921579e2d6fc22214a66127aa543c",
+    "raw/002-v1.png": "8de09804b89ea04e30b0356a595ec98e40ca555c289a0b7f86406a28c1ddc1eb",
+    "raw/003-v1.png": "8cada55c5d6156efcb5a2c29a49a56d8f2662ac31c3201662ec2f66456e7ab17"
+  },
+  "scope": "Technical export and reproducibility; no human scene acceptance.",
+  "independent_measurements": [
+    {
+      "frame": 0,
+      "canvas": [
+        80,
+        68
+      ],
+      "outside_max_alpha": 4,
+      "outside_alpha8_pixels": 0
+    },
+    {
+      "frame": 1,
+      "canvas": [
+        240,
+        94
+      ],
+      "outside_max_alpha": 4,
+      "outside_alpha8_pixels": 0
+    },
+    {
+      "frame": 2,
+      "canvas": [
+        112,
+        130
+      ],
+      "outside_max_alpha": 3,
+      "outside_alpha8_pixels": 0
+    },
+    {
+      "frame": 3,
+      "canvas": [
+        304,
+        94
+      ],
+      "outside_max_alpha": 4,
+      "outside_alpha8_pixels": 0
+    }
+  ],
+  "alpha0_hidden_rgb_control": "PASS: all hidden RGB replaced, identical full padded output",
+  "visible_rgb_control": "PASS: visible colors changed output while alpha stayed exact",
+  "guard_removal": {
+    "sha256": "e1dd9ea606ebc189d2068a2eca93627d8297ab34f97b3861e9f7cbdb8285c738",
+    "removed_statement": "        require(row['scale'] == config['scale'] and row['affine_forward'] == expected_affine(frame) and row['raw_anchor'] == config['raw_anchor'] and row['target_anchor'] == config['target_anchor'], label + ': fixed uniform registration differs')",
+    "witness": "EXECUTED_MUTANT_SHA256=e1dd9ea606ebc189d2068a2eca93627d8297ab34f97b3861e9f7cbdb8285c738",
+    "result": "Same changed scale is rejected by original, accepted and changes real PNG bytes only after guard removal."
+  },
+  "runs": [
+    {
+      "name": "current_candidate_reproduces",
+      "result": "PASS",
+      "returncode": 0,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\nPASS seasonal-export [{\"frame\": 0, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 1, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 2, \"outside_max\": 3, \"outside_alpha8\": 0}, {\"frame\": 3, \"outside_max\": 4, \"outside_alpha8\": 0}]\n",
+      "stderr": ""
+    },
+    {
+      "name": "fresh_full_export",
+      "result": "PASS",
+      "returncode": 0,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\nPASS seasonal-export [{\"frame\": 0, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 1, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 2, \"outside_max\": 3, \"outside_alpha8\": 0}, {\"frame\": 3, \"outside_max\": 4, \"outside_alpha8\": 0}]\n",
+      "stderr": ""
+    },
+    {
+      "name": "wrong_source_hash",
+      "result": "FIRED",
+      "returncode": 1,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\n",
+      "stderr": "FAIL 000: source hash differs\n"
+    },
+    {
+      "name": "wrong_slot_source",
+      "result": "FIRED",
+      "returncode": 1,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\n",
+      "stderr": "FAIL 000: slot/source identity differs\n"
+    },
+    {
+      "name": "missing_frame",
+      "result": "FIRED",
+      "returncode": 1,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\n",
+      "stderr": "FAIL recipe: frame coverage differs\n"
+    },
+    {
+      "name": "wrong_runtime_canvas",
+      "result": "FIRED",
+      "returncode": 1,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\n",
+      "stderr": "FAIL 000: runtime canvas differs\n"
+    },
+    {
+      "name": "wrong_filter",
+      "result": "FIRED",
+      "returncode": 1,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\n",
+      "stderr": "FAIL recipe: render contract differs\n"
+    },
+    {
+      "name": "false_acceptance",
+      "result": "FIRED",
+      "returncode": 1,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\n",
+      "stderr": "FAIL recipe: render contract differs\n"
+    },
+    {
+      "name": "stale_reference",
+      "result": "FIRED",
+      "returncode": 1,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\n",
+      "stderr": "FAIL recipe: reference identity differs\n"
+    },
+    {
+      "name": "changed_uniform_scale",
+      "result": "FIRED",
+      "returncode": 1,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\n",
+      "stderr": "FAIL 000: fixed uniform registration differs\n"
+    },
+    {
+      "name": "changed_output_png",
+      "result": "FIRED",
+      "returncode": 1,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\n",
+      "stderr": "FAIL BMP/HOLIDAY.BMP/000.png: reproduced bytes differ\n"
+    },
+    {
+      "name": "existing_output_refused",
+      "result": "FIRED",
+      "returncode": 1,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\n",
+      "stderr": "FAIL output: refusing to overwrite\n"
+    },
+    {
+      "name": "wrong_scale_accepted_only_after_guard_removal",
+      "result": "PASS",
+      "returncode": 0,
+      "stdout": "EXECUTED_MUTANT_SHA256=e1dd9ea606ebc189d2068a2eca93627d8297ab34f97b3861e9f7cbdb8285c738\nWITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\nPASS seasonal-export [{\"frame\": 0, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 1, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 2, \"outside_max\": 3, \"outside_alpha8\": 0}, {\"frame\": 3, \"outside_max\": 4, \"outside_alpha8\": 0}]\n",
+      "stderr": ""
+    },
+    {
+      "name": "restored_positive",
+      "result": "PASS",
+      "returncode": 0,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\nPASS seasonal-export [{\"frame\": 0, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 1, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 2, \"outside_max\": 3, \"outside_alpha8\": 0}, {\"frame\": 3, \"outside_max\": 4, \"outside_alpha8\": 0}]\n",
+      "stderr": ""
+    }
+  ],
+  "negative_controls_fired": 10
+}

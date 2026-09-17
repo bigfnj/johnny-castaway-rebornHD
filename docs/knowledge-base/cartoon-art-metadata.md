@@ -15,7 +15,7 @@ and checked against historical HD and Cartoon capture records. This is port timi
 
 ## Comparison findings
 
-Historical and current canvases match original dimensions at scale 2; current production bytes match their acceptance ledger,
+Historical pilot canvases match original dimensions at scale 2. Current production separately declares its named island footprints; current production bytes match their acceptance ledger,
 and all recorded affine landmarks map to their declared targets. These are technical checks, not artistic approval.
 The cap landmarks are manually selected registration features, not engine anchors or newly detected pixel features.
 
@@ -100,7 +100,7 @@ hashes use exact preserved bytes; the maintained pack ledger uses the text polic
 
 See [art guidance](../cartoon-art.md), [learnings](../art-style-learnings.md),
 [motion review](../../art/cartoon/motion-review.md) and
-[current production acceptance](../../art/cartoon/skin-tone-v1/production-acceptance.json).
+[current production acceptance](../../art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json).
 
 ## Current production and preserved pilot
 
@@ -109,16 +109,16 @@ Each current production mapping below resolves to its own accepted record; a rep
 
 | Original slot | Pilot status | Current acceptance | Current recipe |
 |---|---|---|---|
-| `BMP/BACKGRND.BMP/000` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json` |
-| `BMP/BACKGRND.BMP/003` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/side-waves/recipe.json` |
-| `BMP/BACKGRND.BMP/004` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/side-waves/recipe.json` |
-| `BMP/BACKGRND.BMP/005` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/side-waves/recipe.json` |
-| `BMP/BACKGRND.BMP/006` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json` |
-| `BMP/BACKGRND.BMP/007` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json` |
-| `BMP/BACKGRND.BMP/008` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json` |
-| `BMP/BACKGRND.BMP/009` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/side-waves/recipe.json` |
-| `BMP/BACKGRND.BMP/010` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/side-waves/recipe.json` |
-| `BMP/BACKGRND.BMP/011` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/side-waves/recipe.json` |
+| `BMP/BACKGRND.BMP/000` | replaced | `art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json` | `art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json` |
+| `BMP/BACKGRND.BMP/003` | replaced | `art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json` | `art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json` |
+| `BMP/BACKGRND.BMP/004` | replaced | `art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json` | `art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json` |
+| `BMP/BACKGRND.BMP/005` | replaced | `art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json` | `art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json` |
+| `BMP/BACKGRND.BMP/006` | replaced | `art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json` | `art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json` |
+| `BMP/BACKGRND.BMP/007` | replaced | `art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json` | `art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json` |
+| `BMP/BACKGRND.BMP/008` | replaced | `art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json` | `art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json` |
+| `BMP/BACKGRND.BMP/009` | replaced | `art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json` | `art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json` |
+| `BMP/BACKGRND.BMP/010` | replaced | `art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json` | `art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json` |
+| `BMP/BACKGRND.BMP/011` | replaced | `art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json` | `art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json` |
 | `BMP/BACKGRND.BMP/012` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json` |
 | `BMP/BACKGRND.BMP/013` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json` |
 | `BMP/BACKGRND.BMP/014` | retained | `art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json` | `art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json` |

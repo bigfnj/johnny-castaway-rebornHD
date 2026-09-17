@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-17",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in edit",
+  "status": "DRAFT_PENDING_EXPORT_AND_SCENE_REVIEW",
+  "prompt": "prompt-v1.txt",
+  "prompt_sha256": "f0181a3b8e476a1a3a6a969021ce4eb88995c4eff1a06699e797b9628cd166e4",
+  "ordered_references": [
+    {
+      "path": "../raw/003-v1.png",
+      "sha256": "8cada55c5d6156efcb5a2c29a49a56d8f2662ac31c3201662ec2f66456e7ab17",
+      "role": "Banner edit target; preserve cloth, text and registration"
+    },
+    {
+      "path": "reference-native.png",
+      "sha256": "73ca34f66995c5ed292d2926e35aa248ef064954a560e8303c01c22cbcfe81c3",
+      "original_path": "build/shoreline-repair-v1/offshore-full-v1/captures/day/banner/candidate/smoke/final.png",
+      "role": "Actual native scene for palm attachment context only"
+    }
+  ],
+  "output": "raw-v1.png",
+  "output_sha256": "20707545681b10804aaa77ab075acff9312e75ccc2ceea9c202472032ca06316",
+  "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-90cfc1ef-d18c-477a-bd18-b82347014711.png",
+  "user_feedback": "Only the New Year banner needs adjustment: both ends should attach to the palm rather than float. Pumpkin and Christmas tree placements are accepted.",
+  "user_feedback_image": "user-feedback.png",
+  "geometry_basis": {
+    "runtime_canvas": [304, 94],
+    "world_origin_hd": [722, 310],
+    "left_palm_witness_hd": [747, 315],
+    "right_palm_witness_hd": [1010, 315],
+    "existing_affine_forward": [0.23, 0, -27.1, 0, 0.23, -73.98]
+  },
+  "limits": "Prompted coordinates and preserved geometry require inspection after export. This generation is not production approval. Do not infer exact unchanged cloth pixels from an image editing prompt."
+}

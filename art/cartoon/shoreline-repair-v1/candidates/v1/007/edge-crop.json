@@ -1,0 +1,40 @@
+{
+  "frame": 7,
+  "method": "Disjoint edge regions over entire filtered guide, not only local pad; top/bottom include corners.",
+  "source_png_sha256": "a36225e9aa95f048e2c23263e5ec0c17e0fd24d551521eb487c11d95615ae2fc",
+  "recipe_sha256": "1eee6a32ee5a0d3a477f94619f68a41647136dff4f28f4bd0e6ac2d8b97e804d",
+  "measurement_script_sha256": "7353842de1ef8bd3434a000f13bda8d07747ba577e12cd3ab2a0ed5d460d1eaf",
+  "runtime_window_in_full_padded": [
+    64,
+    135,
+    384,
+    185
+  ],
+  "edges": {
+    "top": {
+      "nonzero_pixels": 642,
+      "alpha8_pixels": 320,
+      "maximum_alpha": 91,
+      "alpha_sum": 26871
+    },
+    "bottom": {
+      "nonzero_pixels": 196,
+      "alpha8_pixels": 57,
+      "maximum_alpha": 159,
+      "alpha_sum": 5988
+    },
+    "left": {
+      "nonzero_pixels": 11,
+      "alpha8_pixels": 0,
+      "maximum_alpha": 4,
+      "alpha_sum": 41
+    },
+    "right": {
+      "nonzero_pixels": 18,
+      "alpha8_pixels": 0,
+      "maximum_alpha": 4,
+      "alpha_sum": 70
+    }
+  },
+  "context": "Top is the straight sand join overlapping into the island; bottom is foam extent. Geometric edge counts are not material segmentation or approval."
+}

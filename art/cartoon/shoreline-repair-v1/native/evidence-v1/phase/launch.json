@@ -1,0 +1,33 @@
+{
+  "source_commit": "9ee4bcaf5152c9b67e5dc0b0a92dea11cf0025c6",
+  "container_name": "johnny-shore-6fb1e21241db",
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "inputs": {
+    "baseline": {
+      "path": "assets/scrantic_data.zip",
+      "sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be"
+    }
+  },
+  "output": "build/shoreline-repair-v1/phase-probe-v1",
+  "capture_arguments": [
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/art/cartoon/shoreline-repair-v1/native/capture.py",
+    "--output",
+    "/out/captures",
+    "--baseline",
+    "/source/assets/scrantic_data.zip",
+    "--baseline-sha256",
+    "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "--phase-probe"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 27.686678171157837,
+  "no_surviving_task_container": true,
+  "cleanup_exit_code": 0,
+  "launch_helper_sha256": "c84415ce0591860262db67fd0023a77b9064cb085616460e03e297eda0a8b0c4"
+}

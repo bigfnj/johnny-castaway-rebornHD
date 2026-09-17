@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "status": "DIAGNOSTIC_EXPORTED",
+  "exporter_sha256": "e6ecea7ef2484974e094f8ec135ebc8b536138dc1e3a3d9b5f1338b3e5813d14",
+  "recipe_sha256": "f39f9df9656a6a14753f86e817d9528426cb86914aa9d0432146153bf9a4b04a",
+  "changed_frames": [
+    6,
+    7,
+    8
+  ],
+  "retained_frames": [
+    0,
+    3,
+    4,
+    5,
+    9,
+    10,
+    11
+  ],
+  "scope": "Incoming-wash center study for the three-way comparison only; unchanged masked side waves remain from the offshore/base approach.",
+  "assignment": "007-raw to006,006-raw to007,008-raw to008. Median central strong-white crest advances y680,678,675; local splash details and water amounts are not monotonic.",
+  "policy": "One fixed uniform resample per phase; no ground mask, alpha threshold, pose fit or phase translation. Full-source canvas preserves faint filtered alpha.",
+  "footprint": {
+    "id": "cartoon-island-center-foam-v1",
+    "canvas": [
+      384,
+      256
+    ],
+    "offset_hd": [
+      -32,
+      -90
+    ]
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "role": "sole static ground owner",
+      "canvas": [
+        640,
+        180
+      ],
+      "logical_origin_hd": [
+        576,
+        558
+      ],
+      "asset_offset_hd": [
+        -36,
+        -10
+      ],
+      "world_box": [
+        540,
+        548,
+        1180,
+        728
+      ],
+      "footprint": {
+        "id": "cartoon-island-ground-v1",
+        "canvas": [
+          640,
+          180
+        ],
+        "offset_hd": [
+          -36,
+          -10
+        ]
+      },
+      "sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+      "byte_identical_to_parent": true
+    },
+    {
+      "frame": 3,
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        58
+      ],
+      "logical_origin_hd": [
+        540,
+        612
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+      "source_member_sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+      "sha256": "d28e9b61aa90734b649122f96b462de1c846c610637cb45c2051b20db95b34b9",
+      "byte_identical_to_parent": true
+    },
+    {
+      "frame": 4,
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        58
+      ],
+      "logical_origin_hd": [
+        540,
+        612
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+      "source_member_sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+      "sha256": "262fc8bdce3dd7671220480ca382870b0fa5729c92a5630bbe5b7f6674134084",
+      "byte_identical_to_parent": true
+    },
+    {
+      "frame": 5,
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        58
+      ],
+      "logical_origin_hd": [
+        540,
+        612
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+      "source_member_sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+      "sha256": "b9094eacd1ab1e6548b30505752901519642a7f9d73565267c25f7af5da97503",
+      "byte_identical_to_parent": true
+    },
+    {
+      "frame": 6,
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "canvas": [
+        384,
+        256
+      ],
+      "logical_origin_hd": [
+        728,
+        638
+      ],
+      "asset_offset_hd": [
+        -32,
+        -90
+      ],
+      "world_box": [
+        696,
+        548,
+        1080,
+        804
+      ],
+      "footprint": {
+        "id": "cartoon-island-center-foam-v1",
+        "canvas": [
+          384,
+          256
+        ],
+        "offset_hd": [
+          -32,
+          -90
+        ]
+      },
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/wash-over-sand-v1/007-raw.png",
+      "source_sha256": "445d15b6625168e5f154f4fa69e157d4e8e19e1811c8219b225d4989fe5680bd",
+      "role": "unmasked incoming wash, including water intentionally covering land",
+      "sha256": "f89e31bf5cb691494359bf8ae1ef42943b718041c1673317768c74261d3067a5",
+      "uniform_resample_count": 1,
+      "ground_mask_applied": false,
+      "coverage": {
+        "nonzero_pixels": 23687,
+        "alpha8_pixels": 17769,
+        "alpha_sum": 2135986,
+        "maximum_alpha": 255,
+        "nonzero_bounds": [
+          7,
+          86,
+          380,
+          223
+        ],
+        "alpha8_bounds": [
+          14,
+          92,
+          373,
+          177
+        ]
+      },
+      "raw_alpha_bounds": [
+        0,
+        21,
+        1524,
+        998
+      ],
+      "raw_alpha8_bounds": [
+        55,
+        366,
+        1493,
+        714
+      ],
+      "cropped_filtered_alpha": {
+        "nonzero_pixels": 0,
+        "alpha8_pixels": 0,
+        "alpha_sum": 0,
+        "maximum_alpha": 0,
+        "nonzero_bounds": null,
+        "alpha8_bounds": null
+      }
+    },
+    {
+      "frame": 7,
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "canvas": [
+        384,
+        256
+      ],
+      "logical_origin_hd": [
+        728,
+        638
+      ],
+      "asset_offset_hd": [
+        -32,
+        -90
+      ],
+      "world_box": [
+        696,
+        548,
+        1080,
+        804
+      ],
+      "footprint": {
+        "id": "cartoon-island-center-foam-v1",
+        "canvas": [
+          384,
+          256
+        ],
+        "offset_hd": [
+          -32,
+          -90
+        ]
+      },
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/wash-over-sand-v1/006-raw.png",
+      "source_sha256": "d804502abace0fe36419e72152c095a80e7c082434ed9a598ae3da6f0224d34b",
+      "role": "unmasked incoming wash, including water intentionally covering land",
+      "sha256": "8e3363a2c7e68e4dbc43777dbeed8a9e74eff3514b3a6e607994255105f358be",
+      "uniform_resample_count": 1,
+      "ground_mask_applied": false,
+      "coverage": {
+        "nonzero_pixels": 7546,
+        "alpha8_pixels": 6419,
+        "alpha_sum": 959694,
+        "maximum_alpha": 255,
+        "nonzero_bounds": [
+          23,
+          93,
+          368,
+          188
+        ],
+        "alpha8_bounds": [
+          25,
+          95,
+          365,
+          149
+        ]
+      },
+      "raw_alpha_bounds": [
+        25,
+        173,
+        1475,
+        797
+      ],
+      "raw_alpha8_bounds": [
+        101,
+        383,
+        1463,
+        597
+      ],
+      "cropped_filtered_alpha": {
+        "nonzero_pixels": 0,
+        "alpha8_pixels": 0,
+        "alpha_sum": 0,
+        "maximum_alpha": 0,
+        "nonzero_bounds": null,
+        "alpha8_bounds": null
+      }
+    },
+    {
+      "frame": 8,
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "canvas": [
+        384,
+        256
+      ],
+      "logical_origin_hd": [
+        728,
+        638
+      ],
+      "asset_offset_hd": [
+        -32,
+        -90
+      ],
+      "world_box": [
+        696,
+        548,
+        1080,
+        804
+      ],
+      "footprint": {
+        "id": "cartoon-island-center-foam-v1",
+        "canvas": [
+          384,
+          256
+        ],
+        "offset_hd": [
+          -32,
+          -90
+        ]
+      },
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/wash-over-sand-v1/008-raw.png",
+      "source_sha256": "8e08675c0a797090b2a6b0f11829e8920a320b8946b74c77331a06a04b3d2b10",
+      "role": "unmasked incoming wash, including water intentionally covering land",
+      "sha256": "ad3c9b9a8da7bf749d450b35c09941a87f2db203879b585e7df63263a6df5563",
+      "uniform_resample_count": 1,
+      "ground_mask_applied": false,
+      "coverage": {
+        "nonzero_pixels": 21005,
+        "alpha8_pixels": 15270,
+        "alpha_sum": 1843026,
+        "maximum_alpha": 255,
+        "nonzero_bounds": [
+          6,
+          81,
+          372,
+          223
+        ],
+        "alpha8_bounds": [
+          21,
+          88,
+          368,
+          172
+        ]
+      },
+      "raw_alpha_bounds": [
+        23,
+        21,
+        1514,
+        998
+      ],
+      "raw_alpha8_bounds": [
+        85,
+        351,
+        1472,
+        694
+      ],
+      "cropped_filtered_alpha": {
+        "nonzero_pixels": 0,
+        "alpha8_pixels": 0,
+        "alpha_sum": 0,
+        "maximum_alpha": 0,
+        "nonzero_bounds": null,
+        "alpha8_bounds": null
+      }
+    },
+    {
+      "frame": 9,
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        64
+      ],
+      "logical_origin_hd": [
+        1036,
+        606
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+      "source_member_sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+      "sha256": "eb81468edf9ebf3e1622b815ce69f6781e5cb80a2c573bd9e0a31ea8b7a7652d",
+      "byte_identical_to_parent": true
+    },
+    {
+      "frame": 10,
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        64
+      ],
+      "logical_origin_hd": [
+        1036,
+        606
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+      "source_member_sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+      "sha256": "fee6e13f4ebbc382da9954a4ebfa1f355dc797f9339c97c2f8555b6d4d11935e",
+      "byte_identical_to_parent": true
+    },
+    {
+      "frame": 11,
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        64
+      ],
+      "logical_origin_hd": [
+        1036,
+        606
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+      "source_member_sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+      "sha256": "f31e865b2f14a5952b05e4f0f47f9bebdfca34d0424571054d6c995ba17d70c8",
+      "byte_identical_to_parent": true
+    }
+  ],
+  "outputs_sha256": {
+    "BMP/BACKGRND.BMP/000.png": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+    "BMP/BACKGRND.BMP/003.png": "d28e9b61aa90734b649122f96b462de1c846c610637cb45c2051b20db95b34b9",
+    "BMP/BACKGRND.BMP/004.png": "262fc8bdce3dd7671220480ca382870b0fa5729c92a5630bbe5b7f6674134084",
+    "BMP/BACKGRND.BMP/005.png": "b9094eacd1ab1e6548b30505752901519642a7f9d73565267c25f7af5da97503",
+    "BMP/BACKGRND.BMP/006.png": "f89e31bf5cb691494359bf8ae1ef42943b718041c1673317768c74261d3067a5",
+    "audit/006-padded.png": "ca5275da428abcc095ff24a27484a7541d1eb522b2b5eab6c8d6465628e92ffe",
+    "BMP/BACKGRND.BMP/007.png": "8e3363a2c7e68e4dbc43777dbeed8a9e74eff3514b3a6e607994255105f358be",
+    "audit/007-padded.png": "02e2ccd6acdda6ee74234943b278fe5cc208aa632d3ac053ffbf523d3816d921",
+    "BMP/BACKGRND.BMP/008.png": "ad3c9b9a8da7bf749d450b35c09941a87f2db203879b585e7df63263a6df5563",
+    "audit/008-padded.png": "d0239f7b33db75cb39d49798b8204687d3312eaf09d9299a1ad611f658834fef",
+    "BMP/BACKGRND.BMP/009.png": "eb81468edf9ebf3e1622b815ce69f6781e5cb80a2c573bd9e0a31ea8b7a7652d",
+    "BMP/BACKGRND.BMP/010.png": "fee6e13f4ebbc382da9954a4ebfa1f355dc797f9339c97c2f8555b6d4d11935e",
+    "BMP/BACKGRND.BMP/011.png": "f31e865b2f14a5952b05e4f0f47f9bebdfca34d0424571054d6c995ba17d70c8"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "phase": "regression",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "pinned-source-canvas",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "recipe-runtime-identities",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "complete-source-fit-and-single-frame-scope",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "exact-output-report-replay",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "old-source-exact-transform-parity-four-pngs",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "independent-visible-dark-fringe-comparison",
+      "status": "PASS",
+      "detail": {
+        "old007": {
+          "sha256": "c97a2e468a854296fadb787d4b9ff30833bd8e46d3b1c4d17dc8cb965ddbd0d4",
+          "alpha8_pixels": 173496,
+          "alpha8_dark_max_rgb_lt100": 123597,
+          "alpha8_bounds": [
+            84,
+            385,
+            1454,
+            653
+          ]
+        },
+        "new007": {
+          "sha256": "bccf1e15c476c78ed7ffb6f842eaa001c763eff4209c63b3d47162097c5fa8f2",
+          "alpha8_pixels": 32425,
+          "alpha8_dark_max_rgb_lt100": 0,
+          "alpha8_bounds": [
+            108,
+            415,
+            1438,
+            614
+          ]
+        },
+        "neighbor006": {
+          "sha256": "be78ddda6468fdd3d00c20589e700a50fbb6150157591eb1070eeb718e87c5bd",
+          "alpha8_pixels": 31653,
+          "alpha8_dark_max_rgb_lt100": 0,
+          "alpha8_bounds": [
+            123,
+            423,
+            1417,
+            614
+          ]
+        },
+        "neighbor008": {
+          "sha256": "ae9e3795f81be28436ebff6a7c90b19c8998377d0754e4e8ed990ed46bfca2a8",
+          "alpha8_pixels": 31928,
+          "alpha8_dark_max_rgb_lt100": 0,
+          "alpha8_bounds": [
+            118,
+            409,
+            1437,
+            624
+          ]
+        }
+      }
+    },
+    {
+      "name": "all-runtime-pixels-mask-rgb-and-nondegenerate-alpha",
+      "status": "PASS",
+      "detail": {
+        "changed_alpha_pixels": 718
+      }
+    },
+    {
+      "name": "all-nine-sibling-pngs-unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "eight-reachable-damaged-input-controls",
+      "status": "PASS",
+      "detail": [
+        {
+          "name": "changed-source-rgba",
+          "failure": "007: selected raw identity differs"
+        },
+        {
+          "name": "changed-recipe-frame",
+          "failure": "recipe: source/registration contract differs"
+        },
+        {
+          "name": "changed-recipe-source_sha256",
+          "failure": "recipe: source/registration contract differs"
+        },
+        {
+          "name": "changed-recipe-source_to_world_affine",
+          "failure": "recipe: source/registration contract differs"
+        },
+        {
+          "name": "changed-recipe-footprint",
+          "failure": "recipe: source/registration contract differs"
+        },
+        {
+          "name": "damaged-runtime-rgb",
+          "failure": "BMP/BACKGRND.BMP/007.png: output identity differs"
+        },
+        {
+          "name": "damaged-runtime-alpha",
+          "failure": "BMP/BACKGRND.BMP/007.png: output identity differs"
+        },
+        {
+          "name": "filtered-alpha-outside-complete-source-crop",
+          "failure": "007: footprint crops filtered foam alpha"
+        }
+      ]
+    },
+    {
+      "name": "fresh-process-source-guard-removal-fired",
+      "status": "PASS",
+      "detail": {
+        "mutant_sha256": "6ba0a24b33c4346395362f6d1a3bbf315d2f8abfaafcae3c2bd5d7b4f47a779d",
+        "output": "WITNESS 6ba0a24b33c4346395362f6d1a3bbf315d2f8abfaafcae3c2bd5d7b4f47a779d\nTraceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nAssertionError: selected raw identity guard removed: damaged source survived\n"
+      }
+    },
+    {
+      "name": "restored-source-and-output-positive",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "exporter_sha256": "400614176a1a06f36d2e6d96813826ca10511c0f856cff3a6d382a0c57facca7",
+  "harness_sha256": "f07a97dda9d1d2a195009251f6c6d18cad40b5ad3aa8a8ab39267a1f5ef1bda8",
+  "recipe_sha256": "4a33d7a9f1b1b248245268673489b2945f208a69029bb40b28ab6d99576a116d",
+  "report_sha256": "acfe1ba2c28530fed9eddbd9a4d92a08054e1d94f97ae4bfe6d3f9475b2229a9",
+  "limits": "Static source/export validation only. Image generation can change geometry; this does not assert alpha identity with the earlier drawing or native scene approval."
+}

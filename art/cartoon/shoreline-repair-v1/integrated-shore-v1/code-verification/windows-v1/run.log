@@ -1,0 +1,22 @@
+WITNESS Windows PowerShell 5.1.26100.7019
+STEP configure
+-- Building for: Visual Studio 18 2026
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- The C compiler identification is MSVC 19.51.36252.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Building for Windows
+CMake Error at CMakeLists.txt:326 (include):
+  include could not find requested file:
+
+    cmake/RuntimeData.cmake
+
+
+CMake Error at CMakeLists.txt:331 (jc_add_runtime_data):
+  Unknown CMake command "jc_add_runtime_data".
+
+
+-- Configuring incomplete, errors occurred!

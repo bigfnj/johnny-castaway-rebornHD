@@ -1,0 +1,8 @@
+{
+  "status": "HARNESS_CORRECTED",
+  "smoke": "smoke-initial.json",
+  "regression_exit": 1,
+  "failure": "positive-before: manifest content differs beyond redirected source paths",
+  "cause": "The first scratch fixture rewrote unchanged JSON reports with different serialization, changing their exact hashes. The packer correctly preserved those different source hashes in the reproduced manifest.",
+  "correction": "Copy unchanged native and repeat report bytes exactly; serialize only deliberately corrupted fixtures. A second setup attempt found the fresh repeat directory was not created before copyfile; that fixture setup was corrected too (smoke-initial2.json retains its smoke). No packer or captured image changed. Fresh smoke and regression were then run."
+}

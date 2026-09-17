@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "builder_sha256": "029d83ab8bdd36d1c4485130a288780ac9b0ae9e79adfcc0a7543e654798cd04",
+  "checker_sha256": "f848aaf72cf0a693c678d7af7668a9b21535f78504fd94178f7ca0edc0def778",
+  "results": [
+    {
+      "name": "wrong_case",
+      "status": "FIRED",
+      "failure": "scene review: day_banner/baseline report case"
+    },
+    {
+      "name": "changed_native_png",
+      "status": "FIRED",
+      "failure": "scene review: day_banner/baseline/display-001.png PNG identity"
+    },
+    {
+      "name": "wrong_loop_interval",
+      "status": "FIRED",
+      "failure": "banner review: observed 1440 ms loop"
+    },
+    {
+      "name": "existing_output",
+      "status": "FIRED",
+      "failure": "banner review: fresh output required"
+    }
+  ],
+  "restored_fixture_bytes": "PASS",
+  "positive": "Actual unmodified native inputs built successfully; matching smoke and regression are separate records."
+}

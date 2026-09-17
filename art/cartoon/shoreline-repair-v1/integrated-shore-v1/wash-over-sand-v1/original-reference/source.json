@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "scope": "Exact supplied-original center phase guidance, including changing sand and water. The palette is diagnostic, not calibrated original binary color.",
+  "helper_sha256": "b5711005759d7d1a2c76a0e7f7a51d5fc36321e0165932b0407edc65863ac100",
+  "archive": "art/cartoon/character-inventory-v1/reference-originals.zip",
+  "archive_sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912",
+  "frames": [
+    {
+      "frame": 6,
+      "member": "native/BMP/BACKGRND.BMP/006.png",
+      "member_sha256": "2aba9614280ffca6695098009adf5abc070329d49737088c69cc0a6c2a60b5df",
+      "native_canvas": [
+        160,
+        25
+      ],
+      "native_origin": [
+        364,
+        319
+      ],
+      "hd_origin": [
+        728,
+        638
+      ],
+      "guide_canvas": [
+        1536,
+        1024
+      ],
+      "nearest_scale": 8,
+      "guide_offset": [
+        128,
+        360
+      ],
+      "guide_to_world_hd_affine": [
+        0.25,
+        0,
+        696,
+        0,
+        0.25,
+        548
+      ]
+    },
+    {
+      "frame": 7,
+      "member": "native/BMP/BACKGRND.BMP/007.png",
+      "member_sha256": "7158278ec5bd320cec6b5b89c9f7193d6e442f9091f86eb9f4a6cb11455f7952",
+      "native_canvas": [
+        160,
+        25
+      ],
+      "native_origin": [
+        364,
+        319
+      ],
+      "hd_origin": [
+        728,
+        638
+      ],
+      "guide_canvas": [
+        1536,
+        1024
+      ],
+      "nearest_scale": 8,
+      "guide_offset": [
+        128,
+        360
+      ],
+      "guide_to_world_hd_affine": [
+        0.25,
+        0,
+        696,
+        0,
+        0.25,
+        548
+      ]
+    },
+    {
+      "frame": 8,
+      "member": "native/BMP/BACKGRND.BMP/008.png",
+      "member_sha256": "17738a8452aa3f7b758ffe4b59bb82c967d4f84a369a04f45a50fe771a6fbc73",
+      "native_canvas": [
+        160,
+        25
+      ],
+      "native_origin": [
+        364,
+        319
+      ],
+      "hd_origin": [
+        728,
+        638
+      ],
+      "guide_canvas": [
+        1536,
+        1024
+      ],
+      "nearest_scale": 8,
+      "guide_offset": [
+        128,
+        360
+      ],
+      "guide_to_world_hd_affine": [
+        0.25,
+        0,
+        696,
+        0,
+        0.25,
+        548
+      ]
+    }
+  ],
+  "files_sha256": {
+    "006-original-native.png": "2aba9614280ffca6695098009adf5abc070329d49737088c69cc0a6c2a60b5df",
+    "006-original-nearest8.png": "f4fddcaa1cfde48e056505e3cf8d862db68b3544a48f4d9ef3ebcfed53f33be8",
+    "006-original-guide.png": "8b1bb88f1ab2feab80ba5a40333cbb5b75e3ce59b6d8d78e965b58e8ec6925ab",
+    "007-original-native.png": "7158278ec5bd320cec6b5b89c9f7193d6e442f9091f86eb9f4a6cb11455f7952",
+    "007-original-nearest8.png": "00d8445bbcd55e2ec7e4d124c80ffd95fe9dc4e9c4a5ac0c8b6c2715bc86d408",
+    "007-original-guide.png": "05f769ca2ff6085401613b3725a7064d46a44ec8b7910a4329bbbe3e7eaebfd9",
+    "008-original-native.png": "17738a8452aa3f7b758ffe4b59bb82c967d4f84a369a04f45a50fe771a6fbc73",
+    "008-original-nearest8.png": "446691ea4d08feeee27f3c9c5189ddaf5ad9721ee875e38ecb0b8261037f1034",
+    "008-original-guide.png": "6c603558288af6b5598701db65ee0524d62334602faa34c9f0285fb70a31558f",
+    "original-phase-strip.png": "c810aba3e85721b071b45723f145cb16d11435a6cb472d5b052f0addc08e4af8"
+  },
+  "checks": [
+    "Archive and three original member identities",
+    "Three native PNGs copied byte-exact",
+    "Every enlarged RGBA pixel independently checked against nearest8 source coordinate",
+    "Registered guide crop preserves all nearest8 RGBA bytes"
+  ]
+}

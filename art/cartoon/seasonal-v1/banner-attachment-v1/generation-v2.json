@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-17",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in edit",
+  "status": "DRAFT_PENDING_EXPORT_AND_SCENE_REVIEW",
+  "reason": "V1's upper cloth tips exceeded the unchanged runtime canvas and would crop meaningful pixels. Request a shorter natural fold at each tip without shrinking the banner.",
+  "prompt": "prompt-v2.txt",
+  "prompt_sha256": "a76b816f6eb1cdd267852f8b84a48dbe79d66024c153aec4e39917bddedec291",
+  "ordered_references": [
+    {
+      "path": "raw-v1.png",
+      "sha256": "20707545681b10804aaa77ab075acff9312e75ccc2ceea9c202472032ca06316",
+      "role": "Tied banner edit target; shorten only the pointed upper cloth tips"
+    },
+    {
+      "path": "../raw/003-v1.png",
+      "sha256": "8cada55c5d6156efcb5a2c29a49a56d8f2662ac31c3201662ec2f66456e7ab17",
+      "role": "Original banner reference for cloth shape, size and lettering"
+    }
+  ],
+  "output": "raw-v2.png",
+  "output_sha256": "d55a08ac62755c3ad3c13c72ca6bfed8fcd0fc6b000c9f12d798f60948744d84",
+  "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-ab54a15e-0551-43ec-baf0-77d379b66b10.png",
+  "limits": "Prompted bounding coordinates require measured export verification. No production or human scene approval is claimed."
+}

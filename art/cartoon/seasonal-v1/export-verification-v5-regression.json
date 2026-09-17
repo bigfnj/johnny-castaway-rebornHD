@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "regression",
+  "exporter_sha256": "9ff87e42cb7433107ddb93d058f4e3725bf384764e729588bd17c5a29f073cb7",
+  "test_sha256": "168cc58db21f54d3464a01a4a5aea9b79aa70fe5e0e4969a9443d551f6c9ae3f",
+  "recipe_sha256": "5e60af35fd517663b4c0f3c4c26da97d61f81ccad807fadc5bb858c6ed3c848f",
+  "export_report_sha256": "92df904960d878c4e742a413904a438e7ebc74e78a8a35acbc151bf8738dc617",
+  "scope": "Original V1 registration and retained001-003; approved decay source000. No native/island/tide compatibility claim.",
+  "guard_removal": {
+    "sha256": "ca442a044dcc203ac058f425e97b90a2c76a10ab55eff2f188dbb69373f44abf",
+    "removed_statement": "    base.require(recipe == selected_recipe(), 'recipe-v5: selected inputs or V1 registration differ')",
+    "actual_wrong_png_written": true,
+    "wrong_png_sha256": "c4c224fc5d8c42bc93d6464c12a6ab73c3bba63d1656c8d0da2f9faed9f15694"
+  },
+  "unchanged_v1_frames_verified": [
+    1,
+    2,
+    3
+  ],
+  "unchanged_frozen_files": 14,
+  "all_four_original_transforms_equal": true,
+  "outside_runtime_alpha8_pixels": 0,
+  "outside_runtime_max_alpha": 4,
+  "outside_runtime_nonzero_pixels": 63,
+  "runs": [
+    {
+      "name": "v5_smoke_readback",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-v5 9ff87e42cb7433107ddb93d058f4e3725bf384764e729588bd17c5a29f073cb7\nPASS seasonal-v5 1f2ac522476d98afcade5f128c12c0c80f6993b871b611498971f23a44eabf79\n",
+      "stderr": ""
+    },
+    {
+      "name": "fresh_v5_replay",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-v5 9ff87e42cb7433107ddb93d058f4e3725bf384764e729588bd17c5a29f073cb7\nPASS seasonal-v5 1f2ac522476d98afcade5f128c12c0c80f6993b871b611498971f23a44eabf79\n",
+      "stderr": ""
+    },
+    {
+      "name": "000_reduced_placement_rejected",
+      "result": "FIRED",
+      "stdout": "WITNESS seasonal-v5 9ff87e42cb7433107ddb93d058f4e3725bf384764e729588bd17c5a29f073cb7\n",
+      "stderr": "FAIL recipe-v5: selected inputs or V1 registration differ\n"
+    },
+    {
+      "name": "000_stale_source_rejected",
+      "result": "FIRED",
+      "stdout": "WITNESS seasonal-v5 9ff87e42cb7433107ddb93d058f4e3725bf384764e729588bd17c5a29f073cb7\n",
+      "stderr": "FAIL recipe-v5: selected inputs or V1 registration differ\n"
+    },
+    {
+      "name": "000_reduced_placement_accepted_only_without_guard",
+      "result": "PASS",
+      "stdout": "EXECUTED_MUTANT_SHA256=ca442a044dcc203ac058f425e97b90a2c76a10ab55eff2f188dbb69373f44abf\nWITNESS seasonal-v5 9ff87e42cb7433107ddb93d058f4e3725bf384764e729588bd17c5a29f073cb7\nPASS seasonal-v5 c4c224fc5d8c42bc93d6464c12a6ab73c3bba63d1656c8d0da2f9faed9f15694\n",
+      "stderr": ""
+    },
+    {
+      "name": "restored_v5_positive",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-v5 9ff87e42cb7433107ddb93d058f4e3725bf384764e729588bd17c5a29f073cb7\nPASS seasonal-v5 1f2ac522476d98afcade5f128c12c0c80f6993b871b611498971f23a44eabf79\n",
+      "stderr": ""
+    }
+  ]
+}

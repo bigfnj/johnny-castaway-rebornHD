@@ -1,0 +1,48 @@
+{
+  "source_commit": "d558430378d1425b2a55ffd32dac47cd0a6b0cb0",
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "container_name": "johnny-integrated-shore-f19232d38a07",
+  "inputs": {
+    "baseline": {
+      "path": "build/shoreline-repair-v1/selected-v1/baseline.zip",
+      "sha256": "3d619201ec02bd7566d99c9fbab146301a286cc1056f1407b732921b9e3f8898"
+    },
+    "candidate": {
+      "path": "build/shoreline-repair-v1/integrated-selected-v1/candidate.zip",
+      "sha256": "a38e989527923b3980ae800a2a1b92873c9c8ae6d0f25f0934448bf1891ae8a8"
+    }
+  },
+  "phase": "initial",
+  "capture_arguments": [
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/art/cartoon/shoreline-repair-v1/integrated-shore-v1/native/capture.py",
+    "--output",
+    "/out/captures",
+    "--phase",
+    "initial",
+    "--baseline",
+    "/source/build/shoreline-repair-v1/selected-v1/baseline.zip",
+    "--baseline-sha256",
+    "3d619201ec02bd7566d99c9fbab146301a286cc1056f1407b732921b9e3f8898",
+    "--candidate",
+    "/source/build/shoreline-repair-v1/integrated-selected-v1/candidate.zip",
+    "--candidate-sha256",
+    "a38e989527923b3980ae800a2a1b92873c9c8ae6d0f25f0934448bf1891ae8a8"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 42.123106956481934,
+  "no_surviving_task_container": true,
+  "cleanup_exit_code": 0,
+  "launcher_sha256": "4a7205a48865cbc0760c0e9876bf458d4b4be5a1d50e0da9f1833e1cfde6781c",
+  "helpers_sha256": {
+    "capture.py": "df3556567190655927818ff6128317e45e79a300bca4123eef637f60b2fc24fd",
+    "driver.c": "a99215c28ff90961fec3af7d7f99f85b1941b46b5c49b08030f3e630db370e21",
+    "prepare.py": "a68874728e8fe2303e901853f20d735376155cf98ea01bed169a0c827baa18b6",
+    "run.py": "4a7205a48865cbc0760c0e9876bf458d4b4be5a1d50e0da9f1833e1cfde6781c"
+  }
+}

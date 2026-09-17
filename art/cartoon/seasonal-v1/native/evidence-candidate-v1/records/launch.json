@@ -1,0 +1,29 @@
+{
+  "source_commit": "397edf8e4b34191ade4be13bc93a215f73b0c631",
+  "container_name": "johnny-seasonal-2fb5672fa27a",
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "archive": "build/seasonal-v1/cartoon-seasonal-draft-v1.zip",
+  "archive_sha256": "df03295ef3603fd576cf419149a2d2ee9d7909581c1862fdfd768d065b936304",
+  "output": "build/seasonal-v1/native-candidate-v1",
+  "capture_arguments": [
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/art/cartoon/seasonal-v1/native/capture.py",
+    "--archive",
+    "/source/build/seasonal-v1/cartoon-seasonal-draft-v1.zip",
+    "--archive-sha256",
+    "df03295ef3603fd576cf419149a2d2ee9d7909581c1862fdfd768d065b936304",
+    "--output",
+    "/out/captures",
+    "--diagnostics"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 56.56290054321289,
+  "no_surviving_task_container": true,
+  "cleanup_exit_code": 0,
+  "launch_helper_sha256": "1e37d6a2e38fd060d489a808d09a5b6e7e05c105371c9d60f8ed9a52ab22bc1f"
+}

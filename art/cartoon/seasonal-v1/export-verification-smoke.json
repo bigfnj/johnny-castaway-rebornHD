@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "phase": "smoke",
+  "status": "PASS",
+  "exporter_sha256": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+  "test_sha256": "4cb33fd43d76f93c2787e525f71cf3784f1b6221b2f8292db60f7153c2872703",
+  "recipe_sha256": "13a3363b72338c07bdb5d75d242a98a547bf688cf5daa676cc0a0ce0f3761d83",
+  "source_sha256": {
+    "raw/000-v1.png": "64034aee0543908e71a9a5227db12356a3c814188bf3892093243be0c43a0113",
+    "raw/001-v1.png": "74fb855b9f4ef13d6e63a41fd9633607f95921579e2d6fc22214a66127aa543c",
+    "raw/002-v1.png": "8de09804b89ea04e30b0356a595ec98e40ca555c289a0b7f86406a28c1ddc1eb",
+    "raw/003-v1.png": "8cada55c5d6156efcb5a2c29a49a56d8f2662ac31c3201662ec2f66456e7ab17"
+  },
+  "scope": "Technical export and reproducibility; no human scene acceptance.",
+  "runs": [
+    {
+      "name": "current_candidate_reproduces",
+      "result": "PASS",
+      "returncode": 0,
+      "stdout": "WITNESS seasonal-export 7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d\nPASS seasonal-export [{\"frame\": 0, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 1, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 2, \"outside_max\": 3, \"outside_alpha8\": 0}, {\"frame\": 3, \"outside_max\": 4, \"outside_alpha8\": 0}]\n",
+      "stderr": ""
+    }
+  ],
+  "negative_controls_fired": 0
+}

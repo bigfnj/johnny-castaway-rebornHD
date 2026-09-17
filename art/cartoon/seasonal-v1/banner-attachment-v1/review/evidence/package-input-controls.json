@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "name": "stale_runtime_hash",
+      "status": "FIRED",
+      "failure": "banner preparation: runtime 003.png identity"
+    },
+    {
+      "name": "wrong_runtime_canvas",
+      "status": "FIRED",
+      "failure": "banner preparation: 003.png original runtime canvas304x94"
+    },
+    {
+      "name": "existing_output",
+      "status": "FIRED",
+      "failure": "banner preparation: existing output"
+    },
+    {
+      "name": "changed_wave_payload",
+      "status": "FIRED",
+      "failure": "banner native: only HOLIDAY003 payload changed"
+    }
+  ],
+  "restored_original_package_positive": "PASS",
+  "helper_sha256": {
+    "prepare.py": "7981cbc0823de32fe6cb5a0abb36f79646774fe1d42a1f94aa84de406d4361b0",
+    "capture.py": "848f9faa6e7d74482f7662791614aff74a84be8d7688a359eb816ba53ac63844",
+    "check_preparation.py": "921d93c584f8fd3a0b95e32e8b82b615171c261e437f61dacfc76921679e1a71"
+  }
+}

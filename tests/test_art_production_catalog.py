@@ -33,6 +33,8 @@ AGGREGATE = "art/cartoon/expanded/acceptance.json"
 SECOND = "BMP/ONE.BMP/002.png"
 THIRD = "BMP/ONE.BMP/001.png"
 REVIEW2 = "art/cartoon/another/acceptance.json"
+FOOTPRINT = {"id": "cartoon-island-ground-v1", "canvas": [640, 180], "offset_hd": [-36, -10]}
+GROUND = "BMP/BACKGRND.BMP/000.png"
 
 
 def record_digest(data, path):
@@ -114,6 +116,31 @@ def fixture():
             "canvases": {path: [1, 1] for path in paths}, "members": members}
 
 
+def footprint_fixture(frame=0, logical=(280, 52), footprint=FOOTPRINT):
+    data = fixture()
+    path = f"BMP/BACKGRND.BMP/{frame:03}.png"
+    hd = png([b"\x01\x02\x03\xff" * (logical[0]*2)] * (logical[1]*2))
+    current = png([b"\x04\x05\x06\x80" * footprint["canvas"][0]] * footprint["canvas"][1])
+    manifest = json.loads(data["members"]["data/hd/manifest.json"])
+    manifest["BMP"]["BACKGRND.BMP"] = {"numImages": frame+1, "images": [
+        {"index": i, "width": logical[0], "height": logical[1], "file": f"BMP/BACKGRND.BMP/{i:03}.png"}
+        for i in range(frame+1)]}
+    data["members"]["data/hd/manifest.json"] = json.dumps(manifest).encode()
+    for row in manifest["BMP"]["BACKGRND.BMP"]["images"]:
+        data["members"]["data/hd/" + row["file"]] = hd
+        data["canvases"][row["file"]] = list(logical)
+        data["original"]["assets"][row["file"]] = {"canvas": list(logical)}
+    data["members"][m.PREFIX + path] = current
+    data["pack"]["required_assets"].append(path)
+    data["pack"]["assets"].append({"path": path, "source_sha256": m.digest(hd),
+        "sha256": m.digest(current), "recipe": RECIPE, "review": REVIEW,
+        "alpha": "transparent", "footprint": copy.deepcopy(footprint)})
+    data["records"][REVIEW]["accepted_assets"].append({"path": path, "sha256": m.digest(current), "recipe": RECIPE})
+    data["records"][RECIPE]["frames"].append({"path": path, "candidate_png_sha256": m.digest(current),
+        "runtime_canvas": list(footprint["canvas"]), "footprint": copy.deepcopy(footprint)})
+    return data
+
+
 def report(data):
     buffer = io.BytesIO()
     with zipfile.ZipFile(buffer, "w") as archive:
@@ -174,6 +201,53 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(approvals[ASSET], REVIEW)
         self.assertEqual(approvals[SECOND], AGGREGATE)
         self.assertIsNone(approvals[THIRD])
+
+    def test_smoke_registered_footprint(self):
+        data = footprint_fixture()
+        result = report(data)
+        row = next(row for row in result["assets"] if row["path"] == GROUND)
+        self.assertEqual(row["bundled_logical_canvas"], [280, 52])
+        self.assertEqual(row["hd_proxy"]["canvas"], [560, 104])
+        self.assertEqual(row["runtime_canvas"], [640, 180])
+        self.assertEqual(row["footprint"], FOOTPRINT)
+        self.assertEqual(data["original"]["assets"][GROUND]["canvas"], [280, 52])
+
+    def test_footprint_recipe_binding(self):
+        data = footprint_fixture()
+        data["records"][RECIPE]["frames"][-1].pop("footprint")
+        self.refused(lambda: report(data), GROUND, "recipe footprint differs from ledger")
+
+    def test_smoke_side_footprints(self):
+        for frame in (3, 4, 5, 9, 10, 11):
+            logical = [72, 29] if frame < 6 else [72, 32]
+            footprint = {"id": "cartoon-island-left-foam-v1" if frame < 6 else "cartoon-island-right-foam-v1",
+                         "canvas": [150, 66] if frame < 6 else [154, 74],
+                         "offset_hd": [-6, 0] if frame < 6 else [0, 0]}
+            data = footprint_fixture(frame, logical, footprint)
+            path = f"BMP/BACKGRND.BMP/{frame:03}.png"
+            row = next(r for r in report(data)["assets"] if r["path"] == path)
+            self.assertEqual(row["footprint"], footprint)
+            self.assertEqual(row["runtime_canvas"], footprint["canvas"])
+            self.assertEqual(row["bundled_logical_canvas"], logical)
+            self.assertEqual(row["hd_proxy"]["canvas"], [2*n for n in logical])
+
+    def test_side_footprint_recipe_binding(self):
+        for frame, logical, footprint in (
+                (3, [72, 29], {"id": "cartoon-island-left-foam-v1", "canvas": [150, 66], "offset_hd": [-6, 0]}),
+                (9, [72, 32], {"id": "cartoon-island-right-foam-v1", "canvas": [154, 74], "offset_hd": [0, 0]})):
+            data = footprint_fixture(frame, logical, footprint)
+            data["records"][RECIPE]["frames"][-1].pop("footprint")
+            self.refused(lambda: report(data), f"BMP/BACKGRND.BMP/{frame:03}.png", "recipe footprint differs from ledger")
+
+    def test_footprint_contract_rejects_other_offset(self):
+        data = footprint_fixture()
+        data["pack"]["assets"][-1]["footprint"]["offset_hd"][0] += 1
+        self.refused(lambda: report(data), GROUND, "invalid Cartoon footprint declaration")
+
+    def test_footprint_recipe_canvas(self):
+        data = footprint_fixture()
+        data["records"][RECIPE]["frames"][-1]["runtime_canvas"] = [560, 104]
+        self.refused(lambda: report(data), GROUND, "recipe canvas differs from runtime")
 
     def inherited_bad(self, edit, label, reason):
         data = inherited_fixture()
@@ -562,7 +636,8 @@ MUTATIONS = [
     ("test_missing_acceptance", "isinstance(acceptance_path, str)"),
     ("test_missing_recipe", 'require(isinstance(path, str), item["path"], "missing recipe reference")', 'require(True, item["path"], "missing recipe reference")'),
     ("test_missing_recipe_asset", "row is not None"),
-    ("test_recipe_canvas", 'row.get("runtime_canvas") == [n * runtime["scale"] for n in logical]'),
+    ("test_recipe_canvas", 'row.get("runtime_canvas") == footprint["canvas"]'),
+    ("test_footprint_recipe_binding", 'row.get("footprint") == item.get("footprint")'),
     ("test_bundled_canvas", "logical == canvases[path]"),
     ("test_original_canvas", 'native["canvas"] == logical'),
     ("test_review_pointer", 'item.get("review") == approval_paths[path] and approval.get("recipe") == recipe_path'),

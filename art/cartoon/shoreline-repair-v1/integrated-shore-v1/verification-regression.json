@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "exporter_sha256": "7b9071272c7cee320fcc7c2a38167510313c8475cd4e3215bdb70752779c7fcf",
+  "test_sha256": "163ade3bd84d6d4711d7793afd5350f7fcfdd03977de6ab4c821ae940686249c",
+  "recipe_sha256": "0c0de3bf6fc70415b268094ed8a1747b03c21cda095089477da3dc1e3c93d57e",
+  "readback_files": 13,
+  "ground_ownership": "000 exact crop; zero filtered alpha outside; alpha1 fringe retained",
+  "resample_count": 1,
+  "observed_resample_calls": 1,
+  "all_foam_pixels": [
+    {
+      "frame": 3,
+      "checked_pixels": 8352,
+      "transparent_foam_over_ground_witnesses": 4495
+    },
+    {
+      "frame": 4,
+      "checked_pixels": 8352,
+      "transparent_foam_over_ground_witnesses": 4400
+    },
+    {
+      "frame": 5,
+      "checked_pixels": 8352,
+      "transparent_foam_over_ground_witnesses": 3895
+    },
+    {
+      "frame": 6,
+      "checked_pixels": 16000,
+      "transparent_foam_over_ground_witnesses": 10201
+    },
+    {
+      "frame": 7,
+      "checked_pixels": 16000,
+      "transparent_foam_over_ground_witnesses": 10529
+    },
+    {
+      "frame": 8,
+      "checked_pixels": 16000,
+      "transparent_foam_over_ground_witnesses": 10174
+    },
+    {
+      "frame": 9,
+      "checked_pixels": 9216,
+      "transparent_foam_over_ground_witnesses": 4924
+    },
+    {
+      "frame": 10,
+      "checked_pixels": 9216,
+      "transparent_foam_over_ground_witnesses": 4919
+    },
+    {
+      "frame": 11,
+      "checked_pixels": 9216,
+      "transparent_foam_over_ground_witnesses": 4933
+    }
+  ],
+  "partial_alpha_control": {
+    "one_owner": 128,
+    "duplicate_draw": 192
+  },
+  "fresh_replay": {
+    "exit_code": 0,
+    "stdout": "WITNESS integrated-shore 7b9071272c7cee320fcc7c2a38167510313c8475cd4e3215bdb70752779c7fcf\nPASS {\"ground_canvas\": [640, 180], \"ground_offset\": [-36, -10], \"ground_owners\": [0], \"cropped_filtered_pixels\": 0}\n",
+    "stderr": ""
+  },
+  "ownership_mutation": {
+    "status": "FIRED",
+    "original_refusal": {
+      "exit_code": 1,
+      "stdout": "EXECUTED EXPORT SHA 7b9071272c7cee320fcc7c2a38167510313c8475cd4e3215bdb70752779c7fcf\nINJECTED {\"frame\": 3, \"local\": [32, 0], \"world\": [572, 612], \"source_foam_alpha\": 0, \"introduced_ground_alpha\": 2}\n",
+      "stderr": "REFUSED 003: foam-only output introduced alpha outside source foam\n"
+    },
+    "removed_guard": "base.require(all(a[3] or not b[3] for a,b in zip(original,actual)),label+': foam-only output introduced alpha outside source foam')",
+    "replacement": "base.require(True,label+': foam-only output introduced alpha outside source foam')",
+    "mutant_sha256": "65bc74d35560ab62d83c51f743ee5053eb9c6d56e3458a102b91873b47afd9f3",
+    "mutant_acceptance": {
+      "exit_code": 0,
+      "stdout": "EXECUTED EXPORT SHA 65bc74d35560ab62d83c51f743ee5053eb9c6d56e3458a102b91873b47afd9f3\nINJECTED {\"frame\": 3, \"local\": [32, 0], \"world\": [572, 612], \"source_foam_alpha\": 0, \"introduced_ground_alpha\": 2}\nACCEPTED CORRUPT003 SHA 75045ef744ae700ebb1aaeca938bd229c5a99d6a21fa565b31f5af63441f34a1\n",
+      "stderr": ""
+    }
+  },
+  "restored_positive": "PASS"
+}

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "builder_sha256": "2716c15e28b709531094eaa7e04def98f7d1cca3fc636e2da20c9625368580ad",
+  "checker_sha256": "ec0edfbe4121a98ec9439cd561ea4c8c47b92e380c06ead10747280bed5784d6",
+  "results": [
+    {
+      "name": "wrong-selected-archive",
+      "status": "FIRED",
+      "failure": "selected comparison archives"
+    },
+    {
+      "name": "wrong-opening007",
+      "status": "FIRED",
+      "failure": "high_clover: initial007 phase"
+    },
+    {
+      "name": "wrong-loop-closure",
+      "status": "FIRED",
+      "failure": "high_clover: observed1440 phase closure"
+    },
+    {
+      "name": "wrong-clip-case",
+      "status": "FIRED",
+      "failure": "scene review: high_clover/candidate report case"
+    },
+    {
+      "name": "wrong-native-png",
+      "status": "FIRED",
+      "failure": "scene review: high_clover/candidate/display-001.png PNG identity"
+    },
+    {
+      "name": "existing-output",
+      "status": "FIRED",
+      "failure": "fresh review output required"
+    }
+  ],
+  "restored_fixture_bytes": "PASS",
+  "restored_real_input_validation": "PASS",
+  "positive": "The real native inputs build separately and pass browser smoke before regression."
+}

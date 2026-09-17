@@ -13,7 +13,7 @@ import sys
 import zipfile
 from pathlib import Path
 
-from art_common import ArtError, digest, inspect_png, read_json, safe_member, source_catalog
+from art_common import ArtError, cartoon_footprint, digest, inspect_png, read_json, safe_member, source_catalog
 from inventory_scenes import resource_catalog, metadata, u16
 from art_production_catalog import approval_origins, keyed as approval_rows
 
@@ -221,9 +221,12 @@ def production_history(pack, pilot, record, record_hash):
         require(row is not None, path, "asset is absent from referenced recipe")
         require(item.get("sha256") == approval.get("sha256") == row.get("candidate_png_sha256"),
                 path, "accepted PNG hashes differ")
+        require(row.get("footprint") == item.get("footprint"), path, "active recipe footprint differs from ledger")
         result[path] = {"status": "replaced" if path in changed else "retained",
             "acceptance": origins[path], "recipe": recipe_path, "sha256": item["sha256"],
             "member": "data/styles/cartoon/" + path, "canvas": row.get("runtime_canvas")}
+        if item.get("footprint") is not None:
+            result[path]["footprint"] = item["footprint"]
     return result
 
 
@@ -400,8 +403,10 @@ def build(root):
             require(row["runtime_canvas"] == canvas, asset, "recipe canvas differs from original")
             require(item["source_sha256"] == original["source_sha256"], asset, "HD reference hash differs")
             production_item = item
+            current_footprint = cartoon_footprint(asset, logical, pack["runtime"]["scale"], item.get("footprint"))
+            current_canvas = current_footprint["canvas"]
             if production is not None:
-                require(production[asset]["canvas"] == canvas, asset, "active recipe canvas differs from original")
+                require(production[asset]["canvas"] == current_canvas, asset, "active recipe canvas differs from original or declared footprint")
                 # Keep the historical recipe/raw/approval comparison intact.
                 # Current production has its own separately checked mapping.
                 item = dict(item, **approved[asset], review=ACCEPTANCE)
@@ -411,7 +416,7 @@ def build(root):
             member = "data/styles/cartoon/" + asset
             data = archive.read(member)
             require(digest(data) == production_item["sha256"], member, "production PNG hash differs")
-            inspect_png(data, member, expected=tuple(canvas), decode=False)
+            inspect_png(data, member, expected=tuple(current_canvas), decode=False)
             reg = registration(row, recipe, asset)
             deviations = {}
             for key in ("white_foam_extent_delta_hd", "shoreline_extent_delta_hd_vs_original"):
@@ -446,6 +451,8 @@ def build(root):
                         if original["resource"] == "JOHNWALK.BMP" and note["frame"] == index]}})
             if production is not None:
                 assets[-1]["production"] = production[asset]
+                if "id" in current_footprint:
+                    production[asset]["canvas_matches_original_at_scale"] = False
                 assets[-1]["variant"]["production_status"] = production[asset]["status"]
                 if production[asset]["status"] == "replaced":
                     assets[-1]["variant"]["member"] = None
@@ -510,7 +517,9 @@ def markdown(report):
         "pixel-identical to the original installation. The E-to-A sequence is read from the original-derived walk table",
         "and checked against historical HD and Cartoon capture records. This is port timing, not measured original EXE timing.", "",
         "## Comparison findings", "",
-        "Historical and current canvases match original dimensions at scale 2; current production bytes match their acceptance ledger,",
+        ("Historical pilot canvases match original dimensions at scale 2. Current production separately declares its named island footprints; current production bytes match their acceptance ledger,"
+         if any("footprint" in item.get("production", {}) for item in report["assets"]) else
+         "Historical and current canvases match original dimensions at scale 2; current production bytes match their acceptance ledger,"),
         "and all recorded affine landmarks map to their declared targets. These are technical checks, not artistic approval.",
         "The cap landmarks are manually selected registration features, not engine anchors or newly detected pixel features.", "",
         "The earlier directional-cycle-v1 review recorded rear-foot clearance near 11.6 HD pixels in 026 and 11 in 027,",

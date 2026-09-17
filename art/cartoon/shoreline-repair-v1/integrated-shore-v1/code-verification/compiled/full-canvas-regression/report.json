@@ -1,0 +1,306 @@
+{
+  "phase": "regression",
+  "status": "PASS",
+  "build": {
+    "command": [
+      "cc",
+      "-std=gnu11",
+      "-O1",
+      "-g",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-I/src/platform",
+      "-I/src/src/engine",
+      "/src/tests/test_art_footprint.c",
+      "/src/src/engine/graphics.c",
+      "-Wl,--gc-sections",
+      "-o",
+      "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/footprint-probe"
+    ],
+    "sha256": "242234b6be2a726c359b2cf344ba4fc6a7c18ca558ea3bcc2e09ca5ef24b9d52",
+    "rebuilt_timestamp_advanced": true
+  },
+  "cases": [
+    {
+      "case": "legacy-center",
+      "exit_code": 0,
+      "output": "WITNESS art footprint legacy-center BEGIN\nWITNESS art footprint legacy-center PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "hd-fallback",
+      "exit_code": 0,
+      "output": "WITNESS art footprint hd-fallback BEGIN\nWITNESS art footprint hd-fallback PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "bad-hd-fallback",
+      "exit_code": 0,
+      "output": "WITNESS art footprint bad-hd-fallback BEGIN\nWITNESS art footprint bad-hd-fallback PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "original-fallback",
+      "exit_code": 0,
+      "output": "WITNESS art footprint original-fallback BEGIN\nWITNESS art footprint original-fallback PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "hd-style",
+      "exit_code": 0,
+      "output": "WITNESS art footprint hd-style BEGIN\nWITNESS art footprint hd-style PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-normal",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-normal BEGIN\nWITNESS art footprint draw-normal PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-flip",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-flip BEGIN\nWITNESS art footprint draw-flip PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-atop",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-atop BEGIN\nWITNESS art footprint draw-atop PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-legacy",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-legacy BEGIN\nWITNESS art footprint draw-legacy PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-offset",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-offset BEGIN\nWITNESS art footprint draw-offset PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-ground-height",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-ground-height BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/000.png is 640x181; expected 560x104\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-ground-width",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-ground-width BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/000.png is 641x180; expected 560x104\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-source",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-source BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/000.png is 640x180; expected 562x104\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-frame",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-frame BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/001.png is 640x180; expected 560x104\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-resource",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-resource BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/OTHER.BMP/000.png is 640x180; expected 560x104\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-center-frame",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-center-frame BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/009.png is 384x256; expected 320x50\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-center-height",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-center-height BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/007.png is 384x257; expected 320x50\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wave-restore",
+      "exit_code": 0,
+      "output": "WITNESS art footprint wave-restore BEGIN\nWITNESS art footprint wave-restore PASS\n",
+      "status": "PASS"
+    }
+  ],
+  "mutations": [
+    {
+      "case": "wrong-frame",
+      "exit_code": 2,
+      "output": "WITNESS art footprint wrong-frame BEGIN\nFAIL wrong-frame: registered offset\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "63dae1e1917c36ae605b13978aea3a3b720395bd97160b6756c32015995febe7",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-frame/source/platform",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-frame/source/src/engine",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-frame/source/tests/test_art_footprint.c",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-frame/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-frame/footprint-probe"
+        ],
+        "sha256": "466dd8f4c5464303d2f7815d0d6e1bec9fc109a0a5512c9c356486efdcd5ca77",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "bad-hd-fallback",
+      "exit_code": 2,
+      "output": "WITNESS art footprint bad-hd-fallback BEGIN\nFAIL bad-hd-fallback: HD/original fallback ignores extended size\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "3a4211db6d941d26cd4b33e1021e8d9e6631a8fed6683f0645292809f537c01d",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-bad-hd-fallback/source/platform",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-bad-hd-fallback/source/src/engine",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-bad-hd-fallback/source/tests/test_art_footprint.c",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-bad-hd-fallback/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-bad-hd-fallback/footprint-probe"
+        ],
+        "sha256": "31f4df444396d8f85dbe47139a44a0f006db65dbb28a30eb821ee3cda1cce5e1",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "draw-normal",
+      "exit_code": 2,
+      "output": "WITNESS art footprint draw-normal BEGIN\nFAIL draw-normal: first pixel preserves logical anchor\n",
+      "status": "FIRED",
+      "source": "src/engine/graphics.c",
+      "executed_source_sha256": "2367d2783c8a48b420420c0ef1d938e9f2bbc999310ee1ca45bf4b9bf55e17f6",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-normal/source/platform",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-normal/source/src/engine",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-normal/source/tests/test_art_footprint.c",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-normal/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-normal/footprint-probe"
+        ],
+        "sha256": "03a7a9913aad2f59833d8b038308df582a18f10433759a22f0e53b8142322ff0",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "draw-flip",
+      "exit_code": 2,
+      "output": "WITNESS art footprint draw-flip BEGIN\nFAIL draw-flip: first pixel preserves logical anchor\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "8b2481a7083ccaeed9da47e52b021993d2eae045d46d74bf188d81f50ee58f0b",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-flip/source/platform",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-flip/source/src/engine",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-flip/source/tests/test_art_footprint.c",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-flip/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-flip/footprint-probe"
+        ],
+        "sha256": "19bf90a54c84da736f08c7497679b97af2f7aa3b8b81ffdc01005d16997ae891",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "wrong-center-frame",
+      "exit_code": 2,
+      "output": "WITNESS art footprint wrong-center-frame BEGIN\nFAIL wrong-center-frame: registered offset\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "56c76304b67f9805ef987135fe6e6ae05cec59c8a843a91e4e17b018255c785e",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-center-frame/source/platform",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-center-frame/source/src/engine",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-center-frame/source/tests/test_art_footprint.c",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-center-frame/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-center-frame/footprint-probe"
+        ],
+        "sha256": "30b777e4b3ceadbcdd1d1400fd6857faa895b84a6038339bd685d65ecb578994",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "wave-restore",
+      "exit_code": 2,
+      "output": "WITNESS art footprint wave-restore BEGIN\nFAIL wave-restore: dirty bounds include registered wave offsets\n",
+      "status": "FIRED",
+      "source": "src/engine/island.c",
+      "executed_source_sha256": "6d432664391a10b3aafb03232c5b2a60b69e50aed923a72b554f685a955b0941",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wave-restore/source/platform",
+          "-I/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wave-restore/source/src/engine",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wave-restore/source/tests/test_art_footprint.c",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wave-restore/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wave-restore/footprint-probe"
+        ],
+        "sha256": "e9c5f977cbffeb02bf4193884d450eb8ac975cb3dcefbff1f4a4922d4d43f08e",
+        "rebuilt_timestamp_advanced": true
+      }
+    }
+  ],
+  "source_sha256": {
+    "src/engine/art_style.c": "1c66ab03db3e1cf5ab82f6d4c2fdcaf70829501a30de855e36ffe001d074fa42",
+    "src/engine/art_style.h": "8447d3c38cdabf1e959db7d87f8a8f3ecc013ae082e1545310322bf1e8e5aa6f",
+    "src/engine/graphics.c": "7bbab71ae7f9d43ea89f7532ac9a696af7ff16c5c8add3b9ac60fd9ad800db65",
+    "src/engine/island.c": "9b4f4a99e359a9a1af6d91ec9e3b553017afde981c34a423005155b91fd920d6",
+    "tests/test_art_footprint.c": "353606d3fb1172efcc81edd0996d2238fdd8a4f1bd62bac7e36bb6e7bc80329b",
+    "tests/test_art_footprint.py": "1afbdb170d14d9394b1126f319f5bbc0d62256f5c46284c5a3a3707cc2b7ceb3"
+  },
+  "limits": "Headless loader/draw unit probe uses a surface decoder fixture. No native island or PNG decoder parity claim."
+}

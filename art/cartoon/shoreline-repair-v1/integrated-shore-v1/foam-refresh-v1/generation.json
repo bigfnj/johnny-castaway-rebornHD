@@ -1,0 +1,117 @@
+{
+  "method": "built-in image_gen",
+  "accepted": false,
+  "scope": "Three proposed center-foam phases for enlarged island, pending native motion review. Approved sand source unchanged.",
+  "geometry": {
+    "role": "Geometry reference only; cropped view of actual approved ground export, no repaint",
+    "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/candidates/v1/BMP/BACKGRND.BMP/000.png",
+    "source_sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+    "guide_canvas": [
+      1536,
+      1024
+    ],
+    "native_integer_enlargement": 4,
+    "world_to_guide": [
+      4,
+      0,
+      -2784,
+      0,
+      4,
+      -2192
+    ],
+    "foam_runtime_origin": [
+      728,
+      638
+    ],
+    "foam_runtime_canvas": [
+      320,
+      80
+    ],
+    "foam_guide_box": [
+      128,
+      360,
+      1408,
+      680
+    ],
+    "guide_sha256": "949ace55b9964ece2e39898701de070146bc2ecff341dac3c02950e6324f32ad"
+  },
+  "attempts": [
+    {
+      "frame": 6,
+      "prompt_file": "006-prompt.txt",
+      "prompt": "Use case: precise-object-edit / compositing.\nAsset: one isolated transparent animation sprite, center shoreline foam phase006.\nImage1 is a precisely registered geometry guide showing the APPROVED sandy shoreline. Image2 is the old phase006 foam for paint style and rhythm only; its curve no longer fits the new beach.\nCreate ONLY new thin white-cream foam strokes with little pale-cyan accents immediately BELOW the front edge of the sand in Image1. Follow its actual lower contour: a descending curve after the left inlet, a broad low middle, a small rise at the right inlet, then curving gently upward toward the right. We will lay this foam under/beside the unchanged sand. Do NOT include or redraw any sand.\n\nExact canvas1536x1024. Exact foam range x128..1407, y420..675. Foam begins near(132,440), sweeps down past(380,566) to(670,590), lifts gently past(990,540), then extends toward(1400,515). This guide is a close-up of the center coast, NOT the entire island ring. Leave everything outside that limited center shoreline segment transparent, especially x<128 and x>=1408. Maintain the fixed geometry; no zoom, centering, resizing, or moving the curve elsewhere.\nAt phase006 use two or three very slim, interrupted, flowing arcs and a few tiny adjacent flecks, with a 12-35pixel gap from the dark sand edge and no overlaps on the sand. Individual strokes about3-7px thick on this big canvas, delicately tapered, a little livelier at the left and center. Match Image2's hand-drawn cartoon white/cyan style but use Image1's contour and the positions above. Enough visible strokes throughout the width for a readable gentle lapping wave at quarter-size.\nGenuine RGBA transparent background. No sand, dark outlines, shore illustration, solid blue water, cloud, glow, blur, shadow, people, objects, border or text. One single phase, no sprite sheet. The output is the isolated foam layer only.",
+      "references": [
+        {
+          "path": "center-ground-context.png",
+          "role": "registered approved ground geometry only",
+          "sha256": "949ace55b9964ece2e39898701de070146bc2ecff341dac3c02950e6324f32ad"
+        },
+        {
+          "path": "ref-006-raw.png",
+          "role": "historical foam style and phase rhythm",
+          "sha256": "4216199c9e69f0f61cdaa27f7106d7c80b07056b895779592836730772910033"
+        }
+      ],
+      "output": {
+        "path": "006-raw.png",
+        "sha256": "be78ddda6468fdd3d00c20589e700a50fbb6150157591eb1070eeb718e87c5bd",
+        "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-ac235849-fd79-443b-b9e5-f8de66565439.png"
+      }
+    },
+    {
+      "frame": 7,
+      "prompt_file": "007-prompt.txt",
+      "prompt": "Use case: precise-object-edit.\nAsset: one isolated transparent cartoon center-shore foam animation sprite 007.\nImage1 is the precise approved ground geometry guide. Image2 is the newly drawn phase006 foam and defines this family's shared shape and scale. Image3 is the historical phase007 for the idea of changing the arc breaks only.\nPhase007, the wave gathering closer to the shore: move the main arc about6-10 pixels UP toward the beach compared with Image2, while changing its breaks and flecks. Use one long delicate main ripple with a shorter separated lower ripple. The center and right sections gather a little more continuously, and the left has fewer small flecks.\nFollow the broad front coast in Image1, with foam only just outside/below it. Keep the same canvas1536x1024 and the same approximate arc endpoints as Image2, but pull any endpoint/fleck inward to stay wholly within x136..1398. All visible foam must remain within y425..675. Shared broad arc, left beginning near(140,440), middle near(650,595), right finishing near(1390,515). Keep meaningful differences in the breaks and small ripples rather than moving the entire sprite. Lines only3-7px thick, smoothly tapered, in white-cream with little adjacent pale-cyan accents; preserve the delicate hand-drawn style. No sand or dark shore outline. No zoom, recentering, rotation, new overall bounding-box fit, solid sea fill or added objects.\nReturn ONLY the single foam layer on genuine RGBA transparency, no glow or matte, no sand, background, shadow, text, labels, or spritesheet. Everything outside the narrow foam curves is transparent.",
+      "references": [
+        {
+          "path": "center-ground-context.png",
+          "role": "registered approved ground geometry only",
+          "sha256": "949ace55b9964ece2e39898701de070146bc2ecff341dac3c02950e6324f32ad"
+        },
+        {
+          "path": "006-raw.png",
+          "role": "new family style and common arc reference",
+          "sha256": "be78ddda6468fdd3d00c20589e700a50fbb6150157591eb1070eeb718e87c5bd"
+        },
+        {
+          "path": "ref-007-raw.png",
+          "role": "historical foam style and phase rhythm",
+          "sha256": "8c284930a1b4414246cb54ec27eadb9a141b14aceab21830fb28ca545a4a2de8"
+        }
+      ],
+      "output": {
+        "path": "007-raw.png",
+        "sha256": "9a8c318085a7e16744e029bfe6f857ff96f4660f90e24b5bb466bfaee72e9067",
+        "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-584f7c14-e762-49d4-8e37-e4061c447ed1.png"
+      }
+    },
+    {
+      "frame": 8,
+      "prompt_file": "008-prompt.txt",
+      "prompt": "Use case: precise-object-edit.\nAsset: one isolated transparent cartoon center-shore foam animation sprite 008.\nImage1 is the precise approved ground geometry guide. Image2 is the newly drawn phase006 foam and defines this family's shared shape and scale. Image3 is the historical phase008 for the idea of changing the arc breaks only.\nPhase008, the wave easing away and breaking up: move the main arc about8-12 pixels DOWN away from the beach compared with Image2. Use slightly shorter separated white/cyan strokes with clear transparent gaps, while keeping a visible ripple throughout the broad middle. Do not make the entire frame disappear. It must remain a gentle lapping-water phase, ready to loop back to phase006.\nFollow the broad front coast in Image1, with foam only just outside/below it. Keep the same canvas1536x1024 and the same approximate arc endpoints as Image2, but pull any endpoint/fleck inward to stay wholly within x136..1398. All visible foam must remain within y425..675. Shared broad arc, left beginning near(140,440), middle near(650,595), right finishing near(1390,515). Keep meaningful differences in the breaks and small ripples rather than moving the entire sprite. Lines only3-7px thick, smoothly tapered, in white-cream with little adjacent pale-cyan accents; preserve the delicate hand-drawn style. No sand or dark shore outline. No zoom, recentering, rotation, new overall bounding-box fit, solid sea fill or added objects.\nReturn ONLY the single foam layer on genuine RGBA transparency, no glow or matte, no sand, background, shadow, text, labels, or spritesheet. Everything outside the narrow foam curves is transparent.",
+      "references": [
+        {
+          "path": "center-ground-context.png",
+          "role": "registered approved ground geometry only",
+          "sha256": "949ace55b9964ece2e39898701de070146bc2ecff341dac3c02950e6324f32ad"
+        },
+        {
+          "path": "006-raw.png",
+          "role": "new family style and common arc reference",
+          "sha256": "be78ddda6468fdd3d00c20589e700a50fbb6150157591eb1070eeb718e87c5bd"
+        },
+        {
+          "path": "ref-008-raw.png",
+          "role": "historical foam style and phase rhythm",
+          "sha256": "d8fe387761fd1435ac5cef9024e13ecb72684b1c0039ee53318c3ed28138b313"
+        }
+      ],
+      "output": {
+        "path": "008-raw.png",
+        "sha256": "ae9e3795f81be28436ebff6a7c90b19c8998377d0754e4e8ed990ed46bfca2a8",
+        "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-0120146c-6a9d-4b12-8a89-4a3c36f30642.png"
+      }
+    }
+  ],
+  "observation": "Generated endpoints exceed requested guide range, especially007. Export must use one common registered scale with enough canvas padding, not shrink or independently fit the phases."
+}

@@ -1,0 +1,651 @@
+{
+  "phase": "regression",
+  "status": "PASS",
+  "build": {
+    "command": [
+      "cc",
+      "-std=gnu11",
+      "-O1",
+      "-g",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-I/source/platform",
+      "-I/source/src/engine",
+      "/source/tests/test_art_footprint.c",
+      "/source/src/engine/graphics.c",
+      "-Wl,--gc-sections",
+      "-o",
+      "/out/footprint-probe"
+    ],
+    "sha256": "6368c01f8a27bcdfa8bfa7c3fc877598edef0bfecf8cbab9f2fb4378af1accd8",
+    "rebuilt_timestamp_advanced": true
+  },
+  "cases": [
+    {
+      "case": "legacy-center",
+      "exit_code": 0,
+      "output": "WITNESS art footprint legacy-center BEGIN\nWITNESS art footprint legacy-center PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "hd-fallback",
+      "exit_code": 0,
+      "output": "WITNESS art footprint hd-fallback BEGIN\nWITNESS art footprint hd-fallback PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "bad-hd-fallback",
+      "exit_code": 0,
+      "output": "WITNESS art footprint bad-hd-fallback BEGIN\nWITNESS art footprint bad-hd-fallback PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "original-fallback",
+      "exit_code": 0,
+      "output": "WITNESS art footprint original-fallback BEGIN\nWITNESS art footprint original-fallback PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "hd-style",
+      "exit_code": 0,
+      "output": "WITNESS art footprint hd-style BEGIN\nWITNESS art footprint hd-style PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-normal",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-normal BEGIN\nWITNESS art footprint draw-normal PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-flip",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-flip BEGIN\nWITNESS art footprint draw-flip PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-atop",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-atop BEGIN\nWITNESS art footprint draw-atop PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-legacy",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-legacy BEGIN\nWITNESS art footprint draw-legacy PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-offset",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-offset BEGIN\nWITNESS art footprint draw-offset PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-ground-height",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-ground-height BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/000.png is 640x181; expected 560x104\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-ground-width",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-ground-width BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/000.png is 641x180; expected 560x104\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-source",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-source BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/000.png is 640x180; expected 562x104\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-frame",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-frame BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/001.png is 640x180; expected 560x104\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-resource",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-resource BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/OTHER.BMP/000.png is 640x180; expected 560x104\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-center-frame",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-center-frame BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/009.png is 384x256; expected 320x50\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-center-height",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-center-height BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/007.png is 384x257; expected 320x50\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wave-restore",
+      "exit_code": 0,
+      "output": "WITNESS art footprint wave-restore BEGIN\nWITNESS art footprint wave-restore PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "legacy-left",
+      "exit_code": 0,
+      "output": "WITNESS art footprint legacy-left BEGIN\nWITNESS art footprint legacy-left PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "legacy-right",
+      "exit_code": 0,
+      "output": "WITNESS art footprint legacy-right BEGIN\nWITNESS art footprint legacy-right PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "side-hd-fallback",
+      "exit_code": 0,
+      "output": "WITNESS art footprint side-hd-fallback BEGIN\nWITNESS art footprint side-hd-fallback PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "side-wave-restore",
+      "exit_code": 0,
+      "output": "WITNESS art footprint side-wave-restore BEGIN\nWITNESS art footprint side-wave-restore PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-left-normal",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-left-normal BEGIN\nWITNESS art footprint draw-left-normal PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-left-flip",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-left-flip BEGIN\nWITNESS art footprint draw-left-flip PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-left-atop",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-left-atop BEGIN\nWITNESS art footprint draw-left-atop PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-left-offset",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-left-offset BEGIN\nWITNESS art footprint draw-left-offset PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-right-normal",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-right-normal BEGIN\nWITNESS art footprint draw-right-normal PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-right-flip",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-right-flip BEGIN\nWITNESS art footprint draw-right-flip PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-right-atop",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-right-atop BEGIN\nWITNESS art footprint draw-right-atop PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "draw-right-offset",
+      "exit_code": 0,
+      "output": "WITNESS art footprint draw-right-offset BEGIN\nWITNESS art footprint draw-right-offset PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-left-frame",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-left-frame BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/002.png is 150x66; expected 144x58\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-left-other-end",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-left-other-end BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/006.png is 150x66; expected 144x58\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-left-width",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-left-width BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/003.png is 151x66; expected 144x58\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-left-height",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-left-height BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/003.png is 150x67; expected 144x58\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-left-source",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-left-source BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/003.png is 150x66; expected 146x58\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-left-resource",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-left-resource BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/OTHER.BMP/003.png is 150x66; expected 144x58\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-left-scale",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-left-scale BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/003.png is 150x66; expected 72x29\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-right-frame",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-right-frame BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/012.png is 154x74; expected 144x64\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-right-other-end",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-right-other-end BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/008.png is 154x74; expected 144x64\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-right-width",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-right-width BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/009.png is 155x74; expected 144x64\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-right-height",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-right-height BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/009.png is 154x75; expected 144x64\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-right-source",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-right-source BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/009.png is 154x74; expected 146x64\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-right-resource",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-right-resource BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/OTHER.BMP/009.png is 154x74; expected 144x64\n",
+      "status": "PASS"
+    },
+    {
+      "case": "wrong-right-scale",
+      "exit_code": 1,
+      "output": "WITNESS art footprint wrong-right-scale BEGIN\nREFUSED src/engine/art_style.c: Art PNG data/styles/cartoon/BMP/BACKGRND.BMP/009.png is 154x74; expected 72x32\n",
+      "status": "PASS"
+    }
+  ],
+  "mutations": [
+    {
+      "case": "wrong-frame",
+      "exit_code": 2,
+      "output": "WITNESS art footprint wrong-frame BEGIN\nFAIL wrong-frame: registered offset\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "d40875cd44d8ee46fb7761f7c2b541a4142f2e94e2cee236d60b1e1d0adaec47",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-wrong-frame/source/platform",
+          "-I/out/mutant-wrong-frame/source/src/engine",
+          "/out/mutant-wrong-frame/source/tests/test_art_footprint.c",
+          "/out/mutant-wrong-frame/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-wrong-frame/footprint-probe"
+        ],
+        "sha256": "822cafd1ec0314f3fad447ac67df887ce093f4f1d4c3baacf05d3075dc449788",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "bad-hd-fallback",
+      "exit_code": 2,
+      "output": "WITNESS art footprint bad-hd-fallback BEGIN\nFAIL bad-hd-fallback: HD/original fallback ignores extended size\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "0e8fd8904249172684505e7635d4110efc3c0b1035d54144e048fd88c88d6751",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-bad-hd-fallback/source/platform",
+          "-I/out/mutant-bad-hd-fallback/source/src/engine",
+          "/out/mutant-bad-hd-fallback/source/tests/test_art_footprint.c",
+          "/out/mutant-bad-hd-fallback/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-bad-hd-fallback/footprint-probe"
+        ],
+        "sha256": "d09a6db7add737bef688c16180c96bd53d6d0d3826d0d504c30e2ebf371bf7e8",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "draw-normal",
+      "exit_code": 2,
+      "output": "WITNESS art footprint draw-normal BEGIN\nFAIL draw-normal: first pixel preserves logical anchor\n",
+      "status": "FIRED",
+      "source": "src/engine/graphics.c",
+      "executed_source_sha256": "2367d2783c8a48b420420c0ef1d938e9f2bbc999310ee1ca45bf4b9bf55e17f6",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-draw-normal/source/platform",
+          "-I/out/mutant-draw-normal/source/src/engine",
+          "/out/mutant-draw-normal/source/tests/test_art_footprint.c",
+          "/out/mutant-draw-normal/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-draw-normal/footprint-probe"
+        ],
+        "sha256": "219333b6eddb194284edde9f386b4a3de5c8cb664bf392bc079741f5e7c2eec7",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "draw-flip",
+      "exit_code": 2,
+      "output": "WITNESS art footprint draw-flip BEGIN\nFAIL draw-flip: first pixel preserves logical anchor\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "13d9b645f89d55f92b7b141ecebac273d706048b3451ea310bcfb418efa9191e",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-draw-flip/source/platform",
+          "-I/out/mutant-draw-flip/source/src/engine",
+          "/out/mutant-draw-flip/source/tests/test_art_footprint.c",
+          "/out/mutant-draw-flip/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-draw-flip/footprint-probe"
+        ],
+        "sha256": "7e2d1ba2b82fcd98dfb685f29aac8d74b9989b1c89f89bd65fa1bc85490a5f97",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "wrong-center-frame",
+      "exit_code": 2,
+      "output": "WITNESS art footprint wrong-center-frame BEGIN\nFAIL wrong-center-frame: registered offset\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "8c9f20c2b5dede0a36d52510d48da3a37b458e44e64713cd350cf2cc6521b2d6",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-wrong-center-frame/source/platform",
+          "-I/out/mutant-wrong-center-frame/source/src/engine",
+          "/out/mutant-wrong-center-frame/source/tests/test_art_footprint.c",
+          "/out/mutant-wrong-center-frame/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-wrong-center-frame/footprint-probe"
+        ],
+        "sha256": "6704b33bd9d59a74b7a1387378988d1cdb5eb0674d5e5590ae03d556279e4bca",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "wave-restore",
+      "exit_code": 2,
+      "output": "WITNESS art footprint wave-restore BEGIN\nFAIL wave-restore: dirty bounds include registered wave offsets\n",
+      "status": "FIRED",
+      "source": "src/engine/island.c",
+      "executed_source_sha256": "6d432664391a10b3aafb03232c5b2a60b69e50aed923a72b554f685a955b0941",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-wave-restore/source/platform",
+          "-I/out/mutant-wave-restore/source/src/engine",
+          "/out/mutant-wave-restore/source/tests/test_art_footprint.c",
+          "/out/mutant-wave-restore/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-wave-restore/footprint-probe"
+        ],
+        "sha256": "19ed04011ad1ef5373600df5a6b2563650888ef2f491e5f35a3531d99af7494a",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "wrong-left-frame",
+      "exit_code": 2,
+      "output": "WITNESS art footprint wrong-left-frame BEGIN\nFAIL wrong-left-frame: registered offset\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "87587645bb87d1785df6e93e22efcef0dbd387aed4380b70e7683c81639a3f88",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-wrong-left-frame/source/platform",
+          "-I/out/mutant-wrong-left-frame/source/src/engine",
+          "/out/mutant-wrong-left-frame/source/tests/test_art_footprint.c",
+          "/out/mutant-wrong-left-frame/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-wrong-left-frame/footprint-probe"
+        ],
+        "sha256": "708a26dba3dd7df705b25861a5263c8d9d8a255c3ead6bc9a98e290b2f1dcb84",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "wrong-right-frame",
+      "exit_code": 2,
+      "output": "WITNESS art footprint wrong-right-frame BEGIN\nFAIL wrong-right-frame: registered offset\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "2e2c6072b20cd09641c90c631264bcac3e99d0233d9c976f7230c34c2b2f5dff",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-wrong-right-frame/source/platform",
+          "-I/out/mutant-wrong-right-frame/source/src/engine",
+          "/out/mutant-wrong-right-frame/source/tests/test_art_footprint.c",
+          "/out/mutant-wrong-right-frame/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-wrong-right-frame/footprint-probe"
+        ],
+        "sha256": "fe721c6d44a967cf1c04a66ee6af1e53b2a546c4e0d3ad2047930c83d0cb568f",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "wrong-left-source",
+      "exit_code": 2,
+      "output": "WITNESS art footprint wrong-left-source BEGIN\nFAIL wrong-left-source: registered offset\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "55e337febde51c8beec94b0353e3fc07bf2ab1096f9c39318e833afd07241542",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-wrong-left-source/source/platform",
+          "-I/out/mutant-wrong-left-source/source/src/engine",
+          "/out/mutant-wrong-left-source/source/tests/test_art_footprint.c",
+          "/out/mutant-wrong-left-source/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-wrong-left-source/footprint-probe"
+        ],
+        "sha256": "7971a4b469672f480cd6e2eeff6091f83cf8fca2567be9e7ef9bb5b6e1321149",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "wrong-right-height",
+      "exit_code": 2,
+      "output": "WITNESS art footprint wrong-right-height BEGIN\nFAIL wrong-right-height: registered offset\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "cb46962511eeb61c3f38bb909db85a943aad1b124703d68ed6c8ef6366f76e09",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-wrong-right-height/source/platform",
+          "-I/out/mutant-wrong-right-height/source/src/engine",
+          "/out/mutant-wrong-right-height/source/tests/test_art_footprint.c",
+          "/out/mutant-wrong-right-height/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-wrong-right-height/footprint-probe"
+        ],
+        "sha256": "0d5729d833f6c8aeb6648a7aba622159f6cb16b30e04f594741ffc76303fcecc",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "draw-left-flip",
+      "exit_code": 2,
+      "output": "WITNESS art footprint draw-left-flip BEGIN\nFAIL draw-left-flip: side first pixel preserves logical anchor\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "bda74766b2beec942410e5c5308a3d452ebe128b650cc454b051f2a34a46c3ab",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-draw-left-flip/source/platform",
+          "-I/out/mutant-draw-left-flip/source/src/engine",
+          "/out/mutant-draw-left-flip/source/tests/test_art_footprint.c",
+          "/out/mutant-draw-left-flip/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-draw-left-flip/footprint-probe"
+        ],
+        "sha256": "ba983f57787f7e194151ec0dcaa07527a36617dee4c29dd41b60032f4699ff40",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "draw-right-flip",
+      "exit_code": 2,
+      "output": "WITNESS art footprint draw-right-flip BEGIN\nFAIL draw-right-flip: side first pixel preserves logical anchor\n",
+      "status": "FIRED",
+      "source": "src/engine/art_style.c",
+      "executed_source_sha256": "853b1ee08d21243b9874c60331603c29a4189ca48524a1a944a8c733d8295fe3",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-draw-right-flip/source/platform",
+          "-I/out/mutant-draw-right-flip/source/src/engine",
+          "/out/mutant-draw-right-flip/source/tests/test_art_footprint.c",
+          "/out/mutant-draw-right-flip/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-draw-right-flip/footprint-probe"
+        ],
+        "sha256": "c0e9ed1104ebea5c1449b0a076db16af8821a2959bdc66c26415cc446ca7dae5",
+        "rebuilt_timestamp_advanced": true
+      }
+    },
+    {
+      "case": "side-wave-restore",
+      "exit_code": 2,
+      "output": "WITNESS art footprint side-wave-restore BEGIN\nFAIL side-wave-restore: dirty bounds include both side footprints\n",
+      "status": "FIRED",
+      "source": "src/engine/island.c",
+      "executed_source_sha256": "6d432664391a10b3aafb03232c5b2a60b69e50aed923a72b554f685a955b0941",
+      "build": {
+        "command": [
+          "cc",
+          "-std=gnu11",
+          "-O1",
+          "-g",
+          "-ffunction-sections",
+          "-fdata-sections",
+          "-I/out/mutant-side-wave-restore/source/platform",
+          "-I/out/mutant-side-wave-restore/source/src/engine",
+          "/out/mutant-side-wave-restore/source/tests/test_art_footprint.c",
+          "/out/mutant-side-wave-restore/source/src/engine/graphics.c",
+          "-Wl,--gc-sections",
+          "-o",
+          "/out/mutant-side-wave-restore/footprint-probe"
+        ],
+        "sha256": "c72d2adc354acefce851d5425b6504cffde26f23afe200fcc810d7f61cf6bf8b",
+        "rebuilt_timestamp_advanced": true
+      }
+    }
+  ],
+  "source_sha256": {
+    "src/engine/art_style.c": "54e2580edef74671817dccedea1c989195deb68a52e6d1de0823760e47f1a546",
+    "src/engine/art_style.h": "5e12338406ceec466fc678e63f5e8019c7bebf3ff60fc8068293d3f9d917c897",
+    "src/engine/graphics.c": "fded8d14dbfa432242170e0a16010cb882d02f437d31e5a317bfe2baafcee392",
+    "src/engine/island.c": "78795472d233c9b54bcd8ff32e032358e5e19434e4de7d2fdb26f521d6600737",
+    "tests/test_art_footprint.c": "aec5c01fd8cfaed0154b8a759f5a22ce981789e9b30ab4de98623c4a495c2f20",
+    "tests/test_art_footprint.py": "da017512ca85dca8ea04e41b4c1ac6a50f67adac65c3203d1f9b17965bf27c9a"
+  },
+  "limits": "Headless loader/draw unit probe uses a surface decoder fixture. No native island or PNG decoder parity claim."
+}

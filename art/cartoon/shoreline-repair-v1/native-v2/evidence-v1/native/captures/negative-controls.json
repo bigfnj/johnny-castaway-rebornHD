@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "adapter_sha256": "4353c7aaa94e606ac710030a16889eee07918832af2785e3709acfb8746eea56",
+  "controls": [
+    {
+      "name": "wrong_base_origin",
+      "status": "FIRED",
+      "failure": "seasonal: actual base island origin/canvas"
+    },
+    {
+      "name": "wrong_final_wave",
+      "status": "FIRED",
+      "failure": "seasonal: final native wave phases 003/007/009"
+    },
+    {
+      "name": "outside_ground_pixel",
+      "status": "FIRED",
+      "failure": "seasonal: changed pixel outside drawn ground canvases"
+    }
+  ],
+  "method": "Actual completed candidate log/pixels copied and altered in memory; originals unchanged; positive before and after."
+}

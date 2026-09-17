@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "html_sha256": "6486d568518063ab74a88fb50ee21cb0943ccf98e4b62fb441ba4bb3e54dddd8",
+  "manifest_sha256": "295ceeb051d79a4d01fc062dd5b0656eac475f6a5ebe93b3f74bb88b8b3f2cbd",
+  "mutant_manifest_sha256": "fd625ae24a65d9d3298f1d074a6a452436b9fe32144abcba0e965135e98c35d7",
+  "checker_sha256": "0a0723b5eb03c7690f48611960d2e57b4ab6e87bf243c4bfbc8a941f16d4a04e",
+  "observed": {
+    "positive": {
+      "time_ms": 2880,
+      "playing": false,
+      "index": 60
+    },
+    "mutation": {
+      "status": "FIRED",
+      "failure": "low tide must stop at full captured endpoint",
+      "actual": {
+        "time_ms": 160,
+        "playing": true,
+        "index": 4
+      }
+    },
+    "restored_positive": {
+      "time_ms": 2880,
+      "playing": false,
+      "index": 60
+    }
+  },
+  "method": "Actual headless page, fresh page per case, deterministic public animation clock. Only scratch manifest low-tide loop flag changes."
+}

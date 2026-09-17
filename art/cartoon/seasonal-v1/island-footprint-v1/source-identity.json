@@ -1,0 +1,324 @@
+{
+  "schema_version": 1,
+  "engine_base_commit": "397edf8e4b34191ade4be13bc93a215f73b0c631",
+  "source_bindings_sha256": {
+    "assets/scrantic_data.zip": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+    "art/cartoon/character-inventory-v1/reference-originals.zip": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912",
+    "art/cartoon/character-inventory-v1/source/source.json": "75ed623eb06c36894086d614c10e400c7a58464ba4f74f5c4d378546bbd3df12",
+    "art/cartoon/seasonal-v1/native/capture.py": "5a325d6b3db2ae3e7362ede1144977c977542c668596bbfb24b1e0a5bcdfe730",
+    "art/cartoon/seasonal-v1/native/driver.c": "298b37d64f6077a890d29181b84bf6c0859f139b5a7fac2fc7fd9d407bd6b7f6",
+    "art/cartoon/arrival-pilot-v1/review-evidence/native-v1/helpers/capture_format.py": "1a956d08ef659cd537e1530bcf13cc9da153a1bf34a1730fd344e91a107c4195",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json": "fe98aabe978b166d5d9f8177ba43cb4b7f0727a363d1f0f80909eac3cbbfc360",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/README.md": "0cd74d8bf68fa2bfa91f0cb9ad81f427f8389d29d48e6135096d56eb08efe4b2",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/provenance.json": "7bb5536971f35a0a40120339e4aeb0b8c33c33b5c4564c8e040bbc42af2fbb26",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/prompts/012-generated-v1.txt": "092042b606676a284caea462c571be37157ffc1d7237f02d7d44fa885ae16b00",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/prompts/012-generated-v2.txt": "bec602ee1a98433068d4fea5977d71e4d2c68ab1a2f8934c1b1ab4e54dd42f70",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/prompts/012-generated-v3.txt": "e6bf974e9a3e03e6a25379576a7227b4fb4ec1db91ab4954f2420b04935be5bb",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/prompts/013-generated-v1.txt": "2f928cb1a33920282277404a8cb4b3bee0fe4bc05da6417cbb19f1ea5e67432e",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/prompts/013-generated-v2.txt": "681bab013c692e28517886763be002c98436620c3c1fef66a375fe5204e80c55",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/prompts/013-generated-v3.txt": "f1c0ee20cc50e8c8e1c8d6137a8c06828b8489351e56b18a19026ef51a7a73af",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/prompts/cloud-generated-v1.txt": "5f4ad595fda6a1abd70ab38e54b90d25a46710d8720ed4e47495951cfe891d34",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/prompts/sand-generated-v1.txt": "fbb9299d75f7cefbe969213ee3d9c190c5741b9ccb1b91022dd8f7235bbdd890",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/prompts/sand-generated-v2-contour.txt": "120242cd6177435ae3cd3a8ec6a492ca77584a84a06e3b0886e725317ada2f5c",
+    "art/cartoon/island-pilot-v1/palm-sand-cloud/prompts/sand-generated-v3-fresh.txt": "2545c926dc7f5053ccb5b5aa69f6e439a7b5663c8e270f45169e82d1a6405605",
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json": "40b1d14e5bed8b55c5b263b6ecae18120bbb8c4df26c9d3d276f23e4362a96ac",
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/README.md": "02d836fa624282ea3c15083d7e25cad3e49804f81ddafeda474637b2457d144a",
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/provenance.json": "5e48200f21b97d2f47b1c2ca7dbdff9d7d014ef199a84c04dabbbc2aec11cca2",
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/prompts/006-generated-v1.txt": "ec0cda0516bc3ab78487de8b70a4d2c0d432442700a1562e35196b4f242f0c50",
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/prompts/007-generated-v1.txt": "11e584320a1226aa5506c0c3fb68fdc3df7c50d41dd9798fcaf22c82f8ca161c",
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/prompts/008-generated-v1.txt": "02dc7288176740c282912e8a4537c8715c6af9925c4674425e0cc42c75b314a9",
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/prompts/ocean-generated-v1.txt": "d322e5f6a08fdd53d36f0d55a3c93341f858042e8ef3f4cc82ff50fdbcc53a4c",
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/prompts/shadow-generated-v1.txt": "5e71a351aeb417ae4453c89e0369669b07f8635ca6ad46674cac3038bac2e954",
+    "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/prompts/shadow-generated-v2.txt": "8e6008fb394d196eb0849f6ccf686137f1d7e3776f92ae89c9b4fc6a70c8c6d6",
+    "art/cartoon/island-pilot-v1/side-waves/recipe.json": "ea431b1991e9cbfb5d2670d95ef88341ac900c4e8887db3b18c7d8a92b43d28b",
+    "art/cartoon/island-pilot-v1/side-waves/README.md": "05991117244da292a70feeaf7b511e4ece8c8c6994be675f6664bc30376e9fa3",
+    "art/cartoon/island-pilot-v1/side-waves/provenance.json": "b2978b548eb2c3784ddaf121457094c7c164d310ac39dc71336ab0cab3411d3b",
+    "art/cartoon/island-pilot-v1/side-waves/prompts/003-prompt-v1.txt": "25b58c52a3603163e630903b6a3de82fb16bac4fbfdaed57515d4afc6129be68",
+    "art/cartoon/island-pilot-v1/side-waves/prompts/003-prompt-v2-fresh8x.txt": "2f93655dcd0cacac43fa0161a1907998d53006cc343a45f74325d074361b13c5",
+    "art/cartoon/island-pilot-v1/side-waves/prompts/004-prompt-v1-10x.txt": "02f258667ca8cb8a3d065c10dd966e1c83965370f7d88ac6214f29297eda3a94",
+    "art/cartoon/island-pilot-v1/side-waves/prompts/005-prompt-v1-10x.txt": "f649bd76eed2aa314456d45f6ad53a06ab860976f7004cf4e7fb51cfaa084c50",
+    "art/cartoon/island-pilot-v1/side-waves/prompts/009-prompt-v1-10x.txt": "66714e4be0a95c9f11cc45ec80026756044ec1629258b1cc8cf8259712c9ab84",
+    "art/cartoon/island-pilot-v1/side-waves/prompts/010-prompt-v1-10x.txt": "150e6a9598c3d20eb357843c74e82b5235399f520a0af39a3365c8600d6f1a8c",
+    "art/cartoon/island-pilot-v1/side-waves/prompts/011-prompt-v1-10x.txt": "a8c0bb014d672208a1d56cc5a6afa3130041f25482dd71c7229ac80a3cb5b025"
+  },
+  "compiled_and_header_sources": {
+    "platform/jc_resources.h": {
+      "worktree_sha256": "6054a022fe1f5e793c5e6c1744aeb240b5b24e91c5c2a47eebc53ce0d20d7b8a",
+      "git_blob_bytes_sha256": "4b5fb29b51c96f4147967e89f1cb0af7f93fffac47ace37bfc00c8b7886598a2",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "platform/platform.h": {
+      "worktree_sha256": "d44c885dac7188ce20c1c9b726e43f0796a1312639ad2136b248469ad1b0f11b",
+      "git_blob_bytes_sha256": "1a22cc89584ba11cfc00bdb6c234ee1af007b1a21a9557a4a1bc76e85f40d082",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "platform/platform_linux.c": {
+      "worktree_sha256": "c57c9aefad8f40e959116772438f0bdbda7403438b1b7188f2453cbecbc66687",
+      "git_blob_bytes_sha256": "8cdde07142d3131fd7467c6d79d29f05aa51a32a49d5f03342abce9d3937ec8b",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "platform/png_decoder.c": {
+      "worktree_sha256": "e98e3e9a9c3970d8366bcb5e7c8e57a7e5e71b0fad3913d42638cc072fdc2f6a",
+      "git_blob_bytes_sha256": "274a924b3244691540ae61813b778a45cec2d027b4061e9a2998250ae0062cc4",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "platform/png_decoder.h": {
+      "worktree_sha256": "b6ea3e50277f2c23e2f7d40fe5f22caf5e0f5c58fa0dc47a4fb5fea67499a2d2",
+      "git_blob_bytes_sha256": "0ceaba6ccd39b22896c4cd8cd406ac2458c05963bedc5a6b54ba7bf0307081bb",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "platform/png_loader.c": {
+      "worktree_sha256": "05cbc18bc03a3c7b48c15c2ae010242b37b489302acabf753192605aaeffaf1d",
+      "git_blob_bytes_sha256": "6f7622c4458128e162f9e702aafed75a11a55104b3f613a6a44939a4c78dc340",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "platform/zipvfs.c": {
+      "worktree_sha256": "1cb46f55871ac87a0f4ddee7d463282e822269875c77e49f81e101a1c2adec49",
+      "git_blob_bytes_sha256": "5abc5752d1a2f0cc51bc780414b167da501cb4a69de6ee4c4c8824728308db71",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "platform/zipvfs.h": {
+      "worktree_sha256": "493de595f2405359f266cef822c1b4279d1ba3d96e1449db6aeccd68cbdb9696",
+      "git_blob_bytes_sha256": "a7bf80421bfbfe828c820814d68b55891232fffd65c1ac7b2b323807077a647d",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/data/calcpath_data.h": {
+      "worktree_sha256": "fdaf8cc409388b1425485801597b272105c6a788eb30825b74441e21f5041237",
+      "git_blob_bytes_sha256": "06f98ba87a82bb61f330f7f2ac6075a486f2ee141bb9b3637f5ff25b16977904",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/data/story_data.h": {
+      "worktree_sha256": "0f7d6cbd9a37b411839a2a9376c15e035388d00cb0f8cbf4b898dcc93eaff6f6",
+      "git_blob_bytes_sha256": "51446802f188ea95ac8db0eed5a09ded878cbff86f209d9f1628dbe134448cb5",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/data/walk_data.h": {
+      "worktree_sha256": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769",
+      "git_blob_bytes_sha256": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/ads.c": {
+      "worktree_sha256": "c4d53220327f62676a159f1b3651626a8dabafdfa5bf625b5e94d443280eb4f6",
+      "git_blob_bytes_sha256": "d8eab364f3c9bb772910ed082197a5fe8f3a69572eb622e2a16038ae2b26c1a8",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/ads.h": {
+      "worktree_sha256": "fbe0925205b5b0ed225152d5892a5aef72e215c1d68e5f94476ddeb66c7996a1",
+      "git_blob_bytes_sha256": "0528a3365871bf052e67c96da6108c1573f64e1802d6fe1452625d01eb4eab22",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/art_style.c": {
+      "worktree_sha256": "ce25a6fa8f81f79fd59beea2e63da89d12c33aa69ce14708e089b2ab3ed0c289",
+      "git_blob_bytes_sha256": "722cfb1998b917f43dde913425c1d70060d9cdc00afcf21441431e4ee0cf900e",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/art_style.h": {
+      "worktree_sha256": "4d03ec8d3d3595f0dd25ca859177bae7934c4cc98f4b3deb6c631e95d33b058a",
+      "git_blob_bytes_sha256": "08a2225f47a929e5986372f41ce97844479a8eb58e74a4db1d0e113642be3c7c",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/bench.c": {
+      "worktree_sha256": "ca747e19369cd2b57e547393ec4b63cefe3ff1f6a95d4d30fd22b218228ed03c",
+      "git_blob_bytes_sha256": "9be63997007f0978ff62e5c2d7ff9cbfdd7eb1b51554a68f3382a927d98e0b68",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/bench.h": {
+      "worktree_sha256": "e7ff059877a2c4a747c3675767da29b01f167989f8a2ba9a57d45e47cfcbf3ad",
+      "git_blob_bytes_sha256": "f83800cc7a099e71c386a2ffb5b395566c5c35ca5c2d23ad5c3a26571c176e96",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/calcpath.c": {
+      "worktree_sha256": "8035aef05017584b5e7e5db1dcac898ba3f51efe444efc072705d5f0523cfacb",
+      "git_blob_bytes_sha256": "bf175908dba9a6d82543704b1dbc667ab56c68a8faf18bca49f618a1b17e17ba",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/calcpath.h": {
+      "worktree_sha256": "4b5c614adc8a960e1bbab746aa159c4c908e3377d38a2d3c0f353ae0726d915d",
+      "git_blob_bytes_sha256": "5669447b1713f66d8c0e2e7c6914dafc4d7ba118a357bcc0a49bff1198595f7d",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/config.c": {
+      "worktree_sha256": "a87b4e3d050912d7a82f3efa2d681be2ac20a72cadca3581dffa6d7e572bba58",
+      "git_blob_bytes_sha256": "fbd4a579e28056a1e38ae65e44805d227d8dc1c81ec543ddd57a54b324f9476a",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/config.h": {
+      "worktree_sha256": "ef00caffb5bba8c4de0e8b09e84911c4c1563fb6d6e5986f3e935e54b0dfcf46",
+      "git_blob_bytes_sha256": "e62502e00c6a5380991110d310a61c8d72d40a0b81ef0862064f66745520a17a",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/dump.c": {
+      "worktree_sha256": "b2e46c22fa854bbc0d75413b441f4afc0afb10d42b6ead737e70bc5d7e92babd",
+      "git_blob_bytes_sha256": "d4e7e991f1a2d23d3a949ba841035173e85037f6154bad8d31bd5a4e255799fd",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/dump.h": {
+      "worktree_sha256": "27ad235d4b052886c296999aae65f8604b6b668b3428860db0aea561827226df",
+      "git_blob_bytes_sha256": "428e18a6a44d1256a721bca22dee74efdb73402a8a454449d496c079de3a6d1d",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/events.c": {
+      "worktree_sha256": "041ac9fce76af2c3e1fc2eeef56ea9b92b45e1a4adc0087d5318720ccc2d57d2",
+      "git_blob_bytes_sha256": "13d297427e0e9d712e7e6b25eab4d5ac12519597835da7e084b44e65470a9fd8",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/events.h": {
+      "worktree_sha256": "7b73c8f46c470f325fb6b49093cbdc9b4f3c3da598be900d37244bd98bf9ea54",
+      "git_blob_bytes_sha256": "eae7cbc8d74a38280a0b320217b2303bf527cd13a7b775192fb58b2f0689dbcc",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/graphics.c": {
+      "worktree_sha256": "bdb81a2c3af2d1f28014ba3d0d5ffe2fa1886d999d8862594e44444a74bf9e92",
+      "git_blob_bytes_sha256": "1d3f66ffe5e8f0179cb3a602916f36d7f91a69d27be85b1964752330a06adc56",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/graphics.h": {
+      "worktree_sha256": "e2b388c6e9edfac3237c88467ba38117c4b1918b2a56f4a4d9dcd635e6fd9ecf",
+      "git_blob_bytes_sha256": "43e57c976553d2c75dd3d5e34068bbd2335eecb78b1ec89e88fdeac3ab43bcf8",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/island.c": {
+      "worktree_sha256": "222810695a00989322c058aeed272a5f671be9abf168f0702b328e96096bae39",
+      "git_blob_bytes_sha256": "f02ab16e374c26053743f4c202efadd199ee3c7dc883c38d94bb873dc90711fc",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/island.h": {
+      "worktree_sha256": "78da2a0bcc15e38636aa8ca7d1f9c1fb7fc48b49bf44a8afd895f3b76b3bef58",
+      "git_blob_bytes_sha256": "a4a416e70dfeb6b1a50d97074b2a473cc04f21773e6a77d79dad678aa2c32548",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/mytypes.h": {
+      "worktree_sha256": "cd9d251a4025cb9894b3d13dfb0c05568eadd53b7c15ee16f2af49b6c07cad84",
+      "git_blob_bytes_sha256": "ea0e741dbb269cf373309cd81efec31bc9df6d651cc9873e161001c869cd0972",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/resource.c": {
+      "worktree_sha256": "8b60a6d5936dd67ca014aaedde799e8b6f0a567ac482c836bd922a4fa93c6f43",
+      "git_blob_bytes_sha256": "7a6f30dccc8295e19749a3ed0b322425b6c249802a4d42960b6f5b9e44b34a1c",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/resource.h": {
+      "worktree_sha256": "dfb8a1c118fb69a515931b939e7a32e05cc05688b2c09875b496211dcac412af",
+      "git_blob_bytes_sha256": "a22cee6196d85f1c76c3e85bc44c3926281c46f650fdf5c00cb6f915f575da33",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/sound.c": {
+      "worktree_sha256": "eec8a1b43e33eccbd4e7f835ca55b7d9ab952818f2093f6a996d69d1ce6a91ee",
+      "git_blob_bytes_sha256": "83787c86ad22d0a9a19b96ab8159874a3af332a5d0c2ae78d0631d3d9128e383",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/sound.h": {
+      "worktree_sha256": "36bf9900ea05f164190b042905e1d5b5e163015055fa1f9f5cd9ec15c54a1e47",
+      "git_blob_bytes_sha256": "49cb48645bb85b958edceb7df31f34594824c1039e81178bdcc8b3d940f7f2c2",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/story.c": {
+      "worktree_sha256": "b503cca4115b5852f4ed9cdc02c5aef77498c793bac9fdb2b517b19cd8c4b9a4",
+      "git_blob_bytes_sha256": "32148bd4879931d8db5cf91ab4349e347ec279c4c552efaeca85032ffb89902f",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/story.h": {
+      "worktree_sha256": "e2bc55888fa518bbac1566f059111e2b4e278a986639cb825dd28a8677663e0c",
+      "git_blob_bytes_sha256": "a853a877766b6a9092e372ca94d6f8733dff662ba64e89f98032befd93eb146a",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/ttm.c": {
+      "worktree_sha256": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6",
+      "git_blob_bytes_sha256": "4a856f695a64eeab5d2c255b9c53395bc89b4e475b72cd50af3773972556eba3",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/ttm.h": {
+      "worktree_sha256": "7a6a8d40da48f8316d204cc4a8bb664e7cf3950dde0a75f79c0a6bf8b080e48d",
+      "git_blob_bytes_sha256": "e41bc75724bf027784398b8dd37f581c5a2dcf1cd72974b70a1c53d8c51cace3",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/uncompress.c": {
+      "worktree_sha256": "c8c0483ef3ae43e242ecbfff622c4735aef6f330ebce04f4cda8b43bfbba6b15",
+      "git_blob_bytes_sha256": "8718e77512eceeb4ebecb28009889aff08d7a4dcbe1a85d8473b101268c46a4a",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/uncompress.h": {
+      "worktree_sha256": "c58f198f9dad5e00ac344925a0a9c45087253d6c6c950bd06cbc701c906c2148",
+      "git_blob_bytes_sha256": "6001c379486b6ad09239a7e23d45881fcabeee8228b61aec0629bb1d76ce546e",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/utils.c": {
+      "worktree_sha256": "c50c4ae6de6a59e4fbd1a169592eb920778449f8c000175cb55d66595343c10f",
+      "git_blob_bytes_sha256": "4207d99946b0fee2fd00186435d42928ad9e2952481262827513ec336d705491",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/utils.h": {
+      "worktree_sha256": "9e6fb0678b6c62c63bea5f58f1772cf02aa7510809639f4984e94d0fa3d43104",
+      "git_blob_bytes_sha256": "4df55daa4c1b468c545bd7523eb261210f5bf9fd150b01dc0331c61f13269c19",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/walk.c": {
+      "worktree_sha256": "d6b88ef1e16a2ad10944ce520485a472d4b13d53fd744087e9c5e573e1908f9d",
+      "git_blob_bytes_sha256": "a6d49c73188850642a68ff5da1053e032d2c566d0d5e4f0554c1c17946de09b3",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "src/engine/walk.h": {
+      "worktree_sha256": "cd828778b83c73428ba9d7897a87aa7254b7d2d54eb1eb3f31a1ed625cbf5a91",
+      "git_blob_bytes_sha256": "e859fa1fd73d13c5372aff3b21086d3a9ac283d3034102cc5d7d70fab606b4a7",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "third_party/miniz/miniz.c": {
+      "worktree_sha256": "6a0314b68c9b804f33e27d89aa3144ef7724fd787043ba8c95d1b19be2d64afd",
+      "git_blob_bytes_sha256": "f23204efee2bfaffb72a974d2e28c64c3c1d9787144b5c5890f129c465e467bd",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "third_party/miniz/miniz.h": {
+      "worktree_sha256": "0c85210868066516ecc76a9c9cbf77c69bb085ade34ab78177bb3acaf8c1a6d7",
+      "git_blob_bytes_sha256": "672280c799fff9d703f0ecd586de2a53349d0f4e50b13928f78529c1ddf3d75c",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "third_party/miniz/miniz_common.h": {
+      "worktree_sha256": "fa5bf07d72efa51640f9d8ee11431fd2538e6218aea9e9328905edeb54187997",
+      "git_blob_bytes_sha256": "f1ba29821c8caef83585b328196aa346c5da7c82890a70a3d10d77c6cec0ed39",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "third_party/miniz/miniz_export.h": {
+      "worktree_sha256": "a467e6a2e6017ad0e43fe18a2e50f5e5dfd2a93fabe3b52dd6bbba7c18700b03",
+      "git_blob_bytes_sha256": "5ed5f41c863cee382c4db470f35b6c69480d4cac0fcf7079610acdfc8ef6194c",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "third_party/miniz/miniz_tdef.c": {
+      "worktree_sha256": "b368132832eebb4680d8849e3b313876c4833bcc9e03f32821665edef9d3f191",
+      "git_blob_bytes_sha256": "30aa8bf68ebcd6d15f03e1db3c7e72d70a038d4a44e74e69193185ea9187ecd0",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "third_party/miniz/miniz_tdef.h": {
+      "worktree_sha256": "13574142e909c529c3c08bbd76be8ac23939370e08fdc9837e635b2e00b4883d",
+      "git_blob_bytes_sha256": "d62da02953c3834dfcbde4db026c6d9345013ef9b0e53185131016a3a4e48c33",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "third_party/miniz/miniz_tinfl.c": {
+      "worktree_sha256": "457e745d8fef9657b07e4c641548b49f029d54dd70d3fc83568253f51194cda4",
+      "git_blob_bytes_sha256": "2296ebd21ef9af5ebbefd5b454d4bb67d8fb4af2d24945e7fb32114374f75a76",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "third_party/miniz/miniz_tinfl.h": {
+      "worktree_sha256": "ef18f995b0151095a0e9ed718114bd03437c607b302ee979a9d371f157bacf8a",
+      "git_blob_bytes_sha256": "da4850920fdf09f8877d9affabe1ebba1852ce4b1ebbd121f2ba7a7ea8e57e5d",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "third_party/miniz/miniz_zip.c": {
+      "worktree_sha256": "1ab94b269cd6021b006dac0fa78a42c73e1559676d086a16059fb98e21830606",
+      "git_blob_bytes_sha256": "3c1f90797c02ddc9d6bfcdf7079f5ea6f6212f257ed8745f2334dd021d697669",
+      "same_as_base_ignoring_checkout_newlines": true
+    },
+    "third_party/miniz/miniz_zip.h": {
+      "worktree_sha256": "eff19da6bcd7e127bb4447bf67a6093a6e589ee496fd251a444ec3b58c1d86f4",
+      "git_blob_bytes_sha256": "b062a5def545445c73fd1d664e35a89165dfb0d996ab848f507244e819cfcf04",
+      "same_as_base_ignoring_checkout_newlines": true
+    }
+  },
+  "supplied_resource_pair_sha256": {
+    "RESOURCE.MAP": "3d9ec330aab96bbe5a44ce34f5945703862e82b195088590b7adfef5d7345da7",
+    "RESOURCE.001": "df9c2213f7c0abacf4e302cb53a476f9f220579c07ba350b167e351eed548eae"
+  },
+  "docker_image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "host_pillow_version": "12.2.0",
+  "scratch_helper_execution_note": "matched_clover.py had one unreachable if-False save expression removed after capture; retained clean helper preserves executed behavior. Other scratch helpers are unchanged executed bytes.",
+  "scope": "Original art rendered by unchanged port, diagnostic palette; no original-executable or full wave-cycle equivalence claim."
+}

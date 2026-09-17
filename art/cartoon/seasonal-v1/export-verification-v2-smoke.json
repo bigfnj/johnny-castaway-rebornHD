@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "phase": "smoke",
+  "status": "PASS",
+  "exporter_sha256": "50aa0da6717af65bfe51593ac29da28ccb93d571d49ce0809031b0c89fb788e7",
+  "test_sha256": "e0b221b4edbd73ddca164d482b9248c15f7b4fc3bef33c0b64958ebc9a80a2cc",
+  "recipe_sha256": "68e8559a79a5abbf765d8cd6c8d9b7b1d45ff921a264e3aa174fed316ab57d38",
+  "scope": "Current Cartoon shoreline technical placement only; native contact and human approval pending.",
+  "runs": [
+    {
+      "name": "v2_smoke_exact_readback",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-export 50aa0da6717af65bfe51593ac29da28ccb93d571d49ce0809031b0c89fb788e7\nPASS seasonal-export [{\"frame\": 0, \"outside_max\": 3, \"outside_alpha8\": 0}, {\"frame\": 1, \"outside_max\": 4, \"outside_alpha8\": 0}, {\"frame\": 2, \"outside_max\": 1, \"outside_alpha8\": 0}, {\"frame\": 3, \"outside_max\": 4, \"outside_alpha8\": 0}]\n",
+      "stderr": "",
+      "returncode": 0
+    }
+  ]
+}

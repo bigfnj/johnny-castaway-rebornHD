@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "html_sha256": "6486d568518063ab74a88fb50ee21cb0943ccf98e4b62fb441ba4bb3e54dddd8",
+  "manifest_sha256": "295ceeb051d79a4d01fc062dd5b0656eac475f6a5ebe93b3f74bb88b8b3f2cbd",
+  "checker_sha256": "95ea6025c84aab5b51619f2eb241d15a87fd8cf601c0fa2ca6596d0d4da6096c",
+  "checks": [
+    "Defaults show old dark007 versus clean007 at time0, Normal speed",
+    "Exact default native crops and both panels visible at1280x900",
+    "high_clover: every native frame, timing boundary, cameras, cycle/end, Slow and replay",
+    "night_shift_clover: every native frame, timing boundary, cameras, cycle/end, Slow and replay",
+    "low_clover: every native frame, timing boundary, cameras, cycle/end, Slow and replay",
+    "johnny_front: every native frame, timing boundary, cameras, cycle/end, Slow and replay",
+    "johnny_rear: every native frame, timing boundary, cameras, cycle/end, Slow and replay",
+    "Rapid selection discards obsolete load and displays final selected clip"
+  ],
+  "screenshots_sha256": {
+    "browser-regression-1280.png": "6ebec67176d9c8c884d916a93b731ac18fd806628f4a7120812020062b12b1cb",
+    "browser-high_clover.png": "6ebec67176d9c8c884d916a93b731ac18fd806628f4a7120812020062b12b1cb",
+    "browser-night_shift_clover.png": "26a18f31d89a03becdeffe263582d3e4c55345b2ac8979940e16250c9fc8e2d2",
+    "browser-low_clover.png": "ce9422d0cf4a91eb6938408772736f7bc2a2186f36108c75852ac36824e814c2",
+    "browser-johnny_front.png": "4630ebb7390c930a644bdeafbc7a4fce8170664d83d0422f7611ff1bfd5f4631",
+    "browser-johnny_rear.png": "d0ee2e2ea31f561f3da07ec64f481643e91580ae4b284998a6fc3ab75d22eae7"
+  },
+  "scope": "Exact native pixel, timing and viewer controls; human artwork approval remains separate."
+}

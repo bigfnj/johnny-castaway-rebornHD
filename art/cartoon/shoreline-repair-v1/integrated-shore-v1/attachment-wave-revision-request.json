@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-17",
+  "status": "CHANGES_REQUESTED",
+  "shown_url": "http://127.0.0.1:8932/banner-attachment-v1/review.html",
+  "shown_html": "../../seasonal-v1/banner-attachment-v1/review/page/review.html",
+  "shown_html_sha256": "ae65e690d14f03d37dc5d6491b3a5b0a5ff41e36dc71dd714bb6193d97178924",
+  "user_request": "i think it will make more sense at this point to just \"bring-in the banner slightly or extend the palm frawns it connects to so it reaches the corners of the banner. Also, when you revisit the waves, there is a single frame with \"dark\" shadows that shows up, it looks off and you should not do that in the redraw.",
+  "decisions": [
+    {
+      "subject": "banner",
+      "action": "Use original clean banner at 92% of its previous uniform scale, centered to the existing palm canopy; keep palm unchanged.",
+      "reason": "Measured upper cloth corners overlap actual green frond pixels at this size. Prior tie-only draft remains unapproved history.",
+      "draft": "../../seasonal-v1/banner-inset-v1/"
+    },
+    {
+      "subject": "side waves",
+      "action": "Reposition complete unmasked side-wave families for the enlarged shore using side-fit-v1, preserving source scale.",
+      "reason": "Larger ground masks substantial parts of the old side-wave positions.",
+      "draft": "side-fit-v1/"
+    },
+    {
+      "subject": "center phase 007",
+      "action": "Imagegen shading correction on the same full-source registration, combined with side repositioning for native comparison.",
+      "reason": "Only selected raw007 has substantial visible dark shading; adjacent006/008 do not.",
+      "draft": "foam-shading-v1/"
+    }
+  ],
+  "preserved": [
+    "approved enlarged sand silhouette",
+    "offshore ripple style",
+    "accepted pumpkin and Christmas tree placements",
+    "other center phases and native animation timing"
+  ],
+  "accepted": false,
+  "production_promotion": false
+}

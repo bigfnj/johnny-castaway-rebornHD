@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "baseline": {
+      "path": "build/banner-attachment-v1/selected-v3/candidate.zip",
+      "sha256": "507dac5b524b08450d14119443f19a370b790e1bcd198ec6144563ef2a7f2233"
+    },
+    "candidate": {
+      "path": "build/banner-inset-v1/selected-v1/candidate.zip",
+      "sha256": "06ab52ed52fd0cf1249bf5cb14d89da95d31263b482137a021c136063e26e5e0"
+    }
+  },
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "capture_arguments": [
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/art/cartoon/seasonal-v1/banner-inset-v1/native/capture.py",
+    "--baseline",
+    "/source/build/banner-attachment-v1/selected-v3/candidate.zip",
+    "--candidate",
+    "/source/build/banner-inset-v1/selected-v1/candidate.zip",
+    "--candidate-sha256",
+    "06ab52ed52fd0cf1249bf5cb14d89da95d31263b482137a021c136063e26e5e0",
+    "--output",
+    "/out/captures"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 229.10637712478638,
+  "no_surviving_task_container": true,
+  "launcher_sha256": "3626a129badb60ed2422f0c84bf9d0ee278eecf169141ee17e2009d4643e3055",
+  "adapter_sha256": "75500b3ff46998948e5e8fe486680933efc78ab0f3b2cbd42b4e8ba85bba5b88"
+}

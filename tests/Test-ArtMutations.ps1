@@ -59,8 +59,8 @@ $mutations = @(
        Check = 'Cartoon retains intentional opaque magenta'; Witness = 'WITNESS art assertion executed:';
        Failure = 'FAIL tests/Invoke-ArtStyleTests.ps1: Cartoon retains intentional opaque magenta' },
     @{ Name = 'cartoon-dimensions'; File = 'src\engine\art_style.c'; Target = 'jc_reborn';
-       Old = 'if (selected == &styles[1] && (w != width * currentScale || h != height * currentScale)) {';
-       New = 'if (selected == &styles[0] && (w != width * currentScale || h != height * currentScale)) {';
+       Old = 'if (selected == &styles[1] && !registeredFootprint &&';
+       New = 'if (selected == &styles[0] && !registeredFootprint &&';
        Check = 'wrong-size refuses the named asset without timing out'; Witness = 'WITNESS art assertion executed:';
        Failure = 'FAIL tests/Invoke-ArtStyleTests.ps1: wrong-size refuses the named asset without timing out' },
     @{ Name = 'config-style-persistence'; File = 'src\engine\config.c'; Target = 'jc_reborn';

@@ -1,0 +1,38 @@
+{
+  "method": "Exact RGB difference of native first and last observed 1440 ms frames. Bounding boxes do not identify a particular animation routine.",
+  "cases": {
+    "day_banner": {
+      "first_png_sha256": "578e098300aadd449e41838aed65c33453616cab65165bd152c92b2b5c45c921",
+      "endpoint_png_sha256": "ef778669133e9ab105745f14c62114b4681c6efabc339fb972ecf170c97818c0",
+      "difference_bbox": [
+        138,
+        52,
+        698,
+        216
+      ],
+      "phase_tuple_equal": true
+    },
+    "night_banner": {
+      "first_png_sha256": "6be7e8717c45499555bc40b40cdca6f0592b13ca31760ac290f78e89ff970427",
+      "endpoint_png_sha256": "12d492ec4d37ca922905343bfb5c8774784f149140dabdfb1689e9459df52aeb",
+      "difference_bbox": [
+        218,
+        52,
+        1146,
+        238
+      ],
+      "phase_tuple_equal": true
+    },
+    "shifted_banner": {
+      "first_png_sha256": "e9593a6440f9862fe2727ec460df5850a407d4b15736e32e5d8418b18a9b2ff9",
+      "endpoint_png_sha256": "9fe81e0ddffac0acf4cbc8f80468991393a2b136ecc96cf8ac873c24ef677754",
+      "difference_bbox": [
+        0,
+        92,
+        538,
+        256
+      ],
+      "phase_tuple_equal": true
+    }
+  }
+}

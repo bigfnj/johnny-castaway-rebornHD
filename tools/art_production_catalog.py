@@ -15,7 +15,7 @@ import sys
 import zipfile
 import zlib
 
-from art_common import ArtError, digest, inspect_png, read_json, safe_member, source_catalog
+from art_common import ArtError, cartoon_footprint, digest, inspect_png, read_json, safe_member, source_catalog
 from inventory_scenes import resource_catalog, metadata, u16
 
 PLAN = "art/cartoon/production-plan.json"
@@ -261,6 +261,7 @@ def assemble(archive, plan, pack, original, record, canvases, record_hash=None):
     blank_facts, groups, assets = {}, defaultdict(list), []
     for path, source in catalog.items():
         logical = [source["logical_width"], source["logical_height"]]
+        footprint = cartoon_footprint(path, logical, runtime["scale"], packed.get(path, {}).get("footprint"))
         require(logical == canvases[path], path, "HD logical canvas differs from bundled RESOURCE")
         proxy_hash = source["source_sha256"]
         groups[proxy_hash].append(path)
@@ -278,14 +279,15 @@ def assemble(archive, plan, pack, original, record, canvases, record_hash=None):
             recipe_path = item["recipe"]
             row = recipe_rows[recipe_path].get(path)
             require(row is not None, path, "asset is absent from referenced recipe")
-            require(row.get("runtime_canvas") == [n * runtime["scale"] for n in logical], path, "recipe canvas differs from runtime")
+            require(row.get("footprint") == item.get("footprint"), path, "recipe footprint differs from ledger")
+            require(row.get("runtime_canvas") == footprint["canvas"], path, "recipe canvas differs from runtime")
             require(item.get("review") == approval_paths[path] and approval.get("recipe") == recipe_path,
                     path, "active recipe or acceptance pointer differs")
             require(item.get("source_sha256") == proxy_hash, path, "accepted HD proxy hash differs")
             require(item.get("sha256") == approval.get("sha256") == row.get("candidate_png_sha256"), path, "accepted PNG hashes differ")
             data = archive.read(PREFIX + path)
             require(digest(data) == item["sha256"], PREFIX + path, "production PNG hash differs")
-            info = inspect_png(data, PREFIX + path, expected=tuple(n * runtime["scale"] for n in logical))
+            info = inspect_png(data, PREFIX + path, expected=tuple(footprint["canvas"]))
             if source["kind"] == "sprite":
                 require(info["color_type"] in (4, 6), path, "accepted sprite has no alpha channel")
             else:
@@ -296,7 +298,7 @@ def assemble(archive, plan, pack, original, record, canvases, record_hash=None):
             status = {"status": "accepted", "acceptance": approval_paths[path], "recipe": recipe_path, "png_sha256": item["sha256"]}
         assets.append({"path": path, "kind": source["kind"], "resource": source["resource"], "frame": source.get("index"),
                        "family": "resource:" + source["resource"], "bundled_logical_canvas": logical,
-                       "runtime_canvas": [n * runtime["scale"] for n in logical],
+                       "runtime_canvas": footprint["canvas"],
                        "hd_proxy": {"member": source["source_member"], "sha256": proxy_hash,
                                     "canvas": [source["source_width"], source["source_height"]],
                                     "blank_under_hd_runtime_rule": blank_facts[blank_key],
@@ -306,6 +308,8 @@ def assemble(archive, plan, pack, original, record, canvases, record_hash=None):
                            "record_format": native["record_format"] if native is not None else None,
                            "asset_key": path if native is not None else None,
                            "independently_reread": False}, "production": status})
+        if "id" in footprint:
+            assets[-1]["footprint"] = footprint
     families = []
     for resource in sorted(resources, key=lambda name: (priorities.index(name) if name in priorities else len(priorities), name)):
         rows = [row for row in assets if row["resource"] == resource]
@@ -370,7 +374,7 @@ def markdown(report):
              "## Resource worklist", "", "| Priority | Resource | Slots | Accepted | Pending | Blank HD proxies |", "|---|---|---:|---:|---:|---:|"]
     for family in report["families"]:
         lines.append(f"| {family['priority'] or ''} | `{family['resource']}` | {family['slots']} | {family['accepted']} | {family['slots'] - family['accepted']} | {family['hd_proxy_blank_slots']} |")
-    lines += ["", "## Completion boundary", "", "Slot coverage is separate from visual approval. Validate every candidate PNG, preserve original canvases and script placement, "
+    lines += ["", "## Completion boundary", "", "Slot coverage is separate from visual approval. Validate every candidate PNG, preserve original source identities and script placement, declare any registered runtime footprint explicitly, "
               "review each motion/interaction family in the engine, and retain approval scope and known differences. Palette-driven primitives, scene transitions and application UI are outside the BMP/SCR replacement count.", "",
               "The existing [original-first pilot catalog](cartoon-art-metadata.md) and historical review records remain unchanged. "
               "This production catalog adds a worklist; it does not replace their evidence.", "",

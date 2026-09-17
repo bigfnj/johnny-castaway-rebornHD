@@ -1,0 +1,79 @@
+{
+  "scope": "Shape review only. Original source colors are diagnostic. Draft normalized for display after an unintended generation zoom; not a runtime export.",
+  "display_crop": [
+    128,
+    330,
+    1280,
+    360
+  ],
+  "draft": {
+    "path": "raw.png",
+    "sha256": "b628924811d61ed5ccc024285a7282a396688c247ec50de7d57b08431a1bc86f",
+    "display_affine": [
+      0.8370423546302943,
+      116.22182340272792,
+      87.36109117013643
+    ],
+    "pixelated": false
+  },
+  "references": {
+    "original": {
+      "path": "../reference-master/original-ground-master.png",
+      "sha256": "98a5c621b910fa71ba9aad56e8f96ddd32cba6895886804909154d99f3975cb3",
+      "label": "Original source artwork",
+      "note": "The original panel uses extracted source sprites with diagnostic colors. Compare the sand outline; its blue and white pixels belong to the original wave artwork.",
+      "display_affine": [
+        1,
+        0,
+        0
+      ],
+      "pixelated": true
+    },
+    "earlier": {
+      "path": "../reference-master/cartoon-ground-master.png",
+      "sha256": "12a813357d8f3e85509aa3f4f3c2d3c5f6737cfb3013b7574dbf2777e5701fdf",
+      "label": "Earlier Cartoon island",
+      "note": "This is the earlier Cartoon ground and wave artwork at its recorded positions, before the shoreline enlargement.",
+      "display_affine": [
+        1,
+        0,
+        0
+      ],
+      "pixelated": true
+    },
+    "smooth": {
+      "path": "../smooth-shore-v1/raw.png",
+      "sha256": "df6d789714c10bc1d6282a75c86c05770baad73a61990087f246253718a55c97",
+      "label": "Previous smooth draft",
+      "note": "This is the broad smooth draft before restoring the left jut.",
+      "display_affine": [
+        1,
+        0,
+        0
+      ],
+      "pixelated": false
+    }
+  },
+  "registration": {
+    "method": "Uniform alpha128 span fit to prior smooth draft; align minimum x and minimum y, preserve aspect ratio.",
+    "prior_alpha128_bbox": [
+      179,
+      382,
+      1345,
+      648
+    ],
+    "new_alpha128_bbox": [
+      75,
+      352,
+      1468,
+      674
+    ],
+    "upper_edge_sample_count": 221,
+    "upper_edge_vertical_rms_raw_px": 0.85,
+    "upper_edge_vertical_p95_raw_px": 1.49,
+    "upper_edge_vertical_max_raw_px": 2.14,
+    "left_tip_vertical_residual_raw_px": 4.27,
+    "right_tip_vertical_residual_raw_px": 3.28,
+    "limit": "Display-only alignment suitable for shape review. Not exact matching, approved runtime registration, footprint acceptance or in-scene approval."
+  }
+}

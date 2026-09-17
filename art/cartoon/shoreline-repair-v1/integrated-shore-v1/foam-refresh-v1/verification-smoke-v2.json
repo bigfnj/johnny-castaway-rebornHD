@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "smoke",
+  "variant": "offshore",
+  "test_sha256": "1f60aa818e92ba9c396498dfccb6abd99cb495b3fa1509d89289942e8f86ec30",
+  "exporter_sha256": "364c6d69eb2b062982cd35568c364d9204ccb915e5da744f6bc79163c535c847",
+  "recipe_sha256": "53a6ba750c90c9c0b721864d103bd565ae332c6e5a40b00ae98cdc6eb171f4b4",
+  "report_sha256": "ceb1dd987098c6f5ee36a77988009b1f290e44f421bfd7f08cd275c34bca999d",
+  "scope": "Focused authoring evidence, not native animation or human approval.",
+  "checks": [
+    "Exact exporter and recipe identities",
+    "Comparison-only status retained",
+    "Ten ordered runtime slots",
+    "Every report-bound output byte hash",
+    "Seven parent PNGs byte-identical; three full-source canvases retain all filtered alpha",
+    "Unmasked input crop is world-aligned"
+  ],
+  "commands": []
+}

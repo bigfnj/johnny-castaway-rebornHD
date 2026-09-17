@@ -1,0 +1,25 @@
+== portable PNG decoder: premultiplied alpha ==
+== art styles: real rendered pixels ==
+== art styles: persisted setting and transient CLI override ==
+  FAIL tests/Invoke-ArtStyleTests.ps1: a fresh process uses the saved Cartoon setting - zipvfs: opened archive 'scrantic_data.zip' (7 entries)
+Loading resources ....
+HD assets enabled (scale=2, render=1280x960)
+rand seed: 9 (forced)
+---- Loading TEST.TTM
+    LOAD_IMAGE TEST.BMP
+Art asset: data/hd/BMP/TEST.BMP/000.png
+    SET_COLORS 15 15
+    DRAW_RECT 0 0 640 480
+    DRAW_SPRITE 10 10 0 0
+    DRAW_SPRITE_FLIP 20 10 0 0
+    DRAW_SPRITE 638 10 0 0
+    UPDATE
+    UPDATE
+    UPDATE
+    UPDATE
+    UPDATE
+    UPDATE
+jc_reborn: stopping after 5 frame(s) as requested
+Captured frame: D:\.ai-work\worktrees\johnny-seasonal-decorations\build\footprint-ps51-v2\temp\jcr-art-test-78f60479661c4eb08dd91f5f4366c227\valid\persisted.ppm (1280x960)
+
+WITNESS art assertion executed: a fresh process uses the saved Cartoon setting

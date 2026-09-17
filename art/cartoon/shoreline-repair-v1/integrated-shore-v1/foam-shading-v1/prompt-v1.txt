@@ -1,0 +1,6 @@
+Use case: precise-object-edit.
+Asset type: one transparent cartoon ocean-foam animation sprite, phase 007.
+Image 1 is the edit target. Image 2 is only the adjacent phase color reference.
+Edit image 1 by removing its dark gray/black smoky halo and dark shadow shading around the white-and-cyan foam. Use the clean light white/pale-cyan palette of image 2, without adding a luminous glow. The dark band visibly flashes during the animation and must disappear. Empty space must be truly transparent, including between foam strokes. Keep gentle antialiasing at the strokes, not a gray fog or broad opaque band.
+Preserve image 1's individual white foam strokes, curved path, line breaks, little flecks, arc endpoints, exact scale and positions on its 1536x1024 canvas. Do not copy image 2's different shapes. Do not translate, recenter, crop, thicken, or resize the arc. Keep the full source canvas and empty margins. Only the halo/shading changes.
+Output the isolated foam on an actual RGBA transparent background. No black background, ocean fill, gray shadows, glow, island, sand, labels, or text.

@@ -1,0 +1,17 @@
+WITNESS module 37fd46e91145a676dc62b299ca968f611442d4b7c463638571ab23c55a393961
+test_shoreline_recipe_footprint_must_match_ledger (__main__.HistoryTests.test_shoreline_recipe_footprint_must_match_ledger) ... FAIL
+
+======================================================================
+FAIL: test_shoreline_recipe_footprint_must_match_ledger (__main__.HistoryTests.test_shoreline_recipe_footprint_must_match_ledger)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_pilot_history.py", line 227, in test_shoreline_recipe_footprint_must_match_ledger
+    self.refused(damaged, path, "active recipe footprint differs from ledger", extra_pngs=images)
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_pilot_history.py", line 132, in refused
+    self.fail("Expected named refusal: " + label + ": " + reason)
+AssertionError: Expected named refusal: BMP/BACKGRND.BMP/007.png: active recipe footprint differs from ledger
+
+----------------------------------------------------------------------
+Ran 1 test in 0.888s
+
+FAILED (failures=1)

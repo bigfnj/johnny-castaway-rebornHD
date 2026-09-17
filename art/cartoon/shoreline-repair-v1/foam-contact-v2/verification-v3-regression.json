@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "exporter_sha256": "1745fccf514821726d33687f00b21ad2b4e5e50ab4ce06e1a6daaf9d8db6236a",
+  "checker_sha256": "1ae490ef25bd8febd5afe598f8ea5efc7c6836afe9e5cee5fe5c8c5d5104c6d7",
+  "recipe_sha256": "f81a4b2e0944537d98c7a06270dd5d514dc63a87a47e916b2d5baa340ac25d7a",
+  "readback_files": 17,
+  "uniform_resample_count": 1,
+  "fixed_affine": [
+    0.5,
+    0,
+    -64,
+    0,
+    0.5,
+    -192
+  ],
+  "contact_samples": [
+    {
+      "world": [
+        757,
+        646
+      ],
+      "ground_rgba": [
+        239,
+        181,
+        93,
+        253
+      ]
+    },
+    {
+      "world": [
+        785,
+        656
+      ],
+      "ground_rgba": [
+        65,
+        28,
+        0,
+        248
+      ]
+    },
+    {
+      "world": [
+        787,
+        658
+      ],
+      "ground_rgba": [
+        80,
+        41,
+        2,
+        248
+      ]
+    }
+  ],
+  "fresh_replay": {
+    "exit_code": 0,
+    "stdout": "WITNESS contact-ground-v3 1745fccf514821726d33687f00b21ad2b4e5e50ab4ce06e1a6daaf9d8db6236a\nPASS {\"contacts\": [{\"world\": [757, 646], \"ground_rgba\": [239, 181, 93, 253]}, {\"world\": [785, 656], \"ground_rgba\": [65, 28, 0, 248]}, {\"world\": [787, 658], \"ground_rgba\": [80, 41, 2, 248]}], \"outside_union\": {\"nonzero_pixels\": 4, \"alpha8_pixels\": 1, \"maximum_alpha\": 96, \"alpha_sum\": 106}}\n",
+    "stderr": "",
+    "compared_files": 17,
+    "command": "python -B art/cartoon/shoreline-repair-v1/foam-contact-v2/export_v3.py --output <fresh-directory>"
+  },
+  "wrong_raw_control": {
+    "status": "FIRED",
+    "failure": "ground-master-v2.png: source identity differs",
+    "method": "Only in-memory source path changed; selected7265... hash retained. No input or recipe file edited."
+  },
+  "v2_preserved": {
+    "recipe_sha256": "fb4d5c4b826c4cacc7066e5562830175473bfd9e0eb5a51fe011d3aae44c9d52",
+    "report_sha256": "55f6e0010e02fad0ef4adb416153d4af1f40cb487a58113ba4e6d68e41a0fbbb",
+    "runtime_pngs": 10,
+    "status": "PASS"
+  }
+}

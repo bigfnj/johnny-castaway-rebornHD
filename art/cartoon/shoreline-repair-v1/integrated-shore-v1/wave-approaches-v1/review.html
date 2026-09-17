@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Waves at the clovers</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#17252e;color:#eef5fa;font:17px/1.5 system-ui,sans-serif}main{max-width:1920px;margin:auto;padding:24px}h1{font-size:30px;margin:0 0 8px}h2{font-size:20px;margin:0 0 4px}p{margin:8px 0 16px}.intro{max-width:1150px}.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:20px 0}button,select{font:inherit;background:#e8f2f8;color:#173445;border:0;border-radius:5px;padding:9px 12px;cursor:pointer}button:disabled{opacity:.5;cursor:wait}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #ffd57b;outline-offset:3px}.panels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.panel{background:#253b49;border-radius:8px;padding:16px;min-width:0}.panel p{font-size:14px;color:#c4d6df;min-height:44px;margin:4px 0 12px}canvas{display:block;width:100%;height:auto;background:#203340;image-rendering:auto}.frame{font-size:14px;color:#c4d6df;margin-top:10px}.timeline{display:flex;gap:14px;align-items:center;margin:18px 0}.timeline input{flex:1;min-width:90px}.note{font-size:15px;color:#c4d6df;max-width:1250px}a{color:#a3dcff}#status{min-width:165px;font-variant-numeric:tabular-nums}#error{color:#ffc8be}[hidden]{display:none!important}@media(max-width:780px){.panels{grid-template-columns:1fr}main{padding:16px}.panel p{min-height:0}}
+</style></head>
+<body><main>
+<h1>Waves at the clovers</h1>
+<p class="intro">Compare the original wave cycle with the offshore ripples and the new wash onto sand. Watch the beach just below the lowest clover roots as the water arrives and recedes.</p>
+<div class="controls">
+<button id="play" disabled>Pause</button><button id="previous" disabled>Previous phase</button><button id="next" disabled>Next phase</button><button id="replay" disabled>Replay</button>
+<label for="speed">Speed</label><select id="speed"><option value="1">Normal</option><option value="0.5">Slow</option><option value="0.25">Very slow</option></select>
+<label for="view">View</label><select id="view"><option value="clovers">Clovers close-up</option><option value="island">Whole island</option></select>
+<label><input type="checkbox" id="repeat" checked> Repeat</label>
+</div>
+<div class="panels">
+<section class="panel"><h2>Original source</h2><p>Original island, clovers and wave artwork. Colors are diagnostic.</p><canvas id="original" width="430" height="185" aria-label="Original source wave animation with St Patrick's Day clovers"></canvas><div class="frame" id="original-phase"></div></section>
+<section class="panel"><h2>Cartoon: offshore ripples</h2><p>The earlier approach keeps the center foam outside the sand.</p><canvas id="offshore" width="430" height="185" aria-label="Cartoon offshore ripple animation with full-size clovers"></canvas><div class="frame" id="offshore-phase"></div></section>
+<section class="panel"><h2>Cartoon: wash onto sand</h2><p>New center waves cover the beach edge, then reveal the sand again.</p><canvas id="wash" width="430" height="185" aria-label="Cartoon incoming water animation with full-size clovers"></canvas><div class="frame" id="wash-phase"></div></section>
+</div>
+<div class="timeline"><label for="time">Wave cycle</label><input type="range" id="time" min="0" max="1439" step="1" value="0" aria-label="Time within the wave cycle"><span id="status" role="status">Loading captures...</span></div>
+<p class="note">Both Cartoon panels use the same approved island and full-size clovers. Only their center waves differ; the side waves are held constant for this study. All panels follow the port's recorded wave timing. The original panel uses authentic source sprites rendered by the port, not a recording of the original executable.</p>
+<p class="note">This is an art comparison, not an installed update. <a href="README.md">Sources and review notes</a> · <a href="manifest.json">Capture details</a></p>
+<p id="error" role="alert" hidden></p>
+</main><script>
+'use strict';
+const byId=id=>document.getElementById(id);
+const keys=['original','offshore','wash'];
+let manifest,loaded=new Map(),playing=true,time=0,last=0,raf=0,events=[];
+const cropModes={clovers:[660,550,430,185],island:[520,470,680,280]};
+function activeFrame(panel,ms){let frame=panel.displays[0];for(const row of panel.displays){if(row.time_ms>ms)break;frame=row;}return frame;}
+function draw(){
+ const crop=cropModes[byId('view').value];
+ for(const key of keys){
+  const panel=manifest.panels[key],row=activeFrame(panel,time),canvas=byId(key),ctx=canvas.getContext('2d');
+  if(canvas.width!==crop[2]||canvas.height!==crop[3]){canvas.width=crop[2];canvas.height=crop[3];}
+  ctx.imageSmoothingEnabled=false;ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.drawImage(loaded.get(key+'/'+row.file),crop[0]-manifest.stored_crop[0],crop[1]-manifest.stored_crop[1],crop[2],crop[3],0,0,crop[2],crop[3]);
+  canvas.dataset.frame=row.file;canvas.dataset.time=String(row.time_ms);canvas.dataset.phases=row.phases.slice(0,3).join(',');
+  byId(key+'-phase').textContent='Wave poses '+row.phases.slice(0,3).map(n=>String(n).padStart(3,'0')).join(' / ');
+ }
+ byId('time').value=String(Math.floor(time));byId('status').textContent=(time/1000).toFixed(2)+' / '+(manifest.loop_ms/1000).toFixed(2)+' seconds';
+}
+function setPlaying(value){playing=value;last=0;byId('play').textContent=value?'Pause':'Play';}
+function tick(stamp){if(last&&playing){time+=(stamp-last)*Number(byId('speed').value);if(time>=manifest.loop_ms){if(byId('repeat').checked)time%=manifest.loop_ms;else{time=manifest.loop_ms-1;setPlaying(false);}}draw();}last=stamp;raf=requestAnimationFrame(tick);}
+function step(direction){setPlaying(false);const epsilon=.5;if(direction>0)time=events.find(t=>t>time+epsilon)??events[0];else time=[...events].reverse().find(t=>t<time-epsilon)??events[events.length-1];draw();}
+async function start(){
+ const response=await fetch('manifest.json');if(!response.ok)throw new Error('Capture manifest unavailable');manifest=await response.json();
+ for(const key of keys){const panel=manifest.panels[key];if(!panel||!panel.displays.length)throw new Error('Missing '+key+' capture');}
+ await Promise.all(keys.flatMap(key=>[...new Set(manifest.panels[key].displays.map(row=>row.file))].map(file=>new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>{loaded.set(key+'/'+file,image);resolve();};image.onerror=()=>reject(new Error('Image unavailable: '+key+'/'+file));image.src=key+'/'+file;}))));
+ const source=manifest.panels.original.displays;events=[...new Set(source.filter((row,i)=>row.time_ms<manifest.loop_ms&&(!i||row.phases.join()!==source[i-1].phases.join())).map(row=>row.time_ms))];
+ byId('time').max=String(manifest.loop_ms-1);for(const id of ['play','previous','next','replay'])byId(id).disabled=false;
+ byId('play').addEventListener('click',()=>setPlaying(!playing));byId('previous').addEventListener('click',()=>step(-1));byId('next').addEventListener('click',()=>step(1));
+ byId('replay').addEventListener('click',()=>{time=0;setPlaying(true);draw();});byId('view').addEventListener('change',draw);
+ byId('time').addEventListener('input',()=>{setPlaying(false);time=Number(byId('time').value);draw();});
+ document.addEventListener('visibilitychange',()=>{last=0;});window.addEventListener('pagehide',()=>cancelAnimationFrame(raf));
+ document.body.dataset.ready='true';draw();raf=requestAnimationFrame(tick);
+}
+start().catch(error=>{setPlaying(false);byId('error').hidden=false;byId('error').textContent='The comparison could not load: '+error.message;byId('status').textContent='Capture load failed';});
+</script></body></html>

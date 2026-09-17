@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "regression",
+  "variant": "wash",
+  "test_sha256": "1f60aa818e92ba9c396498dfccb6abd99cb495b3fa1509d89289942e8f86ec30",
+  "exporter_sha256": "e6ecea7ef2484974e094f8ec135ebc8b536138dc1e3a3d9b5f1338b3e5813d14",
+  "recipe_sha256": "f39f9df9656a6a14753f86e817d9528426cb86914aa9d0432146153bf9a4b04a",
+  "report_sha256": "25b89a01a44302e44ff00f331bafc330555965c3e3633eb724252e9302ed5ec5",
+  "scope": "Focused authoring evidence, not native animation or human approval.",
+  "checks": [
+    "Exact exporter and recipe identities",
+    "Comparison-only status retained",
+    "Ten ordered runtime slots",
+    "Every report-bound output byte hash",
+    "Seven parent PNGs byte-identical; three full-source canvases retain all filtered alpha",
+    "All three runtime RGBA arrays equal direct resample crops without any ground masking",
+    "Smoke passed first on the same exporter",
+    "Fresh exporter digest witness emitted",
+    "Fresh replay matches every one of 14 files",
+    "Named contract refusal before outputs",
+    "Actual mutant digest witnessed and wrong006 pixels accepted",
+    "Original exporter restored positive after isolated mutation"
+  ],
+  "commands": [
+    {
+      "label": "Fresh-process exact replay",
+      "arguments": [
+        "-B",
+        "<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wash-over-sand-v1\\export.py",
+        "--recipe",
+        "<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wash-over-sand-v1\\recipe-v1.json",
+        "--output",
+        "<repo>\\build\\shoreline-repair-v1\\technical-replays\\wash-r95rip3_\\replay"
+      ],
+      "returncode": 0,
+      "stdout": "WITNESS incoming-wash e6ecea7ef2484974e094f8ec135ebc8b536138dc1e3a3d9b5f1338b3e5813d14\nPASS {\"files\": 14, \"footprint\": {\"id\": \"cartoon-island-center-foam-v1\", \"canvas\": [384, 256], \"offset_hd\": [-32, -90]}}\n",
+      "stderr": ""
+    },
+    {
+      "label": "Valid other-phase raw substitution refusal",
+      "arguments": [
+        "-B",
+        "<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wash-over-sand-v1\\export.py",
+        "--recipe",
+        "<repo>\\build\\shoreline-repair-v1\\technical-replays\\wash-r95rip3_\\wrong-recipe.json",
+        "--output",
+        "<repo>\\build\\shoreline-repair-v1\\technical-replays\\wash-r95rip3_\\refused"
+      ],
+      "returncode": 1,
+      "stdout": "WITNESS incoming-wash e6ecea7ef2484974e094f8ec135ebc8b536138dc1e3a3d9b5f1338b3e5813d14\n",
+      "stderr": "FAIL recipe: source/phase/registration contract differs\n"
+    },
+    {
+      "label": "Guard-removed copied exporter executes corrupted phase assignment",
+      "arguments": [
+        "-B",
+        "<repo>\\build\\shoreline-repair-v1\\technical-replays\\wash-r95rip3_\\launch.py",
+        "<repo>\\build\\shoreline-repair-v1\\technical-replays\\wash-r95rip3_\\mutant.py",
+        "<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wash-over-sand-v1\\export.py",
+        "--recipe",
+        "<repo>\\build\\shoreline-repair-v1\\technical-replays\\wash-r95rip3_\\wrong-recipe.json",
+        "--output",
+        "<repo>\\build\\shoreline-repair-v1\\technical-replays\\wash-r95rip3_\\mutant-output"
+      ],
+      "returncode": 0,
+      "stdout": "WITNESS incoming-wash d1b5d1b93e791022f2136619a5fa9d513015679dff6934c50919c4317b53e9ea\nPASS {\"files\": 14, \"footprint\": {\"id\": \"cartoon-island-center-foam-v1\", \"canvas\": [384, 256], \"offset_hd\": [-32, -90]}}\n",
+      "stderr": ""
+    },
+    {
+      "label": "Restored unchanged positive exporter",
+      "arguments": [
+        "-B",
+        "<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wash-over-sand-v1\\export.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "WITNESS incoming-wash e6ecea7ef2484974e094f8ec135ebc8b536138dc1e3a3d9b5f1338b3e5813d14\nPASS {\"files\": 14, \"footprint\": {\"id\": \"cartoon-island-center-foam-v1\", \"canvas\": [384, 256], \"offset_hd\": [-32, -90]}}\n",
+      "stderr": ""
+    }
+  ],
+  "smoke_sha256": "a820eacf2d2f8b7b3b1febc83308e0e7cb1d6a1b92b8d2495587acf494d83b4f",
+  "mutation": {
+    "guard_removed": "    base.require(recipe == prepared(), 'recipe: source/phase/registration contract differs')",
+    "mutant_sha256": "d1b5d1b93e791022f2136619a5fa9d513015679dff6934c50919c4317b53e9ea",
+    "launcher_sha256": "5227922ece3839a1f0650d5f1a26dd22080bc93d8f15e44baadc91ae01b76a06",
+    "corrupt_recipe_sha256": "3b8b0cf52a8faebe50fd6fcfb3a2c872bb1f125eee9056d3aaa9d47eb879484a",
+    "accepted_wrong006_sha256": "8e3363a2c7e68e4dbc43777dbeed8a9e74eff3514b3a6e607994255105f358be",
+    "correct006_sha256": "f89e31bf5cb691494359bf8ae1ef42943b718041c1673317768c74261d3067a5",
+    "result": "FIRED: original refused; guard-removed fresh process accepted different006 pixels"
+  }
+}

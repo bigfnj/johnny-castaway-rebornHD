@@ -1,0 +1,107 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "inputs": {
+    "assets/scrantic_data.zip": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+    "art/cartoon/pack.json": "1d920d4f97fd4294a14f0d36af97fb6c48882a5bceb49f2a9418cef1f8c1bd8f",
+    "tools/art_common.py": "2e003886e3504f6af4725eaf875c3d793542dc0efd4ccf45042d670c96f6e914",
+    "tools/art_pack.py": "1df59daf81b2bbe6f7826156e7f0d12fd70f9048d576dee2cdc2eac60d1d2239",
+    "tools/art_inventory.py": "0f17eecde17a412e011b4f7ba2fb427c414137461bf84fc34904ce4b2c30eb31",
+    "tools/art_production_catalog.py": "3ec870dadd15667ef8a6ca267fadebc6294a0a9be04cbd94a259b3e8e4883a99",
+    "tools/art_review_metadata.py": "8ea7271dbe4c5d29b6841b8c6f5be9be31a7f705e2bfc68087cf186522847204",
+    "tests/test_art_tools.py": "4b26006c33af2bcb8b699f7bd66cdad5910256b86b397fb9554697bd0185113f",
+    "tests/test_art_inventory.py": "1d72fa04dfc61eaf1d4fe61ca56f00e468f7c8ae46d0de84dc10d7807cd63b6e",
+    "tests/test_art_pilot_history.py": "9612c8aa441860d563e44a29582598f55d2864cc0c0559a48a0ff39ffa60a675",
+    "tests/test_art_review_metadata.py": "1593d8f539901ceb31eedbb4f2fa73aa7ae46a9a4683e003a9de900349fbb658",
+    "tests/test_art_production_catalog.py": "d3474fc4af8865fccef16ea39f77156c743b8e029f462de4ba0af7fc292e02df",
+    "tests/art_pilot_fixture.py": "a9149c3d8f5ce70a71ba57e9f93e4a07fc0c790842c94f54529df6afb0294eeb"
+  },
+  "runs": [
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_tools.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "pack-regression.log",
+      "sha256": "47d099d38131cb4727e6d4d0a5a86a465602ce6e2e46cf3e7afb96752e768282",
+      "tests": 28
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_inventory.py"
+      ],
+      "exit_code": 0,
+      "log": "inventory-regression.log",
+      "sha256": "b76198770e27d0bf020cdda61ffbd15cf5be5231879073d5543899036f9db955",
+      "tests": 11
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "log": "test_art_pilot_history-regression.log",
+      "sha256": "975a64f152133758484e4f2955b0edf9fec3e5f5bc30d325b0fac090f6525b2f",
+      "tests": 25
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "log": "test_art_review_metadata-regression.log",
+      "sha256": "d28228ed38e901f1119e61607b61b86c5b0ef0c3336e09e195e2b90d3e1d1291",
+      "tests": 60
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_production_catalog.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "log": "test_art_production_catalog-regression.log",
+      "sha256": "291d913952d7364b9be9012afb5f977413b7127bb0a3861068aabaf223e70294",
+      "tests": 67
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tools/art_review_metadata.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "art_review_metadata-check.log",
+      "sha256": "85b3103a9c4436984a2b4b41ce7ed57f096c4724885f4a404b65870cbe289dbe",
+      "tests": null
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tools/art_production_catalog.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "art_production_catalog-check.log",
+      "sha256": "4255841b094e856362cd55629f1912f868bfaf8ff9a6fbff85caa44b0f4490a3",
+      "tests": null
+    }
+  ]
+}

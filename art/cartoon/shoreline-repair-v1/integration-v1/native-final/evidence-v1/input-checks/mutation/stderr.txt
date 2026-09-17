@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\art\cartoon\shoreline-repair-v1\integration-v1\native-final\check_inputs.py", line 68, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\art\cartoon\shoreline-repair-v1\integration-v1\native-final\check_inputs.py", line 46, in main
+    negatives(c,before,after,fixtures);return
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\art\cartoon\shoreline-repair-v1\integration-v1\native-final\check_inputs.py", line 29, in negatives
+    else:raise ValueError('final native: negative survived '+name)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: final native: negative survived selected007

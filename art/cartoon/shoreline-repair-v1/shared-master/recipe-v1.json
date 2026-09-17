@@ -1,0 +1,339 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "source": "art/cartoon/shoreline-repair-v1/raw/ground-master-v2.png",
+  "source_sha256": "bde2f4f2111f532cb94a82ece74fa7745129d61e2ad909e8eadaa3fab4df7d14",
+  "reference": "art/cartoon/shoreline-repair-v1/reference-master/source.json",
+  "reference_sha256": "8cac030442054333c2a006a4914703b376c3f2e2bf83d7c034001f2a16d794a8",
+  "archive": "assets/scrantic_data.zip",
+  "archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+  "filter_sha256": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+  "pillow_version": "12.3.0",
+  "resampling": {
+    "working_mode": "RGBa",
+    "affine": "BICUBIC",
+    "oversample": 8,
+    "downsample": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "world_crop": [
+    540,
+    558,
+    1180,
+    686
+  ],
+  "master_canvas": [
+    640,
+    128
+  ],
+  "affine_forward": [
+    0.5,
+    0,
+    -64,
+    0,
+    0.5,
+    -192
+  ],
+  "padding_hd": 32,
+  "ground_ownership": "Disjoint rectangular crops;000 then left,center,right. Center owns the12x8 overlap outside000. No material mask or alpha threshold.",
+  "scope": "Unapproved coherent-ground diagnostic; existing foam inputs unchanged before source-over composition. No tide/scene acceptance.",
+  "frames": [
+    {
+      "frame": 0,
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "canvas": [
+        560,
+        104
+      ],
+      "world_box": [
+        576,
+        558,
+        1136,
+        662
+      ],
+      "ground_family": 0,
+      "owned_ground_rectangles": [
+        [
+          576,
+          558,
+          1136,
+          662
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+      "previous_member_sha256": "c953f7e67b8e8e076e9741ddfb1ad3d6516e57dc8108cedb9bc36a16f4ba30a9",
+      "foam_composition": "none"
+    },
+    {
+      "frame": 3,
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "canvas": [
+        144,
+        58
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "ground_family": 3,
+      "owned_ground_rectangles": [
+        [
+          540,
+          612,
+          576,
+          670
+        ],
+        [
+          576,
+          662,
+          684,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+      "previous_member_sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+      "foam_composition": "unchanged source foam OVER owned master ground"
+    },
+    {
+      "frame": 4,
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "canvas": [
+        144,
+        58
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "ground_family": 3,
+      "owned_ground_rectangles": [
+        [
+          540,
+          612,
+          576,
+          670
+        ],
+        [
+          576,
+          662,
+          684,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+      "previous_member_sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+      "foam_composition": "unchanged source foam OVER owned master ground"
+    },
+    {
+      "frame": 5,
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "canvas": [
+        144,
+        58
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "ground_family": 3,
+      "owned_ground_rectangles": [
+        [
+          540,
+          612,
+          576,
+          670
+        ],
+        [
+          576,
+          662,
+          684,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+      "previous_member_sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+      "foam_composition": "unchanged source foam OVER owned master ground"
+    },
+    {
+      "frame": 6,
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "canvas": [
+        320,
+        50
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "ground_family": 6,
+      "owned_ground_rectangles": [
+        [
+          728,
+          662,
+          1048,
+          688
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+      "previous_member_sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd",
+      "foam_composition": "unchanged source foam OVER owned master ground"
+    },
+    {
+      "frame": 7,
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "canvas": [
+        320,
+        50
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "ground_family": 6,
+      "owned_ground_rectangles": [
+        [
+          728,
+          662,
+          1048,
+          688
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+      "previous_member_sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e",
+      "foam_composition": "unchanged source foam OVER owned master ground"
+    },
+    {
+      "frame": 8,
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "canvas": [
+        320,
+        50
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "ground_family": 6,
+      "owned_ground_rectangles": [
+        [
+          728,
+          662,
+          1048,
+          688
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+      "previous_member_sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19",
+      "foam_composition": "unchanged source foam OVER owned master ground"
+    },
+    {
+      "frame": 9,
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "canvas": [
+        144,
+        64
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "ground_family": 9,
+      "owned_ground_rectangles": [
+        [
+          1136,
+          606,
+          1180,
+          670
+        ],
+        [
+          1048,
+          662,
+          1136,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+      "previous_member_sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+      "foam_composition": "unchanged source foam OVER owned master ground"
+    },
+    {
+      "frame": 10,
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "canvas": [
+        144,
+        64
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "ground_family": 9,
+      "owned_ground_rectangles": [
+        [
+          1136,
+          606,
+          1180,
+          670
+        ],
+        [
+          1048,
+          662,
+          1136,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+      "previous_member_sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+      "foam_composition": "unchanged source foam OVER owned master ground"
+    },
+    {
+      "frame": 11,
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "canvas": [
+        144,
+        64
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "ground_family": 9,
+      "owned_ground_rectangles": [
+        [
+          1136,
+          606,
+          1180,
+          670
+        ],
+        [
+          1048,
+          662,
+          1136,
+          670
+        ]
+      ],
+      "previous_member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+      "previous_member_sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+      "foam_composition": "unchanged source foam OVER owned master ground"
+    }
+  ]
+}

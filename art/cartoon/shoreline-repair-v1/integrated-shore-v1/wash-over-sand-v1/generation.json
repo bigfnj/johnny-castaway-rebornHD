@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-16",
+  "method": "built-in image_gen",
+  "accepted": false,
+  "scope": "Center shoreline incoming-wash study. Side waves stay identical to the offshore comparison. No production promotion.",
+  "user_direction": "Ocean waves wash up onto the island, rather than only radiating away. Compare both approaches beside original artwork with St Patrick's Day clovers.",
+  "geometry": {
+    "source_to_world_affine": [
+      0.25,
+      0,
+      696,
+      0,
+      0.25,
+      548
+    ],
+    "canvas": [
+      384,
+      256
+    ],
+    "offset_hd": [
+      -32,
+      -90
+    ],
+    "ground": "Unchanged approved smooth-shore-v3 export"
+  },
+  "attempts": [
+    {
+      "draft": "006",
+      "prompt_file": "006-prompt.txt",
+      "prompt": "Use case: precise-object-edit / compositing.\nAsset: one registered transparent cartoon animation overlay for the CENTER shoreline, phase 006 (smallest incoming wash).\nImage 1 is the fixed geometry reference: approved sand. Do not redraw or include that sand in the output.\nImage 2 is a native scene for cartoon color/style only.\nDraw a narrow shallow seawater ribbon and its delicate white/cyan foamy LEADING EDGE on the lower edge of the sand in Image 1. Water is arriving FROM BELOW toward the sand, not radiating away from it. The leading foam is on the inland/top side of the ribbon. The thin clear blue water behind it (below it) goes back into the ocean.\nExact canvas 1536 x 1024, genuine RGBA transparency. No zoom or recentering.\nThis covers ONLY the center shore segment, x 128 to 1408, not a whole island ring. Follow Image 1's bottom coast precisely, including the little inlet near x 1000. At this low-wash phase the leading edge barely crosses the dark sand outline by about 4 to 8 pixels. Approximate leading edge path: (136,420), (260,498), (430,539), (650,550), (850,542), (980,500), (1080,517), (1250,510), (1398,477). Follow the reference over these approximate coordinates. Behind the foam draw a narrow transparent turquoise-blue water film 15 to 35 pixels deep, plus a few delicate broken offshore white strokes. Fade the water film gently to transparency downward, not a halo. Endpoint ribbons taper out at x 136 and x 1398.\nUse bright white thin interrupted foamy leading strokes 3 to 6 pixels thick, a few tiny bubbles, and clean hand-drawn pale blue water facets. The water film should be partly transparent so underlying sand texture will show when composited. Gentle tiny lapping wave, not a splash or tsunami. The next phases will wash farther onto sand.\nOutput ONLY this water-and-foam overlay. No sand, black shore line, island, sky, people, clovers, props, labels, text or opaque backdrop. No all-around glow, blur, cast shadow, huge white shapes or unrelated spray. Keep everything in x 128..1408, y 390..625.",
+      "references": [
+        {
+          "path": "../foam-refresh-v1/center-ground-context.png",
+          "role": "Approved ground geometry guide only; source pixels are unchanged",
+          "sha256": "949ace55b9964ece2e39898701de070146bc2ecff341dac3c02950e6324f32ad"
+        },
+        {
+          "path": "reference-native-scene.png",
+          "role": "Native scene palette reference only",
+          "sha256": "179832e1192022c395b071310947cf1559109d68d85342286cdd84a01ea56fd8"
+        }
+      ],
+      "output": {
+        "path": "006-raw.png",
+        "sha256": "d804502abace0fe36419e72152c095a80e7c082434ed9a598ae3da6f0224d34b",
+        "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-1087c3b8-f7cc-4558-8f56-217e20a33556.png"
+      },
+      "assigned_runtime_frame": 7
+    },
+    {
+      "draft": "007",
+      "prompt_file": "007-prompt.txt",
+      "prompt": "Use case: precise-object-edit.\nAsset: one transparent registered cartoon incoming shore-wash overlay, animation phase 007, the second of three frames.\nImage 1 is phase 006, the precise edit target. Image 2 is the approved sand geometry guide only, do not include any sand. Image 3 is the native scene for palette only.\nKeep the entire 1536 x 1024 transparent canvas, all positions, scale, endpoint positions, existing turquoise/white style and sea-side lower extent from Image 1. Change only the arriving water's INNER / TOP edge: advance it UP onto the sand by about 14 pixels in the broad middle, and 8 to 20 pixels in irregular small local sections. Follow the exact shore including its inward notch near x 1000. Extend the translucent water film into this newly wet strip behind the advancing white crest. Do NOT translate or resize the entire ribbon; keep the outer lower water extent and endpoints fixed. The water is creeping across the dark coastline onto sand, not moving outward into the ocean.\nChange the tiny foam breaks and bubbles naturally. Slender cream-white crest 3 to 6 pixels thick with pale cyan facets, translucent turquoise film so sand texture can show. Same low gentle energy. A little more sand is covered than Image 1. No big splash or higher spray.\nOutput only the isolated water-and-foam overlay with genuine RGBA transparency. No sand, land outline, objects, clovers, scene background, glow, labels or text. Preserve the fixed coordinates, no centering or zoom.",
+      "references": [
+        {
+          "path": "006-raw.png",
+          "role": "Generated companion wash, shared style and registration",
+          "sha256": "d804502abace0fe36419e72152c095a80e7c082434ed9a598ae3da6f0224d34b"
+        },
+        {
+          "path": "../foam-refresh-v1/center-ground-context.png",
+          "role": "Approved ground geometry guide only; source pixels are unchanged",
+          "sha256": "949ace55b9964ece2e39898701de070146bc2ecff341dac3c02950e6324f32ad"
+        },
+        {
+          "path": "reference-native-scene.png",
+          "role": "Native scene palette reference only",
+          "sha256": "179832e1192022c395b071310947cf1559109d68d85342286cdd84a01ea56fd8"
+        }
+      ],
+      "output": {
+        "path": "007-raw.png",
+        "sha256": "445d15b6625168e5f154f4fa69e157d4e8e19e1811c8219b225d4989fe5680bd",
+        "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-9ac34905-91f2-4608-9ed4-9f155376d2ed.png"
+      },
+      "assigned_runtime_frame": 6
+    },
+    {
+      "draft": "008",
+      "prompt_file": "008-prompt.txt",
+      "prompt": "Use case: precise-object-edit / compositing.\nAsset: single isolated transparent center-shore incoming-water animation overlay. Maximum wash phase 008.\nImage 1 is the precise approved sandy shore geometry reference. Image 2 is the companion low-wash water sprite for style and shared coordinates.\nCanvas 1536 x 1024. Draw ONLY a thin shallow turquoise water film and a delicate white leading foam edge that has moved UP AND ONTO THE SAND compared with Image 2. Its leading edge must be distinctly ABOVE the dark front sand outline, not below it. This is gentle water covering roughly 30 pixels of the sand along its front coast. Keep the 2D camera, scale, broad outline and notch fixed. No whole-image shift, crop, zoom or centering.\nThe white leading edge must follow approximately these exact canvas points: (140,395), (260,466), (430,503), (650,510), (850,497), (985,467), (1080,480), (1250,470), (1390,439). These points describe an inland path above the front edge of Image 1. Make it a naturally irregular shallow curve, with thin broken foam and tiny flecks. Especially keep the low broad middle near y 503 to 510, not y 550. Taper endpoints. Water is moving from the bottom of the image onto the island at the top.\nBehind this leading edge, BELOW it toward the sea, extend a semitransparent blue/cyan water ribbon down to the same outer sea-side contour as Image 2 near y 585 in the broad middle. Transparent water film must veil underlying sand without repainting sand. Thin white foam about 3 to 6 pixels, pale cyan contours, gentle shallow clean cartoon water, not photorealistic. Same brightness/color/style as Image 2.\nOutput only that isolated water film and foam on true RGBA transparency. Everything else transparent. DO NOT include sand, black shore line, island, objects, people, labels, text, glow or opaque background. One phase only. No sprite sheet.",
+      "references": [
+        {
+          "path": "../foam-refresh-v1/center-ground-context.png",
+          "role": "Approved ground geometry guide only; source pixels are unchanged",
+          "sha256": "949ace55b9964ece2e39898701de070146bc2ecff341dac3c02950e6324f32ad"
+        },
+        {
+          "path": "006-raw.png",
+          "role": "Generated companion wash, shared style and registration",
+          "sha256": "d804502abace0fe36419e72152c095a80e7c082434ed9a598ae3da6f0224d34b"
+        }
+      ],
+      "output": {
+        "path": "008-raw.png",
+        "sha256": "8e08675c0a797090b2a6b0f11829e8920a320b8946b74c77331a06a04b3d2b10",
+        "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-db7d6985-df62-4730-80f1-3c9c1403dce1.png"
+      },
+      "assigned_runtime_frame": 8
+    }
+  ],
+  "assignment_reason": "Generation did not follow the requested phase ordering exactly. Measured median upper strong-white crest over world x 800 to 940 is y 680 for draft 007, y 678 for draft 006, and y 675 for draft 008. Drafts are assigned to runtime phases 006, 007 and 008 in that order.",
+  "limitations": "Crest motion is locally irregular. The lowest-crest draft has more total water alpha, so the sequence is an art study, not an exact reconstruction of original water coverage. No per-phase movement, fitting, shrinking or alpha clipping is used. Native review is required."
+}

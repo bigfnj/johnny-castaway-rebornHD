@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "phase": "smoke",
+  "html_sha256": "fb0d5e2e639a1aaee2b7bd0a4f3a11036be73349bcce42be1acdd3282b962873",
+  "manifest_sha256": "f4cf04f8a9ce99d0a2c9f779e31c2c41afb0c95e56dee89677f6c1d4f00ffb6f",
+  "checker_sha256": "ee5eec7f54a5906e7ea107ac312c74349fc2a6dd81d9ff35345945ab38a9cfc5",
+  "checks": [
+    "Pumpkin still default; playback disabled; Normal speed",
+    "Exact default native pixels on both panels",
+    "Normal timer, pause, next/previous and Slow controls"
+  ],
+  "screenshots_sha256": {
+    "browser-smoke-pumpkin.png": "702a00c04c7a32b88a26eb45478e185e3ab843ebde6934a4578d8165c2deafe6"
+  },
+  "scope": "Exact native capture pixels reconstructed from unchanged crop tiles; actual timing and UI controls. No artwork approval."
+}

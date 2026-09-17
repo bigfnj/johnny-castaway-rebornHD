@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "exporter_sha256": "109d55fcada482a42b97208c1c1c65fecfdcd715d6fa0a3a05c59d92e5ada1bc",
+  "checker_sha256": "6df4e042116f34b1db512117e257473cfb94f04be1cc2ec53049208da6b438d2",
+  "recipe_sha256": "94df1f95fa15d03566191faefcea92b415838ad66e5e212fbea2102c13b5a5cb",
+  "export_report_sha256": "d60a7c94d970d2aaa78cdc0c3b71c800a0b1cf472ead4459fd14ffbbb90b7e1b",
+  "historical_v1_actual_recipe_sha256": "4a2129320c6527306465206149e279c5b183ecb3730a66d752ccb2c46b03ed9d",
+  "checks": [
+    "Exact UTF-8 LF recipe bytes match export report SHA256",
+    "All runtime PNGs and padded banner are byte-identical to shown V1",
+    "Fresh process reproduces exact recipe binding, PNGs and export report"
+  ],
+  "controls": [
+    {
+      "name": "CRLF_recipe_bytes",
+      "status": "FIRED",
+      "failure": "recipe-crlf.json: recipe bytes must be canonical UTF-8 LF",
+      "source_witness": "WITNESS banner-inset-export-v2 109d55fcada482a42b97208c1c1c65fecfdcd715d6fa0a3a05c59d92e5ada1bc"
+    }
+  ],
+  "runs": [
+    {
+      "argv": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\export_v2.py",
+        "--recipe",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\recipe-v2.json",
+        "--output",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\candidates\\v2",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "WITNESS banner-inset-export-v2 109d55fcada482a42b97208c1c1c65fecfdcd715d6fa0a3a05c59d92e5ada1bc\nPASS inset export V2 94df1f95fa15d03566191faefcea92b415838ad66e5e212fbea2102c13b5a5cb e36e103027d2eee53c58c903cd397770a66e5ffce2683e9c0c8ce6e2d988ff92\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\Admin\\AppData\\Local\\DevToolbox\\python\\.venv\\Scripts\\python.exe",
+        "-B",
+        "D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\export_v2.py",
+        "--recipe",
+        "build\\banner-inset-v1\\recipe-v2-controls\\recipe-crlf.json",
+        "--output",
+        "build\\banner-inset-v1\\recipe-v2-controls\\must-not-exist"
+      ],
+      "exit_code": 1,
+      "stdout": "WITNESS banner-inset-export-v2 109d55fcada482a42b97208c1c1c65fecfdcd715d6fa0a3a05c59d92e5ada1bc\n",
+      "stderr": "Traceback (most recent call last):\n  File \"D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\export_v2.py\", line 50, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\export_v2.py\", line 37, in main\n    else:value,actual=read_recipe(a.recipe)\n                      ^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\art\\cartoon\\seasonal-v1\\banner-inset-v1\\export_v2.py\", line 16, in read_recipe\n    if raw!=encode(value):raise ValueError(path.name+': recipe bytes must be canonical UTF-8 LF')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: recipe-crlf.json: recipe bytes must be canonical UTF-8 LF\n"
+    }
+  ],
+  "scope": "Metadata serialization correction only. V1 runtime PNGs and shown native/browser evidence remain exact."
+}

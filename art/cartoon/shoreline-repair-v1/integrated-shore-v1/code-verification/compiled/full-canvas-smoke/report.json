@@ -1,0 +1,53 @@
+{
+  "phase": "smoke",
+  "status": "PASS",
+  "build": {
+    "command": [
+      "cc",
+      "-std=gnu11",
+      "-O1",
+      "-g",
+      "-ffunction-sections",
+      "-fdata-sections",
+      "-I/src/platform",
+      "-I/src/src/engine",
+      "/src/tests/test_art_footprint.c",
+      "/src/src/engine/graphics.c",
+      "-Wl,--gc-sections",
+      "-o",
+      "/out/shoreline-repair-v1/footprint-tests/full-canvas-smoke/footprint-probe"
+    ],
+    "sha256": "242234b6be2a726c359b2cf344ba4fc6a7c18ca558ea3bcc2e09ca5ef24b9d52",
+    "rebuilt_timestamp_advanced": true
+  },
+  "cases": [
+    {
+      "case": "new-ground",
+      "exit_code": 0,
+      "output": "WITNESS art footprint new-ground BEGIN\nWITNESS art footprint new-ground PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "new-center",
+      "exit_code": 0,
+      "output": "WITNESS art footprint new-center BEGIN\nWITNESS art footprint new-center PASS\n",
+      "status": "PASS"
+    },
+    {
+      "case": "legacy-ground",
+      "exit_code": 0,
+      "output": "WITNESS art footprint legacy-ground BEGIN\nWITNESS art footprint legacy-ground PASS\n",
+      "status": "PASS"
+    }
+  ],
+  "mutations": [],
+  "source_sha256": {
+    "src/engine/art_style.c": "1c66ab03db3e1cf5ab82f6d4c2fdcaf70829501a30de855e36ffe001d074fa42",
+    "src/engine/art_style.h": "8447d3c38cdabf1e959db7d87f8a8f3ecc013ae082e1545310322bf1e8e5aa6f",
+    "src/engine/graphics.c": "7bbab71ae7f9d43ea89f7532ac9a696af7ff16c5c8add3b9ac60fd9ad800db65",
+    "src/engine/island.c": "9b4f4a99e359a9a1af6d91ec9e3b553017afde981c34a423005155b91fd920d6",
+    "tests/test_art_footprint.c": "353606d3fb1172efcc81edd0996d2238fdd8a4f1bd62bac7e36bb6e7bc80329b",
+    "tests/test_art_footprint.py": "1afbdb170d14d9394b1126f319f5bbc0d62256f5c46284c5a3a3707cc2b7ceb3"
+  },
+  "limits": "Headless loader/draw unit probe uses a surface decoder fixture. No native island or PNG decoder parity claim."
+}

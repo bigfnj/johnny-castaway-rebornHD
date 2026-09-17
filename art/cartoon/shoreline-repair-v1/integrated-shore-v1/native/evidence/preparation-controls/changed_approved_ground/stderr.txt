@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\art\cartoon\shoreline-repair-v1\integrated-shore-v1\native\prepare.py", line 33, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\art\cartoon\shoreline-repair-v1\integrated-shore-v1\native\prepare.py", line 26, in main
+    pair=package_pair(a.baseline,target)
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\art\cartoon\shoreline-repair-v1\integrated-shore-v1\native\capture.py", line 60, in package_pair
+    require(after[member(0)]==APPROVED_GROUND_SHA,'exact approved static ground retained')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\art\cartoon\shoreline-repair-v1\integrated-shore-v1\native\capture.py", line 22, in require
+    if not ok: raise ValueError('integrated shore: '+label)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: integrated shore: exact approved static ground retained

@@ -1,0 +1,154 @@
+{
+  "scope": "Diagnostic RGB/alpha predicates; white/cyan are color witnesses, not a semantic material segmentation.",
+  "white": "alpha>=128, min(R,G,B)>=180, max(R,G,B)-min(R,G,B)<=60",
+  "cyan": "alpha>=128, G>=140, B>=140, B>=R+20",
+  "frames": [
+    {
+      "source": "006-raw.png",
+      "sha256": "d804502abace0fe36419e72152c095a80e7c082434ed9a598ae3da6f0224d34b",
+      "raw_alpha_bounds": [
+        25,
+        173,
+        1475,
+        797
+      ],
+      "raw_alpha8_bounds": [
+        101,
+        383,
+        1463,
+        597
+      ],
+      "coverage": {
+        "nonzero_pixels": 7546,
+        "alpha8_pixels": 6419,
+        "alpha_sum": 959694,
+        "maximum_alpha": 255,
+        "nonzero_bounds": [
+          23,
+          93,
+          368,
+          188
+        ],
+        "alpha8_bounds": [
+          25,
+          95,
+          365,
+          149
+        ]
+      },
+      "strong_white_pixels": 1030,
+      "strong_white_over_ground_alpha128": 912,
+      "strong_cyan_pixels": 2915,
+      "strong_cyan_over_ground_alpha128": 2117,
+      "first_white_world_y_by_x": {
+        "760": 662,
+        "800": 669,
+        "840": 678,
+        "880": 680,
+        "920": 675,
+        "960": 669,
+        "1000": 672,
+        "1040": 662
+      },
+      "median_first_white_world_y_x800_940": 678
+    },
+    {
+      "source": "007-raw.png",
+      "sha256": "445d15b6625168e5f154f4fa69e157d4e8e19e1811c8219b225d4989fe5680bd",
+      "raw_alpha_bounds": [
+        0,
+        21,
+        1524,
+        998
+      ],
+      "raw_alpha8_bounds": [
+        55,
+        366,
+        1493,
+        714
+      ],
+      "coverage": {
+        "nonzero_pixels": 23687,
+        "alpha8_pixels": 17769,
+        "alpha_sum": 2135986,
+        "maximum_alpha": 255,
+        "nonzero_bounds": [
+          7,
+          86,
+          380,
+          223
+        ],
+        "alpha8_bounds": [
+          14,
+          92,
+          373,
+          177
+        ]
+      },
+      "strong_white_pixels": 1228,
+      "strong_white_over_ground_alpha128": 1042,
+      "strong_cyan_pixels": 6692,
+      "strong_cyan_over_ground_alpha128": 2744,
+      "first_white_world_y_by_x": {
+        "760": 665,
+        "800": 671,
+        "840": 676,
+        "880": 677,
+        "920": 677,
+        "960": 658,
+        "1000": 671,
+        "1040": 667
+      },
+      "median_first_white_world_y_x800_940": 680
+    },
+    {
+      "source": "008-raw.png",
+      "sha256": "8e08675c0a797090b2a6b0f11829e8920a320b8946b74c77331a06a04b3d2b10",
+      "raw_alpha_bounds": [
+        23,
+        21,
+        1514,
+        998
+      ],
+      "raw_alpha8_bounds": [
+        85,
+        351,
+        1472,
+        694
+      ],
+      "coverage": {
+        "nonzero_pixels": 21005,
+        "alpha8_pixels": 15270,
+        "alpha_sum": 1843026,
+        "maximum_alpha": 255,
+        "nonzero_bounds": [
+          6,
+          81,
+          372,
+          223
+        ],
+        "alpha8_bounds": [
+          21,
+          88,
+          368,
+          172
+        ]
+      },
+      "strong_white_pixels": 1332,
+      "strong_white_over_ground_alpha128": 1196,
+      "strong_cyan_pixels": 5679,
+      "strong_cyan_over_ground_alpha128": 3033,
+      "first_white_world_y_by_x": {
+        "760": 660,
+        "800": 672,
+        "840": 676,
+        "880": 678,
+        "920": 670,
+        "960": 659,
+        "1000": 669,
+        "1040": 660
+      },
+      "median_first_white_world_y_x800_940": 675
+    }
+  ]
+}
