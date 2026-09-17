@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "phase": "smoke",
+  "command_recorder_sha256": "b47d4c1a6987fa0b969ba6446fafd9cc044fbfddbe7b82f10662389a3726ee4c",
+  "protected_inputs": {
+    "assets/scrantic_data.zip": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+    "art/cartoon/pack.json": "96bc9dbbacfc6018e384455795941c512d76a73bb42c0d9da2c675ea1c835b62",
+    "art/cartoon/low-tide-v1/integration-v1/runtime-recipe.json": "c81e0472b10c09b5e4b79c991be761e1ceffdb87a6b1046f39fe9703e980c6b4",
+    "art/cartoon/low-tide-v1/integration-v1/production-acceptance.json": "ad56c27932bd0fbf9db532c5759d3fa4a8ab0a9e1d4e0a1359302b2f251069f2",
+    "tools/art_common.py": "2e003886e3504f6af4725eaf875c3d793542dc0efd4ccf45042d670c96f6e914",
+    "tools/art_inventory.py": "0f17eecde17a412e011b4f7ba2fb427c414137461bf84fc34904ce4b2c30eb31",
+    "tools/art_pack.py": "4dd755019d6d203574e003d83913313eb17aa35288b5543844b76d679c721fd6",
+    "tools/art_production_catalog.py": "b6eae10f72a50745d8ed9c465d649fd88623de5bdf56de1a21f5ed37ea246f50",
+    "tools/art_review_metadata.py": "f5fb1aa8aea584cc9f4a97d84d92a55e6d2dee6dcc430136629962e106b61378",
+    "tests/test_art_footprint.py": "eff2b8f6f17627713a793bf7bbead83fc20e4e741b0f907f3a97ba942c7296ef",
+    "tests/test_art_inventory.py": "1d72fa04dfc61eaf1d4fe61ca56f00e468f7c8ae46d0de84dc10d7807cd63b6e",
+    "tests/test_art_pilot_history.py": "bfb73029ef913f5b4b92717a5cebc260eca0e00eebd5bf75f07b6c47b8225f04",
+    "tests/test_art_production_catalog.py": "d3474fc4af8865fccef16ea39f77156c743b8e029f462de4ba0af7fc292e02df",
+    "tests/test_art_review_metadata.py": "1593d8f539901ceb31eedbb4f2fa73aa7ae46a9a4683e003a9de900349fbb658",
+    "tests/test_art_tools.py": "4b26006c33af2bcb8b699f7bd66cdad5910256b86b397fb9554697bd0185113f"
+  },
+  "protected_inputs_unchanged": true,
+  "commands": [
+    {
+      "label": "pack-smoke",
+      "argv": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_tools.py",
+        "ArtToolsTests.test_named_island_footprints_preserve_original_catalog",
+        "ArtToolsTests.test_true_alpha_preserves_opaque_magenta_and_binary_control",
+        "ArtToolsTests.test_inventory_exports_unmodified_and_records_exact_aliases",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "pack-smoke.log",
+      "sha256": "f5629fe9247cc0601974c7b89dd49817041ca6beaaac560b83e6f13ffdad5148",
+      "tests": 3,
+      "skip_lines": []
+    },
+    {
+      "label": "inventory-smoke",
+      "argv": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_inventory.py",
+        "--smoke"
+      ],
+      "exit_code": 0,
+      "log": "inventory-smoke.log",
+      "sha256": "c83620800c258fb7b34386db5f014370e6222044e99cf9c435a917d42b969432",
+      "tests": 3,
+      "skip_lines": []
+    },
+    {
+      "label": "test_art_pilot_history-smoke",
+      "argv": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "log": "test_art_pilot_history-smoke.log",
+      "sha256": "6ca60c212e4cf051d5c25690a29649b42e29e93a4353bb563b685564a860ba6a",
+      "tests": 3,
+      "skip_lines": []
+    },
+    {
+      "label": "test_art_review_metadata-smoke",
+      "argv": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "log": "test_art_review_metadata-smoke.log",
+      "sha256": "b11212ad4c4fe542abbef506f21dca8fcd8fd5e1a57ec4333340034a8114973a",
+      "tests": 2,
+      "skip_lines": []
+    },
+    {
+      "label": "test_art_production_catalog-smoke",
+      "argv": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_production_catalog.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "log": "test_art_production_catalog-smoke.log",
+      "sha256": "79b0b2085f4ecee567b76b4ffc9f98f406b7038853fbeea725ef3670e25d2a97",
+      "tests": 5,
+      "skip_lines": []
+    }
+  ],
+  "scope": "Existing maintained commands only; this recorder adds no art or runtime validation rules."
+}

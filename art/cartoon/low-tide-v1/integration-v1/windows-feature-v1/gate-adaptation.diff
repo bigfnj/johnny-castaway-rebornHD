@@ -1,0 +1,43 @@
+--- gate.ps1
++++ gate-retained.ps1
+@@ -28,7 +28,7 @@
+ Set-StrictMode -Version Latest
+ $ErrorActionPreference = 'Stop'
+ 
+-$repo  = $PSScriptRoot
++$repo  = 'D:\.ai-work\worktrees\johnny-cartoon-low-tide'
+ $build = Join-Path $repo 'build'
+ $exe   = Join-Path $build "$Config\jc_reborn.exe"
+ $failed = $false
+@@ -167,7 +167,7 @@
+ }
+ 
+ Write-Step 'wave renderer smoke'
+-& python -B (Join-Path $repo 'tests\test_wave_renderer.py') --exe $exe --archive $sourceZip --phase smoke
++& python -B (Join-Path $repo 'tests\test_wave_renderer.py') --exe $exe --archive $sourceZip --phase smoke --work 'D:\.ai-work\worktrees\johnny-cartoon-low-tide\build\seasonal-final-windows\low-tide-feature-v1\wave-smoke'
+ if ($LASTEXITCODE -ne 0) {
+     Write-Host 'GATE FAILED: wave smoke failed; regression was not run' -ForegroundColor Red
+     exit 1
+@@ -175,7 +175,7 @@
+ 
+ Write-Step 'palm renderer smoke'
+ $palmDriver = Join-Path (Split-Path $exe -Parent) 'jc_palm_test.exe'
+-& python -B (Join-Path $repo 'tests\test_palm_renderer.py') --driver $palmDriver --archive $sourceZip --phase smoke
++& python -B (Join-Path $repo 'tests\test_palm_renderer.py') --driver $palmDriver --archive $sourceZip --phase smoke --work 'D:\.ai-work\worktrees\johnny-cartoon-low-tide\build\seasonal-final-windows\low-tide-feature-v1\palm-smoke'
+ if ($LASTEXITCODE -ne 0) {
+     Write-Host 'GATE FAILED: palm smoke failed; regression was not run' -ForegroundColor Red
+     exit 1
+@@ -276,11 +276,11 @@
+     if ($LASTEXITCODE -ne 0) { $failed = $true }
+ 
+     Write-Step 'regression (wave alpha, restoration and fallback)'
+-    & python -B (Join-Path $repo 'tests\test_wave_renderer.py') --exe $exe --archive $sourceZip
++    & python -B (Join-Path $repo 'tests\test_wave_renderer.py') --exe $exe --archive $sourceZip --work 'D:\.ai-work\worktrees\johnny-cartoon-low-tide\build\seasonal-final-windows\low-tide-feature-v1\wave-regression'
+     if ($LASTEXITCODE -ne 0) { $failed = $true }
+ 
+     Write-Step 'regression (palm alpha, clipping and fallback)'
+-    & python -B (Join-Path $repo 'tests\test_palm_renderer.py') --driver $palmDriver --archive $sourceZip
++    & python -B (Join-Path $repo 'tests\test_palm_renderer.py') --driver $palmDriver --archive $sourceZip --work 'D:\.ai-work\worktrees\johnny-cartoon-low-tide\build\seasonal-final-windows\low-tide-feature-v1\palm-regression'
+     if ($LASTEXITCODE -ne 0) { $failed = $true }
+ 
+     Write-Step 'regression (art authoring tools)'

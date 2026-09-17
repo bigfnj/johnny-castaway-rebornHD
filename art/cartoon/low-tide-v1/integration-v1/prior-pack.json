@@ -1,0 +1,571 @@
+{
+  "schema_version": 1,
+  "runtime": {
+    "id": "cartoon",
+    "scale": 2,
+    "alpha": "straight",
+    "coverage": "partial"
+  },
+  "required_assets": [
+    "BMP/BACKGRND.BMP/000.png",
+    "BMP/BACKGRND.BMP/003.png",
+    "BMP/BACKGRND.BMP/004.png",
+    "BMP/BACKGRND.BMP/005.png",
+    "BMP/BACKGRND.BMP/006.png",
+    "BMP/BACKGRND.BMP/007.png",
+    "BMP/BACKGRND.BMP/008.png",
+    "BMP/BACKGRND.BMP/009.png",
+    "BMP/BACKGRND.BMP/010.png",
+    "BMP/BACKGRND.BMP/011.png",
+    "BMP/BACKGRND.BMP/012.png",
+    "BMP/BACKGRND.BMP/013.png",
+    "BMP/BACKGRND.BMP/014.png",
+    "BMP/BACKGRND.BMP/015.png",
+    "BMP/JOHNWALK.BMP/024.png",
+    "BMP/JOHNWALK.BMP/025.png",
+    "BMP/JOHNWALK.BMP/026.png",
+    "BMP/JOHNWALK.BMP/027.png",
+    "BMP/JOHNWALK.BMP/028.png",
+    "BMP/JOHNWALK.BMP/029.png",
+    "SCR/OCEAN02.SCR.png",
+    "BMP/JOHNWALK.BMP/011.png",
+    "BMP/JOHNWALK.BMP/019.png",
+    "BMP/JOHNWALK.BMP/020.png",
+    "BMP/JOHNWALK.BMP/021.png",
+    "BMP/JOHNWALK.BMP/022.png",
+    "BMP/JOHNWALK.BMP/023.png",
+    "BMP/JOHNWALK.BMP/018.png",
+    "BMP/JOHNWALK.BMP/000.png",
+    "BMP/JOHNWALK.BMP/015.png",
+    "BMP/JOHNWALK.BMP/016.png",
+    "BMP/JOHNWALK.BMP/017.png",
+    "BMP/JOHNWALK.BMP/001.png",
+    "BMP/JOHNWALK.BMP/002.png",
+    "BMP/JOHNWALK.BMP/003.png",
+    "BMP/JOHNWALK.BMP/004.png",
+    "BMP/JOHNWALK.BMP/005.png",
+    "BMP/JOHNWALK.BMP/006.png",
+    "BMP/JOHNWALK.BMP/007.png",
+    "BMP/JOHNWALK.BMP/008.png",
+    "BMP/JOHNWALK.BMP/009.png",
+    "BMP/JOHNWALK.BMP/010.png",
+    "BMP/JOHNWALK.BMP/012.png",
+    "BMP/HOLIDAY.BMP/000.png",
+    "BMP/HOLIDAY.BMP/001.png",
+    "BMP/HOLIDAY.BMP/002.png",
+    "BMP/HOLIDAY.BMP/003.png"
+  ],
+  "assets": [
+    {
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+      "source_sha256": "cf6fa1b623371c1b4f2c52eb93a9f33104ea1d658879ff7caa9e1fd91d26da08",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+      "footprint": {
+        "id": "cartoon-island-ground-v1",
+        "canvas": [
+          640,
+          180
+        ],
+        "offset_hd": [
+          -36,
+          -10
+        ]
+      }
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "sha256": "3a456347b5106edfd1d197a4df0eaabf7fe4659abdd5cd7f4a45e766b949e4cc",
+      "source_sha256": "ca39d3bcfc7b096eb0e10162c4ff989167084827ef29f4c5d8389c372654a5fd",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+      "footprint": {
+        "id": "cartoon-island-left-foam-v1",
+        "canvas": [
+          150,
+          66
+        ],
+        "offset_hd": [
+          -6,
+          0
+        ]
+      }
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "sha256": "af3826616abb465a81b3ba18498da22c9e31e5cfe4a769eb7bcf6ddd64a7dd0d",
+      "source_sha256": "faaba294040db7486747e4f0c3f30fa5e5d4ec56f48cccdfba1bd5fa3f8ec095",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+      "footprint": {
+        "id": "cartoon-island-left-foam-v1",
+        "canvas": [
+          150,
+          66
+        ],
+        "offset_hd": [
+          -6,
+          0
+        ]
+      }
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "sha256": "5b7fe8718684700e4d3aca76307e41c64d6a47427c8e66f34869e7bb35b69545",
+      "source_sha256": "1c41daae1621f6a4e482b3b195e88e708276a3760041146b8aa2f9fbb86cc425",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+      "footprint": {
+        "id": "cartoon-island-left-foam-v1",
+        "canvas": [
+          150,
+          66
+        ],
+        "offset_hd": [
+          -6,
+          0
+        ]
+      }
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "sha256": "2d2c93478a8e06b99a8a86d832bccdf1327d6d1a55cf79a2593dff49dcbd0db5",
+      "source_sha256": "6adfb326812a829ee9a56c28979b3652cf60be914ce16e23441bf568862a473b",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+      "footprint": {
+        "id": "cartoon-island-center-foam-v1",
+        "canvas": [
+          384,
+          256
+        ],
+        "offset_hd": [
+          -32,
+          -90
+        ]
+      }
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "sha256": "623c8f3fb8a4905a15917db963542f178d86472f0809134227bc2053fa800c56",
+      "source_sha256": "d5654a837b67b4dd21cb8f66bdaa649ee8355cd39b4be6aee75ddd98356d3519",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+      "footprint": {
+        "id": "cartoon-island-center-foam-v1",
+        "canvas": [
+          384,
+          256
+        ],
+        "offset_hd": [
+          -32,
+          -90
+        ]
+      }
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "sha256": "4ff1c6672e10d67e789c01584f1fb0dc1299016e391809eca8e5047e4cf1acea",
+      "source_sha256": "134035d13a1f91df9d053517a939fdd9b1390d2693309f1d8a441683ff13d469",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+      "footprint": {
+        "id": "cartoon-island-center-foam-v1",
+        "canvas": [
+          384,
+          256
+        ],
+        "offset_hd": [
+          -32,
+          -90
+        ]
+      }
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "sha256": "71e82707e1e9fb08772ab19b2247e2c010c4618b1861b338c10ba1855f54311e",
+      "source_sha256": "4683ffdb93d4a7b677c834e67ccf761c38b825f6e04e3fcf566bcaf84b50f2c2",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+      "footprint": {
+        "id": "cartoon-island-right-foam-v1",
+        "canvas": [
+          154,
+          74
+        ],
+        "offset_hd": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "sha256": "9f25c1c30eeda807fbeb8d706a2f0440c18b474c5bd50984317a516e71e5d850",
+      "source_sha256": "cd0a87148fc00c67c4a608d9bcc82544bfce97521af222dabee7460147ae5e7e",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+      "footprint": {
+        "id": "cartoon-island-right-foam-v1",
+        "canvas": [
+          154,
+          74
+        ],
+        "offset_hd": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "sha256": "a7740ab3564218fd3bc52f39da4d770e05e40ab0e0debd32bb2c11cd96dcedc6",
+      "source_sha256": "ad252ab25c85e63b13270818ed5f66ff1feddcd645891cfdf5d746a15640dd9a",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+      "footprint": {
+        "id": "cartoon-island-right-foam-v1",
+        "canvas": [
+          154,
+          74
+        ],
+        "offset_hd": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/012.png",
+      "sha256": "701fc7909c3cc150ece7125c04f493f27da75d07446cc43cc6acae70fde1aa18",
+      "source_sha256": "9a2017622738358ec5a4222787f3e11c35f5d0315ce32032020609a27a70c05c",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+      "review": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/013.png",
+      "sha256": "72714deba94d2e7de946b9f30532e2482ac7a1b1027c442e77e443e5c9b7186c",
+      "source_sha256": "653ededaee4e0078163ea4181b08e8dacfaf32eb57ab82d6dcac62cb293b2711",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+      "review": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/014.png",
+      "sha256": "ddfbff021d56c093456b4a9f9476f9439fbe482c45e66ddfb0c9f2993f9e324f",
+      "source_sha256": "43152471052960a1e173d00cf7b24516d529e4213a727a19a893d2f20a3b5072",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+      "review": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/BACKGRND.BMP/015.png",
+      "sha256": "d7f6f6608cb18ac169b6e4378cb5c12c30a9139d7925c36e8a02f1c8eea41649",
+      "source_sha256": "40723977e5b36558f235f7c6d58fa5d3b521871cdabb996e5a9340baeb229341",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/island-pilot-v1/palm-sand-cloud/recipe.json",
+      "review": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/024.png",
+      "sha256": "ee497f1484d1ceaa980b77b4dd91df0f7f41d982bdfc0d05887861a6a9c8e0fb",
+      "source_sha256": "1233b19ffe0e07e9e9a2c1e2deee1d853026c6f4aca078a2aec4139f97455f91",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/025.png",
+      "sha256": "18e72761952c23b30b23b2a0d070857bd72daeb0f32c64b67d2147dbdcfca13f",
+      "source_sha256": "1eedad18ddb23c631439c17b01659d0abe7ee8b4da3d2ee3862dadb840686954",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/026.png",
+      "sha256": "819f46e6f6640bc6c82cda7a24be0ca6183f9678a074752cdcb6bb2ba3865e5d",
+      "source_sha256": "6d30f88641b8aa4da6a3ab883ecda94cb6871605d58af3b628521b79a93936c9",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/027.png",
+      "sha256": "5f3a95f25278374f18de27460bc79c86028660916ade43bb8de8983850297e3f",
+      "source_sha256": "e19d3fe46184f05da2cc12b38bf07d161bcb293b4348bd076a5b9661a59369a9",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/028.png",
+      "sha256": "7cde619b12ca7dfbe71ca086d7309cd12de267895b61ab27fdd13c8d664b216a",
+      "source_sha256": "a387e9b663b2646c0a39e346106cbed59c8603b30503a4e6f3a445efa287d12a",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/029.png",
+      "sha256": "8a33597aaba9206ff8ff98bad24bd12a52142eac0bdd56c92cbf4b7de798017a",
+      "source_sha256": "091f4690aaab8af69120b4cfcd819c96db711f8ef30609773310e09c7dcdcfd9",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "SCR/OCEAN02.SCR.png",
+      "sha256": "099249884c73c863436983ec4d4f5650e77e6e5748ef65bf417d0785b1acf294",
+      "source_sha256": "8d01436c5d5855ac2cba35559692f3e5180e5f6113725931ae6396b99c5f06cf",
+      "alpha": "opaque",
+      "recipe": "art/cartoon/island-pilot-v1/ocean-shadow-center-waves/recipe.json",
+      "review": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/011.png",
+      "sha256": "89b4368b68a3fba0546312b3b5b71150265d7609e965ac09eedfc7d686e4775f",
+      "source_sha256": "ddde53f810f1a45ac17f1f19ea755e7e01badb91e2db11fbc6eaf50e5a42b052",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/019.png",
+      "sha256": "85d3d360dca907cf4f9c46aeb0a4c42415e66c1f42888d8b3b3204b5075046d6",
+      "source_sha256": "712790f959d8f63c1a07b76dee6c91775a710b7df65d0c1d27dfcd7e2c368a07",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/020.png",
+      "sha256": "d843846f5ae93ea7e2979f3cc40fa00473ef6ef7835b4be61d3cd440338d3eda",
+      "source_sha256": "acad4f83c3c3383be3b3efe17ca53406c05427ef4d644d840801eca71d1c916b",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/021.png",
+      "sha256": "86e34024a577681d8346cc6aabe42f8efb2535d5acf3a7136ac17c37e1b6b87f",
+      "source_sha256": "6bd5a9a2a10222375a71424055c2b2f6bd83c1bfcb595dc40408fa338e71f8c8",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/022.png",
+      "sha256": "9da60acab98e47a38b9a9b127ceac485b547ea2cc41aaeff0f00e31b5f7b7011",
+      "source_sha256": "24df0d2992b8dcf5f04abf6560bb0f78add9126bdc1523782eb96b1b954b1b47",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/023.png",
+      "sha256": "bad86f4273d7953e28266eb88fffb7f6fab7b634a35a4f6f10c89bcc1fd5d086",
+      "source_sha256": "e7f94419111712b3e9f0e7d2bb34147f637afe92a85d5e489e524dc1d417a1ad",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/018.png",
+      "sha256": "5ff919bc1db94f19ce163e990f2e00208cb74c9540656ddc8d2ddd5cf05fd15f",
+      "source_sha256": "3381653776a7abccd5d85562eed83436d226d562e1fd3a81efbfb8daf8d7f6c9",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/standing018-proportions-v1/color/evidence-foot-v5/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/000.png",
+      "sha256": "9cb61e33da65cf89afcf6c03421672c25aa5b83ed9bb9b0305704bcd6bca7b11",
+      "source_sha256": "480cda44e64198f2d0bdb95d597f45d8902fa6d8406deb44a2b07dbec261c8fd",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/015.png",
+      "sha256": "7a592fc994900ce8eae38d3dd16521892b076175b2dcff7485f5acd9708b7b65",
+      "source_sha256": "2a2c51f34f2c5a231089636d674aed6f63e9b2736975863f27b4fae7c1f2945b",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/016.png",
+      "sha256": "85da9bbf6711d1c59548056e250c2a8c3ff4e5c6f2bd72d01dabaf32b2d64891",
+      "source_sha256": "e6448a276f753e91ffaf4488f711d7cd031047ef42333d7d752605ac80e39e3f",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/017.png",
+      "sha256": "755bfc1835f0ae1557ecd3ee4d0660d0faf48131ea08cd5f092e2f28c137a6f1",
+      "source_sha256": "9109f11aa5bbbd93d429b02bf7873f4bf6f6c0b293037f430f8a29b62b5959b5",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/001.png",
+      "sha256": "4466c4cef5d69bd79fb8323cf301cec3db616a03f973b93b5300902266877309",
+      "source_sha256": "dbd2f3ef0ac10911265bae393434003205cb4e9871b2fa703584a8705dcb30fb",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/002.png",
+      "sha256": "29560e602f5595f824d93da2386396089a8c51eb58f4de3d7ffbe31200026a73",
+      "source_sha256": "46b14e4530af14e4f3ea5c97a95a077785a4b84de0734ff901e568704e63e054",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/003.png",
+      "sha256": "303b4cdc0d89995412f17c13e10670bc384b181d626601693ad9ae34e05e1104",
+      "source_sha256": "2210d8b0eee2cb1dd56cc4f6f847f9b1f87b2b7d118fd7ed5aa04f219c408533",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/004.png",
+      "sha256": "f104d2a59c87fce4554a60a18267c11a727c852183019a4e21437e46ceaebf9d",
+      "source_sha256": "e28cf0898b05a9cd9b22035830e404bfa8d5d8cdaa6837f0064b9c811d020eac",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/005.png",
+      "sha256": "ef96c5ee4b37f1aa62b18921158fdde7f810fc9349711b75b717e3e551d2f066",
+      "source_sha256": "28e39694531fe87207cbdb0979564afc044dcef627c58e4d0e1fd96e3fc70b14",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/006.png",
+      "sha256": "f4e4ab518ca0cb456a65f3acfed681dfb2858dcbd462bf71b3378735f2d9d248",
+      "source_sha256": "2e183e15e4171da3e145cc6116e8eb24975685095fdc2b3776b8f7870eceb28f",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/007.png",
+      "sha256": "adff08d927fd237927312b4a43fd7dfdce4183d57ca008647c332cb51f3c5c30",
+      "source_sha256": "88ef4be755b3cdf87ca674221f42f08ef830afaf99ce43f12469cfba4513cdab",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/008.png",
+      "sha256": "6305141675dd55592cceb7696b6369a16a65db54d39b3c271e3759b35a2fe931",
+      "source_sha256": "f6dff5e13a7f425a1816fe135e51a5211f9220715ba7c753f7f36b9b40f1a2bd",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/009.png",
+      "sha256": "926050374d029012ed07cb8f0839f21e374e96349b68968a2e8c7c50346ce7a5",
+      "source_sha256": "f13271713dc93b718155d6fcd99c5509824930b747a4a30e0b6893a7ead123f3",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/010.png",
+      "sha256": "8b0fd9cf810083d8848bf23e767311382f6465738725bbd3729cd3fce960d8cc",
+      "source_sha256": "3406f9584d9e8e5d2d4b60c9b2a41c07cd5552575ef75c009c6713a28b0d4d3b",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/JOHNWALK.BMP/012.png",
+      "sha256": "fc85388c502b3d120f8a704677956e99475a7ed2f8a217d2bad37aa30f33d1cc",
+      "source_sha256": "844e503ea864c99d4ded5216eb57d38dbcffd9c493807ade64376a886bfa03e0",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/skin-tone-v1/exports-v2/recipe.json",
+      "review": "art/cartoon/skin-tone-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/HOLIDAY.BMP/000.png",
+      "sha256": "1f2ac522476d98afcade5f128c12c0c80f6993b871b611498971f23a44eabf79",
+      "source_sha256": "fd50ae7766656bc4c609e1a6d94547b35279dbd99a1e4a2aa708adef3bff7df5",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/HOLIDAY.BMP/001.png",
+      "sha256": "e6327c07e85d7d8610ed45a502efd283fe1c79fe5850c790bb2808a2ee02176e",
+      "source_sha256": "31a9f81b04c2fbfc8bd3ad4f02920eeb92a10803d4341d62332494e473f24fba",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/HOLIDAY.BMP/002.png",
+      "sha256": "7d9c5406f8275a1af9c9369305575a24d807ac5b38200e6ad17913a0a8400265",
+      "source_sha256": "b678dac17870d2449a121b1bd30c2c4c58403d80aa26d8cf844cdef1c619aff0",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json"
+    },
+    {
+      "path": "BMP/HOLIDAY.BMP/003.png",
+      "sha256": "e36e103027d2eee53c58c903cd397770a66e5ffce2683e9c0c8ce6e2d988ff92",
+      "source_sha256": "d37bfa7e164fdccc0b56954871af2d8ad8b12a887b82d2925e1ca19a2b558be9",
+      "alpha": "transparent",
+      "recipe": "art/cartoon/shoreline-repair-v1/integration-v1/runtime-recipe.json",
+      "review": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json"
+    }
+  ],
+  "review_status": "Approved smooth shoreline, repositioned clean offshore wave motion, seasonal props and inset banner in the separately bound human checkpoints.",
+  "acceptance_record": "art/cartoon/shoreline-repair-v1/integration-v1/production-acceptance.json",
+  "scope": "Partial Cartoon pack: 28 Johnny poses, 15 island assets and four seasonal decorations. Other slots retain HD/original fallback; no universal story or original-executable parity claim.",
+  "pilot_history": {
+    "acceptance_record": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
+    "sha256": "ce7f3832982bcfbef13f9ce6dc06c1f60ce774b89aca088247442040fd767a0c",
+    "replaced_assets": [
+      "BMP/JOHNWALK.BMP/024.png",
+      "BMP/JOHNWALK.BMP/025.png",
+      "BMP/JOHNWALK.BMP/026.png",
+      "BMP/JOHNWALK.BMP/027.png",
+      "BMP/JOHNWALK.BMP/028.png",
+      "BMP/JOHNWALK.BMP/029.png",
+      "BMP/BACKGRND.BMP/000.png",
+      "BMP/BACKGRND.BMP/003.png",
+      "BMP/BACKGRND.BMP/004.png",
+      "BMP/BACKGRND.BMP/005.png",
+      "BMP/BACKGRND.BMP/006.png",
+      "BMP/BACKGRND.BMP/007.png",
+      "BMP/BACKGRND.BMP/008.png",
+      "BMP/BACKGRND.BMP/009.png",
+      "BMP/BACKGRND.BMP/010.png",
+      "BMP/BACKGRND.BMP/011.png"
+    ]
+  }
+}

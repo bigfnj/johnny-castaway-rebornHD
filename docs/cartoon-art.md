@@ -1,9 +1,10 @@
 # Cartoon art production
 
-The [seasonal and shoreline delivery](cartoon-seasonal-verification.md) brings
-the current pack to 47 accepted assets, including four holiday decorations and
-the approved larger island with clean offshore waves. Earlier family counts
-below describe their individual delivery checkpoints.
+The [low-tide delivery](cartoon-low-tide-verification.md) brings the current pack
+to 61 accepted assets, including the exposed beach, detached rock and twelve
+low-tide wave frames. The earlier [seasonal and shoreline delivery](cartoon-seasonal-verification.md)
+supplies the approved larger island, high-tide waves and four decorations.
+Earlier family counts below describe their individual delivery checkpoints.
 
 The [production plan](cartoon-production-plan.md) tracks the completed
 [slot catalog](knowledge-base/cartoon-production-catalog.md) and successive
