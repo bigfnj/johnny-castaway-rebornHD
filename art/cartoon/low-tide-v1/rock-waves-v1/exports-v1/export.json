@@ -1,0 +1,217 @@
+{
+  "accepted": false,
+  "scope": "Rock-ring motion draft. White ripple style reused; ring geometry newly generated.",
+  "affine_common_to_all_phases": [
+    0.157,
+    0,
+    -18.067499999999995,
+    0,
+    0.157,
+    -51.595
+  ],
+  "pillow_version": "12.3.0",
+  "filter_sha256": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+  "mask_sha256": "fae28aba1181761777ae4ed43e088fb6a1cc51b08f20db39135ac81fe4ae1445",
+  "exporter_sha256": "a3545dbadac99fd90c618b369f2d937fa78045581169df18b1c95f4e8875764b",
+  "rock_sha256": "a2eb23271a9429753873a86294c2f5db3f42f797eac586e74b53b5efa5541f5d",
+  "operation": "One uniform resample, fixed canvas crop, existing rock-alpha visibility mask. No RGB painting or alpha thresholding.",
+  "limit": "Visibility masking keeps offshore foam off the rock. It is not exact translucent rock-over-foam compositing.",
+  "frames": [
+    {
+      "frame": 39,
+      "source": "art/cartoon/low-tide-v1/rock-waves-v1/039-raw-v1.png",
+      "source_sha256": "c10f453fd60fe52b245e9b43d5f2f10f28ccc002c060e2d0a86c8780c7153532",
+      "png_sha256": "82c39b97630f88fad644cf03761c011cbad543bc1e0d4b4f928419ca344a2185",
+      "canvas": [
+        208,
+        58
+      ],
+      "world_origin": [
+        258,
+        680
+      ],
+      "source_stats": {
+        "alpha8_bounds": [
+          132,
+          351,
+          1423,
+          691
+        ],
+        "nonzero_pixels": 141057,
+        "alpha8_pixels": 104490,
+        "maximum_alpha": 254,
+        "dark_alpha8_pixels": 0
+      },
+      "outside_canvas": {
+        "alpha8_bounds": null,
+        "nonzero_pixels": 0,
+        "alpha8_pixels": 0,
+        "maximum_alpha": 0,
+        "dark_alpha8_pixels": 0
+      },
+      "runtime_stats": {
+        "alpha8_bounds": [
+          2,
+          3,
+          205,
+          57
+        ],
+        "nonzero_pixels": 3353,
+        "alpha8_pixels": 2501,
+        "maximum_alpha": 255,
+        "dark_alpha8_pixels": 1
+      },
+      "visibility": {
+        "opaque_ground_pixels": 141,
+        "omitted_nonzero_foam_pixels": 0,
+        "changed_foam_alpha_pixels": 0,
+        "nonopaque_land_nonzero_foam_pixels": 0,
+        "maximum_single_layer_continuous_blend_deviation_bound_rgb": 0.0,
+        "partial_edge_witness": null
+      },
+      "prompt_record_sha256": "89003631c148d2de49a9e7116449151fe3e17d744b202d78995f69ea6fc9739e",
+      "ordered_references": [
+        {
+          "path": "art/cartoon/low-tide-v1/rock-waves-v1/reference/original-039-guide.png",
+          "sha256": "38abeb812f26c9c50d1c3858d51612810e3e1db42ade44b676e3ec99b7cda6c1"
+        },
+        {
+          "path": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/006-raw.png",
+          "sha256": "be78ddda6468fdd3d00c20589e700a50fbb6150157591eb1070eeb718e87c5bd"
+        },
+        {
+          "path": "art/cartoon/low-tide-v1/rock-waves-v1/reference/approved-rock-position.png",
+          "sha256": "8f0982d36815cef942b5970686ad2ec0d7690a2614ba91cae194c2db12e6d7d2"
+        }
+      ]
+    },
+    {
+      "frame": 40,
+      "source": "art/cartoon/low-tide-v1/rock-waves-v1/040-raw-v1.png",
+      "source_sha256": "f3d4c177295659493d56245a00481955488d100586509fa38672aaadae8c6dd6",
+      "png_sha256": "be00543760c508a56e857a497d3463aca6ea9581afb5c6c2ea1d69701cf0c905",
+      "canvas": [
+        208,
+        58
+      ],
+      "world_origin": [
+        258,
+        680
+      ],
+      "source_stats": {
+        "alpha8_bounds": [
+          169,
+          335,
+          1391,
+          664
+        ],
+        "nonzero_pixels": 80285,
+        "alpha8_pixels": 48992,
+        "maximum_alpha": 254,
+        "dark_alpha8_pixels": 0
+      },
+      "outside_canvas": {
+        "alpha8_bounds": null,
+        "nonzero_pixels": 5,
+        "alpha8_pixels": 0,
+        "maximum_alpha": 3,
+        "dark_alpha8_pixels": 0
+      },
+      "runtime_stats": {
+        "alpha8_bounds": [
+          8,
+          1,
+          201,
+          53
+        ],
+        "nonzero_pixels": 2151,
+        "alpha8_pixels": 1392,
+        "maximum_alpha": 255,
+        "dark_alpha8_pixels": 0
+      },
+      "visibility": {
+        "opaque_ground_pixels": 141,
+        "omitted_nonzero_foam_pixels": 0,
+        "changed_foam_alpha_pixels": 0,
+        "nonopaque_land_nonzero_foam_pixels": 0,
+        "maximum_single_layer_continuous_blend_deviation_bound_rgb": 0.0,
+        "partial_edge_witness": null
+      },
+      "prompt_record_sha256": "727178ac226fdc0fa4a66612b8ba61a450581ad36b3b5d52783b4dcff7d4eab9",
+      "ordered_references": [
+        {
+          "path": "art/cartoon/low-tide-v1/rock-waves-v1/039-raw-v1.png",
+          "sha256": "c10f453fd60fe52b245e9b43d5f2f10f28ccc002c060e2d0a86c8780c7153532"
+        },
+        {
+          "path": "art/cartoon/low-tide-v1/rock-waves-v1/reference/original-040-guide.png",
+          "sha256": "dab0ecdf7d99c471312e2d0904afc0c42b9f77c0569fee324c363903e057a655"
+        }
+      ]
+    },
+    {
+      "frame": 41,
+      "source": "art/cartoon/low-tide-v1/rock-waves-v1/041-raw-v1.png",
+      "source_sha256": "2f9d762abcfcb8947b9e7c921e1eb0c00bc6be43c5c4932943621fb614b6aab2",
+      "png_sha256": "80cf584bc99a19702ec1a4222bbba7c8a35f47b2acc8a00f824275e92ab34862",
+      "canvas": [
+        208,
+        58
+      ],
+      "world_origin": [
+        258,
+        680
+      ],
+      "source_stats": {
+        "alpha8_bounds": [
+          139,
+          354,
+          1408,
+          685
+        ],
+        "nonzero_pixels": 131044,
+        "alpha8_pixels": 65732,
+        "maximum_alpha": 254,
+        "dark_alpha8_pixels": 0
+      },
+      "outside_canvas": {
+        "alpha8_bounds": null,
+        "nonzero_pixels": 0,
+        "alpha8_pixels": 0,
+        "maximum_alpha": 0,
+        "dark_alpha8_pixels": 0
+      },
+      "runtime_stats": {
+        "alpha8_bounds": [
+          4,
+          4,
+          203,
+          56
+        ],
+        "nonzero_pixels": 2629,
+        "alpha8_pixels": 1424,
+        "maximum_alpha": 255,
+        "dark_alpha8_pixels": 0
+      },
+      "visibility": {
+        "opaque_ground_pixels": 141,
+        "omitted_nonzero_foam_pixels": 0,
+        "changed_foam_alpha_pixels": 0,
+        "nonopaque_land_nonzero_foam_pixels": 0,
+        "maximum_single_layer_continuous_blend_deviation_bound_rgb": 0.0,
+        "partial_edge_witness": null
+      },
+      "prompt_record_sha256": "8511e118c6ab8d64123e1eebcd104511c36eb2668b2f2bb06a5788e3da11189e",
+      "ordered_references": [
+        {
+          "path": "art/cartoon/low-tide-v1/rock-waves-v1/039-raw-v1.png",
+          "sha256": "c10f453fd60fe52b245e9b43d5f2f10f28ccc002c060e2d0a86c8780c7153532"
+        },
+        {
+          "path": "art/cartoon/low-tide-v1/rock-waves-v1/reference/original-041-guide.png",
+          "sha256": "d22588f810ff8e9c76078610d3bd400b11f85cff2e80dfdc1121ba627c42f743"
+        }
+      ]
+    }
+  ]
+}

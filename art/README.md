@@ -19,7 +19,9 @@ The final shoreline, offshore wave motion and inset banner are approved. The
 selected versions and their integration checks; the draft record preserves
 earlier review history.
 
-The [post-merge audit](../docs/cartoon-seasonal-post-merge-audit.md) is the current
-status reference. Pending-production language inside the versioned shoreline
-and integrated-shore READMEs describes their historical checkpoints; the
-combined delivery above supersedes it.
+The [low-tide delivery](../docs/cartoon-low-tide-verification.md) now adds the
+approved exposed beach, detached rock and twelve wave frames. Its
+[lessons](../docs/art-style-learnings-low-tide.md) preserve source reuse and
+tide-specific motion decisions. Pending-production language in frozen versioned
+records describes their historical checkpoints; their later acceptance records
+and delivery reports supersede it.

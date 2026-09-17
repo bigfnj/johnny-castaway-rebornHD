@@ -1,0 +1,10 @@
+{
+  "mode": "built-in image_gen",
+  "accepted": false,
+  "prompt": "Use case: style-transfer\nAsset type: one transparent 2D game sprite, Cartoon low-tide offshore rock, BACKGRND002.\nPrimary request: redraw the original rock from image 1 in the hand-drawn Cartoon visual style of image 2. Image 1 fixes the exact silhouette, shallow viewing angle and major rock facets. Image 2 supplies linework and illustration finish only, not a sand texture or object shape.\nOutput: one 1536x1024 RGBA PNG with genuine transparent background. Keep the object at the same location and size as the geometry guide: approximately x384..1152, y332..692. A single broad low angular coastal boulder, high point left of center, gently sloping light top facet, charcoal/warm-gray left face and medium slate-gray right faces. A few ochre highlights on the upper rim are enough. Translate diagnostic black/white dithering into clean broad shaded planes.\nUse thin dark brown-charcoal contour and restrained warm highlights matching the Cartoon island's sunny light from upper left. This is a squat rock, not a tall mountain. Keep full silhouette, all facets and the broad base visible, oriented exactly as the original. No reshaping, extra rocks, sand, water, waves, foam, shadow on a ground plane, island, vegetation, text, labels, glow or opaque background. Preserve transparent padding.",
+  "referenced_image_paths": [
+    "reference/original-rock-guide.png",
+    "reference/approved-island-style-guide.png"
+  ],
+  "scope": "First low-tide offshore rock draft; no production or native-scene approval."
+}

@@ -1,0 +1,27 @@
+{
+  "scope": "Independent read-only review of prepare.py and its current aggregate records; no new tests added.",
+  "reviewed_helper": {
+    "path": "art/cartoon/low-tide-v1/integration-v1/prepare.py",
+    "sha256": "48cd41f1e0baefe030115a0e009aa954dbbd1cfcc39d60b91922690543b6c767"
+  },
+  "artifact_hashes": {
+    "runtime-recipe.json": "c81e0472b10c09b5e4b79c991be761e1ceffdb87a6b1046f39fe9703e980c6b4",
+    "production-acceptance.json": "ad56c27932bd0fbf9db532c5759d3fa4a8ab0a9e1d4e0a1359302b2f251069f2",
+    "integrated-pack.json": "96bc9dbbacfc6018e384455795941c512d76a73bb42c0d9da2c675ea1c835b62"
+  },
+  "readback": {
+    "checked_hash_bindings": 76,
+    "mismatches": [],
+    "accepted_assets": 61,
+    "inherited_rows_byte_fields_exact": 47,
+    "pilot_history_unchanged": true,
+    "runtime_declaration_unchanged": true,
+    "live_pack_equals_integrated_pack": true
+  },
+  "finding": "No substantive current metadata or provenance mismatch found.",
+  "limits": [
+    "prepare.py member_negative_control checks an altered in-memory hash map. It is not an executed damaged-ZIP refusal or source-guard removal proof.",
+    "prepare.py writes aggregate records under its own directory. Historical source replay must occur in isolated baseline scratch, not against promoted live files.",
+    "Source-export replay and platform/native runs belong to separate root/agent evidence; they were not rerun by this authoring pass."
+  ]
+}

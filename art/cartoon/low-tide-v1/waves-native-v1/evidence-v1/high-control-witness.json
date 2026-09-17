@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "failure": "final native: high-tide exact pixels",
+  "mutated_pixel_hd": [
+    500,
+    700
+  ],
+  "low_mode_changed_pixels": 1,
+  "high_mode": "FIRED",
+  "restored_positive": "PASS",
+  "adapter_sha256": "634a0946017ee1ec63f69c72c08ddf2112735cb6b3fc9a12ae16c01fa7c1fa00",
+  "checker_sha256": "f87c5d4ec84fda73330eb55b3621614f28ea30f826a02972bdc18aaa5788df99",
+  "baseline_report_sha256": "32c4a8998eac16c1de1a05832eb2feee18669d1be3779520a542d8ebf2183b46",
+  "candidate_report_sha256": "037e6da82fd06eb9b8c671733819b7de5f37686444ed3353c16047a976f60072",
+  "method": "Actual native high-tide pixels damaged only in memory; originals untouched. Same mutation accepted by low scope and rejected by high exact scope."
+}

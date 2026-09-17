@@ -28,6 +28,7 @@ the next character pass; the linked historical records below remain unchanged.
 | [Scene acceptance](../art/cartoon/island-pilot-v1/acceptance.json) | The exact 21 assets and preserved motion preview approved with "approved, it looks great" |
 | [Static island sources](../art/cartoon/island-pilot-v1/palm-sand-cloud/README.md) | Palm, sand and cloud prompts, selected ancestry, failed edits and verified exports |
 | [Shoreline and scenery lessons](art-style-learnings-shoreline.md) | Ground inside original wave layers, full-size props, two original inlets, shared-ground ownership and separate shape/scene approvals |
+| [Low-tide lessons](art-style-learnings-low-tide.md) | Complete wave-source reuse, tide-specific spacing, new rock rings, fixed family transforms and historical-baseline replay |
 | [Front walk refresh lessons](art-style-learnings-front-refresh.md) | Hip and shorts connection, far-arm occlusion, original shadows versus foot contact, and preserved approval history |
 | [Front walk refresh bundle](../art/cartoon/walk-pilot/front-refresh-v1/README.md) | Exact 028/029 drafts and prompts, retained 024-027, frozen comparison inputs and separate approvals of standalone motion and the native island scene |
 | [Standing family](../art/cartoon/walk-pilot/front-arrival-v1/README.md) | Original standing geometry, far-foot depth corrections, direct-front toe fit, exact source ancestry and separately scoped native approvals |

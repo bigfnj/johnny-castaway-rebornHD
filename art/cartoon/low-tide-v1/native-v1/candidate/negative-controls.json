@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "name": "changed_old_wave",
+      "status": "FIRED",
+      "failure": "final native: unchanged prior member data/hd/BMP/BACKGRND.BMP/030.png"
+    },
+    {
+      "name": "wrong_001_canvas",
+      "status": "FIRED",
+      "failure": "final native: selected canvas data/styles/cartoon/BMP/BACKGRND.BMP/001.png"
+    },
+    {
+      "name": "outside_pixel",
+      "status": "FIRED",
+      "failure": "final native: pixel outside BACKGRND001/002 rectangles"
+    }
+  ],
+  "method": "Actual member metadata and native pixel copies damaged in memory; original files untouched; restored positives executed.",
+  "adapter_sha256": "c89a980135fc3e8f3a5330adb76d730c02c4d6d935e71e2314be94b06f8a0125"
+}

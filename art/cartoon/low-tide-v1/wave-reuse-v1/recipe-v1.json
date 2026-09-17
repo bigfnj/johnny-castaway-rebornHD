@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "scope": "Technical reuse proposal. Native motion and human acceptance pending.",
+  "pillow_version": "12.3.0",
+  "families": {
+    "left": {
+      "frames": [
+        30,
+        31,
+        32
+      ],
+      "sources": [
+        3,
+        4,
+        5
+      ],
+      "scale": 1.5,
+      "translation": [
+        6,
+        -6
+      ],
+      "world_origin": [
+        466,
+        646
+      ],
+      "basis": "Uniform enlargement of the approved left curve across the longer low beach; a shared upward translation retains phase030 bottom fringe."
+    },
+    "center": {
+      "frames": [
+        33,
+        34,
+        35
+      ],
+      "sources": [
+        6,
+        7,
+        8
+      ],
+      "scale": 0.23,
+      "translation": [
+        0,
+        -90
+      ],
+      "world_origin": [
+        734,
+        712
+      ],
+      "basis": "One direct raw-source resample at92% of former displayed scale fits all three phases in the fixed56HD height; translation aligns the crescent with the new beach front."
+    },
+    "right": {
+      "frames": [
+        36,
+        37,
+        38
+      ],
+      "sources": [
+        9,
+        10,
+        11
+      ],
+      "scale": 1.1,
+      "translation": [
+        -4,
+        8
+      ],
+      "world_origin": [
+        1116,
+        646
+      ],
+      "basis": "Uniform enlargement and shared placement wrap the right low-shore tip without cropping any phase."
+    }
+  },
+  "frames": [
+    {
+      "frame": 30,
+      "family": "left",
+      "source_frame": 3,
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/003.png",
+      "path": "BMP/BACKGRND.BMP/030.png",
+      "runtime_canvas": [
+        240,
+        96
+      ],
+      "world_origin": [
+        466,
+        646
+      ],
+      "affine_forward": [
+        1.5,
+        0,
+        6,
+        0,
+        1.5,
+        -6
+      ]
+    },
+    {
+      "frame": 31,
+      "family": "left",
+      "source_frame": 4,
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/004.png",
+      "path": "BMP/BACKGRND.BMP/031.png",
+      "runtime_canvas": [
+        256,
+        96
+      ],
+      "world_origin": [
+        466,
+        646
+      ],
+      "affine_forward": [
+        1.5,
+        0,
+        6,
+        0,
+        1.5,
+        -6
+      ]
+    },
+    {
+      "frame": 32,
+      "family": "left",
+      "source_frame": 5,
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/005.png",
+      "path": "BMP/BACKGRND.BMP/032.png",
+      "runtime_canvas": [
+        240,
+        96
+      ],
+      "world_origin": [
+        466,
+        646
+      ],
+      "affine_forward": [
+        1.5,
+        0,
+        6,
+        0,
+        1.5,
+        -6
+      ]
+    },
+    {
+      "frame": 33,
+      "family": "center",
+      "source_frame": 6,
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/006-raw.png",
+      "path": "BMP/BACKGRND.BMP/033.png",
+      "runtime_canvas": [
+        352,
+        56
+      ],
+      "world_origin": [
+        734,
+        712
+      ],
+      "affine_forward": [
+        0.23,
+        0,
+        0,
+        0,
+        0.23,
+        -90
+      ]
+    },
+    {
+      "frame": 34,
+      "family": "center",
+      "source_frame": 7,
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-shading-v1/007-raw-v1.png",
+      "path": "BMP/BACKGRND.BMP/034.png",
+      "runtime_canvas": [
+        352,
+        56
+      ],
+      "world_origin": [
+        734,
+        712
+      ],
+      "affine_forward": [
+        0.23,
+        0,
+        0,
+        0,
+        0.23,
+        -90
+      ]
+    },
+    {
+      "frame": 35,
+      "family": "center",
+      "source_frame": 8,
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/008-raw.png",
+      "path": "BMP/BACKGRND.BMP/035.png",
+      "runtime_canvas": [
+        352,
+        56
+      ],
+      "world_origin": [
+        734,
+        712
+      ],
+      "affine_forward": [
+        0.23,
+        0,
+        0,
+        0,
+        0.23,
+        -90
+      ]
+    },
+    {
+      "frame": 36,
+      "family": "right",
+      "source_frame": 9,
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/009.png",
+      "path": "BMP/BACKGRND.BMP/036.png",
+      "runtime_canvas": [
+        176,
+        96
+      ],
+      "world_origin": [
+        1116,
+        646
+      ],
+      "affine_forward": [
+        1.1,
+        0,
+        -4,
+        0,
+        1.1,
+        8
+      ]
+    },
+    {
+      "frame": 37,
+      "family": "right",
+      "source_frame": 10,
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/010.png",
+      "path": "BMP/BACKGRND.BMP/037.png",
+      "runtime_canvas": [
+        176,
+        96
+      ],
+      "world_origin": [
+        1116,
+        646
+      ],
+      "affine_forward": [
+        1.1,
+        0,
+        -4,
+        0,
+        1.1,
+        8
+      ]
+    },
+    {
+      "frame": 38,
+      "family": "right",
+      "source_frame": 11,
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/011.png",
+      "path": "BMP/BACKGRND.BMP/038.png",
+      "runtime_canvas": [
+        176,
+        96
+      ],
+      "world_origin": [
+        1116,
+        646
+      ],
+      "affine_forward": [
+        1.1,
+        0,
+        -4,
+        0,
+        1.1,
+        8
+      ]
+    }
+  ],
+  "source_bindings": {
+    "art/cartoon/seasonal-v1/export.py": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+    "art/cartoon/shoreline-repair-v1/foam-contact-v2/export.py": "fae28aba1181761777ae4ed43e088fb6a1cc51b08f20db39135ac81fe4ae1445",
+    "art/cartoon/low-tide-v1/native-v1/images/prewave-candidate.png": "3f39d67fff987f6d7ed8c99cdf138694a3da4ef34be3c954392366ddec512dd4",
+    "art/cartoon/low-tide-v1/native-v1/prewave/summary.json": "8f07fa08e168b2c24725f05bda2be66838266f3933fa4ca5940d1be8adb87d2e",
+    "art/cartoon/low-tide-v1/native-v1/prewave/candidate/report.json": "7c4342cf7e35c1b187e9d9bcf69491c9421be436803e4a0929c67817a2df7d32",
+    "art/cartoon/low-tide-v1/static-v2/export.json": "a662ceb81d5aeea0cdccf23b3f47db46e3812188fc6488906d0885ad609b80a5",
+    "art/cartoon/low-tide-v1/static-v2/BMP/BACKGRND.BMP/001.png": "f2692720e9604e08ffdf65b850008d06a289c1775a97dfd68f513ab8e7ed62e7",
+    "art/cartoon/low-tide-v1/static-v2/BMP/BACKGRND.BMP/002.png": "a2eb23271a9429753873a86294c2f5db3f42f797eac586e74b53b5efa5541f5d",
+    "art/cartoon/low-tide-v1/reference/source.json": "ce57ba58a396855b36bef166c07ecf9ef185ff689de64cdf3f4dcf227a58b674",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/recipe-v1.json": "3002ca095bd647a2e513b92659d5943811ae1787aeacd5181191602670a1e50d",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/export-report.json": "8489c4449c6fbfe82f8bd4e66a3e4edfd4bec71c4e5d36c5c9999711c6786323",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/recipe-v2.json": "53a6ba750c90c9c0b721864d103bd565ae332c6e5a40b00ae98cdc6eb171f4b4",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-shading-v1/recipe-v1.json": "4a33d7a9f1b1b248245268673489b2945f208a69029bb40b28ab6d99576a116d",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/003.png": "3cc0642deafb85362bca5d9c4b8b7cb493fdb3a32e4066dfb546819351fd1480",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/004.png": "5d555d10a422ed55e50f84e94cf1c2153d10b4fba30f62d526205299730c63d8",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/005.png": "c6fa789f69b55c4f5ac86758bc4e8d974bb22cee643b474147788ad2064a419b",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/006-raw.png": "be78ddda6468fdd3d00c20589e700a50fbb6150157591eb1070eeb718e87c5bd",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-shading-v1/007-raw-v1.png": "bccf1e15c476c78ed7ffb6f842eaa001c763eff4209c63b3d47162097c5fa8f2",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/008-raw.png": "ae9e3795f81be28436ebff6a7c90b19c8998377d0754e4e8ed990ed46bfca2a8",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/009.png": "a7e1ffd0395f394f302ffc76f315023bf8bc9318849203e29da305130d239c09",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/010.png": "3d2959d20d1cf00fd472475209a242fc4220e69a4d5e3067eddc7170c60df09d",
+    "art/cartoon/shoreline-repair-v1/integrated-shore-v1/side-fit-v1/candidates/v1/unmasked/011.png": "292cb4e7fe2adf9dc1845d79143a128f82d737898d433e751371f9966005961a"
+  },
+  "archive": "assets/scrantic_data.zip",
+  "archive_sha256": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+  "ground_member": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+  "ground_member_sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d",
+  "ground_layers": [
+    {
+      "path": "data/styles/cartoon/BMP/BACKGRND.BMP/000.png",
+      "world_origin": [
+        540,
+        548
+      ]
+    },
+    {
+      "path": "art/cartoon/low-tide-v1/static-v2/BMP/BACKGRND.BMP/001.png",
+      "world_origin": [
+        498,
+        606
+      ]
+    },
+    {
+      "path": "art/cartoon/low-tide-v1/static-v2/BMP/BACKGRND.BMP/002.png",
+      "world_origin": [
+        300,
+        656
+      ]
+    }
+  ],
+  "resampling": "One uniform premultiplied RGBa bicubic8x/Lanczos pass per source. No phase-specific fitting, source crop, color painting or thresholds.",
+  "visibility": "Frozen ground-alpha visibility mask, with RGB exactly unchanged after resampling. This offshore interpretation does not replicate original sand-bearing wash.",
+  "audit_margin_hd": 128,
+  "preview": "Exact world-coordinate software overlay on the native pre-wave background. Three aligned family-phase combinations are static studies, not the engine update sequence or native motion proof."
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Low-tide Cartoon waves</title>
+<style>
+:root{color-scheme:dark;font:16px/1.5 system-ui,sans-serif;background:#14242e;color:#edf5fa}body{margin:0;padding:24px;max-width:1700px;margin-inline:auto}h1{font-size:28px;margin:0 0 8px}h2{font-size:18px;margin:0 0 10px}p{color:#c8dce9;margin:8px 0 18px}.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}button,select{font:inherit;background:#e1edf5;color:#152a38;padding:8px 12px;border:0;border-radius:6px;cursor:pointer}button:focus-visible,select:focus-visible{outline:3px solid #ffd17f;outline-offset:3px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{min-width:0;background:#233d4d;padding:16px;border-radius:8px}canvas{width:100%;height:auto;display:block}.single{grid-template-columns:1fr}.single .before{display:none}#status{color:#ffd17f}input[type=range]{width:min(600px,70vw)}small{color:#abc7d8}@media(max-width:800px){body{padding:14px}.grid{grid-template-columns:1fr}h1{font-size:23px}}
+</style>
+<h1>Low-tide Cartoon waves</h1>
+<p>The island reuses our approved white ripples. The rock gets a matching ring. Watch their placement and motion around the approved beach.</p>
+<div class="controls">
+<label>Scene <select id="clip"><option value="none">No decoration</option><option value="clover">St Patrick's clovers</option></select></label>
+<button id="play" disabled>Pause</button><button id="previous" disabled>Previous change</button><button id="next" disabled>Next change</button><button id="replay" disabled>Replay</button>
+<label>Speed <select id="speed"><option value="1">Normal</option><option value="0.5">Slow</option></select></label>
+<label>View <select id="view"><option value="beach">Beach and rock close-up</option><option value="full">Full scene</option></select></label>
+<label><input id="compare" type="checkbox" checked> Show comparison</label>
+</div>
+<div class="grid" id="panels"><section class="panel before"><h2>Old low-tide fallback waves</h2><canvas id="before" width="1040" height="290" aria-label="Old low-tide fallback waves"></canvas></section><section class="panel"><h2>Cartoon: reused island ripples + new rock ring</h2><canvas id="after" width="1040" height="290" aria-label="New Cartoon low-tide wave animation"></canvas></section></div>
+<p id="status" role="status">Loading native animation...</p>
+<div class="controls"><label>Time <input id="seek" type="range" min="0" max="3840" value="0" step="1"></label><span id="position"></span></div>
+<small>The left panel is the legacy low-tide wave set, not the approved high-tide Cartoon waves. Both panels use the same native movement and timing. Frames come from the application; this is a motion review, not a generated video.</small>
+<script>
+let manifest,clip,playing=true,time=0,last=0;const imgs=new Map();const $=id=>document.getElementById(id);document.querySelectorAll('button,select,input').forEach(c=>c.disabled=true);
+function frame(timeline){let index=0;for(let i=1;i<timeline.length&&timeline[i].time_ms<=time;i++)index=i;return timeline[index];}
+function render(){const full=$('view').value==='full';const rect=full?[0,0,1280,960]:[240,510,1040,290];for(const side of ['before','after']){const row=frame(clip[side].timeline),canvas=$(side);if(canvas.width!==rect[2]||canvas.height!==rect[3]){canvas.width=rect[2];canvas.height=rect[3];}const ctx=canvas.getContext('2d');ctx.drawImage(imgs.get(clip.base),...rect,0,0,rect[2],rect[3]);for(const patch of row.patches)ctx.drawImage(imgs.get(patch.file),patch.origin[0]-rect[0],patch.origin[1]-rect[1]);}const row=frame(clip.after.timeline);$('position').textContent=(time/1000).toFixed(2)+' s / '+(clip.duration_ms/1000).toFixed(2)+' s · waves '+row.phases.join(', ');$('seek').value=time;}
+function playLabel(){$('play').textContent=playing?'Pause':'Play';}
+function selectClip(){clip=manifest.clips.find(c=>c.id===$('clip').value);time=0;last=0;$('seek').max=clip.duration_ms;render();}
+function tick(now){if(last&&playing){time+=(now-last)*Number($('speed').value);if(time>=clip.duration_ms)time%=clip.duration_ms;}last=now;render();requestAnimationFrame(tick);}
+function step(direction){playing=false;playLabel();const times=clip.after.timeline.map(r=>r.time_ms);time=direction>0?(times.find(t=>t>time+1)??0):([...times].reverse().find(t=>t<time-1)??times[times.length-1]);render();}
+$('play').onclick=()=>{playing=!playing;playLabel();};$('previous').onclick=()=>step(-1);$('next').onclick=()=>step(1);$('replay').onclick=()=>{time=0;playing=true;last=0;playLabel();render();};$('clip').onchange=selectClip;$('view').onchange=render;$('seek').oninput=()=>{time=Number($('seek').value);playing=false;playLabel();render();};$('compare').onchange=()=>{$('panels').classList.toggle('single',!$('compare').checked);};
+fetch('manifest.json').then(r=>{if(!r.ok)throw Error('Could not load animation manifest');return r.json();}).then(async data=>{manifest=data;await Promise.all(Object.keys(data.files).map(src=>new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>{imgs.set(src,img);resolve();};img.onerror=()=>reject(Error('Could not load '+src));img.src=src;})));selectClip();document.querySelectorAll('button,select,input').forEach(c=>c.disabled=false);$('status').textContent='';requestAnimationFrame(tick);}).catch(e=>{$('status').textContent=e.message;});
+</script></html>

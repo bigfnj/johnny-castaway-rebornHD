@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cartoon low tide: beach and rock</title>
+<style>
+:root{color-scheme:dark;font:16px/1.5 system-ui,sans-serif;background:#13232d;color:#edf5f8}body{margin:0;padding:24px;max-width:1700px;margin-inline:auto}h1{margin:0 0 8px;font-size:28px}p{margin:8px 0 18px;color:#c9dbe6}button,select{font:inherit;background:#dfedf5;color:#142836;border:2px solid transparent;border-radius:6px;padding:8px 12px;cursor:pointer}button[aria-pressed=true]{background:#f9ca72;border-color:#f9ca72}button:focus-visible,select:focus-visible{outline:3px solid #82d9ff;outline-offset:3px}.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{min-width:0;background:#223b4b;border-radius:9px;padding:16px}h2{font-size:18px;margin:0 0 10px}canvas{display:block;width:100%;height:auto;background:#223b4b}#note{min-height:48px;margin:14px 0}details{margin-top:22px}summary{cursor:pointer;font-size:18px}a{color:#95d8ff}.sprite{width:100%;height:170px;object-fit:contain;margin-top:18px;background:repeating-conic-gradient(#293945 0% 25%,#23323d 0% 50%) 0 / 24px 24px}.small{font-size:14px}#status{color:#ffc7a0}@media(max-width:850px){body{padding:15px}.grid{grid-template-columns:1fr}h1{font-size:24px}}
+</style>
+<h1>Low tide: the beach and offshore rock</h1>
+<p>First, judge the new beach shape, how it joins the island, and the rock. The low-tide waves are the next artwork step.</p>
+<div class="controls" aria-label="Comparison">
+<button data-mode="static" aria-pressed="true">Earlier Cartoon</button>
+<button data-mode="original" aria-pressed="false">Original shape</button>
+<button data-mode="waves" aria-pressed="false">With existing waves</button>
+<button data-mode="clovers" aria-pressed="false">With clovers</button>
+<label>View <select id="view"><option value="close">Beach close-up</option><option value="full">Full image</option></select></label>
+</div>
+<div class="grid">
+<section class="panel"><h2 id="left-title">Earlier Cartoon beach and rock</h2><canvas id="left" width="1040" height="250" aria-label="Earlier artwork comparison"></canvas></section>
+<section class="panel"><h2 id="right-title">New Cartoon draft</h2><canvas id="right" width="1040" height="250" aria-label="New Cartoon beach and rock"></canvas></section>
+</div>
+<p id="note"></p><p id="status" role="status">Loading images...</p>
+<details><summary>Inspect the two separate sprites</summary><div class="grid"><section><h2>Exposed beach</h2><img class="sprite" src="beach.png" alt="Cartoon lower beach with red starfish and two small shells"></section><section><h2>Offshore rock</h2><img class="sprite" src="rock.png" alt="Low warm-gray faceted rock"></section></div></details>
+<p class="small">Static shape review only. These two drafts have not replaced the production artwork. <a href="draft-static.png" target="_blank" rel="noopener">Open the full draft image</a>.</p>
+<script>
+const modes = {
+  static:{left:'earlier-static.png',right:'draft-static.png',title:'Earlier Cartoon beach and rock',note:'Actual application backgrounds before the waves are drawn. The new draft replaces only the exposed lower beach and separate rock.'},
+  original:{left:'original-shape.png',right:'draft-static.png',title:'Original source shape',note:'The left side shows the original decoded shapes in diagnostic colors, without the tree. Compare the beach footprint, starfish, two small shore objects and rock. It is not an original-program screenshot.'},
+  waves:{left:'earlier-waves.png',right:'draft-waves.png',title:'Earlier Cartoon with existing waves',note:'Both scenes still use the old low-tide waves. Their pixelated sand and water overlay parts of the new beach. This shows the remaining work, not the finished wave design.'},
+  clovers:{left:'earlier-clovers.png',right:'draft-clovers.png',title:'Earlier Cartoon with clovers',note:'Clovers at their unchanged application positions. Both scenes still use the old low-tide waves; those overlays will be redrawn after the beach and rock review.'}
+};
+let mode='static';const images=new Map();
+const buttons=[...document.querySelectorAll('[data-mode]')];
+function draw(){const item=modes[mode];const full=document.querySelector('#view').value==='full';const rect=full?[0,0,1280,960]:[240,530,1040,250];for(const side of ['left','right']){const canvas=document.querySelector('#'+side);canvas.width=rect[2];canvas.height=rect[3];canvas.getContext('2d').drawImage(images.get(item[side]),...rect,0,0,rect[2],rect[3]);}document.querySelector('#left-title').textContent=item.title;document.querySelector('#note').textContent=item.note;buttons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.mode===mode)));}
+buttons.forEach(button=>button.addEventListener('click',()=>{mode=button.dataset.mode;draw();}));
+document.querySelector('#view').addEventListener('change',draw);
+Promise.all([...new Set(Object.values(modes).flatMap(item=>[item.left,item.right]))].map(src=>new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>{images.set(src,img);resolve();};img.onerror=()=>reject(new Error('Could not load '+src));img.src=src;}))).then(()=>{draw();document.querySelector('#status').textContent='';}).catch(error=>{document.querySelector('#status').textContent=error.message;buttons.forEach(button=>button.disabled=true);});
+</script>
+</html>

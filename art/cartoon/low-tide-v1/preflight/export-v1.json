@@ -1,0 +1,109 @@
+{
+  "accepted": false,
+  "source_commit": "da787d63279ea91bd6c637e02133821339470bfc",
+  "scope": "Two static draft assets; low waves unchanged and human scene review pending.",
+  "production_sha256": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+  "candidate_sha256": "938ea8ffc88c0ad6dafa2b71cc8675936dff8ca38416cc080905f1ffb832dcd1",
+  "pillow_version": "12.3.0",
+  "filter_sha256": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+  "exporter_sha256": "7081244221fee19387dd14f5f9916c4d7f1855c54731e90038aae6805f279efc",
+  "filter": {
+    "working_mode": "RGBa",
+    "affine": "BICUBIC",
+    "oversample": 8,
+    "downsample": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "frames": [
+    {
+      "source": "shore-raw-v2.png",
+      "canvas": [
+        768,
+        138
+      ],
+      "scale": 0.6625,
+      "raw_anchor": [
+        768,
+        595
+      ],
+      "target_anchor": [
+        384,
+        137.5
+      ],
+      "basis": "Strip horizontal center and lower waterline. Scale stays within one percent of original guide mapping2/3; full meaningful shape is retained.",
+      "frame": 1,
+      "path": "BMP/BACKGRND.BMP/001.png",
+      "affine_forward": [
+        0.6625,
+        0,
+        -124.79999999999995,
+        0,
+        0.6625,
+        -256.6875
+      ],
+      "source_sha256": "58d3610a1ad8d99e3f85cecfebea326cdfebf95479f3f528ca186629aa7b86df",
+      "png_sha256": "9dd09729c3b94e6d8ffb0ca3c5447bdc0e4ba697393fb87919b78ea65b3c9130",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha8_bounds_source": [
+        190,
+        404,
+        1346,
+        595
+      ],
+      "outside_canvas_max_alpha": 3,
+      "outside_canvas_alpha8_pixels": 0,
+      "outside_canvas_nonzero_pixels": 130
+    },
+    {
+      "source": "rock-raw-v2.png",
+      "canvas": [
+        128,
+        60
+      ],
+      "scale": 0.164,
+      "raw_anchor": [
+        756.5,
+        717
+      ],
+      "target_anchor": [
+        64,
+        59.4
+      ],
+      "basis": "Rock horizontal midpoint and bottom contact; scale stays within two percent of original guide mapping1/6, retaining full silhouette.",
+      "frame": 2,
+      "path": "BMP/BACKGRND.BMP/002.png",
+      "affine_forward": [
+        0.164,
+        0,
+        -60.066,
+        0,
+        0.164,
+        -58.18800000000001
+      ],
+      "source_sha256": "ec6d013a8ca7c8266a7c677aa559c604d763a8c77dbcc6a52020373813c96f1e",
+      "png_sha256": "a2eb23271a9429753873a86294c2f5db3f42f797eac586e74b53b5efa5541f5d",
+      "alpha_extrema": [
+        0,
+        254
+      ],
+      "alpha8_bounds_source": [
+        370,
+        363,
+        1143,
+        717
+      ],
+      "outside_canvas_max_alpha": 4,
+      "outside_canvas_alpha8_pixels": 0,
+      "outside_canvas_nonzero_pixels": 36
+    }
+  ],
+  "changed_members": [
+    "data/styles/cartoon/BMP/BACKGRND.BMP/001.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/002.png"
+  ],
+  "composition_limit": "Static technical composition at native origins, before waves, clouds and Johnny. Not an application screenshot."
+}

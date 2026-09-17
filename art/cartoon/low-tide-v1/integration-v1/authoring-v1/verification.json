@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "production_archive_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+  "pack_sha256": "96bc9dbbacfc6018e384455795941c512d76a73bb42c0d9da2c675ea1c835b62",
+  "smoke_tests": 16,
+  "regression_reported_tests": 191,
+  "regression_executed_tests": 189,
+  "regression_skipped_tests": 2,
+  "skip_lines": [
+    "test_directory_symlink_alias (__main__.InventoryCliTests.test_directory_symlink_alias) ... skipped \"directory symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-5v24jlmg' -> 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-5v24jlmg\\\\\\\\alias'\"",
+    "test_file_symlink_alias (__main__.InventoryCliTests.test_file_symlink_alias) ... skipped \"file symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-5mf34r3y\\\\\\\\fixture.zip' -> 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-5mf34r3y\\\\\\\\symlink.json'\""
+  ],
+  "generated_outputs_sha256": {
+    "docs/knowledge-base/cartoon-production-catalog.json": "8f001c9920d8099fedfe7ae8885a42dbdf4e506f978adb205395c871905b52d7",
+    "docs/knowledge-base/cartoon-production-catalog.md": "a33bdf6a665ef7b1a2d41af62bf0c8e175368d47f65718ea04c79568f13efeb5",
+    "docs/knowledge-base/cartoon-art-metadata.json": "09fadfa4c9cb64ad2cda7809a928c06efd5d8ece8cc7bd79c7f2bc1cfaaeed93",
+    "docs/knowledge-base/cartoon-art-metadata.md": "488dacd29f4fc9e3a3b003df83bbec58e3905037a9b358e18ee5b0cd1db4757d",
+    "art/cartoon/character-inventory-v1/inventory.json": "705a274d5d5150f2173e508bb8aeb8423e2f366e9e33536f93343664d1814335",
+    "art/cartoon/character-inventory-v1/README.md": "08590654371550c4f396f3369865b692441fee6ed9ff6536feb3080b62b4ee14"
+  },
+  "files_sha256": {
+    "art_production_catalog-check.log": "52deb8af0e70403bbc37b5e78495c9326f2fa5068c11dabfd0e78152e8e1256f",
+    "art_production_catalog-generate.log": "52deb8af0e70403bbc37b5e78495c9326f2fa5068c11dabfd0e78152e8e1256f",
+    "art_review_metadata-check.log": "176a62696c85bf11cad413617512fd0951b4ccbaf421ea7d3749ac22d75caabd",
+    "art_review_metadata-generate.log": "176a62696c85bf11cad413617512fd0951b4ccbaf421ea7d3749ac22d75caabd",
+    "character-inventory-check.log": "398e56fe66a2312e6d7ad671405afc56c3bea9b4c7280f1836070b02f7307ad0",
+    "character-inventory-generate.log": "398e56fe66a2312e6d7ad671405afc56c3bea9b4c7280f1836070b02f7307ad0",
+    "generate.json": "5dbc665394a514c7ac1d363442b45d47f6f21c719df6e86aa00d7ead1b9dab45",
+    "integration-review.json": "fcf23cafba7295410d4e882b20d0f09abfc67eeb04c7030445cb5d29a17af5d9",
+    "inventory-regression.log": "f75eab8e2f4eb913ad3854e5438d7a29c98fa8e0d7850a08e67e3106a9a3c272",
+    "inventory-smoke.log": "c83620800c258fb7b34386db5f014370e6222044e99cf9c435a917d42b969432",
+    "pack-regression.log": "64e53c2ac8671002f3d18e9c3cfb267c8ae98e5449693ecd3b9faccafb62c754",
+    "pack-smoke.log": "f5629fe9247cc0601974c7b89dd49817041ca6beaaac560b83e6f13ffdad5148",
+    "preserve.py": "68198d940ccd365a06529c39bfd5d00aaf863ef83bd309a66a1b6e138e21969d",
+    "regression.json": "3be93c1b4207629c94b5fd3305c421408e0a408562e4bd2a5a7361102276b4d1",
+    "run.py": "b47d4c1a6987fa0b969ba6446fafd9cc044fbfddbe7b82f10662389a3726ee4c",
+    "smoke.json": "cfe762f9660d36ddbd0beae28dbdbb1c111b0ba80efb25a5dd630b27e3b73ed8",
+    "test_art_pilot_history-regression.log": "b0c1c5b35fbafc2b4608ff948f0be23f786f5e7c27bceb6cd872de3e42fcc6b6",
+    "test_art_pilot_history-smoke.log": "6ca60c212e4cf051d5c25690a29649b42e29e93a4353bb563b685564a860ba6a",
+    "test_art_production_catalog-regression.log": "3727ee418bd81d01904177477901863e2a421a0fa569dae3b4248624473dac49",
+    "test_art_production_catalog-smoke.log": "79b0b2085f4ecee567b76b4ffc9f98f406b7038853fbeea725ef3670e25d2a97",
+    "test_art_review_metadata-regression.log": "726cc2a2be35d45343ef6ec1a92ca7d082cf812222a26fec74fb76ad11449229",
+    "test_art_review_metadata-smoke.log": "b11212ad4c4fe542abbef506f21dca8fcd8fd5e1a57ec4333340034a8114973a"
+  },
+  "membership_scope": "Every files_sha256 key is relative to this authoring-v1 directory and must be committed with this binder. No ignored log is implicitly excluded.",
+  "excluded": [
+    "Ignored scratch runner directory duplicates",
+    "Unchanged maintained tools/tests, pinned in phase reports",
+    "Production archive and generated files, bound by path/hash instead of duplicated"
+  ],
+  "limits": [
+    "Two Windows symlink-privilege cases skipped explicitly.",
+    "Stored supplied-original evidence was checked; original external resources and original executable colors were not reread.",
+    "Historical pilot metadata remains21 assets; current production catalog covers61. Johnny outstanding counts remain1002 with28 accepted and84 uncertain.",
+    "This uses existing maintained test controls. No new domain guard or source-removal mutation was introduced."
+  ]
+}

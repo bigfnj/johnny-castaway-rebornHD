@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "baseline_commit": "da787d63279ea91bd6c637e02133821339470bfc",
+  "baseline_archive_sha256": "4d8e573b79b7f0dffdd0fefda6f2fa0833534a1649aa1ff0d2d3bf4724a398c6",
+  "archive_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+  "members": 2612,
+  "accepted_assets": 61,
+  "alpha": {
+    "opaque": 1,
+    "transparent": 60,
+    "blank": 0
+  },
+  "added_members": [
+    "data/styles/cartoon/BMP/BACKGRND.BMP/001.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/002.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/030.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/031.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/032.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/033.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/034.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/035.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/036.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/037.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/038.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/039.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/040.png",
+    "data/styles/cartoon/BMP/BACKGRND.BMP/041.png"
+  ],
+  "existing_members_unchanged": 2598,
+  "inherited_ledger_rows_unchanged": true,
+  "pilot_history_unchanged": true,
+  "runtime_manifest_bytes_unchanged": true,
+  "standard_packer": {
+    "original_members_preserved": 2550,
+    "archive_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66"
+  },
+  "exact_reviewed_archive_reproduced": true,
+  "member_negative_control": {
+    "name": "data/styles/cartoon/BMP/BACKGRND.BMP/034.png",
+    "failures": [
+      "data/styles/cartoon/BMP/BACKGRND.BMP/034.png"
+    ],
+    "restored": "PASS"
+  },
+  "helper": {
+    "path": "art/cartoon/low-tide-v1/integration-v1/prepare.py",
+    "sha256": "48cd41f1e0baefe030115a0e009aa954dbbd1cfcc39d60b91922690543b6c767"
+  },
+  "production_promoted": false
+}
