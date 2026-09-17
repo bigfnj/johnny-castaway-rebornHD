@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "phase": "smoke",
+  "status": "PASS",
+  "test_sha256": "258df4035240b2c47717cf7c77a71f05b78c09685341cf8d07121e596faa9de6",
+  "builder_sha256": "1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8",
+  "published_manifest_sha256": "4f4a7efa96bb651cfdec6b8b6a7b7563619a9e62e7b55cc4ee3d47d9f341ca1f",
+  "scope": "Isolated writer reproduction and actual guard-removal controls; no native recaptures.",
+  "checks": [
+    "All 48 unique published PNG crops preserve native pixels exactly",
+    "All three report/repeat/source/crop hashes match current manifest"
+  ],
+  "executions": [],
+  "negative_controls": []
+}

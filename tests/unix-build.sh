@@ -109,6 +109,7 @@ if [ "$OSNAME" = Linux ]; then
     echo
     echo "== drawing and packed-screen smoke =="
     python3 "$WORK/tests/test_drawing_bounds.py" --output "$WORK/build-unix/drawing-tests" --phase smoke
+    python3 "$WORK/tests/test_art_footprint.py" --output "$WORK/build-unix/footprint-smoke" --phase smoke
 fi
 
 echo
@@ -135,6 +136,7 @@ if [ "$OSNAME" = Linux ]; then
     echo
     echo "== drawing and packed-screen regression =="
     python3 "$WORK/tests/test_drawing_bounds.py" --output "$WORK/build-unix/drawing-tests" --phase regression
+    python3 "$WORK/tests/test_art_footprint.py" --output "$WORK/build-unix/footprint-regression" --phase regression
 fi
 
 echo

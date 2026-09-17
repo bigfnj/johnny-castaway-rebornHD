@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "scope": "Named Cartoon runtime footprint support and maintained authoring validation. No new artwork promotion.",
+  "contracts": {
+    "cartoon-island-ground-v1": {
+      "slots": [
+        0
+      ],
+      "canvas": [
+        640,
+        180
+      ],
+      "offset_hd": [
+        -36,
+        -10
+      ]
+    },
+    "cartoon-island-center-foam-v1": {
+      "slots": [
+        6,
+        7,
+        8
+      ],
+      "canvas": [
+        384,
+        256
+      ],
+      "offset_hd": [
+        -32,
+        -90
+      ]
+    }
+  },
+  "completed": {
+    "compiled_engine": {
+      "smoke": 3,
+      "regression": 18,
+      "fresh_built_mutations": 6,
+      "restored_controls": 6
+    },
+    "authoring": {
+      "smoke": 11,
+      "regression": 175,
+      "executed_source_mutations": 5,
+      "regression_suites": {
+        "pack": 26,
+        "pilot_history": 23,
+        "pilot_metadata": 60,
+        "production_catalog": 66
+      }
+    },
+    "linux_gate_flow": {
+      "cases": 17,
+      "executed_continuation_mutations": 12
+    }
+  },
+  "production_archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+  "source_sha256_at_final_readback": {
+    "src/engine/art_style.c": "1c66ab03db3e1cf5ab82f6d4c2fdcaf70829501a30de855e36ffe001d074fa42",
+    "src/engine/art_style.h": "8447d3c38cdabf1e959db7d87f8a8f3ecc013ae082e1545310322bf1e8e5aa6f",
+    "src/engine/graphics.c": "7bbab71ae7f9d43ea89f7532ac9a696af7ff16c5c8add3b9ac60fd9ad800db65",
+    "src/engine/island.c": "9b4f4a99e359a9a1af6d91ec9e3b553017afde981c34a423005155b91fd920d6",
+    "tools/art_common.py": "5661f93900d7b32dc983be73717decb7b50aa99b7371e9df01b3ce0f3f193731",
+    "tools/art_pack.py": "1df59daf81b2bbe6f7826156e7f0d12fd70f9048d576dee2cdc2eac60d1d2239",
+    "tools/art_production_catalog.py": "0e7b9d2e1b30630d43018abef7efd8bfb14dc4ba2178f7974ac21a8496b8eff2",
+    "tools/art_review_metadata.py": "6c9a82d4426f526476be1d5cb2e85858cadff065e6b0c3991009d1167931e4ee",
+    "tests/test_art_footprint.c": "353606d3fb1172efcc81edd0996d2238fdd8a4f1bd62bac7e36bb6e7bc80329b",
+    "tests/test_art_footprint.py": "1afbdb170d14d9394b1126f319f5bbc0d62256f5c46284c5a3a3707cc2b7ceb3",
+    "tests/test_art_tools.py": "7a4ef471499340bacb8377d73c4576a0f74076497b9cca2f5e6a818339fe5585",
+    "tests/test_art_pilot_history.py": "64c6669e214d1e4e8ac0022cef1ad7b4b29011b2ae8a87cfec57857432a7cacc",
+    "tests/test_art_production_catalog.py": "f3219726e52f2060eb211b2cf88be9016054dff037a494449052f9b3e8169502",
+    "tests/test_art_review_metadata.py": "1593d8f539901ceb31eedbb4f2fa73aa7ae46a9a4683e003a9de900349fbb658",
+    "tests/Test-ArtMutations.ps1": "c8d2f66f61da74946176c05a598a1c6d1664c2f973179e1626b71e5370b87eb8",
+    "tests/unix-build.sh": "4b58c0471aa9ea5d2008e103fb990ed618a92a0eb6cad16a0d89c7d294042dd7",
+    "tests/test_unix_build_flow.py": "99f6ffb3b4b75b399f79c9ef748a4ffde4a313ca0758317343167328395d1ab5",
+    "docs/cartoon-footprint-contract.md": "8c151e221c5109876c5f1ce41e372be557d8517cf601161d1f3cfe743e7c94c0",
+    "docs/cartoon-art.md": "5626ee444d4c81e186deaf5da3b9a5850d0e99125f112d11edd2312f99853ad2",
+    "docs/knowledge-base/cartoon-art-metadata.json": "95ca35215cc75e4247cf2446bfd69a53a7b43fb9c3356724dd3aa1d46e521f65",
+    "docs/knowledge-base/cartoon-art-metadata.md": "94a21de80033404bad9f1fd30b085a4dcb03d78c496794db59be20b8eaef1446",
+    "docs/knowledge-base/cartoon-production-catalog.json": "37bbf9f74076e819af153c93e1f939544ef3bd5e335cb8721c3ad2999473884d",
+    "docs/knowledge-base/cartoon-production-catalog.md": "637e38f393ab15550ebaee0b9a6e589b06e038d1237e512cd827515d381b935c"
+  },
+  "reports_sha256": {
+    "build/shoreline-repair-v1/footprint-tests/full-canvas-smoke/report.json": "d4d3eaaa606292e76b5b6b73a5f8d4576aac0dc5620e96a491fda3715f4ad210",
+    "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/report.json": "7e1db9d62f5560d0ff98f2c7ed4b3cd4486f499d86a5b7406c38408b8204ffe2",
+    "build/shoreline-repair-v1/footprint-tests/unix-flow/report.json": "76c1e1aa077700c9c2a7365c4cc512d20cbe334a30ea7868928b7ac31496803d",
+    "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/authoring-smoke.json": "2b6719c88ecbfc78f56f554f4dcd38d59d25ffb3464d0f799f82bc5104e5c38f",
+    "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/authoring-regression.json": "496963ec14d1c761b235029f09f942e25e15df047fdb7f4e6b678e7169a501a5",
+    "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/authoring-mutations.json": "c12f09d0472f64d203032f324724106e4f2b20a14bbb917af3cb4548002579d2"
+  },
+  "helper_sha256": {
+    "build/shoreline-repair-v1/footprint-tests/finalize.py": "b069f5abcad2a465fd08df7b4fc3f6b2509a8dd67e877c72c3af6a67124151a2",
+    "build/shoreline-repair-v1/footprint-tests/run_authoring.py": "518a7e5be9a88ebafba05902b0afda0929c2d035eaddc153f2b687099cfb3942",
+    "build/shoreline-repair-v1/footprint-tests/check_authoring_mutations.py": "58b942b5920d2657f1ad262f1dfc57de58d3ff5cd7e28e99a37f835e786c7eac"
+  },
+  "final_checks": [
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tools/art_review_metadata.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "build/shoreline-repair-v1/footprint-tests/final-check-0.log",
+      "sha256": "708da9f97faf43f1653e45a250713b50e246f85ae3783c42f61c527702637a39"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tools/art_production_catalog.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "build/shoreline-repair-v1/footprint-tests/final-check-1.log",
+      "sha256": "27928a2b0ad2cdc3300fd6da07b5e2d2be90deffb442fd169beea947df64b757"
+    },
+    {
+      "command": [
+        "powershell.exe",
+        "-NoProfile",
+        "-Command",
+        "$errors = $null; $tokens = $null; [System.Management.Automation.Language.Parser]::ParseFile('tests/Test-ArtMutations.ps1', [ref]$tokens, [ref]$errors) | Out-Null; if ($errors.Count) { $errors | Out-String; exit 1 }; Write-Output 'PASS PowerShell 5.1 parser: tests/Test-ArtMutations.ps1'"
+      ],
+      "exit_code": 0,
+      "log": "build/shoreline-repair-v1/footprint-tests/final-check-2.log",
+      "sha256": "801dd3951fc4ab35ffed4429fc48f33fc47e10f9c030938e48216fe3a2a0bdc1"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": "build/shoreline-repair-v1/footprint-tests/final-check-3.log",
+      "sha256": "21061f14aaa437571bfc2e1652b8c860794d40e368439b2d8fca639a0ddde4db"
+    }
+  ],
+  "retained_intermediate_results": {
+    "earlier_canvas_sizes": "Earlier smoke/regression and padded-* directories used superseded dimensions; only full-canvas-* records apply to the final contract.",
+    "stale_catalog_failures": "Initial authoring regression and full-canvas-final runs stopped at stale pilot catalog hashes. Only docs/art-style-learnings.md and src/engine/island.c input hashes differed; regeneration preserved all other pilot fields. Fresh full-canvas-current-catalog smoke and regression then passed."
+  },
+  "limits": [
+    "Compiled loader probe uses synthetic archive/decoder surfaces; it proves source control flow, placement and restoration, not PNG decoder parity.",
+    "No Windows full gate or live-source mutation runner was executed in this task. The edited PowerShell mutation needle was parsed under Windows PowerShell 5.1; new engine mutations ran on copied sources in pinned Linux Docker.",
+    "Native selected-art tide, night, scene-offset and character matrix remains separate and pending the selected wave artwork. No visual approval is inferred.",
+    "Current production archive and historical approvals were not changed. Generated catalogs describe the current 43-asset pack."
+  ]
+}

@@ -47,6 +47,9 @@ art/cartoon/character-inventory-v1/** -text whitespace=cr-at-eol
 art/cartoon/seasonal-v1/** -text whitespace=cr-at-eol
 art/cartoon/shoreline-repair-v1/** -text whitespace=cr-at-eol
 
+# Preserve the observed CMake line ending in a space in this hashed run log.
+art/cartoon/shoreline-repair-v1/integrated-shore-v1/code-verification/windows-v2/run.log whitespace=cr-at-eol,-blank-at-eol
+
 # This hashed historical capture manifest includes a final blank line.
 art/cartoon/walk-pilot/directional-cycle-v1/review-evidence/direction-clearance-manifest-v1.json whitespace=cr-at-eol,-blank-at-eof
 

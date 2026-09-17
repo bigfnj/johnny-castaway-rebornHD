@@ -57,11 +57,11 @@ class HistoryTests(unittest.TestCase):
         except m.ArtError as caught:
             self.fail("Valid replacement fixture rejected: " + str(caught))
 
-    def report(self, change=None, replace_png=True):
+    def report(self, change=None, replace_png=True, extra_pngs=None):
         with legacy_pilot(ROOT):
-            return self.fixture_report(change, replace_png)
+            return self.fixture_report(change, replace_png, extra_pngs)
 
-    def fixture_report(self, change=None, replace_png=True):
+    def fixture_report(self, change=None, replace_png=True, extra_pngs=None):
         records = fixture()
         if change:
             change(records)
@@ -72,6 +72,8 @@ class HistoryTests(unittest.TestCase):
             return encoded(records[relative]) if relative in records else read_file(path)
 
         def zip_bytes(archive, name, *args, **kwargs):
+            if extra_pngs and name in extra_pngs:
+                return extra_pngs[name]
             if replace_png and name == "data/styles/cartoon/" + ASSET:
                 name = "data/styles/cartoon/" + CONTROL
             return read_zip(archive, name, *args, **kwargs)
@@ -97,6 +99,34 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(row["production"]["acceptance"], NEW)
         self.assertNotEqual(row["variant"]["sha256"], row["production"]["sha256"])
         self.assertIsNone(row["variant"]["member"])
+
+    def test_smoke_extended_island_keeps_historical_canvas(self):
+        from test_art_tools import png
+        ground = "BMP/BACKGRND.BMP/000.png"
+        footprint = {"id": "cartoon-island-ground-v1", "canvas": [640, 180], "offset_hd": [-36, -10]}
+        data = png(640, 180)
+        with legacy_pilot(ROOT):
+            before = m.build(ROOT)
+        def change(records):
+            pack, accepted = records[m.PACK], records[NEW]
+            row = next(row for row in pack["assets"] if row["path"] == ground)
+            row.update(sha256=m.digest(data), recipe=RECIPE, review=NEW, footprint=copy.deepcopy(footprint))
+            pack["pilot_history"]["replaced_assets"].append(ground)
+            approval = next(row for row in accepted["accepted_assets"] if row["path"] == ground)
+            approval.update(sha256=m.digest(data), recipe=RECIPE)
+            accepted["inherited_acceptances"][0]["asset_paths"].remove(ground)
+            accepted["newly_accepted_assets"].append(ground)
+            records[RECIPE]["frames"].append({"path": ground, "candidate_png_sha256": m.digest(data),
+                "runtime_canvas": [640, 180], "footprint": copy.deepcopy(footprint)})
+        after = self.valid_report(change, extra_pngs={"data/styles/cartoon/" + ground: data})
+        previous = next(row for row in before["assets"] if row["id"] == ground[:-4])
+        current = next(row for row in after["assets"] if row["id"] == ground[:-4])
+        self.assertEqual(current["original"], previous["original"])
+        self.assertEqual(current["variant"]["canvas"], [560, 104])
+        self.assertEqual(current["production"]["canvas"], [640, 180])
+        self.assertEqual(current["production"]["footprint"], footprint)
+        self.assertFalse(current["production"]["canvas_matches_original_at_scale"])
+        self.assertIn("Historical pilot canvases", m.markdown(after))
 
     def test_history_and_original_facts_unchanged(self):
         with legacy_pilot(ROOT):
@@ -210,7 +240,11 @@ class HistoryTests(unittest.TestCase):
 
     def test_recipe_canvas(self):
         self.refused(lambda d: d[RECIPE]["frames"][0].update(runtime_canvas=[64, 148]),
-                     ASSET, "active recipe canvas differs from original")
+                     ASSET, "active recipe canvas differs from original or declared footprint")
+
+    def test_recipe_footprint(self):
+        self.refused(lambda d: d[RECIPE]["frames"][0].update(footprint={"id": "unapproved"}),
+                     ASSET, "active recipe footprint differs from ledger")
 
     def test_production_bytes(self):
         self.refused(None, "data/styles/cartoon/" + ASSET, "production PNG hash differs", replace_png=False)
@@ -264,7 +298,8 @@ MUTATIONS = [
     ("test_recipe_pointer", 'isinstance(recipe_path, str) and recipe_path == approval.get("recipe")\n                and item.get("review") == origins[path]'),
     ("test_recipe_coverage", 'row is not None'),
     ("test_recipe_hash", 'item.get("sha256") == approval.get("sha256") == row.get("candidate_png_sha256")'),
-    ("test_recipe_canvas", 'production[asset]["canvas"] == canvas'),
+    ("test_recipe_canvas", 'production[asset]["canvas"] == current_canvas'),
+    ("test_recipe_footprint", 'row.get("footprint") == item.get("footprint")'),
     ("test_production_bytes", 'digest(data) == production_item["sha256"]'),
     ("test_history_and_original_facts_unchanged", 'item = dict(item, **approved[asset], review=ACCEPTANCE)', 'item = item'),
     ("test_smoke_replacement", 'assets[-1]["variant"]["member"] = None', 'pass'),

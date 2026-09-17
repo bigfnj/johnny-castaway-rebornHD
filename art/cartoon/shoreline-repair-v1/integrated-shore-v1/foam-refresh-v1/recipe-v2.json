@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "scope": "Offshore approach retained only for the requested three-way comparison. Not selected for production; incoming wash artwork is a separate direction.",
+  "parent_exporter": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/export.py",
+  "parent_exporter_sha256": "7b9071272c7cee320fcc7c2a38167510313c8475cd4e3215bdb70752779c7fcf",
+  "parent_report_sha256": "9a09c9fd870f150499726b3eb5f17b2f22f391949b3f58cbce1fe3d236f638a4",
+  "filter_sha256": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+  "mask_sha256": "fae28aba1181761777ae4ed43e088fb6a1cc51b08f20db39135ac81fe4ae1445",
+  "pillow_version": "12.3.0",
+  "source_to_world_affine": [
+    0.25,
+    0,
+    696,
+    0,
+    0.25,
+    548
+  ],
+  "world_box": [
+    696,
+    548,
+    1080,
+    804
+  ],
+  "audit_world_box": [
+    692,
+    544,
+    1084,
+    808
+  ],
+  "footprint": {
+    "id": "cartoon-island-center-foam-v1",
+    "canvas": [
+      384,
+      256
+    ],
+    "offset_hd": [
+      -32,
+      -90
+    ]
+  },
+  "policy": "One common transform; no per-phase fit, translation or shrink. Ground visibility mask preserves RGB and changes only foam alpha at overlap. All ground remains in000.",
+  "frames": [
+    {
+      "frame": 0,
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "role": "sole static ground owner",
+      "canvas": [
+        640,
+        180
+      ],
+      "logical_origin_hd": [
+        576,
+        558
+      ],
+      "asset_offset_hd": [
+        -36,
+        -10
+      ],
+      "world_box": [
+        540,
+        548,
+        1180,
+        728
+      ],
+      "footprint": {
+        "id": "cartoon-island-ground-v1",
+        "canvas": [
+          640,
+          180
+        ],
+        "offset_hd": [
+          -36,
+          -10
+        ]
+      },
+      "sha256": "22b426952abb1877e7c77111da0f4f0826dc86ff7a993c4390156c0f55166d9d"
+    },
+    {
+      "frame": 3,
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        58
+      ],
+      "logical_origin_hd": [
+        540,
+        612
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+      "source_member_sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050",
+      "sha256": "d28e9b61aa90734b649122f96b462de1c846c610637cb45c2051b20db95b34b9"
+    },
+    {
+      "frame": 4,
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        58
+      ],
+      "logical_origin_hd": [
+        540,
+        612
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+      "source_member_sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143",
+      "sha256": "262fc8bdce3dd7671220480ca382870b0fa5729c92a5630bbe5b7f6674134084"
+    },
+    {
+      "frame": 5,
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        58
+      ],
+      "logical_origin_hd": [
+        540,
+        612
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+      "source_member_sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6",
+      "sha256": "b9094eacd1ab1e6548b30505752901519642a7f9d73565267c25f7af5da97503"
+    },
+    {
+      "frame": 6,
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "role": "generated center foam only",
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/006-raw.png",
+      "source_sha256": "be78ddda6468fdd3d00c20589e700a50fbb6150157591eb1070eeb718e87c5bd",
+      "canvas": [
+        384,
+        256
+      ],
+      "logical_origin_hd": [
+        728,
+        638
+      ],
+      "asset_offset_hd": [
+        -32,
+        -90
+      ],
+      "world_box": [
+        696,
+        548,
+        1080,
+        804
+      ],
+      "footprint": {
+        "id": "cartoon-island-center-foam-v1",
+        "canvas": [
+          384,
+          256
+        ],
+        "offset_hd": [
+          -32,
+          -90
+        ]
+      }
+    },
+    {
+      "frame": 7,
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "role": "generated center foam only",
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/007-v2-raw.png",
+      "source_sha256": "c97a2e468a854296fadb787d4b9ff30833bd8e46d3b1c4d17dc8cb965ddbd0d4",
+      "canvas": [
+        384,
+        256
+      ],
+      "logical_origin_hd": [
+        728,
+        638
+      ],
+      "asset_offset_hd": [
+        -32,
+        -90
+      ],
+      "world_box": [
+        696,
+        548,
+        1080,
+        804
+      ],
+      "footprint": {
+        "id": "cartoon-island-center-foam-v1",
+        "canvas": [
+          384,
+          256
+        ],
+        "offset_hd": [
+          -32,
+          -90
+        ]
+      }
+    },
+    {
+      "frame": 8,
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "role": "generated center foam only",
+      "source": "art/cartoon/shoreline-repair-v1/integrated-shore-v1/foam-refresh-v1/008-raw.png",
+      "source_sha256": "ae9e3795f81be28436ebff6a7c90b19c8998377d0754e4e8ed990ed46bfca2a8",
+      "canvas": [
+        384,
+        256
+      ],
+      "logical_origin_hd": [
+        728,
+        638
+      ],
+      "asset_offset_hd": [
+        -32,
+        -90
+      ],
+      "world_box": [
+        696,
+        548,
+        1080,
+        804
+      ],
+      "footprint": {
+        "id": "cartoon-island-center-foam-v1",
+        "canvas": [
+          384,
+          256
+        ],
+        "offset_hd": [
+          -32,
+          -90
+        ]
+      }
+    },
+    {
+      "frame": 9,
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        64
+      ],
+      "logical_origin_hd": [
+        1036,
+        606
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+      "source_member_sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28",
+      "sha256": "eb81468edf9ebf3e1622b815ce69f6781e5cb80a2c573bd9e0a31ea8b7a7652d"
+    },
+    {
+      "frame": 10,
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        64
+      ],
+      "logical_origin_hd": [
+        1036,
+        606
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+      "source_member_sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02",
+      "sha256": "fee6e13f4ebbc382da9954a4ebfa1f355dc797f9339c97c2f8555b6d4d11935e"
+    },
+    {
+      "frame": 11,
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        64
+      ],
+      "logical_origin_hd": [
+        1036,
+        606
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+      "source_member_sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3",
+      "sha256": "f31e865b2f14a5952b05e4f0f47f9bebdfca34d0424571054d6c995ba17d70c8"
+    }
+  ],
+  "comparison_exporter_ancestor_sha256": "b4f3e3c8f79a22977da78051b89d34fd4201f4fae1f137007523aa23543b2bd5",
+  "source_window": [
+    0,
+    0,
+    1536,
+    1024
+  ],
+  "extent_reason": "Common full-source footprint for both offshore and incoming-wash comparisons; prior 356x102 result remains historical."
+}

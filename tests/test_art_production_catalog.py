@@ -33,6 +33,8 @@ AGGREGATE = "art/cartoon/expanded/acceptance.json"
 SECOND = "BMP/ONE.BMP/002.png"
 THIRD = "BMP/ONE.BMP/001.png"
 REVIEW2 = "art/cartoon/another/acceptance.json"
+FOOTPRINT = {"id": "cartoon-island-ground-v1", "canvas": [640, 180], "offset_hd": [-36, -10]}
+GROUND = "BMP/BACKGRND.BMP/000.png"
 
 
 def record_digest(data, path):
@@ -114,6 +116,28 @@ def fixture():
             "canvases": {path: [1, 1] for path in paths}, "members": members}
 
 
+def footprint_fixture():
+    data = fixture()
+    hd = png([b"\x01\x02\x03\xff" * 560] * 104)
+    current = png([b"\x04\x05\x06\x80" * 640] * 180)
+    manifest = json.loads(data["members"]["data/hd/manifest.json"])
+    manifest["BMP"]["BACKGRND.BMP"] = {"numImages": 1, "images": [
+        {"index": 0, "width": 280, "height": 52, "file": GROUND}]}
+    data["members"]["data/hd/manifest.json"] = json.dumps(manifest).encode()
+    data["members"]["data/hd/" + GROUND] = hd
+    data["members"][m.PREFIX + GROUND] = current
+    data["canvases"][GROUND] = [280, 52]
+    data["original"]["assets"][GROUND] = {"canvas": [280, 52]}
+    data["pack"]["required_assets"].append(GROUND)
+    data["pack"]["assets"].append({"path": GROUND, "source_sha256": m.digest(hd),
+        "sha256": m.digest(current), "recipe": RECIPE, "review": REVIEW,
+        "alpha": "transparent", "footprint": copy.deepcopy(FOOTPRINT)})
+    data["records"][REVIEW]["accepted_assets"].append({"path": GROUND, "sha256": m.digest(current), "recipe": RECIPE})
+    data["records"][RECIPE]["frames"].append({"path": GROUND, "candidate_png_sha256": m.digest(current),
+        "runtime_canvas": [640, 180], "footprint": copy.deepcopy(FOOTPRINT)})
+    return data
+
+
 def report(data):
     buffer = io.BytesIO()
     with zipfile.ZipFile(buffer, "w") as archive:
@@ -174,6 +198,31 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(approvals[ASSET], REVIEW)
         self.assertEqual(approvals[SECOND], AGGREGATE)
         self.assertIsNone(approvals[THIRD])
+
+    def test_smoke_registered_footprint(self):
+        data = footprint_fixture()
+        result = report(data)
+        row = next(row for row in result["assets"] if row["path"] == GROUND)
+        self.assertEqual(row["bundled_logical_canvas"], [280, 52])
+        self.assertEqual(row["hd_proxy"]["canvas"], [560, 104])
+        self.assertEqual(row["runtime_canvas"], [640, 180])
+        self.assertEqual(row["footprint"], FOOTPRINT)
+        self.assertEqual(data["original"]["assets"][GROUND]["canvas"], [280, 52])
+
+    def test_footprint_recipe_binding(self):
+        data = footprint_fixture()
+        data["records"][RECIPE]["frames"][-1].pop("footprint")
+        self.refused(lambda: report(data), GROUND, "recipe footprint differs from ledger")
+
+    def test_footprint_contract_rejects_other_offset(self):
+        data = footprint_fixture()
+        data["pack"]["assets"][-1]["footprint"]["offset_hd"][0] += 1
+        self.refused(lambda: report(data), GROUND, "invalid Cartoon footprint declaration")
+
+    def test_footprint_recipe_canvas(self):
+        data = footprint_fixture()
+        data["records"][RECIPE]["frames"][-1]["runtime_canvas"] = [560, 104]
+        self.refused(lambda: report(data), GROUND, "recipe canvas differs from runtime")
 
     def inherited_bad(self, edit, label, reason):
         data = inherited_fixture()
@@ -562,7 +611,8 @@ MUTATIONS = [
     ("test_missing_acceptance", "isinstance(acceptance_path, str)"),
     ("test_missing_recipe", 'require(isinstance(path, str), item["path"], "missing recipe reference")', 'require(True, item["path"], "missing recipe reference")'),
     ("test_missing_recipe_asset", "row is not None"),
-    ("test_recipe_canvas", 'row.get("runtime_canvas") == [n * runtime["scale"] for n in logical]'),
+    ("test_recipe_canvas", 'row.get("runtime_canvas") == footprint["canvas"]'),
+    ("test_footprint_recipe_binding", 'row.get("footprint") == item.get("footprint")'),
     ("test_bundled_canvas", "logical == canvases[path]"),
     ("test_original_canvas", 'native["canvas"] == logical'),
     ("test_review_pointer", 'item.get("review") == approval_paths[path] and approval.get("recipe") == recipe_path'),

@@ -78,6 +78,13 @@ if os.environ['JCR_CASE'] == 'drawing-' + phase + '-fail':
     print('FAIL tests/test_drawing_bounds.py: fixture rejected')
     sys.exit(37 if phase == 'smoke' else 38)
 ''',encoding='utf-8')
+    (src/'tests/test_art_footprint.py').write_text('''import os, sys
+phase = sys.argv[sys.argv.index('--phase') + 1]
+with open(os.environ['JCR_TRACE'], 'a') as stream: stream.write('WITNESS footprint-' + phase + '\\n')
+if os.environ['JCR_CASE'] == 'footprint-' + phase + '-fail':
+    print('FAIL tests/test_art_footprint.py: fixture rejected')
+    sys.exit(43 if phase == 'smoke' else 44)
+''',encoding='utf-8')
     platform_fixture = '''#!/usr/bin/env bash
 phase="$2"
 echo "WITNESS platform-$phase" >> "$JCR_TRACE"
@@ -122,9 +129,9 @@ exit 0
 
 def assert_case(mode, code, text, trace):
     full_trace = ['WITNESS build-executed', 'WITNESS png-smoke', 'WITNESS decoder-smoke', 'WITNESS frame-smoke', 'WITNESS extractor-smoke', 'WITNESS platform-smoke']
-    if LINUX: full_trace.append('WITNESS drawing-smoke')
+    if LINUX: full_trace.extend(['WITNESS drawing-smoke', 'WITNESS footprint-smoke'])
     full_trace.extend(['WITNESS decoder-regression', 'WITNESS frame-regression', 'WITNESS extractor-regression', 'WITNESS platform-regression'])
-    if LINUX: full_trace.extend(['WITNESS graphics-regression', 'WITNESS drawing-regression'])
+    if LINUX: full_trace.extend(['WITNESS graphics-regression', 'WITNESS drawing-regression', 'WITNESS footprint-regression'])
     full_trace.append('WITNESS dump-regression')
     if mode in ('clean', 'warning'):
         assert code == 0 and trace.splitlines() == full_trace, f'tests/unix-build.sh: {mode} control did not reach smoke then regression'
@@ -141,7 +148,9 @@ def assert_case(mode, code, text, trace):
                  'frame-smoke-fail': (39, 'frame-smoke', 'tests/test_frame_limits.py'),
                  'frame-regression-fail': (40, 'frame-regression', 'tests/test_frame_limits.py'),
                  'extractor-smoke-fail': (41, 'extractor-smoke', 'tests/test_extractors.py'),
-                 'extractor-regression-fail': (42, 'extractor-regression', 'tests/test_extractors.py')}
+                 'extractor-regression-fail': (42, 'extractor-regression', 'tests/test_extractors.py'),
+                 'footprint-smoke-fail': (43, 'footprint-smoke', 'tests/test_art_footprint.py'),
+                 'footprint-regression-fail': (44, 'footprint-regression', 'tests/test_art_footprint.py')}
         status, stage, file = cases[mode]
         length = full_trace.index('WITNESS ' + stage) + 1
         assert code == status and text.count(f'FAIL {file}: fixture rejected') == 1 and trace.splitlines() == full_trace[:length], f'tests/unix-build.sh: {mode} reached later regression or lost its diagnostic/status'
@@ -153,7 +162,7 @@ def main():
     def verify(work):
         records=[]
         modes = ['clean','warning','build-fail','smoke-fail','decoder-smoke-fail','frame-smoke-fail','extractor-smoke-fail','platform-smoke-fail','decoder-regression-fail','frame-regression-fail','extractor-regression-fail','platform-regression-fail']
-        if LINUX: modes.extend(['graphics-regression-fail', 'drawing-smoke-fail', 'drawing-regression-fail'])
+        if LINUX: modes.extend(['graphics-regression-fail', 'drawing-smoke-fail', 'drawing-regression-fail', 'footprint-smoke-fail', 'footprint-regression-fail'])
         for mode in modes:
             code,text,trace,folder=run_case(work,original,mode,mode)
             assert_case(mode, code, text, trace)
@@ -184,7 +193,9 @@ def main():
                 guarded_commands.extend([
                     ('graphics-regression-fail', 'python3 "$WORK/tests/test_graphics_alloc.py" --output "$WORK/build-unix/graphics-tests"'),
                     ('drawing-smoke-fail', 'python3 "$WORK/tests/test_drawing_bounds.py" --output "$WORK/build-unix/drawing-tests" --phase smoke'),
-                    ('drawing-regression-fail', 'python3 "$WORK/tests/test_drawing_bounds.py" --output "$WORK/build-unix/drawing-tests" --phase regression')])
+                    ('drawing-regression-fail', 'python3 "$WORK/tests/test_drawing_bounds.py" --output "$WORK/build-unix/drawing-tests" --phase regression'),
+                    ('footprint-smoke-fail', 'python3 "$WORK/tests/test_art_footprint.py" --output "$WORK/build-unix/footprint-smoke" --phase smoke'),
+                    ('footprint-regression-fail', 'python3 "$WORK/tests/test_art_footprint.py" --output "$WORK/build-unix/footprint-regression" --phase regression')])
             for mode, needle in guarded_commands:
                 assert original.count(needle) == 1, f'tests/unix-build.sh: expected one {mode} command'
                 mutant = original.replace(needle, needle + ' || true')

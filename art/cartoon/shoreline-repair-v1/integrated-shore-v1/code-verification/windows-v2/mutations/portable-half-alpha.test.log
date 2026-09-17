@@ -1,0 +1,6 @@
+WITNESS portable PNG decoder executed
+ok   opaque RGB order
+ok   transparent RGB cleared
+ok   quarter alpha premultiplied
+ok   opaque magenta preserved
+FAIL platform/png_decoder.c: half alpha premultiplied, got BGRA 50,100,200,128

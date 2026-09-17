@@ -300,6 +300,35 @@ static void releaseLoadedSurface(PlatformSurface *surface)
     free(platformGetSurfacePixels(surface));
     platformFreeSurface(surface);
 }
+/* cartoon-island-ground-v1. Original RESOURCE dimensions remain 280x52.
+ * This is one registered footprint, not permission for arbitrary sprite sizes. */
+static int extendedIsland(const char *name, int image, int width, int height)
+{
+    return name && strcmp(name, "BACKGRND.BMP") == 0 && image == 0 &&
+           width == 640 && height == 180;
+}
+static int extendedCenterFoam(const char *name, int image, int width, int height)
+{
+    return name && strcmp(name, "BACKGRND.BMP") == 0 && image >= 6 && image <= 8 &&
+           width == 384 && height == 256;
+}
+void artStyleSpriteOffset(const char *name, int image, int width, int height,
+                          int flipped, int *dx, int *dy)
+{
+    *dx = *dy = 0;
+    if (selected == &styles[1] && currentScale == 2 &&
+        extendedIsland(name, image, width, height)) {
+        /* Mirror around the original 560-pixel logical canvas, not the new one. */
+        *dx = flipped ? 560 - 640 - (-36) : -36;
+        *dy = -10;
+    }
+    else if (selected == &styles[1] && currentScale == 2 &&
+             extendedCenterFoam(name, image, width, height)) {
+        /* Preserve the original 320-wide logical anchor when flipping padding. */
+        *dx = flipped ? 320 - 384 - (-32) : -32;
+        *dy = -90;
+    }
+}
 static PlatformSurface *loadPng(const TArtStyle *style, const char *name,
                                int image, int width, int height)
 {
@@ -328,7 +357,11 @@ static PlatformSurface *loadPng(const TArtStyle *style, const char *name,
         return NULL;
     }
     int w = platformGetSurfaceWidth(surface), h = platformGetSurfaceHeight(surface);
-    if (selected == &styles[1] && (w != width * currentScale || h != height * currentScale)) {
+    int registeredFootprint = strict && currentScale == 2 &&
+        ((width == 280 && height == 52 && extendedIsland(name, image, w, h)) ||
+         (width == 160 && height == 25 && extendedCenterFoam(name, image, w, h)));
+    if (selected == &styles[1] && !registeredFootprint &&
+        (w != width * currentScale || h != height * currentScale)) {
         releaseLoadedSurface(surface);
         if (strict)
             fatalError("Art PNG %s is %dx%d; expected %dx%d", path, w, h,

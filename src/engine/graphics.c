@@ -606,6 +606,11 @@ void grDrawSprite(PlatformSurface *sfc, struct TTtmSlot *ttmSlot, int x, int y, 
 
     PlatformSurface *srcSfc = ttmSlot->sprites[imageNo][spriteNo];
 
+    int assetDx, assetDy;
+    artStyleSpriteOffset(ttmSlot->bmpNames[imageNo], spriteNo,
+                        platformGetSurfaceWidth(srcSfc), platformGetSurfaceHeight(srcSfc),
+                        0, &assetDx, &assetDy);
+    x += assetDx; y += assetDy;
     PlatformRect dest = { x, y, 0, 0 };
     platformBlitSurface(srcSfc, NULL, sfc, &dest);
 }
@@ -621,6 +626,11 @@ void grDrawSpriteAtop(PlatformSurface *sfc, struct TTtmSlot *ttmSlot, int x, int
     PlatformRect clip;
     platformGetClipRect(sfc, &clip);
     int dx = (x + grDx) * grScale, dy = (y + grDy) * grScale;
+    int assetDx, assetDy;
+    artStyleSpriteOffset(ttmSlot->bmpNames[imageNo], spriteNo,
+                        platformGetSurfaceWidth(source), platformGetSurfaceHeight(source),
+                        0, &assetDx, &assetDy);
+    dx += assetDx; dy += assetDy;
     int left = dx > clip.x ? dx : clip.x;
     int top = dy > clip.y ? dy : clip.y;
     int right = dx + platformGetSurfaceWidth(source);
@@ -670,6 +680,11 @@ void grDrawSpriteFlip(PlatformSurface *sfc, struct TTtmSlot *ttmSlot, int x, int
     x *= grScale; y *= grScale;
 
     PlatformSurface *srcSfc = ttmSlot->sprites[imageNo][spriteNo];
+    int assetDx, assetDy;
+    artStyleSpriteOffset(ttmSlot->bmpNames[imageNo], spriteNo,
+                        platformGetSurfaceWidth(srcSfc), platformGetSurfaceHeight(srcSfc),
+                        1, &assetDx, &assetDy);
+    x += assetDx; y += assetDy;
     x += platformGetSurfaceWidth(srcSfc) - 1;
 
     for (int i=0; i < platformGetSurfaceWidth(srcSfc); i++) {

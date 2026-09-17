@@ -61,9 +61,12 @@ data/styles/cartoon/BMP/JOHNWALK.BMP/000.png
 data/styles/cartoon/SCR/OCEAN00.SCR.png
 ```
 
-Every PNG keeps the original logical width and height multiplied by two. Frames
-keep their original canvas origin and padding. The engine positions that canvas
-using the original script coordinates and flips using the loaded width. Do not
+PNG dimensions normally equal the original logical width and height multiplied
+by two. Two [named island footprints](cartoon-footprint-contract.md) permit
+explicit extra padding for Cartoon BACKGRND000 and006-008 while preserving the
+original logical anchors. Other frames keep their original canvas and padding.
+The engine uses the original script coordinates. Registered padded sprites flip
+around the original logical canvas; legacy sprites flip using the loaded width. Do not
 trim, center, or independently fit the character into each frame. Foot placement,
 hand/prop contacts, and the connections between island pieces need visual review
 at the authored positions. Those landmarks are authoring references, not new

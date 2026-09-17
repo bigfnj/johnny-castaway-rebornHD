@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "phase": "regression",
+  "status": "PASS",
+  "test_sha256": "7e98715fe5a71d20a898a50fdcef9f96b2b565dfd6e2494c4098dc640abd18c3",
+  "builder_sha256": "1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8",
+  "published_manifest_sha256": "4f4a7efa96bb651cfdec6b8b6a7b7563619a9e62e7b55cc4ee3d47d9f341ca1f",
+  "scope": "Isolated writer reproduction and actual guard-removal controls; no native recaptures.",
+  "checks": [
+    "All 48 unique published PNG crops preserve native pixels exactly",
+    "All three report/repeat/source/crop hashes match current manifest",
+    "Fresh writer reproduces all crop bytes and manifest fields except explicit scratch source locations",
+    "Original positive reproduction restored after all six isolated guard removals"
+  ],
+  "executions": [
+    {
+      "label": "positive-before",
+      "executed_script_sha256": "1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8",
+      "returncode": 0,
+      "stdout": "WITNESS packer 1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8\nPASS three native clips; exact shared timing; all nine wave phases; fresh repeat matches\n",
+      "stderr": ""
+    },
+    {
+      "label": "timing-guarded",
+      "executed_script_sha256": "1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8",
+      "returncode": 1,
+      "stdout": "WITNESS packer 1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<scratch>\\launch.py\", line 7, in <module>\n    m.prepare({k:Path(v) for k,v in inputs.items()})\n  File \"<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wave-approaches-v1\\prepare.py\", line 36, in prepare\n    raise ValueError(key + ': native timing or poses differ')\nValueError: offshore: native timing or poses differ\n"
+    },
+    {
+      "label": "timing-guard-removed",
+      "executed_script_sha256": "c42bfc5b7ac281b9e0a71d6e300201251e5359a8de1ef123ecc44c5cb9504c31",
+      "returncode": 0,
+      "stdout": "WITNESS packer c42bfc5b7ac281b9e0a71d6e300201251e5359a8de1ef123ecc44c5cb9504c31\nPASS three native clips; exact shared timing; all nine wave phases; fresh repeat matches\n",
+      "stderr": ""
+    },
+    {
+      "label": "phase-omission-guarded",
+      "executed_script_sha256": "1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8",
+      "returncode": 1,
+      "stdout": "WITNESS packer 1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<scratch>\\launch.py\", line 7, in <module>\n    m.prepare({k:Path(v) for k,v in inputs.items()})\n  File \"<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wave-approaches-v1\\prepare.py\", line 38, in prepare\n    raise ValueError(key + ': wave phases missing')\nValueError: original: wave phases missing\n"
+    },
+    {
+      "label": "phase-omission-guard-removed",
+      "executed_script_sha256": "fe550454b05b3875acb0bf4ebead3b51f80fcb0ba8f50105d15279303ce71ccd",
+      "returncode": 0,
+      "stdout": "WITNESS packer fe550454b05b3875acb0bf4ebead3b51f80fcb0ba8f50105d15279303ce71ccd\nPASS three native clips; exact shared timing; all nine wave phases; fresh repeat matches\n",
+      "stderr": ""
+    },
+    {
+      "label": "repeat-row-guarded",
+      "executed_script_sha256": "1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8",
+      "returncode": 1,
+      "stdout": "WITNESS packer 1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<scratch>\\launch.py\", line 7, in <module>\n    m.prepare({k:Path(v) for k,v in inputs.items()})\n  File \"<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wave-approaches-v1\\prepare.py\", line 44, in prepare\n    raise ValueError(key + ': fresh native repeat differs')\nValueError: original: fresh native repeat differs\n"
+    },
+    {
+      "label": "repeat-row-guard-removed",
+      "executed_script_sha256": "3978fec1e0b72570ce3b8ec1fd5f850952a180c367a6e8ccc112c03fb871d92e",
+      "returncode": 0,
+      "stdout": "WITNESS packer 3978fec1e0b72570ce3b8ec1fd5f850952a180c367a6e8ccc112c03fb871d92e\nPASS three native clips; exact shared timing; all nine wave phases; fresh repeat matches\n",
+      "stderr": ""
+    },
+    {
+      "label": "repeat-status-guarded",
+      "executed_script_sha256": "1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8",
+      "returncode": 1,
+      "stdout": "WITNESS packer 1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<scratch>\\launch.py\", line 7, in <module>\n    m.prepare({k:Path(v) for k,v in inputs.items()})\n  File \"<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wave-approaches-v1\\prepare.py\", line 42, in prepare\n    raise ValueError(key + ': fresh native repeat did not pass')\nValueError: original: fresh native repeat did not pass\n"
+    },
+    {
+      "label": "repeat-status-guard-removed",
+      "executed_script_sha256": "4e7f4e6fc9098181f0996d3134c7f85aceec08d5a6e814c9f655f8029a0ab727",
+      "returncode": 0,
+      "stdout": "WITNESS packer 4e7f4e6fc9098181f0996d3134c7f85aceec08d5a6e814c9f655f8029a0ab727\nPASS three native clips; exact shared timing; all nine wave phases; fresh repeat matches\n",
+      "stderr": ""
+    },
+    {
+      "label": "png-digest-guarded",
+      "executed_script_sha256": "1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8",
+      "returncode": 1,
+      "stdout": "WITNESS packer 1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<scratch>\\launch.py\", line 7, in <module>\n    m.prepare({k:Path(v) for k,v in inputs.items()})\n  File \"<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wave-approaches-v1\\prepare.py\", line 54, in prepare\n    raise ValueError(key + '/' + name + ': source PNG hash differs')\nValueError: original/display-001.png: source PNG hash differs\n"
+    },
+    {
+      "label": "png-digest-guard-removed",
+      "executed_script_sha256": "ff818fa41157c6c338a77768e4273fb5a68d4566605f72eb66cf5a123b53551c",
+      "returncode": 0,
+      "stdout": "WITNESS packer ff818fa41157c6c338a77768e4273fb5a68d4566605f72eb66cf5a123b53551c\nPASS three native clips; exact shared timing; all nine wave phases; fresh repeat matches\n",
+      "stderr": ""
+    },
+    {
+      "label": "loop-closure-guarded",
+      "executed_script_sha256": "1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8",
+      "returncode": 1,
+      "stdout": "WITNESS packer 1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<scratch>\\launch.py\", line 7, in <module>\n    m.prepare({k:Path(v) for k,v in inputs.items()})\n  File \"<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\wave-approaches-v1\\prepare.py\", line 77, in prepare\n    raise ValueError('original: 1440 ms does not close the observed wave cycle')\nValueError: original: 1440 ms does not close the observed wave cycle\n"
+    },
+    {
+      "label": "loop-closure-guard-removed",
+      "executed_script_sha256": "cc8c008616b1511f2277dad6ddc5031c2319c6a0ba280b3c922bacbaac3a8794",
+      "returncode": 0,
+      "stdout": "WITNESS packer cc8c008616b1511f2277dad6ddc5031c2319c6a0ba280b3c922bacbaac3a8794\nPASS three native clips; exact shared timing; all nine wave phases; fresh repeat matches\n",
+      "stderr": ""
+    },
+    {
+      "label": "positive-after",
+      "executed_script_sha256": "1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8",
+      "returncode": 0,
+      "stdout": "WITNESS packer 1a52e2773d106e3751b5c6dc2285bbc18e9fafc6be45c8b68e086ad27ee162d8\nPASS three native clips; exact shared timing; all nine wave phases; fresh repeat matches\n",
+      "stderr": ""
+    }
+  ],
+  "negative_controls": [
+    {
+      "name": "timing",
+      "result": "FIRED",
+      "named_failure": "offshore: native timing or poses differ",
+      "removed_guard": "        elif schedule != current:\n            raise ValueError(key + ': native timing or poses differ')",
+      "mutant_sha256": "c42bfc5b7ac281b9e0a71d6e300201251e5359a8de1ef123ecc44c5cb9504c31",
+      "accepted_manifest_sha256": "7b492358d8bf97b91ba7e0504d31ad1e978205e4abdbdfea81bb46b2f13620f3",
+      "input_report_sha256": {
+        "original": "a25775e19e815ab5d0ea5d7e9840eb08cc55f6d20a4760707789863c36731b06",
+        "offshore": "255585569dbc59793db76668286405b4cac91b54987b431ef2784cda7f7e1c2b",
+        "wash": "c5e283066007f3888930ca502b12ea668753cec5696b472379993b6d5a9b2c70"
+      },
+      "repeat_report_sha256": {
+        "original": "a25775e19e815ab5d0ea5d7e9840eb08cc55f6d20a4760707789863c36731b06",
+        "offshore": "255585569dbc59793db76668286405b4cac91b54987b431ef2784cda7f7e1c2b",
+        "wash": "c5e283066007f3888930ca502b12ea668753cec5696b472379993b6d5a9b2c70"
+      },
+      "proof": "Actual original fails once; actual guard-removed copied source emits its digest and accepts the same corrupted fixture."
+    },
+    {
+      "name": "phase-omission",
+      "result": "FIRED",
+      "named_failure": "original: wave phases missing",
+      "removed_guard": "        if {f for r in rows for f in r['phases'] if f >= 0} != set(range(3, 12)):\n            raise ValueError(key + ': wave phases missing')",
+      "mutant_sha256": "fe550454b05b3875acb0bf4ebead3b51f80fcb0ba8f50105d15279303ce71ccd",
+      "accepted_manifest_sha256": "fef4d5ea197a99d12f7e964b57839f0ea70707e1cca680901f9283d859965a4c",
+      "input_report_sha256": {
+        "original": "538202ab1a39c32733c8e47e078620e029398e4168f0f2221e6e7a571610a091",
+        "offshore": "72cdc3163bb6ff8b52da984fdf477c7f2548471adb094c6a6cce7bbfe95f6762",
+        "wash": "971bc42ac7b158f9a3031fee2a9ff54b0b2581206a23d80a278531b583f87b88"
+      },
+      "repeat_report_sha256": {
+        "original": "538202ab1a39c32733c8e47e078620e029398e4168f0f2221e6e7a571610a091",
+        "offshore": "72cdc3163bb6ff8b52da984fdf477c7f2548471adb094c6a6cce7bbfe95f6762",
+        "wash": "971bc42ac7b158f9a3031fee2a9ff54b0b2581206a23d80a278531b583f87b88"
+      },
+      "proof": "Actual original fails once; actual guard-removed copied source emits its digest and accepts the same corrupted fixture."
+    },
+    {
+      "name": "repeat-row",
+      "result": "FIRED",
+      "named_failure": "original: fresh native repeat differs",
+      "removed_guard": "        if rows != repeat_report['displays']:\n            raise ValueError(key + ': fresh native repeat differs')",
+      "mutant_sha256": "3978fec1e0b72570ce3b8ec1fd5f850952a180c367a6e8ccc112c03fb871d92e",
+      "accepted_manifest_sha256": "1af9dedef1eb34f538c60bd853e52cab1f848754c991de8fa1639f9f9f1a65d1",
+      "input_report_sha256": {
+        "original": "a25775e19e815ab5d0ea5d7e9840eb08cc55f6d20a4760707789863c36731b06",
+        "offshore": "fdd3abc6affb154693e81181ae40a436d8ed80b86258fc8dd6171d508b5496f5",
+        "wash": "c5e283066007f3888930ca502b12ea668753cec5696b472379993b6d5a9b2c70"
+      },
+      "repeat_report_sha256": {
+        "original": "16ccf45c3cda004edd1a7bf9a951f6f75c9348c4758820c187e1902701c6e685",
+        "offshore": "fdd3abc6affb154693e81181ae40a436d8ed80b86258fc8dd6171d508b5496f5",
+        "wash": "c5e283066007f3888930ca502b12ea668753cec5696b472379993b6d5a9b2c70"
+      },
+      "proof": "Actual original fails once; actual guard-removed copied source emits its digest and accepts the same corrupted fixture."
+    },
+    {
+      "name": "repeat-status",
+      "result": "FIRED",
+      "named_failure": "original: fresh native repeat did not pass",
+      "removed_guard": "        if repeat_report['status'] != 'PASS':\n            raise ValueError(key + ': fresh native repeat did not pass')",
+      "mutant_sha256": "4e7f4e6fc9098181f0996d3134c7f85aceec08d5a6e814c9f655f8029a0ab727",
+      "accepted_manifest_sha256": "3834506e7eaef466d4f2306682949a47ba2ee7698148876d72977c397399f65f",
+      "input_report_sha256": {
+        "original": "a25775e19e815ab5d0ea5d7e9840eb08cc55f6d20a4760707789863c36731b06",
+        "offshore": "fdd3abc6affb154693e81181ae40a436d8ed80b86258fc8dd6171d508b5496f5",
+        "wash": "c5e283066007f3888930ca502b12ea668753cec5696b472379993b6d5a9b2c70"
+      },
+      "repeat_report_sha256": {
+        "original": "78ad5aa4893083b2a91e5e8fe17afb04b6f7263accf2870a7ca4cafc07ec1489",
+        "offshore": "fdd3abc6affb154693e81181ae40a436d8ed80b86258fc8dd6171d508b5496f5",
+        "wash": "c5e283066007f3888930ca502b12ea668753cec5696b472379993b6d5a9b2c70"
+      },
+      "proof": "Actual original fails once; actual guard-removed copied source emits its digest and accepts the same corrupted fixture."
+    },
+    {
+      "name": "png-digest",
+      "result": "FIRED",
+      "named_failure": "original/display-001.png: source PNG hash differs",
+      "removed_guard": "            if sha(image_raw) != row['png_sha256']:\n                raise ValueError(key + '/' + name + ': source PNG hash differs')",
+      "mutant_sha256": "ff818fa41157c6c338a77768e4273fb5a68d4566605f72eb66cf5a123b53551c",
+      "accepted_manifest_sha256": "40befc0c67d456cfaad38f3033241c096a0959e852c27acbdd387609c636adb4",
+      "input_report_sha256": {
+        "original": "a25775e19e815ab5d0ea5d7e9840eb08cc55f6d20a4760707789863c36731b06",
+        "offshore": "fdd3abc6affb154693e81181ae40a436d8ed80b86258fc8dd6171d508b5496f5",
+        "wash": "c5e283066007f3888930ca502b12ea668753cec5696b472379993b6d5a9b2c70"
+      },
+      "repeat_report_sha256": {
+        "original": "a25775e19e815ab5d0ea5d7e9840eb08cc55f6d20a4760707789863c36731b06",
+        "offshore": "fdd3abc6affb154693e81181ae40a436d8ed80b86258fc8dd6171d508b5496f5",
+        "wash": "c5e283066007f3888930ca502b12ea668753cec5696b472379993b6d5a9b2c70"
+      },
+      "proof": "Actual original fails once; actual guard-removed copied source emits its digest and accepts the same corrupted fixture."
+    },
+    {
+      "name": "loop-closure",
+      "result": "FIRED",
+      "named_failure": "original: 1440 ms does not close the observed wave cycle",
+      "removed_guard": "    if not at_loop or at_loop[-1]['phases'] != initial:\n        raise ValueError('original: 1440 ms does not close the observed wave cycle')",
+      "mutant_sha256": "cc8c008616b1511f2277dad6ddc5031c2319c6a0ba280b3c922bacbaac3a8794",
+      "accepted_manifest_sha256": "20f5ebfe1de44a319886ff214f7eff7eda9bd9c985557f6f79d35c164b04130e",
+      "input_report_sha256": {
+        "original": "f61b0e892084ad159b354bb748a733244dff532497b38dd33478f3882bcacf68",
+        "offshore": "03229bb2f33f3cb45b8a9ad65db2bacd1ba50abe04539cc90fc474e4c486ad48",
+        "wash": "b5a39507a5ba858505b531e70a7d4a061e72b9824e5d7b38a090b25add79b8dc"
+      },
+      "repeat_report_sha256": {
+        "original": "f61b0e892084ad159b354bb748a733244dff532497b38dd33478f3882bcacf68",
+        "offshore": "03229bb2f33f3cb45b8a9ad65db2bacd1ba50abe04539cc90fc474e4c486ad48",
+        "wash": "b5a39507a5ba858505b531e70a7d4a061e72b9824e5d7b38a090b25add79b8dc"
+      },
+      "proof": "Actual original fails once; actual guard-removed copied source emits its digest and accepts the same corrupted fixture."
+    }
+  ],
+  "smoke_sha256": "01965fcca95652eb8597a17cc87dc83b01f02455bbf3619de0c48860d300cf8e"
+}

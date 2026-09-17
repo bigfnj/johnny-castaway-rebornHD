@@ -1,0 +1,152 @@
+"""Execute the unchanged Windows mutation writer in an isolated source copy."""
+import ctypes
+from ctypes import wintypes
+import hashlib
+import importlib.util
+import json
+import os
+from pathlib import Path
+import shutil
+import time
+
+import psutil
+
+ROOT = Path(__file__).resolve().parents[3]
+OUT = ROOT / 'build/footprint-ps51-v2'
+COPY = OUT / 'source'
+HELPER = Path('D:/.ai-work/worktrees/johnny-pose-corrections/build/original-pose-review/motion_review.py')
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def save(p, value):
+    p.write_text(json.dumps(value, indent=2) + '\n', encoding='utf-8')
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=False)
+    COPY.mkdir()
+    sources = {}
+    for folder in ('src', 'platform', 'third_party', 'tests', 'tools', 'vs', 'assets', 'cmake'):
+        for p in sorted((ROOT / folder).rglob('*')):
+            if p.is_file() and '__pycache__' not in p.parts:
+                relative = p.relative_to(ROOT)
+                dest = COPY / relative
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(p, dest)
+                sources[relative.as_posix()] = sha(p)
+                assert sha(dest) == sources[relative.as_posix()]
+    shutil.copyfile(ROOT / 'CMakeLists.txt', COPY / 'CMakeLists.txt')
+    sources['CMakeLists.txt'] = sha(ROOT / 'CMakeLists.txt')
+    script = OUT / 'run.ps1'
+    script.write_text(r'''#Requires -Version 5.1
+Set-StrictMode -Version Latest
+$ErrorActionPreference = 'Stop'
+if ($PSVersionTable.PSVersion.Major -ne 5 -or $PSVersionTable.PSVersion.Minor -ne 1) { throw 'Expected Windows PowerShell 5.1' }
+Write-Output ('WITNESS Windows PowerShell ' + $PSVersionTable.PSVersion)
+$copyRoot = Join-Path $PSScriptRoot 'source'
+$buildPath = Join-Path $copyRoot 'build'
+$exePath = Join-Path $buildPath 'Release\jc_reborn.exe'
+Write-Output 'STEP configure'
+& cmake -S $copyRoot -B $buildPath -A x64
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+Write-Output 'STEP build required targets'
+& cmake --build $buildPath --config Release --target jc_reborn jc_png_test
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+Write-Output 'STEP base smoke'
+& powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $copyRoot 'tests\Invoke-SmokeTests.ps1') -Exe $exePath
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+Write-Output 'STEP art smoke'
+& powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $copyRoot 'tests\Invoke-ArtStyleTests.ps1') -Exe $exePath -Phase Smoke -KeepArtifacts (Join-Path $PSScriptRoot 'art-smoke-artifacts')
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+Write-Output 'STEP portable PNG positive'
+& (Join-Path $buildPath 'Release\jc_png_test.exe')
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+Write-Output 'STEP Windows 5.1 mutation writer'
+& powershell.exe -NoProfile -ExecutionPolicy Bypass -File (Join-Path $copyRoot 'tests\Test-ArtMutations.ps1') -Config Release
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+Write-Output 'PASS isolated PowerShell 5.1 mutation run'
+exit 0
+''', encoding='utf-8')
+    save(OUT / 'inputs.json', {'source_sha256': sources, 'launcher_sha256': sha(Path(__file__)),
+                              'job_sha256': sha(script), 'desktop_helper_sha256': sha(HELPER),
+                              'scope': 'Exact copied runtime/tools/tests/assets; source changes are made only in this isolated copy, then restored by the unchanged mutation script.'})
+    shutil.copyfile(HELPER, OUT / 'inactive_desktop_helper.py')
+    spec = importlib.util.spec_from_file_location('inactive', OUT / 'inactive_desktop_helper.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    environment = {k: v for k, v in os.environ.items() if k.casefold() != 'psmodulepath'}
+    temp = OUT / 'temp'
+    temp.mkdir()
+    environment['TEMP'] = environment['TMP'] = str(temp)
+    command = ['powershell.exe', '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', str(script)]
+    log = OUT / 'run.log'
+    seen, windows, checks = set(), {}, 0
+    started = time.time()
+    with module.OffscreenDesktop() as desktop:
+        with log.open('wb') as stream:
+            process = module.NativeProcess(command, COPY, environment, stream, desktop.name)
+            save(OUT / 'running.json', {'command': command, 'pid': process.pid, 'desktop': desktop.name,
+                                       'original_input_desktop': desktop.original_input_name})
+            print(f'RUN PowerShell 5.1 isolated copy PID {process.pid}; inactive desktop {desktop.name}; {log}', flush=True)
+            try:
+                while process.poll() is None:
+                    try:
+                        children = psutil.Process(process.pid).children(recursive=True)
+                    except psutil.NoSuchProcess:
+                        children = []
+                    seen.update(child.pid for child in children)
+                    seen.add(process.pid)
+                    desktop.observe(process.pid)
+                    owner = wintypes.DWORD()
+                    desktop.user.GetWindowThreadProcessId(desktop.user.GetForegroundWindow(), ctypes.byref(owner))
+                    assert owner.value not in seen, 'test child became foreground'
+                    @desktop.callback_type
+                    def visit(hwnd, _):
+                        pid = wintypes.DWORD()
+                        desktop.user.GetWindowThreadProcessId(hwnd, ctypes.byref(pid))
+                        if pid.value in seen:
+                            windows[str(int(hwnd))] = pid.value
+                        return True
+                    desktop.user.EnumDesktopWindows(desktop.handle, visit, 0)
+                    checks += 1
+                    if time.time() - started > 1200:
+                        raise TimeoutError('isolated mutation check exceeded 20 minutes')
+                    time.sleep(.25)
+            finally:
+                if process.poll() is None:
+                    for child in reversed(psutil.Process(process.pid).children(recursive=True)):
+                        try:
+                            child.kill()
+                        except psutil.NoSuchProcess:
+                            pass
+                    process.kill()
+                    process.wait()
+                code = process.poll()
+                process.close()
+        input_preserved = desktop.input_name() == desktop.original_input_name
+    changed_source = [p for p, value in sources.items() if sha(ROOT / p) != value]
+    changed_copy = [p for p, value in sources.items() if sha(COPY / p) != value]
+    text = log.read_text(encoding='utf-8', errors='replace')
+    fired = [line for line in text.splitlines() if line.startswith('FIRED ')]
+    restored = [line for line in text.splitlines() if line.startswith('RESTORED ')]
+    warnings = [line for line in text.splitlines() if ': warning ' in line]
+    passed = code == 0 and 'PASS isolated PowerShell 5.1 mutation run' in text and len(fired) == 4 and len(restored) == 4 and not changed_source and not changed_copy and bool(windows) and input_preserved
+    evidence = {p.relative_to(OUT).as_posix(): sha(p) for p in sorted((COPY / 'build/art-mutations').rglob('*')) if p.is_file()}
+    result = {'status': 'PASS' if passed else 'FAIL', 'exit_code': code, 'elapsed_seconds': round(time.time() - started, 3),
+              'log_sha256': sha(log), 'powershell_51_witness': 'WITNESS Windows PowerShell 5.1.' in text,
+              'fired': fired, 'restored': restored, 'compiler_warning_count': len(warnings), 'compiler_warnings': warnings,
+              'shared_source_unchanged': not changed_source, 'isolated_sources_restored': not changed_copy,
+              'changed_shared': changed_source, 'changed_copy': changed_copy,
+              'input_desktop_preserved': input_preserved, 'poll_checks': checks, 'observed_inactive_windows': windows,
+              'mutation_evidence_sha256': evidence,
+              'scope': 'Windows PowerShell 5.1 executed unchanged Test-ArtMutations.ps1 after base and art smoke, using fresh configured native Windows binaries and an isolated source copy. No production/art promotion.'}
+    save(OUT / 'result.json', result)
+    print(json.dumps({k:v for k,v in result.items() if k not in ('observed_inactive_windows', 'mutation_evidence_sha256')}, indent=2), flush=True)
+    raise SystemExit(0 if passed else 1)
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,41 @@
+{
+  "phase": "regression",
+  "status": "FAIL",
+  "runs": [
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_tools.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "test_art_tools-regression.log",
+      "log_sha256": "60a639c22bdb99c0fe55c2f75c6afc375d856ae0acf38be2644884afb1e53193"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 0,
+      "log": "test_art_pilot_history-regression.log",
+      "log_sha256": "e16048afc51c8ea5277654a1ff81f72e54148724ecc7945628b069797f827c7f"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "regression"
+      ],
+      "exit_code": 1,
+      "log": "test_art_review_metadata-regression.log",
+      "log_sha256": "0530dbfb400b7dd7d8eb79e3b5a6151d550f2ad3aae6edb389d6475a77ee30cd"
+    }
+  ]
+}

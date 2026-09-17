@@ -1,0 +1,547 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "case": "clean",
+      "status": 0,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ]
+    },
+    {
+      "case": "warning",
+      "status": 0,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ]
+    },
+    {
+      "case": "build-fail",
+      "status": 23,
+      "trace": [
+        "WITNESS build-executed"
+      ]
+    },
+    {
+      "case": "smoke-fail",
+      "status": 31,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke"
+      ]
+    },
+    {
+      "case": "decoder-smoke-fail",
+      "status": 32,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke"
+      ]
+    },
+    {
+      "case": "frame-smoke-fail",
+      "status": 39,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke"
+      ]
+    },
+    {
+      "case": "extractor-smoke-fail",
+      "status": 41,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke"
+      ]
+    },
+    {
+      "case": "platform-smoke-fail",
+      "status": 33,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke"
+      ]
+    },
+    {
+      "case": "decoder-regression-fail",
+      "status": 34,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression"
+      ]
+    },
+    {
+      "case": "frame-regression-fail",
+      "status": 40,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression"
+      ]
+    },
+    {
+      "case": "extractor-regression-fail",
+      "status": 42,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression"
+      ]
+    },
+    {
+      "case": "platform-regression-fail",
+      "status": 35,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression"
+      ]
+    },
+    {
+      "case": "graphics-regression-fail",
+      "status": 36,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression"
+      ]
+    },
+    {
+      "case": "drawing-smoke-fail",
+      "status": 37,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke"
+      ]
+    },
+    {
+      "case": "drawing-regression-fail",
+      "status": 38,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression"
+      ]
+    },
+    {
+      "case": "footprint-smoke-fail",
+      "status": 43,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke"
+      ]
+    },
+    {
+      "case": "footprint-regression-fail",
+      "status": 44,
+      "trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression"
+      ]
+    },
+    {
+      "mutation": "disabled build failure exit",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: failed build reached smoke/regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "ceccd49fdb2dcdcbe7a412ebd029fbfa52fa54dac8db3d3b8aa0747c351fb00a"
+    },
+    {
+      "mutation": "decoder-smoke-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: decoder-smoke-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "8d316465b95be6790521491122a8c823c1713fa51c232d1390a6c631064b1cb7"
+    },
+    {
+      "mutation": "frame-smoke-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: frame-smoke-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "044b9b6375756da9c675025fa177ab4e8b6530dbebd2cef922a4e825036eabff"
+    },
+    {
+      "mutation": "frame-regression-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: frame-regression-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "a1c7f0413f22459885d19ba34a8185c20bf5a711d0f393e5f585bb55acfa0395"
+    },
+    {
+      "mutation": "extractor-smoke-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: extractor-smoke-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "413a48ac2ea6ac846a98e5421b1e97b536b2e5d6987faf68f1afc057321481eb"
+    },
+    {
+      "mutation": "extractor-regression-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: extractor-regression-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "5d607c0d97280de7145f4f53dff93cc5edd09d51e13d1077ae4b3c63cfe906e8"
+    },
+    {
+      "mutation": "platform-smoke-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: platform-smoke-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "8922405130696e4febb73fe5fa30db033c55e9af046ff4065bf7afea1c35a78a"
+    },
+    {
+      "mutation": "graphics-regression-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: graphics-regression-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "a43a403af88c44d2ad9cadae504a48ad50365d55289b3591d4ed97719b6a182c"
+    },
+    {
+      "mutation": "drawing-smoke-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: drawing-smoke-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "558c6840dff2966a23c1dc824ccbb577cb85123a464296ff480d0ef2d99dd868"
+    },
+    {
+      "mutation": "drawing-regression-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: drawing-regression-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "fa3b892e440923d7ac6cab37f2fcd18693b61b13e5c06657765a15f597b6b4ac"
+    },
+    {
+      "mutation": "footprint-smoke-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: footprint-smoke-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "ef1dae05eab44ddb9dce12865c37343ba160d8059c7dc1a8a6aaf341a87af5e7"
+    },
+    {
+      "mutation": "footprint-regression-fail",
+      "result": "FIRED",
+      "named_failure": "tests/unix-build.sh: footprint-regression-fail reached later regression or lost its diagnostic/status",
+      "executed_trace": [
+        "WITNESS build-executed",
+        "WITNESS png-smoke",
+        "WITNESS decoder-smoke",
+        "WITNESS frame-smoke",
+        "WITNESS extractor-smoke",
+        "WITNESS platform-smoke",
+        "WITNESS drawing-smoke",
+        "WITNESS footprint-smoke",
+        "WITNESS decoder-regression",
+        "WITNESS frame-regression",
+        "WITNESS extractor-regression",
+        "WITNESS platform-regression",
+        "WITNESS graphics-regression",
+        "WITNESS drawing-regression",
+        "WITNESS footprint-regression",
+        "WITNESS dump-regression"
+      ],
+      "mutant_script_sha256": "6a51386bd8e019a0ced8dec3e03de80fbdec735eea2c1a48a69fb24cb533e022"
+    }
+  ]
+}

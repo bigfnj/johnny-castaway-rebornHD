@@ -17,7 +17,7 @@ import zlib
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
-from art_common import ArtError, digest, inspect_png
+from art_common import ArtError, CENTER_FOAM_FOOTPRINT, ISLAND_FOOTPRINT, cartoon_footprint, digest, inspect_png
 from art_inventory import inventory
 from art_pack import accepted_pack, build_archive, main
 
@@ -174,6 +174,74 @@ class ArtToolsTests(unittest.TestCase):
     def test_wrong_dimensions_mutation_names_one_asset(self):
         self.write_asset(png(4, 2))
         self.assert_cli_failure(self.asset, "wrong dimensions")
+
+    def footprint_fixture(self, frame=0):
+        """One original slot; changed canvas requires an explicit named ledger row."""
+        old_file = self.accepted / self.asset
+        old_file.unlink()
+        self.asset = f"BMP/BACKGRND.BMP/{frame:03}.png"
+        logical = [280, 52] if frame == 0 else [160, 25]
+        self.original = png(logical[0]*2, logical[1]*2)
+        manifest = {"scale": 2, "BMP": {"BACKGRND.BMP": {"numImages": frame+1, "images": [
+            {"index": i, "width": logical[0], "height": logical[1],
+             "file": f"BMP/BACKGRND.BMP/{i:03}.png"} for i in range(frame+1)]}}, "SCR": {}}
+        with zipfile.ZipFile(self.archive, "w") as archive:
+            archive.writestr("data/hd/manifest.json", json.dumps(manifest))
+            for row in manifest["BMP"]["BACKGRND.BMP"]["images"]:
+                archive.writestr("data/hd/" + row["file"], self.original)
+        footprint = copy.deepcopy(ISLAND_FOOTPRINT if frame == 0 else CENTER_FOAM_FOOTPRINT)
+        self.ledger["required_assets"] = [self.asset]
+        self.ledger["assets"] = [{"path": self.asset, "source_sha256": digest(self.original),
+                                  "footprint": footprint, "alpha": "opaque"}]
+        self.write_asset(png(*footprint["canvas"]))
+
+    def test_named_island_footprints_preserve_original_catalog(self):
+        for frame in (0, 6, 7, 8):
+            with self.subTest(frame=frame):
+                self.footprint_fixture(frame)
+                _, packed, _ = self.validate()
+                expected = [640, 180] if frame == 0 else [384, 256]
+                info = inspect_png(packed[self.asset], self.asset)
+                self.assertEqual([info["width"], info["height"]], expected)
+                original = inventory(self.archive, ["BACKGRND.BMP"])["assets"][-1]
+                self.assertEqual([original["logical_width"], original["logical_height"]],
+                                 [280, 52] if frame == 0 else [160, 25])
+
+    def test_extended_png_without_declaration_is_refused(self):
+        self.footprint_fixture()
+        del self.ledger["assets"][0]["footprint"]
+        self.assert_cli_failure(self.asset, "wrong dimensions")
+
+    def test_registered_ground_build_preserves_hd(self):
+        self.footprint_fixture()
+        runtime, packed, _ = self.validate()
+        target = self.root / "registered.zip"
+        build_archive(self.archive, target, runtime, packed)
+        with zipfile.ZipFile(target) as archive:
+            self.assertEqual(archive.read("data/hd/" + self.asset), self.original)
+            self.assertEqual(archive.read("data/styles/cartoon/" + self.asset), packed[self.asset])
+
+    def test_declared_footprint_requires_exact_png(self):
+        self.footprint_fixture()
+        self.write_asset(png(640, 179))
+        self.assert_cli_failure(self.asset, "wrong dimensions")
+
+    def test_footprint_name_size_and_offset_are_not_freeform(self):
+        self.footprint_fixture()
+        for key, value in (("id", "unknown"), ("canvas", [640, 181]), ("offset_hd", [-35, -10])):
+            with self.subTest(key=key):
+                self.ledger["assets"][0]["footprint"] = dict(ISLAND_FOOTPRINT, **{key: value})
+                self.assert_cli_failure(self.asset, "invalid Cartoon footprint declaration")
+
+    def test_footprint_rejects_other_slot_and_original_dimensions(self):
+        for path, logical, declaration in (
+                (self.asset, [280, 52], ISLAND_FOOTPRINT),
+                ("BMP/BACKGRND.BMP/001.png", [280, 52], ISLAND_FOOTPRINT),
+                ("BMP/BACKGRND.BMP/000.png", [281, 52], ISLAND_FOOTPRINT),
+                ("BMP/BACKGRND.BMP/009.png", [160, 25], CENTER_FOAM_FOOTPRINT)):
+            with self.subTest(path=path, logical=logical):
+                with self.assertRaisesRegex(ArtError, "invalid Cartoon footprint declaration"):
+                    cartoon_footprint(path, logical, 2, declaration)
 
     def test_missing_coverage_mutation_names_one_asset(self):
         self.ledger["required_resources"] = ["JOHNWALK.BMP"]

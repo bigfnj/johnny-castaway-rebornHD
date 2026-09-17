@@ -1,0 +1,703 @@
+{
+  "schema_version": 1,
+  "status": "PRESERVED",
+  "files_sha256": {
+    "authoring/art_common-disabled-contract.py": "21f9adb08e2abea960dd2d9db1ced78b0175996b6ec3a1cd5705345428f21e00",
+    "authoring/authoring-mutations.json": "c12f09d0472f64d203032f324724106e4f2b20a14bbb917af3cb4548002579d2",
+    "authoring/authoring-regression.json": "496963ec14d1c761b235029f09f942e25e15df047fdb7f4e6b678e7169a501a5",
+    "authoring/authoring-smoke.json": "2b6719c88ecbfc78f56f554f4dcd38d59d25ffb3464d0f799f82bc5104e5c38f",
+    "authoring/common-contract-before.log": "42fdd4c518483d2c6d058936571c00fa513686f788b0f89deb59931b46764b2e",
+    "authoring/common-contract-disabled.log": "8392c2a86f82cafa917d07ca888504491cb766fcbeef64ecc400c5c118900564",
+    "authoring/common-contract-restored.log": "89f19fa76253cdd3510abe3713391ca53525c87f4b76b3b46fd0e31978706f56",
+    "authoring/test_art_pilot_history-mutations.log": "71706d9668a4056330512a7aacac4f261825f8c3ae8268c44156623dfa523322",
+    "authoring/test_art_pilot_history-regression.log": "064c36b0bd0326ee835267dd614d5ecb1b702fda02ffcc7fcc32bb58c98996a4",
+    "authoring/test_art_pilot_history-smoke.log": "69a48acb08e9c6b94ed9637830c1033c60194bd38452e3d4968a2389b997034a",
+    "authoring/test_art_production_catalog-mutations.log": "6894dc8a9b7ed614f38c298d0d1c67c5b81880ce67744ab231d4b80cd83b18b4",
+    "authoring/test_art_production_catalog-regression.log": "3ae211ce39c2a8e3f19403192f5b6fa4e1c9cb98349c15f702464fac6cda2aa9",
+    "authoring/test_art_production_catalog-smoke.log": "37176604232c22368ab45bdfd3fce57660f57bf3b159a16e8f16d3c8fbec95ba",
+    "authoring/test_art_review_metadata-regression.log": "b02b0da7705f7e6f1743c56d70c7877a525db3c55cf253445383e449d5380cb5",
+    "authoring/test_art_review_metadata-smoke.log": "00c39e21d661df56d83af73be5f34984269bbf3acc5c4f94881894bea80c826f",
+    "authoring/test_art_tools-regression.log": "c5052c25f968160c35bfe74439540e85f2f7183de2711d560230a58d9ac9ebf7",
+    "authoring/test_art_tools-smoke.log": "2f7b615955ab8c09f91165d20097c82a3c285fc479859e154a14c3af6f16f52e",
+    "compiled/full-canvas-regression/build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiled/full-canvas-regression/mutant-bad-hd-fallback/build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiled/full-canvas-regression/mutant-bad-hd-fallback/source/src/engine/art_style.c": "3a4211db6d941d26cd4b33e1021e8d9e6631a8fed6683f0645292809f537c01d",
+    "compiled/full-canvas-regression/mutant-draw-flip/build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiled/full-canvas-regression/mutant-draw-flip/source/src/engine/art_style.c": "8b2481a7083ccaeed9da47e52b021993d2eae045d46d74bf188d81f50ee58f0b",
+    "compiled/full-canvas-regression/mutant-draw-normal/build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiled/full-canvas-regression/mutant-draw-normal/source/src/engine/graphics.c": "2367d2783c8a48b420420c0ef1d938e9f2bbc999310ee1ca45bf4b9bf55e17f6",
+    "compiled/full-canvas-regression/mutant-wave-restore/build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiled/full-canvas-regression/mutant-wave-restore/source/src/engine/island.c": "6d432664391a10b3aafb03232c5b2a60b69e50aed923a72b554f685a955b0941",
+    "compiled/full-canvas-regression/mutant-wrong-center-frame/build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiled/full-canvas-regression/mutant-wrong-center-frame/source/src/engine/art_style.c": "56c76304b67f9805ef987135fe6e6ae05cec59c8a843a91e4e17b018255c785e",
+    "compiled/full-canvas-regression/mutant-wrong-frame/build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiled/full-canvas-regression/mutant-wrong-frame/source/src/engine/art_style.c": "63dae1e1917c36ae605b13978aea3a3b720395bd97160b6756c32015995febe7",
+    "compiled/full-canvas-regression/report.json": "7e1db9d62f5560d0ff98f2c7ed4b3cd4486f499d86a5b7406c38408b8204ffe2",
+    "compiled/full-canvas-smoke/build.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "compiled/full-canvas-smoke/report.json": "d4d3eaaa606292e76b5b6b73a5f8d4576aac0dc5620e96a491fda3715f4ad210",
+    "final-checks/final-check-0.log": "708da9f97faf43f1653e45a250713b50e246f85ae3783c42f61c527702637a39",
+    "final-checks/final-check-1.log": "27928a2b0ad2cdc3300fd6da07b5e2d2be90deffb442fd169beea947df64b757",
+    "final-checks/final-check-2.log": "801dd3951fc4ab35ffed4429fc48f33fc47e10f9c030938e48216fe3a2a0bdc1",
+    "final-checks/final-check-3.log": "21061f14aaa437571bfc2e1652b8c860794d40e368439b2d8fca639a0ddde4db",
+    "helpers/check_authoring_mutations.py.txt": "58b942b5920d2657f1ad262f1dfc57de58d3ff5cd7e28e99a37f835e786c7eac",
+    "helpers/finalize.py.txt": "b069f5abcad2a465fd08df7b4fc3f6b2509a8dd67e877c72c3af6a67124151a2",
+    "helpers/preserve.py.txt": "324904767c34545e89c1e8e1f8ae90bcb8b690ee8e1afae1012abddba2e4ad0d",
+    "helpers/run_authoring.py.txt": "518a7e5be9a88ebafba05902b0afda0929c2d035eaddc153f2b687099cfb3942",
+    "helpers/run_windows_ps51.py.txt": "c3b7c5a309e1e6c3cbe42a1888bbf35f0b37a37fe1c0e3ec025fd7fca9a9fb91",
+    "initial-stale-catalog/authoring-regression.json": "5f9bcbfb2a262f98f4314824a5b6d4397b51b80e658cf8166e71d97839bdd37a",
+    "initial-stale-catalog/test_art_review_metadata-regression.log": "0530dbfb400b7dd7d8eb79e3b5a6151d550f2ad3aae6edb389d6475a77ee30cd",
+    "linux-flow/build-fail/witness.log": "5728bb6ee122d761d42d307a9952df956dee1233fb6e191192db13104266a1c2",
+    "linux-flow/clean/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/decoder-regression-fail/witness.log": "9447761108e90d1893a69aba90bd06fcb44198e03bd0e7ded9b58aa53b5054dd",
+    "linux-flow/decoder-smoke-fail/witness.log": "adfcabf0c3124c97b6298e309db03bfef03d0a8f8a036525e661e8d2b3ca5067",
+    "linux-flow/drawing-regression-fail/witness.log": "1c200db60dcac9cdd2dfd2d7fff5617191d497fd4b74b40bd6cb9cbcd6e7432f",
+    "linux-flow/drawing-smoke-fail/witness.log": "f81370259958d1536eaa5880ba016c6db83d3feea6c209a5042d0999c099cb35",
+    "linux-flow/extractor-regression-fail/witness.log": "b2537ac3268166f2dc55aeb239c5747f34a5c6751505cad0e34a6ca34148a92d",
+    "linux-flow/extractor-smoke-fail/witness.log": "26623064d2e1ce5189682df476584d8c5dc4cc91771350f2804375403827be5d",
+    "linux-flow/footprint-regression-fail/witness.log": "be794752306d292b320759a33593f5bddb0786481e358b655a1367a54d367621",
+    "linux-flow/footprint-smoke-fail/witness.log": "74a13ac75146b4e0730657a71a9a01722485e0fa4af7e56ad6e5422287c6136e",
+    "linux-flow/frame-regression-fail/witness.log": "bb829a1b5be689b707090ebf31c45c19238d36e6192a4f908a6c52ea517d6682",
+    "linux-flow/frame-smoke-fail/witness.log": "a5bca433def863adb5989722bbdf01a0f0b1a53f0326aa6e3f2c8cfc3997a3f2",
+    "linux-flow/graphics-regression-fail/witness.log": "6027582416554e7a318b33e222bbf2e32861486d3705ae82205e035a6399221e",
+    "linux-flow/mutant/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-decoder-smoke-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-drawing-regression-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-drawing-smoke-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-extractor-regression-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-extractor-smoke-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-footprint-regression-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-footprint-smoke-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-frame-regression-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-frame-smoke-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-graphics-regression-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/mutant-platform-smoke-fail/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "linux-flow/platform-regression-fail/witness.log": "f2de6202ddb8d7308b05ddf3d677cfda357c0fffacf2964ad87e3c4db937da91",
+    "linux-flow/platform-smoke-fail/witness.log": "35b6daabb32ef40496a406058f8015c90e98980bdeef25cefd3a84cc3e450e84",
+    "linux-flow/report.json": "76c1e1aa077700c9c2a7365c4cc512d20cbe334a30ea7868928b7ac31496803d",
+    "linux-flow/smoke-fail/witness.log": "c29e1d324a9e40a80b0dd29cc0b61e2d41621702a96009ae646d12b953ded822",
+    "linux-flow/warning/witness.log": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+    "README.md": "f2a2152ea74ca3314f7818119de82dedddea3007dcd1c0d536c46a554fef2c75",
+    "verification.json": "9e528086fcd0ce9c91dc97ff228b0a1990cdc0a50191524cd9aef03bc78357e3",
+    "windows-v1/inputs.json": "d0745f67023b6bc8f0bf413768d236d92eff577c45face99bc3bb41c525d27fe",
+    "windows-v1/result.json": "96344c6dff20b8cf25ab304c212b300032221ba88c4b37ac43ee376f08cd8716",
+    "windows-v1/run.log": "ffbf19f2ada20331c5d81a7bddc9f55e80b15ecb73ef684ae94517ffbf76685b",
+    "windows-v1/run.ps1": "fedad0e93f2fccc54a5a5b872b0293b28b98b55d479af465bac629831e555549",
+    "windows-v2/inputs.json": "5b58a76802a93be35747c486ee51368f9199c2177fe9d4cf9759f9fb508d2293",
+    "windows-v2/mutations/cartoon-dimensions-restored.build.log": "e0dc4732fa93f3b726e27850716eadd79aa2449567b223fa7855ce3b76e50024",
+    "windows-v2/mutations/cartoon-dimensions-restored.test.log": "3aa20aa2f2d1c44d9d00129428a0202b93f851e999f4a27101e1ad20b877c725",
+    "windows-v2/mutations/cartoon-dimensions.build.log": "e0dc4732fa93f3b726e27850716eadd79aa2449567b223fa7855ce3b76e50024",
+    "windows-v2/mutations/cartoon-dimensions.test.log": "3bd6cf4126ea5e20c6973824f4c28c5dc6dc4f629e7c5277b530ffa4d2ba3bfd",
+    "windows-v2/mutations/cartoon-magenta-restored.build.log": "e0dc4732fa93f3b726e27850716eadd79aa2449567b223fa7855ce3b76e50024",
+    "windows-v2/mutations/cartoon-magenta-restored.test.log": "1ecf0e3c1bed132046a68def6111280d444929b3d266de56cafa5d6c503e907e",
+    "windows-v2/mutations/cartoon-magenta.build.log": "610b39b3ea129e12fcae7dbe173c3d447f4c73680dfb5dd6eb9306d1136ea651",
+    "windows-v2/mutations/cartoon-magenta.test.log": "300150291e610ea348004d6b41d56dd7b6674e6dbb4738bdec694483134f02f6",
+    "windows-v2/mutations/config-style-persistence-restored.build.log": "7698eefee95e8153704be9a226ed9725f0167a326194ab14899cb33f4a9858ea",
+    "windows-v2/mutations/config-style-persistence-restored.test.log": "b808a8f693acd74e0ebbc924d5b261a9a34abb81633a0cd7c25c400d1d91131c",
+    "windows-v2/mutations/config-style-persistence.build.log": "7698eefee95e8153704be9a226ed9725f0167a326194ab14899cb33f4a9858ea",
+    "windows-v2/mutations/config-style-persistence.test.log": "cf161fc89525d7242177860fa0b43779e1af8a30367e9dbe30d93693c18d7496",
+    "windows-v2/mutations/portable-half-alpha-restored.build.log": "a52be1550def33496c6bbe7a5238bea15d03d7bfd684eecd36247e96730e3e71",
+    "windows-v2/mutations/portable-half-alpha-restored.test.log": "06506c782df0dc2cee2967823787729797fca8864a478dfffca257cf8bcc72c1",
+    "windows-v2/mutations/portable-half-alpha.build.log": "a52be1550def33496c6bbe7a5238bea15d03d7bfd684eecd36247e96730e3e71",
+    "windows-v2/mutations/portable-half-alpha.test.log": "959cc903c4138a5bcaab2c05fd10415c97c54f60674c362d463adcca2ac15b62",
+    "windows-v2/result.json": "2d102232af38dc3ae9eefd9feff8617d5ea4b63c466c09d806f8880919f61859",
+    "windows-v2/run.log": "7af96906c4febb04608a1569dd2c9694e59eeb105a54c143b8b7479cb1addf3f",
+    "windows-v2/run.ps1": "fedad0e93f2fccc54a5a5b872b0293b28b98b55d479af465bac629831e555549"
+  },
+  "exact_copies": [
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/verification.json",
+      "path": "verification.json",
+      "sha256": "9e528086fcd0ce9c91dc97ff228b0a1990cdc0a50191524cd9aef03bc78357e3",
+      "bytes": 7955
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/run_authoring.py",
+      "path": "helpers/run_authoring.py.txt",
+      "sha256": "518a7e5be9a88ebafba05902b0afda0929c2d035eaddc153f2b687099cfb3942",
+      "bytes": 1910
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/check_authoring_mutations.py",
+      "path": "helpers/check_authoring_mutations.py.txt",
+      "sha256": "58b942b5920d2657f1ad262f1dfc57de58d3ff5cd7e28e99a37f835e786c7eac",
+      "bytes": 3431
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/finalize.py",
+      "path": "helpers/finalize.py.txt",
+      "sha256": "b069f5abcad2a465fd08df7b4fc3f6b2509a8dd67e877c72c3af6a67124151a2",
+      "bytes": 6158
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/run_windows_ps51.py",
+      "path": "helpers/run_windows_ps51.py.txt",
+      "sha256": "c3b7c5a309e1e6c3cbe42a1888bbf35f0b37a37fe1c0e3ec025fd7fca9a9fb91",
+      "bytes": 8421
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/preserve.py",
+      "path": "helpers/preserve.py.txt",
+      "sha256": "324904767c34545e89c1e8e1f8ae90bcb8b690ee8e1afae1012abddba2e4ad0d",
+      "bytes": 6633
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/final-check-0.log",
+      "path": "final-checks/final-check-0.log",
+      "sha256": "708da9f97faf43f1653e45a250713b50e246f85ae3783c42f61c527702637a39",
+      "bytes": 272
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/final-check-1.log",
+      "path": "final-checks/final-check-1.log",
+      "sha256": "27928a2b0ad2cdc3300fd6da07b5e2d2be90deffb442fd169beea947df64b757",
+      "bytes": 345
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/final-check-2.log",
+      "path": "final-checks/final-check-2.log",
+      "sha256": "801dd3951fc4ab35ffed4429fc48f33fc47e10f9c030938e48216fe3a2a0bdc1",
+      "bytes": 57
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/final-check-3.log",
+      "path": "final-checks/final-check-3.log",
+      "sha256": "21061f14aaa437571bfc2e1652b8c860794d40e368439b2d8fca639a0ddde4db",
+      "bytes": 2173
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-smoke/build.log",
+      "path": "compiled/full-canvas-smoke/build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-smoke/report.json",
+      "path": "compiled/full-canvas-smoke/report.json",
+      "sha256": "d4d3eaaa606292e76b5b6b73a5f8d4576aac0dc5620e96a491fda3715f4ad210",
+      "bytes": 1911
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/build.log",
+      "path": "compiled/full-canvas-regression/build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-bad-hd-fallback/build.log",
+      "path": "compiled/full-canvas-regression/mutant-bad-hd-fallback/build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-bad-hd-fallback/source/src/engine/art_style.c",
+      "path": "compiled/full-canvas-regression/mutant-bad-hd-fallback/source/src/engine/art_style.c",
+      "sha256": "3a4211db6d941d26cd4b33e1021e8d9e6631a8fed6683f0645292809f537c01d",
+      "bytes": 15380
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-flip/build.log",
+      "path": "compiled/full-canvas-regression/mutant-draw-flip/build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-flip/source/src/engine/art_style.c",
+      "path": "compiled/full-canvas-regression/mutant-draw-flip/source/src/engine/art_style.c",
+      "sha256": "8b2481a7083ccaeed9da47e52b021993d2eae045d46d74bf188d81f50ee58f0b",
+      "bytes": 15376
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-normal/build.log",
+      "path": "compiled/full-canvas-regression/mutant-draw-normal/build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-draw-normal/source/src/engine/graphics.c",
+      "path": "compiled/full-canvas-regression/mutant-draw-normal/source/src/engine/graphics.c",
+      "sha256": "2367d2783c8a48b420420c0ef1d938e9f2bbc999310ee1ca45bf4b9bf55e17f6",
+      "bytes": 34489
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wave-restore/build.log",
+      "path": "compiled/full-canvas-regression/mutant-wave-restore/build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wave-restore/source/src/engine/island.c",
+      "path": "compiled/full-canvas-regression/mutant-wave-restore/source/src/engine/island.c",
+      "sha256": "6d432664391a10b3aafb03232c5b2a60b69e50aed923a72b554f685a955b0941",
+      "bytes": 12917
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-center-frame/build.log",
+      "path": "compiled/full-canvas-regression/mutant-wrong-center-frame/build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-center-frame/source/src/engine/art_style.c",
+      "path": "compiled/full-canvas-regression/mutant-wrong-center-frame/source/src/engine/art_style.c",
+      "sha256": "56c76304b67f9805ef987135fe6e6ae05cec59c8a843a91e4e17b018255c785e",
+      "bytes": 15390
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-frame/build.log",
+      "path": "compiled/full-canvas-regression/mutant-wrong-frame/build.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/mutant-wrong-frame/source/src/engine/art_style.c",
+      "path": "compiled/full-canvas-regression/mutant-wrong-frame/source/src/engine/art_style.c",
+      "sha256": "63dae1e1917c36ae605b13978aea3a3b720395bd97160b6756c32015995febe7",
+      "bytes": 15390
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-regression/report.json",
+      "path": "compiled/full-canvas-regression/report.json",
+      "sha256": "7e1db9d62f5560d0ff98f2c7ed4b3cd4486f499d86a5b7406c38408b8204ffe2",
+      "bytes": 13273
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/art_common-disabled-contract.py",
+      "path": "authoring/art_common-disabled-contract.py",
+      "sha256": "21f9adb08e2abea960dd2d9db1ced78b0175996b6ec3a1cd5705345428f21e00",
+      "bytes": 10717
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/authoring-mutations.json",
+      "path": "authoring/authoring-mutations.json",
+      "sha256": "c12f09d0472f64d203032f324724106e4f2b20a14bbb917af3cb4548002579d2",
+      "bytes": 1704
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/authoring-regression.json",
+      "path": "authoring/authoring-regression.json",
+      "sha256": "496963ec14d1c761b235029f09f942e25e15df047fdb7f4e6b678e7169a501a5",
+      "bytes": 1396
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/authoring-smoke.json",
+      "path": "authoring/authoring-smoke.json",
+      "sha256": "2b6719c88ecbfc78f56f554f4dcd38d59d25ffb3464d0f799f82bc5104e5c38f",
+      "bytes": 1609
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/common-contract-before.log",
+      "path": "authoring/common-contract-before.log",
+      "sha256": "42fdd4c518483d2c6d058936571c00fa513686f788b0f89deb59931b46764b2e",
+      "bytes": 324
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/common-contract-disabled.log",
+      "path": "authoring/common-contract-disabled.log",
+      "sha256": "8392c2a86f82cafa917d07ca888504491cb766fcbeef64ecc400c5c118900564",
+      "bytes": 2597
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/common-contract-restored.log",
+      "path": "authoring/common-contract-restored.log",
+      "sha256": "89f19fa76253cdd3510abe3713391ca53525c87f4b76b3b46fd0e31978706f56",
+      "bytes": 324
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/test_art_pilot_history-mutations.log",
+      "path": "authoring/test_art_pilot_history-mutations.log",
+      "sha256": "71706d9668a4056330512a7aacac4f261825f8c3ae8268c44156623dfa523322",
+      "bytes": 233
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/test_art_pilot_history-regression.log",
+      "path": "authoring/test_art_pilot_history-regression.log",
+      "sha256": "064c36b0bd0326ee835267dd614d5ecb1b702fda02ffcc7fcc32bb58c98996a4",
+      "bytes": 2597
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/test_art_pilot_history-smoke.log",
+      "path": "authoring/test_art_pilot_history-smoke.log",
+      "sha256": "69a48acb08e9c6b94ed9637830c1033c60194bd38452e3d4968a2389b997034a",
+      "bytes": 396
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/test_art_production_catalog-mutations.log",
+      "path": "authoring/test_art_production_catalog-mutations.log",
+      "sha256": "6894dc8a9b7ed614f38c298d0d1c67c5b81880ce67744ab231d4b80cd83b18b4",
+      "bytes": 271
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/test_art_production_catalog-regression.log",
+      "path": "authoring/test_art_production_catalog-regression.log",
+      "sha256": "3ae211ce39c2a8e3f19403192f5b6fa4e1c9cb98349c15f702464fac6cda2aa9",
+      "bytes": 5501
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/test_art_production_catalog-smoke.log",
+      "path": "authoring/test_art_production_catalog-smoke.log",
+      "sha256": "37176604232c22368ab45bdfd3fce57660f57bf3b159a16e8f16d3c8fbec95ba",
+      "bytes": 488
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/test_art_review_metadata-regression.log",
+      "path": "authoring/test_art_review_metadata-regression.log",
+      "sha256": "b02b0da7705f7e6f1743c56d70c7877a525db3c55cf253445383e449d5380cb5",
+      "bytes": 5771
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/test_art_review_metadata-smoke.log",
+      "path": "authoring/test_art_review_metadata-smoke.log",
+      "sha256": "00c39e21d661df56d83af73be5f34984269bbf3acc5c4f94881894bea80c826f",
+      "bytes": 338
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/test_art_tools-regression.log",
+      "path": "authoring/test_art_tools-regression.log",
+      "sha256": "c5052c25f968160c35bfe74439540e85f2f7183de2711d560230a58d9ac9ebf7",
+      "bytes": 3556
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-current-catalog/test_art_tools-smoke.log",
+      "path": "authoring/test_art_tools-smoke.log",
+      "sha256": "2f7b615955ab8c09f91165d20097c82a3c285fc479859e154a14c3af6f16f52e",
+      "bytes": 552
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/report.json",
+      "path": "linux-flow/report.json",
+      "sha256": "76c1e1aa077700c9c2a7365c4cc512d20cbe334a30ea7868928b7ac31496803d",
+      "bytes": 17703
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/build-fail/witness.log",
+      "path": "linux-flow/build-fail/witness.log",
+      "sha256": "5728bb6ee122d761d42d307a9952df956dee1233fb6e191192db13104266a1c2",
+      "bytes": 23
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/clean/witness.log",
+      "path": "linux-flow/clean/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/decoder-regression-fail/witness.log",
+      "path": "linux-flow/decoder-regression-fail/witness.log",
+      "sha256": "9447761108e90d1893a69aba90bd06fcb44198e03bd0e7ded9b58aa53b5054dd",
+      "bytes": 203
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/decoder-smoke-fail/witness.log",
+      "path": "linux-flow/decoder-smoke-fail/witness.log",
+      "sha256": "adfcabf0c3124c97b6298e309db03bfef03d0a8f8a036525e661e8d2b3ca5067",
+      "bytes": 63
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/drawing-regression-fail/witness.log",
+      "path": "linux-flow/drawing-regression-fail/witness.log",
+      "sha256": "1c200db60dcac9cdd2dfd2d7fff5617191d497fd4b74b40bd6cb9cbcd6e7432f",
+      "bytes": 340
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/drawing-smoke-fail/witness.log",
+      "path": "linux-flow/drawing-smoke-fail/witness.log",
+      "sha256": "f81370259958d1536eaa5880ba016c6db83d3feea6c209a5042d0999c099cb35",
+      "bytes": 152
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/extractor-regression-fail/witness.log",
+      "path": "linux-flow/extractor-regression-fail/witness.log",
+      "sha256": "b2537ac3268166f2dc55aeb239c5747f34a5c6751505cad0e34a6ca34148a92d",
+      "bytes": 257
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/extractor-smoke-fail/witness.log",
+      "path": "linux-flow/extractor-smoke-fail/witness.log",
+      "sha256": "26623064d2e1ce5189682df476584d8c5dc4cc91771350f2804375403827be5d",
+      "bytes": 107
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/footprint-regression-fail/witness.log",
+      "path": "linux-flow/footprint-regression-fail/witness.log",
+      "sha256": "be794752306d292b320759a33593f5bddb0786481e358b655a1367a54d367621",
+      "bytes": 369
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/footprint-smoke-fail/witness.log",
+      "path": "linux-flow/footprint-smoke-fail/witness.log",
+      "sha256": "74a13ac75146b4e0730657a71a9a01722485e0fa4af7e56ad6e5422287c6136e",
+      "bytes": 176
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/frame-regression-fail/witness.log",
+      "path": "linux-flow/frame-regression-fail/witness.log",
+      "sha256": "bb829a1b5be689b707090ebf31c45c19238d36e6192a4f908a6c52ea517d6682",
+      "bytes": 228
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/frame-smoke-fail/witness.log",
+      "path": "linux-flow/frame-smoke-fail/witness.log",
+      "sha256": "a5bca433def863adb5989722bbdf01a0f0b1a53f0326aa6e3f2c8cfc3997a3f2",
+      "bytes": 83
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/graphics-regression-fail/witness.log",
+      "path": "linux-flow/graphics-regression-fail/witness.log",
+      "sha256": "6027582416554e7a318b33e222bbf2e32861486d3705ae82205e035a6399221e",
+      "bytes": 313
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant/witness.log",
+      "path": "linux-flow/mutant/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-decoder-smoke-fail/witness.log",
+      "path": "linux-flow/mutant-decoder-smoke-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-drawing-regression-fail/witness.log",
+      "path": "linux-flow/mutant-drawing-regression-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-drawing-smoke-fail/witness.log",
+      "path": "linux-flow/mutant-drawing-smoke-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-extractor-regression-fail/witness.log",
+      "path": "linux-flow/mutant-extractor-regression-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-extractor-smoke-fail/witness.log",
+      "path": "linux-flow/mutant-extractor-smoke-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-footprint-regression-fail/witness.log",
+      "path": "linux-flow/mutant-footprint-regression-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-footprint-smoke-fail/witness.log",
+      "path": "linux-flow/mutant-footprint-smoke-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-frame-regression-fail/witness.log",
+      "path": "linux-flow/mutant-frame-regression-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-frame-smoke-fail/witness.log",
+      "path": "linux-flow/mutant-frame-smoke-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-graphics-regression-fail/witness.log",
+      "path": "linux-flow/mutant-graphics-regression-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/mutant-platform-smoke-fail/witness.log",
+      "path": "linux-flow/mutant-platform-smoke-fail/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/platform-regression-fail/witness.log",
+      "path": "linux-flow/platform-regression-fail/witness.log",
+      "sha256": "f2de6202ddb8d7308b05ddf3d677cfda357c0fffacf2964ad87e3c4db937da91",
+      "bytes": 285
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/platform-smoke-fail/witness.log",
+      "path": "linux-flow/platform-smoke-fail/witness.log",
+      "sha256": "35b6daabb32ef40496a406058f8015c90e98980bdeef25cefd3a84cc3e450e84",
+      "bytes": 130
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/smoke-fail/witness.log",
+      "path": "linux-flow/smoke-fail/witness.log",
+      "sha256": "c29e1d324a9e40a80b0dd29cc0b61e2d41621702a96009ae646d12b953ded822",
+      "bytes": 41
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/unix-flow/warning/witness.log",
+      "path": "linux-flow/warning/witness.log",
+      "sha256": "3bd865131c7b593552d92c4ad7e9004e05c4901309bed094613427fc8d6faa55",
+      "bytes": 393
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-final/authoring-regression.json",
+      "path": "initial-stale-catalog/authoring-regression.json",
+      "sha256": "5f9bcbfb2a262f98f4314824a5b6d4397b51b80e658cf8166e71d97839bdd37a",
+      "bytes": 1047
+    },
+    {
+      "source": "build/shoreline-repair-v1/footprint-tests/full-canvas-final/test_art_review_metadata-regression.log",
+      "path": "initial-stale-catalog/test_art_review_metadata-regression.log",
+      "sha256": "0530dbfb400b7dd7d8eb79e3b5a6151d550f2ad3aae6edb389d6475a77ee30cd",
+      "bytes": 6558
+    },
+    {
+      "source": "build/footprint-ps51-v1/result.json",
+      "path": "windows-v1/result.json",
+      "sha256": "96344c6dff20b8cf25ab304c212b300032221ba88c4b37ac43ee376f08cd8716",
+      "bytes": 749
+    },
+    {
+      "source": "build/footprint-ps51-v1/inputs.json",
+      "path": "windows-v1/inputs.json",
+      "sha256": "d0745f67023b6bc8f0bf413768d236d92eff577c45face99bc3bb41c525d27fe",
+      "bytes": 16508
+    },
+    {
+      "source": "build/footprint-ps51-v1/run.log",
+      "path": "windows-v1/run.log",
+      "sha256": "ffbf19f2ada20331c5d81a7bddc9f55e80b15ecb73ef684ae94517ffbf76685b",
+      "bytes": 810
+    },
+    {
+      "source": "build/footprint-ps51-v1/run.ps1",
+      "path": "windows-v1/run.ps1",
+      "sha256": "fedad0e93f2fccc54a5a5b872b0293b28b98b55d479af465bac629831e555549",
+      "bytes": 1655
+    },
+    {
+      "source": "build/footprint-ps51-v2/result.json",
+      "path": "windows-v2/result.json",
+      "sha256": "2d102232af38dc3ae9eefd9feff8617d5ea4b63c466c09d806f8880919f61859",
+      "bytes": 11871
+    },
+    {
+      "source": "build/footprint-ps51-v2/inputs.json",
+      "path": "windows-v2/inputs.json",
+      "sha256": "5b58a76802a93be35747c486ee51368f9199c2177fe9d4cf9759f9fb508d2293",
+      "bytes": 16712
+    },
+    {
+      "source": "build/footprint-ps51-v2/run.log",
+      "path": "windows-v2/run.log",
+      "sha256": "7af96906c4febb04608a1569dd2c9694e59eeb105a54c143b8b7479cb1addf3f",
+      "bytes": 5727
+    },
+    {
+      "source": "build/footprint-ps51-v2/run.ps1",
+      "path": "windows-v2/run.ps1",
+      "sha256": "fedad0e93f2fccc54a5a5b872b0293b28b98b55d479af465bac629831e555549",
+      "bytes": 1655
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/cartoon-dimensions-restored.build.log",
+      "path": "windows-v2/mutations/cartoon-dimensions-restored.build.log",
+      "sha256": "e0dc4732fa93f3b726e27850716eadd79aa2449567b223fa7855ce3b76e50024",
+      "bytes": 241
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/cartoon-dimensions-restored.test.log",
+      "path": "windows-v2/mutations/cartoon-dimensions-restored.test.log",
+      "sha256": "3aa20aa2f2d1c44d9d00129428a0202b93f851e999f4a27101e1ad20b877c725",
+      "bytes": 234
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/cartoon-dimensions.build.log",
+      "path": "windows-v2/mutations/cartoon-dimensions.build.log",
+      "sha256": "e0dc4732fa93f3b726e27850716eadd79aa2449567b223fa7855ce3b76e50024",
+      "bytes": 241
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/cartoon-dimensions.test.log",
+      "path": "windows-v2/mutations/cartoon-dimensions.test.log",
+      "sha256": "3bd6cf4126ea5e20c6973824f4c28c5dc6dc4f629e7c5277b530ffa4d2ba3bfd",
+      "bytes": 828
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/cartoon-magenta-restored.build.log",
+      "path": "windows-v2/mutations/cartoon-magenta-restored.build.log",
+      "sha256": "e0dc4732fa93f3b726e27850716eadd79aa2449567b223fa7855ce3b76e50024",
+      "bytes": 241
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/cartoon-magenta-restored.test.log",
+      "path": "windows-v2/mutations/cartoon-magenta-restored.test.log",
+      "sha256": "1ecf0e3c1bed132046a68def6111280d444929b3d266de56cafa5d6c503e907e",
+      "bytes": 212
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/cartoon-magenta.build.log",
+      "path": "windows-v2/mutations/cartoon-magenta.build.log",
+      "sha256": "610b39b3ea129e12fcae7dbe173c3d447f4c73680dfb5dd6eb9306d1136ea651",
+      "bytes": 280
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/cartoon-magenta.test.log",
+      "path": "windows-v2/mutations/cartoon-magenta.test.log",
+      "sha256": "300150291e610ea348004d6b41d56dd7b6674e6dbb4738bdec694483134f02f6",
+      "bytes": 244
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/config-style-persistence-restored.build.log",
+      "path": "windows-v2/mutations/config-style-persistence-restored.build.log",
+      "sha256": "7698eefee95e8153704be9a226ed9725f0167a326194ab14899cb33f4a9858ea",
+      "bytes": 238
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/config-style-persistence-restored.test.log",
+      "path": "windows-v2/mutations/config-style-persistence-restored.test.log",
+      "sha256": "b808a8f693acd74e0ebbc924d5b261a9a34abb81633a0cd7c25c400d1d91131c",
+      "bytes": 283
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/config-style-persistence.build.log",
+      "path": "windows-v2/mutations/config-style-persistence.build.log",
+      "sha256": "7698eefee95e8153704be9a226ed9725f0167a326194ab14899cb33f4a9858ea",
+      "bytes": 238
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/config-style-persistence.test.log",
+      "path": "windows-v2/mutations/config-style-persistence.test.log",
+      "sha256": "cf161fc89525d7242177860fa0b43779e1af8a30367e9dbe30d93693c18d7496",
+      "bytes": 988
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/portable-half-alpha-restored.build.log",
+      "path": "windows-v2/mutations/portable-half-alpha-restored.build.log",
+      "sha256": "a52be1550def33496c6bbe7a5238bea15d03d7bfd684eecd36247e96730e3e71",
+      "bytes": 209
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/portable-half-alpha-restored.test.log",
+      "path": "windows-v2/mutations/portable-half-alpha-restored.test.log",
+      "sha256": "06506c782df0dc2cee2967823787729797fca8864a478dfffca257cf8bcc72c1",
+      "bytes": 188
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/portable-half-alpha.build.log",
+      "path": "windows-v2/mutations/portable-half-alpha.build.log",
+      "sha256": "a52be1550def33496c6bbe7a5238bea15d03d7bfd684eecd36247e96730e3e71",
+      "bytes": 209
+    },
+    {
+      "source": "build/footprint-ps51-v2/source/build/art-mutations/portable-half-alpha.test.log",
+      "path": "windows-v2/mutations/portable-half-alpha.test.log",
+      "sha256": "959cc903c4138a5bcaab2c05fd10415c97c54f60674c362d463adcca2ac15b62",
+      "bytes": 237
+    }
+  ],
+  "limits": "Exact compact evidence only. No binaries, native artwork approval or production changes."
+}

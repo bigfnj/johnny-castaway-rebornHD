@@ -1,0 +1,106 @@
+"""Bind already executed footprint verification plus final read-only checks."""
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[3]
+OUT = Path(__file__).resolve().parent
+CURRENT = OUT / 'full-canvas-current-catalog'
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def rel(path):
+    return path.relative_to(ROOT).as_posix()
+
+
+sources = [
+    'src/engine/art_style.c', 'src/engine/art_style.h', 'src/engine/graphics.c',
+    'src/engine/island.c', 'tools/art_common.py', 'tools/art_pack.py',
+    'tools/art_production_catalog.py', 'tools/art_review_metadata.py',
+    'tests/test_art_footprint.c', 'tests/test_art_footprint.py',
+    'tests/test_art_tools.py', 'tests/test_art_pilot_history.py',
+    'tests/test_art_production_catalog.py', 'tests/test_art_review_metadata.py',
+    'tests/Test-ArtMutations.ps1', 'tests/unix-build.sh', 'tests/test_unix_build_flow.py',
+    'docs/cartoon-footprint-contract.md', 'docs/cartoon-art.md',
+    'docs/knowledge-base/cartoon-art-metadata.json',
+    'docs/knowledge-base/cartoon-art-metadata.md',
+    'docs/knowledge-base/cartoon-production-catalog.json',
+    'docs/knowledge-base/cartoon-production-catalog.md',
+]
+reports = [OUT / 'full-canvas-smoke/report.json', OUT / 'full-canvas-regression/report.json',
+           OUT / 'unix-flow/report.json', CURRENT / 'authoring-smoke.json',
+           CURRENT / 'authoring-regression.json', CURRENT / 'authoring-mutations.json']
+for path in reports:
+    record = json.loads(path.read_bytes())
+    assert record['status'] == 'PASS', path
+    for name, expected in record.get('source_sha256', {}).items():
+        assert sha(ROOT / name) == expected, name
+for phase in ('smoke', 'regression'):
+    record = json.loads((CURRENT / ('authoring-' + phase + '.json')).read_bytes())
+    for run in record['runs']:
+        assert sha(CURRENT / run['log']) == run['log_sha256'], run['log']
+mutations = json.loads((OUT / 'full-canvas-regression/report.json').read_bytes())['mutations']
+for record in mutations:
+    assert record['exit_code'] == 2, record
+    assert record['output'].count('FAIL ') == 1, record
+    assert 'FAIL ' + record['case'] + ':' in record['output'], record
+    assert record['build']['rebuilt_timestamp_advanced'], record
+
+commands = [
+    [sys.executable, '-B', 'tools/art_review_metadata.py', '--check'],
+    [sys.executable, '-B', 'tools/art_production_catalog.py', '--check'],
+    ['powershell.exe', '-NoProfile', '-Command',
+     "$errors = $null; $tokens = $null; [System.Management.Automation.Language.Parser]::ParseFile('tests/Test-ArtMutations.ps1', [ref]$tokens, [ref]$errors) | Out-Null; if ($errors.Count) { $errors | Out-String; exit 1 }; Write-Output 'PASS PowerShell 5.1 parser: tests/Test-ArtMutations.ps1'"],
+    ['git', 'diff', '--check'],
+]
+checks = []
+for i, command in enumerate(commands):
+    result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
+    log = OUT / ('final-check-' + str(i) + '.log')
+    log.write_text(result.stdout + result.stderr, encoding='utf-8')
+    assert result.returncode == 0, log.read_text()
+    portable = command.copy()
+    if portable[0] == sys.executable:
+        portable[0] = 'TOOLBOX_PYTHON'
+    checks.append({'command': portable, 'exit_code': result.returncode,
+                   'log': rel(log), 'sha256': sha(log)})
+
+archive = ROOT / 'assets/scrantic_data.zip'
+assert sha(archive) == '4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be'
+report = {
+    'schema_version': 1,
+    'status': 'PASS',
+    'scope': 'Named Cartoon runtime footprint support and maintained authoring validation. No new artwork promotion.',
+    'contracts': {
+        'cartoon-island-ground-v1': {'slots': [0], 'canvas': [640, 180], 'offset_hd': [-36, -10]},
+        'cartoon-island-center-foam-v1': {'slots': [6, 7, 8], 'canvas': [384, 256], 'offset_hd': [-32, -90]},
+    },
+    'completed': {
+        'compiled_engine': {'smoke': 3, 'regression': 18, 'fresh_built_mutations': 6, 'restored_controls': 6},
+        'authoring': {'smoke': 11, 'regression': 175, 'executed_source_mutations': 5,
+                      'regression_suites': {'pack': 26, 'pilot_history': 23, 'pilot_metadata': 60, 'production_catalog': 66}},
+        'linux_gate_flow': {'cases': 17, 'executed_continuation_mutations': 12},
+    },
+    'production_archive_sha256': sha(archive),
+    'source_sha256_at_final_readback': {name: sha(ROOT / name) for name in sources},
+    'reports_sha256': {rel(path): sha(path) for path in reports},
+    'helper_sha256': {rel(path): sha(path) for path in [Path(__file__), OUT / 'run_authoring.py', OUT / 'check_authoring_mutations.py']},
+    'final_checks': checks,
+    'retained_intermediate_results': {
+        'earlier_canvas_sizes': 'Earlier smoke/regression and padded-* directories used superseded dimensions; only full-canvas-* records apply to the final contract.',
+        'stale_catalog_failures': 'Initial authoring regression and full-canvas-final runs stopped at stale pilot catalog hashes. Only docs/art-style-learnings.md and src/engine/island.c input hashes differed; regeneration preserved all other pilot fields. Fresh full-canvas-current-catalog smoke and regression then passed.',
+    },
+    'limits': [
+        'Compiled loader probe uses synthetic archive/decoder surfaces; it proves source control flow, placement and restoration, not PNG decoder parity.',
+        'No Windows full gate or live-source mutation runner was executed in this task. The edited PowerShell mutation needle was parsed under Windows PowerShell 5.1; new engine mutations ran on copied sources in pinned Linux Docker.',
+        'Native selected-art tide, night, scene-offset and character matrix remains separate and pending the selected wave artwork. No visual approval is inferred.',
+        'Current production archive and historical approvals were not changed. Generated catalogs describe the current 43-asset pack.',
+    ],
+}
+(OUT / 'verification.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+print('PASS final footprint evidence', sha(OUT / 'verification.json'))

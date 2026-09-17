@@ -1,0 +1,56 @@
+{
+  "phase": "smoke",
+  "status": "PASS",
+  "runs": [
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_tools.py",
+        "ArtToolsTests.test_named_island_footprints_preserve_original_catalog",
+        "ArtToolsTests.test_true_alpha_preserves_opaque_magenta_and_binary_control",
+        "ArtToolsTests.test_inventory_exports_unmodified_and_records_exact_aliases",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "test_art_tools-smoke.log",
+      "log_sha256": "2f7b615955ab8c09f91165d20097c82a3c285fc479859e154a14c3af6f16f52e"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_pilot_history.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "log": "test_art_pilot_history-smoke.log",
+      "log_sha256": "69a48acb08e9c6b94ed9637830c1033c60194bd38452e3d4968a2389b997034a"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_review_metadata.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "log": "test_art_review_metadata-smoke.log",
+      "log_sha256": "00c39e21d661df56d83af73be5f34984269bbf3acc5c4f94881894bea80c826f"
+    },
+    {
+      "command": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tests/test_art_production_catalog.py",
+        "--phase",
+        "smoke"
+      ],
+      "exit_code": 0,
+      "log": "test_art_production_catalog-smoke.log",
+      "log_sha256": "37176604232c22368ab45bdfd3fce57660f57bf3b159a16e8f16d3c8fbec95ba"
+    }
+  ]
+}

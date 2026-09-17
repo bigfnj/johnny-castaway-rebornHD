@@ -1,0 +1,37 @@
+WITNESS common 21f9adb08e2abea960dd2d9db1ced78b0175996b6ec3a1cd5705345428f21e00
+test_footprint_contract_rejects_other_offset (test_art_production_catalog.CatalogTests.test_footprint_contract_rejects_other_offset) ... FAIL
+
+======================================================================
+FAIL: test_footprint_contract_rejects_other_offset (test_art_production_catalog.CatalogTests.test_footprint_contract_rejects_other_offset)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_production_catalog.py", line 166, in refused
+    callback()
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_production_catalog.py", line 220, in <lambda>
+    self.refused(lambda: report(data), GROUND, "invalid Cartoon footprint declaration")
+                         ^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_production_catalog.py", line 146, in report
+    return m.assemble(archive, data["plan"], data["pack"], data["original"],
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tools\art_production_catalog.py", line 282, in assemble
+    require(row.get("footprint") == item.get("footprint"), path, "recipe footprint differs from ledger")
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tools\art_production_catalog.py", line 31, in require
+    raise ArtError(f"{label}: {reason}")
+art_common.ArtError: BMP/BACKGRND.BMP/000.png: recipe footprint differs from ledger
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_production_catalog.py", line 220, in test_footprint_contract_rejects_other_offset
+    self.refused(lambda: report(data), GROUND, "invalid Cartoon footprint declaration")
+  File "D:\.ai-work\worktrees\johnny-seasonal-decorations\tests\test_art_production_catalog.py", line 169, in refused
+    self.assertEqual(str(exc), label + ": " + reason)
+AssertionError: 'BMP/BACKGRND.BMP/000.png: recipe footprint differs from ledger' != 'BMP/BACKGRND.BMP/000.png: invalid Cartoon footprint declaration'
+- BMP/BACKGRND.BMP/000.png: recipe footprint differs from ledger
++ BMP/BACKGRND.BMP/000.png: invalid Cartoon footprint declaration
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.244s
+
+FAILED (failures=1)

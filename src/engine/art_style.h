@@ -30,6 +30,10 @@ int artStyleCurrentScale(void);
  * Present but invalid Cartoon replacements are fatal and name the exact path. */
 PlatformSurface *artStyleLoadScreen(const char *name, int width, int height);
 PlatformSurface *artStyleLoadSprite(const char *name, int image, int width, int height);
+/* The named Cartoon island footprint extends around the original sprite anchor.
+ * Legacy-sized surfaces and HD/original fallbacks always return zero offsets. */
+void artStyleSpriteOffset(const char *name, int image, int width, int height,
+                          int flipped, int *dx, int *dy);
 void artStyleReportUsage(void);
 
 #endif

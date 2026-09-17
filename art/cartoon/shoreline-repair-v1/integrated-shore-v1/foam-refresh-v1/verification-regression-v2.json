@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "phase": "regression",
+  "variant": "offshore",
+  "test_sha256": "1f60aa818e92ba9c396498dfccb6abd99cb495b3fa1509d89289942e8f86ec30",
+  "exporter_sha256": "364c6d69eb2b062982cd35568c364d9204ccb915e5da744f6bc79163c535c847",
+  "recipe_sha256": "53a6ba750c90c9c0b721864d103bd565ae332c6e5a40b00ae98cdc6eb171f4b4",
+  "report_sha256": "ceb1dd987098c6f5ee36a77988009b1f290e44f421bfd7f08cd275c34bca999d",
+  "scope": "Focused authoring evidence, not native animation or human approval.",
+  "checks": [
+    "Exact exporter and recipe identities",
+    "Comparison-only status retained",
+    "Ten ordered runtime slots",
+    "Every report-bound output byte hash",
+    "Seven parent PNGs byte-identical; three full-source canvases retain all filtered alpha",
+    "Unmasked input crop is world-aligned",
+    "Smoke passed first on the same exporter",
+    "Fresh exporter digest witness emitted",
+    "Fresh replay matches every one of 20 files",
+    "Named contract refusal before outputs"
+  ],
+  "commands": [
+    {
+      "label": "Fresh-process exact replay",
+      "arguments": [
+        "-B",
+        "<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\foam-refresh-v1\\export_v2.py",
+        "--recipe",
+        "<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\foam-refresh-v1\\recipe-v2.json",
+        "--output",
+        "<repo>\\build\\shoreline-repair-v1\\technical-replays\\offshore-ywf0mdqd\\replay"
+      ],
+      "returncode": 0,
+      "stdout": "WITNESS offshore-full-source 364c6d69eb2b062982cd35568c364d9204ccb915e5da744f6bc79163c535c847\nPASS {\"files\": 20, \"footprint\": {\"id\": \"cartoon-island-center-foam-v1\", \"canvas\": [384, 256], \"offset_hd\": [-32, -90]}}\n",
+      "stderr": ""
+    },
+    {
+      "label": "Wrong footprint refusal",
+      "arguments": [
+        "-B",
+        "<repo>\\art\\cartoon\\shoreline-repair-v1\\integrated-shore-v1\\foam-refresh-v1\\export_v2.py",
+        "--recipe",
+        "<repo>\\build\\shoreline-repair-v1\\technical-replays\\offshore-ywf0mdqd\\wrong-recipe.json",
+        "--output",
+        "<repo>\\build\\shoreline-repair-v1\\technical-replays\\offshore-ywf0mdqd\\refused"
+      ],
+      "returncode": 1,
+      "stdout": "WITNESS offshore-full-source 364c6d69eb2b062982cd35568c364d9204ccb915e5da744f6bc79163c535c847\n",
+      "stderr": "FAIL recipe: full-source common footprint contract differs\n"
+    }
+  ],
+  "smoke_sha256": "5398e4f74b5cd65b0467f811afcc1d94e4a9a6fdbfca4f7c82b273e39a533aa4"
+}

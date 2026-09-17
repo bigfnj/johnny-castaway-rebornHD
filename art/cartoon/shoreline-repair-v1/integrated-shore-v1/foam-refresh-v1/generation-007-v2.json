@@ -1,0 +1,27 @@
+{
+  "method": "built-in image_gen; precise-object-edit",
+  "frame": 7,
+  "accepted": false,
+  "selected_source": "007-v2-raw.png",
+  "superseded_source": "007-raw.png",
+  "reason": "First007 version moved high onto the sand: ground occlusion retained only53.9% of alpha mass. Hold006's position and alter stroke breaks only.",
+  "prompt_file": "007-v2-prompt.txt",
+  "prompt": "Use case: precise-object-edit.\nImage1 is the edit target, a newly drawn transparent center shoreline foam phase006. Image2 is its fixed sand context only.\nCreate the next phase007 by changing ONLY the breaks and small individual flecks in Image1. Preserve the exact positions of the main curved strokes and the overall curve, endpoints, scale and1536x1024 canvas. Do not move or lift the wave. The previous attempt moved the left and middle up onto the beach, which is wrong. Keep the white curves within the same narrow bands that Image1 already occupies.\nMake the main middle arc a little more connected from roughlyx470 tox1100, replace a few small flecks with slightly longer tapered strokes, and break the lower outer arc into two asymmetrical pieces. This should be a subtle neighboring animation frame with recognizably different line breaks, not a relocated wave or a copy identical to006.\nKeep every meaningful mark withinx105..1420,y425..630. Keep most white strokes3-7pixels thick, matching the original delicate white-cream and pale-cyan hand-drawn foam. No growth in overall thickness or height.\nOnly isolated foam on actual RGBA transparency. No sand, shoreline outline, solidwater, new background, glow, labels, text or sprite sheet. Do not import or redraw the sand from Image2.",
+  "references": [
+    {
+      "path": "006-raw.png",
+      "role": "edit target; new family shape and position",
+      "sha256": "be78ddda6468fdd3d00c20589e700a50fbb6150157591eb1070eeb718e87c5bd"
+    },
+    {
+      "path": "center-ground-context.png",
+      "role": "fixed sand geometry context only",
+      "sha256": "949ace55b9964ece2e39898701de070146bc2ecff341dac3c02950e6324f32ad"
+    }
+  ],
+  "output": {
+    "path": "007-v2-raw.png",
+    "sha256": "c97a2e468a854296fadb787d4b9ff30833bd8e46d3b1c4d17dc8cb965ddbd0d4",
+    "original_output": "C:/Users/Admin/.codex/generated_images/01a0a1f0-5ca9-70b3-88cd-a31f4f736e75/exec-aa615e10-0afa-47ed-b535-51312d30361c.png"
+  }
+}

@@ -1,0 +1,451 @@
+{
+  "schema_version": 1,
+  "scope": "Original high-tide geometry and timing guidance. Authentic supplied-original sprites rendered with a diagnostic palette; this is not calibrated original executable color or footage.",
+  "archive": "art/cartoon/character-inventory-v1/reference-originals.zip",
+  "archive_sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912",
+  "measurement_method": {
+    "sand": "A>0 and R==G>0 and B==0",
+    "water": "A>0 and R==0 and B>0",
+    "exclusions": "White and gray pixels are excluded because sand dithering and foam cannot be separated by this palette predicate.",
+    "interpretation": "Counts are exact diagnostic-color witnesses, not a complete semantic material mask. First water is the topmost matching pixel in the named local column."
+  },
+  "frames": [
+    {
+      "frame": 3,
+      "member": "native/BMP/BACKGRND.BMP/003.png",
+      "sha256": "9ed77826f1c345b9cdd253e1b76f701dec36fab9afed322e92390b473891d833",
+      "native_canvas": [
+        72,
+        29
+      ],
+      "native_origin": [
+        270,
+        306
+      ],
+      "diagnostic_sand_pixels": 211,
+      "diagnostic_water_pixels": 745,
+      "column_witnesses": {
+        "60": {
+          "last_sand_local_y": 18,
+          "first_water_local_y": 19,
+          "first_water_world_hd_y": 650
+        }
+      }
+    },
+    {
+      "frame": 4,
+      "member": "native/BMP/BACKGRND.BMP/004.png",
+      "sha256": "bacc65431d3c560a240283a0780e34b94962ad4efeaf1e2acf96b417418c0af5",
+      "native_canvas": [
+        72,
+        29
+      ],
+      "native_origin": [
+        270,
+        306
+      ],
+      "diagnostic_sand_pixels": 181,
+      "diagnostic_water_pixels": 773,
+      "column_witnesses": {
+        "60": {
+          "last_sand_local_y": 15,
+          "first_water_local_y": 17,
+          "first_water_world_hd_y": 646
+        }
+      }
+    },
+    {
+      "frame": 5,
+      "member": "native/BMP/BACKGRND.BMP/005.png",
+      "sha256": "5f539918f5187e84cbc8174f6bcc943dca9699a28c3c9dd448d972e82de9f3c2",
+      "native_canvas": [
+        72,
+        29
+      ],
+      "native_origin": [
+        270,
+        306
+      ],
+      "diagnostic_sand_pixels": 156,
+      "diagnostic_water_pixels": 829,
+      "column_witnesses": {
+        "60": {
+          "last_sand_local_y": 16,
+          "first_water_local_y": 17,
+          "first_water_world_hd_y": 646
+        }
+      }
+    },
+    {
+      "frame": 6,
+      "member": "native/BMP/BACKGRND.BMP/006.png",
+      "sha256": "2aba9614280ffca6695098009adf5abc070329d49737088c69cc0a6c2a60b5df",
+      "native_canvas": [
+        160,
+        25
+      ],
+      "native_origin": [
+        364,
+        319
+      ],
+      "diagnostic_sand_pixels": 1110,
+      "diagnostic_water_pixels": 1053,
+      "column_witnesses": {
+        "40": {
+          "last_sand_local_y": 12,
+          "first_water_local_y": 13,
+          "first_water_world_hd_y": 664
+        },
+        "100": {
+          "last_sand_local_y": 13,
+          "first_water_local_y": 15,
+          "first_water_world_hd_y": 668
+        },
+        "120": {
+          "last_sand_local_y": 12,
+          "first_water_local_y": 14,
+          "first_water_world_hd_y": 666
+        }
+      }
+    },
+    {
+      "frame": 7,
+      "member": "native/BMP/BACKGRND.BMP/007.png",
+      "sha256": "7158278ec5bd320cec6b5b89c9f7193d6e442f9091f86eb9f4a6cb11455f7952",
+      "native_canvas": [
+        160,
+        25
+      ],
+      "native_origin": [
+        364,
+        319
+      ],
+      "diagnostic_sand_pixels": 982,
+      "diagnostic_water_pixels": 1093,
+      "column_witnesses": {
+        "40": {
+          "last_sand_local_y": 11,
+          "first_water_local_y": 12,
+          "first_water_world_hd_y": 662
+        },
+        "100": {
+          "last_sand_local_y": 11,
+          "first_water_local_y": 12,
+          "first_water_world_hd_y": 662
+        },
+        "120": {
+          "last_sand_local_y": 9,
+          "first_water_local_y": 10,
+          "first_water_world_hd_y": 658
+        }
+      }
+    },
+    {
+      "frame": 8,
+      "member": "native/BMP/BACKGRND.BMP/008.png",
+      "sha256": "17738a8452aa3f7b758ffe4b59bb82c967d4f84a369a04f45a50fe771a6fbc73",
+      "native_canvas": [
+        160,
+        25
+      ],
+      "native_origin": [
+        364,
+        319
+      ],
+      "diagnostic_sand_pixels": 878,
+      "diagnostic_water_pixels": 1287,
+      "column_witnesses": {
+        "40": {
+          "last_sand_local_y": 10,
+          "first_water_local_y": 11,
+          "first_water_world_hd_y": 660
+        },
+        "100": {
+          "last_sand_local_y": 11,
+          "first_water_local_y": 12,
+          "first_water_world_hd_y": 662
+        },
+        "120": {
+          "last_sand_local_y": 9,
+          "first_water_local_y": 11,
+          "first_water_world_hd_y": 660
+        }
+      }
+    },
+    {
+      "frame": 9,
+      "member": "native/BMP/BACKGRND.BMP/009.png",
+      "sha256": "c2bb4ad5f195d031ebb06606f4bed958ce497208d8ea2fa253b9639b774b1c32",
+      "native_canvas": [
+        72,
+        32
+      ],
+      "native_origin": [
+        518,
+        303
+      ],
+      "diagnostic_sand_pixels": 100,
+      "diagnostic_water_pixels": 408,
+      "column_witnesses": {
+        "30": {
+          "last_sand_local_y": 18,
+          "first_water_local_y": 19,
+          "first_water_world_hd_y": 644
+        }
+      }
+    },
+    {
+      "frame": 10,
+      "member": "native/BMP/BACKGRND.BMP/010.png",
+      "sha256": "7783567c59eb0bec1adaaa17bd47eafbe70e7cce2ee0349bf7d0f75da2dded8a",
+      "native_canvas": [
+        72,
+        32
+      ],
+      "native_origin": [
+        518,
+        303
+      ],
+      "diagnostic_sand_pixels": 90,
+      "diagnostic_water_pixels": 451,
+      "column_witnesses": {
+        "30": {
+          "last_sand_local_y": 14,
+          "first_water_local_y": 18,
+          "first_water_world_hd_y": 642
+        }
+      }
+    },
+    {
+      "frame": 11,
+      "member": "native/BMP/BACKGRND.BMP/011.png",
+      "sha256": "9661cff4a68ea7ad938b15b30bd5b8b1694ff674aa214e2b14477f6d39344753",
+      "native_canvas": [
+        72,
+        32
+      ],
+      "native_origin": [
+        518,
+        303
+      ],
+      "diagnostic_sand_pixels": 92,
+      "diagnostic_water_pixels": 457,
+      "column_witnesses": {
+        "30": {
+          "last_sand_local_y": 16,
+          "first_water_local_y": 18,
+          "first_water_world_hd_y": 642
+        }
+      }
+    }
+  ],
+  "timing": {
+    "inspected_source": "src/engine/island.c",
+    "inspected_source_sha256": "9b4f4a99e359a9a1af6d91ec9e3b553017afde981c34a423005155b91fd920d6",
+    "source_lines": {
+      "high_tide_origins": [
+        42,
+        43
+      ],
+      "initial_four_updates": [
+        257,
+        259
+      ],
+      "timer_ticks": 263,
+      "static_counters_and_phase_advance": [
+        268,
+        282
+      ]
+    },
+    "family_orders": [
+      [
+        3,
+        4,
+        5,
+        3
+      ],
+      [
+        6,
+        7,
+        8,
+        6
+      ],
+      [
+        9,
+        10,
+        11,
+        9
+      ]
+    ],
+    "initial_draw_sequence": [
+      6,
+      9,
+      3,
+      7
+    ],
+    "observed_tick_ms": 20,
+    "family_update_spacing_ms": 480,
+    "global_update_spacing_ms": 160,
+    "observed_loop_ms": 1440,
+    "note": "Families update in staggered order. Static counters persist across islandInit calls; the listed initial sequence is for a fresh process.",
+    "native_report": "build/shoreline-repair-v1/original-cycle-v1/captures/smoke/report.json",
+    "native_report_sha256": "a25775e19e815ab5d0ea5d7e9840eb08cc55f6d20a4760707789863c36731b06",
+    "captured_displays": 51,
+    "duration_ms": 2400,
+    "observed_phase_changes": [
+      {
+        "time_ms": 0,
+        "phases": [
+          3,
+          7,
+          9,
+          -1
+        ]
+      },
+      {
+        "time_ms": 160,
+        "phases": [
+          3,
+          7,
+          10,
+          -1
+        ]
+      },
+      {
+        "time_ms": 320,
+        "phases": [
+          4,
+          7,
+          10,
+          -1
+        ]
+      },
+      {
+        "time_ms": 480,
+        "phases": [
+          4,
+          8,
+          10,
+          -1
+        ]
+      },
+      {
+        "time_ms": 640,
+        "phases": [
+          4,
+          8,
+          11,
+          -1
+        ]
+      },
+      {
+        "time_ms": 800,
+        "phases": [
+          5,
+          8,
+          11,
+          -1
+        ]
+      },
+      {
+        "time_ms": 960,
+        "phases": [
+          5,
+          6,
+          11,
+          -1
+        ]
+      },
+      {
+        "time_ms": 1120,
+        "phases": [
+          5,
+          6,
+          9,
+          -1
+        ]
+      },
+      {
+        "time_ms": 1280,
+        "phases": [
+          3,
+          6,
+          9,
+          -1
+        ]
+      },
+      {
+        "time_ms": 1440,
+        "phases": [
+          3,
+          7,
+          9,
+          -1
+        ]
+      },
+      {
+        "time_ms": 1600,
+        "phases": [
+          3,
+          7,
+          10,
+          -1
+        ]
+      },
+      {
+        "time_ms": 1760,
+        "phases": [
+          4,
+          7,
+          10,
+          -1
+        ]
+      },
+      {
+        "time_ms": 1920,
+        "phases": [
+          4,
+          8,
+          10,
+          -1
+        ]
+      },
+      {
+        "time_ms": 2080,
+        "phases": [
+          4,
+          8,
+          11,
+          -1
+        ]
+      },
+      {
+        "time_ms": 2240,
+        "phases": [
+          5,
+          8,
+          11,
+          -1
+        ]
+      },
+      {
+        "time_ms": 2400,
+        "phases": [
+          5,
+          6,
+          11,
+          -1
+        ]
+      }
+    ]
+  },
+  "guidance": [
+    "The original animated sprites include changing sand as well as water and foam. They are not foam-only transparent drawings.",
+    "Center006 exposes the most measured sand;007 has irregular inward run-up;008 exposes the least measured sand, followed by reset to006. Crest movement is locally irregular, not a rigid ring translation.",
+    "Center local x40 first-water advances native y13,12,11. At x120 it moves y14,10,11. These samples show approximately2 to8 HD pixels of local inward/upward wash.",
+    "The left side similarly reduces measured sand across003,004,005. The right side009,010,011 has locally strongest run-up at010 and a partial relaxation at011.",
+    "Do not blanket-mask a new incoming-water layer against land alpha: intentional wash must remain visible over sand. Keep the original phase observations distinct from the generated comparison assignment."
+  ],
+  "exact_center_references": "original-reference/source.json",
+  "exact_center_references_sha256": "6a56348dd7f9ca6c6fe49db74cdbb065764642f0ef1aaaaed57df372cfa9cf90"
+}

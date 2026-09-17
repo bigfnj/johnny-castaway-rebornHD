@@ -1,0 +1,26 @@
+{
+  "image_id": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "container_name": "johnny-original-wave-9f3cd2d408a5",
+  "archive_sha256": "4301aad91184789727688cb3dac9ade7a8f04152cbde056a29396c9bfaeeac8f",
+  "archive": "build/seasonal-v1/island-footprint/original-full.zip",
+  "arguments": [
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/art/cartoon/shoreline-repair-v1/integrated-shore-v1/native/original_cycle.py",
+    "--archive",
+    "/source/build/seasonal-v1/island-footprint/original-full.zip",
+    "--archive-sha256",
+    "4301aad91184789727688cb3dac9ade7a8f04152cbde056a29396c9bfaeeac8f",
+    "--output",
+    "/out/captures"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 46.188084840774536,
+  "no_surviving_task_container": true,
+  "helper_sha256": "1615c89fe312a018a5facdcc8cc59e05e6ef5ae9c03050538247f509e137fe84",
+  "source_commit": "d558430378d1425b2a55ffd32dac47cd0a6b0cb0"
+}

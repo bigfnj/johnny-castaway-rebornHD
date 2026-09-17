@@ -14,6 +14,32 @@ class ArtError(ValueError):
     pass
 
 
+ISLAND_FOOTPRINT = {"id": "cartoon-island-ground-v1", "canvas": [640, 180],
+                    "offset_hd": [-36, -10]}
+CENTER_FOAM_FOOTPRINT = {"id": "cartoon-island-center-foam-v1", "canvas": [384, 256],
+                         "offset_hd": [-32, -90]}
+
+
+def cartoon_footprint(path, logical, scale, declaration=None):
+    """Keep original canvases separate from explicitly registered island variants.
+
+    The matching runtime contract lives in art_style.c. No original inventory,
+    HD proxy, script coordinate or other Cartoon slot receives an exception.
+    """
+    if declaration is None:
+        return {"canvas": [n * scale for n in logical], "offset_hd": [0, 0]}
+    contract = None
+    if path == "BMP/BACKGRND.BMP/000.png" and list(logical) == [280, 52]:
+        contract = ISLAND_FOOTPRINT
+    elif path in {f"BMP/BACKGRND.BMP/{i:03}.png" for i in (6, 7, 8)} and list(logical) == [160, 25]:
+        contract = CENTER_FOAM_FOOTPRINT
+    if not (contract is not None and type(scale) is int and scale == 2 and declaration == contract
+            and all(type(n) is int for key in ("canvas", "offset_hd") for n in declaration[key])):
+        raise ArtError(f"{path}: invalid Cartoon footprint declaration")
+    return {"id": contract["id"], "canvas": list(contract["canvas"]),
+            "offset_hd": list(contract["offset_hd"])}
+
+
 def digest(data):
     return hashlib.sha256(data).hexdigest()
 

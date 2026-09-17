@@ -1,0 +1,40 @@
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[3]
+OUT = Path(__file__).resolve().parent
+p = argparse.ArgumentParser()
+p.add_argument('phase', choices=['smoke', 'regression'])
+p.add_argument('--label', default='')
+a = p.parse_args()
+if a.label:
+    OUT = OUT / a.label
+    OUT.mkdir(parents=True, exist_ok=True)
+if a.phase == 'regression':
+    assert json.loads((OUT / 'authoring-smoke.json').read_bytes())['status'] == 'PASS'
+tools = ['tests/test_art_tools.py']
+if a.phase == 'smoke':
+    tools += ['ArtToolsTests.test_named_island_footprints_preserve_original_catalog',
+              'ArtToolsTests.test_true_alpha_preserves_opaque_magenta_and_binary_control',
+              'ArtToolsTests.test_inventory_exports_unmodified_and_records_exact_aliases']
+tools += ['-v']
+commands = [tools] + [[f'tests/{name}.py', '--phase', a.phase] for name in
+                      ['test_art_pilot_history', 'test_art_review_metadata', 'test_art_production_catalog']]
+records = []
+for args in commands:
+    run = subprocess.run([sys.executable, '-B', *args], cwd=ROOT, capture_output=True, text=True)
+    name = Path(args[0]).stem + '-' + a.phase + '.log'
+    text = run.stdout + run.stderr
+    (OUT / name).write_text(text, encoding='utf-8')
+    record = {'command': ['TOOLBOX_PYTHON', '-B', *args], 'exit_code': run.returncode,
+              'log': name, 'log_sha256': hashlib.sha256((OUT / name).read_bytes()).hexdigest()}
+    records.append(record)
+    print(name, run.returncode, text[-1600:], flush=True)
+    if run.returncode: break
+result = {'phase': a.phase, 'status': 'PASS' if len(records) == len(commands) and all(r['exit_code'] == 0 for r in records) else 'FAIL', 'runs': records}
+(OUT / ('authoring-' + a.phase + '.json')).write_text(json.dumps(result, indent=2) + '\n')
+sys.exit(0 if result['status'] == 'PASS' else 1)

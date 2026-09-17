@@ -1,0 +1,120 @@
+"""One-time compact evidence copy; no binaries or generated artwork."""
+import hashlib
+import json
+from pathlib import Path
+import shutil
+
+ROOT = Path(__file__).resolve().parents[3]
+SCRATCH = Path(__file__).resolve().parent
+OUT = ROOT / 'art/cartoon/shoreline-repair-v1/integrated-shore-v1/code-verification'
+
+
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=False)
+    copies = []
+
+    def copy(source, name):
+        target = OUT / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source, target)
+        assert sha(source) == sha(target)
+        copies.append({'source': source.relative_to(ROOT).as_posix(), 'path': name,
+                       'sha256': sha(target), 'bytes': target.stat().st_size})
+
+    copy(SCRATCH / 'verification.json', 'verification.json')
+    for name in ('run_authoring.py', 'check_authoring_mutations.py', 'finalize.py', 'run_windows_ps51.py', 'preserve.py'):
+        copy(SCRATCH / name, 'helpers/' + name + '.txt')
+    for path in sorted(SCRATCH.glob('final-check-*.log')):
+        copy(path, 'final-checks/' + path.name)
+    for folder in ('full-canvas-smoke', 'full-canvas-regression'):
+        for path in sorted((SCRATCH / folder).rglob('*')):
+            if path.is_file() and (path.name in ('report.json', 'build.log') or
+                                   path.name in ('art_style.c', 'graphics.c', 'island.c') and
+                                   'source' in path.parts and path.parent.name == 'engine'):
+                # Preserve the mutated source only, not all unmodified copied files.
+                if 'source' in path.parts:
+                    mutation = path.relative_to(SCRATCH / folder).parts[0].removeprefix('mutant-')
+                    owner = {'wrong-frame':'art_style.c', 'bad-hd-fallback':'art_style.c',
+                             'draw-normal':'graphics.c', 'draw-flip':'art_style.c',
+                             'wrong-center-frame':'art_style.c', 'wave-restore':'island.c'}
+                    if path.name != owner[mutation]:
+                        continue
+                copy(path, 'compiled/' + path.relative_to(SCRATCH).as_posix())
+    for path in sorted((SCRATCH / 'full-canvas-current-catalog').glob('*')):
+        if path.is_file() and path.suffix in ('.json', '.log', '.py'):
+            copy(path, 'authoring/' + path.name)
+    copy(SCRATCH / 'unix-flow/report.json', 'linux-flow/report.json')
+    for path in sorted((SCRATCH / 'unix-flow').rglob('witness.log')):
+        copy(path, 'linux-flow/' + path.relative_to(SCRATCH / 'unix-flow').as_posix())
+    for label in ('authoring-regression.json', 'test_art_review_metadata-regression.log'):
+        path = SCRATCH / 'full-canvas-final' / label
+        if path.exists():
+            copy(path, 'initial-stale-catalog/' + label)
+    for attempt in ('v1', 'v2'):
+        windows = ROOT / ('build/footprint-ps51-' + attempt)
+        for name in ('result.json', 'inputs.json', 'run.log', 'run.ps1'):
+            path = windows / name
+            if path.exists():
+                copy(path, 'windows-' + attempt + '/' + name)
+        if attempt == 'v2' and (windows / 'result.json').exists():
+            for path in sorted((windows / 'source/build/art-mutations').glob('*.log')):
+                copy(path, 'windows-v2/mutations/' + path.name)
+    (OUT / 'README.md').write_text('''# Footprint implementation verification
+
+This checkpoint verifies the two named runtime footprint contracts and their
+authoring declarations. It does not promote shoreline artwork or establish
+visual approval. Original resource dimensions, legacy PNG behavior and the
+production ZIP remain unchanged.
+
+`verification.json` records the final 384x256 center contract run: compiled
+smoke before regression, six rebuilt source mutations with exact failure
+witnesses, authoring smoke before regression, five authoring mutations, and
+Linux gate ordering/early-stop controls. `compiled`, `authoring` and
+`linux-flow` contain the small results and logs. Binary hashes and rebuild
+witnesses are retained; executables are omitted.
+
+The initial stale catalog reproduction failure is retained separately. The
+catalog was regenerated for the changed island source and learning-document
+hashes, then fresh smoke and regression passed. Earlier scratch runs with
+superseded footprint dimensions are not evidence for the final contract.
+
+Windows results are separate additions: v1 stopped during configure because
+the scratch copier omitted `cmake/RuntimeData.cmake`. It did not run tests.
+The v2 copy includes that directory and uses the unchanged test writer under
+Windows PowerShell 5.1 on an inactive desktop. Its result and exact logs state
+whether smoke and mutation execution completed. The historical Linux summary
+predates this separate Windows run; its stated Windows limit is not rewritten.
+
+The helper `.py.txt` files are exact scratch snapshots, not directly runnable
+at this preserved location. To replay, restore them to
+`build/shoreline-repair-v1/footprint-tests/`, use fresh output directories,
+and run with the installed toolbox Python. `run_windows_ps51.py` creates an
+isolated source copy and uses the retained existing inactive-desktop API;
+its inputs pin that helper. The byte-identical helper is already retained at
+`art/cartoon/skin-tone-v1/integration-v1/windows-v1/helpers/motion_review.py`
+(SHA256 `86312fd1bad0786c2e1ee56c9eb6aab69cb1bf9f1295ec84430769877490f55d`).
+For replay, set the scratch launcher's `HELPER` to that retained file instead
+of relying on the historical workstation path. It never changes the shared
+runtime. The compiled
+Linux probe commands are documented in `docs/cartoon-footprint-contract.md`.
+Do not rerun this one-time preservation writer over the historical bundle.
+
+The full selected-art tide/night/scene-offset/character matrix remains a
+separate requirement once the wave direction is approved. No such coverage is
+claimed here.
+''', encoding='utf-8')
+    files = {p.relative_to(OUT).as_posix(): sha(p) for p in sorted(OUT.rglob('*')) if p.is_file()}
+    manifest = {'schema_version': 1, 'status': 'PRESERVED', 'files_sha256': files,
+                'exact_copies': copies,
+                'limits': 'Exact compact evidence only. No binaries, native artwork approval or production changes.'}
+    (OUT / 'evidence.json').write_text(json.dumps(manifest, indent=2) + '\n', encoding='utf-8')
+    assert all(sha(OUT / path) == value for path, value in files.items())
+    print('PRESERVED', len(files), 'files', sha(OUT / 'evidence.json'))
+
+
+if __name__ == '__main__':
+    main()

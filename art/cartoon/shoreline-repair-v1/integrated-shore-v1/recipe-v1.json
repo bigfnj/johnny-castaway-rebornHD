@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "scope": "Technical static-ground candidate; approved shape, native placement/foam motion still pending.",
+  "source": "art/cartoon/shoreline-repair-v1/smooth-shore-v3/raw.png",
+  "source_sha256": "19df1e01931cf746e88f6bf696b39e16f009ba7aa1b37f1f7c916b0949822732",
+  "comparison": "art/cartoon/shoreline-repair-v1/smooth-shore-v3/comparison.json",
+  "comparison_sha256": "be5889ac173e0881b948e656be288d7ac7f66cc593c589a6d2bf314431c726ff",
+  "archive": "assets/scrantic_data.zip",
+  "archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+  "filter": "art/cartoon/seasonal-v1/export.py",
+  "filter_sha256": "7fe0e58d9a2522af71ddf696eccb1a76c6c5d293f71e0a3c8cab7282f336892d",
+  "mask_helper": "art/cartoon/shoreline-repair-v1/foam-contact-v2/export.py",
+  "mask_helper_sha256": "fae28aba1181761777ae4ed43e088fb6a1cc51b08f20db39135ac81fe4ae1445",
+  "pillow_version": "12.3.0",
+  "resampling": {
+    "working_mode": "RGBa",
+    "affine": "BICUBIC",
+    "oversample": 8,
+    "downsample": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "source_to_world_affine": [
+    0.41852117731514715,
+    0,
+    534.110911701364,
+    0,
+    0.41852117731514715,
+    409.6805455850682
+  ],
+  "static_world_box": [
+    540,
+    548,
+    1180,
+    728
+  ],
+  "audit_world_box": [
+    530,
+    400,
+    1190,
+    844
+  ],
+  "ground_ownership": "All resampled ground in000 exactly once; no ground in003..011.",
+  "foam_visibility": "Frozen V2 alpha visibility mask, RGB unchanged, original foam positions. Not exact global ground-over-foam compositing.",
+  "frames": [
+    {
+      "frame": 0,
+      "path": "BMP/BACKGRND.BMP/000.png",
+      "role": "sole static ground owner",
+      "canvas": [
+        640,
+        180
+      ],
+      "logical_origin_hd": [
+        576,
+        558
+      ],
+      "asset_offset_hd": [
+        -36,
+        -10
+      ],
+      "world_box": [
+        540,
+        548,
+        1180,
+        728
+      ],
+      "footprint": {
+        "id": "cartoon-island-ground-v1",
+        "canvas": [
+          640,
+          180
+        ],
+        "offset_hd": [
+          -36,
+          -10
+        ]
+      }
+    },
+    {
+      "frame": 3,
+      "path": "BMP/BACKGRND.BMP/003.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        58
+      ],
+      "logical_origin_hd": [
+        540,
+        612
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/003.png",
+      "source_member_sha256": "9322d3ce25f81634899c5ddef43970278d30bf302bd79600bdc75fdb8ddff050"
+    },
+    {
+      "frame": 4,
+      "path": "BMP/BACKGRND.BMP/004.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        58
+      ],
+      "logical_origin_hd": [
+        540,
+        612
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/004.png",
+      "source_member_sha256": "777a30dfec653ac796e92c8df4e99ab242a61cab446bf675aecea035936a7143"
+    },
+    {
+      "frame": 5,
+      "path": "BMP/BACKGRND.BMP/005.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        58
+      ],
+      "logical_origin_hd": [
+        540,
+        612
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        540,
+        612,
+        684,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/005.png",
+      "source_member_sha256": "265551fdda987a704c0906f1e8c6e661ab6fbc7d25a445edb790c090f2a448a6"
+    },
+    {
+      "frame": 6,
+      "path": "BMP/BACKGRND.BMP/006.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        320,
+        50
+      ],
+      "logical_origin_hd": [
+        728,
+        638
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/006.png",
+      "source_member_sha256": "4e82a7045fa9ac2c4a6d3a89633b5a7ac02d6a0179dadf667d006c64a0dce8cd"
+    },
+    {
+      "frame": 7,
+      "path": "BMP/BACKGRND.BMP/007.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        320,
+        50
+      ],
+      "logical_origin_hd": [
+        728,
+        638
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/007.png",
+      "source_member_sha256": "e766a8def1a55f318bfd557baf682913903ce216ae8fbbbfc9d95ec36154052e"
+    },
+    {
+      "frame": 8,
+      "path": "BMP/BACKGRND.BMP/008.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        320,
+        50
+      ],
+      "logical_origin_hd": [
+        728,
+        638
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        728,
+        638,
+        1048,
+        688
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/008.png",
+      "source_member_sha256": "8cc6041d3b766519b94d72687a07956f2661e3e5f2a7cbd323b1af6e24f9bf19"
+    },
+    {
+      "frame": 9,
+      "path": "BMP/BACKGRND.BMP/009.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        64
+      ],
+      "logical_origin_hd": [
+        1036,
+        606
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/009.png",
+      "source_member_sha256": "c2055855905c2e27bd22c9a5064c331ec4fcb515d6f958727d6b6ece74331e28"
+    },
+    {
+      "frame": 10,
+      "path": "BMP/BACKGRND.BMP/010.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        64
+      ],
+      "logical_origin_hd": [
+        1036,
+        606
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/010.png",
+      "source_member_sha256": "3bfbc643859d33f8b01b7e086f003b9497a3fddd2715092f4af4eda0a26eab02"
+    },
+    {
+      "frame": 11,
+      "path": "BMP/BACKGRND.BMP/011.png",
+      "role": "foam only; zero ground ownership",
+      "canvas": [
+        144,
+        64
+      ],
+      "logical_origin_hd": [
+        1036,
+        606
+      ],
+      "asset_offset_hd": [
+        0,
+        0
+      ],
+      "world_box": [
+        1036,
+        606,
+        1180,
+        670
+      ],
+      "source_member": "data/styles/cartoon/BMP/BACKGRND.BMP/011.png",
+      "source_member_sha256": "420008aa518b5c1218af6879ce0551a9b5b8b4f89f2ce0be5b3de824c436e8e3"
+    }
+  ]
+}
