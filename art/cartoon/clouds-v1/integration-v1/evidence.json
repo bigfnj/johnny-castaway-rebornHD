@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "production_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "pack_sha256": "20e515595c2988317c213480dd33b18db698e981ae094bcb40e90dc6d7a956da",
+  "accepted_assets": 63,
+  "zip_members": 2614,
+  "unchanged_prior_payloads": 2612,
+  "smoke_tests": 16,
+  "regression_reported_tests": 191,
+  "regression_executed_tests": 189,
+  "regression_skipped_tests": 2,
+  "skip_lines": [
+    "test_directory_symlink_alias (__main__.InventoryCliTests.test_directory_symlink_alias) ... skipped \"directory symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-yss9m25k' -> 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-yss9m25k\\\\\\\\alias'\"",
+    "test_file_symlink_alias (__main__.InventoryCliTests.test_file_symlink_alias) ... skipped \"file symlinks unavailable on this filesystem: [WinError 1314] A required privilege is not held by the client: 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-ncro_mth\\\\\\\\fixture.zip' -> 'C:\\\\\\\\Users\\\\\\\\Admin\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\johnny-inventory-cli-ncro_mth\\\\\\\\symlink.json'\""
+  ],
+  "generated_outputs_sha256": {
+    "docs/knowledge-base/cartoon-production-catalog.json": "7c6fbf18136225465dd9b9c8fcd797bb194794b452c47e8977dd29711f2bc31c",
+    "docs/knowledge-base/cartoon-production-catalog.md": "1c6b10ee1ab336c55d3790ba1318380681212a941a87829de483a44967b5e794",
+    "docs/knowledge-base/cartoon-art-metadata.json": "e234854dc24c835b26457a377f5874f5493b06769d4cc7b66a9c58dfd985dc80",
+    "docs/knowledge-base/cartoon-art-metadata.md": "9bf5f0f89663e7d495790c4ead46e39cf25e29ea08c3529b23414c74ea6fb38e",
+    "art/cartoon/character-inventory-v1/inventory.json": "4689731fa6b2e4a734864a173f5dc5c1d932b5fbf94b91c054404e1d87881576",
+    "art/cartoon/character-inventory-v1/README.md": "08590654371550c4f396f3369865b692441fee6ed9ff6536feb3080b62b4ee14"
+  },
+  "reused_command_recorder": {
+    "path": "art/cartoon/low-tide-v1/integration-v1/authoring-v1/run.py",
+    "sha256": "b47d4c1a6987fa0b969ba6446fafd9cc044fbfddbe7b82f10662389a3726ee4c"
+  },
+  "files_sha256": {
+    "authoring-v1/art_production_catalog-check.log": "056f29b71d2d8cb821922ff0ec91e9f1a0d69cf8c5dbce0852800a5fb92d8f32",
+    "authoring-v1/art_production_catalog-generate.log": "056f29b71d2d8cb821922ff0ec91e9f1a0d69cf8c5dbce0852800a5fb92d8f32",
+    "authoring-v1/art_review_metadata-check.log": "176a62696c85bf11cad413617512fd0951b4ccbaf421ea7d3749ac22d75caabd",
+    "authoring-v1/art_review_metadata-generate.log": "176a62696c85bf11cad413617512fd0951b4ccbaf421ea7d3749ac22d75caabd",
+    "authoring-v1/character-inventory-check.log": "398e56fe66a2312e6d7ad671405afc56c3bea9b4c7280f1836070b02f7307ad0",
+    "authoring-v1/character-inventory-generate.log": "398e56fe66a2312e6d7ad671405afc56c3bea9b4c7280f1836070b02f7307ad0",
+    "authoring-v1/generate.json": "1e49097affffcc2722d47b34b0416045559ce69e6817e988d70f098f5e58827f",
+    "authoring-v1/inventory-regression.log": "8c73b52b53d90ebc189af3207162b4dc6cdb50ad30b73659bc8d1127501a14dd",
+    "authoring-v1/inventory-smoke.log": "9f37ccd5cd103366225f96049996d544a6508b21972c261c019117ccc27ced6e",
+    "authoring-v1/pack-regression.log": "7db1f99c82c5287f6a86fa23db6ca6b1551742c4db9d4f5ffe407cfc70683383",
+    "authoring-v1/pack-smoke.log": "75495989c3c6c2e49af4d14653a6e0b4af789aa7ad217aeeaace3677f435fff8",
+    "authoring-v1/regression.json": "568c2510570c0450a7fb6207f6d668013c73a42c80bf06427b35528550aeee9f",
+    "authoring-v1/smoke.json": "c7d0373f882aab2162f5035b89ebc557e0350c675a1d797cceb52f310ec17235",
+    "authoring-v1/test_art_pilot_history-regression.log": "fc3a95c9104805c075da4b241bc786dc2f2647ca56a4e38b9d356bcc01c84a55",
+    "authoring-v1/test_art_pilot_history-smoke.log": "233caad0fc1547534e2c0901e7e1321a61d6e399e87a4930dd8b8f032adec9ed",
+    "authoring-v1/test_art_production_catalog-regression.log": "a680b9f1c334bfd2f6ee21e3f1d46a04c22413e15f9c7da9baf59f96c5b87351",
+    "authoring-v1/test_art_production_catalog-smoke.log": "148f890f68dc4c284ec968801d19c75636c8adb7aea3bf73ff95c85f29113cff",
+    "authoring-v1/test_art_review_metadata-regression.log": "c00a47e8eb8427ea1777c5a2278cb54fdb26fff99ae216b36ebc4e87e5ad5a25",
+    "authoring-v1/test_art_review_metadata-smoke.log": "fb93d76e54f34d6225e9743be00a60fd75b8e515f79bbfba3313098d4ea965ac",
+    "integrated-pack.json": "20e515595c2988317c213480dd33b18db698e981ae094bcb40e90dc6d7a956da",
+    "package-readback.json": "46045b7c2b53a838c3e17380446e28b14bb09afcaa7f1753b64c706613dd2e28",
+    "prepare.py": "b7d972c35ada0abcd18f1aad2f9940f4eeb5227e311229b06e102696e5282047",
+    "prior-pack.json": "96bc9dbbacfc6018e384455795941c512d76a73bb42c0d9da2c675ea1c835b62",
+    "production-acceptance.json": "e55629e66219c2ec6be985ea751fcd529c3497f55e7c6a314fca1ae982ad8fd6",
+    "promotion-controls.json": "4883fca0024a5320c1681edbaf23823d6eeb24c731ee55d23312f53bf0fdb8b9",
+    "promotion.json": "6bdc955918311286131af4ac2f2ce39f5442d7739a5e087b5133036205c99f95",
+    "REPRODUCE.md": "d7276511fb3978b9987c9ebe5bb2518d947f9abd879b6cfba38618cb6dea1227",
+    "runtime-recipe.json": "992310d432a265c4aa05bf0d8faa6906ef12bbb10c646498fda548d229a8bbe9",
+    "source-replay.json": "3716e01dc5b3fab411d092e432ba4da466c7c0f6e622bc5d71d662919e794c79",
+    "verify_promotion.py": "9aa4578ed32fb8e2e06629c1d8d419c40256b65890a7f647a1e777f2cd39a809"
+  },
+  "membership_scope": "Every files_sha256 path is relative to this integration-v1 directory and must be committed, including .log files. Only this self-binding evidence.json is omitted from the owned integration/authoring set. Windows evidence has a separate owner and binder.",
+  "excluded": [
+    "Ignored scratch baseline/rebuilt/candidate ZIPs and accepted PNG duplicates, whose hashes are recorded in package-readback and source-replay.",
+    "Existing immutable source/native/review records are referenced by exact path/hash rather than copied again.",
+    "Generated catalog/inventory outputs and live ZIP/pack are bound separately, not duplicated.",
+    "windows-feature-v1 subtree has its own independent binder and is excluded from this integration/authoring record."
+  ],
+  "limits": [
+    "Two Windows symlink-privilege tests skipped explicitly; all189 executed regressions passed.",
+    "Existing maintained validators supplied PNG-corruption and approval-coverage controls; promotion fault controls used disposable roots. No source-removal mutation is claimed.",
+    "Post-promotion raw export reproduced exact reviewed ZIP. The maintained standard packer reproduced all payloads, not the same ZIP envelope.",
+    "Native/full-platform coverage and human viewing scope remain in their separate records; this is authoring and integration evidence."
+  ]
+}

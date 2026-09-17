@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "status": "PASS",
+  "reviewed_head": "7b5eca8c04f66e2582f2c640d900b99586a3858c",
+  "review_time_utc": "2026-09-17T20:40:32.176242+00:00",
+  "scope": "Independent feature integration audit after production promotion, before merge. No runtime/source changes or tests/captures performed by this reviewer.",
+  "new_blockers": [],
+  "package": {
+    "baseline_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+    "promoted_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+    "exact_reviewed_zip_bytes": true,
+    "members": 2614,
+    "prior_payloads_preserved": 2612,
+    "new_members": {
+      "data/styles/cartoon/BMP/BACKGRND.BMP/016.png": "c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87",
+      "data/styles/cartoon/BMP/BACKGRND.BMP/017.png": "6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4"
+    },
+    "accepted_assets": 63,
+    "inherited_ledger_rows_exact": 61,
+    "pilot_history_exact": true,
+    "pack": {
+      "path": "art/cartoon/pack.json",
+      "sha256": "20e515595c2988317c213480dd33b18db698e981ae094bcb40e90dc6d7a956da"
+    }
+  },
+  "approval_and_provenance": {
+    "acceptance": {
+      "path": "art/cartoon/clouds-v1/integration-v1/production-acceptance.json",
+      "sha256": "e55629e66219c2ec6be985ea751fcd529c3497f55e7c6a314fca1ae982ad8fd6"
+    },
+    "runtime_recipe": {
+      "path": "art/cartoon/clouds-v1/integration-v1/runtime-recipe.json",
+      "sha256": "992310d432a265c4aa05bf0d8faa6906ef12bbb10c646498fda548d229a8bbe9"
+    },
+    "explicit_path_hash_bindings_checked": 25,
+    "bindings": {
+      "art/cartoon/clouds-v1/export/BMP/BACKGRND.BMP/016.png": "c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87",
+      "art/cartoon/clouds-v1/generation/016-generated-v2.png": "f16bd7802c23c3dd6040e8d5ddd181ad880e87ecf23e071bb004b9690a52be4e",
+      "art/cartoon/clouds-v1/generation/record.json": "4d323727bc9f918889be4dfbab1c5a8d9f062d9735f9e85fabd7b0401a9d51c2",
+      "art/cartoon/clouds-v1/recipe.json": "6b6ce670d31de1dc918df83a74d9f8035b6ee5a3a695bb858b10fece4494e7e7",
+      "art/cartoon/clouds-v1/export/export-report.json": "1f0d0a72b22efecc6c10bb9de255328e9e5468fbcd42dcecd3d9d29761e348be",
+      "art/cartoon/clouds-v1/export.py": "83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083",
+      "art/cartoon/clouds-v1/export/BMP/BACKGRND.BMP/017.png": "6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4",
+      "art/cartoon/clouds-v1/generation/017-generated-v2.png": "c9343aa097d1700cb736287e2e9af36ceaf6affec799913368171fb85c987a58",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/review/review.html": "f5fedab390bc64652b7b3ca3e8efaef9d817dd96771157f578c7fc184479ff21",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/review/manifest.json": "6e17734c21c5f5214e426e6e5646a3d351dec4b1b51556f53ed26fc3505fb1b2",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/review/atlas-00.png": "6cc6bdfa4859dbeedb760d1733d96c34a6f788814cbfe8e164391354c9e8006a",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/review/atlas-01.png": "43a296f9d91259f88e5475a16a45c77580570d7af84a7651df73fb88f9de0cff",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/review/atlas-02.png": "6321be0862ec0b731acf63b95dadd331c6091238ef322270d685ab19fc0a07d8",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/review/atlas-03.png": "be4e8ba78601a32bf3fb1df7db161203293f402795e323eda7361ada0bc68d69",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/review/atlas-04.png": "bf66ec6b2adc6ebf7acbb3fe5d932a4dc468d287828ea9868111f51e0ca22486",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/review/build.json": "6620726f5880d770a8d4c88b631dcd0d7936f9a22b9d528ab29f21e50106de4d",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/review/browser-review.md": "36572514976be5050a1e75bdbb211863f4fb43180bfcb9dcca5bd8001278aa87",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/evidence.json": "1d156cb3f398643d4a8d4be9a9d65943396bd15c61a9b9c87d76efcf46045ce0",
+      "art/cartoon/clouds-v1/native-v1/evidence-v1/native/summary.json": "89410d424d87f05a3c728a95fc6d9335077d1c36a1ef5b55bb5c195b184f7c21",
+      "art/cartoon/low-tide-v1/integration-v1/production-acceptance.json": "ad56c27932bd0fbf9db532c5759d3fa4a8ab0a9e1d4e0a1359302b2f251069f2",
+      "art/cartoon/clouds-v1/integration-v1/runtime-recipe.json": "992310d432a265c4aa05bf0d8faa6906ef12bbb10c646498fda548d229a8bbe9",
+      "art/cartoon/clouds-v1/integration-v1/prepare.py": "b7d972c35ada0abcd18f1aad2f9940f4eeb5227e311229b06e102696e5282047",
+      "art/cartoon/clouds-v1/integration-v1/production-acceptance.json": "e55629e66219c2ec6be985ea751fcd529c3497f55e7c6a314fca1ae982ad8fd6",
+      "art/cartoon/clouds-v1/integration-v1/integrated-pack.json": "20e515595c2988317c213480dd33b18db698e981ae094bcb40e90dc6d7a956da",
+      "art/cartoon/clouds-v1/integration-v1/package-readback.json": "46045b7c2b53a838c3e17380446e28b14bb09afcaa7f1753b64c706613dd2e28"
+    },
+    "dimensions": {
+      "016": [
+        384,
+        114
+      ],
+      "017": [
+        528,
+        152
+      ]
+    },
+    "special_footprints": false,
+    "source_sha256_semantics": "Existing HD proxy, separately bound generated sources.",
+    "historical_pending_records": "Retained unchanged; later acceptance binds shown art."
+  },
+  "native_evidence": {
+    "binder": {
+      "path": "art/cartoon/clouds-v1/native-v1/evidence-v1/evidence.json",
+      "sha256": "1d156cb3f398643d4a8d4be9a9d65943396bd15c61a9b9c87d76efcf46045ce0"
+    },
+    "copied_files_verified": 52,
+    "copied_bytes_verified": 13958297,
+    "current_source_pins_exact": 72,
+    "current_source_pin_total": 73,
+    "intentional_source_changes": [
+      {
+        "path": "assets/scrantic_data.zip",
+        "historical_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+        "current_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+      }
+    ],
+    "scope": "Readback of retained evidence, not fresh native execution."
+  },
+  "runtime": {
+    "prior_core_review": {
+      "path": "art/cartoon/low-tide-v1/integration-v1/post-merge-v1/core-review.json",
+      "sha256": "785fdefb7de8c0b6d299a99df7a4272a23691e2a4a165d305e354e78dd18edd1"
+    },
+    "prior_review_commit": "024c9943a08ede16cfa24ed37aa768cf1f020b63",
+    "all_src_files_exact": 37,
+    "maintained_code_changes_since_cloud_base": [],
+    "fresh_hotpath_review": "Cloud scheduler, style loader/fallback/night behavior, graphics flips, cloud-layer clear/free ownership reviewed for this feature. Broader src review reused only after exact 37-file hash comparison as assigned.",
+    "files": [
+      {
+        "path": "src/data/calcpath_data.h",
+        "sha256": "fdaf8cc409388b1425485801597b272105c6a788eb30825b74441e21f5041237",
+        "prior_git_blob_sha256": "06f98ba87a82bb61f330f7f2ac6075a486f2ee141bb9b3637f5ff25b16977904",
+        "working_bytes": 2850
+      },
+      {
+        "path": "src/data/story_data.h",
+        "sha256": "0f7d6cbd9a37b411839a2a9376c15e035388d00cb0f8cbf4b898dcc93eaff6f6",
+        "prior_git_blob_sha256": "51446802f188ea95ac8db0eed5a09ded878cbff86f209d9f1628dbe134448cb5",
+        "working_bytes": 10277
+      },
+      {
+        "path": "src/data/walk_data.h",
+        "sha256": "142a0f9df8dd4ac0703b41f96df124284d2a9957904d7743ee9283f607498769",
+        "prior_git_blob_sha256": "3b387634d62a915cdf308c1e370eea7a70aa07bc361eb19de70ff4931aa2ad70",
+        "working_bytes": 14513
+      },
+      {
+        "path": "src/engine/ads.c",
+        "sha256": "c4d53220327f62676a159f1b3651626a8dabafdfa5bf625b5e94d443280eb4f6",
+        "prior_git_blob_sha256": "d8eab364f3c9bb772910ed082197a5fe8f3a69572eb622e2a16038ae2b26c1a8",
+        "working_bytes": 38166
+      },
+      {
+        "path": "src/engine/ads.h",
+        "sha256": "fbe0925205b5b0ed225152d5892a5aef72e215c1d68e5f94476ddeb66c7996a1",
+        "prior_git_blob_sha256": "0528a3365871bf052e67c96da6108c1573f64e1802d6fe1452625d01eb4eab22",
+        "working_bytes": 1267
+      },
+      {
+        "path": "src/engine/art_style.c",
+        "sha256": "f6519bfbb7fb9af09ae19b3d41b546bb644dda1952160eef1956ad7466051513",
+        "prior_git_blob_sha256": "d546bea68c5259d02f6a0925ee3bf658f9c788f4536176247342b91a5834ac10",
+        "working_bytes": 16753
+      },
+      {
+        "path": "src/engine/art_style.h",
+        "sha256": "5e12338406ceec466fc678e63f5e8019c7bebf3ff60fc8068293d3f9d917c897",
+        "prior_git_blob_sha256": "5b1ff50302f8d4bab39cb2c12818232be88b53893707912f7d1587bb01683980",
+        "working_bytes": 1593
+      },
+      {
+        "path": "src/engine/bench.c",
+        "sha256": "ca747e19369cd2b57e547393ec4b63cefe3ff1f6a95d4d30fd22b218228ed03c",
+        "prior_git_blob_sha256": "9be63997007f0978ff62e5c2d7ff9cbfdd7eb1b51554a68f3382a927d98e0b68",
+        "working_bytes": 1414
+      },
+      {
+        "path": "src/engine/bench.h",
+        "sha256": "e7ff059877a2c4a747c3675767da29b01f167989f8a2ba9a57d45e47cfcbf3ad",
+        "prior_git_blob_sha256": "f83800cc7a099e71c386a2ffb5b395566c5c35ca5c2d23ad5c3a26571c176e96",
+        "working_bytes": 1036
+      },
+      {
+        "path": "src/engine/calcpath.c",
+        "sha256": "8035aef05017584b5e7e5db1dcac898ba3f51efe444efc072705d5f0523cfacb",
+        "prior_git_blob_sha256": "bf175908dba9a6d82543704b1dbc667ab56c68a8faf18bca49f618a1b17e17ba",
+        "working_bytes": 3858
+      },
+      {
+        "path": "src/engine/calcpath.h",
+        "sha256": "4b5c614adc8a960e1bbab746aa159c4c908e3377d38a2d3c0f353ae0726d915d",
+        "prior_git_blob_sha256": "5669447b1713f66d8c0e2e7c6914dafc4d7ba118a357bcc0a49bff1198595f7d",
+        "working_bytes": 982
+      },
+      {
+        "path": "src/engine/config.c",
+        "sha256": "a87b4e3d050912d7a82f3efa2d681be2ac20a72cadca3581dffa6d7e572bba58",
+        "prior_git_blob_sha256": "fbd4a579e28056a1e38ae65e44805d227d8dc1c81ec543ddd57a54b324f9476a",
+        "working_bytes": 4550
+      },
+      {
+        "path": "src/engine/config.h",
+        "sha256": "ef00caffb5bba8c4de0e8b09e84911c4c1563fb6d6e5986f3e935e54b0dfcf46",
+        "prior_git_blob_sha256": "e62502e00c6a5380991110d310a61c8d72d40a0b81ef0862064f66745520a17a",
+        "working_bytes": 1180
+      },
+      {
+        "path": "src/engine/dump.c",
+        "sha256": "b2e46c22fa854bbc0d75413b441f4afc0afb10d42b6ead737e70bc5d7e92babd",
+        "prior_git_blob_sha256": "d4e7e991f1a2d23d3a949ba841035173e85037f6154bad8d31bd5a4e255799fd",
+        "working_bytes": 20371
+      },
+      {
+        "path": "src/engine/dump.h",
+        "sha256": "27ad235d4b052886c296999aae65f8604b6b668b3428860db0aea561827226df",
+        "prior_git_blob_sha256": "428e18a6a44d1256a721bca22dee74efdb73402a8a454449d496c079de3a6d1d",
+        "working_bytes": 1334
+      },
+      {
+        "path": "src/engine/events.c",
+        "sha256": "041ac9fce76af2c3e1fc2eeef56ea9b92b45e1a4adc0087d5318720ccc2d57d2",
+        "prior_git_blob_sha256": "13d297427e0e9d712e7e6b25eab4d5ac12519597835da7e084b44e65470a9fd8",
+        "working_bytes": 10393
+      },
+      {
+        "path": "src/engine/events.h",
+        "sha256": "7b73c8f46c470f325fb6b49093cbdc9b4f3c3da598be900d37244bd98bf9ea54",
+        "prior_git_blob_sha256": "eae7cbc8d74a38280a0b320217b2303bf527cd13a7b775192fb58b2f0689dbcc",
+        "working_bytes": 1699
+      },
+      {
+        "path": "src/engine/graphics.c",
+        "sha256": "fded8d14dbfa432242170e0a16010cb882d02f437d31e5a317bfe2baafcee392",
+        "prior_git_blob_sha256": "c48a28ca3402081a5660b9299faa6d202922ad754dd7f4a333c37d4cd3144472",
+        "working_bytes": 35557
+      },
+      {
+        "path": "src/engine/graphics.h",
+        "sha256": "e2b388c6e9edfac3237c88467ba38117c4b1918b2a56f4a4d9dcd635e6fd9ecf",
+        "prior_git_blob_sha256": "43e57c976553d2c75dd3d5e34068bbd2335eecb78b1ec89e88fdeac3ab43bcf8",
+        "working_bytes": 5369
+      },
+      {
+        "path": "src/engine/island.c",
+        "sha256": "78795472d233c9b54bcd8ff32e032358e5e19434e4de7d2fdb26f521d6600737",
+        "prior_git_blob_sha256": "6e7ddc520499cd2baea3575cec450dcf066602b157eacd7134b59aca25c76fa6",
+        "working_bytes": 13297
+      },
+      {
+        "path": "src/engine/island.h",
+        "sha256": "78da2a0bcc15e38636aa8ca7d1f9c1fb7fc48b49bf44a8afd895f3b76b3bef58",
+        "prior_git_blob_sha256": "a4a416e70dfeb6b1a50d97074b2a473cc04f21773e6a77d79dad678aa2c32548",
+        "working_bytes": 1662
+      },
+      {
+        "path": "src/engine/jc_reborn.c",
+        "sha256": "50d9904cffd7c3cba9877ecec383370c612622ccd31a5a013e77755903c358c4",
+        "prior_git_blob_sha256": "2fbda78360af7016404db75148a48860d9192b84c42253f9e58f4a0efd59e590",
+        "working_bytes": 26740
+      },
+      {
+        "path": "src/engine/mytypes.h",
+        "sha256": "cd9d251a4025cb9894b3d13dfb0c05568eadd53b7c15ee16f2af49b6c07cad84",
+        "prior_git_blob_sha256": "ea0e741dbb269cf373309cd81efec31bc9df6d651cc9873e161001c869cd0972",
+        "working_bytes": 1283
+      },
+      {
+        "path": "src/engine/resource.c",
+        "sha256": "8b60a6d5936dd67ca014aaedde799e8b6f0a567ac482c836bd922a4fa93c6f43",
+        "prior_git_blob_sha256": "7a6f30dccc8295e19749a3ed0b322425b6c249802a4d42960b6f5b9e44b34a1c",
+        "working_bytes": 18026
+      },
+      {
+        "path": "src/engine/resource.h",
+        "sha256": "dfb8a1c118fb69a515931b939e7a32e05cc05688b2c09875b496211dcac412af",
+        "prior_git_blob_sha256": "a22cee6196d85f1c76c3e85bc44c3926281c46f650fdf5c00cb6f915f575da33",
+        "working_bytes": 3316
+      },
+      {
+        "path": "src/engine/sound.c",
+        "sha256": "eec8a1b43e33eccbd4e7f835ca55b7d9ab952818f2093f6a996d69d1ce6a91ee",
+        "prior_git_blob_sha256": "83787c86ad22d0a9a19b96ab8159874a3af332a5d0c2ae78d0631d3d9128e383",
+        "working_bytes": 7264
+      },
+      {
+        "path": "src/engine/sound.h",
+        "sha256": "36bf9900ea05f164190b042905e1d5b5e163015055fa1f9f5cd9ec15c54a1e47",
+        "prior_git_blob_sha256": "49cb48645bb85b958edceb7df31f34594824c1039e81178bdcc8b3d940f7f2c2",
+        "working_bytes": 1028
+      },
+      {
+        "path": "src/engine/story.c",
+        "sha256": "b503cca4115b5852f4ed9cdc02c5aef77498c793bac9fdb2b517b19cd8c4b9a4",
+        "prior_git_blob_sha256": "32148bd4879931d8db5cf91ab4349e347ec279c4c552efaeca85032ffb89902f",
+        "working_bytes": 8973
+      },
+      {
+        "path": "src/engine/story.h",
+        "sha256": "e2bc55888fa518bbac1566f059111e2b4e278a986639cb825dd28a8677663e0c",
+        "prior_git_blob_sha256": "a853a877766b6a9092e372ca94d6f8733dff662ba64e89f98032befd93eb146a",
+        "working_bytes": 1677
+      },
+      {
+        "path": "src/engine/ttm.c",
+        "sha256": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6",
+        "prior_git_blob_sha256": "4a856f695a64eeab5d2c255b9c53395bc89b4e475b72cd50af3773972556eba3",
+        "working_bytes": 19276
+      },
+      {
+        "path": "src/engine/ttm.h",
+        "sha256": "7a6a8d40da48f8316d204cc4a8bb664e7cf3950dde0a75f79c0a6bf8b080e48d",
+        "prior_git_blob_sha256": "e41bc75724bf027784398b8dd37f581c5a2dcf1cd72974b70a1c53d8c51cace3",
+        "working_bytes": 1252
+      },
+      {
+        "path": "src/engine/uncompress.c",
+        "sha256": "c8c0483ef3ae43e242ecbfff622c4735aef6f330ebce04f4cda8b43bfbba6b15",
+        "prior_git_blob_sha256": "8718e77512eceeb4ebecb28009889aff08d7a4dcbe1a85d8473b101268c46a4a",
+        "working_bytes": 9294
+      },
+      {
+        "path": "src/engine/uncompress.h",
+        "sha256": "c58f198f9dad5e00ac344925a0a9c45087253d6c6c950bd06cbc701c906c2148",
+        "prior_git_blob_sha256": "6001c379486b6ad09239a7e23d45881fcabeee8228b61aec0629bb1d76ce546e",
+        "working_bytes": 1070
+      },
+      {
+        "path": "src/engine/utils.c",
+        "sha256": "c50c4ae6de6a59e4fbd1a169592eb920778449f8c000175cb55d66595343c10f",
+        "prior_git_blob_sha256": "4207d99946b0fee2fd00186435d42928ad9e2952481262827513ec336d705491",
+        "working_bytes": 8331
+      },
+      {
+        "path": "src/engine/utils.h",
+        "sha256": "9e6fb0678b6c62c63bea5f58f1772cf02aa7510809639f4984e94d0fa3d43104",
+        "prior_git_blob_sha256": "4df55daa4c1b468c545bd7523eb261210f5bf9fd150b01dc0331c61f13269c19",
+        "working_bytes": 3078
+      },
+      {
+        "path": "src/engine/walk.c",
+        "sha256": "d6b88ef1e16a2ad10944ce520485a472d4b13d53fd744087e9c5e573e1908f9d",
+        "prior_git_blob_sha256": "a6d49c73188850642a68ff5da1053e032d2c566d0d5e4f0554c1c17946de09b3",
+        "working_bytes": 7048
+      },
+      {
+        "path": "src/engine/walk.h",
+        "sha256": "cd828778b83c73428ba9d7897a87aa7254b7d2d54eb1eb3f31a1ed625cbf5a91",
+        "prior_git_blob_sha256": "e859fa1fd73d13c5372aff3b21086d3a9ac283d3034102cc5d7d70fab606b4a7",
+        "working_bytes": 1097
+      }
+    ],
+    "new_regressions_leaks_dead_or_inoperable_calls": [],
+    "existing_backlog": "Prior low-tide core audit and BACKLOG retain pre-existing engine/input/audio/decoder limitations. This PNG-only change does not resolve or introduce those conditions.",
+    "optimization": "No measured optimization claim or code change."
+  },
+  "catalog": {
+    "production": {
+      "path": "docs/knowledge-base/cartoon-production-catalog.json",
+      "sha256": "7c6fbf18136225465dd9b9c8fcd797bb194794b452c47e8977dd29711f2bc31c"
+    },
+    "summary": {
+      "slots": 2401,
+      "sprites": 2391,
+      "screens": 10,
+      "accepted": 63,
+      "pending": 2338,
+      "hd_proxy_blank_slots": 119,
+      "distinct_hd_png_bytes": 2141,
+      "exact_duplicate_slots": 260,
+      "supplied_original_evidence_slots": 51
+    },
+    "historical_pilot_metadata": {
+      "path": "docs/knowledge-base/cartoon-art-metadata.json",
+      "sha256": "e234854dc24c835b26457a377f5874f5493b06769d4cc7b66a9c58dfd985dc80"
+    },
+    "pilot_current_summary": {
+      "retained": 5,
+      "replaced": 16
+    },
+    "character_inventory": {
+      "path": "art/cartoon/character-inventory-v1/inventory.json",
+      "sha256": "4689731fa6b2e4a734864a173f5dc5c1d932b5fbf94b91c054404e1d87881576"
+    },
+    "accepted_johnny": 28,
+    "unchanged_character_summary": true
+  },
+  "reviewed_source_files": [
+    {
+      "path": "art/cartoon/clouds-v1/integration-v1/prepare.py",
+      "sha256": "b7d972c35ada0abcd18f1aad2f9940f4eeb5227e311229b06e102696e5282047"
+    },
+    {
+      "path": "art/cartoon/clouds-v1/integration-v1/verify_promotion.py",
+      "sha256": "9aa4578ed32fb8e2e06629c1d8d419c40256b65890a7f647a1e777f2cd39a809"
+    },
+    {
+      "path": "art/cartoon/clouds-v1/export.py",
+      "sha256": "83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083"
+    },
+    {
+      "path": "art/cartoon/clouds-v1/export/verify.py",
+      "sha256": "06bcff0f64747d396323c4cff1af00713338d1a3d076cc2f298437d0536bd4dd"
+    },
+    {
+      "path": "art/cartoon/clouds-v1/native-v1/capture.py",
+      "sha256": "902e613aeec8daf4a2ec79bc468c66fd80920e76b66c641fe50807a2fddbc29c"
+    },
+    {
+      "path": "art/cartoon/clouds-v1/native-v1/driver.c",
+      "sha256": "19d9438ae787ce958757975a3cdc2ba43aae55bb29608a5486d417ba1f1f1e6f"
+    },
+    {
+      "path": "art/cartoon/clouds-v1/native-v1/run.py",
+      "sha256": "f0b0646d52dcbc038acd022024d428d58648dc11ce77ba6b1497f2a111d4bc3c"
+    },
+    {
+      "path": "tools/art_common.py",
+      "sha256": "2e003886e3504f6af4725eaf875c3d793542dc0efd4ccf45042d670c96f6e914"
+    },
+    {
+      "path": "tools/art_pack.py",
+      "sha256": "4dd755019d6d203574e003d83913313eb17aa35288b5543844b76d679c721fd6"
+    },
+    {
+      "path": "tools/art_production_catalog.py",
+      "sha256": "b6eae10f72a50745d8ed9c465d649fd88623de5bdf56de1a21f5ed37ea246f50"
+    },
+    {
+      "path": "tools/art_review_metadata.py",
+      "sha256": "f5fb1aa8aea584cc9f4a97d84d92a55e6d2dee6dcc430136629962e106b61378"
+    },
+    {
+      "path": "tests/test_art_tools.py",
+      "sha256": "4b26006c33af2bcb8b699f7bd66cdad5910256b86b397fb9554697bd0185113f"
+    },
+    {
+      "path": "tests/test_art_production_catalog.py",
+      "sha256": "d3474fc4af8865fccef16ea39f77156c743b8e029f462de4ba0af7fc292e02df"
+    },
+    {
+      "path": "tests/test_art_pilot_history.py",
+      "sha256": "bfb73029ef913f5b4b92717a5cebc260eca0e00eebd5bf75f07b6c47b8225f04"
+    }
+  ],
+  "retained_checks_reviewed": {
+    "package": {
+      "path": "art/cartoon/clouds-v1/integration-v1/package-readback.json",
+      "sha256": "46045b7c2b53a838c3e17380446e28b14bb09afcaa7f1753b64c706613dd2e28"
+    },
+    "promotion_controls": {
+      "path": "art/cartoon/clouds-v1/integration-v1/promotion-controls.json",
+      "sha256": "4883fca0024a5320c1681edbaf23823d6eeb24c731ee55d23312f53bf0fdb8b9"
+    },
+    "promotion": {
+      "path": "art/cartoon/clouds-v1/integration-v1/promotion.json",
+      "sha256": "6bdc955918311286131af4ac2f2ce39f5442d7739a5e087b5133036205c99f95"
+    },
+    "native_summary": {
+      "path": "art/cartoon/clouds-v1/native-v1/evidence-v1/native/summary.json",
+      "sha256": "89410d424d87f05a3c728a95fc6d9335077d1c36a1ef5b55bb5c195b184f7c21"
+    },
+    "note": "Owner runs ordered authoring suite and root runs Windows gate separately; not rerun by this read-only audit.",
+    "integration_binder": {
+      "path": "art/cartoon/clouds-v1/integration-v1/evidence.json",
+      "sha256": "40f76dc0d7de3c69fafae04a877b49d6c207a50cd4a05591272245c07056acfe",
+      "files_rehashed": 30
+    },
+    "authoring": {
+      "smoke_tests": 16,
+      "regression_enumerated": 191,
+      "regression_executed": 189,
+      "explicit_skips": 2,
+      "smoke_sha256": "c7d0373f882aab2162f5035b89ebc557e0350c675a1d797cceb52f310ec17235",
+      "regression_sha256": "568c2510570c0450a7fb6207f6d668013c73a42c80bf06427b35528550aeee9f"
+    },
+    "windows": {
+      "path": "art/cartoon/clouds-v1/integration-v1/windows-feature-v1/evidence.json",
+      "sha256": "716178a0bacc13e8819c5a25e7648093550532b17c2616f7d3a0268b2e3d02e4",
+      "status": "PASS",
+      "protected_inputs_unchanged": 149,
+      "capture_markers": 32,
+      "attribution": "Root-owned executed gate; read report, not rerun or independently revalidated all captures here."
+    }
+  },
+  "replay_followup": {
+    "finding": "verify_promotion.py expects build/clouds-v1/integration-v2/baseline.zip; prepare.py default output is integration-v1.",
+    "disposition": "REPRODUCE.md now recovers the pinned baseline at integration-v2/baseline.zip and copies the verified exact candidate to build/clouds-v1/candidate.zip before running the preserved harness in a disposable checkout. No frozen helper or proof was rewritten.",
+    "status": "closed",
+    "documentation": {
+      "path": "art/cartoon/clouds-v1/integration-v1/REPRODUCE.md",
+      "sha256": "d7276511fb3978b9987c9ebe5bb2518d947f9abd879b6cfba38618cb6dea1227"
+    },
+    "executed_source_replay": {
+      "path": "art/cartoon/clouds-v1/integration-v1/source-replay.json",
+      "sha256": "3716e01dc5b3fab411d092e432ba4da466c7c0f6e622bc5d71d662919e794c79"
+    }
+  },
+  "limits": [
+    "Not a post-merge audit, fresh full native gate or new human approval.",
+    "Explicit native fixtures cover both wind directions, shifted night and zero clouds, not every story or complete wrap.",
+    "Night keeps authored cloud RGB against unchanged fallback NIGHT.SCR; no night-scene art acceptance implied.",
+    "Historical catalog supplied-original coverage is intentionally selective; cloud originals remain separately bound in clouds-v1/reference.",
+    "Windows and authoring execution are attributed to their retained owner reports, not new runs by this reviewer."
+  ]
+}

@@ -43,5 +43,6 @@ The saved motion review remains directly viewable without rebuilding captures.
 The [reusable lessons](art-style-learnings-low-tide.md) preserve wave ancestry,
 white007 selection, common family transforms, alpha-fringe measurements,
 native timing and approval scope. Remaining work stays in [BACKLOG.md](../BACKLOG.md).
-Clouds are the next bounded group, followed by night and alternate ocean states;
-independent props and vehicle groups can follow those environment checks.
+The later [cloud delivery](cartoon-clouds-verification.md) completes the ordinary
+BACKGRND015-017 group. Night and alternate ocean states remain next, followed by
+independent props and vehicle groups.

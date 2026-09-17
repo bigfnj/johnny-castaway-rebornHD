@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "phase": "generate",
+  "command_recorder_sha256": "b47d4c1a6987fa0b969ba6446fafd9cc044fbfddbe7b82f10662389a3726ee4c",
+  "protected_inputs": {
+    "assets/scrantic_data.zip": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+    "art/cartoon/pack.json": "20e515595c2988317c213480dd33b18db698e981ae094bcb40e90dc6d7a956da",
+    "art/cartoon/low-tide-v1/integration-v1/runtime-recipe.json": "c81e0472b10c09b5e4b79c991be761e1ceffdb87a6b1046f39fe9703e980c6b4",
+    "art/cartoon/low-tide-v1/integration-v1/production-acceptance.json": "ad56c27932bd0fbf9db532c5759d3fa4a8ab0a9e1d4e0a1359302b2f251069f2",
+    "tools/art_common.py": "2e003886e3504f6af4725eaf875c3d793542dc0efd4ccf45042d670c96f6e914",
+    "tools/art_inventory.py": "0f17eecde17a412e011b4f7ba2fb427c414137461bf84fc34904ce4b2c30eb31",
+    "tools/art_pack.py": "4dd755019d6d203574e003d83913313eb17aa35288b5543844b76d679c721fd6",
+    "tools/art_production_catalog.py": "b6eae10f72a50745d8ed9c465d649fd88623de5bdf56de1a21f5ed37ea246f50",
+    "tools/art_review_metadata.py": "f5fb1aa8aea584cc9f4a97d84d92a55e6d2dee6dcc430136629962e106b61378",
+    "tests/test_art_footprint.py": "eff2b8f6f17627713a793bf7bbead83fc20e4e741b0f907f3a97ba942c7296ef",
+    "tests/test_art_inventory.py": "1d72fa04dfc61eaf1d4fe61ca56f00e468f7c8ae46d0de84dc10d7807cd63b6e",
+    "tests/test_art_pilot_history.py": "bfb73029ef913f5b4b92717a5cebc260eca0e00eebd5bf75f07b6c47b8225f04",
+    "tests/test_art_production_catalog.py": "d3474fc4af8865fccef16ea39f77156c743b8e029f462de4ba0af7fc292e02df",
+    "tests/test_art_review_metadata.py": "1593d8f539901ceb31eedbb4f2fa73aa7ae46a9a4683e003a9de900349fbb658",
+    "tests/test_art_tools.py": "4b26006c33af2bcb8b699f7bd66cdad5910256b86b397fb9554697bd0185113f"
+  },
+  "protected_inputs_unchanged": true,
+  "commands": [
+    {
+      "label": "art_review_metadata-generate",
+      "argv": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tools/art_review_metadata.py"
+      ],
+      "exit_code": 0,
+      "log": "art_review_metadata-generate.log",
+      "sha256": "176a62696c85bf11cad413617512fd0951b4ccbaf421ea7d3749ac22d75caabd",
+      "tests": null,
+      "skip_lines": []
+    },
+    {
+      "label": "art_production_catalog-generate",
+      "argv": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "tools/art_production_catalog.py"
+      ],
+      "exit_code": 0,
+      "log": "art_production_catalog-generate.log",
+      "sha256": "056f29b71d2d8cb821922ff0ec91e9f1a0d69cf8c5dbce0852800a5fb92d8f32",
+      "tests": null,
+      "skip_lines": []
+    },
+    {
+      "label": "character-inventory-generate",
+      "argv": [
+        "TOOLBOX_PYTHON",
+        "-B",
+        "art/cartoon/character-inventory-v1/build_inventory.py"
+      ],
+      "exit_code": 0,
+      "log": "character-inventory-generate.log",
+      "sha256": "398e56fe66a2312e6d7ad671405afc56c3bea9b4c7280f1836070b02f7307ad0",
+      "tests": null,
+      "skip_lines": []
+    }
+  ],
+  "scope": "Existing maintained commands only; this recorder adds no art or runtime validation rules."
+}

@@ -1,0 +1,17 @@
+# Cloud feature integration audit
+
+No remaining blocker was found in the approved 63-asset integration. This is a read-only feature review at source HEAD `7b5eca8c04f66e2582f2c640d900b99586a3858c` plus the uncommitted integration, before merge. The companion JSON records exact reviewed files and hashes.
+
+Independent ZIP comparison confirms production `a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d` equals the reviewed archive byte-for-byte. All 2,612 previous member payloads remain exact; only BACKGRND016/017 were added. All 61 inherited ledger rows and pilot history remain unchanged. The new acceptance binds the shown page, atlas media, native summary, two selected PNGs and separate raw/export provenance. HD proxy identity remains the meaning of `source_sha256`. Historical pending records retain their original scope.
+
+Cloud016 is 384 x 114 and cloud017 is 528 x 152. They use ordinary exact 2x canvases and zero offsets; no shoreline footprint exception applies. Both catalog entries agree with the PNG, recipe and HD proxy hashes. The production catalog reports 63 accepted and 2,338 pending slots. Character inventory still reports 28 accepted Johnny drawings and now pins the promoted archive. Historical pilot metadata remains five retained and 16 replaced.
+
+All 52 copied native evidence files rehash exactly. After promotion, 72 of its 73 current source pins still match; the sole intentional difference is the archive transition from baseline `a8987430...` to approved `a87a1f52...`. The final integration binder's 30 files also rehash exactly. Do not interpret the historical baseline ZIP pin as an unchanged live-production assertion.
+
+All 37 `src` files exactly match the prior low-tide core audit. Source, platform, maintained tools/tests, CMake and CI have no changes from the cloud baseline. This feature review also inspected the actual cloud scheduler, loader/fallback path, full-canvas flips and cloud-layer lifetime. No new regression, leak, dead call or inoperable path was found. Existing engine/audio/input/decoder issues remain scoped by BACKLOG and the earlier core audit. No performance saving is claimed.
+
+The integration helper validates the exact candidate and retained payloads, resolves inherited approval origins, compares the standard packer's complete payload map and checks promotion readback. The recorded controls actually corrupt a disposable PNG/approval input and exercise candidate refusal plus partial report-write rollback with restored positives. A concrete replay-documentation issue was corrected: the preserved transaction harness needs both scratch baseline and candidate at fixed paths. `REPRODUCE.md` now supplies both with hash checks and confines writer replay to a disposable checkout.
+
+Retained authoring evidence reports 16 smoke tests, then 189 executed regressions plus two explicit skips, 191 enumerated. The root-owned Windows gate passed with all 149 protected inputs stable and 32 capture markers. No tests or captures were rerun by this reviewer.
+
+The native review uses explicit valid cloud fixtures and recorded logical timing. It covers both wind directions, shifted night and a zero-cloud control, not every story or complete wrap traversal. Night preserves the authored cloud RGB over the unchanged fallback background. The medium cloud's flatter silhouette was explicitly included in the user's acceptance. A fresh post-merge audit remains a separate step.

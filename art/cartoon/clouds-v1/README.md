@@ -1,6 +1,10 @@
 # Cartoon moving clouds
 
-Work in progress. Human review and production acceptance are pending.
+The user accepted the displayed clouds with "Yes, keep these clouds". See
+`integration-v1/production-acceptance.json` and the
+[delivery verification](../../../docs/cartoon-clouds-verification.md).
+Earlier generation, recipe and native evidence retain their pending status as
+historical checkpoints; the later acceptance record binds the exact reviewed art.
 
 The ordinary island cloud selector draws `BACKGRND.BMP` frames 015, 016 and
 017. Frame 015 is already approved Cartoon artwork. This batch prepares the
@@ -26,7 +30,7 @@ Those drawings are outside this batch until their use is established.
 edits. `style-reference/source.json` binds these copies to their source members.
 The original-reference export and runtime preflight are recorded separately.
 
-Selected draft exports are `export/BMP/BACKGRND.BMP/016.png` and `017.png`.
+Selected exports are `export/BMP/BACKGRND.BMP/016.png` and `017.png`.
 `generation/record.json` identifies the four raw tool outputs, selected v2
 drawings and edit ancestry. Exact prompts and ordered local references are in
 `generation/requests.json`, `016-v2-request.json` and `017-v2-request.json`.

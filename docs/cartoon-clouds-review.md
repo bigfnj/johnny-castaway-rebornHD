@@ -1,8 +1,13 @@
 # Cartoon cloud review checkpoint
 
-Two draft clouds, BACKGRND016 and017, are ready for human review. Production
-remains at 61 approved Cartoon assets; the private review archive has 63.
-No application source, shipped asset archive or production ledger is changed.
+The user subsequently approved this checkpoint with "Yes, keep these clouds".
+See [the delivery verification](cartoon-clouds-verification.md) for integration.
+The table below records the earlier review state and its evidence limits.
+
+At this checkpoint, two draft clouds, BACKGRND016 and017, were ready for human
+review. Production remained at 61 approved Cartoon assets; the private review
+archive had 63. Application source, the shipped archive and production ledger
+were unchanged.
 
 | Item | Evidence and decision |
 | --- | --- |

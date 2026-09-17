@@ -17,8 +17,8 @@
     "slots": 2401,
     "sprites": 2391,
     "screens": 10,
-    "accepted": 61,
-    "pending": 2340,
+    "accepted": 63,
+    "pending": 2338,
     "hd_proxy_blank_slots": 119,
     "distinct_hd_png_bytes": 2141,
     "exact_duplicate_slots": 260,
@@ -38,7 +38,7 @@
       "resource": "BACKGRND.BMP",
       "priority": 2,
       "slots": 42,
-      "accepted": 28,
+      "accepted": 30,
       "hd_proxy_blank_slots": 0
     },
     {
@@ -2719,10 +2719,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/clouds-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/clouds-v1/integration-v1/runtime-recipe.json",
+        "png_sha256": "c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87"
       }
     },
     {
@@ -2757,10 +2757,10 @@
         "independently_reread": false
       },
       "production": {
-        "status": "pending",
-        "acceptance": null,
-        "recipe": null,
-        "png_sha256": null
+        "status": "accepted",
+        "acceptance": "art/cartoon/clouds-v1/integration-v1/production-acceptance.json",
+        "recipe": "art/cartoon/clouds-v1/integration-v1/runtime-recipe.json",
+        "png_sha256": "6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4"
       }
     },
     {
@@ -93324,12 +93324,16 @@
       "basis": "utf8-normalized-newlines"
     },
     "art/cartoon/pack.json": {
-      "sha256": "96bc9dbbacfc6018e384455795941c512d76a73bb42c0d9da2c675ea1c835b62",
+      "sha256": "20e515595c2988317c213480dd33b18db698e981ae094bcb40e90dc6d7a956da",
       "basis": "utf8-normalized-newlines"
     },
     "docs/knowledge-base/cartoon-original-reference.json": {
       "sha256": "f6293e86dc4773fa5548f205df73afa970729662dab06a5bff111c3b0f9692ef",
       "basis": "utf8-normalized-newlines"
+    },
+    "art/cartoon/clouds-v1/integration-v1/production-acceptance.json": {
+      "sha256": "e55629e66219c2ec6be985ea751fcd529c3497f55e7c6a314fca1ae982ad8fd6",
+      "basis": "file-bytes"
     },
     "art/cartoon/low-tide-v1/integration-v1/production-acceptance.json": {
       "sha256": "ad56c27932bd0fbf9db532c5759d3fa4a8ab0a9e1d4e0a1359302b2f251069f2",
@@ -93389,6 +93393,10 @@
     },
     "art/cartoon/low-tide-v1/integration-v1/runtime-recipe.json": {
       "sha256": "c81e0472b10c09b5e4b79c991be761e1ceffdb87a6b1046f39fe9703e980c6b4",
+      "basis": "file-bytes"
+    },
+    "art/cartoon/clouds-v1/integration-v1/runtime-recipe.json": {
+      "sha256": "992310d432a265c4aa05bf0d8faa6906ef12bbb10c646498fda548d229a8bbe9",
       "basis": "file-bytes"
     },
     "art/cartoon/walk-expansion-v1/reference/metadata.json": {

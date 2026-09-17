@@ -34,5 +34,5 @@ the primary checkout was left untouched.
 | --- | --- |
 | Keep the accepted low-tide gaps | The user withdrew the visual objection. Do not bridge them in a later cleanup without a new art review. |
 | Preserve the current61-asset partial pack | Existing Johnny, high-tide and seasonal drawings remain byte-identical. |
-| Continue with clouds | Review CLOUDS000-003 as the next small group, then night and alternate ocean states before independent props and vehicles. |
+| Continue with clouds | This audit initially named CLOUDS000-003. The later [runtime preflight](../art/cartoon/clouds-v1/preflight/runtime.md) established that ordinary moving clouds are BACKGRND015-017; CLOUDS reachability remains unproven. The [cloud delivery](cartoon-clouds-verification.md) completes the active group. Night and alternate oceans remain next before independent props and vehicles. |
 | Reuse the saved image lessons | Follow [low-tide guidance](art-style-learnings-low-tide.md) for unmasked source reuse, family transforms, white-phase selection, native timing and scoped approvals. |

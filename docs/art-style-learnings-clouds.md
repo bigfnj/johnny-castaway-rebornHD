@@ -1,7 +1,9 @@
 # Moving cloud lessons
 
-This batch is in human review. Its selected drafts are not production approvals.
-See [the authoring record](../art/cartoon/clouds-v1/README.md).
+The user accepted the reviewed clouds with "Yes, keep these clouds". See the
+[authoring record](../art/cartoon/clouds-v1/README.md) and
+[delivery verification](cartoon-clouds-verification.md). Earlier draft and
+native-run records retain their original pending status.
 
 ## Identify the active resource first
 
@@ -23,8 +25,8 @@ image as separately identified inputs in each generation prompt.
 The first drafts exceeded the available height. Targeted image-tool edits made
 them shallower. A numeric bounding box in a prompt is guidance, not a geometric
 guarantee: the second 016 draft became lower than requested. It fits cleanly but
-has about 89 percent of the original silhouette area, so that change remains a
-human visual choice. The second 017 draft retains its distinctive trailing
+has about 89 percent of the original silhouette area; the user accepted that
+shape in the native comparison. The second 017 draft retains its distinctive trailing
 cloudlet and lower opening. No Python drawing or silhouette painting was used.
 
 ## Inspect alpha and actual presentation

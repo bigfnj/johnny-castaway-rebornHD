@@ -67,9 +67,7 @@
     "BMP/BACKGRND.BMP/038.png",
     "BMP/BACKGRND.BMP/039.png",
     "BMP/BACKGRND.BMP/040.png",
-    "BMP/BACKGRND.BMP/041.png",
-    "BMP/BACKGRND.BMP/016.png",
-    "BMP/BACKGRND.BMP/017.png"
+    "BMP/BACKGRND.BMP/041.png"
   ],
   "assets": [
     {
@@ -669,27 +667,11 @@
       "alpha": "transparent",
       "recipe": "art/cartoon/low-tide-v1/integration-v1/runtime-recipe.json",
       "review": "art/cartoon/low-tide-v1/integration-v1/production-acceptance.json"
-    },
-    {
-      "path": "BMP/BACKGRND.BMP/016.png",
-      "sha256": "c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87",
-      "source_sha256": "05487f196124175837e0685f7efc09a27e10306961ed8583157a718d842d012b",
-      "alpha": "transparent",
-      "recipe": "art/cartoon/clouds-v1/integration-v1/runtime-recipe.json",
-      "review": "art/cartoon/clouds-v1/integration-v1/production-acceptance.json"
-    },
-    {
-      "path": "BMP/BACKGRND.BMP/017.png",
-      "sha256": "6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4",
-      "source_sha256": "17c76381bdd32a00d82475966483eab59403b4baac7d801c7b423790f42c2a80",
-      "alpha": "transparent",
-      "recipe": "art/cartoon/clouds-v1/integration-v1/runtime-recipe.json",
-      "review": "art/cartoon/clouds-v1/integration-v1/production-acceptance.json"
     }
   ],
-  "review_status": "Approved medium and large ordinary island cloud companions; prior character, island, tide and seasonal approvals inherited unchanged.",
-  "acceptance_record": "art/cartoon/clouds-v1/integration-v1/production-acceptance.json",
-  "scope": "Partial Cartoon pack: 28 Johnny poses, 31 island/environment assets and four seasonal decorations. Other story slots and night backgrounds retain fallback.",
+  "review_status": "Approved low-tide beach, rock and ripple composition; prior character, high-tide and seasonal approvals inherited unchanged.",
+  "acceptance_record": "art/cartoon/low-tide-v1/integration-v1/production-acceptance.json",
+  "scope": "Partial Cartoon pack: 28 Johnny poses, 29 island/environment assets and four seasonal decorations. Clouds, night and other story slots retain fallback.",
   "pilot_history": {
     "acceptance_record": "art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json",
     "sha256": "ce7f3832982bcfbef13f9ce6dc06c1f60ce774b89aca088247442040fd767a0c",

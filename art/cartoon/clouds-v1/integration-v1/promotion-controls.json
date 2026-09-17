@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "helper_sha256": "b7d972c35ada0abcd18f1aad2f9940f4eeb5227e311229b06e102696e5282047",
+  "harness_sha256": "9aa4578ed32fb8e2e06629c1d8d419c40256b65890a7f647a1e777f2cd39a809",
+  "cases": [
+    {
+      "mode": "positive",
+      "sandbox": "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\promotion-controls\\positive-sl46eh_l",
+      "exit_code": 0,
+      "stdout": "WITNESS promotion b7d972c35ada0abcd18f1aad2f9940f4eeb5227e311229b06e102696e5282047\nPROMOTED a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d\nPASS disposable promotion readback\n",
+      "stderr": ""
+    },
+    {
+      "mode": "corrupt_candidate",
+      "sandbox": "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\promotion-controls\\corrupt_candidate-o8xxkqqr",
+      "exit_code": 0,
+      "stdout": "WITNESS promotion b7d972c35ada0abcd18f1aad2f9940f4eeb5227e311229b06e102696e5282047\nPASS refused or rolled back: candidate identity changed\n",
+      "stderr": ""
+    },
+    {
+      "mode": "report_failure",
+      "sandbox": "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\promotion-controls\\report_failure-n80vc5bn",
+      "exit_code": 0,
+      "stdout": "WITNESS promotion b7d972c35ada0abcd18f1aad2f9940f4eeb5227e311229b06e102696e5282047\nPASS refused or rolled back: controlled promotion record write failure\n",
+      "stderr": ""
+    },
+    {
+      "mode": "positive",
+      "sandbox": "D:\\.ai-work\\worktrees\\johnny-cartoon-clouds\\build\\clouds-v1\\promotion-controls\\positive-8d0vcsjo",
+      "exit_code": 0,
+      "stdout": "WITNESS promotion b7d972c35ada0abcd18f1aad2f9940f4eeb5227e311229b06e102696e5282047\nPROMOTED a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d\nPASS disposable promotion readback\n",
+      "stderr": ""
+    }
+  ],
+  "scope": "Four fresh subprocesses use only disposable ZIP/ledger/report paths. Candidate corruption refuses writes; a partial report-write fault rolls back both files and removes the incomplete new record. No live promotion is performed by these checks."
+}

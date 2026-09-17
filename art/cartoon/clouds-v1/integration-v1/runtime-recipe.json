@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "accepted": true,
+  "scope": "Two approved ordinary island clouds on unchanged original runtime canvases and logical coordinates.",
+  "source_sha256_semantics": "Existing HD proxy bytes, not generated raw art.",
+  "baseline_commit": "de1e489e5c2fe3b22d03e8650bfc26cc1d8a12cc",
+  "baseline_archive_sha256": "a89874307d77d805ab41ef55ba87e45e98ce6e9e589e1bea0d081629e5745d66",
+  "reviewed_candidate_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "frames": [
+    {
+      "frame": 16,
+      "path": "BMP/BACKGRND.BMP/016.png",
+      "runtime_canvas": [
+        384,
+        114
+      ],
+      "candidate_png_sha256": "c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87",
+      "selected_png": {
+        "path": "art/cartoon/clouds-v1/export/BMP/BACKGRND.BMP/016.png",
+        "sha256": "c7cece451e9f42f84eb2997fe6f8720d7d2dbbde3d89487be21d8c14848e2c87"
+      },
+      "source_sha256": "05487f196124175837e0685f7efc09a27e10306961ed8583157a718d842d012b",
+      "generated_source": {
+        "path": "art/cartoon/clouds-v1/generation/016-generated-v2.png",
+        "sha256": "f16bd7802c23c3dd6040e8d5ddd181ad880e87ecf23e071bb004b9690a52be4e"
+      },
+      "generation_record": {
+        "path": "art/cartoon/clouds-v1/generation/record.json",
+        "sha256": "4d323727bc9f918889be4dfbab1c5a8d9f062d9735f9e85fabd7b0401a9d51c2"
+      },
+      "authoring_recipe": {
+        "path": "art/cartoon/clouds-v1/recipe.json",
+        "sha256": "6b6ce670d31de1dc918df83a74d9f8035b6ee5a3a695bb858b10fece4494e7e7"
+      },
+      "authoring_report": {
+        "path": "art/cartoon/clouds-v1/export/export-report.json",
+        "sha256": "1f0d0a72b22efecc6c10bb9de255328e9e5468fbcd42dcecd3d9d29761e348be"
+      },
+      "exporter": {
+        "path": "art/cartoon/clouds-v1/export.py",
+        "sha256": "83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083"
+      },
+      "affine_forward": [
+        0.328125,
+        0,
+        -63.3125,
+        0,
+        0.328125,
+        -111.546875
+      ]
+    },
+    {
+      "frame": 17,
+      "path": "BMP/BACKGRND.BMP/017.png",
+      "runtime_canvas": [
+        528,
+        152
+      ],
+      "candidate_png_sha256": "6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4",
+      "selected_png": {
+        "path": "art/cartoon/clouds-v1/export/BMP/BACKGRND.BMP/017.png",
+        "sha256": "6e22cf789aba9df5fc48d90a0b2d4b64a3624ff627fac8c784da589d01ccd3a4"
+      },
+      "source_sha256": "17c76381bdd32a00d82475966483eab59403b4baac7d801c7b423790f42c2a80",
+      "generated_source": {
+        "path": "art/cartoon/clouds-v1/generation/017-generated-v2.png",
+        "sha256": "c9343aa097d1700cb736287e2e9af36ceaf6affec799913368171fb85c987a58"
+      },
+      "generation_record": {
+        "path": "art/cartoon/clouds-v1/generation/record.json",
+        "sha256": "4d323727bc9f918889be4dfbab1c5a8d9f062d9735f9e85fabd7b0401a9d51c2"
+      },
+      "authoring_recipe": {
+        "path": "art/cartoon/clouds-v1/recipe.json",
+        "sha256": "6b6ce670d31de1dc918df83a74d9f8035b6ee5a3a695bb858b10fece4494e7e7"
+      },
+      "authoring_report": {
+        "path": "art/cartoon/clouds-v1/export/export-report.json",
+        "sha256": "1f0d0a72b22efecc6c10bb9de255328e9e5468fbcd42dcecd3d9d29761e348be"
+      },
+      "exporter": {
+        "path": "art/cartoon/clouds-v1/export.py",
+        "sha256": "83af30fb11f5472ad15be986d7467fe04eb37716ed89b399e35d058efb5d9083"
+      },
+      "affine_forward": [
+        0.390625,
+        0,
+        -37.28125,
+        0,
+        0.390625,
+        -130.640625
+      ]
+    }
+  ],
+  "replay": "Recover the pinned baseline into separate scratch and use export.py --baseline; do not replace promoted live assets to replay."
+}

@@ -4,8 +4,8 @@ The user approved this bounded start on 2026-09-15: establish the production
 catalog, then expand Johnny's walking directions before undertaking the full
 application. Work starts from `0f7d7fd` on `art/cartoon-production-foundation`.
 
-Current delivery: the [low-tide group](cartoon-low-tide-verification.md) brings
-production to61 accepted PNGs. The original scope and phase table below remain
+Current delivery: the [cloud group](cartoon-clouds-verification.md) brings
+production to63 accepted PNGs. The original scope and phase table below remain
 the workflow history; coverage advances are recorded in the linked deliveries.
 
 ## Scope and sequence
@@ -79,8 +79,8 @@ including the lighter skin palette and corrected018 contact. All28 delivered
 Johnny drawings retain those scoped approvals.
 Other placements and story uses of the standing art remain outside its reviewed
 arrival/direction-ring contexts. Seasonal decorations and the high/low-tide
-environment groups are now delivered. Clouds, night and alternate oceans are
-the next bounded scenery groups; other characters, action scenes and code-drawn
+environment groups and ordinary moving clouds are now delivered. Night and
+alternate oceans are the next bounded scenery groups; other characters, action scenes and code-drawn
 effects remain later work. Existing engine maintenance findings stay
 in [BACKLOG.md](../BACKLOG.md); address a reproduced blocker when its affected
 scene enters review.
