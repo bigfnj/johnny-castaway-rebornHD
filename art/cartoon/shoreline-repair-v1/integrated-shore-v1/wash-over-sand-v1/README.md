@@ -1,7 +1,9 @@
 # Incoming water study
 
-Status: proposed center-wave artwork, awaiting human motion review. Nothing in
-this folder approves or promotes an application asset.
+Status: unselected reference. The user chose the offshore ripple panel in the
+three-way motion review. Preserve this incoming-water study and its lessons;
+do not promote it as the selected Cartoon wave direction. The exact decision
+is in [selection.json](../wave-approaches-v1/selection.json).
 
 The user corrected the offshore-only interpretation: original water advances
 onto the island and then exposes sand again. The original center cycle is

@@ -2,7 +2,8 @@
 
 The Cartoon seasonal pass exposed a geometry defect that isolated sprite
 reviews had missed. Full-size clovers revealed missing sand around the island.
-This record separates the approved visual direction from pending native work.
+This record distinguishes the approved visual direction, completed native
+checks and remaining human placement review.
 
 ## What the original layers actually contain
 
@@ -73,6 +74,14 @@ separate. Both Cartoon variants retain identical approved sand, full-size
 clovers and side waves. This isolates the center-wave decision. Do not infer
 approval of either animation from approval of the sand silhouette.
 
+The subsequent explicit choice was "Cartoon: offshore ripples is the winner".
+That selects the offshore look and displayed motion for this Cartoon pack.
+Original behavior remains useful evidence, but it does not override a reviewed
+artistic choice. Keep the wash-over-sand study as an unselected reference and
+do not automatically convert the approved ripples back into incoming water.
+The [selection record](../art/cartoon/shoreline-repair-v1/integrated-shore-v1/wave-approaches-v1/selection.json)
+binds this decision to the actual page, export and native capture hashes.
+
 Prompted phase order is not evidence of actual motion. The incoming drafts
 needed reassignment after crest measurements. Compare water coverage as well
 as crest height: the lower crest can still have a broader translucent ribbon.
@@ -83,7 +92,16 @@ composite and alpha values before calling that a background defect. The selected
 raw ground reaches alpha 254; preserve the actual source and document technical
 filtering rather than silently forcing opacity or clearing faint pixels.
 
-Shape approval is separate from approval of the native scene. The approved V3
-outline still requires checks with full-size decorations, fitted waves, low
-tide, night and shifted scenes, and Johnny's previously accepted contacts.
+Shape approval is separate from approval of the native scene. The selected
+offshore package passed native checks with full-size decorations, fitted waves,
+low tide, night and shifted scenes, and Johnny's previously accepted contacts:
+24 smoke captures followed by 24 exact fresh-process repeats and six negative
+controls. The pumpkin, tree and banner still require human placement review.
 Keep historical previews immutable so an earlier approval remains traceable.
+
+The wider offshore checks also expose existing unstyled low-tide assets:
+BACKGRND 001/002 and wave families 030-041. Compare against the earlier Cartoon
+scene before calling mixed styles a regression. They already coexist with the
+Cartoon top beach; the visible pixelated cloud is also unchanged fallback.
+Plan the lower beach and low-tide waves together rather than stretching the
+approved high-tide art to cover a different scene state.

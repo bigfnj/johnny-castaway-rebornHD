@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "phase": "regression",
+  "html_sha256": "fb0d5e2e639a1aaee2b7bd0a4f3a11036be73349bcce42be1acdd3282b962873",
+  "manifest_sha256": "f4cf04f8a9ce99d0a2c9f779e31c2c41afb0c95e56dee89677f6c1d4f00ffb6f",
+  "checker_sha256": "ee5eec7f54a5906e7ea107ac312c74349fc2a6dd81d9ff35345945ab38a9cfc5",
+  "checks": [
+    "Pumpkin still default; playback disabled; Normal speed",
+    "Exact default native pixels on both panels",
+    "day/none: all native pixels, ordinals, timing, cameras and controls",
+    "day/pumpkin: all native pixels, ordinals, timing, cameras and controls",
+    "day/clover: all native pixels, ordinals, timing, cameras and controls",
+    "day/tree: all native pixels, ordinals, timing, cameras and controls",
+    "day/banner: all native pixels, ordinals, timing, cameras and controls",
+    "motion/high_clover: all native pixels, ordinals, timing, cameras and controls",
+    "motion/low_clover: all native pixels, ordinals, timing, cameras and controls",
+    "motion/night_shift_clover: all native pixels, ordinals, timing, cameras and controls",
+    "motion/johnny_front: all native pixels, ordinals, timing, cameras and controls",
+    "motion/johnny_rear: all native pixels, ordinals, timing, cameras and controls"
+  ],
+  "screenshots_sha256": {
+    "browser-regression-pumpkin.png": "702a00c04c7a32b88a26eb45478e185e3ab843ebde6934a4578d8165c2deafe6",
+    "browser-day-tree.png": "c4b61d5710ad05be74b7d17411f41ef81fca0630a89278a02c344f7b7c501af2",
+    "browser-day-banner.png": "a02c69f0b47911e9bd2d5ec35fa60968515560f79c62d7fcd36431592efa1493",
+    "browser-motion-night_shift_clover.png": "99d02ee541d18c0c80cf19ad4735d7a32d8ac253362da4d517da69932203024b"
+  },
+  "scope": "Exact native capture pixels reconstructed from unchanged crop tiles; actual timing and UI controls. No artwork approval."
+}

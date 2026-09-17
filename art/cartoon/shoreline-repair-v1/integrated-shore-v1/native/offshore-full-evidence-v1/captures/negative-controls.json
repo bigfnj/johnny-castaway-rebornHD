@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "helper_sha256": "f2e0684f6726ce53951988b5d44c101d3efe44f07e6b3b66277499a9f12a1bae",
+  "results": [
+    {
+      "name": "actual_ground_offset",
+      "failure": "integrated shore: actual ground surface placement",
+      "status": "FIRED"
+    },
+    {
+      "name": "actual_center_offset",
+      "failure": "integrated shore: actual high-wave surface placement",
+      "status": "FIRED"
+    },
+    {
+      "name": "initial_wave_phase",
+      "failure": "integrated shore: initial003007009 display phases",
+      "status": "FIRED"
+    },
+    {
+      "name": "native_timestamp",
+      "failure": "integrated shore: observed monotonic native timing",
+      "status": "FIRED"
+    },
+    {
+      "name": "outside_registered_pixel",
+      "failure": "integrated shore: pixel outside registered ground/foam",
+      "status": "FIRED"
+    },
+    {
+      "name": "full_phase_coverage",
+      "failure": "integrated shore: all displayed native wave phases",
+      "status": "FIRED"
+    }
+  ],
+  "method": "Actual native logs copied/damaged in memory; restored positive re-executed. Original outputs preserved."
+}

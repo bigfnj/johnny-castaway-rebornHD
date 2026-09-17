@@ -1,11 +1,13 @@
 # Offshore center-wave comparison
 
-These built-in image_gen drawings implement the earlier offshore-only approach.
-They are retained for the user's explicit side-by-side comparison request, not
-selected as production art. Their exact prompts remain historical evidence.
+These built-in image_gen drawings are the user's selected offshore approach.
+After the three-way animated comparison, the user said "Cartoon: offshore
+ripples is the winner". The [selection record](../wave-approaches-v1/selection.json)
+binds the displayed motion to `candidates/v2`. Scene checks and production
+integration remain separate. Exact prompts remain historical evidence.
 
-The user subsequently clarified that original waves wash onto the sand. In
-particular, the earlier statement that lifting foam onto the beach was wrong
+Before the three-way comparison, the user clarified that original waves wash
+onto the sand. In particular, the earlier statement that lifting foam onto the beach was wrong
 applied to this proposal, and is not a rule for the original or the new incoming
 water study. Blanket ground-exclusion masking cannot reproduce incoming wash.
 

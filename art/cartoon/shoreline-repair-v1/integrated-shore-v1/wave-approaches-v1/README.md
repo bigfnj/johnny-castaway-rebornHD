@@ -1,6 +1,9 @@
 # Three-way clover wave comparison
 
-Status: human art review pending. Open [review.html](review.html).
+The user selected **Cartoon: offshore ripples**, saying "Cartoon: offshore
+ripples is the winner". [selection.json](selection.json) binds this decision to
+the exact shown page, native capture and export. Open [review.html](review.html).
+The review page and historical generation records remain unchanged.
 
 | Panel | What it shows |
 | --- | --- |
@@ -9,8 +12,10 @@ Status: human art review pending. Open [review.html](review.html).
 | Cartoon wash onto sand | The same island and clovers, with a new transparent water-and-foam layer allowed to cross the sand edge. |
 
 Only center wave frames 006, 007 and 008 differ between the Cartoon packages.
-The six side-wave frames are identical. Side-wave run-up remains follow-up work
-after this direction review. The approved sand silhouette is unchanged.
+The six side-wave frames are identical. Keep the displayed offshore style;
+the alternative incoming wash is retained as a reference. Check the selected
+shoreline in the remaining scene states before production. The approved sand
+silhouette is unchanged.
 
 Each native clip contains 51 display records over 2400 ms from twenty actual
 same-heading waits. All nine high-tide wave phases occur. The page loops the

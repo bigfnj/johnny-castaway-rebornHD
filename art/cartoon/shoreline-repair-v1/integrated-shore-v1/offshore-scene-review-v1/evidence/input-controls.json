@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "builder_sha256": "b68c38f0e5cb0a25fecebcd2db966865707721db33be57f8a42ff3f705f71d21",
+  "checker_sha256": "101364859856e0a95e37d80595e38cc293e3111bf418f1d5adf8c0f15af12887",
+  "results": [
+    {
+      "name": "wrong_case_report",
+      "status": "FIRED",
+      "failure": "scene review: day/none/baseline report case"
+    },
+    {
+      "name": "changed_native_png",
+      "status": "FIRED",
+      "failure": "scene review: day/none/baseline/display-001.png PNG identity"
+    },
+    {
+      "name": "existing_output",
+      "status": "FIRED",
+      "failure": "scene review: output already exists: D:\\.ai-work\\worktrees\\johnny-seasonal-decorations\\build\\shoreline-repair-v1\\offshore-scene-review-controls-atlas-v1\\existing"
+    }
+  ],
+  "scope": "Three executed damaged-input/refusal controls. Source captures unchanged; final positive browser checks are recorded separately."
+}
