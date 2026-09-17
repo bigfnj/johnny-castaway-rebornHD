@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-17",
+  "scope": "Lightweight source-replay browser checks only. Tanker human appearance and motion approval remain pending; native validation is deferred to bulk integration.",
+  "url": "http://127.0.0.1:8941/tanker-motion-v1/review.html",
+  "bound_files": {
+    "review.html": "b2721f1e3873dae9a3c96e764a596be7cb83b9e9c669252d138986af6815a3e1",
+    "sprites.json": "3e907bd276a7bc5a11cb28a39b9ea3364b2e20420eb390f77c190cea75498f22",
+    "source-sequence.json": "565f9de98842e738ea148687834d380be70f1b7a1c829fecd570ba6f9544a229"
+  },
+  "observations": [
+    "All 28 image references loaded; playback controls became enabled and the page error text was empty.",
+    "Frame selection provides all 14 source frames; the timeline covers 76 actual draws.",
+    "Jump 000 showed step 24, mirrored, source x156 y175.",
+    "Jump 006 showed step 30, unmirrored, source x128 y177; Next showed step 31, frame 007, unmirrored, x122 y176.",
+    "Play advanced through the sequence. The delivered page is playing at half speed in centered view.",
+    "Original path selection was reflected in the DOM. Numeric camera check found all 76 source canvas rectangles inside the 740 by 330 display, with combined bounds 14.7,115.5,619.5,237.3.",
+    "Screenshots show shallow Cartoon end-on silhouettes and insufficient depth in 006. These are art review findings, not preview test failures."
+  ],
+  "production_archive_unchanged_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+}
