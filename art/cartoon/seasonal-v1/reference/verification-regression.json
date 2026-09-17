@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "phase": "regression",
+  "status": "PASS",
+  "helper_sha256": "c9668a7c8b8cd427bb78e51b469d3c1cc434259c8bf9b2d0a57a9f9b5ff5640f",
+  "test_sha256": "270a5e6882bae12984c0081e49ec47c26449d7ddba533c35a30ccc238dc55b2e",
+  "source_sha256": "750dad7500e029214e2576f34c86fec4eeaf4b51bac3427272e47d06cce8fc1b",
+  "mutation": {
+    "sha256": "d313579d9bf3ca560c54736292d5cb2dd94814e3d9383a2a6a9bea802c467ddd",
+    "removed_statement": "                require(target.read_bytes() == data, name + ': reproduced bytes differ')",
+    "corrupt_guide_sha256": "a5dd600efccd47c0ca2050f2d99d57e384430442ef310bf67048b229c6b79d1d",
+    "executed": true
+  },
+  "independent_pixels": [
+    {
+      "frame": 0,
+      "nearest8_pixels_checked": 87040,
+      "guide_offset": [
+        352,
+        376
+      ],
+      "guide_padding_alpha_zero": true
+    },
+    {
+      "frame": 1,
+      "nearest8_pixels_checked": 360960,
+      "guide_offset": [
+        288,
+        324
+      ],
+      "guide_padding_alpha_zero": true
+    },
+    {
+      "frame": 2,
+      "nearest8_pixels_checked": 232960,
+      "guide_offset": [
+        288,
+        252
+      ],
+      "guide_padding_alpha_zero": true
+    },
+    {
+      "frame": 3,
+      "nearest8_pixels_checked": 457216,
+      "guide_offset": [
+        160,
+        324
+      ],
+      "guide_padding_alpha_zero": true
+    }
+  ],
+  "runs": [
+    {
+      "name": "exact_reference_readback",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-reference c9668a7c8b8cd427bb78e51b469d3c1cc434259c8bf9b2d0a57a9f9b5ff5640f\nPASS seasonal-reference {\"frames\": 4, \"files\": 22, \"check\": true}\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    {
+      "name": "wrong_original_archive_rejected",
+      "result": "FIRED",
+      "stdout": "WITNESS seasonal-reference c9668a7c8b8cd427bb78e51b469d3c1cc434259c8bf9b2d0a57a9f9b5ff5640f\nFAIL art/cartoon/character-inventory-v1/reference-originals.zip: source identity differs\n",
+      "stderr": "",
+      "returncode": 1
+    },
+    {
+      "name": "altered_guide_rejected",
+      "result": "FIRED",
+      "stdout": "WITNESS seasonal-reference c9668a7c8b8cd427bb78e51b469d3c1cc434259c8bf9b2d0a57a9f9b5ff5640f\nFAIL 000-original-guide.png: reproduced bytes differ\n",
+      "stderr": "",
+      "returncode": 1
+    },
+    {
+      "name": "same_bad_guide_accepted_only_without_guard",
+      "result": "PASS",
+      "stdout": "EXECUTED_MUTANT_SHA256=d313579d9bf3ca560c54736292d5cb2dd94814e3d9383a2a6a9bea802c467ddd\nWITNESS seasonal-reference c9668a7c8b8cd427bb78e51b469d3c1cc434259c8bf9b2d0a57a9f9b5ff5640f\nPASS seasonal-reference {\"frames\": 4, \"files\": 22, \"check\": true}\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    {
+      "name": "restored_real_references_pass",
+      "result": "PASS",
+      "stdout": "WITNESS seasonal-reference c9668a7c8b8cd427bb78e51b469d3c1cc434259c8bf9b2d0a57a9f9b5ff5640f\nPASS seasonal-reference {\"frames\": 4, \"files\": 22, \"check\": true}\n",
+      "stderr": "",
+      "returncode": 0
+    }
+  ],
+  "scope": "Source/reference reproduction only; no generation, geometry export or human art acceptance."
+}

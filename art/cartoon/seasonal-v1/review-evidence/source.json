@@ -1,0 +1,434 @@
+{
+  "status": "pending human visual approval",
+  "native_runs": {
+    "before": {
+      "path": "build/seasonal-v1/native-baseline-v2",
+      "summary_sha256": "8a998e865d3a8f92973bd8f813477b98fa7c596274dfd32b522771301edab7db",
+      "result": {
+        "status": "PASS",
+        "selected_archive": {
+          "archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+          "member_count": 2594,
+          "unchanged_production_member_count": 2594,
+          "holiday_dependencies": [
+            "data/hd/BMP/HOLIDAY.BMP/000.png",
+            "data/hd/BMP/HOLIDAY.BMP/001.png",
+            "data/hd/BMP/HOLIDAY.BMP/002.png",
+            "data/hd/BMP/HOLIDAY.BMP/003.png"
+          ],
+          "holiday_members_sha256": {
+            "data/hd/BMP/HOLIDAY.BMP/000.png": "fd50ae7766656bc4c609e1a6d94547b35279dbd99a1e4a2aa708adef3bff7df5",
+            "data/hd/BMP/HOLIDAY.BMP/001.png": "31a9f81b04c2fbfc8bd3ad4f02920eeb92a10803d4341d62332494e473f24fba",
+            "data/hd/BMP/HOLIDAY.BMP/002.png": "b678dac17870d2449a121b1bd30c2c4c58403d80aa26d8cf844cdef1c619aff0",
+            "data/hd/BMP/HOLIDAY.BMP/003.png": "d37bfa7e164fdccc0b56954871af2d8ad8b12a887b82d2925e1ca19a2b558be9"
+          },
+          "new_cartoon_members": []
+        },
+        "groups": {
+          "day": {
+            "none": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "6e1349d3d299172ced4c48d6502b7b629b0450b0d2dc1202ca4960b654e7813e",
+              "changed_pixels": 0,
+              "allowed_rect": null
+            },
+            "halloween": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "f672b8c1b1104a58e80d5d504c554cf2d8ed2423bc1c07ea21fe4fb906a3ad1c",
+              "changed_pixels": 3408,
+              "allowed_rect": [
+                820,
+                596,
+                900,
+                664
+              ]
+            },
+            "stpatricks": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "7fd45b59b502b56b37f415630e6845adfec45aa6438ecb3fca4fe7e5de8b1fd3",
+              "changed_pixels": 8452,
+              "allowed_rect": [
+                666,
+                572,
+                906,
+                666
+              ]
+            },
+            "christmas": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "5e91939484421457bedcf5657263566da14122c92ad84c82b2855b300819bc3b",
+              "changed_pixels": 4884,
+              "allowed_rect": [
+                808,
+                534,
+                920,
+                664
+              ]
+            },
+            "newyear": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "fc366017331000c4e92d3185e617492dd94416f24610a1bd0685cdeaeeb44bbe",
+              "changed_pixels": 13400,
+              "allowed_rect": [
+                722,
+                310,
+                1026,
+                404
+              ]
+            }
+          },
+          "night": {
+            "none": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "12ee2aa64b04baef63f0a19123f98c09d4fc6d9ad7f2f678b686769b228f83ee",
+              "changed_pixels": 0,
+              "allowed_rect": null
+            },
+            "halloween": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "61b216e0a0061e7210bf8f275189840e4381b008e2b3e1c402da6348d29c54d8",
+              "changed_pixels": 3378,
+              "allowed_rect": [
+                820,
+                596,
+                900,
+                664
+              ]
+            },
+            "stpatricks": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "9897a5a0e2632fd31fca284abc38a4786002af36440d3a07c01e3c6d6a4fc98d",
+              "changed_pixels": 8432,
+              "allowed_rect": [
+                666,
+                572,
+                906,
+                666
+              ]
+            },
+            "christmas": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "7da70c5fbfa6fc55d8d8d2ce458ca279002ae0fa5ab8c259a3dfb1335b185043",
+              "changed_pixels": 4772,
+              "allowed_rect": [
+                808,
+                534,
+                920,
+                664
+              ]
+            },
+            "newyear": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "0ab4e543320737fefde03bb37b7c96adf52a19455904fe65d73d0068eb684352",
+              "changed_pixels": 13400,
+              "allowed_rect": [
+                722,
+                310,
+                1026,
+                404
+              ]
+            }
+          },
+          "offset": {
+            "none": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "ebc22e4e8d24a06dd9c8e0c923555b4b17cc5a3e68c0712dcdb5fb7a9046246e",
+              "changed_pixels": 0,
+              "allowed_rect": null
+            },
+            "halloween": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "df16a0bc8c2742b05136ef4b20c4e35f40a85384fa6403115bf458757ba5ebf5",
+              "changed_pixels": 3408,
+              "allowed_rect": [
+                660,
+                636,
+                740,
+                704
+              ]
+            },
+            "stpatricks": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "084f4c316c087a522eb73d800f4d724b12920741e8aa9f17caa43c81c86c10c8",
+              "changed_pixels": 8452,
+              "allowed_rect": [
+                506,
+                612,
+                746,
+                706
+              ]
+            },
+            "christmas": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "b9c766e4bdc2033bcfde11c4b416b9fb867531cd615fa4e30c6aaecdb6ffdfe5",
+              "changed_pixels": 4884,
+              "allowed_rect": [
+                648,
+                574,
+                760,
+                704
+              ]
+            },
+            "newyear": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "31b736e71b6076ef417bea6fa5ef69d92acac6b60eddec361eb4e3c1e59177f3",
+              "changed_pixels": 13400,
+              "allowed_rect": [
+                562,
+                350,
+                866,
+                444
+              ]
+            }
+          }
+        },
+        "helper_sha256": "5a325d6b3db2ae3e7362ede1144977c977542c668596bbfb24b1e0a5bcdfe730",
+        "driver_sha256": "298b37d64f6077a890d29181b84bf6c0859f139b5a7fac2fc7fd9d407bd6b7f6",
+        "protected_inputs_unchanged": 60,
+        "negative_controls": 3,
+        "scope": "Still capture of actual native holiday layer over current Cartoon island and approved standing016. No original-executable timing/palette claim; cargo scene suppression and randomized tide/offset selection are not exercised."
+      }
+    },
+    "after": {
+      "path": "build/seasonal-v1/native-candidate-v1",
+      "summary_sha256": "396f90cd11500ca459ba4c1204aea80a78e8d7f78e7053974ed091f971160333",
+      "result": {
+        "status": "PASS",
+        "selected_archive": {
+          "archive_sha256": "df03295ef3603fd576cf419149a2d2ee9d7909581c1862fdfd768d065b936304",
+          "member_count": 2598,
+          "unchanged_production_member_count": 2594,
+          "holiday_dependencies": [
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/000.png",
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/001.png",
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/002.png",
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/003.png"
+          ],
+          "holiday_members_sha256": {
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/000.png": "581ab60737d4ab8e0063a63b43dc2a47b4e68d08d3cfe6d348eb8c3bd03998fd",
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/001.png": "e6327c07e85d7d8610ed45a502efd283fe1c79fe5850c790bb2808a2ee02176e",
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/002.png": "7d9c5406f8275a1af9c9369305575a24d807ac5b38200e6ad17913a0a8400265",
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/003.png": "03ab2762a2924aa39431cf9940555da96ed76bd20043ef73eb130a61ae879740"
+          },
+          "new_cartoon_members": [
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/000.png",
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/001.png",
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/002.png",
+            "data/styles/cartoon/BMP/HOLIDAY.BMP/003.png"
+          ]
+        },
+        "groups": {
+          "day": {
+            "none": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "6e1349d3d299172ced4c48d6502b7b629b0450b0d2dc1202ca4960b654e7813e",
+              "changed_pixels": 0,
+              "allowed_rect": null
+            },
+            "halloween": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "a405263d5464f9393f74e82322298ee613b58146422c6a3fa0840cc3b756a49f",
+              "changed_pixels": 3714,
+              "allowed_rect": [
+                820,
+                596,
+                900,
+                664
+              ]
+            },
+            "stpatricks": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "b88aaaea269f54b361e814e5e595355a114050d4542bafadf966e4836cbfd406",
+              "changed_pixels": 9919,
+              "allowed_rect": [
+                666,
+                572,
+                906,
+                666
+              ]
+            },
+            "christmas": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "fdf991b1a8ee35bc3208bc457345ee4b115acd3fd6b288e02a1ba80b39a24f6a",
+              "changed_pixels": 5941,
+              "allowed_rect": [
+                808,
+                534,
+                920,
+                664
+              ]
+            },
+            "newyear": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "779479f6c1431d39c96e8d8fdd48c5182a03e80a083e1932c55f9a7cd15e801c",
+              "changed_pixels": 14457,
+              "allowed_rect": [
+                722,
+                310,
+                1026,
+                404
+              ]
+            }
+          },
+          "night": {
+            "none": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "12ee2aa64b04baef63f0a19123f98c09d4fc6d9ad7f2f678b686769b228f83ee",
+              "changed_pixels": 0,
+              "allowed_rect": null
+            },
+            "halloween": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "ad224f7f5ca00298b274fed73513762255db2e20a93744a1c58316b5bb525198",
+              "changed_pixels": 3712,
+              "allowed_rect": [
+                820,
+                596,
+                900,
+                664
+              ]
+            },
+            "stpatricks": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "6a33a7e87dbfc93416069f048130411fc557aa21b9836d7f8fe474f7d15e8b75",
+              "changed_pixels": 9879,
+              "allowed_rect": [
+                666,
+                572,
+                906,
+                666
+              ]
+            },
+            "christmas": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "58010f2d561c3881d449a42207f2afae535a3755bc7b7bb38f36fed7cdc77254",
+              "changed_pixels": 5870,
+              "allowed_rect": [
+                808,
+                534,
+                920,
+                664
+              ]
+            },
+            "newyear": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "35cc4dabfc7c66fad40deb55ed1fd77394c03eaecc8e919aa98ba756e11245b7",
+              "changed_pixels": 14458,
+              "allowed_rect": [
+                722,
+                310,
+                1026,
+                404
+              ]
+            }
+          },
+          "offset": {
+            "none": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "ebc22e4e8d24a06dd9c8e0c923555b4b17cc5a3e68c0712dcdb5fb7a9046246e",
+              "changed_pixels": 0,
+              "allowed_rect": null
+            },
+            "halloween": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "e96ec593f69d2944d62208d7336b9f309fbaae2d542ebbf83f7179c5e5141f9e",
+              "changed_pixels": 3714,
+              "allowed_rect": [
+                660,
+                636,
+                740,
+                704
+              ]
+            },
+            "stpatricks": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "0b8043f8f049b464ee7cc849bb88a3574632f2ec25848810fbe62e6768e599d1",
+              "changed_pixels": 9919,
+              "allowed_rect": [
+                506,
+                612,
+                746,
+                706
+              ]
+            },
+            "christmas": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "9e3815af64d081c73362a85dd8c28eeedbf1621fedeaa9de85ca51851b695762",
+              "changed_pixels": 5941,
+              "allowed_rect": [
+                648,
+                574,
+                760,
+                704
+              ]
+            },
+            "newyear": {
+              "smoke": "PASS",
+              "regression_repeat": "PASS",
+              "png_sha256": "92dd27dce4323f0012ce9e719e9538a28f07e570926223ef68aa7dc5929ed53e",
+              "changed_pixels": 14459,
+              "allowed_rect": [
+                562,
+                350,
+                866,
+                444
+              ]
+            }
+          }
+        },
+        "helper_sha256": "5a325d6b3db2ae3e7362ede1144977c977542c668596bbfb24b1e0a5bcdfe730",
+        "driver_sha256": "298b37d64f6077a890d29181b84bf6c0859f139b5a7fac2fc7fd9d407bd6b7f6",
+        "protected_inputs_unchanged": 60,
+        "negative_controls": 3,
+        "scope": "Still capture of actual native holiday layer over current Cartoon island and approved standing016. No original-executable timing/palette claim; cargo scene suppression and randomized tide/offset selection are not exercised."
+      }
+    }
+  },
+  "review_files_sha256": {
+    "review-evidence/000-before.png": "f672b8c1b1104a58e80d5d504c554cf2d8ed2423bc1c07ea21fe4fb906a3ad1c",
+    "review-evidence/000-before-close.png": "0366780c134f3ec0dd29a895265a65829cc77ec6c7f753e887d03194df06d38d",
+    "review-evidence/000-after.png": "a405263d5464f9393f74e82322298ee613b58146422c6a3fa0840cc3b756a49f",
+    "review-evidence/000-after-close.png": "eec3a9d4452437853a7ad35bdbe651b072c0794b6ad04922ad8a4d5a475fc33c",
+    "review-evidence/001-before.png": "7fd45b59b502b56b37f415630e6845adfec45aa6438ecb3fca4fe7e5de8b1fd3",
+    "review-evidence/001-before-close.png": "7ee35c642cf2dca5cf163e58b64ba5d5774033f9131801547da254dd9a55edc2",
+    "review-evidence/001-after.png": "b88aaaea269f54b361e814e5e595355a114050d4542bafadf966e4836cbfd406",
+    "review-evidence/001-after-close.png": "87d4276e95e19894330e19855829769325dc0480abc300d965e391b06e657985",
+    "review-evidence/002-before.png": "5e91939484421457bedcf5657263566da14122c92ad84c82b2855b300819bc3b",
+    "review-evidence/002-before-close.png": "8b45f3eac6f81f84b515c6fb469fe722e79bcc179fb050712457eaab040cd9a0",
+    "review-evidence/002-after.png": "fdf991b1a8ee35bc3208bc457345ee4b115acd3fd6b288e02a1ba80b39a24f6a",
+    "review-evidence/002-after-close.png": "c124715fa18e0b18e02659041da66d8492e12d1ef9737c216a7540e50152c6a4",
+    "review-evidence/003-before.png": "fc366017331000c4e92d3185e617492dd94416f24610a1bd0685cdeaeeb44bbe",
+    "review-evidence/003-before-close.png": "6a6afa970755cb8ca11127e3bf2ebdc8ce5b5acf506aab6f4cdd8c5f478051b7",
+    "review-evidence/003-after.png": "779479f6c1431d39c96e8d8fdd48c5182a03e80a083e1932c55f9a7cd15e801c",
+    "review-evidence/003-after-close.png": "65a2fb111ae8f0a100a859996d7ee508adc7b260a66bf16c09024eda554b4aeb"
+  }
+}

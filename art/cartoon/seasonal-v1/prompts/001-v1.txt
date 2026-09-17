@@ -1,0 +1,8 @@
+Use case: style-transfer
+Asset type: independent transparent seasonal sprite for the Johnny Castaway Cartoon game.
+Input images: Image 1 is the original geometry reference and edit target; its pixelated diagnostic colors are not the desired palette. Image 2 is the approved Cartoon island STYLE reference only.
+Style: clean expressive hand-inked cartoon, crisp narrow dark outlines, simple warm cel shading, legible at small game scale. Match the visual language of the palm and island in image 2. Smooth the pixel steps into drawn contours.
+Transparency: actual transparent RGBA background and padding, opaque painted interiors, narrow antialiased edges. No checkerboard, black backdrop, glow, haze or translucent object interiors.
+Primary request: redraw the scattered cluster of shamrock/clover stems from image 1, preserving the exact arrangement, individual stem positions and relative sizes. Retain each separate four-lobed leaf head, slim upright stems, small subtle contact marks and clear transparent gaps. Fresh green leaf faces with darker green undersides, simple highlights and fine dark contours. This is the island's St Patrick decoration.
+Composition: preserve the 1536 by1024 canvas. Original native120 by47 sprite enlarged8x at offset(288,324), occupying x288..1248,y324..700. Keep its staggered diagonal row: taller/larger clovers toward the upper left and scattered lower clovers toward the right, exactly following image1. Preserve the open space between stems, no continuous ground mat.
+Constraints: this single complete group only. Do not rearrange it into a bouquet or regular row. No pot, grass bed, soil patch, coins, hats, character, island, labels, watermark or extra symbols. Keep all elements within the original reference rectangle.

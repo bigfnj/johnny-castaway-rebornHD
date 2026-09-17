@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartoon seasonal decorations</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,sans-serif;background:#16242d;color:#ecf4f8}body{max-width:1500px;margin:24px auto;padding:0 20px}h1{font-size:27px;margin-bottom:8px}p{line-height:1.5;color:#c8dce9}.controls{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin:22px 0}select,button{font:inherit;padding:9px;border:1px solid #819dac;border-radius:5px;background:#e8f2f8;color:#102732}label{display:flex;align-items:center;gap:8px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}.panel{margin:0;padding:16px;background:#263d4b;border-radius:8px}.panel h2{font-size:18px;margin:0 0 12px}.scene{display:block;width:100%;height:auto;background:#12202a}.sprite-row{display:flex;flex-wrap:wrap;gap:24px}.sprite-row figure{margin:8px 0;min-width:200px;flex:1}.sprite-row figcaption{margin-bottom:10px}.sprite{height:230px;display:flex;align-items:center;justify-content:center;background:repeating-conic-gradient(#303c44 0 25%,#253139 0 50%) 0/24px 24px;border-radius:4px}.sprite img{max-width:95%;max-height:95%;object-fit:contain;image-rendering:pixelated}a{color:#b8e1ff}.note{font-size:14px}#error{color:#ffb3a3}details{margin:24px 0}summary{cursor:pointer;font-size:18px}body[data-view="close"] .scene{aspect-ratio:1.48;object-fit:cover} @media(max-width:800px){.pair{grid-template-columns:1fr}}
+</style>
+<h1>Cartoon seasonal decorations</h1>
+<p>Compare the existing holiday artwork with the four new Cartoon drafts. Judge their appearance, scale and placement on the island. Johnny and the scene layout are unchanged.</p>
+<div class="controls">
+<label for="decoration">Decoration <select id="decoration"></select></label>
+<label for="view">View <select id="view"><option value="close">Island close-up</option><option value="full">Full scene</option></select></label>
+</div>
+<p id="description"></p>
+<div class="pair">
+<section class="panel"><h2>Existing HD decoration</h2><img class="scene" id="before" alt="Existing holiday decoration on the Cartoon island"></section>
+<section class="panel"><h2>Cartoon draft</h2><img class="scene" id="after" alt="New Cartoon decoration on the same island"></section>
+</div>
+<details open><summary>Compare the drawings</summary><div class="sprite-row">
+<figure><figcaption>Original shape reference</figcaption><div class="sprite"><img id="original" alt="Original native decoration, enlarged without smoothing"></div></figure>
+<figure><figcaption>Existing HD</figcaption><div class="sprite"><img id="hd" alt="Existing HD decoration"></div></figure>
+<figure><figcaption>Cartoon draft</figcaption><div class="sprite"><img id="candidate" alt="New Cartoon decoration"></div></figure>
+</div><p class="note">The original reference uses the diagnostic palette. It establishes shape and spacing, not the original executable's exact colors. Drawings above share a display scale within each decoration.</p></details>
+<p class="note" id="capture-note"></p><p id="error" role="alert"></p>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+let data;
+function show(){
+ const entry=data.assets[Number($('decoration').value)];
+ const close=$('view').value==='close';
+ document.body.dataset.view=close?'close':'full';
+ $('before').src=close?entry.before_close:entry.before;
+ $('after').src=close?entry.after_close:entry.after;
+ $('original').src=entry.original;
+ $('hd').src=entry.hd;
+ $('candidate').src=entry.candidate;
+ $('description').textContent=entry.description;
+ for(const id of ['original','hd','candidate']){
+  const img=$(id);img.style.width=entry.runtime_canvas[0]*data.sprite_zoom+'px';img.style.height=entry.runtime_canvas[1]*data.sprite_zoom+'px';
+ }
+}
+async function load(){try{
+ const response=await fetch('review-data.json');if(!response.ok)throw new Error('Review data could not be loaded.');
+ data=await response.json();
+ data.assets.forEach((asset,index)=>{const option=document.createElement('option');option.value=index;option.textContent=asset.name;$('decoration').append(option)});
+ $('capture-note').textContent=data.capture_note;
+ $('decoration').addEventListener('change',show);$('view').addEventListener('change',show);show();
+}catch(error){$('error').textContent=error.message}}
+load();
+</script>
+</html>

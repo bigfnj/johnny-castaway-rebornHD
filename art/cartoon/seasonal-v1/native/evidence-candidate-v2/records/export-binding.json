@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "selected_runtime": {
+    "data/styles/cartoon/BMP/HOLIDAY.BMP/000.png": {
+      "path": "art/cartoon/seasonal-v1/candidates/v2/BMP/HOLIDAY.BMP/000.png",
+      "sha256": "91739835231b14ee9b0ece50fcd6c043530eb44f47798c627e7a334ec218bb2d"
+    },
+    "data/styles/cartoon/BMP/HOLIDAY.BMP/001.png": {
+      "path": "art/cartoon/seasonal-v1/candidates/v2/BMP/HOLIDAY.BMP/001.png",
+      "sha256": "35a4bfc60ed87a04fb4cdf1e3c90e7a1a2da0cc75c85d4235b3966178b33ce5e"
+    },
+    "data/styles/cartoon/BMP/HOLIDAY.BMP/002.png": {
+      "path": "art/cartoon/seasonal-v1/candidates/v2/BMP/HOLIDAY.BMP/002.png",
+      "sha256": "bb2ca61d5520e547e2fc192986a4f7a9fc2d36ec85f239cabcc7ff97fd8c5e0a"
+    },
+    "data/styles/cartoon/BMP/HOLIDAY.BMP/003.png": {
+      "path": "art/cartoon/seasonal-v1/candidates/v2/BMP/HOLIDAY.BMP/003.png",
+      "sha256": "03ab2762a2924aa39431cf9940555da96ed76bd20043ef73eb130a61ae879740"
+    }
+  },
+  "negative_control": {
+    "status": "FIRED",
+    "failure": "selected candidate runtime identity:data/styles/cartoon/BMP/HOLIDAY.BMP/000.png",
+    "method": "Altered copied selected-runtime SHA, exact named failure; restored positive. No PNG or archive modified."
+  },
+  "scope": "All four actual native-selected members equal the four candidates/v2 exported PNG bytes. Technical source identity, not human approval."
+}

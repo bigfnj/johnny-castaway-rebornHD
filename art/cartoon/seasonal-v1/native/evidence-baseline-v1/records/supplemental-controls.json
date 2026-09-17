@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "helper_sha256": "5a325d6b3db2ae3e7362ede1144977c977542c668596bbfb24b1e0a5bcdfe730",
+  "test_sha256": "c5db7cae2fa63be5ef759658a6b592bc9e38d385835662ced924e28ab10cb660",
+  "production_archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+  "smoke": "completed baseline captures and baseline package checked first",
+  "controls": [
+    {
+      "name": "changed_existing_payload",
+      "status": "FIRED",
+      "failure": "seasonal: retained production payload identity"
+    },
+    {
+      "name": "removed_existing_member",
+      "status": "FIRED",
+      "failure": "seasonal: retained production members"
+    },
+    {
+      "name": "duplicate_member",
+      "status": "FIRED",
+      "failure": "seasonal: archive duplicate members"
+    },
+    {
+      "name": "unrelated_addition",
+      "status": "FIRED",
+      "failure": "seasonal: only seasonal additions"
+    },
+    {
+      "name": "wrong_candidate_canvas",
+      "status": "FIRED",
+      "failure": "seasonal: holiday fixed canvas:0"
+    },
+    {
+      "name": "wrong_observed_state",
+      "status": "FIRED",
+      "failure": "seasonal: actual island state"
+    },
+    {
+      "name": "wrong_observed_backdrop",
+      "status": "FIRED",
+      "failure": "seasonal: actual backdrop"
+    },
+    {
+      "name": "missing_cleanup_witness",
+      "status": "FIRED",
+      "failure": "seasonal: finite capture and cleanup"
+    },
+    {
+      "name": "draw_when_holiday_none",
+      "status": "FIRED",
+      "failure": "seasonal: no-holiday draw absent"
+    }
+  ],
+  "nondegenerate_candidate_addition": "PASS",
+  "restored_positive": "PASS",
+  "scope": "Actual copied ZIP payloads and captured logs altered; no native rendering, image edits or production mutations. Technical addition control uses existing HD bytes only as a package-routing fixture, not proposed artwork."
+}

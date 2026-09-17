@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "accepted": false,
+  "scope": "Technical candidates pending human scene review.",
+  "normalization": "none",
+  "pillow_version": "12.3.0",
+  "resampling": {
+    "working_mode": "RGBa",
+    "affine": "BICUBIC",
+    "oversample": 8,
+    "downsample": "LANCZOS",
+    "output_mode": "RGBA",
+    "png_compress_level": 9
+  },
+  "padding_hd": 32,
+  "reference_sha256": "750dad7500e029214e2576f34c86fec4eeaf4b51bac3427272e47d06cce8fc1b",
+  "filter_ancestor": "art/cartoon/walk-pilot/profile-walk-v1/export.py",
+  "filter_ancestor_sha256": "244532cd1a94d094deff483b028f44ddded5a1291f78c5a72379d38a79dd0df2",
+  "frames": [
+    {
+      "frame": 0,
+      "path": "BMP/HOLIDAY.BMP/000.png",
+      "source": "raw/000-v1.png",
+      "source_sha256": "64034aee0543908e71a9a5227db12356a3c814188bf3892093243be0c43a0113",
+      "generated_canvas": [
+        1254,
+        1254
+      ],
+      "runtime_canvas": [
+        80,
+        68
+      ],
+      "scale": 0.162,
+      "raw_anchor": [
+        631.5,
+        855
+      ],
+      "target_anchor": [
+        39,
+        67.75
+      ],
+      "anchor_basis": "Pumpkin body horizontal center at original visible-canvas midpoint39HD; raw shadow bottom855 maps to original bottom68HD minus0.25 filter margin.",
+      "affine_forward": [
+        0.162,
+        0,
+        -63.303,
+        0,
+        0.162,
+        -70.75999999999999
+      ]
+    },
+    {
+      "frame": 1,
+      "path": "BMP/HOLIDAY.BMP/001.png",
+      "source": "raw/001-v1.png",
+      "source_sha256": "74fb855b9f4ef13d6e63a41fd9633607f95921579e2d6fc22214a66127aa543c",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        240,
+        94
+      ],
+      "scale": 0.19,
+      "raw_anchor": [
+        1239.5,
+        774
+      ],
+      "target_anchor": [
+        205,
+        93.75
+      ],
+      "anchor_basis": "Lowest front clover ground patch: raw final alpha8 row x[1233,1246) midpoint1239.5; original row46 shadow x[99,106) midpoint102.5 doubled. Bottom94HD minus0.25 margin.",
+      "affine_forward": [
+        0.19,
+        0,
+        -30.504999999999995,
+        0,
+        0.19,
+        -53.31
+      ]
+    },
+    {
+      "frame": 2,
+      "path": "BMP/HOLIDAY.BMP/002.png",
+      "source": "raw/002-v1.png",
+      "source_sha256": "8de09804b89ea04e30b0356a595ec98e40ca555c289a0b7f86406a28c1ddc1eb",
+      "generated_canvas": [
+        1254,
+        1254
+      ],
+      "runtime_canvas": [
+        112,
+        130
+      ],
+      "scale": 0.163,
+      "raw_anchor": [
+        626.5,
+        1046
+      ],
+      "target_anchor": [
+        49.25,
+        129.75
+      ],
+      "anchor_basis": "Star/trunk axis: raw alpha128 star-tip x[625,628) midpoint626.5; original top pixel x24 midpoint24.5 doubled49HD, plus0.25 margin to retain left branch. Shadow bottom1046 maps to130HD minus0.25 margin.",
+      "affine_forward": [
+        0.163,
+        0,
+        -52.8695,
+        0,
+        0.163,
+        -40.74800000000002
+      ]
+    },
+    {
+      "frame": 3,
+      "path": "BMP/HOLIDAY.BMP/003.png",
+      "source": "raw/003-v1.png",
+      "source_sha256": "8cada55c5d6156efcb5a2c29a49a56d8f2662ac31c3201662ec2f66456e7ab17",
+      "generated_canvas": [
+        1536,
+        1024
+      ],
+      "runtime_canvas": [
+        304,
+        94
+      ],
+      "scale": 0.23,
+      "raw_anchor": [
+        770,
+        322
+      ],
+      "target_anchor": [
+        150,
+        0.08
+      ],
+      "anchor_basis": "Hanging-banner span center raw770 maps to original visible span midpoint75 doubled150HD. Highest hanging endpoint alpha8 top322 maps to0.08HD; source height408 at0.23 occupies93.84HD. Ends retain generated asymmetry; no separate endpoint warp.",
+      "affine_forward": [
+        0.23,
+        0,
+        -27.099999999999994,
+        0,
+        0.23,
+        -73.98
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "drafts pending human visual approval",
+  "calls": [
+    {
+      "id": "000",
+      "subject": "pumpkin",
+      "prompt_file": "prompts/000-v1.txt",
+      "submitted_prompt": "Use case: style-transfer\nAsset type: independent transparent seasonal sprite for the Johnny Castaway Cartoon game.\nInput images: Image 1 is the original geometry reference and edit target; its pixelated diagnostic colors are not the desired palette. Image 2 is the approved Cartoon island STYLE reference only.\nStyle: clean expressive hand-inked cartoon, crisp narrow dark outlines, simple warm cel shading, legible at small game scale. Match the visual language of the palm and island in image 2. Smooth the pixel steps into drawn contours.\nTransparency: actual transparent RGBA background and padding, opaque painted interiors, narrow antialiased edges. No checkerboard, black backdrop, glow, haze or translucent object interiors.\nPrimary request: redraw the single squat Halloween jack-o-lantern from image 1. Retain its broad lobed body, short angled stalk, two triangular eyes, small triangular nose and wide cheerful carved grin. Warm orange pumpkin, golden orange highlights, darker orange side lobes, olive green/brown stem and opaque very dark carved openings. Keep the modest narrow ground shadow under the pumpkin.\nComposition: preserve the 1024 by 1024 canvas. The original native40 by34 sprite is enlarged8x at offset(352,376). Keep the complete pumpkin and shadow inside x352..672 and y376..648. Preserve broad rounded silhouette and low ground contact near y632; do not enlarge the decoration to fill the whole image.\nConstraints: only the one pumpkin and its small contact shadow. No character, island, sand patch, leaves, candies, extra props, text, watermark or framing.",
+      "reference_mechanism": "referenced_image_paths",
+      "ordered_references": [
+        {
+          "path": "art/cartoon/seasonal-v1/reference/000-original-guide.png",
+          "role": "original geometry / edit target"
+        },
+        {
+          "path": "art/cartoon/island-pilot-v1/review-evidence/cartoon-island-reference.png",
+          "role": "approved Cartoon scene appearance"
+        }
+      ],
+      "raw_file": "raw/000-v1.png",
+      "tool_mode": "built-in image_gen",
+      "exposed_seed": null
+    },
+    {
+      "id": "001",
+      "subject": "clovers",
+      "prompt_file": "prompts/001-v1.txt",
+      "submitted_prompt": "Use case: style-transfer\nAsset type: independent transparent seasonal sprite for the Johnny Castaway Cartoon game.\nInput images: Image 1 is the original geometry reference and edit target; its pixelated diagnostic colors are not the desired palette. Image 2 is the approved Cartoon island STYLE reference only.\nStyle: clean expressive hand-inked cartoon, crisp narrow dark outlines, simple warm cel shading, legible at small game scale. Match the visual language of the palm and island in image 2. Smooth the pixel steps into drawn contours.\nTransparency: actual transparent RGBA background and padding, opaque painted interiors, narrow antialiased edges. No checkerboard, black backdrop, glow, haze or translucent object interiors.\nPrimary request: redraw the scattered cluster of shamrock/clover stems from image 1, preserving the exact arrangement, individual stem positions and relative sizes. Retain each separate four-lobed leaf head, slim upright stems, small subtle contact marks and clear transparent gaps. Fresh green leaf faces with darker green undersides, simple highlights and fine dark contours. This is the island's St Patrick decoration.\nComposition: preserve the 1536 by1024 canvas. Original native120 by47 sprite enlarged8x at offset(288,324), occupying x288..1248,y324..700. Keep its staggered diagonal row: taller/larger clovers toward the upper left and scattered lower clovers toward the right, exactly following image1. Preserve the open space between stems, no continuous ground mat.\nConstraints: this single complete group only. Do not rearrange it into a bouquet or regular row. No pot, grass bed, soil patch, coins, hats, character, island, labels, watermark or extra symbols. Keep all elements within the original reference rectangle.",
+      "reference_mechanism": "referenced_image_paths",
+      "ordered_references": [
+        {
+          "path": "art/cartoon/seasonal-v1/reference/001-original-guide.png",
+          "role": "original geometry / edit target"
+        },
+        {
+          "path": "art/cartoon/island-pilot-v1/review-evidence/cartoon-island-reference.png",
+          "role": "approved Cartoon scene appearance"
+        }
+      ],
+      "raw_file": "raw/001-v1.png",
+      "tool_mode": "built-in image_gen",
+      "exposed_seed": null
+    },
+    {
+      "id": "002",
+      "subject": "tree",
+      "prompt_file": "prompts/002-v1.txt",
+      "submitted_prompt": "Use case: style-transfer\nAsset type: independent transparent seasonal sprite for the Johnny Castaway Cartoon game.\nInput images: Image 1 is the original geometry reference and edit target; its pixelated diagnostic colors are not the desired palette. Image 2 is the approved Cartoon island STYLE reference only.\nStyle: clean expressive hand-inked cartoon, crisp narrow dark outlines, simple warm cel shading, legible at small game scale. Match the visual language of the palm and island in image 2. Smooth the pixel steps into drawn contours.\nTransparency: actual transparent RGBA background and padding, opaque painted interiors, narrow antialiased edges. No checkerboard, black backdrop, glow, haze or translucent object interiors.\nPrimary request: redraw the little decorated Christmas tree from image1. Retain the tiered triangular evergreen silhouette, four-point golden star at top, red round ornaments, small pink ornaments/lights, a light-colored bead garland, short brown trunk and modest red tree stand at the bottom. Rich green needles as clean solid cartoon branch shapes with simple darker undersides. Keep the narrow ground shadow under the stand.\nComposition: preserve the 1024 by1024 canvas. Original native56 by65 sprite enlarged8x at offset(288,252), occupying x288..736,y252..772. Keep star centered near x484,y298, tree-body base near y662 and stand contact near y756. Preserve the asymmetry and branch widths, do not center or enlarge to fill the canvas.\nConstraints: only the one tree with its existing ornaments, stand and narrow ground shadow. No presents, snow, ground patch, character, palm, island, text or watermark. Do not add lights floating outside the tree.",
+      "reference_mechanism": "referenced_image_paths",
+      "ordered_references": [
+        {
+          "path": "art/cartoon/seasonal-v1/reference/002-original-guide.png",
+          "role": "original geometry / edit target"
+        },
+        {
+          "path": "art/cartoon/island-pilot-v1/review-evidence/cartoon-island-reference.png",
+          "role": "approved Cartoon scene appearance"
+        }
+      ],
+      "raw_file": "raw/002-v1.png",
+      "tool_mode": "built-in image_gen",
+      "exposed_seed": null
+    },
+    {
+      "id": "003",
+      "subject": "banner",
+      "prompt_file": "prompts/003-v1.txt",
+      "submitted_prompt": "Use case: style-transfer\nAsset type: independent transparent seasonal sprite for the Johnny Castaway Cartoon game.\nInput images: Image 1 is the original geometry reference and edit target; its pixelated diagnostic colors are not the desired palette. Image 2 is the approved Cartoon island STYLE reference only.\nStyle: clean expressive hand-inked cartoon, crisp narrow dark outlines, simple warm cel shading, legible at small game scale. Match the visual language of the palm and island in image 2. Smooth the pixel steps into drawn contours.\nTransparency: actual transparent RGBA background and padding, opaque painted interiors, narrow antialiased edges. No checkerboard, black backdrop, glow, haze or translucent object interiors.\nPrimary request: redraw the curved New Year cloth banner from image1, preserving its wide shallow shape, raised ends, gently sagging center and small folded/notched end details. Cream-white cloth with very restrained cool-gray fold shading and a fine dark ink outline. Red hand-drawn serif capital lettering following the original curve.\nText verbatim: \"HAPPY NEW YEAR\". Exactly these three words, clearly readable, no extra punctuation, year number or other text.\nComposition: preserve the 1536 by1024 canvas. Original native152 by47 sprite enlarged8x at offset(160,324), occupying x160..1376,y324..700. Preserve the same contour, high end tips around y350 and center bottom near y690. Leave the whole area above the sagging upper edge transparent.\nConstraints: only this one banner, including its small folded ends. No poles, rope extending beyond the original, confetti, champagne, character, island, background or watermark. Do not make a straight rectangular banner or reverse its curvature.",
+      "reference_mechanism": "referenced_image_paths",
+      "ordered_references": [
+        {
+          "path": "art/cartoon/seasonal-v1/reference/003-original-guide.png",
+          "role": "original geometry / edit target"
+        },
+        {
+          "path": "art/cartoon/island-pilot-v1/review-evidence/cartoon-island-reference.png",
+          "role": "approved Cartoon scene appearance"
+        }
+      ],
+      "raw_file": "raw/003-v1.png",
+      "tool_mode": "built-in image_gen",
+      "exposed_seed": null
+    }
+  ]
+}

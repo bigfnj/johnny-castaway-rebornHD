@@ -1,0 +1,8 @@
+Use case: style-transfer
+Asset type: independent transparent seasonal sprite for the Johnny Castaway Cartoon game.
+Input images: Image 1 is the original geometry reference and edit target; its pixelated diagnostic colors are not the desired palette. Image 2 is the approved Cartoon island STYLE reference only.
+Style: clean expressive hand-inked cartoon, crisp narrow dark outlines, simple warm cel shading, legible at small game scale. Match the visual language of the palm and island in image 2. Smooth the pixel steps into drawn contours.
+Transparency: actual transparent RGBA background and padding, opaque painted interiors, narrow antialiased edges. No checkerboard, black backdrop, glow, haze or translucent object interiors.
+Primary request: redraw the single squat Halloween jack-o-lantern from image 1. Retain its broad lobed body, short angled stalk, two triangular eyes, small triangular nose and wide cheerful carved grin. Warm orange pumpkin, golden orange highlights, darker orange side lobes, olive green/brown stem and opaque very dark carved openings. Keep the modest narrow ground shadow under the pumpkin.
+Composition: preserve the 1024 by 1024 canvas. The original native40 by34 sprite is enlarged8x at offset(352,376). Keep the complete pumpkin and shadow inside x352..672 and y376..648. Preserve broad rounded silhouette and low ground contact near y632; do not enlarge the decoration to fill the whole image.
+Constraints: only the one pumpkin and its small contact shadow. No character, island, sand patch, leaves, candies, extra props, text, watermark or framing.

@@ -1,0 +1,354 @@
+{
+  "status": "PASS",
+  "baseline_summary_sha256": "8a998e865d3a8f92973bd8f813477b98fa7c596274dfd32b522771301edab7db",
+  "candidate_summary_sha256": "396f90cd11500ca459ba4c1204aea80a78e8d7f78e7053974ed091f971160333",
+  "baseline_archive_sha256": "4c8085beeb71c2ddf071c32be0a741d4ec2327446cce45eb97addc8af1e233be",
+  "candidate_archive_sha256": "df03295ef3603fd576cf419149a2d2ee9d7909581c1862fdfd768d065b936304",
+  "capture_helper_sha256": "5a325d6b3db2ae3e7362ede1144977c977542c668596bbfb24b1e0a5bcdfe730",
+  "comparison_helper_sha256": "6180e15e8b016141727b19a6b9e21c230f85474aa19b86d2387fd0e7a969fae1",
+  "comparisons": [
+    {
+      "capture": "day/none/smoke",
+      "changed_pixels": 0,
+      "allowed_rect": null,
+      "baseline_png_sha256": "6e1349d3d299172ced4c48d6502b7b629b0450b0d2dc1202ca4960b654e7813e",
+      "candidate_png_sha256": "6e1349d3d299172ced4c48d6502b7b629b0450b0d2dc1202ca4960b654e7813e"
+    },
+    {
+      "capture": "day/none/repeat",
+      "changed_pixels": 0,
+      "allowed_rect": null,
+      "baseline_png_sha256": "6e1349d3d299172ced4c48d6502b7b629b0450b0d2dc1202ca4960b654e7813e",
+      "candidate_png_sha256": "6e1349d3d299172ced4c48d6502b7b629b0450b0d2dc1202ca4960b654e7813e"
+    },
+    {
+      "capture": "day/halloween/smoke",
+      "changed_pixels": 3764,
+      "allowed_rect": [
+        820,
+        596,
+        900,
+        664
+      ],
+      "baseline_png_sha256": "f672b8c1b1104a58e80d5d504c554cf2d8ed2423bc1c07ea21fe4fb906a3ad1c",
+      "candidate_png_sha256": "a405263d5464f9393f74e82322298ee613b58146422c6a3fa0840cc3b756a49f"
+    },
+    {
+      "capture": "day/halloween/repeat",
+      "changed_pixels": 3764,
+      "allowed_rect": [
+        820,
+        596,
+        900,
+        664
+      ],
+      "baseline_png_sha256": "f672b8c1b1104a58e80d5d504c554cf2d8ed2423bc1c07ea21fe4fb906a3ad1c",
+      "candidate_png_sha256": "a405263d5464f9393f74e82322298ee613b58146422c6a3fa0840cc3b756a49f"
+    },
+    {
+      "capture": "day/stpatricks/smoke",
+      "changed_pixels": 11047,
+      "allowed_rect": [
+        666,
+        572,
+        906,
+        666
+      ],
+      "baseline_png_sha256": "7fd45b59b502b56b37f415630e6845adfec45aa6438ecb3fca4fe7e5de8b1fd3",
+      "candidate_png_sha256": "b88aaaea269f54b361e814e5e595355a114050d4542bafadf966e4836cbfd406"
+    },
+    {
+      "capture": "day/stpatricks/repeat",
+      "changed_pixels": 11047,
+      "allowed_rect": [
+        666,
+        572,
+        906,
+        666
+      ],
+      "baseline_png_sha256": "7fd45b59b502b56b37f415630e6845adfec45aa6438ecb3fca4fe7e5de8b1fd3",
+      "candidate_png_sha256": "b88aaaea269f54b361e814e5e595355a114050d4542bafadf966e4836cbfd406"
+    },
+    {
+      "capture": "day/christmas/smoke",
+      "changed_pixels": 6262,
+      "allowed_rect": [
+        808,
+        534,
+        920,
+        664
+      ],
+      "baseline_png_sha256": "5e91939484421457bedcf5657263566da14122c92ad84c82b2855b300819bc3b",
+      "candidate_png_sha256": "fdf991b1a8ee35bc3208bc457345ee4b115acd3fd6b288e02a1ba80b39a24f6a"
+    },
+    {
+      "capture": "day/christmas/repeat",
+      "changed_pixels": 6262,
+      "allowed_rect": [
+        808,
+        534,
+        920,
+        664
+      ],
+      "baseline_png_sha256": "5e91939484421457bedcf5657263566da14122c92ad84c82b2855b300819bc3b",
+      "candidate_png_sha256": "fdf991b1a8ee35bc3208bc457345ee4b115acd3fd6b288e02a1ba80b39a24f6a"
+    },
+    {
+      "capture": "day/newyear/smoke",
+      "changed_pixels": 14817,
+      "allowed_rect": [
+        722,
+        310,
+        1026,
+        404
+      ],
+      "baseline_png_sha256": "fc366017331000c4e92d3185e617492dd94416f24610a1bd0685cdeaeeb44bbe",
+      "candidate_png_sha256": "779479f6c1431d39c96e8d8fdd48c5182a03e80a083e1932c55f9a7cd15e801c"
+    },
+    {
+      "capture": "day/newyear/repeat",
+      "changed_pixels": 14817,
+      "allowed_rect": [
+        722,
+        310,
+        1026,
+        404
+      ],
+      "baseline_png_sha256": "fc366017331000c4e92d3185e617492dd94416f24610a1bd0685cdeaeeb44bbe",
+      "candidate_png_sha256": "779479f6c1431d39c96e8d8fdd48c5182a03e80a083e1932c55f9a7cd15e801c"
+    },
+    {
+      "capture": "night/none/smoke",
+      "changed_pixels": 0,
+      "allowed_rect": null,
+      "baseline_png_sha256": "12ee2aa64b04baef63f0a19123f98c09d4fc6d9ad7f2f678b686769b228f83ee",
+      "candidate_png_sha256": "12ee2aa64b04baef63f0a19123f98c09d4fc6d9ad7f2f678b686769b228f83ee"
+    },
+    {
+      "capture": "night/none/repeat",
+      "changed_pixels": 0,
+      "allowed_rect": null,
+      "baseline_png_sha256": "12ee2aa64b04baef63f0a19123f98c09d4fc6d9ad7f2f678b686769b228f83ee",
+      "candidate_png_sha256": "12ee2aa64b04baef63f0a19123f98c09d4fc6d9ad7f2f678b686769b228f83ee"
+    },
+    {
+      "capture": "night/halloween/smoke",
+      "changed_pixels": 3762,
+      "allowed_rect": [
+        820,
+        596,
+        900,
+        664
+      ],
+      "baseline_png_sha256": "61b216e0a0061e7210bf8f275189840e4381b008e2b3e1c402da6348d29c54d8",
+      "candidate_png_sha256": "ad224f7f5ca00298b274fed73513762255db2e20a93744a1c58316b5bb525198"
+    },
+    {
+      "capture": "night/halloween/repeat",
+      "changed_pixels": 3762,
+      "allowed_rect": [
+        820,
+        596,
+        900,
+        664
+      ],
+      "baseline_png_sha256": "61b216e0a0061e7210bf8f275189840e4381b008e2b3e1c402da6348d29c54d8",
+      "candidate_png_sha256": "ad224f7f5ca00298b274fed73513762255db2e20a93744a1c58316b5bb525198"
+    },
+    {
+      "capture": "night/stpatricks/smoke",
+      "changed_pixels": 11009,
+      "allowed_rect": [
+        666,
+        572,
+        906,
+        666
+      ],
+      "baseline_png_sha256": "9897a5a0e2632fd31fca284abc38a4786002af36440d3a07c01e3c6d6a4fc98d",
+      "candidate_png_sha256": "6a33a7e87dbfc93416069f048130411fc557aa21b9836d7f8fe474f7d15e8b75"
+    },
+    {
+      "capture": "night/stpatricks/repeat",
+      "changed_pixels": 11009,
+      "allowed_rect": [
+        666,
+        572,
+        906,
+        666
+      ],
+      "baseline_png_sha256": "9897a5a0e2632fd31fca284abc38a4786002af36440d3a07c01e3c6d6a4fc98d",
+      "candidate_png_sha256": "6a33a7e87dbfc93416069f048130411fc557aa21b9836d7f8fe474f7d15e8b75"
+    },
+    {
+      "capture": "night/christmas/smoke",
+      "changed_pixels": 6189,
+      "allowed_rect": [
+        808,
+        534,
+        920,
+        664
+      ],
+      "baseline_png_sha256": "7da70c5fbfa6fc55d8d8d2ce458ca279002ae0fa5ab8c259a3dfb1335b185043",
+      "candidate_png_sha256": "58010f2d561c3881d449a42207f2afae535a3755bc7b7bb38f36fed7cdc77254"
+    },
+    {
+      "capture": "night/christmas/repeat",
+      "changed_pixels": 6189,
+      "allowed_rect": [
+        808,
+        534,
+        920,
+        664
+      ],
+      "baseline_png_sha256": "7da70c5fbfa6fc55d8d8d2ce458ca279002ae0fa5ab8c259a3dfb1335b185043",
+      "candidate_png_sha256": "58010f2d561c3881d449a42207f2afae535a3755bc7b7bb38f36fed7cdc77254"
+    },
+    {
+      "capture": "night/newyear/smoke",
+      "changed_pixels": 14817,
+      "allowed_rect": [
+        722,
+        310,
+        1026,
+        404
+      ],
+      "baseline_png_sha256": "0ab4e543320737fefde03bb37b7c96adf52a19455904fe65d73d0068eb684352",
+      "candidate_png_sha256": "35cc4dabfc7c66fad40deb55ed1fd77394c03eaecc8e919aa98ba756e11245b7"
+    },
+    {
+      "capture": "night/newyear/repeat",
+      "changed_pixels": 14817,
+      "allowed_rect": [
+        722,
+        310,
+        1026,
+        404
+      ],
+      "baseline_png_sha256": "0ab4e543320737fefde03bb37b7c96adf52a19455904fe65d73d0068eb684352",
+      "candidate_png_sha256": "35cc4dabfc7c66fad40deb55ed1fd77394c03eaecc8e919aa98ba756e11245b7"
+    },
+    {
+      "capture": "offset/none/smoke",
+      "changed_pixels": 0,
+      "allowed_rect": null,
+      "baseline_png_sha256": "ebc22e4e8d24a06dd9c8e0c923555b4b17cc5a3e68c0712dcdb5fb7a9046246e",
+      "candidate_png_sha256": "ebc22e4e8d24a06dd9c8e0c923555b4b17cc5a3e68c0712dcdb5fb7a9046246e"
+    },
+    {
+      "capture": "offset/none/repeat",
+      "changed_pixels": 0,
+      "allowed_rect": null,
+      "baseline_png_sha256": "ebc22e4e8d24a06dd9c8e0c923555b4b17cc5a3e68c0712dcdb5fb7a9046246e",
+      "candidate_png_sha256": "ebc22e4e8d24a06dd9c8e0c923555b4b17cc5a3e68c0712dcdb5fb7a9046246e"
+    },
+    {
+      "capture": "offset/halloween/smoke",
+      "changed_pixels": 3764,
+      "allowed_rect": [
+        660,
+        636,
+        740,
+        704
+      ],
+      "baseline_png_sha256": "df16a0bc8c2742b05136ef4b20c4e35f40a85384fa6403115bf458757ba5ebf5",
+      "candidate_png_sha256": "e96ec593f69d2944d62208d7336b9f309fbaae2d542ebbf83f7179c5e5141f9e"
+    },
+    {
+      "capture": "offset/halloween/repeat",
+      "changed_pixels": 3764,
+      "allowed_rect": [
+        660,
+        636,
+        740,
+        704
+      ],
+      "baseline_png_sha256": "df16a0bc8c2742b05136ef4b20c4e35f40a85384fa6403115bf458757ba5ebf5",
+      "candidate_png_sha256": "e96ec593f69d2944d62208d7336b9f309fbaae2d542ebbf83f7179c5e5141f9e"
+    },
+    {
+      "capture": "offset/stpatricks/smoke",
+      "changed_pixels": 11047,
+      "allowed_rect": [
+        506,
+        612,
+        746,
+        706
+      ],
+      "baseline_png_sha256": "084f4c316c087a522eb73d800f4d724b12920741e8aa9f17caa43c81c86c10c8",
+      "candidate_png_sha256": "0b8043f8f049b464ee7cc849bb88a3574632f2ec25848810fbe62e6768e599d1"
+    },
+    {
+      "capture": "offset/stpatricks/repeat",
+      "changed_pixels": 11047,
+      "allowed_rect": [
+        506,
+        612,
+        746,
+        706
+      ],
+      "baseline_png_sha256": "084f4c316c087a522eb73d800f4d724b12920741e8aa9f17caa43c81c86c10c8",
+      "candidate_png_sha256": "0b8043f8f049b464ee7cc849bb88a3574632f2ec25848810fbe62e6768e599d1"
+    },
+    {
+      "capture": "offset/christmas/smoke",
+      "changed_pixels": 6262,
+      "allowed_rect": [
+        648,
+        574,
+        760,
+        704
+      ],
+      "baseline_png_sha256": "b9c766e4bdc2033bcfde11c4b416b9fb867531cd615fa4e30c6aaecdb6ffdfe5",
+      "candidate_png_sha256": "9e3815af64d081c73362a85dd8c28eeedbf1621fedeaa9de85ca51851b695762"
+    },
+    {
+      "capture": "offset/christmas/repeat",
+      "changed_pixels": 6262,
+      "allowed_rect": [
+        648,
+        574,
+        760,
+        704
+      ],
+      "baseline_png_sha256": "b9c766e4bdc2033bcfde11c4b416b9fb867531cd615fa4e30c6aaecdb6ffdfe5",
+      "candidate_png_sha256": "9e3815af64d081c73362a85dd8c28eeedbf1621fedeaa9de85ca51851b695762"
+    },
+    {
+      "capture": "offset/newyear/smoke",
+      "changed_pixels": 14819,
+      "allowed_rect": [
+        562,
+        350,
+        866,
+        444
+      ],
+      "baseline_png_sha256": "31b736e71b6076ef417bea6fa5ef69d92acac6b60eddec361eb4e3c1e59177f3",
+      "candidate_png_sha256": "92dd27dce4323f0012ce9e719e9538a28f07e570926223ef68aa7dc5929ed53e"
+    },
+    {
+      "capture": "offset/newyear/repeat",
+      "changed_pixels": 14819,
+      "allowed_rect": [
+        562,
+        350,
+        866,
+        444
+      ],
+      "baseline_png_sha256": "31b736e71b6076ef417bea6fa5ef69d92acac6b60eddec361eb4e3c1e59177f3",
+      "candidate_png_sha256": "92dd27dce4323f0012ce9e719e9538a28f07e570926223ef68aa7dc5929ed53e"
+    }
+  ],
+  "negative_controls": [
+    {
+      "holiday": 0,
+      "status": "FIRED",
+      "failure": "seasonal: no-holiday exact scene identity"
+    },
+    {
+      "holiday": 1,
+      "status": "FIRED",
+      "failure": "seasonal: pixels outside holiday canvas"
+    }
+  ],
+  "scope": "Exact matched native stills, both processes already smoke/repeat verified. No-holiday scenes are byte-identical; every other change lies within its actual seasonal canvas. Does not infer artistic or semantic alpha approval."
+}
