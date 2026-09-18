@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-17",
+  "status": "draft_bar_removal_awaiting_human_review",
+  "resource": "TANKER.BMP",
+  "frame": "001",
+  "tool": "built-in image_gen",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/001-generated-v2.png",
+    "sha256": "2d21999c2c4fe327c17072e4ab1f0d1cfe1649567037149d53cf36d06349e575",
+    "canvas": [
+      1916,
+      821
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      61,
+      53,
+      1870,
+      783
+    ],
+    "meaningful_bounds_alpha8": [
+      77,
+      135,
+      1845,
+      692
+    ]
+  },
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/001-v2-request.json",
+    "sha256": "9b5583c5aa723b6f2d32377c9979a7a2c5559ce0f3a612c77ec2e585cbf4073c"
+  },
+  "references": [
+    {
+      "role": "edit_target",
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/001-generated-v1.png",
+      "sha256": "ad000a8d2f7c45e8fbff85e1ef1b4f10f2ba26c080c6d001bc2d10cedeb1578a"
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/001.png",
+    "sha256": "6139d7c983b22affc1cb082b1fe4a502413c7b5b7afda3e2ccc953b0e049f8a3"
+  },
+  "approval": null,
+  "production_package_changed": false,
+  "image_processing": "Exact copy of returned PNG; no resampling, recoloring or alpha changes.",
+  "visual_observation": "The long elevated red spans and both tall outer support posts are absent. Small deck fittings, white stepped cabin, funnel and hull remain. This removal does not establish original perspective or yaw continuity.",
+  "deferred_work": [
+    "Human review of bar removal",
+    "Existing tanker proportions and yaw correction",
+    "Original-canvas fitting and native motion during bulk integration"
+  ]
+}
