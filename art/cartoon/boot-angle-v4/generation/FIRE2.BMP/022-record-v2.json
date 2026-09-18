@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": "022",
+  "version": 2,
+  "recorded_at_utc": "2026-09-18T20:59:19.529640+00:00",
+  "tool": "builtin image_gen",
+  "status": "clockwise_angle_correction_ready_for_human_review_not_approved",
+  "raw_output": {
+    "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/022-generated-v2.png",
+    "sha256": "2e1773700100d3c934ff65617a896f8edcecd67c4660209c9c02b9cba6f22cd2"
+  },
+  "raw": {
+    "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/022-generated-v2.png",
+    "sha256": "2e1773700100d3c934ff65617a896f8edcecd67c4660209c9c02b9cba6f22cd2",
+    "canvas": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA"
+  },
+  "request": {
+    "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/022-v2-request.json",
+    "sha256": "20fe258b2ceed7eae38290cf7cfa2b7318193733005e78a166bb6244c9ccd257",
+    "saved_before_generation": true
+  },
+  "ordered_references": [
+    {
+      "role": "edit target; entire shape rotates together, internal bend locked",
+      "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/022-generated-v1.png",
+      "sha256": "d8757b5f1ba7c79487299bc51070fe90b705c85699a19610e860230fb3e28a71"
+    },
+    {
+      "role": "exact target is detached manual cutout bottom-right; ignore rejected flat-arch revision above",
+      "path": "art/cartoon/boot-angle-v4/reference/user-feedback/boot022.png",
+      "sha256": "12b1fd2657295b9380dc7061d3b20217190d6e5a73d27ec71b204705891dc348"
+    }
+  ],
+  "earlier_good_shape_source": {
+    "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/022-generated-v1.png",
+    "sha256": "048194ef12fdb7ee24f1997ca86ec04e2c92406688d6a39642983a0eed7ba473",
+    "role": "Earlier natural ankle bend, as requested in user's manual rotated cutout."
+  },
+  "source_original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/022.png",
+    "sha256": "99767618dcadef09b40f56669c05b35a822d1579455bbaea251abcd3c8b35073",
+    "canvas": [
+      24,
+      14
+    ],
+    "role": "Historical exact source pin; user manual cutout governs this correction."
+  },
+  "previous_intermediate_record": {
+    "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/022-record-v1.json",
+    "sha256": "f6f2730a15ab93ac4fbeb71bacd392eae11127b4eb15b346ffecd9e4604ae97c",
+    "status": "Preserved first attempt; less clockwise tilt."
+  },
+  "raw_source_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-8ee2af0f-6eb0-4dc0-8276-f151f3fc86b6.png",
+  "raw_source_sha256": "2e1773700100d3c934ff65617a896f8edcecd67c4660209c9c02b9cba6f22cd2",
+  "copied_byte_exact": true,
+  "postprocessing": "None; exact built-in output retained. Neutral-gray alpha composite inspected in memory only.",
+  "pixels": {
+    "mode": "RGBA",
+    "canvas": [
+      1374,
+      1145
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      76,
+      21,
+      1285,
+      999
+    ],
+    "alpha8_bounds": [
+      349,
+      301,
+      1242,
+      997
+    ],
+    "bounds_by_alpha_threshold": {
+      "1": [
+        76,
+        21,
+        1285,
+        999
+      ],
+      "8": [
+        349,
+        301,
+        1242,
+        997
+      ],
+      "128": [
+        350,
+        302,
+        1241,
+        997
+      ],
+      "255": [
+        351,
+        303,
+        1240,
+        995
+      ]
+    },
+    "edge_alpha_max": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+    }
+  },
+  "visual_review": {
+    "observation": "Cuff is lowered farther right relative to the toe than version1. Toe remains lower-left, open red cuff upper-right, with a compact curved ankle rather than the rejected flattened arch. Two brass eyelets, worn black leather, gray sole and scuffs remain recognizable.",
+    "target_authority": "Detached bottom-right manual cutout in the user screenshot; angle estimates are supporting descriptions only.",
+    "neutral_gray_alpha_composite_inspected": true,
+    "visible_background_haze_observed": false,
+    "meaningful_alpha8_touches_edge": false,
+    "limitations": "This is a generated visual edit, not a proven rigid pixel rotation or measured angular match. Final correspondence to the user cutout awaits human review; no further generation planned."
+  },
+  "approval": null,
+  "production_ready": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "pixel_edits_after_generation": false
+}

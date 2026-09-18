@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": "022",
+  "version": 2,
+  "tool": "builtin image_gen",
+  "intent": "further12degree whole-object clockwise tilt, internal ankle bend fixed",
+  "prompt": "Use case: precise-object-edit\nImage1 is the current boot. Image2's DETACHED BOTTOM-RIGHT cutout is the exact desired orientation.\nMake ONE small change: rotate the ENTIRE boot in image1 a further 12 degrees CLOCKWISE, as one rigid object. Keep every internal angle, ankle bend, wrinkle, eyelet, scuff and red cuff shape unchanged. Do not bend only the cuff. Do not stretch, flatten, straighten or redraw its naturally curved ankle.\nCurrent boot remains too upright. In the final pose, the line from the rounded toe CENTER at lower-left to the red cuff opening CENTER at upper-right should rise only about 25-30 degrees above horizontal, matching the manually rotated bottom-right cutout in image2. Thus cuff is still higher and right of toe, but substantially farther right relative to its height. The whole compact bent boot must tilt, not become the rejected flat arch at image2's top-right.\nSame single worn black boot with two gold eyelets, gray sole/scuffs, ragged red open cuff. Keep original appearance and internal perspective. No new elements.\nOutput one full boot with transparent safety margin, genuine transparent RGBA, no arrow, checkerboard pixels, screenshot, text, background, ground, cast shadow or glow.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/boot-angle-v4/generation/FIRE2.BMP/022-generated-v1.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/boot-angle-v4/reference/user-feedback/boot022.png"
+  ],
+  "ordered_references": [
+    {
+      "role": "edit target; entire shape rotates together, internal bend locked",
+      "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/022-generated-v1.png",
+      "sha256": "d8757b5f1ba7c79487299bc51070fe90b705c85699a19610e860230fb3e28a71"
+    },
+    {
+      "role": "exact target is detached manual cutout bottom-right; ignore rejected flat-arch revision above",
+      "path": "art/cartoon/boot-angle-v4/reference/user-feedback/boot022.png",
+      "sha256": "12b1fd2657295b9380dc7061d3b20217190d6e5a73d27ec71b204705891dc348"
+    }
+  ],
+  "output_path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/022-generated-v2.png"
+}

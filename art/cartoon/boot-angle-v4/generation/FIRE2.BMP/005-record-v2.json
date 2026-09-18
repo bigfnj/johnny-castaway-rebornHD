@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 5,
+  "version": 2,
+  "status": "selected draft for manual-angle human review; not approved",
+  "tool": "builtin image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/005-v2-request.json",
+    "sha256": "7c63d93c153e143277a13f5e3d770301e5567dfd881154341d2f5a3b41a186ff"
+  },
+  "output": {
+    "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/005-generated-v2.png",
+    "sha256": "162d1d9d083af0864ae4d39e3d1252f484f8ea8d26a2a3855f1c516a1d22e3cd"
+  },
+  "raw_cache": {
+    "path": "C:/Users/Admin/.codex/generated_images/01a0a66d-be69-7d32-a6c3-063800819526/exec-ba7674a8-f7b0-4d32-8f33-9c6c10ff8c3e.png",
+    "sha256": "162d1d9d083af0864ae4d39e3d1252f484f8ea8d26a2a3855f1c516a1d22e3cd"
+  },
+  "copied_byte_exact": true,
+  "ordered_references": [
+    {
+      "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/005-generated-v1.png",
+      "sha256": "ab5bd9b3d2f7ecdce31822bfaab3ef1f31a27b996b651a8a489163e404693fa9",
+      "role": "v1 local angle edit target",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/boot-angle-v4/reference/user-feedback/boot005.png",
+      "sha256": "92a5ac15b8c6e02b6ca6979b4b3f816bdc336f159891e318bf9d733cace80f08",
+      "role": "authoritative bottom-right manual cutout",
+      "inspected_before_request": true
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/005.png",
+    "sha256": "9c078d5f32469d97dba0a03d053952987080ff8f96734cc9ccb9913a042d385c"
+  },
+  "material_shape_source": {
+    "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/005-generated-v1.png",
+    "sha256": "33a78778c54d7855f261066ed863e5804ee0a4a502a009ec9bec08332ebaa6ea"
+  },
+  "previous_attempt_record": {
+    "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/005-record-v1.json",
+    "sha256": "04e9a73b535bb964c55df284dee83a8dfdd251f5845fb58067198cba78faadb6"
+  },
+  "durable_user_annotation": {
+    "path": "art/cartoon/boot-angle-v4/reference/user-feedback/boot005.png",
+    "sha256": "92a5ac15b8c6e02b6ca6979b4b3f816bdc336f159891e318bf9d733cace80f08"
+  },
+  "pixels": {
+    "canvas": [
+      1331,
+      1181
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bbox": [
+      25,
+      21,
+      1251,
+      1161
+    ],
+    "alpha_ge8_bbox": [
+      247,
+      189,
+      1246,
+      1067
+    ],
+    "alpha_ge8_edge_pixels": 0
+  },
+  "visual_observations": [
+    "The sole/toe section now leans visibly up-right from the lower-left toe toward the upper-right heel.",
+    "The three-eyelet section remains mostly horizontal toward the right, with the red cuff hanging below it.",
+    "The relative foot angle changed compared with v1, rather than rotating the entire sprite.",
+    "This is a visual match attempt to the user's lower manual cutout; exact geometric equivalence and native fit are not claimed."
+  ],
+  "postprocessing": "None; raw generated PNG copied byte-exact.",
+  "human_approval": null,
+  "production_ready": false,
+  "runtime_export_executed": false,
+  "tests_executed": false
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": "022",
+  "version": 1,
+  "tool": "builtin image_gen",
+  "intent": "rigid clockwise pose correction, preserving earlier natural boot bend",
+  "prompt": "Use case: precise-object-edit\nAsset: one isolated transparent boot game sprite, FIRE2.BMP022.\nImage1 is the good earlier boot EDIT BASE. Image2 contains the user's exact pose target: the DETACHED ROTATED CUTOUT at the BOTTOM RIGHT, indicated by the red arrow. Match ONLY that bottom-right cutout. The top-right 'New revision' boot is a rejected overbent flat arch and MUST NOT be copied.\nRequired edit: Tilt the ENTIRE boot in image1 CLOCKWISE by approximately 23 degrees (20-25 degrees), matching the user's manual rotated cutout. Treat it as a rigid pose rotation of the same boot, not a new bend. The red open cuff moves right and downward; the toe stays lower-left. Preserve the current NATURAL ankle curvature and every relative relationship between cuff, eyelets, ankle and toe. Do NOT collapse the boot into a flat arch, kink its ankle, or lower only the cuff.\nPreserve exact visual design: worn black leather, two brass eyelets, gray scuff patches and sole, ragged red open cuff and its dark red interior, painterly cartoon highlights and dark outline. Do not redesign shape, change wear marks, add laces, create another boot, or change the perspective. All parts rotate together clockwise while the internal bend stays unchanged.\nComposition: Full boot with clear transparent margin on every side; use whatever canvas framing holds the rotated sprite without clipping. One boot only, no separate parts.\nOutput: Genuine transparent RGBA background. No checkerboard pixels, screenshot border, red arrow, text, labels, white backdrop, shadow or glow. The user's bottom-right manually rotated earlier boot is the exact visual target.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/022-generated-v1.png",
+    "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-7cc0d4ad-b177-46b6-9587-025e79e16549.png"
+  ],
+  "ordered_references": [
+    {
+      "role": "edit base; retain this exact boot appearance and internal ankle bend",
+      "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/022-generated-v1.png",
+      "sha256": "048194ef12fdb7ee24f1997ca86ec04e2c92406688d6a39642983a0eed7ba473"
+    },
+    {
+      "role": "authoritative user manual rotation target is the detached bottom-right cutout; top-right overbent revision is rejected",
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-7cc0d4ad-b177-46b6-9587-025e79e16549.png",
+      "sha256": "12b1fd2657295b9380dc7061d3b20217190d6e5a73d27ec71b204705891dc348"
+    }
+  ],
+  "user_feedback_interpretation": "Match bottom-right manual cutout: rotate earlier direction-v2 boot clockwise about20-25degrees without overbending into the rejected flat arch.",
+  "source_head": "ab566a5ecf7e15ed2511f2f7341706650dec51fa",
+  "output_path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/022-generated-v1.png"
+}

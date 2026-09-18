@@ -94,6 +94,8 @@ The user's 2026-09-18 review rejected 13 facing/eye interpretations in that grou
 
 The subsequent [six-drawing refinement](../art/cartoon/campfire-props-bend-v3/README.md) addresses the marked sole/cuff bends in 005/022, upper eye placement in 006, and rounded head/appendage corrections in 021/024/FIRE5 000. User annotations are retained with the generation records. Earlier comparison pages remain intact; unmentioned frames have no new acceptance implied by this request. Full scene testing remains deferred.
 
+The latest [005/022 angle review](../art/cartoon/boot-angle-v4/README.md) follows the user's manually rotated boot cutouts. Preserve the natural internal bend while matching the indicated tilt. The page compares the source, the user cutout and the new output; earlier pose reviews remain historical evidence, not acceptance.
+
 The workflow builds on [the original lessons](art-style-learnings.md),
 [the Calm focus addendum](art-style-learnings-calm-focus.md), and
 [the approved runtime record](../art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json).

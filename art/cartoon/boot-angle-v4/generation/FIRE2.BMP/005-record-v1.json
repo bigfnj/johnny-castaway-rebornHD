@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 5,
+  "version": 1,
+  "status": "draft manual-angle correction awaiting human review",
+  "tool": "builtin image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/005-v1-request.json",
+    "sha256": "9c8127fa5f533a64ffe9277028e91121816be210fec92d0d69f1a4fada00509b"
+  },
+  "output": {
+    "path": "art/cartoon/boot-angle-v4/generation/FIRE2.BMP/005-generated-v1.png",
+    "sha256": "ab5bd9b3d2f7ecdce31822bfaab3ef1f31a27b996b651a8a489163e404693fa9"
+  },
+  "raw_cache": {
+    "path": "C:/Users/Admin/.codex/generated_images/01a0a66d-be69-7d32-a6c3-063800819526/exec-ef17642e-06b0-4f20-8937-3ca56836166b.png",
+    "sha256": "ab5bd9b3d2f7ecdce31822bfaab3ef1f31a27b996b651a8a489163e404693fa9"
+  },
+  "copied_byte_exact": true,
+  "ordered_references": [
+    {
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-55ce84a2-4109-41c5-85a7-f95e28c57f83.png",
+      "sha256": "92a5ac15b8c6e02b6ca6979b4b3f816bdc336f159891e318bf9d733cace80f08",
+      "role": "user bottom-right manual cutout is authoritative",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/005-generated-v1.png",
+      "sha256": "33a78778c54d7855f261066ed863e5804ee0a4a502a009ec9bec08332ebaa6ea",
+      "role": "less-curved earlier boot shape and materials",
+      "inspected_before_request": true
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/005.png",
+    "sha256": "9c078d5f32469d97dba0a03d053952987080ff8f96734cc9ccb9913a042d385c"
+  },
+  "inspected_rejected_curve": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/005-generated-v1.png",
+    "sha256": "d392e097bbb1f5408c0fbd9dd2b77f7376212a9ee369ed2a1f604408ffad15cd"
+  },
+  "pixels": {
+    "canvas": [
+      1331,
+      1181
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bbox": [
+      228,
+      21,
+      1295,
+      1141
+    ],
+    "alpha_ge8_bbox": [
+      232,
+      181,
+      1124,
+      1069
+    ],
+    "alpha_ge8_edge_pixels": 0
+  },
+  "visual_observations": [
+    "The laced section is more horizontal and the red cuff hangs down on the right.",
+    "The heel lies to the right of the toe, but the foot-axis tilt is still more modest than the manual target.",
+    "Natural boot materials remain; no whole-image pixel rotation or other postprocessing was applied."
+  ],
+  "postprocessing": "None; raw generated PNG copied byte-exact.",
+  "human_approval": null,
+  "production_ready": false,
+  "runtime_export_executed": false,
+  "tests_executed": false,
+  "durable_user_annotation": {
+    "path": "art/cartoon/boot-angle-v4/reference/user-feedback/boot005.png",
+    "sha256": "92a5ac15b8c6e02b6ca6979b4b3f816bdc336f159891e318bf9d733cace80f08"
+  },
+  "annotation_copy_matches_submitted": true
+}
