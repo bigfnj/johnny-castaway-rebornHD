@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": "006",
+  "version": 1,
+  "status": "eye_position_and_upward_gaze_correction_ready_for_review_not_approved",
+  "recorded_at_utc": "2026-09-18T20:36:22.460270+00:00",
+  "tool": "builtin image_gen",
+  "raw_output": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/006-generated-v1.png",
+    "sha256": "f26799e5ddfb62e5ff12d8df086af377a4fa8d67d32c2b994204d795f875d3de"
+  },
+  "raw": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/006-generated-v1.png",
+    "sha256": "f26799e5ddfb62e5ff12d8df086af377a4fa8d67d32c2b994204d795f875d3de",
+    "canvas": [
+      1738,
+      905
+    ],
+    "mode": "RGBA"
+  },
+  "request": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/006-v1-request.json",
+    "sha256": "b18aeca0624195a8570b6f2428a25060667db3aa351cfeb57ea49360d6484373",
+    "saved_before_generation": true
+  },
+  "ordered_references": [
+    {
+      "role": "edit target; preserve overall mantle and tentacle silhouette, replace current eye placement",
+      "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/006-generated-v1.png",
+      "sha256": "3ec8672244bd6bfcacbdc9b4cabc6d734e1a4439e99462b1e66fc460355ffed4"
+    },
+    {
+      "role": "user-annotated authority: green ovals locate new upper-face eyes and green strokes specify upward gaze",
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-894053f2-7850-49ff-80a4-62540084b82b.png",
+      "sha256": "9888154b647564cec964773c1404f05a1d499372a284b1c615273b7fadcbe979"
+    },
+    {
+      "role": "exact original nearest-neighbor pose reference; preserve diagonal mantle and trailing arms",
+      "path": "art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/006.png",
+      "sha256": "688d87970ed41df976b9d87c608ceb10aa435c739f66823e06a7b0a41f5f3a20"
+    }
+  ],
+  "user_feedback": {
+    "exact_quote": "squid 006 laying on back looking up, you just added two eyes and they are both looking down and left. Look at my green edits for reference.",
+    "scope": "latest specific green annotation supersedes prior left-looking interpretation"
+  },
+  "exact_original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/006.png",
+    "sha256": "957da4c523b5a3b020de3418775140b317cad239044fec8bfd2e5d6d5cad9f97",
+    "canvas": [
+      48,
+      25
+    ]
+  },
+  "reference_source": {
+    "path": "art/cartoon/campfire-props-v1/reference/source.json",
+    "sha256": "904d8a0137b6df047c88efe9d707667c0c02e949bfe2b262b1e6e3663d828274"
+  },
+  "previous_rejected_record": {
+    "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/006-record-v1.json",
+    "sha256": "67cd83912ba375dfcc3da69a0a69ee974c05d52375e52f905de7c720d1814c15",
+    "scope": "Historical lower-face placement and leftward gaze superseded by latest specific user annotation."
+  },
+  "raw_source_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-c4d2e6ee-01a4-4f8e-b92a-6ba8f9e10d1b.png",
+  "raw_source_sha256": "f26799e5ddfb62e5ff12d8df086af377a4fa8d67d32c2b994204d795f875d3de",
+  "copied_byte_exact": true,
+  "postprocessing": "None; exact built-in output preserved. Neutral-gray alpha composite inspected in memory only.",
+  "pixels": {
+    "mode": "RGBA",
+    "canvas": [
+      1738,
+      905
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      26,
+      35,
+      1708,
+      858
+    ],
+    "alpha8_bounds": [
+      28,
+      70,
+      1706,
+      855
+    ],
+    "bounds_by_alpha_threshold": {
+      "1": [
+        26,
+        35,
+        1708,
+        858
+      ],
+      "8": [
+        28,
+        70,
+        1706,
+        855
+      ],
+      "128": [
+        29,
+        71,
+        1706,
+        854
+      ],
+      "255": [
+        30,
+        71,
+        1705,
+        853
+      ]
+    },
+    "edge_alpha_max": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+    }
+  },
+  "semantic_visual_inspection": {
+    "performed": true,
+    "visible_eye_count": 2,
+    "eye_placement": "Both eyes moved up and right onto the upper-facing surface of the mantle/head, diagonally paired with the right eye slightly higher. Previous lower-left underside eye locations are replaced by red body surface.",
+    "gaze": "Both pupils sit close to their upper rims, visibly looking upward; the pair has a slight leftward lean within that upward gaze.",
+    "silhouette": "Mantle still extends diagonally upper-left and long swept arms trail right. No added dangling head tentacle observed.",
+    "neutral_gray_alpha_composite_inspected": true,
+    "visible_background_haze_observed": false,
+    "meaningful_alpha8_touches_edge": false,
+    "method": "Direct visual inspection of generated output and read-only alpha measurements; not native execution or pixel-exact silhouette proof.",
+    "limitation": "Human judgment of the annotated pose remains pending; no export registration or scene testing performed."
+  },
+  "approval": null,
+  "production_ready": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "pixel_edits_after_generation": false,
+  "user_annotation_durable_copy": {
+    "path": "art/cartoon/campfire-props-bend-v3/reference/user-feedback/squid006.png",
+    "sha256": "9888154b647564cec964773c1404f05a1d499372a284b1c615273b7fadcbe979",
+    "byte_identical_to_actual_tool_input": true,
+    "note": "Parent preserved this exact copy after generation. The request retains the actual temporary image path submitted to the tool."
+  }
+}

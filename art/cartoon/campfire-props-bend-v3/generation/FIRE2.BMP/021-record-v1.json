@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 21,
+  "version": 1,
+  "status": "correction_review_candidate_not_approved",
+  "selected_for_correction_review": true,
+  "recorded_at_utc": "2026-09-18T20:39:54.919053+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "feedback": {
+    "path": "art/cartoon/campfire-props-bend-v3/feedback.json",
+    "sha256": "3533c88da71539208b7c066b3144f3447bca753778f98d97e7115bcaaa84b4a4"
+  },
+  "required_correction": "Remove the marked head appendages and shift both pupils down-left while retaining the compact head and right curled arms.",
+  "raw": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/021-generated-v1.png",
+    "sha256": "6cd5d05ac43131abdb6be13b902c194869ddcdbf1204dc911e9b31ffa796d390",
+    "canvas": [
+      1894,
+      830
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      166,
+      19,
+      1848,
+      812
+    ],
+    "alpha8_bounds_exclusive": [
+      168,
+      165,
+      1759,
+      744
+    ],
+    "alpha8_margins_left_top_right_bottom": [
+      168,
+      165,
+      135,
+      86
+    ],
+    "alpha_nonzero_pixels": 584116,
+    "alpha_opaque_pixels": 1878,
+    "alpha_1_to_7_pixels": 8282,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-2c0129cb-d751-4100-ad8b-b6ea99c3212a.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/021-v1-request.json",
+    "sha256": "f76ae7a0d5fb5e78b8e1c9b4b48f78a0a344f5c042444b75c09bc4412ee35697"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/021-generated-v1.png",
+      "sha256": "767ff24a89bf1fe4ccf305dca892f5850e11298e8901ca96ef5a413266c8b24d"
+    },
+    {
+      "path": "art/cartoon/campfire-props-bend-v3/reference/user-feedback/squid021.png",
+      "sha256": "0b54893f5228336466184e7abb29abf38076e19004bfe2a8738d941ff2d6aace"
+    }
+  ],
+  "reference_roles": [
+    "Exact prior edit target; preserve body and right curled arms.",
+    "User annotation: remove green-circled head fins; green strokes set down-left pupil direction."
+  ],
+  "exact_original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/021.png",
+    "sha256": "5ce5adb9aea601af4f93990b172df2111bc3d9762913f1ec41e5335c320f24f3",
+    "canvas": [
+      32,
+      14
+    ]
+  },
+  "reference_source": {
+    "path": "art/cartoon/campfire-props-v1/reference/source.json",
+    "sha256": "904d8a0137b6df047c88efe9d707667c0c02e949bfe2b262b1e6e3663d828274"
+  },
+  "semantic_visual_inspection": {
+    "performed": true,
+    "visible_eye_count": 2,
+    "gaze": "down-left",
+    "expression": "curious",
+    "observation": "Both marked top-left protruding fins have been removed. The head is a short broad rounded capsule; the two pupils sit toward the lower-left of the whites. The curled arm arrangement remains on the right.",
+    "method": "Direct visual inspection of generated output alongside the viewed input images.",
+    "limitations": "Generated edit preserves the requested visual arrangement but does not establish pixel-identical geometry. No native size or motion check was performed."
+  },
+  "mirror_relationship": {
+    "authorized": false,
+    "implementation": "Not applicable.",
+    "exact_pixel_mirror_claimed": false
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "alpha_measurement_note": "Alpha >= 8 is a diagnostic measurement only. All generated RGBA pixels and faint alpha are retained without thresholds, recoloring, cropping or resampling."
+}

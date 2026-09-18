@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "scope": "Lightweight draft, provenance and preview checks only; full smoke/regression deferred to bulk integration.",
+  "selected_drawings": 6,
+  "selected_version": 1,
+  "hash_bindings_checked": 95,
+  "hash_mismatches": [],
+  "prior_evidence_files_unchanged": 22,
+  "javascript_syntax": "passed",
+  "browser": {
+    "url": "http://127.0.0.1:8941/campfire-props-bend-v3/review.html",
+    "ready_text": "6 of 6 comparisons ready.",
+    "loaded_canvases": 18,
+    "light_dark_control": "observed working and restored to light",
+    "previous_review_column_control": "observed hiding and showing the previous draft; restored to visible",
+    "captured_console_errors_or_warnings": [],
+    "visual_check": "All six raw outputs inspected by the parent agent; original/prior/new boot005 and original/new squid006 inspected in the browser. Human pose acceptance remains pending."
+  },
+  "byte_preservation_mutation": {
+    "disabled_family_attribute_failure_count": 1,
+    "named_failure": "art/cartoon/campfire-props-bend-v3/review-record.json",
+    "restored_attribute": "Git filtered blob matches exact working-file bytes"
+  },
+  "production_archive_changed": false,
+  "production_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "full_smoke_regression_run": false,
+  "native_motion_run": false,
+  "human_approval": null,
+  "limitations": [
+    "Raw generation outputs remain untouched; alpha1 residue on the left edge of FIRE5 000 is retained.",
+    "024 and 000 are independent generated edits, not exact pixel mirrors.",
+    "Drawings are enlarged independently; scene size, hand/mouth joins and native timing remain untested."
+  ]
+}

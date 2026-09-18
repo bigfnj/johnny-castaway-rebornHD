@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 24,
+  "version": 1,
+  "status": "correction_review_candidate_not_approved",
+  "selected_for_correction_review": true,
+  "recorded_at_utc": "2026-09-18T20:39:54.977257+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "precise-object-edit",
+  "feedback": {
+    "path": "art/cartoon/campfire-props-bend-v3/feedback.json",
+    "sha256": "3533c88da71539208b7c066b3144f3447bca753778f98d97e7115bcaaa84b4a4"
+  },
+  "required_correction": "Use the corrected 021 rounded head; retain the existing diagonal body, two eyes and down-right gaze.",
+  "raw": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/024-generated-v1.png",
+    "sha256": "21eea4e824763721e8912f262e1075ab6985865fb07450be7f4aa34ba598d76c",
+    "canvas": [
+      1628,
+      966
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      107,
+      143,
+      1537,
+      924
+    ],
+    "alpha8_bounds_exclusive": [
+      110,
+      145,
+      1535,
+      894
+    ],
+    "alpha8_margins_left_top_right_bottom": [
+      110,
+      145,
+      93,
+      72
+    ],
+    "alpha_nonzero_pixels": 553905,
+    "alpha_opaque_pixels": 2094,
+    "alpha_1_to_7_pixels": 7520,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-c2f690e6-403d-46d0-a2a1-dbba62581b5b.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/024-v1-request.json",
+    "sha256": "61946ca2b178de45f224b25bf8c0821e98e262708b94d015217e583e2850f61f"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/024-generated-v1.png",
+      "sha256": "009edd243eceedc21b54198f3b6b3b7598464fccb77fd67e869168b18e53c025"
+    },
+    {
+      "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/021-generated-v1.png",
+      "sha256": "6cd5d05ac43131abdb6be13b902c194869ddcdbf1204dc911e9b31ffa796d390"
+    }
+  ],
+  "reference_roles": [
+    "Exact prior edit target; body, eye direction and diagonal pose remain authoritative.",
+    "Corrected 021 rounded head shape and material key only; its horizontal body pose is not copied."
+  ],
+  "exact_original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/024.png",
+    "sha256": "aa11115bc448c460b63a8dc8ef0346666b955ea9ac278c3f3287a8f8f1571683",
+    "canvas": [
+      32,
+      19
+    ]
+  },
+  "reference_source": {
+    "path": "art/cartoon/campfire-props-v1/reference/source.json",
+    "sha256": "904d8a0137b6df047c88efe9d707667c0c02e949bfe2b262b1e6e3663d828274"
+  },
+  "semantic_visual_inspection": {
+    "performed": true,
+    "visible_eye_count": 2,
+    "gaze": "down-right",
+    "expression": "curious",
+    "observation": "The elongated pointed head has become a broad rounded dome without the old upper fins. Two eyes look down-right. Head remains upper-right with curled arms lower-left in a diagonal pose.",
+    "method": "Direct visual inspection of generated output alongside the viewed input images.",
+    "limitations": "Generated edit preserves the requested visual arrangement but does not establish pixel-identical geometry. No native size or motion check was performed."
+  },
+  "mirror_relationship": {
+    "authorized": true,
+    "implementation": "Independent imagegen edits from each prior orientation using the common rounded-head key.",
+    "exact_pixel_mirror_claimed": false
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "alpha_measurement_note": "Alpha >= 8 is a diagnostic measurement only. All generated RGBA pixels and faint alpha are retained without thresholds, recoloring, cropping or resampling."
+}

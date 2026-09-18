@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": "006",
+  "version": 1,
+  "tool": "builtin image_gen",
+  "intent": "targeted eye relocation and upward gaze from latest user annotation",
+  "prompt": "Use case: precise-object-edit\nAsset: one transparent cartoon squid game sprite, FIRE2.BMP006.\nPrimary request: Correct the physical position of BOTH eyes and their gaze in image1 according to the green annotations in image2. The squid is LYING ON ITS BACK LOOKING UP.\nImage roles: Image1 is the edit target. Image2 is the user's annotated comparison screenshot; use the green ovals and upward green strokes on its right-hand Revised Cartoon panel to locate the new face and gaze, not the old eyes. Image3 is the original pixel pose, supporting the same diagonal mantle and swept rightward tentacles.\nRequired change: Completely remove the existing two eyes from the LOWER-LEFT UNDERSIDE edge of the mantle. Fill those old locations with continuous red mantle surface and smooth existing contour. Relocate both eyeballs UP AND RIGHT, onto the UPPER facing surface of the mantle/head where the two green ovals are drawn. They sit embedded into the top-right surface of the red mantle, above and to the right of their current positions, as a slightly diagonal pair. One oval is a little lower-left and the other a little higher-right. They must NOT dangle beneath the mantle or stay on its bottom-left edge.\nGaze: BOTH dark pupils point UP toward the top of the image along the green strokes, near the upper rims of their white eyes, with white visible beneath. Not down-left, not sideward-left. This is an upward-facing head on its back, not a frontal face on a squid lying upright.\nInvariants: Keep the existing large tapered mantle diagonal toward UPPER LEFT, and preserve the long swept curling tentacles trailing RIGHT, their count, overall outline and motion. Keep red/orange body, golden highlights, bold dark warm outline, current illustrated style and transparent background. Do not rotate the animal or reverse travel direction. No dangling head tentacle, no new mouth appendage, no new arm below the face. The changes are eye location, gaze, and the red surface replacing the old eyes.\nOutput: Single full sprite only, genuine transparent RGBA, same framing with all arms visible. Do not include green annotations, source screenshot, text, checkerboard pixels, background, scenery, glow, haze or shadow. Do not settle for changing only pupils: both eyeballs must move up onto the annotated top-right face surface.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/006-generated-v1.png",
+    "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-894053f2-7850-49ff-80a4-62540084b82b.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/006.png"
+  ],
+  "ordered_references": [
+    {
+      "role": "edit target; preserve overall mantle and tentacle silhouette, replace current eye placement",
+      "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/006-generated-v1.png",
+      "sha256": "3ec8672244bd6bfcacbdc9b4cabc6d734e1a4439e99462b1e66fc460355ffed4"
+    },
+    {
+      "role": "user-annotated authority: green ovals locate new upper-face eyes and green strokes specify upward gaze",
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-894053f2-7850-49ff-80a4-62540084b82b.png",
+      "sha256": "9888154b647564cec964773c1404f05a1d499372a284b1c615273b7fadcbe979"
+    },
+    {
+      "role": "exact original nearest-neighbor pose reference; preserve diagonal mantle and trailing arms",
+      "path": "art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/006.png",
+      "sha256": "688d87970ed41df976b9d87c608ceb10aa435c739f66823e06a7b0a41f5f3a20"
+    }
+  ],
+  "user_feedback": {
+    "exact_quote": "squid006 laying on back looking up, you just added two eyes and they are both looking down and left. Look at my green edits",
+    "scope": "latest specific green annotation supersedes prior left-looking interpretation"
+  },
+  "output_path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/006-generated-v1.png",
+  "source_head": "e8c31991b6f51b107268de0e19c3d5d6cbc81109",
+  "runtime_claim": "None; raw appearance correction only"
+}

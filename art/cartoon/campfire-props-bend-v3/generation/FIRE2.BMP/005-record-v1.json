@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 5,
+  "version": 1,
+  "status": "draft bend correction awaiting human review",
+  "tool": "builtin image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/005-v1-request.json",
+    "sha256": "26b9472856cf4200b4c814370af328d74a5228254fcfe63c1e0438326ae8422e"
+  },
+  "output": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/005-generated-v1.png",
+    "sha256": "d392e097bbb1f5408c0fbd9dd2b77f7376212a9ee369ed2a1f604408ffad15cd"
+  },
+  "raw_cache": {
+    "path": "C:/Users/Admin/.codex/generated_images/01a0a66d-be69-7d32-a6c3-063800819526/exec-6327ba72-0ead-4e08-915f-1e6ea24c27a6.png",
+    "sha256": "d392e097bbb1f5408c0fbd9dd2b77f7376212a9ee369ed2a1f604408ffad15cd"
+  },
+  "copied_byte_exact": true,
+  "original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/005.png",
+    "sha256": "9c078d5f32469d97dba0a03d053952987080ff8f96734cc9ccb9913a042d385c"
+  },
+  "edit_target": {
+    "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/005-generated-v1.png",
+    "sha256": "33a78778c54d7855f261066ed863e5804ee0a4a502a009ec9bec08332ebaa6ea"
+  },
+  "user_annotation": {
+    "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-fe7f7933-23c6-47cb-aca3-3f7089831b21.png",
+    "sha256": "a8194e4a13af691ec23b8f2ab8904285c1fab160923d792d7cf63c392f565187"
+  },
+  "ordered_references": [
+    {
+      "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/005-generated-v1.png",
+      "sha256": "33a78778c54d7855f261066ed863e5804ee0a4a502a009ec9bec08332ebaa6ea",
+      "role": "edit target",
+      "inspected_before_request": true
+    },
+    {
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-fe7f7933-23c6-47cb-aca3-3f7089831b21.png",
+      "sha256": "a8194e4a13af691ec23b8f2ab8904285c1fab160923d792d7cf63c392f565187",
+      "role": "user annotation and original pose comparison",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/005.png",
+      "sha256": "57ecca61b5702e14ac1a8377b74382483eae85cc62ac82f9c3e96b9cbb4060da",
+      "role": "nearest-neighbor original geometry",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/campfire-props-v1/reference/FIRE2.BMP-contact-1.png",
+      "sha256": "84197f7e39f7aed8968246efec5ff0040530ff666bd2294a16a6f72a80168bad",
+      "role": "original contact sheet",
+      "inspected_before_request": true
+    }
+  ],
+  "pixels": {
+    "canvas": [
+      1331,
+      1181
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bbox": [
+      41,
+      48,
+      1221,
+      1141
+    ],
+    "alpha_ge8_bbox": [
+      352,
+      173,
+      1109,
+      1043
+    ],
+    "meaningful_edge_pixels": 0
+  },
+  "visual_observations": [
+    "The outer gray sole now follows a bowed curve with the upper heel rolling to the right, replacing the previous straight vertical sole.",
+    "The lower toe still points down, and the red opening and eyelet side face right.",
+    "The change is an ankle/sole bend, rather than a whole-image rotation."
+  ],
+  "postprocessing": "None; exact generated PNG bytes copied without pixel edits.",
+  "human_approval": null,
+  "production_ready": false,
+  "runtime_export_executed": false,
+  "tests_executed": false,
+  "durable_user_annotation": {
+    "path": "art/cartoon/campfire-props-bend-v3/reference/user-feedback/boot005.png",
+    "sha256": "a8194e4a13af691ec23b8f2ab8904285c1fab160923d792d7cf63c392f565187"
+  },
+  "annotation_copy_matches_submitted": true
+}

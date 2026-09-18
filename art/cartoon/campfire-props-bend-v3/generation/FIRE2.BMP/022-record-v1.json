@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 22,
+  "version": 1,
+  "status": "draft bend correction awaiting human review",
+  "tool": "builtin image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/022-v1-request.json",
+    "sha256": "dacc6e72b9f85a55b3fc2bd90134caf14098d8ad7067ce2b09fdab222efbaff4"
+  },
+  "output": {
+    "path": "art/cartoon/campfire-props-bend-v3/generation/FIRE2.BMP/022-generated-v1.png",
+    "sha256": "b45ba2d0e4d48914cdb194843002009962b9838e9036ea7a378f12424784a921"
+  },
+  "raw_cache": {
+    "path": "C:/Users/Admin/.codex/generated_images/01a0a66d-be69-7d32-a6c3-063800819526/exec-eb838848-d8a6-4125-b11c-c2a6fee5daf4.png",
+    "sha256": "b45ba2d0e4d48914cdb194843002009962b9838e9036ea7a378f12424784a921"
+  },
+  "copied_byte_exact": true,
+  "original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/022.png",
+    "sha256": "99767618dcadef09b40f56669c05b35a822d1579455bbaea251abcd3c8b35073"
+  },
+  "edit_target": {
+    "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/022-generated-v1.png",
+    "sha256": "048194ef12fdb7ee24f1997ca86ec04e2c92406688d6a39642983a0eed7ba473"
+  },
+  "user_annotation": {
+    "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-8f490de7-7a65-435e-8e60-df28b992f623.png",
+    "sha256": "464ebf674be8c695c99cf3319e2279256fd795b417765740ca5d9a1bef189ba1"
+  },
+  "ordered_references": [
+    {
+      "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/022-generated-v1.png",
+      "sha256": "048194ef12fdb7ee24f1997ca86ec04e2c92406688d6a39642983a0eed7ba473",
+      "role": "edit target",
+      "inspected_before_request": true
+    },
+    {
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-8f490de7-7a65-435e-8e60-df28b992f623.png",
+      "sha256": "464ebf674be8c695c99cf3319e2279256fd795b417765740ca5d9a1bef189ba1",
+      "role": "user annotation and original pose comparison",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/022.png",
+      "sha256": "d10839d9b0197d9faae483154d78f70aa98a94ab6580874eb7955f5019d05423",
+      "role": "nearest-neighbor original geometry",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/campfire-props-v1/reference/FIRE2.BMP-contact-2.png",
+      "sha256": "4f1539fba02cfdec6a43450012d2da6e237e47775727e13d49d2e5ce78995ff7",
+      "role": "original contact sheet",
+      "inspected_before_request": true
+    }
+  ],
+  "pixels": {
+    "canvas": [
+      1374,
+      1145
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bbox": [
+      74,
+      21,
+      1269,
+      1119
+    ],
+    "alpha_ge8_bbox": [
+      206,
+      364,
+      1252,
+      954
+    ],
+    "meaningful_edge_pixels": 0
+  },
+  "visual_observations": [
+    "The boot lies on its side with a deeply folded ankle.",
+    "The red opening is lowered at the right; its lower rim is approximately level with the lower toe/sole on the left.",
+    "The opening remains toward the viewer and the eyelet section follows the downward bend.",
+    "These are visual observations, not native registration or joint-contact validation."
+  ],
+  "postprocessing": "None; exact generated PNG bytes copied without pixel edits.",
+  "human_approval": null,
+  "production_ready": false,
+  "runtime_export_executed": false,
+  "tests_executed": false,
+  "durable_user_annotation": {
+    "path": "art/cartoon/campfire-props-bend-v3/reference/user-feedback/boot022.png",
+    "sha256": "464ebf674be8c695c99cf3319e2279256fd795b417765740ca5d9a1bef189ba1"
+  },
+  "annotation_copy_matches_submitted": true
+}
