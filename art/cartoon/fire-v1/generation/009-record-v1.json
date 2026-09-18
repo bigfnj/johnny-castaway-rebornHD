@@ -1,0 +1,174 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "frame": 9,
+  "version": 1,
+  "date": "2026-09-18",
+  "status": "draft_pending_family_appearance_review_not_runtime_accepted",
+  "family": "medium_flame",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "style-transfer",
+  "raw": {
+    "path": "art/cartoon/fire-v1/generation/009-generated-v1.png",
+    "sha256": "97219480c4e6134f111736b7177ff4a1ec0bc86237e55676a8fa85db9632c39b",
+    "canvas": [
+      1228,
+      1281
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds_exclusive": {
+      "1": [
+        2,
+        15,
+        1147,
+        1281
+      ],
+      "8": [
+        96,
+        17,
+        1144,
+        1277
+      ],
+      "128": [
+        97,
+        18,
+        1143,
+        1277
+      ],
+      "255": [
+        105,
+        23,
+        1143,
+        1276
+      ]
+    },
+    "alpha_nonzero_pixels": 454088,
+    "alpha_opaque_pixels": 3200,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        1
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    },
+    "alpha8_touches_canvas_edge": false,
+    "visible_width_height_ratio_alpha8": 0.8317460317460318
+  },
+  "cache_source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-cd4a6a0d-a4ef-4f21-9434-d0dbcab3a31c.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/fire-v1/generation/009-v1-request.json",
+    "sha256": "e2d1460a32c66c2374976a28bad5b243389e472d42a987dac2b6f6660365882d"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/fire-v1/reference/nearest8/009.png",
+      "sha256": "59826a0526b2589c72f654c8eb152d8c1c3507bb9f0c399b52ec7389f43d683e",
+      "role": "exact_original_geometry_nearest8"
+    },
+    {
+      "path": "art/cartoon/fire-v1/generation/013-generated-v2.png",
+      "sha256": "833a10d764b716f74cf07e261a998f4404f078889fbc6f1e13b4a4a0269b56e4",
+      "role": "shared_outline_and_palette_only"
+    }
+  ],
+  "exact_original": {
+    "path": "art/cartoon/fire-v1/reference/original/009.png",
+    "sha256": "190aaf333e059212f7b2ae3e3acc15a3e202c603d00777b9f8105196149e0075",
+    "canvas": [
+      24,
+      23
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds_exclusive": {
+      "1": [
+        0,
+        0,
+        20,
+        23
+      ],
+      "8": [
+        0,
+        0,
+        20,
+        23
+      ],
+      "128": [
+        0,
+        0,
+        20,
+        23
+      ],
+      "255": [
+        0,
+        0,
+        20,
+        23
+      ]
+    },
+    "alpha_nonzero_pixels": 165,
+    "alpha_opaque_pixels": 165,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        255
+      ],
+      "bottom": [
+        0,
+        255
+      ],
+      "left": [
+        0,
+        255
+      ],
+      "right": [
+        0,
+        0
+      ]
+    },
+    "alpha8_touches_canvas_edge": true,
+    "visible_width_height_ratio_alpha8": 0.8695652173913043
+  },
+  "reference_source": {
+    "path": "art/cartoon/fire-v1/reference/source.json",
+    "sha256": "2d6ac4e8c540fb6ad6d216b724e183ec279f28111bb2c5f43289bf1f777dbcb7"
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Wide lower flame mass with a tall central rising tongue and left/right detached flame patches. The vertical flame top nearly reaches the upper raw margin but remains in bounds.",
+    "alpha_composite": "All eight selected raw drafts were composited over neutral gray in memory for inspection. No visible outer glow, smoke or ground was seen. This diagnostic did not write or alter any raw PNG.",
+    "limits": "Detailed flame tongues and sparks are stylized. The original canvas scale, exact contour, frame-to-frame registration and motion are not yet validated. Raw presentation sizes do not establish small versus medium runtime scale."
+  },
+  "source_replay_order_context": [
+    9,
+    11,
+    10,
+    12
+  ],
+  "replay_order_source": "Parent task specified medium order 009,011,010,012; no native replay was run for this generation task.",
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "raw_alpha_and_hidden_rgb_preserved": true,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false
+}

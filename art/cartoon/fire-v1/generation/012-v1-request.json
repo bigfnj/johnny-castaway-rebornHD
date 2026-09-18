@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "frame": 12,
+  "version": 1,
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "style-transfer",
+  "family": "medium_flame",
+  "prompt": "Create one transparent game-animation flame sprite for FIRE1 frame 012. Image 1 is the exact original frame enlarged by nearest-neighbor and is the GEOMETRY authority: preserve its occupied silhouette, relative width/height, distinct tongues, separated sparks, relative positions and transparent gaps. Image 2 is STYLE AND PALETTE ONLY: match its crisp dark warm-brown outline, pointed smooth cel-illustrated flame contours, bright yellow core and orange-to-red flame layers. Do not copy image 2's large flame shape, number of sparks or arrangement. Medium phase 012 has a strong upright lower-central flame with irregular pointed side tongues and separated smaller fragments above and at the sides. Preserve the taller narrow phase, central upward movement and each source gap. Translate pixel stairs into smooth clean flame contours while retaining this exact phase's recognizable proportions. Treat every separate patch in image 1 as part of the same animation frame, not an icon collection or a grid. Only flames and the original detached sparks are present. No logs, charcoal, ground, smoke, scenery, characters, labels or text. Keep all tongues and sparks intact with modest transparent margin. Use true RGBA transparency in the background and all gaps; flames have crisp defined boundaries with NO visible outside glow, aura, haze or soft orange cloud. The source black empty regions are transparent space, not a black painted backdrop. No drop shadow. Preserve the specific small/medium phase, not an identical generic flame for each frame.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/fire-v1/reference/nearest8/012.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/fire-v1/generation/013-generated-v2.png"
+  ],
+  "output_file": "art/cartoon/fire-v1/generation/012-generated-v1.png",
+  "status": "draft_pending_family_appearance_review",
+  "pixel_edits_after_generation": false
+}

@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "frame": 8,
+  "version": 1,
+  "date": "2026-09-18",
+  "status": "draft_pending_family_appearance_review_not_runtime_accepted",
+  "family": "small_flame",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "style-transfer",
+  "raw": {
+    "path": "art/cartoon/fire-v1/generation/008-generated-v1.png",
+    "sha256": "291ad85f77f9c77cedf9a3322d6e32e80ec49c06924319377f69ce3155e14456",
+    "canvas": [
+      1122,
+      1402
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds_exclusive": {
+      "1": [
+        25,
+        11,
+        1070,
+        1392
+      ],
+      "8": [
+        145,
+        13,
+        990,
+        1390
+      ],
+      "128": [
+        146,
+        13,
+        989,
+        1389
+      ],
+      "255": [
+        147,
+        15,
+        988,
+        1387
+      ]
+    },
+    "alpha_nonzero_pixels": 313738,
+    "alpha_opaque_pixels": 2811,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    },
+    "alpha8_touches_canvas_edge": false,
+    "visible_width_height_ratio_alpha8": 0.6136528685548294
+  },
+  "cache_source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-b2b77b38-3244-4148-bc7f-2a34529fa3b6.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/fire-v1/generation/008-v1-request.json",
+    "sha256": "f5e2c4e9dfff54dc411e0d2e0c876f677ea86430541ff5f3387d9c609254d06f"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/fire-v1/reference/nearest8/008.png",
+      "sha256": "2cffa8da953f33cc26815a62b6898780653191118370f5b1c1fc898c14e385c2",
+      "role": "exact_original_geometry_nearest8"
+    },
+    {
+      "path": "art/cartoon/fire-v1/generation/013-generated-v2.png",
+      "sha256": "833a10d764b716f74cf07e261a998f4404f078889fbc6f1e13b4a4a0269b56e4",
+      "role": "shared_outline_and_palette_only"
+    }
+  ],
+  "exact_original": {
+    "path": "art/cartoon/fire-v1/reference/original/008.png",
+    "sha256": "10ef43fffa9bdf697fd4d77ed6f95af5c616ec48bbbd5e2a485459285bb4a160",
+    "canvas": [
+      16,
+      20
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds_exclusive": {
+      "1": [
+        0,
+        0,
+        13,
+        20
+      ],
+      "8": [
+        0,
+        0,
+        13,
+        20
+      ],
+      "128": [
+        0,
+        0,
+        13,
+        20
+      ],
+      "255": [
+        0,
+        0,
+        13,
+        20
+      ]
+    },
+    "alpha_nonzero_pixels": 81,
+    "alpha_opaque_pixels": 81,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        255
+      ],
+      "bottom": [
+        0,
+        255
+      ],
+      "left": [
+        0,
+        255
+      ],
+      "right": [
+        0,
+        0
+      ]
+    },
+    "alpha8_touches_canvas_edge": true,
+    "visible_width_height_ratio_alpha8": 0.65
+  },
+  "reference_source": {
+    "path": "art/cartoon/fire-v1/reference/source.json",
+    "sha256": "2d6ac4e8c540fb6ad6d216b724e183ec279f28111bb2c5f43289bf1f777dbcb7"
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Lower flame mass rises along a slender bent tongue, with three detached upper flamelets and clear gaps. The source arrangement is stylized rather than contour-exact.",
+    "alpha_composite": "All eight selected raw drafts were composited over neutral gray in memory for inspection. No visible outer glow, smoke or ground was seen. This diagnostic did not write or alter any raw PNG.",
+    "limits": "Detailed flame tongues and sparks are stylized. The original canvas scale, exact contour, frame-to-frame registration and motion are not yet validated. Raw presentation sizes do not establish small versus medium runtime scale."
+  },
+  "source_replay_order_context": null,
+  "replay_order_source": "Small-family membership is 005-008; its actual replay order was not established by this generation task. No native replay was run.",
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "raw_alpha_and_hidden_rgb_preserved": true,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false
+}

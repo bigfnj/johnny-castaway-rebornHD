@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "frame": 4,
+  "version": 1,
+  "status": "generated_draft_pending_family_review",
+  "tool": "built-in image_gen",
+  "request": {
+    "path": "art/cartoon/fire-v1/generation/004-request-v1.json",
+    "sha256": "25f63451cfd235738843ddd4dcb176d6e0416ff879d7adda03458bdc110fbf1a"
+  },
+  "ordered_references": [
+    {
+      "path": "art/cartoon/fire-v1/reference/nearest8/004.png",
+      "sha256": "a0f86a8294ed7fec14119300a0f7af8009f809baa2b8e45b8e1e8c139c551a5a",
+      "canvas": [
+        128,
+        160
+      ]
+    },
+    {
+      "path": "art/cartoon/fire-v1/generation/001-generated-v2.png",
+      "sha256": "2a65cb998f6aa5b072b02ed122426f69060fc67d5a14c926a49b5ca317bd6000",
+      "canvas": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original-contact-1.png",
+      "sha256": "b08d02c595ef1bb5ff158a4d9ba8d211ecebd4bb42aa08f26dd4607c0a3e8f82",
+      "canvas": [
+        1280,
+        1320
+      ]
+    }
+  ],
+  "raw_tool_output": {
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-ea65dc99-d5b2-4e81-841c-02e12643683a.png",
+    "sha256": "d5a551ce7131947014bb3242617ddfe0ea596026e4ba36a3d79e865047d21e1e"
+  },
+  "workspace_output": {
+    "path": "art/cartoon/fire-v1/generation/004-generated-v1.png",
+    "sha256": "d5a551ce7131947014bb3242617ddfe0ea596026e4ba36a3d79e865047d21e1e"
+  },
+  "measurements": {
+    "mode": "RGBA",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_pixels": 1496932,
+    "alpha_nonzero_pixels": 75932,
+    "alpha_ge8_pixels": 65261,
+    "alpha_ge250_pixels": 52356,
+    "alpha_nonzero_bounds": [
+      494,
+      47,
+      1092,
+      974
+    ],
+    "alpha_ge8_bounds": [
+      496,
+      49,
+      1038,
+      972
+    ],
+    "edge_alpha_max": 0,
+    "edge_alpha_ge8_pixels": 0,
+    "sample_rgba": {
+      "(0, 0)": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "(768, 300)": [
+        104,
+        97,
+        93,
+        0
+      ],
+      "(768, 512)": [
+        130,
+        125,
+        120,
+        1
+      ],
+      "(400, 600)": [
+        13,
+        12,
+        11,
+        0
+      ],
+      "(1000, 800)": [
+        32,
+        28,
+        25,
+        0
+      ]
+    }
+  },
+  "visual_observation": "Thin gray wisps and open gaps; left and center curls vary subtly. Exact original phase curvature is not established.",
+  "pixel_processing": "Exact PNG byte copy only. No color keys, alpha thresholds, cropping, repainting or runtime export. Alpha thresholds are read-only diagnostic measurements.",
+  "alpha_visual_inspection": {
+    "method": "Read-only in-memory neutral composite on RGB225,231,235; no composite asset saved and source PNG unchanged.",
+    "observation": "Actual compositing shows clean isolated sprite edges and open transparent background. The dark/brown haze visible in the raw tool preview is hidden RGB, not a visible surrounding halo."
+  }
+}

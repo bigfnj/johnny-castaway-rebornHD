@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "frame": 19,
+  "version": 1,
+  "status": "appearance_review_draft_not_runtime_accepted",
+  "recorded_at_utc": "2026-09-18T17:02:05.553401+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "raw": {
+    "path": "art/cartoon/fire-v1/generation/019-generated-v1.png",
+    "sha256": "c94b1425cfcd7523f7bff3067e0510a676382593d0300bca2bb9622888f55968",
+    "canvas": [
+      1046,
+      1504
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      37,
+      6,
+      1024,
+      1504
+    ],
+    "alpha8_bounds_exclusive": [
+      49,
+      8,
+      987,
+      1496
+    ],
+    "alpha_nonzero_pixels": 440112,
+    "alpha_opaque_pixels": 2641,
+    "alpha_1_to_7_pixels": 19562,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        1
+      ],
+      "left": [
+        0,
+        0
+      ]
+    },
+    "corner_rgba": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "alpha8_margins_left_top_right_bottom": [
+      49,
+      8,
+      59,
+      8
+    ]
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-ff804c2c-ef89-40db-ba09-2ccec48045dd.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/fire-v1/generation/019-v1-request.json",
+    "sha256": "735b14569695759609bc4e54ebba2a3233bd9b46ba1ad1f312f97e08a75c6303"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/fire-v1/reference/nearest8/019.png",
+      "sha256": "2cdf2204caab2fb6c0a83ce7418b17577ce4d0c4a889b9f3f456897e36148858"
+    },
+    {
+      "path": "art/cartoon/fire-v1/generation/013-generated-v2.png",
+      "sha256": "833a10d764b716f74cf07e261a998f4404f078889fbc6f1e13b4a4a0269b56e4"
+    }
+  ],
+  "exact_original": {
+    "path": "art/cartoon/fire-v1/reference/original/019.png",
+    "sha256": "813f1613a6dcea5af25c163c81df542609ea6094edd497372c711d15787864f5",
+    "canvas": [
+      32,
+      46
+    ]
+  },
+  "reference_source": {
+    "path": "art/cartoon/fire-v1/reference/source.json",
+    "sha256": "2d6ac4e8c540fb6ad6d216b724e183ec279f28111bb2c5f43289bf1f777dbcb7"
+  },
+  "reference_roles": {
+    "first": "Exact original phase geometry with diagnostic palette only.",
+    "second": "Shared generation key 013 v2 for Cartoon flame palette and linework, not an approval of this new phase."
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Very large wider phase with a tiny far upper-right spark, separated upper tongues and a broad branching lower body.",
+    "limitations": "This is a generative interpretation of very small original pixel shapes, not an exact silhouette or spark-coordinate reconstruction. Final registered fit, source-relative proportions and animation coherence remain unverified.",
+    "no_obvious_logs_ground_or_smoke": true
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "alpha_measurement_note": "Alpha >= 8 is a diagnostic bounds measurement only. No alpha threshold, keying, cleanup or other pixel transformation was applied to the saved raw.",
+  "deferred": [
+    "Human appearance review",
+    "Final runtime size and registration",
+    "Native motion and bulk integration checks"
+  ]
+}

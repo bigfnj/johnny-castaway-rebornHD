@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "frame": 15,
+  "version": 2,
+  "status": "appearance_review_draft_not_runtime_accepted",
+  "recorded_at_utc": "2026-09-18T17:05:19.046920+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "edit_scope": "Transparent canvas padding around existing flame composition, with completion of the lower terminal point if needed; no redesign requested.",
+  "raw": {
+    "path": "art/cartoon/fire-v1/generation/015-generated-v2.png",
+    "sha256": "1242107123882ca0597d1819cc933f217883fa4f10d2df430ff7f2538a64d221",
+    "canvas": [
+      984,
+      1599
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      108,
+      36,
+      895,
+      1569
+    ],
+    "alpha8_bounds_exclusive": [
+      110,
+      92,
+      853,
+      1567
+    ],
+    "alpha_nonzero_pixels": 380529,
+    "alpha_opaque_pixels": 3465,
+    "alpha_1_to_7_pixels": 13015,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ]
+    },
+    "alpha8_margins_left_top_right_bottom": [
+      110,
+      92,
+      131,
+      32
+    ]
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-35e2b0e4-cbcd-4450-ac35-490b694d057c.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/fire-v1/generation/015-v2-request.json",
+    "sha256": "f4455747788788c41e74a7ef2f43ea2e1f5d2193822ecbe3c9c74a5b599c4da4"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/fire-v1/generation/015-generated-v1.png",
+      "sha256": "8ef772c0fea10ad791bd220219be5cc47aa781810aabe4f967c28f1ff5aaa600"
+    }
+  ],
+  "ancestor_record": {
+    "path": "art/cartoon/fire-v1/generation/015-record-v1.json",
+    "sha256": "615aa5720668301028658e6b44186a25c9bbbeae79efc4db3dcf6a7b207ae2ea"
+  },
+  "exact_original": {
+    "path": "art/cartoon/fire-v1/reference/original/015.png",
+    "sha256": "c62943eaf28eef6373a05958745676daeb897f2a2d5bf388519d675e17fb98cd",
+    "canvas": [
+      24,
+      39
+    ]
+  },
+  "reference_source": {
+    "path": "art/cartoon/fire-v1/reference/source.json",
+    "sha256": "2d6ac4e8c540fb6ad6d216b724e183ec279f28111bb2c5f43289bf1f777dbcb7"
+  },
+  "shared_style_ancestor": {
+    "path": "art/cartoon/fire-v1/generation/013-generated-v2.png",
+    "sha256": "833a10d764b716f74cf07e261a998f4404f078889fbc6f1e13b4a4a0269b56e4"
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "The lower flame point is fully visible with transparent space below. The upper-right spark, detached left fragment, forked upper tongues and connected lower body retain the same arrangement and yellow/orange/red palette by visual comparison. No added smoke, logs, scenery or broad glow is apparent.",
+    "limitations": "This is an imagegen edit, not a byte-identical canvas extension. The output reframes the artwork and may change local contour or internal color details. No exact geometry, pixel identity or unchanged scale claim is made; final runtime registration remains pending."
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "alpha_measurement_note": "Alpha >= 8 is diagnostic only. Saved raw is the exact tool output, with no threshold or cleanup."
+}

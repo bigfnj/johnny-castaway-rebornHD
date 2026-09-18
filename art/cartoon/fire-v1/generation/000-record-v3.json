@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "frame": 0,
+  "version": 3,
+  "status": "targeted_tall_connected_wood_draft_pending_review",
+  "tool": "built-in image_gen",
+  "request": {
+    "path": "art/cartoon/fire-v1/generation/000-v3-request.json",
+    "sha256": "60b69c4e9e9e2dae176e9d726a64e8608da6b2d469e54e96d82f8dbd822c57be"
+  },
+  "ordered_references": [
+    {
+      "path": "art/cartoon/fire-v1/generation/000-generated-v2.png",
+      "sha256": "f92db091a9ea91da224da2695b94fd17e090e7c818ea28435f2ad0285db773dc"
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/nearest8/000.png",
+      "sha256": "9f2ab830e842839128a41bd8d4fe1566fd1776c0463c9fc754c5e2f0ab416d3f"
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original-contact-1.png",
+      "sha256": "b08d02c595ef1bb5ff158a4d9ba8d211ecebd4bb42aa08f26dd4607c0a3e8f82"
+    }
+  ],
+  "raw_tool_output": {
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-8bc511e8-ca0c-4f13-8c9e-096c5b37615e.png",
+    "sha256": "120ed4ff1607abfcd64b60296a000f4fe1ccbcb8e961d18c29accc9a85f7f7fc"
+  },
+  "workspace_output": {
+    "path": "art/cartoon/fire-v1/generation/000-generated-v3.png",
+    "sha256": "120ed4ff1607abfcd64b60296a000f4fe1ccbcb8e961d18c29accc9a85f7f7fc"
+  },
+  "measurements": {
+    "canvas": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_ge8_bounds": [
+      76,
+      83,
+      1462,
+      963
+    ],
+    "alpha_ge8_width_height_ratio": 1.575,
+    "edge_alpha_max": 0,
+    "edge_alpha_ge8_pixels": 0,
+    "sample_rgba": {
+      "(0, 0)": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "(768, 51)": [
+        14,
+        10,
+        7,
+        0
+      ],
+      "(384, 341)": [
+        2,
+        1,
+        1,
+        0
+      ],
+      "(768, 1023)": [
+        8,
+        1,
+        0,
+        0
+      ]
+    }
+  },
+  "comparison_v2": {
+    "canvas": [
+      1548,
+      1016
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "alpha_ge8_bounds": [
+      89,
+      458,
+      1483,
+      978
+    ],
+    "alpha_ge8_width_height_ratio": 2.6807692307692306,
+    "edge_alpha_max": 1,
+    "edge_alpha_ge8_pixels": 0,
+    "sample_rgba": {
+      "(0, 0)": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "(774, 50)": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "(387, 338)": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "(774, 1015)": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "requested_ratio_range": [
+    1.5,
+    1.7
+  ],
+  "visual_observation": "Central upright and supporting slanted sticks extend substantially higher while visibly connecting into the lower pile. Low side logs, warm brown/charcoal/ash material and ember seams remain recognizable. No separate smoke or flames; no disconnected floating fragments. Exact native overlap with flame layers requires the source replay.",
+  "pixel_processing": "Exact raw PNG byte copy only. Alpha>=8 is a read-only diagnostic; no pixel cleanup, scaling, thresholding or export."
+}

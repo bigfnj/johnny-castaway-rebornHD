@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "frame": 26,
+  "version": 1,
+  "status": "generated_draft_pending_family_review",
+  "tool": "built-in image_gen",
+  "request": {
+    "path": "art/cartoon/fire-v1/generation/026-request-v1.json",
+    "sha256": "9c1a3db62181d15b83714c22f25bd498e335105e9fd17b00133c190947ebcaf4"
+  },
+  "ordered_references": [
+    {
+      "path": "art/cartoon/fire-v1/reference/nearest8/026.png",
+      "sha256": "062516e797af6b90814e1d61b4b4a08b0f88f03b86a6295d34d70094fc6d4a4f",
+      "canvas": [
+        256,
+        128
+      ]
+    },
+    {
+      "path": "art/cartoon/fire-v1/generation/000-generated-v2.png",
+      "sha256": "f92db091a9ea91da224da2695b94fd17e090e7c818ea28435f2ad0285db773dc",
+      "canvas": [
+        1548,
+        1016
+      ]
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original-contact-2.png",
+      "sha256": "584f2f8aae35fcd1a3602809ace8f32b26a4280d7e806c54ded88b43d098637d",
+      "canvas": [
+        1280,
+        1320
+      ]
+    }
+  ],
+  "raw_tool_output": {
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-145f06d7-f195-4cd3-b2cf-cfb2c41b16b2.png",
+    "sha256": "4c911330cf7c8ffe0c13416fa1aad635deb2db98c4405f30f099076ba3ea0f54"
+  },
+  "workspace_output": {
+    "path": "art/cartoon/fire-v1/generation/026-generated-v1.png",
+    "sha256": "4c911330cf7c8ffe0c13416fa1aad635deb2db98c4405f30f099076ba3ea0f54"
+  },
+  "measurements": {
+    "mode": "RGBA",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_pixels": 1221682,
+    "alpha_nonzero_pixels": 351182,
+    "alpha_ge8_pixels": 343007,
+    "alpha_ge250_pixels": 331193,
+    "alpha_nonzero_bounds": [
+      87,
+      21,
+      1522,
+      1000
+    ],
+    "alpha_ge8_bounds": [
+      90,
+      443,
+      1444,
+      932
+    ],
+    "edge_alpha_max": 0,
+    "edge_alpha_ge8_pixels": 0,
+    "sample_rgba": {
+      "(0, 0)": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "(768, 300)": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "(768, 512)": [
+        42,
+        36,
+        32,
+        253
+      ],
+      "(400, 600)": [
+        44,
+        25,
+        13,
+        0
+      ],
+      "(1000, 800)": [
+        106,
+        91,
+        84,
+        253
+      ]
+    }
+  },
+  "visual_observation": "Broader dying-fire pile with shared materials. Fuller than reduced later stages; original structure and progression require visual review.",
+  "pixel_processing": "Exact PNG byte copy only. No color keys, alpha thresholds, cropping, repainting or runtime export. Alpha thresholds are read-only diagnostic measurements.",
+  "alpha_visual_inspection": {
+    "method": "Read-only in-memory neutral composite on RGB225,231,235; no composite asset saved and source PNG unchanged.",
+    "observation": "Actual compositing shows clean isolated sprite edges and open transparent background. The dark/brown haze visible in the raw tool preview is hidden RGB, not a visible surrounding halo."
+  }
+}

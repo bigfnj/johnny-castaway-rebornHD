@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "frame": 24,
+  "version": 1,
+  "status": "generated_draft_pending_family_review",
+  "tool": "built-in image_gen",
+  "request": {
+    "path": "art/cartoon/fire-v1/generation/024-request-v1.json",
+    "sha256": "cd6b6f740a06e015808305004b5bc3598ba35484238b473f8844a6f6f15a4eb0"
+  },
+  "ordered_references": [
+    {
+      "path": "art/cartoon/fire-v1/reference/nearest8/024.png",
+      "sha256": "455d94ec095f0618af901334983a45ce8d20a0488b3b529e78f112b0783df184",
+      "canvas": [
+        128,
+        72
+      ]
+    },
+    {
+      "path": "art/cartoon/fire-v1/generation/000-generated-v2.png",
+      "sha256": "f92db091a9ea91da224da2695b94fd17e090e7c818ea28435f2ad0285db773dc",
+      "canvas": [
+        1548,
+        1016
+      ]
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original-contact-2.png",
+      "sha256": "584f2f8aae35fcd1a3602809ace8f32b26a4280d7e806c54ded88b43d098637d",
+      "canvas": [
+        1280,
+        1320
+      ]
+    }
+  ],
+  "raw_tool_output": {
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-c220f259-b409-4b9f-b53f-42b6f353cb50.png",
+    "sha256": "05fd1059c441ce33b7fd756b8b3cfb4c439d9fd7a7ac6b7ccc43d15eddc46aa9"
+  },
+  "workspace_output": {
+    "path": "art/cartoon/fire-v1/generation/024-generated-v1.png",
+    "sha256": "05fd1059c441ce33b7fd756b8b3cfb4c439d9fd7a7ac6b7ccc43d15eddc46aa9"
+  },
+  "measurements": {
+    "mode": "RGBA",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "alpha_extrema": [
+      0,
+      254
+    ],
+    "alpha_zero_pixels": 1517169,
+    "alpha_nonzero_pixels": 55695,
+    "alpha_ge8_pixels": 53088,
+    "alpha_ge250_pixels": 49150,
+    "alpha_nonzero_bounds": [
+      460,
+      357,
+      1284,
+      724
+    ],
+    "alpha_ge8_bounds": [
+      463,
+      467,
+      1056,
+      640
+    ],
+    "edge_alpha_max": 0,
+    "edge_alpha_ge8_pixels": 0,
+    "sample_rgba": {
+      "(0, 0)": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "(768, 300)": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "(768, 512)": [
+        59,
+        22,
+        11,
+        1
+      ],
+      "(400, 600)": [
+        18,
+        15,
+        13,
+        0
+      ],
+      "(1000, 800)": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "visual_observation": "Smallest sparse ember bed, short charcoal pieces, restrained remaining upright stub. Fewer sticks and less height than023v2.",
+  "pixel_processing": "Exact PNG byte copy only. No color keys, alpha thresholds, cropping, repainting or runtime export. Alpha thresholds are read-only diagnostic measurements.",
+  "alpha_visual_inspection": {
+    "method": "Read-only in-memory neutral composite on RGB225,231,235; no composite asset saved and source PNG unchanged.",
+    "observation": "Actual compositing shows clean isolated sprite edges and open transparent background. The dark/brown haze visible in the raw tool preview is hidden RGB, not a visible surrounding halo."
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "frame": 15,
+  "version": 1,
+  "status": "appearance_review_draft_not_runtime_accepted",
+  "recorded_at_utc": "2026-09-18T17:02:05.406993+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "raw": {
+    "path": "art/cartoon/fire-v1/generation/015-generated-v1.png",
+    "sha256": "8ef772c0fea10ad791bd220219be5cc47aa781810aabe4f967c28f1ff5aaa600",
+    "canvas": [
+      984,
+      1599
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      51,
+      3,
+      950,
+      1599
+    ],
+    "alpha8_bounds_exclusive": [
+      52,
+      5,
+      844,
+      1599
+    ],
+    "alpha_nonzero_pixels": 436920,
+    "alpha_opaque_pixels": 3080,
+    "alpha_1_to_7_pixels": 14864,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        252
+      ],
+      "left": [
+        0,
+        0
+      ]
+    },
+    "corner_rgba": [
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "alpha8_margins_left_top_right_bottom": [
+      52,
+      5,
+      140,
+      0
+    ],
+    "bottom_edge_alpha8_pixels": 10,
+    "bottom_edge_alpha8_x_range_inclusive": [
+      348,
+      357
+    ]
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-d08bff0a-1e47-487b-a85b-616a9db053ba.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/fire-v1/generation/015-v1-request.json",
+    "sha256": "2fa0d6e4969fff4eb594b9cec389f1a1070cd8c9625e761e72a92c642f02a98e"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/fire-v1/reference/nearest8/015.png",
+      "sha256": "0061f6bbaff15e61e227aaff11c846346b773da64c460a26ff17f6dd54d75775"
+    },
+    {
+      "path": "art/cartoon/fire-v1/generation/013-generated-v2.png",
+      "sha256": "833a10d764b716f74cf07e261a998f4404f078889fbc6f1e13b4a4a0269b56e4"
+    }
+  ],
+  "exact_original": {
+    "path": "art/cartoon/fire-v1/reference/original/015.png",
+    "sha256": "c62943eaf28eef6373a05958745676daeb897f2a2d5bf388519d675e17fb98cd",
+    "canvas": [
+      24,
+      39
+    ]
+  },
+  "reference_source": {
+    "path": "art/cartoon/fire-v1/reference/source.json",
+    "sha256": "2d6ac4e8c540fb6ad6d216b724e183ec279f28111bb2c5f43289bf1f777dbcb7"
+  },
+  "reference_roles": {
+    "first": "Exact original phase geometry with diagnostic palette only.",
+    "second": "Shared generation key 013 v2 for Cartoon flame palette and linework, not an approval of this new phase."
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Large phase with a separated high right spark, forked upper fragments, open central gaps and a bright connected lower body.",
+    "limitations": "This is a generative interpretation of very small original pixel shapes, not an exact silhouette or spark-coordinate reconstruction. Final registered fit, source-relative proportions and animation coherence remain unverified.",
+    "no_obvious_logs_ground_or_smoke": true,
+    "edge_concern": "The terminal lower flame tip reaches the raw bottom edge, with no transparent bottom safety margin. The original also has its lower tip on its bottom canvas row. The saved raw is unaltered; completeness beyond the generated edge is not established."
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "alpha_measurement_note": "Alpha >= 8 is a diagnostic bounds measurement only. No alpha threshold, keying, cleanup or other pixel transformation was applied to the saved raw.",
+  "deferred": [
+    "Human appearance review",
+    "Final runtime size and registration",
+    "Native motion and bulk integration checks"
+  ]
+}
