@@ -1,0 +1,82 @@
+{
+  "date": "2026-09-18",
+  "scope": "lightweight_asset_and_browser_review_only",
+  "review_url": "http://127.0.0.1:8941/fire-v1/review.html",
+  "selected_frames": 28,
+  "raw_outputs_retained": 34,
+  "per_output_records_retained": 34,
+  "review_binding_checks": {
+    "files": 130,
+    "mismatches": 0,
+    "frame_ids": "000 through 027 exactly once",
+    "production_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+  },
+  "browser": {
+    "ready_message": "Ready: all 28 Cartoon drawings and 28 original references loaded.",
+    "gallery_canvases": 28,
+    "original_disclosures_expanded": 28,
+    "failed_dom_images": [],
+    "console_errors": [],
+    "checked_controls": [
+      "all five effect selections",
+      "pause/play",
+      "next/previous phase",
+      "slow/normal selector",
+      "show/hide wood pile",
+      "show all originals",
+      "light/dark checkerboard",
+      "group navigation"
+    ],
+    "observed_first_second_phases": {
+      "smoke": [
+        "001",
+        "002"
+      ],
+      "small": [
+        "005",
+        "006"
+      ],
+      "medium": [
+        "009",
+        "011"
+      ],
+      "large": [
+        "013",
+        "014"
+      ],
+      "very_large": [
+        "017",
+        "018"
+      ]
+    },
+    "visual_read": [
+      "all seven gallery groups over dark checkerboard",
+      "original-versus-Cartoon medium011 and small006 log contact with000v3",
+      "large015v2 completed tip and log contact"
+    ]
+  },
+  "checks_run": [
+    "build_review.py",
+    "node --check review.js",
+    "selected review file/hash binding readback",
+    "git diff --check",
+    "browser UI exercise and visual inspection"
+  ],
+  "no_production_package_change": true,
+  "byte_preservation_control": {
+    "disabled_rule": "FIRE1 -text path attribute temporarily moved to a nonmatching path",
+    "observed_failure": "art/cartoon/fire-v1/review-record.json: byte-preservation mismatch with rule disabled",
+    "failure_count": 1,
+    "restored_result": "Git filtered blob matches exact working-file bytes"
+  },
+  "full_smoke_regression_deferred": true,
+  "human_appearance_approval": null,
+  "limitations": [
+    "Source-derived isolated phase preview, not native capture",
+    "Uniform provisional fitting; scene registration pending",
+    "005-008/009-012 sparks are interpretations of tiny originals;006 is wider than source",
+    "Smoke curve differences are subtle",
+    "016 top alpha8 clearance is one raw pixel; native export handling remains unverified",
+    "Dying-fire sequence, clipped embers and Johnny interactions are documented but not replayed on this page"
+  ]
+}

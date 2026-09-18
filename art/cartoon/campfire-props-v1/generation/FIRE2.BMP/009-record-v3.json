@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 9,
+  "version": 3,
+  "status": "draft for visual review; no runtime export or native placement validation",
+  "tool": "builtin image_gen.imagegen",
+  "request_path": "art/cartoon/campfire-props-v1/generation/FIRE2.BMP/009-request-v3.json",
+  "request_sha256": "14c9f97b20d6ce47d7878a23a0e401f023f427142a57dfa859c0338fd7b0ed6f",
+  "raw_source_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-1a59f8b9-eb6b-4159-a6d9-5c73f9118c54.png",
+  "raw_source_sha256": "4ef3907421e1aa2cd484bad8a18235b392dfb520366e97b7b8c82a0c1f6df24d",
+  "output_path": "art/cartoon/campfire-props-v1/generation/FIRE2.BMP/009-generated-v3.png",
+  "output_sha256": "4ef3907421e1aa2cd484bad8a18235b392dfb520366e97b7b8c82a0c1f6df24d",
+  "output_size": [
+    1254,
+    1254
+  ],
+  "output_mode": "RGBA",
+  "alpha_range": [
+    0,
+    255
+  ],
+  "alpha_nonzero_bbox": [
+    97,
+    51,
+    1192,
+    1198
+  ],
+  "alpha_ge8_bbox": [
+    456,
+    276,
+    878,
+    1078
+  ],
+  "alpha_ge8_visible_ratio": 0.526185,
+  "meaningful_edge_pixels": 0,
+  "references": [
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/generation/FIRE2.BMP/009-generated-v1.png",
+      "sha256": "5eddc97452fc38310cafb3d45da29f4e537519f21e3845a826ce27780e81a362",
+      "inspected_before_request": true,
+      "role": "v1 edit target"
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/FIRE2.BMP-contact-1.png",
+      "sha256": "84197f7e39f7aed8968246efec5ff0040530ff666bd2294a16a6f72a80168bad",
+      "inspected_before_request": true,
+      "role": "original contact sheet pose authority"
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/generation/FIRE2.BMP/023-generated-v1.png",
+      "sha256": "cdc81ae35ad59d4014da7561543236a2da43cc823422eeadf746243308ffddfd",
+      "inspected_before_request": true,
+      "role": "023 material identity only"
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/009.png",
+    "sha256": "e29eebe9576861b6975aff06826449f6a80ce1c700ed2e0162132b702a56a35d",
+    "canvas": [
+      16,
+      22
+    ],
+    "alpha_bbox": [
+      0,
+      0,
+      15,
+      22
+    ],
+    "visible_ratio": 0.681818
+  },
+  "prior_v1_visible_ratio": 0.35768,
+  "pixel_edits_after_generation": false,
+  "visual_observations": [
+    "The middle shaft is shorter than v1, while the near-front perspective, narrow sole, cuff slope and rightward toe placement are retained.",
+    "No v2 image was supplied as a reference.",
+    "The overall visible width/height is closer to the original than v1 but remains narrower; exact source proportions are not claimed.",
+    "No meaningful edge clipping; draft requires human review and later runtime registration."
+  ]
+}

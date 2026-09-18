@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-18",
+  "scope": "lightweight_art_and_browser_review_only",
+  "review_url": "http://127.0.0.1:8941/campfire-props-v1/review.html",
+  "selected_drawings": 25,
+  "raw_outputs_retained": 29,
+  "per_output_records_retained": 29,
+  "selected_versions": {"FIRE2.BMP009": 3, "FIRE2.BMP015": 3, "all_other_drawings": 1},
+  "preserved_source_slots": 3,
+  "deferred_character_grips": ["FIRE2.BMP010", "FIRE2.BMP011"],
+  "binding_readback": {"checked_bindings": 385, "unique_paths": 225, "mismatches": 0},
+  "browser": {
+    "ready_message": "25 of 25 drawings ready.",
+    "loaded_canvases": 25,
+    "expanded_original_comparisons": 25,
+    "failed_dom_images": [],
+    "console_errors": [],
+    "controls_checked": ["show/hide all originals", "light/dark checkerboard", "group navigation"],
+    "visual_read": ["all four groups in rendered gallery", "original comparisons for squid and raft", "009/015 version 3 beside original boot shapes", "fish and boot edges over dark checkerboard"],
+    "final_selected_boot_hrefs_observed": ["generation/FIRE2.BMP/009-generated-v3.png", "generation/FIRE2.BMP/015-generated-v3.png"]
+  },
+  "checks_run": ["build_review.py", "node --check review.js", "raw/reference/request/record hash readback", "source-marker negative control", "exact-byte Git attribute negative control", "browser control and image inspection", "git diff --check"],
+  "negative_controls": {
+    "marker": "Appended disposable bytes to source-preserved/FIRE2.BMP/000.png; fresh builder failed exactly once naming that file and did not publish a record. Restored original bytes, reran the builder, observed expected summary and advanced output timestamp.",
+    "line_endings": "Temporarily made the new family's -text rule nonmatching; review-record.json had one exact-byte mismatch under Git filtering. Restored the rule; filtered blob matched raw working bytes."
+  },
+  "production_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "production_package_changed": false,
+  "full_smoke_regression_deferred": true,
+  "human_appearance_approval": null,
+  "limitations": ["Still artwork review only; no native action playback", "Hand/mouth joins and full-canvas registration remain pending", "FIRE5 scene usage unconfirmed", "Generated mirrored companions are not pixel-exact reflections", "009/015 remain narrower and022 wider/flatter than source; fish017/FIRE5 002 also vary in silhouette;013 has an extra small fin"]
+}

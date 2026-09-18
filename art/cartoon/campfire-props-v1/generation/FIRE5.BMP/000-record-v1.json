@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE5.BMP",
+  "frame": 0,
+  "version": 1,
+  "status": "appearance_review_draft_not_runtime_accepted",
+  "recorded_at_utc": "2026-09-18T18:10:24.946141+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "raw": {
+    "path": "art/cartoon/campfire-props-v1/generation/FIRE5.BMP/000-generated-v1.png",
+    "sha256": "5170ddd2ee91c4f8aaacf758a46c855e17b0b63d40076dc2260f338fd9436517",
+    "canvas": [
+      1628,
+      966
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      65,
+      37,
+      1584,
+      932
+    ],
+    "alpha8_bounds_exclusive": [
+      145,
+      87,
+      1456,
+      868
+    ],
+    "alpha_nonzero_pixels": 488450,
+    "alpha_opaque_pixels": 1923,
+    "alpha_1_to_7_pixels": 8082,
+    "alpha8_margins_left_top_right_bottom": [
+      145,
+      87,
+      172,
+      98
+    ],
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ]
+    }
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-22f795b2-2e01-4a4e-8def-b2d8ebced466.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/campfire-props-v1/generation/FIRE5.BMP/000-v1-request.json",
+    "sha256": "217491e3bec484d8e2418bee768a3f03e4c58e5333ab68532a21b8ba92172516"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/campfire-props-v1/reference/nearest8/FIRE5.BMP/000.png",
+      "sha256": "d9610096aff6de18f8e6a8f0a487e482b215686952b48a5973642b06569ca741"
+    },
+    {
+      "path": "art/cartoon/campfire-props-v1/generation/FIRE2.BMP/024-generated-v1.png",
+      "sha256": "d2275f652cbd61de498169399c92523f263edb7415dfc24cb740bb3ffaf8fce6"
+    }
+  ],
+  "reference_roles": [
+    "Exact original phase geometry; diagnostic palette only.",
+    "Shared generated identity/material key. For FIRE5 000 this is the opposite-facing FIRE2 024 companion."
+  ],
+  "exact_original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE5.BMP/000.png",
+    "sha256": "a0fef578147ca11461816ad3e3c7a094c620535da0c6d03658ae0cf60201b5bc",
+    "canvas": [
+      32,
+      19
+    ]
+  },
+  "reference_source": {
+    "path": "art/cartoon/campfire-props-v1/reference/source.json",
+    "sha256": "904d8a0137b6df047c88efe9d707667c0c02e949bfe2b262b1e6e3663d828274"
+  },
+  "shared_family_key": {
+    "path": "art/cartoon/campfire-props-v1/generation/FIRE2.BMP/006-generated-v1.png",
+    "sha256": "7b1fc12888d001644c8ce5415e5ecf888ec69a722a874a5457c5e7d8149dc338"
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Opposite-facing companion using FIRE2 024 as its direct identity key. The left mantle, eye and right curled-arm arrangement visually reflect that generated drawing. It is a separately generated image, not an exact pixel reflection.",
+    "limitations": "Rounded mantle details, eye expression, highlight patches and individual arm contours are generated interpretations of small source pixels, not exact source silhouettes. Final full-canvas scale/registration and native action fit remain unverified.",
+    "no_obvious_human_hands_ground_scenery_or_bones": true
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "alpha_measurement_note": "Alpha >= 8 is only a diagnostic bounds measurement. No alpha threshold, keying or pixel correction was applied."
+}

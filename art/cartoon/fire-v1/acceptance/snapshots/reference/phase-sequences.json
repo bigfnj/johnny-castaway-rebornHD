@@ -1,0 +1,6135 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE1.BMP",
+  "status": "source_derived_phase_reference_not_native_capture",
+  "purpose": "Exact original/candidate isolated phase-comparison guidance; not production acceptance.",
+  "timing": {
+    "tick_ms": 20,
+    "source_label": "Nominal current-port timing, not measured native playback or original executable timing.",
+    "cycle_tags39_41_42_43_44": {
+      "ticks_per_phase": 7,
+      "ms_per_phase": 140,
+      "ms_per_four_phase_pass": 560
+    },
+    "dying_embers": {
+      "ticks_per_phase": 8,
+      "ms_per_phase": 160
+    },
+    "timer77": {
+      "args": [
+        60,
+        120
+      ],
+      "port_formula": "integer mean of both arguments",
+      "ticks": 90,
+      "ms": 1800
+    },
+    "engine_evidence": [
+      "src/engine/ttm.c:304 UPDATE yields",
+      "src/engine/ttm.c:309 SET_DELAY uses at least4ticks",
+      "src/engine/ttm.c:362 TIMER command; integer mean implementation follows",
+      "src/engine/events.c:217 tick is20ms",
+      "src/engine/ads.c:843 scheduler executes threads when timer reaches0"
+    ],
+    "limits": "ADS concurrency can subdivide display updates; speed controls, rendering overhead, outer story selection and original binary behavior are not measured."
+  },
+  "coordinates": {
+    "units": "native logical pixels before ttmDx/ttmDy and render scale",
+    "draws_ordered_back_to_front": true,
+    "preserve_canvas_alpha": true,
+    "no_recorded_draw_is_mirrored": true
+  },
+  "review_labels": {
+    "027": "Fire burst / pop in disappointed action (descriptive interpretation)",
+    "027_not": "Not a speech bubble: no tail or text; exact command placement centers it over firewood.",
+    "027_pixels": {
+      "canvas": [
+        40,
+        22
+      ],
+      "transparent_pixels": 710,
+      "opaque_black_pixels": 104,
+      "opaque_white_pixels": 66,
+      "original_png_sha256": "e2701e4adca04e0f4a88f6d46927f6188ad24f7a4c5517db4b566abd1c575d33"
+    },
+    "025": "Wood/ember drawing retained; no unique-slot DRAW attribution in saved static map, not proof of runtime nonuse."
+  },
+  "source_pins": [
+    {
+      "path": "art/cartoon/fire-v1/reference/source.json",
+      "sha256": "2d6ac4e8c540fb6ad6d216b724e183ec279f28111bb2c5f43289bf1f777dbcb7"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/source/frame-index.json",
+      "sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/scene-map/static-draw-sites.json",
+      "sha256": "2892a584a1816bf70c41c2d0ecb934f2a22e071dbda5629cfe54f185af0acaad"
+    },
+    {
+      "path": "art/cartoon/character-inventory-v1/scene-map/resource-map.json",
+      "sha256": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3"
+    },
+    {
+      "path": "docs/knowledge-base/port-inventory.json",
+      "sha256": "ebfe199988297ffe150a2e47eebd9b39b17c8320315932883f6dca3097f63f4b"
+    },
+    {
+      "path": "assets/scrantic_data.zip",
+      "sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+    },
+    {
+      "path": "tools/inventory_scenes.py",
+      "sha256": "f4950f39557e5bb937b5158f22ddf5050ac8bb9f11f022265aa542994dbdee52"
+    },
+    {
+      "path": "src/engine/ttm.c",
+      "sha256": "f74b812e1279847cad9d2af9ff55792e9b5a852e204424ced5410a7cd00509f6"
+    },
+    {
+      "path": "src/engine/ads.c",
+      "sha256": "c4d53220327f62676a159f1b3651626a8dabafdfa5bf625b5e94d443280eb4f6"
+    },
+    {
+      "path": "src/engine/events.c",
+      "sha256": "041ac9fce76af2c3e1fc2eeef56ea9b92b45e1a4adc0087d5318720ccc2d57d2"
+    },
+    {
+      "path": "src/engine/graphics.c",
+      "sha256": "fded8d14dbfa432242170e0a16010cb882d02f437d31e5a317bfe2baafcee392"
+    }
+  ],
+  "decoded_source_cache": {
+    "path": "D:\\.ai-work\\worktrees\\johnny-character-inventory\\build\\character-inventory\\scene-map\\decoded-scripts.json",
+    "sha256": "4944dab61454a232934815ba3bb39a11806ad833963098c4099deff056dcb55d",
+    "retention_note": "Existing read-only historical decode. Relevant exact commands are embedded below; do not depend on this external scratch path for preview playback."
+  },
+  "resource_identities": [
+    {
+      "resource": "MJFIRE.TTM",
+      "current_payload_sha256": "6b72333247ea690ad5cf2c4919eae4322c47de630a63c6c496c76b5f1f18b01c",
+      "cached_decode_payload_sha256": "6b72333247ea690ad5cf2c4919eae4322c47de630a63c6c496c76b5f1f18b01c",
+      "decoded_sha256": "9af97c8523448a062193b2d5202eeb51e42f9be139c871fc500cf5ddb6805a11",
+      "supplied_original_payload_sha256": "6b72333247ea690ad5cf2c4919eae4322c47de630a63c6c496c76b5f1f18b01c",
+      "supplied_original_decoded_sha256": "9af97c8523448a062193b2d5202eeb51e42f9be139c871fc500cf5ddb6805a11",
+      "current_payload_matches_cached_decode": true,
+      "current_matches_supplied_original_payload": true,
+      "decoded_matches_supplied_original": true
+    },
+    {
+      "resource": "FIRE.TTM",
+      "current_payload_sha256": "b45296d11ec3dceb948e784cc0d04ebe4ae4dda42ccdde68540aed91991185b9",
+      "cached_decode_payload_sha256": "b45296d11ec3dceb948e784cc0d04ebe4ae4dda42ccdde68540aed91991185b9",
+      "decoded_sha256": "98f8036468fa82f6819ea93bf9c4612b0d98593c0b0dcbb0ece0390f4eed6551",
+      "supplied_original_payload_sha256": "b45296d11ec3dceb948e784cc0d04ebe4ae4dda42ccdde68540aed91991185b9",
+      "supplied_original_decoded_sha256": "98f8036468fa82f6819ea93bf9c4612b0d98593c0b0dcbb0ece0390f4eed6551",
+      "current_payload_matches_cached_decode": true,
+      "current_matches_supplied_original_payload": true,
+      "decoded_matches_supplied_original": true
+    },
+    {
+      "resource": "BUILDING.ADS",
+      "current_payload_sha256": "c8a76b9e9e8c2cfe9e7e3b045d85e2de81f72099923e4de32245c0e86dfe321d",
+      "cached_decode_payload_sha256": "c8a76b9e9e8c2cfe9e7e3b045d85e2de81f72099923e4de32245c0e86dfe321d",
+      "decoded_sha256": "c627d5ea95b3c2a5ac1cc4b065582598c74cbaf469590a4107789ed5f4cb2031",
+      "supplied_original_payload_sha256": "c8a76b9e9e8c2cfe9e7e3b045d85e2de81f72099923e4de32245c0e86dfe321d",
+      "supplied_original_decoded_sha256": "c627d5ea95b3c2a5ac1cc4b065582598c74cbaf469590a4107789ed5f4cb2031",
+      "current_payload_matches_cached_decode": true,
+      "current_matches_supplied_original_payload": true,
+      "decoded_matches_supplied_original": true
+    }
+  ],
+  "original_frames": [
+    {
+      "path": "art/cartoon/fire-v1/reference/original/000.png",
+      "sha256": "96c6b9e6139f517b25f98d2eb95e4bd678fce87aaea342644c8951fa31d92ccd",
+      "member": "native/BMP/FIRE1.BMP/000.png",
+      "canvas": [
+        32,
+        21
+      ],
+      "matches_inventory": true,
+      "frame": 0
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/001.png",
+      "sha256": "0c3f9a5aeb573f139c095052ff66d8487f8d0125a52f23640ba12e90e151a957",
+      "member": "native/BMP/FIRE1.BMP/001.png",
+      "canvas": [
+        16,
+        21
+      ],
+      "matches_inventory": true,
+      "frame": 1
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/002.png",
+      "sha256": "e37c7bfa121726b6d07bca3d7f1af6de8c269642aad3ffaf32508abd804a4e3e",
+      "member": "native/BMP/FIRE1.BMP/002.png",
+      "canvas": [
+        16,
+        23
+      ],
+      "matches_inventory": true,
+      "frame": 2
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/003.png",
+      "sha256": "8e8c6be25d6936211f27dadc9a10c5d6a6cf4e595b3c24bbb7458a8baf3749a4",
+      "member": "native/BMP/FIRE1.BMP/003.png",
+      "canvas": [
+        16,
+        21
+      ],
+      "matches_inventory": true,
+      "frame": 3
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/004.png",
+      "sha256": "90a7ef6515214ac8595ce9dbab07be23334d01da2e107e946501471057d94502",
+      "member": "native/BMP/FIRE1.BMP/004.png",
+      "canvas": [
+        16,
+        20
+      ],
+      "matches_inventory": true,
+      "frame": 4
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/005.png",
+      "sha256": "cb7b5bcdeb599ed14977ef44f5af2cd59d614fbc9654c1bbb510b24b7ac692e5",
+      "member": "native/BMP/FIRE1.BMP/005.png",
+      "canvas": [
+        24,
+        25
+      ],
+      "matches_inventory": true,
+      "frame": 5
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/006.png",
+      "sha256": "2092f63268be69847537f345b1506293f3d435d4d0d62cf75331af62c788ea74",
+      "member": "native/BMP/FIRE1.BMP/006.png",
+      "canvas": [
+        16,
+        15
+      ],
+      "matches_inventory": true,
+      "frame": 6
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/007.png",
+      "sha256": "c50337abfe83eb1d87ffe3a5506c96a6a8f474a4513d033da4d7d3e6124c6d38",
+      "member": "native/BMP/FIRE1.BMP/007.png",
+      "canvas": [
+        16,
+        19
+      ],
+      "matches_inventory": true,
+      "frame": 7
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/008.png",
+      "sha256": "10ef43fffa9bdf697fd4d77ed6f95af5c616ec48bbbd5e2a485459285bb4a160",
+      "member": "native/BMP/FIRE1.BMP/008.png",
+      "canvas": [
+        16,
+        20
+      ],
+      "matches_inventory": true,
+      "frame": 8
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/009.png",
+      "sha256": "190aaf333e059212f7b2ae3e3acc15a3e202c603d00777b9f8105196149e0075",
+      "member": "native/BMP/FIRE1.BMP/009.png",
+      "canvas": [
+        24,
+        23
+      ],
+      "matches_inventory": true,
+      "frame": 9
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/010.png",
+      "sha256": "e590222f39dae91eef1ea7edccca8f3f7a096b2ba6e56fef8fcf0cf7f28fd5dc",
+      "member": "native/BMP/FIRE1.BMP/010.png",
+      "canvas": [
+        24,
+        22
+      ],
+      "matches_inventory": true,
+      "frame": 10
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/011.png",
+      "sha256": "a5f4c3d1f137e7a8638b519eac7a1e1db136e7949ab6b26a11c8d3b3a72ea93b",
+      "member": "native/BMP/FIRE1.BMP/011.png",
+      "canvas": [
+        16,
+        17
+      ],
+      "matches_inventory": true,
+      "frame": 11
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/012.png",
+      "sha256": "f240f3b5329337a56dff4210b93271a9d0ec56d345ff7a0caab10d4e87a2863c",
+      "member": "native/BMP/FIRE1.BMP/012.png",
+      "canvas": [
+        24,
+        24
+      ],
+      "matches_inventory": true,
+      "frame": 12
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/013.png",
+      "sha256": "0c282ebe1ce6b818cc1600faa7b6d933ae99b0fabd99197af0967a037af4ab05",
+      "member": "native/BMP/FIRE1.BMP/013.png",
+      "canvas": [
+        24,
+        36
+      ],
+      "matches_inventory": true,
+      "frame": 13
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/014.png",
+      "sha256": "9db5e08bcdbe82be35abb7f1ccf13e40d1a19b9563607fa79bdb2f02b1eaf87e",
+      "member": "native/BMP/FIRE1.BMP/014.png",
+      "canvas": [
+        24,
+        37
+      ],
+      "matches_inventory": true,
+      "frame": 14
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/015.png",
+      "sha256": "c62943eaf28eef6373a05958745676daeb897f2a2d5bf388519d675e17fb98cd",
+      "member": "native/BMP/FIRE1.BMP/015.png",
+      "canvas": [
+        24,
+        39
+      ],
+      "matches_inventory": true,
+      "frame": 15
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/016.png",
+      "sha256": "9675241d4ccd522d1777cf8903e495111cf912755b23cb8192c1f19420f3bf08",
+      "member": "native/BMP/FIRE1.BMP/016.png",
+      "canvas": [
+        24,
+        37
+      ],
+      "matches_inventory": true,
+      "frame": 16
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/017.png",
+      "sha256": "99f0ff7f3146fa213b3d3ad6e3dee708a5ddd6873192b3448b27590766429721",
+      "member": "native/BMP/FIRE1.BMP/017.png",
+      "canvas": [
+        24,
+        45
+      ],
+      "matches_inventory": true,
+      "frame": 17
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/018.png",
+      "sha256": "1a3581ac72e8f0ee51d83d8f4af6d88b03d3793809a0517a78edc97e55207602",
+      "member": "native/BMP/FIRE1.BMP/018.png",
+      "canvas": [
+        24,
+        43
+      ],
+      "matches_inventory": true,
+      "frame": 18
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/019.png",
+      "sha256": "813f1613a6dcea5af25c163c81df542609ea6094edd497372c711d15787864f5",
+      "member": "native/BMP/FIRE1.BMP/019.png",
+      "canvas": [
+        32,
+        46
+      ],
+      "matches_inventory": true,
+      "frame": 19
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/020.png",
+      "sha256": "89e1b2dd5f76ebfe7e098015eb5fad077d628ad66c0afaeca4621d9231034723",
+      "member": "native/BMP/FIRE1.BMP/020.png",
+      "canvas": [
+        24,
+        44
+      ],
+      "matches_inventory": true,
+      "frame": 20
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/021.png",
+      "sha256": "b18b937279d25a39edff56a1bbbe46bd0d94a4a89e9e347811ac112adf7d6cfb",
+      "member": "native/BMP/FIRE1.BMP/021.png",
+      "canvas": [
+        24,
+        13
+      ],
+      "matches_inventory": true,
+      "frame": 21
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/022.png",
+      "sha256": "75f6a10f2ec8a72cc66e110384e70193f6b3f14ad9782759de7d5473c1bb07b3",
+      "member": "native/BMP/FIRE1.BMP/022.png",
+      "canvas": [
+        24,
+        12
+      ],
+      "matches_inventory": true,
+      "frame": 22
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/023.png",
+      "sha256": "7244ef3a7d4e2163b4c0bd5fac7e7bb723568097c2c1077f6ebd9143ebb1c7a7",
+      "member": "native/BMP/FIRE1.BMP/023.png",
+      "canvas": [
+        16,
+        10
+      ],
+      "matches_inventory": true,
+      "frame": 23
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/024.png",
+      "sha256": "310bc6cc9d56bc42e11df5e2fdd0a3e02f12d8370b6284b0882ff17a985fc387",
+      "member": "native/BMP/FIRE1.BMP/024.png",
+      "canvas": [
+        16,
+        9
+      ],
+      "matches_inventory": true,
+      "frame": 24
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/025.png",
+      "sha256": "a4a0ecb5544cb6c4262bfc99ad09d47bda6069a968c9565219e2391f711a19ae",
+      "member": "native/BMP/FIRE1.BMP/025.png",
+      "canvas": [
+        32,
+        14
+      ],
+      "matches_inventory": true,
+      "frame": 25
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/026.png",
+      "sha256": "c7ecc292a3bf561869ad56b6e1e5f78d79129f3dc5e2ba1c49316c7c06820d44",
+      "member": "native/BMP/FIRE1.BMP/026.png",
+      "canvas": [
+        32,
+        16
+      ],
+      "matches_inventory": true,
+      "frame": 26
+    },
+    {
+      "path": "art/cartoon/fire-v1/reference/original/027.png",
+      "sha256": "e2701e4adca04e0f4a88f6d46927f6188ad24f7a4c5517db4b566abd1c575d33",
+      "member": "native/BMP/FIRE1.BMP/027.png",
+      "canvas": [
+        40,
+        22
+      ],
+      "matches_inventory": true,
+      "frame": 27
+    }
+  ],
+  "sequences": [
+    {
+      "id": "smoke",
+      "ttm": "MJFIRE.TTM",
+      "tag": 39,
+      "description": "smoke cycle",
+      "tag_offset": 2162,
+      "nominal_pass_ms": 560,
+      "phase_count": 4,
+      "preview_loop_is_editorial": true,
+      "terminator": "PURGE",
+      "note": "Preserve exact draw order, per-phase coordinates and command order. A fixed isolated preview crop is independent of native scene composition.",
+      "phases": [
+        {
+          "phase": 0,
+          "nominal_start_ms": 0,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2194,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2170,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 1,
+              "x": 306,
+              "y": 280,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2180,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2166,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 39,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2170,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 39,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2180,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 39,
+              "args": [
+                306,
+                280,
+                1,
+                4
+              ]
+            },
+            {
+              "offset": 2190,
+              "opcode": "1021",
+              "command": "SET_DELAY",
+              "tag": 39,
+              "args": [
+                7
+              ]
+            },
+            {
+              "offset": 2194,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 39,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 1,
+          "nominal_start_ms": 140,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2220,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2200,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 2,
+              "x": 306,
+              "y": 278,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2210,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2196,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 39,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2200,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 39,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2210,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 39,
+              "args": [
+                306,
+                278,
+                2,
+                4
+              ]
+            },
+            {
+              "offset": 2220,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 39,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 2,
+          "nominal_start_ms": 280,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2246,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2226,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 3,
+              "x": 306,
+              "y": 280,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2236,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2222,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 39,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2226,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 39,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2236,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 39,
+              "args": [
+                306,
+                280,
+                3,
+                4
+              ]
+            },
+            {
+              "offset": 2246,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 39,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 3,
+          "nominal_start_ms": 420,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2274,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 4,
+              "x": 305,
+              "y": 280,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2252,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2262,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2248,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 39,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2252,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 39,
+              "args": [
+                305,
+                280,
+                4,
+                4
+              ]
+            },
+            {
+              "offset": 2262,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 39,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2272,
+              "opcode": "0110",
+              "command": "PURGE",
+              "tag": 39,
+              "args": []
+            },
+            {
+              "offset": 2274,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 39,
+              "args": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "small_flames",
+      "ttm": "MJFIRE.TTM",
+      "tag": 41,
+      "description": "small fire",
+      "tag_offset": 2288,
+      "nominal_pass_ms": 560,
+      "phase_count": 4,
+      "preview_loop_is_editorial": true,
+      "terminator": "PURGE",
+      "note": "Preserve exact draw order, per-phase coordinates and command order. A fixed isolated preview crop is independent of native scene composition.",
+      "phases": [
+        {
+          "phase": 0,
+          "nominal_start_ms": 0,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2320,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 5,
+              "x": 302,
+              "y": 281,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2296,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2306,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2292,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 41,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2296,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 41,
+              "args": [
+                302,
+                281,
+                5,
+                4
+              ]
+            },
+            {
+              "offset": 2306,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 41,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2316,
+              "opcode": "1021",
+              "command": "SET_DELAY",
+              "tag": 41,
+              "args": [
+                7
+              ]
+            },
+            {
+              "offset": 2320,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 41,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 1,
+          "nominal_start_ms": 140,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2346,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2326,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 6,
+              "x": 306,
+              "y": 290,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2336,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2322,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 41,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2326,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 41,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2336,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 41,
+              "args": [
+                306,
+                290,
+                6,
+                4
+              ]
+            },
+            {
+              "offset": 2346,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 41,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 2,
+          "nominal_start_ms": 280,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2372,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2352,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 7,
+              "x": 305,
+              "y": 286,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2362,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2348,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 41,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2352,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 41,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2362,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 41,
+              "args": [
+                305,
+                286,
+                7,
+                4
+              ]
+            },
+            {
+              "offset": 2372,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 41,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 3,
+          "nominal_start_ms": 420,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2400,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2378,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 8,
+              "x": 305,
+              "y": 286,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2388,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2374,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 41,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2378,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 41,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2388,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 41,
+              "args": [
+                305,
+                286,
+                8,
+                4
+              ]
+            },
+            {
+              "offset": 2398,
+              "opcode": "0110",
+              "command": "PURGE",
+              "tag": 41,
+              "args": []
+            },
+            {
+              "offset": 2400,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 41,
+              "args": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "medium_flames",
+      "ttm": "MJFIRE.TTM",
+      "tag": 42,
+      "description": "med. fire",
+      "tag_offset": 2416,
+      "nominal_pass_ms": 560,
+      "phase_count": 4,
+      "preview_loop_is_editorial": true,
+      "terminator": "PURGE",
+      "note": "Preserve exact draw order, per-phase coordinates and command order. A fixed isolated preview crop is independent of native scene composition.",
+      "phases": [
+        {
+          "phase": 0,
+          "nominal_start_ms": 0,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2448,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2424,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 9,
+              "x": 302,
+              "y": 284,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2434,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2420,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 42,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2424,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 42,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2434,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 42,
+              "args": [
+                302,
+                284,
+                9,
+                4
+              ]
+            },
+            {
+              "offset": 2444,
+              "opcode": "1021",
+              "command": "SET_DELAY",
+              "tag": 42,
+              "args": [
+                7
+              ]
+            },
+            {
+              "offset": 2448,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 42,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 1,
+          "nominal_start_ms": 140,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2474,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2454,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 11,
+              "x": 306,
+              "y": 289,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2464,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2450,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 42,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2454,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 42,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2464,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 42,
+              "args": [
+                306,
+                289,
+                11,
+                4
+              ]
+            },
+            {
+              "offset": 2474,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 42,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 2,
+          "nominal_start_ms": 280,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2500,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2480,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 10,
+              "x": 302,
+              "y": 284,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2490,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2476,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 42,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2480,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 42,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2490,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 42,
+              "args": [
+                302,
+                284,
+                10,
+                4
+              ]
+            },
+            {
+              "offset": 2500,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 42,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 3,
+          "nominal_start_ms": 420,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2528,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 12,
+              "x": 304,
+              "y": 283,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2506,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2516,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2502,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 42,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2506,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 42,
+              "args": [
+                304,
+                283,
+                12,
+                4
+              ]
+            },
+            {
+              "offset": 2516,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 42,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2526,
+              "opcode": "0110",
+              "command": "PURGE",
+              "tag": 42,
+              "args": []
+            },
+            {
+              "offset": 2528,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 42,
+              "args": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "large_flames",
+      "ttm": "MJFIRE.TTM",
+      "tag": 43,
+      "description": "lrg. fire",
+      "tag_offset": 2544,
+      "nominal_pass_ms": 560,
+      "phase_count": 4,
+      "preview_loop_is_editorial": true,
+      "terminator": "PURGE",
+      "note": "Preserve exact draw order, per-phase coordinates and command order. A fixed isolated preview crop is independent of native scene composition.",
+      "phases": [
+        {
+          "phase": 0,
+          "nominal_start_ms": 0,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2576,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2552,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 13,
+              "x": 306,
+              "y": 272,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2562,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2548,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 43,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2552,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 43,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2562,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 43,
+              "args": [
+                306,
+                272,
+                13,
+                4
+              ]
+            },
+            {
+              "offset": 2572,
+              "opcode": "1021",
+              "command": "SET_DELAY",
+              "tag": 43,
+              "args": [
+                7
+              ]
+            },
+            {
+              "offset": 2576,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 43,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 1,
+          "nominal_start_ms": 140,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2602,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2582,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 14,
+              "x": 307,
+              "y": 271,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2592,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2578,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 43,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2582,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 43,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2592,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 43,
+              "args": [
+                307,
+                271,
+                14,
+                4
+              ]
+            },
+            {
+              "offset": 2602,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 43,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 2,
+          "nominal_start_ms": 280,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2628,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2608,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 15,
+              "x": 306,
+              "y": 269,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2618,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2604,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 43,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2608,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 43,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2618,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 43,
+              "args": [
+                306,
+                269,
+                15,
+                4
+              ]
+            },
+            {
+              "offset": 2628,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 43,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 3,
+          "nominal_start_ms": 420,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2656,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2634,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 16,
+              "x": 306,
+              "y": 271,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2644,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2630,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 43,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2634,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 43,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2644,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 43,
+              "args": [
+                306,
+                271,
+                16,
+                4
+              ]
+            },
+            {
+              "offset": 2654,
+              "opcode": "0110",
+              "command": "PURGE",
+              "tag": 43,
+              "args": []
+            },
+            {
+              "offset": 2656,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 43,
+              "args": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "very_large_flames",
+      "ttm": "MJFIRE.TTM",
+      "tag": 44,
+      "description": "very lrg. fire",
+      "tag_offset": 2672,
+      "nominal_pass_ms": 560,
+      "phase_count": 4,
+      "preview_loop_is_editorial": true,
+      "terminator": "PURGE",
+      "note": "Preserve exact draw order, per-phase coordinates and command order. A fixed isolated preview crop is independent of native scene composition.",
+      "phases": [
+        {
+          "phase": 0,
+          "nominal_start_ms": 0,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2704,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2680,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 17,
+              "x": 303,
+              "y": 262,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2690,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2676,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 44,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2680,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 44,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2690,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 44,
+              "args": [
+                303,
+                262,
+                17,
+                4
+              ]
+            },
+            {
+              "offset": 2700,
+              "opcode": "1021",
+              "command": "SET_DELAY",
+              "tag": 44,
+              "args": [
+                7
+              ]
+            },
+            {
+              "offset": 2704,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 44,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 1,
+          "nominal_start_ms": 140,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2730,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2710,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 18,
+              "x": 304,
+              "y": 264,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2720,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2706,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 44,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2710,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 44,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2720,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 44,
+              "args": [
+                304,
+                264,
+                18,
+                4
+              ]
+            },
+            {
+              "offset": 2730,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 44,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 2,
+          "nominal_start_ms": 280,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2756,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2736,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 19,
+              "x": 303,
+              "y": 261,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2746,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2732,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 44,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2736,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 44,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2746,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 44,
+              "args": [
+                303,
+                261,
+                19,
+                4
+              ]
+            },
+            {
+              "offset": 2756,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 44,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 3,
+          "nominal_start_ms": 420,
+          "delay_ticks": 7,
+          "nominal_duration_ms": 140,
+          "update_offset": 2784,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 20,
+              "x": 302,
+              "y": 264,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2762,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 2772,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 2758,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 44,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 2762,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 44,
+              "args": [
+                302,
+                264,
+                20,
+                4
+              ]
+            },
+            {
+              "offset": 2772,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 44,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 2782,
+              "opcode": "0110",
+              "command": "PURGE",
+              "tag": 44,
+              "args": []
+            },
+            {
+              "offset": 2784,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 44,
+              "args": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fire_burst_in_disappointed_action",
+      "ttm": "MJFIRE.TTM",
+      "tag": 77,
+      "description": "disappointed",
+      "tag_offset": 1508,
+      "nominal_pass_ms": 3600,
+      "phase_count": 2,
+      "preview_loop_is_editorial": true,
+      "terminator": "PURGE",
+      "note": "Includes Johnny source pose to identify burst placement; an isolated prop preview may omit Johnny, but must not claim native scene parity.",
+      "phases": [
+        {
+          "phase": 0,
+          "nominal_start_ms": 0,
+          "delay_ticks": 90,
+          "nominal_duration_ms": 1800,
+          "update_offset": 1546,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE.BMP",
+              "frame": 9,
+              "x": 317,
+              "y": 263,
+              "bmp_slot": 3,
+              "flip": false,
+              "offset": 1516,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 1526,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 1512,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 77,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 1516,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 77,
+              "args": [
+                317,
+                263,
+                9,
+                3
+              ]
+            },
+            {
+              "offset": 1526,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 77,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 1536,
+              "opcode": "C051",
+              "command": "PLAY_SAMPLE",
+              "tag": 77,
+              "args": [
+                24
+              ]
+            },
+            {
+              "offset": 1540,
+              "opcode": "2022",
+              "command": "TIMER",
+              "tag": 77,
+              "args": [
+                60,
+                120
+              ]
+            },
+            {
+              "offset": 1546,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 77,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 1,
+          "nominal_start_ms": 1800,
+          "delay_ticks": 90,
+          "nominal_duration_ms": 1800,
+          "update_offset": 1584,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE.BMP",
+              "frame": 9,
+              "x": 317,
+              "y": 263,
+              "bmp_slot": 3,
+              "flip": false,
+              "offset": 1552,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 1562,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 2,
+              "resource": "FIRE1.BMP",
+              "frame": 27,
+              "x": 292,
+              "y": 287,
+              "bmp_slot": 4,
+              "flip": false,
+              "offset": 1572,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 1548,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 77,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 1552,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 77,
+              "args": [
+                317,
+                263,
+                9,
+                3
+              ]
+            },
+            {
+              "offset": 1562,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 77,
+              "args": [
+                297,
+                298,
+                0,
+                4
+              ]
+            },
+            {
+              "offset": 1572,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 77,
+              "args": [
+                292,
+                287,
+                27,
+                4
+              ]
+            },
+            {
+              "offset": 1582,
+              "opcode": "0110",
+              "command": "PURGE",
+              "tag": 77,
+              "args": []
+            },
+            {
+              "offset": 1584,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 77,
+              "args": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fire_slowly_dying",
+      "ttm": "MJFIRE.TTM",
+      "tag": 82,
+      "description": "fire slowly dying",
+      "tag_offset": 8602,
+      "nominal_pass_ms": 6080,
+      "phase_count": 38,
+      "preview_loop_is_editorial": true,
+      "terminator": "PURGE",
+      "note": "Preserve exact draw order, per-phase coordinates and command order. A fixed isolated preview crop is independent of native scene composition.",
+      "phases": [
+        {
+          "phase": 0,
+          "nominal_start_ms": 0,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8650,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8626,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 20,
+              "x": 301,
+              "y": 264,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8636,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8606,
+              "opcode": "1051",
+              "command": "SET_BMP_SLOT",
+              "tag": 82,
+              "args": [
+                2
+              ]
+            },
+            {
+              "offset": 8610,
+              "opcode": "F02F",
+              "command": "LOAD_IMAGE",
+              "tag": 82,
+              "args": [
+                "FIRE1.BMP"
+              ]
+            },
+            {
+              "offset": 8622,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8626,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                297,
+                298,
+                0,
+                2
+              ]
+            },
+            {
+              "offset": 8636,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                264,
+                20,
+                2
+              ]
+            },
+            {
+              "offset": 8646,
+              "opcode": "1021",
+              "command": "SET_DELAY",
+              "tag": 82,
+              "args": [
+                8
+              ]
+            },
+            {
+              "offset": 8650,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 1,
+          "nominal_start_ms": 160,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8676,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8656,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 19,
+              "x": 302,
+              "y": 262,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8666,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8652,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8656,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                297,
+                298,
+                0,
+                2
+              ]
+            },
+            {
+              "offset": 8666,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                302,
+                262,
+                19,
+                2
+              ]
+            },
+            {
+              "offset": 8676,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 2,
+          "nominal_start_ms": 320,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8702,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8682,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 18,
+              "x": 304,
+              "y": 265,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8692,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8678,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8682,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                297,
+                298,
+                0,
+                2
+              ]
+            },
+            {
+              "offset": 8692,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                304,
+                265,
+                18,
+                2
+              ]
+            },
+            {
+              "offset": 8702,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 3,
+          "nominal_start_ms": 480,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8728,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 0,
+              "x": 297,
+              "y": 298,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8708,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 17,
+              "x": 302,
+              "y": 263,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8718,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8704,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8708,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                297,
+                298,
+                0,
+                2
+              ]
+            },
+            {
+              "offset": 8718,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                302,
+                263,
+                17,
+                2
+              ]
+            },
+            {
+              "offset": 8728,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 4,
+          "nominal_start_ms": 640,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8754,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 26,
+              "x": 299,
+              "y": 303,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8734,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 18,
+              "x": 303,
+              "y": 265,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8744,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8730,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8734,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                299,
+                303,
+                26,
+                2
+              ]
+            },
+            {
+              "offset": 8744,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                303,
+                265,
+                18,
+                2
+              ]
+            },
+            {
+              "offset": 8754,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 5,
+          "nominal_start_ms": 800,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8780,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 26,
+              "x": 299,
+              "y": 303,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8760,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 17,
+              "x": 303,
+              "y": 265,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8770,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8756,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8760,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                299,
+                303,
+                26,
+                2
+              ]
+            },
+            {
+              "offset": 8770,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                303,
+                265,
+                17,
+                2
+              ]
+            },
+            {
+              "offset": 8780,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 6,
+          "nominal_start_ms": 960,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8806,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 26,
+              "x": 299,
+              "y": 303,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8786,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 16,
+              "x": 305,
+              "y": 274,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8796,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8782,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8786,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                299,
+                303,
+                26,
+                2
+              ]
+            },
+            {
+              "offset": 8796,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                305,
+                274,
+                16,
+                2
+              ]
+            },
+            {
+              "offset": 8806,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 7,
+          "nominal_start_ms": 1120,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8832,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 26,
+              "x": 299,
+              "y": 303,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8812,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 15,
+              "x": 306,
+              "y": 272,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8822,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8808,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8812,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                299,
+                303,
+                26,
+                2
+              ]
+            },
+            {
+              "offset": 8822,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                306,
+                272,
+                15,
+                2
+              ]
+            },
+            {
+              "offset": 8832,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 8,
+          "nominal_start_ms": 1280,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8858,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 26,
+              "x": 299,
+              "y": 303,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8838,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 14,
+              "x": 307,
+              "y": 274,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8848,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8834,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8838,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                299,
+                303,
+                26,
+                2
+              ]
+            },
+            {
+              "offset": 8848,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                274,
+                14,
+                2
+              ]
+            },
+            {
+              "offset": 8858,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 9,
+          "nominal_start_ms": 1440,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8884,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8864,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 16,
+              "x": 306,
+              "y": 273,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8874,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8860,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8864,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 8874,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                306,
+                273,
+                16,
+                2
+              ]
+            },
+            {
+              "offset": 8884,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 10,
+          "nominal_start_ms": 1600,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8910,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 15,
+              "x": 306,
+              "y": 271,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8890,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8900,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8886,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8890,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                306,
+                271,
+                15,
+                2
+              ]
+            },
+            {
+              "offset": 8900,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 8910,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 11,
+          "nominal_start_ms": 1760,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8936,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 14,
+              "x": 307,
+              "y": 272,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8916,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8926,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8912,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8916,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                272,
+                14,
+                2
+              ]
+            },
+            {
+              "offset": 8926,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 8936,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 12,
+          "nominal_start_ms": 1920,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8962,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 13,
+              "x": 307,
+              "y": 273,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8942,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8952,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8938,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8942,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                273,
+                13,
+                2
+              ]
+            },
+            {
+              "offset": 8952,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 8962,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 13,
+          "nominal_start_ms": 2080,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 8988,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 12,
+              "x": 304,
+              "y": 285,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8968,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8978,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8964,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8968,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                304,
+                285,
+                12,
+                2
+              ]
+            },
+            {
+              "offset": 8978,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 8988,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 14,
+          "nominal_start_ms": 2240,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9014,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 11,
+              "x": 308,
+              "y": 293,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 8994,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9004,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 8990,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 8994,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                308,
+                293,
+                11,
+                2
+              ]
+            },
+            {
+              "offset": 9004,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 9014,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 15,
+          "nominal_start_ms": 2400,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9040,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 10,
+              "x": 303,
+              "y": 287,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9020,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9030,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9016,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9020,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                303,
+                287,
+                10,
+                2
+              ]
+            },
+            {
+              "offset": 9030,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 9040,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 16,
+          "nominal_start_ms": 2560,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9066,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 9,
+              "x": 303,
+              "y": 286,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9046,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9056,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9042,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9046,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                303,
+                286,
+                9,
+                2
+              ]
+            },
+            {
+              "offset": 9056,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 9066,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 17,
+          "nominal_start_ms": 2720,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9092,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 8,
+              "x": 308,
+              "y": 289,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9072,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9082,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9068,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9072,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                308,
+                289,
+                8,
+                2
+              ]
+            },
+            {
+              "offset": 9082,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 9092,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 18,
+          "nominal_start_ms": 2880,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9118,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 7,
+              "x": 307,
+              "y": 290,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9098,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9108,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9094,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9098,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                290,
+                7,
+                2
+              ]
+            },
+            {
+              "offset": 9108,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 9118,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 19,
+          "nominal_start_ms": 3040,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9144,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 6,
+              "x": 309,
+              "y": 295,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9124,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 21,
+              "x": 301,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9134,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9120,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9124,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                309,
+                295,
+                6,
+                2
+              ]
+            },
+            {
+              "offset": 9134,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                301,
+                305,
+                21,
+                2
+              ]
+            },
+            {
+              "offset": 9144,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 20,
+          "nominal_start_ms": 3200,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9170,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 22,
+              "x": 303,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9150,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 5,
+              "x": 305,
+              "y": 285,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9160,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9146,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9150,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                303,
+                305,
+                22,
+                2
+              ]
+            },
+            {
+              "offset": 9160,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                305,
+                285,
+                5,
+                2
+              ]
+            },
+            {
+              "offset": 9170,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 21,
+          "nominal_start_ms": 3360,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9196,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 22,
+              "x": 303,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9176,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 8,
+              "x": 307,
+              "y": 291,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9186,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9172,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9176,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                303,
+                305,
+                22,
+                2
+              ]
+            },
+            {
+              "offset": 9186,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                291,
+                8,
+                2
+              ]
+            },
+            {
+              "offset": 9196,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 22,
+          "nominal_start_ms": 3520,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9222,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 22,
+              "x": 303,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9202,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 7,
+              "x": 307,
+              "y": 291,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9212,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9198,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9202,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                303,
+                305,
+                22,
+                2
+              ]
+            },
+            {
+              "offset": 9212,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                291,
+                7,
+                2
+              ]
+            },
+            {
+              "offset": 9222,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 23,
+          "nominal_start_ms": 3680,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9248,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 22,
+              "x": 303,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9228,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 6,
+              "x": 309,
+              "y": 295,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9238,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9224,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9228,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                303,
+                305,
+                22,
+                2
+              ]
+            },
+            {
+              "offset": 9238,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                309,
+                295,
+                6,
+                2
+              ]
+            },
+            {
+              "offset": 9248,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 24,
+          "nominal_start_ms": 3840,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9274,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 22,
+              "x": 303,
+              "y": 305,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9254,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 5,
+              "x": 304,
+              "y": 285,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9264,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9250,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9254,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                303,
+                305,
+                22,
+                2
+              ]
+            },
+            {
+              "offset": 9264,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                304,
+                285,
+                5,
+                2
+              ]
+            },
+            {
+              "offset": 9274,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 25,
+          "nominal_start_ms": 4000,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9300,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 23,
+              "x": 306,
+              "y": 306,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9280,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 8,
+              "x": 308,
+              "y": 291,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9290,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9276,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9280,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                306,
+                306,
+                23,
+                2
+              ]
+            },
+            {
+              "offset": 9290,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                308,
+                291,
+                8,
+                2
+              ]
+            },
+            {
+              "offset": 9300,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 26,
+          "nominal_start_ms": 4160,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9326,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 23,
+              "x": 306,
+              "y": 306,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9306,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 5,
+              "x": 304,
+              "y": 285,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9316,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9302,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9306,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                306,
+                306,
+                23,
+                2
+              ]
+            },
+            {
+              "offset": 9316,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                304,
+                285,
+                5,
+                2
+              ]
+            },
+            {
+              "offset": 9326,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 27,
+          "nominal_start_ms": 4320,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9352,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 23,
+              "x": 306,
+              "y": 306,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9332,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 8,
+              "x": 309,
+              "y": 290,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9342,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9328,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9332,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                306,
+                306,
+                23,
+                2
+              ]
+            },
+            {
+              "offset": 9342,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                309,
+                290,
+                8,
+                2
+              ]
+            },
+            {
+              "offset": 9352,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 28,
+          "nominal_start_ms": 4480,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9378,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 23,
+              "x": 306,
+              "y": 306,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9358,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 5,
+              "x": 304,
+              "y": 285,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9368,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9354,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9358,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                306,
+                306,
+                23,
+                2
+              ]
+            },
+            {
+              "offset": 9368,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                304,
+                285,
+                5,
+                2
+              ]
+            },
+            {
+              "offset": 9378,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 29,
+          "nominal_start_ms": 4640,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9404,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9384,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 8,
+              "x": 309,
+              "y": 290,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9394,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9380,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9384,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9394,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                309,
+                290,
+                8,
+                2
+              ]
+            },
+            {
+              "offset": 9404,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 30,
+          "nominal_start_ms": 4800,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9430,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9410,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 4,
+              "x": 307,
+              "y": 291,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9420,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9406,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9410,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9420,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                291,
+                4,
+                2
+              ]
+            },
+            {
+              "offset": 9430,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 31,
+          "nominal_start_ms": 4960,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9456,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9436,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 3,
+              "x": 308,
+              "y": 291,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9446,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9432,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9436,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9446,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                308,
+                291,
+                3,
+                2
+              ]
+            },
+            {
+              "offset": 9456,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 32,
+          "nominal_start_ms": 5120,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9482,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9462,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 2,
+              "x": 308,
+              "y": 291,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9472,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9458,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9462,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9472,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                308,
+                291,
+                2,
+                2
+              ]
+            },
+            {
+              "offset": 9482,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 33,
+          "nominal_start_ms": 5280,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9508,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9488,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 1,
+              "x": 308,
+              "y": 292,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9498,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9484,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9488,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9498,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                308,
+                292,
+                1,
+                2
+              ]
+            },
+            {
+              "offset": 9508,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 34,
+          "nominal_start_ms": 5440,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9534,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9514,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 4,
+              "x": 307,
+              "y": 292,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9524,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9510,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9514,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9524,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                292,
+                4,
+                2
+              ]
+            },
+            {
+              "offset": 9534,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 35,
+          "nominal_start_ms": 5600,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9560,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9540,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 3,
+              "x": 307,
+              "y": 289,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9550,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9536,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9540,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9550,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                289,
+                3,
+                2
+              ]
+            },
+            {
+              "offset": 9560,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 36,
+          "nominal_start_ms": 5760,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9586,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9566,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 2,
+              "x": 307,
+              "y": 290,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9576,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9562,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9566,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9576,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                290,
+                2,
+                2
+              ]
+            },
+            {
+              "offset": 9586,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 37,
+          "nominal_start_ms": 5920,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9614,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9592,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 1,
+              "x": 308,
+              "y": 290,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9602,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9588,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 82,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9592,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9602,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 82,
+              "args": [
+                308,
+                290,
+                1,
+                2
+              ]
+            },
+            {
+              "offset": 9612,
+              "opcode": "0110",
+              "command": "PURGE",
+              "tag": 82,
+              "args": []
+            },
+            {
+              "offset": 9614,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 82,
+              "args": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "embers",
+      "ttm": "MJFIRE.TTM",
+      "tag": 83,
+      "description": "just ambers",
+      "tag_offset": 9616,
+      "nominal_pass_ms": 1120,
+      "phase_count": 7,
+      "preview_loop_is_editorial": false,
+      "terminator": "GOTO_TAG83",
+      "note": "Preserve exact draw order, per-phase coordinates and command order. A fixed isolated preview crop is independent of native scene composition.",
+      "phases": [
+        {
+          "phase": 0,
+          "nominal_start_ms": 0,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9658,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9624,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 3,
+              "x": 308,
+              "y": 291,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9634,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9620,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 83,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9624,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9634,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                308,
+                291,
+                3,
+                2
+              ]
+            },
+            {
+              "offset": 9644,
+              "opcode": "4004",
+              "command": "SET_CLIP_ZONE",
+              "tag": 83,
+              "args": [
+                304,
+                303,
+                324,
+                317
+              ]
+            },
+            {
+              "offset": 9654,
+              "opcode": "1021",
+              "command": "SET_DELAY",
+              "tag": 83,
+              "args": [
+                8
+              ]
+            },
+            {
+              "offset": 9658,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 83,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 1,
+          "nominal_start_ms": 160,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9684,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9664,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 2,
+              "x": 308,
+              "y": 291,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9674,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9660,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 83,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9664,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9674,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                308,
+                291,
+                2,
+                2
+              ]
+            },
+            {
+              "offset": 9684,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 83,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 2,
+          "nominal_start_ms": 320,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9710,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9690,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 1,
+              "x": 308,
+              "y": 292,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9700,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9686,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 83,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9690,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9700,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                308,
+                292,
+                1,
+                2
+              ]
+            },
+            {
+              "offset": 9710,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 83,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 3,
+          "nominal_start_ms": 480,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9736,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9716,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 4,
+              "x": 307,
+              "y": 292,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9726,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9712,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 83,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9716,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9726,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                307,
+                292,
+                4,
+                2
+              ]
+            },
+            {
+              "offset": 9736,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 83,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 4,
+          "nominal_start_ms": 640,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9762,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9742,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 3,
+              "x": 307,
+              "y": 289,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9752,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9738,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 83,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9742,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9752,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                307,
+                289,
+                3,
+                2
+              ]
+            },
+            {
+              "offset": 9762,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 83,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 5,
+          "nominal_start_ms": 800,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9788,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9768,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 2,
+              "x": 307,
+              "y": 290,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9778,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9764,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 83,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9768,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9778,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                307,
+                290,
+                2,
+                2
+              ]
+            },
+            {
+              "offset": 9788,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 83,
+              "args": []
+            }
+          ]
+        },
+        {
+          "phase": 6,
+          "nominal_start_ms": 960,
+          "delay_ticks": 8,
+          "nominal_duration_ms": 160,
+          "update_offset": 9818,
+          "draws": [
+            {
+              "draw_order": 0,
+              "resource": "FIRE1.BMP",
+              "frame": 24,
+              "x": 307,
+              "y": 307,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9794,
+              "opcode": "A504"
+            },
+            {
+              "draw_order": 1,
+              "resource": "FIRE1.BMP",
+              "frame": 1,
+              "x": 308,
+              "y": 290,
+              "bmp_slot": 2,
+              "flip": false,
+              "offset": 9804,
+              "opcode": "A504"
+            }
+          ],
+          "commands": [
+            {
+              "offset": 9790,
+              "opcode": "A601",
+              "command": "CLEAR_SCREEN",
+              "tag": 83,
+              "args": [
+                0
+              ]
+            },
+            {
+              "offset": 9794,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                307,
+                307,
+                24,
+                2
+              ]
+            },
+            {
+              "offset": 9804,
+              "opcode": "A504",
+              "command": "DRAW_SPRITE",
+              "tag": 83,
+              "args": [
+                308,
+                290,
+                1,
+                2
+              ]
+            },
+            {
+              "offset": 9814,
+              "opcode": "1201",
+              "command": "GOTO_TAG",
+              "tag": 83,
+              "args": [
+                83
+              ]
+            },
+            {
+              "offset": 9818,
+              "opcode": "0FF0",
+              "command": "UPDATE",
+              "tag": 83,
+              "args": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "scene_context": {
+    "load_tag36": [
+      {
+        "offset": 38,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 36,
+        "args": [
+          36
+        ]
+      },
+      {
+        "offset": 42,
+        "opcode": "1121",
+        "command": "TTM_UNKNOWN_1",
+        "tag": 36,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 46,
+        "opcode": "4214",
+        "command": "SAVE_IMAGE1",
+        "tag": 36,
+        "args": [
+          240,
+          134,
+          352,
+          204
+        ]
+      },
+      {
+        "offset": 56,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 36,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 60,
+        "opcode": "F02F",
+        "command": "LOAD_IMAGE",
+        "tag": 36,
+        "args": [
+          "JOHNWALK.BMP"
+        ]
+      },
+      {
+        "offset": 76,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 36,
+        "args": [
+          1
+        ]
+      },
+      {
+        "offset": 80,
+        "opcode": "F02F",
+        "command": "LOAD_IMAGE",
+        "tag": 36,
+        "args": [
+          "TRUNK.BMP"
+        ]
+      },
+      {
+        "offset": 92,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 36,
+        "args": [
+          3
+        ]
+      },
+      {
+        "offset": 96,
+        "opcode": "F02F",
+        "command": "LOAD_IMAGE",
+        "tag": 36,
+        "args": [
+          "FIRE.BMP"
+        ]
+      },
+      {
+        "offset": 108,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 36,
+        "args": [
+          4
+        ]
+      },
+      {
+        "offset": 112,
+        "opcode": "F02F",
+        "command": "LOAD_IMAGE",
+        "tag": 36,
+        "args": [
+          "FIRE1.BMP"
+        ]
+      },
+      {
+        "offset": 124,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 36,
+        "args": [
+          5
+        ]
+      },
+      {
+        "offset": 128,
+        "opcode": "F02F",
+        "command": "LOAD_IMAGE",
+        "tag": 36,
+        "args": [
+          "FIRE3.BMP"
+        ]
+      },
+      {
+        "offset": 140,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 36,
+        "args": [
+          0
+        ]
+      }
+    ],
+    "BUILDING.ADS_bindings": [
+      {
+        "slot": 1,
+        "resource": "MJSAND.TTM"
+      },
+      {
+        "slot": 2,
+        "resource": "GJGULIVR.TTM"
+      },
+      {
+        "slot": 3,
+        "resource": "MJFIRE.TTM"
+      }
+    ],
+    "relevant_scheduling_commands": [
+      {
+        "offset": 1838,
+        "opcode": "3010",
+        "command": "RANDOM_START",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 1874,
+        "opcode": "30FF",
+        "command": "RANDOM_END",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 1890,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          39,
+          65356,
+          1
+        ]
+      },
+      {
+        "offset": 1930,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          77,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 1948,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          39,
+          65356,
+          1
+        ]
+      },
+      {
+        "offset": 1986,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          41,
+          65356,
+          1
+        ]
+      },
+      {
+        "offset": 2004,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          42,
+          65356,
+          1
+        ]
+      },
+      {
+        "offset": 2066,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          43,
+          65356,
+          1
+        ]
+      },
+      {
+        "offset": 2084,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          44,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 2120,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          44,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 2164,
+        "opcode": "2010",
+        "command": "STOP_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          44,
+          1
+        ]
+      },
+      {
+        "offset": 2172,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          82,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 2200,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          83,
+          64536,
+          1
+        ]
+      },
+      {
+        "offset": 2246,
+        "opcode": "2010",
+        "command": "STOP_SCENE",
+        "tag": 5,
+        "args": [
+          3,
+          83,
+          1
+        ]
+      },
+      {
+        "offset": 2846,
+        "opcode": "3010",
+        "command": "RANDOM_START",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2882,
+        "opcode": "30FF",
+        "command": "RANDOM_END",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2898,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          39,
+          65356,
+          1
+        ]
+      },
+      {
+        "offset": 2938,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          77,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 2956,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          39,
+          65356,
+          1
+        ]
+      },
+      {
+        "offset": 2994,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          41,
+          65356,
+          1
+        ]
+      },
+      {
+        "offset": 3012,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          42,
+          65356,
+          1
+        ]
+      },
+      {
+        "offset": 3074,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          43,
+          65356,
+          1
+        ]
+      },
+      {
+        "offset": 3118,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          44,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 3144,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          44,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 3162,
+        "opcode": "3010",
+        "command": "RANDOM_START",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 3194,
+        "opcode": "30FF",
+        "command": "RANDOM_END",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 3392,
+        "opcode": "2010",
+        "command": "STOP_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          44,
+          1
+        ]
+      },
+      {
+        "offset": 3410,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          82,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 3428,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          83,
+          65236,
+          1
+        ]
+      },
+      {
+        "offset": 3474,
+        "opcode": "2010",
+        "command": "STOP_SCENE",
+        "tag": 7,
+        "args": [
+          3,
+          83,
+          1
+        ]
+      }
+    ],
+    "negative_args_are_signed": "65356=-180ticks;64536=-1000ticks;65236=-300ticks.",
+    "loop_note": "PURGE repeats a tag when its scene timer is active. Normal timed calls and random story branches determine repeats/transitions; the four-frame presentation loop is only an isolated comparison. Tag83 has an explicit GOTO_TAG83 and a clip command after its first two draws."
+  },
+  "frame025_unique_static_draw_count": 0,
+  "pixel_or_runtime_mutations": false,
+  "tests_or_native_capture_executed": false
+}

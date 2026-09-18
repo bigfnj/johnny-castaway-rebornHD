@@ -2,7 +2,7 @@
 
 Preparation for the complete **FIRE1.BMP000-027** family started on 2026-09-18 after the 37-slot ship batch (33 new drawings and four source-preserved slots). The user said "approved, continue please" at the third tanker review, completing the ship group's scoped drawing approvals: tanker appearance and isolated source-replay rotation, plus the earlier appearance approval for the other 19 drawings. [Tanker acceptance](../tanker-motion-v3/acceptance/appearance-rotation-v1.json) preserves the exact scope and selections. Native export, registration and bulk integration remain pending for the ship artwork.
 
-FIRE1 provides 28 distinct source slots in one coherent prop/effect family. All 28 now have generated drafts in the [campfire review](../fire-v1/README.md), with appearance approval pending. The source research below remains the basis for this group. Its isolated phase comparisons preserve the actual source order and layering; they do not establish complete scene integration.
+FIRE1 provides 28 distinct source slots in one coherent prop/effect family. The user approved all 28 selected drawings in the [campfire review](../fire-v1/README.md) on 2026-09-18 with "excellent, approved". [Acceptance](../fire-v1/acceptance/appearance-v1.json) records the exact displayed selections. The source research below remains the basis for this group. Its isolated phase comparisons preserve the actual source order and layering; they do not establish complete scene integration.
 
 Every exact original frame was visually inspected for this recommendation, using an in-memory nearest-neighbor contact sheet from `character-inventory-v1/reference-originals.zip`. The drawings contain wood/ember piles, smoke wisps, flames and a small outlined signal/impact graphic. No visible Johnny, other person, creature, occupied vehicle, unresolved anatomy, or placeholder was found. The existing `not_johnny` classification supports this finding but was not used as a substitute for inspection.
 
@@ -33,4 +33,4 @@ Exact source members are `native/BMP/FIRE1.BMP/000.png` through `027.png` in the
 
 The read inventory SHA is `4689731fa6b2e4a734864a173f5dc5c1d932b5fbf94b91c054404e1d87881576`; the static resource-map SHA is `fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3`. The inspected pack ledger SHA is `0dee75befeaa36abfab1952fb737392d18c50ad037fe85c2143583da4215c795`.
 
-The initial selection-research task wrote only this recommendation file. The 2026-09-18 continuation records tanker approval and the completed FIRE1 draft batch. No FIRE1 approval or production integration is claimed.
+The initial selection-research task wrote only this recommendation file. The 2026-09-18 continuation records tanker approval and the completed, appearance-approved FIRE1 batch. Production integration is still pending.

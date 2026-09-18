@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 18,
+  "version": 1,
+  "use_case": "stylized-concept",
+  "mode": "builtin-imagegen",
+  "intent": "generate from original pose and shared design reference",
+  "prompt": "Use case: stylized-concept\nAsset type: one transparent cartoon game sprite, FIRE2.BMP frame 018.\nPrimary request: Redraw image 1's exact fish pose and occupied silhouette using the fish identity and clean cartoon rendering in image 2.\nInput images: Image 1 is the authoritative original geometry, orientation, curvature, fin phase and eye position. Its diagnostic neon/pixel colors are not canonical. Image 2 is the style/identity reference only; never copy its pose when different from image 1.\nPose: TAIL FRAGMENT ONLY. Image1 contains just a single triangular fan-shaped fish tail, wide across the TOP and narrowing to a short pointed stalk at BOTTOM CENTER. Its top-left edge is slightly higher than its top-right edge. Width:height about 22:14. Draw only this isolated tail in the golden-orange fin colors and dark warm outline of image2. Absolutely NO fish body, head, eye, mouth or other fins. The style key is for fin material only; do not draw a whole fish.\nStyle: Same leaf-green fish with golden-orange tail and fins, white eye and dark pupil where present, crisp dark warm outlines, simple warm highlights and restrained darker green shading as image 2. Clear clean shapes, no pixelated outline. Keep original proportions and relative fin positions; no extra accessories.\nComposition: One isolated sprite, centered with a small transparent safety margin so no contour touches or clips the output canvas. Preserve the source's silhouette aspect ratio rather than stretching to the output canvas.\nBackground: Truly transparent RGBA alpha. No ocean, island, scenery, fishing rod, people, text, ground, drop shadow, detached highlight, outer glow, haze or colored backdrop. Preserve holes between fins and body as transparency.\nOutput: One drawing only, no contact sheet or alternate views.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/018.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/generation/FIRE2.BMP/020-generated-v1.png"
+  ],
+  "ordered_references": [
+    {
+      "role": "original geometry and phase",
+      "path": "art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/018.png",
+      "sha256": "b3dfdadff4a8467ebca66b8afadfb1d6fda555acd8da03a3be81b62d7799b3c9"
+    },
+    {
+      "role": "fish identity and style only",
+      "path": "art/cartoon/campfire-props-v1/generation/FIRE2.BMP/020-generated-v1.png",
+      "sha256": "57aa1bd60b6a6c0ef6b5ed902e29a4001d4f68e3158aece6ef21fbf53b024659"
+    }
+  ],
+  "output_path": "art/cartoon/campfire-props-v1/generation/FIRE2.BMP/018-generated-v1.png",
+  "runtime_use_claim": "Source pose reference only; no native integration claim."
+}
