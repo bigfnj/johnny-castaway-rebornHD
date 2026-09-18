@@ -90,6 +90,8 @@ The user approved the complete 28-drawing [FIRE1.BMP000-027 group](../art/cartoo
 
 The next [25-drawing prop review](../art/cartoon/campfire-props-v1/README.md) covers nine fish/tail drawings, nine boot/toe drawings, five squid drawings and a separate raft/paddle. It awaits appearance approval. Three FIRE2 marker slots remain exact originals; two hand/grip overlays stay deferred with Johnny's action work. The original inventory classification needs that correction during regeneration. FIRE5 source variants have no proven TTM load. Full hand/mouth/raft joins, native registration and motion remain bulk integration work.
 
+The user's 2026-09-18 review rejected 13 facing/eye interpretations in that group. [The direction-correction review](../art/cartoon/campfire-props-direction-v2/README.md) revises fish 012/013/014, boots 005/009/015/019/022 and all five squid drawings, showing originals and earlier drafts beside the replacements. It awaits human acceptance. The other 12 drawings remain unchanged without implied approval; preserve the initial review as rejected-pose history, not pose authority for future packs.
+
 The workflow builds on [the original lessons](art-style-learnings.md),
 [the Calm focus addendum](art-style-learnings-calm-focus.md), and
 [the approved runtime record](../art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json).

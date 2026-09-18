@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 22,
+  "version": 1,
+  "status": "direction-correction draft for human review, not approved or integrated",
+  "tool": "builtin image_gen.imagegen",
+  "request_path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/022-v1-request.json",
+  "request_sha256": "44262542cdefc207e7b1cdbdb792ef31dd1895402d5815e4cce78169b9861329",
+  "raw_source_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-d68776aa-4a72-4f27-a9af-b86f503789ee.png",
+  "raw_source_sha256": "048194ef12fdb7ee24f1997ca86ec04e2c92406688d6a39642983a0eed7ba473",
+  "output_path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/022-generated-v1.png",
+  "output_sha256": "048194ef12fdb7ee24f1997ca86ec04e2c92406688d6a39642983a0eed7ba473",
+  "output_size": [
+    1374,
+    1145
+  ],
+  "output_mode": "RGBA",
+  "alpha_range": [
+    0,
+    255
+  ],
+  "alpha_nonzero_bbox": [
+    76,
+    52,
+    1297,
+    1113
+  ],
+  "alpha_ge8_bbox": [
+    341,
+    151,
+    1172,
+    1057
+  ],
+  "meaningful_edge_pixels": 0,
+  "references": [
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/022.png",
+      "sha256": "d10839d9b0197d9faae483154d78f70aa98a94ab6580874eb7955f5019d05423",
+      "inspected_before_request": true
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/FIRE2.BMP-contact-2.png",
+      "sha256": "4f1539fba02cfdec6a43450012d2da6e237e47775727e13d49d2e5ce78995ff7",
+      "inspected_before_request": true
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/generation/FIRE2.BMP/023-generated-v1.png",
+      "sha256": "cdc81ae35ad59d4014da7561543236a2da43cc823422eeadf746243308ffddfd",
+      "inspected_before_request": true
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/022.png",
+    "sha256": "99767618dcadef09b40f56669c05b35a822d1579455bbaea251abcd3c8b35073",
+    "canvas": [
+      24,
+      14
+    ],
+    "alpha_bbox": [
+      0,
+      0,
+      20,
+      14
+    ]
+  },
+  "feedback": {
+    "path": "art/cartoon/campfire-props-direction-v2/feedback.json",
+    "sha256": "aa54e687427bcda7a4d1b6daa27076a9efdbc0de988a24666a0b4978113709f3",
+    "screenshot_path": "art/cartoon/campfire-props-direction-v2/reference/user-feedback/boot022.png",
+    "screenshot_sha256": "8c9980059d15ed91c4a087b736625f64de01c23a9adb888671677779be5c28b5",
+    "screenshot_use": "read for user correction; rejected top artwork was not supplied as pose authority"
+  },
+  "pixel_edits_after_generation": false,
+  "visual_observations": [
+    "Foreshortened toe-down boot with front-facing red opening.",
+    "Direction and overlap remain for human review; no runtime placement approval."
+  ]
+}

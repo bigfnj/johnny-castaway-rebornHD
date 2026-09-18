@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE5.BMP",
+  "frame": 0,
+  "version": 1,
+  "status": "corrected_appearance_review_candidate_not_approved",
+  "selected_for_correction_review": true,
+  "recorded_at_utc": "2026-09-18T20:18:08.413683+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "feedback": {
+    "path": "art/cartoon/campfire-props-direction-v2/feedback.json",
+    "sha256": "aa54e687427bcda7a4d1b6daa27076a9efdbc0de988a24666a0b4978113709f3"
+  },
+  "required_correction": "Existing overall angle is correct, but show TWO eyes looking curiously DOWN and LEFT; not on its back gazing up.",
+  "raw": {
+    "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE5.BMP/000-generated-v1.png",
+    "sha256": "1c4382584aeda40690ebc1720d4cfb0bcb1c2116c3ef6558f58c9aafb382ad1c",
+    "canvas": [
+      1628,
+      966
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bounds_exclusive": [
+      37,
+      46,
+      1578,
+      925
+    ],
+    "alpha8_bounds_exclusive": [
+      39,
+      49,
+      1571,
+      908
+    ],
+    "alpha_nonzero_pixels": 600492,
+    "alpha_opaque_pixels": 2132,
+    "alpha_1_to_7_pixels": 8794,
+    "alpha8_margins_left_top_right_bottom": [
+      39,
+      49,
+      57,
+      58
+    ],
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ]
+    }
+  },
+  "cache_source": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-03b7786d-5629-4386-9b1f-39ee0a38367b.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE5.BMP/000-v1-request.json",
+    "sha256": "ce61a259087842a82fb1b59f9e4e3b2dd0a02178e192edb5de1ab015538fab5d"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/campfire-props-v1/reference/nearest8/FIRE5.BMP/000.png",
+      "sha256": "d9610096aff6de18f8e6a8f0a487e482b215686952b48a5973642b06569ca741"
+    },
+    {
+      "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/024-generated-v1.png",
+      "sha256": "009edd243eceedc21b54198f3b6b3b7598464fccb77fd67e869168b18e53c025"
+    }
+  ],
+  "reference_roles": [
+    "Exact original FIRE5 companion geometry.",
+    "New corrected FIRE2 024 two-eye down-right pose, used to generate the opposite-facing down-left companion."
+  ],
+  "exact_original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE5.BMP/000.png",
+    "sha256": "a0fef578147ca11461816ad3e3c7a094c620535da0c6d03658ae0cf60201b5bc",
+    "canvas": [
+      32,
+      19
+    ]
+  },
+  "reference_source": {
+    "path": "art/cartoon/campfire-props-v1/reference/source.json",
+    "sha256": "904d8a0137b6df047c88efe9d707667c0c02e949bfe2b262b1e6e3663d828274"
+  },
+  "semantic_visual_inspection": {
+    "performed": true,
+    "visible_eye_count": 2,
+    "gaze": "down-left",
+    "expression": "Curious downward glance.",
+    "observation": "Two visible eyes on the lower-left face with pupils shifted down-left; mantle remains high at left and curled arms extend lower-right.",
+    "method": "Direct visual inspection of the exact generated image; semantic judgment, not a runtime test.",
+    "limitations": "The art is a generative interpretation of the original phase. Exact silhouette, arm shape, source registration and reflected-pixel identity are not established. Human review remains pending."
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "alpha_measurement_note": "Alpha >= 8 is a diagnostic bounds measurement only. The saved raw is an exact tool-output copy with no alpha threshold, keying or other pixel changes."
+}

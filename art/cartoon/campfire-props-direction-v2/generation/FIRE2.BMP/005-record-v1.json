@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 5,
+  "version": 1,
+  "status": "direction-correction draft for human review, not approved or integrated",
+  "tool": "builtin image_gen.imagegen",
+  "request_path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/005-v1-request.json",
+  "request_sha256": "11e1a3040c73711eb7592187fd105961dd4c8ac3dc93c3d2eb73f56276e5e605",
+  "raw_source_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-3433e4e5-c9ce-44e7-8972-4d42c356ec42.png",
+  "raw_source_sha256": "33a78778c54d7855f261066ed863e5804ee0a4a502a009ec9bec08332ebaa6ea",
+  "output_path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/005-generated-v1.png",
+  "output_sha256": "33a78778c54d7855f261066ed863e5804ee0a4a502a009ec9bec08332ebaa6ea",
+  "output_size": [
+    1331,
+    1181
+  ],
+  "output_mode": "RGBA",
+  "alpha_range": [
+    0,
+    255
+  ],
+  "alpha_nonzero_bbox": [
+    357,
+    130,
+    1109,
+    1147
+  ],
+  "alpha_ge8_bbox": [
+    360,
+    133,
+    1107,
+    1063
+  ],
+  "meaningful_edge_pixels": 0,
+  "references": [
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/005.png",
+      "sha256": "57ecca61b5702e14ac1a8377b74382483eae85cc62ac82f9c3e96b9cbb4060da",
+      "inspected_before_request": true
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/FIRE2.BMP-contact-1.png",
+      "sha256": "84197f7e39f7aed8968246efec5ff0040530ff666bd2294a16a6f72a80168bad",
+      "inspected_before_request": true
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/generation/FIRE2.BMP/023-generated-v1.png",
+      "sha256": "cdc81ae35ad59d4014da7561543236a2da43cc823422eeadf746243308ffddfd",
+      "inspected_before_request": true
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/005.png",
+    "sha256": "9c078d5f32469d97dba0a03d053952987080ff8f96734cc9ccb9913a042d385c",
+    "canvas": [
+      24,
+      21
+    ],
+    "alpha_bbox": [
+      0,
+      0,
+      23,
+      21
+    ]
+  },
+  "feedback": {
+    "path": "art/cartoon/campfire-props-direction-v2/feedback.json",
+    "sha256": "aa54e687427bcda7a4d1b6daa27076a9efdbc0de988a24666a0b4978113709f3",
+    "screenshot_path": "art/cartoon/campfire-props-direction-v2/reference/user-feedback/boot005.png",
+    "screenshot_sha256": "76b8bc809901457bc3540e720e0938eaab969be459362eda5458b4160c1b8597",
+    "screenshot_use": "read for user correction; rejected top artwork was not supplied as pose authority"
+  },
+  "pixel_edits_after_generation": false,
+  "visual_observations": [
+    "Toe points downward, outer sole runs up the left, and red opening is at the right.",
+    "Brass eyelets remain on the right-facing portion; no planted horizontal sole."
+  ]
+}

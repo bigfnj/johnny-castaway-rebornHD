@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_on": "2026-09-18",
+  "scope": "Lightweight draft integrity and browser review checks. Native smoke and regression testing remain deferred to bulk integration.",
+  "selected_corrections": 13,
+  "retained_raw_generation_outputs": 16,
+  "selected_versions": {"FIRE2.BMP012": 2, "FIRE2.BMP013": 2, "FIRE2.BMP014": 2, "other_selected_frames": 1},
+  "record_path_hash_bindings_checked": 205,
+  "record_path_hash_mismatches": [],
+  "earlier_review_evidence_files_unchanged_from_4093f24": 31,
+  "javascript_syntax_check": "passed",
+  "browser": {
+    "url": "http://127.0.0.1:8941/campfire-props-direction-v2/review.html",
+    "ready_text": "13 of 13 comparisons ready.",
+    "loaded_canvases": 39,
+    "light_and_dark_checkerboard_toggle": "observed working",
+    "earlier_column_hide_and_show_toggle": "observed working",
+    "restored_default_three_columns": true,
+    "captured_error_or_warning_messages": [],
+    "visual_inspection": "Original, earlier and revised fish comparisons inspected in-browser; revised boots and squid inspected as raw images, with FIRE5.BMP000 also compared to its original in-browser. These are agent observations, not human acceptance."
+  },
+  "exact_byte_attribute_mutation": {
+    "method": "Temporarily disabled only the new family attribute and ran git hash-object with core.autocrlf=true; restored the attribute in a finally block.",
+    "failure_count": 1,
+    "failure_path": "art/cartoon/campfire-props-direction-v2/review-record.json",
+    "restored_result": "Git filtered blob matches exact working-file bytes"
+  },
+  "production_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "production_archive_changed": false,
+  "native_playback_run": false,
+  "bulk_smoke_and_regression_run": false,
+  "human_approval": null,
+  "remaining_limits": [
+    "Human review of the 13 revised poses is pending.",
+    "The 12 unmentioned drawings from the prior batch remain unapproved.",
+    "Frame 019's interaction with Johnny needs native scene verification; a join to another boot drawing is not established.",
+    "The page enlarges each drawing independently and does not demonstrate native registration, timing or hand/mouth contact."
+  ]
+}

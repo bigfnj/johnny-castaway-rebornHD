@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 9,
+  "version": 1,
+  "status": "direction-correction draft for human review, not approved or integrated",
+  "tool": "builtin image_gen.imagegen",
+  "request_path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/009-v1-request.json",
+  "request_sha256": "0be13b4e6702bd42589c7a685321d57812e71c2219a9ffdf3aa41c8a7b49f5e2",
+  "raw_source_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-6b4b19f9-6e9e-40ac-a292-42d33e7b7118.png",
+  "raw_source_sha256": "a8b3f23245969abab7ea83ff91c05a5e167f8d71a8a6bcc6e0370b261638a788",
+  "output_path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/009-generated-v1.png",
+  "output_sha256": "a8b3f23245969abab7ea83ff91c05a5e167f8d71a8a6bcc6e0370b261638a788",
+  "output_size": [
+    1070,
+    1470
+  ],
+  "output_mode": "RGBA",
+  "alpha_range": [
+    0,
+    255
+  ],
+  "alpha_nonzero_bbox": [
+    131,
+    15,
+    1007,
+    1399
+  ],
+  "alpha_ge8_bbox": [
+    188,
+    115,
+    871,
+    1339
+  ],
+  "meaningful_edge_pixels": 0,
+  "references": [
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/009.png",
+      "sha256": "fe32640d5ad08312e786b3242293687c6bd432b30ede465a4774d70ac4f94957",
+      "inspected_before_request": true
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/FIRE2.BMP-contact-1.png",
+      "sha256": "84197f7e39f7aed8968246efec5ff0040530ff666bd2294a16a6f72a80168bad",
+      "inspected_before_request": true
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/generation/FIRE2.BMP/023-generated-v1.png",
+      "sha256": "cdc81ae35ad59d4014da7561543236a2da43cc823422eeadf746243308ffddfd",
+      "inspected_before_request": true
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/009.png",
+    "sha256": "e29eebe9576861b6975aff06826449f6a80ce1c700ed2e0162132b702a56a35d",
+    "canvas": [
+      16,
+      22
+    ],
+    "alpha_bbox": [
+      0,
+      0,
+      15,
+      22
+    ]
+  },
+  "feedback": {
+    "path": "art/cartoon/campfire-props-direction-v2/feedback.json",
+    "sha256": "aa54e687427bcda7a4d1b6daa27076a9efdbc0de988a24666a0b4978113709f3",
+    "screenshot_path": "art/cartoon/campfire-props-direction-v2/reference/user-feedback/boot009.png",
+    "screenshot_sha256": "e468ba959cc72010d6be25e7c8524d2ffad6826d2a470295e1ba8d69f4ba6620",
+    "screenshot_use": "read for user correction; rejected top artwork was not supplied as pose authority"
+  },
+  "pixel_edits_after_generation": false,
+  "visual_observations": [
+    "Rear heel and back seam face the viewer; no visible front eyelet row.",
+    "Top cuff slopes down toward the right; a small right side strip is visible.",
+    "The generated shaft remains tall relative to the small original; facing correction is the primary draft change."
+  ]
+}

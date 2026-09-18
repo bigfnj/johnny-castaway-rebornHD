@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": "012",
+  "version": 1,
+  "tool": "builtin image_gen",
+  "raw_output": {
+    "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/012-generated-v1.png",
+    "sha256": "b62519fae6e1931a7ebf302060fd99039d330243c56c25138df7e740ff4ad424"
+  },
+  "request": {
+    "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/012-v1-request.json",
+    "sha256": "46b120b3d804bc47bd72f475b661dbc6b4cd44b9a0568e8992edd681c388532e",
+    "saved_before_generation": true
+  },
+  "ordered_references": [
+    {
+      "role": "authoritative original geometry, upside-down eye position and phase",
+      "path": "art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/012.png",
+      "sha256": "1811fa51141f5f9c542eace290f4102efb6f82165afd7b78b60e1524246391ea"
+    },
+    {
+      "role": "user correction screenshot; upper cartoon is rejected, lower original authoritative",
+      "path": "art/cartoon/campfire-props-direction-v2/reference/user-feedback/fish012.png",
+      "sha256": "2f7fd22099a1e80c0cf84fe4b8f16b80254ff0fa33ff7e4ae6fa809fa6fec11b"
+    },
+    {
+      "role": "materials and colors only; not pose or eye placement",
+      "path": "art/cartoon/campfire-props-v1/generation/FIRE2.BMP/020-generated-v1.png",
+      "sha256": "57aa1bd60b6a6c0ef6b5ed902e29a4001d4f68e3158aece6ef21fbf53b024659"
+    }
+  ],
+  "feedback": {
+    "path": "art/cartoon/campfire-props-direction-v2/feedback.json",
+    "sha256": "aa54e687427bcda7a4d1b6daa27076a9efdbc0de988a24666a0b4978113709f3"
+  },
+  "raw_source_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-ef529a2b-c34e-4848-ac8b-b8dc5a36b35a.png",
+  "raw_source_sha256": "b62519fae6e1931a7ebf302060fd99039d330243c56c25138df7e740ff4ad424",
+  "copied_byte_exact": true,
+  "postprocessing": "None",
+  "pixels": {
+    "mode": "RGBA",
+    "canvas": [
+      1774,
+      887
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      33,
+      44,
+      1744,
+      863
+    ],
+    "alpha8_bounds": [
+      64,
+      46,
+      1707,
+      840
+    ],
+    "bounds_by_alpha_threshold": {
+      "1": [
+        33,
+        44,
+        1744,
+        863
+      ],
+      "8": [
+        64,
+        46,
+        1707,
+        840
+      ],
+      "128": [
+        65,
+        47,
+        1706,
+        839
+      ],
+      "255": [
+        66,
+        48,
+        1705,
+        838
+      ]
+    }
+  },
+  "visual_review": {
+    "observed_eye_count": 1,
+    "eye_placement": "Below the left-front body, not on the upper edge.",
+    "facing": "Head left, tail right.",
+    "remaining_issue": "Large dorsal fin remains above the back and belly band below. Eyes are corrected but overall anatomy still borrows upright design; targeted version2 follows.",
+    "status": "superseded corrective intermediate, not selected"
+  },
+  "approval": null,
+  "production_ready": false
+}

@@ -1,0 +1,224 @@
+{
+  "source": {
+    "path": "art/cartoon/character-inventory-v1/scene-map/static-draw-sites.json",
+    "sha256": "2892a584a1816bf70c41c2d0ecb934f2a22e071dbda5629cfe54f185af0acaad"
+  },
+  "tag": 72,
+  "source_label": "J eats boot",
+  "slot5_prop_order": [
+    22,
+    5,
+    4,
+    16,
+    16,
+    19
+  ],
+  "frame019_draw_contexts": [
+    [
+      {
+        "ttm": "MJFIRE.TTM",
+        "offset": 7038,
+        "tag": 72,
+        "local_tag": null,
+        "draw": [
+          359,
+          258,
+          16,
+          5
+        ],
+        "flip": false,
+        "resource": null,
+        "attribution": "ambiguous-slot-reuse",
+        "resource_candidates": [
+          "FIRE2.BMP",
+          "FIRE3.BMP"
+        ],
+        "linear_resource_hint": "FIRE2.BMP",
+        "linear_load_offset": 4900,
+        "linear_load_same_tag": false,
+        "last_same_tag_delay_instruction": {
+          "command": "SET_DELAY",
+          "args": [
+            11
+          ],
+          "offset": 7008
+        }
+      },
+      {
+        "ttm": "MJFIRE.TTM",
+        "offset": 7054,
+        "tag": 72,
+        "local_tag": null,
+        "draw": [
+          351,
+          255,
+          22,
+          0
+        ],
+        "flip": false,
+        "resource": null,
+        "attribution": "ambiguous-slot-reuse",
+        "resource_candidates": [
+          "FIRE4.BMP",
+          "JOHNWALK.BMP"
+        ],
+        "linear_resource_hint": "FIRE4.BMP",
+        "linear_load_offset": 5968,
+        "linear_load_same_tag": false,
+        "last_same_tag_delay_instruction": {
+          "command": "SET_DELAY",
+          "args": [
+            11
+          ],
+          "offset": 7008
+        }
+      },
+      {
+        "ttm": "MJFIRE.TTM",
+        "offset": 7064,
+        "tag": 72,
+        "local_tag": null,
+        "draw": [
+          328,
+          293,
+          34,
+          0
+        ],
+        "flip": false,
+        "resource": null,
+        "attribution": "ambiguous-slot-reuse",
+        "resource_candidates": [
+          "FIRE4.BMP",
+          "JOHNWALK.BMP"
+        ],
+        "linear_resource_hint": "FIRE4.BMP",
+        "linear_load_offset": 5968,
+        "linear_load_same_tag": false,
+        "last_same_tag_delay_instruction": {
+          "command": "SET_DELAY",
+          "args": [
+            11
+          ],
+          "offset": 7008
+        }
+      },
+      {
+        "ttm": "MJFIRE.TTM",
+        "offset": 7074,
+        "tag": 72,
+        "local_tag": null,
+        "draw": [
+          362,
+          268,
+          19,
+          5
+        ],
+        "flip": false,
+        "resource": null,
+        "attribution": "ambiguous-slot-reuse",
+        "resource_candidates": [
+          "FIRE2.BMP",
+          "FIRE3.BMP"
+        ],
+        "linear_resource_hint": "FIRE2.BMP",
+        "linear_load_offset": 4900,
+        "linear_load_same_tag": false,
+        "last_same_tag_delay_instruction": {
+          "command": "SET_DELAY",
+          "args": [
+            11
+          ],
+          "offset": 7008
+        }
+      },
+      {
+        "ttm": "MJFIRE.TTM",
+        "offset": 7094,
+        "tag": 72,
+        "local_tag": null,
+        "draw": [
+          324,
+          261,
+          2,
+          0
+        ],
+        "flip": false,
+        "resource": null,
+        "attribution": "ambiguous-slot-reuse",
+        "resource_candidates": [
+          "FIRE4.BMP",
+          "JOHNWALK.BMP"
+        ],
+        "linear_resource_hint": "FIRE4.BMP",
+        "linear_load_offset": 5968,
+        "linear_load_same_tag": false,
+        "last_same_tag_delay_instruction": {
+          "command": "SET_DELAY",
+          "args": [
+            15
+          ],
+          "offset": 7084
+        }
+      },
+      {
+        "ttm": "MJFIRE.TTM",
+        "offset": 7104,
+        "tag": 72,
+        "local_tag": null,
+        "draw": [
+          328,
+          293,
+          34,
+          0
+        ],
+        "flip": false,
+        "resource": null,
+        "attribution": "ambiguous-slot-reuse",
+        "resource_candidates": [
+          "FIRE4.BMP",
+          "JOHNWALK.BMP"
+        ],
+        "linear_resource_hint": "FIRE4.BMP",
+        "linear_load_offset": 5968,
+        "linear_load_same_tag": false,
+        "last_same_tag_delay_instruction": {
+          "command": "SET_DELAY",
+          "args": [
+            15
+          ],
+          "offset": 7084
+        }
+      },
+      {
+        "ttm": "MJFIRE.TTM",
+        "offset": 7120,
+        "tag": 72,
+        "local_tag": null,
+        "draw": [
+          303,
+          266,
+          1,
+          0
+        ],
+        "flip": false,
+        "resource": null,
+        "attribution": "ambiguous-slot-reuse",
+        "resource_candidates": [
+          "FIRE4.BMP",
+          "JOHNWALK.BMP"
+        ],
+        "linear_resource_hint": "FIRE4.BMP",
+        "linear_load_offset": 5968,
+        "linear_load_same_tag": false,
+        "last_same_tag_delay_instruction": {
+          "command": "SET_DELAY",
+          "args": [
+            15
+          ],
+          "offset": 7084
+        }
+      }
+    ]
+  ],
+  "limit": "Static source evidence only. Slot5 is reused; these commands do not prove every runtime resource state or a geometric connection to another boot frame."
+}

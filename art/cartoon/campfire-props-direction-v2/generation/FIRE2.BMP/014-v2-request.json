@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": "014",
+  "version": 2,
+  "tool": "builtin image_gen",
+  "intent": "targeted anatomy correction preserving already corrected low eyes and leftward trajectory",
+  "prompt": "Use case: precise-object-edit\nAsset: transparent cartoon fish FIRE2.BMP 014.\nImage1 is the edit target. Image2 is the original upside-down pose reference.\nCorrect only the remaining upside-down body anatomy of image1. Its TWO visible white eyes are ALREADY correctly underneath the lower-left front of the body. LOCK that exact eye count, low eye placement, pupils and head-left/tail-right direction. Keep the current head and tail endpoints, original body bend, tail shape, face, green/orange colors, style and transparent canvas.\nThe current body still wrongly has a tall upright dorsal fin along its TOP and a yellow belly band along its BOTTOM. For a fish rolled fully upside down, the warm pale yellow-green belly edge must be on the UPPER edge of the body, while the greener spotted back and a modest orange dorsal fin are on the LOWER edge. Remove the tall orange fan on top of the back; render the dorsal fin on the underside instead, kept modest and consistent with the original source contour. Small paired ventral fins may appear on the top, but no big upright fan on top. Do not merely move the eyes, they already have the right position.\nCritical: do NOT rotate the whole image or reverse its horizontal direction. Head remains LEFT and tail remains RIGHT, lower-right in this pose. Do not put eyes on top, remove an eye, add eyes, elongate the body, enlarge the tail, or redraw into a generic swimming pose. The entire animal should read as upside-down with eyes beneath the head and belly above.\nOutput one edited sprite on genuine transparent RGBA. No background, labels, cast shadow, glow, haze, or comparison sheet.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/014-generated-v1.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/014.png"
+  ],
+  "ordered_references": [
+    {
+      "role": "edit target; preserve corrected face, count, direction, curve and tail",
+      "path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/014-generated-v1.png",
+      "sha256": "3917e0d844bac6b11767c18197d468b137dfe3df3c5af9dab8828e87826d0d19"
+    },
+    {
+      "role": "authoritative original geometry, upside-down eye position and phase",
+      "path": "art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/014.png",
+      "sha256": "9bab813e61f5044f055d569804c02f7e9deb64206b3fc9c1c6fd6b76818bbbc6"
+    }
+  ],
+  "feedback": {
+    "path": "art/cartoon/campfire-props-direction-v2/feedback.json",
+    "sha256": "aa54e687427bcda7a4d1b6daa27076a9efdbc0de988a24666a0b4978113709f3"
+  },
+  "required_eye_count": 2,
+  "required_pose": "upside down, eyes below body, belly above, head left and tail right",
+  "output_path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/014-generated-v2.png"
+}

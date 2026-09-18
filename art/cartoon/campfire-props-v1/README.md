@@ -30,3 +30,7 @@ Known draft differences remain visible for human review: FIRE2 009/015 v3 shorte
 Source numeric order is not an animation loop. Fish/boot/squid cooking and eating interleave these props with Johnny in FIRE4 and other components in FIRE3. SRAFT's raft and paddle have separate native origins/layers in SJLEAVES. Full original-canvas fitting, hand/mouth joins, native scene timing, smoke testing and regressions remain at the bulk milestone requested by the user. No fabricated motion preview is used here.
 
 `build_review.py` constructs the gallery and binds selected raw/reference/request/record files in `review-record.json`. `record_root_outputs.py` documents the five root-owned raw copies; the other records were saved by the parallel authoring agents. `prepare_references.py` only extracts references and creates diagnostic enlarged views. These authoring helpers are not runtime code.
+
+## Subsequent direction review, 2026-09-18
+
+The user identified incorrect orientation and eye placement in 13 drawings: fish 012/013/014, boots 005/009/015/019/022, and all five squid views. In particular, the fish are upside-down, boot 009/015 face away from the camera, and four squid frames need both eyes visible. These are semantic pose errors, not merely proportional interpretation differences. The earlier PNGs and shown review remain frozen as history. [The correction review](../campfire-props-direction-v2/README.md) records the exact feedback and revised artwork. The remaining 12 drawings are unchanged and are not implicitly approved.

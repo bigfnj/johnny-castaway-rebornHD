@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": "014",
+  "version": 1,
+  "tool": "builtin image_gen",
+  "intent": "correct source orientation and eye count after explicit user feedback",
+  "prompt": "Use case: stylized-concept\nAsset type: single transparent cartoon game sprite, FIRE2.BMP frame 014, corrective drawing.\nPrimary request: Draw the original fish UPSIDE DOWN, with its eyeballs on the LOWER side of the head/body, while the HEAD FACES LEFT and the TAIL STAYS RIGHT. This anatomical inversion is the essential correction.\nImage roles: Image 1 is the exact authoritative original pose. Image 2 is the user's feedback screenshot: its TOP cartoon is the REJECTED WRONG UPRIGHT drawing; only its BOTTOM original demonstrates the required upside-down anatomy. Do NOT copy the top cartoon's eye position. Image 3 supplies ONLY leaf-green material, golden-orange fins, white eyes and crisp dark outlines. Its upright eye placement and right-facing pose are NOT references for this drawing.\nExact required pose: TWO clearly distinct visible white eyes below the body, both at the LOWER LEFT FRONT, next to one another because the upside-down head is turned slightly toward the viewer. Both eyes need visible dark pupils. Do not hide the second eye and do not mount either eye above the body. Rounded green body remains high at LEFT; narrow stalk turns steeply down to a fan tail at LOWER CENTER-RIGHT, spreading horizontally along the bottom. Preserve the source bend and leftward trajectory.\nOrientation check: Green body mass ABOVE the visible eyes; eyes clearly protrude from the UNDERSIDE near the LEFT end. The top outline must NOT carry the big white eye. Belly-up rather than a conventional upright swimming fish. Keep head LEFT and tail RIGHT; rotating the fish 180 degrees would incorrectly reverse its direction. Do not flip the source's head/tail trajectory. Follow image1 for the body curve and fin phase; no invented large upright dorsal fin above the body.\nStyle: Same leaf-green fish identity, clean dark warm contour, simple smooth warm highlights and dark green spots, golden-orange fin rays, white eyes with dark pupils. A consistent cartoon fish, not a new species. Decorative styling is secondary to correct eye position/count.\nComposition: One isolated full sprite, centered with transparent safety margins, all fins and tail visible. Preserve the source's occupied silhouette and curvature. No alternate poses or comparison layout.\nBackground: Genuine transparent RGBA alpha, no background color, checkerboard painting, water, scenery, text, labels, glow, shadow or haze.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/014.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-direction-v2/reference/user-feedback/fish014.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/generation/FIRE2.BMP/020-generated-v1.png"
+  ],
+  "ordered_references": [
+    {
+      "role": "authoritative original geometry, upside-down eye position and phase",
+      "path": "art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/014.png",
+      "sha256": "9bab813e61f5044f055d569804c02f7e9deb64206b3fc9c1c6fd6b76818bbbc6"
+    },
+    {
+      "role": "user correction screenshot; upper cartoon is rejected, lower original authoritative",
+      "path": "art/cartoon/campfire-props-direction-v2/reference/user-feedback/fish014.png",
+      "sha256": "95ef8d682d78e82abcde4e0c69ad85c83322618ff59c4c23c8384f921cb9bbcf"
+    },
+    {
+      "role": "materials and colors only; not pose or eye placement",
+      "path": "art/cartoon/campfire-props-v1/generation/FIRE2.BMP/020-generated-v1.png",
+      "sha256": "57aa1bd60b6a6c0ef6b5ed902e29a4001d4f68e3158aece6ef21fbf53b024659"
+    }
+  ],
+  "feedback": {
+    "path": "art/cartoon/campfire-props-direction-v2/feedback.json",
+    "sha256": "aa54e687427bcda7a4d1b6daa27076a9efdbc0de988a24666a0b4978113709f3"
+  },
+  "required_eye_count": 2,
+  "required_pose": "upside down, eyes below body, head left and tail right",
+  "output_path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/014-generated-v1.png"
+}

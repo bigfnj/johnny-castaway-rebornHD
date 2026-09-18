@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "resource": "FIRE2.BMP",
+  "frame": 19,
+  "version": 1,
+  "status": "direction-correction draft for human review, not approved or integrated",
+  "tool": "builtin image_gen.imagegen",
+  "request_path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/019-v1-request.json",
+  "request_sha256": "9b76bdde31d2802de5b32627a89e8d862cf36a0737b193d77d729a14d55cf6a9",
+  "raw_source_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-c05fc590-ef46-4472-83eb-472c0895c66f.png",
+  "raw_source_sha256": "c48c6ef22814e5960cd65e57c42ef1e186e10f67befa36102cbc5a7859a9a84d",
+  "output_path": "art/cartoon/campfire-props-direction-v2/generation/FIRE2.BMP/019-generated-v1.png",
+  "output_sha256": "c48c6ef22814e5960cd65e57c42ef1e186e10f67befa36102cbc5a7859a9a84d",
+  "output_size": [
+    1774,
+    887
+  ],
+  "output_mode": "RGBA",
+  "alpha_range": [
+    0,
+    255
+  ],
+  "alpha_nonzero_bbox": [
+    148,
+    21,
+    1579,
+    831
+  ],
+  "alpha_ge8_bbox": [
+    200,
+    172,
+    1575,
+    751
+  ],
+  "meaningful_edge_pixels": 0,
+  "references": [
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/nearest8/FIRE2.BMP/019.png",
+      "sha256": "1ed60f0f8f683f464ebe5aba90baeb6102f3a5cc09cb978311ee009c4a8ca647",
+      "inspected_before_request": true
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/reference/FIRE2.BMP-contact-2.png",
+      "sha256": "4f1539fba02cfdec6a43450012d2da6e237e47775727e13d49d2e5ce78995ff7",
+      "inspected_before_request": true
+    },
+    {
+      "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/campfire-props-v1/generation/FIRE2.BMP/023-generated-v1.png",
+      "sha256": "cdc81ae35ad59d4014da7561543236a2da43cc823422eeadf746243308ffddfd",
+      "inspected_before_request": true
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/campfire-props-v1/reference/original/FIRE2.BMP/019.png",
+    "sha256": "6c472a73c801c30fb78896b084266680e2431d51ced0b7162e63c4e9859a05d0",
+    "canvas": [
+      24,
+      11
+    ],
+    "alpha_bbox": [
+      0,
+      0,
+      22,
+      11
+    ]
+  },
+  "feedback": {
+    "path": "art/cartoon/campfire-props-direction-v2/feedback.json",
+    "sha256": "aa54e687427bcda7a4d1b6daa27076a9efdbc0de988a24666a0b4978113709f3",
+    "screenshot_path": "art/cartoon/campfire-props-direction-v2/reference/user-feedback/boot019.png",
+    "screenshot_sha256": "327eb5534ac1e1d98f0e8c95e8461443fd571b399e16e442efbdc9385a8e9260",
+    "screenshot_use": "read for user correction; rejected top artwork was not supplied as pose authority"
+  },
+  "pixel_edits_after_generation": false,
+  "visual_observations": [
+    "Upside-down toe fragment with sole on top and toe pointing left.",
+    "Right end is closed and the remaining connection projects downward, rather than an east-facing torn opening.",
+    "A physical join to another sprite is not established by this draft."
+  ],
+  "source_context": {
+    "path": "art/cartoon/campfire-props-direction-v2/reference/boot019-scene-context.json",
+    "sha256": "5aea9b3c904b30402f4efcb955c5b258aad63ff6efc24d836dc4716c30998557",
+    "scope": "Remaining fragment in eating sequence; no proven simultaneous boot-to-boot join."
+  }
+}
