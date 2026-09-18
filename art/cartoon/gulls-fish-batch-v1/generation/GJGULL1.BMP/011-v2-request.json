@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "resource": "GJGULL1.BMP",
+  "frame": "011",
+  "version": 2,
+  "tool": "builtin image_gen",
+  "prompt": "Create one corrected GJGULL1.BMP011 seagull sprite. Image1 exact original is the pose authority. Image2 is ONLY identity/materials. Critical orientation: BODY FACES RIGHT, tail extends LEFT; HEAD at upper-right is turned BACK LEFT toward its own raised wing. The beak crosses leftward in front of the raised wing, while the white rounded chest stays on the RIGHT. DO NOT mirror the whole body into left-facing and DO NOT put the tail at right. Match original compact stance, one wing raised up-left behind head into triangular peak, other wing folded along body, short two legs and source contact shadow. Image1 is authoritative for original geometry, exact wing phase, yaw, beak angle, eye count/location and feet. Image2 supplies ONLY gull identity/colors/linework; never copy its standing pose when different. White head/body, light-gray back/wings, charcoal-black feather tips, warm yellow-orange beak/webbed feet, crisp dark outlines and restrained cel shading. No hats, clothes, character features, oversized eye expression or extra anatomy. Preserve pose-specific visible eyes, not automatically two. Genuine transparent RGBA, full sprite with safety margin, no text, scenery, checkerboard pixels, glow, haze or cast background. Small neutral gray contact shadow only, no ground or scenery, whole silhouette within transparent canvas.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/011.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png"
+  ],
+  "ordered_references": [
+    {
+      "role": "exact original pose/wing phase/yaw/eye and beak authority",
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/011.png",
+      "sha256": "dc72c811a0183eb0f2787959540e9c7e7da7169d37f7c6ceb98086bcb1c4ef80"
+    },
+    {
+      "role": "shared gull identity/materials only, not pose or shadow",
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png",
+      "sha256": "35ca7c28c9d2bbbe79c369977950ec35277d39af69b78221aba8f0b4ad2ac247"
+    }
+  ],
+  "output_path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/011-generated-v2.png"
+}

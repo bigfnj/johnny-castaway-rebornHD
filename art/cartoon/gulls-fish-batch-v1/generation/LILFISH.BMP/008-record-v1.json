@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "resource": "LILFISH.BMP",
+  "frame": 8,
+  "version": 1,
+  "status": "generated draft; human visual approval and runtime fitting pending",
+  "generator": "built-in image_gen",
+  "request": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/008-v1-request.json",
+    "sha256": "e3a5727a90af68487a6e30177750a5d2a8d1157cab58e65618064057c0bfcef0"
+  },
+  "output": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/008-generated-v1.png",
+    "sha256": "dd28adc84b52e0edf361b137fd6965d6c21687e154a46d026083b122d69d6f88"
+  },
+  "raw_cache": {
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-955ae46f-196d-460d-8c24-506642a435a2.png",
+    "sha256": "dd28adc84b52e0edf361b137fd6965d6c21687e154a46d026083b122d69d6f88"
+  },
+  "raw_bytes_copied_unchanged": true,
+  "source_original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/008.png",
+    "sha256": "b6d8fefaf0f90d2ddda52e5b084c1f2e1b2cd9618cf9ae4dbec9b9247f2bc4df"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/008.png",
+      "sha256": "0ac3424f412bca9ade0f817fce02d1bbca18f7b98dc111e527d49368e7630718"
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/005-generated-v1.png",
+      "sha256": "c69df24a1f28ef18f77bc5c3a24b3b57d4abb70c3afdcde3c24781c47bc1869e"
+    }
+  ],
+  "image": {
+    "format": "PNG",
+    "mode": "RGBA",
+    "canvas": [
+      2172,
+      724
+    ],
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "transparent_pixel_count": 1095940,
+    "partial_alpha_pixel_count": 474437,
+    "alpha8_bounds_xyxy": [
+      117,
+      67,
+      2077,
+      658
+    ],
+    "alpha8_edge_pixels": 0
+  },
+  "observations": [
+    "Rejected draft: generated group has five visible fish heads despite request for four. Preserve as history; targeted count correction required."
+  ],
+  "limits": "Source palette is diagnostic. No native placement, registration or animation approval is claimed."
+}

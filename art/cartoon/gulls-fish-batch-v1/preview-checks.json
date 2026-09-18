@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "scope": "Draft gallery display and source/output readback only",
+  "review_url": "http://127.0.0.1:8941/gulls-fish-batch-v1/review.html",
+  "drawings": 42,
+  "groups": 4,
+  "browser": {
+    "surface": "Codex in-app browser",
+    "loaded_canvases": 84,
+    "ready_text": "42 of 42 comparisons ready.",
+    "filter_LILFISH_visible_drawings": 9,
+    "filter_LILFISH_visible_sections": 1,
+    "filter_GJGULL1_BMP_011_visible_drawings": 1,
+    "hide_all_originals_open_count": 0,
+    "restored_originals_open_count": 42,
+    "restored_visible_drawings": 42,
+    "restored_visible_sections": 4,
+    "light_and_dark_checkerboards_observed": true,
+    "error_logs": []
+  },
+  "readback": {
+    "sha256_bindings_checked": 636,
+    "mismatches": [],
+    "exact_source_slots": 42,
+    "accepted_boot_evidence_unchanged_count": 5,
+    "production_archive_unchanged": true,
+    "production_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+  },
+  "javascript_syntax_check": "node --check review.js passed",
+  "selected_revisions": ["GJGULL1.BMP011 v2", "GJGULL1.BMP026 v2", "LILFISH.BMP004 v2", "LILFISH.BMP008 v2"],
+  "visual_notes": [
+    "Workers inspected every selected draft; raw outputs remain unchanged.",
+    "Root inspected representative flight, frontal, turn, nest, fish component and catch images, plus actual-alpha browser displays.",
+    "LILFISH008 has four visible heads; the tightly overlapping middle bodies remain part of the human appearance review."
+  ],
+  "human_approval": null,
+  "native_export_or_runtime_testing": false,
+  "full_smoke_regression_audit": false,
+  "deferred": "Original canvas fitting, component joins, scene motion and bulk integration validation"
+}

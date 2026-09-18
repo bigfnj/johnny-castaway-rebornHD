@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "resource": "GJGULL1.BMP",
+  "frame": 23,
+  "version": 1,
+  "status": "appearance_review_candidate_not_approved",
+  "selected_for_review": true,
+  "recorded_at_utc": "2026-09-18T21:27:20.013240+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/023-v1-request.json",
+    "sha256": "54c20e1c7a5b6adfb00fa4a250f7ad2fdd740eaaacc146370c73f4378958055d"
+  },
+  "output": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/023-generated-v1.png",
+    "sha256": "8dce17846e18f8ebe684c5fac75c610d6a17d3fa83fbf1fa7af645b870224d38"
+  },
+  "raw_cache": {
+    "path": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-1407584e-2ab2-42fe-8f50-7c35d657f1cc.png",
+    "sha256": "8dce17846e18f8ebe684c5fac75c610d6a17d3fa83fbf1fa7af645b870224d38"
+  },
+  "copied_byte_exact": true,
+  "ordered_references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/023.png",
+      "sha256": "e7831a0007611d88ee3ce445e5ab4af32a5e0dd205c62dfa1a48190218b4f6b5",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png",
+      "sha256": "35ca7c28c9d2bbbe79c369977950ec35277d39af69b78221aba8f0b4ad2ac247",
+      "inspected_before_request": true
+    }
+  ],
+  "reference_roles": [
+    "Exact original pose/silhouette, nearest-neighbor display; diagnostic palette only.",
+    "Gull009 shared identity/materials, not pose authority."
+  ],
+  "original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/GJGULL1.BMP/023.png",
+    "sha256": "1a90eaa2154c86bdcee858998ba8fbef39d1f15efeae5d6b9cf4c068435b7969"
+  },
+  "nearest8": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/023.png",
+    "sha256": "e7831a0007611d88ee3ce445e5ab4af32a5e0dd205c62dfa1a48190218b4f6b5"
+  },
+  "source": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/source.json",
+    "sha256": "476e7d2bc1e7ba27191eb70e28364763a60fd9cb596bedf3b51d8cd7a55c5f89",
+    "archive": {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    "archive_member": "native/BMP/GJGULL1.BMP/023.png",
+    "canvas": [
+      40,
+      20
+    ],
+    "rgba_sha256": "ed580da2b3681d06d05b8de207fd5e63f646acb0a386464989bc1d20a245c6c1"
+  },
+  "pixels": {
+    "canvas": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bbox": [
+      269,
+      108,
+      1668,
+      812
+    ],
+    "alpha_ge8_bbox": [
+      272,
+      110,
+      1666,
+      810
+    ],
+    "alpha_ge8_margins_left_top_right_bottom": [
+      272,
+      110,
+      108,
+      77
+    ],
+    "alpha_nonzero_pixels": 418493,
+    "alpha_1_to_7_pixels": 7952,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Deep pecking LEFT-facing gull: body and folded wing high on right, long curved neck lowered left, head and beak close to ground at lower-left; beak tip points DOWN-RIGHT along original curve. Preserve empty space between lowered head and feet, no added worms or food.",
+    "visible_eye_count": 1,
+    "ground_shadow": "Small contact shadow under feet; not counted as anatomy.",
+    "limits": "Generative interpretation, not pixel-exact source geometry or native registration. Review selection is not human approval."
+  },
+  "postprocessing": "None. Exact generated PNG copied; no pixel edits, crop, resampling, recoloring or alpha thresholds.",
+  "human_approval": null,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false
+}

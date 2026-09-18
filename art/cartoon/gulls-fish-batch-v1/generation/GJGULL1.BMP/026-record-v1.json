@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "resource": "GJGULL1.BMP",
+  "frame": 26,
+  "version": 1,
+  "status": "superseded_extra_foot",
+  "selected_for_review": false,
+  "recorded_at_utc": "2026-09-18T21:27:20.107881+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/026-v1-request.json",
+    "sha256": "9c2cdcc97ab4c0b6aafe9b1aef7a2cf0c8d5cce459d45b3afc2a1e76368e2069"
+  },
+  "output": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/026-generated-v1.png",
+    "sha256": "8f3a98c7dbcc702f30c69de8e6cf0cab994043a807abfffe4a12c0a7c4ab4323"
+  },
+  "raw_cache": {
+    "path": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-edcc3c25-44a7-4072-9ed8-ae00459db576.png",
+    "sha256": "8f3a98c7dbcc702f30c69de8e6cf0cab994043a807abfffe4a12c0a7c4ab4323"
+  },
+  "copied_byte_exact": true,
+  "ordered_references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/026.png",
+      "sha256": "a9660edafddb38b133cb11f54643844c6b41efd9c1ab19fb9b4b1fc7616362b9",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png",
+      "sha256": "35ca7c28c9d2bbbe79c369977950ec35277d39af69b78221aba8f0b4ad2ac247",
+      "inspected_before_request": true
+    }
+  ],
+  "reference_roles": [
+    "Exact original pose/silhouette, nearest-neighbor display; diagnostic palette only.",
+    "Gull009 shared identity/materials, not pose authority."
+  ],
+  "original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/GJGULL1.BMP/026.png",
+    "sha256": "d138d5c5a01a586fc98f434ab61f418846206af94a2a4ed62805d5e502103e1a"
+  },
+  "nearest8": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/026.png",
+    "sha256": "a9660edafddb38b133cb11f54643844c6b41efd9c1ab19fb9b4b1fc7616362b9"
+  },
+  "source": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/source.json",
+    "sha256": "476e7d2bc1e7ba27191eb70e28364763a60fd9cb596bedf3b51d8cd7a55c5f89",
+    "archive": {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    "archive_member": "native/BMP/GJGULL1.BMP/026.png",
+    "canvas": [
+      40,
+      43
+    ],
+    "rgba_sha256": "4dd173d235814fd373f997ddd4107e3ae17ebd562c537dc3ea00ea7824203f49"
+  },
+  "pixels": {
+    "canvas": [
+      1209,
+      1300
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bbox": [
+      2,
+      34,
+      1171,
+      1300
+    ],
+    "alpha_ge8_bbox": [
+      85,
+      36,
+      1147,
+      1230
+    ],
+    "alpha_ge8_margins_left_top_right_bottom": [
+      85,
+      36,
+      62,
+      70
+    ],
+    "alpha_nonzero_pixels": 404605,
+    "alpha_1_to_7_pixels": 11447,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        1
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "V1 has an extra third yellow foot near the tail. Preserved unselected; corrected by v2.",
+    "visible_eye_count": 1,
+    "ground_shadow": "None; airborne.",
+    "limits": "Generative interpretation, not pixel-exact source geometry or native registration. Review selection is not human approval."
+  },
+  "postprocessing": "None. Exact generated PNG copied; no pixel edits, crop, resampling, recoloring or alpha thresholds.",
+  "human_approval": null,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "resource": "GJGULL1.BMP",
+  "frame": 17,
+  "version": 1,
+  "status": "appearance_review_candidate_not_approved",
+  "selected_for_review": true,
+  "recorded_at_utc": "2026-09-18T21:27:19.808461+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/017-v1-request.json",
+    "sha256": "762d1062fea928dbec6bc2c90e63a87aec8dc4e62ed39a7edc384e6373d12c09"
+  },
+  "output": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/017-generated-v1.png",
+    "sha256": "0090919b7e8da8e3e9eaea0989d5a570f588c23cb93eaea7242322828ee15f5e"
+  },
+  "raw_cache": {
+    "path": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-3a6bf2ed-1cc2-4169-8a88-bb56baf6af4a.png",
+    "sha256": "0090919b7e8da8e3e9eaea0989d5a570f588c23cb93eaea7242322828ee15f5e"
+  },
+  "copied_byte_exact": true,
+  "ordered_references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/017.png",
+      "sha256": "226577a1b6179a9bcf9e498c79733c844518a036fefbd0ff25fd6ceada99f7e0",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png",
+      "sha256": "35ca7c28c9d2bbbe79c369977950ec35277d39af69b78221aba8f0b4ad2ac247",
+      "inspected_before_request": true
+    }
+  ],
+  "reference_roles": [
+    "Exact original pose/silhouette, nearest-neighbor display; diagnostic palette only.",
+    "Gull009 shared identity/materials, not pose authority."
+  ],
+  "original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/GJGULL1.BMP/017.png",
+    "sha256": "162004a2828353de4665e883abcc9ead7611f1de920d1596aaa25b046307945d"
+  },
+  "nearest8": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/017.png",
+    "sha256": "226577a1b6179a9bcf9e498c79733c844518a036fefbd0ff25fd6ceada99f7e0"
+  },
+  "source": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/source.json",
+    "sha256": "476e7d2bc1e7ba27191eb70e28364763a60fd9cb596bedf3b51d8cd7a55c5f89",
+    "archive": {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    "archive_member": "native/BMP/GJGULL1.BMP/017.png",
+    "canvas": [
+      32,
+      21
+    ],
+    "rgba_sha256": "8159bacb351d643cc4254bd9be5256c8ca1afb6338e370b3a73865dd24c6f84c"
+  },
+  "pixels": {
+    "canvas": [
+      1548,
+      1016
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bbox": [
+      213,
+      19,
+      1465,
+      976
+    ],
+    "alpha_ge8_bbox": [
+      215,
+      139,
+      1391,
+      908
+    ],
+    "alpha_ge8_margins_left_top_right_bottom": [
+      215,
+      139,
+      157,
+      108
+    ],
+    "alpha_nonzero_pixels": 353198,
+    "alpha_1_to_7_pixels": 10266,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Standing gull turning toward the left: head at upper-left and long folded-wing body tapering to a right-pointing tail. Beak directed down-left; camera sees more chest than the complete side view018. Preserve this three-quarter turn and short foot stance.",
+    "visible_eye_count": 1,
+    "ground_shadow": "Small contact shadow under feet; not counted as anatomy.",
+    "limits": "Generative interpretation, not pixel-exact source geometry or native registration. Review selection is not human approval."
+  },
+  "postprocessing": "None. Exact generated PNG copied; no pixel edits, crop, resampling, recoloring or alpha thresholds.",
+  "human_approval": null,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "resource": "GJGULL1.BMP",
+  "frame": "009",
+  "version": 1,
+  "tool": "builtin image_gen",
+  "purpose": "shared gull identity key generated before dependent phases",
+  "prompt": "Use case: stylized-concept\nAsset: Shared cartoon seagull identity key, GJGULL1.BMP009, one transparent game sprite.\nPrimary request: Redraw this exact original standing seagull pose in clean cartoon illustration suitable for the Johnny Castaway cartoon art set. The supplied image is authoritative for body geometry, viewpoint and pose; its coarse diagnostic palette is not the final palette.\nPose: TRUE RIGHT-FACING PROFILE. One visible eye in the upper-right head. Closed compact beak projects right with the slight downward angle in the source. Rounded head with a modest neck, long low bird body and folded wing, short tail extending LEFT. Keep the original near-horizontal back/body and the relative head/body proportions. Feet remain below the same body contact region; do not turn the bird toward the viewer or spread its wings. Preserve the source's visible foot/leg arrangement, with overlap rather than inventing a wide stance.\nDesign: White gull head and underside; light cool-gray back and folded wings; charcoal-black feather tips. Warm yellow-orange modest beak and webbed feet. Small dark eye with clear placement and calm natural expression. Crisp dark cartoon outlines, restrained two-tone cel shading, soft upper-left light. No new character traits, clothing, hats, eyelashes, eyebrows, oversized grin, extra colors or accessories. Simplify feather detail into readable clean shapes, not photorealistic texture or 3D gloss.\nBackground and contact: Genuine transparent RGBA around the bird. A small neutral soft gray contact shadow may appear directly under the feet to correspond to the attached gray source shadow; no colored shadow, platform, ground scene, ocean or scenery. Shadow is not part of the bird anatomy. Keep all contours within the canvas with transparent margin.\nOutput: ONE full standing bird only; no contact sheet, alternate pose, text, label, watermark, haze or outer glow.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/009.png"
+  ],
+  "ordered_references": [
+    {
+      "role": "exact original standing pose, anatomy, right-profile yaw, eye placement, beak angle and feet",
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/009.png",
+      "sha256": "5a3f54034938e02f81bbfe83269b6608f9ffaff446371257cc760d0dc42f2fad"
+    }
+  ],
+  "source_index": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/source.json",
+    "sha256": "476e7d2bc1e7ba27191eb70e28364763a60fd9cb596bedf3b51d8cd7a55c5f89"
+  },
+  "output_path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png"
+}

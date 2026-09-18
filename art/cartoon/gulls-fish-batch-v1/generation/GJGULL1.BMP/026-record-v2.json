@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "resource": "GJGULL1.BMP",
+  "frame": 26,
+  "version": 2,
+  "status": "appearance_review_candidate_not_approved",
+  "selected_for_review": true,
+  "recorded_at_utc": "2026-09-18T21:27:20.181228+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/026-v2-request.json",
+    "sha256": "ef8c911fcf4d2966c71e9869145b2fc460c6935b15a9e60963d42314c7ca0baf"
+  },
+  "output": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/026-generated-v2.png",
+    "sha256": "9dc7b494aa5528dc79c71f7ebef7b9d334139e468ef58f932b389c7682cc9829"
+  },
+  "raw_cache": {
+    "path": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-7befa07d-8f4d-4d0c-b700-8afe5c67bf9d.png",
+    "sha256": "9dc7b494aa5528dc79c71f7ebef7b9d334139e468ef58f932b389c7682cc9829"
+  },
+  "copied_byte_exact": true,
+  "ordered_references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/026-generated-v1.png",
+      "sha256": "8f3a98c7dbcc702f30c69de8e6cf0cab994043a807abfffe4a12c0a7c4ab4323",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/026.png",
+      "sha256": "a9660edafddb38b133cb11f54643844c6b41efd9c1ab19fb9b4b1fc7616362b9",
+      "inspected_before_request": true
+    }
+  ],
+  "reference_roles": [
+    "Prior generated026 edit target with extra-foot defect.",
+    "Exact original026 pose reference."
+  ],
+  "original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/GJGULL1.BMP/026.png",
+    "sha256": "d138d5c5a01a586fc98f434ab61f418846206af94a2a4ed62805d5e502103e1a"
+  },
+  "nearest8": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/026.png",
+    "sha256": "a9660edafddb38b133cb11f54643844c6b41efd9c1ab19fb9b4b1fc7616362b9"
+  },
+  "source": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/source.json",
+    "sha256": "476e7d2bc1e7ba27191eb70e28364763a60fd9cb596bedf3b51d8cd7a55c5f89",
+    "archive": {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    "archive_member": "native/BMP/GJGULL1.BMP/026.png",
+    "canvas": [
+      40,
+      43
+    ],
+    "rgba_sha256": "4dd173d235814fd373f997ddd4107e3ae17ebd562c537dc3ea00ea7824203f49"
+  },
+  "pixels": {
+    "canvas": [
+      1209,
+      1300
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bbox": [
+      82,
+      35,
+      1157,
+      1235
+    ],
+    "alpha_ge8_bbox": [
+      84,
+      37,
+      1153,
+      1232
+    ],
+    "alpha_ge8_margins_left_top_right_bottom": [
+      84,
+      37,
+      56,
+      68
+    ],
+    "alpha_nonzero_pixels": 403002,
+    "alpha_1_to_7_pixels": 9505,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Direct inspection confirms exactly TWO visible tucked yellow feet. The extra rightmost third foot is removed, and the head-down/right pose, raised wings and no-shadow airborne presentation remain.",
+    "visible_eye_count": 1,
+    "ground_shadow": "None; airborne.",
+    "limits": "Generative interpretation, not pixel-exact source geometry or native registration. Review selection is not human approval."
+  },
+  "postprocessing": "None. Exact generated PNG copied; no pixel edits, crop, resampling, recoloring or alpha thresholds.",
+  "human_approval": null,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "previous_attempt_record": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/026-record-v1.json",
+    "sha256": "58a7faf9026668025558ab6de92a2307352ccf0abb6561df1951c127d6aac984"
+  }
+}

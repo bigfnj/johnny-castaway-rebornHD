@@ -2,6 +2,8 @@
 
 Current workflow: the user requested [art construction first, bulk verification later](cartoon-art-build-workflow.md) on 2026-09-17. That instruction supersedes the per-family test and audit cadence documented below. Preserve visual approvals and source records as each family is completed; run full smoke, regression and final code audit at the combined delivery milestone.
 
+The default new-art review size is now 36-48 drawings, per the user's 2026-09-18 instruction. Keep targeted corrections separate from that count and use parallel work across compatible resource groups.
+
 The user approved this bounded start on 2026-09-15: establish the production
 catalog, then expand Johnny's walking directions before undertaking the full
 application. Work starts from `0f7d7fd` on `art/cartoon-production-foundation`.
@@ -95,6 +97,8 @@ The user's 2026-09-18 review rejected 13 facing/eye interpretations in that grou
 The subsequent [six-drawing refinement](../art/cartoon/campfire-props-bend-v3/README.md) addresses the marked sole/cuff bends in 005/022, upper eye placement in 006, and rounded head/appendage corrections in 021/024/FIRE5 000. User annotations are retained with the generation records. Earlier comparison pages remain intact; unmentioned frames have no new acceptance implied by this request. Full scene testing remains deferred.
 
 The latest [005/022 angle review](../art/cartoon/boot-angle-v4/README.md) follows the user's manually rotated boot cutouts. Preserve the natural internal bend while matching the indicated tilt. The page compares the source, the user cutout and the new output; earlier pose reviews remain historical evidence, not acceptance.
+
+The user approved those two selected boot drawings with "perfect" and asked to proceed with 36-48 drawings per review. [The scoped acceptance](../art/cartoon/boot-angle-v4/acceptance/appearance-v1.json) binds 005 v2 and 022 v2; it does not approve unseen or unmentioned campfire drawings. The next [42-drawing wildlife batch](../art/cartoon/gulls-fish-batch-v1/README.md) covers complete GJGULL1 and LILFISH families, with shared gull/nest style references and per-frame source references. All remain drafts until reviewed.
 
 The workflow builds on [the original lessons](art-style-learnings.md),
 [the Calm focus addendum](art-style-learnings-calm-focus.md), and

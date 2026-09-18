@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "resource": "LILFISH.BMP",
+  "frame": 8,
+  "version": 2,
+  "status": "generated draft; human visual approval and runtime fitting pending",
+  "generator": "built-in image_gen",
+  "request": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/008-v2-request.json",
+    "sha256": "b40ad6a8870b3a95eaef3394aefe9ad537f0715704759db6e4aa04dad5f5217c"
+  },
+  "output": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/008-generated-v2.png",
+    "sha256": "ff7983ef6156c8ca55d790534fec5178ee34ad752f13b708798b3f0d90ccb8fa"
+  },
+  "raw_cache": {
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-3f8bca77-5c58-4ad9-a9c1-58362beb4afc.png",
+    "sha256": "ff7983ef6156c8ca55d790534fec5178ee34ad752f13b708798b3f0d90ccb8fa"
+  },
+  "raw_bytes_copied_unchanged": true,
+  "source_original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/008.png",
+    "sha256": "b6d8fefaf0f90d2ddda52e5b084c1f2e1b2cd9618cf9ae4dbec9b9247f2bc4df"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/008-generated-v1.png",
+      "sha256": "dd28adc84b52e0edf361b137fd6965d6c21687e154a46d026083b122d69d6f88"
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/008.png",
+      "sha256": "0ac3424f412bca9ade0f817fce02d1bbca18f7b98dc111e527d49368e7630718"
+    }
+  ],
+  "image": {
+    "format": "PNG",
+    "mode": "RGBA",
+    "canvas": [
+      2172,
+      724
+    ],
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "transparent_pixel_count": 1138625,
+    "partial_alpha_pixel_count": 431541,
+    "alpha8_bounds_xyxy": [
+      116,
+      66,
+      2073,
+      656
+    ],
+    "alpha8_edge_pixels": 0
+  },
+  "observations": [
+    "Targeted count correction now has exactly four visible heads/eyes, versus five in v1.",
+    "The two middle fish overlap tightly; their complete tail/body ownership is not independently exposed in this static view. Human anatomy and later registration review remain necessary."
+  ],
+  "limits": "Source palette is diagnostic. No native placement, registration or animation approval is claimed."
+}

@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "resource": "GJGULL1.BMP",
+  "frame": 24,
+  "version": 1,
+  "status": "appearance_review_candidate_not_approved",
+  "selected_for_review": true,
+  "recorded_at_utc": "2026-09-18T21:27:20.045199+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/024-v1-request.json",
+    "sha256": "fb8551be3370accaaa08591ad5ae006a2e6415f4b712f3fe967cafd6ba6facff"
+  },
+  "output": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/024-generated-v1.png",
+    "sha256": "644e53b342e913c3becdf9c170cc5b56737b7fabda0eea9a2141db5db323d711"
+  },
+  "raw_cache": {
+    "path": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-d872546a-d638-43f9-86aa-9989236a1112.png",
+    "sha256": "644e53b342e913c3becdf9c170cc5b56737b7fabda0eea9a2141db5db323d711"
+  },
+  "copied_byte_exact": true,
+  "ordered_references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/024.png",
+      "sha256": "23ccc7235c96c148e65dcbe15662904bbb946fff7dabeb599f4f2d5822c4bb42",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png",
+      "sha256": "35ca7c28c9d2bbbe79c369977950ec35277d39af69b78221aba8f0b4ad2ac247",
+      "inspected_before_request": true
+    }
+  ],
+  "reference_roles": [
+    "Exact original pose/silhouette, nearest-neighbor display; diagnostic palette only.",
+    "Gull009 shared identity/materials, not pose authority."
+  ],
+  "original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/GJGULL1.BMP/024.png",
+    "sha256": "a6453b4c271eb08c43837f467d4c6f489fad4d2d2188ccd03e76bcda4ea090ec"
+  },
+  "nearest8": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/024.png",
+    "sha256": "23ccc7235c96c148e65dcbe15662904bbb946fff7dabeb599f4f2d5822c4bb42"
+  },
+  "source": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/source.json",
+    "sha256": "476e7d2bc1e7ba27191eb70e28364763a60fd9cb596bedf3b51d8cd7a55c5f89",
+    "archive": {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    "archive_member": "native/BMP/GJGULL1.BMP/024.png",
+    "canvas": [
+      48,
+      23
+    ],
+    "rgba_sha256": "5c61aded02867dfb2669b8dd757ecf9e1d327f0eb93197cfe46de92a586ff1c7"
+  },
+  "pixels": {
+    "canvas": [
+      1810,
+      869
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bbox": [
+      75,
+      63,
+      1744,
+      845
+    ],
+    "alpha_ge8_bbox": [
+      98,
+      66,
+      1710,
+      784
+    ],
+    "alpha_ge8_margins_left_top_right_bottom": [
+      98,
+      66,
+      100,
+      85
+    ],
+    "alpha_nonzero_pixels": 585086,
+    "alpha_1_to_7_pixels": 12925,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "Crouched gull spreading its wings just before takeoff: head and down-pointing beak low on LEFT, torso in middle-right, two wings extended out/up in exact unequal source angles. Short legs/webbed feet still below middle-right and small soft gray contact shadow. Do not replace this with wings folded or a fully airborne level gull.",
+    "visible_eye_count": 1,
+    "ground_shadow": "Small contact shadow under feet; not counted as anatomy.",
+    "limits": "Generative interpretation, not pixel-exact source geometry or native registration. Review selection is not human approval."
+  },
+  "postprocessing": "None. Exact generated PNG copied; no pixel edits, crop, resampling, recoloring or alpha thresholds.",
+  "human_approval": null,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "resource": "GJGULL1.BMP",
+  "frame": 31,
+  "version": 1,
+  "status": "appearance_review_candidate_not_approved",
+  "selected_for_review": true,
+  "recorded_at_utc": "2026-09-18T21:27:20.143180+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/031-v1-request.json",
+    "sha256": "41025263a73f9e3d87cd981a06ae0d35dd03da06432278136dc05e7c9e49050a"
+  },
+  "output": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/031-generated-v1.png",
+    "sha256": "17dce10050e8b75a174b7abda736dbf2bdd6c47eaffdbc41174d0412ef75c5c6"
+  },
+  "raw_cache": {
+    "path": "C:/Users/Admin/.codex/generated_images/01a0a66d-7b1e-7210-9921-90642bf1b5ed/exec-8d46258f-65b7-4a7d-ab31-af7564c27275.png",
+    "sha256": "17dce10050e8b75a174b7abda736dbf2bdd6c47eaffdbc41174d0412ef75c5c6"
+  },
+  "copied_byte_exact": true,
+  "ordered_references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/031.png",
+      "sha256": "c977592d7f989ba80bfa5c0fdd22cd1b9834a89b95c2b35cc7fadbc89f43e897",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png",
+      "sha256": "35ca7c28c9d2bbbe79c369977950ec35277d39af69b78221aba8f0b4ad2ac247",
+      "inspected_before_request": true
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/030-generated-v1.png",
+      "sha256": "7cbb71963e4c8d26b0196b247523b3131e6630ac52adfa8c9c9cafe5101a4df8",
+      "inspected_before_request": true
+    }
+  ],
+  "reference_roles": [
+    "Exact original pose/silhouette, nearest-neighbor display; diagnostic palette only.",
+    "Gull009 shared identity/materials, not pose authority.",
+    "Nest030 shared material/style, not independent geometry authority."
+  ],
+  "original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/GJGULL1.BMP/031.png",
+    "sha256": "44c423872394b7f014ccf8046d3d400956814e9327af53c0a3b3ca93871f1ed4"
+  },
+  "nearest8": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/031.png",
+    "sha256": "c977592d7f989ba80bfa5c0fdd22cd1b9834a89b95c2b35cc7fadbc89f43e897"
+  },
+  "source": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/source.json",
+    "sha256": "476e7d2bc1e7ba27191eb70e28364763a60fd9cb596bedf3b51d8cd7a55c5f89",
+    "archive": {
+      "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+      "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+    },
+    "archive_member": "native/BMP/GJGULL1.BMP/031.png",
+    "canvas": [
+      48,
+      25
+    ],
+    "rgba_sha256": "290b878e40ff1bcdbaac58a1d912290330d57b2febdeb5df4908371e220656a1"
+  },
+  "pixels": {
+    "canvas": [
+      1738,
+      905
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_nonzero_bbox": [
+      114,
+      128,
+      1710,
+      905
+    ],
+    "alpha_ge8_bbox": [
+      164,
+      130,
+      1575,
+      797
+    ],
+    "alpha_ge8_margins_left_top_right_bottom": [
+      164,
+      130,
+      163,
+      108
+    ],
+    "alpha_nonzero_pixels": 565150,
+    "alpha_1_to_7_pixels": 8912,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        1
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    }
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "One left-looking gull sits inside the twig nest with its lower body occluded by the rim. No egg or exposed feet. The shared nest/gull materials are visibly consistent.",
+    "visible_eye_count": 1,
+    "ground_shadow": "None outside nest.",
+    "limits": "Generative interpretation, not pixel-exact source geometry or native registration. Review selection is not human approval."
+  },
+  "postprocessing": "None. Exact generated PNG copied; no pixel edits, crop, resampling, recoloring or alpha thresholds.",
+  "human_approval": null,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false
+}

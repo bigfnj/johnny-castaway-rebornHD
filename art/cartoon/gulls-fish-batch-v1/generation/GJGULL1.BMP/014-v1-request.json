@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "resource": "GJGULL1.BMP",
+  "frame": "014",
+  "version": 1,
+  "tool": "builtin image_gen",
+  "prompt": "Create exactly one clean cartoon seagull sprite for GJGULL1.BMP frame 014. Image1 is authoritative for original geometry, exact wing phase, yaw, beak angle, eye count/location and feet. Image2 supplies ONLY gull identity/colors/linework; never copy its standing pose when different. White head/body, light-gray back/wings, charcoal-black feather tips, warm yellow-orange beak/webbed feet, crisp dark outlines and restrained cel shading. No hats, clothes, character features, oversized eye expression or extra anatomy. Preserve pose-specific visible eyes, not automatically two. Genuine transparent RGBA, full sprite with safety margin, no text, scenery, checkerboard pixels, glow, haze or cast background. Pose-specific requirement: The next standing preening phase: BODY FACES RIGHT, tail extends LEFT, raised wing on LEFT forms a high diagonal peak; head at upper-right bends/tucks DOWN-LEFT into the wing/body feathers. Beak/eye are largely hidden in this phase: preserve the original occlusion and do not invent a large staring exposed face. The right-side upright neck curves inward into feathers. Feet on small attached neutral contact shadow, match the original compact pose. Keep complete silhouette and feather tips with transparent margin. No ground plane or island.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/014.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png"
+  ],
+  "ordered_references": [
+    {
+      "role": "exact original pose/wing phase/yaw/eye and beak authority",
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/GJGULL1.BMP/014.png",
+      "sha256": "dc21c027d17d2cb7ae69a70c036342a1534af0687bea0ae22364ae6c05b516e0"
+    },
+    {
+      "role": "shared gull identity/materials only, not pose or shadow",
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png",
+      "sha256": "35ca7c28c9d2bbbe79c369977950ec35277d39af69b78221aba8f0b4ad2ac247"
+    }
+  ],
+  "output_path": "art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/014-generated-v1.png"
+}

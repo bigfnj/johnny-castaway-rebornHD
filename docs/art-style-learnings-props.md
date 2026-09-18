@@ -1,6 +1,6 @@
 # Prop authoring lessons
 
-The user requested batches of at least24 drawings per art review on2026-09-17. Keep full smoke/regression for the combined asset delivery, retain original comparisons and collect individual frame corrections together. [Current workflow](cartoon-art-build-workflow.md).
+The user increased the default to 36-48 drawings per art review on 2026-09-18, following the earlier request for at least 24. Keep full smoke/regression for the combined asset delivery, retain original comparisons and collect individual frame corrections together. [Current workflow](cartoon-art-build-workflow.md).
 
 ## Shared style with original geometry
 
@@ -71,3 +71,5 @@ Treat shared generated keys as material/identity references only when their pose
 The user's [next annotated correction](../art/cartoon/campfire-props-bend-v3/README.md) separates whole-object orientation from internal bending. Boot 005 needs a curved sole; 022 is almost on its side with its cuff bending down toward the toe's ground plane. The latest green marks for squid 006 put both eyes on the upper-facing head surface with an upward gaze, superseding the lower-face interpretation. Squid 021 retains its rounded head but loses the stray head appendage and looks down-left. Carry that rounded head into 024 and FIRE5 000 while preserving their already-correct body and eye directions. The user permits a mirrored pair; independent generated edits must not be described as exact pixel mirrors without checking. Save the actual annotations because a phrase such as "two eyes" does not specify their anatomical placement.
 
 The subsequent [boot cutouts](../art/cartoon/boot-angle-v4/README.md) refine that instruction: keep the natural ankle shape and match the angle demonstrated by the user's arranged image. The preceding 022 draft flattened the boot into an exaggerated arch. For 005, the sole should lean down-left; for 022, the earlier compact boot needs a clockwise tilt. Show the user's target directly beside the next drawing. Do not continue adding curvature when the reference is asking for orientation.
+
+The user approved both selected boot-angle outputs and increased ordinary reviews to 36-48 new drawings. The next [42-slot gull/fish batch](../art/cartoon/gulls-fish-batch-v1/README.md) uses complete source families to make that scale practical. Preserve per-view eye count even when the shared gull key is a one-eye profile. Keep nest stages visibly distinct. LILFISH002/003/004 form separate body/tail components;006/007/008 are joined groups of two/three/four fish, not single elongated fish. Static catch labels corroborate the counts. Larger batches still need per-frame anatomical notes and source references.

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "awaiting_batch_appearance_review",
+  "target_drawings": 42,
+  "user_batch_default": [36, 48],
+  "resources": {"GJGULL1.BMP": {"first": 0, "last": 32, "count": 33}, "LILFISH.BMP": {"first": 0, "last": 8, "count": 9}},
+  "shared_references": {
+    "gull_identity": "GJGULL1.BMP009 generated first; visual draft identity, not yet approved",
+    "nest_material": "GJGULL1.BMP030 generated first; complete woven nest",
+    "fish_style": "Existing Cartoon campfire fish colors/material only; exact LILFISH originals control anatomy and pose"
+  },
+  "anatomy_notes": {
+    "GJGULL1.BMP": "000-007 flight phases; 008 landing; 009-024 standing, turning and pecking; 025/026 head-first dives; 027-030 nest stages; 031 gull in nest; 032 egg in nest. Gray source shadows are separate visual cues from feet.",
+    "LILFISH.BMP": "000/001 upright fish; 002 body/head component used with the separate tails 003/004; 005 single fish; 006/007/008 joined two/three/four-fish catch groups. Keep original overlaps and eye count; do not invent tails on partial components."
+  },
+  "workflow": "One built-in image generation call per drawing; inspect source geometry, use shared keys for style only, preserve exact requests and raw outputs. Collect human review in one 42-drawing gallery.",
+  "approval": null,
+  "native_testing": "Deferred to bulk integration"
+}
