@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "resource": "TANKER.BMP",
+  "frame": 12,
+  "version": 5,
+  "date": "2026-09-18",
+  "status": "draft_pending_rotation_review",
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "image-edit",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-generated-v5.png",
+    "sha256": "e7f8ac8c259484efb2986b1c1a3caeeb61909a9e8f5cf0f10af2e2876ab53a78",
+    "canvas": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds_exclusive": {
+      "1": [
+        0,
+        73,
+        1611,
+        825
+      ],
+      "8": [
+        167,
+        75,
+        1608,
+        823
+      ],
+      "128": [
+        168,
+        76,
+        1608,
+        822
+      ],
+      "255": [
+        169,
+        78,
+        1606,
+        821
+      ]
+    },
+    "visible_width_height_ratio_alpha8": 1.9264705882352942,
+    "alpha_nonzero_pixels": 538240,
+    "alpha_opaque_pixels": 1689,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        1
+      ],
+      "right": [
+        0,
+        0
+      ]
+    },
+    "alpha8_touches_canvas_edge": false
+  },
+  "cache_source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-28037c7b-bacd-4bc7-8cd4-28bd50cc5b50.png",
+  "cache_bytes_equal_saved": true,
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-v5-request.json",
+    "sha256": "54e2f306792241bf0cd9ee7cd81abfd02d2891549bccecd374711cda2178aa8f"
+  },
+  "ordered_reference_images": [
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-generated-v4.png",
+      "sha256": "39c172b72aa74ab651439414a48e99507c0ba873581e75f9ab8cbe5aafe8bb11"
+    }
+  ],
+  "exact_original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/012.png",
+    "sha256": "2f84215a93fec233ed10ec767fa5ebe289445b05a5263e2837f60770da665f9e",
+    "canvas": [
+      48,
+      24
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds_exclusive": {
+      "1": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "8": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "128": [
+        0,
+        0,
+        48,
+        24
+      ],
+      "255": [
+        0,
+        0,
+        48,
+        24
+      ]
+    },
+    "visible_width_height_ratio_alpha8": 2.0,
+    "alpha_nonzero_pixels": 626,
+    "alpha_opaque_pixels": 626,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        255
+      ],
+      "bottom": [
+        0,
+        255
+      ],
+      "left": [
+        0,
+        255
+      ],
+      "right": [
+        0,
+        255
+      ]
+    },
+    "alpha8_touches_canvas_edge": true
+  },
+  "reference_source": {
+    "path": "art/cartoon/tanker-v1/reference/source.json",
+    "sha256": "1e375f4f506da889b01c90b3cbb5ba866e022fdd61495399dbbde0c2ec97920b"
+  },
+  "previous_draft_preserved": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-generated-v4.png",
+    "sha256": "39c172b72aa74ab651439414a48e99507c0ba873581e75f9ab8cbe5aafe8bb11",
+    "canvas": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds_exclusive": {
+      "1": [
+        307,
+        73,
+        1508,
+        826
+      ],
+      "8": [
+        312,
+        76,
+        1463,
+        823
+      ],
+      "128": [
+        313,
+        77,
+        1462,
+        822
+      ],
+      "255": [
+        314,
+        78,
+        1461,
+        821
+      ]
+    },
+    "visible_width_height_ratio_alpha8": 1.5408299866131192,
+    "alpha_nonzero_pixels": 461635,
+    "alpha_opaque_pixels": 1635,
+    "edge_alpha_ranges": {
+      "top": [
+        0,
+        0
+      ],
+      "bottom": [
+        0,
+        0
+      ],
+      "left": [
+        0,
+        0
+      ],
+      "right": [
+        0,
+        0
+      ]
+    },
+    "alpha8_touches_canvas_edge": false
+  },
+  "previous_record_preserved": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-record-v4.json",
+    "sha256": "0d242802041703e2bab72fd4fec364097325cd4a33eef68314dac1f1bb38c9b6"
+  },
+  "visual_inspection": {
+    "performed": true,
+    "observation": "The foreground bow is wider while the nearly bow-on view, small right-offset cabin and upper structure visually retain v4 placement and size. The red hull expands at both outer edges with substantially unchanged vertical extent. Its alpha8 ratio is now closer to the 2.00 original.",
+    "limits": "Generation output is retained exactly. Visual preservation of upper structures is not a pixel-identity claim; original contour, runtime registration and motion remain unapproved. No further art pass after this authorized local-width correction."
+  },
+  "geometry_observation": {
+    "metric": "alpha>=8 bounding-box width divided by height; not a full contour or angle comparison",
+    "original_ratio": 2.0,
+    "previous_ratio": 1.5408299866131192,
+    "new_ratio": 1.9264705882352942,
+    "new_relative_ratio_error": -0.03676470588235292,
+    "visible_width_change_factor": 1.2519548218940053,
+    "visible_height_change_factor": 1.001338688085676
+  },
+  "human_approval": null,
+  "pixel_edits_after_generation": false,
+  "raw_low_alpha_residue_preserved": true,
+  "runtime_export_executed": false,
+  "production_package_changed": false,
+  "tests_executed": false,
+  "deferred": [
+    "Human rotation appearance review",
+    "Final geometry and runtime registration",
+    "Native motion and bulk integration checks"
+  ]
+}

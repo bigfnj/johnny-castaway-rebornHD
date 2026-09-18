@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "TANKER.BMP",
+  "frame": 12,
+  "version": 3,
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "image-edit",
+  "reason": "Correct overly tall centered v2 to original wider asymmetric near-bow silhouette.",
+  "prompt": "Edit the cartoon tanker in reference image 1. Reference image 2 is exact original game frame 012 enlarged with nearest-neighbor pixels; use it as the authority for visible silhouette, asymmetric camera angle and relative positions, but keep smooth cartoon rendering and the colors of image 1. Return one isolated transparent-background ship sprite. The current draft in image 1 is much too tall/narrow (visible width:height about 1.49) and too centered. WIDEN AND LOWER the entire visible tanker silhouette to width:height approximately 2.00, matching reference image 2. This is a NEARLY BOW-ON view but deliberately ASYMMETRIC, not a perfectly centered head-on view and not a broadside. Show the bow as a broad squat red body whose left flank extends farther horizontally, with the ivory cabin group and black-capped red funnel noticeably offset to the RIGHT of the hull center, following the original. Preserve a subtle visible side plane and unequal left/right hull spans. Do not impose mirror symmetry. The compact cabins and funnel must sit lower relative to the hull width, as in the original silhouette. Preserve the same vivid red hull, darker red lower band, ivory cabin walls, small blue-black windows, black-capped red funnel, dark clean outlines and simple upper-left lighting. Keep only compact design details supported by the source. Remove any invented full-width raised rail/bar with posts across the deck; a thin normal hull rim is sufficient. Do not invent a large center mast or elongated prow. Preserve a natural coherent ship drawing rather than mechanically stretching pixels. Fit the whole object comfortably inside generous transparent margins. No water, wake, smoke, scenery, cast shadow outside the ship, glow, text, checkerboard or border. Use genuine RGBA transparency. The exact source silhouette and asymmetric cabin offset matter more than decorative detail.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/tanker-v1/generation/TANKER.BMP/012-generated-v2.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/012.png"
+  ],
+  "output_file": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-generated-v3.png",
+  "status": "draft_pending_visual_review",
+  "pixel_edits_after_generation": false
+}

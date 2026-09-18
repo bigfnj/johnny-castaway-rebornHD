@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "status": "draft_yaw_and_proportions_correction_pending",
+  "resource": "TANKER.BMP",
+  "frame": "008",
+  "version": 2,
+  "tool": "built-in image_gen",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/008-generated-v2.png",
+    "sha256": "6042132f88a28e80d480a75e02cccaba136fcd03fd1bcdfdc3a501d7ba9fa84a",
+    "canvas": [
+      2139,
+      735
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      41,
+      91,
+      2077,
+      719
+    ],
+    "meaningful_bounds_alpha8": [
+      167,
+      93,
+      1984,
+      657
+    ],
+    "meaningful_width_height_ratio": 3.2216
+  },
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/008-v2-request.json",
+    "sha256": "40d93b3a92b8801aa270667eb1974cffed0486e274b111d68ae28649e6efd60b"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/008.png",
+      "sha256": "4176f8b82dcc32cc5a60c84e50880c384437ab74b0840abffad67a18e768da2b",
+      "role": "authoritative_original_pose_nearest8"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/008-generated-v1.png",
+      "sha256": "38e4da9407ea532c4a59e43ae070411f1788ef416acdedb69069706fe8d85a54",
+      "role": "cartoon_edit_target_identity"
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/008.png",
+    "sha256": "ecb920e6936fc2387eef795bda6be206433d9e1b3a83b810f5217ac05c259074"
+  },
+  "cache_source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0b1cf-c378-7ab3-84ca-0fa87a778b92\\exec-35f67418-2a7e-4140-9685-99a212000e06.png",
+  "approval": null,
+  "production_package_changed": false,
+  "image_processing": "Exact copy of returned PNG; no resampling, recoloring or alpha changes.",
+  "visual_observation": "The left bow begins to emerge toward the viewer and the superstructure is taller than the prior draft. Meaningful width:height 3.2216 remains broader than the source 2.9130. Bow-quarter yaw remains subtle and needs motion comparison beside 007 and 009.",
+  "deferred_work": [
+    "Human review of corrected viewing angle and proportions",
+    "Sequence continuity against neighboring angles",
+    "Original-canvas fitting and native motion during bulk integration"
+  ]
+}

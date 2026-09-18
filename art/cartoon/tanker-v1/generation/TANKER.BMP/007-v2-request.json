@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "TANKER.BMP",
+  "frame": 7,
+  "version": 2,
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "image-edit",
+  "reason": "Correct broadside visible proportions using exact original geometry; preserve earlier v1.",
+  "prompt": "Edit the cartoon tanker in reference image 1. Reference image 2 is the exact original game frame enlarged with nearest-neighbor pixels; it is the authority for camera angle, compact silhouette, component placement and relative proportions, not for pixelated rendering or diagnostic colors. Produce one clean high-resolution transparent-background sprite, no scene. This is frame 007: a TRUE FLAT BROADSIDE side view with no yaw and no front face visible. The present image 1 is too long and low, with visible width to height about 4.02. Correct the visible silhouette to width:height approximately 2.80, as in image 2: shorten the overly extended hull and make the whole ship vertically substantial in the same proportions as the original, maintaining generous transparent margin. Keep the original left/right orientation and the compact aft deck structures grouped in the right half. Preserve the vivid red hull, deep red lower hull band, ivory cabin walls, blue-black windows, black-capped red funnel, dark outline and simple upper-left lit cartoon shading of image 1. Cabin and funnel placement must follow image 2, with the tall narrow bridge just left of the funnel and the lower cabin block beneath the funnel. Reduce invented details. The forward open deck should be uncluttered. Do not add a long red rail, bar, fence or posts spanning the full deck. A thin natural hull lip is enough. Keep a clean strong broadside silhouette, smooth illustrated contours, no pixel staircases, no tall antenna beyond the original design. No water, wake, smoke, ground, shadows cast outside the ship, glow, text, border, checkerboard or background. Return exactly one isolated ship in RGBA with genuine transparent background. This is a proportion and camera correction, not a redesign.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/tanker-v1/generation/TANKER.BMP/007-generated-v1.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/007.png"
+  ],
+  "output_file": "art/cartoon/tanker-v1/generation/TANKER.BMP/007-generated-v2.png",
+  "status": "draft_pending_visual_review",
+  "pixel_edits_after_generation": false
+}

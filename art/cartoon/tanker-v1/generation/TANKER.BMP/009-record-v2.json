@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "status": "draft_yaw_and_proportions_correction_pending",
+  "resource": "TANKER.BMP",
+  "frame": "009",
+  "version": 2,
+  "tool": "built-in image_gen",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/009-generated-v2.png",
+    "sha256": "b951eee5011885a2e203b92590edf246c7104ad456cdb0a3ef8cbdf9e632dc4d",
+    "canvas": [
+      2076,
+      758
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      131,
+      32,
+      2046,
+      734
+    ],
+    "meaningful_bounds_alpha8": [
+      133,
+      59,
+      1963,
+      711
+    ],
+    "meaningful_width_height_ratio": 2.8067
+  },
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/009-v2-request.json",
+    "sha256": "d8a84eac56497891ed11e0f25e267f0df0ab27b073ea9e7b8062c456e79fd969"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/009.png",
+      "sha256": "6b3d22b304925ec18a67dab3f3246a1b3fbf78b546103fbf4c3822f46299f30c",
+      "role": "authoritative_original_pose_nearest8"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/009-generated-v1.png",
+      "sha256": "9be661eb1cae55e50321c21a3c276c6f4f06f31a7967bd9ae0f7c98265d810b3",
+      "role": "cartoon_edit_target_identity"
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/009.png",
+    "sha256": "37cf4337d842905c69b635cfdf434cb8f1158d36ee32dfbd6091f693e0c27df0"
+  },
+  "cache_source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0b1cf-c378-7ab3-84ca-0fa87a778b92\\exec-b3e2e98a-c9cf-46b4-8ad9-50b6d2cf29d8.png",
+  "approval": null,
+  "production_package_changed": false,
+  "image_processing": "Exact copy of returned PNG; no resampling, recoloring or alpha changes.",
+  "visual_observation": "The left bow is deeper and more prominent, with taller cabin/funnel mass. Meaningful width:height 2.8067 is close to source 2.7391. It still reads fairly close to profile, so stronger bow-quarter yaw may be needed beside 010; this is a draft, not angle parity.",
+  "deferred_work": [
+    "Human review of corrected viewing angle and proportions",
+    "Sequence continuity against neighboring angles",
+    "Original-canvas fitting and native motion during bulk integration"
+  ]
+}

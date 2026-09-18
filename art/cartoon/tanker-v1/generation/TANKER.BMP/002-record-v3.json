@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "status": "retained_intermediate_proportion_draft",
+  "resource": "TANKER.BMP",
+  "frame": "002",
+  "version": 3,
+  "tool": "built-in image_gen",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/002-generated-v3.png",
+    "sha256": "c9077976d627106acb76d56bf3438a1a0030e932ee01570f9c6e23b9c6319f23",
+    "canvas": [
+      1846,
+      852
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      276,
+      94,
+      1816,
+      804
+    ],
+    "meaningful_bounds_alpha8": [
+      282,
+      96,
+      1580,
+      795
+    ],
+    "visible_width_height_ratio": 1.856938
+  },
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/002-v3-request.json",
+    "sha256": "7d8f355fbc2d07fc6a4332e918a3b84cf0692f86231ccdd1b3adb4247e095bec"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/002.png",
+      "sha256": "976e7b24c8cc7e05e74dc4a3a7eeca92b7ea18ac4829babbb9e7524cb065a8ba"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/000-generated-v4.png",
+      "sha256": "df4334c914651478acf78f0ef8d38d372017710808825cc7e0adf9b7d3484997"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/007-generated-v1.png",
+      "sha256": "32559cec7256e2138a33908fa3f61d3ce8bc5d088693e61d471d87a2e4c5ffa0"
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/002.png",
+    "sha256": "67f4af795da142f73bfbf188e90c5ede2d273759c31c0216828f7539994748e5"
+  },
+  "approval": null,
+  "production_package_changed": false,
+  "image_processing": "Exact copy of returned PNG; no resampling, recoloring or alpha changes.",
+  "visual_observation": "Stern view or stern-quarter draft with the elevated long bar and outside posts absent. Revised cabin height, foreshortened side and visible transom require review in source-sequence motion. Numeric silhouette ratio alone does not establish correct yaw or registration.",
+  "deferred_work": [
+    "Human rotation and vessel continuity review",
+    "Final original-canvas fitting and registration",
+    "Bulk native smoke tests and regressions"
+  ]
+}

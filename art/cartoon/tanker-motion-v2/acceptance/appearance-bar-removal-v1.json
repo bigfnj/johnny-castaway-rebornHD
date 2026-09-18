@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "status": "targeted_bar_and_post_removal_approved; tanker_perspective_and_integration_pending",
+  "recorded_date": "2026-09-18",
+  "exact_user_response": "looks good, continue",
+  "reviewed_url": "http://127.0.0.1:8941/tanker-motion-v2/review.html",
+  "context_summary": "The user responded at tanker-motion-v2 after the prior response identified the bar and tall posts removed in frames 000-002 and explicitly stated that perspective corrections remain outstanding. This is scoped approval of that removal, not acceptance of the whole tanker or final native integration.",
+  "approved_change": "Remove the elevated red bar and tall supporting posts in the selected 000-generated-v2.png, 001-generated-v2.png and 002-generated-v2.png drawings.",
+  "approved_resource_frames": {
+    "TANKER.BMP": [
+      "000",
+      "001",
+      "002"
+    ]
+  },
+  "selected_drawings": [
+    {
+      "resource": "TANKER.BMP",
+      "frame": "000",
+      "selected_raw": {
+        "url": "../tanker-v1/generation/TANKER.BMP/000-generated-v2.png",
+        "canvas": [
+          1915,
+          821
+        ],
+        "bounds": [
+          90,
+          126,
+          1825,
+          664
+        ],
+        "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/000-generated-v2.png",
+        "sha256": "a3238879a749be8a49087d0298bbefd48a66cdd6e15f829bb6035776a04f6f61"
+      },
+      "actual_png_sha256": "a3238879a749be8a49087d0298bbefd48a66cdd6e15f829bb6035776a04f6f61",
+      "approved_aspect": "Removal of the elevated red bar and its tall supporting posts only."
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": "001",
+      "selected_raw": {
+        "url": "../tanker-v1/generation/TANKER.BMP/001-generated-v2.png",
+        "canvas": [
+          1916,
+          821
+        ],
+        "bounds": [
+          77,
+          135,
+          1845,
+          692
+        ],
+        "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/001-generated-v2.png",
+        "sha256": "2d21999c2c4fe327c17072e4ab1f0d1cfe1649567037149d53cf36d06349e575"
+      },
+      "actual_png_sha256": "2d21999c2c4fe327c17072e4ab1f0d1cfe1649567037149d53cf36d06349e575",
+      "approved_aspect": "Removal of the elevated red bar and its tall supporting posts only."
+    },
+    {
+      "resource": "TANKER.BMP",
+      "frame": "002",
+      "selected_raw": {
+        "url": "../tanker-v1/generation/TANKER.BMP/002-generated-v2.png",
+        "canvas": [
+          1915,
+          821
+        ],
+        "bounds": [
+          106,
+          138,
+          1823,
+          685
+        ],
+        "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/002-generated-v2.png",
+        "sha256": "b72ec8a882ef745d4c7e20d2e011e75a7dc7f3209b3e8d2f2edf4f13052bc44d"
+      },
+      "actual_png_sha256": "b72ec8a882ef745d4c7e20d2e011e75a7dc7f3209b3e8d2f2edf4f13052bc44d",
+      "approved_aspect": "Removal of the elevated red bar and its tall supporting posts only."
+    }
+  ],
+  "shown_inputs": [
+    {
+      "source_path": "art/cartoon/tanker-motion-v2/review.html",
+      "sha256": "ee00afe6fcedc495bbdcd565dd8ad2c42354e4c5f0542f66c509340a9214a1b9",
+      "snapshot_path": "art/cartoon/tanker-motion-v2/acceptance/shown-review.html",
+      "snapshot_sha256": "ee00afe6fcedc495bbdcd565dd8ad2c42354e4c5f0542f66c509340a9214a1b9",
+      "byte_exact_copy": true
+    },
+    {
+      "source_path": "art/cartoon/tanker-motion-v2/sprites.json",
+      "sha256": "484bee18203d7cccdc249bbd19645b1d32f9ee9077e368f711343c49be9ac13a",
+      "snapshot_path": "art/cartoon/tanker-motion-v2/acceptance/shown-sprites.json",
+      "snapshot_sha256": "484bee18203d7cccdc249bbd19645b1d32f9ee9077e368f711343c49be9ac13a",
+      "byte_exact_copy": true
+    },
+    {
+      "source_path": "art/cartoon/tanker-motion-v1/source-sequence.json",
+      "sha256": "565f9de98842e738ea148687834d380be70f1b7a1c829fecd570ba6f9544a229",
+      "snapshot_path": "art/cartoon/tanker-motion-v2/acceptance/shown-source-sequence.json",
+      "snapshot_sha256": "565f9de98842e738ea148687834d380be70f1b7a1c829fecd570ba6f9544a229",
+      "byte_exact_copy": true
+    },
+    {
+      "source_path": "art/cartoon/tanker-motion-v2/README.md",
+      "sha256": "a4bb1b8c41b3b606b951f60219fe3d8a01496cb4f0d900dab05c4721638bbe81",
+      "snapshot_path": "art/cartoon/tanker-motion-v2/acceptance/shown-README.md",
+      "snapshot_sha256": "a4bb1b8c41b3b606b951f60219fe3d8a01496cb4f0d900dab05c4721638bbe81",
+      "byte_exact_copy": true
+    },
+    {
+      "source_path": "art/cartoon/tanker-motion-v2/build_review.py",
+      "sha256": "d7373323f3b0ff77573a513cb0f7a08e0fbfb76040ed1c6355fd7caf3959192b",
+      "snapshot_path": "art/cartoon/tanker-motion-v2/acceptance/shown-build_review.py",
+      "snapshot_sha256": "d7373323f3b0ff77573a513cb0f7a08e0fbfb76040ed1c6355fd7caf3959192b",
+      "byte_exact_copy": true
+    }
+  ],
+  "review_method": "Isolated source-script replay of 76 draws at the port nominal timing, with unchanged v1 sequence and uniform fitting to original visible bounds; not an original-executable or native-runtime capture.",
+  "scope_limits": {
+    "whole_tanker_appearance_approved": false,
+    "perspective_and_proportions_approved": false,
+    "runtime_canvas_fitting_approved": false,
+    "native_motion_or_integration_approved": false,
+    "production_acceptance": false,
+    "other_frames_approval_inferred": false
+  },
+  "remaining_work": [
+    "Correct the tanker perspective and proportion issues.",
+    "Review the corrected family in motion.",
+    "Complete original-canvas registration and native integration validation at the agreed bulk milestone."
+  ],
+  "snapshot_note": "Copies preserve the exact shown metadata and page before the dated README acceptance append. They are archival snapshots; the copied HTML is not a standalone published preview. Original files and PNGs were not changed."
+}

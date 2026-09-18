@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "status": "draft_rotation_review",
+  "resource": "TANKER.BMP",
+  "frame": "001",
+  "version": 4,
+  "tool": "built-in image_gen",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/001-generated-v4.png",
+    "sha256": "5ecaa0d290af13bdc621258ee7ed0b0e17b149db89f9c1b4565091bc32b2994b",
+    "canvas": [
+      1827,
+      861
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      0,
+      87,
+      1747,
+      837
+    ],
+    "meaningful_bounds_alpha8": [
+      109,
+      89,
+      1743,
+      805
+    ],
+    "visible_width_height_ratio": 2.282123
+  },
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/001-v4-request.json",
+    "sha256": "34a0dcb9eb84849ab7188d86e0cf473105023df203d1eade9ce1f3e488ad8c6a"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/001-generated-v3.png",
+      "sha256": "f7bbf72679ffea487c91a3bc8a78bef9d4d0de482be1b5650ef9dbf8127f848a"
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/001.png",
+    "sha256": "6139d7c983b22affc1cb082b1fe4a502413c7b5b7afda3e2ccc953b0e049f8a3"
+  },
+  "approval": null,
+  "production_package_changed": false,
+  "image_processing": "Exact copy of returned PNG; no resampling, recoloring or alpha changes.",
+  "visual_observation": "Stern view or stern-quarter draft with the elevated long bar and outside posts absent. Revised cabin height, foreshortened side and visible transom require review in source-sequence motion. Numeric silhouette ratio alone does not establish correct yaw or registration.",
+  "deferred_work": [
+    "Human rotation and vessel continuity review",
+    "Final original-canvas fitting and registration",
+    "Bulk native smoke tests and regressions"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "status": "draft_yaw_and_proportions_correction_pending",
+  "resource": "TANKER.BMP",
+  "frame": "009",
+  "version": 3,
+  "tool": "built-in image_gen",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/009-generated-v3.png",
+    "sha256": "d082df1be5e0791df07e837ecc30a7c8dabf39e42c2c3509367dfc89f03e539b",
+    "canvas": [
+      2076,
+      757
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      253,
+      39,
+      1913,
+      757
+    ],
+    "meaningful_bounds_alpha8": [
+      256,
+      49,
+      1910,
+      718
+    ],
+    "meaningful_width_height_ratio": 2.4723
+  },
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/009-v3-request.json",
+    "sha256": "7a5cad9b9b4f747d8d734fa84e6e3a0e24a20431cb3184aaad2727c037df1514"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/009-generated-v2.png",
+      "sha256": "b951eee5011885a2e203b92590edf246c7104ad456cdb0a3ef8cbdf9e632dc4d",
+      "role": "cartoon_edit_target"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/009.png",
+      "sha256": "6b3d22b304925ec18a67dab3f3246a1b3fbf78b546103fbf4c3822f46299f30c",
+      "role": "authoritative_original_pose_nearest8"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/010-generated-v2.png",
+      "sha256": "a62636f8b34e1214184659524db3ee7d259bdb421ab1e0a580a2e4eac13bf79d",
+      "role": "neighbor010_bow_structure_guide"
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/009.png",
+    "sha256": "37cf4337d842905c69b635cfdf434cb8f1158d36ee32dfbd6091f693e0c27df0"
+  },
+  "cache_source": "C:\\Users\\Admin\\.codex\\generated_images\\01a0b1cf-c378-7ab3-84ca-0fa87a778b92\\exec-9cada6c7-7fa1-4e8d-a0ed-aa130278c306.png",
+  "approval": null,
+  "production_package_changed": false,
+  "image_processing": "Exact copy of returned PNG; no resampling, recoloring or alpha changes.",
+  "visual_observation": "More visible foredeck and rounded left foreground bow than v2; right side recedes and shortens. Compact forward tower and color identity remain. This is an intermediate correction; transition continuity against 008 and 010 still requires motion review.",
+  "deferred_work": [
+    "Human review of intermediate bow-quarter angle",
+    "Sequence continuity against neighboring angles",
+    "Original-canvas fitting and native motion during bulk integration"
+  ]
+}

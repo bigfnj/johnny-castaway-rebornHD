@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "status": "retained_intermediate_proportion_draft",
+  "resource": "TANKER.BMP",
+  "frame": "000",
+  "version": 3,
+  "tool": "built-in image_gen",
+  "raw": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/000-generated-v3.png",
+    "sha256": "912ff60b58298e147e278c6ed4e598340a7ed795a4e8768f7df5eabf09d7293a",
+    "canvas": [
+      1819,
+      865
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds": [
+      377,
+      135,
+      1596,
+      809
+    ],
+    "meaningful_bounds_alpha8": [
+      379,
+      137,
+      1440,
+      773
+    ],
+    "visible_width_height_ratio": 1.668239
+  },
+  "request": {
+    "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/000-v3-request.json",
+    "sha256": "c10ffe7d17c6c5b74cd065210f7a5bda49f7167e3446a1518624468f7f1b2b13"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/tanker-v1/generation/TANKER.BMP/000-generated-v2.png",
+      "sha256": "a3238879a749be8a49087d0298bbefd48a66cdd6e15f829bb6035776a04f6f61"
+    },
+    {
+      "path": "art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/000.png",
+      "sha256": "bc3acccd7f9c714135be47aeac19d73907d906df2a3e2a0aad0e14458540adae"
+    }
+  ],
+  "original": {
+    "path": "art/cartoon/tanker-v1/reference/original/TANKER.BMP/000.png",
+    "sha256": "a482a25d47b8db5cc6487492e2daddc059bf017b2787b59497424bd2cce79f4c"
+  },
+  "approval": null,
+  "production_package_changed": false,
+  "image_processing": "Exact copy of returned PNG; no resampling, recoloring or alpha changes.",
+  "visual_observation": "Stern view or stern-quarter draft with the elevated long bar and outside posts absent. Revised cabin height, foreshortened side and visible transom require review in source-sequence motion. Numeric silhouette ratio alone does not establish correct yaw or registration.",
+  "deferred_work": [
+    "Human rotation and vessel continuity review",
+    "Final original-canvas fitting and registration",
+    "Bulk native smoke tests and regressions"
+  ]
+}

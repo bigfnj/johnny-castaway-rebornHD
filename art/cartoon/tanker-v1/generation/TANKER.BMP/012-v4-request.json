@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "resource": "TANKER.BMP",
+  "frame": 12,
+  "version": 4,
+  "tool": "built-in image_gen.imagegen",
+  "use_case": "image-edit",
+  "reason": "Targeted follow-up to v3 overshoot: reduce obliqueness and visible width while retaining a smaller right-offset cabin.",
+  "prompt": "Make one targeted revision to tanker sprite image 1, preserving its red/ivory/black palette and cartoon linework. Image 2 is exact original frame 012 enlarged by nearest-neighbor, the authority for view family and proportions. Image 3 is frame 013, a bow-shape and ship-design reference ONLY, not the required symmetric angle. Correct image 1 from its overly long oblique view to a NEARLY BOW-ON view: rotate the ship toward the viewer so the visible long side becomes much shorter. The bow should be the main readable face, a broad rounded squat red bow with a coherent shallow central ridge. Do not make a side-view hull. Keep a subtle yaw so it is NOT perfectly mirror symmetric: a little more hull width extends left, and the compact ivory cabin/funnel group remains slightly RIGHT of the bow center, but much less far right than in image 1. Aim for the cabin/funnel axis around 60 percent of the full visible ship width rather than the present roughly 76 percent. The entire visible ship silhouette from hull tip to hull tip and from funnel cap to keel should be width:height about 2.00, not image 1's 2.406. Narrow the elongated left span without making the superstructure tall or the bow narrow. Use image 3's clean frontal bow curvature and the same red hull, deep red lower band, ivory cabin, blue-black small windows, black-capped red funnel, dark outlines and upper-left cel lighting; do not simply copy its exactly head-on camera. Keep deck structures compact and uncluttered. No raised full-width red crossbar/rail or row of extra posts. No new antenna, scene, ocean, wake, smoke, cast shadow, glow, text or border. Isolated single high-resolution sprite, all extremities inside generous transparent margins, genuine RGBA transparent background. This changes camera/proportion only, not the ship identity.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/tanker-v1/generation/TANKER.BMP/012-generated-v3.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/tanker-v1/reference/nearest8/TANKER.BMP/012.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/tanker-v1/generation/TANKER.BMP/013-generated-v1.png"
+  ],
+  "output_file": "art/cartoon/tanker-v1/generation/TANKER.BMP/012-generated-v4.png",
+  "status": "draft_pending_visual_review",
+  "pixel_edits_after_generation": false
+}
