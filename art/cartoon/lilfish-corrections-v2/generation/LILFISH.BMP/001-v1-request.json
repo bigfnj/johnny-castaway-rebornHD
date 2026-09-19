@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "resource": "LILFISH.BMP",
+  "frame": "001",
+  "version": 1,
+  "tool": "builtin image_gen",
+  "use_case": "precise-object-edit",
+  "prompt": "Create exactly one corrected cartoon fish sprite. Image1 is the exact original anatomy/pose authority. Image2 is a REJECTED draft: use only its bright leaf-green scales, golden-yellow belly, golden-orange fins, white eye, crisp dark outline and restrained cel shading. Image3 documents the user's comparison, not a layout to reproduce. Correct the anatomical roll of the arched leaping fish to image1. This is the moment AFTER jumping up when it starts falling BACKWARDS ONTO ITS BACK. Keep head HIGH-RIGHT and curled tail LOW-LEFT as the original; do not mirror those overall endpoints. Reorient the anatomy: pale yellow belly faces LEFT and slightly upward along the inner curve, green back and orange dorsal/back fin run on the RIGHT outer curve. The visible eye is high on the RIGHT-facing surface of the head, while the small single mouth is on its LEFT-facing snout edge. It should read as a fish tipping backward onto its right-side back, not a right-facing fish swimming upward. Preserve the original body curvature and eye/fin placement, exactly one mouth. Retain one visible eye matching original location, no extra eyes, and clean fins/tail. Truly transparent RGBA background; no scenery, water, spray, ground, shadow, glow, haze, text, checkerboard or comparison panel. Full fish only, uncropped with transparent margin. Do not preserve the incorrect anatomy of image2.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/001.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/001-generated-v1.png",
+    "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-0dde8f22-f372-4e41-86cd-ed49251de57b.png"
+  ],
+  "ordered_references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/001.png",
+      "sha256": "f9844f81e1d8dbb0bb4a843b4cffda60af371e6ec32a92bcc41a29d490df314a",
+      "role": "authoritative original geometry and anatomy, nearest-neighbor enlargement"
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/001-generated-v1.png",
+      "sha256": "dfa3f288b6d90fbf942301a61a2fece35c29c43422a687280ebdc4246a42fa90",
+      "role": "rejected prior draft: colors and linework only, orientation and mouth must change"
+    },
+    {
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-0dde8f22-f372-4e41-86cd-ed49251de57b.png",
+      "sha256": "a53ab20e3b2edcdb196b9b337013554732d6bfbdca67e08c4a004c214f688b81",
+      "role": "user feedback screenshot: rejected draft above original comparison"
+    }
+  ],
+  "source_original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/001.png",
+    "sha256": "f54945c53010c8d6ca178322368680a074fe5ac1ceb2fd15a35d7adf1e2b41d4"
+  },
+  "output_path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/001-generated-v1.png"
+}

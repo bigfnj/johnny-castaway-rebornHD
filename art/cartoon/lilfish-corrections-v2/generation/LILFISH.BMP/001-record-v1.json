@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "resource": "LILFISH.BMP",
+  "frame": "001",
+  "version": 1,
+  "tool": "builtin image_gen",
+  "status": "generated correction draft; human approval pending",
+  "request": {
+    "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/001-v1-request.json",
+    "sha256": "1f5df5970b9b3c7d3714a5de243e4f8aa0d7614e2b5d5b48b47d112bbe148f2c",
+    "saved_before_generation": true
+  },
+  "output": {
+    "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/001-generated-v1.png",
+    "sha256": "b8cf3d29afc697bfbbdc940970af7b0ff2bfc4fc048262c9495879e2b72eb6d5"
+  },
+  "raw_cache": {
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-55bc2d96-7abf-40c1-80bb-42d591e71c41.png",
+    "sha256": "b8cf3d29afc697bfbbdc940970af7b0ff2bfc4fc048262c9495879e2b72eb6d5"
+  },
+  "copied_byte_exact": true,
+  "postprocessing": "None; raw bytes and alpha preserved.",
+  "source_original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/001.png",
+    "sha256": "f54945c53010c8d6ca178322368680a074fe5ac1ceb2fd15a35d7adf1e2b41d4"
+  },
+  "original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/001.png",
+    "sha256": "f54945c53010c8d6ca178322368680a074fe5ac1ceb2fd15a35d7adf1e2b41d4"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/001.png",
+      "sha256": "f9844f81e1d8dbb0bb4a843b4cffda60af371e6ec32a92bcc41a29d490df314a",
+      "role": "authoritative original geometry and anatomy, nearest-neighbor enlargement"
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/001-generated-v1.png",
+      "sha256": "dfa3f288b6d90fbf942301a61a2fece35c29c43422a687280ebdc4246a42fa90",
+      "role": "rejected prior draft: colors and linework only, orientation and mouth must change"
+    },
+    {
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-0dde8f22-f372-4e41-86cd-ed49251de57b.png",
+      "sha256": "a53ab20e3b2edcdb196b9b337013554732d6bfbdca67e08c4a004c214f688b81",
+      "role": "user feedback screenshot: rejected draft above original comparison"
+    }
+  ],
+  "ordered_references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/001.png",
+      "sha256": "f9844f81e1d8dbb0bb4a843b4cffda60af371e6ec32a92bcc41a29d490df314a",
+      "role": "authoritative original geometry and anatomy, nearest-neighbor enlargement"
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/001-generated-v1.png",
+      "sha256": "dfa3f288b6d90fbf942301a61a2fece35c29c43422a687280ebdc4246a42fa90",
+      "role": "rejected prior draft: colors and linework only, orientation and mouth must change"
+    },
+    {
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-0dde8f22-f372-4e41-86cd-ed49251de57b.png",
+      "sha256": "a53ab20e3b2edcdb196b9b337013554732d6bfbdca67e08c4a004c214f688b81",
+      "role": "user feedback screenshot: rejected draft above original comparison"
+    }
+  ],
+  "pixels": {
+    "mode": "RGBA",
+    "canvas": [
+      1160,
+      1355
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha_bounds_by_threshold": {
+      "1": [
+        108,
+        19,
+        1120,
+        1289
+      ],
+      "8": [
+        110,
+        94,
+        1117,
+        1269
+      ],
+      "128": [
+        111,
+        95,
+        1117,
+        1268
+      ],
+      "255": [
+        112,
+        97,
+        1116,
+        1267
+      ]
+    },
+    "alpha8_bounds": [
+      110,
+      94,
+      1117,
+      1269
+    ],
+    "edge_alpha_max": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+    }
+  },
+  "observations": [
+    "Head high-right and tail low-left preserved. Belly/mouth face left/up, dorsal back fin right; reads as beginning to tip backward. One visible eye and one mouth."
+  ],
+  "limits": "Source anatomy interpreted from diagnostic original pixels. Not runtime fitting, native integration, animation or human approval.",
+  "user_feedback_durable": {
+    "path": "art/cartoon/lilfish-corrections-v2/reference/user-feedback/001.png",
+    "sha256": "a53ab20e3b2edcdb196b9b337013554732d6bfbdca67e08c4a004c214f688b81",
+    "role": "Exact copy of user screenshot retained by root"
+  }
+}

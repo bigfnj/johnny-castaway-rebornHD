@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "resource": "LILFISH.BMP",
+  "frame": "000",
+  "version": 2,
+  "tool": "builtin image_gen",
+  "status": "generated correction draft; human approval pending",
+  "request": {
+    "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/000-v2-request.json",
+    "sha256": "2175d1a61d9fec0c5c1401df0ed18c856d1d15e66e1ca9a07ac131c513ea16dc",
+    "saved_before_generation": true
+  },
+  "output": {
+    "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/000-generated-v2.png",
+    "sha256": "69a35095bf7d2b548537ef0fecf1ff3648acb84fab18abcea8f93910c187fe8e"
+  },
+  "raw_cache": {
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-fa9c1aab-1949-450a-af7a-2b8da5ab062f.png",
+    "sha256": "69a35095bf7d2b548537ef0fecf1ff3648acb84fab18abcea8f93910c187fe8e"
+  },
+  "copied_byte_exact": true,
+  "postprocessing": "None; raw bytes and alpha preserved.",
+  "source_original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/000.png",
+    "sha256": "fc1beac76a0ef591728570b685a868411b66e7e22b5d2c600c002e9327454da8"
+  },
+  "original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/000.png",
+    "sha256": "fc1beac76a0ef591728570b685a868411b66e7e22b5d2c600c002e9327454da8"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/000-generated-v1.png",
+      "sha256": "3397ca98db5d8f1f0385948dfa71a1670b03beae95ce0484e4408901cf5a983b",
+      "role": "edit target; correct anatomical sides retained"
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/000.png",
+      "sha256": "c30545d9f3e3a863650298cb6f23d5e0cf2a554dba608fb57bfea32b9278123f",
+      "role": "exact original anatomy authority"
+    }
+  ],
+  "ordered_references": [
+    {
+      "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/000-generated-v1.png",
+      "sha256": "3397ca98db5d8f1f0385948dfa71a1670b03beae95ce0484e4408901cf5a983b",
+      "role": "edit target; correct anatomical sides retained"
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/000.png",
+      "sha256": "c30545d9f3e3a863650298cb6f23d5e0cf2a554dba608fb57bfea32b9278123f",
+      "role": "exact original anatomy authority"
+    }
+  ],
+  "pixels": {
+    "mode": "RGBA",
+    "canvas": [
+      1024,
+      1536
+    ],
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bounds_by_threshold": {
+      "1": [
+        171,
+        35,
+        962,
+        1500
+      ],
+      "8": [
+        255,
+        37,
+        800,
+        1490
+      ],
+      "128": [
+        255,
+        38,
+        800,
+        1489
+      ],
+      "255": null
+    },
+    "alpha8_bounds": [
+      255,
+      37,
+      800,
+      1490
+    ],
+    "edge_alpha_max": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+    }
+  },
+  "observations": [
+    "Single short closed mouth line at left-facing snout, without the earlier second protruding lip. Source anatomical sides retained: eye upper-right, belly/face left, dorsal back fin right, tail below."
+  ],
+  "limits": "Source anatomy interpreted from diagnostic original pixels. Not runtime fitting, native integration, animation or human approval.",
+  "user_feedback_durable": {
+    "path": "art/cartoon/lilfish-corrections-v2/reference/user-feedback/000.png",
+    "sha256": "db771f8d7ba85b2b74891c564086392bb353b9898c22bbfdd7a8fcd958f95b2b",
+    "role": "Exact copy of user screenshot retained by root"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-18",
+  "scope": "Five-drawing appearance preview only",
+  "url": "http://127.0.0.1:8941/lilfish-corrections-v2/review.html",
+  "browser": {
+    "surface": "Codex in-app browser",
+    "loaded_panels": 15,
+    "ready_text": "5 of 5 comparisons ready.",
+    "light_and_dark_checkerboards_observed": true,
+    "frame_008_anchor_observed": true,
+    "final_frame": "000",
+    "final_dark_background": false,
+    "error_logs": []
+  },
+  "readback": {
+    "sha256_bindings": 112,
+    "mismatches": [],
+    "prior_42_drawing_review_unchanged": true,
+    "production_archive_unchanged": true,
+    "production_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+  },
+  "javascript_syntax": "node --check review.js passed",
+  "visual_inspection": {
+    "all_five_selected_drawings_inspected": true,
+    "008_second_reader": "Four distinct heads; lower-right sunglasses; far-right tail; central crossing reads as overlap, with no concrete duplicated or fused-body defect found.",
+    "limits": "Human appearance review remains pending. Occluded anatomy is inferred from the source; no pixel-exact geometry or native motion claim."
+  },
+  "human_approval": null,
+  "native_export_or_testing": false,
+  "full_smoke_regression_audit": false
+}

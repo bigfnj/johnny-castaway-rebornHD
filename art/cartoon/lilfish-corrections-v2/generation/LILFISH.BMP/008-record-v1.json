@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "resource": "LILFISH.BMP",
+  "frame": "008",
+  "version": 1,
+  "status": "awaiting_human_appearance_review",
+  "tool": "built-in image_gen.imagegen",
+  "request": {
+    "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/008-v1-request.json",
+    "sha256": "d03fd8c2469338fc88150a66a298fbd01dfd44553038392edc36c681a0aa2e09"
+  },
+  "output": {
+    "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/008-generated-v1.png",
+    "sha256": "046d7af947376fa1c3653cd034dcad5107f49aa9157a948ea5f9719272191420"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/008.png",
+      "sha256": "0ac3424f412bca9ade0f817fce02d1bbca18f7b98dc111e527d49368e7630718"
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/005-generated-v1.png",
+      "sha256": "c69df24a1f28ef18f77bc5c3a24b3b57d4abb70c3afdcde3c24781c47bc1869e"
+    },
+    {
+      "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/006-generated-v1.png",
+      "sha256": "5546225a35660446ee93c0e436863f67a437c3ffd1001d57293ec97626bbd272"
+    }
+  ],
+  "reference_roles": [
+    "Exact original arrangement",
+    "Cartoon fish identity only",
+    "Sunglasses material and fish identity"
+  ],
+  "original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/008.png",
+    "sha256": "b6d8fefaf0f90d2ddda52e5b084c1f2e1b2cd9618cf9ae4dbec9b9247f2bc4df"
+  },
+  "feedback": {
+    "path": "art/cartoon/lilfish-corrections-v2/feedback.json",
+    "sha256": "460afc1d148af87e5ad90f42b37348f1824baec3e4c066917ad46b3fc9458cb8"
+  },
+  "raw_cache_path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-33a67e5a-2ab9-4511-bf6b-0d5f7ee4233c.png",
+  "raw_cache_sha256": "046d7af947376fa1c3653cd034dcad5107f49aa9157a948ea5f9719272191420",
+  "copied_byte_exact": true,
+  "postprocessing": "None",
+  "pixels": {
+    "mode": "RGBA",
+    "canvas": [
+      2172,
+      724
+    ],
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha8_bounds": [
+      114,
+      77,
+      2058,
+      664
+    ]
+  },
+  "inspection": "Four heads and four mouths. Left normal fish, lower-left normal fish, lower-right sunglasses fish, upper-right normal fish. Far-right extent is a tail. Bodies overlap with drawn occlusion boundaries; final anatomy remains for human judgment.",
+  "approval": null,
+  "native_testing": false,
+  "production_package_changed": false
+}

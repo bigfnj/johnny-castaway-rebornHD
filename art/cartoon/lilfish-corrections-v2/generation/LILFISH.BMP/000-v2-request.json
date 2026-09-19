@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "resource": "LILFISH.BMP",
+  "frame": "000",
+  "version": 2,
+  "tool": "builtin image_gen",
+  "use_case": "precise-object-edit",
+  "prompt": "Precise local sprite edit of image1: keep the entire upright fish pose, visible eye at upper-right, pale yellow belly on LEFT, green back and orange dorsal fin on RIGHT, tail below and every fin position. Change ONLY the mouth/snout shape. It currently has two stacked protrusions that can read as two mouths. Replace those with ONE simple compact left-facing rounded snout and ONE short closed mouth line at the green/yellow boundary. Remove the separate green nose-like protrusion above the mouth and the exaggerated yellow pouting lower lip. No second notch, duplicated lip, open cavity or extra smile anywhere. Do not mirror or rotate the fish. Image2 confirms anatomy and overall pose only. Preserve the same green/orange identity and dark outlines, transparent RGBA, no outside glow or shadow, whole sprite uncropped.",
+  "referenced_image_paths": [
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/000-generated-v1.png",
+    "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/000.png"
+  ],
+  "ordered_references": [
+    {
+      "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/000-generated-v1.png",
+      "sha256": "3397ca98db5d8f1f0385948dfa71a1670b03beae95ce0484e4408901cf5a983b",
+      "role": "edit target; correct anatomical sides retained"
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/000.png",
+      "sha256": "c30545d9f3e3a863650298cb6f23d5e0cf2a554dba608fb57bfea32b9278123f",
+      "role": "exact original anatomy authority"
+    }
+  ],
+  "source_original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/000.png",
+    "sha256": "fc1beac76a0ef591728570b685a868411b66e7e22b5d2c600c002e9327454da8"
+  },
+  "output_path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/000-generated-v2.png"
+}

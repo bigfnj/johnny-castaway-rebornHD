@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "resource": "LILFISH.BMP",
+  "frame": 7,
+  "version": 1,
+  "status": "draft sunglasses and source-anatomy correction pending human review",
+  "generator": "built-in image_gen",
+  "request": {
+    "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/007-v1-request.json",
+    "sha256": "39e7c5f42340d509706b7f3b597d88cd816fa954e9d88e7dca038428d8b79dc6"
+  },
+  "output": {
+    "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/007-generated-v1.png",
+    "sha256": "ec80031cdfdf5b750f615dbb1cbf5e65b1e0b094a109ac879e147ccd3c86ae05"
+  },
+  "raw_cache": {
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-83f713b4-2d2e-4171-a48f-852f52b6d2ed.png",
+    "sha256": "ec80031cdfdf5b750f615dbb1cbf5e65b1e0b094a109ac879e147ccd3c86ae05"
+  },
+  "raw_bytes_copied_unchanged": true,
+  "source_original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/007.png",
+    "sha256": "a5a212c1edcea57ca46599a2df912139a451060d0f991b6c98a5c2025ef31dfb"
+  },
+  "prior_record": {
+    "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/007-record-v1.json",
+    "sha256": "c3169746ef126497848681035f2874f605e5597f69a2af1e43dad14104e9556d"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/generation/LILFISH.BMP/007-generated-v1.png",
+      "sha256": "19bd57849848f71f3aff676f81348a7effb7678fce38637a1e8f94bf3233e35a"
+    },
+    {
+      "path": "art/cartoon/gulls-fish-batch-v1/reference/nearest8/LILFISH.BMP/007.png",
+      "sha256": "a32622f3c63882193d5f5fdc11f97e232cc87ddf5a4cdd95e231633fa92f8268"
+    },
+    {
+      "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/006-generated-v1.png",
+      "sha256": "5546225a35660446ee93c0e436863f67a437c3ffd1001d57293ec97626bbd272"
+    }
+  ],
+  "image": {
+    "mode": "RGBA",
+    "canvas": [
+      2167,
+      725
+    ],
+    "alpha_min": 0,
+    "alpha_max": 255,
+    "transparent_pixels": 986406,
+    "alpha8_bounds_xyxy": [
+      35,
+      45,
+      2124,
+      681
+    ],
+    "alpha8_edge_pixels": 0
+  },
+  "original_anatomy": {
+    "canvas": [
+      48,
+      15
+    ],
+    "left_normal_eye_xy": [
+      5,
+      4
+    ],
+    "new_down_left_normal_eye_xy": [
+      20,
+      6
+    ],
+    "carried_down_right_sunglasses_glint_xy": [
+      34,
+      9
+    ],
+    "new_fish_tail_region_xyxy": [
+      40,
+      7,
+      45,
+      13
+    ],
+    "interpretation": "Far-right source shape is the new third fish tail, not a horizontal head. New fish arches through center above the carried sunglasses fish."
+  },
+  "observations": [
+    "Exactly three heads: far-left normal eye, lower-middle-left downward normal eye, lower-right downward sunglasses.",
+    "The formerly invented far-right horizontal fish head is removed; a curved central fish now runs from the lower-middle-left head to the far-right tail.",
+    "Sunglasses cover only the carried lower-right fish; outer/source normal eyes stay exposed.",
+    "Overlapping bodies are visually separated by occlusion and outline. Hidden portions remain to be assessed during human/native review."
+  ],
+  "limits": "No native placement, runtime export or approval claimed."
+}
