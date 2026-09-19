@@ -17,3 +17,5 @@ All artwork lives in [generation/GJGULL2.BMP](generation/GJGULL2.BMP). Each PNG 
 [Selected versions](selected-versions.json) keeps targeted revisions separate from the earlier drafts. Frames 021/022 v2 restore the slight frontal head turn and two visible eyes. Frames 028/029/033 v2 restore the diagonal trailing cloth instead of copying the hanging reference. Frames 040/041/042 v2 remove extra folded-wing panels. Other selected drawings use v1. The raw earlier versions remain as authoring history.
 
 Appearance review is pending. Native scale, multipart registration, scene animation and bulk smoke/regression testing remain for the integration milestone. This review does not change the production asset archive.
+
+The user subsequently corrected ten poses in [the follow-up review](../gull-clothes-corrections-v2/README.md): five gull views fly away with hidden eyes, four clothing heaps contain black belts, and stick 000 uses one continuous curve. Those instructions supersede the earlier facing and clothing interpretations in this batch's source notes and prompts. The original gallery remains intact as review history.

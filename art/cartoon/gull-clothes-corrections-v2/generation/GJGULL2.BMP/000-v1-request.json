@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Correct the recoil stick to one continuous C-shaped source curve without the extra lower reverse bend.",
+  "arguments": {
+    "referenced_image_paths": ["D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gull-clothes-batch-v1/generation/GJGULL2.BMP/000-generated-v1.png", "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gull-clothes-batch-v1/reference/nearest8/GJGULL2.BMP/000.png", "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gull-clothes-corrections-v2/reference/user-feedback/stick.png"],
+    "prompt": "Use case: precise-object-edit. Image1 is the isolated stick to correct; image2 is exact original curve authority; image3 is the user's screenshot comparison, for reference only. Return ONLY the corrected isolated stick sprite, never the screenshot, page, labels or original. The user says the stick must have ONE CONTINUOUS C-SHAPED CURVE and no second bend at the bottom. Replace the S-like lower section with a single smooth arc of consistent curvature from top endpoint to bottom endpoint. Match image2: the whole slender stick bows to the RIGHT, opening LEFT like a tall right parenthesis; both endpoints lie left of the outer rightmost middle. The lower third continues the same arc sweeping down-left, with no reverse bend, no hook, no kink, no wavy segment and no nearly straight added handle. Keep the existing warm brown wood, crisp dark outline and fine highlight, slender thickness, and short black recoil motion marks at the upper left. Keep the shape smooth with no exaggerated knots changing the outline. Entire stick and marks visible with clear transparent margins. Genuinely transparent RGBA background, no shadow, ground, glow, text or checkerboard. One image and one stick only."
+  }
+}
