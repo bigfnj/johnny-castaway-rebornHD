@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-19",
+  "scope": "Two shape-change appearance comparisons only",
+  "url": "http://127.0.0.1:8941/lilfish-shape-v3/review.html",
+  "browser": {
+    "surface": "Codex in-app browser",
+    "loaded_panels": 4,
+    "ready_text": "2 of 2 comparisons ready.",
+    "both_drawings_inspected_on_page": true,
+    "light_and_dark_checkerboards_checked": true,
+    "007_anchor_checked": true,
+    "final_frame": "000",
+    "final_dark_background": false,
+    "error_logs": []
+  },
+  "readback": {
+    "sha256_bindings": 43,
+    "mismatches": [],
+    "earlier_reviews_unchanged": true,
+    "production_archive_unchanged": true,
+    "production_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+  },
+  "javascript_syntax": "node --check review.js passed",
+  "visual_observations": {
+    "000": "Rounded crown without the two lobes; actual left mouth remains. Pose retention was judged visually, not by claiming pixel-identical unchanged regions.",
+    "007": "Four compact independent fish; sunglasses only on the lower-right fish, facing down-right. No continuous elongated arch."
+  },
+  "count_limit": "User-directed four-fish alternative for original007's three-fish catch. Native source count and script are unchanged.",
+  "human_approval": null,
+  "native_export_or_testing": false,
+  "full_smoke_regression_audit": false
+}

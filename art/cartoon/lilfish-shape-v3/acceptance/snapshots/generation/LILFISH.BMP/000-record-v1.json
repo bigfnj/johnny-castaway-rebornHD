@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "resource": "LILFISH.BMP",
+  "frame": "000",
+  "version": 1,
+  "tool": "builtin image_gen",
+  "status": "generated narrow crown correction; human review pending",
+  "request": {
+    "path": "art/cartoon/lilfish-shape-v3/generation/LILFISH.BMP/000-v1-request.json",
+    "sha256": "a885656a0228917a9850a97fefcc4bbcf7e052cf73d7c1f21afa8428c577fdc7",
+    "saved_before_generation": true
+  },
+  "output": {
+    "path": "art/cartoon/lilfish-shape-v3/generation/LILFISH.BMP/000-generated-v1.png",
+    "sha256": "bbe21e0402ad12b742d63531970573635535a7880328a29277188457888cd61f"
+  },
+  "raw_cache": {
+    "path": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-3861fd01-b54a-40d7-b510-d15acc34ccc9.png",
+    "sha256": "bbe21e0402ad12b742d63531970573635535a7880328a29277188457888cd61f"
+  },
+  "copied_byte_exact": true,
+  "postprocessing": "None; exact tool output bytes and alpha preserved.",
+  "references": [
+    {
+      "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/000-generated-v2.png",
+      "sha256": "69a35095bf7d2b548537ef0fecf1ff3648acb84fab18abcea8f93910c187fe8e",
+      "role": "edit target; preserve every part except crown silhouette"
+    },
+    {
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-5ffb0d35-09a5-40ae-8bc9-dfd4c79efa16.png",
+      "sha256": "25bc6656412117f8db4df49c3024621b315ea02fdf67e58ab292765cca528e69",
+      "role": "user green circle identifies ONLY the two-lobed crown above eye; annotation must not appear in output"
+    }
+  ],
+  "ordered_references": [
+    {
+      "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/000-generated-v2.png",
+      "sha256": "69a35095bf7d2b548537ef0fecf1ff3648acb84fab18abcea8f93910c187fe8e",
+      "role": "edit target; preserve every part except crown silhouette"
+    },
+    {
+      "path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-5ffb0d35-09a5-40ae-8bc9-dfd4c79efa16.png",
+      "sha256": "25bc6656412117f8db4df49c3024621b315ea02fdf67e58ab292765cca528e69",
+      "role": "user green circle identifies ONLY the two-lobed crown above eye; annotation must not appear in output"
+    }
+  ],
+  "source_original": {
+    "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/000.png",
+    "sha256": "fc1beac76a0ef591728570b685a868411b66e7e22b5d2c600c002e9327454da8"
+  },
+  "pixels": {
+    "mode": "RGBA",
+    "canvas": [
+      1024,
+      1536
+    ],
+    "alpha_range": [
+      0,
+      254
+    ],
+    "alpha_bounds_by_threshold": {
+      "1": [
+        65,
+        85,
+        1010,
+        1492
+      ],
+      "8": [
+        264,
+        87,
+        800,
+        1490
+      ],
+      "128": [
+        264,
+        88,
+        800,
+        1489
+      ],
+      "255": null
+    },
+    "alpha8_bounds": [
+      264,
+      87,
+      800,
+      1490
+    ],
+    "edge_alpha_max": {
+      "top": 0,
+      "bottom": 0,
+      "left": 0,
+      "right": 0
+    }
+  },
+  "observations": [
+    "Both crown lobes and the notch above the eye are replaced by a continuous rounded dome.",
+    "The actual left-side short mouth line remains, with eye position, belly-left/back-right anatomy, fins, tail and upright pose visually retained."
+  ],
+  "limits": "Local-edit intent checked visually; not an assertion of pixel-exact identity outside the crown. No export, native integration or human approval claimed.",
+  "user_feedback_durable": {
+    "path": "art/cartoon/lilfish-shape-v3/reference/user-feedback/000.png",
+    "sha256": "25bc6656412117f8db4df49c3024621b315ea02fdf67e58ab292765cca528e69"
+  }
+}

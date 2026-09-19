@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-19",
+  "exact_user_text": "the top right fish has to much of an elongated body, maybe just make it a 4th fish. in 000 that bump i circled in green looks like a 2nd mouth, smooth it out",
+  "frames": [
+    {
+      "frame": "000",
+      "screenshot": {
+        "path": "art/cartoon/lilfish-shape-v3/reference/user-feedback/000.png",
+        "sha256": "25bc6656412117f8db4df49c3024621b315ea02fdf67e58ab292765cca528e69"
+      },
+      "prior_raw": {
+        "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/000-generated-v2.png",
+        "sha256": "69a35095bf7d2b548537ef0fecf1ff3648acb84fab18abcea8f93910c187fe8e"
+      },
+      "original": {
+        "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/000.png",
+        "sha256": "fc1beac76a0ef591728570b685a868411b66e7e22b5d2c600c002e9327454da8"
+      }
+    },
+    {
+      "frame": "007",
+      "screenshot": {
+        "path": "art/cartoon/lilfish-shape-v3/reference/user-feedback/007.png",
+        "sha256": "db2de9b26f626ad0fbe594698269069737460f387195d76df4996d82b6e26b4a"
+      },
+      "prior_raw": {
+        "path": "art/cartoon/lilfish-corrections-v2/generation/LILFISH.BMP/007-generated-v1.png",
+        "sha256": "ec80031cdfdf5b750f615dbb1cbf5e65b1e0b094a109ac879e147ccd3c86ae05"
+      },
+      "original": {
+        "path": "art/cartoon/gulls-fish-batch-v1/reference/original/LILFISH.BMP/007.png",
+        "sha256": "a5a212c1edcea57ca46599a2df912139a451060d0f991b6c98a5c2025ef31dfb"
+      }
+    }
+  ],
+  "prior_review": {
+    "path": "art/cartoon/lilfish-corrections-v2/review-record.json",
+    "sha256": "9791be007e4a2779d1d96dda26b31eee378f4c7e721a122424c6dde6fcf37e9b"
+  },
+  "interpretation": {
+    "000": "Smooth only the two-lobed crown above the eye into a rounded contour. Retain the actual left mouth and corrected body orientation.",
+    "007": "Screenshot identifies selected007. Split its overlong arched fish into two compact individual fish, giving four visible fish as suggested by the user."
+  },
+  "007_count_note": "Explicit art-direction alternative: four generated fish versus three in original007. Keep original source and native catch attribution unchanged; no runtime count acceptance is implied.",
+  "approval": null,
+  "native_testing": "Deferred to bulk integration"
+}
