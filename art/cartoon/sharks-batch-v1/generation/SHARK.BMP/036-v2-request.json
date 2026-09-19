@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Correct image1, the SHARK036 diving sprite, against original pose image2. REMOVE the erroneous isolated gray fin floating at the far RIGHT. There is only ONE shark: the existing continuous gray arched body at left/center, with its head submerged and narrow rear end bending down to right. Also follow original image2's smooth rounded arch: remove the oversized triangular dorsal protrusion added at the top of the arc, since this rolled/submerging original pose does not expose that fin shape. Keep the main continuous arch and attached white/pale-blue splash in their present positions, preserve gray/cream cel shading and black ink. Do not add any new fins, head, eyes, tail pieces, animals or dark water. Outside the arch and source splash is genuinely transparent, including where the detached fin was removed. Keep the same full canvas, original composition and margins. This is a targeted anatomy cleanup, not a new full shark drawing.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/generation/SHARK.BMP/036-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/reference/nearest8/SHARK.BMP/036.png"
+    ]
+  }
+}

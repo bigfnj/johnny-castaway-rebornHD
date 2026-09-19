@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: stylized-concept. Create ONE transparent Cartoon game sprite for GJFFFOOD.BMP frame 017.\nInput 1 is the exact original pose/silhouette/eye-expression/fin and water-boundary authority, shown with a diagnostic pixel palette. Input 2 is ONLY the shared shark identity, gray material palette, pale underside, crisp black ink and clean cel-shading reference. Do not copy input 2's pose, grin or gaze when input 1 differs.\nPOSE: Preserve reference 1's compact curved-turn pose: head at LOWER LEFT facing LEFT with a sly toothy grin and one partly closed visible side eye; torso curves steeply UP on the RIGHT into the forked tail at UPPER RIGHT. The pale belly follows the inside/right-lower curve. Maintain the high raised tail and near-vertical bend, not reference 2's horizontal tail. There is no water patch here.\nRender the original geometry as smooth, clean hand-drawn Cartoon art matching the shared key. Keep one shark only, no people, hands, props, extra tails or duplicated fins. Gray upper body, pale warm-gray/ivory underside, black outlines and restrained cel highlights. Any source-attached water must be white/pale-blue foam and light blue water, with no dark gray shadow, dark puddle or floor. No new water if the source has none. Actual RGBA alpha transparency throughout empty space, no checkerboard, background, atmospheric glow, text or border. Preserve the whole source silhouette and all included detached droplets; add comfortable transparent padding outside the drawing on every side. Do not use transparent padding to straighten or reorient the source pose.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/reference/nearest8/GJFFFOOD.BMP/017.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/generation/GJFFFOOD.BMP/019-generated-v1.png"
+    ]
+  }
+}
