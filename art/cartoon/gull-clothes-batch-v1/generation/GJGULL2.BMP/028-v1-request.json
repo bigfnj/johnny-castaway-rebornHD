@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: style-transfer game sprite. Draw exactly ONE gull carrying clothes, isolated on actual transparent RGBA background. This is GJGULL2 frame 028.\nInput 1: exact original sprite, sole authority for pose geometry, wing phase, yaw, eye visibility, carried cloth shape and overlap. Input 2: approved standing gull identity/style ONLY; do not copy its standing pose, large feet or ground shadow. Input 3: white ragged cloth MATERIAL/style ONLY; do not include its stick or copy its hanging orientation.\nSpecific original pose: Right-facing profile, one visible eye. Both wings are in a lowered stroke: broad nearer wing hangs down at the left of the bird, farther wing slopes down-right from the shoulder. The folded clothes trail diagonally down-left below the beak. Keep these wing-versus-cloth boundaries clear.\nMatch the original's relative silhouette and occupied proportions closely, translating pixel anatomy into smooth clean cartoon shapes. The beak must physically pinch the cloth at the source attachment point; cloth hangs/trails below it as in input1, not tied to a foot or floating separately. The bundle is empty white clothing with pale cool-gray folds, crisp black outline and modest ragged edges. Preserve visible openings/folds and distinguish cloth from the feathered wings. No human skin, hands, arms or legs inside the clothing. Do not add a stick, hat, nest or props absent from input1.\nGull identity: white head and belly, light gray back and wings, charcoal-black feather tips, warm yellow-orange beak and small tucked webbed feet only where visible in the flying original; round dark eye(s) in the correct source positions. Crisp black cartoon outlines, restrained clean cel shading like input2. No extra wings or legs, no exaggerated new expression, no silhouette redesign. Keep the exact source facing and wing angles; do not make each phase identical.\nComposition: complete sprite with about 5 percent clear transparent margin around every wingtip, tail, cloth edge and beak. No cropping. Keep the original's wide/tall aspect of the subject rather than stretching anatomy. Actual transparent background, no scenery, ground, shadows, glow, text, border or checkerboard.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gull-clothes-batch-v1/reference/nearest8/GJGULL2.BMP/028.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gulls-fish-batch-v1/generation/GJGULL1.BMP/009-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gull-clothes-batch-v1/generation/GJGULL2.BMP/017-generated-v1.png"
+    ]
+  }
+}

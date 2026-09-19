@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "status": "human_appearance_approved",
+  "date": "2026-09-19",
+  "user_response": {
+    "verbatim": "approved, lets start the next batch",
+    "url": "http://127.0.0.1:8941/shark-fin-corrections-v2/review.html#frame-035",
+    "context": "Response to the two fin corrections presented together in this review; exact wording and URL supplied by the coordinating task."
+  },
+  "scope": {
+    "approved_drawings": 2,
+    "resource": "GJFFFOOD.BMP",
+    "selected_frames": [
+      "026 v1",
+      "035 v1"
+    ],
+    "approved": [
+      "026 gray external fin below the closed chin, replacing the mistaken pink tongue/open-mouth interpretation.",
+      "035 readable swept gray fin above the mostly submerged body, with less obscuring white/light-blue water."
+    ],
+    "not_approved_by_this_record": [
+      "Other 37 drawings in the preceding 39-shark batch, or earlier rejected versions of these two frames.",
+      "Native export, scale, registration, scene execution, water layering, animation timing or production integration."
+    ],
+    "native_integration": "deferred to later bulk integration and validation"
+  },
+  "source_context": {
+    "observed_head_during_record": "27c97bb2573113ef63e32022d54de3f903c10e54",
+    "worktree_before_record": "git status --short was empty before this acceptance task",
+    "binding_authority": "Exact shown worktree SHA256 values and retained metadata copies; approval scope is not inferred from commit membership."
+  },
+  "selected": [
+    {
+      "resource": "GJFFFOOD.BMP",
+      "frame": "026",
+      "version": 1,
+      "raw": {
+        "path": "art/cartoon/shark-fin-corrections-v2/generation/GJFFFOOD.BMP/026-generated-v1.png",
+        "sha256": "466044ec385e3bc33d658ba5f70319cb0159dafe41e2e3cb9f8027f1c17fbb85"
+      },
+      "request": {
+        "path": "art/cartoon/shark-fin-corrections-v2/generation/GJFFFOOD.BMP/026-v1-request.json",
+        "sha256": "449f7f6f27cdf13563913c78231ff9633bcc0e26074f5d39b720db4630472714"
+      },
+      "generation_record": {
+        "path": "art/cartoon/shark-fin-corrections-v2/generation/GJFFFOOD.BMP/026-record-v1.json",
+        "sha256": "21e7b7ccc97326351908ae53b9d63c5a4296c10fa7336de36577e5217eb2eed5"
+      },
+      "original": {
+        "path": "art/cartoon/sharks-batch-v1/reference/original/GJFFFOOD.BMP/026.png",
+        "sha256": "0691de98567214bcdf3e6357234a0a6bb19b740be732491f4d5d5b578b14616f"
+      },
+      "approved_scope": "appearance of this selected raw fin correction only"
+    },
+    {
+      "resource": "GJFFFOOD.BMP",
+      "frame": "035",
+      "version": 1,
+      "raw": {
+        "path": "art/cartoon/shark-fin-corrections-v2/generation/GJFFFOOD.BMP/035-generated-v1.png",
+        "sha256": "6a19c62066a67715691bfcbc719f614a1d7aaa2139a0ad92e1e7a682bce7f2bc"
+      },
+      "request": {
+        "path": "art/cartoon/shark-fin-corrections-v2/generation/GJFFFOOD.BMP/035-v1-request.json",
+        "sha256": "f2040b192979b520fa9c419b13c83849f906d7f5380da5c1d7319fadedf10d5d"
+      },
+      "generation_record": {
+        "path": "art/cartoon/shark-fin-corrections-v2/generation/GJFFFOOD.BMP/035-record-v1.json",
+        "sha256": "3e40921025c62b70551b72e340b84cdf9ce1f51292fc7f7492bd31de0207d1d6"
+      },
+      "original": {
+        "path": "art/cartoon/sharks-batch-v1/reference/original/GJFFFOOD.BMP/035.png",
+        "sha256": "88a714f2574b0be007cbdeb367c9e977b1ed487a266f1d020e474ab8b983f77e"
+      },
+      "approved_scope": "appearance of this selected raw fin correction only"
+    }
+  ],
+  "shown_review": {
+    "page": {
+      "path": "art/cartoon/shark-fin-corrections-v2/review.html",
+      "sha256": "07c0b16b2305e66504e6eb46844b6d6554b0d13892b0efa12bad95fd7aa9a707"
+    },
+    "data": {
+      "path": "art/cartoon/shark-fin-corrections-v2/review-data.json",
+      "sha256": "8a52bdb4b063322479d8c35c905241b471c573b27c6d6ea689cb02f0a6cc11bc"
+    },
+    "record": {
+      "path": "art/cartoon/shark-fin-corrections-v2/review-record.json",
+      "sha256": "d89e0bd8ad3464adc2c4a30b9770ff6e680211d863a6a611180c2b64d7fe8faa"
+    },
+    "preview_checks": {
+      "path": "art/cartoon/shark-fin-corrections-v2/preview-checks.json",
+      "sha256": "69e3c8ed51f94f8ecb9c3c8de459a4c7e83c64521945ce0e329132874e91feab"
+    },
+    "feedback": {
+      "path": "art/cartoon/shark-fin-corrections-v2/feedback.json",
+      "sha256": "5920088800dc50b7ed6a60f2d40ab65ed389b975dcafc39369c453c1d8169107"
+    },
+    "selected_versions": {
+      "path": "art/cartoon/shark-fin-corrections-v2/selected-versions.json",
+      "sha256": "6a58c91516296d8c3fbe9416d160eee99e9e643f8aca10620d9306a02b693189"
+    },
+    "helpers": [
+      {
+        "path": "art/cartoon/shark-fin-corrections-v2/build_review.py",
+        "sha256": "34dd3616beb03da3fef73eee77882898d1e6a17773b46c1071c223814da18128"
+      },
+      {
+        "path": "art/cartoon/shark-fin-corrections-v2/review.js",
+        "sha256": "bb2ad1fda6d1b3c4038a4dc6fc4f314e68851a81a095d631d03fb86ed7b4de5a"
+      },
+      {
+        "path": "art/cartoon/shark-fin-corrections-v2/review-template.html",
+        "sha256": "61d06013b7e0a881e818225b6a52017483aa241e5c041469d2b6fcaa3314e4e1"
+      },
+      {
+        "path": "art/cartoon/shark-fin-corrections-v2/record_output.py",
+        "sha256": "126e49dc19dbd9614f4a9771d9605f76ac3177e74d3e865e4d339cb2aed8eb14"
+      },
+      {
+        "path": "art/cartoon/shark-fin-corrections-v2/prepare_feedback.py",
+        "sha256": "06cde511d60ba8ae6d7b6d26de6e2d7fceb7b4f77258db87db995fc39d26f106"
+      }
+    ]
+  },
+  "production_archive": {
+    "path": "assets/scrantic_data.zip",
+    "sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+  },
+  "historical_metadata": "Shown review files retain their pre-approval pending status. This separate dated record captures the subsequent human decision.",
+  "snapshots": [
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/review.html",
+        "sha256": "07c0b16b2305e66504e6eb46844b6d6554b0d13892b0efa12bad95fd7aa9a707"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/review.html",
+        "sha256": "07c0b16b2305e66504e6eb46844b6d6554b0d13892b0efa12bad95fd7aa9a707"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/review.js",
+        "sha256": "bb2ad1fda6d1b3c4038a4dc6fc4f314e68851a81a095d631d03fb86ed7b4de5a"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/review.js",
+        "sha256": "bb2ad1fda6d1b3c4038a4dc6fc4f314e68851a81a095d631d03fb86ed7b4de5a"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/review-data.json",
+        "sha256": "8a52bdb4b063322479d8c35c905241b471c573b27c6d6ea689cb02f0a6cc11bc"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/review-data.json",
+        "sha256": "8a52bdb4b063322479d8c35c905241b471c573b27c6d6ea689cb02f0a6cc11bc"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/review-record.json",
+        "sha256": "d89e0bd8ad3464adc2c4a30b9770ff6e680211d863a6a611180c2b64d7fe8faa"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/review-record.json",
+        "sha256": "d89e0bd8ad3464adc2c4a30b9770ff6e680211d863a6a611180c2b64d7fe8faa"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/preview-checks.json",
+        "sha256": "69e3c8ed51f94f8ecb9c3c8de459a4c7e83c64521945ce0e329132874e91feab"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/preview-checks.json",
+        "sha256": "69e3c8ed51f94f8ecb9c3c8de459a4c7e83c64521945ce0e329132874e91feab"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/build_review.py",
+        "sha256": "34dd3616beb03da3fef73eee77882898d1e6a17773b46c1071c223814da18128"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/build_review.py",
+        "sha256": "34dd3616beb03da3fef73eee77882898d1e6a17773b46c1071c223814da18128"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/review-template.html",
+        "sha256": "61d06013b7e0a881e818225b6a52017483aa241e5c041469d2b6fcaa3314e4e1"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/review-template.html",
+        "sha256": "61d06013b7e0a881e818225b6a52017483aa241e5c041469d2b6fcaa3314e4e1"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/feedback.json",
+        "sha256": "5920088800dc50b7ed6a60f2d40ab65ed389b975dcafc39369c453c1d8169107"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/feedback.json",
+        "sha256": "5920088800dc50b7ed6a60f2d40ab65ed389b975dcafc39369c453c1d8169107"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/selected-versions.json",
+        "sha256": "6a58c91516296d8c3fbe9416d160eee99e9e643f8aca10620d9306a02b693189"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/selected-versions.json",
+        "sha256": "6a58c91516296d8c3fbe9416d160eee99e9e643f8aca10620d9306a02b693189"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/record_output.py",
+        "sha256": "126e49dc19dbd9614f4a9771d9605f76ac3177e74d3e865e4d339cb2aed8eb14"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/record_output.py",
+        "sha256": "126e49dc19dbd9614f4a9771d9605f76ac3177e74d3e865e4d339cb2aed8eb14"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/prepare_feedback.py",
+        "sha256": "06cde511d60ba8ae6d7b6d26de6e2d7fceb7b4f77258db87db995fc39d26f106"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/prepare_feedback.py",
+        "sha256": "06cde511d60ba8ae6d7b6d26de6e2d7fceb7b4f77258db87db995fc39d26f106"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/generation/GJFFFOOD.BMP/026-v1-request.json",
+        "sha256": "449f7f6f27cdf13563913c78231ff9633bcc0e26074f5d39b720db4630472714"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/generation/GJFFFOOD.BMP/026-v1-request.json",
+        "sha256": "449f7f6f27cdf13563913c78231ff9633bcc0e26074f5d39b720db4630472714"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/generation/GJFFFOOD.BMP/026-record-v1.json",
+        "sha256": "21e7b7ccc97326351908ae53b9d63c5a4296c10fa7336de36577e5217eb2eed5"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/generation/GJFFFOOD.BMP/026-record-v1.json",
+        "sha256": "21e7b7ccc97326351908ae53b9d63c5a4296c10fa7336de36577e5217eb2eed5"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/generation/GJFFFOOD.BMP/035-v1-request.json",
+        "sha256": "f2040b192979b520fa9c419b13c83849f906d7f5380da5c1d7319fadedf10d5d"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/generation/GJFFFOOD.BMP/035-v1-request.json",
+        "sha256": "f2040b192979b520fa9c419b13c83849f906d7f5380da5c1d7319fadedf10d5d"
+      },
+      "byte_identical": true
+    },
+    {
+      "source": {
+        "path": "art/cartoon/shark-fin-corrections-v2/generation/GJFFFOOD.BMP/035-record-v1.json",
+        "sha256": "3e40921025c62b70551b72e340b84cdf9ce1f51292fc7f7492bd31de0207d1d6"
+      },
+      "copy": {
+        "path": "art/cartoon/shark-fin-corrections-v2/acceptance/snapshots/generation/GJFFFOOD.BMP/035-record-v1.json",
+        "sha256": "3e40921025c62b70551b72e340b84cdf9ce1f51292fc7f7492bd31de0207d1d6"
+      },
+      "byte_identical": true
+    }
+  ],
+  "readback": {
+    "all_declared_review_and_generation_pins_match": true,
+    "unique_declared_paths_checked": 26,
+    "exact_metadata_copies": 15,
+    "raw_pngs_duplicated": false,
+    "source_files_unchanged": true,
+    "new_tests_or_native_runs": false
+  },
+  "production_package_changed": false
+}

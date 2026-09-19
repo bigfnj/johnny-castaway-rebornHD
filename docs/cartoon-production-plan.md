@@ -100,6 +100,8 @@ The latest [005/022 angle review](../art/cartoon/boot-angle-v4/README.md) follow
 
 The user approved those two selected boot drawings with "perfect" and asked to proceed with 36-48 drawings per review. [The scoped acceptance](../art/cartoon/boot-angle-v4/acceptance/appearance-v1.json) binds 005 v2 and 022 v2; it does not approve unseen or unmentioned campfire drawings. The next [42-drawing wildlife batch](../art/cartoon/gulls-fish-batch-v1/README.md) covers complete GJGULL1 and LILFISH families, with shared gull/nest style references and per-frame source references. All remain drafts until reviewed.
 
+On 2026-09-19, the user said "approved, lets start the next batch" at the [shark fin-correction review](../art/cartoon/shark-fin-corrections-v2/README.md). Its [acceptance record](../art/cartoon/shark-fin-corrections-v2/acceptance/appearance-v1.json) approves only GJFFFOOD026 v1 and 035 v1 appearance. The other 37 drawings in the earlier shark gallery gain no implied approval. Native registration, water layering, motion and bulk integration remain pending. The next [39-drawing GJGULL2 batch](../art/cartoon/gull-clothes-batch-v1/README.md) covers clothes-carrying, preening and settling, with source markers 006-015 preserved. Its original-versus-Cartoon gallery awaits appearance review; full testing remains deferred.
+
 The workflow builds on [the original lessons](art-style-learnings.md),
 [the Calm focus addendum](art-style-learnings-calm-focus.md), and
 [the approved runtime record](../art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json).

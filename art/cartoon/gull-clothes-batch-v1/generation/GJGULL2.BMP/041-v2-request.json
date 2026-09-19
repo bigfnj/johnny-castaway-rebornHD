@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Remove extra folded-wing panel from GJGULL2.BMP041 while retaining its two downstroke wings and cloth geometry.",
+  "arguments": {
+    "referenced_image_paths": ["D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gull-clothes-batch-v1/generation/GJGULL2.BMP/041-generated-v1.png", "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/gull-clothes-batch-v1/reference/nearest8/GJGULL2.BMP/041.png"],
+    "prompt": "Use case: precise-object-edit. Image1 is the edit target, image2 is original pose guidance. Correct ONLY the bird's extra wing anatomy while retaining the same right-facing flight pose and carried cloth. There must be exactly TWO wings: the long near wing sweeping down to the lower right and the partly occluded far wing sweeping down-left. REMOVE the entire additional folded gray feathered wing panel currently lying horizontally on top of the back, including its scalloped feather lobes and enclosing wing outline. Replace that panel with the smooth, lightly gray-shaded ordinary back and white body of one gull. The far down-left wing's root belongs at the opposite shoulder, hidden behind the body, not growing from the tail or the feet. Keep one simple white tail, the two small tucked feet, the current one visible eye, beak position, same diagonal trailing ragged white clothes clamped in the beak, and current two-wing downstroke angles. No new props or feathers shaped as another wing. Preserve the clean outlined Cartoon style and white/light-gray palette with dark wing tips. Whole sprite and cloth inside transparent canvas with clear margins. Genuinely transparent RGBA background; no shadow, glow, ground, scenery, checkerboard or text."
+  }
+}

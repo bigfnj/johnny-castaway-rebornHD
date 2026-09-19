@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Correct026: the shape below the snout is a fin, not a tongue",
+  "arguments": {
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/generation/GJFFFOOD.BMP/026-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/reference/nearest8/GJFFFOOD.BMP/026.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/generation/GJFFFOOD.BMP/027-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/generation/GJFFFOOD.BMP/028-generated-v1.png"
+    ],
+    "prompt": "Use case: precise-object-edit. Asset: one transparent Cartoon shark reaction sprite, GJFFFOOD026. Image1 is the edit target. Image2 is the exact source pose. Images3 and4 are adjacent027/028 anatomy references for the small gray FIN beneath the chin, not pose templates. The user identified a major anatomy error: the pink tongue in Image1 is actually supposed to be a GRAY PECTORAL FIN. Correct the entire mistaken tongue/mouth treatment. Remove ALL pink tongue, red mouth interior and huge open-jaw cavity. Close that gaping mouth to a restrained small mouth/chin line following the source, with pale underside continuing down the chest. Put a small solid gray rounded triangular pectoral fin projecting to the LEFT from the torso just beneath the chin, at the original fin position, visually related to the small gray fin of027/028. Make it clearly an external body fin attached to the chest, not a gray tongue coming out of the mouth. Preserve Image1's single wide white eye and small black pupil, arched eyebrow, long snout pointing up-left, upright gray head/neck silhouette, rear dorsal fin, gray and pale cel shading, clean black outlines, and small white/light-blue waterline at its base. Retain this026 viewpoint with ONE visible eye; do not copy the two-eye view of027/028. No new fins or extra body, no smile with huge exposed teeth, no pink or red in this sprite. Actual alpha transparent background, generous clear margins on all four sides, no scene, shadow, glow, checkerboard, text or labels."
+  }
+}

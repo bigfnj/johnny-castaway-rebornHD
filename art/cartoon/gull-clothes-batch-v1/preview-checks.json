@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "scope": "Lightweight appearance/file/browser checks only",
+  "selected_drawing_count": 39,
+  "raw_output_history_count": 47,
+  "review_page": {
+    "path": "art/cartoon/gull-clothes-batch-v1/review.html",
+    "sha256": "dde3ee85562bb9cab9cedaa460a378894dce6435cad83b9931f1f16621cc2a42"
+  },
+  "review_data": {
+    "path": "art/cartoon/gull-clothes-batch-v1/review-data.json",
+    "sha256": "7e9a6865799887148dfd15063b80b930d5b6d92e8a6d3d290134e6f7b210dc27"
+  },
+  "selection": {
+    "path": "art/cartoon/gull-clothes-batch-v1/selected-versions.json",
+    "sha256": "171f46b05ad5b1a896ae1b3d1bff4383c2bcb399e5326c0f60f71e90c07e1ab0"
+  },
+  "readback": {
+    "selected_files_present": 39,
+    "target_count": 39,
+    "transparent_rgba": true,
+    "edge_alpha_above_8": [],
+    "production_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+    "checks": "Source/request/output hash readback, PNG decode and alpha, technical original-versus-generated contact sheets. No runtime or integration tests."
+  },
+  "browser": {
+    "url": "http://127.0.0.1:8941/gull-clothes-batch-v1/review.html",
+    "status": "39 of 39 comparisons ready.",
+    "cards": 39,
+    "canvases": 78,
+    "loaded_canvases": 78,
+    "console_errors": [],
+    "light_checkerboard_observed": true,
+    "dark_checkerboard_046_observed": true,
+    "filter_046_visible_cards": 1,
+    "restored_visible_cards": 39
+  },
+  "visual_inspection": "All selected drawings compared against exact original references in technical actual-alpha contact sheets. Front flight 046-048 received an independent visual look. Eight targeted revisions retain earlier drafts.",
+  "pixel_postprocessing": "None; PNGs are byte-exact built-in imagegen outputs.",
+  "human_appearance_approval": null,
+  "runtime_tests_run": false,
+  "production_package_changed": false,
+  "deferred": [
+    "Original canvas fitting and multipart registration",
+    "Native scene animation",
+    "Bulk smoke and regression tests"
+  ]
+}

@@ -21,7 +21,7 @@ Each PNG is one built-in `image_gen.imagegen` result, copied byte-for-byte into 
 
 The selected revisions are GJFFFOOD030 v2 for transparent headroom, GJFFFOOD033 v3 for its wide-eyed worried gaze and complete snout margin, GJFFFOOD034 v3 for the open eye and downward tail entering the splash, GJFFFOOD035 v2 for the low submerged arc, GJFFFOOD044 v2 for the pale jaw, and SHARK036 v2 to remove an extra detached fin. Other selected drawings use v1. Earlier outputs remain as authoring history, and `selected-versions.json` controls the gallery.
 
-Appearance approval is pending. Native scale, registration, water layering, timing and bulk smoke/regression tests remain for the integration milestone. No production asset package is changed by this review.
+The original 39-drawing review remains historical. On 2026-09-19, "approved, lets start the next batch" at the separate [fin-correction review](../shark-fin-corrections-v2/README.md) approved only its replacement GJFFFOOD026 v1 and 035 v1, as recorded in [scoped acceptance](../shark-fin-corrections-v2/acceptance/appearance-v1.json). The other 37 drawings have no approval implied by that response. Native scale, registration, water layering, timing and bulk smoke/regression tests remain for the integration milestone. No production asset package is changed by these reviews.
 
 ## Next candidate
 
