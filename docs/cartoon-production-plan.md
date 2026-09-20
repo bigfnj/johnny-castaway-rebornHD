@@ -120,6 +120,8 @@ The user's 2026-09-20 review requested [24 focused corrections](../art/cartoon/g
 
 The next [67-drawing visitor review](../art/cartoon/visitors-and-props-batch-v1/README.md) contains 38 masked-performer poses, 14 camera/sunglasses visitor poses, 11 woman visitor gestures and four thought scenes. Shared cartoon character keys preserve identity while each original governs its pose. Upper-body pieces remain cropped as source components. Appearance review is pending; scene fitting, multipart registration, native sequences and bulk testing remain deferred.
 
+The user's follow-up clarifies [seven GJNAT3 visitor poses](../art/cartoon/visitor-pose-corrections-v2/README.md): 005 holds the camera with both hands; 009/010 have no sunglasses; 012-014 shift the belly toward screen-right like015; and016 faces front while looking down. The earlier interpretation of016 as a rear view was incorrect. This correction gallery preserves the original and preceding drawing beside each new version. These seven corrections await appearance review, and unmentioned drawings retain their prior status.
+
 The workflow builds on [the original lessons](art-style-learnings.md),
 [the Calm focus addendum](art-style-learnings-calm-focus.md), and
 [the approved runtime record](../art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json).

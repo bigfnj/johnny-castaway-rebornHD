@@ -31,6 +31,8 @@ Latest focused approval: [five blurred propellers](art/cartoon/propeller-motion-
 
 Next appearance review: [67 visitor and thought-scene drawings](art/cartoon/visitors-and-props-batch-v1/README.md). The masked performer, camera visitor, woman visitor and four thought scenes are new drafts with exact originals shown beneath them. Scene fitting and native checks remain deferred.
 
+The follow-up [seven visitor corrections](art/cartoon/visitor-pose-corrections-v2/README.md) addresses GJNAT3 005's two-handed camera grip, bare eyes in009/010, rightward belly angle in012-014, and front-facing head-down016. These corrections are pending appearance review; other drawings retain their prior status.
+
 | Item | Evidence and next useful action |
 | --- | --- |
 | Run bulk verification after the Cartoon asset build | Requested by the user on 2026-09-17 to speed visual iteration. Assemble approved assets, run smoke before regressions, troubleshoot integration, then merge/push and perform the final code audit. Do not repeat this complete cycle for each art approval. |
