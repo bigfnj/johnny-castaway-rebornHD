@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Precise small anatomy correction to this image only. This worker incorrectly has THREE arms and three hands. DELETE THE REARMOST arm at the far IMAGE LEFT, the small sleeve behind his large foreground sleeve and the tan hand furthest left. Remove that entire extra rear sleeve, cuff and hand, leaving transparent background where that extra arm projected. KEEP the large foreground lowered arm and its tan hand near the blue thigh unchanged. KEEP the raised overhead bent arm and its hand unchanged. After the correction there are exactly TWO arms and TWO hands: one overhead and one lowered. There must be no empty leftover cuff or sleeve-shaped fragment behind the real lowered arm. Reconstruct the nearby torso edge neatly without changing the blue overalls. Preserve the exact overhead bend, visible right-facing eye/nose/mouth, cap, hairstyle, pose, feet, colors, outline and RGBA transparency. No added halo, glow, shadow, floor or scenery.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/generation/LILIPUTS.BMP/035-generated-v1.png"
+    ]
+  }
+}

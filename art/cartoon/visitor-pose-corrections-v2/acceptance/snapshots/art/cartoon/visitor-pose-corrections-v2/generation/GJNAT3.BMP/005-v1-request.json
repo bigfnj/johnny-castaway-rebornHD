@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit.\nAsset: GJNAT3.BMP 005, isolated adult male visitor upper-body cartoon sprite.\nInput image 1 is the exact selected drawing to EDIT. Image 2 is its original pixel pose reference, not a color or costume guide; red/yellow checker pixels are bare skin dithering.\nPrimary request: BOTH hands must hold the camcorder. Replace the dangling free arm on IMAGE LEFT with an anatomically natural bent arm: its upper arm stays by the left side of the chest, elbow sits near the lower-left chest, and the forearm crosses the bare chest diagonally UP-RIGHT. Its hand must visibly touch and cup/support the BOTTOM/near-left side of the gray camcorder. The existing image-right hand still grips the camera side. Exactly two arms and two hands, both mechanically connected to and supporting this ONE camera. Remove the old hanging hand and extended arm completely. Keep the camera at its existing height beside the cheek, gray body and turquoise lens, face, gaze, black hair and sunglasses PERCHED ON THE FOREHEAD unchanged. This latest user correction overrides any ambiguity in the pixel original.\nKeep the illustration's existing crisp black outlines, restrained warm cel shading, adult anatomy and bare tan upper body. Do not add garments or alter the character identity. Preserve the deliberate waist crop without adding legs. The whole illustration must fit inside a genuinely RGBA transparent canvas with safe margins; all outside space and internal gaps transparent. No scenery, floor, cast shadow, halo, labels or text.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/005-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitors-and-props-batch-v1/reference/nearest8/GJNAT3.BMP/005.png"
+    ]
+  }
+}

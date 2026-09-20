@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "status": "human_appearance_approved_with_previous_version_choices",
+  "date": "2026-09-20",
+  "user_response": {
+    "verbatim": "012 013 014. keep your \"previous cartoon\". the rest approved, next batch proceed",
+    "url": "http://127.0.0.1:8941/visitor-pose-corrections-v2/review.html",
+    "context": "Exact user response and shown URL supplied by the coordinating task. The shown page compared seven Original / Previous Cartoon / Corrected Cartoon rows. The explicit previous-version choice applies to 012, 013 and 014; 'the rest approved' applies only to the four other rows."
+  },
+  "scope": {
+    "approved_drawings": 7,
+    "retained_previous_frames": [
+      "GJNAT3.BMP 012 v1",
+      "GJNAT3.BMP 013 v1",
+      "GJNAT3.BMP 014 v1"
+    ],
+    "approved_corrected_frames": [
+      "GJNAT3.BMP 005 v1",
+      "GJNAT3.BMP 009 v1",
+      "GJNAT3.BMP 010 v1",
+      "GJNAT3.BMP 016 v1"
+    ],
+    "approved": [
+      "Appearance of exactly the seven chosen drawings and the explicit previous-versus-corrected decisions recorded here."
+    ],
+    "not_approved_by_this_record": [
+      "The other 60 visitor-batch drawings, any other pending batch, or blanket batch approval.",
+      "The corrected 012 v2, 013 v1 and 014 v1 alternatives in visitor-pose-corrections-v2.",
+      "Native export registration, runtime motion, production integration or bulk validation."
+    ],
+    "native_integration": "deferred to later bulk integration and validation"
+  },
+  "source_context": {
+    "observed_head_during_record": "fb09d34b101364235ce74b78ec59e72b3d2aa3ce",
+    "binding_authority": "Exact shown worktree byte hashes and retained metadata snapshots. Commit membership is not used as the approval authority."
+  },
+  "selected": [
+    {
+      "resource": "GJNAT3.BMP",
+      "frame": "005",
+      "version": 1,
+      "decision": "approve_corrected_cartoon",
+      "shown_column": "Corrected Cartoon",
+      "family": "visitor-pose-corrections-v2",
+      "raw": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/005-generated-v1.png",
+        "sha256": "fad33674537dcb1b1cef3c5afcbd1666260e7cbd7f7f9afabfaf0d3d54bab318"
+      },
+      "request": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/005-v1-request.json",
+        "sha256": "b96a603b4cc8fa7b6b7c820c504944e36225ed0e9cee2e57d0471ce180fe5555"
+      },
+      "generation_record": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/005-record-v1.json",
+        "sha256": "935abdb5ab69665baf3598209cc03bf9382ee536c1edf1527aef8455b8f76fa0"
+      },
+      "original": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/reference/original/GJNAT3.BMP/005.png",
+        "sha256": "eaba8e8b7cbb47046562a9de70159d37b5027adcba012fbe8d5c2cf51b7f528b"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/005-generated-v1.png",
+          "sha256": "ecf100e0bf34254b5758833f0925e8816e6e59dabe23d7e7767ddc53155ef9bb"
+        },
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/reference/nearest8/GJNAT3.BMP/005.png",
+          "sha256": "a816f2214417fa9d7c68e0fd985592fc1f345722b1dc5820a176b563d2c31fd1"
+        }
+      ],
+      "comparison_not_selected": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/005-generated-v1.png",
+        "sha256": "ecf100e0bf34254b5758833f0925e8816e6e59dabe23d7e7767ddc53155ef9bb"
+      },
+      "reason": "Approved by the user's scoped 'the rest approved' choice on this seven-row review."
+    },
+    {
+      "resource": "GJNAT3.BMP",
+      "frame": "009",
+      "version": 1,
+      "decision": "approve_corrected_cartoon",
+      "shown_column": "Corrected Cartoon",
+      "family": "visitor-pose-corrections-v2",
+      "raw": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/009-generated-v1.png",
+        "sha256": "99141a0c4f6c046b8e8dcb1531d7c6a6d0380476a9bec235828020a7468628ff"
+      },
+      "request": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/009-v1-request.json",
+        "sha256": "4070eb04b08ecebb78bc4f949a644fa6cd3098c49343b910ba58f810a0df8813"
+      },
+      "generation_record": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/009-record-v1.json",
+        "sha256": "f9caf0b528ee54a506c3fb36082d0096fceaff69bb4a8d936032c06727ee2584"
+      },
+      "original": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/reference/original/GJNAT3.BMP/009.png",
+        "sha256": "790011b9752dc74a775074fe0e176878afc4ecce2bfe19c78d43bb4e303a34db"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/009-generated-v1.png",
+          "sha256": "0a94c2ca911d36e94adfd2fd3298c0897b64c9df055d550610a625e445346c04"
+        },
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/reference/nearest8/GJNAT3.BMP/009.png",
+          "sha256": "62c9e643b07d2a6b94c17878f84d90ea9433abf4041e5451f00b5576fabc1038"
+        }
+      ],
+      "comparison_not_selected": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/009-generated-v1.png",
+        "sha256": "0a94c2ca911d36e94adfd2fd3298c0897b64c9df055d550610a625e445346c04"
+      },
+      "reason": "Approved by the user's scoped 'the rest approved' choice on this seven-row review."
+    },
+    {
+      "resource": "GJNAT3.BMP",
+      "frame": "010",
+      "version": 1,
+      "decision": "approve_corrected_cartoon",
+      "shown_column": "Corrected Cartoon",
+      "family": "visitor-pose-corrections-v2",
+      "raw": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/010-generated-v1.png",
+        "sha256": "4ac79e38b523f55fcc8cc87d64e454e69ee8ddfd15c0d7e4ff743342b76a0657"
+      },
+      "request": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/010-v1-request.json",
+        "sha256": "bb41db661f1854b303a423977b8dbb70146b03107cf602ae306e4ebb05a8d9ba"
+      },
+      "generation_record": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/010-record-v1.json",
+        "sha256": "25c56b6c375ea14840e4f30a8feea7e400797b759cacf2db869154a825c2adbd"
+      },
+      "original": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/reference/original/GJNAT3.BMP/010.png",
+        "sha256": "33217c07d53796bf0fb241aaff24ad4d1ac0183782a18b6b99720d8fe38c2567"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/010-generated-v1.png",
+          "sha256": "75dec9edbbec0a986b928f9df905d9bf43bbb2b13d070c701adc0258a44cb722"
+        },
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/reference/nearest8/GJNAT3.BMP/010.png",
+          "sha256": "d6491d1f537b56dc443173dc7fdc510c3b661af77c6d8d65bc06de4f7b43801c"
+        }
+      ],
+      "comparison_not_selected": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/010-generated-v1.png",
+        "sha256": "75dec9edbbec0a986b928f9df905d9bf43bbb2b13d070c701adc0258a44cb722"
+      },
+      "reason": "Approved by the user's scoped 'the rest approved' choice on this seven-row review."
+    },
+    {
+      "resource": "GJNAT3.BMP",
+      "frame": "012",
+      "version": 1,
+      "decision": "retain_and_approve_previous_cartoon",
+      "shown_column": "Previous Cartoon",
+      "family": "visitors-and-props-batch-v1",
+      "raw": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/012-generated-v1.png",
+        "sha256": "e653f8d7f0202a0c68e20c0a43e61ace3f51cc77df6734247bf2e140a314f031"
+      },
+      "request": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/012-v1-request.json",
+        "sha256": "51faafcabc248c1a2704452c3f0e7967800cda3eef167187fab354dd3ebc27a7"
+      },
+      "generation_record": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/012-record-v1.json",
+        "sha256": "a2ada39f0ad6982b2f08ef0d52ee25ff43227302eabbf8805e2eccaf1b06f243"
+      },
+      "original": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/reference/original/GJNAT3.BMP/012.png",
+        "sha256": "1106d2653ee52ba99795f17b9524ea16d1f3e629a530a7f8ac06b7f34a7a4b9a"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/reference/nearest8/GJNAT3.BMP/012.png",
+          "sha256": "a9b5ec1e57f18feaf8593c5a6a4f03bf005e847f56df38a4daacf145817d3c16"
+        },
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/017-generated-v1.png",
+          "sha256": "c270c1b9c048516e2741c4dc3c1b3abd26c2742d5b92ca94626ca975872fa48c"
+        }
+      ],
+      "comparison_not_selected": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/012-generated-v2.png",
+        "sha256": "4b8bb36f5c74434a4159e76c57bf2fb3f7775460cc1d5df11be8651a9ce5a02a"
+      },
+      "reason": "User explicitly said to keep the \"previous cartoon\" for this frame."
+    },
+    {
+      "resource": "GJNAT3.BMP",
+      "frame": "013",
+      "version": 1,
+      "decision": "retain_and_approve_previous_cartoon",
+      "shown_column": "Previous Cartoon",
+      "family": "visitors-and-props-batch-v1",
+      "raw": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/013-generated-v1.png",
+        "sha256": "6d85c6d6d6840decd2b61ec6c3faa0e229b7f2a89efdf7e25253f57cafbb22f3"
+      },
+      "request": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/013-v1-request.json",
+        "sha256": "31cb526a89bb51d362e04c0f4c662e44bdb9aec6bff8cfb4ceac5f81d5bf5285"
+      },
+      "generation_record": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/013-record-v1.json",
+        "sha256": "9eb5f58d32f52c1deddaf1c7ccfc571d2bc762511143759d810f71817c02ef82"
+      },
+      "original": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/reference/original/GJNAT3.BMP/013.png",
+        "sha256": "f885c9fba244273223c601632f5db51e9c13f8669b07e177ccff84448942f5e4"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/reference/nearest8/GJNAT3.BMP/013.png",
+          "sha256": "c52407fea1b7ed4fa4c1e98a9f0cd218c022f91e2754b7ea81b430c87e2c2eb9"
+        },
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/017-generated-v1.png",
+          "sha256": "c270c1b9c048516e2741c4dc3c1b3abd26c2742d5b92ca94626ca975872fa48c"
+        }
+      ],
+      "comparison_not_selected": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/013-generated-v1.png",
+        "sha256": "b8eb61aa62a85186b457811eb3e284702902d3725fdf545a5bfb2d5be6ca053d"
+      },
+      "reason": "User explicitly said to keep the \"previous cartoon\" for this frame."
+    },
+    {
+      "resource": "GJNAT3.BMP",
+      "frame": "014",
+      "version": 1,
+      "decision": "retain_and_approve_previous_cartoon",
+      "shown_column": "Previous Cartoon",
+      "family": "visitors-and-props-batch-v1",
+      "raw": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/014-generated-v1.png",
+        "sha256": "468fe04584830f083230f4a14ce4485da2de10217bfc755ee44c8b231feb874a"
+      },
+      "request": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/014-v1-request.json",
+        "sha256": "819d34dd4e0c45b1daed4be3af6be787479b7453f211de5fcd2507f83b3df1dc"
+      },
+      "generation_record": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/014-record-v1.json",
+        "sha256": "2cd26975664022f05d611c63ef72a09f14610bc56852f3384f2b53197bd9496e"
+      },
+      "original": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/reference/original/GJNAT3.BMP/014.png",
+        "sha256": "aee9091b411190f7357793a58e16e04d2b7ded54a04497fa429171db82770a34"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/reference/nearest8/GJNAT3.BMP/014.png",
+          "sha256": "46878b7fcc3f7ae8e2769fd2e50a6e9a52f6a05c17d14f236df89b37918abd25"
+        },
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/017-generated-v1.png",
+          "sha256": "c270c1b9c048516e2741c4dc3c1b3abd26c2742d5b92ca94626ca975872fa48c"
+        }
+      ],
+      "comparison_not_selected": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/014-generated-v1.png",
+        "sha256": "e326d5833702ff39986e4cee8d9f559daf4b527891d41df9cbdd1a28bc7c3ca9"
+      },
+      "reason": "User explicitly said to keep the \"previous cartoon\" for this frame."
+    },
+    {
+      "resource": "GJNAT3.BMP",
+      "frame": "016",
+      "version": 1,
+      "decision": "approve_corrected_cartoon",
+      "shown_column": "Corrected Cartoon",
+      "family": "visitor-pose-corrections-v2",
+      "raw": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/016-generated-v1.png",
+        "sha256": "7da2f9bb2e7323faceaa9b60459671334f856e8aaaecdac4dc5e9a17d08c14c8"
+      },
+      "request": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/016-v1-request.json",
+        "sha256": "e229b840f6a3578cde5a76381afc5ff4ddf5dcd1f245ba0666c8fd5aa890dbd2"
+      },
+      "generation_record": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/016-record-v1.json",
+        "sha256": "f0a9d0972460ed35215f5c161463c5d7e96ecdf13d7f37db7bd1d3ea69a0accf"
+      },
+      "original": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/reference/original/GJNAT3.BMP/016.png",
+        "sha256": "fa00c5503a5492fd2a742d0559b32cabccf700b034809c04c4ae11393a662b1e"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/016-generated-v1.png",
+          "sha256": "e3a2afa0d57a42fe6d2632a4ff69d2285e0aa3f7ce9f037e8e35a01a6349aa41"
+        },
+        {
+          "path": "art/cartoon/visitors-and-props-batch-v1/reference/nearest8/GJNAT3.BMP/016.png",
+          "sha256": "eb981c0c028e9ccb2943fc7d63f784a199b587bd0d69b6059a87faa30955c02c"
+        }
+      ],
+      "comparison_not_selected": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/016-generated-v2.png",
+        "sha256": "0e5fc218299681b4aac5b3b50bf50e329251be0e895e6819674980305fba1a58"
+      },
+      "reason": "Approved by the user's scoped 'the rest approved' choice on this seven-row review."
+    }
+  ],
+  "shown_page": {
+    "path": "art/cartoon/visitor-pose-corrections-v2/review.html",
+    "sha256": "04eb7ed94ec5ddc3523713371a628a1dfdad2278921d27ea40cc7354b5148254"
+  },
+  "shown_review_record": {
+    "path": "art/cartoon/visitor-pose-corrections-v2/review-record.json",
+    "sha256": "eb595e118c179ed6bdd38c350f8a08c08bfa5ef97546420a298e1cc60c8707ad"
+  },
+  "shown_data": {
+    "path": "art/cartoon/visitor-pose-corrections-v2/review-data.json",
+    "sha256": "f49447bef1eede9d327ec0dddb752bd3383020c159e25db090e033ee5b6a63c8"
+  },
+  "shown_preview_check": {
+    "path": "art/cartoon/visitor-pose-corrections-v2/preview-check.json",
+    "sha256": "143114577d055ed85ddebcee6d58848a98048e25480fcaaf27a5455e50464c65"
+  },
+  "metadata_snapshots": [
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/review.html",
+        "sha256": "04eb7ed94ec5ddc3523713371a628a1dfdad2278921d27ea40cc7354b5148254"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/review.html",
+        "sha256": "04eb7ed94ec5ddc3523713371a628a1dfdad2278921d27ea40cc7354b5148254"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/review.js",
+        "sha256": "3637f700cefe1596c240e4bc382fcba3c5e61c2b79756d06d82ff2f0551dc73e"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/review.js",
+        "sha256": "3637f700cefe1596c240e4bc382fcba3c5e61c2b79756d06d82ff2f0551dc73e"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/review-data.json",
+        "sha256": "f49447bef1eede9d327ec0dddb752bd3383020c159e25db090e033ee5b6a63c8"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/review-data.json",
+        "sha256": "f49447bef1eede9d327ec0dddb752bd3383020c159e25db090e033ee5b6a63c8"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/review-record.json",
+        "sha256": "eb595e118c179ed6bdd38c350f8a08c08bfa5ef97546420a298e1cc60c8707ad"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/review-record.json",
+        "sha256": "eb595e118c179ed6bdd38c350f8a08c08bfa5ef97546420a298e1cc60c8707ad"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/preview-check.json",
+        "sha256": "143114577d055ed85ddebcee6d58848a98048e25480fcaaf27a5455e50464c65"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/preview-check.json",
+        "sha256": "143114577d055ed85ddebcee6d58848a98048e25480fcaaf27a5455e50464c65"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/build_review.py",
+        "sha256": "4757ee0527eba9fe6e8f5c6317b84098f032b31cb1ebb2da2022374ab73e04f9"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/build_review.py",
+        "sha256": "4757ee0527eba9fe6e8f5c6317b84098f032b31cb1ebb2da2022374ab73e04f9"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/review-template.html",
+        "sha256": "42dd24d7178222046aa8ed41863c90c4069e6d91d901dd37a16f1d5eea0ff715"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/review-template.html",
+        "sha256": "42dd24d7178222046aa8ed41863c90c4069e6d91d901dd37a16f1d5eea0ff715"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/feedback.json",
+        "sha256": "79863f8b2c1277dc809faf233bafa196b80e0860904cf3eaa7842047a8bf866f"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/feedback.json",
+        "sha256": "79863f8b2c1277dc809faf233bafa196b80e0860904cf3eaa7842047a8bf866f"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/selected-versions.json",
+        "sha256": "5d7eb49199c94c9eee818fd02a29e3e0baed370edf8c735f43a3f62b6db060f6"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/selected-versions.json",
+        "sha256": "5d7eb49199c94c9eee818fd02a29e3e0baed370edf8c735f43a3f62b6db060f6"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/record_output.py",
+        "sha256": "126e49dc19dbd9614f4a9771d9605f76ac3177e74d3e865e4d339cb2aed8eb14"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/record_output.py",
+        "sha256": "126e49dc19dbd9614f4a9771d9605f76ac3177e74d3e865e4d339cb2aed8eb14"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/prepare_feedback.py",
+        "sha256": "2a2de4fbe4927ebdbf2e0d463889ccd3cc5aabcf4f7b3130771a8ec2e4505a48"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/prepare_feedback.py",
+        "sha256": "2a2de4fbe4927ebdbf2e0d463889ccd3cc5aabcf4f7b3130771a8ec2e4505a48"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/reference/source.json",
+        "sha256": "940b90be30c4490cc9db2a478ebfca0914436c9cf279c3f8ff64c15da1e4c411"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitors-and-props-batch-v1/reference/source.json",
+        "sha256": "940b90be30c4490cc9db2a478ebfca0914436c9cf279c3f8ff64c15da1e4c411"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/005-v1-request.json",
+        "sha256": "b96a603b4cc8fa7b6b7c820c504944e36225ed0e9cee2e57d0471ce180fe5555"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/005-v1-request.json",
+        "sha256": "b96a603b4cc8fa7b6b7c820c504944e36225ed0e9cee2e57d0471ce180fe5555"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/005-record-v1.json",
+        "sha256": "935abdb5ab69665baf3598209cc03bf9382ee536c1edf1527aef8455b8f76fa0"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/005-record-v1.json",
+        "sha256": "935abdb5ab69665baf3598209cc03bf9382ee536c1edf1527aef8455b8f76fa0"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/009-v1-request.json",
+        "sha256": "4070eb04b08ecebb78bc4f949a644fa6cd3098c49343b910ba58f810a0df8813"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/009-v1-request.json",
+        "sha256": "4070eb04b08ecebb78bc4f949a644fa6cd3098c49343b910ba58f810a0df8813"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/009-record-v1.json",
+        "sha256": "f9caf0b528ee54a506c3fb36082d0096fceaff69bb4a8d936032c06727ee2584"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/009-record-v1.json",
+        "sha256": "f9caf0b528ee54a506c3fb36082d0096fceaff69bb4a8d936032c06727ee2584"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/010-v1-request.json",
+        "sha256": "bb41db661f1854b303a423977b8dbb70146b03107cf602ae306e4ebb05a8d9ba"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/010-v1-request.json",
+        "sha256": "bb41db661f1854b303a423977b8dbb70146b03107cf602ae306e4ebb05a8d9ba"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/010-record-v1.json",
+        "sha256": "25c56b6c375ea14840e4f30a8feea7e400797b759cacf2db869154a825c2adbd"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/010-record-v1.json",
+        "sha256": "25c56b6c375ea14840e4f30a8feea7e400797b759cacf2db869154a825c2adbd"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/012-v1-request.json",
+        "sha256": "51faafcabc248c1a2704452c3f0e7967800cda3eef167187fab354dd3ebc27a7"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/012-v1-request.json",
+        "sha256": "51faafcabc248c1a2704452c3f0e7967800cda3eef167187fab354dd3ebc27a7"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/012-record-v1.json",
+        "sha256": "a2ada39f0ad6982b2f08ef0d52ee25ff43227302eabbf8805e2eccaf1b06f243"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/012-record-v1.json",
+        "sha256": "a2ada39f0ad6982b2f08ef0d52ee25ff43227302eabbf8805e2eccaf1b06f243"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/012-v2-request.json",
+        "sha256": "c1d829a714778009aece095e8d812c76bd2bb5ac2f7a60b75aa961ba890fe4d9"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/012-v2-request.json",
+        "sha256": "c1d829a714778009aece095e8d812c76bd2bb5ac2f7a60b75aa961ba890fe4d9"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/012-record-v2.json",
+        "sha256": "00efa6f348723ca7cae9a04d5a82106bfa5973c3327e8c25145d3d2022e535cc"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/012-record-v2.json",
+        "sha256": "00efa6f348723ca7cae9a04d5a82106bfa5973c3327e8c25145d3d2022e535cc"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/013-v1-request.json",
+        "sha256": "31cb526a89bb51d362e04c0f4c662e44bdb9aec6bff8cfb4ceac5f81d5bf5285"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/013-v1-request.json",
+        "sha256": "31cb526a89bb51d362e04c0f4c662e44bdb9aec6bff8cfb4ceac5f81d5bf5285"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/013-record-v1.json",
+        "sha256": "9eb5f58d32f52c1deddaf1c7ccfc571d2bc762511143759d810f71817c02ef82"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/013-record-v1.json",
+        "sha256": "9eb5f58d32f52c1deddaf1c7ccfc571d2bc762511143759d810f71817c02ef82"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/013-v1-request.json",
+        "sha256": "f08ccf24ad83b0d55df1717a2b4b61a4d0e770c4a71613e52fc9ce116a59c651"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/013-v1-request.json",
+        "sha256": "f08ccf24ad83b0d55df1717a2b4b61a4d0e770c4a71613e52fc9ce116a59c651"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/013-record-v1.json",
+        "sha256": "bd6dfe4f428fbb73c9ec722b69285411e9540bba3a2f07dbd4a7a1eee25a97eb"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/013-record-v1.json",
+        "sha256": "bd6dfe4f428fbb73c9ec722b69285411e9540bba3a2f07dbd4a7a1eee25a97eb"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/014-v1-request.json",
+        "sha256": "819d34dd4e0c45b1daed4be3af6be787479b7453f211de5fcd2507f83b3df1dc"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/014-v1-request.json",
+        "sha256": "819d34dd4e0c45b1daed4be3af6be787479b7453f211de5fcd2507f83b3df1dc"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/014-record-v1.json",
+        "sha256": "2cd26975664022f05d611c63ef72a09f14610bc56852f3384f2b53197bd9496e"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/014-record-v1.json",
+        "sha256": "2cd26975664022f05d611c63ef72a09f14610bc56852f3384f2b53197bd9496e"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/014-v1-request.json",
+        "sha256": "1c9481f79d539b0f096d5de2b655803282d9f23a087f0ad7b967e07d828f888f"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/014-v1-request.json",
+        "sha256": "1c9481f79d539b0f096d5de2b655803282d9f23a087f0ad7b967e07d828f888f"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/014-record-v1.json",
+        "sha256": "33c9b36ef335b787d36cce553681210f36b84cb384a5e7d36539b4108fd8c33d"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/014-record-v1.json",
+        "sha256": "33c9b36ef335b787d36cce553681210f36b84cb384a5e7d36539b4108fd8c33d"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/016-v1-request.json",
+        "sha256": "e229b840f6a3578cde5a76381afc5ff4ddf5dcd1f245ba0666c8fd5aa890dbd2"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/016-v1-request.json",
+        "sha256": "e229b840f6a3578cde5a76381afc5ff4ddf5dcd1f245ba0666c8fd5aa890dbd2"
+      }
+    },
+    {
+      "source": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/016-record-v1.json",
+        "sha256": "f0a9d0972460ed35215f5c161463c5d7e96ecdf13d7f37db7bd1d3ea69a0accf"
+      },
+      "snapshot": {
+        "path": "art/cartoon/visitor-pose-corrections-v2/acceptance/snapshots/art/cartoon/visitor-pose-corrections-v2/generation/GJNAT3.BMP/016-record-v1.json",
+        "sha256": "f0a9d0972460ed35215f5c161463c5d7e96ecdf13d7f37db7bd1d3ea69a0accf"
+      }
+    }
+  ],
+  "historical_records_unchanged": true,
+  "artifact_policy": "No PNGs, historical requests, source references, selection files or gallery records were modified. Snapshots copy only small metadata; selected PNGs are hash-bound in place."
+}

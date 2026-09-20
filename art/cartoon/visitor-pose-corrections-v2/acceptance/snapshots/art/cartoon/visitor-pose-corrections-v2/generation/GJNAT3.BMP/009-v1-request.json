@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit.\nAsset: GJNAT3.BMP 009, isolated adult male visitor upper-body cartoon sprite.\nInput image 1 is the exact selected drawing to EDIT. Image 2 is its original pixel pose reference, not a color or costume guide; red/yellow checker pixels are bare skin dithering.\nPrimary request: REMOVE THE SUNGLASSES ENTIRELY. Replace the glasses, bridge, dark lenses and side temples with the man's natural visible eyes, eyelids, eyebrows and tan skin. No glasses left on his face, hair, forehead or elsewhere. Eyes must follow his existing left-facing three-quarter head and look in that facing direction; the farther eye is foreshortened as appropriate, not a new frontal face. Preserve the exact leaning/twisting torso pose, swept black hair silhouette, nose, mouth, jaw, ears, raised bent image-right arm and hanging hand, lower crossed image-left arm, waist crop, colors and cel-shaded style. This is only an eyewear removal and face completion.\nKeep the illustration's existing crisp black outlines, restrained warm cel shading, adult anatomy and bare tan upper body. Do not add garments or alter the character identity. Preserve the deliberate waist crop without adding legs. The whole illustration must fit inside a genuinely RGBA transparent canvas with safe margins; all outside space and internal gaps transparent. No scenery, floor, cast shadow, halo, labels or text.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitors-and-props-batch-v1/generation/GJNAT3.BMP/009-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitors-and-props-batch-v1/reference/nearest8/GJNAT3.BMP/009.png"
+    ]
+  }
+}

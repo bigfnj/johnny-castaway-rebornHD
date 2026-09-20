@@ -25,13 +25,15 @@ checks. Capture-launcher diagnostics and historical replay remain tooling work.
 
 ## Open work
 
+Next appearance review: [72 little-worker drawings](art/cartoon/little-workers-batch-v1/README.md), LILIPUTS.BMP000-071. Walking, turns, gestures and reaches have exact originals beneath each Cartoon. These are new appearance drafts; original-canvas fitting and native testing remain deferred.
+
 The current [asset-build workflow](docs/cartoon-art-build-workflow.md) defers full smoke, regression and code audits until the art build is complete. Keep visual approvals and reusable source records current while accumulating families.
 
 Latest focused approval: [five blurred propellers](art/cartoon/propeller-motion-blur-v3/acceptance/appearance-v1.json), accepted on 2026-09-20 after the 24 gull/clock/prop corrections. The five selected GJVIS3 007-011 drawings have appearance approval; other drawings retain their prior status.
 
-Next appearance review: [67 visitor and thought-scene drawings](art/cartoon/visitors-and-props-batch-v1/README.md). The masked performer, camera visitor, woman visitor and four thought scenes are new drafts with exact originals shown beneath them. Scene fitting and native checks remain deferred.
+The [67 visitor and thought-scene drawings](art/cartoon/visitors-and-props-batch-v1/README.md) include the masked performer, camera visitor, woman visitor and four thought scenes, with exact originals shown beneath them. Seven appearance choices are accepted below; the other 60 drawings retain their prior status. Scene fitting and native checks remain deferred.
 
-The follow-up [seven visitor corrections](art/cartoon/visitor-pose-corrections-v2/README.md) addresses GJNAT3 005's two-handed camera grip, bare eyes in009/010, rightward belly angle in012-014, and front-facing head-down016. These corrections are pending appearance review; other drawings retain their prior status.
+On 2026-09-20, the user accepted [seven visitor appearance choices](art/cartoon/visitor-pose-corrections-v2/acceptance/appearance-v1.json): retain the previous visitor-batch GJNAT3 012/013/014 v1 drawings, and use corrected 005/009/010/016 v1. The latter show a two-handed camera grip, bare eyes in 009/010, and a front-facing head-down 016. The corrected 012-014 alternatives are not selected. This does not approve the other 60 drawings; source-canvas fitting, multipart registration, native sequences and bulk testing remain deferred.
 
 | Item | Evidence and next useful action |
 | --- | --- |
