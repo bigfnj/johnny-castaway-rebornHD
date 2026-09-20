@@ -1,0 +1,1137 @@
+{
+  "schema_version": 1,
+  "count": 36,
+  "scope": "Exact source drawings for a new appearance review",
+  "palette_limit": "Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.",
+  "archive": {
+    "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+    "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+  },
+  "frame_index": {
+    "path": "art/cartoon/character-inventory-v1/source/frame-index.json",
+    "sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2"
+  },
+  "scene_map": {
+    "path": "art/cartoon/character-inventory-v1/scene-map/resource-map.json",
+    "sha256": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3"
+  },
+  "preparation": {
+    "path": "art/cartoon/marine-scenes-batch-v1/prepare_references.py",
+    "sha256": "e79c034ac412687054e5f118af449494b58d9af7646b8b31e3628495eedc983f"
+  },
+  "contacts": [
+    {
+      "path": "art/cartoon/marine-scenes-batch-v1/reference/GJCATCH2.BMP-contact-01.png",
+      "sha256": "c6558ef8f63557247d36d2e57f733a2c602a6b54ca7e16cc4999e1ae543f57c4"
+    },
+    {
+      "path": "art/cartoon/marine-scenes-batch-v1/reference/GJCATCH2.BMP-contact-02.png",
+      "sha256": "7b0e5c436f3ac0021421655ba25e59e8362998cea33730218a4658387316e408"
+    },
+    {
+      "path": "art/cartoon/marine-scenes-batch-v1/reference/GJDIVE.BMP-contact-01.png",
+      "sha256": "168111212bf8476c7f157679520133b71cc97e6efb535c1b4436a7fd65713647"
+    },
+    {
+      "path": "art/cartoon/marine-scenes-batch-v1/reference/SPLASH.BMP-contact-01.png",
+      "sha256": "904e88e33daa250e8b0b7acb30069af360cd40996c4c5583d3d9e7038c1686f4"
+    }
+  ],
+  "assets": [
+    {
+      "id": "BMP/GJCATCH2.BMP/000",
+      "resource": "GJCATCH2.BMP",
+      "frame": "000",
+      "canvas": [
+        96,
+        110
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/000.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/000.png",
+        "sha256": "ff21f9662423923d824179542866ad02757f868095acf36c2cf6ad79722c53c6"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/000.png",
+        "sha256": "562c124427acc9e36e2b72a8e119a6dfdbbb3e6120a7032411e8c228753f5576"
+      },
+      "source_rgba_sha256": "e6e46aaa74735e080f22c1292c6e97099499f49e9b1fb0f5fe08f82a221858a4",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/003",
+      "resource": "GJCATCH2.BMP",
+      "frame": "003",
+      "canvas": [
+        96,
+        77
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/003.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/003.png",
+        "sha256": "7de20059da935e5d609ee0e36cb75bcce4a401e858610be55d11d0adffa6c021"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/003.png",
+        "sha256": "4b6bcb7b469891b5bbe845cb39f31abcbbc5d12fec8bb100dca49084da672b7b"
+      },
+      "source_rgba_sha256": "efb14650bd3500a29673bd911efe487e10f5808e8d58acc1850fc6109e938615",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/025",
+      "resource": "GJCATCH2.BMP",
+      "frame": "025",
+      "canvas": [
+        72,
+        51
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/025.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/025.png",
+        "sha256": "3479b9a67c9c92393f23a5c2584dc871d59659954e17deb2df3d5e75dae20aaa"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/025.png",
+        "sha256": "3937eebfcd27d3a7e6f9f78e19d94e8cb7f1664e0ae051a135fe815323653df7"
+      },
+      "source_rgba_sha256": "1c7caa9634cedc2a33fde282ee1ea9b9608492528e4ae0786c04cfa78c7bc573",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/026",
+      "resource": "GJCATCH2.BMP",
+      "frame": "026",
+      "canvas": [
+        72,
+        44
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/026.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/026.png",
+        "sha256": "a1a86054810621a5c58918c900a4416d31cc0ad3fd645a630f4af6c51e8a66cf"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/026.png",
+        "sha256": "b3a6d90379c7fb351300b6eea016c79276326d44ebca50b96bc27b1369ea5423"
+      },
+      "source_rgba_sha256": "8349556c9cab94cc71e00c14011ce3ca56c045738c7d9934fe49d450d12e1496",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/027",
+      "resource": "GJCATCH2.BMP",
+      "frame": "027",
+      "canvas": [
+        64,
+        47
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/027.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/027.png",
+        "sha256": "f45ce28cb7a3bf1f36abd52f06bb9a1a37b70cbe68904b243c3cfe089002c07f"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/027.png",
+        "sha256": "3ff8b2a97567277af423eda1d41c05bdbe5aa94c70052ae45963cf4b22e4e483"
+      },
+      "source_rgba_sha256": "31a88e3c38218144f574b4a6665a21d74c7452a8c35c5fcb0849a65a54e12468",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/028",
+      "resource": "GJCATCH2.BMP",
+      "frame": "028",
+      "canvas": [
+        80,
+        54
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/028.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/028.png",
+        "sha256": "bee6ea3d5d24974ada090674a78b584f49e1d743e7af806270f7c54fe331fb2b"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/028.png",
+        "sha256": "01b3bc26481e7dd49d2ecab62a66eea76bf316564659753a59fbd216bcadfaf8"
+      },
+      "source_rgba_sha256": "3b6436dbf330a0a7490c8680ec3f9824fb0f129871b69ae16399de6a2c554b51",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/029",
+      "resource": "GJCATCH2.BMP",
+      "frame": "029",
+      "canvas": [
+        104,
+        54
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/029.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/029.png",
+        "sha256": "efd42ff8e00ddb8e5c1206788862ea341f2d3ebf20ec1fac1fd61919e80be24a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/029.png",
+        "sha256": "0a08a5419e9aca10ca844880fde9735115b61709fd2b1a0d54aa7d72357e14a7"
+      },
+      "source_rgba_sha256": "a09c4d9182862fae159c0fe9c015edb6f0aa5a56034e10ac1e8ae069dad8a236",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/030",
+      "resource": "GJCATCH2.BMP",
+      "frame": "030",
+      "canvas": [
+        64,
+        57
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/030.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/030.png",
+        "sha256": "a995f48c349aa51c6b01dc55a9a29fd93e7ab4db2eddd5c4a603b0dd4101844a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/030.png",
+        "sha256": "31b4f43a14591be1b74f90a3ba09864304084c66947cab835491da106f64af13"
+      },
+      "source_rgba_sha256": "923391904a426186cb5b4fce0c1ac60bdd510b2d07d94170a46a49f83954d0c4",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/031",
+      "resource": "GJCATCH2.BMP",
+      "frame": "031",
+      "canvas": [
+        64,
+        57
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/031.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/031.png",
+        "sha256": "9531afce6595dc05c4e352d5a17a4bbe67b6736a500d9a53e30ea9caf84096e4"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/031.png",
+        "sha256": "a619a4fe60b4bafab98c1118c15c6dd636dee8c5558a6148cacc6b9bacc9ab45"
+      },
+      "source_rgba_sha256": "0c1096cac35da2c659fab4cddfdba72e2595f5805a8f2b8c2d268e8f4ca7407d",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/032",
+      "resource": "GJCATCH2.BMP",
+      "frame": "032",
+      "canvas": [
+        88,
+        51
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/032.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/032.png",
+        "sha256": "60e4efce3aed00e1a3dc0d2f9642bbfa958782557f63a7644187a8234df5a768"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/032.png",
+        "sha256": "3bd830d341f18e73dd1832723a59805a2623b96e27e00cd373799ac34d2ab680"
+      },
+      "source_rgba_sha256": "238e1cd4eb76f326c95cd98d5e8724f5ba8c0f15d3b8fd188ee8246a6fd2ac89",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/033",
+      "resource": "GJCATCH2.BMP",
+      "frame": "033",
+      "canvas": [
+        64,
+        54
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/033.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/033.png",
+        "sha256": "01719dc443ddd88ee5f6964ec2565c0b2050835e36150dcf540f48962bb797ee"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/033.png",
+        "sha256": "50a737d9aa5a6f502bc0be9bdddc0c7afb225203bb0d59bf885ae85b94739a4e"
+      },
+      "source_rgba_sha256": "deb82787c7c8801145db0681248c7a8801235a3e932d914707cef8f57b62f655",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/034",
+      "resource": "GJCATCH2.BMP",
+      "frame": "034",
+      "canvas": [
+        88,
+        44
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/034.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/034.png",
+        "sha256": "0eb48482a8ea92408a92b41c06a5a1b4bc197a339be47ef8b60602a6a9a89da6"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/034.png",
+        "sha256": "c94f7bb0c17fc90b5239f959ec90540626018c29caa4fbc57532becb28e2829f"
+      },
+      "source_rgba_sha256": "8f3fab39ae9494eab8bfa1d3f689f3051fbda08b0064e003d09b3f837ec327df",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/035",
+      "resource": "GJCATCH2.BMP",
+      "frame": "035",
+      "canvas": [
+        72,
+        54
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/035.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/035.png",
+        "sha256": "3157f46f53168812eb68219f37e691aa8ca4b964841ce9272478d33f6fd71636"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/035.png",
+        "sha256": "3183f69dee7c318395f8d9864681b186582103f36e9f7b00599616085a7eff8f"
+      },
+      "source_rgba_sha256": "a7ace9ca310807bdaa3739374faf04a4d3d8d8f4526f714b0c073b47b4bdca13",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/036",
+      "resource": "GJCATCH2.BMP",
+      "frame": "036",
+      "canvas": [
+        88,
+        42
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/036.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/036.png",
+        "sha256": "92d92a0aa20f95dd068ed3e50c83f6b1f48170b4348e4a123438c10df8df34e4"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/036.png",
+        "sha256": "8ba1ea04f359116c6db62eb828fa14931c775d145458d7b00022abcd01bdcd21"
+      },
+      "source_rgba_sha256": "5afe599e19e948e3e1e5ef59f674982e4ead5f63d2f524b940ed7c48ce6ec454",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/037",
+      "resource": "GJCATCH2.BMP",
+      "frame": "037",
+      "canvas": [
+        80,
+        52
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/037.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/037.png",
+        "sha256": "32136e6bc68091538c5fa4daeb816fb487ea3c0e6076789cb97853d18cc2c885"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/037.png",
+        "sha256": "d74c871ce46887389e7bf6d9baf04e86c40e695504476031545094e47576b795"
+      },
+      "source_rgba_sha256": "3e4a9702e10e78a4b939ecc91908e840b4a3d8b4afee159e4e9a58898c2daa7c",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/038",
+      "resource": "GJCATCH2.BMP",
+      "frame": "038",
+      "canvas": [
+        88,
+        57
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/038.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/038.png",
+        "sha256": "88cd9063dcc23dbc5500964ec13866d82bab39d66bbe6f17018c62d3958d0069"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/038.png",
+        "sha256": "736c2a7b19986929f5676d785afa5ff0dfb7e64af549259e42dd0e2f5923a23c"
+      },
+      "source_rgba_sha256": "855e3681ac5d923f44fc4c2a42839c04b6f32aa656e2664d1abd657dcfff35e8",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/039",
+      "resource": "GJCATCH2.BMP",
+      "frame": "039",
+      "canvas": [
+        56,
+        69
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/039.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJCATCH2.BMP/039.png",
+        "sha256": "3162e8bde0a71f08a790d0b526880d1a7c5a29b2cdec02216f699830f7883dd9"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJCATCH2.BMP/039.png",
+        "sha256": "10ca961ca00ee099213cddc058867d485749524df0f738b13e3ccf4a30d19685"
+      },
+      "source_rgba_sha256": "209a149931abdcd2c0143fedafab6481f75e37f63711043e6b868f5efb9a91d2",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/016",
+      "resource": "GJDIVE.BMP",
+      "frame": "016",
+      "canvas": [
+        72,
+        15
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/016.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/016.png",
+        "sha256": "163c0bc4d37fcca096ae217da79809d5554e702ee89133bcc58c6bb0019f6c2a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/016.png",
+        "sha256": "1f579e7ad010ae6430a94c90b750d36811c476efd56f4fed5e9dfcf085e29a08"
+      },
+      "source_rgba_sha256": "9e9915e76f159977b8d7ea49f2677a1ad6f0aa362ee5076dec754ca2a1b63eeb",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/017",
+      "resource": "GJDIVE.BMP",
+      "frame": "017",
+      "canvas": [
+        88,
+        24
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/017.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/017.png",
+        "sha256": "162bcb481735b44654d5cf9157554196142e289414754aaf799d24e65b7ae241"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/017.png",
+        "sha256": "7ec12d8f526e078d5c1f699dcc4ce64ad5b22533b2b28e4cb965539c73507fd0"
+      },
+      "source_rgba_sha256": "55b3d825168590e1d758c5609f21ce89d10020a559a9589ee2be86b5710b9c25",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/018",
+      "resource": "GJDIVE.BMP",
+      "frame": "018",
+      "canvas": [
+        88,
+        28
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/018.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/018.png",
+        "sha256": "bb7b33f3437e5538ad046ef37641dc82743451e217b3dc2563b87a46af85e322"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/018.png",
+        "sha256": "01fb910b275fa3cc6b77badb2154dae95f14e5e18f00a2a6e268fa1b498f1aff"
+      },
+      "source_rgba_sha256": "467b50b0e7637d7b3fd846772ed159c9dff5aafc1938f086a79ee162b9f69309",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/019",
+      "resource": "GJDIVE.BMP",
+      "frame": "019",
+      "canvas": [
+        88,
+        28
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/019.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/019.png",
+        "sha256": "49e3cd6236be265ddaa38f56e3d37a2072a5ae0259a7cbe7dee628b7400cc3c6"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/019.png",
+        "sha256": "a563bea5f3d3ed0f57397ae9a76465f8f1440dc9f0a673537eb605ca21bf92b9"
+      },
+      "source_rgba_sha256": "fffddb5da9907a71e9e9888d5906a982891b34c02037f0b547636c975b1119e1",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/020",
+      "resource": "GJDIVE.BMP",
+      "frame": "020",
+      "canvas": [
+        88,
+        32
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/020.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/020.png",
+        "sha256": "1facf6137362cea48fddf87f39a7037144fad17fa18b33b18b732468e3cd000d"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/020.png",
+        "sha256": "4cd344fac570dc778be61ee1ce145206028d3c6421a5325e456ba31de7863c17"
+      },
+      "source_rgba_sha256": "9cbac83035e40ee23d540a7d2c85cf23427d008ab3c0ecda2606984c74ed75ad",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/021",
+      "resource": "GJDIVE.BMP",
+      "frame": "021",
+      "canvas": [
+        80,
+        41
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/021.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/021.png",
+        "sha256": "b9df4a41cf6c1cf11e6221878b8361f797c320db7b5ef6b3851327282a3db76e"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/021.png",
+        "sha256": "a39f8f20e64e2df584b7c00d8e2c2b3315c54e1f389feac01c1e41f419056a56"
+      },
+      "source_rgba_sha256": "fe0140b1069f186039296c18ac2116b6a76c29d4617a656e29f78a32f30412e4",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/024",
+      "resource": "GJDIVE.BMP",
+      "frame": "024",
+      "canvas": [
+        40,
+        34
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/024.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/024.png",
+        "sha256": "bef459ff176eb918cbda2b4f7d942cd42877e6fea172bf53d6e9b23b4cee0af6"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/024.png",
+        "sha256": "d67214bace1ea7ee009767ee0e20abbd59449a7ad9973f2ae17de4f25cad56ad"
+      },
+      "source_rgba_sha256": "11a3b8b5e61b2b6e34489a3675e8c08291cdb8e62a0437e8cb833762a495fe77",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/025",
+      "resource": "GJDIVE.BMP",
+      "frame": "025",
+      "canvas": [
+        48,
+        29
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/025.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/025.png",
+        "sha256": "18231adfd88a73654f8cd4b903ab38d6ffb3d3df4d8e7e1d0cc3724f7fb6a947"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/025.png",
+        "sha256": "977996df60678b419891b87049af1adb2c9f81777cbca6524ecc72dd64747b9f"
+      },
+      "source_rgba_sha256": "c62d031ab8c47f6e2b080246a594ee27577c1f68cdd20ddf5cbab4dd54852bfb",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/026",
+      "resource": "GJDIVE.BMP",
+      "frame": "026",
+      "canvas": [
+        48,
+        28
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/026.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/026.png",
+        "sha256": "25d7f7623a3176675b64fac41031c233b8c8e11efaa5e08b7a30e3750d38f4ea"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/026.png",
+        "sha256": "f406badf61c12d39a570dad863f6bc60e26cff492618222eea8c266f28aedce2"
+      },
+      "source_rgba_sha256": "5a2c2489ab7ecf612aab724f2886011de14e47f17d7783f71b5fc56878c126c9",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/027",
+      "resource": "GJDIVE.BMP",
+      "frame": "027",
+      "canvas": [
+        104,
+        59
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/027.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/027.png",
+        "sha256": "83b13a64047ae220af50010109ff5cea71e22a110362689ba5f0120b41c1b38e"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/027.png",
+        "sha256": "5e076cc26185965b0b06463df742eb8a109881047b6cefbdf4e3c4c0e0e7a1f1"
+      },
+      "source_rgba_sha256": "047403fa0de6a3ade1449dde0facc2e379635cb4c1b0d6d591f26a17a6dba009",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/028",
+      "resource": "GJDIVE.BMP",
+      "frame": "028",
+      "canvas": [
+        96,
+        60
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/028.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/028.png",
+        "sha256": "9cad023d7ffddaba3e7c724a11c24d3ffa7e686def4a2b5f2bc1ed6839904154"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/028.png",
+        "sha256": "55b208a2cc64dbda4c87013af4fa4fd75d5730bb466ca5a460d224b9e22136b0"
+      },
+      "source_rgba_sha256": "5cc2654908bcfcee0c9799714bf4954ab068074df22e30e4229574db053d23c1",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJDIVE.BMP/029",
+      "resource": "GJDIVE.BMP",
+      "frame": "029",
+      "canvas": [
+        88,
+        65
+      ],
+      "archive_member": "native/BMP/GJDIVE.BMP/029.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/GJDIVE.BMP/029.png",
+        "sha256": "e189861d3a65d2c4879c0882db3740ef44b4ed8f27d2ee7da1cab1787ce5df58"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/029.png",
+        "sha256": "fb011ff3c6ae42fd84f312dfc1001c42688485d4cb9c838bd359e39e9f1ca54a"
+      },
+      "source_rgba_sha256": "8d8002b5380cec721dd83c503d8e9fd814f8cf22c3ce040621aa9185918fa4f3",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 7,
+          "description": "bellyflop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 8,
+          "description": "johnny flip",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJDIVE.TTM",
+          "tag": 9,
+          "description": "cannonball",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/SPLASH.BMP/000",
+      "resource": "SPLASH.BMP",
+      "frame": "000",
+      "canvas": [
+        96,
+        65
+      ],
+      "archive_member": "native/BMP/SPLASH.BMP/000.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/SPLASH.BMP/000.png",
+        "sha256": "6b8b7f4c08598202c82ac58425d6c246ce5224f0347df8af1e41bdce3fd153da"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/SPLASH.BMP/000.png",
+        "sha256": "bb10418335b3401d9a3a1e8be7f7eeec70fa992517d60118870fe5e2b6c6650d"
+      },
+      "source_rgba_sha256": "873aa7beffaad11f8a78a061333edb10f5f05fc8d249ce0633d74a8b3e088097",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 52,
+          "description": "FALL FROM TREE",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/SPLASH.BMP/001",
+      "resource": "SPLASH.BMP",
+      "frame": "001",
+      "canvas": [
+        152,
+        39
+      ],
+      "archive_member": "native/BMP/SPLASH.BMP/001.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/SPLASH.BMP/001.png",
+        "sha256": "9020b2519e7a637c6b7b7118061b19020e8ecb9c9ead181cd677f1a2794c7b37"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/SPLASH.BMP/001.png",
+        "sha256": "b2cb3bdf9d3e88ad5bf75014d27cc07a9f5b242c91c62bb7375643e5fa264d16"
+      },
+      "source_rgba_sha256": "457e40b909f33156d804d212df419ff9ff7c659fd9b949f802bb7c3c5345ab14",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/SPLASH.BMP/002",
+      "resource": "SPLASH.BMP",
+      "frame": "002",
+      "canvas": [
+        96,
+        54
+      ],
+      "archive_member": "native/BMP/SPLASH.BMP/002.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/SPLASH.BMP/002.png",
+        "sha256": "dae8c704303dd956c429e858b6454e6766ba6b94defe83c7fba85608f55af025"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/SPLASH.BMP/002.png",
+        "sha256": "8ff7296d88d0257a02c9e6edee84278df2932f77dbf0f834e06973f00e2704c9"
+      },
+      "source_rgba_sha256": "727628309c345d1cff907c617c416451f187d9936b2131f9511a5875abcc05dd",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/SPLASH.BMP/003",
+      "resource": "SPLASH.BMP",
+      "frame": "003",
+      "canvas": [
+        88,
+        61
+      ],
+      "archive_member": "native/BMP/SPLASH.BMP/003.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/SPLASH.BMP/003.png",
+        "sha256": "75a2c874f60a736c2e7c7f84ba7590a82f3e90991432bb943645cf152aa97437"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/SPLASH.BMP/003.png",
+        "sha256": "0e04740e026a1c7b73a91c170ffe5bd3e7fe4a3db733870c8a5ba1af95e03348"
+      },
+      "source_rgba_sha256": "5c1e8231cfd3c3121d5bb12dd569db2f9f2b61b580f7e6a8584184281185d568",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/SPLASH.BMP/004",
+      "resource": "SPLASH.BMP",
+      "frame": "004",
+      "canvas": [
+        128,
+        112
+      ],
+      "archive_member": "native/BMP/SPLASH.BMP/004.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/SPLASH.BMP/004.png",
+        "sha256": "9392ef47cb23dca6b559c0875ac562ef26ab23b96d5802ab79ac27269e52860e"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/SPLASH.BMP/004.png",
+        "sha256": "67c2315186764b1256e9d478412ce4866847ee487aad9f628d5b91f069954533"
+      },
+      "source_rgba_sha256": "a3ecbffb53534832b295601aeb2c556e7893538a7ca62dba58d92c1419d41c2c",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 52,
+          "description": "FALL FROM TREE",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/SPLASH.BMP/005",
+      "resource": "SPLASH.BMP",
+      "frame": "005",
+      "canvas": [
+        112,
+        39
+      ],
+      "archive_member": "native/BMP/SPLASH.BMP/005.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/SPLASH.BMP/005.png",
+        "sha256": "9b6cad5e114d758d5cef9e4c19c5c8f40f147e0d10baf15ce3b52da611538698"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/SPLASH.BMP/005.png",
+        "sha256": "f3c12e7611e4692f37b6ff6c4a901043f9365ae880019e7cef7f55ba1f80f7a2"
+      },
+      "source_rgba_sha256": "9339b22068997087e09fdf6401884264141b6840507be2137110848f7fd1e862",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/SPLASH.BMP/006",
+      "resource": "SPLASH.BMP",
+      "frame": "006",
+      "canvas": [
+        80,
+        20
+      ],
+      "archive_member": "native/BMP/SPLASH.BMP/006.png",
+      "original": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/original/SPLASH.BMP/006.png",
+        "sha256": "b693cc9ded789a6ac8e7bf1e79b1a30c09625494456ce557c88aaf40d7aec71b"
+      },
+      "nearest8": {
+        "path": "art/cartoon/marine-scenes-batch-v1/reference/nearest8/SPLASH.BMP/006.png",
+        "sha256": "2e103d33037a9495b6a8236ff6003f5b0a5f84d0581151b54d110431f98cdca9"
+      },
+      "source_rgba_sha256": "01b08c3fae25c183c7fe82c75f7d8ba07b7c966813a51696c22241dbab55aa11",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 52,
+          "description": "FALL FROM TREE",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    }
+  ]
+}

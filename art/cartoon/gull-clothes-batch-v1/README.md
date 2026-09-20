@@ -19,3 +19,5 @@ All artwork lives in [generation/GJGULL2.BMP](generation/GJGULL2.BMP). Each PNG 
 Appearance review is pending. Native scale, multipart registration, scene animation and bulk smoke/regression testing remain for the integration milestone. This review does not change the production asset archive.
 
 The user subsequently corrected ten poses in [the follow-up review](../gull-clothes-corrections-v2/README.md): five gull views fly away with hidden eyes, four clothing heaps contain black belts, and stick 000 uses one continuous curve. Those instructions supersede the earlier facing and clothing interpretations in this batch's source notes and prompts. The original gallery remains intact as review history.
+
+On 2026-09-19, "approved, lets start on the next set" approved only the follow-up's selected 000 v2 and 004/016/034/037/040/045/046/047/048 v1. The [acceptance record](../gull-clothes-corrections-v2/acceptance/appearance-v1.json) preserves that ten-drawing scope. The other 29 original-batch drawings gain no implied approval, and native integration remains pending.

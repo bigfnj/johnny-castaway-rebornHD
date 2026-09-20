@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "target_new_drawings": 36,
+  "user_batch_default": [
+    36,
+    48
+  ],
+  "resources": {
+    "GJCATCH2.BMP": [
+      0,
+      3,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "GJDIVE.BMP": [
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "SPLASH.BMP": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "source_record": {
+    "path": "art/cartoon/marine-scenes-batch-v1/reference/source.json",
+    "sha256": "7e39b16d30f7fefabfeeb09e551ea004e4720c2aa5489ab497335bf3924cea37"
+  },
+  "groups": {
+    "octopus": "17 eight-arm-menace poses, including rear views and fish held by tentacles",
+    "judges": "12 starfish, crab, fish and gull drawings holding blank diving scorecards",
+    "water": "7 distinct splash and settling-ripple drawings"
+  },
+  "excluded": "GJDIVE shadow planes 022/023 and numeric overlays 031-039; no Johnny fragments selected.",
+  "art_direction": "Original silhouette, eye visibility, overlap and prop placement govern each pose. Shared generated keys control materials only. Cards remain blank for separate score overlays.",
+  "approval": null,
+  "native_validation": false,
+  "workflow": "Built-in image generation, one call per drawing, exact saved requests and untouched raw outputs. Appearance review now; native placement and bulk testing later.",
+  "attribution_limit": "Static source associations do not establish native timing. No consecutive-frame animation is fabricated."
+}

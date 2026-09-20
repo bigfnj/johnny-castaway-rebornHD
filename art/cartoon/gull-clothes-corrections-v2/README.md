@@ -12,4 +12,6 @@ Frames 004/034/016/045 now form supported white clothing heaps with visible blac
 
 Each PNG under [generation/GJGULL2.BMP](generation/GJGULL2.BMP) is a built-in `image_gen.imagegen` result copied byte-for-byte. The adjacent `NNN-vN-request.json` retains the exact prompt and inputs saved before generation; `NNN-record-vN.json` binds the request, references and unchanged raw output. [Selected versions](selected-versions.json) drives the comparison page. No artwork pixels were postprocessed.
 
-Appearance review is pending. Only light image/file/browser checks are included. Native sizing, registration and animation remain deferred with bulk smoke/regression testing. The production asset archive is unchanged.
+Only light image/file/browser checks are included. Native sizing, registration and animation remain deferred with bulk smoke/regression testing. The production asset archive is unchanged.
+
+On 2026-09-19, the user said "approved, lets start on the next set" at this review. The [scoped acceptance](acceptance/appearance-v1.json) approves the appearance of these ten selected corrections only: 000 v2 and 004/016/034/037/040/045/046/047/048 v1. It binds their exact raw PNGs, prompts, source references and shown review, with small byte-identical metadata snapshots. The other 29 drawings from the original batch gain no approval from this response. Historical review and generation records keep their pre-approval status; native integration remains deferred.
