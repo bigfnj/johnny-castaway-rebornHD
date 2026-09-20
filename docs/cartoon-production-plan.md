@@ -4,7 +4,7 @@ Current workflow: the user requested [art construction first, bulk verification 
 
 The default new-art review size is now 60-72 drawings, per the user's 2026-09-19 instruction to deliver five or six dozen per run. Target about 66 where complete families fit. Keep targeted corrections separate from that count and use parallel work across compatible resource groups.
 
-The next [72-drawing little-worker review](../art/cartoon/little-workers-batch-v1/README.md) covers LILIPUTS.BMP000-071, with original references and saved built-in generation requests. Appearance approval is pending; native fitting and bulk verification remain deferred.
+The [72-drawing little-worker review](../art/cartoon/little-workers-batch-v1/README.md) covers LILIPUTS.BMP000-071. The user's follow-up produced [18 pose corrections](../art/cartoon/little-workers-pose-corrections-v2/README.md): alternating leading legs and stride progression, a forward running lean, arm visibility and overlap, slight elbow bends and063 gesturing behind while looking right. Original, previous and corrected drawings are shown together with saved built-in generation requests. Appearance approval is pending; native fitting and bulk verification remain deferred.
 
 The user approved this bounded start on 2026-09-15: establish the production
 catalog, then expand Johnny's walking directions before undertaking the full

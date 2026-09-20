@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Correct ONLY the arm pose of the full-body worker in the FIRST image. The SECOND image is the exact original pose. User clarification overrides our prior reading of that tiny sprite. Keep the same right-facing head with one visible eye, brow, nose and mouth, same cap, face, body, royal-blue bib overalls, green long sleeves, tan hands, dark shoes and stationary standing legs. Anatomy map: the large clearly visible shoulder at SCREEN-LEFT is his NEAR anatomical RIGHT shoulder. His FAR anatomical LEFT shoulder is behind the upper chest at SCREEN-RIGHT. Trace exactly TWO separate continuous arms from those two shoulders, exactly two hands and two sleeves, no third limb or empty cuff. No mirroring of the whole sprite. Genuine transparent RGBA, no floor, background, shadow or halo; safe margins. Keep the NEAR anatomical RIGHT arm at SCREEN-LEFT in its existing modestly bent pose, with elbow beside the waist and hand in front near belly height. CHANGE ONLY the FAR anatomical LEFT arm: remove its hanging position behind the back, bring it FORWARD from the far shoulder behind the upper chest at SCREEN-RIGHT. Extend it diagonally down-right in front, with its hand reaching out beyond the near hand. THIRD reference041 shows the correct far-shoulder origin and two-arm relationship; use that relationship but LOWER the far reach to the low diagonal angle in original040. Near arm remains closer to the torso, far arm reaches outward. Clearly trace two separate arms and two hands, one near/bent and one far/extended. No third hanging arm or empty sleeve. Do not copy041's higher horizontal reach, use040 low gesture.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/generation/LILIPUTS.BMP/040-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/reference/nearest8/LILIPUTS.BMP/040.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/generation/LILIPUTS.BMP/041-generated-v1.png"
+    ]
+  }
+}

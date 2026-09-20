@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "review_record": {
+    "path": "art/cartoon/little-workers-pose-corrections-v2/review-record.json",
+    "sha256": "a7ab81423682a2d9ef2b4cb0133eadd5aab2e513e40d483a5c9fbc35ddbc54c2"
+  },
+  "method": "Focused source/output validation and observed in-app browser UI; no native animation execution.",
+  "focused_verification": {
+    "schema_version": 1,
+    "status": "PASS",
+    "scope": "Focused art-first verification only; no native motion testing or Git index verification.",
+    "verify": {
+      "selected": 18,
+      "panels": 54,
+      "pins": 179,
+      "raw_versions": 22,
+      "actual_rgba_alpha8_margins": 18,
+      "production_archive": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+    },
+    "controls": {
+      "scope": "In-memory mutation controls; no shared files changed.",
+      "expected_failures": [
+        "review-data.json: exact eighteen IDs",
+        "art/cartoon/little-workers-pose-corrections-v2/generation/LILIPUTS.BMP/002-generated-v1.png: SHA256 mismatch",
+        "art/cartoon/little-workers-pose-corrections-v2/generation/LILIPUTS.BMP/002-generated-v1.png: alpha8 touches canvas edge"
+      ],
+      "restored_positives": 3
+    },
+    "attributes": {
+      "scope": "one family attribute line disabled; Git core.autocrlf=true hash-object",
+      "mutation_failures": [
+        "art/cartoon/little-workers-pose-corrections-v2/feedback.json"
+      ],
+      "raw_blob": "dd09cd8c371bd09f6e1a8320d63c05f7e458c6f1",
+      "disabled_line_filtered_blob": "55322ebad3f3b07ba592578371bfb93af552b042",
+      "restored": true,
+      "attributes_sha256": "2bc2984a6ffaa557017438254293bf676be9476cb859ff1e950b143432ca3cd5"
+    },
+    "source_sha256": {
+      "build/verify_worker_pose_corrections.py": "a2a1ad43db40903a173901d04f1f0b5c874121495726982d3bb0bad06bac7e2f",
+      "art/cartoon/little-workers-pose-corrections-v2/review-record.json": "04cd13990adedeaffc0d5bac684f40147cdfa962a5f0e8f4a66262a061008a87",
+      "art/cartoon/little-workers-pose-corrections-v2/review-data.json": "efb3b2fc5f25576269d95a8f36a24531354858981865d25d73587855c200ec8b",
+      "art/cartoon/little-workers-pose-corrections-v2/selected-versions.json": "8beb26fe3471a1952c6e922a29d3358872ec6a14b6886ec5fa98fea85a4799bb"
+    },
+    "commands": [
+      "& $env:TOOLBOX_PYTHON -B build/verify_worker_pose_corrections.py verify",
+      "& $env:TOOLBOX_PYTHON -B build/verify_worker_pose_corrections.py controls",
+      "& $env:TOOLBOX_PYTHON -B build/verify_worker_pose_corrections.py attributes"
+    ]
+  },
+  "browser": {
+    "url": "http://127.0.0.1:8941/little-workers-pose-corrections-v2/review.html",
+    "status": "18 of 18 comparisons ready.",
+    "rows": 18,
+    "loaded_canvases": 54,
+    "filter_063_visible_keys": [
+      "LILIPUTS.BMP-063"
+    ],
+    "clear_restored_rows": 18,
+    "dark_checker_pressed": true,
+    "final_light_checker": true,
+    "console_errors": [],
+    "visual_inspection": "All eighteen original/previous/corrected comparisons inspected on actual alpha; browser samples checked on light and dark checkerboards."
+  },
+  "appearance_approval": null,
+  "native_motion_checked": false,
+  "production_integrated": false
+}

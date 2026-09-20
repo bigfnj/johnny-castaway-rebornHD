@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Image1 is the previous Cartoon EDIT TARGET. Image2 is the exact original pose reference. The user's anatomical interpretation is the authority for the correction. SWAP the two arm roles. The NEAR anatomical RIGHT arm, attached to the visible foreground shoulder on image LEFT, extends diagonally DOWN AND LEFT away from the body; its hand must be out on image LEFT at roughly hip height. Trace that near arm continuously from the near shoulder across the outside silhouette. The FAR anatomical LEFT arm emerges from behind the chest at image RIGHT and bends only slightly forward, its hand just in front of the waist. Do not keep the near forearm across the front of the belly. Exactly TWO arms and TWO hands, no duplicate sleeve. Preserve the same adult worker identity: black cap, short dark hair, one visible right-facing eye/eyebrow/nose/mouth, green shirt, royal blue overalls and navy shoes, tan skin, crisp black outlines and restrained cel shading. Preserve the full-body crop, character scale and every part not explicitly changed. One whole sprite on genuinely transparent RGBA background with clear padding on every edge. No added objects, backdrop, floor, shadow, glow, labels or motion lines. Do not mirror the whole character.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/generation/LILIPUTS.BMP/029-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/reference/nearest8/LILIPUTS.BMP/029.png"
+    ]
+  }
+}

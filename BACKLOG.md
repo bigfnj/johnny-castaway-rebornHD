@@ -25,7 +25,7 @@ checks. Capture-launcher diagnostics and historical replay remain tooling work.
 
 ## Open work
 
-Next appearance review: [72 little-worker drawings](art/cartoon/little-workers-batch-v1/README.md), LILIPUTS.BMP000-071. Walking, turns, gestures and reaches have exact originals beneath each Cartoon. These are new appearance drafts; original-canvas fitting and native testing remain deferred.
+Next appearance review: [18 little-worker pose corrections](art/cartoon/little-workers-pose-corrections-v2/README.md), following the [72-drawing batch](art/cartoon/little-workers-batch-v1/README.md). The focused changes fix leading legs and stride progression, the forward lean into running, hidden and crossing arms, elbow bends and the backward gesture in063. Original, previous and corrected drawings appear together. Appearance approval remains pending; original-canvas fitting and native testing remain deferred.
 
 The current [asset-build workflow](docs/cartoon-art-build-workflow.md) defers full smoke, regression and code audits until the art build is complete. Keep visual approvals and reusable source records current while accumulating families.
 
