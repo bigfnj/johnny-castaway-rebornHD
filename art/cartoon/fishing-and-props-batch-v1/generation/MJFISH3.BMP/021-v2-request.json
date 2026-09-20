@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Restore the partly occluded far eye visible in the exact source",
+  "arguments": {
+    "referenced_image_paths": [
+      "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\fishing-and-props-batch-v1\\generation\\MJFISH3.BMP\\021-generated-v1.png",
+      "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\fishing-and-props-batch-v1\\reference\\nearest8\\MJFISH3.BMP\\021.png"
+    ],
+    "prompt": "Use case: precise-object-edit. Image 1 is the edit target: preserve its complete transparent red/orange Cartoon cephalopod sprite. Image 2 is the exact original geometry reference. The original has TWO visible white eyes: a large near eye toward screen-left, and a smaller partly hidden far eye immediately to its screen-right, slightly lower, on the far contour of the lower head. Image 1 mistakenly has only one eye. Add ONLY that second far eye as a partly occluded white oval with a small dark pupil, peeking around the head's right contour next to the existing eye. It should be roughly half the visible area of the near eye, with the head hiding the rest, matching image 2's larger-white-eye / smaller-white-sliver relationship. Preserve the existing near eye and its gaze. The pair should read as two eyes of ONE head looking toward the lower left; do not place an eye on an arm, add a third eye, add a mouth, or change the long head silhouette. Keep the exact five visible dangling arm shapes, gaps, pose, colors, highlights, black outlines, canvas and transparency of image 1 unchanged. No scenery, shadow, halo or checkerboard. Output the full sprite on genuine transparent alpha."
+  }
+}

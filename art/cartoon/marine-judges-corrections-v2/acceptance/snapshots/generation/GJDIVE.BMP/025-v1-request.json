@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "GJDIVE025 restore the partly occluded far eye requested by the user",
+  "arguments": {
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/marine-scenes-batch-v1/generation/GJDIVE.BMP/025-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/marine-scenes-batch-v1/reference/nearest8/GJDIVE.BMP/025.png"
+    ],
+    "prompt": "Use case: precise-object-edit. Image 1 is the edit target, the existing Cartoon fish holding its lowered blank ivory scorecard. Image 2 is the original source pose. The user's correction is that this fish has TWO visible eyes: the large near eye and a partly obscured FAR eye visible at the LEFT contour of the head, just as the small white mark at the left edge of the original head shows.\nChange ONLY the far eye: add a narrow white sclera crescent/partial oval peeking from behind the far-left head contour, with a small partly concealed black pupil consistent with the near eye's gaze. Much of this eye remains behind the green head; its visible width is around one quarter of the large near eye. It is an actual partial second eye, not a solid black bump, nostril, mouth or second large full eyeball. Keep the head's smooth contour and existing mouth.\nPreserve all other Image 1 details exactly: large near eye, green round fish body and spots, yellow belly, orange fins and tail, lowered card plane and fin grip, pose, proportions, ink style, shading, framing and transparent alpha. Do not turn the fish fully frontal. No text, numbers, checkerboard or added scenery. Return the one entire sprite with genuine transparent RGBA and clear padding."
+  }
+}

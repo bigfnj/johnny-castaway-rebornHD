@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Smooth fuselage insignia without changing the source aircraft pose",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Edit image 1, keeping the same complete transparent Cartoon aircraft sprite, its pose, bank angle, olive fuselage, red wings and tail, wheel, nose propeller, cockpit, lighting and shading. Change ONLY the blocky pixel-stepped red-white-blue emblem on the fuselage into a small smooth circular concentric roundel: red outer band, white middle band, solid dark-blue center. Match the roundel design of image 2, which is a style reference ONLY; DO NOT copy image 2's horizontal aircraft orientation. Keep the badge centered at its existing location and approximately the existing width, fitting the fuselage perspective. No pixel steps, squares or cross silhouette. Preserve all other artwork and genuine transparent alpha, with complete aircraft inside the canvas.",
+    "referenced_image_paths": [
+      "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\fishing-and-props-batch-v1\\generation\\GJBIPLAN.BMP\\002-generated-v1.png",
+      "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\fishing-and-props-batch-v1\\generation\\GJBIPLAN.BMP\\001-generated-v2.png"
+    ]
+  }
+}

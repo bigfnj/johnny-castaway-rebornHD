@@ -1,0 +1,2725 @@
+{
+  "schema_version": 1,
+  "count": 64,
+  "scope": "Exact source drawings for a new appearance review",
+  "palette_limit": "Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.",
+  "archive": {
+    "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+    "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+  },
+  "frame_index": {
+    "path": "art/cartoon/character-inventory-v1/source/frame-index.json",
+    "sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2"
+  },
+  "scene_map": {
+    "path": "art/cartoon/character-inventory-v1/scene-map/resource-map.json",
+    "sha256": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3"
+  },
+  "preparation": {
+    "path": "art/cartoon/fishing-and-props-batch-v1/prepare_references.py",
+    "sha256": "3d78f6f3fbf8e1dc137c6240a64d90ff3a7173db4e8414c49537e2883c9d74da"
+  },
+  "contacts": [
+    {
+      "path": "art/cartoon/fishing-and-props-batch-v1/reference/MJFISH3.BMP-contact-01.png",
+      "sha256": "eda0f7031654563e8f8a78a8872a8b1bb2bd99e9ec1c28ed7730ab18ed9ea9e0"
+    },
+    {
+      "path": "art/cartoon/fishing-and-props-batch-v1/reference/MJFISH3.BMP-contact-02.png",
+      "sha256": "1783f296f5165c0082e9df28448768dc49319491430d0acf8a23e79fae9ecfbf"
+    },
+    {
+      "path": "art/cartoon/fishing-and-props-batch-v1/reference/MJFISH3.BMP-contact-03.png",
+      "sha256": "426b2110eaa8c7d51fb69f043fdca0a62e4dfce723a232c843e566fa4050fe7f"
+    },
+    {
+      "path": "art/cartoon/fishing-and-props-batch-v1/reference/MJFISH1.BMP-contact-01.png",
+      "sha256": "f5f50ef11b69d53a976df9aacf548df3d2ee4c8a5db8774acf1bedba47b40d37"
+    },
+    {
+      "path": "art/cartoon/fishing-and-props-batch-v1/reference/GJCATCH1.BMP-contact-01.png",
+      "sha256": "3d05b660e0ea6157c1eaa596cb5351a76556e23e46c4ca7a531758d26f57d10b"
+    },
+    {
+      "path": "art/cartoon/fishing-and-props-batch-v1/reference/GJCATCH2.BMP-contact-01.png",
+      "sha256": "1dbfc6d9cd7ac4ac0ca8bd3216b0858af08dcfb117481c9f9f8919517a94ddbc"
+    },
+    {
+      "path": "art/cartoon/fishing-and-props-batch-v1/reference/GJBIPLAN.BMP-contact-01.png",
+      "sha256": "fc26bd3a5802d9a4369b6eb7bdc5fc976eaf37cd70247ae2a1905f7fad0945fe"
+    },
+    {
+      "path": "art/cartoon/fishing-and-props-batch-v1/reference/GJBIPLAN.BMP-contact-02.png",
+      "sha256": "4643a12b63a02436e2ec5f7572084f3f1508297a570d9d647ead4a844ad19ca6"
+    },
+    {
+      "path": "art/cartoon/fishing-and-props-batch-v1/reference/GJVIS52.BMP-contact-01.png",
+      "sha256": "17b975cb9b9703f1e1cf12784d05f97d68787babc63f11d09b8a27d921a68c42"
+    }
+  ],
+  "assets": [
+    {
+      "id": "BMP/MJFISH3.BMP/000",
+      "resource": "MJFISH3.BMP",
+      "frame": "000",
+      "canvas": [
+        32,
+        26
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/000.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/000.png",
+        "sha256": "d7eb29800f45e1c728273c0e4b0200d1024efdc17951f8c1d0158a6bebd835c5"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/000.png",
+        "sha256": "fb7915fd5a48fc2902767679e60a81b26e0fb0a807d55521a5f10245acda99c5"
+      },
+      "source_rgba_sha256": "0b6c76f4c28c77d93573cad3ea2234abee57e8b36b147fce4d8d02aef06df93f",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 24,
+          "description": "sa crabpinch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 27,
+          "description": "sa grab crabline",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 61,
+          "description": "crab sequence",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/002",
+      "resource": "MJFISH3.BMP",
+      "frame": "002",
+      "canvas": [
+        24,
+        40
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/002.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/002.png",
+        "sha256": "bc3c04df48ca9f741f44f0c3659a71a6ba94df42d12ce1bddba60cd5a69464d4"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/002.png",
+        "sha256": "81d7c14ac276bc440f062129dc9d0beb9006ec9e9dd4d5a242aaad2a5fa174b3"
+      },
+      "source_rgba_sha256": "6719c29cffbca2ce3de4b7d014a2dfb1cb0e0ab827ebff31a2a9a3991af3e8f1",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 28,
+          "description": "sa grab large fish",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 30,
+          "description": "sa lgfish stx tree",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 41,
+          "description": "fish gag 3",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 58,
+          "description": " large fish wiggle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 63,
+          "description": "large fish catch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 108,
+          "description": "Johnny looks",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/003",
+      "resource": "MJFISH3.BMP",
+      "frame": "003",
+      "canvas": [
+        24,
+        42
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/003.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/003.png",
+        "sha256": "b275398fe2530bee22d343d9ca44302a13143f4cc6bbefec81b556f5be442183"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/003.png",
+        "sha256": "39b828714cf0e94b28964603382ec531be3cb6a24906a109f0e1471c24e43ef3"
+      },
+      "source_rgba_sha256": "33ae658e66962dd1ba84662833f0f3d0e0cf0dde96f0376f8f74be1d629ba93b",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 28,
+          "description": "sa grab large fish",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 30,
+          "description": "sa lgfish stx tree",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 41,
+          "description": "fish gag 3",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 58,
+          "description": " large fish wiggle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 63,
+          "description": "large fish catch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 108,
+          "description": "Johnny looks",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/004",
+      "resource": "MJFISH3.BMP",
+      "frame": "004",
+      "canvas": [
+        32,
+        42
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/004.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/004.png",
+        "sha256": "1637a6761d6598c7c91cbb7279f99f6abb9bb760664862610bf3266e1c58819a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/004.png",
+        "sha256": "e7fa6931042b84b274dd3b4090a5b72b4076adf60f7918a452bb39092f83c9db"
+      },
+      "source_rgba_sha256": "fb39821a377c7e9e56aac0f8403344d91b57a4d6c346e19ac0d63b9a2446afbb",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 28,
+          "description": "sa grab large fish",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 30,
+          "description": "sa lgfish stx tree",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 41,
+          "description": "fish gag 3",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 58,
+          "description": " large fish wiggle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 63,
+          "description": "large fish catch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 108,
+          "description": "Johnny looks",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/005",
+      "resource": "MJFISH3.BMP",
+      "frame": "005",
+      "canvas": [
+        24,
+        17
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/005.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/005.png",
+        "sha256": "5b0f4dac9c0f706e15c51272fb376b0c0f448db926d3b836e227a44ecf36fbe6"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/005.png",
+        "sha256": "190c78b5ba4cee0d0399c418ab1427f36a50a70c28a5bec55cb6df79910605d2"
+      },
+      "source_rgba_sha256": "7899db68dd78db9559e44da75375399b684277ab997e30712b5e454e71f3eb66",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 31,
+          "description": "sa seastar gr/thr",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 52,
+          "description": "twinkle star",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/006",
+      "resource": "MJFISH3.BMP",
+      "frame": "006",
+      "canvas": [
+        24,
+        15
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/006.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/006.png",
+        "sha256": "f3cf733c8f772b19c478dce6f732c932fd0ae5c2fdab16e23fe1a677af919362"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/006.png",
+        "sha256": "ae89a0297bdbc2d766e51b4027d65c0cf3ccce0607a11d64700c8a678f11dbdb"
+      },
+      "source_rgba_sha256": "6bcf05de395ddf7386a2fc0b70f11fdf1893a99ab36c43f6b7a8c5d7986458b3",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 31,
+          "description": "sa seastar gr/thr",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 52,
+          "description": "twinkle star",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/007",
+      "resource": "MJFISH3.BMP",
+      "frame": "007",
+      "canvas": [
+        24,
+        17
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/007.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/007.png",
+        "sha256": "471bd45390182e590c99e11edc057e135310c3b5256eacdc5d272f95984f1a74"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/007.png",
+        "sha256": "1a1c6f14c5b30979ebdce3525156e6d13e9e961a414aae725c9c58b1e76bdb00"
+      },
+      "source_rgba_sha256": "dd73cb5db6b20bc5168f6d00f054371f65642c3c5c68a38c1fe559093d16234f",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 31,
+          "description": "sa seastar gr/thr",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 52,
+          "description": "twinkle star",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 53,
+          "description": "toss star",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/008",
+      "resource": "MJFISH3.BMP",
+      "frame": "008",
+      "canvas": [
+        16,
+        18
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/008.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/008.png",
+        "sha256": "9328671ac21e0aea22f9afe3e890022fde950a621aff040ed7cc550f79a6cd45"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/008.png",
+        "sha256": "50e21206593bd13aba36a0f8ef35a276486565078bc9e97fdc78cc84b3879d3d"
+      },
+      "source_rgba_sha256": "e69f558aa66bd71e153bd5b49da7c2b78a1ddba5fae41d19423a6d321853e644",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 26,
+          "description": "sa fishdrop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 29,
+          "description": "sa wigglefish",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 49,
+          "description": "fish wiggle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/009",
+      "resource": "MJFISH3.BMP",
+      "frame": "009",
+      "canvas": [
+        16,
+        19
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/009.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/009.png",
+        "sha256": "364fd887cac33c4bcd52c0dfdea83198caf720649f59ea2e05526a9e71160ea0"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/009.png",
+        "sha256": "183ab46980bfb89ff6b8d100775f65165aa68f4e4cb70a36b3a00ea97c4c5d2b"
+      },
+      "source_rgba_sha256": "756e7bcfbeb59339b587652f8f80d4d56a0eff8a08b589933b348653d69fe8ba",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 26,
+          "description": "sa fishdrop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 29,
+          "description": "sa wigglefish",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 49,
+          "description": "fish wiggle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/010",
+      "resource": "MJFISH3.BMP",
+      "frame": "010",
+      "canvas": [
+        16,
+        20
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/010.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/010.png",
+        "sha256": "3ef71233927b00aa71ffb25ca60ff1b2972698709a80c7582a654362e580d435"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/010.png",
+        "sha256": "3d5312f9006415880c395c5fc5ef75bcf1bd5beef17ca84fbc961db39c116806"
+      },
+      "source_rgba_sha256": "1b316d198ec7d54564c7ae65b208b8cfe6c28e7c14415de9e052af298e77f494",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 26,
+          "description": "sa fishdrop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 29,
+          "description": "sa wigglefish",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 49,
+          "description": "fish wiggle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/011",
+      "resource": "MJFISH3.BMP",
+      "frame": "011",
+      "canvas": [
+        40,
+        38
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/011.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/011.png",
+        "sha256": "a9a3cfe1dde776d8f94480b491301882e70b1a978b957c9adc2599737ddd4501"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/011.png",
+        "sha256": "60c219de45fb0aca9444fc86d835c1d750ce01ee59b9a2f47be36e589fcce4dc"
+      },
+      "source_rgba_sha256": "a754a8c83587ce0866b8c8e46ea9d99c7920627581ffc1d0fbaf4cc055315965",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 35,
+          "description": "sa preserver",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/013",
+      "resource": "MJFISH3.BMP",
+      "frame": "013",
+      "canvas": [
+        24,
+        40
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/013.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/013.png",
+        "sha256": "e3ff4a9a7093f658bba560350fefe4a486cc97b56f427a2e06fb961c14ca901a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/013.png",
+        "sha256": "0aabbbaecf034315147ec189f301e25a36ff838473b3d20bed8664984618f91a"
+      },
+      "source_rgba_sha256": "e43f3217ba1d20a120b905cc1af23b93e48482cd6bb69d9dddf8580dfbee605d",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 36,
+          "description": "sa board",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/014",
+      "resource": "MJFISH3.BMP",
+      "frame": "014",
+      "canvas": [
+        24,
+        42
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/014.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/014.png",
+        "sha256": "9181456a8103734757d1147580e7bc4925490b7b6c09f3629bb4d65f391c64b6"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/014.png",
+        "sha256": "01ec06b28bd1c21761cf20028dd38d61c7e26a86026c9baed45deea83c53087e"
+      },
+      "source_rgba_sha256": "2f4db195d397fa56c6bb5cd72079daef695c6c0c9feec8dd986ae8c7139a2a27",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 36,
+          "description": "sa board",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/015",
+      "resource": "MJFISH3.BMP",
+      "frame": "015",
+      "canvas": [
+        32,
+        40
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/015.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/015.png",
+        "sha256": "0cedf21e911a395f7f754cde02d0d86a95dc7d7183985ff440a49cd766f32a1d"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/015.png",
+        "sha256": "93756fff9ff1558dd805e9bb9818e7f11ba1b368b96b1a819908acd4a607abd8"
+      },
+      "source_rgba_sha256": "41c82b530ecf336aaa12d21847f68b57397c4326bcd071494c4900dfed2b96e2",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/016",
+      "resource": "MJFISH3.BMP",
+      "frame": "016",
+      "canvas": [
+        40,
+        35
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/016.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/016.png",
+        "sha256": "5971965128c3415960654ea0f55c260ac7223ffab6dbc2880d6b0144186d9699"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/016.png",
+        "sha256": "c74d3aba34314b3b0a2a5dfa01c7612ec7067558e74cfff665d01d8139bdc925"
+      },
+      "source_rgba_sha256": "e02221e060bb77c7cfc0bd4555e34927b5cd25f165e62e9f26d73929dae228a7",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/017",
+      "resource": "MJFISH3.BMP",
+      "frame": "017",
+      "canvas": [
+        48,
+        30
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/017.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/017.png",
+        "sha256": "423f3a93d4243808459983b4646b00241de8115dfb01a9c83bb56e12f3f127e8"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/017.png",
+        "sha256": "3651fad3a35a022f9971b82ec8d66fdd6f96eb3d2a49df2d3864c33dd70f27ba"
+      },
+      "source_rgba_sha256": "a1dc35652cd97b85f039153e48acc7b02bc795f9b1285cb00b863a7815493285",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/018",
+      "resource": "MJFISH3.BMP",
+      "frame": "018",
+      "canvas": [
+        48,
+        22
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/018.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/018.png",
+        "sha256": "1dc680b962f964eee8b13931b45223bf6db43fa4d3645df8ae9dfa0e576e5b59"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/018.png",
+        "sha256": "31e6d922f39896802bc6193ae97b83509e3acd0cc4be475eebcdb18ea07c7b46"
+      },
+      "source_rgba_sha256": "9ebdc4307bccaeed91e142f205ab32309c1a65b3103401b5e29ef8a0d7ee7dd7",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 36,
+          "description": "sa board",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/019",
+      "resource": "MJFISH3.BMP",
+      "frame": "019",
+      "canvas": [
+        40,
+        55
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/019.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/019.png",
+        "sha256": "db1662d69f73846d03b3b5e14317df1cd80eb7ba2446f4f1af14ae43f4d56796"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/019.png",
+        "sha256": "835dcbcfddd5fc14090665b20d21757ba2723e0b7d5852f3afb6439513d465b1"
+      },
+      "source_rgba_sha256": "67fcbb73088dd4a88f9becc8278d8f5d4d7a92ed04d5008654a5c3cab30eca72",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 37,
+          "description": "sa octopus ",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/020",
+      "resource": "MJFISH3.BMP",
+      "frame": "020",
+      "canvas": [
+        40,
+        52
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/020.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/020.png",
+        "sha256": "a30e1f94d786dfd9a41af81d2265a8ab8a5823294b7e8fa7b40b3cac01172145"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/020.png",
+        "sha256": "b0e5b9318bdc0602524f3fdd9fca6e7aa206c93705896f5b1f5feb736d2e24af"
+      },
+      "source_rgba_sha256": "f2ee062dfc71fae55b0aabbc4ce9656c543c54f1d7819e1db1af94e9fab8b9ba",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 37,
+          "description": "sa octopus ",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/021",
+      "resource": "MJFISH3.BMP",
+      "frame": "021",
+      "canvas": [
+        48,
+        55
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/021.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/021.png",
+        "sha256": "8902ffe6393e7aa83c55fe18ef2760ec99ea2eee18da37851dacc1cf2e1fabdf"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/021.png",
+        "sha256": "2524d2c046d1f3e1aada8f8d1569ab014c1650c65a49c534a16ad5d9da974251"
+      },
+      "source_rgba_sha256": "f1deff273f24e9e5cfe3373ae60677bd3d9160c6c08b27ad80b9edcb0379d648",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 37,
+          "description": "sa octopus ",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/022",
+      "resource": "MJFISH3.BMP",
+      "frame": "022",
+      "canvas": [
+        40,
+        38
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/022.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/022.png",
+        "sha256": "8a8933eaf76d21ee421f940a510806ee78141adc7141334207d8c5a0b9fc57e0"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/022.png",
+        "sha256": "b2584b7dbe120ab918e425f875682c4e7bc955b15c71e5a3a22352ce4df691f0"
+      },
+      "source_rgba_sha256": "f3c92177d10ee0c14f8bd8688731f4f8192eb1359917d76fee98a0929ba06fbe",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 35,
+          "description": "sa preserver",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/024",
+      "resource": "MJFISH3.BMP",
+      "frame": "024",
+      "canvas": [
+        40,
+        32
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/024.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/024.png",
+        "sha256": "6a78f87f271c22607eea24511512229160378756c2d0e8a00d3f27e55e25be03"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/024.png",
+        "sha256": "5f03beca91174e294e2bc9bd5c580b64d4e67a31371fd4814b7ff5551251294c"
+      },
+      "source_rgba_sha256": "77bce04f448a315607eaa7c3d640b6e80d7986404271e226874ceafb20d7137d",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 24,
+          "description": "sa crabpinch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 31,
+          "description": "sa seastar gr/thr",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 33,
+          "description": "sa boot throw",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 41,
+          "description": "fish gag 3",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 53,
+          "description": "toss star",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 55,
+          "description": "throw boot",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 61,
+          "description": "crab sequence",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 108,
+          "description": "Johnny looks",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJMSSGE.TTM",
+          "tag": 10,
+          "description": "throw bottle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/025",
+      "resource": "MJFISH3.BMP",
+      "frame": "025",
+      "canvas": [
+        24,
+        11
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/025.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/025.png",
+        "sha256": "98d5f54c5eb9004804c9fb84a29918c9bd44d1bff65790955b902c0f586cebfd"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/025.png",
+        "sha256": "76ef87f5955554bc238e065a7aa8bfd18d205934532fb3486b685a95378c6102"
+      },
+      "source_rgba_sha256": "dc71921cd77d57a22dfcfcc7c0cc04b99d881cd1a440ab76f7187812fc320c2c",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 24,
+          "description": "sa crabpinch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 26,
+          "description": "sa fishdrop",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 31,
+          "description": "sa seastar gr/thr",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 33,
+          "description": "sa boot throw",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 41,
+          "description": "fish gag 3",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 49,
+          "description": "fish wiggle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 53,
+          "description": "toss star",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 55,
+          "description": "throw boot",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 61,
+          "description": "crab sequence",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 108,
+          "description": "Johnny looks",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJMSSGE.TTM",
+          "tag": 10,
+          "description": "throw bottle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/031",
+      "resource": "MJFISH3.BMP",
+      "frame": "031",
+      "canvas": [
+        24,
+        22
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/031.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/031.png",
+        "sha256": "13b08f0f103819f62de2cb7ef2f227ef32447424d81d3849b2f2b8faa746873f"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/031.png",
+        "sha256": "989775226f95794823cf319a44eaec2dfec873258b328882d00144be1878f906"
+      },
+      "source_rgba_sha256": "417bce4c15d46a8a6484963dea6819ce931c9671902fb9d4ceb977205dc548f8",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/032",
+      "resource": "MJFISH3.BMP",
+      "frame": "032",
+      "canvas": [
+        32,
+        17
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/032.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/032.png",
+        "sha256": "27e00e0137a1a642926371d4f9291a00bfb22d849254886ebd0a5a1e49f4a612"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/032.png",
+        "sha256": "07fb5111ef2ec0e1543dc356d0437a82f3e101a6ccb3939b1e3c084073770b13"
+      },
+      "source_rgba_sha256": "6c984cd09b99d1b7de457a34eac411df8dfedaea828edecf37c033b62808ef5c",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MJFISH3.BMP/037",
+      "resource": "MJFISH3.BMP",
+      "frame": "037",
+      "canvas": [
+        16,
+        22
+      ],
+      "archive_member": "native/BMP/MJFISH3.BMP/037.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH3.BMP/037.png",
+        "sha256": "cb0d1f98b88eb43fef6c0b67b464fd02142929c72f985281d7c4ca530c552a83"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH3.BMP/037.png",
+        "sha256": "2e7eb65186c963176d23a3ae62b25aa810a7d0d872d9309940733222e6ee2579"
+      },
+      "source_rgba_sha256": "d5adb27f9258ed70784044c205d5a43a07ed7de2c9c64bf36e056cb2c89f86ae",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 62,
+          "description": "boot to tree",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH1.BMP/022",
+      "resource": "MJFISH1.BMP",
+      "frame": "022",
+      "canvas": [
+        48,
+        16
+      ],
+      "archive_member": "native/BMP/MJFISH1.BMP/022.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH1.BMP/022.png",
+        "sha256": "bdf4cea84515d2cfe6cc46b7ec78a5ebce6ab8bfc190995b3b38f26bee548d2a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH1.BMP/022.png",
+        "sha256": "cfa3ae8126ff12576df49c87f6ea6a0b58dbc27cef8041099fb164ee5514338e"
+      },
+      "source_rgba_sha256": "3b8f1138a01c4e84f6a9283c8592e35434967e7361f2287555e524a23658287c",
+      "static_frame_attribution": [
+        {
+          "ttm": "FISHWALK.TTM",
+          "tag": 19,
+          "description": "fishwalk",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 18,
+          "description": "walk d to a get pole",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 20,
+          "description": "wlk a to d",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 30,
+          "description": "sa lgfish stx tree",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 34,
+          "description": "sa boot tree",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 35,
+          "description": "sa preserver",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 36,
+          "description": "sa board",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 37,
+          "description": "sa octopus ",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 17,
+          "description": "Walk e to c get pole",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 63,
+          "description": "large fish catch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 64,
+          "description": "walk c to tree",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 17,
+          "description": "Walk e to c get pole",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 108,
+          "description": "Johnny looks",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH1.BMP/023",
+      "resource": "MJFISH1.BMP",
+      "frame": "023",
+      "canvas": [
+        48,
+        11
+      ],
+      "archive_member": "native/BMP/MJFISH1.BMP/023.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH1.BMP/023.png",
+        "sha256": "3c7f29be2f287deda3b4f1e5519202cd9e497939d2a8faca6da4367960da504d"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH1.BMP/023.png",
+        "sha256": "8d2d7f5b0d57f7f11ad47a5a496aee644870270028258276942f0505548ece28"
+      },
+      "source_rgba_sha256": "b8262456435e50781bd355d96f56eceb3afd63c1863f22b0e84f17da47fd8167",
+      "static_frame_attribution": [
+        {
+          "ttm": "FISHWALK.TTM",
+          "tag": 19,
+          "description": "fishwalk",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 18,
+          "description": "walk d to a get pole",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 20,
+          "description": "wlk a to d",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 30,
+          "description": "sa lgfish stx tree",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 34,
+          "description": "sa boot tree",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 35,
+          "description": "sa preserver",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 36,
+          "description": "sa board",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 37,
+          "description": "sa octopus ",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 17,
+          "description": "Walk e to c get pole",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 63,
+          "description": "large fish catch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 64,
+          "description": "walk c to tree",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 17,
+          "description": "Walk e to c get pole",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 108,
+          "description": "Johnny looks",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH1.BMP/024",
+      "resource": "MJFISH1.BMP",
+      "frame": "024",
+      "canvas": [
+        40,
+        9
+      ],
+      "archive_member": "native/BMP/MJFISH1.BMP/024.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH1.BMP/024.png",
+        "sha256": "786989b2e491c77a39ffbd63ab85115767746c59c2ae4d97c14cce53dd54b8e8"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH1.BMP/024.png",
+        "sha256": "f7a1ddc3ad6b82ad244690c08aedf242f1677b86532603e458db80d392b1ad2e"
+      },
+      "source_rgba_sha256": "81fa12067240e495a5512849877f844f272397b59d2008efaf4918934d000162",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 10,
+          "description": "A CAST POLE",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 12,
+          "description": "A REEL CATCH LIGHT",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 13,
+          "description": "A REEL CATCH HEAVY",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 14,
+          "description": "A REEL FAST",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 15,
+          "description": "A REEL SLOW",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 16,
+          "description": "A GRAB LINE",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 21,
+          "description": "sa amb sh",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 22,
+          "description": "sa amb bs",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 23,
+          "description": "sa amb ft",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 38,
+          "description": "JOHNSTAND A",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 44,
+          "description": "cylce catch fish",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 2,
+          "description": "c cast",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 5,
+          "description": "C REEL FAST",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 6,
+          "description": "C REEL CATCH HEAVY",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 7,
+          "description": "C- REEL CATCH LIGHT",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 8,
+          "description": "C REEL SLOW",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 9,
+          "description": "C GRAB CATCH",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 44,
+          "description": "john stand at d",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 45,
+          "description": "sc amb sh",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 46,
+          "description": "sc amb bs",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 47,
+          "description": "sc amb ft",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 2,
+          "description": "c cast",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 105,
+          "description": "Johnny ambient",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 108,
+          "description": "Johnny looks",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH1.BMP/025",
+      "resource": "MJFISH1.BMP",
+      "frame": "025",
+      "canvas": [
+        48,
+        14
+      ],
+      "archive_member": "native/BMP/MJFISH1.BMP/025.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH1.BMP/025.png",
+        "sha256": "ce8845130b8d7be07dad156d2de8f3665565819748d8550b03b31bf5736fd19d"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH1.BMP/025.png",
+        "sha256": "c649434d9afe975d66339519932dc32bc9c5747c804f43a48c6c756bf5976e00"
+      },
+      "source_rgba_sha256": "ee9a05ff7c86ef92e8e81ebabc2512e8057c3c3a9c2d4ef7afc12f41a35676fe",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 12,
+          "description": "A REEL CATCH LIGHT",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 13,
+          "description": "A REEL CATCH HEAVY",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 14,
+          "description": "A REEL FAST",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 15,
+          "description": "A REEL SLOW",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 16,
+          "description": "A GRAB LINE",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 44,
+          "description": "cylce catch fish",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 5,
+          "description": "C REEL FAST",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 6,
+          "description": "C REEL CATCH HEAVY",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 7,
+          "description": "C- REEL CATCH LIGHT",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 8,
+          "description": "C REEL SLOW",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 9,
+          "description": "C GRAB CATCH",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 105,
+          "description": "Johnny ambient",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 108,
+          "description": "Johnny looks",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJFISH1.BMP/026",
+      "resource": "MJFISH1.BMP",
+      "frame": "026",
+      "canvas": [
+        56,
+        17
+      ],
+      "archive_member": "native/BMP/MJFISH1.BMP/026.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/MJFISH1.BMP/026.png",
+        "sha256": "e063af84bdd3cab5466649e801990ae66f1a453da8a0e867ed217e722fe049cc"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/MJFISH1.BMP/026.png",
+        "sha256": "c3f0567f93e23fbb15b2337eb4e7e2e4b8730a9b45a99e1c42784189a9de69cc"
+      },
+      "source_rgba_sha256": "7471d235c5936cf82933f162520bdcccf8f84f9c0afb1ead297e9cc66ffb6fee",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 12,
+          "description": "A REEL CATCH LIGHT",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 13,
+          "description": "A REEL CATCH HEAVY",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 14,
+          "description": "A REEL FAST",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 15,
+          "description": "A REEL SLOW",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 16,
+          "description": "A GRAB LINE",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISH.TTM",
+          "tag": 44,
+          "description": "cylce catch fish",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 5,
+          "description": "C REEL FAST",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 6,
+          "description": "C REEL CATCH HEAVY",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 7,
+          "description": "C- REEL CATCH LIGHT",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 8,
+          "description": "C REEL SLOW",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 9,
+          "description": "C GRAB CATCH",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 105,
+          "description": "Johnny ambient",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJGLIMPS.TTM",
+          "tag": 108,
+          "description": "Johnny looks",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH1.BMP/007",
+      "resource": "GJCATCH1.BMP",
+      "frame": "007",
+      "canvas": [
+        128,
+        17
+      ],
+      "archive_member": "native/BMP/GJCATCH1.BMP/007.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH1.BMP/007.png",
+        "sha256": "6e7dac9532da1a776cd6091ea8f687812402871075c6b1b233881360c623605d"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH1.BMP/007.png",
+        "sha256": "c451072a18734b3c32acc1b08bc9efa61027161d6af949b8da29b9b616bb593e"
+      },
+      "source_rgba_sha256": "b95d38ce09fdc3bcb8124059ef218f7a97ef5e702178805c22a66e5d77539bf5",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 42,
+          "description": "catch 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH1.BMP/013",
+      "resource": "GJCATCH1.BMP",
+      "frame": "013",
+      "canvas": [
+        96,
+        12
+      ],
+      "archive_member": "native/BMP/GJCATCH1.BMP/013.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH1.BMP/013.png",
+        "sha256": "d3b58f592463c5e2a11cd378daa94da1a190d308b73755cdf17eb6c59bb84761"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH1.BMP/013.png",
+        "sha256": "624ad3462f7718ad1c926687fb25843597e5ab6863c24ba77ef07074d60d2944"
+      },
+      "source_rgba_sha256": "9c4a29a3c14b66fea7fea04272e770e880e271166163c81b55bf9443ba0b1f13",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 42,
+          "description": "catch 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH1.BMP/014",
+      "resource": "GJCATCH1.BMP",
+      "frame": "014",
+      "canvas": [
+        72,
+        16
+      ],
+      "archive_member": "native/BMP/GJCATCH1.BMP/014.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH1.BMP/014.png",
+        "sha256": "889a818cc6584447ee8008ad8de60821a0c56913dcdb41354bb37841434bb939"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH1.BMP/014.png",
+        "sha256": "0bb6fe340b0792e3a87460547e1aa7becaedb8e39c57f32dd3ba275743a25ac4"
+      },
+      "source_rgba_sha256": "4958292cbbf598d87d4439ea42b03db9963c6a078df0c721814fb4ab198f6ed8",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 42,
+          "description": "catch 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH1.BMP/016",
+      "resource": "GJCATCH1.BMP",
+      "frame": "016",
+      "canvas": [
+        80,
+        10
+      ],
+      "archive_member": "native/BMP/GJCATCH1.BMP/016.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH1.BMP/016.png",
+        "sha256": "3ddbf8ce4e03b0bb1ba0a197c2d45ce859fb20b5c2878e61242c45aa5ca5487a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH1.BMP/016.png",
+        "sha256": "8ae01e316c41d88cd7eea7e15035344774a20eaa418f6e3c74504e798c2ecb42"
+      },
+      "source_rgba_sha256": "a90974f3593b04f45b1bd3400491760b53257c46f64dfe3c23c3d75597130e06",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 42,
+          "description": "catch 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH1.BMP/018",
+      "resource": "GJCATCH1.BMP",
+      "frame": "018",
+      "canvas": [
+        80,
+        49
+      ],
+      "archive_member": "native/BMP/GJCATCH1.BMP/018.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH1.BMP/018.png",
+        "sha256": "2a9a1aa78da100b06f144c7803016de2ab553cc058dd3c0822d86e20f65b3745"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH1.BMP/018.png",
+        "sha256": "08d5bf38064ffed93e3703acc31d7dbfc1826705a4221707f729db689d981a25"
+      },
+      "source_rgba_sha256": "fb5cbd8d761adf70a076a32733807a54c5fd17d6414a57c9a4ab75a6ad60a6c6",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 42,
+          "description": "catch 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH1.BMP/019",
+      "resource": "GJCATCH1.BMP",
+      "frame": "019",
+      "canvas": [
+        80,
+        33
+      ],
+      "archive_member": "native/BMP/GJCATCH1.BMP/019.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH1.BMP/019.png",
+        "sha256": "21f05b24a94f96259953e1b19d4242380a2c584e52487452fa5381290cf3e6d6"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH1.BMP/019.png",
+        "sha256": "e11bb67e7fc81b4dbc02faa1b6ecc2a49025b8b37431b90cb20c5a54490f0a6c"
+      },
+      "source_rgba_sha256": "6ce0acd1b0aea054915b60bd0c7e16fd3ad2cf6a79175c49bf1bb3eafc5bd6ea",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 42,
+          "description": "catch 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH1.BMP/020",
+      "resource": "GJCATCH1.BMP",
+      "frame": "020",
+      "canvas": [
+        48,
+        20
+      ],
+      "archive_member": "native/BMP/GJCATCH1.BMP/020.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH1.BMP/020.png",
+        "sha256": "7913d23fac076b5d213de7180efe95a7d341b87df62ffeefd159173ca1b36dfc"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH1.BMP/020.png",
+        "sha256": "f2886d3aa9c18132bd125b969e4dd683b417c5d9eb9032a1850c3cec829a1655"
+      },
+      "source_rgba_sha256": "73cee33c3a7951e6c48425b8cb9d5b7d61c34da892af5af78f81daeae4021a14",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJFISHC.TTM",
+          "tag": 42,
+          "description": "catch 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/005",
+      "resource": "GJCATCH2.BMP",
+      "frame": "005",
+      "canvas": [
+        80,
+        58
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/005.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH2.BMP/005.png",
+        "sha256": "00d420440aed7dfad1fe2cdd2e18590b10ce9dc0b7f502a694158b39f505c4d1"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH2.BMP/005.png",
+        "sha256": "a36101f5d4d78ed05407b845dc31d869c6618badf299d9465b6f1d6668e926ae"
+      },
+      "source_rgba_sha256": "df1eea38c8067e0730606033d22727f56cb14a51bcce50fbaedec546cba5dcb4",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/006",
+      "resource": "GJCATCH2.BMP",
+      "frame": "006",
+      "canvas": [
+        80,
+        54
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/006.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH2.BMP/006.png",
+        "sha256": "d63c684215ee9807a082d5b79effe6412bb53dcebc282cb40cc3c80717664efb"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH2.BMP/006.png",
+        "sha256": "6814d4cc00af81aa25e1ea1a8fc80e080b20311cf5f5b604a1505104230d18b5"
+      },
+      "source_rgba_sha256": "1c03b560b300d6816facf680b6c0932ba38e17ba7f97253ade2f11dd51aaa774",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/010",
+      "resource": "GJCATCH2.BMP",
+      "frame": "010",
+      "canvas": [
+        120,
+        18
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/010.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH2.BMP/010.png",
+        "sha256": "2699121d47331b572603fc7a2ff00f8ca124d7314eedb4f00bdc18b7e9c04769"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH2.BMP/010.png",
+        "sha256": "be011b6e6fa97f35dc32bdd4125537ef35edb05a643c38f5caf5817b7edda43b"
+      },
+      "source_rgba_sha256": "3bbfd87b129627d532d03113f0461794c003bf3274de0a4f91a2a617a5237708",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJCATCH2.BMP/011",
+      "resource": "GJCATCH2.BMP",
+      "frame": "011",
+      "canvas": [
+        104,
+        16
+      ],
+      "archive_member": "native/BMP/GJCATCH2.BMP/011.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJCATCH2.BMP/011.png",
+        "sha256": "5e523c05031bdfe1850208cf78f1fbb525a420d694a1102cb9a0337846a4d8ca"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJCATCH2.BMP/011.png",
+        "sha256": "069e405706541e0d6859426d0bc24d0fbc5bf818f2aa7e505b5f95941ddfb0ca"
+      },
+      "source_rgba_sha256": "40912a7e1ae6e14a6945366a4285d024f74061cfcbd92a7df52df7d131b2cdc7",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJCATCH2.TTM",
+          "tag": 1,
+          "description": "catch2 gag",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/000",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "000",
+      "canvas": [
+        32,
+        22
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/000.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/000.png",
+        "sha256": "e91d5af3c13a2ddbdd48587e16c817b6638b513a988c75be0647388d11e8ca10"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/000.png",
+        "sha256": "c1a6e830420d082975d09cd2a72d25547bed6cd2e470398021dc4a29c7b8a651"
+      },
+      "source_rgba_sha256": "29f9f46a5fb70e8615f4ae647d395f2f229741f8f63834f2953559b6ebe92885",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 70,
+          "description": "BACK HI CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 72,
+          "description": "BACK HI CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 73,
+          "description": "BACK LO CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 74,
+          "description": "BACK LO CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 75,
+          "description": "FRONT HI CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 76,
+          "description": "FRONT HI CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 77,
+          "description": "FRONT LO CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 78,
+          "description": "FRONT LO CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/001",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "001",
+      "canvas": [
+        40,
+        19
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/001.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/001.png",
+        "sha256": "7d9eeca76c6abada1c815115a9aee8bfd3fb2766d0c2ef89c61ee46728bba70f"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/001.png",
+        "sha256": "b79f88cfb71f3740a9ed091a977dab131124cb0533573024c0e7b8617c42110c"
+      },
+      "source_rgba_sha256": "5d8d12e64a97b51aa3f96c96869722571a3f69622fa27e5f31cac513ac5c3b61",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 57,
+          "description": "PLANE LAUNCH 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 58,
+          "description": "PLANE LAUNCH 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 59,
+          "description": "PLANE LAUNCH 3",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 60,
+          "description": "PLANE LAUNCH 4",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 70,
+          "description": "BACK HI CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 72,
+          "description": "BACK HI CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 73,
+          "description": "BACK LO CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 74,
+          "description": "BACK LO CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 75,
+          "description": "FRONT HI CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 76,
+          "description": "FRONT HI CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 77,
+          "description": "FRONT LO CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 78,
+          "description": "FRONT LO CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/002",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "002",
+      "canvas": [
+        40,
+        21
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/002.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/002.png",
+        "sha256": "9f19adb4187cec32c4b2bceb59cccd4ac048e055389a53b0f91a9524a92b29af"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/002.png",
+        "sha256": "bf6cb211dd0d933d486e09e66216ff1ffc22c4c18d0240b2b28020dd8d68e1b8"
+      },
+      "source_rgba_sha256": "a4fb0b1776d2b1df392aed434f58bfe07b02cea83b9f82a2279ced3223254af2",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 57,
+          "description": "PLANE LAUNCH 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 58,
+          "description": "PLANE LAUNCH 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 59,
+          "description": "PLANE LAUNCH 3",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 60,
+          "description": "PLANE LAUNCH 4",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/003",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "003",
+      "canvas": [
+        40,
+        26
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/003.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/003.png",
+        "sha256": "a5b03a1a182dd3f2ef26320e9a57b3f49556959848cc369a7e6e36b4b7b1854c"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/003.png",
+        "sha256": "acb30745cbd1c6d21fdf7091ca049e116b9002a8253ac322dfebd500167ce2ec"
+      },
+      "source_rgba_sha256": "c30fc48aaac8643612e7c52c325f1166fa249c535210f3f3d296aea508cb72e9",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/004",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "004",
+      "canvas": [
+        48,
+        21
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/004.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/004.png",
+        "sha256": "85cbf50243c666278a1cc05467ff6e25cbedae5c4d5bd0a508c9ebbb2352efd2"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/004.png",
+        "sha256": "016cb2fa4535718093792408987e378317c43ab1356a2c6a23744200e34ba115"
+      },
+      "source_rgba_sha256": "12522b2c1e55a10e672e7d62ca0f17de8d053836ec62e7b25c8e7db62f6c3d76",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 73,
+          "description": "BACK LO CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 74,
+          "description": "BACK LO CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 75,
+          "description": "FRONT HI CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 76,
+          "description": "FRONT HI CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 77,
+          "description": "FRONT LO CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 78,
+          "description": "FRONT LO CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 81,
+          "description": "HIGH CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 82,
+          "description": "HIGH CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/005",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "005",
+      "canvas": [
+        40,
+        30
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/005.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/005.png",
+        "sha256": "21163a584ac1634d93692a695811b7c19304b62cc948fc39e8cc370c8a297938"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/005.png",
+        "sha256": "f52566c732ed1f1bcd8625bb00c556b1d156707c2b3583aa0fe741eeceba3847"
+      },
+      "source_rgba_sha256": "df08602b4483247e9cf96bd97169d88f565adc8a8f30873990da03b31833b34a",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 70,
+          "description": "BACK HI CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 72,
+          "description": "BACK HI CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 77,
+          "description": "FRONT LO CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 78,
+          "description": "FRONT LO CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/006",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "006",
+      "canvas": [
+        40,
+        20
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/006.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/006.png",
+        "sha256": "a3dd63709ea02b4ceaae84ba945dc6ed4c769210a0dd3a4106332c7514bf9e19"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/006.png",
+        "sha256": "0fdfd2ff2c4b9743956e8a3ad314226390f42d30bb10afeb7c36edd50eae5cdd"
+      },
+      "source_rgba_sha256": "53363fed6863aa5ed618de48744544a954088d2640dce2407fd8c9e6a233f87a",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 57,
+          "description": "PLANE LAUNCH 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 58,
+          "description": "PLANE LAUNCH 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 59,
+          "description": "PLANE LAUNCH 3",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 60,
+          "description": "PLANE LAUNCH 4",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 75,
+          "description": "FRONT HI CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 76,
+          "description": "FRONT HI CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 79,
+          "description": "LOW CIRCLE 1",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 80,
+          "description": "LOW CIRCLE 2",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/007",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "007",
+      "canvas": [
+        32,
+        8
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/007.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/007.png",
+        "sha256": "5513ac43ef1ba9cb691ca9ca7b132aa3a24387446ff0fc3603821814f1f56018"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/007.png",
+        "sha256": "a6ed9bb5d8407a93269904db1031c7ef559ffd7d8713bc65b8bd4a6099c822b5"
+      },
+      "source_rgba_sha256": "64a7172c111b8c43fd7ad8f17152da43da87efba02b3e32bc524f1ed4725f336",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 46,
+          "description": "FLAGS FLY",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/008",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "008",
+      "canvas": [
+        24,
+        8
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/008.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/008.png",
+        "sha256": "654454aa95609f4292c3a436b523a0ad5141e312d1ce8fec8fe91c924113d996"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/008.png",
+        "sha256": "17d831cc68ebc5cdc858a0c6cade06ec7af8e3f17f4610302c72bf4bdc066fba"
+      },
+      "source_rgba_sha256": "3ba0ea6b60b1bf1b766462231422733b5a47225c5a1923c1c7d393f632d1d1c8",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 46,
+          "description": "FLAGS FLY",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/009",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "009",
+      "canvas": [
+        32,
+        10
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/009.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/009.png",
+        "sha256": "3cb39db62628c95360c2c333e3a91585b24b91e87f0452079e2f5fcef59fdb2f"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/009.png",
+        "sha256": "77263d0002ffdc0a28ca7ecc04d74dd85d3781a316b59bda755d989be320de74"
+      },
+      "source_rgba_sha256": "c9b8af6051fd2c194c32f26b8ef4fccd05e16fa2c6635829f603c7620bea8943",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 46,
+          "description": "FLAGS FLY",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 85,
+          "description": "freeup shapes",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/020",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "020",
+      "canvas": [
+        8,
+        9
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/020.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/020.png",
+        "sha256": "9117f6377107532e9039e37e9df29147de0b19a24afb179ab86564238ee150ad"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/020.png",
+        "sha256": "00d5f1edc1e075b3a90a6411273b8ca868bcba7953454d6f40071b949966310d"
+      },
+      "source_rgba_sha256": "9b9b4f6e0d2ef06f5d3786a24fa8247c230d7a2bcd3f107c335b9c565a8346a3",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 84,
+          "description": "RAISE FLAG",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/021",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "021",
+      "canvas": [
+        8,
+        21
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/021.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/021.png",
+        "sha256": "3f2a64890ef471ad4bb0360712d1dd03b1bcdc8f601544328a9f444e52300e51"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/021.png",
+        "sha256": "930aa8cb80e1450c52cc354fbcafa29ff55063779b18e5deda61571259bbafc5"
+      },
+      "source_rgba_sha256": "2cde21f7ba26702f25f6cebbfa7a663855092562d64ed20b80b673b3758f34e6",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 84,
+          "description": "RAISE FLAG",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/022",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "022",
+      "canvas": [
+        16,
+        30
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/022.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/022.png",
+        "sha256": "bcf121c01513a3cee21bdcdc1905cece61c4918f835e518f1c4ef7352912aeec"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/022.png",
+        "sha256": "71f121f1e92139a8c475921073cedabf19c81452205e27c3d5d4a57cf5d98657"
+      },
+      "source_rgba_sha256": "b65a9a88df735f5618043d469e4630c05396401cab0cc1356ccfef44fccd4c83",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 84,
+          "description": "RAISE FLAG",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJBIPLAN.BMP/023",
+      "resource": "GJBIPLAN.BMP",
+      "frame": "023",
+      "canvas": [
+        8,
+        30
+      ],
+      "archive_member": "native/BMP/GJBIPLAN.BMP/023.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJBIPLAN.BMP/023.png",
+        "sha256": "8748f8e8d2f197b60b4997f51139f206fd65a8bbb19e4dedfb080beadab090fd"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJBIPLAN.BMP/023.png",
+        "sha256": "ffd1aa5a92a2f41f7e014ae34e02c7e589fe877fe1e6b0d1a24e35c42c7fab3a"
+      },
+      "source_rgba_sha256": "e156abfee5dad94bfc9421560d26f8678e62c7822532cafa4c4bc0b65b574688",
+      "static_frame_attribution": [
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 46,
+          "description": "FLAGS FLY",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "MJSAND.TTM",
+          "tag": 85,
+          "description": "freeup shapes",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS52.BMP/000",
+      "resource": "GJVIS52.BMP",
+      "frame": "000",
+      "canvas": [
+        96,
+        32
+      ],
+      "archive_member": "native/BMP/GJVIS52.BMP/000.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJVIS52.BMP/000.png",
+        "sha256": "54ade91bfb605ce592ce1d8d5f68a8d0b80e76c9a46f8a99269a363b0668f207"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJVIS52.BMP/000.png",
+        "sha256": "1ca4c0b0aebc71ed2a7c1c6efa8dbeffbdc7a79324628e50744543c30391701f"
+      },
+      "source_rgba_sha256": "620f40896c82a2f8070686ccd4ac251efd0767ebcac6390fd9a2dff044653c7a",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS5.TTM",
+          "tag": 3,
+          "description": "jumping johnny",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS5W.TTM",
+          "tag": 3,
+          "description": "jumping johnny",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS52.BMP/004",
+      "resource": "GJVIS52.BMP",
+      "frame": "004",
+      "canvas": [
+        88,
+        44
+      ],
+      "archive_member": "native/BMP/GJVIS52.BMP/004.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJVIS52.BMP/004.png",
+        "sha256": "9750ddc6438197d039539b3d5fe701f2a1471dd78040175a79c49c923e02ca96"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJVIS52.BMP/004.png",
+        "sha256": "e99ee4394bc7b2c0a2a1403ac9621dab3209baf766d52c53caccdb5c99d1f1ee"
+      },
+      "source_rgba_sha256": "e24f2a5a5985c8b61cd9890717ac57f39a2cfbd90b5336344090999f69b5414c",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS5.TTM",
+          "tag": 3,
+          "description": "jumping johnny",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS5W.TTM",
+          "tag": 3,
+          "description": "jumping johnny",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS52.BMP/005",
+      "resource": "GJVIS52.BMP",
+      "frame": "005",
+      "canvas": [
+        120,
+        57
+      ],
+      "archive_member": "native/BMP/GJVIS52.BMP/005.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJVIS52.BMP/005.png",
+        "sha256": "e265200327c18759e8aa80595cf1b2c7df8e9749c55867eea32130292feced4d"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJVIS52.BMP/005.png",
+        "sha256": "d99fdf6324133a81cda489538f90148488fb32d6aa60fc916c03658a56e42ab0"
+      },
+      "source_rgba_sha256": "cf241570db54f2bd4b3e0bef37f2b141c9423e3903d663d2ddcace89054232cd",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS5.TTM",
+          "tag": 5,
+          "description": "john hits plane",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS5W.TTM",
+          "tag": 3,
+          "description": "jumping johnny",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS5W.TTM",
+          "tag": 5,
+          "description": "john hits plane",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS52.BMP/006",
+      "resource": "GJVIS52.BMP",
+      "frame": "006",
+      "canvas": [
+        88,
+        67
+      ],
+      "archive_member": "native/BMP/GJVIS52.BMP/006.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJVIS52.BMP/006.png",
+        "sha256": "9cc153979687fcb32ef229af0bfe59b2b16718f945f6b640ccfda223e82622ec"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJVIS52.BMP/006.png",
+        "sha256": "be15c8f0f11c27461a906aed773c9b8a2280be0533784137b34d6879fcc6c02e"
+      },
+      "source_rgba_sha256": "b5dee8860146ffbd7fea0395435af8308e3f7f718c5229ecb7aac10249c8cd6b",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS5.TTM",
+          "tag": 5,
+          "description": "john hits plane",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS5W.TTM",
+          "tag": 5,
+          "description": "john hits plane",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS52.BMP/007",
+      "resource": "GJVIS52.BMP",
+      "frame": "007",
+      "canvas": [
+        104,
+        79
+      ],
+      "archive_member": "native/BMP/GJVIS52.BMP/007.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJVIS52.BMP/007.png",
+        "sha256": "58f743247152aa49549e65ba7c9be44a4a36a3409e68585227ccce2328a78a9a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJVIS52.BMP/007.png",
+        "sha256": "9ccf06506f8b229923b563e376ce95ca7f3347570ce80a202a6e7ece808d750d"
+      },
+      "source_rgba_sha256": "b50d0bb82806edda92462e1687464623aa35f1a1deb4b01a97fe8ccaac4746bb",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJVIS52.BMP/010",
+      "resource": "GJVIS52.BMP",
+      "frame": "010",
+      "canvas": [
+        96,
+        125
+      ],
+      "archive_member": "native/BMP/GJVIS52.BMP/010.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJVIS52.BMP/010.png",
+        "sha256": "46142615ecf3c5f350c0d6d7cc906cd179904afb5d0ec6cb5841c437a0b45b09"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJVIS52.BMP/010.png",
+        "sha256": "fd909f4d143c1210552735b2b04ab9557979ccccf07f37d423e4709d083762ef"
+      },
+      "source_rgba_sha256": "367f1c8d30e0ced3da6a0ebbb93836ad15ae938e58cc4f5c1bffd0c8c41277c7",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS5.TTM",
+          "tag": 5,
+          "description": "john hits plane",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS5W.TTM",
+          "tag": 5,
+          "description": "john hits plane",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS52.BMP/016",
+      "resource": "GJVIS52.BMP",
+      "frame": "016",
+      "canvas": [
+        112,
+        74
+      ],
+      "archive_member": "native/BMP/GJVIS52.BMP/016.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJVIS52.BMP/016.png",
+        "sha256": "bb065db41b6d7e0dc234ad7078225d6df01de15501b1410eb4c9fa2d4185097b"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJVIS52.BMP/016.png",
+        "sha256": "a7eef3c4345162e18a3bd3036dcb229303b638202f26389fad040911d1d7344e"
+      },
+      "source_rgba_sha256": "7fcc3d6fac76f1b2e539249eb4e1aa5ef88aa44d458c75f53a23b6552ea9837e",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS5.TTM",
+          "tag": 5,
+          "description": "john hits plane",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS5W.TTM",
+          "tag": 5,
+          "description": "john hits plane",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS52.BMP/017",
+      "resource": "GJVIS52.BMP",
+      "frame": "017",
+      "canvas": [
+        32,
+        11
+      ],
+      "archive_member": "native/BMP/GJVIS52.BMP/017.png",
+      "original": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/original/GJVIS52.BMP/017.png",
+        "sha256": "d3241e64c0b6cf64f3032fbb00df9e2a665cb74e85a5e4320be8f6e03d98fa37"
+      },
+      "nearest8": {
+        "path": "art/cartoon/fishing-and-props-batch-v1/reference/nearest8/GJVIS52.BMP/017.png",
+        "sha256": "21363453d7d0fde10d329295828e1347f9be0e2562058c863af9e2dc8eafebee"
+      },
+      "source_rgba_sha256": "851f464d019570dd85bafb4e6a03a7e382beb639dfa95e45e8c7ebc5d1a64842",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS5.TTM",
+          "tag": 9,
+          "description": "plane starting",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS5W.TTM",
+          "tag": 1,
+          "description": "load jvis5",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    }
+  ]
+}

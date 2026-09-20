@@ -2,7 +2,7 @@
 
 Current workflow: the user requested [art construction first, bulk verification later](cartoon-art-build-workflow.md) on 2026-09-17. That instruction supersedes the per-family test and audit cadence documented below. Preserve visual approvals and source records as each family is completed; run full smoke, regression and final code audit at the combined delivery milestone.
 
-The default new-art review size is now 36-48 drawings, per the user's 2026-09-18 instruction. Keep targeted corrections separate from that count and use parallel work across compatible resource groups.
+The default new-art review size is now 60-72 drawings, per the user's 2026-09-19 instruction to deliver five or six dozen per run. Target about 66 where complete families fit. Keep targeted corrections separate from that count and use parallel work across compatible resource groups.
 
 The user approved this bounded start on 2026-09-15: establish the production
 catalog, then expand Johnny's walking directions before undertaking the full
@@ -106,7 +106,9 @@ The user then requested [ten GJGULL2 corrections](../art/cartoon/gull-clothes-co
 
 The next [36-drawing marine set](../art/cartoon/marine-scenes-batch-v1/README.md) contains 17 GJCATCH2 octopus poses, 12 GJDIVE animal judges with blank scorecards and seven SPLASH effects. Each exact original remains visible beside the new art. Starfish, crab, round fish and gull are separate judge designs; numeric score overlays and shadow planes are excluded from the drawing count. Appearance review is pending, with native registration and bulk testing deferred.
 
-The user's [four judge corrections](../art/cartoon/marine-judges-corrections-v2/README.md) restore the partly hidden far eye in GJDIVE 025 and the chest-forward stance in gulls 027/028/029. Both gull wings hold the card; the rear feather fan is the tail. The comparison preserves each original card angle beside the earlier and corrected drawings. These source interpretations supersede the earlier notes. Appearance review remains pending, and the other 32 marine drawings gain no implied approval. Native integration and full testing remain deferred.
+The user approved the [four judge corrections](../art/cartoon/marine-judges-corrections-v2/acceptance/appearance-v1.json) on 2026-09-19: GJDIVE 025 v1 restores the partly hidden far eye, and 027 v2 with 028/029 v1 show a chest-forward gull using both wings to hold its card. The rear feather fan is the tail. These source interpretations supersede the earlier notes. The other 32 marine drawings gain no implied approval. Native integration and full testing remain deferred.
+
+The next [64-drawing fishing, prop and aircraft review](../art/cartoon/fishing-and-props-batch-v1/README.md) follows the new 60-72 default. It contains 42 fishing catches, rotating props, rods and water effects, plus 22 aircraft, flag and associated effect drawings. Exact original references determine orientation and visible anatomy. Appearance approval, native canvas registration and bulk smoke tests remain separate steps.
 
 The workflow builds on [the original lessons](art-style-learnings.md),
 [the Calm focus addendum](art-style-learnings-calm-focus.md), and
