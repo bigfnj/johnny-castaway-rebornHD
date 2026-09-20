@@ -112,6 +112,10 @@ The next [64-drawing fishing, prop and aircraft review](../art/cartoon/fishing-a
 
 The subsequent [fish-scene and flag correction review](../art/cartoon/fishing-scene-and-flag-v2/README.md) addresses the user's request to see MJFISH3 008-010 in the fishing scene before changing their colors. Their Cartoon drawings remain unchanged. GJBIPLAN 021 now depicts the long cloth from 022 hanging freely from its upper connection. These targeted changes do not imply approval of the remaining batch or completion of bulk integration.
 
+The user approved those four selected drawings with "approved, please proceed with the next batch" on 2026-09-19. [Exact acceptance](../art/cartoon/fishing-scene-and-flag-v2/acceptance/appearance-v1.json) retains MJFISH3 008-010 v2 colors and GJBIPLAN021's hanging-flag correction. The other 60 drawings in the preceding batch gain no implied appearance approval.
+
+The next [71-drawing review](../art/cartoon/gulls-clock-props-batch-v1/README.md) contains 26 gulls, 17 watch pieces, three sleep marks, 12 aircraft/rotor/parachute pieces, nine bottle poses and four water effects. The original is shown below every drawing. The watch arms, rotors and canopy-only piece remain separate components. Appearance review is pending; production still contains 63 PNGs, with registration, native sequences and bulk testing deferred.
+
 The workflow builds on [the original lessons](art-style-learnings.md),
 [the Calm focus addendum](art-style-learnings-calm-focus.md), and
 [the approved runtime record](../art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json).

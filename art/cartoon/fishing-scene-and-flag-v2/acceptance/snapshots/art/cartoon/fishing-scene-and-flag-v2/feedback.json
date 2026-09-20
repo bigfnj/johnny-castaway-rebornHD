@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-19",
+  "prior_review": "http://127.0.0.1:8941/fishing-and-props-batch-v1/review.html",
+  "user_feedback": "008 009 010 the color pallete is darker for these 3, I think I would need to see these 3 \"in scene\" to ascertain if its supposed to be darker like this. 021 is the \"longer flag from 022 draping down. yours is fully attached to the pole.",
+  "images": [
+    {
+      "path": "art/cartoon/fishing-scene-and-flag-v2/feedback/fish-colors.png",
+      "sha256": "fbcbf79f27ec53e3aa49195f03cea4d8f9169ea20c4808fde4700996e32c18c4"
+    },
+    {
+      "path": "art/cartoon/fishing-scene-and-flag-v2/feedback/flag-drape.png",
+      "sha256": "c7ed6cad9aaec2dbde51b2bd1c5721a5b35efc644af0b3baad8f11f57eb46b8b"
+    }
+  ],
+  "requested_work": [
+    {
+      "resource": "MJFISH3.BMP",
+      "frames": [
+        "008",
+        "009",
+        "010"
+      ],
+      "action": "Show original fishing-scene context and palette. Retain current Cartoon colors pending review."
+    },
+    {
+      "resource": "GJBIPLAN.BMP",
+      "frames": [
+        "021"
+      ],
+      "action": "Correct the long flag draping from its upper connection, with its lower length free of the pole; use 022 as cloth identity reference."
+    }
+  ],
+  "approval_scope": "No new appearance approval inferred from this feedback."
+}

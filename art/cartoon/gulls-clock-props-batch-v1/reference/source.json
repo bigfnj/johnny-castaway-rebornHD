@@ -1,0 +1,1879 @@
+{
+  "schema_version": 1,
+  "count": 71,
+  "scope": "Exact source drawings for a new appearance review",
+  "palette_limit": "Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.",
+  "archive": {
+    "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+    "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+  },
+  "frame_index": {
+    "path": "art/cartoon/character-inventory-v1/source/frame-index.json",
+    "sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2"
+  },
+  "scene_map": {
+    "path": "art/cartoon/character-inventory-v1/scene-map/resource-map.json",
+    "sha256": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3"
+  },
+  "preparation": {
+    "path": "art/cartoon/gulls-clock-props-batch-v1/prepare_references.py",
+    "sha256": "3d78f6f3fbf8e1dc137c6240a64d90ff3a7173db4e8414c49537e2883c9d74da"
+  },
+  "contacts": [
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/GJGULL1A.BMP-contact-01.png",
+      "sha256": "a707ae199c18af3cdbb6f181b5c2ceb871661272128c031949c3fcbd7c6a6b24"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/GJGULL1A.BMP-contact-02.png",
+      "sha256": "f08dec919cf15bef9c4e5d6d3667612d32b6b8fc9d1176454b8074f177149ae6"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/GJGULL3.BMP-contact-01.png",
+      "sha256": "856c66e516daf25639be72f2ff3a078c50d3cc72a2ccba6f99faf963340ed7db"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/GJGULL3A.BMP-contact-01.png",
+      "sha256": "32d9474a1981444afd2acb35fd2b1f832450a5793891f3fbe909e0d2448ee544"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/MEANWHIL.BMP-contact-01.png",
+      "sha256": "e133433c8095ef377c1f6e2445e8647dd7026b7c237eec1b504a8d02b5b17810"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/MEANWHIL.BMP-contact-02.png",
+      "sha256": "5f53c847b960e876f06c3cb50a424c98bb9fa159b47c1fa99b7fb3f0ce72b905"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/ZZZZS.BMP-contact-01.png",
+      "sha256": "2754edc8cd650979f9f3c6978d79e1f4081ee05801951de2392e246220398b56"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/GJVIS3.BMP-contact-01.png",
+      "sha256": "c0dbf3b261552b122921202ce7d9c9761994ef30ad38a6acaff1f5bfe25d9bc2"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/THEEND1.BMP-contact-01.png",
+      "sha256": "e185b9f70c7a10742e70ed3b38d2c036250cc91d1427583c983198305b5ca8c7"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/MJBOTTLE.BMP-contact-01.png",
+      "sha256": "6e34fd4edfa57b9f03af51af60abb15ff29b655b72b8e6e5e7095cea724ec7ab"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/MJBTL2.BMP-contact-01.png",
+      "sha256": "1e595276e6805b43e794fbad9543da599e86ad07d225e96852af20ebb0ad3217"
+    },
+    {
+      "path": "art/cartoon/gulls-clock-props-batch-v1/reference/WOULDBE.BMP-contact-01.png",
+      "sha256": "360696c951113dc1b483536d4f1ddd9afa0a4d72eeada9f26cd015d131dc32fe"
+    }
+  ],
+  "assets": [
+    {
+      "id": "BMP/GJGULL1A.BMP/026",
+      "resource": "GJGULL1A.BMP",
+      "frame": "026",
+      "canvas": [
+        56,
+        39
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/026.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/026.png",
+        "sha256": "971836d7b73977540603b3d6bcc469e2717a78c6303a7cb4920b9c1afc686117"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/026.png",
+        "sha256": "a5939b78ca81f7df834e1440c52ac51b9966c34041efc5e4add694c63a355d72"
+      },
+      "source_rgba_sha256": "98e74c798f68738d7b26e231d0ef559691478171ff0b2e173fce41cf46279148",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 46,
+          "description": "got book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/027",
+      "resource": "GJGULL1A.BMP",
+      "frame": "027",
+      "canvas": [
+        56,
+        41
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/027.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/027.png",
+        "sha256": "00cee079a48cdef4b4137623ff95dade364bc5b741cc9f48123edb44197f7274"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/027.png",
+        "sha256": "fe46c3aae8c51ea487c0cd1078e46591262860964d1a9d164f8f572f29542359"
+      },
+      "source_rgba_sha256": "32b1dd05ad42a6ca3850e2109f8837362760f33166db6d328a73af435037578c",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 46,
+          "description": "got book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/028",
+      "resource": "GJGULL1A.BMP",
+      "frame": "028",
+      "canvas": [
+        56,
+        34
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/028.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/028.png",
+        "sha256": "47b33ec8a1135ec96dd615ec0de071c62ff6e28d6d795d7a629ccee647f3d7a8"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/028.png",
+        "sha256": "322d6ceda9c7fcbc7e05942f0492f5056b09157b796d023cc223f0924622a30e"
+      },
+      "source_rgba_sha256": "90e1dafd84d21411567a0e3903a434aebf9ea73b452fba66a268b8a7842a9661",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 46,
+          "description": "got book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/029",
+      "resource": "GJGULL1A.BMP",
+      "frame": "029",
+      "canvas": [
+        48,
+        39
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/029.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/029.png",
+        "sha256": "74984bf926f598c17de2ce9c5e843f94644922b9c0338621f067a2cc266ed325"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/029.png",
+        "sha256": "082e9fe5e219708ea5f5c4763bd612dbedda4051bf06a211a3585bd69f4d3b7d"
+      },
+      "source_rgba_sha256": "1875fd81ff52cb158c15cee5c6e49fa1b80af965667e90a7636d4e61d7b45a5a",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 46,
+          "description": "got book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/030",
+      "resource": "GJGULL1A.BMP",
+      "frame": "030",
+      "canvas": [
+        40,
+        22
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/030.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/030.png",
+        "sha256": "1552dea789cbd473eed54bb38005690732c89d0a1918ea3984b26375977422e3"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/030.png",
+        "sha256": "da2701bb222d7775b256476d2917667a4ce028bf07d8047b86be37ab45a7862a"
+      },
+      "source_rgba_sha256": "c258c2bcd5a0266fdf9ed16f5eda53b0d78a72b117911fc53e9a73212e697767",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 46,
+          "description": "got book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/031",
+      "resource": "GJGULL1A.BMP",
+      "frame": "031",
+      "canvas": [
+        56,
+        27
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/031.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/031.png",
+        "sha256": "7770c809a9b20cab918cc5ea9d22354909c82debb7239125ba8eee9011abf011"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/031.png",
+        "sha256": "1a3eccffd3f32ecd94a6f7a91100091cee6796b4ac8e24d3415f98637d91dcba"
+      },
+      "source_rgba_sha256": "fc174cbe82bf266c20551d73a61442f086e72a511022679c91ef8380643cdadc",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 46,
+          "description": "got book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/032",
+      "resource": "GJGULL1A.BMP",
+      "frame": "032",
+      "canvas": [
+        48,
+        27
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/032.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/032.png",
+        "sha256": "cb7de2148cde437da6d4c6ce5520a66670699d72d5de358f9230c3385d264ac7"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/032.png",
+        "sha256": "624983d9a0afd10adbad5a036d70f28beaf31a000bced8772240d7a62b46c3ef"
+      },
+      "source_rgba_sha256": "393a5c716c92e96b3abe4249cff97015876cbae9ab77aea0ea93ab366119aa1e",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 30,
+          "description": "gull book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/033",
+      "resource": "GJGULL1A.BMP",
+      "frame": "033",
+      "canvas": [
+        48,
+        27
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/033.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/033.png",
+        "sha256": "e19687b729f96d327717bf0b8191a2a73d5379fe2233e76bf17904dab4ad7abc"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/033.png",
+        "sha256": "62838cf7949371983b11a367f75fbaac2f35f03ba7fbb905d8162d738f601a0f"
+      },
+      "source_rgba_sha256": "a290c4741df30889630c19d7dc7fd3248ecf7050620f84a92e31a319a325ebac",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 30,
+          "description": "gull book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/034",
+      "resource": "GJGULL1A.BMP",
+      "frame": "034",
+      "canvas": [
+        48,
+        25
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/034.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/034.png",
+        "sha256": "ec631878a10f1acface8122a076febc15e14f9961cc00ce7bf93c615369f8646"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/034.png",
+        "sha256": "84080dcd2ade51299703100aba1bfaeaba8e8d17dcd51d134c4f8dd4800caf1f"
+      },
+      "source_rgba_sha256": "1635b8177e18cd421662764bf132b9680d3bbd8294b4df9c0a2570e6d0ebdeaa",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 30,
+          "description": "gull book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/035",
+      "resource": "GJGULL1A.BMP",
+      "frame": "035",
+      "canvas": [
+        48,
+        27
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/035.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/035.png",
+        "sha256": "606697acc37f0e38cd909302230682943fb416f78eef57128253efb130e596d5"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/035.png",
+        "sha256": "2d2e075a7c96312ced8fb3c0bd8fb34569f9048b23fd7c71215fc653ac28d6a7"
+      },
+      "source_rgba_sha256": "2e5b767b9bcc9eff5997d03bd1e75ed479efb65310adaa4d9f265a67bf1e6580",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 30,
+          "description": "gull book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/036",
+      "resource": "GJGULL1A.BMP",
+      "frame": "036",
+      "canvas": [
+        48,
+        27
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/036.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/036.png",
+        "sha256": "c2efe457cd8c35eecad93fca6f11d017abeb736a018f3a470e3951bd46ffebe9"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/036.png",
+        "sha256": "7d4f552bbe731e233d0235ac1c242bddd840bfb9a0dd22659fbb9ee874ff4be2"
+      },
+      "source_rgba_sha256": "788a0f8a1c8af4358e5c15faf6338fcef27b623359d8789b215030e82dd9f546",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 30,
+          "description": "gull book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/037",
+      "resource": "GJGULL1A.BMP",
+      "frame": "037",
+      "canvas": [
+        48,
+        26
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/037.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/037.png",
+        "sha256": "2e449cca430feb7bcac5da8d08a090dd2200e12eab6296f9ce5b65240253854d"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/037.png",
+        "sha256": "b16ef63769b74a9a7dac093bb856788857de7b0358da753324fcce8e4ddc1c43"
+      },
+      "source_rgba_sha256": "b869cd1908ceadb1128de9b07fcc17399fd3f66c65b48c8e246bb1a76eb27c4b",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 30,
+          "description": "gull book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL1A.BMP/038",
+      "resource": "GJGULL1A.BMP",
+      "frame": "038",
+      "canvas": [
+        48,
+        30
+      ],
+      "archive_member": "native/BMP/GJGULL1A.BMP/038.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL1A.BMP/038.png",
+        "sha256": "01cb9c989ee60f7312950aefb96a184b6ca67c07ce27862d70eb967d899bd87e"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL1A.BMP/038.png",
+        "sha256": "6b33b9a6460daf498731931371259caace453a4046511b34de411273173010d4"
+      },
+      "source_rgba_sha256": "3d0d20350039d14c6809362d14f2ae80fc65743e4abf7295adbbb677d9d986a1",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJGULL1.TTM",
+          "tag": 30,
+          "description": "gull book",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJGULL3.BMP/017",
+      "resource": "GJGULL3.BMP",
+      "frame": "017",
+      "canvas": [
+        48,
+        48
+      ],
+      "archive_member": "native/BMP/GJGULL3.BMP/017.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3.BMP/017.png",
+        "sha256": "87cf2035c75b052908721f8f315e56a4c8bac9e814237c21c095bb7907053a49"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3.BMP/017.png",
+        "sha256": "298d51090607da78d7a82750f68f854027d734b854aad478c3c4699f0acab9c4"
+      },
+      "source_rgba_sha256": "b1fa3dcc1d904d05144ca42352203ddec5f13d50b0ecca85cb8521cc7c679c98",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3.BMP/018",
+      "resource": "GJGULL3.BMP",
+      "frame": "018",
+      "canvas": [
+        48,
+        33
+      ],
+      "archive_member": "native/BMP/GJGULL3.BMP/018.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3.BMP/018.png",
+        "sha256": "d8fc1992a3e5160effb751b8bb42cd61405a1884cbf4e35d6233ecacca94d21a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3.BMP/018.png",
+        "sha256": "a4837df17c6fb2c786592a87eee50f6318f4111d66e3a9b62ee06cc657ce2050"
+      },
+      "source_rgba_sha256": "567886359014e55cc7ac45570456b918f2eac8e7b3fcebb543fe6d476b721efa",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3.BMP/019",
+      "resource": "GJGULL3.BMP",
+      "frame": "019",
+      "canvas": [
+        48,
+        37
+      ],
+      "archive_member": "native/BMP/GJGULL3.BMP/019.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3.BMP/019.png",
+        "sha256": "a8ea27f26870abe58d5e17e7878847beb90fede21a065b3ba66c38825d6b22e3"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3.BMP/019.png",
+        "sha256": "fc9e76fc6201dad536984628f3a224bd2eab3bbb3837b30c0260a7b0a524b14f"
+      },
+      "source_rgba_sha256": "6901647cfe67efa18979c2b6bed3d0e6a12b98e4e7f26930cd6726e505336ad9",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3.BMP/020",
+      "resource": "GJGULL3.BMP",
+      "frame": "020",
+      "canvas": [
+        56,
+        46
+      ],
+      "archive_member": "native/BMP/GJGULL3.BMP/020.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3.BMP/020.png",
+        "sha256": "0cefc94317c488a4b470dc90dfa44862870b9a33b4a83caa7e532911efa9a3a8"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3.BMP/020.png",
+        "sha256": "83ed57cf69f4f2dbb61b49e96ca8a56cd0f1607e5af27d6037cbf347d15f1bd0"
+      },
+      "source_rgba_sha256": "69d2521b2e2528e918998d850a4ed49c1c559b4f65c235a44fb589487b10429a",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3.BMP/021",
+      "resource": "GJGULL3.BMP",
+      "frame": "021",
+      "canvas": [
+        48,
+        48
+      ],
+      "archive_member": "native/BMP/GJGULL3.BMP/021.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3.BMP/021.png",
+        "sha256": "54a88e1a7608cdfc55aa91855d8669d42d7bc2b282ac479b9c02b543894ae631"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3.BMP/021.png",
+        "sha256": "364e0968d2a0b406b56d216ef473ff13865b54bcf5569683fc33db2bf63e69bc"
+      },
+      "source_rgba_sha256": "deafc1e151ae4dd6420c450c4a0a6100e643241b39a4350163214b2a3de9932d",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3.BMP/022",
+      "resource": "GJGULL3.BMP",
+      "frame": "022",
+      "canvas": [
+        40,
+        33
+      ],
+      "archive_member": "native/BMP/GJGULL3.BMP/022.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3.BMP/022.png",
+        "sha256": "1651bbdbb676d057c8043060f2133a3976bb42f24a35e0bf3d9eac97bc31447d"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3.BMP/022.png",
+        "sha256": "5de8c19a17fc8c93fde02b9b44dec82721376a870883b6210fc4db323d1c21c6"
+      },
+      "source_rgba_sha256": "516dfbb54252662c7657878aaea92427f42428ad320736dc8dbbbbc1f4795646",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3.BMP/023",
+      "resource": "GJGULL3.BMP",
+      "frame": "023",
+      "canvas": [
+        48,
+        35
+      ],
+      "archive_member": "native/BMP/GJGULL3.BMP/023.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3.BMP/023.png",
+        "sha256": "340caa76196754ce81ab17e8d275222b89869f45dc52e97d3a1d91653aa775be"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3.BMP/023.png",
+        "sha256": "aaf3d612c2415ef6156374197f352c9af0f7fa858cb9ed74ac4dd8316d5ec140"
+      },
+      "source_rgba_sha256": "9b660c40032a2552fa9424a5aff94cf462a96537689121708f40d2ed6597d584",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3.BMP/024",
+      "resource": "GJGULL3.BMP",
+      "frame": "024",
+      "canvas": [
+        56,
+        45
+      ],
+      "archive_member": "native/BMP/GJGULL3.BMP/024.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3.BMP/024.png",
+        "sha256": "6f975c169c6b9d965ff9b2ace63a679a8c65c50e81e48db54cfc71fceb38a143"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3.BMP/024.png",
+        "sha256": "3d3159741490b4e9f679f2dfe9360dd96afa2c9d0c7d4147f7b6ba117f795a9f"
+      },
+      "source_rgba_sha256": "5aeb19ade6909bbb1f509501cb2f960156b1bf884e78f2bd72094620b80b6baf",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3A.BMP/042",
+      "resource": "GJGULL3A.BMP",
+      "frame": "042",
+      "canvas": [
+        48,
+        38
+      ],
+      "archive_member": "native/BMP/GJGULL3A.BMP/042.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3A.BMP/042.png",
+        "sha256": "58cda57e3644251bd8ca075154747075265998116d5ccde7f899857b5adb0ab2"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3A.BMP/042.png",
+        "sha256": "0d9b0a8c4c9e947144bcea2b6ddedec272b4c48801bcee81d278a3452cb04fc0"
+      },
+      "source_rgba_sha256": "e0672fe84bdf410b98ad9058b2887487bd7c27b066400508def6aa87399bc284",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3A.BMP/043",
+      "resource": "GJGULL3A.BMP",
+      "frame": "043",
+      "canvas": [
+        48,
+        30
+      ],
+      "archive_member": "native/BMP/GJGULL3A.BMP/043.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3A.BMP/043.png",
+        "sha256": "2ead382e4d8f03ff61b2f456a98a2f5660bfda20f22f57f126f4c245589d5893"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3A.BMP/043.png",
+        "sha256": "349227a2d55258259cb7fb2c8995dcd87c1ba0ce4f1c32729b91afe64e5720a4"
+      },
+      "source_rgba_sha256": "e64318002d0f00495dfd1c430b74e0d585f2bfde2ff80cccb5285508e73f4734",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3A.BMP/044",
+      "resource": "GJGULL3A.BMP",
+      "frame": "044",
+      "canvas": [
+        72,
+        22
+      ],
+      "archive_member": "native/BMP/GJGULL3A.BMP/044.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3A.BMP/044.png",
+        "sha256": "2d42cbf1f1499dbc80aefc5705373d60f45b8bc22d82faadb965add6a7e44c21"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3A.BMP/044.png",
+        "sha256": "71a2368e34b54006527847104639e0fe06f7f36fb3004318e7a58c21e6f7f30a"
+      },
+      "source_rgba_sha256": "f85e83d48f85d7c0a6749c3dfe98a18492bfe3566c86b76ccf46a16b1502f9ad",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3A.BMP/045",
+      "resource": "GJGULL3A.BMP",
+      "frame": "045",
+      "canvas": [
+        64,
+        33
+      ],
+      "archive_member": "native/BMP/GJGULL3A.BMP/045.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3A.BMP/045.png",
+        "sha256": "943fd57113f8dc8e2f0bc6c31737fb13cfbd41bbf7363dbc5c3e3e9417a294a3"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3A.BMP/045.png",
+        "sha256": "651447571f5abb8f204464ee1eb8ff331b9f8d23c70a203d7f78742b48e0f71b"
+      },
+      "source_rgba_sha256": "ca8e02faa0d9dfd67bde4ac70c0e495f73ce09727170192d746b136f940cd736",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJGULL3A.BMP/046",
+      "resource": "GJGULL3A.BMP",
+      "frame": "046",
+      "canvas": [
+        40,
+        33
+      ],
+      "archive_member": "native/BMP/GJGULL3A.BMP/046.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJGULL3A.BMP/046.png",
+        "sha256": "77e15ecdea5ce637df3d4f6b87ab834a375679c29491d32aac00cb04adfd1617"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJGULL3A.BMP/046.png",
+        "sha256": "b9a6bff8f6a953dc8be9edabf748db36b4a57769c87f8182acfe8c00b2711263"
+      },
+      "source_rgba_sha256": "cc3dd4db8e0368ef06386d6097b7a57db829013aa1b007c1764971f6d92fbcda",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/000",
+      "resource": "MEANWHIL.BMP",
+      "frame": "000",
+      "canvas": [
+        96,
+        109
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/000.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/000.png",
+        "sha256": "668aa681d392f8ed5ea132c6b7d87a5996b90a69cb875eb08e20f830827618e4"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/000.png",
+        "sha256": "eb85ca086803d4f03de9ae6072d4d2e10302cdd57b9763c14f97420c8cb685c0"
+      },
+      "source_rgba_sha256": "f7befa32651f0cd1b9cb48a09fa1a63db093c2c2667331bfa057127d2fb32bb3",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/001",
+      "resource": "MEANWHIL.BMP",
+      "frame": "001",
+      "canvas": [
+        32,
+        20
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/001.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/001.png",
+        "sha256": "7be42cdcd886ce49bab2d5ad0a32a82e1ac4cbb4e8bd149f2e59e60c0a894fd5"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/001.png",
+        "sha256": "0db36c27392e5fdba889d38df65bf5791a5263b9db67da8ef9849aa1bebe89a7"
+      },
+      "source_rgba_sha256": "9e0b6c3c261d754ab02dbbe1782161acda9063ecdfdb6243196481f4317e3a3e",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/002",
+      "resource": "MEANWHIL.BMP",
+      "frame": "002",
+      "canvas": [
+        32,
+        20
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/002.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/002.png",
+        "sha256": "84e189074bd74cfaf81e7a6f522d5b88522216d417d75ce4acc9d7e4b877b928"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/002.png",
+        "sha256": "080dc1e183436ef69ad5ab17caa2a9b6cdc85b7683432a430d0f36d265f6a786"
+      },
+      "source_rgba_sha256": "747f552c3733c1154dd553512988be445ced357058f85f48e8dc398782436dc4",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/003",
+      "resource": "MEANWHIL.BMP",
+      "frame": "003",
+      "canvas": [
+        24,
+        26
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/003.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/003.png",
+        "sha256": "6d0f5373f3a4b8428face46e84b8566e87306017d0d0c1b493f86cde29c73eb3"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/003.png",
+        "sha256": "61e45ed75d68e1963aa0cef77f159484fe38581aa5641ae3e68e2d3c1b183a62"
+      },
+      "source_rgba_sha256": "f270a29c0173f4e73749a7c899bb467ffc69ab1ecf4b3abfd0ec7f58521a406e",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/004",
+      "resource": "MEANWHIL.BMP",
+      "frame": "004",
+      "canvas": [
+        24,
+        26
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/004.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/004.png",
+        "sha256": "e87f514cf9c4add09fdeb9e643f56775c7e3792760491fe5e894e461467fae80"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/004.png",
+        "sha256": "1574fc6f3246a70d417eb82918cd31ebf14ac8206256da34f52bab05f65cc173"
+      },
+      "source_rgba_sha256": "daae58b5bc37d3685784b0476c4e5bc8fd9e69732f13b7e551e3aa8f50948c06",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/005",
+      "resource": "MEANWHIL.BMP",
+      "frame": "005",
+      "canvas": [
+        16,
+        25
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/005.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/005.png",
+        "sha256": "57d570c11b8fc42c145fe48591216252dbcaa88bdc0d7bdca195b56729e1e6f1"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/005.png",
+        "sha256": "39544bf7e00a9f0c4cb9890041a1e726f0ba85f700290e10230750922133ee9a"
+      },
+      "source_rgba_sha256": "9c52503d2c6f105fc8eb7fc0942cc6702e1223b1cd350bbea22fbe8f190e942d",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/006",
+      "resource": "MEANWHIL.BMP",
+      "frame": "006",
+      "canvas": [
+        16,
+        21
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/006.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/006.png",
+        "sha256": "79a87d9f0521fcb2417f9bf26f7aa4b708db47ad09d12a27770f8a3bde1e4048"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/006.png",
+        "sha256": "3ac0f3fa563502e6953976b50a24c0b3094d5773055b57835d9fa06f2610c0f3"
+      },
+      "source_rgba_sha256": "cbbdc63e74f034c591e992a4e8778283365a12613032a8abd89a4399b7c05884",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/007",
+      "resource": "MEANWHIL.BMP",
+      "frame": "007",
+      "canvas": [
+        24,
+        15
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/007.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/007.png",
+        "sha256": "aa5124f37e4ccafb19e878374fc788c9482ed296ee77a7569200055ae3036b50"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/007.png",
+        "sha256": "edcf6d7202a49bcbda6d22e7d74d4823db8ec90c644c96ded40b8b2f51356578"
+      },
+      "source_rgba_sha256": "f403344c371dd6e67624ab2abdc79d4d016c39aff68cc2233b1fe3ffc739b451",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/008",
+      "resource": "MEANWHIL.BMP",
+      "frame": "008",
+      "canvas": [
+        32,
+        10
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/008.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/008.png",
+        "sha256": "543d4ef5d0f99e2820f0c6e103c28d057eeeefea88cff4278f39759fb7a4a614"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/008.png",
+        "sha256": "316a2bc079bd8605e1fb4fa23e07613cc7380ba4e1f682ed70ea019e5e04c528"
+      },
+      "source_rgba_sha256": "52cd4d34284231fe1d046ae2b99d5f04f7899d850ac4ea33e73c892224a1fb64",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/009",
+      "resource": "MEANWHIL.BMP",
+      "frame": "009",
+      "canvas": [
+        24,
+        16
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/009.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/009.png",
+        "sha256": "22acc9487fb84493d82c66c4d6692fd9bee1059d4732ef348d29e11486c4e7ec"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/009.png",
+        "sha256": "8681d3133263aa9bfa0a337b40ae2e5b036433d8f5fc4e60f44f1bd2e49f2489"
+      },
+      "source_rgba_sha256": "7b0f691cf0c00ef6097918cb85de77b9a8ee5ef102c8a5394af45587b51dd926",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/010",
+      "resource": "MEANWHIL.BMP",
+      "frame": "010",
+      "canvas": [
+        16,
+        22
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/010.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/010.png",
+        "sha256": "27103768a56fcfaef0f7dd15a678575a9cb7afd934c419bb7e4e213157b6e364"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/010.png",
+        "sha256": "a15ba200e8f61df1d81f3705c856415fb277ac9bfe5b21ae89e26619b350215e"
+      },
+      "source_rgba_sha256": "22f5a02b544cf7756079df94c20d175f6352e976881bfa6595c396c88d9b9a51",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/011",
+      "resource": "MEANWHIL.BMP",
+      "frame": "011",
+      "canvas": [
+        16,
+        25
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/011.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/011.png",
+        "sha256": "1bdd4df8cc86d61e520ed7bc79562d8576eca367122037256812d94fb19d284a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/011.png",
+        "sha256": "9ee2d80f7a492bac07fa4fb5ceea3f958b844277908dec24e2fa8c85c544157e"
+      },
+      "source_rgba_sha256": "cbe9106bc70e4666e07b27d40319ac62254a5f3a09ffb27401864fb3b8021c84",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/012",
+      "resource": "MEANWHIL.BMP",
+      "frame": "012",
+      "canvas": [
+        16,
+        21
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/012.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/012.png",
+        "sha256": "35d7dc9e4af4312ee9a8aa3fdf6343c5dc6bee33af92c547675cb848862edad1"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/012.png",
+        "sha256": "b37c287dbecf0703a50ef9bae6c03630cb445f0d57b78fe932f2b8d5a3f7cee1"
+      },
+      "source_rgba_sha256": "47f2a6268f1f293609ff7e6f3e7d76ec66484c27a06259c83d52d0744615bc40",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/013",
+      "resource": "MEANWHIL.BMP",
+      "frame": "013",
+      "canvas": [
+        24,
+        15
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/013.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/013.png",
+        "sha256": "6a1262e355e5304b74c2e3190ea8f204b13c2ea8e7e954e6cd94a40adcf413ff"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/013.png",
+        "sha256": "36967df313200da7a768f3c659deda533597e29b14a69418ae4260dfa9d1e87e"
+      },
+      "source_rgba_sha256": "538c0ccaa16f60f5a3c60b12a811fd5d448e0a4fad7a406192f06d7767d99761",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/014",
+      "resource": "MEANWHIL.BMP",
+      "frame": "014",
+      "canvas": [
+        32,
+        10
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/014.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/014.png",
+        "sha256": "ba7885d1ff898138f61ad0fffee286cec9598089f19ebe54e356210d0be87e0e"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/014.png",
+        "sha256": "f13b49418a079c7f7821e74b9f8f36eab323db6f0c0ad21965ecb33ab7552a27"
+      },
+      "source_rgba_sha256": "d819360227479ed66acaa9200d2a3439070d9e2bbbe98c4b04e6a3342f5b608e",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/015",
+      "resource": "MEANWHIL.BMP",
+      "frame": "015",
+      "canvas": [
+        24,
+        16
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/015.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/015.png",
+        "sha256": "dfcf4f2e7b1db1d6d8d4280f271d3d32583499511ced8f2611ff601e0ec31adc"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/015.png",
+        "sha256": "e8761f22f44df41d2b331c6b1343c4fb7e850d3d9a520e38d1bc3faac9e623a8"
+      },
+      "source_rgba_sha256": "d65f052e32057c3305146cfcb1c038b48395c02f8a609adbf20457a19bcb70e2",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MEANWHIL.BMP/016",
+      "resource": "MEANWHIL.BMP",
+      "frame": "016",
+      "canvas": [
+        16,
+        22
+      ],
+      "archive_member": "native/BMP/MEANWHIL.BMP/016.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MEANWHIL.BMP/016.png",
+        "sha256": "bbee39c7dec74a161a02861b088fb0dfc0de350142f25a3912779f7f2eb8c3c4"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MEANWHIL.BMP/016.png",
+        "sha256": "bcb84029019c57386dd65a7d976649dedccfe6913f8e804edea2f6971bef171d"
+      },
+      "source_rgba_sha256": "46ca704ba08f5428e26f5bd99bec02c7a2feadffcc2d33d977590a886700b2f3",
+      "static_frame_attribution": [
+        {
+          "ttm": "MEANWHIL.TTM",
+          "tag": 1,
+          "description": "quarky watch",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/ZZZZS.BMP/000",
+      "resource": "ZZZZS.BMP",
+      "frame": "000",
+      "canvas": [
+        8,
+        7
+      ],
+      "archive_member": "native/BMP/ZZZZS.BMP/000.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/ZZZZS.BMP/000.png",
+        "sha256": "1a327233951e1b77f1684c956bc1926d7abcaac57aa61d4f56b9fd5360fbdb8e"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/ZZZZS.BMP/000.png",
+        "sha256": "ae395ddadfa458be3dd51fda8a16c951627288215903750cd614426eb42a9027"
+      },
+      "source_rgba_sha256": "9725dda5d7f93eb1cc5a8471bf840b657f41388abcc9765a8fb5ef14757839d5",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/ZZZZS.BMP/001",
+      "resource": "ZZZZS.BMP",
+      "frame": "001",
+      "canvas": [
+        16,
+        9
+      ],
+      "archive_member": "native/BMP/ZZZZS.BMP/001.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/ZZZZS.BMP/001.png",
+        "sha256": "bdffe35dbd5ed2fa0229e9d57b3bb004723c5068a2d6ac36ab9c2cbf4c9d7b46"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/ZZZZS.BMP/001.png",
+        "sha256": "63f99f2bbc3cadf978cf9957cf5509acc84699b1f82dece78a18e63815db21e9"
+      },
+      "source_rgba_sha256": "6e4656b1748e09f3017ceec3956a37aa236b6b435c30ccfe7a9e0f0e22646c37",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/ZZZZS.BMP/002",
+      "resource": "ZZZZS.BMP",
+      "frame": "002",
+      "canvas": [
+        16,
+        12
+      ],
+      "archive_member": "native/BMP/ZZZZS.BMP/002.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/ZZZZS.BMP/002.png",
+        "sha256": "6b5c1a253ebc6b8aaf225d42a36e97b20911d3d3606d390829641adb635872a8"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/ZZZZS.BMP/002.png",
+        "sha256": "13555051b2f5463ddfbcc16182f2d9da0f935d399398fb78982bd5eb9d472879"
+      },
+      "source_rgba_sha256": "f9da7f953ee90280dff22b9e6a3c1c796c4ea6b7317da08f977d26764dfc9863",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/GJVIS3.BMP/005",
+      "resource": "GJVIS3.BMP",
+      "frame": "005",
+      "canvas": [
+        136,
+        54
+      ],
+      "archive_member": "native/BMP/GJVIS3.BMP/005.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJVIS3.BMP/005.png",
+        "sha256": "5763337f6cae0ffe6ba8008f018be30891cf47bc68742ad2f251c760aabaf085"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJVIS3.BMP/005.png",
+        "sha256": "ec9d9974b8d7120aabe276e5da9a7bcf591a5261978124eb47178f95ef8190ca"
+      },
+      "source_rgba_sha256": "cf4fc792f609c0b4777eb227af38d33e221689ad64ca9ed386ae1a540346d76c",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS3.TTM",
+          "tag": 57,
+          "description": "PLANE        ",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS3.BMP/007",
+      "resource": "GJVIS3.BMP",
+      "frame": "007",
+      "canvas": [
+        24,
+        28
+      ],
+      "archive_member": "native/BMP/GJVIS3.BMP/007.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJVIS3.BMP/007.png",
+        "sha256": "6e01d2d05ba23b02962e29ce6b859b25e7d5da918f87443f7e591a148af914aa"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJVIS3.BMP/007.png",
+        "sha256": "e15ca4368dd1e74cbc29b30fa5209821ae31516d0977dcb2969e7aa8466fe284"
+      },
+      "source_rgba_sha256": "bfcf80779b9af6e46790f8bd5bb7cbf1c4f5a669854ab0161126580bcdd6cdf6",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS3.TTM",
+          "tag": 57,
+          "description": "PLANE        ",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS3.BMP/008",
+      "resource": "GJVIS3.BMP",
+      "frame": "008",
+      "canvas": [
+        24,
+        28
+      ],
+      "archive_member": "native/BMP/GJVIS3.BMP/008.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJVIS3.BMP/008.png",
+        "sha256": "3a015702f4d2e73c87d7801a643ba53c7ec5ccbbd491348adf5e20b03a2feb12"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJVIS3.BMP/008.png",
+        "sha256": "c3091ccc2ff0d0cbd2d34017e5b7e70156b99b9f895283c0a25119cc19b1d3e7"
+      },
+      "source_rgba_sha256": "2bb17cc9b30d5c6afd917cdffea37366c872b59224faa5aab742664ed51f0c5d",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS3.TTM",
+          "tag": 57,
+          "description": "PLANE        ",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS3.BMP/009",
+      "resource": "GJVIS3.BMP",
+      "frame": "009",
+      "canvas": [
+        24,
+        28
+      ],
+      "archive_member": "native/BMP/GJVIS3.BMP/009.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJVIS3.BMP/009.png",
+        "sha256": "93df12b463f90daf58a6124a2d6562a45426ce51d8d8ef9f71e6e7b8ce4fce92"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJVIS3.BMP/009.png",
+        "sha256": "aea8dcec6a655bf355cff217943c639a630173b6ddbab7f3036bde0a5ec89263"
+      },
+      "source_rgba_sha256": "443fa21f9fe63dd410219077d67f80da5e131aeb52884b43f39b494777be3217",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS3.TTM",
+          "tag": 57,
+          "description": "PLANE        ",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS3.BMP/010",
+      "resource": "GJVIS3.BMP",
+      "frame": "010",
+      "canvas": [
+        152,
+        63
+      ],
+      "archive_member": "native/BMP/GJVIS3.BMP/010.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJVIS3.BMP/010.png",
+        "sha256": "8b47535d03fd5b5dfee9be7e4e2cb72fc340f05120dfef48d9d53d457e6e40d6"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJVIS3.BMP/010.png",
+        "sha256": "310f24653b82cea904f0564e91f862581f6b1bdd9a1f67a9d02c8a0606ff4981"
+      },
+      "source_rgba_sha256": "002cc34af9f8abf0486524702e2ac39fdb33bd03adb85429fca879de7ddac09a",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS3.TTM",
+          "tag": 59,
+          "description": "COPTER OUT",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS3.TTM",
+          "tag": 60,
+          "description": "COPTER IN",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS3.TTM",
+          "tag": 61,
+          "description": "COPTER HOVER",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/GJVIS3.BMP/011",
+      "resource": "GJVIS3.BMP",
+      "frame": "011",
+      "canvas": [
+        152,
+        63
+      ],
+      "archive_member": "native/BMP/GJVIS3.BMP/011.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/GJVIS3.BMP/011.png",
+        "sha256": "a8e119aac6cf22e128530b91ceb84ecbd1fb7e22955a48763388c1cb06470e12"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/GJVIS3.BMP/011.png",
+        "sha256": "eb5b67f4cf7d87ad898ea727d667f1409c441a652af5a71df1851cf433b1ae4c"
+      },
+      "source_rgba_sha256": "9d956051a62c9c589db3fb9d258092c1ec743bc7711c0abad76b7cfa4db91250",
+      "static_frame_attribution": [
+        {
+          "ttm": "GJVIS3.TTM",
+          "tag": 59,
+          "description": "COPTER OUT",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS3.TTM",
+          "tag": 60,
+          "description": "COPTER IN",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "GJVIS3.TTM",
+          "tag": 61,
+          "description": "COPTER HOVER",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/THEEND1.BMP/000",
+      "resource": "THEEND1.BMP",
+      "frame": "000",
+      "canvas": [
+        72,
+        24
+      ],
+      "archive_member": "native/BMP/THEEND1.BMP/000.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/THEEND1.BMP/000.png",
+        "sha256": "a91f45705f51a6754991d17e6cf6871c2459a9c383bfdef7d5e29136a538d6ee"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/THEEND1.BMP/000.png",
+        "sha256": "80f3886911222be40a71e1578458b3a23144b4a238ec25bee541af5802d1fd53"
+      },
+      "source_rgba_sha256": "e8b5f25e63d4783463b7b8dc925606bfbf9f56e18a73e5c6915c8b5f1d5dc229",
+      "static_frame_attribution": [
+        {
+          "ttm": "THEEND.TTM",
+          "tag": 1,
+          "description": "plane drops J",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/THEEND1.BMP/001",
+      "resource": "THEEND1.BMP",
+      "frame": "001",
+      "canvas": [
+        8,
+        15
+      ],
+      "archive_member": "native/BMP/THEEND1.BMP/001.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/THEEND1.BMP/001.png",
+        "sha256": "c03f89ec296878c52f42405103e69100d9287235ec050ea4798b51f1ec82e77d"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/THEEND1.BMP/001.png",
+        "sha256": "3c7831bd71322bf28a50cb159ead7815ac2085f7ca7942f6b189b9a4558d9a4b"
+      },
+      "source_rgba_sha256": "8308cc4068d6050f2391602774b88d8c6aa8cbf30a84ac0a2cf55377e20d8f97",
+      "static_frame_attribution": [
+        {
+          "ttm": "THEEND.TTM",
+          "tag": 1,
+          "description": "plane drops J",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/THEEND1.BMP/002",
+      "resource": "THEEND1.BMP",
+      "frame": "002",
+      "canvas": [
+        8,
+        15
+      ],
+      "archive_member": "native/BMP/THEEND1.BMP/002.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/THEEND1.BMP/002.png",
+        "sha256": "dabd54ea7c25ec1c3f34dd6e542e1692999ecdf87df5304a2aefed87a203e08c"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/THEEND1.BMP/002.png",
+        "sha256": "e5734ba93952f55e760798fd9ef32b8da10875de44f9577406ceece65484fde2"
+      },
+      "source_rgba_sha256": "93e7c7382916751d278b85505d30ad4e0065ebfa361043da83c24406d091bf7f",
+      "static_frame_attribution": [
+        {
+          "ttm": "THEEND.TTM",
+          "tag": 1,
+          "description": "plane drops J",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/THEEND1.BMP/006",
+      "resource": "THEEND1.BMP",
+      "frame": "006",
+      "canvas": [
+        72,
+        45
+      ],
+      "archive_member": "native/BMP/THEEND1.BMP/006.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/THEEND1.BMP/006.png",
+        "sha256": "eaa4c6cd77fa0521adcf1ecfb5275a4ad5c1cab740bba9181f71f5bc5de844e2"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/THEEND1.BMP/006.png",
+        "sha256": "1f736e048325dfba88c5941282ba0250aa1546a54aff3a96560188d1c4db9830"
+      },
+      "source_rgba_sha256": "cbf6214d76ec37c1dd7a52b0880fc1437549987969f4d0f5f7fb0baba395f9c6",
+      "static_frame_attribution": [
+        {
+          "ttm": "THEEND.TTM",
+          "tag": 1,
+          "description": "plane drops J",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/THEEND1.BMP/008",
+      "resource": "THEEND1.BMP",
+      "frame": "008",
+      "canvas": [
+        72,
+        37
+      ],
+      "archive_member": "native/BMP/THEEND1.BMP/008.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/THEEND1.BMP/008.png",
+        "sha256": "664c81bac807637add81dac83066f1e3d1ac9ed37a28a7c4083896f73ea757f6"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/THEEND1.BMP/008.png",
+        "sha256": "fa0bb823c4671ac068140c460cae91dcc40f7d06562315fbd00f2fbdf3624899"
+      },
+      "source_rgba_sha256": "ccdb90b5b7b5c27ad7a0e32e98bb89025a30b33e440fea7b007a87d2fe987bb2",
+      "static_frame_attribution": [
+        {
+          "ttm": "THEEND.TTM",
+          "tag": 1,
+          "description": "plane drops J",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/THEEND1.BMP/009",
+      "resource": "THEEND1.BMP",
+      "frame": "009",
+      "canvas": [
+        72,
+        24
+      ],
+      "archive_member": "native/BMP/THEEND1.BMP/009.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/THEEND1.BMP/009.png",
+        "sha256": "689d7cd467a92c7d0285bad809ff6a51c7c241e8986d6c85fdeb2d3f270eac46"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/THEEND1.BMP/009.png",
+        "sha256": "9ef401435bc02f3981c5270939011a4156d96257ad3e52709de78f0977d16af6"
+      },
+      "source_rgba_sha256": "f5228a2ac8deafd9d094c60a830f7c849ef4f4059d1aec6965b37bb722116990",
+      "static_frame_attribution": [
+        {
+          "ttm": "THEEND.TTM",
+          "tag": 1,
+          "description": "plane drops J",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJBOTTLE.BMP/000",
+      "resource": "MJBOTTLE.BMP",
+      "frame": "000",
+      "canvas": [
+        32,
+        20
+      ],
+      "archive_member": "native/BMP/MJBOTTLE.BMP/000.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MJBOTTLE.BMP/000.png",
+        "sha256": "9ea839a29a32a0fc39fa58f69488173b786a95ece59b38c75fe27c11538c6d03"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MJBOTTLE.BMP/000.png",
+        "sha256": "baf4a0cf789997808627628629821c6d7cd3c138c40a927d7555c192d9fff931"
+      },
+      "source_rgba_sha256": "8b394e89b4fc6d518bd958db7ddc53d83924d18d3be185407de92db552cd857f",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MJBOTTLE.BMP/001",
+      "resource": "MJBOTTLE.BMP",
+      "frame": "001",
+      "canvas": [
+        32,
+        20
+      ],
+      "archive_member": "native/BMP/MJBOTTLE.BMP/001.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MJBOTTLE.BMP/001.png",
+        "sha256": "1718c42289e7059bc0fac955788d25eefc4d7f715c2927c02d5376e34e58318b"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MJBOTTLE.BMP/001.png",
+        "sha256": "cccd6a9623a58894c07adef79c9ecf45c11e0c1c133c33e2f2d982d96d070880"
+      },
+      "source_rgba_sha256": "a500a4bc9958c26f133b20dff269bec4cdcd61351561953814a4a7d1aa93b12a",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MJBOTTLE.BMP/002",
+      "resource": "MJBOTTLE.BMP",
+      "frame": "002",
+      "canvas": [
+        32,
+        20
+      ],
+      "archive_member": "native/BMP/MJBOTTLE.BMP/002.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MJBOTTLE.BMP/002.png",
+        "sha256": "991a6442ea7851afd6a59d3155608f8ac12f8773b19adea4c118f8212d6fc40b"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MJBOTTLE.BMP/002.png",
+        "sha256": "6a252802a9af35d35ddfc5e5669f008e1947db297f1fca2d31612028895a6653"
+      },
+      "source_rgba_sha256": "f51af7d6d098da8a70d5a44928b028c9e227c65f1d73957a360f6a191aa915c2",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MJBOTTLE.BMP/004",
+      "resource": "MJBOTTLE.BMP",
+      "frame": "004",
+      "canvas": [
+        16,
+        14
+      ],
+      "archive_member": "native/BMP/MJBOTTLE.BMP/004.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MJBOTTLE.BMP/004.png",
+        "sha256": "38f5013fbca2b3f58297ecec1a5afa1fd9d82183ffd58539f6a7e126b5b6825f"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MJBOTTLE.BMP/004.png",
+        "sha256": "f833836baa2e970d9e9532b5b03c508ddffb7fb928eb0fdd1008f661950c8626"
+      },
+      "source_rgba_sha256": "6b29e883a50b59ff4b72c45d68242dbf9434ed82e3d27583c55f67a3123b0e3a",
+      "static_frame_attribution": [
+        {
+          "ttm": "SJMSSGE.TTM",
+          "tag": 2,
+          "description": "johnny gets bottle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJMSSGE.TTM",
+          "tag": 9,
+          "description": "puts note in bottle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJBTL2.BMP/000",
+      "resource": "MJBTL2.BMP",
+      "frame": "000",
+      "canvas": [
+        16,
+        14
+      ],
+      "archive_member": "native/BMP/MJBTL2.BMP/000.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MJBTL2.BMP/000.png",
+        "sha256": "16afa1ceb89f2051120355d10d38f732f7c1d4cbf45af1c9b5687488bbe68efe"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MJBTL2.BMP/000.png",
+        "sha256": "8dffa7c7677bc9ef872028445365756d8aca53183aa39ac6a16a5d0e587dd84b"
+      },
+      "source_rgba_sha256": "3dcfe7e47bcfae19b0b5db2f33d5a79e37b5cdb91a77f94a0b70bb566eb92a2d",
+      "static_frame_attribution": [
+        {
+          "ttm": "SJMSSGE.TTM",
+          "tag": 10,
+          "description": "throw bottle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJBTL2.BMP/001",
+      "resource": "MJBTL2.BMP",
+      "frame": "001",
+      "canvas": [
+        16,
+        14
+      ],
+      "archive_member": "native/BMP/MJBTL2.BMP/001.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MJBTL2.BMP/001.png",
+        "sha256": "a955f8f3ab18d9973a17ff6d4dbceb4f25aeb7593e604b9f2e9a2daefb0dc1e8"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MJBTL2.BMP/001.png",
+        "sha256": "ae0591ba721c2459a38bd99b02defe749fb2b83d70d5a4395f9ce7635d190e11"
+      },
+      "source_rgba_sha256": "5ce16d6e9cb484fb78df9e03f1db709023393ceac92c927d37c0925bf4c84c9a",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MJBTL2.BMP/002",
+      "resource": "MJBTL2.BMP",
+      "frame": "002",
+      "canvas": [
+        16,
+        15
+      ],
+      "archive_member": "native/BMP/MJBTL2.BMP/002.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MJBTL2.BMP/002.png",
+        "sha256": "d73ba280c9dd9bab9cf27ba93e5d270a5ff2bdd7dae7bbcd8c65c92bb0233486"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MJBTL2.BMP/002.png",
+        "sha256": "2e181e14c78627ac55fa2c7dd6c6382237abeb81bf852dd00ed2fcc27d7ec154"
+      },
+      "source_rgba_sha256": "6609e19729ea38a918443d5ee61cfeedb6ae2f30df0562bccc393aec19e8cffc",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/MJBTL2.BMP/033",
+      "resource": "MJBTL2.BMP",
+      "frame": "033",
+      "canvas": [
+        16,
+        10
+      ],
+      "archive_member": "native/BMP/MJBTL2.BMP/033.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MJBTL2.BMP/033.png",
+        "sha256": "869726f4651675de03d64f909ae5dee761951023b9b895573560d3e086568302"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MJBTL2.BMP/033.png",
+        "sha256": "9f26f04b8a7d4d45a5fdb7a87a94a2000462411535a6c3ceb87c1123de4841cc"
+      },
+      "source_rgba_sha256": "f9aa67f22d24e8918698cebcafe308d630ac93ca04b27d6feaaedf31204944bc",
+      "static_frame_attribution": [
+        {
+          "ttm": "SJMSSGE.TTM",
+          "tag": 2,
+          "description": "johnny gets bottle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJMSSGE.TTM",
+          "tag": 36,
+          "description": "WALK TO BOTTLE",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/MJBTL2.BMP/036",
+      "resource": "MJBTL2.BMP",
+      "frame": "036",
+      "canvas": [
+        16,
+        10
+      ],
+      "archive_member": "native/BMP/MJBTL2.BMP/036.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/MJBTL2.BMP/036.png",
+        "sha256": "8fb85cba01ac52d207cae0c7f20d965c4a88337ec12c6763a77875319211d236"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/MJBTL2.BMP/036.png",
+        "sha256": "76c2e997b71a0f35cfeaa2bdc153e135ff8fcf196a40064bfbb3426c44c09745"
+      },
+      "source_rgba_sha256": "d646cdd0fd551a711aea252916096b9a59f1ab0d454b7be8fb80e84f0f171ae1",
+      "static_frame_attribution": [
+        {
+          "ttm": "SJMSSGE.TTM",
+          "tag": 2,
+          "description": "johnny gets bottle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SJMSSGE.TTM",
+          "tag": 36,
+          "description": "WALK TO BOTTLE",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/WOULDBE.BMP/044",
+      "resource": "WOULDBE.BMP",
+      "frame": "044",
+      "canvas": [
+        80,
+        47
+      ],
+      "archive_member": "native/BMP/WOULDBE.BMP/044.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/WOULDBE.BMP/044.png",
+        "sha256": "c5fe7785b2016470d14fb6b14f75d636e97e4b5c58b35eb534ae729863362746"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/WOULDBE.BMP/044.png",
+        "sha256": "5b107e4be45b03bc1affe6df2ae6a7fa6dbfdf85ed85673ad2efd98bba67b119"
+      },
+      "source_rgba_sha256": "d87829f61ce69ea6ed5402bfbd14814a1773454bb29fb5e6f6e3d32eefe27415",
+      "static_frame_attribution": [
+        {
+          "ttm": "WOULDBE.TTM",
+          "tag": 11,
+          "description": "John getting off",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/WOULDBE.BMP/046",
+      "resource": "WOULDBE.BMP",
+      "frame": "046",
+      "canvas": [
+        80,
+        17
+      ],
+      "archive_member": "native/BMP/WOULDBE.BMP/046.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/WOULDBE.BMP/046.png",
+        "sha256": "775a2f5bc7024366fa780df126071e9fdecb83e92dfef248493e5329bc1c4f4a"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/WOULDBE.BMP/046.png",
+        "sha256": "d2a699878952ce9a1287bb42f768bfebbabdabcac08b3dccb759556e7f2030dc"
+      },
+      "source_rgba_sha256": "bee6c90a4f7fbc0b5f854cf902c448fe9eb3585a566a70669c74c2efe430696d",
+      "static_frame_attribution": [
+        {
+          "ttm": "WOULDBE.TTM",
+          "tag": 11,
+          "description": "John getting off",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "BMP/WOULDBE.BMP/049",
+      "resource": "WOULDBE.BMP",
+      "frame": "049",
+      "canvas": [
+        72,
+        40
+      ],
+      "archive_member": "native/BMP/WOULDBE.BMP/049.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/WOULDBE.BMP/049.png",
+        "sha256": "ecece0a8842e0ce2390f1eeeb6d886cf6543b7eb567dfb07ebbb28b811d9314d"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/WOULDBE.BMP/049.png",
+        "sha256": "0fae9296e8cc073424e672440cbda47b10d74b275a5db17d105f37460fadc9ba"
+      },
+      "source_rgba_sha256": "a8f93511b40a6cd1769ac91a6b367034ebdbd8411399f42e2ce423d7918845bd",
+      "static_frame_attribution": []
+    },
+    {
+      "id": "BMP/WOULDBE.BMP/050",
+      "resource": "WOULDBE.BMP",
+      "frame": "050",
+      "canvas": [
+        160,
+        16
+      ],
+      "archive_member": "native/BMP/WOULDBE.BMP/050.png",
+      "original": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/original/WOULDBE.BMP/050.png",
+        "sha256": "5e8b2856a4c62117a7d97b0a77aae46ac5884fc7111f82f174c1d46855d5ccdc"
+      },
+      "nearest8": {
+        "path": "art/cartoon/gulls-clock-props-batch-v1/reference/nearest8/WOULDBE.BMP/050.png",
+        "sha256": "579e19ee73c81fa22188f85b2ce97107b6fe34b0c30e23e53c0f7c091c2ee852"
+      },
+      "source_rgba_sha256": "b9efa4f63e8839f0983870b2784dd970e957bab389a2894a5e4afc664722bcc8",
+      "static_frame_attribution": [
+        {
+          "ttm": "WOULDBE.TTM",
+          "tag": 11,
+          "description": "John getting off",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    }
+  ]
+}
