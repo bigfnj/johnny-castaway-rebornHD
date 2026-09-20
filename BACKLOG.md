@@ -27,6 +27,8 @@ checks. Capture-launcher diagnostics and historical replay remain tooling work.
 
 The current [asset-build workflow](docs/cartoon-art-build-workflow.md) defers full smoke, regression and code audits until the art build is complete. Keep visual approvals and reusable source records current while accumulating families.
 
+Latest focused review: [five blurred propellers](art/cartoon/propeller-motion-blur-v3/README.md), requested after the 24 gull/clock/prop corrections. Appearance review remains pending.
+
 | Item | Evidence and next useful action |
 | --- | --- |
 | Run bulk verification after the Cartoon asset build | Requested by the user on 2026-09-17 to speed visual iteration. Assemble approved assets, run smoke before regressions, troubleshoot integration, then merge/push and perform the final code audit. Do not repeat this complete cycle for each art approval. |
