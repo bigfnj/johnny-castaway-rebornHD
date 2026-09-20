@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Produce ONE corrected transparent Cartoon worker sprite, not a sheet. Image1 is the exact original frame pose reference, image2 is the previous drawing to correct, image3 is the worker identity/style only. User's gait correction below overrides earlier drawing pose; do NOT copy the lifted-knee pose of the identity key. Frame017 is the COMPLETED forward step following016. In right-facing profile the anatomical RIGHT leg is the NEAR leg. Extend that near/right leg naturally FORWARD toward image right and set its heel/shoe on the implied ground ahead of the hips; weight beginning to settle onto it. Far/left leg is behind toward image left with heel beginning to lift at the end of its support. A modest, readable walking stride with visible gap between the legs, both shoes low, no crossed shins or mid-stride overlapping X. Do not leave the right foot back or beneath the body. Arms counter-swing naturally: near/right arm back, far/left arm forward. Torso upright.  Same adult small worker with black cap, dark brown hair, green long-sleeve shirt, royal-blue bib overalls, tan skin/hands, charcoal shoes; same crisp dark outlines and clean cel shading. In this right-facing side view show one visible eye, eyebrow, nose and mouth. Exactly two attached arms, two hands, two legs and two feet with believable joints. Entire figure inside generous transparent padding. Genuine RGBA alpha background. No actual ground/floor, no shadow, no glow/haze, no text, no props.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/reference/nearest8/LILIPUTS.BMP/017.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/generation/LILIPUTS.BMP/017-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/generation/LILIPUTS.BMP/000-generated-v1.png"
+    ]
+  }
+}

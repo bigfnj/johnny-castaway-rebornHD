@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Image1 is the previous Cartoon EDIT TARGET. Image2 is the exact original pose reference. The user's anatomical interpretation is the authority for the correction. Change ONLY the NEAR/RIGHT arm (the foreground shoulder on image LEFT, currently straight down). Give it a SLIGHT clearly visible elbow bend: elbow a little behind/out to image LEFT at waist level, forearm angles inward toward the hip with the hand near the upper thigh/waist. Preserve the FAR/LEFT arm extended forward toward image RIGHT at chest height. One continuous sleeve per arm, exactly TWO arms, no empty extra sleeves. Preserve the same adult worker identity: black cap, short dark hair, one visible right-facing eye/eyebrow/nose/mouth, green shirt, royal blue overalls and navy shoes, tan skin, crisp black outlines and restrained cel shading. Preserve the full-body crop, character scale and every part not explicitly changed. One whole sprite on genuinely transparent RGBA background with clear padding on every edge. No added objects, backdrop, floor, shadow, glow, labels or motion lines. Do not mirror the whole character.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/generation/LILIPUTS.BMP/047-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-batch-v1/reference/nearest8/LILIPUTS.BMP/047.png"
+    ]
+  }
+}

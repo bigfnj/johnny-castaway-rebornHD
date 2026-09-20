@@ -25,11 +25,11 @@ checks. Capture-launcher diagnostics and historical replay remain tooling work.
 
 ## Open work
 
-Next appearance review: [18 little-worker pose corrections](art/cartoon/little-workers-pose-corrections-v2/README.md), following the [72-drawing batch](art/cartoon/little-workers-batch-v1/README.md). The focused changes fix leading legs and stride progression, the forward lean into running, hidden and crossing arms, elbow bends and the backward gesture in063. Original, previous and corrected drawings appear together. Appearance approval remains pending; original-canvas fitting and native testing remain deferred.
+Next appearance review: [60 worker and mermaid drawings](art/cartoon/workers-and-mermaids-batch-v1/README.md), covering LILIPUTS 072-100, SBREAKUP 000-020/034 and SMGFTWAV 000-008. Per-frame tool grips, rope paths and waterline occlusion follow the [saved pose lessons](docs/art-style-learnings-pose-and-action.md). The SSUZY1 visitor family is deferred after repeated image-tool output moderation failures; its partial drafts are preserved and excluded from the 60. Native fitting and bulk verification remain deferred.
 
 The current [asset-build workflow](docs/cartoon-art-build-workflow.md) defers full smoke, regression and code audits until the art build is complete. Keep visual approvals and reusable source records current while accumulating families.
 
-Latest focused approval: [five blurred propellers](art/cartoon/propeller-motion-blur-v3/acceptance/appearance-v1.json), accepted on 2026-09-20 after the 24 gull/clock/prop corrections. The five selected GJVIS3 007-011 drawings have appearance approval; other drawings retain their prior status.
+Latest focused approval: [18 little-worker pose corrections](art/cartoon/little-workers-pose-corrections-v2/acceptance/appearance-v1.json), accepted with "approved, take notes so the next art pack is accurate and continue". The exact selected corrections are appearance-approved; the other 54 drawings retain their prior status. Reusable lessons now cover limb ownership, gait phase, overlaps, prop contact and motion effects.
 
 The [67 visitor and thought-scene drawings](art/cartoon/visitors-and-props-batch-v1/README.md) include the masked performer, camera visitor, woman visitor and four thought scenes, with exact originals shown beneath them. Seven appearance choices are accepted below; the other 60 drawings retain their prior status. Scene fitting and native checks remain deferred.
 

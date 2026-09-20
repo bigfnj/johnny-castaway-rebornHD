@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Image1 is edit target. Image2 is exact source geometry. Image3 is supporting identity reference only. Correct ONLY the facing direction: the first image incorrectly faces RIGHT. The exact original image2 faces LEFT, as does the correct adjacent tool pose in image3. Turn the worker into a left-facing three-quarter/profile pose with his nose and cap brim pointing SCREEN-LEFT, one main visible left-profile eye. Keep BOTH arms hanging quietly by the sides, hands EMPTY, same narrow stance and separated shoes. Do not import the tool from image3. Preserve clothing/material/proportions. This must visibly reverse facing; not merely move the eye or cap brim. Crisp outlined cel-shaded cartoon, genuine transparent RGBA, no added scenery, shadows, glow, text, limbs or props. Return the complete intact sprite with clear transparent padding.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/085-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/LILIPUTS.BMP/085.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/084-generated-v1.png"
+    ]
+  }
+}

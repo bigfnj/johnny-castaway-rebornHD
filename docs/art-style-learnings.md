@@ -13,6 +13,8 @@ the next character pass; the linked historical records below remain unchanged.
 
 ## Evidence and source records
 
+The [pose and action lessons](art-style-learnings-pose-and-action.md) capture the user's worker, gull, visitor and moving-prop corrections. Read them before the next art batch, then write per-frame anatomy and overlap notes from the exact originals.
+
 | Record | Knowledge preserved |
 |---|---|
 | [Runtime and packaging](cartoon-art.md) | PNG support, coverage, fallback, inventory and candidate building |

@@ -16,4 +16,6 @@ The cloud CI run was already underway when this decision arrived. Let it finish,
 
 Actual engine changes remain separate from art-only iteration and receive testing appropriate to the changed behavior. Human review remains useful for anatomy, contact, layering and style decisions; it does not require the full software validation cycle first.
 
+Before new generation, apply the [saved pose and action lessons](art-style-learnings-pose-and-action.md). Trace near/far limbs and prop attachments in the exact original and neighboring phases, record those observations in each frame's prompt, and compare the generated joint connections and overlaps before presenting the pack.
+
 NIGHT.SCR and the remaining active ocean screens have visual approval and await integration. Work now covers independent props and vehicle families in larger batches. Preserve all earlier character, shoreline, offshore-wave and seasonal approvals.

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Fix the LEG OVERLAP in image1. Image2 demonstrates the CORRECT left-foot-forward anatomy and overlap that this pose needs. Preserve image1's head, entire upper body, arms, identity and moderate shorter stride. Redraw image1 below the waist using image2's topology: the BRIGHT BLUE NEAR leg, attached to the visible side pocket, angles DOWN-LEFT into the TRAILING shoe. Its thigh forms the foreground edge that occludes the upper other leg. The DARKER BLUE FAR leg starts BEHIND that near hip and reaches DOWN-RIGHT into the FORWARD shoe. This advances the anatomical LEFT foot. The side-pocket near thigh must NOT connect into the forward rightward knee; remove that current diagonal outline and reconstruct the hip overlap. Keep image1's stride moderate, less wide than image2. Both feet and knees should stay natural and exactly two legs. Keep the same right-facing head, single visible eye, green shirt, blue overalls, black cap, tan skin and clean cartoon lines. Do not mirror. Transparent RGBA background, no halo/shadow/floor. Treat image2 as a clear leg-layering guide, not a request to duplicate its arms or longer stride.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-pose-corrections-v2/generation/LILIPUTS.BMP/013-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/little-workers-pose-corrections-v2/generation/LILIPUTS.BMP/002-generated-v1.png"
+    ]
+  }
+}
