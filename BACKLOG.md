@@ -27,7 +27,9 @@ checks. Capture-launcher diagnostics and historical replay remain tooling work.
 
 The current [asset-build workflow](docs/cartoon-art-build-workflow.md) defers full smoke, regression and code audits until the art build is complete. Keep visual approvals and reusable source records current while accumulating families.
 
-Latest focused review: [five blurred propellers](art/cartoon/propeller-motion-blur-v3/README.md), requested after the 24 gull/clock/prop corrections. Appearance review remains pending.
+Latest focused approval: [five blurred propellers](art/cartoon/propeller-motion-blur-v3/acceptance/appearance-v1.json), accepted on 2026-09-20 after the 24 gull/clock/prop corrections. The five selected GJVIS3 007-011 drawings have appearance approval; other drawings retain their prior status.
+
+Next appearance review: [67 visitor and thought-scene drawings](art/cartoon/visitors-and-props-batch-v1/README.md). The masked performer, camera visitor, woman visitor and four thought scenes are new drafts with exact originals shown beneath them. Scene fitting and native checks remain deferred.
 
 | Item | Evidence and next useful action |
 | --- | --- |
