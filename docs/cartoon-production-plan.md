@@ -110,6 +110,8 @@ The user approved the [four judge corrections](../art/cartoon/marine-judges-corr
 
 The next [64-drawing fishing, prop and aircraft review](../art/cartoon/fishing-and-props-batch-v1/README.md) follows the new 60-72 default. It contains 42 fishing catches, rotating props, rods and water effects, plus 22 aircraft, flag and associated effect drawings. Exact original references determine orientation and visible anatomy. Appearance approval, native canvas registration and bulk smoke tests remain separate steps.
 
+The subsequent [fish-scene and flag correction review](../art/cartoon/fishing-scene-and-flag-v2/README.md) addresses the user's request to see MJFISH3 008-010 in the fishing scene before changing their colors. Their Cartoon drawings remain unchanged. GJBIPLAN 021 now depicts the long cloth from 022 hanging freely from its upper connection. These targeted changes do not imply approval of the remaining batch or completion of bulk integration.
+
 The workflow builds on [the original lessons](art-style-learnings.md),
 [the Calm focus addendum](art-style-learnings-calm-focus.md), and
 [the approved runtime record](../art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json).

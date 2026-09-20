@@ -1,0 +1,112 @@
+zipvfs: opened archive 'scrantic_data.zip' (29 entries)
+Loading resources ...................................................................................................................................................................................
+rand seed: 11 (forced)
+PALETTE: resource=JOHNCAST.PAL index=0
+RGB: 0 168 0 168
+RGB: 1 0 0 168
+RGB: 2 0 168 0
+RGB: 3 0 168 168
+RGB: 4 168 0 0
+RGB: 5 0 0 0
+RGB: 6 168 168 0
+RGB: 7 212 212 212
+RGB: 8 128 128 128
+RGB: 9 0 0 252
+RGB: 10 0 252 0
+RGB: 11 0 252 252
+RGB: 12 252 0 0
+RGB: 13 252 0 252
+RGB: 14 252 252 0
+RGB: 15 252 252 252
+island backdrop: OCEAN02.SCR
+Clouds Pos: 89, 32
+Clouds Pos: 136, 26
+---- Loading MJFISH.TTM
+SETUP: direct original MJFISH.TTM tag1 resource-load setup on adsInitIsland context
+    TTM_UNKNOWN_1 0
+    SET_BMP_SLOT 3
+    SET_FRAME1 0 0
+    LOAD_IMAGE MJFISH2.BMP
+    SET_BMP_SLOT 4
+    SET_FRAME1 0 0
+    LOAD_IMAGE MJFISH3.BMP
+    SAVE_IMAGE1 0 157 640 193
+    SET_BMP_SLOT 2
+    LOAD_IMAGE TRUNK.BMP
+    SET_FRAME1 0 0
+    SET_BMP_SLOT 0
+    SET_FRAME1 0 0
+    LOAD_IMAGE MJFISH1.BMP
+    SET_BMP_SLOT 1
+    SET_FRAME1 0 0
+    LOAD_IMAGE JOHNWALK.BMP
+    PURGE
+    UPDATE
+SCENE: TTM=MJFISH.TTM tag=29 seed=11 day=1 low=0 raft=0 offset=0,0 render=640x480 mode=direct-source-tag
+    CLEAR_SCREEN 0
+    DRAW_SPRITE_FLIP 254 230 14 0
+    DRAW_SPRITE_FLIP 306 278 21 0
+    DRAW_SPRITE_FLIP 256 278 10 4
+FISH DRAW: frame=10 flip=1 x=256 y=278 dx=0 dy=0 scale=1 canvas=16x20 ticks=0
+    SET_DELAY 7
+    UPDATE
+CAPTURE: frame=10 display=1 ticks=0 flip=1 x=256 y=278 dx=0 dy=0 canvas=16x20 file=fish-010.ppm
+    CLEAR_SCREEN 0
+    DRAW_SPRITE_FLIP 254 230 14 0
+    DRAW_SPRITE_FLIP 306 278 21 0
+    DRAW_SPRITE_FLIP 249 278 8 4
+FISH DRAW: frame=8 flip=1 x=249 y=278 dx=0 dy=0 scale=1 canvas=16x18 ticks=0
+    UPDATE
+CAPTURE: frame=8 display=3 ticks=7 flip=1 x=249 y=278 dx=0 dy=0 canvas=16x18 file=fish-008.ppm
+    CLEAR_SCREEN 0
+    DRAW_SPRITE_FLIP 254 230 14 0
+    DRAW_SPRITE_FLIP 306 278 21 0
+    DRAW_SPRITE_FLIP 252 279 9 4
+FISH DRAW: frame=9 flip=1 x=252 y=279 dx=0 dy=0 scale=1 canvas=16x19 ticks=7
+    PLAY_SAMPLE 7
+    UPDATE
+CAPTURE: frame=9 display=4 ticks=14 flip=1 x=252 y=279 dx=0 dy=0 canvas=16x19 file=fish-009.ppm
+    CLEAR_SCREEN 0
+    DRAW_SPRITE_FLIP 306 278 21 0
+    DRAW_SPRITE_FLIP 254 220 15 0
+    DRAW_SPRITE_FLIP 292 269 9 4
+FISH DRAW: frame=9 flip=1 x=292 y=269 dx=0 dy=0 scale=1 canvas=16x19 ticks=14
+    UPDATE
+    CLEAR_SCREEN 0
+    DRAW_SPRITE_FLIP 257 219 16 0
+    DRAW_SPRITE_FLIP 304 268 10 4
+FISH DRAW: frame=10 flip=1 x=304 y=268 dx=0 dy=0 scale=1 canvas=16x20 ticks=21
+    UPDATE
+    CLEAR_SCREEN 0
+    DRAW_SPRITE_FLIP 261 217 17 0
+    DRAW_SPRITE_FLIP 313 268 8 4
+FISH DRAW: frame=8 flip=1 x=313 y=268 dx=0 dy=0 scale=1 canvas=16x18 ticks=28
+    UPDATE
+    CLEAR_SCREEN 0
+    DRAW_SPRITE_FLIP 259 219 18 0
+    DRAW_SPRITE_FLIP 306 277 20 0
+    DRAW_SPRITE_FLIP 312 262 9 4
+FISH DRAW: frame=9 flip=1 x=312 y=262 dx=0 dy=0 scale=1 canvas=16x19 ticks=35
+    UPDATE
+    DRAW_SPRITE_FLIP 262 221 19 0
+    DRAW_SPRITE_FLIP 305 278 21 0
+    DRAW_SPRITE_FLIP 321 258 8 4
+FISH DRAW: frame=8 flip=1 x=321 y=258 dx=0 dy=0 scale=1 canvas=16x18 ticks=42
+    TIMER 120 240
+    UPDATE
+    CLEAR_SCREEN 0
+    DRAW_SPRITE_FLIP 262 221 19 0
+    DRAW_SPRITE_FLIP 305 278 21 0
+    DRAW_SPRITE_FLIP 324 259 9 4
+FISH DRAW: frame=9 flip=1 x=324 y=259 dx=0 dy=0 scale=1 canvas=16x19 ticks=49
+    SET_DELAY 8
+    UPDATE
+    CLEAR_SCREEN 0
+    DRAW_SPRITE_FLIP 262 221 19 0
+    DRAW_SPRITE_FLIP 305 278 21 0
+    DRAW_SPRITE_FLIP 327 258 10 4
+FISH DRAW: frame=10 flip=1 x=327 y=258 dx=0 dy=0 scale=1 canvas=16x20 ticks=229
+    PURGE
+    UPDATE
+RETURN: displays=11 ticks=237 captured=1,1,1
+DONE: direct native TTM returned and cleanup complete

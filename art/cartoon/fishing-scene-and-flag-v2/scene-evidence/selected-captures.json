@@ -1,0 +1,558 @@
+{
+  "schema_version": 1,
+  "status": "captured",
+  "scope": "Six actual native window-surface captures for fish color context. Direct original MJFISH.TTM tag1 load setup then tag29; unchanged ttmPlay and grUpdateDisplay on adsInitIsland context. Native draw positions, flips and script phase order retained.",
+  "limits": [
+    "This supplied script tag is not directly scheduled by current FISHING.ADS; not a naturally reached story-scene claim.",
+    "Static day/high-tide island fixture at0,0 with raft0,holiday0,seed11. No walking setup or animated island/cloud scheduler in direct-tag loop.",
+    "Original graphics shown through current Linux port, not the historical Windows executable. Engine palette directives are not implemented; graphicsInit uses palResources[0], JOHNCAST.PAL.",
+    "No generated Cartoon fish are integrated in these captures. Current scene uses existing HD fish fallback.",
+    "No smoke/regression matrix or bulk integration validation was run."
+  ],
+  "source_findings": {
+    "path": "build/fish-scene-review/source-findings.json",
+    "sha256": "6de71a594139123a321930de548c7e8dd3b44e0e234df20755de8bcca5f0e99a"
+  },
+  "source_decode": {
+    "path": "build/fish-scene-review/source-attribution/source-scene.json",
+    "sha256": "c5ffdf8b7cc50eb377c8d69d695712266215ae2f4299c45b95e07f8a8db02768"
+  },
+  "private_original_archive": {
+    "path": "build/fish-scene-review/archive.json",
+    "sha256": "e5eceb92abaaf441b4f1af9c87f3d683e788dfb8819bb3b24b394d2cafdc4081"
+  },
+  "cases": [
+    {
+      "id": "hd-ttm29-seed11",
+      "style": "Original resources at native resolution",
+      "archive_sha256": "98ca152078817fb7a27d876e3d362d4646e3ac5d639045171baf2cf641744ea0",
+      "captures": [
+        {
+          "frame": 8,
+          "display_ordinal": 3,
+          "ticks": 7,
+          "time_ms": 140,
+          "flip": 1,
+          "logical_position": [
+            249,
+            278
+          ],
+          "logical_scene_offset": [
+            0,
+            0
+          ],
+          "scale": 1,
+          "draw_canvas": [
+            16,
+            18
+          ],
+          "draw_bounds_pixels": [
+            249,
+            278,
+            265,
+            296
+          ],
+          "image": {
+            "path": "build/fish-scene-review/hd-ttm29-seed11/scene/fish-008.png",
+            "sha256": "f873721c8b5e2c628fbafbac69d1be04ca21fe565658f9aefa0dd577d56b1c7f"
+          },
+          "pixels_sha256": "bd8e91855fd55d06e1c1612f6b69baf0bf0c64acac89988b8ec150920c70c572",
+          "fish_source": {
+            "archive": "98ca152078817fb7a27d876e3d362d4646e3ac5d639045171baf2cf641744ea0",
+            "resource": "MJFISH3.BMP",
+            "mode": "native packed-resource decode using JOHNCAST.PAL"
+          },
+          "bounds_note": "Full native submitted sprite canvas, conservative for transparent pixels. No independent visible-pixel boundary claim."
+        },
+        {
+          "frame": 9,
+          "display_ordinal": 4,
+          "ticks": 14,
+          "time_ms": 280,
+          "flip": 1,
+          "logical_position": [
+            252,
+            279
+          ],
+          "logical_scene_offset": [
+            0,
+            0
+          ],
+          "scale": 1,
+          "draw_canvas": [
+            16,
+            19
+          ],
+          "draw_bounds_pixels": [
+            252,
+            279,
+            268,
+            298
+          ],
+          "image": {
+            "path": "build/fish-scene-review/hd-ttm29-seed11/scene/fish-009.png",
+            "sha256": "c340b0551a04a631b275c1fb3db09b9210c84d35b239b24a95eeec27a4c4ddac"
+          },
+          "pixels_sha256": "3fba1e90ddd83c14edaed69dd5cb2c66b2840fe7ebd48d37e3005eb4f8d569d6",
+          "fish_source": {
+            "archive": "98ca152078817fb7a27d876e3d362d4646e3ac5d639045171baf2cf641744ea0",
+            "resource": "MJFISH3.BMP",
+            "mode": "native packed-resource decode using JOHNCAST.PAL"
+          },
+          "bounds_note": "Full native submitted sprite canvas, conservative for transparent pixels. No independent visible-pixel boundary claim."
+        },
+        {
+          "frame": 10,
+          "display_ordinal": 1,
+          "ticks": 0,
+          "time_ms": 0,
+          "flip": 1,
+          "logical_position": [
+            256,
+            278
+          ],
+          "logical_scene_offset": [
+            0,
+            0
+          ],
+          "scale": 1,
+          "draw_canvas": [
+            16,
+            20
+          ],
+          "draw_bounds_pixels": [
+            256,
+            278,
+            272,
+            298
+          ],
+          "image": {
+            "path": "build/fish-scene-review/hd-ttm29-seed11/scene/fish-010.png",
+            "sha256": "e6baaca3f4fd9dccf9f936eb4a35bb8f83e3ad3615b32bc69d78f810edd40a4f"
+          },
+          "pixels_sha256": "fc4a0a0835dfd825ff77a9203bbba4a89c6bf037220e1f497d6cd61e5b6ddb3c",
+          "fish_source": {
+            "archive": "98ca152078817fb7a27d876e3d362d4646e3ac5d639045171baf2cf641744ea0",
+            "resource": "MJFISH3.BMP",
+            "mode": "native packed-resource decode using JOHNCAST.PAL"
+          },
+          "bounds_note": "Full native submitted sprite canvas, conservative for transparent pixels. No independent visible-pixel boundary claim."
+        }
+      ],
+      "palette_resource": "JOHNCAST.PAL",
+      "palette_rgb_by_index": [
+        [
+          0,
+          168,
+          0,
+          168
+        ],
+        [
+          1,
+          0,
+          0,
+          168
+        ],
+        [
+          2,
+          0,
+          168,
+          0
+        ],
+        [
+          3,
+          0,
+          168,
+          168
+        ],
+        [
+          4,
+          168,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          168,
+          168,
+          0
+        ],
+        [
+          7,
+          212,
+          212,
+          212
+        ],
+        [
+          8,
+          128,
+          128,
+          128
+        ],
+        [
+          9,
+          0,
+          0,
+          252
+        ],
+        [
+          10,
+          0,
+          252,
+          0
+        ],
+        [
+          11,
+          0,
+          252,
+          252
+        ],
+        [
+          12,
+          252,
+          0,
+          0
+        ],
+        [
+          13,
+          252,
+          0,
+          252
+        ],
+        [
+          14,
+          252,
+          252,
+          0
+        ],
+        [
+          15,
+          252,
+          252,
+          252
+        ]
+      ],
+      "palette_note": "Original resource decoding uses this actual port palette. Current Cartoon fish use the loaded HD PNG colors, verified pixel-exact in the displayed scene.",
+      "run": {
+        "path": "build/fish-scene-review/hd-ttm29-seed11/run.json",
+        "sha256": "2edfd7428821b5988715964a538d676316341885ddaef7d49c79f1f3a4176c49"
+      },
+      "launch": {
+        "path": "build/fish-scene-review/hd-ttm29-seed11/launch.json",
+        "sha256": "adceae19669a7171efcdd0b973a6108be05a3f9c068ba5310eaedecca68d0b93"
+      },
+      "build": {
+        "path": "build/fish-scene-review/hd-ttm29-seed11/build.json",
+        "sha256": "8bc39a52d114c7f627e9e6a973f34ae5001b8ddc468b9b234d5d263a8dea57ce"
+      },
+      "log": {
+        "path": "build/fish-scene-review/hd-ttm29-seed11/scene/capture.log",
+        "sha256": "b56d0c153418fbfe4a3481d33521d49147cb2463ce62b4ca4d13bbac7733b0bf"
+      },
+      "helpers": [
+        {
+          "path": "build/fish-scene-review/hd-ttm29-seed11/helpers/capture.py",
+          "sha256": "d804af08e115bf94971915b87bbb8e8ac982e5cc777edadf90d98906d52d8482"
+        },
+        {
+          "path": "build/fish-scene-review/hd-ttm29-seed11/helpers/driver.c",
+          "sha256": "107391e1f8def0173a16f589ec4a30e437186fc891e7c96884160c0fb95323f8"
+        },
+        {
+          "path": "build/fish-scene-review/hd-ttm29-seed11/helpers/report.py",
+          "sha256": "325b7c78390a0243889ba04307d11e7ad66b1db45d68825f2c04f4a08884982a"
+        },
+        {
+          "path": "build/fish-scene-review/hd-ttm29-seed11/helpers/run.py",
+          "sha256": "e2aaf2b0afdcf9bdb3eb9ab7608a730c34cd0e3d80bae17a487781e93bb6d8f8"
+        }
+      ]
+    },
+    {
+      "id": "cartoon-ttm29-seed11",
+      "style": "Current Cartoon with existing HD fish fallback",
+      "archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+      "captures": [
+        {
+          "frame": 8,
+          "display_ordinal": 3,
+          "ticks": 7,
+          "time_ms": 140,
+          "flip": 1,
+          "logical_position": [
+            249,
+            278
+          ],
+          "logical_scene_offset": [
+            0,
+            0
+          ],
+          "scale": 2,
+          "draw_canvas": [
+            32,
+            36
+          ],
+          "draw_bounds_pixels": [
+            498,
+            556,
+            530,
+            592
+          ],
+          "image": {
+            "path": "build/fish-scene-review/cartoon-ttm29-seed11/scene/fish-008.png",
+            "sha256": "c5c39a6772322ff7623c9127553a592d13a78497e8cc445ee84708ff6003e489"
+          },
+          "pixels_sha256": "bd56a83f4eb6ce691be73adff5e6723ecb0c31d9aa89328846d44d306b06ef34",
+          "fish_source": {
+            "archive": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+            "member": "data/hd/BMP/MJFISH3.BMP/008.png",
+            "sha256": "ae3f8a209db1257b23e6fa7b0b4895c00d04e7bef714a2895bacbe6e6c289611"
+          },
+          "opaque_source_pixels": 368,
+          "opaque_source_pixel_mismatches": 0,
+          "fish_alpha_bounds_pixels": [
+            510,
+            560,
+            530,
+            592
+          ]
+        },
+        {
+          "frame": 9,
+          "display_ordinal": 4,
+          "ticks": 14,
+          "time_ms": 280,
+          "flip": 1,
+          "logical_position": [
+            252,
+            279
+          ],
+          "logical_scene_offset": [
+            0,
+            0
+          ],
+          "scale": 2,
+          "draw_canvas": [
+            32,
+            38
+          ],
+          "draw_bounds_pixels": [
+            504,
+            558,
+            536,
+            596
+          ],
+          "image": {
+            "path": "build/fish-scene-review/cartoon-ttm29-seed11/scene/fish-009.png",
+            "sha256": "c6a3299554de29aea58ee467702bca598f6f0fd2893c21c4b80b7f8e5f6cbbfd"
+          },
+          "pixels_sha256": "144992d1e82e66d4142c5ca9d287ff219c8d672062a3cdbd0062ed13db101bac",
+          "fish_source": {
+            "archive": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+            "member": "data/hd/BMP/MJFISH3.BMP/009.png",
+            "sha256": "52866f5c4a43310078aec349d4cdd0f45a540406b046c2e058fc3f3f40febefb"
+          },
+          "opaque_source_pixels": 380,
+          "opaque_source_pixel_mismatches": 0,
+          "fish_alpha_bounds_pixels": [
+            514,
+            562,
+            536,
+            596
+          ]
+        },
+        {
+          "frame": 10,
+          "display_ordinal": 1,
+          "ticks": 0,
+          "time_ms": 0,
+          "flip": 1,
+          "logical_position": [
+            256,
+            278
+          ],
+          "logical_scene_offset": [
+            0,
+            0
+          ],
+          "scale": 2,
+          "draw_canvas": [
+            32,
+            40
+          ],
+          "draw_bounds_pixels": [
+            512,
+            556,
+            544,
+            596
+          ],
+          "image": {
+            "path": "build/fish-scene-review/cartoon-ttm29-seed11/scene/fish-010.png",
+            "sha256": "25e84e73951223045c9815a27afb37d0041b97bdd60f43c8fce2e94cc1b341ea"
+          },
+          "pixels_sha256": "52f2267c766777f6368ff17e65813568ca3a8dd3b4529e6017f0a058210a44d5",
+          "fish_source": {
+            "archive": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+            "member": "data/hd/BMP/MJFISH3.BMP/010.png",
+            "sha256": "df1623d5a55185c4d38e087ac6d7b3e915f8e236fe753a06e6da5bf1b98d5137"
+          },
+          "opaque_source_pixels": 436,
+          "opaque_source_pixel_mismatches": 0,
+          "fish_alpha_bounds_pixels": [
+            514,
+            560,
+            544,
+            596
+          ]
+        }
+      ],
+      "palette_resource": "JOHNCAST.PAL",
+      "palette_rgb_by_index": [
+        [
+          0,
+          168,
+          0,
+          168
+        ],
+        [
+          1,
+          0,
+          0,
+          168
+        ],
+        [
+          2,
+          0,
+          168,
+          0
+        ],
+        [
+          3,
+          0,
+          168,
+          168
+        ],
+        [
+          4,
+          168,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          168,
+          168,
+          0
+        ],
+        [
+          7,
+          212,
+          212,
+          212
+        ],
+        [
+          8,
+          128,
+          128,
+          128
+        ],
+        [
+          9,
+          0,
+          0,
+          252
+        ],
+        [
+          10,
+          0,
+          252,
+          0
+        ],
+        [
+          11,
+          0,
+          252,
+          252
+        ],
+        [
+          12,
+          252,
+          0,
+          0
+        ],
+        [
+          13,
+          252,
+          0,
+          252
+        ],
+        [
+          14,
+          252,
+          252,
+          0
+        ],
+        [
+          15,
+          252,
+          252,
+          252
+        ]
+      ],
+      "palette_note": "Original resource decoding uses this actual port palette. Current Cartoon fish use the loaded HD PNG colors, verified pixel-exact in the displayed scene.",
+      "run": {
+        "path": "build/fish-scene-review/cartoon-ttm29-seed11/run.json",
+        "sha256": "a91a16919f2558c6708380d5d14f52f0d99b619592f90d9da41d1f2293a960a4"
+      },
+      "launch": {
+        "path": "build/fish-scene-review/cartoon-ttm29-seed11/launch.json",
+        "sha256": "f4b0736d97e830a6bdca6716304996bcb452ab7e1742eebfd06f019c1076bb3a"
+      },
+      "build": {
+        "path": "build/fish-scene-review/cartoon-ttm29-seed11/build.json",
+        "sha256": "e1b3ace813c7ef2731895e49999595ca1eae9f763f356110b527d0395ef6c82e"
+      },
+      "log": {
+        "path": "build/fish-scene-review/cartoon-ttm29-seed11/scene/capture.log",
+        "sha256": "d49f333bcbfcad92cb584ec64d3a25a917d4beeb6549d6f8853875629a426145"
+      },
+      "helpers": [
+        {
+          "path": "build/fish-scene-review/cartoon-ttm29-seed11/helpers/capture.py",
+          "sha256": "d804af08e115bf94971915b87bbb8e8ac982e5cc777edadf90d98906d52d8482"
+        },
+        {
+          "path": "build/fish-scene-review/cartoon-ttm29-seed11/helpers/driver.c",
+          "sha256": "107391e1f8def0173a16f589ec4a30e437186fc891e7c96884160c0fb95323f8"
+        },
+        {
+          "path": "build/fish-scene-review/cartoon-ttm29-seed11/helpers/report.py",
+          "sha256": "325b7c78390a0243889ba04307d11e7ad66b1db45d68825f2c04f4a08884982a"
+        },
+        {
+          "path": "build/fish-scene-review/cartoon-ttm29-seed11/helpers/run.py",
+          "sha256": "e2aaf2b0afdcf9bdb3eb9ab7608a730c34cd0e3d80bae17a487781e93bb6d8f8"
+        }
+      ]
+    }
+  ],
+  "readback": {
+    "six_PNGs_exact_to_native_PPM": true,
+    "paired_positions_flips_ticks": true,
+    "all_compiled_C_sources_still_exact": true,
+    "current_fish_opaque_pixels_exact_to_loaded_HD_PNGs": true,
+    "production_archive_unchanged": true
+  }
+}

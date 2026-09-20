@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-19",
+  "scope": "Lightweight scene/correction display and byte binding checks only",
+  "review_record": {
+    "path": "art/cartoon/fishing-scene-and-flag-v2/review-record.json",
+    "sha256": "95f2a16a62b39a84a20dd2e87c26ba1f7e8f54261397c627e1e809e60cf83847"
+  },
+  "checked_hash_bindings": 70,
+  "browser": {
+    "url": "http://127.0.0.1:8941/fishing-scene-and-flag-v2/review.html",
+    "status": "Three fish scene views and the flag comparison ready.",
+    "loaded_canvases": 10,
+    "console_errors": [],
+    "observed_controls": [
+      "Fish008 to009 to010 and back to008",
+      "Current environment toOriginal-mode palette and back",
+      "Flag comparison section navigation"
+    ],
+    "visual_observations": "Fish context and enlarged crops render; corrected flag has a clear alpha gap beside the pole and a free folded lower tip."
+  },
+  "native_capture_scope": "Three selected poses in two art modes from direct MJFISH.TTM29 execution. No native Cartoon draft integration.",
+  "production_archive_sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d",
+  "human_approval": null,
+  "full_smoke_suite": "Deferred at user request"
+}

@@ -1,0 +1,41 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--init",
+    "--rm",
+    "--name",
+    "johnny-fish-f2ce8ea3c8f2",
+    "--network",
+    "none",
+    "--mount",
+    "type=bind,source=D:\\.ai-work\\worktrees\\johnny-cartoon-environment,target=/source,readonly",
+    "--mount",
+    "type=bind,source=D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\build\\fish-scene-review\\hd-ttm29-seed11,target=/out",
+    "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+    "xvfb-run",
+    "-a",
+    "-s",
+    "-screen 0 1280x960x24",
+    "python3",
+    "-B",
+    "/source/build/fish-scene-review/capture.py",
+    "--tag",
+    "29",
+    "--seed",
+    "11",
+    "--style",
+    "hd"
+  ],
+  "image": "sha256:c648e362c0fa184b745cc54efc05792d54596ef23e5a34b1376d98e62af39a72",
+  "source_head": "2ecea01ce27dd445a76f273e7161a3df6db63595",
+  "returncode": 0,
+  "elapsed_seconds": 16.49287486076355,
+  "no_surviving_task_container": true,
+  "source_archive_unchanged": true,
+  "helpers_sha256": {
+    "driver.c": "107391e1f8def0173a16f589ec4a30e437186fc891e7c96884160c0fb95323f8",
+    "capture.py": "d804af08e115bf94971915b87bbb8e8ac982e5cc777edadf90d98906d52d8482",
+    "run.py": "e2aaf2b0afdcf9bdb3eb9ab7608a730c34cd0e3d80bae17a487781e93bb6d8f8"
+  }
+}
