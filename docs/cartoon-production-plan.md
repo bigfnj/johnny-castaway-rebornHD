@@ -106,6 +106,8 @@ The user then requested [ten GJGULL2 corrections](../art/cartoon/gull-clothes-co
 
 The next [36-drawing marine set](../art/cartoon/marine-scenes-batch-v1/README.md) contains 17 GJCATCH2 octopus poses, 12 GJDIVE animal judges with blank scorecards and seven SPLASH effects. Each exact original remains visible beside the new art. Starfish, crab, round fish and gull are separate judge designs; numeric score overlays and shadow planes are excluded from the drawing count. Appearance review is pending, with native registration and bulk testing deferred.
 
+The user's [four judge corrections](../art/cartoon/marine-judges-corrections-v2/README.md) restore the partly hidden far eye in GJDIVE 025 and the chest-forward stance in gulls 027/028/029. Both gull wings hold the card; the rear feather fan is the tail. The comparison preserves each original card angle beside the earlier and corrected drawings. These source interpretations supersede the earlier notes. Appearance review remains pending, and the other 32 marine drawings gain no implied approval. Native integration and full testing remain deferred.
+
 The workflow builds on [the original lessons](art-style-learnings.md),
 [the Calm focus addendum](art-style-learnings-calm-focus.md), and
 [the approved runtime record](../art/cartoon/walk-pilot/calm-focus-runtime-v1/production-acceptance.json).
