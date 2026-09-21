@@ -6,6 +6,8 @@ The default new-art review size is now 60-72 drawings, per the user's 2026-09-19
 
 The user approved the [18 worker pose corrections](../art/cartoon/little-workers-pose-corrections-v2/acceptance/appearance-v1.json) and requested durable lessons for subsequent packs. The [pose and action notes](art-style-learnings-pose-and-action.md) guide per-frame source interpretation. The [60-drawing review](../art/cartoon/workers-and-mermaids-batch-v1/README.md) contains 29 remaining unique worker poses, 22 mermaid/sandcastle drawings and 9 tail phases. Follow-up feedback produced [seven tool and pose corrections](../art/cartoon/worker-tool-pose-corrections-v2/README.md) and an [original-only context workup](../art/cartoon/blocked-originals-context-v1/README.md) for the deferred visitor family and recovered mermaid attempts. These corrections await appearance review; other drawings retain their prior status. Native fitting and bulk verification remain deferred.
 
+The latest [worker, visitor and mermaid fix pass](../art/cartoon/worker-visitor-mermaid-fixes-v1/README.md) contains 13 new drawings and retains the matching visitor 001 and bottle 011. It follows the user's explicit swimwear and jewelry context, reverses078's thumb and attaches093's rope to its peg. SSUZY1 003 remains original-only after two output blocks; the rest have selected artwork for review. No appearance approval is inferred.
+
 The user approved this bounded start on 2026-09-15: establish the production
 catalog, then expand Johnny's walking directions before undertaking the full
 application. Work starts from `0f7d7fd` on `art/cartoon-production-foundation`.

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "resource": "SSUZY1.BMP",
+  "frame": "003",
+  "version": 2,
+  "status": "no_image_returned",
+  "request_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/003-v2-request.json",
+  "actual_tool_error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 2008097d-f64c-4bdd-a126-cf53672b9232. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")",
+  "follow_up": "Authorized single targeted edit also blocked. No further retries, substitutions or alternate service used. Parent will show original with unresolved status.",
+  "request": {
+    "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/003-v2-request.json",
+    "sha256": "4e11501b15fe2b11422d2d74a9dba5f24a4e034eaa1461fa530defc012c7d020"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/002-generated-v1.png",
+      "sha256": "c8847edc308c165fc2d61fa21d0b69ca895dcb77ba03d3b49c1f63b0230cdabf"
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/003.png",
+      "sha256": "3379946ba642dd4d360981e8745c83def33addce015ef342e22157e535f3ff27"
+    }
+  ]
+}

@@ -25,7 +25,7 @@ checks. Capture-launcher diagnostics and historical replay remain tooling work.
 
 ## Open work
 
-Next appearance review: [seven worker tool and pose corrections](art/cartoon/worker-tool-pose-corrections-v2/README.md) to the [60 worker and mermaid drawings](art/cartoon/workers-and-mermaids-batch-v1/README.md). LILIPUTS 076 fixes shoulder ownership, 077/078 correct palm-facing grips, 079 corrects the hammer angle, 092/096 turn the whole body left, and 093 restores the loose rope and closer peg. The [original-only blocked-image workup](art/cartoon/blocked-originals-context-v1/README.md) shows the deferred SSUZY1 family and recovered mermaid attempts for the user's context. Other drawings retain their prior review status. Native fitting and bulk verification remain deferred.
+Next appearance review: [worker, visitor and mermaid fix pass](art/cartoon/worker-visitor-mermaid-fixes-v1/README.md), with 13 new drawings and two retained drawings. LILIPUTS 078 moves the hammer-hand thumb and093 attaches the rope to the peg. SSUZY1 uses the user's redhead/pink-swimwear/jewelry context;003 remains unresolved after two output blocks and is shown original-only. Mermaid015/016 both rendered successfully with the green-bikini/blue-hairband context. Earlier [worker corrections](art/cartoon/worker-tool-pose-corrections-v2/README.md) and the [60-drawing pack](art/cartoon/workers-and-mermaids-batch-v1/README.md) retain their prior review status. Native fitting and bulk verification remain deferred.
 
 The current [asset-build workflow](docs/cartoon-art-build-workflow.md) defers full smoke, regression and code audits until the art build is complete. Keep visual approvals and reusable source records current while accumulating families.
 

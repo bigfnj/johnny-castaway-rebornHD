@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "user_request": "078 move the thumb on the hand holding the hammer to the other side. 093 have the rope attached to the wooden nail. for the SSUZY images, its a redhead woman, in a pink bathing suit wearing earrings and bracelets. Ensure your AI image generator knows it has clothes and is not sexual. ALso for the SBREKUP images, why did they fail to render? they are just headshots of the already rendered mermaid. green bikini and blue hairband. I would pass that context and render them in this \"fix\" pass.",
+  "scope": {
+    "worker_frames": [
+      "078",
+      "093"
+    ],
+    "visitor_frames": [
+      "000",
+      "001",
+      "002",
+      "003",
+      "004",
+      "005",
+      "006",
+      "007",
+      "008",
+      "009",
+      "010"
+    ],
+    "retained_visitor_prop": "011",
+    "mermaid_frames": [
+      "015",
+      "016"
+    ]
+  },
+  "clothing_context": {
+    "SSUZY1": "Adult redhead woman wearing opaque pink two-piece swimwear, gold earrings and bracelets, turquoise sunglasses; ordinary nonsexual sunbathing and tanning-oil actions.",
+    "SBREAKUP": "Already-established adult blonde mermaid wearing a green bikini and blue hairband; head-only waterline poses preserve torso occlusion."
+  },
+  "prior_mermaid_failure": "The paired015/016 attempt did not identify a frame-specific cause; both later returned drafts. This pass uses the user-supplied clothed-character context.",
+  "attachments": [
+    {
+      "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/feedback/codex-clipboard-6ea795ff-94a6-4ed0-9e45-5a85c7ec610d.png",
+      "sha256": "5dc60d304a3a78226d83c39422e179b94069aedfc604d4408e8f1f82c6d85848"
+    },
+    {
+      "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/feedback/codex-clipboard-a278492f-6c35-4419-b057-2ca60a23b6a1.png",
+      "sha256": "97095b675acc6fb6e7d6f038864a28218bb152d07d99fec67bc2d52f9a06d089"
+    }
+  ],
+  "appearance_approval": null
+}

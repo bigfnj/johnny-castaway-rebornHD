@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "resource": "SSUZY1.BMP",
+  "frame": "001",
+  "version": 1,
+  "status": "no_image_returned",
+  "request_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/001-v1-request.json",
+  "actual_tool_error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID d8adaf59-4552-4f9c-86c4-ba00de41e766. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")",
+  "follow_up": "No retry or alternate service used. Parent notified.",
+  "request": {
+    "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/001-v1-request.json",
+    "sha256": "2be3871a61f92bb75eb3ebbe45a94a69a952e683c428d90086cc7d9c368e6093"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/001.png",
+      "sha256": "da1c42940db7a19ca920f187e2825d5baa9913d3a758eb773099055f52920b7e"
+    },
+    {
+      "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/000-generated-v1.png",
+      "sha256": "c10f9ac77f3e859971d785b907a0bbce5c4808efbbcf41ab39254766e74392ea"
+    }
+  ]
+}
