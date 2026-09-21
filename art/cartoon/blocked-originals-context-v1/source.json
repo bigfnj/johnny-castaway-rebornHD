@@ -1,0 +1,1040 @@
+{
+  "schema_version": 1,
+  "title": "Blocked originals, in context",
+  "count": 19,
+  "scope": "Original pixels only. Context for the user's next art-direction clarification; not a new appearance approval.",
+  "palette_limit": "Supplied-original index planes rendered with the port diagnostic dump palette. BMP index0 is transparent; all SCR indices are opaque. Original executable palette, compositing, timing and exhaustive scene parity are not established. Shadow-inclusive bounds are not anatomical or foot-contact measurements.",
+  "archive": {
+    "path": "art/cartoon/character-inventory-v1/reference-originals.zip",
+    "sha256": "b9a906dd6508b013e860c9ca7396b21ea78776f5c7d086b71f13f1ac530bd912"
+  },
+  "frame_index": {
+    "path": "art/cartoon/character-inventory-v1/source/frame-index.json",
+    "sha256": "04f63230a01b94b90fa632c68b8d12ab27840eb6462d32719ae8d0ddf73cced2"
+  },
+  "scene_map": {
+    "path": "art/cartoon/character-inventory-v1/scene-map/resource-map.json",
+    "sha256": "fc68bf58c57e8a70702654878cc7b42db667592c64cd1216a9e78199ec979ca3"
+  },
+  "rows": [
+    {
+      "id": "SSUZY1.BMP-000",
+      "resource": "SSUZY1.BMP",
+      "frame": "000",
+      "canvas": [
+        96,
+        42
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        96,
+        42
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/000.png",
+        "sha256": "08500dcc11999642029ffb1215b1d4644ceb7d125e77c00695ec8a30ab787438"
+      },
+      "url": "original/SSUZY1.BMP/000.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/000.png",
+        "sha256": "08500dcc11999642029ffb1215b1d4644ceb7d125e77c00695ec8a30ab787438"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/000.png",
+      "source_rgba_sha256": "a6ac46e9f7794ff8040575d091ad065e18d9edb588256c0d2763fc8b3a2327ee",
+      "status": "recovered",
+      "status_label": "Blocked, then recovered",
+      "status_detail": "The first attempt returned no image. A second attempt produced a draft. The whole family was later deferred.",
+      "description": "Low side recline, head at left, hands over a small flat reading item.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/000-v1-request.json",
+          "sha256": "63ca746e39e86a7c5988ebe33f3c533f996c2e9d521a6539248e65f7fee69e4c"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/000-v2-request.json",
+          "sha256": "a7baac0b3d0b4372c442a0513d5cd9449dcca3df407a1ad3b17a77f4fa45e7b7"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/000-v1-failure.json",
+          "sha256": "7e02d4c6979c7c9a054ce26b2d3636f9f11b66754d39e5716b0bf6568d7c1437"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 2,
+          "description": "tanning oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 5,
+          "description": "lay back down",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 6,
+          "description": "floating bottle",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-001",
+      "resource": "SSUZY1.BMP",
+      "frame": "001",
+      "canvas": [
+        104,
+        55
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        100,
+        55
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/001.png",
+        "sha256": "545ece2029d98f488c1ac0516d79472f55fd5cd55eec130b4a622daebf5f4109"
+      },
+      "url": "original/SSUZY1.BMP/001.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/001.png",
+        "sha256": "545ece2029d98f488c1ac0516d79472f55fd5cd55eec130b4a622daebf5f4109"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/001.png",
+      "source_rgba_sha256": "288e89b888f9abbb0b8adfe480bfeeb96ae2ea05f32aedda25078bb21ebdf2ba",
+      "status": "success",
+      "status_label": "Draft returned",
+      "status_detail": "A draft was produced on the first attempt. This neighboring frame was not blocked.",
+      "description": "Raised forearm and tiny cap; the separate oil bottle stands at far left.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-v1-request.json",
+          "sha256": "eb39970661ceb341bc3c6d1d5dcac537804982706d64009f896cb3f25eebc7a5"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 2,
+          "description": "tanning oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 5,
+          "description": "lay back down",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-002",
+      "resource": "SSUZY1.BMP",
+      "frame": "002",
+      "canvas": [
+        112,
+        57
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        105,
+        57
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/002.png",
+        "sha256": "7ff6ef17abe00f2d7e7896c0c16031b40ca3ba2b915b797d261a795c211fd0be"
+      },
+      "url": "original/SSUZY1.BMP/002.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/002.png",
+        "sha256": "7ff6ef17abe00f2d7e7896c0c16031b40ca3ba2b915b797d261a795c211fd0be"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/002.png",
+      "source_rgba_sha256": "4f491d301e03a4049fbbd19268ade34a7f324eb9a4629e6ec399abbd79fcfcb0",
+      "status": "blocked",
+      "status_label": "No output after two attempts",
+      "status_detail": "Both saved attempts returned no image. The first has an individual failure record; the second is recorded in the family status log.",
+      "description": "Reaching down-left toward the bottle, with both legs extending right.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/002-v1-request.json",
+          "sha256": "c58481f1e6585a6bf045df650abc20ab34e2de65745acc8e15f289dc0ac57c02"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/002-v2-request.json",
+          "sha256": "a616a8d8956a2009736a1d63bfd3e168463848797c50df98a8c0ae2cdd9b6ec2"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/002-v1-failure.json",
+          "sha256": "2f39211ca1e32e4e68e6279ac44961c17094ebdc68c1bcf6f2469f76f1170729"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 2,
+          "description": "tanning oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 5,
+          "description": "lay back down",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-003",
+      "resource": "SSUZY1.BMP",
+      "frame": "003",
+      "canvas": [
+        96,
+        57
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        92,
+        57
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/003.png",
+        "sha256": "ebb2f6be0b676de5035e85f41693419019c0fe7923049b83c23dd06b5d344ae4"
+      },
+      "url": "original/SSUZY1.BMP/003.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/003.png",
+        "sha256": "ebb2f6be0b676de5035e85f41693419019c0fe7923049b83c23dd06b5d344ae4"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/003.png",
+      "source_rgba_sha256": "de5922616e820091c84fe090178eeba8bcc8c1d66a64fa0e17509fc7eb912bdb",
+      "status": "blocked",
+      "status_label": "No output recorded",
+      "status_detail": "The saved first attempt returned no image according to the family status log. No separate per-call failure record was saved.",
+      "description": "Turning toward the viewer; bottle partly hidden between the hands.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/003-v1-request.json",
+          "sha256": "95240d45d7981c4b3ff22786f4d1ec214c48684088e116a1d4765d6e7e4f09cf"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 2,
+          "description": "tanning oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 5,
+          "description": "lay back down",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-004",
+      "resource": "SSUZY1.BMP",
+      "frame": "004",
+      "canvas": [
+        96,
+        56
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        91,
+        56
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/004.png",
+        "sha256": "07b1bda0d283390511c472fff621702a5a28909cbb67ab89d8c1d332695ed254"
+      },
+      "url": "original/SSUZY1.BMP/004.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/004.png",
+        "sha256": "07b1bda0d283390511c472fff621702a5a28909cbb67ab89d8c1d332695ed254"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/004.png",
+      "source_rgba_sha256": "f2dd7dec248aca33cb32f4c37253d06f502f8f546751bd4b4d7a215add71bba4",
+      "status": "not-run",
+      "status_label": "Deferred before running",
+      "status_detail": "A request was saved, but it was never sent. This frame is shown for sequence context and must not be called blocked.",
+      "description": "More frontal recline, hands and bottle low in front, one knee raised.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/004-v1-request.json",
+          "sha256": "61a3f3a2537ea354c587dafb5a5b25a98808a784ff09638ded9554a9168af6da"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 2,
+          "description": "tanning oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 5,
+          "description": "lay back down",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-005",
+      "resource": "SSUZY1.BMP",
+      "frame": "005",
+      "canvas": [
+        80,
+        56
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        80,
+        56
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/005.png",
+        "sha256": "36de9277f4cf961116b23287f66d082ef2985584b018bea4c3da6e2a6c184432"
+      },
+      "url": "original/SSUZY1.BMP/005.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/005.png",
+        "sha256": "36de9277f4cf961116b23287f66d082ef2985584b018bea4c3da6e2a6c184432"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/005.png",
+      "source_rgba_sha256": "82bf6c29de59b3f87824710e162b9a6e8b3f3bdaaf288e3af33b13f1ab306145",
+      "status": "not-run",
+      "status_label": "Deferred before running",
+      "status_detail": "A request was saved, but it was never sent. This frame is shown for sequence context and must not be called blocked.",
+      "description": "Propped transition toward sitting, with overlapping bent legs.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/005-v1-request.json",
+          "sha256": "b8f57bb2044d9451a09154a14ba29c92ea6187e26371be8af76282d2f43a25c5"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 2,
+          "description": "tanning oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-006",
+      "resource": "SSUZY1.BMP",
+      "frame": "006",
+      "canvas": [
+        88,
+        55
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        84,
+        55
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/006.png",
+        "sha256": "aefb5f83f1b90248a7a640531568bc2cabe677f7a1c2fabb1892180195289d69"
+      },
+      "url": "original/SSUZY1.BMP/006.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/006.png",
+        "sha256": "aefb5f83f1b90248a7a640531568bc2cabe677f7a1c2fabb1892180195289d69"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/006.png",
+      "source_rgba_sha256": "da092f66ba049281d29454ee5e48ac56bf5d17443ef5439c2de951083d8d705e",
+      "status": "not-run",
+      "status_label": "Deferred before running",
+      "status_detail": "A request was saved, but it was never sent. This frame is shown for sequence context and must not be called blocked.",
+      "description": "Upright recline, bottle raised at left and the other hand near the knee.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/006-v1-request.json",
+          "sha256": "a262b2d2b95c886a939fd123adddac80df6a502978dd7cafd9af7add65a79035"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 2,
+          "description": "tanning oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 5,
+          "description": "lay back down",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-007",
+      "resource": "SSUZY1.BMP",
+      "frame": "007",
+      "canvas": [
+        104,
+        62
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        98,
+        62
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/007.png",
+        "sha256": "ca9ea7dfb0574f412e8dfefffb78ddf285993242bf474ffc3a615e3065663665"
+      },
+      "url": "original/SSUZY1.BMP/007.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/007.png",
+        "sha256": "ca9ea7dfb0574f412e8dfefffb78ddf285993242bf474ffc3a615e3065663665"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/007.png",
+      "source_rgba_sha256": "331bd9550e401498a711f36c32d1eee5444e6d6a97941792b7a0900ce39ed7d8",
+      "status": "not-run",
+      "status_label": "Deferred before running",
+      "status_detail": "A request was saved, but it was never sent. This frame is shown for sequence context and must not be called blocked.",
+      "description": "Seated front, one leg folded low and the other knee raised.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/007-v1-request.json",
+          "sha256": "9b137f76360a704bd9f4cfaec01dd1f56784f8bc2c31aea55c20d67b7c2ab213"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 2,
+          "description": "tanning oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-008",
+      "resource": "SSUZY1.BMP",
+      "frame": "008",
+      "canvas": [
+        112,
+        64
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        112,
+        64
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/008.png",
+        "sha256": "531914024c37959da310d620d9e5369ae09b9a1937e2be4be27a6c91e3b7d987"
+      },
+      "url": "original/SSUZY1.BMP/008.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/008.png",
+        "sha256": "531914024c37959da310d620d9e5369ae09b9a1937e2be4be27a6c91e3b7d987"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/008.png",
+      "source_rgba_sha256": "7593228b22f1e17c38729d325e498f9c72e1c75b5baf58fd536cf9f93ad27318",
+      "status": "not-run",
+      "status_label": "Deferred before running",
+      "status_detail": "A request was saved, but it was never sent. This frame is shown for sequence context and must not be called blocked.",
+      "description": "Hand near the separate bottle; other hand on the raised knee.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/008-v1-request.json",
+          "sha256": "60c65055f81bf2bed172262b9ab7f5593e34829785eb7453da4dc6ef123ab070"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 2,
+          "description": "tanning oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 5,
+          "description": "lay back down",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-009",
+      "resource": "SSUZY1.BMP",
+      "frame": "009",
+      "canvas": [
+        104,
+        61
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        104,
+        61
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/009.png",
+        "sha256": "cb836349c2e7b0345ca1e6ad0aa1906b1c6774a18fb56f4d098e3fdd3a6aa6ab"
+      },
+      "url": "original/SSUZY1.BMP/009.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/009.png",
+        "sha256": "cb836349c2e7b0345ca1e6ad0aa1906b1c6774a18fb56f4d098e3fdd3a6aa6ab"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/009.png",
+      "source_rgba_sha256": "5214b6b72dd6c39b998ff2d52cee64f1f80554383b6bd64a9835ad4fbcae55d9",
+      "status": "not-run",
+      "status_label": "Deferred before running",
+      "status_detail": "A request was saved, but it was never sent. This frame is shown for sequence context and must not be called blocked.",
+      "description": "Applying oil to the raised shin; no separate bottle in this sprite.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/009-v1-request.json",
+          "sha256": "01a3f2d34a0ec49e95353c89f08cd2f1e202dfe3fdbe7e27664b03e78e1c71de"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 2,
+          "description": "tanning oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 3,
+          "description": "apply oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        },
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 5,
+          "description": "lay back down",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-010",
+      "resource": "SSUZY1.BMP",
+      "frame": "010",
+      "canvas": [
+        112,
+        56
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        105,
+        56
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/010.png",
+        "sha256": "1a933a1b2460c0f24b18ce91123acfe8f776c6fcea2696b77e8d72fb3b1058b8"
+      },
+      "url": "original/SSUZY1.BMP/010.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/010.png",
+        "sha256": "1a933a1b2460c0f24b18ce91123acfe8f776c6fcea2696b77e8d72fb3b1058b8"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/010.png",
+      "source_rgba_sha256": "6ca0c9135872dfc312875a3bb5d79b3238d5ce059a920156b8680c10c7a12377",
+      "status": "not-run",
+      "status_label": "Deferred before running",
+      "status_detail": "A request was saved, but it was never sent. This frame is shown for sequence context and must not be called blocked.",
+      "description": "Leaning farther toward the shin and ankle at image-right.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/010-v1-request.json",
+          "sha256": "bc9f1b2fca3999b9222c554a661accd1d439a49914a7b413d3b4bf3593b84c6e"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        }
+      ],
+      "static_source_actions": [
+        {
+          "ttm": "SUZYCITY.TTM",
+          "tag": 3,
+          "description": "apply oil",
+          "scope": "static unique-script-slot draw attribution, not executed sequence"
+        }
+      ]
+    },
+    {
+      "id": "SSUZY1.BMP-011",
+      "resource": "SSUZY1.BMP",
+      "frame": "011",
+      "canvas": [
+        16,
+        16
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        10,
+        16
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SSUZY1.BMP/011.png",
+        "sha256": "766026a9f1086f0aa250c19260f834dd6f0f48571dffdaffe62c0e38d80228e5"
+      },
+      "url": "original/SSUZY1.BMP/011.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/011.png",
+        "sha256": "766026a9f1086f0aa250c19260f834dd6f0f48571dffdaffe62c0e38d80228e5"
+      },
+      "archive_member": "native/BMP/SSUZY1.BMP/011.png",
+      "source_rgba_sha256": "ef0b9e9aefbaa640ff7eed7dd1b1c729f30dde19d0a2e2555e67d0e943800789",
+      "status": "success",
+      "status_label": "Bottle drafts returned",
+      "status_detail": "Both bottle attempts produced drafts. This standalone prop was not blocked.",
+      "description": "The separate tanning-oil bottle.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/011-v1-request.json",
+          "sha256": "18c1a5e807696f8c5e241997e4d24c54a1df0d9859de48407645a9de0030737b"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/011-v2-request.json",
+          "sha256": "19c99794d4b053608d8257e4a8199c2e5b78821200b92efe5126bfd9848b7024"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+          "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+        }
+      ],
+      "static_source_actions": []
+    },
+    {
+      "id": "SBREAKUP.BMP-012",
+      "resource": "SBREAKUP.BMP",
+      "frame": "012",
+      "canvas": [
+        72,
+        27
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        65,
+        27
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SBREAKUP.BMP/012.png",
+        "sha256": "3da3dbcf8f8459a1946ec4e59339e5da745bec152dc5077fbddfe5fd98171160"
+      },
+      "url": "original/SBREAKUP.BMP/012.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SBREAKUP.BMP/012.png",
+        "sha256": "3da3dbcf8f8459a1946ec4e59339e5da745bec152dc5077fbddfe5fd98171160"
+      },
+      "archive_member": "native/BMP/SBREAKUP.BMP/012.png",
+      "source_rgba_sha256": "0a57288c5b3020e69aa58bfdcd440b777ffb339fb4ebab21de059f3ea7fc918a",
+      "status": "context",
+      "status_label": "Neighboring frame",
+      "status_detail": "A draft was produced for this neighboring pose. It provides context for the recovered 015/016 pair.",
+      "description": "A low, partly submerged head-and-hair pose with a small arm portion.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/012-v1-request.json",
+          "sha256": "cc6b9e67c56f3f905defd80b08939ccd7f93cb3dca72778377f2c293fa89b0a1"
+        }
+      ],
+      "status_evidence": [],
+      "static_source_actions": []
+    },
+    {
+      "id": "SBREAKUP.BMP-013",
+      "resource": "SBREAKUP.BMP",
+      "frame": "013",
+      "canvas": [
+        72,
+        37
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        65,
+        37
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SBREAKUP.BMP/013.png",
+        "sha256": "877dc8dfda1ecc448da2b392041cdf5db43bf11e50dbcb70cc36575e3c1e5336"
+      },
+      "url": "original/SBREAKUP.BMP/013.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SBREAKUP.BMP/013.png",
+        "sha256": "877dc8dfda1ecc448da2b392041cdf5db43bf11e50dbcb70cc36575e3c1e5336"
+      },
+      "archive_member": "native/BMP/SBREAKUP.BMP/013.png",
+      "source_rgba_sha256": "766bd232569f684f2984d23b2e66a3c07726f399360694683e4c7c2b63a1d39e",
+      "status": "context",
+      "status_label": "Neighboring frame",
+      "status_detail": "A draft was produced for this neighboring pose. It provides context for the recovered 015/016 pair.",
+      "description": "Hands to face, upper body raised, long hair trailing right.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/013-v1-request.json",
+          "sha256": "4eaab1d5a9c721d826f65b965220839916b4c00a2e9d40d0b096c80a654f0eb6"
+        }
+      ],
+      "status_evidence": [],
+      "static_source_actions": []
+    },
+    {
+      "id": "SBREAKUP.BMP-014",
+      "resource": "SBREAKUP.BMP",
+      "frame": "014",
+      "canvas": [
+        88,
+        30
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        82,
+        30
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SBREAKUP.BMP/014.png",
+        "sha256": "553db6c7debce729908dae3d86bf7891f6c4aeb4fedea9057ead8a9758e7c24d"
+      },
+      "url": "original/SBREAKUP.BMP/014.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SBREAKUP.BMP/014.png",
+        "sha256": "553db6c7debce729908dae3d86bf7891f6c4aeb4fedea9057ead8a9758e7c24d"
+      },
+      "archive_member": "native/BMP/SBREAKUP.BMP/014.png",
+      "source_rgba_sha256": "d4f9c4a0ef27581ca9f31ef8198474f7d6974860a1fffdb4541413babfd0f38a",
+      "status": "context",
+      "status_label": "Neighboring frame",
+      "status_detail": "A draft was produced for this neighboring pose. It provides context for the recovered 015/016 pair.",
+      "description": "Face at the left waterline, hair lying along the surface.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/014-v1-request.json",
+          "sha256": "6ffd48f26e8b83a4498f5cede517815c46c25aa68bd307ec6a94f67447a9cd3e"
+        }
+      ],
+      "status_evidence": [],
+      "static_source_actions": []
+    },
+    {
+      "id": "SBREAKUP.BMP-015",
+      "resource": "SBREAKUP.BMP",
+      "frame": "015",
+      "canvas": [
+        104,
+        28
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        103,
+        28
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SBREAKUP.BMP/015.png",
+        "sha256": "a47b40a8ad9509e9cdd1ee4d6c8e2deb3bfdfd19f0cf84ed5eaf9b6572f520b2"
+      },
+      "url": "original/SBREAKUP.BMP/015.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SBREAKUP.BMP/015.png",
+        "sha256": "a47b40a8ad9509e9cdd1ee4d6c8e2deb3bfdfd19f0cf84ed5eaf9b6572f520b2"
+      },
+      "archive_member": "native/BMP/SBREAKUP.BMP/015.png",
+      "source_rgba_sha256": "ec045e352866e7a3a01eb764165ffd7dec3f12e76d7eff46d07515dd6fc9657a",
+      "status": "recovered",
+      "status_label": "Pair recovered on retry",
+      "status_detail": "The parallel 015/016 attempt reported an output block without identifying which frame failed. Neither raw returned. Separate second attempts produced both drafts.",
+      "description": "Lower surface pose, with the face at left and hair extending right.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/015-v1-request.json",
+          "sha256": "ada9d4695c1b1f349d62f3ba653d36a8238a422f98909477b621abcdfdb46630"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/015-v2-request.json",
+          "sha256": "c726dc039b5bdbd1167938075dc3d81ac6ddfde7efe8347d57d8b8f8a4421b61"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/015-v1-attempt.json",
+          "sha256": "bfe292592172e4b7ea80ba6a31e661057cb2fbb139eedd71f08171e08df09ec9"
+        }
+      ],
+      "static_source_actions": []
+    },
+    {
+      "id": "SBREAKUP.BMP-016",
+      "resource": "SBREAKUP.BMP",
+      "frame": "016",
+      "canvas": [
+        72,
+        32
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        69,
+        32
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SBREAKUP.BMP/016.png",
+        "sha256": "9560b5c6069f7a279e3e99773b7a671b8b8172164145adbbe51d62bdcf9784d0"
+      },
+      "url": "original/SBREAKUP.BMP/016.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SBREAKUP.BMP/016.png",
+        "sha256": "9560b5c6069f7a279e3e99773b7a671b8b8172164145adbbe51d62bdcf9784d0"
+      },
+      "archive_member": "native/BMP/SBREAKUP.BMP/016.png",
+      "source_rgba_sha256": "30c75e06c18f7ee4951bc71c3da9aab5808691e4b90212f38f3c9ed988624398",
+      "status": "recovered",
+      "status_label": "Pair recovered on retry",
+      "status_detail": "The parallel 015/016 attempt reported an output block without identifying which frame failed. Neither raw returned. Separate second attempts produced both drafts.",
+      "description": "Back of the bowed head, turquoise band, hair sloping down-right.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/016-v1-request.json",
+          "sha256": "dae1ad7053d5e29daeb363a52e8fd9596722041439fcf4c72603f0b826b02568"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/016-v2-request.json",
+          "sha256": "281aa303360a236346ab736d9ef50277ead1b5ede1c29b9741c28862dce14d4c"
+        }
+      ],
+      "status_evidence": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/016-v1-attempt.json",
+          "sha256": "66016d2795e49972fd2c56b61bfb9f466e29d9186b5baed8d0fb667c952aece5"
+        }
+      ],
+      "static_source_actions": []
+    },
+    {
+      "id": "SBREAKUP.BMP-017",
+      "resource": "SBREAKUP.BMP",
+      "frame": "017",
+      "canvas": [
+        56,
+        38
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        52,
+        38
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SBREAKUP.BMP/017.png",
+        "sha256": "60c63d4514728ca005e4e79aa93b5250be5a6428723e54561f9a982518b39893"
+      },
+      "url": "original/SBREAKUP.BMP/017.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SBREAKUP.BMP/017.png",
+        "sha256": "60c63d4514728ca005e4e79aa93b5250be5a6428723e54561f9a982518b39893"
+      },
+      "archive_member": "native/BMP/SBREAKUP.BMP/017.png",
+      "source_rgba_sha256": "8ff9df9754628f06aef1d3a30df52087eb0e7a4b3c63b39d2f2d58bf5e3e63ca",
+      "status": "context",
+      "status_label": "Neighboring frame",
+      "status_detail": "A draft was produced for this neighboring pose. It provides context for the recovered 015/016 pair.",
+      "description": "Upright near-rear view, with hair covering most of the torso.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/017-v1-request.json",
+          "sha256": "e98fcf1b9e0f2e8a102a7a5017190add541fa719d80a942a3cfcc01d9be1e2d5"
+        }
+      ],
+      "status_evidence": [],
+      "static_source_actions": []
+    },
+    {
+      "id": "SBREAKUP.BMP-018",
+      "resource": "SBREAKUP.BMP",
+      "frame": "018",
+      "canvas": [
+        72,
+        42
+      ],
+      "mode": "RGBA",
+      "alpha_bounds": [
+        0,
+        0,
+        71,
+        42
+      ],
+      "original": {
+        "path": "art/cartoon/blocked-originals-context-v1/original/SBREAKUP.BMP/018.png",
+        "sha256": "6b7ed1595bc8465589bdc239f1a1bee4f669e7a1f612ff7dea9c764b66d745e2"
+      },
+      "url": "original/SBREAKUP.BMP/018.png",
+      "prior_original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SBREAKUP.BMP/018.png",
+        "sha256": "6b7ed1595bc8465589bdc239f1a1bee4f669e7a1f612ff7dea9c764b66d745e2"
+      },
+      "archive_member": "native/BMP/SBREAKUP.BMP/018.png",
+      "source_rgba_sha256": "fb6a52f6abc46e6611bfba35a9529bc3d0dd9f7439f6a78c29b79403bd48fb95",
+      "status": "context",
+      "status_label": "Neighboring frame",
+      "status_detail": "A draft was produced for this neighboring pose. It provides context for the recovered 015/016 pair.",
+      "description": "Forward-leaning near-rear view, hair trailing diagonally right.",
+      "request_records": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/018-v1-request.json",
+          "sha256": "4f356b6fac5198a2afeee5180b20afd675dde0f6c6aed319e07630691b6f2955"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/018-v2-request.json",
+          "sha256": "089eeb60658dc860d0618e7975db7b7089f5b6fdcab6d87823b6f4c8cdacbfe3"
+        }
+      ],
+      "status_evidence": [],
+      "static_source_actions": []
+    }
+  ],
+  "evidence": [
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+      "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/000-v1-failure.json",
+      "sha256": "7e02d4c6979c7c9a054ce26b2d3636f9f11b66754d39e5716b0bf6568d7c1437"
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/002-v1-failure.json",
+      "sha256": "2f39211ca1e32e4e68e6279ac44961c17094ebdc68c1bcf6f2469f76f1170729"
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/015-v1-attempt.json",
+      "sha256": "bfe292592172e4b7ea80ba6a31e661057cb2fbb139eedd71f08171e08df09ec9"
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/016-v1-attempt.json",
+      "sha256": "66016d2795e49972fd2c56b61bfb9f466e29d9186b5baed8d0fb667c952aece5"
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/visitor-source-notes.md",
+      "sha256": "aa77e345a6d1e14a8cbf3254ca755e96daa8fa73ea4c558d3d63721b771af29f"
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/mermaid-source-notes.md",
+      "sha256": "02c3174ade4fd21d34018c27f63e1799bdfe00f0595c5ddaf5b302b5cae84051"
+    }
+  ],
+  "failure_audit": {
+    "path": "art/cartoon/blocked-originals-context-v1/failure-record-audit.json",
+    "sha256": "4275250c48378afe8c7419ef34b783a469067523e92f025f439ee9e8b6baf1d1"
+  },
+  "contact_sheet": {
+    "path": "art/cartoon/blocked-originals-context-v1/contact-sheet.png",
+    "sha256": "531ebfcf49b3a40d207741c90aacb34a7e156d253e0267b81b0ea56f32c0aa87"
+  },
+  "source_integrity": "All19 copies equal their prior-family files and exact original-archive members. No alpha edits, recoloring, cropping or generated artwork."
+}

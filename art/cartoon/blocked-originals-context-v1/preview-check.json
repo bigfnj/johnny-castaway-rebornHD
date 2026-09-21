@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-20",
+  "scope": "Original-only context workup; no image generation or approval",
+  "url": "http://127.0.0.1:8941/blocked-originals-context-v1/review.html",
+  "page": {
+    "path": "art/cartoon/blocked-originals-context-v1/review.html",
+    "sha256": "8d7a4344c07d8f77205fa943c19f1727702acb5ecd9c20a918607333afe8381d"
+  },
+  "source": {
+    "path": "art/cartoon/blocked-originals-context-v1/source.json",
+    "sha256": "fa44a696b429f7b5d26f661541350d4c4309924dbaaf3ecc3b0d496f49e164e4"
+  },
+  "review_record": {
+    "path": "art/cartoon/blocked-originals-context-v1/review-record.json",
+    "sha256": "61dad166dbb708e351f079788fb3dca1368ffcfdbabdb119a2e4acf881a744ed"
+  },
+  "status_observed": "19 of 19 originals loaded",
+  "originals": 19,
+  "browser_console_errors": [],
+  "controls_observed": [
+    "Still no output filter shows only SSUZY1 002 and 003",
+    "Search 003 shows only SSUZY1 003",
+    "Clear filter restores all nineteen originals",
+    "Enlarge original 002 opens a large pixel-preserving dialog; Close dismisses it",
+    "Sea blue and Light checker backdrop selection works",
+    "Beach visitor link navigates to the complete SSUZY1 family"
+  ],
+  "visual_review": "Original sprites and source status labels inspected in the browser. The standalone overview sheet was also inspected at full image size.",
+  "new_generations": 0,
+  "appearance_approval": null,
+  "production_integrated": false
+}

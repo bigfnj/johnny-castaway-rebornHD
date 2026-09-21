@@ -1,0 +1,58 @@
+{
+  "scope": "All prior art/cartoon JSON files searched for moderation, no_image_returned or blocked.",
+  "json_files_scanned": 4377,
+  "matches": [
+    {
+      "path": "art/cartoon/walk-expansion-v1/motion-review-v2.json",
+      "sha256": "a1835817efc130fdfcb8aa8c7202d633277ff701989d546ec34af0fb2c21fc17",
+      "interpretation": "Runtime export/fit block; not an image-generation failure."
+    },
+    {
+      "path": "art/cartoon/walk-expansion-v1/review-evidence/motion-v1/preview-record.json",
+      "sha256": "89f550f040579ee38aaaa7917be9108a6f7b58a96359f339abedc5dc9a598227",
+      "interpretation": "Runtime export/fit block; not an image-generation failure."
+    },
+    {
+      "path": "art/cartoon/walk-expansion-v1/review-evidence/motion-v2/preview-record.json",
+      "sha256": "7c8bb3e0cfab5e377bbeb608f5768e52ac3c00f968c0c72aa35c480b0a36738f",
+      "interpretation": "Runtime export/fit block; not an image-generation failure."
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback.json",
+      "sha256": "f47d70d6c1ae3342e6e7c5f9de2e09313a3a190c73b308530201814c313e5c4d",
+      "interpretation": "User request for this context workup; not a new failure."
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/batch-plan.json",
+      "sha256": "6ccac2c53d71ac002f76e0b9ae324de5956f7ab910f7d96a92c8490e03e69060",
+      "interpretation": "Batch summary of deferred SSUZY1."
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+      "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c",
+      "interpretation": "Recorded image-generation failure or family status."
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/015-v1-attempt.json",
+      "sha256": "bfe292592172e4b7ea80ba6a31e661057cb2fbb139eedd71f08171e08df09ec9",
+      "interpretation": "Recorded image-generation failure or family status."
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/016-v1-attempt.json",
+      "sha256": "66016d2795e49972fd2c56b61bfb9f466e29d9186b5baed8d0fb667c952aece5",
+      "interpretation": "Recorded image-generation failure or family status."
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/000-v1-failure.json",
+      "sha256": "7e02d4c6979c7c9a054ce26b2d3636f9f11b66754d39e5716b0bf6568d7c1437",
+      "interpretation": "Recorded image-generation failure or family status."
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/002-v1-failure.json",
+      "sha256": "2f39211ca1e32e4e68e6279ac44961c17094ebdc68c1bcf6f2469f76f1170729",
+      "interpretation": "Recorded image-generation failure or family status."
+    }
+  ],
+  "finding": "Recorded generation blocks concern SSUZY1 and the recovered SBREAKUP015/016 pair. No other generation-block family was found in this retained JSON scan.",
+  "limit": "This does not reconstruct unretained tool errors or claim that a whole deferred family was blocked."
+}

@@ -25,7 +25,7 @@ checks. Capture-launcher diagnostics and historical replay remain tooling work.
 
 ## Open work
 
-Next appearance review: [60 worker and mermaid drawings](art/cartoon/workers-and-mermaids-batch-v1/README.md), covering LILIPUTS 072-100, SBREAKUP 000-020/034 and SMGFTWAV 000-008. Per-frame tool grips, rope paths and waterline occlusion follow the [saved pose lessons](docs/art-style-learnings-pose-and-action.md). The SSUZY1 visitor family is deferred after repeated image-tool output moderation failures; its partial drafts are preserved and excluded from the 60. Native fitting and bulk verification remain deferred.
+Next appearance review: [seven worker tool and pose corrections](art/cartoon/worker-tool-pose-corrections-v2/README.md) to the [60 worker and mermaid drawings](art/cartoon/workers-and-mermaids-batch-v1/README.md). LILIPUTS 076 fixes shoulder ownership, 077/078 correct palm-facing grips, 079 corrects the hammer angle, 092/096 turn the whole body left, and 093 restores the loose rope and closer peg. The [original-only blocked-image workup](art/cartoon/blocked-originals-context-v1/README.md) shows the deferred SSUZY1 family and recovered mermaid attempts for the user's context. Other drawings retain their prior review status. Native fitting and bulk verification remain deferred.
 
 The current [asset-build workflow](docs/cartoon-art-build-workflow.md) defers full smoke, regression and code audits until the art build is complete. Keep visual approvals and reusable source records current while accumulating families.
 

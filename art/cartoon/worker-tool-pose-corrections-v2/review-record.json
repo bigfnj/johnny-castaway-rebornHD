@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "status": "awaiting_7_worker_tool_pose_corrections_appearance_review",
+  "scope": "Only 7 worker tool/pose corrections. No implied approval of other drawings.",
+  "frame_count": 7,
+  "panel_count": 21,
+  "frames": [
+    {
+      "key": "LILIPUTS.BMP-076",
+      "resource": "LILIPUTS.BMP",
+      "frame": "076",
+      "group": "arms",
+      "correction": "The anatomical left/near arm reaches down; the anatomical right/far arm swings back. Correct shoulder ownership and overlap, preserving the crouched left-facing pose.",
+      "version": 1,
+      "record": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/076-record-v1.json",
+        "sha256": "e4ac956f1a815d5ed234d9cc6b03c42613da740ee9c450aad2e6fc68b18b1752"
+      },
+      "request": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/076-v1-request.json",
+        "sha256": "b4f582126d368f7b2b8f62ffbef58539a5ccd37e34060f1dac0e8b5eeaa22f4a"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/076-generated-v1.png",
+          "sha256": "09efc5c37ce5adc100169bed8a930188ce5e291aebebc17798519a3b8559e782"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/LILIPUTS.BMP/076.png",
+          "sha256": "3876c043fa1c9fbd2eff452f9e46553c338c06c184b8ef856f2c269cde782483"
+        }
+      ],
+      "generation_output": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/076-generated-v1.png",
+        "sha256": "5d3c9ee50483c6a840f0eb1f7b8729b13fcf25dd3e3854ba0455667931ef55c1"
+      },
+      "raw_tool_output": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a1f0-5ca9-70b3-88cd-a31f4f736e75\\exec-7e35b6f5-f6e2-4096-80d1-3c4e41926b5b.png",
+      "prior_record": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/076-record-v1.json",
+        "sha256": "f0c9b6dc05752fd472309fe3ad390daa58b01c07713bf7249bfe1672f0aaf524"
+      },
+      "prior_request": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/076-v1-request.json",
+        "sha256": "f7970266fc78bef7179a74c71e6a20f00acc9e533976025b2a4bc0ab4dd221db"
+      },
+      "original_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/076.png",
+        "sha256": "3fc79d54c4544d53faab411e7298961d28dc52ef0ea88b1e2ec190897cb1f06b",
+        "canvas": [
+          24,
+          14
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          18,
+          14
+        ]
+      },
+      "prior_output_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/076-generated-v1.png",
+        "sha256": "09efc5c37ce5adc100169bed8a930188ce5e291aebebc17798519a3b8559e782",
+        "canvas": [
+          1642,
+          958
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          144,
+          42,
+          1496,
+          924
+        ]
+      },
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/076.png",
+          "sha256": "3fc79d54c4544d53faab411e7298961d28dc52ef0ea88b1e2ec190897cb1f06b",
+          "canvas": [
+            24,
+            14
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            18,
+            14
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/076.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/076-generated-v1.png",
+          "sha256": "09efc5c37ce5adc100169bed8a930188ce5e291aebebc17798519a3b8559e782",
+          "canvas": [
+            1642,
+            958
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            144,
+            42,
+            1496,
+            924
+          ],
+          "url": "../workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/076-generated-v1.png"
+        },
+        "corrected": {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/076-generated-v1.png",
+          "sha256": "5d3c9ee50483c6a840f0eb1f7b8729b13fcf25dd3e3854ba0455667931ef55c1",
+          "canvas": [
+            1642,
+            958
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            302,
+            40,
+            1496,
+            924
+          ],
+          "url": "generation/LILIPUTS.BMP/076-generated-v1.png"
+        }
+      }
+    },
+    {
+      "key": "LILIPUTS.BMP-077",
+      "resource": "LILIPUTS.BMP",
+      "frame": "077",
+      "group": "tools",
+      "correction": "Rotate the gripping hand naturally around the raised hammer handle so its inner/palm side faces the viewer. Preserve the source hammer direction and crouch.",
+      "version": 1,
+      "record": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/077-record-v1.json",
+        "sha256": "f2119cc262ecb30c671381c23556c1d586a4b3dcd44e76d809bdcd65faf504d3"
+      },
+      "request": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/077-v1-request.json",
+        "sha256": "ad747666b0f4f30da600bddbe839fbc2f9e21aa3d0792590973ebb7b5c123564"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/077-generated-v1.png",
+          "sha256": "33edd23e09748b74f23366635b76b858458e5060a9ee1034297dfa2db270531c"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/LILIPUTS.BMP/077.png",
+          "sha256": "86b9fd05691ecc49dd16b2e0e9a7638ebe33d1499766e9687b76b66563c2e2d4"
+        },
+        {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-eca6fa1c-9c49-4cc4-9b4f-4fa774f4b2c8.png",
+          "sha256": "e712745539ffb9e7f595864cdf762dea6b794df569b59aedb196f663a3d8428a"
+        }
+      ],
+      "generation_output": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/077-generated-v1.png",
+        "sha256": "89af10cbb85152401f58f36f3c07f084e6888fb0f8f2dc4453a37c63c4e7e60b"
+      },
+      "raw_tool_output": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-f35493f4-ced1-4743-bfe1-01de76532206.png",
+      "prior_record": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/077-record-v1.json",
+        "sha256": "732bf7f11baf410c63ccf590c7b405ba5e46e7325dcbe4b941caccd8615a64b9"
+      },
+      "prior_request": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/077-v1-request.json",
+        "sha256": "a51d5f42809ca08b9cac624a3baeac33fc67984394865f04b4fc74048537aec9"
+      },
+      "original_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/077.png",
+        "sha256": "5f93bc42ba99072d24d06b55aea9e17caf30bcfcc17ff901a8564c4624656d18",
+        "canvas": [
+          24,
+          22
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          24,
+          22
+        ]
+      },
+      "prior_output_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/077-generated-v1.png",
+        "sha256": "33edd23e09748b74f23366635b76b858458e5060a9ee1034297dfa2db270531c",
+        "canvas": [
+          1308,
+          1203
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          167,
+          31,
+          1270,
+          1161
+        ]
+      },
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/077.png",
+          "sha256": "5f93bc42ba99072d24d06b55aea9e17caf30bcfcc17ff901a8564c4624656d18",
+          "canvas": [
+            24,
+            22
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            24,
+            22
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/077.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/077-generated-v1.png",
+          "sha256": "33edd23e09748b74f23366635b76b858458e5060a9ee1034297dfa2db270531c",
+          "canvas": [
+            1308,
+            1203
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            167,
+            31,
+            1270,
+            1161
+          ],
+          "url": "../workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/077-generated-v1.png"
+        },
+        "corrected": {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/077-generated-v1.png",
+          "sha256": "89af10cbb85152401f58f36f3c07f084e6888fb0f8f2dc4453a37c63c4e7e60b",
+          "canvas": [
+            1308,
+            1202
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            165,
+            34,
+            1272,
+            1162
+          ],
+          "url": "generation/LILIPUTS.BMP/077-generated-v1.png"
+        }
+      }
+    },
+    {
+      "key": "LILIPUTS.BMP-078",
+      "resource": "LILIPUTS.BMP",
+      "frame": "078",
+      "group": "tools",
+      "correction": "Correct the raised hammer grip to show the inner/palm side of the hand, with natural thumb and wrist orientation. Preserve this distinct source swing phase.",
+      "version": 1,
+      "record": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/078-record-v1.json",
+        "sha256": "8cb21e904e42866c220ab9e324f673618b35eb59a8f960c304501391844bbc42"
+      },
+      "request": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/078-v1-request.json",
+        "sha256": "5abbfd066c0fec6eac5edad7d291212884c4fd6f30f3db0e99e65bdace7857c6"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/078-generated-v1.png",
+          "sha256": "2dd1c71370da413658a51c9d6c5d56cbb2e62147fc7ef8d797ed018f5a755a28"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/LILIPUTS.BMP/078.png",
+          "sha256": "3603b0b470d316aedb43aa15ae76d6658a32e89770e90869c926d90c42143759"
+        }
+      ],
+      "generation_output": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/078-generated-v1.png",
+        "sha256": "7e96dae981b589427630fec274ef368f24aa4b8f748ce791cc54775ffb053ac1"
+      },
+      "raw_tool_output": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-bfd7968a-e7fa-4d46-9276-4c135dea29c6.png",
+      "prior_record": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/078-record-v1.json",
+        "sha256": "d04e477143595bdd8d37503e396dc16662db3fed76eeb770c4c9564cdd7aca11"
+      },
+      "prior_request": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/078-v1-request.json",
+        "sha256": "76e45f73b8a690276ca527fc7a601a1502c7c71e1c7d3708d3ad8d6e283fb700"
+      },
+      "original_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/078.png",
+        "sha256": "3292e74b548c24cf33170779a20ed35e3fb3e90b3452e3a2031762c9d46ee67b",
+        "canvas": [
+          24,
+          21
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          18,
+          21
+        ]
+      },
+      "prior_output_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/078-generated-v1.png",
+        "sha256": "2dd1c71370da413658a51c9d6c5d56cbb2e62147fc7ef8d797ed018f5a755a28",
+        "canvas": [
+          1341,
+          1173
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          85,
+          81,
+          1257,
+          1116
+        ]
+      },
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/078.png",
+          "sha256": "3292e74b548c24cf33170779a20ed35e3fb3e90b3452e3a2031762c9d46ee67b",
+          "canvas": [
+            24,
+            21
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            18,
+            21
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/078.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/078-generated-v1.png",
+          "sha256": "2dd1c71370da413658a51c9d6c5d56cbb2e62147fc7ef8d797ed018f5a755a28",
+          "canvas": [
+            1341,
+            1173
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            85,
+            81,
+            1257,
+            1116
+          ],
+          "url": "../workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/078-generated-v1.png"
+        },
+        "corrected": {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/078-generated-v1.png",
+          "sha256": "7e96dae981b589427630fec274ef368f24aa4b8f748ce791cc54775ffb053ac1",
+          "canvas": [
+            1341,
+            1173
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            83,
+            59,
+            1260,
+            1116
+          ],
+          "url": "generation/LILIPUTS.BMP/078-generated-v1.png"
+        }
+      }
+    },
+    {
+      "key": "LILIPUTS.BMP-079",
+      "resource": "LILIPUTS.BMP",
+      "frame": "079",
+      "group": "tools",
+      "correction": "Match the original hammer angle, including the shaft and head orientation relative to the raised hand. Do not reuse the previous upward diagonal hammer angle.",
+      "version": 1,
+      "record": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/079-record-v1.json",
+        "sha256": "8404aa47018842f0cbfe3384815c1401111f0810d5f71140725e7832cda69015"
+      },
+      "request": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/079-v1-request.json",
+        "sha256": "9c16c8c7fb4ba89bad3e7b9e68d65c2e6dcee265ea1da3323940b1b024b2620d"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/079-generated-v2.png",
+          "sha256": "b2ab086f767fda179421a2e149a5ea8cc2634ecaf79a2b1ea519c82aee600eac"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/LILIPUTS.BMP/079.png",
+          "sha256": "3eb3beee076b3947d21ad0d7c83643538c339cc1d569a0f7ac908c3ac4f64682"
+        },
+        {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-2ebb2279-e280-4101-b5b2-7f3ebb17658d.png",
+          "sha256": "98b6c3c099d4cb2fa30eca39bb0c928922496dc0ae02a6e07353377153732c9a"
+        }
+      ],
+      "generation_output": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/079-generated-v1.png",
+        "sha256": "d1dfdbcdcf5cfcb9174409820734d94b7d1e8cbf817fcff4cc7251dab11d5843"
+      },
+      "raw_tool_output": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-be69-7d32-a6c3-063800819526\\exec-b019e64f-2933-43a0-8434-35960f9daebf.png",
+      "prior_record": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/079-record-v2.json",
+        "sha256": "70b03c37f7bbbd32dc36ae616beed886d75124975bfe9164b33afa505645604a"
+      },
+      "prior_request": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/079-v2-request.json",
+        "sha256": "916ff1810333275947c8d78fe1f74510615120fc153aee36521db7dbe6019bdd"
+      },
+      "original_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/079.png",
+        "sha256": "ea9f9a4263842585bfdaec0d65e06a8b6263e0a9e16632029a3b439eef87dbf1",
+        "canvas": [
+          32,
+          19
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          25,
+          19
+        ]
+      },
+      "prior_output_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/079-generated-v2.png",
+        "sha256": "b2ab086f767fda179421a2e149a5ea8cc2634ecaf79a2b1ea519c82aee600eac",
+        "canvas": [
+          1627,
+          967
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          66,
+          35,
+          1450,
+          941
+        ]
+      },
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/079.png",
+          "sha256": "ea9f9a4263842585bfdaec0d65e06a8b6263e0a9e16632029a3b439eef87dbf1",
+          "canvas": [
+            32,
+            19
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            25,
+            19
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/079.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/079-generated-v2.png",
+          "sha256": "b2ab086f767fda179421a2e149a5ea8cc2634ecaf79a2b1ea519c82aee600eac",
+          "canvas": [
+            1627,
+            967
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            66,
+            35,
+            1450,
+            941
+          ],
+          "url": "../workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/079-generated-v2.png"
+        },
+        "corrected": {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/079-generated-v1.png",
+          "sha256": "d1dfdbcdcf5cfcb9174409820734d94b7d1e8cbf817fcff4cc7251dab11d5843",
+          "canvas": [
+            1627,
+            967
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            159,
+            16,
+            1453,
+            944
+          ],
+          "url": "generation/LILIPUTS.BMP/079-generated-v1.png"
+        }
+      }
+    },
+    {
+      "key": "LILIPUTS.BMP-092",
+      "resource": "LILIPUTS.BMP",
+      "frame": "092",
+      "group": "body",
+      "correction": "Turn the entire character left, including torso, hips, legs and both feet, with the head aligned to that body turn. Preserve both raised arms and the rope coil.",
+      "version": 1,
+      "record": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/092-record-v1.json",
+        "sha256": "d686ff370876bd023b8cb33c949ce75e42978e71242b7e332333f953eec52588"
+      },
+      "request": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/092-v1-request.json",
+        "sha256": "1dbd402bec0c732b1ce5307a68e55a82cfc1158a448ac48af8ede592e0e276e1"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/LILIPUTS.BMP/092.png",
+          "sha256": "f3aa57efd05d6eb8dc15356d721fecee25343c1f6135b05dfdf277c335167293"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/092-generated-v1.png",
+          "sha256": "e670f1ea49b1b3b708e22cc2836d989cd6b057ef95672b724a40e8aab62bde26"
+        },
+        {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-27102d64-a44f-4b9e-b5f7-a17d99665baf.png",
+          "sha256": "eaf3059e55fe503497193bff2393059fa1624900e0476b350f6cef32b5f27646"
+        }
+      ],
+      "generation_output": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/092-generated-v1.png",
+        "sha256": "451138284a7d08684b164395ac8b987ee1a022eb4eafa96d758ce58131c8a3fd"
+      },
+      "raw_tool_output": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-c1efffae-8b0a-4867-997d-519b77ada070.png",
+      "prior_record": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/092-record-v1.json",
+        "sha256": "3b8391e7adbf6fe2ddeca00bee449a736a4d1a2fe1de318b92442a0d75a900c3"
+      },
+      "prior_request": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/092-v1-request.json",
+        "sha256": "a1f9ba20f5aa62d61e8b145705e495d243eb80b9bf78345a89c936c00044d811"
+      },
+      "original_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/092.png",
+        "sha256": "72d9081672366d93c36d364ce778107b0fa85b95d720f3e2eff41c1d0871d070",
+        "canvas": [
+          24,
+          25
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          20,
+          25
+        ]
+      },
+      "prior_output_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/092-generated-v1.png",
+        "sha256": "e670f1ea49b1b3b708e22cc2836d989cd6b057ef95672b724a40e8aab62bde26",
+        "canvas": [
+          1097,
+          1434
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          51,
+          33,
+          1017,
+          1401
+        ]
+      },
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/092.png",
+          "sha256": "72d9081672366d93c36d364ce778107b0fa85b95d720f3e2eff41c1d0871d070",
+          "canvas": [
+            24,
+            25
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            20,
+            25
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/092.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/092-generated-v1.png",
+          "sha256": "e670f1ea49b1b3b708e22cc2836d989cd6b057ef95672b724a40e8aab62bde26",
+          "canvas": [
+            1097,
+            1434
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            51,
+            33,
+            1017,
+            1401
+          ],
+          "url": "../workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/092-generated-v1.png"
+        },
+        "corrected": {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/092-generated-v1.png",
+          "sha256": "451138284a7d08684b164395ac8b987ee1a022eb4eafa96d758ce58131c8a3fd",
+          "canvas": [
+            1097,
+            1434
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            54,
+            58,
+            908,
+            1395
+          ],
+          "url": "generation/LILIPUTS.BMP/092-generated-v1.png"
+        }
+      }
+    },
+    {
+      "key": "LILIPUTS.BMP-093",
+      "resource": "LILIPUTS.BMP",
+      "frame": "093",
+      "group": "tools",
+      "correction": "The loose rope hangs in mid-air to the left. The wooden peg is closer to the worker under the hammer strike, not attached at the remote end of a long rope held in the free hand. Match the exact original spacing and arm/prop contact.",
+      "version": 1,
+      "record": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/093-record-v1.json",
+        "sha256": "09c12af35cf8447d51e83fd43b41e1f4c1dede8ccc5d73bcf2cf105aeba30b47"
+      },
+      "request": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/093-v1-request.json",
+        "sha256": "2ab04d6d712a103745a526fc19cc375694f7033bdd431aaeadaeb994ced1c909"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/LILIPUTS.BMP/093.png",
+          "sha256": "43782a9b4d9d4625a575fc059f65e8c551ca868390da0806e0442ad9ba834995"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/093-generated-v1.png",
+          "sha256": "13a5d31eec7060a44109b579bbfd51ae0186dae8ef1c3a25c20016fee76c11c2"
+        },
+        {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-b627e491-da35-4675-bfb1-7caca90d95c7.png",
+          "sha256": "d57507f725dacf276218007e8aafca934db9700071c905922e05ae7ffd9d5959"
+        }
+      ],
+      "generation_output": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/093-generated-v1.png",
+        "sha256": "740f33ffb0bf58510c154d856e7bb30f116f14533630fecc8a40fb3144f3348f"
+      },
+      "raw_tool_output": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-8f8fe954-b039-4e11-9b8e-dbdae8f32328.png",
+      "prior_record": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/093-record-v1.json",
+        "sha256": "31b77c4aac3b5d8d8c0fe4afb4b2a606f2e37b2f1879be40fd8a82f53fa02416"
+      },
+      "prior_request": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/093-v1-request.json",
+        "sha256": "af346295219bc669fe24ecf755a1167ba629ddee6982f6ad3b2281d680d99f1d"
+      },
+      "original_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/093.png",
+        "sha256": "bfaab10ba76740e1ec703ff490d2a4fb31140e075d43421f904eb4d4148b47e9",
+        "canvas": [
+          40,
+          15
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          33,
+          15
+        ]
+      },
+      "prior_output_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/093-generated-v1.png",
+        "sha256": "13a5d31eec7060a44109b579bbfd51ae0186dae8ef1c3a25c20016fee76c11c2",
+        "canvas": [
+          1649,
+          954
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          48,
+          55,
+          1601,
+          911
+        ]
+      },
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/093.png",
+          "sha256": "bfaab10ba76740e1ec703ff490d2a4fb31140e075d43421f904eb4d4148b47e9",
+          "canvas": [
+            40,
+            15
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            33,
+            15
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/093.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/093-generated-v1.png",
+          "sha256": "13a5d31eec7060a44109b579bbfd51ae0186dae8ef1c3a25c20016fee76c11c2",
+          "canvas": [
+            1649,
+            954
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            48,
+            55,
+            1601,
+            911
+          ],
+          "url": "../workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/093-generated-v1.png"
+        },
+        "corrected": {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/093-generated-v1.png",
+          "sha256": "740f33ffb0bf58510c154d856e7bb30f116f14533630fecc8a40fb3144f3348f",
+          "canvas": [
+            1649,
+            954
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            43,
+            80,
+            1635,
+            903
+          ],
+          "url": "generation/LILIPUTS.BMP/093-generated-v1.png"
+        }
+      }
+    },
+    {
+      "key": "LILIPUTS.BMP-096",
+      "resource": "LILIPUTS.BMP",
+      "frame": "096",
+      "group": "body",
+      "correction": "Turn the entire character left, including chest, pelvis, knees and both feet. Preserve the asymmetric empty-hand gesture and rope coil; a head-only turn is insufficient.",
+      "version": 1,
+      "record": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/096-record-v1.json",
+        "sha256": "4305bd624e430113f0b432db363fb44bc95c6ff77167b914b8ee9f4648808be4"
+      },
+      "request": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/096-v1-request.json",
+        "sha256": "fb0020f22deefd51436d0633ee507dab60df59b73685528f890f26850bb06391"
+      },
+      "generation_references": [
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/LILIPUTS.BMP/096.png",
+          "sha256": "8155398f17471d3f07ce099a424678d951fb1c0bb0923b104fe59da93fb72953"
+        },
+        {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/096-generated-v2.png",
+          "sha256": "fe4252f7261b7f77b1c714d38ed7cab1ee97ec25095acfe18b369635439b1fba"
+        },
+        {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-de019106-d731-4230-848c-7b25c28cfa09.png",
+          "sha256": "0d3c967ea97ecdb1300a29e991740b387fc876a05216a85f54e16dd27997acd3"
+        }
+      ],
+      "generation_output": {
+        "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/096-generated-v1.png",
+        "sha256": "265e49a1ea9b0dea5c9ae1ec776db5bf8eccb04e8cf02b1cb9f22767660cff38"
+      },
+      "raw_tool_output": "C:\\Users\\Admin\\.codex\\generated_images\\01a0a66d-99c8-7e01-a943-711e7cc0aeaa\\exec-554917d8-a6bc-4362-b3d8-e6da48c95b7b.png",
+      "prior_record": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/096-record-v2.json",
+        "sha256": "2fdba4393a7d6ef3f69bfe93ab0dece63bc63ed3bae5a5882cd30d6b5c858ea9"
+      },
+      "prior_request": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/096-v2-request.json",
+        "sha256": "8c5826cd7f225fb1ce5ffe704737e19e1e01c5391b627990f5a153df8fe29b75"
+      },
+      "original_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/096.png",
+        "sha256": "23acf2a4ca5fca17bb109cf823802dc76a6657d4cc020306f75a3c08678032ed",
+        "canvas": [
+          24,
+          21
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          24,
+          21
+        ]
+      },
+      "prior_output_binding": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/096-generated-v2.png",
+        "sha256": "fe4252f7261b7f77b1c714d38ed7cab1ee97ec25095acfe18b369635439b1fba",
+        "canvas": [
+          1074,
+          1465
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          74,
+          102,
+          1032,
+          1401
+        ]
+      },
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/096.png",
+          "sha256": "23acf2a4ca5fca17bb109cf823802dc76a6657d4cc020306f75a3c08678032ed",
+          "canvas": [
+            24,
+            21
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            24,
+            21
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/LILIPUTS.BMP/096.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/096-generated-v2.png",
+          "sha256": "fe4252f7261b7f77b1c714d38ed7cab1ee97ec25095acfe18b369635439b1fba",
+          "canvas": [
+            1074,
+            1465
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            74,
+            102,
+            1032,
+            1401
+          ],
+          "url": "../workers-and-mermaids-batch-v1/generation/LILIPUTS.BMP/096-generated-v2.png"
+        },
+        "corrected": {
+          "path": "art/cartoon/worker-tool-pose-corrections-v2/generation/LILIPUTS.BMP/096-generated-v1.png",
+          "sha256": "265e49a1ea9b0dea5c9ae1ec776db5bf8eccb04e8cf02b1cb9f22767660cff38",
+          "canvas": [
+            1074,
+            1465
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            74,
+            115,
+            989,
+            1403
+          ],
+          "url": "generation/LILIPUTS.BMP/096-generated-v1.png"
+        }
+      }
+    }
+  ],
+  "page": {
+    "path": "art/cartoon/worker-tool-pose-corrections-v2/review.html",
+    "sha256": "f206b70350a9ebcc31122964b40ec456cd6a9b0571a58794e694aaac5964896d"
+  },
+  "data": {
+    "path": "art/cartoon/worker-tool-pose-corrections-v2/review-data.json",
+    "sha256": "dbe9573a52ce1305a40ad9a248130c5962fde009b7b4a30eed6373920b89d2b0"
+  },
+  "feedback": {
+    "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback.json",
+    "sha256": "f47d70d6c1ae3342e6e7c5f9de2e09313a3a190c73b308530201814c313e5c4d"
+  },
+  "prior_review": {
+    "path": "art/cartoon/workers-and-mermaids-batch-v1/review-record.json",
+    "sha256": "a5591d633184db9ad202566e340e9158321f4181e7e0fcfa47c42e81a075b5ea"
+  },
+  "attachments": [
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-5e5a3a59-69dc-411d-81e1-a340561292b8.png",
+      "sha256": "14ab15555eeb20c0e8a223c97501decde8c84b705530c19c1fedab1868e70602"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-eca6fa1c-9c49-4cc4-9b4f-4fa774f4b2c8.png",
+      "sha256": "e712745539ffb9e7f595864cdf762dea6b794df569b59aedb196f663a3d8428a"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-2ebb2279-e280-4101-b5b2-7f3ebb17658d.png",
+      "sha256": "98b6c3c099d4cb2fa30eca39bb0c928922496dc0ae02a6e07353377153732c9a"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-27102d64-a44f-4b9e-b5f7-a17d99665baf.png",
+      "sha256": "eaf3059e55fe503497193bff2393059fa1624900e0476b350f6cef32b5f27646"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-b627e491-da35-4675-bfb1-7caca90d95c7.png",
+      "sha256": "d57507f725dacf276218007e8aafca934db9700071c905922e05ae7ffd9d5959"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/feedback/codex-clipboard-de019106-d731-4230-848c-7b25c28cfa09.png",
+      "sha256": "0d3c967ea97ecdb1300a29e991740b387fc876a05216a85f54e16dd27997acd3"
+    }
+  ],
+  "helpers": [
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/build_review.py",
+      "sha256": "e5937516ee99d3de1845985c8dd407803b22d8cd901130a7e133f93b6927c247"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/review.js",
+      "sha256": "7bed76b9160b921eee6a8eb3cdce95054a32efe9cdd111057ffed3fc85587178"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/review-template.html",
+      "sha256": "e159931770cd73fcf99faefd6959800b05dc239e5f43d762b2e92328d8e6e755"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/record_output.py",
+      "sha256": "01186de107d2a6f89b76c7c74b891f8b3ebfad4f104962b5e7995047cdd90498"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/prepare_feedback.py",
+      "sha256": "a98c687ef082f167b95d8fc68f86e40361ac04a3f250ebab13344e530b1e2b87"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/arm-source-notes.md",
+      "sha256": "2bec8ea6acd9fb586cd7dfdba826dd867eba58d6c9e4868df331de996d853903"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/hammer-source-notes.md",
+      "sha256": "7db6af4941238185a5515418dab5a9309a56d7f27e8b618302d1ad1030d9b92e"
+    },
+    {
+      "path": "art/cartoon/worker-tool-pose-corrections-v2/body-rope-source-notes.md",
+      "sha256": "7e838f66fe38b26a248e18d8a2b588707f0ffd9695501af6def764d6c49fb752"
+    }
+  ],
+  "selected_versions": {
+    "path": "art/cartoon/worker-tool-pose-corrections-v2/selected-versions.json",
+    "sha256": "432964deb438755e3de4daea1f7f2ab67216a62724483a6bd500ffbbd486f529"
+  },
+  "production_archive": {
+    "path": "assets/scrantic_data.zip",
+    "sha256": "a87a1f52b85277d88129347654a508edf9ca1f82920a31e20b5b41216242f63d"
+  },
+  "human_approval": null,
+  "production_package_changed": false,
+  "native_testing": false
+}
