@@ -5,15 +5,15 @@
   "url": "http://127.0.0.1:8941/worker-tool-pose-corrections-v2/review.html",
   "page": {
     "path": "art/cartoon/worker-tool-pose-corrections-v2/review.html",
-    "sha256": "f206b70350a9ebcc31122964b40ec456cd6a9b0571a58794e694aaac5964896d"
+    "sha256": "e92c9c52f53a9a43360cab39f78709ecf5db076537557bf90a3e5c2f33070882"
   },
   "data": {
     "path": "art/cartoon/worker-tool-pose-corrections-v2/review-data.json",
-    "sha256": "dbe9573a52ce1305a40ad9a248130c5962fde009b7b4a30eed6373920b89d2b0"
+    "sha256": "5c41b379b576c2b89e0ce8c4cf81b7ac7c7f3e64b343e8330cb8a31aae4bd9f2"
   },
   "review_record": {
     "path": "art/cartoon/worker-tool-pose-corrections-v2/review-record.json",
-    "sha256": "df63cdad4b56b8dc18076f8e9cd7f168091fd660f52fd24a612174ed13455a75"
+    "sha256": "06fca041fba0b0845ad886aca76b2a4a9ac1deb1069479bc3e05a71ae3224d82"
   },
   "status_observed": "7 of 7 comparisons ready.",
   "rows": 7,
@@ -26,11 +26,11 @@
     "Dark and light checkerboard toggle works",
     "Whole body turns link scrolls to092/096; Arm ownership link returns to076"
   ],
-  "visual_review": "All seven corrections compared with original and previous Cartoon on actual-alpha contact images. Reaching sleeve076 connects to near left shoulder;077/078 show palm-facing grips;079 rotates the hammer axes;092/096 turn hips and feet left;093 separates the hanging rope and close impact peg. Browser screenshots inspected for076 on dark and092/096 on light.",
+  "visual_review": "All seven corrections compared with original and previous Cartoon on actual-alpha contact images. Reaching sleeve076 connects to near left shoulder;077/078 show palm-facing grips;079 rotates the hammer axes;092/096 turn hips and feet left;093 separates the hanging rope and close impact peg. Browser screenshots inspected for076 on dark and092/096 on light. Follow-up078 v2 additionally corrects shoulder ownership using077; see followup_078.",
   "selected_versions": {
     "LILIPUTS.BMP-076": 1,
     "LILIPUTS.BMP-077": 1,
-    "LILIPUTS.BMP-078": 1,
+    "LILIPUTS.BMP-078": 2,
     "LILIPUTS.BMP-079": 1,
     "LILIPUTS.BMP-092": 1,
     "LILIPUTS.BMP-093": 1,
@@ -39,5 +39,19 @@
   "appearance_approval": null,
   "production_integrated": false,
   "native_motion_checked": false,
-  "full_regression_run": false
+  "full_regression_run": false,
+  "followup_078": {
+    "version": 2,
+    "loaded_panels": 21,
+    "status_observed": "7 of 7 comparisons ready.",
+    "visual_review": "Browser comparison shows rejected v1 in the middle and v2 at right. The down-reaching near sleeve now overlaps the bib, with the hammer arm on the far shoulder behind the head, matching077. The diagonal hammer swing remains distinct. Independent visual review also found both arm chains coherent.",
+    "prior_drawings_unchanged": [
+      "076",
+      "077",
+      "079",
+      "092",
+      "093",
+      "096"
+    ]
+  }
 }

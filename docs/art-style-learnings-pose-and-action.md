@@ -18,7 +18,7 @@ For the right-facing worker in the approved correction set, the nearer leg and a
 
 ## Earlier corrections that must carry forward
 
-The later worker feedback adds a stricter shoulder check. In LILIPUTS 076, the near left arm goes down and the far right arm goes back. Matching hand endpoints is insufficient if the sleeves attach to the opposite shoulders. In 077/078, the raised hammer grip must show the natural inner palm orientation, with the thumb and wrist consistent with that grip. In 079, inspect the tool's shaft and head axes independently from the arm angle.
+The later worker feedback adds a stricter shoulder check. In LILIPUTS 076, the near left arm goes down and the far right arm goes back. Matching hand endpoints is insufficient if the sleeves attach to the opposite shoulders. In 077/078, the raised hammer grip must show the natural inner palm orientation, with the thumb and wrist consistent with that grip. The user rejected the first078 correction because it retained the wrong arm arrangement, directing us to077: the near left sleeve reaches down in front of the bib, while the hammer arm emerges from the far shoulder behind the head. Check that overlap before refining fingers. In 079, inspect the tool's shaft and head axes independently from the arm angle.
 
 In 092 and 096, the whole body faces left. Turn the chest, pelvis and both feet with the head; a face turned left on a frontal body fails that instruction. In 093, the loose rope hangs to the left and the wooden peg being struck is closer to the worker. Do not invent an attachment at the far end of the rope. Preserve the source spacing and distinguish the impact target from nearby loose material.
 

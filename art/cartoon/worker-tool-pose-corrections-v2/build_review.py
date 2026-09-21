@@ -37,10 +37,14 @@ def save(path, value):
 
 def main():
     feedback = json.loads((HERE / 'feedback.json').read_text(encoding='utf-8'))
+    followup_path = HERE / 'followup-feedback.json'
+    followup = json.loads(followup_path.read_text(encoding='utf-8')) if followup_path.exists() else None
     versions = json.loads((HERE / 'selected-versions.json').read_text(encoding='utf-8'))
     rows = []
     groups = {group: [] for group in GROUPS}
     for item in feedback['frames']:
+        if followup and item['key'] == followup['frame']['key']:
+            item = {**item, **followup['frame']}
         key, resource, frame = item['key'], item['resource'], item['frame']
         version = versions[key]
         record_path = HERE / 'generation' / resource / f'{frame}-record-v{version}.json'
@@ -96,6 +100,8 @@ def main():
         'production_archive': pin(ROOT / 'assets/scrantic_data.zip'),
         'human_approval': None, 'production_package_changed': False, 'native_testing': False,
     }
+    if followup:
+        review['followup_feedback'] = pin(followup_path)
     save(HERE / 'review-record.json', review)
     print(f'Built {len(rows)} corrections with {len(rows) * 3} comparison panels')
 
