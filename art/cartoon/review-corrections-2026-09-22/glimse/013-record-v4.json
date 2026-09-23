@@ -1,0 +1,28 @@
+{
+  "frame": "SMGLIMSE.BMP-013",
+  "created_at_utc": "2026-09-22T21:10:21.618314+00:00",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "request": {
+    "path": "art/cartoon/review-corrections-2026-09-22/glimse/013-request-v4.json",
+    "sha256": "64d4542cdb325768c88d0803a7c712c858cbfd600afc38cceb0d4f20c37925c7"
+  },
+  "output": null,
+  "appearance_approval": null,
+  "production_integrated": false,
+  "native_motion_checked": false,
+  "status": "no_image",
+  "raw_tool_result": {
+    "status": "no_image",
+    "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 7e4e0877-e8f0-4bab-9c07-d7cc2c33deb4.\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"other\\\"\\n      ]\\n    }\\n  }\\n}\")",
+    "code": "moderation_blocked",
+    "stage": "output",
+    "category": "other",
+    "request_id": "7e4e0877-e8f0-4bab-9c07-d7cc2c33deb4"
+  },
+  "failure_reason": "The fourth built-in attempt requested only a slight head yaw. The generator blocked the output and returned no image.",
+  "code": "moderation_blocked",
+  "stage": "output",
+  "request_id": "7e4e0877-e8f0-4bab-9c07-d7cc2c33deb4",
+  "category": "other"
+}

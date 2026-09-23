@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM3.BMP",
+  "frame": "002",
+  "version": 3,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Remove duplicated dorsal fin from shark identity correction",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Correct one anatomy error in this cartoon game sprite: remove ONLY the small extra gray fin sticking out of the shark's middle-left back edge, around one-third down the shark body (near x=470, y=320 in this 2100x749 image). Connect that left back contour smoothly from below the large top dorsal fin down toward the body above the water. Keep the large TOP triangular dorsal fin at upper-left, keep the near pectoral fin pointing down-left into the water, and keep the far pectoral fin reaching right toward the mermaid. The animal should have exactly one dorsal fin plus two pectoral fins visible. Preserve everything else, especially gray shark's face, sly eyebrows, teeth, gills, mermaid's anatomy, trailing arm, flowing hair, outfit, waterline, composition and transparent background. Return the corrected full sprite on genuine RGBA transparency, no text, no background, no drawn checkerboard.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/002-generated-v2.png"
+    ]
+  }
+}

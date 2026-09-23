@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM2.BMP",
+  "frame": "005",
+  "version": 5,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Coordinate-directed removal of extra lower-left fin",
+  "arguments": {
+    "prompt": "Edit this existing transparent shark sprite. Remove ONLY the extra lower-left triangular fin/spike that sticks out from behind the torso at midbody height. It is the gray triangle whose tip is at approximately x=49,y=718, with base attached around x=295,y=525 to x=255,y=682. Completely erase this triangle to transparency and reconnect the body's left edge in a smooth curve at its former base. Keep the large upper dorsal fin extending from the top toward x=348,y=398. Keep the long hanging near pectoral fin running from x=350,y=670 to x=440,y=1050. Keep the large drooping far pectoral fin gesturing to screen-right beneath the mouth exactly. There should be one dorsal fin and two pectorals, no fourth fin. Preserve face, mouth, expression, gills, gray/ivory colors, proportions, waterline, margins and everything else exactly. Genuine transparent RGBA background, no text.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/005-generated-v4.png"
+    ]
+  }
+}

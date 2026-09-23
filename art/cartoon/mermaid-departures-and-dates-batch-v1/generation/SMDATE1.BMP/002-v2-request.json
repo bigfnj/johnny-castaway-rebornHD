@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "resource": "SMDATE1.BMP",
+  "frame": "002",
+  "version": 2,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Edit image 1, a transparent cartoon game sprite of an adult mermaid leaping to the right. Correct ONLY the tail's visible extent to match source image 2. The large fully exposed forked fluke at the lower left in image 1 was invented. Remove that entire broad fluke and shorten the tail to the source's compact tapering green segment pointing down-left, disappearing behind a small white/cyan splash at the lower left. Do not show a complete forked fin in this frame. Keep the head, yellow hair, cyan band, green swimsuit, both bent arms, face direction, colors and clean black/cel-shaded style unchanged. Match image 2's relative short tail extent, with hip high in the middle and endpoint low at left. Preserve actual transparent RGBA background and empty gaps, include the complete sprite with margins.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SMDATE1.BMP/002-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SMDATE1.BMP/002.png"
+    ]
+  },
+  "reason": "Remove invented broad tail fluke; match compact original visible tail."
+}

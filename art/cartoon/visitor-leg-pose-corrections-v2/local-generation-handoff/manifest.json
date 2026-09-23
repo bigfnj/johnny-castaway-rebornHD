@@ -1,0 +1,955 @@
+{
+  "schema_version": 1,
+  "scope": "Exact current-pass prompts and reference inputs. All submissions stopped; no approval implied.",
+  "source_family": "art/cartoon/visitor-leg-pose-corrections-v2",
+  "counts": {
+    "saved_request_versions": 10,
+    "submitted_request_versions": 9,
+    "unsubmitted_request_versions": 1,
+    "recorded_submissions": 10,
+    "blocked_request_versions": 4,
+    "returned_images": 5,
+    "ordered_reference_copies": 25
+  },
+  "004_note": "One saved request used twice; first error details not retained, second block captured. One folder represents both identical-input submissions.",
+  "backend": {
+    "tool": "image_gen.imagegen",
+    "mode": "built-in",
+    "documented_backend": "gpt-image-2",
+    "documentation": "https://learn.chatgpt.com/docs/image-generation",
+    "checked": "2026-09-21",
+    "per_call_model_id": "Not present in retained tool responses; documentation is not a per-call attestation."
+  },
+  "attempts": [
+    {
+      "id": "003-v1",
+      "submission_status": "SUBMITTED",
+      "recorded_submission_count": 1,
+      "result_status": "BLOCKED",
+      "reason": "No image returned; output moderation block.",
+      "appearance_approved": false,
+      "status_source": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-003-notes.md",
+        "copy_path": "notes/visitor-003-notes.md",
+        "sha256": "c2d6dd4799d5ad07bba099505d32bd108f590eb0f0e3ab922d7b1023677dfa0b",
+        "role": "Agent submission/result notes"
+      },
+      "request": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-request.json",
+        "copy_path": "003-v1/request.json",
+        "sha256": "53ed1314db51dc715b0bb229c5db0700804003567ae5652d8646563445e8314a",
+        "role": "Exact historical request JSON"
+      },
+      "references": [
+        {
+          "source_path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+          "copy_path": "003-v1/references/01.png",
+          "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16",
+          "role": "Edit target and complete pose reference: earlier 001",
+          "order": 1,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png"
+        }
+      ],
+      "prompt": {
+        "copy_path": "003-v1/prompt.txt",
+        "sha256": "614f7ec108934e7239ffeeebcb3261cbf6f1f6a4df92dbe4b8e6d79bc6debab6",
+        "exact_string_from": "arguments.prompt",
+        "encoding": "UTF-8; no added newline"
+      },
+      "failure": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-failure.json",
+        "copy_path": "003-v1/failure.json",
+        "sha256": "707c86b62f32f7b85b78e748d922dc7f72cd7128dbfda2fdd02c57be8c32827a",
+        "role": "Exact recorded failure"
+      }
+    },
+    {
+      "id": "004-v1",
+      "submission_status": "SUBMITTED",
+      "recorded_submission_count": 2,
+      "result_status": "BLOCKED",
+      "reason": "Same request submitted twice. First result and error details were not retained; second output block is recorded. No image exists.",
+      "appearance_approved": false,
+      "status_source": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-004-006-notes.md",
+        "copy_path": "notes/visitor-004-006-notes.md",
+        "sha256": "db799e33af0ea265eb72a916a4e1b0f42f864d3b56ed6762c783c5fd535e2be5",
+        "role": "Agent submission/result notes"
+      },
+      "request": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-request.json",
+        "copy_path": "004-v1/request.json",
+        "sha256": "0be2b69343df01f3393d647a4b2afb5420d31d6df4fa6f8fd296d7d0254dfae7",
+        "role": "Exact historical request JSON"
+      },
+      "references": [
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/004-generated-v1.png",
+          "copy_path": "004-v1/references/01.png",
+          "sha256": "ca219c0e13656fb85a2e87179af9e85f9fedb620ae4b1bf5035a46d4fe40d31b",
+          "role": "Edit target: previous 004",
+          "order": 1,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/004-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+          "copy_path": "004-v1/references/02.png",
+          "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16",
+          "role": "Leg-pose reference: earlier 001",
+          "order": 2,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/004.png",
+          "copy_path": "004-v1/references/03.png",
+          "sha256": "711094ec3ec772c4a9b42aef4fdfc95db0cb4f6a240391693bc7817ff8a288da",
+          "role": "Exact original 004, nearest-neighbor enlargement",
+          "order": 3,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/004.png"
+        }
+      ],
+      "prompt": {
+        "copy_path": "004-v1/prompt.txt",
+        "sha256": "84ad8a236fb0bf62c4c7b247e6af6174935c106546afe7c6d2601b0417a17ea2",
+        "exact_string_from": "arguments.prompt",
+        "encoding": "UTF-8; no added newline"
+      },
+      "failure": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-failure.json",
+        "copy_path": "004-v1/failure.json",
+        "sha256": "2d35c1f7e04df5559f91b2e258d292bd7f6a88ed00f87a2bc1c26d3f7feda86b",
+        "role": "Exact recorded failure"
+      }
+    },
+    {
+      "id": "005-v1",
+      "submission_status": "SUBMITTED",
+      "recorded_submission_count": 1,
+      "result_status": "READY FOR REVIEW",
+      "reason": "Agent notes say suitable for human review. Not appearance-approved.",
+      "appearance_approved": false,
+      "status_source": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-004-006-notes.md",
+        "copy_path": "notes/visitor-004-006-notes.md",
+        "sha256": "db799e33af0ea265eb72a916a4e1b0f42f864d3b56ed6762c783c5fd535e2be5",
+        "role": "Agent submission/result notes"
+      },
+      "request": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v1-request.json",
+        "copy_path": "005-v1/request.json",
+        "sha256": "c01c5441e7af362c25221f34064f583450ba9f78a2d7d677fca1fba2d912f85d",
+        "role": "Exact historical request JSON"
+      },
+      "references": [
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/005-generated-v1.png",
+          "copy_path": "005-v1/references/01.png",
+          "sha256": "366f93b36318593002ae1029f30a1ff0a31eea5280783955d78fb2743ba6cc91",
+          "role": "Edit target: previous 005",
+          "order": 1,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/005-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/005.png",
+          "copy_path": "005-v1/references/02.png",
+          "sha256": "102e8398a3ace0751e2aa43c3dec324752abc403a55c6d6ef7de4bb332c0b209",
+          "role": "Exact original 005, nearest-neighbor enlargement",
+          "order": 2,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/005.png"
+        },
+        {
+          "source_path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+          "copy_path": "005-v1/references/03.png",
+          "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16",
+          "role": "Natural side-resting leg reference: earlier 001",
+          "order": 3,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png"
+        }
+      ],
+      "prompt": {
+        "copy_path": "005-v1/prompt.txt",
+        "sha256": "ab37d242f434044a603d6b46938f824f6314277c558cd1c827f6973d7d24beb5",
+        "exact_string_from": "arguments.prompt",
+        "encoding": "UTF-8; no added newline"
+      },
+      "returned_output": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+        "copy_path": "005-v1/returned-output.png",
+        "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353",
+        "role": "Exact returned image; status above, not approved"
+      },
+      "output_record": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-record-v1.json",
+        "copy_path": "005-v1/output-record.json",
+        "sha256": "35504b9bd3ceeec4dcc4b4d3f93321d127ab0a9097b7147181aeff38e2cc25d7",
+        "role": "Exact output record"
+      }
+    },
+    {
+      "id": "006-v1",
+      "submission_status": "SUBMITTED",
+      "recorded_submission_count": 1,
+      "result_status": "INSUFFICIENT",
+      "reason": "Low foreground leg remains too thick and straight; incomplete correction.",
+      "appearance_approved": false,
+      "status_source": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-004-006-notes.md",
+        "copy_path": "notes/visitor-004-006-notes.md",
+        "sha256": "db799e33af0ea265eb72a916a4e1b0f42f864d3b56ed6762c783c5fd535e2be5",
+        "role": "Agent submission/result notes"
+      },
+      "request": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-v1-request.json",
+        "copy_path": "006-v1/request.json",
+        "sha256": "de24f453a19332436f1a1fc0c33c96f37e6ae96a9eabd4432f7ce807c4d553d4",
+        "role": "Exact historical request JSON"
+      },
+      "references": [
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/006-generated-v1.png",
+          "copy_path": "006-v1/references/01.png",
+          "sha256": "bbfe8f0518061c68c701cb5dca1de2b9c2465e80f50f08b38434238c2d194413",
+          "role": "Edit target: previous 006",
+          "order": 1,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/006-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/006.png",
+          "copy_path": "006-v1/references/02.png",
+          "sha256": "91d88cdde8c59b767058a28048b2a3d09cff1766b37bdaf32b19b50cc96d2524",
+          "role": "Exact original 006, nearest-neighbor enlargement",
+          "order": 2,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/006.png"
+        },
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+          "copy_path": "006-v1/references/03.png",
+          "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+          "role": "Low bent-leg anatomy reference: successful 007",
+          "order": 3,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+        }
+      ],
+      "prompt": {
+        "copy_path": "006-v1/prompt.txt",
+        "sha256": "0f774ac2c42a3c4da2896a2c0734370660a2611a3d8173a6e89eb5446bce8be7",
+        "exact_string_from": "arguments.prompt",
+        "encoding": "UTF-8; no added newline"
+      },
+      "returned_output": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png",
+        "copy_path": "006-v1/returned-output.png",
+        "sha256": "1439aa6839e2d2759b4faf48f239b8111459537b763cf14131740ab788d4e28c",
+        "role": "Exact returned image; status above, not approved"
+      },
+      "output_record": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-record-v1.json",
+        "copy_path": "006-v1/output-record.json",
+        "sha256": "d70a5bf273a3a370dff4c843a2531385f267c3902d03605e4ca263aef399921c",
+        "role": "Exact output record"
+      }
+    },
+    {
+      "id": "006-v2",
+      "submission_status": "NOT SUBMITTED",
+      "recorded_submission_count": 0,
+      "result_status": "PREPARED ONLY",
+      "reason": "Saved before the pause; no submission, output or output record.",
+      "appearance_approved": false,
+      "status_source": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-004-006-notes.md",
+        "copy_path": "notes/visitor-004-006-notes.md",
+        "sha256": "db799e33af0ea265eb72a916a4e1b0f42f864d3b56ed6762c783c5fd535e2be5",
+        "role": "Agent submission/result notes"
+      },
+      "request": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-v2-request.json",
+        "copy_path": "006-v2/request.json",
+        "sha256": "a3e2285a50c3ca18fa9e402d5d179f3829af1e4c8712b484a621ec944bd11ef3",
+        "role": "Exact historical request JSON"
+      },
+      "references": [
+        {
+          "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png",
+          "copy_path": "006-v2/references/01.png",
+          "sha256": "1439aa6839e2d2759b4faf48f239b8111459537b763cf14131740ab788d4e28c",
+          "role": "Edit target: current 006 v1",
+          "order": 1,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+          "copy_path": "006-v2/references/02.png",
+          "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+          "role": "Leg-path reference: successful 007",
+          "order": 2,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+        }
+      ],
+      "prompt": {
+        "copy_path": "006-v2/prompt.txt",
+        "sha256": "73a2bfc7d7e2d2663e5a33f64e7939c4e3946af9d99af10047dbdb8893681bf4",
+        "exact_string_from": "arguments.prompt",
+        "encoding": "UTF-8; no added newline"
+      }
+    },
+    {
+      "id": "008-v1",
+      "submission_status": "SUBMITTED",
+      "recorded_submission_count": 1,
+      "result_status": "INSUFFICIENT",
+      "reason": "Returned image changed rejected hip construction too little.",
+      "appearance_approved": false,
+      "status_source": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-008-010-notes.md",
+        "copy_path": "notes/visitor-008-010-notes.md",
+        "sha256": "5a2983365b36823c9294791a74358fd90218818f6da76c5ef1d866d3b6b2a0e4",
+        "role": "Agent submission/result notes"
+      },
+      "request": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-v1-request.json",
+        "copy_path": "008-v1/request.json",
+        "sha256": "5dd4965de552716dbb9fec879029eaee32d41c9cff6e0f33961d2e402d5a8465",
+        "role": "Exact historical request JSON"
+      },
+      "references": [
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/008-generated-v1.png",
+          "copy_path": "008-v1/references/01.png",
+          "sha256": "cb854629387a4356c6984b3c677fbd7948a9d420121a1a25fe913ba7d29368d1",
+          "role": "Edit target: previous 008",
+          "order": 1,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/008-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+          "copy_path": "008-v1/references/02.png",
+          "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+          "role": "Tucked-leg anatomy reference: successful 007",
+          "order": 2,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/008.png",
+          "copy_path": "008-v1/references/03.png",
+          "sha256": "1e59910b044d71371a518128e354c375cf389251a6f6bb5f55aaeee555d3cc49",
+          "role": "Exact original 008, nearest-neighbor enlargement",
+          "order": 3,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/008.png"
+        }
+      ],
+      "prompt": {
+        "copy_path": "008-v1/prompt.txt",
+        "sha256": "39f7d5191ea97e40c938a48044b5b892f43c0639b3855587d4a49fadb49ab834",
+        "exact_string_from": "arguments.prompt",
+        "encoding": "UTF-8; no added newline"
+      },
+      "returned_output": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v1.png",
+        "copy_path": "008-v1/returned-output.png",
+        "sha256": "9e88fc2db2c7f2575d5431f5018d871848195fbd4f3306d8cfec0bfad7757c0a",
+        "role": "Exact returned image; status above, not approved"
+      },
+      "output_record": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-record-v1.json",
+        "copy_path": "008-v1/output-record.json",
+        "sha256": "b3402cd16cee3fc02650988043c155854586fd2e7a3b75c8267fa4bc6f1c0d29",
+        "role": "Exact output record"
+      }
+    },
+    {
+      "id": "008-v2",
+      "submission_status": "SUBMITTED",
+      "recorded_submission_count": 1,
+      "result_status": "COMPARISON CANDIDATE",
+      "reason": "Hip transition improved, but overall leg remains close to prior draft. Not confirmed complete or approved.",
+      "appearance_approved": false,
+      "status_source": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-008-010-notes.md",
+        "copy_path": "notes/visitor-008-010-notes.md",
+        "sha256": "5a2983365b36823c9294791a74358fd90218818f6da76c5ef1d866d3b6b2a0e4",
+        "role": "Agent submission/result notes"
+      },
+      "request": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-v2-request.json",
+        "copy_path": "008-v2/request.json",
+        "sha256": "918c9907bc5318820e17bdc12b4ab4bb0a432fea6d511f6c9f1db0d481241020",
+        "role": "Exact historical request JSON"
+      },
+      "references": [
+        {
+          "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v1.png",
+          "copy_path": "008-v2/references/01.png",
+          "sha256": "9e88fc2db2c7f2575d5431f5018d871848195fbd4f3306d8cfec0bfad7757c0a",
+          "role": "Edit target: current 008 v1",
+          "order": 1,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+          "copy_path": "008-v2/references/02.png",
+          "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+          "role": "Folded-leg reference: successful 007",
+          "order": 2,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+        }
+      ],
+      "prompt": {
+        "copy_path": "008-v2/prompt.txt",
+        "sha256": "431289d963064eb51d0b964f5ed9ef2cab12e1e4d1d24cbfc4cf63c1b9be2e0a",
+        "exact_string_from": "arguments.prompt",
+        "encoding": "UTF-8; no added newline"
+      },
+      "returned_output": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v2.png",
+        "copy_path": "008-v2/returned-output.png",
+        "sha256": "8093274c4ec5d501f995dcd0329f656af4769e0fb69c01d67a7ced82a44c840f",
+        "role": "Exact returned image; status above, not approved"
+      },
+      "output_record": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-record-v2.json",
+        "copy_path": "008-v2/output-record.json",
+        "sha256": "973755dafef4e7e2fef3bd39559685e5d9883490000f51049d095bc9612e2b40",
+        "role": "Exact output record"
+      }
+    },
+    {
+      "id": "009-v1",
+      "submission_status": "SUBMITTED",
+      "recorded_submission_count": 1,
+      "result_status": "INSUFFICIENT",
+      "reason": "Returned image changed rejected hip construction too little. Diagnostic only.",
+      "appearance_approved": false,
+      "status_source": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-008-010-notes.md",
+        "copy_path": "notes/visitor-008-010-notes.md",
+        "sha256": "5a2983365b36823c9294791a74358fd90218818f6da76c5ef1d866d3b6b2a0e4",
+        "role": "Agent submission/result notes"
+      },
+      "request": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v1-request.json",
+        "copy_path": "009-v1/request.json",
+        "sha256": "2cd3c1015431bb65792454fa03b64456d2d7f28bca36933574e67436288a3410",
+        "role": "Exact historical request JSON"
+      },
+      "references": [
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-generated-v2.png",
+          "copy_path": "009-v1/references/01.png",
+          "sha256": "81133f52b9aae04375d004924ca33c1e077f791b3ec66a8caf8f89af4bec0bde",
+          "role": "Edit target: previous 009 v2",
+          "order": 1,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-generated-v2.png"
+        },
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+          "copy_path": "009-v1/references/02.png",
+          "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+          "role": "Tucked-leg anatomy reference: successful 007",
+          "order": 2,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/009.png",
+          "copy_path": "009-v1/references/03.png",
+          "sha256": "a5a1942192d065786af459abd90b00df74725a39791bf3e757d661832796fe11",
+          "role": "Exact original 009, nearest-neighbor enlargement",
+          "order": 3,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/009.png"
+        }
+      ],
+      "prompt": {
+        "copy_path": "009-v1/prompt.txt",
+        "sha256": "fcb08d14f85c75a4fa81c90bc483b74824652638738f76b6f27946dfd778068d",
+        "exact_string_from": "arguments.prompt",
+        "encoding": "UTF-8; no added newline"
+      },
+      "returned_output": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-generated-v1.png",
+        "copy_path": "009-v1/returned-output.png",
+        "sha256": "e52d90f89a875330940b7c3d1f53084a1ca913793d327c3ee4d4a5317b77bc63",
+        "role": "Exact returned image; status above, not approved"
+      },
+      "output_record": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-record-v1.json",
+        "copy_path": "009-v1/output-record.json",
+        "sha256": "e90596ca68c851bffff13299073ad8d14adb7c6399bcb4a31c979f5d3adbc4c6",
+        "role": "Exact output record"
+      }
+    },
+    {
+      "id": "009-v2",
+      "submission_status": "SUBMITTED",
+      "recorded_submission_count": 1,
+      "result_status": "BLOCKED",
+      "reason": "No image returned; output moderation block.",
+      "appearance_approved": false,
+      "status_source": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-008-010-notes.md",
+        "copy_path": "notes/visitor-008-010-notes.md",
+        "sha256": "5a2983365b36823c9294791a74358fd90218818f6da76c5ef1d866d3b6b2a0e4",
+        "role": "Agent submission/result notes"
+      },
+      "request": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v2-request.json",
+        "copy_path": "009-v2/request.json",
+        "sha256": "a78ae3ef9540c4f52d32aa017951f36afd7f0faba724f559e599a5c2d9d293f2",
+        "role": "Exact historical request JSON"
+      },
+      "references": [
+        {
+          "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-generated-v1.png",
+          "copy_path": "009-v2/references/01.png",
+          "sha256": "e52d90f89a875330940b7c3d1f53084a1ca913793d327c3ee4d4a5317b77bc63",
+          "role": "Edit target: current 009 v1",
+          "order": 1,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+          "copy_path": "009-v2/references/02.png",
+          "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+          "role": "Folded-leg reference: successful 007",
+          "order": 2,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+        }
+      ],
+      "prompt": {
+        "copy_path": "009-v2/prompt.txt",
+        "sha256": "198b8335d819b642857f56abc3685b52ded7ed562c1bcc4a380f29b04aaa2d0c",
+        "exact_string_from": "arguments.prompt",
+        "encoding": "UTF-8; no added newline"
+      },
+      "failure": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v2-failure.json",
+        "copy_path": "009-v2/failure.json",
+        "sha256": "815b414f9d62b05d99554ec45185a3cdc229c37bb09ebc8ea70393cc5fff0f8a",
+        "role": "Exact recorded failure"
+      }
+    },
+    {
+      "id": "010-v1",
+      "submission_status": "SUBMITTED",
+      "recorded_submission_count": 1,
+      "result_status": "BLOCKED",
+      "reason": "No image returned; output moderation block.",
+      "appearance_approved": false,
+      "status_source": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-008-010-notes.md",
+        "copy_path": "notes/visitor-008-010-notes.md",
+        "sha256": "5a2983365b36823c9294791a74358fd90218818f6da76c5ef1d866d3b6b2a0e4",
+        "role": "Agent submission/result notes"
+      },
+      "request": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-v1-request.json",
+        "copy_path": "010-v1/request.json",
+        "sha256": "f9c9c5edab5e953f69266ae41d7be9161ff49539161a76000fa395b5521fffc6",
+        "role": "Exact historical request JSON"
+      },
+      "references": [
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/010-generated-v1.png",
+          "copy_path": "010-v1/references/01.png",
+          "sha256": "c2e720a38c3e12f64bdadf99023ee27cebad5d5ba874e9cbaadd3154ecf6b03d",
+          "role": "Edit target: previous 010",
+          "order": 1,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/010-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+          "copy_path": "010-v1/references/02.png",
+          "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+          "role": "Folded-leg reference: successful 007",
+          "order": 2,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+        },
+        {
+          "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/010.png",
+          "copy_path": "010-v1/references/03.png",
+          "sha256": "2fb55f4557931e0fa91b8cedc0f6ed988102946e90f95969cdbd66046d7c2daa",
+          "role": "Exact original 010, nearest-neighbor enlargement",
+          "order": 3,
+          "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/010.png"
+        }
+      ],
+      "prompt": {
+        "copy_path": "010-v1/prompt.txt",
+        "sha256": "776476a0d61124dfb36597974b169df18305cc5ad5030e2bbf24493064d9d155",
+        "exact_string_from": "arguments.prompt",
+        "encoding": "UTF-8; no added newline"
+      },
+      "failure": {
+        "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-v1-failure.json",
+        "copy_path": "010-v1/failure.json",
+        "sha256": "bb56eb9e6e31e8edcbe1876d71b660e3cec88a5ee96675ce297dd2b870ad2953",
+        "role": "Exact recorded failure"
+      }
+    }
+  ],
+  "source_copies": [
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-003-notes.md",
+      "copy_path": "notes/visitor-003-notes.md",
+      "sha256": "c2d6dd4799d5ad07bba099505d32bd108f590eb0f0e3ab922d7b1023677dfa0b",
+      "role": "Agent submission/result notes"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-004-006-notes.md",
+      "copy_path": "notes/visitor-004-006-notes.md",
+      "sha256": "db799e33af0ea265eb72a916a4e1b0f42f864d3b56ed6762c783c5fd535e2be5",
+      "role": "Agent submission/result notes"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/visitor-008-010-notes.md",
+      "copy_path": "notes/visitor-008-010-notes.md",
+      "sha256": "5a2983365b36823c9294791a74358fd90218818f6da76c5ef1d866d3b6b2a0e4",
+      "role": "Agent submission/result notes"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-request.json",
+      "copy_path": "003-v1/request.json",
+      "sha256": "53ed1314db51dc715b0bb229c5db0700804003567ae5652d8646563445e8314a",
+      "role": "Exact historical request JSON"
+    },
+    {
+      "source_path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+      "copy_path": "003-v1/references/01.png",
+      "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16",
+      "role": "Edit target and complete pose reference: earlier 001",
+      "order": 1,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-failure.json",
+      "copy_path": "003-v1/failure.json",
+      "sha256": "707c86b62f32f7b85b78e748d922dc7f72cd7128dbfda2fdd02c57be8c32827a",
+      "role": "Exact recorded failure"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-request.json",
+      "copy_path": "004-v1/request.json",
+      "sha256": "0be2b69343df01f3393d647a4b2afb5420d31d6df4fa6f8fd296d7d0254dfae7",
+      "role": "Exact historical request JSON"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/004-generated-v1.png",
+      "copy_path": "004-v1/references/01.png",
+      "sha256": "ca219c0e13656fb85a2e87179af9e85f9fedb620ae4b1bf5035a46d4fe40d31b",
+      "role": "Edit target: previous 004",
+      "order": 1,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/004-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+      "copy_path": "004-v1/references/02.png",
+      "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16",
+      "role": "Leg-pose reference: earlier 001",
+      "order": 2,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/004.png",
+      "copy_path": "004-v1/references/03.png",
+      "sha256": "711094ec3ec772c4a9b42aef4fdfc95db0cb4f6a240391693bc7817ff8a288da",
+      "role": "Exact original 004, nearest-neighbor enlargement",
+      "order": 3,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/004.png"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-failure.json",
+      "copy_path": "004-v1/failure.json",
+      "sha256": "2d35c1f7e04df5559f91b2e258d292bd7f6a88ed00f87a2bc1c26d3f7feda86b",
+      "role": "Exact recorded failure"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v1-request.json",
+      "copy_path": "005-v1/request.json",
+      "sha256": "c01c5441e7af362c25221f34064f583450ba9f78a2d7d677fca1fba2d912f85d",
+      "role": "Exact historical request JSON"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/005-generated-v1.png",
+      "copy_path": "005-v1/references/01.png",
+      "sha256": "366f93b36318593002ae1029f30a1ff0a31eea5280783955d78fb2743ba6cc91",
+      "role": "Edit target: previous 005",
+      "order": 1,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/005-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/005.png",
+      "copy_path": "005-v1/references/02.png",
+      "sha256": "102e8398a3ace0751e2aa43c3dec324752abc403a55c6d6ef7de4bb332c0b209",
+      "role": "Exact original 005, nearest-neighbor enlargement",
+      "order": 2,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/005.png"
+    },
+    {
+      "source_path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+      "copy_path": "005-v1/references/03.png",
+      "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16",
+      "role": "Natural side-resting leg reference: earlier 001",
+      "order": 3,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+      "copy_path": "005-v1/returned-output.png",
+      "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353",
+      "role": "Exact returned image; status above, not approved"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-record-v1.json",
+      "copy_path": "005-v1/output-record.json",
+      "sha256": "35504b9bd3ceeec4dcc4b4d3f93321d127ab0a9097b7147181aeff38e2cc25d7",
+      "role": "Exact output record"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-v1-request.json",
+      "copy_path": "006-v1/request.json",
+      "sha256": "de24f453a19332436f1a1fc0c33c96f37e6ae96a9eabd4432f7ce807c4d553d4",
+      "role": "Exact historical request JSON"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/006-generated-v1.png",
+      "copy_path": "006-v1/references/01.png",
+      "sha256": "bbfe8f0518061c68c701cb5dca1de2b9c2465e80f50f08b38434238c2d194413",
+      "role": "Edit target: previous 006",
+      "order": 1,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/006-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/006.png",
+      "copy_path": "006-v1/references/02.png",
+      "sha256": "91d88cdde8c59b767058a28048b2a3d09cff1766b37bdaf32b19b50cc96d2524",
+      "role": "Exact original 006, nearest-neighbor enlargement",
+      "order": 2,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/006.png"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+      "copy_path": "006-v1/references/03.png",
+      "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+      "role": "Low bent-leg anatomy reference: successful 007",
+      "order": 3,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png",
+      "copy_path": "006-v1/returned-output.png",
+      "sha256": "1439aa6839e2d2759b4faf48f239b8111459537b763cf14131740ab788d4e28c",
+      "role": "Exact returned image; status above, not approved"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-record-v1.json",
+      "copy_path": "006-v1/output-record.json",
+      "sha256": "d70a5bf273a3a370dff4c843a2531385f267c3902d03605e4ca263aef399921c",
+      "role": "Exact output record"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-v2-request.json",
+      "copy_path": "006-v2/request.json",
+      "sha256": "a3e2285a50c3ca18fa9e402d5d179f3829af1e4c8712b484a621ec944bd11ef3",
+      "role": "Exact historical request JSON"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png",
+      "copy_path": "006-v2/references/01.png",
+      "sha256": "1439aa6839e2d2759b4faf48f239b8111459537b763cf14131740ab788d4e28c",
+      "role": "Edit target: current 006 v1",
+      "order": 1,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+      "copy_path": "006-v2/references/02.png",
+      "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+      "role": "Leg-path reference: successful 007",
+      "order": 2,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-v1-request.json",
+      "copy_path": "008-v1/request.json",
+      "sha256": "5dd4965de552716dbb9fec879029eaee32d41c9cff6e0f33961d2e402d5a8465",
+      "role": "Exact historical request JSON"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/008-generated-v1.png",
+      "copy_path": "008-v1/references/01.png",
+      "sha256": "cb854629387a4356c6984b3c677fbd7948a9d420121a1a25fe913ba7d29368d1",
+      "role": "Edit target: previous 008",
+      "order": 1,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/008-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+      "copy_path": "008-v1/references/02.png",
+      "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+      "role": "Tucked-leg anatomy reference: successful 007",
+      "order": 2,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/008.png",
+      "copy_path": "008-v1/references/03.png",
+      "sha256": "1e59910b044d71371a518128e354c375cf389251a6f6bb5f55aaeee555d3cc49",
+      "role": "Exact original 008, nearest-neighbor enlargement",
+      "order": 3,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/008.png"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v1.png",
+      "copy_path": "008-v1/returned-output.png",
+      "sha256": "9e88fc2db2c7f2575d5431f5018d871848195fbd4f3306d8cfec0bfad7757c0a",
+      "role": "Exact returned image; status above, not approved"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-record-v1.json",
+      "copy_path": "008-v1/output-record.json",
+      "sha256": "b3402cd16cee3fc02650988043c155854586fd2e7a3b75c8267fa4bc6f1c0d29",
+      "role": "Exact output record"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-v2-request.json",
+      "copy_path": "008-v2/request.json",
+      "sha256": "918c9907bc5318820e17bdc12b4ab4bb0a432fea6d511f6c9f1db0d481241020",
+      "role": "Exact historical request JSON"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v1.png",
+      "copy_path": "008-v2/references/01.png",
+      "sha256": "9e88fc2db2c7f2575d5431f5018d871848195fbd4f3306d8cfec0bfad7757c0a",
+      "role": "Edit target: current 008 v1",
+      "order": 1,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+      "copy_path": "008-v2/references/02.png",
+      "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+      "role": "Folded-leg reference: successful 007",
+      "order": 2,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v2.png",
+      "copy_path": "008-v2/returned-output.png",
+      "sha256": "8093274c4ec5d501f995dcd0329f656af4769e0fb69c01d67a7ced82a44c840f",
+      "role": "Exact returned image; status above, not approved"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-record-v2.json",
+      "copy_path": "008-v2/output-record.json",
+      "sha256": "973755dafef4e7e2fef3bd39559685e5d9883490000f51049d095bc9612e2b40",
+      "role": "Exact output record"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v1-request.json",
+      "copy_path": "009-v1/request.json",
+      "sha256": "2cd3c1015431bb65792454fa03b64456d2d7f28bca36933574e67436288a3410",
+      "role": "Exact historical request JSON"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-generated-v2.png",
+      "copy_path": "009-v1/references/01.png",
+      "sha256": "81133f52b9aae04375d004924ca33c1e077f791b3ec66a8caf8f89af4bec0bde",
+      "role": "Edit target: previous 009 v2",
+      "order": 1,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-generated-v2.png"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+      "copy_path": "009-v1/references/02.png",
+      "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+      "role": "Tucked-leg anatomy reference: successful 007",
+      "order": 2,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/009.png",
+      "copy_path": "009-v1/references/03.png",
+      "sha256": "a5a1942192d065786af459abd90b00df74725a39791bf3e757d661832796fe11",
+      "role": "Exact original 009, nearest-neighbor enlargement",
+      "order": 3,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/009.png"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-generated-v1.png",
+      "copy_path": "009-v1/returned-output.png",
+      "sha256": "e52d90f89a875330940b7c3d1f53084a1ca913793d327c3ee4d4a5317b77bc63",
+      "role": "Exact returned image; status above, not approved"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-record-v1.json",
+      "copy_path": "009-v1/output-record.json",
+      "sha256": "e90596ca68c851bffff13299073ad8d14adb7c6399bcb4a31c979f5d3adbc4c6",
+      "role": "Exact output record"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v2-request.json",
+      "copy_path": "009-v2/request.json",
+      "sha256": "a78ae3ef9540c4f52d32aa017951f36afd7f0faba724f559e599a5c2d9d293f2",
+      "role": "Exact historical request JSON"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-generated-v1.png",
+      "copy_path": "009-v2/references/01.png",
+      "sha256": "e52d90f89a875330940b7c3d1f53084a1ca913793d327c3ee4d4a5317b77bc63",
+      "role": "Edit target: current 009 v1",
+      "order": 1,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+      "copy_path": "009-v2/references/02.png",
+      "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+      "role": "Folded-leg reference: successful 007",
+      "order": 2,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v2-failure.json",
+      "copy_path": "009-v2/failure.json",
+      "sha256": "815b414f9d62b05d99554ec45185a3cdc229c37bb09ebc8ea70393cc5fff0f8a",
+      "role": "Exact recorded failure"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-v1-request.json",
+      "copy_path": "010-v1/request.json",
+      "sha256": "f9c9c5edab5e953f69266ae41d7be9161ff49539161a76000fa395b5521fffc6",
+      "role": "Exact historical request JSON"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/010-generated-v1.png",
+      "copy_path": "010-v1/references/01.png",
+      "sha256": "c2e720a38c3e12f64bdadf99023ee27cebad5d5ba874e9cbaadd3154ecf6b03d",
+      "role": "Edit target: previous 010",
+      "order": 1,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/010-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+      "copy_path": "010-v1/references/02.png",
+      "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c",
+      "role": "Folded-leg reference: successful 007",
+      "order": 2,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png"
+    },
+    {
+      "source_path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/010.png",
+      "copy_path": "010-v1/references/03.png",
+      "sha256": "2fb55f4557931e0fa91b8cedc0f6ed988102946e90f95969cdbd66046d7c2daa",
+      "role": "Exact original 010, nearest-neighbor enlargement",
+      "order": 3,
+      "recorded_reference_path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/010.png"
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-v1-failure.json",
+      "copy_path": "010-v1/failure.json",
+      "sha256": "bb56eb9e6e31e8edcbe1876d71b660e3cec88a5ee96675ce297dd2b870ad2953",
+      "role": "Exact recorded failure"
+    }
+  ],
+  "portability": "request.json retains original absolute paths. Numbered reference copies preserve original argument order.",
+  "image_handling": "PNG byte copies only. Browser scaling is display-only."
+}

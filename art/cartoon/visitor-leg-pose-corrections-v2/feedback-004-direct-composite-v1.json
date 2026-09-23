@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-21",
+  "frame": "SSUZY1.BMP-004",
+  "assistant_question_exact": "May I directly combine 004 v3's upper body with 003 v2's hips and legs, adjusting only scale and the waist seam?",
+  "user_response_exact": "Yes, directly combine the PNGs",
+  "authorized_method": "Non-generative direct PNG compositing with ImageMagick. Adjust scale and the waist seam only.",
+  "scope": "Authorization to prepare a direct composite, not appearance approval of any resulting image.",
+  "ordered_references": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-generated-v3.png",
+      "sha256": "e75955f44c7f4941fc8d0d004931fc5dcf9e49b4e8457aea3c589fb1ff5ca12b",
+      "label": "004 rejected v3: body, head and bottle"
+    },
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+      "sha256": "663a7b6f7efa233e78e3db6feedee031eb31a6cb6d468e216e6f92a6c7fbeb89",
+      "label": "003 approved v2: complete hips and both legs"
+    }
+  ],
+  "prior_instruction": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-composite-v8.json",
+    "sha256": "d3859ccb296474938b67ed7dccd92147876a51eb617c9b78b1a52e642dfee1c3"
+  },
+  "built_in_v8": {
+    "status": "blocked",
+    "request": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v8-request.json",
+      "sha256": "c99f839b4f146fc85db8974c1d3f19bd5b64bb717f74ec6de0a2e6b9ecc00bfa"
+    },
+    "failure": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v8-failure.json",
+      "sha256": "9e231a6f98b93956ecce35c80759d79cc234eebe63bed07bb47e63104fba9b37"
+    }
+  },
+  "shown_unresolved_review": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-composite-v8/review.html",
+    "sha256": "99f74d436a4b367e66813dda8d76e82b06b61ba740a4010666f52a97ed5a8d3f"
+  },
+  "six_appearance_approvals_unchanged": {
+    "record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+      "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+    },
+    "scope": "Full appearance of six selected drawings only.",
+    "approved_frames": [
+      "003",
+      "005",
+      "006",
+      "008",
+      "009",
+      "010"
+    ]
+  },
+  "appearance_approval_004": null,
+  "production_integrated": false
+}

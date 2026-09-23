@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "resource": "SSUZY1.BMP",
+  "frame": "004",
+  "version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "request_path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-request.json",
+  "attempts": 2,
+  "first_attempt": "No result stored; rejection details were not retained by the initial Promise.allSettled wrapper.",
+  "second_attempt": "Unchanged exact arguments, explicit error captured.",
+  "status": "blocked-no-image",
+  "category": "sexual",
+  "moderation_stage": "output",
+  "request_id": "920d4d61-1a95-49a3-b94e-729eef78167d",
+  "exact_error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 920d4d61-1a95-49a3-b94e-729eef78167d. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")",
+  "output": null,
+  "follow_up": "No further 004 generation attempted after explicit rejection."
+}

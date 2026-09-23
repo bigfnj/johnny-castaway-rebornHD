@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "status": "pose_correction_failed",
+  "assessment": "The local model preserved the character, but kept the rejected long foreground thigh and far-right knee. The requested knee below the belly button did not move. This is a failed pose correction, not a replacement sprite.",
+  "checks": {
+    "character_recognizable": true,
+    "two_legs": true,
+    "knee_below_belly_button": false,
+    "foreground_thigh_shortened": false,
+    "real_alpha": false
+  },
+  "appearance_approval": null
+}

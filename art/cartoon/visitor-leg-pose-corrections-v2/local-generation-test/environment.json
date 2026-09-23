@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-21T14:07:29.061118+00:00",
+  "status": "pass",
+  "python": {
+    "path": "D:\\.ai-work\\venvs\\johnny-flux2-klein\\Scripts\\python.exe",
+    "version": "3.11.15",
+    "prefix": "D:\\.ai-work\\venvs\\johnny-flux2-klein",
+    "base_prefix": "C:\\Users\\Admin\\AppData\\Roaming\\uv\\python\\cpython-3.11-windows-x86_64-none"
+  },
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "torchvision": "0.28.0+cu130",
+    "diffusers": "0.37.0",
+    "transformers": "5.5.4",
+    "accelerate": "1.14.0",
+    "safetensors": "0.8.0",
+    "Pillow": "12.2.0",
+    "tokenizers": "0.22.2",
+    "sentencepiece": "0.2.1",
+    "protobuf": "4.25.9",
+    "huggingface-hub": "1.24.0",
+    "numpy": "2.4.6"
+  },
+  "imports": [
+    "Flux2KleinPipeline",
+    "Qwen2TokenizerFast",
+    "Qwen3ForCausalLM",
+    "torch",
+    "PIL.Image",
+    "accelerate",
+    "safetensors",
+    "sentencepiece"
+  ],
+  "pipeline": {
+    "class": "Flux2KleinPipeline",
+    "source": "D:\\.ai-work\\venvs\\johnny-flux2-klein\\Lib\\site-packages\\diffusers\\pipelines\\flux2\\pipeline_flux2_klein.py",
+    "accepts_image": true
+  },
+  "cuda": {
+    "available": true,
+    "torch_cuda_build": "13.0",
+    "device_count": 1,
+    "device_name": "NVIDIA GeForce RTX 4090"
+  },
+  "scope": {
+    "model_loaded": false,
+    "image_generated": false,
+    "gpu_tensor_created": false,
+    "other_environments_modified": false
+  },
+  "logs_directory": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\build\\local-flux2-setup"
+}

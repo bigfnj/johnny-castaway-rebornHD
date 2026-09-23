@@ -1,0 +1,7324 @@
+{
+  "SUZY.ADS": {
+    "payload_sha256": "b02963afb516a27539f7db7b7ce69c779dec8963c284df14d5394bc7bc5a58f7",
+    "decoded_sha256": "16b62f1e8d68f57971f3c32a295b042e511f7cb744bd460d6bb61696c9b27e50",
+    "tags": [
+      {
+        "id": 1,
+        "description": "SUZY CITY DWELLER"
+      },
+      {
+        "id": 2,
+        "description": "JOHN MEETS SUZY"
+      }
+    ],
+    "bindings": [
+      {
+        "slot": 1,
+        "resource": "SUZYCITY.TTM"
+      },
+      {
+        "slot": 2,
+        "resource": "SJMSUZY.TTM"
+      },
+      {
+        "slot": 3,
+        "resource": "MEANWHIL.TTM"
+      }
+    ],
+    "commands": [
+      {
+        "offset": 0,
+        "opcode": "0001",
+        "command": "TAG",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 2,
+        "opcode": "1330",
+        "command": "IF_UNKNOWN_1",
+        "tag": 1,
+        "args": [
+          3,
+          1
+        ]
+      },
+      {
+        "offset": 8,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          3,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 18,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          1,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 28,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 30,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 1,
+        "args": [
+          3,
+          1
+        ]
+      },
+      {
+        "offset": 36,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          1,
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 46,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 48,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 1,
+        "args": [
+          1,
+          2
+        ]
+      },
+      {
+        "offset": 54,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          1,
+          3,
+          2,
+          1
+        ]
+      },
+      {
+        "offset": 64,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 66,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 1,
+        "args": [
+          1,
+          3
+        ]
+      },
+      {
+        "offset": 72,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          1,
+          5,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 82,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 84,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 1,
+        "args": [
+          1,
+          5
+        ]
+      },
+      {
+        "offset": 90,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          1,
+          6,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 100,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 102,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 1,
+        "args": [
+          1,
+          6
+        ]
+      },
+      {
+        "offset": 108,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          1,
+          7,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 118,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 120,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 1,
+        "args": [
+          1,
+          7
+        ]
+      },
+      {
+        "offset": 126,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          1,
+          11,
+          3,
+          1
+        ]
+      },
+      {
+        "offset": 136,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 138,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 1,
+        "args": [
+          1,
+          11
+        ]
+      },
+      {
+        "offset": 144,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          1,
+          12,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 154,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 156,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 1,
+        "args": [
+          1,
+          12
+        ]
+      },
+      {
+        "offset": 162,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          1,
+          13,
+          65336,
+          1
+        ]
+      },
+      {
+        "offset": 172,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 174,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 1,
+        "args": [
+          1,
+          13
+        ]
+      },
+      {
+        "offset": 180,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 1,
+        "args": [
+          1,
+          14,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 190,
+        "opcode": "F010",
+        "command": "FADE_OUT",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 192,
+        "opcode": "FFFF",
+        "command": "END",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 194,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 196,
+        "opcode": "FFFF",
+        "command": "END",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 198,
+        "opcode": "0002",
+        "command": "TAG",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 200,
+        "opcode": "1330",
+        "command": "IF_UNKNOWN_1",
+        "tag": 2,
+        "args": [
+          3,
+          1
+        ]
+      },
+      {
+        "offset": 206,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 2,
+        "args": [
+          3,
+          1,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 216,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 2,
+        "args": [
+          2,
+          6,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 226,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 228,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 2,
+        "args": [
+          3,
+          1
+        ]
+      },
+      {
+        "offset": 234,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 2,
+        "args": [
+          2,
+          7,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 244,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 246,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 2,
+        "args": [
+          2,
+          7
+        ]
+      },
+      {
+        "offset": 252,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 2,
+        "args": [
+          2,
+          3,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 262,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 264,
+        "opcode": "1350",
+        "command": "IF_LASTPLAYED",
+        "tag": 2,
+        "args": [
+          2,
+          3
+        ]
+      },
+      {
+        "offset": 270,
+        "opcode": "2005",
+        "command": "ADD_SCENE",
+        "tag": 2,
+        "args": [
+          2,
+          4,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 280,
+        "opcode": "F010",
+        "command": "FADE_OUT",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 282,
+        "opcode": "FFFF",
+        "command": "END",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 284,
+        "opcode": "1510",
+        "command": "PLAY_SCENE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 286,
+        "opcode": "FFFF",
+        "command": "END",
+        "tag": 2,
+        "args": []
+      }
+    ]
+  },
+  "SUZYCITY.TTM": {
+    "payload_sha256": "60319019042d43283ea2c99cfc616b78c55f51fec94608a0ab9556a2c93021af",
+    "decoded_sha256": "4ffe7286f2f2e623ac421fdd2a1e1f18d1e8c527beed36842bc2a7cf9baa08ff",
+    "tags": [
+      {
+        "id": 1,
+        "description": "load suzy city"
+      },
+      {
+        "id": 2,
+        "description": "tanning oil"
+      },
+      {
+        "id": 3,
+        "description": "apply oil"
+      },
+      {
+        "id": 5,
+        "description": "lay back down"
+      },
+      {
+        "id": 6,
+        "description": "floating bottle"
+      },
+      {
+        "id": 7,
+        "description": "susy's 1st message"
+      },
+      {
+        "id": 11,
+        "description": " begin whoop"
+      },
+      {
+        "id": 12,
+        "description": " thought of island"
+      },
+      {
+        "id": 13,
+        "description": "the island"
+      },
+      {
+        "id": 14,
+        "description": "thought hunk"
+      },
+      {
+        "id": 15,
+        "description": "island timer"
+      }
+    ],
+    "bindings": [],
+    "commands": [
+      {
+        "offset": 0,
+        "opcode": "1061",
+        "command": "SET_PALETTE_SLOT",
+        "tag": 0,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 4,
+        "opcode": "F05F",
+        "command": "LOAD_PALETTE",
+        "tag": 0,
+        "args": [
+          "JOHNCAST.PAL"
+        ]
+      },
+      {
+        "offset": 20,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 0,
+        "args": []
+      },
+      {
+        "offset": 22,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 1,
+        "args": [
+          1
+        ]
+      },
+      {
+        "offset": 26,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 1,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 30,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 1,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 34,
+        "opcode": "F02F",
+        "command": "LOAD_IMAGE",
+        "tag": 1,
+        "args": [
+          "SSUZY1.BMP"
+        ]
+      },
+      {
+        "offset": 48,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 1,
+        "args": [
+          1
+        ]
+      },
+      {
+        "offset": 52,
+        "opcode": "F02F",
+        "command": "LOAD_IMAGE",
+        "tag": 1,
+        "args": [
+          "SSUZY2.BMP"
+        ]
+      },
+      {
+        "offset": 66,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 1,
+        "args": [
+          2
+        ]
+      },
+      {
+        "offset": 70,
+        "opcode": "F02F",
+        "command": "LOAD_IMAGE",
+        "tag": 1,
+        "args": [
+          "SSUZY3.BMP"
+        ]
+      },
+      {
+        "offset": 84,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 1,
+        "args": [
+          10
+        ]
+      },
+      {
+        "offset": 88,
+        "opcode": "0110",
+        "command": "PURGE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 90,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 1,
+        "args": []
+      },
+      {
+        "offset": 92,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 2,
+        "args": [
+          2
+        ]
+      },
+      {
+        "offset": 96,
+        "opcode": "F01F",
+        "command": "LOAD_SCREEN",
+        "tag": 2,
+        "args": [
+          "SUZBEACH.SCR"
+        ]
+      },
+      {
+        "offset": 112,
+        "opcode": "1121",
+        "command": "TTM_UNKNOWN_1",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 116,
+        "opcode": "4214",
+        "command": "SAVE_IMAGE1",
+        "tag": 2,
+        "args": [
+          128,
+          77,
+          384,
+          268
+        ]
+      },
+      {
+        "offset": 126,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 130,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 140,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 150,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 2,
+        "args": [
+          9
+        ]
+      },
+      {
+        "offset": 154,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 156,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 160,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          164,
+          267,
+          1,
+          0
+        ]
+      },
+      {
+        "offset": 170,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 172,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 176,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          158,
+          262,
+          2,
+          0
+        ]
+      },
+      {
+        "offset": 186,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 188,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 192,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          174,
+          255,
+          3,
+          0
+        ]
+      },
+      {
+        "offset": 202,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 204,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 208,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          176,
+          257,
+          4,
+          0
+        ]
+      },
+      {
+        "offset": 218,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 220,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 224,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          176,
+          261,
+          5,
+          0
+        ]
+      },
+      {
+        "offset": 234,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 236,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 240,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          166,
+          261,
+          6,
+          0
+        ]
+      },
+      {
+        "offset": 250,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 252,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 256,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          171,
+          254,
+          7,
+          0
+        ]
+      },
+      {
+        "offset": 266,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 268,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 272,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          173,
+          254,
+          8,
+          0
+        ]
+      },
+      {
+        "offset": 282,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 284,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 2,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 288,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          181,
+          257,
+          9,
+          0
+        ]
+      },
+      {
+        "offset": 298,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 2,
+        "args": [
+          173,
+          297,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 308,
+        "opcode": "0110",
+        "command": "PURGE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 310,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 2,
+        "args": []
+      },
+      {
+        "offset": 312,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 3,
+        "args": [
+          3
+        ]
+      },
+      {
+        "offset": 316,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 3,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 320,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 3,
+        "args": [
+          183,
+          263,
+          10,
+          0
+        ]
+      },
+      {
+        "offset": 330,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 3,
+        "args": [
+          173,
+          297,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 340,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 3,
+        "args": [
+          9
+        ]
+      },
+      {
+        "offset": 344,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 3,
+        "args": []
+      },
+      {
+        "offset": 346,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 3,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 350,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 3,
+        "args": [
+          181,
+          257,
+          9,
+          0
+        ]
+      },
+      {
+        "offset": 360,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 3,
+        "args": [
+          173,
+          297,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 370,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 3,
+        "args": []
+      },
+      {
+        "offset": 372,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 3,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 376,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 3,
+        "args": [
+          183,
+          263,
+          10,
+          0
+        ]
+      },
+      {
+        "offset": 386,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 3,
+        "args": [
+          173,
+          297,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 396,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 3,
+        "args": []
+      },
+      {
+        "offset": 398,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 3,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 402,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 3,
+        "args": [
+          181,
+          257,
+          9,
+          0
+        ]
+      },
+      {
+        "offset": 412,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 3,
+        "args": [
+          173,
+          297,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 422,
+        "opcode": "0110",
+        "command": "PURGE",
+        "tag": 3,
+        "args": []
+      },
+      {
+        "offset": 424,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 3,
+        "args": []
+      },
+      {
+        "offset": 426,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 5,
+        "args": [
+          5
+        ]
+      },
+      {
+        "offset": 430,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 5,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 434,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 5,
+        "args": [
+          181,
+          257,
+          9,
+          0
+        ]
+      },
+      {
+        "offset": 444,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 5,
+        "args": [
+          173,
+          297,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 454,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 5,
+        "args": [
+          9
+        ]
+      },
+      {
+        "offset": 458,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 460,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 5,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 464,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 5,
+        "args": [
+          173,
+          254,
+          8,
+          0
+        ]
+      },
+      {
+        "offset": 474,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 476,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 5,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 480,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 5,
+        "args": [
+          166,
+          261,
+          6,
+          0
+        ]
+      },
+      {
+        "offset": 490,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 492,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 5,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 496,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 5,
+        "args": [
+          176,
+          257,
+          4,
+          0
+        ]
+      },
+      {
+        "offset": 506,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 508,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 5,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 512,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 5,
+        "args": [
+          174,
+          255,
+          3,
+          0
+        ]
+      },
+      {
+        "offset": 522,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 524,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 5,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 528,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 5,
+        "args": [
+          158,
+          262,
+          2,
+          0
+        ]
+      },
+      {
+        "offset": 538,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 540,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 5,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 544,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 5,
+        "args": [
+          164,
+          267,
+          1,
+          0
+        ]
+      },
+      {
+        "offset": 554,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 556,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 5,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 560,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 5,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 570,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 5,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 580,
+        "opcode": "2022",
+        "command": "TIMER",
+        "tag": 5,
+        "args": [
+          45,
+          90
+        ]
+      },
+      {
+        "offset": 586,
+        "opcode": "0110",
+        "command": "PURGE",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 588,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 5,
+        "args": []
+      },
+      {
+        "offset": 590,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 6,
+        "args": [
+          6
+        ]
+      },
+      {
+        "offset": 594,
+        "opcode": "4004",
+        "command": "SET_CLIP_ZONE",
+        "tag": 6,
+        "args": [
+          131,
+          45,
+          498,
+          334
+        ]
+      },
+      {
+        "offset": 604,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 608,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          489,
+          307,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 618,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 628,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 638,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 6,
+        "args": [
+          9
+        ]
+      },
+      {
+        "offset": 642,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 644,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 648,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          485,
+          308,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 658,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 668,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 678,
+        "opcode": "C051",
+        "command": "PLAY_SAMPLE",
+        "tag": 6,
+        "args": [
+          16
+        ]
+      },
+      {
+        "offset": 682,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 684,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 688,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          482,
+          309,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 698,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 708,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 718,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 720,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 724,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          480,
+          310,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 734,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 744,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 754,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 756,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 760,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 770,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          478,
+          311,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 780,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 790,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 792,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 796,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 806,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          476,
+          312,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 816,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 826,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 828,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 832,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 842,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          474,
+          313,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 852,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 862,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 864,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 868,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 878,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          472,
+          312,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 888,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 898,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 900,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 904,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 914,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          470,
+          311,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 924,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 934,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 936,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 940,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 950,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          468,
+          310,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 960,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 970,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 972,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 976,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 986,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 996,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          466,
+          309,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1006,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1008,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1012,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1022,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          464,
+          308,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1032,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1042,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1044,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1048,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1058,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          462,
+          309,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1068,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1078,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1080,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1084,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1094,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          460,
+          308,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1104,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1114,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1116,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1120,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1130,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          459,
+          307,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1140,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1150,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1152,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1156,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1166,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          458,
+          306,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1176,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1186,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1188,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1192,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1202,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          457,
+          305,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1212,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1222,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1224,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1228,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1238,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          456,
+          304,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1248,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1258,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1260,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1264,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1274,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          455,
+          305,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1284,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1294,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1296,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1300,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1310,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          454,
+          306,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1320,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1330,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1332,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1336,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1346,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          453,
+          307,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1356,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1366,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1368,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1372,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1382,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          452,
+          308,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1392,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1402,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1404,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1408,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1418,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          451,
+          308,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1428,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1438,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1448,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1450,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1454,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1464,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          450,
+          307,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1474,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1484,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1486,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1490,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          168,
+          279,
+          0,
+          0
+        ]
+      },
+      {
+        "offset": 1500,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          449,
+          306,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1510,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1520,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1522,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1526,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 6,
+        "args": [
+          3
+        ]
+      },
+      {
+        "offset": 1530,
+        "opcode": "F02F",
+        "command": "LOAD_IMAGE",
+        "tag": 6,
+        "args": [
+          "LITEBULB.BMP"
+        ]
+      },
+      {
+        "offset": 1546,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          448,
+          305,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1556,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          180,
+          237,
+          4,
+          3
+        ]
+      },
+      {
+        "offset": 1566,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          169,
+          288,
+          30,
+          2
+        ]
+      },
+      {
+        "offset": 1576,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          176,
+          272,
+          31,
+          2
+        ]
+      },
+      {
+        "offset": 1586,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1596,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 6,
+        "args": [
+          75
+        ]
+      },
+      {
+        "offset": 1600,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1602,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 6,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1606,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          169,
+          288,
+          30,
+          2
+        ]
+      },
+      {
+        "offset": 1616,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          167,
+          278,
+          32,
+          2
+        ]
+      },
+      {
+        "offset": 1626,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          447,
+          304,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1636,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 6,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1646,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 6,
+        "args": [
+          12
+        ]
+      },
+      {
+        "offset": 1650,
+        "opcode": "0110",
+        "command": "PURGE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1652,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 6,
+        "args": []
+      },
+      {
+        "offset": 1654,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 7,
+        "args": [
+          7
+        ]
+      },
+      {
+        "offset": 1658,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1662,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1672,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          446,
+          303,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1682,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          169,
+          267,
+          2,
+          1
+        ]
+      },
+      {
+        "offset": 1692,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 7,
+        "args": [
+          9
+        ]
+      },
+      {
+        "offset": 1696,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 1698,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1702,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          158,
+          264,
+          3,
+          1
+        ]
+      },
+      {
+        "offset": 1712,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1722,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          445,
+          304,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1732,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 1734,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1738,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          163,
+          259,
+          0,
+          1
+        ]
+      },
+      {
+        "offset": 1748,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1758,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          444,
+          305,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1768,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 1770,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1774,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          177,
+          255,
+          4,
+          1
+        ]
+      },
+      {
+        "offset": 1784,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1794,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          443,
+          306,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1804,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 1806,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1810,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          191,
+          236,
+          5,
+          1
+        ]
+      },
+      {
+        "offset": 1820,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1830,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          442,
+          307,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1840,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 1842,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1846,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          204,
+          228,
+          6,
+          1
+        ]
+      },
+      {
+        "offset": 1856,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1866,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          441,
+          308,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1876,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 1878,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1882,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          215,
+          220,
+          7,
+          1
+        ]
+      },
+      {
+        "offset": 1892,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1902,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          440,
+          307,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1912,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 7,
+        "args": [
+          9
+        ]
+      },
+      {
+        "offset": 1916,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 1918,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1922,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          232,
+          223,
+          8,
+          1
+        ]
+      },
+      {
+        "offset": 1932,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1942,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          440,
+          306,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1952,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 1954,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1958,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          234,
+          225,
+          9,
+          1
+        ]
+      },
+      {
+        "offset": 1968,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 1978,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          440,
+          305,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 1988,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 1990,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 1994,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          262,
+          230,
+          10,
+          1
+        ]
+      },
+      {
+        "offset": 2004,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2014,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          440,
+          304,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2024,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2026,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2030,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          280,
+          225,
+          11,
+          1
+        ]
+      },
+      {
+        "offset": 2040,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2050,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          439,
+          303,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2060,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2062,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2066,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          285,
+          225,
+          12,
+          1
+        ]
+      },
+      {
+        "offset": 2076,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2086,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          439,
+          304,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2096,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2098,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2102,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          286,
+          230,
+          13,
+          1
+        ]
+      },
+      {
+        "offset": 2112,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2122,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          439,
+          305,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2132,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2134,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2138,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          309,
+          229,
+          14,
+          1
+        ]
+      },
+      {
+        "offset": 2148,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2158,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          438,
+          306,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2168,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2170,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2174,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          352,
+          228,
+          15,
+          1
+        ]
+      },
+      {
+        "offset": 2184,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2194,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          438,
+          305,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2204,
+        "opcode": "C051",
+        "command": "PLAY_SAMPLE",
+        "tag": 7,
+        "args": [
+          16
+        ]
+      },
+      {
+        "offset": 2208,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 7,
+        "args": [
+          12
+        ]
+      },
+      {
+        "offset": 2212,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2214,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2218,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          356,
+          241,
+          16,
+          1
+        ]
+      },
+      {
+        "offset": 2228,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2238,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          438,
+          304,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2248,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2250,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2254,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          359,
+          233,
+          17,
+          1
+        ]
+      },
+      {
+        "offset": 2264,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2274,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          438,
+          303,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2284,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2286,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2290,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          437,
+          302,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2300,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2310,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          378,
+          254,
+          0,
+          2
+        ]
+      },
+      {
+        "offset": 2320,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2322,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2326,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          398,
+          257,
+          1,
+          2
+        ]
+      },
+      {
+        "offset": 2336,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2346,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 7,
+        "args": [
+          18
+        ]
+      },
+      {
+        "offset": 2350,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2352,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2356,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          402,
+          237,
+          2,
+          2
+        ]
+      },
+      {
+        "offset": 2366,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2376,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 7,
+        "args": [
+          10
+        ]
+      },
+      {
+        "offset": 2380,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2382,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2386,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          398,
+          237,
+          3,
+          2
+        ]
+      },
+      {
+        "offset": 2396,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2406,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 7,
+        "args": [
+          9
+        ]
+      },
+      {
+        "offset": 2410,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2412,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2416,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          388,
+          230,
+          4,
+          2
+        ]
+      },
+      {
+        "offset": 2426,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2436,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2438,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2442,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          401,
+          230,
+          6,
+          2
+        ]
+      },
+      {
+        "offset": 2452,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2462,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          357,
+          291,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2472,
+        "opcode": "C051",
+        "command": "PLAY_SAMPLE",
+        "tag": 7,
+        "args": [
+          16
+        ]
+      },
+      {
+        "offset": 2476,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2478,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2482,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          399,
+          230,
+          7,
+          2
+        ]
+      },
+      {
+        "offset": 2492,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2502,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          357,
+          292,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2512,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 7,
+        "args": [
+          45
+        ]
+      },
+      {
+        "offset": 2516,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2518,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2522,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          396,
+          231,
+          8,
+          2
+        ]
+      },
+      {
+        "offset": 2532,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2542,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          356,
+          293,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2552,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 7,
+        "args": [
+          30
+        ]
+      },
+      {
+        "offset": 2556,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2558,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2562,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          396,
+          225,
+          9,
+          2
+        ]
+      },
+      {
+        "offset": 2572,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2582,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          355,
+          294,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2592,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 7,
+        "args": [
+          9
+        ]
+      },
+      {
+        "offset": 2596,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2598,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 7,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2602,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          388,
+          249,
+          10,
+          2
+        ]
+      },
+      {
+        "offset": 2612,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2622,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 7,
+        "args": [
+          354,
+          293,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2632,
+        "opcode": "0110",
+        "command": "PURGE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2634,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 7,
+        "args": []
+      },
+      {
+        "offset": 2636,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 11,
+        "args": [
+          11
+        ]
+      },
+      {
+        "offset": 2640,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 11,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2644,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          381,
+          232,
+          11,
+          2
+        ]
+      },
+      {
+        "offset": 2654,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2664,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          353,
+          292,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2674,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          396,
+          274,
+          14,
+          2
+        ]
+      },
+      {
+        "offset": 2684,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 11,
+        "args": [
+          8
+        ]
+      },
+      {
+        "offset": 2688,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 11,
+        "args": []
+      },
+      {
+        "offset": 2690,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 11,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2694,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          352,
+          291,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2704,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2714,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          396,
+          274,
+          14,
+          2
+        ]
+      },
+      {
+        "offset": 2724,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          406,
+          229,
+          12,
+          2
+        ]
+      },
+      {
+        "offset": 2734,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          381,
+          260,
+          28,
+          2
+        ]
+      },
+      {
+        "offset": 2744,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 11,
+        "args": []
+      },
+      {
+        "offset": 2746,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 11,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2750,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          352,
+          290,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2760,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2770,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          396,
+          274,
+          14,
+          2
+        ]
+      },
+      {
+        "offset": 2780,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          407,
+          229,
+          13,
+          2
+        ]
+      },
+      {
+        "offset": 2790,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 11,
+        "args": [
+          381,
+          260,
+          28,
+          2
+        ]
+      },
+      {
+        "offset": 2800,
+        "opcode": "0110",
+        "command": "PURGE",
+        "tag": 11,
+        "args": []
+      },
+      {
+        "offset": 2802,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 11,
+        "args": []
+      },
+      {
+        "offset": 2804,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 12,
+        "args": [
+          12
+        ]
+      },
+      {
+        "offset": 2808,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 12,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2812,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 12,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2822,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 12,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 2832,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 12,
+        "args": [
+          351,
+          290,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2842,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 12,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 2848,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 12,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 2858,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 12,
+        "args": [
+          10
+        ]
+      },
+      {
+        "offset": 2862,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 12,
+        "args": []
+      },
+      {
+        "offset": 2864,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 12,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2868,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 12,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 2878,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 12,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2888,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 12,
+        "args": [
+          350,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2898,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 12,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 2908,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 12,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 2918,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 12,
+        "args": []
+      },
+      {
+        "offset": 2920,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 12,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2924,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 12,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 2934,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 12,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 2944,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 12,
+        "args": [
+          349,
+          288,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 2954,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 12,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 2964,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 12,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 2974,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 12,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 2984,
+        "opcode": "0110",
+        "command": "PURGE",
+        "tag": 12,
+        "args": []
+      },
+      {
+        "offset": 2986,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 12,
+        "args": []
+      },
+      {
+        "offset": 2988,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 13,
+        "args": [
+          13
+        ]
+      },
+      {
+        "offset": 2992,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 13,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 2996,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 13,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 3006,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 13,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 3016,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 13,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 3026,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 13,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 3032,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 13,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 3042,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 13,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3052,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 13,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 3062,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 13,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 3072,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 13,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3082,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 13,
+        "args": [
+          204,
+          84,
+          18,
+          2
+        ]
+      },
+      {
+        "offset": 3092,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 13,
+        "args": [
+          281,
+          103,
+          17,
+          2
+        ]
+      },
+      {
+        "offset": 3102,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 13,
+        "args": [
+          8
+        ]
+      },
+      {
+        "offset": 3106,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 13,
+        "args": []
+      },
+      {
+        "offset": 3108,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 13,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 3112,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 13,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 3122,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 13,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 3132,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 13,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 3142,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 13,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 3148,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 13,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 3158,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 13,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3168,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 13,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 3178,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 13,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 3188,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 13,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3198,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 13,
+        "args": [
+          204,
+          84,
+          18,
+          2
+        ]
+      },
+      {
+        "offset": 3208,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 13,
+        "args": [
+          273,
+          98,
+          16,
+          2
+        ]
+      },
+      {
+        "offset": 3218,
+        "opcode": "1201",
+        "command": "GOTO_TAG",
+        "tag": 13,
+        "args": [
+          13
+        ]
+      },
+      {
+        "offset": 3222,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 13,
+        "args": []
+      },
+      {
+        "offset": 3224,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 15,
+        "args": [
+          15
+        ]
+      },
+      {
+        "offset": 3228,
+        "opcode": "2022",
+        "command": "TIMER",
+        "tag": 15,
+        "args": [
+          60,
+          240
+        ]
+      },
+      {
+        "offset": 3234,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 15,
+        "args": []
+      },
+      {
+        "offset": 3236,
+        "opcode": "1111",
+        "command": "TAG",
+        "tag": 14,
+        "args": [
+          14
+        ]
+      },
+      {
+        "offset": 3240,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 3244,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 3254,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 3264,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          351,
+          290,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 3274,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 3280,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 3290,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 14,
+        "args": [
+          30
+        ]
+      },
+      {
+        "offset": 3294,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 3296,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 3300,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 3310,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 3320,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          350,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 3330,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3340,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 3350,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 14,
+        "args": [
+          12
+        ]
+      },
+      {
+        "offset": 3354,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 3356,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 3360,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 3370,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 3380,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          349,
+          288,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 3390,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3400,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3410,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 3420,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 3422,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 3426,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 3436,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 3446,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 3456,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 3462,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 3472,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3482,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 3492,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 3502,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3512,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          205,
+          84,
+          29,
+          2
+        ]
+      },
+      {
+        "offset": 3522,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          234,
+          142,
+          23,
+          2
+        ]
+      },
+      {
+        "offset": 3532,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          225,
+          111,
+          19,
+          2
+        ]
+      },
+      {
+        "offset": 3542,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          274,
+          118,
+          24,
+          2
+        ]
+      },
+      {
+        "offset": 3552,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 14,
+        "args": [
+          12
+        ]
+      },
+      {
+        "offset": 3556,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 3558,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 3562,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 3572,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 3582,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 3592,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 3598,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 3608,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3618,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 3628,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 3638,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3648,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          205,
+          84,
+          29,
+          2
+        ]
+      },
+      {
+        "offset": 3658,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          234,
+          142,
+          23,
+          2
+        ]
+      },
+      {
+        "offset": 3668,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          228,
+          111,
+          20,
+          2
+        ]
+      },
+      {
+        "offset": 3678,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          271,
+          120,
+          25,
+          2
+        ]
+      },
+      {
+        "offset": 3688,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 3690,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 3694,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 3704,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 3714,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 3724,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 3730,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 3740,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3750,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 3760,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 3770,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3780,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          205,
+          84,
+          29,
+          2
+        ]
+      },
+      {
+        "offset": 3790,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          234,
+          142,
+          23,
+          2
+        ]
+      },
+      {
+        "offset": 3800,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          231,
+          111,
+          21,
+          2
+        ]
+      },
+      {
+        "offset": 3810,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          256,
+          119,
+          26,
+          2
+        ]
+      },
+      {
+        "offset": 3820,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 3822,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 3826,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 3836,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 3846,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 3856,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 3862,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 3872,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3882,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 3892,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 3902,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 3912,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          205,
+          84,
+          29,
+          2
+        ]
+      },
+      {
+        "offset": 3922,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          234,
+          142,
+          23,
+          2
+        ]
+      },
+      {
+        "offset": 3932,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          236,
+          109,
+          22,
+          2
+        ]
+      },
+      {
+        "offset": 3942,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          262,
+          120,
+          27,
+          2
+        ]
+      },
+      {
+        "offset": 3952,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          15,
+          15
+        ]
+      },
+      {
+        "offset": 3958,
+        "opcode": "A0A4",
+        "command": "DRAW_LINE",
+        "tag": 14,
+        "args": [
+          262,
+          116,
+          262,
+          123
+        ]
+      },
+      {
+        "offset": 3968,
+        "opcode": "A0A4",
+        "command": "DRAW_LINE",
+        "tag": 14,
+        "args": [
+          260,
+          119,
+          266,
+          119
+        ]
+      },
+      {
+        "offset": 3978,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 14,
+        "args": [
+          90
+        ]
+      },
+      {
+        "offset": 3982,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 3984,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 3988,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 3998,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 4008,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 4014,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 4024,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 4034,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 4044,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 4054,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 4064,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          205,
+          84,
+          29,
+          2
+        ]
+      },
+      {
+        "offset": 4074,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          234,
+          142,
+          23,
+          2
+        ]
+      },
+      {
+        "offset": 4084,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          236,
+          109,
+          22,
+          2
+        ]
+      },
+      {
+        "offset": 4094,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          262,
+          120,
+          27,
+          2
+        ]
+      },
+      {
+        "offset": 4104,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 14,
+        "args": [
+          12
+        ]
+      },
+      {
+        "offset": 4108,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 4118,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 4120,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 4124,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 4134,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 4144,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 4154,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 4160,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 4170,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 4180,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 4190,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 4200,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 4210,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          205,
+          84,
+          29,
+          2
+        ]
+      },
+      {
+        "offset": 4220,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          234,
+          142,
+          23,
+          2
+        ]
+      },
+      {
+        "offset": 4230,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          231,
+          111,
+          21,
+          2
+        ]
+      },
+      {
+        "offset": 4240,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          256,
+          119,
+          26,
+          2
+        ]
+      },
+      {
+        "offset": 4250,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 4252,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 4256,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 4266,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 4276,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 4286,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 4292,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 4302,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 4312,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 4322,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 4332,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 4342,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          205,
+          84,
+          29,
+          2
+        ]
+      },
+      {
+        "offset": 4352,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          234,
+          142,
+          23,
+          2
+        ]
+      },
+      {
+        "offset": 4362,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          228,
+          111,
+          20,
+          2
+        ]
+      },
+      {
+        "offset": 4372,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          271,
+          120,
+          25,
+          2
+        ]
+      },
+      {
+        "offset": 4382,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 4384,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 4388,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 4398,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 4408,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 4418,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 4424,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 4434,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 4444,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 4454,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 4464,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 4474,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          205,
+          84,
+          29,
+          2
+        ]
+      },
+      {
+        "offset": 4484,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          234,
+          142,
+          23,
+          2
+        ]
+      },
+      {
+        "offset": 4494,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          225,
+          111,
+          19,
+          2
+        ]
+      },
+      {
+        "offset": 4504,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          274,
+          118,
+          24,
+          2
+        ]
+      },
+      {
+        "offset": 4514,
+        "opcode": "0110",
+        "command": "PURGE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 4516,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 14,
+        "args": [
+          75
+        ]
+      },
+      {
+        "offset": 4520,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 4522,
+        "opcode": "A601",
+        "command": "CLEAR_SCREEN",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 4526,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          391,
+          229,
+          15,
+          2
+        ]
+      },
+      {
+        "offset": 4536,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          164,
+          305,
+          1,
+          1
+        ]
+      },
+      {
+        "offset": 4546,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          348,
+          289,
+          5,
+          2
+        ]
+      },
+      {
+        "offset": 4556,
+        "opcode": "2002",
+        "command": "SET_COLORS",
+        "tag": 14,
+        "args": [
+          5,
+          15
+        ]
+      },
+      {
+        "offset": 4562,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          379,
+          210,
+          10,
+          10
+        ]
+      },
+      {
+        "offset": 4572,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          387,
+          221,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 4582,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          410,
+          226,
+          6,
+          6
+        ]
+      },
+      {
+        "offset": 4592,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          361,
+          186,
+          24,
+          24
+        ]
+      },
+      {
+        "offset": 4602,
+        "opcode": "A404",
+        "command": "DRAW_CIRCLE",
+        "tag": 14,
+        "args": [
+          399,
+          225,
+          8,
+          8
+        ]
+      },
+      {
+        "offset": 4612,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          205,
+          84,
+          29,
+          2
+        ]
+      },
+      {
+        "offset": 4622,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          234,
+          142,
+          23,
+          2
+        ]
+      },
+      {
+        "offset": 4632,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          225,
+          111,
+          19,
+          2
+        ]
+      },
+      {
+        "offset": 4642,
+        "opcode": "A504",
+        "command": "DRAW_SPRITE",
+        "tag": 14,
+        "args": [
+          274,
+          118,
+          24,
+          2
+        ]
+      },
+      {
+        "offset": 4652,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 4656,
+        "opcode": "0080",
+        "command": "DRAW_BACKGROUND",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 4658,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 14,
+        "args": [
+          1
+        ]
+      },
+      {
+        "offset": 4662,
+        "opcode": "0080",
+        "command": "DRAW_BACKGROUND",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 4664,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 14,
+        "args": [
+          2
+        ]
+      },
+      {
+        "offset": 4668,
+        "opcode": "0080",
+        "command": "DRAW_BACKGROUND",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 4670,
+        "opcode": "1051",
+        "command": "SET_BMP_SLOT",
+        "tag": 14,
+        "args": [
+          3
+        ]
+      },
+      {
+        "offset": 4674,
+        "opcode": "0080",
+        "command": "DRAW_BACKGROUND",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 4676,
+        "opcode": "1021",
+        "command": "SET_DELAY",
+        "tag": 14,
+        "args": [
+          0
+        ]
+      },
+      {
+        "offset": 4680,
+        "opcode": "0110",
+        "command": "PURGE",
+        "tag": 14,
+        "args": []
+      },
+      {
+        "offset": 4682,
+        "opcode": "0FF0",
+        "command": "UPDATE",
+        "tag": 14,
+        "args": []
+      }
+    ]
+  }
+}

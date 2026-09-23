@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SMGLIMSE.BMP",
+  "frame": "014",
+  "version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "status": "blocked",
+  "output_returned": false,
+  "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/014-v1-request.json",
+  "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 68e96b61-1e5a-4cdd-9c62-4c524d568802.\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"other\\\"\\n      ]\\n    }\\n  }\\n}\")",
+  "request_id": "68e96b61-1e5a-4cdd-9c62-4c524d568802",
+  "moderation_stage": "output",
+  "categories": [
+    "other"
+  ]
+}

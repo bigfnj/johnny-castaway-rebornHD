@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "model": "black-forest-labs/FLUX.2-klein-4B",
+  "tests_completed": 5,
+  "runs": [
+    {
+      "run": "006-direct-v1",
+      "execution": "image_returned_needs_visual_review",
+      "visual_result": "pose_correction_failed",
+      "assessment": "The local model preserved the character, but kept the rejected long foreground thigh and far-right knee. The requested knee below the belly button did not move. This is a failed pose correction, not a replacement sprite.",
+      "output_sha256": "07adb4cb05a81f180d82f3301b8d64672ddde5b6fcb59fb00d900ac6992201b3",
+      "inference_seconds": 79.244,
+      "process_seconds_excluding_imports": 83.204,
+      "peak_torch_allocated_gib": 8.665,
+      "peak_torch_reserved_gib": 8.939,
+      "output_mode": "RGB"
+    },
+    {
+      "run": "006-joint-path-v1",
+      "execution": "image_returned_needs_visual_review",
+      "visual_result": "pose_correction_failed",
+      "assessment": "Adding the original sprite and explicit hip-to-knee-to-ankle directions still retained the long thigh and the knee too far to the right. The local output does not satisfy the user's requested knee position.",
+      "output_sha256": "3227be44fce6cffd1483b7697bbdaa4f76c9acd801b552b2c59dde3d715af056",
+      "inference_seconds": 96.166,
+      "process_seconds_excluding_imports": 100.227,
+      "peak_torch_allocated_gib": 8.665,
+      "peak_torch_reserved_gib": 9.232,
+      "output_mode": "RGB"
+    },
+    {
+      "run": "009-from-008-v1",
+      "execution": "image_returned_needs_visual_review",
+      "visual_result": "partial_edit",
+      "assessment": "The local model removed the bottle and preserved the accepted folded-leg connection. The hand movement and extension are less distinct than the successful built-in009v3. This RGB trial is retained for comparison; the built-in transparent candidate is selected for the art review.",
+      "output_sha256": "822a0caf08f382c157138f650e5fed1812cd98a2ad6a0edd1796205d542e5290",
+      "inference_seconds": 114.748,
+      "process_seconds_excluding_imports": 119.351,
+      "peak_torch_allocated_gib": 8.595,
+      "peak_torch_reserved_gib": 8.857,
+      "output_mode": "RGB"
+    },
+    {
+      "run": "004-hip-v1",
+      "execution": "image_returned_needs_visual_review",
+      "visual_result": "pose_correction_failed",
+      "assessment": "The oversized side-facing near hip, exposed lower swimsuit and far upper-thigh wedge remain. The far lower leg is less distinct, leaving only one clearly readable foot. The requested pelvis and thigh overlap was not achieved.",
+      "output_sha256": "1853a2c82c6e9cbab552d7d23417c6af8e96f1be31180a59fdc4b7177235d249",
+      "inference_seconds": 117.967,
+      "process_seconds_excluding_imports": 123.464,
+      "peak_torch_allocated_gib": 8.595,
+      "peak_torch_reserved_gib": 8.918,
+      "output_mode": "RGB"
+    },
+    {
+      "run": "004-original-pose-v1",
+      "execution": "image_returned_needs_visual_review",
+      "visual_result": "pose_correction_failed",
+      "assessment": "Two distinct feet are visible, but the oversized side-facing near hip, exposed lower swimsuit and far upper-thigh wedge remain. The original-first reference order did not reconstruct the requested viewer-facing pelvis and near-thigh overlap.",
+      "output_sha256": "7280c246acf43b8551985cf9607715a8f9a3c5d82904ecfe814149e9c9d59b81",
+      "inference_seconds": 228.172,
+      "process_seconds_excluding_imports": 231.966,
+      "peak_torch_allocated_gib": 8.595,
+      "peak_torch_reserved_gib": 9.066,
+      "output_mode": "RGB"
+    }
+  ],
+  "method": "One sequential local inference per saved prompt, each in a separate process, 1024px maximum edge, 4 steps, BF16, model CPU offload, seed7. Timings describe these trials only, not a performance comparison.",
+  "conclusion": "The isolated local environment executes reference edits. Both 006 trials failed the knee-position requirement; 009 removed the bottle but its pose changes were subtle. Both 004 trials failed the hip-integration requirement. The six approved built-in drawings remain selected; no current004 replacement is selected.",
+  "all_inference_processes_completed": true,
+  "gpu_observation_after_final_process_exit": "name, memory.used [MiB], memory.free [MiB]\nNVIDIA GeForce RTX 4090, 2579 MiB, 21564 MiB",
+  "appearance_approval": null,
+  "production_integrated": false
+}

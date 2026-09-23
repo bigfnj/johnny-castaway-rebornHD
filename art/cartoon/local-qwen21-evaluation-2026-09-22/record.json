@@ -1,0 +1,414 @@
+{
+  "status": "image_returned_needs_visual_review",
+  "model": "Qwen-Image-2.1",
+  "run_id": "preserver-v2",
+  "appearance_approval": null,
+  "production_integrated": false,
+  "memory_measurement": "Sampled nvidia-smi total GPU usage includes Windows and other processes.",
+  "download_provenance": {
+    "repository": "Comfy-Org/Qwen-Image-2.1",
+    "revision": "5dc5850eb514a3685f6a03a2641728a8f7549c69",
+    "files": [
+      {
+        "file": "D:\\.ai-work\\models\\Qwen-Image-2.1\\diffusion_models\\qwen_image_2.1_int8_convrot.safetensors",
+        "sha256": "cb74113cb03faecd79611b01fd7fd642f0aa60d6f0b95086abee214d75eaa57d",
+        "bytes": 7256783064,
+        "download_and_verify_seconds": 52.24
+      },
+      {
+        "file": "D:\\.ai-work\\models\\Qwen-Image-2.1\\text_encoders\\qwen3vl_8b_int8_convrot.safetensors",
+        "sha256": "8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f",
+        "bytes": 9350798360,
+        "download_and_verify_seconds": 111.97
+      },
+      {
+        "file": "D:\\.ai-work\\models\\Qwen-Image-2.1\\vae\\qwen_image_2.1_vae_bf16.safetensors",
+        "sha256": "bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9",
+        "bytes": 675509688,
+        "download_and_verify_seconds": 19.95
+      }
+    ]
+  },
+  "settings": {
+    "resolution": 1024,
+    "steps": 25,
+    "seed": 7,
+    "cfg": 1.0,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "reserve_vram_gib": 4
+  },
+  "gpu_before": {
+    "used_mib": 2520,
+    "free_mib": 21623,
+    "utilization_percent": 2
+  },
+  "comfy_commit": "95539f56344958339e39b7582a476267d489b0ee",
+  "server_command": [
+    "D:\\.ai-work\\venvs\\johnny-qwen21\\Scripts\\python.exe",
+    "-u",
+    "D:\\.ai-work\\ops\\comfyui-qwen21\\main.py",
+    "--listen",
+    "127.0.0.1",
+    "--port",
+    "8191",
+    "--disable-auto-launch",
+    "--disable-all-custom-nodes",
+    "--disable-api-nodes",
+    "--use-pytorch-cross-attention",
+    "--reserve-vram",
+    "4",
+    "--cache-none",
+    "--models-directory",
+    "D:\\.ai-work\\models\\Qwen-Image-2.1",
+    "--input-directory",
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\inputs",
+    "--output-directory",
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\runs\\preserver-v2\\comfy-output"
+  ],
+  "server_pid": 21856,
+  "system_stats": {
+    "system": {
+      "os": "win32",
+      "ram_total": 68636581888,
+      "ram_free": 34980958208,
+      "comfyui_version": "0.37.0",
+      "required_frontend_version": "1.53.6",
+      "installed_templates_version": "0.11.68",
+      "required_templates_version": "0.11.68",
+      "comfy_package_versions": [
+        {
+          "name": "comfyui-frontend-package",
+          "installed": "1.53.6",
+          "required": "1.53.6"
+        },
+        {
+          "name": "comfyui-workflow-templates",
+          "installed": "0.11.68",
+          "required": "0.11.68"
+        },
+        {
+          "name": "comfyui-embedded-docs",
+          "installed": "0.5.12",
+          "required": "0.5.12"
+        },
+        {
+          "name": "comfy-kitchen",
+          "installed": "0.2.35",
+          "required": "0.2.35"
+        },
+        {
+          "name": "comfy-aimdo",
+          "installed": "0.5.5",
+          "required": "0.5.5"
+        }
+      ],
+      "python_version": "3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]",
+      "pytorch_version": "2.13.0+cu130",
+      "embedded_python": false,
+      "deploy_environment": "local-git",
+      "argv": [
+        "D:\\.ai-work\\ops\\comfyui-qwen21\\main.py",
+        "--listen",
+        "127.0.0.1",
+        "--port",
+        "8191",
+        "--disable-auto-launch",
+        "--disable-all-custom-nodes",
+        "--disable-api-nodes",
+        "--use-pytorch-cross-attention",
+        "--reserve-vram",
+        "4",
+        "--cache-none",
+        "--models-directory",
+        "D:\\.ai-work\\models\\Qwen-Image-2.1",
+        "--input-directory",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\inputs",
+        "--output-directory",
+        "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\runs\\preserver-v2\\comfy-output"
+      ]
+    },
+    "devices": [
+      {
+        "name": "cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync",
+        "type": "cuda",
+        "index": 0,
+        "vram_total": 25756565504,
+        "vram_free": 24159191040,
+        "torch_vram_total": 0,
+        "torch_vram_free": 0
+      }
+    ]
+  },
+  "submission": {
+    "prompt_id": "ff5486db-39d1-4994-bd4f-e0bb78dc1c0c",
+    "number": 0,
+    "node_errors": {}
+  },
+  "startup_seconds": 14.3,
+  "gpu_samples": [
+    {
+      "seconds": 0.0,
+      "used_mib": 2853,
+      "free_mib": 21290,
+      "utilization_percent": 2
+    },
+    {
+      "seconds": 5.09,
+      "used_mib": 3081,
+      "free_mib": 21062,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 10.12,
+      "used_mib": 4048,
+      "free_mib": 20095,
+      "utilization_percent": 6
+    },
+    {
+      "seconds": 15.19,
+      "used_mib": 4851,
+      "free_mib": 19292,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 20.27,
+      "used_mib": 5434,
+      "free_mib": 18709,
+      "utilization_percent": 60
+    },
+    {
+      "seconds": 25.31,
+      "used_mib": 5892,
+      "free_mib": 18251,
+      "utilization_percent": 17
+    },
+    {
+      "seconds": 30.36,
+      "used_mib": 6188,
+      "free_mib": 17955,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 35.42,
+      "used_mib": 6873,
+      "free_mib": 17270,
+      "utilization_percent": 33
+    },
+    {
+      "seconds": 40.48,
+      "used_mib": 7397,
+      "free_mib": 16746,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 45.55,
+      "used_mib": 7969,
+      "free_mib": 16174,
+      "utilization_percent": 34
+    },
+    {
+      "seconds": 50.61,
+      "used_mib": 8411,
+      "free_mib": 15732,
+      "utilization_percent": 2
+    },
+    {
+      "seconds": 55.66,
+      "used_mib": 8760,
+      "free_mib": 15383,
+      "utilization_percent": 0
+    },
+    {
+      "seconds": 60.73,
+      "used_mib": 9348,
+      "free_mib": 14795,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 65.8,
+      "used_mib": 9942,
+      "free_mib": 14201,
+      "utilization_percent": 2
+    },
+    {
+      "seconds": 70.86,
+      "used_mib": 10379,
+      "free_mib": 13764,
+      "utilization_percent": 10
+    },
+    {
+      "seconds": 75.91,
+      "used_mib": 10767,
+      "free_mib": 13376,
+      "utilization_percent": 2
+    },
+    {
+      "seconds": 80.95,
+      "used_mib": 11466,
+      "free_mib": 12677,
+      "utilization_percent": 2
+    },
+    {
+      "seconds": 86.02,
+      "used_mib": 12107,
+      "free_mib": 12036,
+      "utilization_percent": 87
+    },
+    {
+      "seconds": 91.06,
+      "used_mib": 12587,
+      "free_mib": 11556,
+      "utilization_percent": 16
+    },
+    {
+      "seconds": 96.14,
+      "used_mib": 12108,
+      "free_mib": 12035,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 101.19,
+      "used_mib": 12822,
+      "free_mib": 11321,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 106.25,
+      "used_mib": 14266,
+      "free_mib": 9877,
+      "utilization_percent": 3
+    },
+    {
+      "seconds": 111.3,
+      "used_mib": 15219,
+      "free_mib": 8924,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 116.34,
+      "used_mib": 16264,
+      "free_mib": 7879,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 121.42,
+      "used_mib": 17224,
+      "free_mib": 6919,
+      "utilization_percent": 3
+    },
+    {
+      "seconds": 126.5,
+      "used_mib": 18312,
+      "free_mib": 5831,
+      "utilization_percent": 4
+    },
+    {
+      "seconds": 131.55,
+      "used_mib": 19537,
+      "free_mib": 4606,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 136.61,
+      "used_mib": 20629,
+      "free_mib": 3514,
+      "utilization_percent": 0
+    },
+    {
+      "seconds": 141.69,
+      "used_mib": 21682,
+      "free_mib": 2461,
+      "utilization_percent": 3
+    },
+    {
+      "seconds": 146.73,
+      "used_mib": 22823,
+      "free_mib": 1320,
+      "utilization_percent": 5
+    },
+    {
+      "seconds": 151.78,
+      "used_mib": 23079,
+      "free_mib": 1064,
+      "utilization_percent": 2
+    },
+    {
+      "seconds": 156.84,
+      "used_mib": 22966,
+      "free_mib": 1177,
+      "utilization_percent": 93
+    },
+    {
+      "seconds": 161.92,
+      "used_mib": 22967,
+      "free_mib": 1176,
+      "utilization_percent": 100
+    },
+    {
+      "seconds": 166.97,
+      "used_mib": 18165,
+      "free_mib": 5978,
+      "utilization_percent": 1
+    },
+    {
+      "seconds": 172.02,
+      "used_mib": 17653,
+      "free_mib": 6490,
+      "utilization_percent": 2
+    },
+    {
+      "seconds": 177.08,
+      "used_mib": 3006,
+      "free_mib": 21137,
+      "utilization_percent": 2
+    }
+  ],
+  "output": {
+    "path": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\runs\\preserver-v2\\output-raw.png",
+    "mode": "RGBA",
+    "size": [
+      1952,
+      544
+    ],
+    "sha256": "eb58bc73885d94b7f6f05347ecc43867e993249e787aa5f9a97e6410c8dd4a0a",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  "inference_seconds": 177.34,
+  "process_seconds": 191.92,
+  "gpu_after": {
+    "used_mib": 2506,
+    "free_mib": 21637,
+    "utilization_percent": 1
+  },
+  "peak_total_gpu_used_mib": 23079,
+  "server_stopped": true,
+  "original_art_verified_unchanged": [
+    {
+      "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\mermaid-gifts-and-glimpses-batch-v1\\reference\\original\\SMGIFT.BMP\\039.png",
+      "sha256": "3ed696a8619166b0a45cc87bb74f32e71a2d09db761d766657e384093aa26194"
+    },
+    {
+      "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\review-corrections-2026-09-22\\preserver\\041\\candidate-v1.png",
+      "sha256": "f7b45401b398f5ec0ad3865e99f33f251c89e8e13ebcf5db395406b7811e3042"
+    },
+    {
+      "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\review-corrections-2026-09-22\\preserver\\039\\candidate-v1.png",
+      "sha256": "205c3ed2eb158b5ec38fb42c4a92985620f8c4124a8f9e4ba0364a6f7cbb9aaf"
+    }
+  ],
+  "visual_review": {
+    "status": "assistant_reviewed_user_review_pending",
+    "summary": "Prompt plus two references and native transparency work. This first test is below the approved drawing in visual quality.",
+    "observations": [
+      "The white ring, yellow rope, hand-only scene and low waterline viewpoint are recognized.",
+      "Browser compositing confirms transparent background on checkerboard, dark and white. Purple hidden RGB seen in the raw-image inspector is not a visible background.",
+      "Ring and waterline retain stair-step geometry from the pixel sprite; cyan dashes are thick and fragmented.",
+      "The hand is larger and drapes over the front rim; rope loops are irregular compared with the approved039 drawing."
+    ],
+    "appearance_approved_by_user": false
+  }
+}

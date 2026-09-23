@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "visual_qa_pass",
+  "assessment": "The final direct combination has a continuous waist seam and restored bracelet contour. No visible gaps, doubled outlines, donor-arm fragments or cropped head, hands, bottle or legs were found in the inspected full sprite and light-gray alpha seam view.",
+  "output": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v1/004-composite-v1.png",
+    "sha256": "a91bc9b7474db0c7f492ffdb0f2530fae465339a43c54e028f2ef721330a6844",
+    "canvas": [
+      1642,
+      958
+    ]
+  },
+  "review_scope": "Latest user-directed non-generative combination of004v3 upper body and003v2 hips/both legs. This review does not apply the superseded generative hip-redraw requirement.",
+  "sources": [
+    {
+      "role": "upper body, head, hands and bottle",
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-generated-v3.png",
+      "sha256": "e75955f44c7f4941fc8d0d004931fc5dcf9e49b4e8457aea3c589fb1ff5ca12b"
+    },
+    {
+      "role": "hips and both legs",
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+      "sha256": "663a7b6f7efa233e78e3db6feedee031eb31a6cb6d468e216e6f92a6c7fbeb89"
+    }
+  ],
+  "bracelet_check": {
+    "comparison": "Pixels previously opaque in004v3 and transparent in composite-draft-v4 within x504..524,y793..814.",
+    "previously_missing_pixels": 84,
+    "final_rgba_differences_from_original": 0,
+    "result": "All84 restored exactly."
+  },
+  "inspection": {
+    "full_sprite": true,
+    "waist_crop": [
+      470,
+      590,
+      820,
+      850
+    ],
+    "waist_crop_background_rgb": [
+      225,
+      225,
+      225
+    ],
+    "files_modified_for_inspection": false
+  },
+  "limitations": "Bounded static visual and84-pixel regression check only. No independent whole-mask pixel-identity check, runtime fit or motion test.",
+  "appearance_approval": null,
+  "production_integrated": false,
+  "native_motion_checked": false
+}

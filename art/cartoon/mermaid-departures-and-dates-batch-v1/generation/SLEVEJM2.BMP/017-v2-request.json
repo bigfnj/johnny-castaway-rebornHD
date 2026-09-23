@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Fix only arm anatomy in image 1 using original image 2 as the pose guide. There must be EXACTLY TWO independently connected arms. NEAR arm: starts at shoulder on image-left, upper arm drops to elbow at image-left waist, then its long forearm extends diagonally down-right to the low open hand; preserve this path. FAR arm: starts at shoulder on image-right behind the chest, upper arm drops to its own elbow at image-right waist, forearm rises diagonally inward/up-left to the hand near the collarbone. The raised hand must connect to THAT FAR elbow, never the near elbow. Remove the erroneous short forearm branching upward from the near elbow. Hide the middle of the far forearm naturally behind the torso as needed, with no detached stump or extra limb. Preserve head, hair, torso, green swimsuit, waterline, lower extended hand position and style. Actual transparent RGBA, full padding.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/017-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM2.BMP/017.png"
+    ]
+  }
+}

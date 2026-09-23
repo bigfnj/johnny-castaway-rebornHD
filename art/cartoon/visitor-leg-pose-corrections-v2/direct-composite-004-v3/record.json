@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "resource": "SSUZY1.BMP",
+  "frame": "004",
+  "version": 3,
+  "tool": "Pillow",
+  "mode": "direct-png-composite",
+  "requested_change": "Smooth the circled protruding belly edge into an inward curve, retaining the current proportions and stacked-leg pose.",
+  "method": "Direct contour refinement of composite v2. Trim only the belly silhouette with an antialiased inward curve, redraw its short outline, and close the tiny forearm-join transparency gap. Every pixel outside the recorded belly box is unchanged.",
+  "output": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v3/004-composite-v3.png",
+    "sha256": "d53304f654f59676097bbbb15add2d54e8f503cd173511e59475c5cf5d2c957d"
+  },
+  "request": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v3/request.json",
+    "sha256": "bd61be7b5a1584fa33001bc4ca606f78d083fd99917da1f7b8cbbcdc72f798fd"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v2/004-composite-v2.png",
+      "sha256": "2d6a7257197339e2d000cc6ed1862d190ba2186434e329c725b4c0c9d59d6bfd"
+    }
+  ],
+  "previous_candidate_record": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v2/record.json",
+    "sha256": "11cf3d0ec8e80082c43d00fb1f6c6b6c9476383ceeb914b98921aaff755ede16"
+  },
+  "image": {
+    "canvas": [
+      1592,
+      988
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha8_bounds": [
+      91,
+      19,
+      1556,
+      885
+    ]
+  },
+  "pixel_checks": {
+    "edit_box": [
+      410,
+      650,
+      642,
+      768
+    ],
+    "changed_pixels": 6062,
+    "actual_change_bounds": [
+      412,
+      667,
+      639,
+      753
+    ],
+    "outside_box_changed": 0
+  },
+  "build_script": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v3/build-belly-curve.py",
+    "sha256": "c4aa5d97d295361db89868c1715d1a9ede0ba78a2b3fbe8dae58d515409c697b"
+  },
+  "appearance_approval": null,
+  "production_integrated": false,
+  "native_motion_checked": false
+}

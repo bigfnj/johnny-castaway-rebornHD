@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit.\nEdit Image 1, the existing frame 003 cartoon sprite. Restore the missing sunblock bottle in her hand. Image 2 is only a reference for the small amber/brown sunscreen bottle and yellow nozzle, matching this adjacent frame's prop; do not copy Image 2's body or leg pose.\nThe same adult redheaded beach visitor in her pink bathing suit is reclining exactly as in Image 1. At the existing low hand position near the foreground supporting forearm, her anatomical right hand (the hand toward the left side of the image) must visibly grip the small sunscreen bottle naturally. Keep it close to her hands and torso, ready to dispense in the next frame; no lotion stream yet. Adjust only the fingers and wrist as needed to hold it. The other hand and both elbows stay low in their existing resting arrangement. Do not place this bottle on the ground; this frame is the hand-held phase.\nPreserve Image 1's face, hairstyle, glasses, jewelry, smile, colors, crisp black outlines, cel shading, torso, hip, legs, overlap, knees, feet, and entire reclining silhouette. This is a prop-continuity correction, not a new pose. Keep pink swimsuit coverage unchanged. No other object additions, no detached extra hands, no text.\nOutput one complete clean game sprite on genuine transparent alpha, not a checkerboard. Keep clear margins around the whole character.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-expression-corrections-v1/generation/SSUZY1.BMP/004-generated-v2.png"
+    ]
+  }
+}

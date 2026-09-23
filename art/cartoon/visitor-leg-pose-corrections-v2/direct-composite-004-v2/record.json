@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "resource": "SSUZY1.BMP",
+  "frame": "004",
+  "version": 2,
+  "tool": "Pillow",
+  "mode": "direct-png-composite",
+  "method": "Authorized direct combination of 004 v2 upper body and approved 003 v2 hips and legs. Both sources retain native scale. Lower body is translated (-140,+20), without rotation or limb deformation. A short waist join beneath the foreground forearm is reconstructed in the existing skin palette and outline, with a faded color seam.",
+  "output": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v2/004-composite-v2.png",
+    "sha256": "2d6a7257197339e2d000cc6ed1862d190ba2186434e329c725b4c0c9d59d6bfd"
+  },
+  "request": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v2/request.json",
+    "sha256": "f01f81d81ec424bd3da14b5a32970e8fceefc65c8ef0d5ba7ebbf1e9ff90972c"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SSUZY1.BMP/004-generated-v2.png",
+      "sha256": "f09937bbfa7f6c5e0ff0d34ccc5cacf04a456eb6f0a9b5ff0f50cabf42a7c173"
+    },
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+      "sha256": "663a7b6f7efa233e78e3db6feedee031eb31a6cb6d468e216e6f92a6c7fbeb89"
+    }
+  ],
+  "transforms": {
+    "upper": {
+      "scale": 1.0,
+      "translation": [
+        0,
+        0
+      ],
+      "rotation_degrees": 0
+    },
+    "lower": {
+      "scale": 1.0,
+      "translation": [
+        -140,
+        20
+      ],
+      "rotation_degrees": 0
+    }
+  },
+  "waist_join_region": [
+    390,
+    640,
+    640,
+    790
+  ],
+  "image": {
+    "canvas": [
+      1592,
+      988
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha8_bounds": [
+      91,
+      19,
+      1556,
+      885
+    ],
+    "edge_alpha_max": 0
+  },
+  "pixel_checks": [
+    {
+      "region": "visible 004 head, upper body, arms, hands and bottle retained by upper mask (alpha at least 8)",
+      "visible_pixels_checked": 277653,
+      "different_pixels": 0
+    },
+    {
+      "region": "003 folded lower leg and feet, source box [880,690,1700,890]",
+      "visible_pixels_checked": 68551,
+      "different_pixels": 0
+    }
+  ],
+  "build_script": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v2/build-composite.py",
+    "sha256": "944dd0e2747d1bce3ff76344a108cdded5305477bf71ee83b0fc81bb3a0a97b8"
+  },
+  "masks": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v2/upper-mask.png",
+      "sha256": "688604b81b9fbf6117d33c9531a8f9a102b9fdf5b8b568bf1d66c71a644537bb"
+    },
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v2/lower-mask.png",
+      "sha256": "cc284251268f680624cd3768d18bb172daded0647c83f7facd0406aa242db50a"
+    }
+  ],
+  "appearance_approval": null,
+  "production_integrated": false,
+  "native_motion_checked": false
+}

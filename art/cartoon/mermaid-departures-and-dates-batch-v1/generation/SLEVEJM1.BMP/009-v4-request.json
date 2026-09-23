@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM1.BMP",
+  "frame": "009",
+  "version": 4,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Remove forehead extra fin and restore waterline occlusion of near fin",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. This is a cartoon shark sprite at the water surface. Make exactly two small anatomy/occlusion fixes while preserving the rest of this image. (1) Remove the tiny gray horn/fin on the TOP OF THE FOREHEAD near x=845,y=95. Smooth the skull contour across that spot. Retain the large normal dorsal fin farther BACK on the shark's upper-left side. (2) The near pectoral fin hanging on screen-left currently continues BELOW the cyan-white waterline into empty transparency. Remove that below-water tip. Its visible fin must end behind the water ripple at the water surface; keep the ripple line continuous in front. The sprite is surface-only and shows no submerged body parts. Preserve the far pectoral fin extended nearly horizontally to screen-right beneath the mouth, compact face, gray skin, gills, ivory underside, sly brow, sharp teeth, head yaw, body pose, scale and remaining water. Exactly one dorsal fin and two pectoral fins should remain, with the near fin occluded by water. Genuine transparent RGBA outside the sprite, no background, no text.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM1.BMP/009-generated-v3.png"
+    ]
+  }
+}

@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "scope": "Retained prior image-generation refusal audit, not a moderation appeal or native-art acceptance",
+  "baseline_commit": "4ecd33ee02455754a14957719ff0ee2b80843ff0",
+  "excluded_current_family": "art/cartoon/visitor-leg-pose-corrections-v2",
+  "conclusion": {
+    "unresolved_prior_frames": [
+      "SSUZY1.BMP-003"
+    ],
+    "additional_unresolved_prior_frames": [],
+    "all_affected_frame_statuses": "Five SSUZY1 frames and the ambiguous SBREAKUP 015/016 pair are listed below. Only SSUZY1 003 has no generated output at this baseline."
+  },
+  "method": {
+    "source": "Git-tree membership at the baseline commit; read exact baseline blobs when checked-out bytes differ. No current-family attempt is scanned.",
+    "text_extensions": [
+      ".json",
+      ".md",
+      ".txt",
+      ".log",
+      ".yaml",
+      ".yml"
+    ],
+    "text_files_scanned": 6022,
+    "json_files_scanned": 4423,
+    "search_expression": "moderation|refus(?:al|ed)|safety.system|no_image_returned|output.block|no.output",
+    "matching_text_files": 153,
+    "matching_json_files": 70,
+    "scanned_paths_sha256": "7ad9cf51ee66deba105536be847f2c777a17cdf84e61727d6ee0e1f5d3bdf11a",
+    "baseline_blob_fallback_count": 15,
+    "verification": "Pinned review rows, retained outputs, generation records and request references were read and checked against their recorded SHA256. The committed tree contains no SSUZY1 003 generated PNG."
+  },
+  "baseline_selection": {
+    "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/selected-versions.json",
+    "sha256": "8fd696d825d9b6cd786ce4deb3eba00378ba6237b9d2bea9baea7b2a38bf1b04"
+  },
+  "baseline_review_data": {
+    "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/review-data.json",
+    "sha256": "7a9aec7be030d342da18956ba9e1ee71fa4d9305f1f7669b67965f9115d660e5"
+  },
+  "baseline_scope_notes": {
+    "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/README.md",
+    "sha256": "2acd438fc7cbc2ea85f2691915d1e3a402d33bc908dadd0adcecbf7348e0431c"
+  },
+  "initial_family_summary": {
+    "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+    "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+  },
+  "historical_context_audit": {
+    "path": "art/cartoon/blocked-originals-context-v1/failure-record-audit.json",
+    "sha256": "4275250c48378afe8c7419ef34b783a469067523e92f025f439ee9e8b6baf1d1"
+  },
+  "actual_attempt_evidence": [
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/000-v1-failure.json",
+      "sha256": "7e02d4c6979c7c9a054ce26b2d3636f9f11b66754d39e5716b0bf6568d7c1437",
+      "recorded_status": "no_image_returned",
+      "classification": "Recorded image-generation output block; no image returned."
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/002-v1-failure.json",
+      "sha256": "2f39211ca1e32e4e68e6279ac44961c17094ebdc68c1bcf6f2469f76f1170729",
+      "recorded_status": "no_image_returned",
+      "classification": "Recorded image-generation output block; no image returned."
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/015-v1-attempt.json",
+      "sha256": "bfe292592172e4b7ea80ba6a31e661057cb2fbb139eedd71f08171e08df09ec9",
+      "recorded_status": "no_output_returned",
+      "classification": "Output moderation error, other category; parallel 015/016 member not identified."
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/016-v1-attempt.json",
+      "sha256": "66016d2795e49972fd2c56b61bfb9f466e29d9186b5baed8d0fb667c952aece5",
+      "recorded_status": "no_output_returned",
+      "classification": "Output moderation error, other category; parallel 015/016 member not identified."
+    },
+    {
+      "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/001-v1-failure.json",
+      "sha256": "866971ad448671cf872038503e2316f40dbdce70534b69c53105fc8589f30650",
+      "recorded_status": "no_image_returned",
+      "classification": "Output moderation error, sexual category; no image returned."
+    },
+    {
+      "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/003-v1-failure.json",
+      "sha256": "6b94df31efd5998901c486fe2186d8d8c6e84199212fa9c1de38ea49ddc5ae0c",
+      "recorded_status": "no_image_returned",
+      "classification": "Output moderation error, sexual category; no image returned."
+    },
+    {
+      "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/003-v2-failure.json",
+      "sha256": "d5aca66b7b75527903514bbd68600ae593b01c7a9189bdd7ddfb96f6102e39c0",
+      "recorded_status": "no_image_returned",
+      "classification": "Output moderation error, sexual category; no image returned."
+    },
+    {
+      "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-v1-failure.json",
+      "sha256": "2c92537d16fcb1ab12a99eb04e67c108271d9246dad673e7dc2f6968d8be5eb4",
+      "recorded_status": null,
+      "classification": "Output moderation error, sexual category; no image returned."
+    }
+  ],
+  "frame_statuses": [
+    {
+      "resource": "SSUZY1.BMP",
+      "frame": "000",
+      "status_at_baseline": "recovered",
+      "reason": "The original v1 call returned no image. Original v2 succeeded, and the later fix pass also has a successful selected v1.",
+      "failure_evidence_paths": [
+        "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/000-v1-failure.json"
+      ],
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/000.png",
+        "sha256": "08500dcc11999642029ffb1215b1d4644ceb7d125e77c00695ec8a30ab787438"
+      },
+      "selected_output": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/000-generated-v1.png",
+        "sha256": "c10f9ac77f3e859971d785b907a0bbce5c4808efbbcf41ab39254766e74392ea"
+      },
+      "generation_record": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/000-record-v1.json",
+        "sha256": "dd86cefe0b5a5c97bd2073b83f9aa7ccd2799b54b1bca97c97fb558b8b8b44e7"
+      }
+    },
+    {
+      "resource": "SSUZY1.BMP",
+      "frame": "001",
+      "status_at_baseline": "retained_successful_prior_drawing",
+      "reason": "The newer v1 call failed, but the earlier successful v1 drawing is explicitly retained in the baseline review.",
+      "failure_evidence_paths": [
+        "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/001-v1-failure.json"
+      ],
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/001.png",
+        "sha256": "545ece2029d98f488c1ac0516d79472f55fd5cd55eec130b4a622daebf5f4109"
+      },
+      "selected_output": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+        "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16"
+      },
+      "generation_record": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-record-v1.json",
+        "sha256": "6fb734501f918b8e2ed56b3b6acfe408864efa804a08f073cdd79f69539f9898"
+      }
+    },
+    {
+      "resource": "SSUZY1.BMP",
+      "frame": "002",
+      "status_at_baseline": "recovered",
+      "reason": "Original v1 and v2 returned no image; the later fix pass selected a successful v1.",
+      "failure_evidence_paths": [
+        "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/002-v1-failure.json",
+        "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json"
+      ],
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/002.png",
+        "sha256": "7ff6ef17abe00f2d7e7896c0c16031b40ca3ba2b915b797d261a795c211fd0be"
+      },
+      "selected_output": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/002-generated-v1.png",
+        "sha256": "c8847edc308c165fc2d61fa21d0b69ca895dcb77ba03d3b49c1f63b0230cdabf"
+      },
+      "generation_record": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/002-record-v1.json",
+        "sha256": "bae7f6474305b0ced005179d843bcc9745315e5556f8b2de6bb94d066593f18f"
+      }
+    },
+    {
+      "resource": "SSUZY1.BMP",
+      "frame": "003",
+      "status_at_baseline": "unresolved_no_generated_output",
+      "reason": "The original v1 and later fix-pass v1/v2 returned no image. The baseline review is original-only; the baseline Git tree has no SSUZY1 003 generated PNG.",
+      "failure_evidence_paths": [
+        "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+        "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/003-v1-failure.json",
+        "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/003-v2-failure.json"
+      ],
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/003.png",
+        "sha256": "ebb2f6be0b676de5035e85f41693419019c0fe7923049b83c23dd06b5d344ae4"
+      },
+      "selected_output": null
+    },
+    {
+      "resource": "SSUZY1.BMP",
+      "frame": "009",
+      "status_at_baseline": "recovered",
+      "reason": "The original family never ran its saved request. The later fix-pass v1 was blocked; its v2 edit from the successful 008 drawing returned an image.",
+      "failure_evidence_paths": [
+        "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-v1-failure.json"
+      ],
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/009.png",
+        "sha256": "cb836349c2e7b0345ca1e6ad0aa1906b1c6774a18fb56f4d098e3fdd3a6aa6ab"
+      },
+      "selected_output": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-generated-v2.png",
+        "sha256": "81133f52b9aae04375d004924ca33c1e077f791b3ec66a8caf8f89af4bec0bde"
+      },
+      "generation_record": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-record-v2.json",
+        "sha256": "b6ea426a70c0c513253827197b4fbe4c0f76020126ea744124d736881add1373"
+      }
+    },
+    {
+      "resource": "SBREAKUP.BMP",
+      "frame": "015",
+      "status_at_baseline": "recovered",
+      "reason": "One parallel pair reported an output moderation error without identifying its failed member; neither result returned. Separate v2 calls succeeded for both, followed by successful new v1 drawings in the later fix pass.",
+      "failure_evidence_paths": [
+        "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/015-v1-attempt.json"
+      ],
+      "first_recovery_record": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/015-record-v2.json",
+        "sha256": "ea543f4a78aac8389da9d081b0f84d7e0552e14545c684a8a1224c1ecb31ea46"
+      },
+      "first_recovery_output": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/015-generated-v2.png",
+        "sha256": "1a932485c28e564a485cd1ec922501b247208e7a3a07aaa0d44198540ad30dc1"
+      },
+      "selected_output": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SBREAKUP.BMP/015-generated-v1.png",
+        "sha256": "80c40ae2b971e69332c6aea1acfabe9c1b0bf0de1b1ad2550733d536290bca8a"
+      },
+      "generation_record": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SBREAKUP.BMP/015-record-v1.json",
+        "sha256": "53ea37731018a8638cd7d7379eceae9e1abc17c346149abdd787d17e5620bd12"
+      }
+    },
+    {
+      "resource": "SBREAKUP.BMP",
+      "frame": "016",
+      "status_at_baseline": "recovered",
+      "reason": "One parallel pair reported an output moderation error without identifying its failed member; neither result returned. Separate v2 calls succeeded for both, followed by successful new v1 drawings in the later fix pass.",
+      "failure_evidence_paths": [
+        "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/016-v1-attempt.json"
+      ],
+      "first_recovery_record": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/016-record-v2.json",
+        "sha256": "2784a447a02e3639dbb3e968513b94e0d6875ec5e2d53b0c05a98541069d5695"
+      },
+      "first_recovery_output": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/016-generated-v2.png",
+        "sha256": "21a27d64e37124acf1aec645973664259ef27fa4de24707ed50030b85b7f3254"
+      },
+      "selected_output": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SBREAKUP.BMP/016-generated-v1.png",
+        "sha256": "c12c0ba7f426b94943edd2712923833801b81fb2810b4da5f7cd166c674f07e2"
+      },
+      "generation_record": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SBREAKUP.BMP/016-record-v1.json",
+        "sha256": "54c1efff8e3f2da9d074da70cb9d96a964a8c1a1dc2da4add29c60fca88314e7"
+      }
+    }
+  ],
+  "initially_deferred_not_refused": {
+    "resource": "SSUZY1.BMP",
+    "frames": [
+      "004",
+      "005",
+      "006",
+      "007",
+      "008",
+      "009",
+      "010"
+    ],
+    "reason": "The first family saved requests but did not call image generation for these frames. All now have selected successful drawings in the later fix pass. Frame 009 has a separate later refusal and recovery, listed above.",
+    "evidence": {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/deferred/SSUZY1-status.json",
+      "sha256": "6f20578fab4f7eccf58ba530580e2cf3dd6b1a109bf6987de84f1ed953f8b72c"
+    }
+  },
+  "successful_never_refused_reference": {
+    "resource": "SSUZY1.BMP",
+    "frame": "011",
+    "reason": "Successful bottle drawing, retained. No failure record found.",
+    "output": {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/011-generated-v2.png",
+      "sha256": "d2f26a2894f10386a6e5c1d023281ce0cb705ebde6382fdf3d1c98be0307c676"
+    }
+  },
+  "excluded_non_generation_examples": [
+    {
+      "record": {
+        "path": "art/cartoon/walk-pilot/profile-walk-v1/review-evidence/export-tool-v1/001-rejected-refusal.json",
+        "sha256": "622bcf4d7bd74bc132b6ff6a367ba13b36d5943d618d901b21c55aed8e2109f1"
+      },
+      "reason": "Exporter runtime-overhang:001 refusal; generated source already existed."
+    },
+    {
+      "record": {
+        "path": "art/cartoon/shoreline-repair-v1/shared-master/verification-attempt-1.json",
+        "sha256": "e3df0c2d23f46ad272e3f02be0f81f7096939fd0cc4ad7e9187fa6b3d39d1ca6"
+      },
+      "reason": "Test-oracle assertion about hidden RGB at alpha0, not image generation."
+    },
+    {
+      "record": {
+        "path": "art/cartoon/clouds-v1/integration-v1/promotion-controls.json",
+        "sha256": "4883fca0024a5320c1681edbaf23823d6eeb24c731ee55d23312f53bf0fdb8b9"
+      },
+      "reason": "Deliberately damaged package/promotion controls, not image generation."
+    }
+  ],
+  "other_matches": "Other retained refusal mentions concern exporter fit, source/recipe identity controls, browser/native capture controls, build failures, or historical summaries of these same generation events. No further image-generation failure family was found.",
+  "limitations": [
+    "This covers retained repository records at the named commit, not unrecorded tool history.",
+    "An output block returned no rejected image, so these records cannot establish what visual content triggered it.",
+    "The current 003 attempt and all current-family outputs are intentionally excluded.",
+    "No assets, previous records, production files, approval statuses or generation requests were modified."
+  ]
+}

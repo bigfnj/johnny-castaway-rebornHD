@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM2.BMP",
+  "frame": "000",
+  "version": 5,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Remove extra lower-left flap to retain one dorsal and two pectoral fins",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Image 1 is the current shark sprite and sole edit target; Image 2 is its original pixel pose reference only. Fix one anatomy defect in Image 1: remove the EXTRA small gray triangular flap projecting from the LOWER-LEFT outline of the torso, between the large upper-left dorsal fin and the hanging near pectoral fin. This is the point beside and behind the near pectoral fin, roughly three-quarters of the way down the left edge. Reconnect that lower-left body contour with one smooth curved line behind the hanging near fin. Preserve the large dorsal fin on the UPPER-LEFT back. Preserve the near pectoral fin hanging down on the left/front body. Preserve the far pectoral fin gesturing to screen-right beneath the mouth. Exactly those three fins should remain visible: one dorsal plus two pectorals. Do not change the face, mouth opening, teeth, eyebrow, eye, gills, skin colors, pale underside, torso proportions, pose, waterline or framing. No new parts or submerged anatomy. Return the corrected full sprite with genuine RGBA transparency outside, no background, no checkerboard, no text.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/000-generated-v4.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM2.BMP/000.png"
+    ]
+  }
+}

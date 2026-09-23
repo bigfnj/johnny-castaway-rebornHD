@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-21",
+  "frame": "SSUZY1.BMP-004",
+  "user_request_exact": "focus this pass on the hip to leg integration, its completely unnatural. rotate the top of the hips more towards the viewer, slide the rear leg (bottom) OUT of view, we should not see the lower part of the bathing suit, it would be blocked by the leg (reference the original art). THEN draw some of the rear leg underneath the front one, and extending past the front leg. again, reference the original. leg 1 in green, leg 2 in blue (i drew lines to help you).",
+  "attachments": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4/codex-clipboard-4cb308f6-2bb1-40b9-92ad-6b9864fc6d76.png",
+      "sha256": "4c31ebff2a1b18bcfdcc0169896701805ebab8569d5da3e300544ad912c696df",
+      "label": "Shown 004 comparison",
+      "source_path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-4cb308f6-2bb1-40b9-92ad-6b9864fc6d76.png"
+    },
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4/codex-clipboard-590aed65-44a9-4059-9d85-e23e21ed98b9.png",
+      "sha256": "a8947b9f4c69ec2132d97cc50a322b2a6c42143f7e68c99d49d1f0af1a30ca4c",
+      "label": "User green/blue leg guide",
+      "source_path": "C:/Users/Admin/AppData/Local/Temp/codex-clipboard-590aed65-44a9-4059-9d85-e23e21ed98b9.png"
+    }
+  ],
+  "instruction_authority": "The original 004 pose and the user green/blue annotation supersede 003 as the pose authority for this correction.",
+  "required_change": "Rotate the top of the hips toward the viewer. Occlude the swimsuit bottom behind the foreground leg. Hide the proximal rear leg, then show only its lower portion underneath and extending beyond the foreground leg, following the annotated original.",
+  "rejected": {
+    "key": "SSUZY1.BMP-004",
+    "version": 3,
+    "status": "rejected_by_user",
+    "reason": "Unnatural hip-to-leg integration; the original and green/blue annotation govern the revised pelvis and overlapping legs.",
+    "output": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-generated-v3.png",
+      "sha256": "e75955f44c7f4941fc8d0d004931fc5dcf9e49b4e8457aea3c589fb1ff5ca12b"
+    },
+    "request": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v3-request.json",
+      "sha256": "4cff0bd1f710e7d56da550baef09763886be5f607b36f73c6c350c7c49cdf3bd"
+    },
+    "record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-record-v3.json",
+      "sha256": "cc6c2b7d434f939bb05ee204d4c6a41f00d40eba91e49b93d2d149ab21d32ef4"
+    }
+  },
+  "shown_review_snapshots": [
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review.html",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4/snapshots/review.html",
+        "sha256": "889315f38b696c39bb8c23dff7a46385e9aef504e61c93425f525c0f97cb54c2"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review-data.json",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4/snapshots/review-data.json",
+        "sha256": "626852c63b4660c98999f81088ec694e0d79981b4b77183c16002f59e834a5f2"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review-record.json",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4/snapshots/review-record.json",
+        "sha256": "ef5ebe0455444070fcb2ecd4459eff531f8bbbb2acebebe7083b670561e863c1"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/selected-versions.json",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4/snapshots/selected-versions.json",
+        "sha256": "ab9449c289ceb0010970b2230210ff8402a4e60516d3b5f0886ec0fc331d11ec"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review-template.html",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4/snapshots/review-template.html",
+        "sha256": "f0a0f2402cf88468e8b0e94de328d0f69ee4c60aa87bcfbbbf82e555e9e2c68b"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review.js",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4/snapshots/review.js",
+        "sha256": "f30eaac5f0755517a31df6da470c1c88731db602e5769d3db69f209c3110069f"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/build_review.py",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4/snapshots/build_review.py",
+        "sha256": "e2ad5a5065d57a7b88da7df8d210b446e00458fcd061947b5776df336e9cf73e"
+      }
+    }
+  ],
+  "six_appearance_approvals_unchanged": {
+    "record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+      "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+    },
+    "scope": "Full appearance of six selected drawings only.",
+    "approved_frames": [
+      "003",
+      "005",
+      "006",
+      "008",
+      "009",
+      "010"
+    ]
+  },
+  "appearance_approval_004": null,
+  "production_integrated": false
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "resource": "SSUZY1.BMP",
+  "frame": "004",
+  "version": 1,
+  "tool": "ImageMagick 7.1.2-24",
+  "mode": "direct-screenshot-cutout",
+  "kind": "imported_screenshot_cutout",
+  "method": "Right-hand drawing cropped from the user screenshot, then the connected pale checkerboard background removed into an alpha mask. No generation, resizing or repainting. All retained drawing RGB pixels are unchanged.",
+  "output": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/004-transparent-v1.png",
+    "sha256": "4487fe4d58e876851822a8bd943a5645730717258382b5e6bd6f769774b86e50"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/source-screenshot.png",
+      "sha256": "ce7f95797ece45aa3b8b76a3dd0dc3accb2acd12371aef85d0792f4a644832d8"
+    },
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/004-cropped-v1.png",
+      "sha256": "79259b26e6f48e72fdcc6cf57a564494e5c7a96c1f9704a23fe608db8691199e"
+    }
+  ],
+  "crop_record": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/record.json",
+    "sha256": "8a77702b3e99d1cc756d412c2520d88d5efb74f0d7df80ed95a2779912e5c131"
+  },
+  "processing_script": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/remove-checkerboard.ps1",
+    "sha256": "13d1162454be2596bed17caf92069d02f585a7f946dc0f5851bdbe711ab1f1a7"
+  },
+  "alpha_mask": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/foreground-alpha.png",
+    "sha256": "fa98979dd54b09aa5c39e0eb0c185f1e8d73a357c2016677a71eb0144d88e8f8"
+  },
+  "image": {
+    "canvas": [
+      490,
+      304
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha8_bounds": [
+      36,
+      9,
+      448,
+      298
+    ],
+    "edge_alpha_max": 0,
+    "background": "Transparent"
+  },
+  "pixel_check": {
+    "retained_pixels": 45145,
+    "different_retained_rgb_pixels": 0,
+    "transparent_pixels": 103815
+  },
+  "selection_instruction_exact": "can you crop out and use the right image for 004 ?",
+  "followup_instruction_exact": "certainly we dont need the checkerboard, but you are able to use the image?",
+  "approval_scope": "User-selected screenshot drawing for 004, with checkerboard removed as requested.",
+  "production_integrated": false,
+  "native_motion_checked": false
+}

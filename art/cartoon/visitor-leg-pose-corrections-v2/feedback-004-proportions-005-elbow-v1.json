@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-21",
+  "frames": [
+    "SSUZY1.BMP-004",
+    "SSUZY1.BMP-005"
+  ],
+  "user_request_exact": "given the pushback, i still want to make one more attempt at fixing 004 and a correction to 005. 004, the stomach section looks overly elongated, maybe now that we have the top and legs fixed, we can generate the body proportions more accurately. for 005, she is leaning on her elbow and holding the sunblock to squeeze it into her lower hand. Specifically we need to have her leaning on her elbow, move the sunblock to the other hand. make sense ?",
+  "instruction_authority": "Latest user correction reopens 005's posture and bottle action and requests 004 torso proportions from the direct composite. Earlier appearance approvals are retained as history.",
+  "corrections": {
+    "004": {
+      "requested_change": "Shorten the overly elongated stomach section for natural body proportions while preserving the corrected head, upper body identity, hips and leg arrangement.",
+      "edit_target": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v1/004-composite-v1.png",
+        "sha256": "a91bc9b7474db0c7f492ffdb0f2530fae465339a43c54e028f2ef721330a6844"
+      },
+      "edit_target_record": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v1/record.json",
+        "sha256": "ef4ae9bf6405c80c115c3d1f23a352b6fd01d0447be8524ee60760c55eb14840"
+      },
+      "appearance_approval": null
+    },
+    "005": {
+      "requested_change": "Lean on the elbow. Move the sunblock to the other, upper hand and tip it to squeeze into the lower hand.",
+      "edit_target": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+        "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+      },
+      "original_pose_reference": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/005.png",
+        "sha256": "102e8398a3ace0751e2aa43c3dec324752abc403a55c6d6ef7de4bb332c0b209"
+      },
+      "previous_appearance_approval": {
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+          "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+        },
+        "scope": "Full appearance of this selected drawing.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+          "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+        },
+        "version": 1
+      },
+      "approval_reopened": true
+    }
+  },
+  "shown_review_snapshots": [
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review.html",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1/review.html",
+        "sha256": "6bc87c0f617b969155d5852263f3b4a8e1b5fb761bd18ad955cbca752bb4add3"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review-data.json",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1/review-data.json",
+        "sha256": "e423ab6e743b023bf8ab960144d68c79da2bd890bb4986080dcea1e4eeed7ba4"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review-record.json",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1/review-record.json",
+        "sha256": "00d3315a50031e9da646f5b7e0466f9c3cacb2af89e88afbf893711a413a00d1"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/selected-versions.json",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1/selected-versions.json",
+        "sha256": "bd63298062c034978fcdc813f13c54a0a6356087d6dc81064a4500ecd6e71313"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review-template.html",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1/review-template.html",
+        "sha256": "5b2660b85948d50cfe9b2a8724adda3cef5e5af5397cebc5b0dee50867230ae9"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review.js",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1/review.js",
+        "sha256": "f30eaac5f0755517a31df6da470c1c88731db602e5769d3db69f209c3110069f"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/build_review.py",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1/build_review.py",
+        "sha256": "8a4787cf6ebd163f18b3de5f45fa081fa59b5155b837bee1f156801bdebb91ba"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/session-status.md",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1/session-status.md",
+        "sha256": "21bffc5bd451d5117a80a4bef3bca6f6b10692a15df2b2812a1235c68d32fee3"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/pose-regeneration-notes.md",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1/pose-regeneration-notes.md",
+        "sha256": "3b86d3d007eb8abd0ce5bc97733c5e551404767687a35d843a8c7a87d884689f"
+      }
+    }
+  ],
+  "prior_batch_approval": {
+    "record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+      "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+    },
+    "scope": "Full appearance of six selected drawings only.",
+    "approved_frames": [
+      "003",
+      "005",
+      "006",
+      "008",
+      "009",
+      "010"
+    ]
+  },
+  "unchanged_approved_frames": [
+    "003",
+    "006",
+    "008",
+    "009",
+    "010"
+  ],
+  "production_integrated": false,
+  "native_motion_checked": false
+}

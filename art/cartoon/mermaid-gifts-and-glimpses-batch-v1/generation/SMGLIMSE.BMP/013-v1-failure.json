@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "resource": "SMGLIMSE.BMP",
+  "frame": "013",
+  "version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "status": "blocked",
+  "output_returned": false,
+  "request": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGLIMSE.BMP/013-v1-request.json",
+  "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 957da185-38a6-49ff-93e6-f16637d8b475.\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"other\\\"\\n      ]\\n    }\\n  }\\n}\")",
+  "request_id": "957da185-38a6-49ff-93e6-f16637d8b475",
+  "moderation_stage": "output",
+  "categories": [
+    "other"
+  ]
+}
+

@@ -1,0 +1,3370 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-09-21T19:45:17.025354+00:00",
+  "status": "pass_with_documented_limitations",
+  "scope": "Final mermaid expression batch saved-artifact provenance/inventory audit",
+  "counts": {
+    "mermaid_scope_entries": 101,
+    "revised_candidates": 66,
+    "gift_revised": 38,
+    "glimpses_revised": 15,
+    "earlier_revised": 13,
+    "retained_mermaid_entries": 30,
+    "mermaid_no_image_entries": 5,
+    "visitor_no_image_entries": 2,
+    "png_variants": 67,
+    "saved_requests": 74,
+    "saved_failure_records": 7,
+    "pins_verified": 299,
+    "raw_copies_equal": 67
+  },
+  "deviations": [],
+  "documented_notes": [
+    {
+      "key": "SBREAKUP.BMP-006",
+      "version": 1,
+      "note": "Superseded variant has visible alpha reaching the canvas; selected v2 is inset."
+    },
+    {
+      "key": "SBREAKUP.BMP-006",
+      "version": 2,
+      "note": "Alpha maximum is below255; retained raw tool alpha unchanged.",
+      "alpha_range": [
+        0,
+        254
+      ]
+    },
+    {
+      "key": "SMGIFT.BMP-004",
+      "version": 1,
+      "note": "Alpha maximum is below255; retained raw tool alpha unchanged.",
+      "alpha_range": [
+        0,
+        254
+      ]
+    }
+  ],
+  "limitations": [
+    "This audit checks saved artifacts and captured request/error records. It does not independently replay the tool or prove the network request arguments.",
+    "SBREAKUP007/008 share an uncertain concurrent-wrapper failure. Both have exact saved requests and no returned saved image; the blocked individual request is unknown.",
+    "No gallery selector existed when the audit began. Preferred candidate versions are checked against the completed agents: v1 except SBREAKUP006 v2.",
+    "No art was edited, no visitor cleanup was attempted, and no native or production gate was run."
+  ],
+  "selected_outputs": [
+    {
+      "key": "SBREAKUP.BMP-000",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/000-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/000-generated-v1.png",
+        "sha256": "d64984cd9b1d074bffb005bd5a8a5dc7f77c1a41e33113d1eeb2b396160d2b7e"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        26,
+        33,
+        207,
+        31
+      ],
+      "image": {
+        "canvas": [
+          1495,
+          1052
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          26,
+          33,
+          1288,
+          1021
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-001",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/001-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/001-generated-v1.png",
+        "sha256": "a0448b3e8fb3bb200a4fd7ddf2b92eeb83c38a72358f20bfe4cb58b89afca32d"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        45,
+        68,
+        103,
+        42
+      ],
+      "image": {
+        "canvas": [
+          1512,
+          1040
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          45,
+          68,
+          1409,
+          998
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-002",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/002-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/002-generated-v1.png",
+        "sha256": "f44f125b4c90573bdcbf6a5550e19d00a0f9d61f6c4f8a22b8ccee7e940fef55"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        50,
+        109,
+        93,
+        46
+      ],
+      "image": {
+        "canvas": [
+          1502,
+          1047
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          50,
+          109,
+          1409,
+          1001
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-003",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/003-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/003-generated-v1.png",
+        "sha256": "f687da51d83e99f7018f039ed99f7441db0c70b6336974e34bb2b9c3e5fd28e3"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        44,
+        41,
+        25,
+        47
+      ],
+      "image": {
+        "canvas": [
+          1728,
+          910
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          44,
+          41,
+          1703,
+          863
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-004",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/004-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/004-generated-v1.png",
+        "sha256": "66c17a31809750425fa9216c90cddf21dbb662c3b3d0011db37d705fd5edafce"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        47,
+        28,
+        49,
+        32
+      ],
+      "image": {
+        "canvas": [
+          2020,
+          779
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          47,
+          28,
+          1971,
+          747
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-005",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/005-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/005-generated-v1.png",
+        "sha256": "83e026bb64022e95d62b1bbf655f724ff7028da1204e66c87ca1f651725715cd"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        77,
+        19,
+        73,
+        50
+      ],
+      "image": {
+        "canvas": [
+          1523,
+          1033
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          77,
+          19,
+          1450,
+          983
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-006",
+      "version": 2,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/006-record-v2.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/006-generated-v2.png",
+        "sha256": "10568af0e9bce1ccda0889f112e5a02ec74b1a3dbbda2bceab0e4d0e6bc92726"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        144,
+        32,
+        141,
+        60
+      ],
+      "image": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha8_bounds": [
+          144,
+          32,
+          1395,
+          964
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-009",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/009-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/009-generated-v1.png",
+        "sha256": "9086b4e1168569fb6530687854c23aab9264656bc95bc69aae57f0d0ce01aa3f"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        314,
+        24,
+        91,
+        17
+      ],
+      "image": {
+        "canvas": [
+          1490,
+          1055
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          314,
+          24,
+          1399,
+          1038
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-010",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/010-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/010-generated-v1.png",
+        "sha256": "b908989cc247709190f8cfc95602c8a85b46b211322635f39f5d93264197df75"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        157,
+        40,
+        64,
+        65
+      ],
+      "image": {
+        "canvas": [
+          1429,
+          1101
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          157,
+          40,
+          1365,
+          1036
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-013",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/013-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/013-generated-v1.png",
+        "sha256": "8143902865f743c30da7cfa71856f14792bbdae8800cf0728e5aee68d2e9b215"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        56,
+        18,
+        32,
+        32
+      ],
+      "image": {
+        "canvas": [
+          1748,
+          900
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          56,
+          18,
+          1716,
+          868
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-014",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/014-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/014-generated-v1.png",
+        "sha256": "0c18966b0b5d3a26e92e823bfb7be6d179fa078c48ee4dfbb5e70edb00ebfe27"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        18,
+        95,
+        55,
+        101
+      ],
+      "image": {
+        "canvas": [
+          2149,
+          732
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          18,
+          95,
+          2094,
+          631
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-015",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/015-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/015-generated-v1.png",
+        "sha256": "28eb1f3ec92900320bfe601c6fae764f2c4f578f15940047d21b4bc5ffba53df"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        62,
+        173,
+        60,
+        111
+      ],
+      "image": {
+        "canvas": [
+          2170,
+          725
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          62,
+          173,
+          2110,
+          614
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-019",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/019-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/019-generated-v1.png",
+        "sha256": "66a03af2415ec9ab348a70be98d455a439c8d10a3461a78246187a163fea26e8"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        22,
+        35,
+        52,
+        56
+      ],
+      "image": {
+        "canvas": [
+          2115,
+          743
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          22,
+          35,
+          2063,
+          687
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-000",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/000-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/000-generated-v1.png",
+        "sha256": "f03ba94972c8e98333a8f6ced208bc9a5a4b48e1ed98ae4a95efd3c01615cede"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        222,
+        12,
+        210,
+        13
+      ],
+      "image": {
+        "canvas": [
+          1660,
+          948
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          222,
+          12,
+          1450,
+          935
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-001",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/001-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/001-generated-v1.png",
+        "sha256": "6024766cf600b47853bccfd5fd2ed0e33e2365ffd71feae63c39412606e5c052"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        97,
+        9,
+        222,
+        20
+      ],
+      "image": {
+        "canvas": [
+          1713,
+          918
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          97,
+          9,
+          1491,
+          898
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-002",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/002-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/002-generated-v1.png",
+        "sha256": "f09c04438d6bcdb206b7c34e3d689861624276d7e9accade8dcb73bf7c75fafd"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        37,
+        33,
+        35,
+        28
+      ],
+      "image": {
+        "canvas": [
+          1633,
+          963
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          37,
+          33,
+          1598,
+          935
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-003",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/003-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/003-generated-v1.png",
+        "sha256": "e26f5c76b5e86cab0dc59a6c29cd113ae0707c7e2906d63f8cccadc37b1297f6"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        121,
+        26,
+        115,
+        51
+      ],
+      "image": {
+        "canvas": [
+          1774,
+          887
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          121,
+          26,
+          1659,
+          836
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-004",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/004-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/004-generated-v1.png",
+        "sha256": "c548c3d436c25b47efc0350031fdbf8d08104e10db10ec6db1725788dc0c7b00"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        112,
+        16,
+        97,
+        45
+      ],
+      "image": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha8_bounds": [
+          112,
+          16,
+          1439,
+          979
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-005",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/005-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/005-generated-v1.png",
+        "sha256": "91be5cb0d7f9292f19587721d70275e8df302cf65bdf67438614b2830d24280a"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        21,
+        8,
+        23,
+        23
+      ],
+      "image": {
+        "canvas": [
+          1863,
+          844
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          21,
+          8,
+          1840,
+          821
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-008",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/008-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/008-generated-v1.png",
+        "sha256": "4c16a51ce89162db38f846c2ca61e5a1b9125c9dbd7b233a51f7bf85bd73cb62"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        85,
+        59,
+        164,
+        28
+      ],
+      "image": {
+        "canvas": [
+          1840,
+          855
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          85,
+          59,
+          1676,
+          827
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-009",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/009-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/009-generated-v1.png",
+        "sha256": "22488c991815e5759456298c795445d889a808f7fb881004c22fa80f4373a1ef"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        53,
+        51,
+        52,
+        31
+      ],
+      "image": {
+        "canvas": [
+          1774,
+          887
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          53,
+          51,
+          1722,
+          856
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-010",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/010-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/010-generated-v1.png",
+        "sha256": "df63851d9f813892b104d9e53de94433764033c057b854912e83ab371ca3d9d0"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        15,
+        44,
+        65,
+        29
+      ],
+      "image": {
+        "canvas": [
+          2011,
+          782
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          15,
+          44,
+          1946,
+          753
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-011",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/011-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/011-generated-v1.png",
+        "sha256": "12c3c5656a06a7ecb21d67fc36456f45bb92aa4a709a105a76a9af1ce0d7ddca"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        46,
+        22,
+        102,
+        20
+      ],
+      "image": {
+        "canvas": [
+          1632,
+          964
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          46,
+          22,
+          1530,
+          944
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-012",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/012-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/012-generated-v1.png",
+        "sha256": "3d7cef210d68b4cb0e848f89d2657e15c4bfb3f0e9d7130964c64af1ab7939cf"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        40,
+        20,
+        224,
+        17
+      ],
+      "image": {
+        "canvas": [
+          1895,
+          830
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          40,
+          20,
+          1671,
+          813
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-013",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/013-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/013-generated-v1.png",
+        "sha256": "38497da6837a22cb829c567c210fb2bc049df291e7633f6c40bb7499b23c44b5"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        18,
+        13,
+        74,
+        23
+      ],
+      "image": {
+        "canvas": [
+          1914,
+          822
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          18,
+          13,
+          1840,
+          799
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-014",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/014-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/014-generated-v1.png",
+        "sha256": "5524243a60d852cad4bbbed95ae4770aef374120b3dc6d20f36bcaeb3dd0badb"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        94,
+        27,
+        146,
+        42
+      ],
+      "image": {
+        "canvas": [
+          1774,
+          887
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          94,
+          27,
+          1628,
+          845
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-015",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/015-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/015-generated-v1.png",
+        "sha256": "f1a8695043bdf03206e9546d469d7e1f95992cbdff5a0687b43728b069b43ffa"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        21,
+        43,
+        53,
+        46
+      ],
+      "image": {
+        "canvas": [
+          1490,
+          1056
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          21,
+          43,
+          1437,
+          1010
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-016",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/016-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/016-generated-v1.png",
+        "sha256": "ac26fbaf291cb7f87263c1bf390cf340205439e85179b51b32ae6b61758b9b71"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        19,
+        35,
+        32,
+        58
+      ],
+      "image": {
+        "canvas": [
+          1832,
+          859
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          19,
+          35,
+          1800,
+          801
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-017",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/017-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/017-generated-v1.png",
+        "sha256": "c5fdbca806e6e81b3fde360c74fefca1fa3071cd876635741daa390b06d22686"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        21,
+        19,
+        17,
+        60
+      ],
+      "image": {
+        "canvas": [
+          1898,
+          829
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          21,
+          19,
+          1881,
+          769
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-018",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/018-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/018-generated-v1.png",
+        "sha256": "6c153422884ddc11af10515cae77b2d6f938c20f1c1ea4560f6d111622a43f49"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        67,
+        48,
+        225,
+        43
+      ],
+      "image": {
+        "canvas": [
+          1774,
+          887
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          67,
+          48,
+          1549,
+          844
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-019",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/019-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/019-generated-v1.png",
+        "sha256": "568b78aeffa15544a78effb885942022c75d12a0c81886baba3b6997a73ec5b1"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        27,
+        17,
+        31,
+        28
+      ],
+      "image": {
+        "canvas": [
+          1649,
+          954
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          27,
+          17,
+          1618,
+          926
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-020",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/020-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/020-generated-v1.png",
+        "sha256": "f247f3232ed7e6330579f4b98f0c45f048e8be665a34e3e3ac38d88190914a98"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        69,
+        41,
+        74,
+        45
+      ],
+      "image": {
+        "canvas": [
+          1726,
+          911
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          69,
+          41,
+          1652,
+          866
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-021",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/021-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/021-generated-v1.png",
+        "sha256": "b7b0b9c02ccedd6598263f3a659e0afa2af7a9cb169c13dc5a8f4b38dcc1159b"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        41,
+        48,
+        43,
+        36
+      ],
+      "image": {
+        "canvas": [
+          1695,
+          928
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          41,
+          48,
+          1652,
+          892
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-022",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/022-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/022-generated-v1.png",
+        "sha256": "d49af476becc3a65f8d0030155bbacbf3bdb1c53f01f592606a088c079a713b3"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        118,
+        20,
+        115,
+        20
+      ],
+      "image": {
+        "canvas": [
+          1585,
+          992
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          118,
+          20,
+          1470,
+          972
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-023",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/023-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/023-generated-v1.png",
+        "sha256": "27327a572978078614c2203ce01c352454e664a2ff17f286efd1f0857b56be1a"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        169,
+        32,
+        225,
+        16
+      ],
+      "image": {
+        "canvas": [
+          1721,
+          914
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          169,
+          32,
+          1496,
+          898
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-024",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/024-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/024-generated-v1.png",
+        "sha256": "349776d03bd10e26c28544f7225a923053f38484b29ddb9c8f600b89213991df"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        176,
+        28,
+        243,
+        17
+      ],
+      "image": {
+        "canvas": [
+          1672,
+          941
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          176,
+          28,
+          1429,
+          924
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-026",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/026-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/026-generated-v1.png",
+        "sha256": "9c7beaad0631476902948649e1545d6688d7e9abd52ca3733b980704cac63ce1"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        14,
+        2,
+        6,
+        5
+      ],
+      "image": {
+        "canvas": [
+          1711,
+          919
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          14,
+          2,
+          1705,
+          914
+        ],
+        "edge_alpha_max": 5
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-027",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/027-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/027-generated-v1.png",
+        "sha256": "886638a21cf87ba5c162deed9c0dc7a6774b7c47245b11379144abc170564e6a"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        158,
+        11,
+        258,
+        64
+      ],
+      "image": {
+        "canvas": [
+          1993,
+          789
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          158,
+          11,
+          1735,
+          725
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-028",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/028-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/028-generated-v1.png",
+        "sha256": "e58cbb7267b4e59708e1fa8aea621cf4f0b49e8309784c724d3ed7a488973f61"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        45,
+        11,
+        33,
+        27
+      ],
+      "image": {
+        "canvas": [
+          1706,
+          922
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          45,
+          11,
+          1673,
+          895
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-029",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/029-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/029-generated-v1.png",
+        "sha256": "9a7a9b44953398e170a370a23aca08f0f640407feea848f906bc0a7948df9ebd"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        205,
+        6,
+        252,
+        8
+      ],
+      "image": {
+        "canvas": [
+          1896,
+          830
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          205,
+          6,
+          1644,
+          822
+        ],
+        "edge_alpha_max": 4
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-030",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/030-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/030-generated-v1.png",
+        "sha256": "171ba93f57bdf3992e33b56208a80db3a659b44150d8bce7e0b6c73935f86800"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        182,
+        24,
+        196,
+        64
+      ],
+      "image": {
+        "canvas": [
+          1466,
+          1073
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          182,
+          24,
+          1270,
+          1009
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-031",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/031-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/031-generated-v1.png",
+        "sha256": "dc76e5d9c41fca374de2972b13a7666b1bcb65b69005f971f5474835fd903f43"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        90,
+        29,
+        72,
+        45
+      ],
+      "image": {
+        "canvas": [
+          1431,
+          1099
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          90,
+          29,
+          1359,
+          1054
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-032",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/032-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/032-generated-v1.png",
+        "sha256": "713f34da7a8cfd5be30b7d352fc0b42accdcfb9fbfb1e69ad26b3366f3af760d"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        143,
+        26,
+        152,
+        106
+      ],
+      "image": {
+        "canvas": [
+          1325,
+          1187
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          143,
+          26,
+          1173,
+          1081
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-033",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/033-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/033-generated-v1.png",
+        "sha256": "b1058ed02536b24d2ff27d066f916cd25d935fa2523b97790dd351c977b8cb9c"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        48,
+        8,
+        50,
+        8
+      ],
+      "image": {
+        "canvas": [
+          1566,
+          1005
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          48,
+          8,
+          1516,
+          997
+        ],
+        "edge_alpha_max": 3
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-034",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/034-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/034-generated-v1.png",
+        "sha256": "dbb946a293e6914f06af2a4206d854d3a7aa61822840eaa9f195448fa7b0d919"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        177,
+        33,
+        96,
+        51
+      ],
+      "image": {
+        "canvas": [
+          1399,
+          1124
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          177,
+          33,
+          1303,
+          1073
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-035",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/035-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/035-generated-v1.png",
+        "sha256": "662e2eba82128f8428082c4bf2c4adfd3f58b168d413c13b51437fa08d07c231"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        130,
+        19,
+        73,
+        34
+      ],
+      "image": {
+        "canvas": [
+          1570,
+          1002
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          130,
+          19,
+          1497,
+          968
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-036",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/036-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/036-generated-v1.png",
+        "sha256": "ee29beb5b3ff3f38f850e6d5130d0ab45a93d549af97184a157cbcbe43639dea"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        34,
+        12,
+        33,
+        14
+      ],
+      "image": {
+        "canvas": [
+          1602,
+          982
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          34,
+          12,
+          1569,
+          968
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-037",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/037-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/037-generated-v1.png",
+        "sha256": "6151c6cebee3356ed197addf18a2dc0ebacd3faf6dc2d07a58ce3c78aed259fd"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        38,
+        9,
+        25,
+        9
+      ],
+      "image": {
+        "canvas": [
+          1502,
+          1047
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          38,
+          9,
+          1477,
+          1038
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-038",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/038-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/038-generated-v1.png",
+        "sha256": "e683e19b2d932b605d021cd965a29c190d3f1e1ca77e39ff5c98cdbbbb12e9ef"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        41,
+        10,
+        18,
+        8
+      ],
+      "image": {
+        "canvas": [
+          1541,
+          1020
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          41,
+          10,
+          1523,
+          1012
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-042",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/042-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/042-generated-v1.png",
+        "sha256": "ece507ae56f7f38bf32950e9176635e15fdf6809f71357379a48fd1395086e5d"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        81,
+        25,
+        117,
+        21
+      ],
+      "image": {
+        "canvas": [
+          1711,
+          919
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          81,
+          25,
+          1594,
+          898
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-044",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/044-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/044-generated-v1.png",
+        "sha256": "cfd7ced716b107e983f12f1f92d94b3e1d385ad989c8bc612ef2b04fd688feee"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        46,
+        50,
+        27,
+        39
+      ],
+      "image": {
+        "canvas": [
+          1565,
+          1005
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          46,
+          50,
+          1538,
+          966
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-000",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/000-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/000-generated-v1.png",
+        "sha256": "6ac31b5b413a7fdd62ca4838adf1744263b7391f601faede4726d80cc42cb80e"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        57,
+        99,
+        82,
+        68
+      ],
+      "image": {
+        "canvas": [
+          1717,
+          916
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          57,
+          99,
+          1635,
+          848
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-001",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/001-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/001-generated-v1.png",
+        "sha256": "45ff87a58d4d50e95db099a99f69c02931e9a4fa46552beebacef4c41bec4aa9"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        27,
+        50,
+        46,
+        53
+      ],
+      "image": {
+        "canvas": [
+          1877,
+          838
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          27,
+          50,
+          1831,
+          785
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-003",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/003-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/003-generated-v1.png",
+        "sha256": "27beca1dafb89ce4a94c448a8be6c1b018c90db00c8a3f54cecc09bc33214225"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        34,
+        27,
+        147,
+        57
+      ],
+      "image": {
+        "canvas": [
+          1988,
+          791
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          34,
+          27,
+          1841,
+          734
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-004",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/004-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/004-generated-v1.png",
+        "sha256": "6a2f8c56dcec0d5746618fa791877b550b9b257d365129ca07dd6434fec8f487"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        36,
+        53,
+        34,
+        47
+      ],
+      "image": {
+        "canvas": [
+          1983,
+          793
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          36,
+          53,
+          1949,
+          746
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-005",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/005-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/005-generated-v1.png",
+        "sha256": "3c633fa74e8570e53707f5a6ad205cfd2aa051c757eb0440ad14873da350151b"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        54,
+        105,
+        48,
+        81
+      ],
+      "image": {
+        "canvas": [
+          2170,
+          725
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          54,
+          105,
+          2122,
+          644
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-006",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/006-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/006-generated-v1.png",
+        "sha256": "ed37823d56ac9b59e671fe06cf67ef8a33ee649afd1bfd9dea8917b7a1ff29d5"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        46,
+        123,
+        109,
+        99
+      ],
+      "image": {
+        "canvas": [
+          2164,
+          727
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          46,
+          123,
+          2055,
+          628
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-008",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/008-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/008-generated-v1.png",
+        "sha256": "e6b0da350f6d787c0c13cc7a323aeb146244eaf6de9c1792da9057f1813a3667"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        30,
+        106,
+        101,
+        92
+      ],
+      "image": {
+        "canvas": [
+          2007,
+          783
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          30,
+          106,
+          1906,
+          691
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-010",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/010-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/010-generated-v1.png",
+        "sha256": "ae9170dc80bbed1f2ddd3ab55dc721d558ad43d2aaf67b5390321739eaf064cf"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        53,
+        34,
+        75,
+        35
+      ],
+      "image": {
+        "canvas": [
+          1695,
+          928
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          53,
+          34,
+          1620,
+          893
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-011",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/011-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/011-generated-v1.png",
+        "sha256": "1a56bf3e6b32045411c35f8ddeae0b2b5d21a89cdb504a9dc8c4b8a57be202f0"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        36,
+        47,
+        39,
+        35
+      ],
+      "image": {
+        "canvas": [
+          1122,
+          1402
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          36,
+          47,
+          1083,
+          1367
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-016",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/016-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/016-generated-v1.png",
+        "sha256": "6e05b9cc6fc6a04e8e052151df86673ec3afb08cb3a82b4c85b37bfd0cf45a2e"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        340,
+        58,
+        336,
+        44
+      ],
+      "image": {
+        "canvas": [
+          1840,
+          854
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          340,
+          58,
+          1504,
+          810
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-017",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/017-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/017-generated-v1.png",
+        "sha256": "88f85c8048f7d28bcac37a357a43b50c9bdf8f99240d5fb0a393f34e449878e4"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        80,
+        79,
+        83,
+        89
+      ],
+      "image": {
+        "canvas": [
+          1512,
+          1040
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          80,
+          79,
+          1429,
+          951
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-018",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/018-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/018-generated-v1.png",
+        "sha256": "7b03c25fa1c20eb7e9ea4f757f840c292c547b0a916a5c3ed07e55bbd4a01b3a"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        129,
+        65,
+        270,
+        47
+      ],
+      "image": {
+        "canvas": [
+          1470,
+          1070
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          129,
+          65,
+          1200,
+          1023
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-019",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/019-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/019-generated-v1.png",
+        "sha256": "7dbfc8881aa7f984e65b1fb9ef52a910b4e025bab123f211dff71234de69d004"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        198,
+        65,
+        26,
+        67
+      ],
+      "image": {
+        "canvas": [
+          1133,
+          1388
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          198,
+          65,
+          1107,
+          1321
+        ],
+        "edge_alpha_max": 0
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-020",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/020-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/020-generated-v1.png",
+        "sha256": "67cd098bc92bdfa6189d42e2a2ae49dd2fea8327b9b1d9dcd51de538117ba3e0"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        82,
+        60,
+        23,
+        58
+      ],
+      "image": {
+        "canvas": [
+          1226,
+          1283
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          82,
+          60,
+          1203,
+          1225
+        ],
+        "edge_alpha_max": 1
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-021",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/021-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/021-generated-v1.png",
+        "sha256": "ebeaf246ff4bac699f8608da71b2fb7e344c7fb484a55612a1f971719cc99bf2"
+      },
+      "selected": true,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": true,
+      "margins_at_alpha8": [
+        42,
+        22,
+        22,
+        65
+      ],
+      "image": {
+        "canvas": [
+          1875,
+          839
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          42,
+          22,
+          1853,
+          774
+        ],
+        "edge_alpha_max": 0
+      }
+    }
+  ],
+  "superseded_outputs": [
+    {
+      "key": "SBREAKUP.BMP-006",
+      "version": 1,
+      "record": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/006-record-v1.json",
+      "output": {
+        "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/006-generated-v1.png",
+        "sha256": "f3b5ce7da32c47ca6d315c07c57f444b69749a0eb1ac6036043342d7303fa698"
+      },
+      "selected": false,
+      "raw_copy_equal": true,
+      "transparent": true,
+      "visible_bounds_inset": false,
+      "margins_at_alpha8": [
+        0,
+        0,
+        0,
+        60
+      ],
+      "image": {
+        "canvas": [
+          1536,
+          1024
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          254
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          1536,
+          964
+        ],
+        "edge_alpha_max": 21
+      }
+    }
+  ],
+  "retained": [
+    {
+      "key": "SMGIFT.BMP-006",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGIFT.BMP/006-generated-v1.png",
+        "sha256": "a97e0547c05f0bbd526fe92c73a603dabd41769dca378462e10e7d8344d5ed36"
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-007",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGIFT.BMP/007-generated-v1.png",
+        "sha256": "9c654093b3041016d4220ec14e3101b249386bd1b8e808b0dc04adbb24a8c236"
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-025",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGIFT.BMP/025-generated-v1.png",
+        "sha256": "3bc465ecec1622c12912ee7957eb2b4c0bc0307805c17401ec63ef068878d06e"
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-039",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGIFT.BMP/039-generated-v1.png",
+        "sha256": "c95cfeec2838f5e12412d2ff15752484e4dff02685c4716d03278878db54f254"
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-040",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGIFT.BMP/040-generated-v1.png",
+        "sha256": "9dedcb92f59ee0ad0a3ab0600cd1ebc807e52b5e9dd5a05dcb1334f75dbf7897"
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-041",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGIFT.BMP/041-generated-v1.png",
+        "sha256": "83f31b02a8b7afcda7d9d564596800d7112290230367e9f166012d4f3deba3e9"
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-043",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGIFT.BMP/043-generated-v1.png",
+        "sha256": "7cf0bb7831821cf6befe99e74999c8ead87a3282bf1e0a96ccd6848739c36446"
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-045",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGIFT.BMP/045-generated-v1.png",
+        "sha256": "81a6bb5420cc6d4fb8362b49de376976994e5f8ce392a40e4ccf94735196a3b6"
+      }
+    },
+    {
+      "key": "SMGIFT.BMP-046",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGIFT.BMP/046-generated-v1.png",
+        "sha256": "814274df15a45431657e3445f7f70caa29de5ff48db3199ea3b52b1ccfa3a1c2"
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-002",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGLIMSE.BMP/002-generated-v1.png",
+        "sha256": "59bda3b4d92e73bf5a1ef2bcaf9ad6dae9fe32b16fd2fb900028ec063001629f"
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-007",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGLIMSE.BMP/007-generated-v1.png",
+        "sha256": "5825382f278a3537d6b275e2406312d0d66cc64762f4a82eacbd18e4598037c1"
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-009",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGLIMSE.BMP/009-generated-v1.png",
+        "sha256": "675f4f0e39a6414ec50076f505365557c2280807d2456c543f17ed8599683a64"
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-015",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGLIMSE.BMP/015-generated-v1.png",
+        "sha256": "7053af81be6f89379b58396c9bb0ff2a945ad4e488f022cabd2201d40d2e2602"
+      }
+    },
+    {
+      "key": "SMGLIMSE.BMP-022",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/mermaid-gifts-and-glimpses-batch-v1/generation/SMGLIMSE.BMP/022-generated-v1.png",
+        "sha256": "f4122c451a42b0dd4dda599e5a7411b329ccf93ed106dfe597bfbf75608817fe"
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-011",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/011-generated-v1.png",
+        "sha256": "a7ea4fc24ef70c00b8dd1bfff4e9423ebbccf76adfab4c4437c41ec92df9a2f4"
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-012",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/012-generated-v1.png",
+        "sha256": "4b2ad966a37405796f4695634624fe5cc9fde4275afc76281270e3992538f4d5"
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-016",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SBREAKUP.BMP/016-generated-v1.png",
+        "sha256": "c12c0ba7f426b94943edd2712923833801b81fb2810b4da5f7cd166c674f07e2"
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-017",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/017-generated-v1.png",
+        "sha256": "d3ca428020cdd1f51598836fa578c461fe601718c0134c6ea53bbd0a520f92ac"
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-018",
+      "version": 2,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/018-generated-v2.png",
+        "sha256": "f7c581295a0fdd94619d1c94c81af2b1f19fc802e521bb6790413eb47c5ace55"
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-020",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/020-generated-v1.png",
+        "sha256": "ef19150f002fc8f20d10de4ac4e574a4f1a3d271984d322008b194128572f16c"
+      }
+    },
+    {
+      "key": "SBREAKUP.BMP-034",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SBREAKUP.BMP/034-generated-v1.png",
+        "sha256": "ee410969b7cf1c34958c5cc6221c243d2ecb6dbea68610ffa762b8ae4682f706"
+      }
+    },
+    {
+      "key": "SMGFTWAV.BMP-000",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SMGFTWAV.BMP/000-generated-v1.png",
+        "sha256": "d0570a5e446edb6cbe401ef3ab1dc485759b761eaa880e90ae015a539d0ff31b"
+      }
+    },
+    {
+      "key": "SMGFTWAV.BMP-001",
+      "version": 2,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SMGFTWAV.BMP/001-generated-v2.png",
+        "sha256": "2e7ef858305bb493935f717f3d412a606a133e3ad086ab84cb7c4e0068d9613c"
+      }
+    },
+    {
+      "key": "SMGFTWAV.BMP-002",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SMGFTWAV.BMP/002-generated-v1.png",
+        "sha256": "acf8f6d4e736740a2b3cb2e07c56f7960e540c3a5632b9c1b944d63c33ab3ac9"
+      }
+    },
+    {
+      "key": "SMGFTWAV.BMP-003",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SMGFTWAV.BMP/003-generated-v1.png",
+        "sha256": "c7a7fee7e1fcb50fa008247876eb636b4219cf8e9e244893e20f759c61f646f5"
+      }
+    },
+    {
+      "key": "SMGFTWAV.BMP-004",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SMGFTWAV.BMP/004-generated-v1.png",
+        "sha256": "0d50bba9f560a55968d85a49cf787254d62e9f8b2b9ccd551fade845cd24aae8"
+      }
+    },
+    {
+      "key": "SMGFTWAV.BMP-005",
+      "version": 2,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SMGFTWAV.BMP/005-generated-v2.png",
+        "sha256": "ab29983a79bb16e1b09cec5c7a02ce550647bd3069130d4bd3360c7aeb9d4078"
+      }
+    },
+    {
+      "key": "SMGFTWAV.BMP-006",
+      "version": 2,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SMGFTWAV.BMP/006-generated-v2.png",
+        "sha256": "dcc9800b62af4c6bb05516b2d1e8e072b3f079245f4be0cb0a02cded1c476ccb"
+      }
+    },
+    {
+      "key": "SMGFTWAV.BMP-007",
+      "version": 1,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SMGFTWAV.BMP/007-generated-v1.png",
+        "sha256": "37df907002c98b528440890f5897c096fff05be8cd828f82b067a3f95a474b5c"
+      }
+    },
+    {
+      "key": "SMGFTWAV.BMP-008",
+      "version": 2,
+      "drawing": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SMGFTWAV.BMP/008-generated-v2.png",
+        "sha256": "60f4e0841943e73b2f5907bf6d463fb19780d90e00cc51f33b3fd375ae61b263"
+      }
+    }
+  ],
+  "attempts": [
+    {
+      "key": "SBREAKUP.BMP-000",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/000-v1-request.json",
+      "request_sha256": "14fa214e26b05e97fcb55af66e4437b0cb8f5f6eea4ab37b15293c3735411365",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-001",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/001-v1-request.json",
+      "request_sha256": "dd121de046bed794cb0336177a4fa347d2f7f2b922c5ba76c03fd2ef4d8a13cb",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-002",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/002-v1-request.json",
+      "request_sha256": "975bc4be080fc6058050d78f4c4b13921c4e2ced60fcae3ac99f0331776abbdb",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-003",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/003-v1-request.json",
+      "request_sha256": "14d8e500dfe0b27c397c46dc2e19a2a7a849fca5c5bbaa505d9b95e016293df0",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-004",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/004-v1-request.json",
+      "request_sha256": "85346bcad861a1f1d0467f66145bf143062a2b080a71a0815fd2f8c4ba452692",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-005",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/005-v1-request.json",
+      "request_sha256": "5e449ecc1a9dcff0d520728acc8f627090a1d3d02f6c1b5d1378c6c135be0ade",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-006",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/006-v1-request.json",
+      "request_sha256": "bb7dda80900594702af9afa1e7d0c9c6231265d0840220147debc9cb16cd8aba",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-006",
+      "version": 2,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/006-v2-request.json",
+      "request_sha256": "3d32e3c63690b1c1b83fb4449c7b746e4c0d88ebf6a8d8364ef6c5ff1e3a0b72",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-007",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/007-v1-request.json",
+      "request_sha256": "84285590c66104257049c5be37083dfdb108090527e1cbc536349242f197247e",
+      "outcome": "no_image"
+    },
+    {
+      "key": "SBREAKUP.BMP-008",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/008-v1-request.json",
+      "request_sha256": "b2bea129c5f4c8dd9555a0b32952b36815f856b18d9192b7be3aaa194d17abc7",
+      "outcome": "no_image"
+    },
+    {
+      "key": "SBREAKUP.BMP-009",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/009-v1-request.json",
+      "request_sha256": "84846d0b6db5deacfe476d1daf4f5882addad54c5a556c04abd471a2c8b14d06",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-010",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/010-v1-request.json",
+      "request_sha256": "4e9d8395498d39d9c7fb9c8b72c45323e19a87755b15d02cc67f13036542f149",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-013",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/013-v1-request.json",
+      "request_sha256": "af6d9a56a87c7889a07728bf01a738778c1656aaf5a0806b01d9604179452807",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-014",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/014-v1-request.json",
+      "request_sha256": "40d6a43280cb02d04466f3a9854b1b4a9acaea8773c5424695d65d0317b720c5",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-015",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/015-v1-request.json",
+      "request_sha256": "b7a746c00c83dd3b2013facf708ec1a02b985a8889a1eb8652f5caba7653de01",
+      "outcome": "image"
+    },
+    {
+      "key": "SBREAKUP.BMP-019",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/019-v1-request.json",
+      "request_sha256": "592b1ab4351c999aef129f4113f90d04cb0a09c6d7b0f6ce86b7081e40d57414",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-000",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/000-v1-request.json",
+      "request_sha256": "8e5e919887b6b4d8858367d34921e2fdcda094db5850f0871b4a151e544e0078",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-001",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/001-v1-request.json",
+      "request_sha256": "9fdd2d5110a5bea2f1a0f5455a72a4564bb5e757082eb9e9bc4bfa15e6015338",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-002",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/002-v1-request.json",
+      "request_sha256": "d872b56b2ca9ae88af18e33b3302470a527a6e9a0c4614bd1384fc3845fb8b70",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-003",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/003-v1-request.json",
+      "request_sha256": "5c5a4b57ec9168e01fcfff516dce9c51d97b36d16dcedf0ca24af2b166f97257",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-004",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/004-v1-request.json",
+      "request_sha256": "f298f7e7f5d833c22fa544e4c2a848ca030d7a87342ebd35ff58a63926a818c3",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-005",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/005-v1-request.json",
+      "request_sha256": "c7841a4c64ebac784b130203031cba92567a9e1938cc89fa846f21c18e497c96",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-008",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/008-v1-request.json",
+      "request_sha256": "c361f7fa7a77fddf02145ad1af39841b25f224b5e7fdfa6a47a59e08b13678bf",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-009",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/009-v1-request.json",
+      "request_sha256": "6fd134ad9d1ae5f94be1e50287ea288922829e49f9ebc58718d91e362b16dda4",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-010",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/010-v1-request.json",
+      "request_sha256": "466c772a46514d47a5471fddf227ecc472543c45fdd6bde0a10fa5e837021d1b",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-011",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/011-v1-request.json",
+      "request_sha256": "5a7d26f810a26f063630eaa74d693a0f2fa7deac042c3144b0ab1c2bf7e15f09",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-012",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/012-v1-request.json",
+      "request_sha256": "b7aead705a9823a9452a0aed365571c6e2221eaae03d88a05813fbc36a60e7b0",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-013",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/013-v1-request.json",
+      "request_sha256": "0c0746a00343fb50b96ff2d6edaf486b877a40aa3aa8336751ed7275961a2d77",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-014",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/014-v1-request.json",
+      "request_sha256": "9cd8d31347180f5c61d18f1e4702e3318a3a5bf2940f7732298bce37fdc1a688",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-015",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/015-v1-request.json",
+      "request_sha256": "6ade8ad86c706638587a4fdb3451fa2be4cc363848355a5a64817d782ac8d794",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-016",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/016-v1-request.json",
+      "request_sha256": "5403756fc37392a05d727879f940c3fa615e48dd45dcdd0797ff483fad36daa6",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-017",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/017-v1-request.json",
+      "request_sha256": "dcdeee4d114d676843b22b777011b5f77f6eeda7101b6331de26d257e62546a4",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-018",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/018-v1-request.json",
+      "request_sha256": "a255c2e6c18a20f5364c850d4e42a676641fc688e46eecafa47d8edc814d7493",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-019",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/019-v1-request.json",
+      "request_sha256": "fc1f74b0d89c6ed8db7531446fb0eba7aec7799b64b38c2d4dad351d88001003",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-020",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/020-v1-request.json",
+      "request_sha256": "9a8456434c7922c0dd9b499d43c69d6538a21dba2aea7e6d217cb9424d918c84",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-021",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/021-v1-request.json",
+      "request_sha256": "20d3e1e7dbda40f0dbe0e176212647981bc91be2ecb6220c7f791d5710b0a86e",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-022",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/022-v1-request.json",
+      "request_sha256": "042c73c51591f342e78f1b178a5be0994ac3943b63aac005fa3856b76f1ec674",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-023",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/023-v1-request.json",
+      "request_sha256": "7a29fac557d5f3b92f5b988c04bfce744e077bf85f55c262068edaf522c2655e",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-024",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/024-v1-request.json",
+      "request_sha256": "8d085ed1aedde570f2ce2a8309c42364ce41e6a36741c0cf71d74d513c075eb9",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-026",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/026-v1-request.json",
+      "request_sha256": "675004fa0e63357f1d0711894fa2bcf9943064f32baa4eb818e43f68073da66a",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-027",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/027-v1-request.json",
+      "request_sha256": "6a38e66a8be967809ab3c45d077b2178c6a2fb4dd0fbb2cecbfbebbd974e66e3",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-028",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/028-v1-request.json",
+      "request_sha256": "cf99d0c0ace7fdaf6c91eb9e09a59c60bbb53372fe9ce75cbd40d047b02eaac7",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-029",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/029-v1-request.json",
+      "request_sha256": "c4c5378fc4bf4fee69e9c7d508adc6e4b60af5d4adc1f5267f01fca5d9e17537",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-030",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/030-v1-request.json",
+      "request_sha256": "b861fa8c7ce900654eb250c36ee5830c9b0919b0c2aea3b5238e2343b12dbc5b",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-031",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/031-v1-request.json",
+      "request_sha256": "548b224b5e01b4e4a9e1fe596ca988d7da5fdec10729309cf13398ff3ee8a586",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-032",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/032-v1-request.json",
+      "request_sha256": "6f1d59a9a8d1d1afd42145c0a27563d58c5a2caf8e66b03fc2f1bd3d41ae4a02",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-033",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/033-v1-request.json",
+      "request_sha256": "65840fcbaa577e3cbe1d9c98b64bab0db429989e1b723107f9ef75230de0cfca",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-034",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/034-v1-request.json",
+      "request_sha256": "150a96b92138017303384af50544e07b0b03eec845d80b798507a0839e4b4510",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-035",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/035-v1-request.json",
+      "request_sha256": "1c14f16868240e37af09fa7325dbf6ae01aacbc9ac2dcf0c7c155442fdb8366e",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-036",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/036-v1-request.json",
+      "request_sha256": "0303798266c4b81ef1c8a1a24777df1f12959b0d6230a83f194a9bfeb7ce2998",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-037",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/037-v1-request.json",
+      "request_sha256": "b090ae3dd6ab8b3b020d1959bf6aece64317e16d22ca21e3bbbeb24e9b0c9090",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-038",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/038-v1-request.json",
+      "request_sha256": "16da4c93b22381a9778e7b8597feefe44d92d426d4ef94fe8bcf214cc29f23e3",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-042",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/042-v1-request.json",
+      "request_sha256": "796d023cffc80a9957d2cf2f7739f2cd86e2a6103af25effd0bb3a76dcf3aa79",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGIFT.BMP-044",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/044-v1-request.json",
+      "request_sha256": "7bcc43deec7285dba765028b95667b9993fedebc4e826a65f4b0e91e28942421",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-000",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/000-v1-request.json",
+      "request_sha256": "2480ff990095bb5efe41a9dceb1f47e66dae34ae61891d4cb701b076b418001a",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-001",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/001-v1-request.json",
+      "request_sha256": "a241b452329d0d3faff39ee9b9edc67bb9f2a58277f8c5b192f8d64920588209",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-003",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/003-v1-request.json",
+      "request_sha256": "e495cdca1944e46f6e87d277f495b54fbab9d301ba0ec485cc371b8c6c164f45",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-004",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/004-v1-request.json",
+      "request_sha256": "f5abf5b7dc2c3ac4d47389386f52f51b145f895f36a62bc3c12ab443af11464f",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-005",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/005-v1-request.json",
+      "request_sha256": "1f972ad9fabaa720b31a77c5727e79243ac64c8d3035330040735b75ded43f91",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-006",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/006-v1-request.json",
+      "request_sha256": "2756509a818c6e8548ae8d90609d5e8cf16fd7b353d43169da732e21fe8e3ffb",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-008",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/008-v1-request.json",
+      "request_sha256": "efaef1b1051c657dd46e476ebe8442c6dee41067c7de9715125deaed32c4c380",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-010",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/010-v1-request.json",
+      "request_sha256": "336011b12253d95a4489225b95d1fc0ce8a6b89734e6b6c589377c9d9bcbe5e9",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-011",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/011-v1-request.json",
+      "request_sha256": "c2734d58a7f17f3636e2a92cd9a7c617cc5864ce930d671f224876281b369892",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-012",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/012-v1-request.json",
+      "request_sha256": "cc26eac2016c3e80eef945db0e8ebfd189114f17a557ebe3111bd5a3e5916a00",
+      "outcome": "no_image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-013",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/013-v1-request.json",
+      "request_sha256": "770eb7ba6ca7e127ad25f914750973016c5fc3569cc317c300f8d806424c30a8",
+      "outcome": "no_image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-014",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/014-v1-request.json",
+      "request_sha256": "827ba4c0e3cf75cb01a7382b86db2f775d80e1eb55be8b0002c572229b2ed3c9",
+      "outcome": "no_image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-016",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/016-v1-request.json",
+      "request_sha256": "0b00e147a77658ca2abe301e5b32d44ce4f27ed97a77f100adcb1232945f1b91",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-017",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/017-v1-request.json",
+      "request_sha256": "afa7d7d581e63e53ec5c41001cc5c0fc4be4b457440bf4466c77309c95388bcf",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-018",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/018-v1-request.json",
+      "request_sha256": "e44a2b578ab0b65f8f104c7a6319f03de994b50c755b7972605e5851da56c104",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-019",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/019-v1-request.json",
+      "request_sha256": "b94d212d87c1a3139fbc37f18a26578dfe18c77f6cf77d5f9c9cde84edb29e78",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-020",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/020-v1-request.json",
+      "request_sha256": "abdd05361b6f337cabb0768e7b1a80750ac3cf61f178e64fe02a01b7aa4f44de",
+      "outcome": "image"
+    },
+    {
+      "key": "SMGLIMSE.BMP-021",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/021-v1-request.json",
+      "request_sha256": "c798d1fa3c81a5bb36ab0917be38040d8d5a4a0a775f3693a8968615b6d57ab6",
+      "outcome": "image"
+    },
+    {
+      "key": "SSUZY1.BMP-004",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SSUZY1.BMP/004-v1-request.json",
+      "request_sha256": "6b72b2e52c3a101eee79b621576325cdbdb530b297edfcd58033585078137ae7",
+      "outcome": "no_image"
+    },
+    {
+      "key": "SSUZY1.BMP-005",
+      "version": 1,
+      "request": "art/cartoon/mermaid-expression-corrections-v1/generation/SSUZY1.BMP/005-v1-request.json",
+      "request_sha256": "b85c3eaeb5f3b75231496efade82550e6191efbf44f5330c1ab2e237b4e58609",
+      "outcome": "no_image"
+    }
+  ],
+  "no_image_outcomes": [
+    {
+      "key": "SBREAKUP.BMP-007",
+      "version": 1,
+      "file": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/007-v1-failure.json",
+      "status": "no_image_returned",
+      "error_present": true,
+      "moderation_stage": null,
+      "attribution": "Frame007 and008 were submitted concurrently. One returned this output-stage moderation error, which terminated the Promise.all wrapper before either per-frame result was saved. The failed frame identity is unknown; this record does not assert that this individual frame was blocked.",
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID f465dbb3-eff8-458b-9e90-ede8b1bdb326. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "key": "SBREAKUP.BMP-008",
+      "version": 1,
+      "file": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/008-v1-failure.json",
+      "status": "no_image_returned",
+      "error_present": true,
+      "moderation_stage": null,
+      "attribution": "Frame007 and008 were submitted concurrently. One returned this output-stage moderation error, which terminated the Promise.all wrapper before either per-frame result was saved. The failed frame identity is unknown; this record does not assert that this individual frame was blocked.",
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID f465dbb3-eff8-458b-9e90-ede8b1bdb326. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "key": "SMGLIMSE.BMP-012",
+      "version": 1,
+      "file": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/012-v1-failure.json",
+      "status": "blocked",
+      "error_present": true,
+      "moderation_stage": "input",
+      "attribution": null,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 0fc57d51-e1d6-4c53-9b9a-adc28e19a79f. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"input\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "key": "SMGLIMSE.BMP-013",
+      "version": 1,
+      "file": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/013-v1-failure.json",
+      "status": "blocked",
+      "error_present": true,
+      "moderation_stage": "output",
+      "attribution": null,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 665de442-0df7-4530-988a-9bcc339084f9.\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"other\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "key": "SMGLIMSE.BMP-014",
+      "version": 1,
+      "file": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/014-v1-failure.json",
+      "status": "blocked",
+      "error_present": true,
+      "moderation_stage": "output",
+      "attribution": null,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 68e96b61-1e5a-4cdd-9c62-4c524d568802.\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"other\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "key": "SSUZY1.BMP-004",
+      "version": 1,
+      "file": "art/cartoon/mermaid-expression-corrections-v1/generation/SSUZY1.BMP/004-v1-failure.json",
+      "status": "no_image_returned",
+      "error_present": true,
+      "moderation_stage": null,
+      "attribution": null,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 62775402-fd76-40bd-a555-55952124130d. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    },
+    {
+      "key": "SSUZY1.BMP-005",
+      "version": 1,
+      "file": "art/cartoon/mermaid-expression-corrections-v1/generation/SSUZY1.BMP/005-v1-failure.json",
+      "status": "no_image_returned",
+      "error_present": true,
+      "moderation_stage": null,
+      "attribution": null,
+      "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 3156b129-b3ec-4acb-a108-042b525c78b7. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")"
+    }
+  ]
+}

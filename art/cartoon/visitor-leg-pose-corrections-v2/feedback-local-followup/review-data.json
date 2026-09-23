@@ -1,0 +1,943 @@
+{
+  "schema_version": 2,
+  "total": 7,
+  "status": "generation_paused",
+  "counts": {
+    "comparison_count": 7,
+    "displayed_new_attempt_count": 4,
+    "no_new_image_count": 3,
+    "latest_request_blocked_count": 4,
+    "latest_request_not_submitted_count": 1,
+    "image_panel_count": 18,
+    "placeholder_panel_count": 3,
+    "review_status_counts": {
+      "blocked": 3,
+      "ready_for_review": 1,
+      "needs_anatomy_review": 1,
+      "diagnostic_insufficient": 2
+    }
+  },
+  "summary": "7 comparisons: 4 new attempts shown, 3 without a new image. 4 latest requests were blocked; 1 was prepared but not submitted.",
+  "links": {
+    "local_generation_handoff": "local-generation-handoff/index.html",
+    "prior_refusal_audit": "prior-refusal-audit.json",
+    "prior_refusal_notes": "refusal-audit-notes.md"
+  },
+  "frames": [
+    {
+      "key": "SSUZY1.BMP-003",
+      "resource": "SSUZY1.BMP",
+      "frame": "003",
+      "group": "reclining",
+      "correction": "Use the same pose as001, remove the lotion bottle and bring the arm inward slightly. The new attempt was blocked;001 is shown as a pose reference, not a completed003.",
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/003.png",
+        "sha256": "ebb2f6be0b676de5035e85f41693419019c0fe7923049b83c23dd06b5d344ae4",
+        "canvas": [
+          96,
+          57
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          92,
+          57
+        ]
+      },
+      "previous": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+        "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16",
+        "canvas": [
+          1725,
+          912
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          44,
+          37,
+          1696,
+          862
+        ]
+      },
+      "previous_label": "Pose reference001",
+      "review_status": "blocked",
+      "status_text": "Paused. Attempt v1 was blocked by the image tool and returned no drawing. The middle image is pose reference 001, not a completed 003.",
+      "display_version": null,
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/003.png",
+          "sha256": "ebb2f6be0b676de5035e85f41693419019c0fe7923049b83c23dd06b5d344ae4",
+          "canvas": [
+            96,
+            57
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            92,
+            57
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/003.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+          "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16",
+          "canvas": [
+            1725,
+            912
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            44,
+            37,
+            1696,
+            862
+          ],
+          "url": "../workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png"
+        }
+      },
+      "latest_request": {
+        "version": 1,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-request.json",
+          "sha256": "53ed1314db51dc715b0bb229c5db0700804003567ae5652d8646563445e8314a",
+          "url": "generation/SSUZY1.BMP/003-v1-request.json"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-failure.json",
+          "sha256": "707c86b62f32f7b85b78e748d922dc7f72cd7128dbfda2fdd02c57be8c32827a",
+          "url": "generation/SSUZY1.BMP/003-v1-failure.json"
+        }
+      }
+    },
+    {
+      "key": "SSUZY1.BMP-004",
+      "resource": "SSUZY1.BMP",
+      "frame": "004",
+      "group": "reclining",
+      "correction": "Use001 for the natural reclining leg arrangement. Preserve004's upper body and hands while removing the unnatural crossing.",
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/004.png",
+        "sha256": "07b1bda0d283390511c472fff621702a5a28909cbb67ab89d8c1d332695ed254",
+        "canvas": [
+          96,
+          56
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          91,
+          56
+        ]
+      },
+      "previous": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/004-generated-v1.png",
+        "sha256": "ca219c0e13656fb85a2e87179af9e85f9fedb620ae4b1bf5035a46d4fe40d31b",
+        "canvas": [
+          1642,
+          958
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          43,
+          23,
+          1599,
+          938
+        ]
+      },
+      "previous_label": "Previous Cartoon",
+      "review_status": "blocked",
+      "status_text": "Paused. Attempt v1 was blocked by the image tool and returned no drawing. The previous Cartoon remains shown for context.",
+      "display_version": null,
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/004.png",
+          "sha256": "07b1bda0d283390511c472fff621702a5a28909cbb67ab89d8c1d332695ed254",
+          "canvas": [
+            96,
+            56
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            91,
+            56
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/004.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/004-generated-v1.png",
+          "sha256": "ca219c0e13656fb85a2e87179af9e85f9fedb620ae4b1bf5035a46d4fe40d31b",
+          "canvas": [
+            1642,
+            958
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            43,
+            23,
+            1599,
+            938
+          ],
+          "url": "../worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/004-generated-v1.png"
+        }
+      },
+      "latest_request": {
+        "version": 1,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-request.json",
+          "sha256": "0be2b69343df01f3393d647a4b2afb5420d31d6df4fa6f8fd296d7d0254dfae7",
+          "url": "generation/SSUZY1.BMP/004-v1-request.json"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-failure.json",
+          "sha256": "2d35c1f7e04df5559f91b2e258d292bd7f6a88ed00f87a2bc1c26d3f7feda86b",
+          "url": "generation/SSUZY1.BMP/004-v1-failure.json"
+        }
+      }
+    },
+    {
+      "key": "SSUZY1.BMP-005",
+      "resource": "SSUZY1.BMP",
+      "frame": "005",
+      "group": "reclining",
+      "correction": "Open the raised leg higher without tucking or knotting the legs together. Keep each hip, knee and ankle connected naturally.",
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/005.png",
+        "sha256": "36de9277f4cf961116b23287f66d082ef2985584b018bea4c3da6e2a6c184432",
+        "canvas": [
+          80,
+          56
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          80,
+          56
+        ]
+      },
+      "previous": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/005-generated-v1.png",
+        "sha256": "366f93b36318593002ae1029f30a1ff0a31eea5280783955d78fb2743ba6cc91",
+        "canvas": [
+          1500,
+          1049
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          60,
+          12,
+          1441,
+          1030
+        ]
+      },
+      "previous_label": "Previous Cartoon",
+      "review_status": "ready_for_review",
+      "status_text": "New attempt v1 is ready for your appearance review. The raised leg opens higher and the knotted crossing is removed. No approval is recorded.",
+      "display_version": 1,
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/005.png",
+          "sha256": "36de9277f4cf961116b23287f66d082ef2985584b018bea4c3da6e2a6c184432",
+          "canvas": [
+            80,
+            56
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            80,
+            56
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/005.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/005-generated-v1.png",
+          "sha256": "366f93b36318593002ae1029f30a1ff0a31eea5280783955d78fb2743ba6cc91",
+          "canvas": [
+            1500,
+            1049
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            60,
+            12,
+            1441,
+            1030
+          ],
+          "url": "../worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/005-generated-v1.png"
+        },
+        "attempt": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+          "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353",
+          "canvas": [
+            1500,
+            1049
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            52,
+            11,
+            1450,
+            1024
+          ],
+          "url": "generation/SSUZY1.BMP/005-generated-v1.png"
+        }
+      },
+      "latest_request": {
+        "version": 1,
+        "status": "returned",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v1-request.json",
+          "sha256": "c01c5441e7af362c25221f34064f583450ba9f78a2d7d677fca1fba2d912f85d",
+          "url": "generation/SSUZY1.BMP/005-v1-request.json"
+        }
+      },
+      "displayed_attempt": {
+        "version": 1,
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-record-v1.json",
+          "sha256": "35504b9bd3ceeec4dcc4b4d3f93321d127ab0a9097b7147181aeff38e2cc25d7"
+        },
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v1-request.json",
+          "sha256": "c01c5441e7af362c25221f34064f583450ba9f78a2d7d677fca1fba2d912f85d"
+        },
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+          "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+        },
+        "references": [
+          {
+            "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/005-generated-v1.png",
+            "sha256": "366f93b36318593002ae1029f30a1ff0a31eea5280783955d78fb2743ba6cc91"
+          },
+          {
+            "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/005.png",
+            "sha256": "102e8398a3ace0751e2aa43c3dec324752abc403a55c6d6ef7de4bb332c0b209"
+          },
+          {
+            "path": "art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+            "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16"
+          }
+        ]
+      }
+    },
+    {
+      "key": "SSUZY1.BMP-006",
+      "resource": "SSUZY1.BMP",
+      "frame": "006",
+      "group": "reclining",
+      "correction": "The lower leg emerges from the hip, bends at the knee and rests on the sand. Correct the thick straight shape.",
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/006.png",
+        "sha256": "aefb5f83f1b90248a7a640531568bc2cabe677f7a1c2fabb1892180195289d69",
+        "canvas": [
+          88,
+          55
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          84,
+          55
+        ]
+      },
+      "previous": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/006-generated-v1.png",
+        "sha256": "bbfe8f0518061c68c701cb5dca1de2b9c2465e80f50f08b38434238c2d194413",
+        "canvas": [
+          1586,
+          992
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          72,
+          2,
+          1519,
+          980
+        ]
+      },
+      "previous_label": "Previous Cartoon",
+      "review_status": "diagnostic_insufficient",
+      "status_text": "New attempt v1 is diagnostic and still insufficient: the lower leg remains too thick and too straight. A v2 request was prepared but never submitted before the pause.",
+      "display_version": 1,
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/006.png",
+          "sha256": "aefb5f83f1b90248a7a640531568bc2cabe677f7a1c2fabb1892180195289d69",
+          "canvas": [
+            88,
+            55
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            84,
+            55
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/006.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/006-generated-v1.png",
+          "sha256": "bbfe8f0518061c68c701cb5dca1de2b9c2465e80f50f08b38434238c2d194413",
+          "canvas": [
+            1586,
+            992
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            72,
+            2,
+            1519,
+            980
+          ],
+          "url": "../worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/006-generated-v1.png"
+        },
+        "attempt": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png",
+          "sha256": "1439aa6839e2d2759b4faf48f239b8111459537b763cf14131740ab788d4e28c",
+          "canvas": [
+            1584,
+            993
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            71,
+            4,
+            1499,
+            975
+          ],
+          "url": "generation/SSUZY1.BMP/006-generated-v1.png"
+        }
+      },
+      "latest_request": {
+        "version": 2,
+        "status": "not_submitted",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-v2-request.json",
+          "sha256": "a3e2285a50c3ca18fa9e402d5d179f3829af1e4c8712b484a621ec944bd11ef3",
+          "url": "generation/SSUZY1.BMP/006-v2-request.json"
+        }
+      },
+      "displayed_attempt": {
+        "version": 1,
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-record-v1.json",
+          "sha256": "d70a5bf273a3a370dff4c843a2531385f267c3902d03605e4ca263aef399921c"
+        },
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-v1-request.json",
+          "sha256": "de24f453a19332436f1a1fc0c33c96f37e6ae96a9eabd4432f7ce807c4d553d4"
+        },
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png",
+          "sha256": "1439aa6839e2d2759b4faf48f239b8111459537b763cf14131740ab788d4e28c"
+        },
+        "references": [
+          {
+            "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/006-generated-v1.png",
+            "sha256": "bbfe8f0518061c68c701cb5dca1de2b9c2465e80f50f08b38434238c2d194413"
+          },
+          {
+            "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/006.png",
+            "sha256": "91d88cdde8c59b767058a28048b2a3d09cff1766b37bdaf32b19b50cc96d2524"
+          },
+          {
+            "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+            "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c"
+          }
+        ]
+      }
+    },
+    {
+      "key": "SSUZY1.BMP-008",
+      "resource": "SSUZY1.BMP",
+      "frame": "008",
+      "group": "seated",
+      "correction": "Match007's natural right-leg connection and tuck at the swimsuit. Keep the separate bottle and hand-on-knee pose.",
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/008.png",
+        "sha256": "531914024c37959da310d620d9e5369ae09b9a1937e2be4be27a6c91e3b7d987",
+        "canvas": [
+          112,
+          64
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          112,
+          64
+        ]
+      },
+      "previous": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/008-generated-v1.png",
+        "sha256": "cb854629387a4356c6984b3c677fbd7948a9d420121a1a25fe913ba7d29368d1",
+        "canvas": [
+          1660,
+          948
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          69,
+          5,
+          1618,
+          937
+        ]
+      },
+      "previous_label": "Previous Cartoon",
+      "review_status": "needs_anatomy_review",
+      "status_text": "New attempt v2 is the best available candidate, but the hip and folded-leg anatomy still need review. The pinched skin wedge is reduced; this is not a confirmed complete correction.",
+      "display_version": 2,
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/008.png",
+          "sha256": "531914024c37959da310d620d9e5369ae09b9a1937e2be4be27a6c91e3b7d987",
+          "canvas": [
+            112,
+            64
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            112,
+            64
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/008.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/008-generated-v1.png",
+          "sha256": "cb854629387a4356c6984b3c677fbd7948a9d420121a1a25fe913ba7d29368d1",
+          "canvas": [
+            1660,
+            948
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            69,
+            5,
+            1618,
+            937
+          ],
+          "url": "../worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/008-generated-v1.png"
+        },
+        "attempt": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v2.png",
+          "sha256": "8093274c4ec5d501f995dcd0329f656af4769e0fb69c01d67a7ced82a44c840f",
+          "canvas": [
+            1659,
+            948
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            58,
+            1,
+            1607,
+            933
+          ],
+          "url": "generation/SSUZY1.BMP/008-generated-v2.png"
+        }
+      },
+      "latest_request": {
+        "version": 2,
+        "status": "returned",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-v2-request.json",
+          "sha256": "918c9907bc5318820e17bdc12b4ab4bb0a432fea6d511f6c9f1db0d481241020",
+          "url": "generation/SSUZY1.BMP/008-v2-request.json"
+        }
+      },
+      "displayed_attempt": {
+        "version": 2,
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-record-v2.json",
+          "sha256": "973755dafef4e7e2fef3bd39559685e5d9883490000f51049d095bc9612e2b40"
+        },
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-v2-request.json",
+          "sha256": "918c9907bc5318820e17bdc12b4ab4bb0a432fea6d511f6c9f1db0d481241020"
+        },
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v2.png",
+          "sha256": "8093274c4ec5d501f995dcd0329f656af4769e0fb69c01d67a7ced82a44c840f"
+        },
+        "references": [
+          {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v1.png",
+            "sha256": "9e88fc2db2c7f2575d5431f5018d871848195fbd4f3306d8cfec0bfad7757c0a"
+          },
+          {
+            "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+            "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c"
+          }
+        ]
+      }
+    },
+    {
+      "key": "SSUZY1.BMP-009",
+      "resource": "SSUZY1.BMP",
+      "frame": "009",
+      "group": "seated",
+      "correction": "Match007's natural right-leg connection and tuck. Preserve the hand below the knee and the bottle-free pose.",
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/009.png",
+        "sha256": "cb836349c2e7b0345ca1e6ad0aa1906b1c6774a18fb56f4d098e3fdd3a6aa6ab",
+        "canvas": [
+          104,
+          61
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          104,
+          61
+        ]
+      },
+      "previous": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-generated-v2.png",
+        "sha256": "81133f52b9aae04375d004924ca33c1e077f791b3ec66a8caf8f89af4bec0bde",
+        "canvas": [
+          1660,
+          948
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          177,
+          6,
+          1599,
+          936
+        ]
+      },
+      "previous_label": "Previous Cartoon",
+      "review_status": "diagnostic_insufficient",
+      "status_text": "New attempt v1 is diagnostic and still retains too much of the rejected hip construction. The later v2 request was blocked by the image tool and returned no image.",
+      "display_version": 1,
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/009.png",
+          "sha256": "cb836349c2e7b0345ca1e6ad0aa1906b1c6774a18fb56f4d098e3fdd3a6aa6ab",
+          "canvas": [
+            104,
+            61
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            104,
+            61
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/009.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-generated-v2.png",
+          "sha256": "81133f52b9aae04375d004924ca33c1e077f791b3ec66a8caf8f89af4bec0bde",
+          "canvas": [
+            1660,
+            948
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            177,
+            6,
+            1599,
+            936
+          ],
+          "url": "../worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-generated-v2.png"
+        },
+        "attempt": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-generated-v1.png",
+          "sha256": "e52d90f89a875330940b7c3d1f53084a1ca913793d327c3ee4d4a5317b77bc63",
+          "canvas": [
+            1659,
+            948
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            146,
+            4,
+            1579,
+            938
+          ],
+          "url": "generation/SSUZY1.BMP/009-generated-v1.png"
+        }
+      },
+      "latest_request": {
+        "version": 2,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v2-request.json",
+          "sha256": "a78ae3ef9540c4f52d32aa017951f36afd7f0faba724f559e599a5c2d9d293f2",
+          "url": "generation/SSUZY1.BMP/009-v2-request.json"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v2-failure.json",
+          "sha256": "815b414f9d62b05d99554ec45185a3cdc229c37bb09ebc8ea70393cc5fff0f8a",
+          "url": "generation/SSUZY1.BMP/009-v2-failure.json"
+        }
+      },
+      "displayed_attempt": {
+        "version": 1,
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-record-v1.json",
+          "sha256": "e90596ca68c851bffff13299073ad8d14adb7c6399bcb4a31c979f5d3adbc4c6"
+        },
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v1-request.json",
+          "sha256": "2cd3c1015431bb65792454fa03b64456d2d7f28bca36933574e67436288a3410"
+        },
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-generated-v1.png",
+          "sha256": "e52d90f89a875330940b7c3d1f53084a1ca913793d327c3ee4d4a5317b77bc63"
+        },
+        "references": [
+          {
+            "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/009-generated-v2.png",
+            "sha256": "81133f52b9aae04375d004924ca33c1e077f791b3ec66a8caf8f89af4bec0bde"
+          },
+          {
+            "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/007-generated-v1.png",
+            "sha256": "e042e3b0600f864831fdc7b3749b8fb6795a8a3e4082759ffba3c7208aff564c"
+          },
+          {
+            "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/009.png",
+            "sha256": "a5a1942192d065786af459abd90b00df74725a39791bf3e757d661832796fe11"
+          }
+        ]
+      }
+    },
+    {
+      "key": "SSUZY1.BMP-010",
+      "resource": "SSUZY1.BMP",
+      "frame": "010",
+      "group": "seated",
+      "correction": "Match007's natural right-leg connection and tuck. Preserve the farther forward bend and hand at the ankle.",
+      "original": {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/010.png",
+        "sha256": "1a933a1b2460c0f24b18ce91123acfe8f776c6fcea2696b77e8d72fb3b1058b8",
+        "canvas": [
+          112,
+          56
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          0,
+          0,
+          105,
+          56
+        ]
+      },
+      "previous": {
+        "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/010-generated-v1.png",
+        "sha256": "c2e720a38c3e12f64bdadf99023ee27cebad5d5ba874e9cbaadd3154ecf6b03d",
+        "canvas": [
+          1659,
+          948
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          96,
+          11,
+          1607,
+          934
+        ]
+      },
+      "previous_label": "Previous Cartoon",
+      "review_status": "blocked",
+      "status_text": "Paused. Attempt v1 was blocked by the image tool and returned no drawing. No new correction is available.",
+      "display_version": null,
+      "images": {
+        "original": {
+          "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/010.png",
+          "sha256": "1a933a1b2460c0f24b18ce91123acfe8f776c6fcea2696b77e8d72fb3b1058b8",
+          "canvas": [
+            112,
+            56
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            0,
+            0,
+            105,
+            56
+          ],
+          "url": "../workers-and-mermaids-batch-v1/reference/original/SSUZY1.BMP/010.png"
+        },
+        "earlier": {
+          "path": "art/cartoon/worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/010-generated-v1.png",
+          "sha256": "c2e720a38c3e12f64bdadf99023ee27cebad5d5ba874e9cbaadd3154ecf6b03d",
+          "canvas": [
+            1659,
+            948
+          ],
+          "mode": "RGBA",
+          "alpha_range": [
+            0,
+            255
+          ],
+          "alpha8_bounds": [
+            96,
+            11,
+            1607,
+            934
+          ],
+          "url": "../worker-visitor-mermaid-fixes-v1/generation/SSUZY1.BMP/010-generated-v1.png"
+        }
+      },
+      "latest_request": {
+        "version": 1,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-v1-request.json",
+          "sha256": "f9c9c5edab5e953f69266ae41d7be9161ff49539161a76000fa395b5521fffc6",
+          "url": "generation/SSUZY1.BMP/010-v1-request.json"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-v1-failure.json",
+          "sha256": "bb56eb9e6e31e8edcbe1876d71b660e3cec88a5ee96675ce297dd2b870ad2953",
+          "url": "generation/SSUZY1.BMP/010-v1-failure.json"
+        }
+      }
+    }
+  ],
+  "appearance_approval": null,
+  "production_integrated": false,
+  "native_motion_checked": false
+}

@@ -1,0 +1,478 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-09-23T21:42:38.443180+00:00",
+  "scope": "Bounded saved-state audit for the September 23 Git checkpoint. Read and hash files; do not change approval history. Served-page checks are separate.",
+  "current_reviews": {
+    "records": [
+      {
+        "record": {
+          "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/review-record.json",
+          "sha256": "841fafce40a2d3d85aa467a0edd3782f2339ebe1ff435cc46c78f65f3fb37d07"
+        },
+        "counts": {
+          "generated": 72
+        },
+        "binding_occurrence_count": 308,
+        "verified_binding_count": 308,
+        "mismatches": []
+      },
+      {
+        "record": {
+          "path": "art/cartoon/shark-identity-corrections-v1/review-record.json",
+          "sha256": "aabc8b73bbe0bbaee5cf5f0df1843d0b0a11573b2c80ed0a6b67f75420ddef7c"
+        },
+        "counts": {
+          "awaiting_review": 27
+        },
+        "binding_occurrence_count": 3,
+        "verified_binding_count": 3,
+        "mismatches": []
+      }
+    ],
+    "verified_binding_occurrences": 311,
+    "current_batch_count": 72,
+    "shark_correction_count": 27,
+    "other_selected_drawings": 45,
+    "appearance_approval": null
+  },
+  "prior_focused_approvals": {
+    "count": 12,
+    "artworks": [
+      {
+        "key": "SMGIFT.BMP-014",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+          "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/gift014/014-generated-v1.png",
+          "expected_sha256": "ab7a4769c0ff2c2af93655b6cd93f35050e3aad1dec3c14990a660183dbd231a",
+          "actual_sha256": "ab7a4769c0ff2c2af93655b6cd93f35050e3aad1dec3c14990a660183dbd231a",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/gift014/014-request.json",
+          "expected_sha256": "30ee0404ca15457d8f39584a17a7d5339e30c0ddcdf424356dbabf0cf0d7da03",
+          "actual_sha256": "30ee0404ca15457d8f39584a17a7d5339e30c0ddcdf424356dbabf0cf0d7da03",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/gift014/014-record.json",
+          "expected_sha256": "ee3f54d71c7536b180902fe3c4d2f0d421f2fed225d2fb31175423cad9f12d13",
+          "actual_sha256": "ee3f54d71c7536b180902fe3c4d2f0d421f2fed225d2fb31175423cad9f12d13",
+          "verified": true
+        }
+      },
+      {
+        "key": "SMGIFT.BMP-037",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+          "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/037/candidate-v1.png",
+          "expected_sha256": "28b53d23e774da5be64d0937c51652df4bd6ca7e303e13a504b12e1d60342f13",
+          "actual_sha256": "28b53d23e774da5be64d0937c51652df4bd6ca7e303e13a504b12e1d60342f13",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/037/request.json",
+          "expected_sha256": "f624f971b5d71990b47459666cb9a507d09218c3f08ef4d590bd11e21eddfaa9",
+          "actual_sha256": "f624f971b5d71990b47459666cb9a507d09218c3f08ef4d590bd11e21eddfaa9",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/037/record.json",
+          "expected_sha256": "a84a439f4d24ff51bc6e4506c763b84de8f504f656c8b0354e4de0a911f0565a",
+          "actual_sha256": "a84a439f4d24ff51bc6e4506c763b84de8f504f656c8b0354e4de0a911f0565a",
+          "verified": true
+        }
+      },
+      {
+        "key": "SMGIFT.BMP-038",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+          "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/038/candidate-v1.png",
+          "expected_sha256": "cb2c4d180fa851a6d094aee03d137a0e03d5cf0043c1caebda4e507eeb2fa81e",
+          "actual_sha256": "cb2c4d180fa851a6d094aee03d137a0e03d5cf0043c1caebda4e507eeb2fa81e",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/038/request.json",
+          "expected_sha256": "29ce484f6fda3829e5ae52d223c3722ec6c80e4dbe460fbed83891db91aa0201",
+          "actual_sha256": "29ce484f6fda3829e5ae52d223c3722ec6c80e4dbe460fbed83891db91aa0201",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/038/record.json",
+          "expected_sha256": "8b414629835ee708ac869c135f402e8c0007784200bd4c685598ce893cdff536",
+          "actual_sha256": "8b414629835ee708ac869c135f402e8c0007784200bd4c685598ce893cdff536",
+          "verified": true
+        }
+      },
+      {
+        "key": "SMGIFT.BMP-039",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+          "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/039/candidate-v1.png",
+          "expected_sha256": "205c3ed2eb158b5ec38fb42c4a92985620f8c4124a8f9e4ba0364a6f7cbb9aaf",
+          "actual_sha256": "205c3ed2eb158b5ec38fb42c4a92985620f8c4124a8f9e4ba0364a6f7cbb9aaf",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/039/request.json",
+          "expected_sha256": "9d884000d63e6239a2363e29e7dcb1ee8d6719868fc9e6c879e8300f51ef4112",
+          "actual_sha256": "9d884000d63e6239a2363e29e7dcb1ee8d6719868fc9e6c879e8300f51ef4112",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/039/record.json",
+          "expected_sha256": "7cc66f90bb548c582dede44b5daf71fc3d5e522cf33dbb82bb575f6b20db76d0",
+          "actual_sha256": "7cc66f90bb548c582dede44b5daf71fc3d5e522cf33dbb82bb575f6b20db76d0",
+          "verified": true
+        }
+      },
+      {
+        "key": "SMGIFT.BMP-041",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+          "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/041/candidate-v1.png",
+          "expected_sha256": "f7b45401b398f5ec0ad3865e99f33f251c89e8e13ebcf5db395406b7811e3042",
+          "actual_sha256": "f7b45401b398f5ec0ad3865e99f33f251c89e8e13ebcf5db395406b7811e3042",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/041/request.json",
+          "expected_sha256": "f570d99a24e1b82b19054cccd5fddc248efcec504be6d72cfe383c58a2f3551f",
+          "actual_sha256": "f570d99a24e1b82b19054cccd5fddc248efcec504be6d72cfe383c58a2f3551f",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/041/record.json",
+          "expected_sha256": "0a02a65eb58b089dd6b38bd60ca92eb88ac3a3cd944af7cfd6557032a576e23e",
+          "actual_sha256": "0a02a65eb58b089dd6b38bd60ca92eb88ac3a3cd944af7cfd6557032a576e23e",
+          "verified": true
+        }
+      },
+      {
+        "key": "SMGIFT.BMP-043",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+          "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/043/candidate-v1.png",
+          "expected_sha256": "d61721311d445ee213b9b8cf1d0020ca86b3925475e6ad05ef55d4eb8292b6f0",
+          "actual_sha256": "d61721311d445ee213b9b8cf1d0020ca86b3925475e6ad05ef55d4eb8292b6f0",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/043/request.json",
+          "expected_sha256": "d468e86a55f7679071a60dfd1ca0351b26511bf8dac5bd0fd74363c441c8931c",
+          "actual_sha256": "d468e86a55f7679071a60dfd1ca0351b26511bf8dac5bd0fd74363c441c8931c",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/preserver/043/record.json",
+          "expected_sha256": "d9dc12726b494497faa92381403535145d0bdf3925a6469b8715e9a73627a3eb",
+          "actual_sha256": "d9dc12726b494497faa92381403535145d0bdf3925a6469b8715e9a73627a3eb",
+          "verified": true
+        }
+      },
+      {
+        "key": "SMGLIMSE.BMP-000",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+          "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/000-candidate-v1.png",
+          "expected_sha256": "0f6d0ebb18273cf2956e7b1f26e50d5f3961eeab9c9f7b97c36c0af1193629b6",
+          "actual_sha256": "0f6d0ebb18273cf2956e7b1f26e50d5f3961eeab9c9f7b97c36c0af1193629b6",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/000-request.json",
+          "expected_sha256": "937c83e97d75b409872f1c29fa2ea8fead1ef42daa5c268cf3a51afdd924f731",
+          "actual_sha256": "937c83e97d75b409872f1c29fa2ea8fead1ef42daa5c268cf3a51afdd924f731",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/000-record.json",
+          "expected_sha256": "681bc50498826e0ef4520dafc5c247864b0eac78225b11121e09e58624c68130",
+          "actual_sha256": "681bc50498826e0ef4520dafc5c247864b0eac78225b11121e09e58624c68130",
+          "verified": true
+        }
+      },
+      {
+        "key": "SMGLIMSE.BMP-010",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+          "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/010-candidate-v1.png",
+          "expected_sha256": "dd32c570e64d9a7254a0d4f982e720bfe7732de97040fb406f8dd16d4b7ffc6d",
+          "actual_sha256": "dd32c570e64d9a7254a0d4f982e720bfe7732de97040fb406f8dd16d4b7ffc6d",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/010-request.json",
+          "expected_sha256": "507b1d876fa83c37a9a48b6cbb5a97baa3d877c82edd07cedd9c2fdebe788b25",
+          "actual_sha256": "507b1d876fa83c37a9a48b6cbb5a97baa3d877c82edd07cedd9c2fdebe788b25",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/010-record.json",
+          "expected_sha256": "de24aaa6b0776ddb2d50dd4b9b6dca0b6b275313640ef4834acfae3991c8e19d",
+          "actual_sha256": "de24aaa6b0776ddb2d50dd4b9b6dca0b6b275313640ef4834acfae3991c8e19d",
+          "verified": true
+        }
+      },
+      {
+        "key": "SMGLIMSE.BMP-012",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+          "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/012-candidate-v1.png",
+          "expected_sha256": "da302cb5ab2faea810155f52bdd42a8f317eabe8bb44d9ec3b8ca920ffbbb93e",
+          "actual_sha256": "da302cb5ab2faea810155f52bdd42a8f317eabe8bb44d9ec3b8ca920ffbbb93e",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/012-request.json",
+          "expected_sha256": "b7b936597f8dd3a33f242f11a464024af3a2024c0a1c76218534670f02c214ed",
+          "actual_sha256": "b7b936597f8dd3a33f242f11a464024af3a2024c0a1c76218534670f02c214ed",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/012-record.json",
+          "expected_sha256": "3c8fa322b236bc7166bd5b77f9b56e9ec7c654ae8b5de3c03510ec198a2b8eed",
+          "actual_sha256": "3c8fa322b236bc7166bd5b77f9b56e9ec7c654ae8b5de3c03510ec198a2b8eed",
+          "verified": true
+        }
+      },
+      {
+        "key": "SSUZY1.BMP-004",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+          "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/suzy/004-upright-bottle-local-v1.png",
+          "expected_sha256": "a931a3974ea04b86665b9efbaf7f6104ce7271b1fd6b255d15600d7fd6058344",
+          "actual_sha256": "a931a3974ea04b86665b9efbaf7f6104ce7271b1fd6b255d15600d7fd6058344",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/suzy/004-request.json",
+          "expected_sha256": "622c5591eb46d682ace743c4af5be999ca1ed38ca81a2daef9201b2d5717be24",
+          "actual_sha256": "622c5591eb46d682ace743c4af5be999ca1ed38ca81a2daef9201b2d5717be24",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/suzy/004-record.json",
+          "expected_sha256": "1450a60e447e59e3e7164658ad41738deaadec7fe682485c161db2e5a4156c72",
+          "actual_sha256": "1450a60e447e59e3e7164658ad41738deaadec7fe682485c161db2e5a4156c72",
+          "verified": true
+        }
+      },
+      {
+        "key": "SMGLIMSE.BMP-014",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-glimpse014-v1.json",
+          "sha256": "d07c622417613897e0a52966c4d9c97e2b8dbda15631ce5f4c160a3d7c0de63b"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/014-candidate-v1.png",
+          "expected_sha256": "4b6db9d40db5caf30289da8f5e2448f0b0fcb3fec7c8f87e0f1f7dca5e84b956",
+          "actual_sha256": "4b6db9d40db5caf30289da8f5e2448f0b0fcb3fec7c8f87e0f1f7dca5e84b956",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/014-request.json",
+          "expected_sha256": "a17c755cbcffe22cfb75b7f8c5cc3676524deadb00899fd535ce202529d2dd55",
+          "actual_sha256": "a17c755cbcffe22cfb75b7f8c5cc3676524deadb00899fd535ce202529d2dd55",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/014-record.json",
+          "expected_sha256": "522d3b8ceaacf29323c8c4587d5ec69699cd100f5ec34f1e37361b0e6e4d6258",
+          "actual_sha256": "522d3b8ceaacf29323c8c4587d5ec69699cd100f5ec34f1e37361b0e6e4d6258",
+          "verified": true
+        }
+      },
+      {
+        "key": "SMGLIMSE.BMP-013",
+        "approval_record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-glimpse013-v5.json",
+          "sha256": "f0f744c61c4b149c5068900318c62f75484cde280dafdcf0188bb03f0b2eac5f"
+        },
+        "output": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/013-candidate-v5.png",
+          "expected_sha256": "93169db219cdc814b368a06b0693419e2ef71d962e3cc7bee99436fcedbfdaed",
+          "actual_sha256": "93169db219cdc814b368a06b0693419e2ef71d962e3cc7bee99436fcedbfdaed",
+          "verified": true
+        },
+        "request": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/013-request-v5.json",
+          "expected_sha256": "3d3396bf0b4ca5832f2c293a049b6f6b873140771f6aaaa782d3b5f9592b4279",
+          "actual_sha256": "3d3396bf0b4ca5832f2c293a049b6f6b873140771f6aaaa782d3b5f9592b4279",
+          "verified": true
+        },
+        "record": {
+          "path": "art/cartoon/review-corrections-2026-09-22/glimse/013-record-v5.json",
+          "expected_sha256": "f3470a8d8fe93fed381478a17d5d4a07588047ed3ebdeba3366f744998abff15",
+          "actual_sha256": "f3470a8d8fe93fed381478a17d5d4a07588047ed3ebdeba3366f744998abff15",
+          "verified": true
+        }
+      }
+    ],
+    "approval_files_preserved_unchanged": true
+  },
+  "selected_suzy005": {
+    "key": "SSUZY1.BMP-005",
+    "version": 2,
+    "selection": "Previous partial 005 v2",
+    "approval_record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-005-partial-v2-restored.json",
+      "sha256": "286f400c3eab1cf751938027d3b6686e2307afe8d9a4fc07477845270d61760d"
+    },
+    "output": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v2.png",
+      "expected_sha256": "ce4cd909762c0236e08f49b2c194e2891b3cfc538915a0682cc6dc3c28401597",
+      "actual_sha256": "ce4cd909762c0236e08f49b2c194e2891b3cfc538915a0682cc6dc3c28401597",
+      "verified": true
+    },
+    "record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-record-v2.json",
+      "expected_sha256": "16c3b190742ff323527524794b1f56ae6af3bc20790042e6781fb6bf03845062",
+      "actual_sha256": "16c3b190742ff323527524794b1f56ae6af3bc20790042e6781fb6bf03845062",
+      "verified": true
+    },
+    "request": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v2-request.json",
+      "expected_sha256": "298cc464b519bd67e55a4fc7912ddfe7d1c4004d4ed938489655cb260ce2b395",
+      "actual_sha256": "298cc464b519bd67e55a4fc7912ddfe7d1c4004d4ed938489655cb260ce2b395",
+      "verified": true
+    }
+  },
+  "pending_suzy003": {
+    "key": "SSUZY1.BMP-003",
+    "version": 3,
+    "status": "Saved bottle-in-hand candidate awaiting appearance review; successful render exists.",
+    "output": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v3.png",
+      "expected_sha256": "6246fa75a8b379d541e8725f0020d529eee38e481a663e0fa6ddf773bd19c56a",
+      "actual_sha256": "6246fa75a8b379d541e8725f0020d529eee38e481a663e0fa6ddf773bd19c56a",
+      "verified": true
+    },
+    "request": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v3-request.json",
+      "expected_sha256": "484cde07fa47d6f9359a06e56e0550f7ae49bf0675c59942b1c0888768c2e637",
+      "actual_sha256": "484cde07fa47d6f9359a06e56e0550f7ae49bf0675c59942b1c0888768c2e637",
+      "verified": true
+    },
+    "record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-record-v3.json",
+      "expected_sha256": "9190555b407532a51bb79d0d2a2fa8fc90b625c5ad612ab053c98e54aad4ad03",
+      "actual_sha256": "9190555b407532a51bb79d0d2a2fa8fc90b625c5ad612ab053c98e54aad4ad03",
+      "verified": true
+    }
+  },
+  "deferred_suzy_preview": {
+    "data": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/color-sequence.json",
+      "sha256": "563741b2e6a1c4b9d170b02e3ccb537ceb71c9bb759641aec53c87e89df7b3c4"
+    },
+    "viewer": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/color-sequence-review.html",
+      "sha256": "7a086c0c400a6330b92735c8871ce04884476ae07face0758c14fda35fb4b055"
+    },
+    "schema_version": 2,
+    "ground_bottle_connected": false,
+    "candidate_003_v3_connected": false,
+    "required_work": "Connect selected 003 v3 and restore the separate ground bottle through 009 and 010 at 008 position, preserving approved 004 upright bottle and selected partial 005 v2."
+  },
+  "historical_manifest_references": {
+    "acceptance_record": {
+      "path": "art/cartoon/review-corrections-2026-09-22/acceptance/appearance-rest-v1.json",
+      "sha256": "62b17922c4091897a8c2f8533f5bff9bfc0641bf1822c945496e954f2075867c"
+    },
+    "total_acceptance_binding_occurrences": 52,
+    "matching_binding_occurrences": 42,
+    "mismatch_occurrences": 10,
+    "unique_mismatch_files": 4,
+    "mismatches": [
+      {
+        "path": "art/cartoon/review-corrections-2026-09-22/gift014/manifest.json",
+        "expected_sha256": "c76204665d73a40c135424709d4d1ecd1cde138cf9f303c9168ff33361b5e1de",
+        "actual_sha256": "c2b53e4a599b0c9152114deff6d210bbc19412df38f0c92c4f5269fd374034f6",
+        "verified": false,
+        "occurrences": 1
+      },
+      {
+        "path": "art/cartoon/review-corrections-2026-09-22/preserver/manifest.json",
+        "expected_sha256": "df9162c1b29e0f0bfbf44c9f221cf97116f2fc30bb310d7418e17c0416ecc4d7",
+        "actual_sha256": "d81add7a7914b1abbf5f8504734081c40d7b899b65c417a0fa9eecdeb00a7e22",
+        "verified": false,
+        "occurrences": 5
+      },
+      {
+        "path": "art/cartoon/review-corrections-2026-09-22/glimse/manifest.json",
+        "expected_sha256": "5dc552b460d07305d54085b55d02fcf899147f82308153f34669903db66db144",
+        "actual_sha256": "18d49070a1447391aad74983fb7d4003a7e4c86db3d351ba056362e7f5e8c897",
+        "verified": false,
+        "occurrences": 3
+      },
+      {
+        "path": "art/cartoon/review-corrections-2026-09-22/suzy/manifest.json",
+        "expected_sha256": "d0a30e495d74247e406f49b584200b6ee96f7593dc5264e6958a52364e8a665c",
+        "actual_sha256": "e5b5a8851abc0d1cba00a1cc4b64a58b9e9156cabc6ca5e15d9e99a878eb5672",
+        "verified": false,
+        "occurrences": 1
+      }
+    ],
+    "explanation": "The acceptance record pins prior mutable source manifests. Current manifests contain later approval/status changes, so their bytes differ. Exact approved PNG, prompt and artifact-record bindings still match. No historical expected hashes were rewritten."
+  },
+  "local_qwen_evaluation": {
+    "record": {
+      "path": "art/cartoon/local-qwen21-evaluation-2026-09-22/record.json",
+      "sha256": "e33fc0cda8be87e6c09347d4bf1336557b55778b8ac904eca5abe2601c351c17"
+    },
+    "run_id": "preserver-v2",
+    "output": {
+      "path": "art/cartoon/local-qwen21-evaluation-2026-09-22/runs/preserver-v2/output-raw.png",
+      "expected_sha256": "eb58bc73885d94b7f6f05347ecc43867e993249e787aa5f9a97e6410c8dd4a0a",
+      "actual_sha256": "eb58bc73885d94b7f6f05347ecc43867e993249e787aa5f9a97e6410c8dd4a0a",
+      "verified": true
+    },
+    "appearance_approval": null,
+    "production_integrated": false,
+    "result": "Prompt plus references and RGBA returned a compatibility-test image; quality below approved SMGIFT039. Evaluation remains separate from approved art."
+  },
+  "checkpoint_refresh_findings": [
+    "The 72-drawing batch already exists and includes the 27 shark corrections; both still await appearance approval.",
+    "The old next ordinary batch remains 60-72 sentence describes cadence, not an unstarted next batch.",
+    "The prior 12 focused corrections are all approved. Remaining mermaid corrections is stale in that historical sequence-preview paragraph.",
+    "Suzy bottle continuity is deferred preview assembly, not a missing-render failure. The old 003-only-failure note is superseded by the successful v3 record.",
+    "Preserve selected partial 005 v2; a pending color-candidate instruction is superseded.",
+    "SLEVEJM2 004 v5 currently has a narrower grin than its original speaking pose; this remains a review note, not an appearance approval."
+  ],
+  "limitations": [
+    "No native scene integration or motion test performed by this audit.",
+    "No broad historical approval audit performed.",
+    "No local GPU inference run."
+  ]
+}

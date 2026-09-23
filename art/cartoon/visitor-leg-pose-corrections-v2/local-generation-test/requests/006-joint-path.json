@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tool": "local_diffusers.Flux2KleinPipeline",
+  "mode": "local-experiment",
+  "approach": "006-joint-path",
+  "arguments": {
+    "prompt": "Correct the foreground leg in image 1 using the joint positions in the original animation frame in image 2. She is an adult beach visitor wearing a pink two-piece bathing suit. Read the foreground leg as a bent chain: HIP at the bathing-suit opening, then KNEE beneath the belly-button area, then ANKLE and FOOT farther to the right. The thigh travels down-left from the hip to the low knee; the shin turns and travels down-right from that knee. Draw a distinct rounded kneecap under the belly, and a slimmer calf after the bend. Preserve image 1's upper body, raised opposite leg, hands, bottle, swimsuit coverage, face, glasses, red updo, jewelry and crisp cartoon shading. Two coherent legs only. Output image 1's complete character with that one leg corrected, on white.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/006.png"
+    ]
+  }
+}

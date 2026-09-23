@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM1.BMP",
+  "frame": "009",
+  "version": 3,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Correct source anatomy: right projection is a gesturing pectoral fin beneath compact shark face",
+  "arguments": {
+    "prompt": "Use case: style-transfer / precise-object-edit. Asset SLEVEJM1.BMP frame 009. Image 1 is the authoritative original pixel sprite for anatomy and pose. Image 2 is the established gray shark design for identity and smooth cartoon rendering. Image 3 is the previous incorrect reconstruction: use its rendering finish only, NOT its mouth size or fin pose. Rebuild this one upright partially submerged cartoon shark from Image 1. CRITICAL anatomical reading: the long gray projection extending horizontally to screen-right BELOW the mouth is a raised gesturing PECTORAL FIN, not a long snout or lower jaw. Draw a compact shark head at the upper-right of the upright torso, with the visible eye high on the head and a normal compact toothy shark grin beneath a short pointed snout. The fin originates on the far side of the torso beneath the cheek and extends almost horizontally right like a gesturing arm, ending at the rightmost silhouette. Keep the near pectoral fin hanging down on the left flank. The gray torso rises diagonally from lower-left to upper-right and disappears into a thin cyan-white water ripple, with a narrow pale underside at lower right. Preserve source placement, one-eye visibility and the projecting far fin below the face. Use Image 2's neutral medium-gray skin, ivory underside, gill slits, heavy sly brow, half-lidded sneaky gaze, narrow grin of clearly triangular razor teeth, and bold smooth black outlines/cel shading. No dolphin beak, no huge projecting lower jaw, no extra fins, no human hands, no mermaid, no other characters. Single complete visible sprite with every edge inside frame and a genuinely transparent RGBA background, no checkerboard pattern, no background rectangle, no text or labels.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM1.BMP/009.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/generation/GJFFFOOD.BMP/019-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM1.BMP/009-generated-v2.png"
+    ]
+  }
+}

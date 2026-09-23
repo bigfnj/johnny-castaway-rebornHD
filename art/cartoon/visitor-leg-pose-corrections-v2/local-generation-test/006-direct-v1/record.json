@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "status": "image_returned_needs_visual_review",
+  "model": "black-forest-labs/FLUX.2-klein-4B",
+  "source_request": {
+    "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/requests/006-direct.json",
+    "sha256": "8df82ee549fe4ba28dbc7e50f77a6ea6baa16e86580598aedef919b37909a79d"
+  },
+  "prompt": {
+    "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/006-direct-v1/prompt.txt",
+    "sha256": "d840209030a60e8b0d0ea9a3c37b9fb4493eeb137f7192fcd0a04d3a3e48a171"
+  },
+  "source_request_tool": "local_diffusers.Flux2KleinPipeline",
+  "prompt_matches_source_request": true,
+  "references": [
+    {
+      "source": {
+        "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png",
+        "sha256": "1439aa6839e2d2759b4faf48f239b8111459537b763cf14131740ab788d4e28c"
+      },
+      "source_mode": "RGBA",
+      "source_size": [
+        1584,
+        993
+      ],
+      "input": {
+        "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/006-direct-v1/reference-01-rgb.png",
+        "sha256": "9cc67409951e641796ddbc827eff9996b8717b7b511ec3f538846d1ddb45df64"
+      },
+      "input_size": [
+        1024,
+        640
+      ]
+    }
+  ],
+  "input_preprocessing": "Alpha composited on white, then resized to max-edge and multiples of16. Original PNGs unchanged.",
+  "settings": {
+    "width": 1024,
+    "height": 640,
+    "steps": 4,
+    "seed": 7,
+    "guidance_scale": 1.0,
+    "max_sequence_length": 512,
+    "dtype": "bfloat16",
+    "model_cpu_offload": true
+  },
+  "output_policy": "Raw local RGB result. No alpha extraction or production replacement.",
+  "user_authorized": "User explicitly requested building the .venv and running tests on2026-09-21.",
+  "appearance_approval": null,
+  "production_integrated": false,
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "diffusers": "0.37.0",
+    "transformers": "5.5.4",
+    "accelerate": "1.14.0",
+    "Pillow": "12.2.0"
+  },
+  "model_snapshot": "D:/.ai-work/cache/hf-cache/hub/models--black-forest-labs--FLUX.2-klein-4B/snapshots/e7b7dc27f91deacad38e78976d1f2b499d76a294",
+  "model_index": {
+    "path": "D:/.ai-work/cache/hf-cache/hub/models--black-forest-labs--FLUX.2-klein-4B/snapshots/e7b7dc27f91deacad38e78976d1f2b499d76a294/model_index.json",
+    "sha256": "51a76cb1cf3ed37423a1128c79c22faee8e6fbe7f5aaeb737f0a258930dbaac0"
+  },
+  "gpu_before": "name, memory.total [MiB], memory.used [MiB], memory.free [MiB]\nNVIDIA GeForce RTX 4090, 24564 MiB, 2831 MiB, 21312 MiB",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "model_load_seconds": 3.663,
+  "inference_seconds": 79.244,
+  "output": {
+    "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/006-direct-v1/output-raw.png",
+    "sha256": "07adb4cb05a81f180d82f3301b8d64672ddde5b6fcb59fb00d900ac6992201b3",
+    "mode": "RGB",
+    "size": [
+      1024,
+      640
+    ],
+    "has_alpha": false
+  },
+  "peak_allocated_gib": 8.665,
+  "peak_reserved_gib": 8.939,
+  "process_seconds": 83.204,
+  "gpu_after_cleanup_before_process_exit": "name, memory.total [MiB], memory.used [MiB], memory.free [MiB]\nNVIDIA GeForce RTX 4090, 24564 MiB, 3182 MiB, 20961 MiB"
+}

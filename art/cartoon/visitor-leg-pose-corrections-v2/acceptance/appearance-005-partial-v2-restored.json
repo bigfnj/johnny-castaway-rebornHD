@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-09-22T19:29:51.581602+00:00",
+  "frame": "SSUZY1.BMP-005",
+  "version": 2,
+  "user_response_exact": "keep the partial 005 v2 (unless you want to take another crack at generating based on the original).",
+  "approval_scope": "Restore and keep the exact drawing shown as Previous partial 005 v2 in the visitor review.",
+  "output": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v2.png",
+    "sha256": "ce4cd909762c0236e08f49b2c194e2891b3cfc538915a0682cc6dc3c28401597"
+  },
+  "artifact_record": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-record-v2.json",
+    "sha256": "16c3b190742ff323527524794b1f56ae6af3bc20790042e6781fb6bf03845062"
+  },
+  "previous_selection": {
+    "display_version": null,
+    "review_status": "approved_by_user",
+    "latest_version": 4,
+    "latest_status": "blocked",
+    "status_text": "The user's elbow-corrected 005 drawing is selected. The accidental red dot has been removed and the checkerboard is now transparent.",
+    "appearance_approval": {
+      "record": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-imported-005-v1.json",
+        "sha256": "a52fcd74b202f13511e50bcad9bdc46e7fb6472a4411682b8b6c61fdcc79df36"
+      },
+      "scope": "User-selected finished 005 drawing with the requested accidental-dot cleanup and transparent background.",
+      "output": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/005-transparent-v1.png",
+        "sha256": "82e70a3d6ddb7033418bbd21740fa0e81449cafbab111223df08818e5e7d6074"
+      },
+      "artifact_kind": "imported_screenshot_cutout",
+      "version": 1
+    },
+    "appearance_approval_history": [
+      {
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+          "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+        },
+        "scope": "Full appearance of this selected drawing.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+          "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+        },
+        "version": 1,
+        "status": "reopened_for_correction",
+        "feedback": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1.json",
+          "sha256": "1c917c75998c01e631ce152289eb2317f046ad04bdaf9ccef96611aadcb49cb8"
+        }
+      }
+    ],
+    "history": [
+      {
+        "version": 1,
+        "status": "reopened_for_correction",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+          "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+        },
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v1-request.json",
+          "sha256": "c01c5441e7af362c25221f34064f583450ba9f78a2d7d677fca1fba2d912f85d"
+        },
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-record-v1.json",
+          "sha256": "35504b9bd3ceeec4dcc4b4d3f93321d127ab0a9097b7147181aeff38e2cc25d7"
+        },
+        "appearance_approval": {
+          "record": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+            "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+          },
+          "scope": "Full appearance of this selected drawing.",
+          "output": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+            "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+          },
+          "version": 1
+        },
+        "feedback": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1.json",
+          "sha256": "1c917c75998c01e631ce152289eb2317f046ad04bdaf9ccef96611aadcb49cb8"
+        }
+      },
+      {
+        "version": 2,
+        "status": "diagnostic_insufficient",
+        "reason": "The bottle action is corrected, but the elbow is still too high relative to the resting hip and legs to read as bearing weight.",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v2-request.json",
+          "sha256": "298cc464b519bd67e55a4fc7912ddfe7d1c4004d4ed938489655cb260ce2b395"
+        },
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-record-v2.json",
+          "sha256": "16c3b190742ff323527524794b1f56ae6af3bc20790042e6781fb6bf03845062"
+        },
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v2.png",
+          "sha256": "ce4cd909762c0236e08f49b2c194e2891b3cfc538915a0682cc6dc3c28401597"
+        },
+        "visual_review": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-visual-review-v2.json",
+          "sha256": "6246ecf249bc43864676c8deff184614cb615fdd0d9603bb55587495f6bad76e"
+        }
+      },
+      {
+        "version": 3,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v3-request.json",
+          "sha256": "4924e1c2855dbc54ccb854411b78c080e8e34ca88cea979fc3fa5fbc2e5d5ae5"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v3-failure.json",
+          "sha256": "f5ce7010adb706e3ec22af8fefe0adf7d764f1ef0f22836032ded2c6560c5d95"
+        }
+      },
+      {
+        "version": 4,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v4-request.json",
+          "sha256": "9f549f6fa104f66ea729855f66a1d9f98926036b9a9a0cbb9c9b7443de80c7c0"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v4-failure.json",
+          "sha256": "a7b3d8af76343f73754b0b2253c03a15d858d3db05dfad9bb9fed5d81e52befa"
+        }
+      }
+    ],
+    "requested_change": "Use the supplied elbow-corrected 005 drawing and remove the accidental red dot from the leg.",
+    "comparison_previous": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v2.png",
+      "sha256": "ce4cd909762c0236e08f49b2c194e2891b3cfc538915a0682cc6dc3c28401597"
+    },
+    "previous_label": "Previous partial 005 v2",
+    "latest_feedback": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-imported-005-v1.json",
+      "sha256": "a52fcd74b202f13511e50bcad9bdc46e7fb6472a4411682b8b6c61fdcc79df36"
+    },
+    "instruction_references": [
+      {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/source-screenshot.png",
+        "sha256": "59095ad84ef44dc652f2a897c4647b03af158c76dee16db0574055a5b1fdbe4a",
+        "label": "User-supplied 005 before dot cleanup"
+      }
+    ],
+    "display_label": "Selected 005 drawing",
+    "related_evidence": [
+      {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/visual-review.json",
+        "sha256": "63f0b9cbf1bbc338f072c17e2f7b4f1252c7d373164fe65f63d636ca2d16215b",
+        "label": "Selected 005 cleanup inspection"
+      },
+      {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/dark-proof.png",
+        "sha256": "159cc41723c0864f76a7023b68b9cebf8372c0a1800eb557a8e4bd17c3f14d1d",
+        "label": "Transparent cutout on dark background"
+      }
+    ],
+    "display_artifact": {
+      "kind": "imported_screenshot_cutout",
+      "version": 1,
+      "title": "Selected 005 drawing",
+      "record": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/record.json",
+        "sha256": "2e27f69702d6eb3d2795fbb89faeb79ba77b99cecc0033d1e9be1e0a07581c31"
+      }
+    }
+  },
+  "production_integrated": false,
+  "native_motion_checked": false
+}

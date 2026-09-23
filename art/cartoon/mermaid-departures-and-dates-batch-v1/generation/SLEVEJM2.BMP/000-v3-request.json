@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM2.BMP",
+  "frame": "000",
+  "version": 3,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Replace mistaken dolphin identity with existing gray shark; rebuild original mouth anatomy.",
+  "arguments": {
+    "prompt": "Use case: style-transfer. Redraw Image 1, the exact original SLEVEJM2 000 sprite, as one polished cartoon SHARK sprite. Image 1 controls pose, mouth shape, facing, visible anatomy, framing and water occlusion. Images 2 and 3 are CHARACTER DESIGN AND DRAWING STYLE ONLY, not pose. Match the established shark: neutral medium gray skin, pale ivory jaw and underside, gill slits, bold black outlines, smooth restrained cel shading, heavy sly brows and razor-sharp triangular teeth. This is the sneaky shark character, never a friendly dolphin; no dolphin beak or rounded dolphin teeth. Pose: Upright chest-high shark facing image-right in side/rear three-quarter view, showing mostly gray back and flank and only a narrow pale belly strip at right. Broad high forehead and SHORT upper snout, small sly eye high on the head. A tooth-filled mouth opening is below that upper snout. The exaggerated lower jaw projects forward to the right and bends slightly down at its tip. The white-and-black patch halfway down the head is MOUTH WITH TEETH, never a giant eye. Near pectoral fin hangs down-left against the flank; dorsal fin lies behind the head/back. Keep the source's heavy sloping forehead and asymmetric visible fins. Preserve the source silhouette and relative positions while replacing pixel steps with smooth ink. Only the character parts above water are drawn, with a thin cyan-and-white ripple at original cutoff. Do not complete submerged body, tail or legs. One character only. All contours inside canvas with clear transparent padding on every edge. Actual transparent RGBA background, no checkerboard, scene, cast shadow, glow, text or collage.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM2.BMP/000.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/generation/GJFFFOOD.BMP/019-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/generation/SHARK.BMP/025-generated-v1.png"
+    ]
+  }
+}

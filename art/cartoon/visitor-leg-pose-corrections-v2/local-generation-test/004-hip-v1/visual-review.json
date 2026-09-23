@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "pose_correction_failed",
+  "assessment": "The oversized side-facing near hip, exposed lower swimsuit and far upper-thigh wedge remain. The far lower leg is less distinct, leaving only one clearly readable foot. The requested pelvis and thigh overlap was not achieved.",
+  "output": {
+    "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-hip-v1/output-raw.png",
+    "sha256": "1853a2c82c6e9cbab552d7d23417c6af8e96f1be31180a59fdc4b7177235d249"
+  },
+  "technical_result": "One local RGB image returned; runner process exited with code0.",
+  "visual_result": "Requested anatomical correction not achieved.",
+  "findings": [
+    "Oversized side-facing near hip remains; the pelvis does not visibly roll toward the viewer.",
+    "Lower swimsuit remains exposed instead of being occluded by the near thigh.",
+    "A separate far upper-thigh wedge remains behind the near hip.",
+    "The far lower leg is merged or hidden, leaving only one clearly readable foot instead of a narrow underlapping calf and separate farther foot."
+  ],
+  "selection": "Not recommended as the corrected004; retained as an unsuccessful local comparison.",
+  "appearance_approval": null,
+  "production_integrated": false,
+  "source_images_unchanged": true,
+  "next_inference_started": false,
+  "performance": {
+    "inference_seconds": 117.967,
+    "model_load_seconds": 5.019,
+    "recorded_process_seconds": 123.464,
+    "peak_allocated_gib": 8.595,
+    "peak_reserved_gib": 8.918,
+    "method": "One fresh process with CPU offload,1024x592,4steps,seed7. These are individual run observations, not comparative performance claims."
+  },
+  "gpu_after_process_exit": {
+    "command": "nvidia-smi --query-gpu=name,memory.total,memory.used,memory.free,utilization.gpu --format=csv",
+    "output": "name, memory.total [MiB], memory.used [MiB], memory.free [MiB], utilization.gpu [%]\r\nNVIDIA GeForce RTX 4090, 24564 MiB, 2852 MiB, 21291 MiB, 7 %",
+    "process_exit_code": 0,
+    "process_check": "nvidia-smi process query listed no named Python/model process; WDDM also returned desktop apps and unidentified insufficient-permission rows. No user process was stopped or evicted."
+  }
+}

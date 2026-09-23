@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "user_feedback": "the 004 pose has the legs crossed and not sitting over each other like the original, can you correct for the leg placement please",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit.\nAsset type: one transparent cartoon animation sprite, SSUZY1.BMP frame 004.\nEdit Image 1. Correct ONLY the hips and leg placement. Keep its existing head, face, sunglasses, red hair, torso proportions, both arms and hands, gold jewelry, pink swimsuit coverage, sunscreen bottle, white lotion stream, vivid palette, black outlines and cel shading.\nImage roles: Image 1 is the current frame 004 edit target and upper-body/color/style authority. Image 2 is approved neighboring frame 003 and is the exact hip-and-leg pose guide ONLY; do not copy its upper body or arm action. Image 3 is the enlarged original frame 004, authoritative for the compact folded-leg silhouette and limb overlap, not for colors or pixel texture.\nLeg correction: the adult visitor is reclining on her side with bent legs resting one over the other. Reproduce Image 2's hip, knee, shin and foot arrangement in Image 1, naturally joined to Image 1's waist. The foreground thigh descends from the hip to a low bent knee; the foreground shin returns upward toward screen-right, resting OVER the farther lower leg. The farther upper thigh and knee are mostly hidden by the foreground leg. Only the farther calf and foot emerge underneath, extending farther right than the foreground foot. Maintain continuous, anatomically coherent hip-to-knee-to-ankle paths. These are stacked folded legs: no scissor crossing, no X at the shins or ankles, no pair of separately raised knees, no extra limb, and no disconnected hip wedge. Preserve the compact torso and natural proportions.\nThis is an ordinary adult character dispensing sunscreen in a beach animation. Preserve the clothing and all upper-body action. Output one complete sprite with genuine transparent alpha and clear margins, no painted checkerboard, no background, no text, no collage.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-expression-corrections-v1/generation/SSUZY1.BMP/004-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/004.png"
+    ]
+  }
+}

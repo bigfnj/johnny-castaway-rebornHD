@@ -1,0 +1,307 @@
+{
+  "schema_version": 2,
+  "status": "six_approved_004_review",
+  "selection_scope": "003 v2, 005 v1, 006 v3, 008 v2, 009 v3 and 010 v2 appearance approved. 004 v3 is ready for review; rejected v2 is preserved. Native integration remains deferred.",
+  "frames": {
+    "SSUZY1.BMP-003": {
+      "display_version": 2,
+      "review_status": "approved_by_user",
+      "latest_version": 2,
+      "latest_status": "returned",
+      "status_text": "Appearance approved: v2.",
+      "requested_change": "Use the same pose as 001, remove the lotion bottle and cap, and bring the forearm inward slightly.",
+      "history": [
+        {
+          "version": 1,
+          "status": "blocked",
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-request.json",
+            "sha256": "53ed1314db51dc715b0bb229c5db0700804003567ae5652d8646563445e8314a"
+          },
+          "failure": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-failure.json",
+            "sha256": "707c86b62f32f7b85b78e748d922dc7f72cd7128dbfda2fdd02c57be8c32827a"
+          }
+        }
+      ],
+      "appearance_approval": {
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+          "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+        },
+        "scope": "Full appearance of this selected drawing.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+          "sha256": "663a7b6f7efa233e78e3db6feedee031eb31a6cb6d468e216e6f92a6c7fbeb89"
+        },
+        "version": 2
+      }
+    },
+    "SSUZY1.BMP-004": {
+      "display_version": 3,
+      "review_status": "ready_for_review",
+      "latest_version": 3,
+      "latest_status": "returned",
+      "status_text": "New v3 places the right calf and foot slightly underneath the left leg, using approved 003 as the reference.",
+      "history": [
+        {
+          "version": 1,
+          "status": "blocked",
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-request.json",
+            "sha256": "0be2b69343df01f3393d647a4b2afb5420d31d6df4fa6f8fd296d7d0254dfae7"
+          },
+          "failure": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-failure.json",
+            "sha256": "2d35c1f7e04df5559f91b2e258d292bd7f6a88ed00f87a2bc1c26d3f7feda86b"
+          }
+        },
+        {
+          "key": "SSUZY1.BMP-004",
+          "version": 2,
+          "status": "rejected_by_user",
+          "reason": "The legs should follow 003 more closely, with the anatomical RIGHT leg slightly under the LEFT.",
+          "output": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-generated-v2.png",
+            "sha256": "2da5d9bf0612f9f463a1c9b163163b6a9d50c60f1fda20130ff78c9238f62bc1"
+          },
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v2-request.json",
+            "sha256": "40a390033f257dfae743d67e875fd9272ea9ff4538ec8d1ab11e388027cbb8c3"
+          },
+          "record": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-record-v2.json",
+            "sha256": "831a19cbc7b909446a48da6b5305c253bc235453a561b1360c8f0551e434065c"
+          }
+        }
+      ],
+      "requested_change": "Match 003 more closely, with the anatomical RIGHT leg sitting slightly underneath the LEFT.",
+      "appearance_approval": null,
+      "comparison_previous": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-generated-v2.png",
+        "sha256": "2da5d9bf0612f9f463a1c9b163163b6a9d50c60f1fda20130ff78c9238f62bc1"
+      },
+      "previous_label": "Rejected v2",
+      "pose_reference": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+        "sha256": "663a7b6f7efa233e78e3db6feedee031eb31a6cb6d468e216e6f92a6c7fbeb89"
+      }
+    },
+    "SSUZY1.BMP-005": {
+      "display_version": 1,
+      "review_status": "approved_by_user",
+      "latest_version": 1,
+      "latest_status": "returned",
+      "status_text": "Appearance approved: v1.",
+      "appearance_approval": {
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+          "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+        },
+        "scope": "Full appearance of this selected drawing.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+          "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+        },
+        "version": 1
+      }
+    },
+    "SSUZY1.BMP-006": {
+      "display_version": 3,
+      "review_status": "approved_by_user",
+      "latest_version": 3,
+      "latest_status": "returned",
+      "status_text": "Appearance approved: v3.",
+      "requested_change": "The knee is directly below the belly-button area, then the lower leg slides down. Correct the missing knee and thick straight thigh.",
+      "history": [
+        {
+          "version": 1,
+          "status": "diagnostic_insufficient",
+          "record": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-record-v1.json",
+            "sha256": "d70a5bf273a3a370dff4c843a2531385f267c3902d03605e4ca263aef399921c"
+          },
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-v1-request.json",
+            "sha256": "de24f453a19332436f1a1fc0c33c96f37e6ae96a9eabd4432f7ce807c4d553d4"
+          },
+          "output": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png",
+            "sha256": "1439aa6839e2d2759b4faf48f239b8111459537b763cf14131740ab788d4e28c"
+          }
+        },
+        {
+          "version": 2,
+          "status": "not_submitted",
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-v2-request.json",
+            "sha256": "a3e2285a50c3ca18fa9e402d5d179f3829af1e4c8712b484a621ec944bd11ef3"
+          }
+        }
+      ],
+      "appearance_approval": {
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+          "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+        },
+        "scope": "Full appearance of this selected drawing.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v3.png",
+          "sha256": "b4b6926ab9bc21f9887bf1f3276b0686a1fe975f5bba081fca677567bd28fa21"
+        },
+        "version": 3
+      }
+    },
+    "SSUZY1.BMP-008": {
+      "display_version": 2,
+      "review_status": "approved_by_user",
+      "latest_version": 2,
+      "latest_status": "returned",
+      "status_text": "Appearance approved: v2.",
+      "appearance_approval": {
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+          "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+        },
+        "scope": "Full appearance of this selected drawing.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v2.png",
+          "sha256": "8093274c4ec5d501f995dcd0329f656af4769e0fb69c01d67a7ced82a44c840f"
+        },
+        "version": 2
+      },
+      "appearance_approval_history": [
+        {
+          "date": "2026-09-21",
+          "user_response_exact": "I'm getting very confused and frustrated at the refusal to regenerate our fixes. even here, you got it fixsed properly in 008. the lady is very clearly clothed in her bathing suit, 009 is just a slightly longer leg extension, and all we need is for the leg connected properly the way you fixed it in 008. 006 the knee is literally below the belly-button area, then the rest of the leg slides down, you keep drawing a tree-trunk thigh with no knee.",
+          "frame": "SSUZY1.BMP-008",
+          "version": 2,
+          "scope": "The user accepts the leg connection in 008 v2 and chooses it as the anatomical reference for 009. This is not approval of the whole batch or native integration.",
+          "output": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v2.png",
+            "sha256": "8093274c4ec5d501f995dcd0329f656af4769e0fb69c01d67a7ced82a44c840f"
+          },
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-v2-request.json",
+            "sha256": "918c9907bc5318820e17bdc12b4ab4bb0a432fea6d511f6c9f1db0d481241020"
+          },
+          "record": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-record-v2.json",
+            "sha256": "973755dafef4e7e2fef3bd39559685e5d9883490000f51049d095bc9612e2b40"
+          },
+          "production_integrated": false,
+          "native_motion_checked": false
+        }
+      ]
+    },
+    "SSUZY1.BMP-009": {
+      "display_version": 3,
+      "review_status": "approved_by_user",
+      "latest_version": 3,
+      "latest_status": "returned",
+      "status_text": "Appearance approved: v3.",
+      "requested_change": "Use accepted 008 v2 directly for the leg connection, with a slightly longer leg extension and the distinct 009 arm/hand pose.",
+      "appearance_approval": {
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+          "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+        },
+        "scope": "Full appearance of this selected drawing.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-generated-v3.png",
+          "sha256": "3b7fb3956e77523dbef2592b42b728d11bfcd7547cab04ff41593e6c8ba2d70f"
+        },
+        "version": 3
+      },
+      "history": [
+        {
+          "version": 2,
+          "status": "blocked",
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v2-request.json",
+            "sha256": "a78ae3ef9540c4f52d32aa017951f36afd7f0faba724f559e599a5c2d9d293f2"
+          },
+          "failure": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v2-failure.json",
+            "sha256": "815b414f9d62b05d99554ec45185a3cdc229c37bb09ebc8ea70393cc5fff0f8a"
+          }
+        }
+      ]
+    },
+    "SSUZY1.BMP-010": {
+      "display_version": 2,
+      "review_status": "approved_by_user",
+      "latest_version": 2,
+      "latest_status": "returned",
+      "status_text": "Appearance approved: v2.",
+      "history": [
+        {
+          "version": 1,
+          "status": "blocked",
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-v1-request.json",
+            "sha256": "f9c9c5edab5e953f69266ae41d7be9161ff49539161a76000fa395b5521fffc6"
+          },
+          "failure": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-v1-failure.json",
+            "sha256": "bb56eb9e6e31e8edcbe1876d71b660e3cec88a5ee96675ce297dd2b870ad2953"
+          }
+        }
+      ],
+      "appearance_approval": {
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+          "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+        },
+        "scope": "Full appearance of this selected drawing.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-generated-v2.png",
+          "sha256": "fb8f709bd0881f9c4031d699129683c70dc956e46bbdf57f751da6f6cc1a32fa"
+        },
+        "version": 2
+      }
+    }
+  },
+  "appearance_approval": {
+    "record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+      "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+    },
+    "scope": "Full appearance of six selected drawings only.",
+    "approved_frames": [
+      "003",
+      "005",
+      "006",
+      "008",
+      "009",
+      "010"
+    ]
+  },
+  "followup_feedback": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-local-followup.json",
+    "sha256": "50e2b219418d3a1c263ae757ea16d9c9b02b917f12d2cdc783f1671de1231e14"
+  },
+  "appearance_approval_history": [
+    {
+      "date": "2026-09-21",
+      "user_response_exact": "I'm getting very confused and frustrated at the refusal to regenerate our fixes. even here, you got it fixsed properly in 008. the lady is very clearly clothed in her bathing suit, 009 is just a slightly longer leg extension, and all we need is for the leg connected properly the way you fixed it in 008. 006 the knee is literally below the belly-button area, then the rest of the leg slides down, you keep drawing a tree-trunk thigh with no knee.",
+      "frame": "SSUZY1.BMP-008",
+      "version": 2,
+      "scope": "The user accepts the leg connection in 008 v2 and chooses it as the anatomical reference for 009. This is not approval of the whole batch or native integration.",
+      "output": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v2.png",
+        "sha256": "8093274c4ec5d501f995dcd0329f656af4769e0fb69c01d67a7ced82a44c840f"
+      },
+      "request": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-v2-request.json",
+        "sha256": "918c9907bc5318820e17bdc12b4ab4bb0a432fea6d511f6c9f1db0d481241020"
+      },
+      "record": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-record-v2.json",
+        "sha256": "973755dafef4e7e2fef3bd39559685e5d9883490000f51049d095bc9612e2b40"
+      },
+      "production_integrated": false,
+      "native_motion_checked": false
+    }
+  ]
+}

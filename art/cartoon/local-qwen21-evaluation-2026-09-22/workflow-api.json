@@ -1,0 +1,161 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "reference-01.png"
+    },
+    "_meta": {
+      "title": "Reference 1: edit target"
+    }
+  },
+  "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "reference-02.png"
+    },
+    "_meta": {
+      "title": "Reference 2: approved style or object reference"
+    }
+  },
+  "3": {
+    "class_type": "JoinImageWithAlpha",
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ],
+      "alpha": [
+        "1",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Preserve source transparency"
+    }
+  },
+  "4": {
+    "class_type": "JoinImageWithAlpha",
+    "inputs": {
+      "image": [
+        "2",
+        0
+      ],
+      "alpha": [
+        "2",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Preserve reference transparency"
+    }
+  },
+  "5": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_2.1_int8_convrot.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "6": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "7": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+    }
+  },
+  "8": {
+    "class_type": "TextEncodeQwenImage21",
+    "inputs": {
+      "clip": [
+        "6",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "prompt": "Redraw the scene in <image1> as a clean high-resolution cartoon sprite. Use the white padded life preserver, golden-yellow rope, bold black outlines and soft cartoon shading of <image2>. Preserve the composition and low waterline perspective of <image1>: the life preserver is viewed almost edge-on, with a single human hand gripping its upper rim near the center and thin cyan water ripples along the lower edge. Only the hand is visible; the person remains underwater. Keep the ring white with a gray underside and a continuous yellow rope. Keep the original wide shallow silhouette and placement. This is an RGBA image with transparency. The image has alpha channel and the background is transparent. No text, border, scenery, or checkerboard pattern.",
+      "negative_prompt": "",
+      "resolution": 1024,
+      "images.image_1": [
+        "3",
+        0
+      ],
+      "images.image_2": [
+        "4",
+        0
+      ]
+    }
+  },
+  "9": {
+    "class_type": "QwenImage21Cache",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "device": "auto",
+      "dtype": "default"
+    },
+    "_meta": {
+      "title": "Optional cache settings: bypass by connecting sampler model to node 5"
+    }
+  },
+  "10": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "9",
+        0
+      ],
+      "positive": [
+        "8",
+        0
+      ],
+      "negative": [
+        "8",
+        1
+      ],
+      "latent_image": [
+        "8",
+        2
+      ],
+      "seed": 7,
+      "steps": 25,
+      "cfg": 1.0,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "denoise": 1.0
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "10",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ]
+    }
+  },
+  "12": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ],
+      "filename_prefix": "preserver039-qwen21-v1"
+    }
+  }
+}

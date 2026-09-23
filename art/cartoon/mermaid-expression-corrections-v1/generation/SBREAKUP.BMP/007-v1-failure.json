@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "resource": "SBREAKUP.BMP",
+  "frame": "007",
+  "version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "status": "no_image_returned",
+  "request": {
+    "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SBREAKUP.BMP/007-v1-request.json",
+    "sha256": "84285590c66104257049c5be37083dfdb108090527e1cbc536349242f197247e"
+  },
+  "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID f465dbb3-eff8-458b-9e90-ede8b1bdb326. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")",
+  "attribution": "Frame007 and008 were submitted concurrently. One returned this output-stage moderation error, which terminated the Promise.all wrapper before either per-frame result was saved. The failed frame identity is unknown; this record does not assert that this individual frame was blocked.",
+  "output": null,
+  "appearance_approval": null,
+  "production_integrated": false,
+  "native_motion_checked": false
+}

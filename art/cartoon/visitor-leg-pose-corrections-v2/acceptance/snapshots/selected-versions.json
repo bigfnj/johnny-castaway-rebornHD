@@ -1,0 +1,188 @@
+{
+  "schema_version": 2,
+  "status": "ready_for_review",
+  "selection_scope": "Six revised drawings ready for review: 003 v2, 004 v2, 005 v1, 006 v3, 009 v3 and 010 v2. 008 v2 leg connection accepted only. All seven images are available; native integration remains deferred.",
+  "frames": {
+    "SSUZY1.BMP-003": {
+      "display_version": 2,
+      "review_status": "ready_for_review",
+      "latest_version": 2,
+      "latest_status": "returned",
+      "status_text": "New v2 removes the bottle and cap, brings the forearm inward and preserves the full leg pose from 001.",
+      "requested_change": "Use the same pose as 001, remove the lotion bottle and cap, and bring the forearm inward slightly.",
+      "history": [
+        {
+          "version": 1,
+          "status": "blocked",
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-request.json",
+            "sha256": "53ed1314db51dc715b0bb229c5db0700804003567ae5652d8646563445e8314a"
+          },
+          "failure": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-failure.json",
+            "sha256": "707c86b62f32f7b85b78e748d922dc7f72cd7128dbfda2fdd02c57be8c32827a"
+          }
+        }
+      ]
+    },
+    "SSUZY1.BMP-004": {
+      "display_version": 2,
+      "review_status": "ready_for_review",
+      "latest_version": 2,
+      "latest_status": "returned",
+      "status_text": "New v2 restores the reclining leg arrangement from 001 while keeping the bottle and hands.",
+      "history": [
+        {
+          "version": 1,
+          "status": "blocked",
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-request.json",
+            "sha256": "0be2b69343df01f3393d647a4b2afb5420d31d6df4fa6f8fd296d7d0254dfae7"
+          },
+          "failure": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-failure.json",
+            "sha256": "2d35c1f7e04df5559f91b2e258d292bd7f6a88ed00f87a2bc1c26d3f7feda86b"
+          }
+        }
+      ]
+    },
+    "SSUZY1.BMP-005": {
+      "display_version": 1,
+      "review_status": "ready_for_review",
+      "latest_version": 1,
+      "latest_status": "returned",
+      "status_text": "New v1 opens the raised leg higher and removes the knotted crossing."
+    },
+    "SSUZY1.BMP-006": {
+      "display_version": 3,
+      "review_status": "ready_for_review",
+      "latest_version": 3,
+      "latest_status": "returned",
+      "status_text": "New v3 puts the foreground knee directly below the belly area, with a short thigh and bent lower leg extending down-right.",
+      "requested_change": "The knee is directly below the belly-button area, then the lower leg slides down. Correct the missing knee and thick straight thigh.",
+      "history": [
+        {
+          "version": 1,
+          "status": "diagnostic_insufficient",
+          "record": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-record-v1.json",
+            "sha256": "d70a5bf273a3a370dff4c843a2531385f267c3902d03605e4ca263aef399921c"
+          },
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-v1-request.json",
+            "sha256": "de24f453a19332436f1a1fc0c33c96f37e6ae96a9eabd4432f7ce807c4d553d4"
+          },
+          "output": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v1.png",
+            "sha256": "1439aa6839e2d2759b4faf48f239b8111459537b763cf14131740ab788d4e28c"
+          }
+        },
+        {
+          "version": 2,
+          "status": "not_submitted",
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-v2-request.json",
+            "sha256": "a3e2285a50c3ca18fa9e402d5d179f3829af1e4c8712b484a621ec944bd11ef3"
+          }
+        }
+      ]
+    },
+    "SSUZY1.BMP-008": {
+      "display_version": 2,
+      "review_status": "approved_by_user",
+      "latest_version": 2,
+      "latest_status": "returned",
+      "status_text": "The user accepts the v2 leg connection, which is also the anatomy reference for 009.",
+      "appearance_approval": {
+        "date": "2026-09-21",
+        "user_response_exact": "I'm getting very confused and frustrated at the refusal to regenerate our fixes. even here, you got it fixsed properly in 008. the lady is very clearly clothed in her bathing suit, 009 is just a slightly longer leg extension, and all we need is for the leg connected properly the way you fixed it in 008. 006 the knee is literally below the belly-button area, then the rest of the leg slides down, you keep drawing a tree-trunk thigh with no knee.",
+        "frame": "SSUZY1.BMP-008",
+        "version": 2,
+        "scope": "The user accepts the leg connection in 008 v2 and chooses it as the anatomical reference for 009. This is not approval of the whole batch or native integration.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v2.png",
+          "sha256": "8093274c4ec5d501f995dcd0329f656af4769e0fb69c01d67a7ced82a44c840f"
+        },
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-v2-request.json",
+          "sha256": "918c9907bc5318820e17bdc12b4ab4bb0a432fea6d511f6c9f1db0d481241020"
+        },
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-record-v2.json",
+          "sha256": "973755dafef4e7e2fef3bd39559685e5d9883490000f51049d095bc9612e2b40"
+        },
+        "production_integrated": false,
+        "native_motion_checked": false
+      }
+    },
+    "SSUZY1.BMP-009": {
+      "display_version": 3,
+      "review_status": "ready_for_review",
+      "latest_version": 3,
+      "latest_status": "returned",
+      "status_text": "New v3 retains 008 v2's leg connection, extends the other leg and moves the hand down the shin.",
+      "requested_change": "Use accepted 008 v2 directly for the leg connection, with a slightly longer leg extension and the distinct 009 arm/hand pose.",
+      "appearance_approval": null,
+      "history": [
+        {
+          "version": 2,
+          "status": "blocked",
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v2-request.json",
+            "sha256": "a78ae3ef9540c4f52d32aa017951f36afd7f0faba724f559e599a5c2d9d293f2"
+          },
+          "failure": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/009-v2-failure.json",
+            "sha256": "815b414f9d62b05d99554ec45185a3cdc229c37bb09ebc8ea70393cc5fff0f8a"
+          }
+        }
+      ]
+    },
+    "SSUZY1.BMP-010": {
+      "display_version": 2,
+      "review_status": "ready_for_review",
+      "latest_version": 2,
+      "latest_status": "returned",
+      "status_text": "New v2 retains the accepted foreground leg connection, with the torso leaning forward and the hand at the ankle.",
+      "history": [
+        {
+          "version": 1,
+          "status": "blocked",
+          "request": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-v1-request.json",
+            "sha256": "f9c9c5edab5e953f69266ae41d7be9161ff49539161a76000fa395b5521fffc6"
+          },
+          "failure": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/010-v1-failure.json",
+            "sha256": "bb56eb9e6e31e8edcbe1876d71b660e3cec88a5ee96675ce297dd2b870ad2953"
+          }
+        }
+      ]
+    }
+  },
+  "appearance_approval": {
+    "date": "2026-09-21",
+    "user_response_exact": "I'm getting very confused and frustrated at the refusal to regenerate our fixes. even here, you got it fixsed properly in 008. the lady is very clearly clothed in her bathing suit, 009 is just a slightly longer leg extension, and all we need is for the leg connected properly the way you fixed it in 008. 006 the knee is literally below the belly-button area, then the rest of the leg slides down, you keep drawing a tree-trunk thigh with no knee.",
+    "frame": "SSUZY1.BMP-008",
+    "version": 2,
+    "scope": "The user accepts the leg connection in 008 v2 and chooses it as the anatomical reference for 009. This is not approval of the whole batch or native integration.",
+    "output": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-generated-v2.png",
+      "sha256": "8093274c4ec5d501f995dcd0329f656af4769e0fb69c01d67a7ced82a44c840f"
+    },
+    "request": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-v2-request.json",
+      "sha256": "918c9907bc5318820e17bdc12b4ab4bb0a432fea6d511f6c9f1db0d481241020"
+    },
+    "record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/008-record-v2.json",
+      "sha256": "973755dafef4e7e2fef3bd39559685e5d9883490000f51049d095bc9612e2b40"
+    },
+    "production_integrated": false,
+    "native_motion_checked": false
+  },
+  "followup_feedback": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-local-followup.json",
+    "sha256": "50e2b219418d3a1c263ae757ea16d9c9b02b917f12d2cdc783f1671de1231e14"
+  }
+}

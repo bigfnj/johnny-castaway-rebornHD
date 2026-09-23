@@ -1,0 +1,52 @@
+{
+  "tool": "local_ComfyUI.Qwen-Image-2.1",
+  "purpose": "Prompt plus two-reference model evaluation",
+  "prompt": "Redraw the scene in <image1> as a clean high-resolution cartoon sprite. Use the white padded life preserver, golden-yellow rope, bold black outlines and soft cartoon shading of <image2>. Preserve the composition and low waterline perspective of <image1>: the life preserver is viewed almost edge-on, with a single human hand gripping its upper rim near the center and thin cyan water ripples along the lower edge. Only the hand is visible; the person remains underwater. Keep the ring white with a gray underside and a continuous yellow rope. Keep the original wide shallow silhouette and placement. This is an RGBA image with transparency. The image has alpha channel and the background is transparent. No text, border, scenery, or checkerboard pattern.",
+  "references": [
+    {
+      "file": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\inputs\\reference-01.png",
+      "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\mermaid-gifts-and-glimpses-batch-v1\\reference\\original\\SMGIFT.BMP\\039.png",
+      "role": "Original pixel sprite: scene, hand position and low waterline perspective",
+      "sha256": "3ed696a8619166b0a45cc87bb74f32e71a2d09db761d766657e384093aa26194",
+      "size": [
+        80,
+        22
+      ],
+      "mode": "RGBA"
+    },
+    {
+      "file": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\inputs\\reference-02.png",
+      "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\review-corrections-2026-09-22\\preserver\\041\\candidate-v1.png",
+      "role": "Approved white life preserver with yellow rope: object design and cartoon style",
+      "sha256": "f7b45401b398f5ec0ad3865e99f33f251c89e8e13ebcf5db395406b7811e3042",
+      "size": [
+        2170,
+        725
+      ],
+      "mode": "RGBA"
+    }
+  ],
+  "comparison_only": {
+    "file": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\inputs\\approved-comparison.png",
+    "source": "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\review-corrections-2026-09-22\\preserver\\039\\candidate-v1.png",
+    "role": "Approved 039 comparison only; not passed to the model",
+    "sha256": "205c3ed2eb158b5ec38fb42c4a92985620f8c4124a8f9e4ba0364a6f7cbb9aaf",
+    "size": [
+      2169,
+      725
+    ],
+    "mode": "RGBA"
+  },
+  "settings": {
+    "resolution": 1024,
+    "steps": 25,
+    "seed": 7,
+    "cfg": 1.0,
+    "sampler": "euler",
+    "scheduler": "simple",
+    "reserve_vram_gib": 4
+  },
+  "appearance_approval": null,
+  "production_integrated": false,
+  "authorization": "User said ok proceed please after prompt-plus-reference model evaluation recommendation."
+}

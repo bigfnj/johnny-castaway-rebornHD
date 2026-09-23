@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "resource": "SMGIFT.BMP",
+  "frame": "014",
+  "version": 2,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "status": "blocked",
+  "output_returned": false,
+  "request": {
+    "path": "art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/014-v2-request.json",
+    "sha256": "e731dc868a022553abf10512c73eede1ef730b1ee824009e3ea83f7311448af2"
+  },
+  "request_id": "d4a9a90e-c3e1-48f3-9b77-d120ccb72286",
+  "moderation_stage": "output",
+  "categories": ["sexual"],
+  "error": "image generation failed: http 400 Bad Request: Some(\"{\\n  \\\"error\\\": {\\n    \\\"message\\\": \\\"Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID d4a9a90e-c3e1-48f3-9b77-d120ccb72286. safety_violations=[sexual].\\\",\\n    \\\"type\\\": \\\"image_generation_user_error\\\",\\n    \\\"param\\\": null,\\n    \\\"code\\\": \\\"moderation_blocked\\\",\\n    \\\"moderation_details\\\": {\\n      \\\"moderation_stage\\\": \\\"output\\\",\\n      \\\"categories\\\": [\\n        \\\"sexual\\\"\\n      ]\\n    }\\n  }\\n}\")",
+  "output": null
+}

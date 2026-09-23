@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "resource": "SSUZY1.BMP",
+  "frame": "005",
+  "version": 4,
+  "status": "blocked",
+  "image_returned": false,
+  "request_id": "440fa160-034e-4199-9594-5034ba17c9f2",
+  "request": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v4-request.json",
+    "sha256": "9f549f6fa104f66ea729855f66a1d9f98926036b9a9a0cbb9c9b7443de80c7c0"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v2.png",
+      "sha256": "ce4cd909762c0236e08f49b2c194e2891b3cfc538915a0682cc6dc3c28401597",
+      "role": "Edit target; preserve bottle action and accepted leg arrangement"
+    },
+    {
+      "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/005.png",
+      "sha256": "102e8398a3ace0751e2aa43c3dec324752abc403a55c6d6ef7de4bb332c0b209",
+      "role": "Original low-elbow and reclining-torso pose reference"
+    }
+  ],
+  "error": {
+    "message": "Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 440fa160-034e-4199-9594-5034ba17c9f2. safety_violations=[sexual].",
+    "type": "image_generation_user_error",
+    "param": null,
+    "code": "moderation_blocked",
+    "moderation_details": {
+      "moderation_stage": "output",
+      "categories": [
+        "sexual"
+      ]
+    }
+  },
+  "appearance_approval": null,
+  "production_integrated": false,
+  "native_motion_checked": false
+}

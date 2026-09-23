@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-21",
+  "frame": "SSUZY1.BMP-004",
+  "user_request_exact": "ok try this for 004. Use the \"Rejected v3\" left hafl, and the \"Approved drawing v2\" from 003. make sense? so the body and head from rejected and the leg hip from approved v2.",
+  "instruction_authority": "This two-source compositing instruction supersedes the earlier 004 hip redraw directions for the new attempt.",
+  "ordered_references": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-generated-v3.png",
+      "sha256": "e75955f44c7f4941fc8d0d004931fc5dcf9e49b4e8457aea3c589fb1ff5ca12b",
+      "label": "004 rejected v3: body, head and bottle"
+    },
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+      "sha256": "663a7b6f7efa233e78e3db6feedee031eb31a6cb6d468e216e6f92a6c7fbeb89",
+      "label": "003 approved v2: complete hips and both legs"
+    }
+  ],
+  "required_change": "Use rejected 004 v3 for the upper body, head, hands and bottle, and approved 003 v2 for the complete hips and both legs.",
+  "superseded_feedback": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4.json",
+    "sha256": "36a215364179329d0f4ca34f4e0f0f450f4ff48b94dfe41213996e2f6890a5a7"
+  },
+  "shown_unresolved_review_snapshots": [
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review.html",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-composite-v8/review.html",
+        "sha256": "99f74d436a4b367e66813dda8d76e82b06b61ba740a4010666f52a97ed5a8d3f"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review-data.json",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-composite-v8/review-data.json",
+        "sha256": "8cfceac70c61bd72e4ea09b8f9a635f24d4c9b964f119d309af789d794c4489e"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review-record.json",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-composite-v8/review-record.json",
+        "sha256": "c00bc73abd27f6e16dff3398f7b9dfecd36c5c3e9f50ded43ffc4d7a6d7ea16e"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/selected-versions.json",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-composite-v8/selected-versions.json",
+        "sha256": "e4f3fb680707ec8c3e4c513dd5cfc4ddbe93a1085aa45383c9a13ff04970bcea"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review-template.html",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-composite-v8/review-template.html",
+        "sha256": "a5d6b0087535ab5bc9ba8189e62d119d618808f5ccbcd13205b32a0a3e83e387"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/review.js",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-composite-v8/review.js",
+        "sha256": "f30eaac5f0755517a31df6da470c1c88731db602e5769d3db69f209c3110069f"
+      }
+    },
+    {
+      "source_path": "art/cartoon/visitor-leg-pose-corrections-v2/build_review.py",
+      "snapshot": {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-composite-v8/build_review.py",
+        "sha256": "e045e381bb45b678eea7e7ce900fb2270b874d1406e7aac03eef0244d2629230"
+      }
+    }
+  ],
+  "six_appearance_approvals_unchanged": {
+    "record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+      "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+    },
+    "scope": "Full appearance of six selected drawings only.",
+    "approved_frames": [
+      "003",
+      "005",
+      "006",
+      "008",
+      "009",
+      "010"
+    ]
+  },
+  "appearance_approval_004": null,
+  "production_integrated": false
+}

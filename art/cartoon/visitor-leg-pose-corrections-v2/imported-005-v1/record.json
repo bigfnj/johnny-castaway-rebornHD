@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "resource": "SSUZY1.BMP",
+  "frame": "005",
+  "version": 1,
+  "tool": "ImageMagick 7.1.2-24",
+  "mode": "direct-screenshot-cleanup",
+  "kind": "imported_screenshot_cutout",
+  "method": "User-supplied elbow-corrected drawing. Removed the accidental red dot with a 21-pixel local skin-color interpolation and removed the pale checkerboard into transparency. Original 349 by 206 pixel scale and pose retained; no generation or resizing.",
+  "output": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/005-transparent-v1.png",
+    "sha256": "82e70a3d6ddb7033418bbd21740fa0e81449cafbab111223df08818e5e7d6074"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/source-screenshot.png",
+      "sha256": "59095ad84ef44dc652f2a897c4647b03af158c76dee16db0574055a5b1fdbe4a"
+    }
+  ],
+  "source_origin": "C:\\Users\\Admin\\AppData\\Local\\Temp\\codex-clipboard-4bbe9603-9e08-417b-8030-967597a1c198.png",
+  "source_roles": [
+    "User-selected finished 005 drawing, immutable source screenshot"
+  ],
+  "transforms": {
+    "scale": [
+      1,
+      1
+    ],
+    "translation": [
+      0,
+      0
+    ],
+    "rotation_degrees": 0,
+    "crop": null
+  },
+  "repair": {
+    "bounds_xyxy_exclusive": [
+      196,
+      141,
+      201,
+      146
+    ],
+    "changed_pixel_count": 21,
+    "row_spans_inclusive": [
+      {
+        "y": 141,
+        "x": [
+          197,
+          199
+        ]
+      },
+      {
+        "y": 142,
+        "x": [
+          196,
+          200
+        ]
+      },
+      {
+        "y": 143,
+        "x": [
+          196,
+          200
+        ]
+      },
+      {
+        "y": 144,
+        "x": [
+          196,
+          200
+        ]
+      },
+      {
+        "y": 145,
+        "x": [
+          197,
+          199
+        ]
+      }
+    ],
+    "method": "Horizontal interpolation between neighboring unaffected skin colors at x=196/200 for rows 141/145, and x=195/201 for rows 142-144."
+  },
+  "background_removal": {
+    "candidate_rule": "r>0.60 and g>0.60 and b>0.50 and max(r,g,b)-min(r,g,b)<0.16, normalized RGB",
+    "flood_seeds_xy": [
+      [
+        0,
+        0
+      ],
+      [
+        34,
+        109
+      ],
+      [
+        30,
+        120
+      ]
+    ],
+    "enclosed_background_pixels_removed": 10,
+    "white_cream_preserved": true,
+    "description": "Remove the edge-connected pale background and the small enclosed gap beneath the bottle hand. Preserve the separate white cream component."
+  },
+  "processing_script": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/clean-source.ps1",
+    "sha256": "7af5f0b4c14180c20f574e060b93cbd6beb3c289feeaaf72100ec0e1e0fb348a"
+  },
+  "alpha_mask": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/foreground-alpha.png",
+    "sha256": "9fdeba626b3433ddbd627db33e1e6027467cfeb8d238c4c9e8e59ee0f48209d6"
+  },
+  "image": {
+    "canvas": [
+      349,
+      206
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha8_bounds": [
+      11,
+      3,
+      340,
+      198
+    ],
+    "edge_alpha_max": 0,
+    "background": "Transparent"
+  },
+  "pixel_check": {
+    "source_copy_byte_identical": true,
+    "total_source_pixels": 71894,
+    "repaired_pixels": 21,
+    "different_rgb_pixels_outside_repair": 0,
+    "retained_pixels": 22603,
+    "transparent_pixels": 49291,
+    "different_retained_rgb_pixels_vs_repaired_source": 0
+  },
+  "selection_instruction_exact": "here is your new 005 with the elbow fixed, do what you need to and make that the updated image resource",
+  "cleanup_instruction_exact": "remove the red \"dot\" on her leg, thats my fault.",
+  "approval_scope": "User-selected finished 005 drawing with the requested accidental-dot cleanup and transparent background.",
+  "production_integrated": false,
+  "native_motion_checked": false
+}

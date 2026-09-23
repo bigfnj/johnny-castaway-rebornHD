@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM3.BMP",
+  "task": "Gray shark identity correction for dive frames",
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "appearance_approval": null,
+  "qa": {
+    "method": "Inspected original nearest8 sprites, previous drawings and established shark references before generation; inspected the four new tool images and actual alpha composites on pale and dark backgrounds.",
+    "alpha_composite_diagnostic": "C:/Users/Admin/AppData/Local/Temp/shark-dive-alpha-review.png",
+    "result": "Neutral gray material is consistent across all four drawings. No added head, teeth or anatomy where hidden. Alpha composites show clean transparent gaps and no opaque backdrop. All four records have RGBA alpha range 0..255 and edge alpha max 0."
+  },
+  "assets": [
+    {
+      "frame": "004",
+      "selected_version": 2,
+      "source_notes": "Shark diving down toward the right; both eyes still visible immediately above the water, mouth submerged, arched back with dorsal fin, yellow mermaid hair at far right.",
+      "visual_review": "Replaced blue dolphin material with neutral gray and replaced friendly wide eyes with sly half-lidded eyes. Both eyes and the yellow hair remain visible. No teeth were added because the mouth is underwater.",
+      "review_status": "Ready for user appearance review"
+    },
+    {
+      "frame": "005",
+      "selected_version": 2,
+      "source_notes": "Only the long arched shark back and dorsal fin remain above water, with separate yellow hair tuft at far right; head and mouth are submerged.",
+      "visual_review": "Gray shark back and fin retain the shallow dive composition, cyan-white wave and separate yellow hair tuft. No face or additional anatomy introduced.",
+      "review_status": "Ready for user appearance review"
+    },
+    {
+      "frame": "006",
+      "selected_version": 2,
+      "source_notes": "Small swept fin at far right with long sparse wake trailing left. Body, head and mermaid are no longer visible.",
+      "visual_review": "Neutral-gray shark dorsal fin retains its rightmost position and long leftward cyan-white wake. Source contains no face or teeth, and neither was added.",
+      "review_status": "Ready for user appearance review"
+    },
+    {
+      "frame": "007",
+      "selected_version": 2,
+      "source_notes": "Final visible fin fragment above a thin waterline, angled toward the left. No body, face or mermaid is visible.",
+      "visual_review": "Neutral-gray swept shark fin above the thin cyan-white waterline. The smooth fin remains more curved than the blocky source outline, consistent with the preceding converted fin drawings.",
+      "review_status": "Ready for user appearance review"
+    }
+  ]
+}

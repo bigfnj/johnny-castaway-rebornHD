@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "resource": "SSUZY1.BMP",
+  "frame": "004",
+  "version": 1,
+  "tool": "ImageMagick 7.1.2-24",
+  "mode": "direct-screenshot-crop",
+  "kind": "imported_screenshot_crop",
+  "method": "Exact crop of the supplied screenshot's right-hand drawing. Crop rectangle x=530, y=54, width=490, height=304. No resizing, regeneration or retouching. The screenshot's checkerboard remains baked in.",
+  "output": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/004-cropped-v1.png",
+    "sha256": "79259b26e6f48e72fdcc6cf57a564494e5c7a96c1f9704a23fe608db8691199e"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/source-screenshot.png",
+      "sha256": "ce7f95797ece45aa3b8b76a3dd0dc3accb2acd12371aef85d0792f4a644832d8"
+    }
+  ],
+  "source_roles": [
+    "User-supplied screenshot, right-hand drawing selected for frame 004"
+  ],
+  "crop": {
+    "x": 530,
+    "y": 54,
+    "width": 490,
+    "height": 304
+  },
+  "image": {
+    "canvas": [
+      490,
+      304
+    ],
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "alpha8_bounds": [
+      0,
+      0,
+      490,
+      304
+    ],
+    "edge_alpha_max": 255,
+    "background": "Opaque checkerboard baked into supplied screenshot"
+  },
+  "pixel_check": {
+    "pixels_compared": 148960,
+    "different_pixels": 0
+  },
+  "command": "magick source-screenshot.png -crop 490x304+530+54 +repage 004-cropped-v1.png",
+  "selection_instruction_exact": "can you crop out and use the right image for 004 ?",
+  "approval_scope": "User-selected screenshot appearance for 004; native sprite transparency and production integration are not included.",
+  "production_integrated": false,
+  "native_motion_checked": false
+}

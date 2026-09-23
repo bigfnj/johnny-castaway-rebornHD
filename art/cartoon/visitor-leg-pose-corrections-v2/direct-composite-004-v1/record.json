@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "resource": "SSUZY1.BMP",
+  "frame": "004",
+  "version": 1,
+  "tool": "ImageMagick 7.1.2-24",
+  "mode": "direct-png-composite",
+  "method": "Direct source-pixel composite. 004 v3 upper body overlays the intact 003 v2 hips and both legs. Lower source translated (-120,+68) at scale1.0 without rotation. Alpha masks trim only the waist join and old forearm fringe. No image generation, repainting, color changes or limb deformation.",
+  "output": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v1/004-composite-v1.png",
+    "sha256": "a91bc9b7474db0c7f492ffdb0f2530fae465339a43c54e028f2ef721330a6844"
+  },
+  "references": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-generated-v3.png",
+      "sha256": "e75955f44c7f4941fc8d0d004931fc5dcf9e49b4e8457aea3c589fb1ff5ca12b"
+    },
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+      "sha256": "663a7b6f7efa233e78e3db6feedee031eb31a6cb6d468e216e6f92a6c7fbeb89"
+    }
+  ],
+  "source_roles": [
+    "004 v3: head, upper body, arms, hands and lotion bottle",
+    "003 v2: waist, hips, both legs and both feet"
+  ],
+  "transforms": {
+    "upper": {
+      "translation": [
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "rotation_degrees": 0
+    },
+    "lower": {
+      "translation": [
+        -120,
+        68
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "rotation_degrees": 0
+    }
+  },
+  "image": {
+    "canvas": [
+      1642,
+      958
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "alpha8_bounds": [
+      26,
+      28,
+      1576,
+      933
+    ],
+    "edge_alpha_max": 0
+  },
+  "pixel_checks": [
+    {
+      "region": "004 head, face and shoulders",
+      "source_box": [
+        0,
+        0,
+        700,
+        475
+      ],
+      "destination_box": [
+        0,
+        0,
+        700,
+        475
+      ],
+      "visible_pixels_checked": 144432,
+      "different_pixels": 0
+    },
+    {
+      "region": "004 left upper body, hands and bottle region",
+      "source_box": [
+        0,
+        475,
+        500,
+        850
+      ],
+      "destination_box": [
+        0,
+        475,
+        500,
+        850
+      ],
+      "visible_pixels_checked": 137387,
+      "different_pixels": 0
+    },
+    {
+      "region": "003 intact hip and leg region",
+      "source_box": [
+        820,
+        400,
+        1724,
+        890
+      ],
+      "destination_box": [
+        700,
+        468,
+        1604,
+        958
+      ],
+      "visible_pixels_checked": 163943,
+      "different_pixels": 0
+    }
+  ],
+  "build_script": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v1/build-composite.ps1",
+    "sha256": "eeab06c33d5d1c5f7ca7871a84d0ec3b8344ff345ed788fcfb2cf6061122c83e"
+  },
+  "masks": [
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v1/upper-mask.png",
+      "sha256": "4881a024ee6d562215f5885d3b955cae34087c24c19bae95b3f6ecb65824a10d"
+    },
+    {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v1/lower-mask.png",
+      "sha256": "c2d43f5df28943089c91b06ead7e5f750113d9f0ba1619c5bcb6f7b78112fdf7"
+    }
+  ],
+  "verification_script": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v1/record-composite.py",
+    "sha256": "3b1ba4381ee652ebc63a053b5b3e2d90a622f8e1ed48db29704b9539ecda4378"
+  },
+  "authorization": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-direct-composite-v1.json",
+    "sha256": "d1ad04b5c795727f52da15eacced50916797210d2e09dc84d9aab600c97e444b"
+  },
+  "appearance_approval": null,
+  "production_integrated": false,
+  "native_motion_checked": false
+}

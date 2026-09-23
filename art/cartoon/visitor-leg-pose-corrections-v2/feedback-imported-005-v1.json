@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-21",
+  "frame": "SSUZY1.BMP-005",
+  "user_request_exact": "here is your new 005 with the elbow fixed, do what you need to and make that the updated image resource",
+  "cleanup_request_exact": "remove the red \"dot\" on her leg, thats my fault.",
+  "appearance_selection": "Use the user's supplied elbow-corrected 005 drawing, cleaned of the accidental red dot.",
+  "approval_scope": "User-selected finished 005 drawing with the requested accidental-dot cleanup and transparent background.",
+  "output": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/005-transparent-v1.png",
+    "sha256": "82e70a3d6ddb7033418bbd21740fa0e81449cafbab111223df08818e5e7d6074"
+  },
+  "artifact_record": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/record.json",
+    "sha256": "2e27f69702d6eb3d2795fbb89faeb79ba77b99cecc0033d1e9be1e0a07581c31"
+  },
+  "source_screenshot": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/source-screenshot.png",
+    "sha256": "59095ad84ef44dc652f2a897c4647b03af158c76dee16db0574055a5b1fdbe4a"
+  },
+  "previous_005_selection": {
+    "display_version": 2,
+    "review_status": "awaiting_correction",
+    "latest_version": 3,
+    "latest_status": "blocked",
+    "status_text": "Partial correction: v2 moves the inverted bottle above the other cupped palm and bends the elbow, but the elbow remains too high to read as supporting her weight. The focused v3 edit returned no image; the support pose remains unresolved.",
+    "appearance_approval": null,
+    "appearance_approval_history": [
+      {
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+          "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+        },
+        "scope": "Full appearance of this selected drawing.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+          "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+        },
+        "version": 1,
+        "status": "reopened_for_correction",
+        "feedback": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1.json",
+          "sha256": "1c917c75998c01e631ce152289eb2317f046ad04bdaf9ccef96611aadcb49cb8"
+        }
+      }
+    ],
+    "history": [
+      {
+        "version": 1,
+        "status": "reopened_for_correction",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+          "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+        },
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v1-request.json",
+          "sha256": "c01c5441e7af362c25221f34064f583450ba9f78a2d7d677fca1fba2d912f85d"
+        },
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-record-v1.json",
+          "sha256": "35504b9bd3ceeec4dcc4b4d3f93321d127ab0a9097b7147181aeff38e2cc25d7"
+        },
+        "appearance_approval": {
+          "record": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/acceptance/appearance-v1.json",
+            "sha256": "ade525e8ecc929622a3509cb06c31dba34afa866087386d830cad8057a4c8f1c"
+          },
+          "scope": "Full appearance of this selected drawing.",
+          "output": {
+            "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+            "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+          },
+          "version": 1
+        },
+        "feedback": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1.json",
+          "sha256": "1c917c75998c01e631ce152289eb2317f046ad04bdaf9ccef96611aadcb49cb8"
+        }
+      },
+      {
+        "version": 2,
+        "status": "diagnostic_insufficient",
+        "reason": "The bottle action is corrected, but the elbow is still too high relative to the resting hip and legs to read as bearing weight.",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v2-request.json",
+          "sha256": "298cc464b519bd67e55a4fc7912ddfe7d1c4004d4ed938489655cb260ce2b395"
+        },
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-record-v2.json",
+          "sha256": "16c3b190742ff323527524794b1f56ae6af3bc20790042e6781fb6bf03845062"
+        },
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v2.png",
+          "sha256": "ce4cd909762c0236e08f49b2c194e2891b3cfc538915a0682cc6dc3c28401597"
+        },
+        "visual_review": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-visual-review-v2.json",
+          "sha256": "6246ecf249bc43864676c8deff184614cb615fdd0d9603bb55587495f6bad76e"
+        }
+      }
+    ],
+    "requested_change": "Lean on the elbow. Move the sunblock to the other, upper hand and tip it to squeeze into the lower hand.",
+    "comparison_previous": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v1.png",
+      "sha256": "2c849df82f0a6e08d937f71e8be4f7b6158d7820ab1fbf18fd4833c7674bb353"
+    },
+    "previous_label": "Previously approved v1",
+    "latest_feedback": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1.json",
+      "sha256": "1c917c75998c01e631ce152289eb2317f046ad04bdaf9ccef96611aadcb49cb8"
+    },
+    "instruction_references": [
+      {
+        "path": "art/cartoon/workers-and-mermaids-batch-v1/reference/nearest8/SSUZY1.BMP/005.png",
+        "sha256": "102e8398a3ace0751e2aa43c3dec324752abc403a55c6d6ef7de4bb332c0b209",
+        "label": "005 original: elbow support and bottle action"
+      }
+    ],
+    "display_label": "Partial correction v2",
+    "related_evidence": [
+      {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-visual-review-v2.json",
+        "label": "005 v2 visual assessment: elbow support unresolved"
+      }
+    ]
+  },
+  "production_integrated": false,
+  "native_motion_checked": false
+}

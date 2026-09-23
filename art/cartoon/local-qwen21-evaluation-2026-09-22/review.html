@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qwen-Image-2.1 model evaluation | SMGIFT 039</title>
+<style>
+:root { color-scheme: dark; font: 16px/1.5 system-ui, sans-serif; background: #112936; color: #edf5f8; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 1640px; margin: auto; padding: 24px; }
+h1 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin: 0 0 8px; }
+h2 { font-size: 1.1rem; margin: 0 0 6px; }
+p { margin: 6px 0 12px; }
+a { color: #a7e5ff; text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 3px solid #ffcc66; outline-offset: 4px; }
+.notice { color: #ffcc66; font-weight: 650; }
+.muted, .dimensions { color: #bdd0d9; }
+.status { padding: 14px 18px; margin: 18px 0; border: 1px solid #426374; border-radius: 10px; background: #1b3948; }
+.toolbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 20px 0 14px; }
+button { border: 1px solid #6c8998; border-radius: 6px; color: #edf5f8; background: #244858; padding: 7px 12px; font: inherit; cursor: pointer; }
+button[aria-pressed="true"] { color: #102632; background: #b9e8fa; border-color: #b9e8fa; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.card { min-width: 0; padding: 16px; border-radius: 10px; background: #203f4e; }
+.card p { min-height: 3em; color: #d4e2e9; }
+.canvas { height: 400px; width: 100%; display: flex; align-items: center; justify-content: center; border: 1px solid #6b7c80; border-radius: 4px; overflow: hidden; background-color: #eeeae0; background-image: conic-gradient(#d4d1c7 25%, #eeeae0 0 50%, #d4d1c7 0 75%, #eeeae0 0); background-size: 24px 24px; }
+body[data-background="dark"] .canvas { background: #162329; }
+body[data-background="white"] .canvas { background: #fff; }
+.canvas img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.canvas img.pixelated { image-rendering: pixelated; }
+.canvas.empty { color: #152d38; text-align: center; padding: 24px; }
+body[data-background="dark"] .canvas.empty { color: #edf5f8; }
+.image-footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 10px; font-size: .9rem; }
+.details { margin-top: 20px; padding: 18px; background: #1b3948; border-radius: 10px; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; font: .9rem/1.5 ui-monospace, monospace; margin: 12px 0; }
+.prompt { font-family: inherit; }
+.error { color: #ffd1c8; border-left: 3px solid #ffab96; padding: 10px; background: #492f33; }
+summary { cursor: pointer; }
+table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: .9rem; }
+th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid #426374; overflow-wrap: anywhere; }
+th { font-weight: 500; width: 52%; }
+@media (max-width: 760px) { main { padding: 14px; } .grid { grid-template-columns: 1fr; } .canvas { height: 330px; } .card p { min-height: 0; } }
+</style>
+</head>
+<body data-background="checkerboard">
+<main>
+<h1>Qwen-Image-2.1 model evaluation</h1>
+<p class="notice">Model evaluation only. Approved drawings remain selected.</p>
+<p>SMGIFT 039: evaluate a written instruction with two reference images, life preserver consistency, and transparent output.</p>
+<section class="status" aria-label="Run status">
+<div>Recorded status: <strong>Render complete; awaiting your review</strong></div>
+<p>Prompt plus two references and native transparency work. This first test is below the approved drawing in visual quality.</p>
+<p class="muted">This review reports the saved run record. Refresh after the review is rebuilt to see new results.</p>
+
+<div><a href="request.json" target="_blank" rel="noopener">Exact request</a> · <a href="record.json" target="_blank" rel="noopener">Run record</a></div>
+</section>
+<div class="toolbar" aria-label="Preview background">
+<span>Preview background:</span>
+<button type="button" data-bg="checkerboard" aria-pressed="true">Checkerboard</button>
+<button type="button" data-bg="dark" aria-pressed="false">Dark</button>
+<button type="button" data-bg="white" aria-pressed="false">White</button>
+</div>
+<section class="grid" aria-label="Image comparison"><article class="card"><h2>Original SMGIFT 039</h2><p>Reference 1: original pixel drawing and composition.</p><a class="canvas" href="inputs/reference-01.png" target="_blank" rel="noopener" aria-label="Open Original SMGIFT 039 PNG"><img class="pixelated" src="inputs/reference-01.png" alt="Original SMGIFT 039"></a><div class="image-footer"><a href="inputs/reference-01.png" target="_blank" rel="noopener">Open PNG</a><span class="dimensions">Loading dimensions</span></div></article><article class="card"><h2>Approved SMGIFT 041 reference</h2><p>Reference 2: approved cartoon life preserver, white ring, and rope.</p><a class="canvas" href="inputs/reference-02.png" target="_blank" rel="noopener" aria-label="Open Approved SMGIFT 041 reference PNG"><img class="" src="inputs/reference-02.png" alt="Approved SMGIFT 041 reference"></a><div class="image-footer"><a href="inputs/reference-02.png" target="_blank" rel="noopener">Open PNG</a><span class="dimensions">Loading dimensions</span></div></article><article class="card"><h2>Approved SMGIFT 039</h2><p>The approved drawing remains the baseline for comparison.</p><a class="canvas" href="inputs/approved-comparison.png" target="_blank" rel="noopener" aria-label="Open Approved SMGIFT 039 PNG"><img class="" src="inputs/approved-comparison.png" alt="Approved SMGIFT 039"></a><div class="image-footer"><a href="inputs/approved-comparison.png" target="_blank" rel="noopener">Open PNG</a><span class="dimensions">Loading dimensions</span></div></article><article class="card"><h2>Qwen-Image-2.1 evaluation output</h2><p>Raw model output for review. File availability does not imply approval.</p><a class="canvas" href="output-raw.png" target="_blank" rel="noopener" aria-label="Open Qwen-Image-2.1 evaluation output PNG"><img class="" src="output-raw.png" alt="Qwen-Image-2.1 evaluation output"></a><div class="image-footer"><a href="output-raw.png" target="_blank" rel="noopener">Open PNG</a><span class="dimensions">Loading dimensions</span></div></article></section>
+<section class="details"><h2>Written instruction</h2><pre class="prompt">Redraw the scene in &lt;image1&gt; as a clean high-resolution cartoon sprite. Use the white padded life preserver, golden-yellow rope, bold black outlines and soft cartoon shading of &lt;image2&gt;. Preserve the composition and low waterline perspective of &lt;image1&gt;: the life preserver is viewed almost edge-on, with a single human hand gripping its upper rim near the center and thin cyan water ripples along the lower edge. Only the hand is visible; the person remains underwater. Keep the ring white with a gray underside and a continuous yellow rope. Keep the original wide shallow silhouette and placement. This is an RGBA image with transparency. The image has alpha channel and the background is transparent. No text, border, scenery, or checkerboard pattern.</pre></section>
+<section class="details"><h2>Recorded GPU and timing data</h2><table><tbody><tr><th>settings.reserve_vram_gib</th><td>4</td></tr><tr><th>gpu_before.used_mib</th><td>2520</td></tr><tr><th>gpu_before.free_mib</th><td>21623</td></tr><tr><th>gpu_before.utilization_percent</th><td>2</td></tr><tr><th>startup_seconds</th><td>14.3</td></tr><tr><th>inference_seconds</th><td>177.34</td></tr><tr><th>process_seconds</th><td>191.92</td></tr><tr><th>gpu_after.used_mib</th><td>2506</td></tr><tr><th>gpu_after.free_mib</th><td>21637</td></tr><tr><th>gpu_after.utilization_percent</th><td>1</td></tr><tr><th>peak_total_gpu_used_mib</th><td>23079</td></tr></tbody></table>
+<details><summary>Full run record</summary><pre>{
+  &quot;status&quot;: &quot;image_returned_needs_visual_review&quot;,
+  &quot;model&quot;: &quot;Qwen-Image-2.1&quot;,
+  &quot;run_id&quot;: &quot;preserver-v2&quot;,
+  &quot;appearance_approval&quot;: null,
+  &quot;production_integrated&quot;: false,
+  &quot;memory_measurement&quot;: &quot;Sampled nvidia-smi total GPU usage includes Windows and other processes.&quot;,
+  &quot;download_provenance&quot;: {
+    &quot;repository&quot;: &quot;Comfy-Org/Qwen-Image-2.1&quot;,
+    &quot;revision&quot;: &quot;5dc5850eb514a3685f6a03a2641728a8f7549c69&quot;,
+    &quot;files&quot;: [
+      {
+        &quot;file&quot;: &quot;D:\\.ai-work\\models\\Qwen-Image-2.1\\diffusion_models\\qwen_image_2.1_int8_convrot.safetensors&quot;,
+        &quot;sha256&quot;: &quot;cb74113cb03faecd79611b01fd7fd642f0aa60d6f0b95086abee214d75eaa57d&quot;,
+        &quot;bytes&quot;: 7256783064,
+        &quot;download_and_verify_seconds&quot;: 52.24
+      },
+      {
+        &quot;file&quot;: &quot;D:\\.ai-work\\models\\Qwen-Image-2.1\\text_encoders\\qwen3vl_8b_int8_convrot.safetensors&quot;,
+        &quot;sha256&quot;: &quot;8bfd0f6e12abf2d2d697ecc888e5e90b0d6741d6708f05799f53afa560452e8f&quot;,
+        &quot;bytes&quot;: 9350798360,
+        &quot;download_and_verify_seconds&quot;: 111.97
+      },
+      {
+        &quot;file&quot;: &quot;D:\\.ai-work\\models\\Qwen-Image-2.1\\vae\\qwen_image_2.1_vae_bf16.safetensors&quot;,
+        &quot;sha256&quot;: &quot;bb21f7473051e1ac368515dd3f2e15cd44d7a11748ee8823e1ddca3e4876b7c9&quot;,
+        &quot;bytes&quot;: 675509688,
+        &quot;download_and_verify_seconds&quot;: 19.95
+      }
+    ]
+  },
+  &quot;settings&quot;: {
+    &quot;resolution&quot;: 1024,
+    &quot;steps&quot;: 25,
+    &quot;seed&quot;: 7,
+    &quot;cfg&quot;: 1.0,
+    &quot;sampler&quot;: &quot;euler&quot;,
+    &quot;scheduler&quot;: &quot;simple&quot;,
+    &quot;reserve_vram_gib&quot;: 4
+  },
+  &quot;gpu_before&quot;: {
+    &quot;used_mib&quot;: 2520,
+    &quot;free_mib&quot;: 21623,
+    &quot;utilization_percent&quot;: 2
+  },
+  &quot;comfy_commit&quot;: &quot;95539f56344958339e39b7582a476267d489b0ee&quot;,
+  &quot;server_command&quot;: [
+    &quot;D:\\.ai-work\\venvs\\johnny-qwen21\\Scripts\\python.exe&quot;,
+    &quot;-u&quot;,
+    &quot;D:\\.ai-work\\ops\\comfyui-qwen21\\main.py&quot;,
+    &quot;--listen&quot;,
+    &quot;127.0.0.1&quot;,
+    &quot;--port&quot;,
+    &quot;8191&quot;,
+    &quot;--disable-auto-launch&quot;,
+    &quot;--disable-all-custom-nodes&quot;,
+    &quot;--disable-api-nodes&quot;,
+    &quot;--use-pytorch-cross-attention&quot;,
+    &quot;--reserve-vram&quot;,
+    &quot;4&quot;,
+    &quot;--cache-none&quot;,
+    &quot;--models-directory&quot;,
+    &quot;D:\\.ai-work\\models\\Qwen-Image-2.1&quot;,
+    &quot;--input-directory&quot;,
+    &quot;D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\inputs&quot;,
+    &quot;--output-directory&quot;,
+    &quot;D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\runs\\preserver-v2\\comfy-output&quot;
+  ],
+  &quot;server_pid&quot;: 21856,
+  &quot;system_stats&quot;: {
+    &quot;system&quot;: {
+      &quot;os&quot;: &quot;win32&quot;,
+      &quot;ram_total&quot;: 68636581888,
+      &quot;ram_free&quot;: 34980958208,
+      &quot;comfyui_version&quot;: &quot;0.37.0&quot;,
+      &quot;required_frontend_version&quot;: &quot;1.53.6&quot;,
+      &quot;installed_templates_version&quot;: &quot;0.11.68&quot;,
+      &quot;required_templates_version&quot;: &quot;0.11.68&quot;,
+      &quot;comfy_package_versions&quot;: [
+        {
+          &quot;name&quot;: &quot;comfyui-frontend-package&quot;,
+          &quot;installed&quot;: &quot;1.53.6&quot;,
+          &quot;required&quot;: &quot;1.53.6&quot;
+        },
+        {
+          &quot;name&quot;: &quot;comfyui-workflow-templates&quot;,
+          &quot;installed&quot;: &quot;0.11.68&quot;,
+          &quot;required&quot;: &quot;0.11.68&quot;
+        },
+        {
+          &quot;name&quot;: &quot;comfyui-embedded-docs&quot;,
+          &quot;installed&quot;: &quot;0.5.12&quot;,
+          &quot;required&quot;: &quot;0.5.12&quot;
+        },
+        {
+          &quot;name&quot;: &quot;comfy-kitchen&quot;,
+          &quot;installed&quot;: &quot;0.2.35&quot;,
+          &quot;required&quot;: &quot;0.2.35&quot;
+        },
+        {
+          &quot;name&quot;: &quot;comfy-aimdo&quot;,
+          &quot;installed&quot;: &quot;0.5.5&quot;,
+          &quot;required&quot;: &quot;0.5.5&quot;
+        }
+      ],
+      &quot;python_version&quot;: &quot;3.11.15 (main, Jun  2 2026, 22:29:49) [MSC v.1944 64 bit (AMD64)]&quot;,
+      &quot;pytorch_version&quot;: &quot;2.13.0+cu130&quot;,
+      &quot;embedded_python&quot;: false,
+      &quot;deploy_environment&quot;: &quot;local-git&quot;,
+      &quot;argv&quot;: [
+        &quot;D:\\.ai-work\\ops\\comfyui-qwen21\\main.py&quot;,
+        &quot;--listen&quot;,
+        &quot;127.0.0.1&quot;,
+        &quot;--port&quot;,
+        &quot;8191&quot;,
+        &quot;--disable-auto-launch&quot;,
+        &quot;--disable-all-custom-nodes&quot;,
+        &quot;--disable-api-nodes&quot;,
+        &quot;--use-pytorch-cross-attention&quot;,
+        &quot;--reserve-vram&quot;,
+        &quot;4&quot;,
+        &quot;--cache-none&quot;,
+        &quot;--models-directory&quot;,
+        &quot;D:\\.ai-work\\models\\Qwen-Image-2.1&quot;,
+        &quot;--input-directory&quot;,
+        &quot;D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\inputs&quot;,
+        &quot;--output-directory&quot;,
+        &quot;D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\runs\\preserver-v2\\comfy-output&quot;
+      ]
+    },
+    &quot;devices&quot;: [
+      {
+        &quot;name&quot;: &quot;cuda:0 NVIDIA GeForce RTX 4090 : cudaMallocAsync&quot;,
+        &quot;type&quot;: &quot;cuda&quot;,
+        &quot;index&quot;: 0,
+        &quot;vram_total&quot;: 25756565504,
+        &quot;vram_free&quot;: 24159191040,
+        &quot;torch_vram_total&quot;: 0,
+        &quot;torch_vram_free&quot;: 0
+      }
+    ]
+  },
+  &quot;submission&quot;: {
+    &quot;prompt_id&quot;: &quot;ff5486db-39d1-4994-bd4f-e0bb78dc1c0c&quot;,
+    &quot;number&quot;: 0,
+    &quot;node_errors&quot;: {}
+  },
+  &quot;startup_seconds&quot;: 14.3,
+  &quot;gpu_samples&quot;: [
+    {
+      &quot;seconds&quot;: 0.0,
+      &quot;used_mib&quot;: 2853,
+      &quot;free_mib&quot;: 21290,
+      &quot;utilization_percent&quot;: 2
+    },
+    {
+      &quot;seconds&quot;: 5.09,
+      &quot;used_mib&quot;: 3081,
+      &quot;free_mib&quot;: 21062,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 10.12,
+      &quot;used_mib&quot;: 4048,
+      &quot;free_mib&quot;: 20095,
+      &quot;utilization_percent&quot;: 6
+    },
+    {
+      &quot;seconds&quot;: 15.19,
+      &quot;used_mib&quot;: 4851,
+      &quot;free_mib&quot;: 19292,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 20.27,
+      &quot;used_mib&quot;: 5434,
+      &quot;free_mib&quot;: 18709,
+      &quot;utilization_percent&quot;: 60
+    },
+    {
+      &quot;seconds&quot;: 25.31,
+      &quot;used_mib&quot;: 5892,
+      &quot;free_mib&quot;: 18251,
+      &quot;utilization_percent&quot;: 17
+    },
+    {
+      &quot;seconds&quot;: 30.36,
+      &quot;used_mib&quot;: 6188,
+      &quot;free_mib&quot;: 17955,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 35.42,
+      &quot;used_mib&quot;: 6873,
+      &quot;free_mib&quot;: 17270,
+      &quot;utilization_percent&quot;: 33
+    },
+    {
+      &quot;seconds&quot;: 40.48,
+      &quot;used_mib&quot;: 7397,
+      &quot;free_mib&quot;: 16746,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 45.55,
+      &quot;used_mib&quot;: 7969,
+      &quot;free_mib&quot;: 16174,
+      &quot;utilization_percent&quot;: 34
+    },
+    {
+      &quot;seconds&quot;: 50.61,
+      &quot;used_mib&quot;: 8411,
+      &quot;free_mib&quot;: 15732,
+      &quot;utilization_percent&quot;: 2
+    },
+    {
+      &quot;seconds&quot;: 55.66,
+      &quot;used_mib&quot;: 8760,
+      &quot;free_mib&quot;: 15383,
+      &quot;utilization_percent&quot;: 0
+    },
+    {
+      &quot;seconds&quot;: 60.73,
+      &quot;used_mib&quot;: 9348,
+      &quot;free_mib&quot;: 14795,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 65.8,
+      &quot;used_mib&quot;: 9942,
+      &quot;free_mib&quot;: 14201,
+      &quot;utilization_percent&quot;: 2
+    },
+    {
+      &quot;seconds&quot;: 70.86,
+      &quot;used_mib&quot;: 10379,
+      &quot;free_mib&quot;: 13764,
+      &quot;utilization_percent&quot;: 10
+    },
+    {
+      &quot;seconds&quot;: 75.91,
+      &quot;used_mib&quot;: 10767,
+      &quot;free_mib&quot;: 13376,
+      &quot;utilization_percent&quot;: 2
+    },
+    {
+      &quot;seconds&quot;: 80.95,
+      &quot;used_mib&quot;: 11466,
+      &quot;free_mib&quot;: 12677,
+      &quot;utilization_percent&quot;: 2
+    },
+    {
+      &quot;seconds&quot;: 86.02,
+      &quot;used_mib&quot;: 12107,
+      &quot;free_mib&quot;: 12036,
+      &quot;utilization_percent&quot;: 87
+    },
+    {
+      &quot;seconds&quot;: 91.06,
+      &quot;used_mib&quot;: 12587,
+      &quot;free_mib&quot;: 11556,
+      &quot;utilization_percent&quot;: 16
+    },
+    {
+      &quot;seconds&quot;: 96.14,
+      &quot;used_mib&quot;: 12108,
+      &quot;free_mib&quot;: 12035,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 101.19,
+      &quot;used_mib&quot;: 12822,
+      &quot;free_mib&quot;: 11321,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 106.25,
+      &quot;used_mib&quot;: 14266,
+      &quot;free_mib&quot;: 9877,
+      &quot;utilization_percent&quot;: 3
+    },
+    {
+      &quot;seconds&quot;: 111.3,
+      &quot;used_mib&quot;: 15219,
+      &quot;free_mib&quot;: 8924,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 116.34,
+      &quot;used_mib&quot;: 16264,
+      &quot;free_mib&quot;: 7879,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 121.42,
+      &quot;used_mib&quot;: 17224,
+      &quot;free_mib&quot;: 6919,
+      &quot;utilization_percent&quot;: 3
+    },
+    {
+      &quot;seconds&quot;: 126.5,
+      &quot;used_mib&quot;: 18312,
+      &quot;free_mib&quot;: 5831,
+      &quot;utilization_percent&quot;: 4
+    },
+    {
+      &quot;seconds&quot;: 131.55,
+      &quot;used_mib&quot;: 19537,
+      &quot;free_mib&quot;: 4606,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 136.61,
+      &quot;used_mib&quot;: 20629,
+      &quot;free_mib&quot;: 3514,
+      &quot;utilization_percent&quot;: 0
+    },
+    {
+      &quot;seconds&quot;: 141.69,
+      &quot;used_mib&quot;: 21682,
+      &quot;free_mib&quot;: 2461,
+      &quot;utilization_percent&quot;: 3
+    },
+    {
+      &quot;seconds&quot;: 146.73,
+      &quot;used_mib&quot;: 22823,
+      &quot;free_mib&quot;: 1320,
+      &quot;utilization_percent&quot;: 5
+    },
+    {
+      &quot;seconds&quot;: 151.78,
+      &quot;used_mib&quot;: 23079,
+      &quot;free_mib&quot;: 1064,
+      &quot;utilization_percent&quot;: 2
+    },
+    {
+      &quot;seconds&quot;: 156.84,
+      &quot;used_mib&quot;: 22966,
+      &quot;free_mib&quot;: 1177,
+      &quot;utilization_percent&quot;: 93
+    },
+    {
+      &quot;seconds&quot;: 161.92,
+      &quot;used_mib&quot;: 22967,
+      &quot;free_mib&quot;: 1176,
+      &quot;utilization_percent&quot;: 100
+    },
+    {
+      &quot;seconds&quot;: 166.97,
+      &quot;used_mib&quot;: 18165,
+      &quot;free_mib&quot;: 5978,
+      &quot;utilization_percent&quot;: 1
+    },
+    {
+      &quot;seconds&quot;: 172.02,
+      &quot;used_mib&quot;: 17653,
+      &quot;free_mib&quot;: 6490,
+      &quot;utilization_percent&quot;: 2
+    },
+    {
+      &quot;seconds&quot;: 177.08,
+      &quot;used_mib&quot;: 3006,
+      &quot;free_mib&quot;: 21137,
+      &quot;utilization_percent&quot;: 2
+    }
+  ],
+  &quot;output&quot;: {
+    &quot;path&quot;: &quot;D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\local-qwen21-evaluation-2026-09-22\\runs\\preserver-v2\\output-raw.png&quot;,
+    &quot;mode&quot;: &quot;RGBA&quot;,
+    &quot;size&quot;: [
+      1952,
+      544
+    ],
+    &quot;sha256&quot;: &quot;eb58bc73885d94b7f6f05347ecc43867e993249e787aa5f9a97e6410c8dd4a0a&quot;,
+    &quot;alpha_extrema&quot;: [
+      0,
+      255
+    ]
+  },
+  &quot;inference_seconds&quot;: 177.34,
+  &quot;process_seconds&quot;: 191.92,
+  &quot;gpu_after&quot;: {
+    &quot;used_mib&quot;: 2506,
+    &quot;free_mib&quot;: 21637,
+    &quot;utilization_percent&quot;: 1
+  },
+  &quot;peak_total_gpu_used_mib&quot;: 23079,
+  &quot;server_stopped&quot;: true,
+  &quot;original_art_verified_unchanged&quot;: [
+    {
+      &quot;source&quot;: &quot;D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\mermaid-gifts-and-glimpses-batch-v1\\reference\\original\\SMGIFT.BMP\\039.png&quot;,
+      &quot;sha256&quot;: &quot;3ed696a8619166b0a45cc87bb74f32e71a2d09db761d766657e384093aa26194&quot;
+    },
+    {
+      &quot;source&quot;: &quot;D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\review-corrections-2026-09-22\\preserver\\041\\candidate-v1.png&quot;,
+      &quot;sha256&quot;: &quot;f7b45401b398f5ec0ad3865e99f33f251c89e8e13ebcf5db395406b7811e3042&quot;
+    },
+    {
+      &quot;source&quot;: &quot;D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\review-corrections-2026-09-22\\preserver\\039\\candidate-v1.png&quot;,
+      &quot;sha256&quot;: &quot;205c3ed2eb158b5ec38fb42c4a92985620f8c4124a8f9e4ba0364a6f7cbb9aaf&quot;
+    }
+  ],
+  &quot;visual_review&quot;: {
+    &quot;status&quot;: &quot;assistant_reviewed_user_review_pending&quot;,
+    &quot;summary&quot;: &quot;Prompt plus two references and native transparency work. This first test is below the approved drawing in visual quality.&quot;,
+    &quot;observations&quot;: [
+      &quot;The white ring, yellow rope, hand-only scene and low waterline viewpoint are recognized.&quot;,
+      &quot;Browser compositing confirms transparent background on checkerboard, dark and white. Purple hidden RGB seen in the raw-image inspector is not a visible background.&quot;,
+      &quot;Ring and waterline retain stair-step geometry from the pixel sprite; cyan dashes are thick and fragmented.&quot;,
+      &quot;The hand is larger and drapes over the front rim; rope loops are irregular compared with the approved039 drawing.&quot;
+    ],
+    &quot;appearance_approved_by_user&quot;: false
+  }
+}</pre></details></section>
+</main>
+<script>
+for (const button of document.querySelectorAll('[data-bg]')) {
+  button.addEventListener('click', () => {
+    document.body.dataset.background = button.dataset.bg;
+    for (const option of document.querySelectorAll('[data-bg]')) {
+      option.setAttribute('aria-pressed', String(option === button));
+    }
+  });
+}
+for (const image of document.querySelectorAll('.canvas img')) {
+  const label = image.closest('.card').querySelector('.dimensions');
+  const showDimensions = () => { label.textContent = image.naturalWidth + ' x ' + image.naturalHeight + ' pixels'; };
+  image.addEventListener('load', showDimensions);
+  image.addEventListener('error', () => { label.textContent = 'Image could not be loaded'; });
+  if (image.complete && image.naturalWidth) showDimensions();
+}
+</script>
+</body>
+</html>

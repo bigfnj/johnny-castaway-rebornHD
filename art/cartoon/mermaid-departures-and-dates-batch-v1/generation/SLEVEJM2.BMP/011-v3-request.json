@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM2.BMP",
+  "frame": "011",
+  "version": 3,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Restore source far eye, preserve all body and fin geometry.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Edit Image 1, the cartoon shark sprite. Restore the small far-side EYE visible at the top of the head in Image 2 (the original pose). The current pointed spike above the near eye is an error: replace that spike with the far eye peeking up above/behind the forehead, including a small white sclera and dark pupil and sly brow. This is a three-quarter view and BOTH eyes must be visible, looking up-right. Keep the existing near eye, normal sneaky shark expression, gray body, ivory belly, mouth with razor triangular teeth, tongue inside mouth, fin positions, posture, waterline, line weight and cel shading unchanged. Do not add a fin or horn on the forehead. This is a small face-only correction. Preserve actual transparent RGBA background and clear canvas margins. No checkerboard, text, glow or scenery.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/011-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM2.BMP/011.png"
+    ]
+  }
+}

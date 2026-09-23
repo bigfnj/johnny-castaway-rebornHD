@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "status": "prepared",
+  "model": "black-forest-labs/FLUX.2-klein-4B",
+  "source_request": {
+    "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-v1-request.json",
+    "sha256": "53ed1314db51dc715b0bb229c5db0700804003567ae5652d8646563445e8314a"
+  },
+  "prompt": {
+    "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/prepare-smoke/prompt.txt",
+    "sha256": "fd6884e3d500d54f4a835eccc6df711966b65f47bf51f8aad0f30cfce1dab8bc"
+  },
+  "source_request_tool": "image_gen.imagegen",
+  "prompt_matches_source_request": true,
+  "references": [
+    {
+      "source": {
+        "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/workers-and-mermaids-batch-v1/generation/SSUZY1.BMP/001-generated-v1.png",
+        "sha256": "e18233a323e5c876f61cec3caef3d7252746bc4f66fa88f54299449af58d9d16"
+      },
+      "source_mode": "RGBA",
+      "source_size": [
+        1725,
+        912
+      ],
+      "input": {
+        "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/prepare-smoke/reference-01-rgb.png",
+        "sha256": "5e45813df147b1b1015d403467ec295374a2b1ca2e1bfeb52ee2dea1e4b6cd8b"
+      },
+      "input_size": [
+        1024,
+        544
+      ]
+    }
+  ],
+  "input_preprocessing": "Alpha composited on white, then resized to max-edge and multiples of16. Original PNGs unchanged.",
+  "settings": {
+    "width": 1024,
+    "height": 544,
+    "steps": 4,
+    "seed": 7,
+    "guidance_scale": 1.0,
+    "max_sequence_length": 512,
+    "dtype": "bfloat16",
+    "model_cpu_offload": true
+  },
+  "output_policy": "Raw local RGB result. No alpha extraction or production replacement.",
+  "user_authorized": "User explicitly requested building the .venv and running tests on2026-09-21.",
+  "appearance_approval": null,
+  "production_integrated": false
+}

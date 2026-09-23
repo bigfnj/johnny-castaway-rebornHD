@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "feedback": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1.json",
+    "sha256": "1c917c75998c01e631ce152289eb2317f046ad04bdaf9ccef96611aadcb49cb8"
+  },
+  "004": {
+    "version": 9,
+    "status": "blocked",
+    "image_returned": false,
+    "request": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v9-request.json",
+      "sha256": "257f9f08d8338779b20f8949440e25d40d09cb7c3b2fe8cd1908075a8a00a2c0"
+    },
+    "failure": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v9-failure.json",
+      "sha256": "dd477f3a09bbfcfac13856c17b51e4dbcff5d764898479fcebac3644f4563362"
+    },
+    "unresolved": "The direct composite's stomach section remains overly elongated."
+  },
+  "005": {
+    "displayed_version": 2,
+    "displayed_status": "partial_correction",
+    "displayed_image_returned": true,
+    "request": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v2-request.json",
+      "sha256": "298cc464b519bd67e55a4fc7912ddfe7d1c4004d4ed938489655cb260ce2b395"
+    },
+    "record": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-record-v2.json",
+      "sha256": "16c3b190742ff323527524794b1f56ae6af3bc20790042e6781fb6bf03845062"
+    },
+    "output": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v2.png",
+      "sha256": "ce4cd909762c0236e08f49b2c194e2891b3cfc538915a0682cc6dc3c28401597"
+    },
+    "visual_review": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-visual-review-v2.json",
+      "sha256": "6246ecf249bc43864676c8deff184614cb615fdd0d9603bb55587495f6bad76e"
+    },
+    "appearance_approval": null,
+    "latest_version": 3,
+    "latest_status": "blocked",
+    "latest_image_returned": false,
+    "latest_request": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v3-request.json",
+      "sha256": "4924e1c2855dbc54ccb854411b78c080e8e34ca88cea979fc3fa5fbc2e5d5ae5"
+    },
+    "latest_failure": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-v3-failure.json",
+      "sha256": "f5ce7010adb706e3ec22af8fefe0adf7d764f1ef0f22836032ded2c6560c5d95"
+    },
+    "unresolved": "The bent supporting elbow remains too high relative to the resting hip and legs to read as bearing weight."
+  },
+  "unchanged_approved_frames": [
+    "003",
+    "006",
+    "008",
+    "009",
+    "010"
+  ],
+  "production_integrated": false,
+  "native_motion_checked": false
+}

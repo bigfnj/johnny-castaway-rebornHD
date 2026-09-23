@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-21",
+  "frame": "SSUZY1.BMP-004",
+  "user_request_exact": "can you crop out and use the right image for 004 ?",
+  "appearance_selection": "Use the right-hand drawing in the user-supplied screenshot for 004.",
+  "approval_scope": "User-selected screenshot appearance for 004; native sprite transparency and production integration are not included.",
+  "output": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/004-cropped-v1.png",
+    "sha256": "79259b26e6f48e72fdcc6cf57a564494e5c7a96c1f9704a23fe608db8691199e"
+  },
+  "artifact_record": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/record.json",
+    "sha256": "8a77702b3e99d1cc756d412c2520d88d5efb74f0d7df80ed95a2779912e5c131"
+  },
+  "source_screenshot": {
+    "path": "art/cartoon/visitor-leg-pose-corrections-v2/imported-004-v1/source-screenshot.png",
+    "sha256": "ce7f95797ece45aa3b8b76a3dd0dc3accb2acd12371aef85d0792f4a644832d8"
+  },
+  "previous_004_selection": {
+    "display_version": null,
+    "review_status": "awaiting_correction",
+    "latest_version": 10,
+    "latest_status": "blocked",
+    "status_text": "The new 004 request used 005's sunblock action and 003's lowered reclining legs, but returned no image. No replacement drawing is available.",
+    "history": [
+      {
+        "version": 1,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-request.json",
+          "sha256": "0be2b69343df01f3393d647a4b2afb5420d31d6df4fa6f8fd296d7d0254dfae7"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v1-failure.json",
+          "sha256": "2d35c1f7e04df5559f91b2e258d292bd7f6a88ed00f87a2bc1c26d3f7feda86b"
+        }
+      },
+      {
+        "key": "SSUZY1.BMP-004",
+        "version": 2,
+        "status": "rejected_by_user",
+        "reason": "The legs should follow 003 more closely, with the anatomical RIGHT leg slightly under the LEFT.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-generated-v2.png",
+          "sha256": "2da5d9bf0612f9f463a1c9b163163b6a9d50c60f1fda20130ff78c9238f62bc1"
+        },
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v2-request.json",
+          "sha256": "40a390033f257dfae743d67e875fd9272ea9ff4538ec8d1ab11e388027cbb8c3"
+        },
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-record-v2.json",
+          "sha256": "831a19cbc7b909446a48da6b5305c253bc235453a561b1360c8f0551e434065c"
+        }
+      },
+      {
+        "key": "SSUZY1.BMP-004",
+        "version": 3,
+        "status": "rejected_by_user",
+        "reason": "Unnatural hip-to-leg integration; the original and green/blue annotation govern the revised pelvis and overlapping legs.",
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-generated-v3.png",
+          "sha256": "e75955f44c7f4941fc8d0d004931fc5dcf9e49b4e8457aea3c589fb1ff5ca12b"
+        },
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v3-request.json",
+          "sha256": "4cff0bd1f710e7d56da550baef09763886be5f607b36f73c6c350c7c49cdf3bd"
+        },
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-record-v3.json",
+          "sha256": "cc6c2b7d434f939bb05ee204d4c6a41f00d40eba91e49b93d2d149ab21d32ef4"
+        },
+        "feedback": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4.json",
+          "sha256": "36a215364179329d0f4ca34f4e0f0f450f4ff48b94dfe41213996e2f6890a5a7"
+        }
+      },
+      {
+        "version": 4,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v4-request.json",
+          "sha256": "bba748543fbc3f6ad13f051b263b0604b0ee0bbc70cb0c59c23a2b982378771f"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v4-failure.json",
+          "sha256": "895bf3398d8dd6f8914ad9afd5d72a0ef193965703debe9b841b8bc4cfde9f23"
+        }
+      },
+      {
+        "version": 5,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v5-request.json",
+          "sha256": "f70c62d71c8b43ac077e763ca7b2c32ed13c35f8ca502c023e47fd3d02cb6e89"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v5-failure.json",
+          "sha256": "e6b29abb4f58f48a20f6f3e65346c4f42b33fea3673849509f0e5c47f0ebe786"
+        }
+      },
+      {
+        "version": 6,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v6-request.json",
+          "sha256": "412a347338e7d4c1071b80eb19a23032ccd0afa7c3319f86e4308e65d532d147"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v6-failure.json",
+          "sha256": "a05bc5e2e48be6695583c6d92489230d7199d427cb664f6b210c58785fc98d8e"
+        }
+      },
+      {
+        "version": 7,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v7-request.json",
+          "sha256": "a39fd119ee0966deb33896baea5a58cc0d8f014d6fef18606646d70dd1c64e1c"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v7-failure.json",
+          "sha256": "3ae9ab206cfc4d0707733b57a7aac0bdf348d5e36ed324c189cfda6a81e4fdd2"
+        }
+      },
+      {
+        "version": 8,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v8-request.json",
+          "sha256": "c99f839b4f146fc85db8974c1d3f19bd5b64bb717f74ec6de0a2e6b9ecc00bfa"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v8-failure.json",
+          "sha256": "9e231a6f98b93956ecce35c80759d79cc234eebe63bed07bb47e63104fba9b37"
+        }
+      },
+      {
+        "version": 9,
+        "status": "blocked",
+        "request": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v9-request.json",
+          "sha256": "257f9f08d8338779b20f8949440e25d40d09cb7c3b2fe8cd1908075a8a00a2c0"
+        },
+        "failure": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-v9-failure.json",
+          "sha256": "dd477f3a09bbfcfac13856c17b51e4dbcff5d764898479fcebac3644f4563362"
+        }
+      }
+    ],
+    "requested_change": "Use 005 v2's sunblock hand action and upper body, with the raised leg lowered to the reclining hip and leg arrangement in approved 003 v2.",
+    "appearance_approval": null,
+    "comparison_previous": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v2.png",
+      "sha256": "ce4cd909762c0236e08f49b2c194e2891b3cfc538915a0682cc6dc3c28401597"
+    },
+    "previous_label": "005 v2 starting drawing",
+    "instruction_references": [
+      {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/005-generated-v2.png",
+        "sha256": "ce4cd909762c0236e08f49b2c194e2891b3cfc538915a0682cc6dc3c28401597",
+        "label": "005 v2: starting drawing and bottle action"
+      },
+      {
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+        "sha256": "663a7b6f7efa233e78e3db6feedee031eb31a6cb6d468e216e6f92a6c7fbeb89",
+        "label": "Approved 003 v2: lowered reclining leg pose"
+      }
+    ],
+    "latest_feedback": {
+      "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-from005-v10.json",
+      "sha256": "84ee0350b32fd5c008efbbf2781796357d694033163555fb571009dfee92d6bc"
+    },
+    "related_evidence": [
+      {
+        "label": "004 attempt notes",
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/004-hip-attempts.md"
+      },
+      {
+        "label": "Local trial 1: unsuccessful RGB output",
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-hip-v1/output-raw.png"
+      },
+      {
+        "label": "Local trial 1: anatomy assessment",
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-hip-v1/visual-review.json"
+      },
+      {
+        "label": "Local trial 1: run record",
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-hip-v1/record.json"
+      },
+      {
+        "label": "Local trial 2: unsuccessful RGB output",
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-original-pose-v1/output-raw.png"
+      },
+      {
+        "label": "Local trial 2: anatomy assessment",
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-original-pose-v1/visual-review.json"
+      },
+      {
+        "label": "Local trial 2: run record",
+        "path": "art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-original-pose-v1/record.json"
+      }
+    ],
+    "artifact_history": [
+      {
+        "kind": "direct_png_composite",
+        "version": 1,
+        "status": "correction_requested",
+        "reason": "User says the stomach section is overly elongated; the head and leg arrangement are the basis for the proportion correction.",
+        "record": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v1/record.json",
+          "sha256": "ef4ae9bf6405c80c115c3d1f23a352b6fd01d0447be8524ee60760c55eb14840"
+        },
+        "output": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/direct-composite-004-v1/004-composite-v1.png",
+          "sha256": "a91bc9b7474db0c7f492ffdb0f2530fae465339a43c54e028f2ef721330a6844"
+        },
+        "feedback": {
+          "path": "art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-proportions-005-elbow-v1.json",
+          "sha256": "1c917c75998c01e631ce152289eb2317f046ad04bdaf9ccef96611aadcb49cb8"
+        }
+      }
+    ],
+    "no_image_text": "The 004 v10 request based on 005 and 003 returned no image. The 005 starting drawing is shown at left; no new 004 was produced."
+  },
+  "background": "Opaque checkerboard baked into supplied screenshot",
+  "production_integrated": false,
+  "native_motion_checked": false
+}

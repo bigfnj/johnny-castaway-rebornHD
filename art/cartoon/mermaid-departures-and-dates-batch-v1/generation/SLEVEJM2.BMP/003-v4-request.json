@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM2.BMP",
+  "frame": "003",
+  "version": 4,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Remove extra lower-left flap to retain one dorsal and two pectoral fins",
+  "arguments": {
+    "prompt": "Edit this existing transparent cartoon shark sprite. Remove the unwanted triangular spike on the LOWER LEFT OUTLINE. It is the gray point ending at approximately x=269,y=842, directly behind the long hanging pectoral fin. Completely erase this pointed flap and its protruding gray area to transparency. Replace the body outline in this region with one smooth inward curve descending from beneath the large upper-left dorsal fin toward the waterline. The back contour should enter BEHIND the hanging near pectoral fin instead of making a second pointed flap beside it. Keep the hanging near pectoral fin intact (leaf-shaped fin from approximately x=440,y=640 to x=565,y=990). Keep the large upper dorsal fin ending at x=230,y=330 unchanged. Preserve the far pectoral fin gesturing to screen-right beneath the mouth exactly. One dorsal fin and two pectoral fins remain. Everything else exactly unchanged, including face, mouth opening, expression, gills, gray and ivory colors, proportions, waterline and framing. Genuine transparent RGBA background, no text.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/003-generated-v3.png"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "arguments": {
+    "prompt": "Use case: identity-preserve.\nAsset type: a single transparent cartoon animation sprite for a retro screensaver restoration.\nPrimary request: Regenerate Image 1 identically in composition and pose, correcting its colors and rendering so it belongs to the same art pack as Images 2 and 3. Its current coloring is too dull.\nInput roles: Image 1 is the edit target and absolute pose/composition reference. Image 2 (approved frame 003) is the primary color and clean cartoon linework reference only. Image 3 (approved frame 006) is an additional palette and shading reference only. Do not copy the poses from Images 2 or 3.\nSubject: the same adult redheaded beach visitor wearing her pink two-piece bathing suit, cyan sunglasses, gold hoop earrings and bracelets, dispensing sunscreen into her open lower hand. This is an ordinary nonsexual beach activity.\nColor and style: match the approved bright red hair, vivid pink/magenta swimsuit, warm peach skin, cyan lenses, gold jewelry, crisp black outlines and simple cel shading. Preserve the existing clothing coverage and design, face, hairstyle, expression, hands, bottle and white lotion stream.\nConstraints: Keep Image 1's full silhouette, proportions, head position, elbow position, torso length, hip connection, leg overlap, knees and feet as closely as possible. Only the color and drawing finish should change. Keep both hands anatomically clear and the sunscreen in the same hand. No additional props, no red dot on the leg, no writing, no collage, no pixel-art styling.\nOutput: one full character sprite with genuine transparent alpha, comfortable clear margins, no checkerboard or other painted background.\n\nFrame 005: preserve the exact selected frame 005 pose in Image 1, including her low supporting elbow, low reclining body, and extended overlapping legs. Do not raise her body or alter the elbow or knees.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/imported-005-v1/005-transparent-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/003-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/006-generated-v3.png"
+    ]
+  }
+}

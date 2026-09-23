@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "status": "image_returned_needs_visual_review",
+  "model": "black-forest-labs/FLUX.2-klein-4B",
+  "source_request": {
+    "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/requests/004-hip-v1.json",
+    "sha256": "5d5d3b46d8acb6f9911acc41eec4705db956da43338006bd8340c675a8e55aac"
+  },
+  "prompt": {
+    "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-hip-v1/prompt.txt",
+    "sha256": "da194ffaaab823c012f62c90b7d62e02b56c4b051c00f4fa935ffbd61a6d820c"
+  },
+  "source_request_tool": "local_diffusers.Flux2KleinPipeline",
+  "prompt_matches_source_request": true,
+  "references": [
+    {
+      "source": {
+        "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/generation/SSUZY1.BMP/004-generated-v3.png",
+        "sha256": "e75955f44c7f4941fc8d0d004931fc5dcf9e49b4e8457aea3c589fb1ff5ca12b"
+      },
+      "source_mode": "RGBA",
+      "source_size": [
+        1642,
+        958
+      ],
+      "input": {
+        "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-hip-v1/reference-01-rgb.png",
+        "sha256": "eaf8445ca0ebbfa6bd469eb409466ce1fb3fdd61dc1251b3fffb5c3d9ae1538e"
+      },
+      "input_size": [
+        1024,
+        592
+      ]
+    },
+    {
+      "source": {
+        "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/feedback-004-hip-v4/codex-clipboard-590aed65-44a9-4059-9d85-e23e21ed98b9.png",
+        "sha256": "a8947b9f4c69ec2132d97cc50a322b2a6c42143f7e68c99d49d1f0af1a30ca4c"
+      },
+      "source_mode": "RGB",
+      "source_size": [
+        373,
+        274
+      ],
+      "input": {
+        "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-hip-v1/reference-02-rgb.png",
+        "sha256": "75f7a782d762a4f14dd3a4acc87be1e22c7c57eeec0d4e00c6ca958c2c6ddc09"
+      },
+      "input_size": [
+        368,
+        272
+      ]
+    }
+  ],
+  "input_preprocessing": "Alpha composited on white, then resized to max-edge and multiples of16. Original PNGs unchanged.",
+  "settings": {
+    "width": 1024,
+    "height": 592,
+    "steps": 4,
+    "seed": 7,
+    "guidance_scale": 1.0,
+    "max_sequence_length": 512,
+    "dtype": "bfloat16",
+    "model_cpu_offload": true
+  },
+  "output_policy": "Raw local RGB result. No alpha extraction or production replacement.",
+  "user_authorized": "User explicitly requested building the .venv and running tests on2026-09-21.",
+  "appearance_approval": null,
+  "production_integrated": false,
+  "packages": {
+    "torch": "2.13.0+cu130",
+    "diffusers": "0.37.0",
+    "transformers": "5.5.4",
+    "accelerate": "1.14.0",
+    "Pillow": "12.2.0"
+  },
+  "model_snapshot": "D:/.ai-work/cache/hf-cache/hub/models--black-forest-labs--FLUX.2-klein-4B/snapshots/e7b7dc27f91deacad38e78976d1f2b499d76a294",
+  "model_index": {
+    "path": "D:/.ai-work/cache/hf-cache/hub/models--black-forest-labs--FLUX.2-klein-4B/snapshots/e7b7dc27f91deacad38e78976d1f2b499d76a294/model_index.json",
+    "sha256": "51a76cb1cf3ed37423a1128c79c22faee8e6fbe7f5aaeb737f0a258930dbaac0"
+  },
+  "gpu_before": "name, memory.total [MiB], memory.used [MiB], memory.free [MiB]\nNVIDIA GeForce RTX 4090, 24564 MiB, 2822 MiB, 21321 MiB",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "model_load_seconds": 5.019,
+  "inference_seconds": 117.967,
+  "output": {
+    "path": "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/visitor-leg-pose-corrections-v2/local-generation-test/004-hip-v1/output-raw.png",
+    "sha256": "1853a2c82c6e9cbab552d7d23417c6af8e96f1be31180a59fdc4b7177235d249",
+    "mode": "RGB",
+    "size": [
+      1024,
+      592
+    ],
+    "has_alpha": false
+  },
+  "peak_allocated_gib": 8.595,
+  "peak_reserved_gib": 8.918,
+  "process_seconds": 123.464,
+  "gpu_after_cleanup_before_process_exit": "name, memory.total [MiB], memory.used [MiB], memory.free [MiB]\nNVIDIA GeForce RTX 4090, 24564 MiB, 3243 MiB, 20900 MiB"
+}

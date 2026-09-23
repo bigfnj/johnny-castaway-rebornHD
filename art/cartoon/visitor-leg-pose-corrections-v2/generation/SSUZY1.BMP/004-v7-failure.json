@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "frame": "004",
+  "version": 7,
+  "status": "blocked",
+  "image_returned": false,
+  "request_id": "36c739b2-58ca-49ab-9b34-9e555bcd9414",
+  "error": {
+    "message": "Your request was rejected by the safety system. If you believe this is an error, contact us at help.openai.com and include the request ID 36c739b2-58ca-49ab-9b34-9e555bcd9414. safety_violations=[sexual].",
+    "type": "image_generation_user_error",
+    "param": null,
+    "code": "moderation_blocked",
+    "moderation_details": {
+      "moderation_stage": "output",
+      "categories": [
+        "sexual"
+      ]
+    }
+  }
+}
