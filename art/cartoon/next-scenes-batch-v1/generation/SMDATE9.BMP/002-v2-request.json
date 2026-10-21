@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "resource": "SMDATE9.BMP",
+  "frame": "002",
+  "version": 2,
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Image1 is the EDIT TARGET, SMDATE9 002 current HD sprite. Image2 is the exact original pose reference. Correct ONLY the two anatomy/costume mistakes in Image1 while keeping its diagonal composition, character identity, facial angles, hair shape, hat, coat, green tail, line art and transparent background.\n1) Johnny must have TWO distinct long bare lower legs trailing diagonally down-right, as original. Keep the current lower/near leg and foot unchanged; restore the far leg emerging from the other hip under the black coat, parallel and above it, ending with its own smaller foreshortened bare foot near the green fin, partly occluded by the tail as source. Do not create extra knees or a floating foot. Exactly two legs total.\n2) Remove the red bowtie incorrectly drawn on the mermaid's upper chest/neck. The red bowtie belongs at Johnny's shirt collar under HIS beard only, where visible; her green bikini is unchanged. Do not add or expose hidden anatomy. Preserve everything else, genuinely transparent RGBA, no glow, no background or shadow, no added water or props.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/next-scenes-batch-v1/generation/SMDATE9.BMP/002-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/next-scenes-batch-v1/reference/nearest8/SMDATE9.BMP/002.png"
+    ]
+  }
+}

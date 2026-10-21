@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM2.BMP",
+  "frame": "009",
+  "version": 6,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Replace the body-like hump with an unmistakable near/front pectoral fin and keep the farther fin hidden.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit\nAsset type: transparent production cartoon sprite\nInput images: Image 1 is the edit target, current selected SLEVEJM2.BMP frame 009; Image 2 is the enlarged nearest-neighbor original pose reference; Image 3 is the native pixel original pose reference.\nPrimary request: Replace the current raised near-side appendage with an unmistakable shark pectoral fin performing the same original gesture.\nSubject detail: The shark is upright in the water. The ONE visible fin must be the near/front pectoral fin. Its broad base must visibly emerge from the near chest/shoulder just behind the gill area, then extend toward image-right and taper to one pointed fin tip with a slightly downward curve, matching the original reference gesture. It must read as a flat triangular pectoral fin, not a rounded arm, body swelling, shoulder lump, dorsal hump, or back hump.\nStyle/medium: polished 2D hand-inked cartoon sprite matching Image 1 exactly\nComposition/framing: keep the shark pose, crop, scale, orientation, facial expression, waterline, and transparent canvas from Image 1\nConstraints: change only the fin anatomy and its local attachment; hide the farther pectoral fin completely; preserve the dorsal fin and entire back silhouette; preserve shark identity, gray palette, white belly, outlines, highlights, face, teeth, gills, and water splash; genuinely transparent background; no added objects; no text; no watermark\nAvoid: second pectoral fin; detached fin; fin attached to the back; rounded hump; arm or hand anatomy; extra limb; changed face; changed body silhouette outside the near chest attachment",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/009-generated-v5.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM2.BMP/009.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/original/SLEVEJM2.BMP/009.png"
+    ]
+  }
+}

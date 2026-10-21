@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM1.BMP",
+  "frame": "008",
+  "version": 3,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Restore the shark's near pectoral fin so it visibly holds the mermaid's hand.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Asset type: transparent cartoon game animation sprite, SLEVEJM1.BMP-008. Image 1 is the edit target and supplies the finished neutral-gray shark identity, adult mermaid, water, composition, scale and rendering. Image 2 is the exact original pixel pose and governs the interaction and anatomy. Change only the hand interaction: add the shark's FRONT/NEAR pectoral fin on the shark's visible right-facing side, bending naturally toward image-right so its fin tip meets and gently holds the mermaid's visible hand at the center between them. Their hand and fin must visibly touch in one clear holding-hands contact, as in Image 2. The near fin must have an unbroken anatomical connection to the shark's near shoulder/flank and must not emerge from the mouth, jaw, belly or water. Keep the existing farther pectoral fin on image-left, dorsal fin, gray body, ivory underside, pointed snout, half-lidded eye, gill slits and triangular-tooth grin unchanged. Keep the mermaid exactly rear-facing with the same yellow hair, turquoise headband, green top, body angle and visible arm; adjust only her fingers enough to close naturally around the fin tip. Preserve the sparse cyan-white waterline, framing, margins, bold black outlines and smooth cel shading. No extra arms, hands or fins; no detached fin; no overlap through either torso; no new objects, text, labels, background, checkerboard, shadow or glow. Return one genuinely transparent RGBA sprite with clean transparent margins.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM1.BMP/008-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM1.BMP/008.png"
+    ]
+  }
+}

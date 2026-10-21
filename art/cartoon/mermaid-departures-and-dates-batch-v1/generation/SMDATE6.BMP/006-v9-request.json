@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SMDATE6.BMP",
+  "frame": "006",
+  "version": 9,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Final arm reconstruction from the clean no-arm intermediate: add the foreground arm from frame 005 and attach it to the visible near shoulder.",
+  "arguments": {
+    "prompt": "Use case: compositing. Asset: one transparent cartoon game animation sprite, SMDATE6.BMP-006. Image 1 is the clean edit base and is authoritative for the entire woman, deeply reclined head, face, hair, headband, swimsuit, torso, floating wine glass, colors, outline and rendering. It intentionally has no arms. Image 2 is the exact pose donor for the single foreground arm: copy its natural V-shaped shoulder-to-elbow-to-hand construction and glass grip. Image 3 is the enlarged original frame and confirms that the closer arm owns the glass. Add exactly one arm to Image 1. Attach it continuously to the large rounded foreground shoulder on image-left/lower-center. From that shoulder, the upper arm descends diagonally down and to the right across the lower foreground, reaching a clearly visible low bent elbow near the lower-right side of the torso. From that elbow, the forearm rises diagonally up and to the right toward the mouth. The hand wraps naturally around the existing wine-glass stem close to the bowl, as in Image 2, while the bowl stays at her lips. The finished arm must form an obvious wide V and remain visibly connected to the foreground shoulder along its entire path. It may overlap the lower edge of the green top but must not pass through either breast. The farther arm remains completely hidden. Preserve Image 1's face, extreme head-back angle, lifted chin, backward-falling hair, cyan headband, torso, swimsuit and glass position. Show exactly one shoulder-owned arm, one elbow, one forearm and one five-fingered hand. No upright arm attached at the image-right armpit, no second arm, stump, fused anatomy or disconnected hand. Return only the complete corrected sprite on a genuinely transparent RGBA background with margin around every edge; no water, scenery, text, solid backdrop, checkerboard pixels, border or shadow rectangle.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SMDATE6.BMP/006-generated-v8.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SMDATE6.BMP/005-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SMDATE6.BMP/006.png"
+    ]
+  }
+}

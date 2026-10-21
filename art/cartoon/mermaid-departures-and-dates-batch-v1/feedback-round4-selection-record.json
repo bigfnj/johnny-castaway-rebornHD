@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "status": "round4_selection_verified",
+  "baseline_asset_count": 72,
+  "current_asset_count": 72,
+  "corrected_frame_count": 2,
+  "unchanged_frame_count": 70,
+  "exact_changed_keys": [
+    "SLEVEJM2.BMP-009",
+    "SLEVEJM3.BMP-004"
+  ],
+  "selection_changed_keys": [
+    "SLEVEJM2.BMP-009",
+    "SLEVEJM3.BMP-004"
+  ],
+  "corrected_frames": {
+    "SLEVEJM2.BMP-009": {
+      "baseline_version": 6,
+      "selected_version": 7,
+      "baseline_output_sha256": "41daa0e3198340386a23964bd4847f791488df5acc557ad5fbe2108611c098fd",
+      "selected_output": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/009-generated-v7.png",
+        "sha256": "0234568dca3c8c0a45e2929c844be087b2d5f9c1cfc0fe5b263bb9fae112d786"
+      },
+      "request": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/009-v7-request.json",
+        "sha256": "4a28aa6ca7dba1b8b75fe77baec192a09a2d4e528f34881abaff3f24e98e3943"
+      },
+      "record": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/009-record-v7.json",
+        "sha256": "c1e18b4dcc90334937e48fd4556dcb26fd1e343257c08fd31780bb6314a400de"
+      }
+    },
+    "SLEVEJM3.BMP-004": {
+      "baseline_version": 5,
+      "selected_version": 6,
+      "baseline_output_sha256": "f7bfcc578134f201bf8f9b531b2456398f71883dfd4782460ff783c2b12b7228",
+      "selected_output": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/004-generated-v6.png",
+        "sha256": "43d1061189c9121f2ee7d817ebc57b4cd09bfc6e17753c88e5031823566a1715"
+      },
+      "request": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/004-v6-request.json",
+        "sha256": "a9e0fb2b59dd5299356658e589c356365da5e48da4be266e60a405ea48814977"
+      },
+      "record": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/004-record-v6.json",
+        "sha256": "11d1621c11e541c3230fe6b47f00786ee18ba0928320a73a68cb64891707419f"
+      }
+    }
+  },
+  "unchanged_guard": {
+    "fields": [
+      "version",
+      "selected_raw.sha256"
+    ],
+    "verified_frame_count": 70,
+    "mismatches": []
+  },
+  "negative_control": {
+    "mutation": "Changed SLEVEJM1.BMP-000 selected_raw.sha256 in memory, then restored it by discarding the copied data.",
+    "guard_fired": true,
+    "failure_count": 1,
+    "detected_binding": "SLEVEJM1.BMP-000:selected_raw.sha256",
+    "failure_message": "unchanged-frame guard found 1 mismatch(es): SLEVEJM1.BMP-000:selected_raw.sha256",
+    "source_files_modified": false
+  },
+  "provenance_negative_control": {
+    "mutation": "Changed SLEVEJM2.BMP-009 generation-record mode to external in memory, then restored it by discarding the copied data.",
+    "guard_fired": true,
+    "failure_message": "SLEVEJM2.BMP-009: record is not a built-in imagegen artifact",
+    "source_files_modified": false
+  },
+  "inputs": {
+    "art/cartoon/mermaid-departures-and-dates-batch-v1/review-data-before-feedback-round4.json": "049742ef1016c185f0b57a213bea5a4e45602c8c213508aa0d1bfaa0747ca0ba",
+    "art/cartoon/mermaid-departures-and-dates-batch-v1/review-data.json": "b0bced92d1398b7b976174287a5ca2087a542027f2828d4499c3fb627d1da497",
+    "art/cartoon/mermaid-departures-and-dates-batch-v1/feedback-2026-09-24-round4.json": "23a84f62384137977f0ef90c3651bf2f7d9ae2cde868ec51ba2260a0a79e3016",
+    "art/cartoon/mermaid-departures-and-dates-batch-v1/verify_feedback_round4.py": "66d4806f6c594557cefaca0faa222afdacdd8b67a9ba3d177ae34f1e96f3e75d"
+  },
+  "appearance_approval": null,
+  "production_integrated": false,
+  "native_motion_checked": false,
+  "limits": "This record proves selection scope and artifact bindings. It does not prove appearance acceptance, native motion, or production integration."
+}

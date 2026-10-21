@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "resource": "SMDATE9.BMP",
+  "frame": "004",
+  "version": 1,
+  "arguments": {
+    "prompt": "Use case: illustration-story. Create ONE HD Cartoon game sprite on a genuinely transparent RGBA background, recreating the exact source frame, not a new scene. Image1 is the exact original pose reference and controls silhouette, facing, visible eyes, anatomy, gestures, overlaps and contact. Image2 is Johnny identity/style only, not ordinary clothes/stance. Image3 is mermaid identity/materials only, not her pose or water. Image4 is the original neighboring phases for motion context only, not extra panels.\nStyle: polished clean black contour 2D cartoon with restrained cel shading. Johnny: adult lean castaway, long rounded nose, full dark-brown scruffy beard, shaggy hair, warm light peach skin. For this story he wears source BLACK TOP HAT and BLACK TAILCOAT with red bowtie and blue waistcoat. His bare legs/feet remain where visible in source; do not replace visible skin with trousers. Mermaid: adult blonde, blue/cyan headband, green bikini top and emerald tail, smooth bright yellow hair. Preserve source face angle and eye visibility rather than copying the reference's upward gaze. Replace diagnostic red/white skin dithering with coherent peach fills. Preserve each hand attachment and the hidden far-side anatomy; do not add extra limbs or expose hidden eyes. The joined pair stays ONE silhouette.\n\nPose lock SMDATE9 004: Very tall narrow vertical spinning pair. Mermaid near center front, body extremely foreshortened edge-on with arms descending to the waist support; face largely hidden by a narrow curtain of hair, DO NOT turn her face front-on. Her blonde hair shoots almost straight vertically up in a long tapered column; headband visible as a tiny cyan segment. Her green tail curls down around the supporting hands then up the right edge ending in fin lobes at mid-right height. Johnny low-left with top hat seen from side/back, dark coat below, head close to her waist/shoulder. He holds her waist/base of tail; the nearer supporting hand contacts tail below. One bare lower leg and foot points down at bottom-left, the other is mostly hidden. Keep strong tall hair/compact bodies silhouette and rightward tail crescent, no ground shadow.\nOutput: whole source silhouette with transparent margins, no scenery, water, floor, labels, border, checkerboard, glow or flat gray ground shadow. Use the exact original over any prose ambiguity. Single drawing only.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/next-scenes-batch-v1/reference/nearest8/SMDATE9.BMP/004.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/johnny-character-v5.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/013-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/next-scenes-batch-v1/reference/SMDATE9.BMP-contact-01.png"
+    ]
+  }
+}

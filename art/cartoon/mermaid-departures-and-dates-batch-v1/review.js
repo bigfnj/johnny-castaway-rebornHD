@@ -25,7 +25,8 @@ document.getElementById("filter").addEventListener("input", event => {
 });
 
 async function render() {
-  const response = await fetch("review-data.json", {cache: "no-store"});
+  const dataUrl = document.body.dataset.reviewData || "review-data.json";
+  const response = await fetch(dataUrl, {cache: "no-store"});
   if (!response.ok) throw new Error(`Review data HTTP ${response.status}`);
   const data = await response.json();
   let loaded = 0;

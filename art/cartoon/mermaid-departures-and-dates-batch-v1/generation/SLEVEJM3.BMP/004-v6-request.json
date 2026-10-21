@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM3.BMP",
+  "frame": "004",
+  "version": 6,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Restore the single visible eye as open, excited, friendly, and forward-looking while preserving the clean upper face.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit\nAsset type: transparent production cartoon game sprite, SLEVEJM3.BMP frame 004\nInput images: Image 1 is the sole edit target and clean-face authority (current v5). Image 2 is the earlier v4 placement/identity reference for the shark's single lower/right visible eye. Image 3 is the earlier v3 expression reference for a wide-open, round, excited forward-looking cartoon eye. Image 4 is the enlarged original pixel pose reference.\nPrimary request: Change only the shark's one visible eye on Image 1. Replace the current narrow, slitted, dangerous-looking lower/right eye with one clearly open white oval cartoon eyeball and a round black pupil looking forward/right toward the yellow hair. The eye must read excited, eager, friendly and alert, never angry, devious, sleepy, predatory or threatening.\nComposition/framing: keep the exact Image 1 canvas, shark pose, scale, silhouette, dorsal fin, snout, waterline, wave shapes, yellow hair, placement and transparent margins.\nStyle/medium: preserve Image 1's polished hand-inked 2D cel-shaded cartoon style, gray palette, bold black outlines, cyan-and-white foam and yellow hair.\nConstraints: exactly one visible eye total, in the existing lower/right eye location; white sclera is broadly open and rounded/oval rather than a narrow crescent or slit; round pupil faces forward/right; no heavy slanted upper lid and no eyebrow. Keep the previously cleaned upper/left face as uninterrupted smooth gray skin. Do not reintroduce the removed upper dark almond, mouth-like mark, second eye, extra facial mark or teeth. Preserve every non-eye pixel as closely as possible. Return the complete sprite on a genuinely transparent RGBA background with transparent gaps and margin at every edge. No text, labels, border, checkerboard or watermark.\nAvoid: slitted eye; narrowed eye; dangerous glare; angry brow; devious expression; second eye; upper dark mark; mouth; teeth; changes to shark body, waves or hair.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/004-generated-v5.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/004-generated-v4.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/004-generated-v3.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM3.BMP/004.png"
+    ]
+  }
+}

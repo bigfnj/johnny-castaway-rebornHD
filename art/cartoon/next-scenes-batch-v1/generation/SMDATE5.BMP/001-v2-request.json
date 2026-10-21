@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SMDATE5.BMP",
+  "frame": "001",
+  "version": 2,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "submission_status": "not_submitted",
+  "reason_not_submitted": "Apparent diffuse glow is hidden RGB under alpha 0, not a visible backdrop. Preserve v1 alpha and inspect in browser.",
+  "correction": "Remove erroneous diffuse colored backdrop, preserve characters and droplets.",
+  "arguments": {
+    "prompt": "Use case: background-extraction. Image1 is the sole edit target. Keep both complete cartoon characters, their exact poses, clothing, expressions, colors, outlines, relative layout and individual white water droplets. Remove ALL diffuse colored glow, aura, smoke and haze behind and between characters and droplets. The surrounding background and every gap between outlines must become pure alpha-zero TRANSPARENT pixels. No black solid background, no gray matte, no colored backdrop, no glow around edges. Retain opaque interiors of characters, green tail, yellow hair, white shirt and individual white droplets. Clean transparent RGBA game sprite with precise smooth cutout edges and no rectangular background. No redraw of anatomy or added items.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/next-scenes-batch-v1/generation/SMDATE5.BMP/001-generated-v1.png"
+    ]
+  }
+}

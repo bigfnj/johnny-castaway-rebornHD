@@ -11,6 +11,7 @@ from PIL import Image
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
+APPROVAL_PATH = HERE.parent / "mermaid-departures-and-dates-batch-v1" / "acceptance" / "appearance-round5-2026-09-25.json"
 
 
 def read(path):
@@ -50,11 +51,25 @@ def load_notes():
     return notes
 
 
+def apply_appearance_approval(row, approval, approval_pin):
+    selected = approval.get("approved_assets", {}).get(row["key"])
+    if not selected or selected.get("version") != row["version"]:
+        return
+    expected = selected.get("output", {})
+    output = row.get("output") or {}
+    if not output or any(output.get(field) != expected.get(field) for field in ("path", "sha256")):
+        raise ValueError(f'{row["key"]}: appearance approval does not bind selected output {output.get("path")}')
+    row["appearance_approval"] = approval_pin
+    row["status"] = "appearance_approved"
+
+
 def main():
     plan = read(HERE / "correction-plan.json")
     notes = load_notes()
     override_path = HERE / "selected-corrections.json"
     overrides = read(override_path) if override_path.exists() else {}
+    approval = read(APPROVAL_PATH) if APPROVAL_PATH.exists() else {}
+    approval_pin = pin(APPROVAL_PATH.relative_to(ROOT).as_posix()) if approval else None
     rows = []
     for entry in plan["entries"]:
         row = {key: entry[key] for key in ("key", "resource", "frame", "version", "previous_version")}
@@ -72,6 +87,7 @@ def main():
         row["status"] = "awaiting_review" if row["output"] else "pending"
         row["visual_review"] = notes.get(row["key"], "")
         row["appearance_approval"] = None
+        apply_appearance_approval(row, approval, approval_pin)
         row["production_integrated"] = False
         row["native_motion_checked"] = False
         rows.append(row)
@@ -87,13 +103,16 @@ def main():
             panels.append(f'<section><h3>{label}</h3><div class="art">{content}</div></section>')
         links = " &middot; ".join(f'<a href="{html.escape(row[kind]["url"], quote=True)}" target="_blank">{label}</a>'
             for kind, label in (("request", "Exact request"), ("record", "Image record"), ("output", "Exact PNG")) if row[kind])
-        state = f'Gray shark v{row["version"]}: awaiting your review' if row["output"] else "Correction in progress"
+        if row["status"] == "appearance_approved":
+            state = f'Gray shark v{row["version"]}: appearance approved on 2026-09-25'
+        else:
+            state = f'Gray shark v{row["version"]}: awaiting your review' if row["output"] else "Correction in progress"
         note = f'<p class="muted">{html.escape(row["visual_review"])}</p>' if row["visual_review"] else ""
         cards.append(f'<article id="frame-{row["key"]}" data-resource="{row["resource"]}" data-status="{row["status"]}"><h2>{row["resource"][:-4]} {row["frame"]}</h2><p class="state">{state}</p>{note}<div class="panels">{"".join(panels)}</div><p class="links">{links}</p></article>')
     data = {"schema_version": 1, "total": len(rows), "counts": dict(counts), "entries": rows,
-            "appearance_approval": None, "production_integrated": False, "native_motion_checked": False}
+            "appearance_approval": approval_pin, "production_integrated": False, "native_motion_checked": False}
     (HERE / "review-data.json").write_text(json.dumps(data, indent=2) + "\n", encoding="utf-8")
-    summary = f'{counts.get("awaiting_review", 0)} of 27 shark corrections ready for review.'
+    summary = f'{counts.get("appearance_approved", 0)} of 27 shark corrections appearance approved; {counts.get("awaiting_review", 0)} awaiting review.'
     if counts.get("pending"):
         summary += f' {counts["pending"]} still in progress. Refresh this page for updates.'
     template = (HERE / "review-template.html").read_text(encoding="utf-8")
@@ -103,7 +122,7 @@ def main():
               "counts": dict(counts), "plan": pin("art/cartoon/shark-identity-corrections-v1/correction-plan.json"),
               "html": pin("art/cartoon/shark-identity-corrections-v1/review.html"),
               "data": pin("art/cartoon/shark-identity-corrections-v1/review-data.json"),
-              "appearance_approval": None, "production_integrated": False, "native_motion_checked": False}
+              "appearance_approval": approval_pin, "production_integrated": False, "native_motion_checked": False}
     (HERE / "review-record.json").write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"total": 27, "counts": dict(counts), "page": str(HERE / "review.html")}))
 

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM3.BMP",
+  "frame": "004",
+  "version": 5,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Remove only the unwanted upper dark almond and restore uninterrupted gray skin.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit\nAsset type: transparent production cartoon sprite\nInput images: Image 1 is the sole edit target, current selected SLEVEJM3.BMP frame 004.\nPrimary request: Remove only the small dark black-outlined almond-shaped mark on the shark's upper cheek/forehead area, the mark above and left of the single white eye. Reconstruct that exact small area as smooth neutral gray shark skin continuous with the surrounding face.\nStyle/medium: preserve the polished 2D hand-inked cartoon sprite exactly\nComposition/framing: preserve the shark pose, crop, scale, waterline, yellow hair, waves, and transparent canvas exactly\nConstraints: change only the dark almond-shaped mark and its immediate pixels; leave no residual line, outline, crease, shadow, oval, or facial feature in that location; preserve the single lower/right white eye with black pupil exactly; preserve all gray shading and highlights except the tiny repaired patch; preserve dorsal fin, body, snout, hair, foam, splashes, outlines, palette, and transparency; genuinely transparent background; no text; no watermark\nAvoid: replacement eye; replacement mouth; brow; nostril; teeth; crease; scar; eyelid; new facial mark; moving or changing the surviving white eye; changing hair or waves",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/004-generated-v4.png"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM2.BMP",
+  "frame": "004",
+  "version": 6,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Correct rear-facing head so no eyes are visible.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Image 1 is the selected transparent shark sprite to edit. Image 2 is the exact original SLEVEJM2 004 pose and action. Image 3 is the established gray-shark identity and ink/cel-shading reference only. Correct only the head orientation and eye area: this shark has his back to the viewer and his head is turned away toward screen-right. NO EYES are visible from this rear three-quarter angle. Remove every eye, pupil, white sclera, eyelid and eyebrow from Image 1, and redraw that area as a smooth continuous medium-gray back/top-of-head plane with restrained cel shading. Do not replace the eye with a closed-eye line. Do not add a far-side eye. Keep the existing compact toothy mouth, snout direction, level far pectoral-fin gesture, hanging near pectoral fin, single dorsal fin, body silhouette, waterline, proportions, colors and bold black line style unchanged. Image 2 is pose truth; do not reinterpret its mouth/fin pixels as an eye. Preserve clear margins and genuine transparent RGBA. No background, checkerboard, glow, shadow, text or extra anatomy.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/004-generated-v5.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM2.BMP/004.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/generation/GJFFFOOD.BMP/019-generated-v1.png"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM2.BMP",
+  "frame": "009",
+  "version": 7,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Redraw the bulbous hump-like silhouette as a normal cartoon shark with a clearly rooted near/front pectoral fin making the original rightward gesture.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit\nAsset type: transparent production cartoon sprite\nInput images: Image 1 is the current SLEVEJM2.BMP frame 009 edit target and the authority for the shark's face, colors, ink style, upright waterline crop, and expression, but NOT for its bulbous body silhouette; Image 2 is the enlarged nearest-neighbor original and is the authority for the upright pose and rightward fin gesture; Image 3 is an approved shark reference and is the anatomy authority for a normal gray cartoon shark body and a distinct pectoral fin; Image 4 is the native pixel original and confirms the pose.\nPrimary request: Redraw the shark so it unmistakably reads as a normal cartoon SHARK with a fin, never as a humpback whale or a shark with a back hump. Keep the same upright pose and rightward gesture, but replace the huge round torso and rounded appendage with streamlined shark anatomy.\nSubject detail: Give the shark a tapered wedge-shaped head and a slimmer, gently tapered torso rather than a spherical or whale-like body. Keep one separate triangular dorsal fin rising cleanly from the top/back. Show exactly ONE pectoral fin: the near/front fin must have a clearly visible broad root on the side of the chest immediately behind and slightly below the gill slits, then project toward image-right as a flat triangular fin with straight-to-gently-curved edges and one sharp pointed tip. Add a short crease at the fin root so it cannot be mistaken for a body bulge. Hide the farther pectoral fin completely. The lower body remains cropped by the waterline; do not add a tail.\nStyle/medium: polished 2D hand-inked cartoon sprite matching Image 1, with thick clean black outlines and simple glossy cel shading\nComposition/framing: upright upper-body shark emerging from water, facing image-right, same scale and framing as Image 1, with room around the pointed pectoral fin\nConstraints: preserve the exact sly half-lidded eye, toothy grin, pointed snout, three gill slits, gray-blue palette, cream underside, waterline splash, and transparent background from Image 1; preserve the original rightward gesture from Images 2 and 4; use Image 3 only for normal shark anatomy and pectoral-fin construction; no extra objects; no text; no watermark\nAvoid: humpback whale silhouette; huge round belly; spherical torso; arched back hump; dorsal hump instead of a fin; pectoral fin growing from the back; thick rounded arm; flipper shaped like a body swelling; detached fin; second pectoral fin; far fin; hand or fingers; tail; changed face; closed mouth; missing teeth; opaque background",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/009-generated-v6.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM2.BMP/009.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/000-generated-v3.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/original/SLEVEJM2.BMP/009.png"
+    ]
+  }
+}

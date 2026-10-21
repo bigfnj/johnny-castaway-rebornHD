@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM2.BMP",
+  "frame": "009",
+  "version": 5,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Correct pectoral-fin ownership: use the near/front fin for the gesture and hide the farther fin.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Asset type: transparent cartoon game animation sprite, SLEVEJM2.BMP-009. Image 1 is the edit target and supplies the finished neutral-gray shark identity, pose, water, framing and rendering. Image 2 is the exact original pixel pose and governs which pectoral fin is visible. Change only the pectoral fins. The ONE visible pectoral fin must be the FRONT/NEAR fin, anatomically rooted high on the shark's visible near flank beside the gill slits. It crosses in front of the narrow ivory belly and gestures toward image-right at chest height, with a gentle downward arch and narrow drooping tip matching Image 2. Completely hide the FARTHER pectoral fin: remove the separate long hanging fin on image-left and leave a continuous gray rear flank there. Keep only the dorsal fin and the single near/front gesturing pectoral fin. Preserve the shark's right-facing body angle, compact pointed snout, one high half-lidded eye, sly brow, closed toothy smirk, gill slits, neutral gray body, narrow ivory belly and thin cyan-white water cutoff. Preserve the same canvas proportions, transparent margins, bold black outlines and smooth cel shading. No third fin, no detached fin, no fin emerging from the mouth or jaw, no broad frontal belly, no completed submerged body, no new objects, text, labels, background, checkerboard, shadow or glow. Return one genuinely transparent RGBA sprite with clean transparent margins.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/009-generated-v4.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM2.BMP/009.png"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM2.BMP",
+  "frame": "009",
+  "version": 8,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "purpose": "Correct the viewpoint and handedness: show the shark from behind while the farther pectoral fin points right and the near fin hangs at the left flank.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit\nAsset type: transparent 2D cartoon game sprite for SLEVEJM2 frame 009\nInput images:\n- Image 1: current high-resolution cartoon style and shark identity reference. Its front-facing torso and pointing near fin are WRONG and must not be copied.\n- Image 2: enlarged original pixel frame and definitive authority for camera angle, pose, silhouette, and which fin points.\n- Image 3: established high-resolution rear-facing shark anatomy reference. Use its broad-back viewpoint and normal shark construction, while matching Image 2's specific 009 gesture.\nPrimary request: redraw SLEVEJM2 009 so the shark faces AWAY from the viewer in a rear three-quarter pose and points toward image-right with his OTHER, farther pectoral fin.\nSubject and pose:\n- The viewer sees a broad, continuous gray back and outer flank, not a cream chest or front-facing belly.\n- The back of the head and torso dominate the view. Turn only the shark's muzzle/head enough toward image-right to retain the original right-facing profile, visible eye, and sly toothy smile.\n- The NEAR pectoral fin belongs on the viewer-left outer flank and hangs downward alongside the body. It must NOT point.\n- The OTHER/FAR pectoral fin emerges across/from the far side of the torso and extends horizontally toward image-right as the pointing gesture, matching the pixel original.\n- Give both fins unmistakable fin roots and normal tapered pectoral-fin anatomy. Keep a normal streamlined cartoon shark silhouette, not a whale, humpback, or bulbous humped torso.\nStyle/medium: polished clean 2D cartoon sprite, thick black outlines, restrained cel shading, gray-blue shark with pale underside visible only narrowly along the right edge/profile, matching the existing frame family\nComposition/framing: upright shark rising from the same cyan-and-white waterline; full sprite centered with generous transparent padding; do not crop fins or body\nConstraints: preserve the established shark identity, gray palette, eyebrow/eye, sly toothy grin, gill marks, waterline, and transparent background; follow Image 2 for handedness and gesture even if other references conflict; exactly two pectoral fins, with only the far fin pointing right\nAvoid: front-facing chest, broad cream belly facing camera, near/right-side fin performing the point, both fins pointing, fin grown from the dorsal ridge, dorsal fin used as an arm, whale silhouette, rounded humpback torso, extra fins, missing hanging fin, opaque background, text, labels, watermark",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/009-generated-v7.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM2.BMP/009.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/004-generated-v7.png"
+    ]
+  }
+}

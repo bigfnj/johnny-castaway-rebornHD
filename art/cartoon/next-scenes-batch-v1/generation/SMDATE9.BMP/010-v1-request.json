@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "tool": "image_gen.imagegen",
+  "resource": "SMDATE9.BMP",
+  "frame": "010",
+  "version": 1,
+  "arguments": {
+    "prompt": "Use case: illustration-story. Create ONE HD Cartoon game sprite on a genuinely transparent RGBA background, recreating the exact source frame, not a new scene. Image1 is the exact original pose reference and controls silhouette, facing, visible eyes, anatomy, gestures, overlaps and contact. Image2 is Johnny identity/style only, not ordinary clothes/stance. Image3 is mermaid identity/materials only, not her pose or water. Image4 is the original neighboring phases for motion context only, not extra panels.\nStyle: polished clean black contour 2D cartoon with restrained cel shading. Johnny: adult lean castaway, long rounded nose, full dark-brown scruffy beard, shaggy hair, warm light peach skin. For this story he wears source BLACK TOP HAT and BLACK TAILCOAT with red bowtie and blue waistcoat. His bare legs/feet remain where visible in source; do not replace visible skin with trousers. Mermaid: adult blonde, blue/cyan headband, green bikini top and emerald tail, smooth bright yellow hair. Preserve source face angle and eye visibility rather than copying the reference's upward gaze. Replace diagnostic red/white skin dithering with coherent peach fills. Preserve each hand attachment and the hidden far-side anatomy; do not add extra limbs or expose hidden eyes. The joined pair stays ONE silhouette.\n\nPose lock SMDATE9 010: Three-quarter spinning carrying pose with Johnny's dark coat back/left side toward viewer, top hat upper-left, face turned into mermaid. Mermaid face partly visible at upper-right looking left toward him, both eyes only to extent source shows; hair flares broadly right and upward with cyan band across forehead. Her arms clasp shoulders, his arms support waist/base of tail, joined hands and coat sleeves attached naturally. Her green tail loops low around his bent legs and returns to far-left into two pointed fin lobes reaching diagonally up-left. One bare foot is lifted and points left through the loop near center-lower, other stands/extends at bottom-center. Keep compact turning pose and left fin orientation. No detached hands or extra legs.\nAnatomy check before output: Johnny has exactly two arms attached to his shoulders, each hand connects to ONE sleeve at wrist. Mermaid has exactly two arms. Respect hidden hands, no floating hands. Output whole source silhouette with transparent margins; no scenery, water, floor, labels, border, checkerboard, glow or gray ground shadow. Exact original overrides prose ambiguity; single sprite.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/next-scenes-batch-v1/reference/nearest8/SMDATE9.BMP/010.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/johnny-character-v5.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-expression-corrections-v1/generation/SMGLIMSE.BMP/013-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/next-scenes-batch-v1/reference/SMDATE9.BMP-contact-01.png"
+    ]
+  }
+}

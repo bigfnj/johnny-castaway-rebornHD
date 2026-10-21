@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "resource": "SMDATE4.BMP",
+  "frame": "008",
+  "version": 2,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Remove four invented floating items from left margin; retain exact intended Johnny/furniture pose.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Image1 is the cartoon edit target. Image2 is the exact original composition. Remove the four invented floating objects at the far left of Image1: (1) extra airborne wineglass and spilled wine above Johnny's left hand, (2) red-white checkered fragment below that hand, (3) red-white-blue curved shape left of his hip, (4) red-white checkered fragment lower-left beside his legs. These four regions become pure transparent alpha. Keep Johnny's complete body, head, top hat, costume, hands, arm connections, bare feet, table, cloth, chair and all their exact pixels and positions visually unchanged. Preserve exactly two wineglasses resting on the table on the right and their food plates. Do not add any replacement objects. Preserve transparent RGBA background, smooth cartoon outlines and margins; no text, border, backdrop, checkerboard or watermark.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/next-scenes-batch-v1/generation/SMDATE4.BMP/008-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/next-scenes-batch-v1/reference/nearest8/SMDATE4.BMP/008.png"
+    ]
+  }
+}

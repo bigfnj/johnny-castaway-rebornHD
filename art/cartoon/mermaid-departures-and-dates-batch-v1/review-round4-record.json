@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "status": "awaiting_appearance_review",
+  "selected_frame_count": 2,
+  "exact_keys": [
+    "SLEVEJM2.BMP-009",
+    "SLEVEJM3.BMP-004"
+  ],
+  "page": {
+    "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/review-round4.html",
+    "sha256": "0463d688882b2359df57516acbf42854d586793c972710daf29e0f8491cba4a0"
+  },
+  "data": {
+    "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/review-data-round4.json",
+    "sha256": "a0710b31faf4650f916d11c9aa77334f25ecb5d6023fa9a171e41463c130cfc5"
+  },
+  "feedback": {
+    "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/feedback-2026-09-24-round4.json",
+    "sha256": "23a84f62384137977f0ef90c3651bf2f7d9ae2cde868ec51ba2260a0a79e3016"
+  },
+  "selection_proof": {
+    "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/feedback-round4-selection-record.json",
+    "sha256": "03f2eab73a5aa871340dad1fba47abd6228eb15ead9c2b11e885c1730c6d2f42"
+  },
+  "builder": {
+    "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/build_round4_review.py",
+    "sha256": "087f7faf3a870ac1337b490c66aa4f80d01f8cbd63af7777f3605f1722ce4cfd"
+  },
+  "target_negative_control": {
+    "mutation": "Added SMDATE6.BMP-999 to an in-memory copy of the focused key list.",
+    "guard_fired": true,
+    "failure_message": "negative-control targets does not match the two focused targets; missing=[], unexpected=['SMDATE6.BMP-999']",
+    "source_files_modified": false
+  },
+  "selected_assets": [
+    {
+      "key": "SLEVEJM2.BMP-009",
+      "version": 7,
+      "output": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/009-generated-v7.png",
+        "sha256": "0234568dca3c8c0a45e2929c844be087b2d5f9c1cfc0fe5b263bb9fae112d786",
+        "canvas": [
+          1317,
+          1194
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          161,
+          62,
+          1252,
+          1159
+        ]
+      },
+      "request": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/009-v7-request.json",
+        "sha256": "4a28aa6ca7dba1b8b75fe77baec192a09a2d4e528f34881abaff3f24e98e3943"
+      },
+      "generation_record": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM2.BMP/009-record-v7.json",
+        "sha256": "c1e18b4dcc90334937e48fd4556dcb26fd1e343257c08fd31780bb6314a400de"
+      }
+    },
+    {
+      "key": "SLEVEJM3.BMP-004",
+      "version": 6,
+      "output": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/004-generated-v6.png",
+        "sha256": "43d1061189c9121f2ee7d817ebc57b4cd09bfc6e17753c88e5031823566a1715",
+        "canvas": [
+          2172,
+          724
+        ],
+        "mode": "RGBA",
+        "alpha_range": [
+          0,
+          255
+        ],
+        "alpha8_bounds": [
+          16,
+          10,
+          2092,
+          695
+        ]
+      },
+      "request": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/004-v6-request.json",
+        "sha256": "a9e0fb2b59dd5299356658e589c356365da5e48da4be266e60a405ea48814977"
+      },
+      "generation_record": {
+        "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/004-record-v6.json",
+        "sha256": "11d1621c11e541c3230fe6b47f00786ee18ba0928320a73a68cb64891707419f"
+      }
+    }
+  ],
+  "appearance_approval": null,
+  "production_integrated": false,
+  "native_motion_checked": false,
+  "browser_validation": {
+    "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/browser-review-round4-focused.json",
+    "sha256": "69b700e60d8c46e6466d1f3b6bda013ec438b537f3cd976c1c6780fdaada96c4"
+  },
+  "browser_negative_control": {
+    "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/browser-review-round4-focused-negative-control.json",
+    "sha256": "e580f7d8598ee21af5a4f36461e5baccc13fc857b0c548c569571edd6a5bf59b"
+  },
+  "browser_screenshot": {
+    "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/browser-review-round4-focused.png",
+    "sha256": "fb3f045c83628c83b382e5d2e52e88aec090049f33f2286e66b6ebde1284ca11"
+  },
+  "full_archive_browser_validation": {
+    "path": "art/cartoon/mermaid-departures-and-dates-batch-v1/browser-review-round4-full-archive.json",
+    "sha256": "396835eb22534b0131bfb4e34802da7bcfbe1ada0b2b403c0f1dbd1ef98897b4"
+  }
+}

@@ -41,6 +41,8 @@ def main():
     versions = json.loads(selected_path.read_text(encoding="utf-8")) if selected_path.exists() else {}
     notes_path = HERE / "review-notes.json"
     notes = json.loads(notes_path.read_text(encoding="utf-8")) if notes_path.exists() else {}
+    approval_path = HERE / "acceptance/appearance-round5-2026-09-25.json"
+    approvals = json.loads(approval_path.read_text(encoding="utf-8"))["approved_assets"] if approval_path.is_file() else {}
     rows, nav, sections = [], [], []
     for group, title, resource, frames in GROUPS:
         frames = [n for n in frames if n in selection.get(resource, [])]
@@ -77,6 +79,13 @@ def main():
                    "review_note": notes.get(key),
                    "url": local_url(raw) if raw.is_file() else None,
                    "original_url": local_url(original) if original.is_file() else None}
+            approved = approvals.get(key, {})
+            if (approved.get("version") == version and row["selected_raw"]
+                    and approved.get("output", {}).get("sha256") == row["selected_raw"]["sha256"]
+                    and approved.get("output", {}).get("path") == row["selected_raw"]["path"]):
+                message = "Appearance approved by user on September 25, 2026"
+                row["status_text"] = message
+                row["appearance_approval"] = pin(approval_path)
             rows.append(row)
             label = f"{resource.removesuffix('.BMP')} {frame}"
             review_note = f'<p class="review-note">{html.escape(notes[key])}</p>' if key in notes else ""
@@ -114,16 +123,47 @@ def main():
     data_path = HERE / "review-data.json"
     data_path.write_text(json.dumps({"assets": rows, "counts": counts, "summary": summary}, indent=2) + "\n", encoding="utf-8")
     template = (HERE / "review-template.html").read_text(encoding="utf-8")
-    output = HERE / "review.html"
+    output = HERE / "review-full.html"
     output.write_text(template.replace("{{NAV}}", "".join(nav)).replace("{{SECTIONS}}", "\n".join(sections)).replace("{{SUMMARY}}", html.escape(summary)), encoding="utf-8")
     helpers = ["build_review.py", "record_output.py", "review-template.html", "review.js",
                "prepare_references.py", "source-notes.md", "selection.json", "README.md",
                "merge_review_notes.py", "make_inspection_sheets.py", "audit_selection.py", "duplicate-audit.json",
-               "shark-correction-overrides.json"]
+               "shark-correction-overrides.json", "feedback-2026-09-24.json",
+             "feedback-2026-09-24-round2.json", "review-data-before-feedback-round2.json",
+             "verify_feedback_round2.py", "feedback-round2-selection-record.json",
+             "browser-review-round2.json", "browser-review-round2-negative-control.json",
+             "browser-review-round2.png", "feedback-2026-09-24-round3.json",
+             "review-data-before-feedback-round3.json", "verify_feedback_round3.py",
+             "feedback-round3-selection-record.json", "browser-review-round3.json",
+             "browser-review-round3-negative-control.json", "browser-review-round3.png",
+             "build_round3_review.py", "review-full.html", "review-data-round3.json",
+             "review-round3-record.json", "browser-review-round3-focused.json",
+             "browser-review-round3-focused-negative-control.json",
+             "browser-review-round3-focused.png", "browser-review-round3-full-archive.json",
+             "review-round3.html", "feedback-2026-09-24-round4.json",
+             "review-data-before-feedback-round4.json", "verify_feedback_round4.py",
+             "feedback-round4-selection-record.json", "build_round4_review.py",
+             "validate_round4_browser.py",
+             "review-data-round4.json", "review-round4-record.json",
+             "browser-review-round4-focused.json",
+             "browser-review-round4-focused-negative-control.json",
+             "browser-review-round4-focused.png",
+             "browser-review-round4-full-archive.json", "review-round4.html",
+             "feedback-2026-09-24-round5.json",
+             "review-data-before-feedback-round5.json", "verify_feedback_round5.py",
+             "feedback-round5-selection-record.json", "build_round5_review.py",
+             "validate_round5_browser.py", "review-data-round5.json",
+             "review-round5-record.json", "browser-review-round5-focused.json",
+             "browser-review-round5-focused-negative-control.json",
+             "browser-review-round5-focused.png",
+             "browser-review-round5-full-archive.json",
+             "review-data-before-approval-round5.json",
+             "acceptance/appearance-round5-2026-09-25.json"]
     result = {"schema_version": 1,
               "status": ("generation_in_progress" if counts.get("pending", 0) or counts.get("generated_unrecorded", 0) else "awaiting_appearance_review"),
               "selected_frame_count": len(rows), "generated_drawing_count": available,
               "counts": counts, "page": pin(output), "data": pin(data_path), "assets": rows,
+              "appearance_approved_frame_count": sum(bool(row.get("appearance_approval")) for row in rows),
               "source_record": pin(HERE / "reference/source.json"), "batch_plan": pin(HERE / "batch-plan.json"),
               "helpers": [pin(HERE / name) for name in helpers if (HERE / name).is_file()],
               "visual_approval": None, "production_acceptance": False, "native_validation": False,

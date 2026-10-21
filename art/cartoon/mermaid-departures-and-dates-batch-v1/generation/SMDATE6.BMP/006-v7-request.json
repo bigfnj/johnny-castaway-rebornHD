@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SMDATE6.BMP",
+  "frame": "006",
+  "version": 7,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Second owner-correction attempt: v6 still used the upright farther arm. Use the foreground arm path established by frame 005.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Asset: one transparent cartoon game animation sprite, SMDATE6.BMP-006. Image 1 is the edit target and is authoritative for the adult mermaid's head, deep backward drinking tilt, face, hair, cyan headband, green swimsuit, wine glass, palette, black outlines and cel rendering. Image 2 is the immediately preceding animation frame and is the authoritative pose donor for the CLOSER FOREGROUND ARM: it shows the correct single continuous V-shaped limb from a rounded shoulder at image-left, down to a low elbow, then up-right through the forearm and hand into the wine glass. Image 3 is the enlarged original frame and confirms that same near-arm ownership. Replace the arm in Image 1 with Image 2's exact near-arm joint path, scaled and positioned so its rounded shoulder attaches to the large visible foreground shoulder at lower-left/center of the woman's torso and its hand brings the glass to her lips. The upper arm must descend diagonally from that foreground shoulder to a low elbow near the lower-right of her torso; the forearm must then rise diagonally from the low elbow to the glass. This clear V bend is mandatory. Delete the current nearly vertical arm on image-right in Image 1 completely; it is the wrong farther arm. The farther arm remains fully hidden. Show exactly one visible arm, one connected shoulder, one elbow, one forearm and one hand. No limb may emerge from her breast, armpit on image-right, neck or empty space. Preserve her far-back head, lifted chin, lips touching the glass, pink wine and backward-falling hair. Keep a genuinely transparent RGBA background and full margin. No second arm, cross-body stump, fused anatomy, disconnected hand, water, scenery, text, solid backdrop, checkerboard pixels, border or shadow rectangle.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SMDATE6.BMP/006-generated-v6.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SMDATE6.BMP/005-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SMDATE6.BMP/006.png"
+    ]
+  }
+}

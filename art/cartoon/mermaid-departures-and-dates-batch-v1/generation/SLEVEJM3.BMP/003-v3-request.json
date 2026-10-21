@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SLEVEJM3.BMP",
+  "frame": "003",
+  "version": 3,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Owner appearance correction 2026-09-24: restore shark hug, closed mermaid eye, and non-smiling shark expression from source.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Asset: one transparent cartoon game animation sprite, SLEVEJM3.BMP-003. Image 1 is the selected modern drawing to correct and supplies the established mermaid and gray-shark rendering. Image 2 is the exact enlarged original pixel sprite and is the authority for pose, overlap, eye state, occlusion and expression. Image 3 supplies the established gray-shark identity and cel-rendering only, never its pose. Correct the interaction to match image 2: the shark is immediately behind the mermaid and is hugging her, with its near pectoral fin/arm-like flipper visibly wrapped forward across and around her upper back and shoulder rather than both figures merely sitting side by side. Bring the shark's head close behind her flowing hair while keeping the mermaid bowed and facing right at the cyan-white waterline. Her visible eye is fully CLOSED, shown by a simple relaxed dark eyelid line. The shark is NOT smiling: use the source's restrained, closed, nearly level mouth with no teeth and no upturned grin; keep the source's calm attentive eye rather than inventing a cheerful expression. Preserve the neutral medium-gray skin, ivory underside, gill slits, pointed snout, yellow hair, cyan headband, green strap, water shape, broad horizontal framing, visible-fragment count and all unrelated details from image 1. Clean bold black cartoon outlines and smooth cel shading. Return only this complete corrected sprite on a genuinely transparent RGBA background, with transparent gaps and margin around every edge; no solid backdrop, checkerboard pixels, text, labels, border or shadow rectangle.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SLEVEJM3.BMP/003-generated-v2.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SLEVEJM3.BMP/003.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/sharks-batch-v1/generation/GJFFFOOD.BMP/019-generated-v1.png"
+    ]
+  }
+}

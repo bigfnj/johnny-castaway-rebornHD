@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "resource": "SMDATE1.BMP",
+  "frame": "013",
+  "version": 2,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Owner appearance correction 2026-09-24: turn the inverted head slightly toward camera so both eyes are visible.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Asset: one transparent cartoon game animation sprite, SMDATE1.BMP-013. Image 1 is the selected modern drawing to correct and supplies the exact inverted body, tail, hair, arms, water, palette and cel-rendering. Image 2 is the exact enlarged original pixel sprite and is the authority for pose, visibility and occlusion. Image 3 supplies the established adult mermaid face and identity only, never its pose. Make one targeted correction: rotate her downward-facing head SLIGHTLY inward toward the viewer/camera, from the current one-eye profile to a subtle three-quarter view in which BOTH eyes are clearly visible. Keep her gaze directed downward into the dive and preserve the sense that her head is inverted beneath her body; do not turn the whole figure front-on. Preserve image 1's broad inverted-J tail arc, forked fin at upper left, long yellow hair flowing above her inverted head, cyan headband, green swimsuit, outward-bent elbows, hands close together in the pointed diving shape, white/cyan spray arc, small splash beneath, scale, placement and every unrelated detail. Do not straighten the arms or alter the tail curve. Clean bold black cartoon outlines and smooth cel shading. Return only this complete corrected sprite on a genuinely transparent RGBA background, with transparent gaps and margin around every edge; no solid backdrop, checkerboard pixels, text, labels, border or shadow rectangle.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SMDATE1.BMP/013-generated-v1.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/reference/nearest8/SMDATE1.BMP/013.png",
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-expression-corrections-v1/generation/SMGIFT.BMP/000-generated-v1.png"
+    ]
+  }
+}

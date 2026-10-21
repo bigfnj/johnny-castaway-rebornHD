@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "resource": "SMDATE6.BMP",
+  "frame": "006",
+  "version": 8,
+  "tool": "image_gen.imagegen",
+  "mode": "built-in",
+  "correction": "Intermediate anatomical cleanup after v6 and v7 retained the wrong farther arm: remove that arm before adding the correct near arm.",
+  "arguments": {
+    "prompt": "Use case: precise-object-edit. Asset: intermediate transparent cartoon game animation sprite for SMDATE6.BMP-006. Edit Image 1 with one removal only. Completely erase the entire nearly vertical flesh-colored arm and hand on image-right, from its wrist around the wine-glass stem down through the forearm and upper arm to the image-right side of her bust. Reconstruct the green swimsuit edge and right torso contour cleanly where that wrong arm was attached. Keep the wine glass itself floating in exactly the same place with its bowl touching her lips; preserve the glass bowl, pink wine and stem even though no hand holds it in this intermediate. Preserve the large rounded foreground shoulder on image-left/lower-center untouched because the correct arm will attach there later. The result must contain zero visible arms and zero visible hands. Do not alter the head, face, lifted chin, deep backward drinking tilt, hair, cyan headband, breasts, swimsuit, waist crop, colors, black outlines, cel shading or transparency. Return only the complete intermediate sprite on a genuinely transparent RGBA background with margin around every edge. No arm stump, fingers, extra limb, water, scenery, text, solid backdrop, checkerboard pixels, border or shadow rectangle.",
+    "referenced_image_paths": [
+      "D:/.ai-work/worktrees/johnny-cartoon-environment/art/cartoon/mermaid-departures-and-dates-batch-v1/generation/SMDATE6.BMP/006-generated-v6.png"
+    ]
+  }
+}

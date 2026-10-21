@@ -1,0 +1,21 @@
+{
+  "mutation": "Remove first selected frame from imported GROUPS in memory only.",
+  "removed_key": "SMDATE2.BMP-000",
+  "expected_exception": "ValueError",
+  "expected_message": "Gallery groups must cover every selected frame exactly once",
+  "observed_message": "Gallery groups must cover every selected frame exactly once",
+  "guard_fired": true,
+  "files_unchanged": true,
+  "before_sha256": {
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\next-scenes-batch-v1\\review.html": "7970cb7c800933fcec8521cf39676c994d9a349f9c656a5553e2039261b37723",
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\next-scenes-batch-v1\\review-data.json": "7c644c7779cd699bc61d2a623874214caa2a8234093785bb91809221852641c6",
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\next-scenes-batch-v1\\review-record.json": "d3e680eceebd38a54cea75ecdf0a02c40d29edbf988b920ecd6fbd05f1ddf264",
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\next-scenes-batch-v1\\selection.json": "24dcaff5a71ef1911286dd48dea529ca4ac4028d72a8424e74e99ef6cfc85972"
+  },
+  "after_sha256": {
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\next-scenes-batch-v1\\review.html": "7970cb7c800933fcec8521cf39676c994d9a349f9c656a5553e2039261b37723",
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\next-scenes-batch-v1\\review-data.json": "7c644c7779cd699bc61d2a623874214caa2a8234093785bb91809221852641c6",
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\next-scenes-batch-v1\\review-record.json": "d3e680eceebd38a54cea75ecdf0a02c40d29edbf988b920ecd6fbd05f1ddf264",
+    "D:\\.ai-work\\worktrees\\johnny-cartoon-environment\\art\\cartoon\\next-scenes-batch-v1\\selection.json": "24dcaff5a71ef1911286dd48dea529ca4ac4028d72a8424e74e99ef6cfc85972"
+  }
+}
